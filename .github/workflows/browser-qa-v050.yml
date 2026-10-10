@@ -35,6 +35,106 @@ jobs:
           npm install --no-save --ignore-scripts playwright@1.55.0
           npx playwright install --with-deps chromium
 
+      - name: Refine overflow detector for decorative overscan and bounded scrollers
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/browser-qa-v050.mjs')
+          s = p.read_text()
+          old = '''async function inspectLayout(page, label, { allowVerticalScroll = true } = {}) {
+            const issues = await page.evaluate(({ allowVerticalScroll }) => {
+              const viewportWidth = window.innerWidth;
+              const viewportHeight = window.innerHeight;
+              const visible = [...document.querySelectorAll('body *')].filter((element) => {
+                const style = getComputedStyle(element);
+                const rect = element.getBoundingClientRect();
+                return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 1 && rect.height > 1;
+              });
+              const overflow = visible
+                .map((element) => {
+                  const rect = element.getBoundingClientRect();
+                  return {
+                    tag: element.tagName,
+                    id: element.id || null,
+                    className: typeof element.className === 'string' ? element.className.slice(0, 100) : null,
+                    left: Math.round(rect.left),
+                    right: Math.round(rect.right),
+                    top: Math.round(rect.top),
+                    bottom: Math.round(rect.bottom),
+                  };
+                })
+                .filter((item) => item.right > viewportWidth + 4 || item.left < -4)
+                .slice(0, 25);
+              const bodyOverflow = document.documentElement.scrollWidth > viewportWidth + 4;
+              const verticalIssue = !allowVerticalScroll && document.documentElement.scrollHeight > viewportHeight + 4;
+              return { bodyOverflow, verticalIssue, overflow };
+            }, { allowVerticalScroll });
+            if (issues.bodyOverflow || issues.verticalIssue || issues.overflow.length) {
+              report.layoutIssues.push({ page: label, ...issues });
+            }
+          }
+          '''
+          new = '''async function inspectLayout(page, label, { allowVerticalScroll = true } = {}) {
+            const issues = await page.evaluate(({ allowVerticalScroll }) => {
+              const viewportWidth = window.innerWidth;
+              const viewportHeight = window.innerHeight;
+              const decorativeOverscan = '.grain, .scanlines, .vignette, [data-qa-overflow="allow"]';
+
+              const isContainedByHorizontalScroller = (element) => {
+                let parent = element.parentElement;
+                while (parent && parent !== document.body) {
+                  const style = getComputedStyle(parent);
+                  const rect = parent.getBoundingClientRect();
+                  const clipsHorizontally = ['auto', 'scroll', 'hidden', 'clip'].includes(style.overflowX);
+                  const isBounded = rect.left >= -4 && rect.right <= viewportWidth + 4;
+                  if (clipsHorizontally && isBounded && parent.scrollWidth > parent.clientWidth + 2) return true;
+                  parent = parent.parentElement;
+                }
+                return false;
+              };
+
+              const visible = [...document.querySelectorAll('body *')].filter((element) => {
+                const style = getComputedStyle(element);
+                const rect = element.getBoundingClientRect();
+                return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 1 && rect.height > 1;
+              });
+              const overflow = visible
+                .filter((element) => {
+                  const rect = element.getBoundingClientRect();
+                  const outsideViewport = rect.right > viewportWidth + 4 || rect.left < -4;
+                  if (!outsideViewport) return false;
+                  if (element.matches(decorativeOverscan)) return false;
+                  if (isContainedByHorizontalScroller(element)) return false;
+                  return true;
+                })
+                .map((element) => {
+                  const rect = element.getBoundingClientRect();
+                  return {
+                    tag: element.tagName,
+                    id: element.id || null,
+                    className: typeof element.className === 'string' ? element.className.slice(0, 100) : null,
+                    left: Math.round(rect.left),
+                    right: Math.round(rect.right),
+                    top: Math.round(rect.top),
+                    bottom: Math.round(rect.bottom),
+                  };
+                })
+                .slice(0, 25);
+              const bodyOverflow = document.documentElement.scrollWidth > viewportWidth + 4;
+              const verticalIssue = !allowVerticalScroll && document.documentElement.scrollHeight > viewportHeight + 4;
+              return { bodyOverflow, verticalIssue, overflow };
+            }, { allowVerticalScroll });
+            if (issues.bodyOverflow || issues.verticalIssue || issues.overflow.length) {
+              report.layoutIssues.push({ page: label, ...issues });
+            }
+          }
+          '''
+          if old not in s:
+              raise SystemExit('layout detector block not found')
+          p.write_text(s.replace(old, new))
+          PY
+          node --check scripts/browser-qa-v050.mjs
+
       - name: Capture and validate the interface
         id: browserqa
         continue-on-error: true
@@ -65,7 +165,7 @@ jobs:
         run: |
           git config user.name "darknigthmare"
           git config user.email "chuckykill@hotmail.fr"
-          git add docs/BROWSER_QA_v0.5.0.md tests/captures-v050
+          git add scripts/browser-qa-v050.mjs docs/BROWSER_QA_v0.5.0.md tests/captures-v050
           git commit -m "test: validate v0.5.0 interface in Chrome for Testing"
           git push origin main
 
