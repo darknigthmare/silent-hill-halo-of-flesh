@@ -1,0 +1,52 @@
+name: Bootstrap v0.3.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bootstrap-v030.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+
+      - name: Download verified v0.3.0 source archive
+        env:
+          ARCHIVE_URL: "https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-1ffc-820a-bc51-401e0f4008a2/raw?se=2026-10-10T20%3A44%3A43Z&sp=r&sv=2026-02-06&sr=b&scid=e0d54d63-1672-5f2d-bbcd-6108a625b8c6&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T01%3A15%3A11Z&ske=2026-10-11T01%3A15%3A11Z&sks=b&skv=2026-02-06&sig=yLGc5lcNbi3C11t3M8%2Bp/ZHBsjv1iEI2wXwCVI0jA0c%3D"
+        run: |
+          curl --fail --location --retry 3 --output /tmp/halo-v0.3.0.tar.gz "$ARCHIVE_URL"
+          echo "d18785a4bec65e20267d07906d077ac15e9f2f568d762993016ad19839b64f66  /tmp/halo-v0.3.0.tar.gz" | sha256sum --check --strict
+
+      - name: Restore complete project tree
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github -exec rm -rf {} +
+          tar -xzf /tmp/halo-v0.3.0.tar.gz -C .
+          test -f package.json
+          test -f src/fight.js
+          test -f docs/RELEASE_NOTES_v0.3.0.md
+
+      - name: Run full QA
+        run: npm test
+
+      - name: Publish v0.3.0 to main
+        run: |
+          git config user.name "darknigthmare"
+          git config user.email "chuckykill@hotmail.fr"
+          git add -A
+          git commit -m "feat: release Halo of Flesh v0.3.0"
+          git push origin main
