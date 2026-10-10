@@ -36,9 +36,12 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Capture and validate the interface
+        id: browserqa
+        continue-on-error: true
         run: npm run qa:browser
 
       - name: Build browser QA package
+        if: always()
         run: |
           if command -v montage >/dev/null 2>&1; then
             montage tests/captures-v050/*.png -thumbnail 520x320 -tile 3x -geometry +12+12 tests/captures-v050/contact-sheet-v050.jpg || true
@@ -47,6 +50,7 @@ jobs:
           mv /tmp/SILENT-HILL-HALO-OF-FLESH_v0.5.0_BROWSER_QA.zip tests/captures-v050/
 
       - name: Upload browser QA artifact
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: halo-of-flesh-v0.5.0-browser-qa
@@ -57,9 +61,14 @@ jobs:
           retention-days: 30
 
       - name: Publish browser QA evidence
+        if: steps.browserqa.outcome == 'success'
         run: |
           git config user.name "darknigthmare"
           git config user.email "chuckykill@hotmail.fr"
           git add docs/BROWSER_QA_v0.5.0.md tests/captures-v050
           git commit -m "test: validate v0.5.0 interface in Chrome for Testing"
           git push origin main
+
+      - name: Enforce browser QA result
+        if: always()
+        run: test "${{ steps.browserqa.outcome }}" = "success"
