@@ -72,7 +72,9 @@
 
 ## QA navigateur
 
-La passe navigateur v0.4.0 couvre le Command Center, le roster audité, les dossiers, les fatalités Signature et d’arène, la galerie de stages, les Archives, la matrice de couverture et deux vues mobiles.
+La passe Chromium v0.4.0 a produit **11 captures** : Command Center, roster Townfall, dossier de traçabilité, fatalité Signature, fatalité d’arène, galerie des stages, archive des fatalités, matrice de couverture, archive des décors animés et deux vues mobiles.
+
+Résultat navigateur : **0 exception JavaScript, 0 erreur ou avertissement console, 0 ressource manquante et 0 échec réseau**. Les deux chemins de fatalité ont été déclenchés dans le moteur via la passerelle réservée à `?qa=1`, sans altérer le comportement public normal.
 
 Détail : [`BROWSER_QA_v0.4.0.md`](BROWSER_QA_v0.4.0.md).
 
