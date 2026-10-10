@@ -2,17 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, createBossPhases, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from '../src/data.js';
 
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.4.0 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.4.0');
+test('v0.5.0 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.5.0');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:374,coverageComplete:true
+    fatalities:460,stageFatalities:123,stageAnimations:374,moves:3680,
+    directCanonicalMoves:425,behaviorCompositeMoves:2796,versusAdaptationMoves:459,coverageComplete:true
   });
 });
 
@@ -86,14 +87,25 @@ test('combat profiles are playable, bounded and internally linked',()=>{
     const profile=createCombatProfile(fighter);
     assert.ok(profile.maxHealth>=700&&profile.maxHealth<=1800,fighter.name);
     assert.ok(profile.speed>0&&profile.jump>0&&profile.reach>0,fighter.name);
-    assert.equal(Object.keys(profile.moves).length,6,fighter.name);
+    assert.equal(Object.keys(profile.moves).length,MOVESET_KEYS.length,fighter.name);
+    assert.deepEqual(profile.moveset.order,MOVESET_KEYS,fighter.name);
     for(const [key,move] of Object.entries(profile.moves)){
       assert.ok(move.damage>0,`${fighter.name}/${key}`);
       assert.ok(move.startup>=0,`${fighter.name}/${key}`);
       assert.ok(move.reach>0,`${fighter.name}/${key}`);
+      assert.ok(move.input&&move.canonicalBasis,`${fighter.name}/${key}`);
+      assert.ok(MOVE_FIDELITY[move.fidelity],`${fighter.name}/${key}/${move.fidelity}`);
       if(move.effect)assert.ok(AFFLICTIONS[move.effect.id],`${fighter.name}/${key}/${move.effect.id}`);
       for(const cancel of move.cancelInto||[])assert.ok(profile.moves[cancel],`${fighter.name}/${key}/${cancel}`);
     }
+  }
+});
+
+test('every source combatant exposes at least one directly attested action while adapted set-pieces remain labelled',()=>{
+  for(const fighter of ROSTER){
+    const summary=createCombatProfile(fighter).moveset.fidelitySummary;
+    if(String(fighter.catalogueStatus).includes('adapted')) assert.ok(summary.composite+summary.adapted>=1,fighter.id);
+    else assert.ok(summary.direct>=1,`${fighter.id}: aucune action directement attestée`);
   }
 });
 
@@ -136,7 +148,7 @@ test('every AI personality and ritual modifier has complete readable metadata',(
 });
 
 
-test('coverage audit reports no known gap inside the v0.4.0 media scope',()=>{
+test('coverage audit reports no known gap inside the v0.5.0 media scope',()=>{
   const audit=coverageAudit();
   assert.equal(audit.complete,true);
   assert.equal(Object.keys(audit.sources).length,Object.keys(SOURCE_META).length);
@@ -157,4 +169,6 @@ test('fatality and animation totals are derived from the live catalogue',()=>{
   assert.equal(CONTENT_STATS.fatalities,ROSTER.reduce((sum,f)=>sum+f.fatalities.length,0));
   assert.equal(CONTENT_STATS.stageFatalities,STAGES.filter(stage=>stage.fatality).length);
   assert.equal(CONTENT_STATS.stageAnimations,STAGES.reduce((sum,stage)=>sum+stage.animations.length,0));
+  assert.equal(CONTENT_STATS.moves,ROSTER.length*MOVESET_KEYS.length);
+  assert.equal(CONTENT_STATS.directCanonicalMoves+CONTENT_STATS.behaviorCompositeMoves+CONTENT_STATS.versusAdaptationMoves,CONTENT_STATS.moves);
 });

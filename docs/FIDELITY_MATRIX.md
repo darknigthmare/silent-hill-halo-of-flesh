@@ -1,4 +1,4 @@
-# Matrice de fidélité et couverture — v0.4.0
+# Matrice de fidélité et couverture — v0.5.0
 
 | Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |
 |---|---:|---:|---:|---:|---:|---|
@@ -19,7 +19,7 @@
 | SILENT HILL: ASCENSION | 7 | 2 | 3 | 6 | 17 | Vérifiée |
 | SILENT HILL: TOWNFALL | 5 | 1 | 7 | 29 | 17 | Vérifiée |
 
-**Total : 230 manifestations · 75 boss · 123 arènes · 374 animations · 460 fatalités combattant · 123 fatalités d’arène · 16 sources.**
+**Total : 230 manifestations · 3680 coups · 425 directement attestés · 2796 composites · 459 adaptations · 75 boss · 123 arènes · 374 animations · 16 sources.**
 
 ## Contrat de fidélité
 
@@ -36,6 +36,6 @@ Chaque profil sépare explicitement six couches :
 
 Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.
 
-Distingue nom officiel/établi, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.4.0.
+Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.5.0.
 
 La mention « vérifiée » signifie qu’aucune lacune connue n’a été retrouvée dans le périmètre des seize packs média intégrés à cette release. Elle ne transforme pas les fatalités originales de ce fan-game en scènes canoniques.

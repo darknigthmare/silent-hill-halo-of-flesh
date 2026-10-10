@@ -1,3 +1,5 @@
+import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './movesets.js';
+
 /*
  * SILENT HILL: HALO OF FLESH — catalogue de prototype.
  * Les noms identifient les créatures de la franchise à des fins de documentation
@@ -5,7 +7,7 @@
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.4.0';
+export const VERSION = '0.5.0';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -1038,7 +1040,7 @@ export function coverageAudit() {
   return {
     version: VERSION,
     scope: 'Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.',
-    policy: 'Distingue nom officiel/établi, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.4.0.',
+    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.5.0.',
     sources,
     complete: Object.values(sources).every((entry) => entry.complete)
   };
@@ -1064,6 +1066,15 @@ export function createCombatProfile(fighter) {
   const specialEffect = { id: effect, duration: affliction.duration, potency: fighter.boss ? 1.15 : 1 };
   const ai = AI_PERSONALITIES[fighter.aiProfile || fighter.archetype] || AI_PERSONALITIES.balanced;
   const bossPhases = createBossPhases(fighter);
+  const loreMoveset = buildLoreMoveset(fighter, {
+    power, reach, speed, recoveryScale,
+    projectileScale: trait.projectileScale || 1,
+    throwDamage: trait.throwDamage || 1,
+    throwEffect: trait.throwEffect || null,
+    throwEffectDuration: trait.throwEffect ? AFFLICTIONS[trait.throwEffect]?.duration : null,
+    effectId: effect,
+    effectDuration: affliction.duration
+  });
   return {
     ...base,
     speed,
@@ -1080,14 +1091,8 @@ export function createCombatProfile(fighter) {
     dodgeInvuln: 14 + (trait.dodgeInvuln || 0),
     cancelWindow: 5 + (trait.cancelWindow || 0),
     lowProfile: trait.lowProfile || 1,
-    moves: {
-      light: {name:'FRAPPE',startup:5,active:4,recovery:Math.round(11*recoveryScale),damage:Math.round(42*power),reach:72*reach,level:'mid',meter:9,cancelInto:['heavy','special']},
-      heavy: {name:'ATTAQUE LOURDE',startup:14,active:6,recovery:Math.round(24*recoveryScale),damage:Math.round(86*power*scalePower),reach:105*reach,level:'mid',meter:16,knockback:8,cancelInto:['special']},
-      low: {name:'ATTAQUE BASSE',startup:Math.max(6,10+(trait.lowStartup||0)),active:4,recovery:Math.round(18*recoveryScale),damage:Math.round(55*power),reach:88*reach,level:'low',meter:11,cancelInto:['special']},
-      throw: {name:'SAISIE',startup:8,active:3,recovery:Math.round(28*recoveryScale),damage:Math.round((grappler?118:92)*power*(trait.throwDamage||1)),reach:65*reach,level:'throw',meter:18,knockback:12,effect:trait.throwEffect?{id:trait.throwEffect,duration:AFFLICTIONS[trait.throwEffect].duration,potency:1}:null},
-      special: {name:fighter.signature,startup:ranged?18:12,active:ranged?1:6,recovery:Math.round((ranged?25:23)*recoveryScale),damage:Math.round((ranged?104:120)*power),reach:(ranged?700:145)*reach,level:'mid',meter:22,projectile:ranged,projectileSpeed:11+(speed*.65),projectileScale:trait.projectileScale||1,knockback:10,effect:specialEffect},
-      super: {name:`NIGHTMARE — ${fighter.signature}`,startup:28,active:ranged?1:12,recovery:Math.round(42*recoveryScale),damage:Math.round(235*power),reach:(ranged?950:210)*reach,level:'mid',meterCost:100,projectile:ranged,projectileSpeed:15,projectileScale:(trait.projectileScale||1)*1.2,knockback:18,effect:{...specialEffect,duration:Math.round(affliction.duration*1.35),potency:1.35}}
-    }
+    moves: loreMoveset.moves,
+    moveset: loreMoveset
   };
 }
 
@@ -1102,5 +1107,11 @@ export const CONTENT_STATS = Object.freeze({
   fatalities: ROSTER.reduce((sum, fighter) => sum + fighter.fatalities.length, 0),
   stageFatalities: STAGES.filter(stage => stage.fatality).length,
   stageAnimations: STAGES.reduce((sum, stage) => sum + stage.animations.length, 0),
+  moves: ROSTER.length * MOVESET_KEYS.length,
+  directCanonicalMoves: ROSTER.reduce((sum, fighter) => sum + createCombatProfile(fighter).moveset.fidelitySummary.direct, 0),
+  behaviorCompositeMoves: ROSTER.reduce((sum, fighter) => sum + createCombatProfile(fighter).moveset.fidelitySummary.composite, 0),
+  versusAdaptationMoves: ROSTER.reduce((sum, fighter) => sum + createCombatProfile(fighter).moveset.fidelitySummary.adapted, 0),
   coverageComplete: coverageAudit().complete
 });
+
+export { MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY };

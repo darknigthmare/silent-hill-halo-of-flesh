@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -37,6 +37,15 @@ async function syncData() {
     writeJson(join(dataDir,'content-stats.json'),CONTENT_STATS),
     writeJson(join(dataDir,'coverage-audit.json'),coverageAudit()),
     writeJson(join(dataDir,'fatalities.json'),{ version: VERSION, fighters: ROSTER.map(({id,name,source,fatalities})=>({id,name,source,fatalities})), stages: STAGES.map(({id,name,source,fatality,animations})=>({id,name,source,fatality,animations})) }),
+    writeJson(join(dataDir,'movesets.json'),{
+      version: VERSION,
+      order: MOVESET_KEYS,
+      fidelityTypes: MOVE_FIDELITY,
+      fighters: ROSTER.map((fighter)=>{
+        const profile=createCombatProfile(fighter);
+        return { id:fighter.id, name:fighter.name, source:fighter.source, summary:profile.moveset.fidelitySummary, presentation:profile.moveset.presentation, moves:profile.moves };
+      })
+    }),
     writeJson(join(dataDir,'combat-rules.json'),{
       version: VERSION,
       traits: MANIFESTATION_TRAITS,
@@ -86,7 +95,8 @@ async function runVerification() {
     assert(typeof fighter.catalogueStatus==='string'&&typeof fighter.nameStatus==='string'&&typeof fighter.evidenceTier==='string',`Traçabilité incomplète: ${fighter.id}`);
     const profile=createCombatProfile(fighter);
     assert(profile.maxHealth>=700&&profile.maxHealth<=1800,`Vitalité hors bornes: ${fighter.id}`);
-    assert(Object.keys(profile.moves).length===6,`Moveset incomplet: ${fighter.id}`);
+    assert(Object.keys(profile.moves).length===MOVESET_KEYS.length,`Moveset incomplet: ${fighter.id}`);
+    assert(profile.moveset?.fidelitySummary?.total===MOVESET_KEYS.length,`Résumé de moveset incomplet: ${fighter.id}`);
     assert(profile.ai&&profile.ai.preferredRange>0,`Profil IA incomplet: ${fighter.id}`);
     const phases=createBossPhases(fighter);
     assert((fighter.boss&&phases.length===2)||(!fighter.boss&&phases.length===0),`Phases de boss incohérentes: ${fighter.id}`);
@@ -94,8 +104,13 @@ async function runVerification() {
       assert(phase.threshold>0&&phase.threshold<1,`Seuil de phase invalide: ${fighter.id}/${index}`);
       assert(phase.power>=1&&phase.speed>=1,`Modificateur de phase invalide: ${fighter.id}/${index}`);
     });
-    for(const [key,move] of Object.entries(profile.moves)){
-      assert(move.damage>0&&move.startup>=0&&move.reach>0,`Coup invalide: ${fighter.id}/${key}`);
+    for(const key of MOVESET_KEYS){
+      const move=profile.moves[key];
+      assert(move&&move.key===key,`Coup absent ou mal indexé: ${fighter.id}/${key}`);
+      assert(move.damage>0&&move.startup>=0&&move.active>0&&move.recovery>0&&move.reach>0,`Coup invalide: ${fighter.id}/${key}`);
+      assert(typeof move.input==='string'&&move.input.length>0,`Commande absente: ${fighter.id}/${key}`);
+      assert(typeof move.canonicalBasis==='string'&&move.canonicalBasis.length>=8,`Base canonique absente: ${fighter.id}/${key}`);
+      assert(MOVE_FIDELITY[move.fidelity],`Statut de fidélité inconnu: ${fighter.id}/${key}/${move.fidelity}`);
       if(move.effect)assert(afflictionIds.has(move.effect.id),`Effet inconnu: ${fighter.id}/${key}/${move.effect.id}`);
       for(const cancel of move.cancelInto||[])assert(profile.moves[cancel],`Annulation inconnue: ${fighter.id}/${key}/${cancel}`);
     }
@@ -120,6 +135,8 @@ async function runVerification() {
   assert(CONTENT_STATS.fatalities===ROSTER.reduce((sum,fighter)=>sum+fighter.fatalities.length,0),'Statistique fatalités incohérente');
   assert(CONTENT_STATS.stageFatalities===STAGES.filter(stage=>stage.fatality).length,'Statistique fatalités d’arène incohérente');
   assert(CONTENT_STATS.stageAnimations===STAGES.reduce((sum,stage)=>sum+stage.animations.length,0),'Statistique animations incohérente');
+  assert(CONTENT_STATS.moves===ROSTER.length*MOVESET_KEYS.length,'Statistique moves incohérente');
+  assert(CONTENT_STATS.directCanonicalMoves+CONTENT_STATS.behaviorCompositeMoves+CONTENT_STATS.versusAdaptationMoves===CONTENT_STATS.moves,'Répartition de fidélité incohérente');
   const audit=coverageAudit();
   assert(audit.complete&&CONTENT_STATS.coverageComplete,'Audit de couverture incomplet');
 
@@ -127,7 +144,7 @@ async function runVerification() {
     'index.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
-    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json'
+    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','src/movesets.js'
   ];
   for(const path of required)assert(await exists(join(project,path)),`Fichier requis absent: ${path}`);
 
@@ -147,7 +164,7 @@ async function runVerification() {
       assert(await exists(target),`Référence absente ${relative(project,file)} → ${ref}`);
     }
   }
-  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,coverageComplete:coverageAudit().complete};
+  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:coverageAudit().complete};
 }
 
 await syncData();
@@ -160,7 +177,7 @@ const result=verify?await runVerification():{js:0,html:0,traits:0,afflictions:0,
 if(!verifyOnly){
   const files=await filesUnder(dist);const manifest=[];
   for(const file of files){const bytes=await readFile(file);manifest.push({path:relative(dist,file).replaceAll('\\','/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
-  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
+  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
   await writeJson(join(dist,'build-manifest.json'),report);
   console.log(`Build v${VERSION}: ${files.length+1} fichiers → ${dist}`);
 }

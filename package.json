@@ -1,8 +1,8 @@
 {
   "name": "silent-hill-halo-of-flesh",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
-  "description": "Prototype fan-made non commercial de jeu de combat 2D consacré aux manifestations de Silent Hill, avec roster audité, fatalités data-driven, arènes dédiées animées, Otherworld dynamique, rites, phases de boss, IA adaptative et Chroniques.",
+  "description": "Prototype fan-made non commercial de jeu de combat 2D consacré aux manifestations de Silent Hill, avec 230 profils, 3 680 mouvements lore-first, fatalités data-driven, 123 arènes animées, Otherworld dynamique, rites, phases de boss et IA adaptative.",
   "type": "module",
   "scripts": {
     "start": "node scripts/server.mjs",
@@ -10,7 +10,8 @@
     "verify": "node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only",
     "build": "node scripts/generate-docs.mjs && node scripts/build.mjs",
     "test": "node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
-    "qa": "npm test"
+    "qa": "npm test",
+    "qa:browser": "node scripts/browser-qa-v050.mjs"
   },
   "engines": {
     "node": ">=20"

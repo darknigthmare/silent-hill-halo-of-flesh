@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ROSTER, AFFLICTIONS, RITUAL_MODIFIERS, createBossPhases, createCombatProfile } from '../src/data.js';
+import { ROSTER, AFFLICTIONS, RITUAL_MODIFIERS, MOVESET_KEYS, MOVE_FIDELITY, createBossPhases, createCombatProfile } from '../src/data.js';
 import { chronicleGrade } from '../src/fight.js';
 
 const avg=(items,key)=>items.reduce((sum,item)=>sum+item[key],0)/items.length;
@@ -16,7 +16,7 @@ test('ranged archetypes produce projectile specials and supers',()=>{
   const ranged=new Set(['zoner','artillery','flyer','ghost','trickster']);
   for(const fighter of ROSTER.filter(f=>ranged.has(f.archetype))){
     const profile=createCombatProfile(fighter);
-    assert.equal(profile.moves.special.projectile,true,fighter.name);
+    assert.equal(profile.moves.neutralSpecial.projectile,true,fighter.name);
     assert.equal(profile.moves.super.projectile,true,fighter.name);
   }
 });
@@ -34,14 +34,14 @@ test('low-profile manifestations receive their intended body modifier',()=>{
   for(const fighter of ROSTER.filter(f=>f.trait==='lowProfile')){
     const profile=createCombatProfile(fighter);
     assert.ok(profile.lowProfile<1,fighter.name);
-    assert.ok(profile.moves.low.startup<=8,fighter.name);
+    assert.ok(profile.moves.crouchLight.startup<=8,fighter.name);
   }
 });
 
 test('static-field and suppression traits enlarge projectiles',()=>{
   for(const fighter of ROSTER.filter(f=>['staticField','suppression'].includes(f.trait))){
     const profile=createCombatProfile(fighter);
-    assert.ok(profile.moves.special.projectileScale>1,fighter.name);
+    assert.ok(profile.moves.neutralSpecial.projectileScale>1,fighter.name);
   }
 });
 
@@ -72,11 +72,21 @@ test('chronicle grade boundaries remain ordered',()=>{
   for(let i=1;i<scores.length;i++)assert.ok(rank[scores[i]]>=rank[scores[i-1]],scores.join(','));
 });
 
-test('all super moves preserve the manifestation signature',()=>{
+test('all manifestations expose sixteen documented moves with a complete fidelity split',()=>{
   for(const fighter of ROSTER){
     const profile=createCombatProfile(fighter);
-    assert.ok(profile.moves.super.name.includes(fighter.signature),fighter.id);
+    assert.equal(Object.keys(profile.moves).length,MOVESET_KEYS.length,fighter.id);
     assert.equal(profile.moves.super.meterCost,100,fighter.id);
+    assert.equal(profile.moves.desperation.meterCost,100,fighter.id);
+    assert.equal(profile.moveset.fidelitySummary.total,MOVESET_KEYS.length,fighter.id);
+    assert.equal(new Set(Object.values(profile.moves).map((move)=>move.name)).size,MOVESET_KEYS.length,`${fighter.id} distinct move names`);
+    assert.equal(profile.moveset.fidelitySummary.direct+profile.moveset.fidelitySummary.composite+profile.moveset.fidelitySummary.adapted,MOVESET_KEYS.length,fighter.id);
+    for(const key of MOVESET_KEYS){
+      const move=profile.moves[key];
+      assert.equal(move.key,key,`${fighter.id}/${key}`);
+      assert.ok(move.input&&move.name&&move.canonicalBasis,`${fighter.id}/${key}`);
+      assert.ok(MOVE_FIDELITY[move.fidelity],`${fighter.id}/${key}/${move.fidelity}`);
+    }
   }
 });
 

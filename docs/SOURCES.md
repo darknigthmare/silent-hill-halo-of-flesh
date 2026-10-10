@@ -1,78 +1,62 @@
-# Registre de sources et provenance — v0.4.0
+# Registre de sources et provenance — v0.5.0
 
 ## Principe
 
-Le projet organise un registre de fan-game à partir des manifestations et lieux publiquement documentés. Les descriptions sont reformulées et les visuels sont produits par paramètres internes. Aucun fichier média de référence n’est embarqué.
+Le projet construit un registre de fan-game à partir de manifestations et lieux publiquement documentés. Les descriptions sont reformulées, les comportements sont transposés et les visuels sont produits par code. Aucun fichier média officiel n’est embarqué.
 
-## Périmètre de catalogue
+## Périmètre
 
-- Silent Hill
-- Silent Hill 2, y compris les formes distinctes du remake
-- Silent Hill 3
-- Silent Hill 4: The Room
-- Silent Hill: Origins
-- Silent Hill: Homecoming
-- Silent Hill: Shattered Memories
-- Silent Hill: Downpour
-- Silent Hill: The Arcade
-- Silent Hill: Book of Memories
-- P.T.
-- Silent Hill: The Short Message
-- Silent Hill f
-- Silent Hill — Film Universe, y compris Return to Silent Hill
-- Silent Hill: Ascension
-- Silent Hill: Townfall
+Silent Hill ; Silent Hill 2 et ses formes distinctes ; Silent Hill 3 ; Silent Hill 4: The Room ; Origins ; Homecoming ; Shattered Memories ; Downpour ; The Arcade ; Book of Memories ; P.T. ; The Short Message ; Silent Hill f ; adaptations cinématographiques dont Return to Silent Hill ; Ascension ; Townfall.
 
 ## Hiérarchie de vérification
 
-1. Sources officielles publiques : pages de jeu, bandes-annonces, communiqués, crédits, manuels et descriptions éditeur.
-2. Documentation interne au média : noms affichés, sous-titres, menus, dossiers et séquences identifiables.
-3. Guides, ouvrages ou bases secondaires reconnues pour croiser variantes et translittérations.
-4. Wikis communautaires comme index de travail, jamais comme unique preuve lorsqu’une source primaire est accessible.
+1. Sources officielles publiques : pages de jeu, bandes-annonces, communiqués, manuels, crédits et descriptions éditeur.
+2. Jeu ou média : noms affichés, sous-titres, trophées, menus, dossiers, combats et séquences observables.
+3. Guides de sortie, ouvrages et bases secondaires reconnues pour croiser noms, variantes et attaques.
+4. Wikis communautaires comme index de travail, pas comme unique preuve lorsqu’une source primaire existe.
 
-## Statuts conservés dans les données
+## Métadonnées conservées
 
-- `catalogueStatus` : rôle de l’entrée dans le catalogue, par exemple canon rencontré, variante visible ou adaptation de set-piece.
-- `nameStatus` : nom officiel/établi, traduction courante, variante qualifiée ou nom descriptif.
-- `evidenceTier` : niveau de preuve retenu.
-- `canonicalBasis` : comportement, posture, attaque ou symbole ayant servi de base à la fatalité.
-- `fidelity` : indique si la séquence recompose un comportement documenté ou constitue une adaptation originale.
+- `catalogueStatus` : canon rencontré, variante, humain hostile, passif adapté ou set-piece.
+- `nameStatus` : officiel, établi, guide/trophée, variante qualifiée ou descriptif.
+- `evidenceTier` : niveau de preuve.
+- `canonicalBehavior` : comportement source reformulé.
+- `adaptation` : traduction en règles de versus.
+- `canonicalBasis` : base d’un mouvement ou d’une fatalité.
+- `fidelity` : direct, composite ou adaptation.
 
-## Politique de validation d’un profil
+## Validation d’un profil
 
-1. Confirmer source et identité.
-2. Confirmer le statut de créature, variante, humain hostile, boss ou apparition passive.
-3. Ne séparer une variante que lorsqu’elle possède une morphologie, une arme, un comportement, une phase ou une fonction visuellement distincte.
-4. Relever échelle, posture et signes distinctifs sans copier d’asset.
-5. Résumer le comportement source avec un texte original.
-6. Définir séparément l’adaptation de combat.
-7. Associer une arène cohérente et une fatalité documentée comme canonique ou originale.
-8. Attribuer trait, affliction et personnalité IA justifiables.
-9. Pour un boss, documenter les phases d’adaptation sans les présenter comme canoniques.
-10. Vérifier qu’aucun média officiel n’est inclus.
+1. Confirmer source, identité et statut.
+2. Séparer une variante seulement si morphologie, arme, comportement, phase ou fonction diffère réellement.
+3. Relever échelle, posture et signes distinctifs sans copier d’asset.
+4. Résumer les actions observables.
+5. Construire seize commandes et attribuer un niveau de fidélité à chacune.
+6. Réserver `direct-canonical` aux actions attestées.
+7. Documenter les composites et adaptations sans les présenter comme officiels.
+8. Associer arène, trait, affliction, IA, phases et fatalités cohérentes.
+9. Vérifier les références croisées et l’absence d’asset officiel.
 
-## Cas particuliers
+## Townfall après sortie
 
-### Apparitions passives et set-pieces
+*Silent Hill: Townfall* est traité comme un jeu sorti, et non plus uniquement comme une préversion. St. Amelia, le CRTV, les séquences de combat et d’évasion sont intégrés au dossier. L’éditeur ne publiant pas de bestiaire officiel complet dans les sources utilisées, les noms Lunger, Sorrowful, Fallen et The Weight sont balisés comme établis par guides de sortie ; Widow possède également un ancrage trophée/guide. Cette nomenclature n’est pas présentée comme une liste officielle Konami.
 
-Une créature non combattue dans son média peut être ajoutée lorsque sa présence, sa morphologie et sa fonction sont suffisamment documentées pour produire une adaptation jouable. Son statut l’indique explicitement.
+## Silent Hill f
 
-### Humains hostiles
+Les mouvements spécifiques ajoutés aux principaux adversaires sont dérivés des attaques observées et décrites : enchaînements de lames, frappes descendantes, cris, flailing attacks, charges, armes rituelles, contres et formes de boss. Les noms anglais affichés dans certaines fiches sont conservés lorsqu’ils servent à identifier une attaque publiée ou communément documentée ; l’animation du prototype reste originale.
 
-Un humain affronté comme boss ou adversaire peut être intégré lorsque le combat constitue une rencontre jouable significative. Le dossier ne le présente pas comme une « créature ».
+## Apparitions passives et humains hostiles
 
-### Townfall
+Une apparition passive ou un humain peut être jouable lorsque sa présence, sa morphologie et son rôle sont suffisamment documentés. Son dossier conserve le statut d’adaptation. L’absence de mouvement directement attesté n’est jamais masquée par un faux label canonique.
 
-Le pack est volontairement prudent : lorsque l’éditeur ne fournit pas encore de bestiaire nommé, l’entrée utilise un nom descriptif balisé. Ces appellations ne sont pas annoncées comme des noms officiels.
+## Films
 
-### Films
+Les variantes cinématographiques sont séparées lorsque silhouette, comportement ou mise en scène diffère. Chaque entrée conserve son média exact.
 
-Les variantes cinématographiques sont séparées des variantes de jeux lorsque leur silhouette, leur mise en scène ou leur comportement diffèrent. Les adaptations récentes restent balisées par leur média exact.
+## Systèmes originaux
 
-## Fatalités, IA et phases
+Rites, statistiques, IA, frame data, routes d’annulation, phases de boss, fatalités et équilibre sont des systèmes de fan-game. Ils s’appuient sur les comportements et symboles de la source mais ne sont pas revendiqués comme mécaniques canoniques.
 
-Les rites, profils IA, statistiques, phases de boss et fatalités sont des systèmes de gameplay originaux. Ils s’inspirent de l’atmosphère, de la fonction narrative, des armes et du comportement général d’une manifestation, mais ne sont pas présentés comme des mécaniques ou scènes canoniques lorsque ce n’est pas le cas.
+## Visuels et audio
 
-## Visuels et animations
-
-Les portraits, combattants, stages, fatalités et animations sont rendus avec des formes, palettes, motifs et effets programmatiques. Les captures de QA montrent le prototype en fonctionnement ; elles ne contiennent aucun sprite, modèle, son ou décor extrait.
+Portraits, combattants, stages, effets, menus et audio sont procéduraux ou originaux. Les captures QA ne contiennent aucun sprite, modèle, son, texture ou décor extrait.

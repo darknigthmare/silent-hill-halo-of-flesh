@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.5.0 — 11 octobre 2026
+
+### Movesets lore-first
+
+- Remplacement des six attaques génériques par **seize actions par manifestation**.
+- Catalogue porté à **3 680 mouvements** : 425 directement attestés, 2 796 composites lore-friendly et 459 adaptations versus.
+- Ajout de `src/movesets.js` et de l’export `data/movesets.json`.
+- Frame data, dégâts, portée, niveau, annulations, déplacements, armor, invulnérabilité, projectiles, pièges, auras, téléportations, lancement et knockdown documentés.
+- Ajout du Nightmare et d’un mouvement de désespoir conditionnel à faible vitalité.
+
+### Moteur et IA
+
+- Résolution des variantes neutres, avant, basses et aériennes.
+- Ajout des projectiles multiples, trajectoires, gravité, homing, pièges persistants, auras et postures de contre.
+- IA mise à jour pour sélectionner les slots réels du moveset selon la distance et les propriétés du combattant.
+- Observation enrichie avec input, mouvement actif et niveau de fidélité.
+
+### Archives et interface
+
+- Nouvel onglet **Movesets 1:1** couvrant les 230 profils.
+- Dossiers Versus et Bestiaire enrichis avec les seize actions.
+- Command Center remanié comme registre CRTV/radio avec fréquence, niveau de signal, codes de dossier et fiche de preuve.
+- Palette et hiérarchie visuelle recentrées sur la brume, la rouille, l’ivoire sale et le rouge de signal.
+
+### Documentation et QA
+
+- Nouveau document exhaustif `docs/MOVESETS.md`.
+- Mise à jour du GDD, des contrôles, de la provenance, de la parité CQC et du rapport QA.
+- Suite portée à **49 tests automatisés**, tous réussis.
+- Tests dédiés aux commandes directionnelles, au désespoir, aux projectiles, aux pièges et aux postures de contre.
+- Service worker migré vers `halo-of-flesh-v0.5.0`.
+
 ## 0.4.0 — 10 octobre 2026
 
 ### Couverture et fidélité

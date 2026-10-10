@@ -2,15 +2,15 @@
 
 [![QA](https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/workflows/qa.yml/badge.svg)](https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/workflows/qa.yml)
 
-Prototype jouable fan-made et non commercial de **monster battle 2D**, construit sur l’organisation fonctionnelle de **CQC Versus Legacy v0.56**, puis entièrement réécrit autour des manifestations, boss et lieux de Silent Hill.
+Prototype fan-made non commercial de **monster battle 2D**, construit sur l’organisation fonctionnelle de **CQC Versus Legacy v0.56**, puis réécrit autour des manifestations, boss, lieux et symboles de Silent Hill.
 
 - **Jouer :** https://silent-hill-halo-of-flesh.vercel.app
 - **Dépôt :** https://github.com/darknigthmare/silent-hill-halo-of-flesh
-- **Version :** `0.4.0 — Complete Manifestation & Fatality Pass`
+- **Version :** `0.5.0 — Lore-First Complete Movesets & Signal Interface`
 
-> **Contrat de fidélité** — Le catalogue vise la plus grande fidélité documentaire possible pour les noms, variantes, proportions relatives, signes distinctifs, comportements, fonctions symboliques et lieux associés. Chaque entrée distingue nom officiel ou établi, variante visible et nom descriptif. Les silhouettes, animations, effets, sons, statistiques, fatalités et compositions sont des créations procédurales ou des adaptations originales : aucun sprite, modèle, son, texture ou fichier officiel n’est redistribué.
+> **Contrat de fidélité** — Le catalogue vise la fidélité documentaire la plus forte possible pour les identités, variantes, proportions relatives, postures, armes, attaques, comportements, fonctions symboliques et lieux. Chaque mouvement distingue ce qui est directement attesté, recomposé de façon lore-friendly ou ajouté pour le versus. Les silhouettes, animations, effets, sons, frame data, statistiques et fatalités sont des créations originales ou procédurales : aucun asset officiel n’est redistribué.
 
-## Contenu de la v0.4.0
+## Contenu
 
 | Contenu | Total |
 |---|---:|
@@ -19,6 +19,10 @@ Prototype jouable fan-made et non commercial de **monster battle 2D**, construit
 | Sources média auditées | **16** |
 | Arènes | **123** |
 | Chroniques | **15** |
+| Mouvements | **3 680** |
+| Actions directement attestées | **425** |
+| Composites lore-friendly | **2 796** |
+| Adaptations versus | **459** |
 | Fatalités de combattant | **460** |
 | Fatalités d’arène | **123** |
 | Animations d’arène | **374** |
@@ -26,104 +30,78 @@ Prototype jouable fan-made et non commercial de **monster battle 2D**, construit
 | Traits / afflictions / dangers | **12 / 8 / 7** |
 | Rites / personnalités IA | **9 / 12** |
 
-La couverture réunit les épisodes principaux et dérivés, *P.T.*, *The Short Message*, *Silent Hill f*, les adaptations cinématographiques, *Silent Hill: Ascension* et un pack *Silent Hill: Townfall* dont les noms descriptifs sont explicitement balisés lorsque la nomenclature officielle reste absente ou incomplète.
+Le périmètre réunit les épisodes principaux et dérivés, *P.T.*, *The Short Message*, *Silent Hill f*, les adaptations cinématographiques, *Silent Hill: Ascension* et *Silent Hill: Townfall*.
 
-## Nouveautés majeures
+## v0.5.0 — Movesets complets
 
-### Audit complet du roster
+Les six attaques génériques de la première architecture ont été remplacées par **seize commandes par manifestation** :
 
-Le catalogue a été repris source par source. Les manifestations passives, formes uniques, humains hostiles, boss narratifs et variantes réellement distinctes ont été évalués selon des règles explicites. La v0.4.0 ajoute notamment les fantômes nommés de *Silent Hill 4*, plusieurs formes absentes de *Silent Hill 2* et *Silent Hill 3*, des adversaires de *Homecoming*, *The Arcade*, les adaptations cinématographiques récentes et *Townfall*.
+- léger neutre, avant, bas et aérien ;
+- lourd neutre, avant, bas et aérien ;
+- saisie ;
+- technique neutre, avant, arrière, basse et aérienne ;
+- Nightmare ;
+- mouvement de désespoir à faible vitalité.
 
-L’audit ne prétend pas que chaque adaptation jouable est canonique : `catalogueStatus`, `nameStatus` et `evidenceTier` conservent cette distinction dans les données, les dossiers et les exports.
+Chaque action contient input, démarrage, activité, récupération, dégâts, portée, niveau de garde, annulations et propriétés : projectile, trajectoire, gravité, multi-coups, armor, invulnérabilité, téléportation, piège, aura, contre, lancement, knockdown et affliction.
 
-### Fatalités jouables
+### Fidélité mouvement par mouvement
 
-Chaque manifestation possède deux séquences :
+- **Directement attesté** : action, arme ou comportement observable dans la source.
+- **Composite lore-friendly** : combinaison jouable de plusieurs comportements attestés.
+- **Adaptation versus** : action nécessaire au format de combat, signalée sans prétention canonique.
 
-- une **fatalité Signature**, dérivée de sa posture, de ses armes, de son attaque ou de son rôle documenté ;
-- une **fatalité Nightmare**, plus spectaculaire, balisée comme adaptation originale lorsqu’elle n’existe pas dans l’œuvre source.
+Les apparitions passives et set-pieces adaptés conservent leurs réserves. Le pack *Townfall* emploie des noms établis par guides/trophées lorsque l’éditeur ne publie pas de bestiaire officiel complet.
 
-Chaque arène possède également une fatalité environnementale. Le moteur choisit entre exécution Signature et exécution de stage selon le coup décisif, la position, le danger actif et le type d’attaque finale. Les séquences disposent de leur propre phase de combat, caméra, poses, effets, statistiques et écran de résultat.
+## Interface Silent Hill
 
-### 123 arènes dédiées et animées
+Le Command Center est désormais présenté comme un registre de terrain relié à un récepteur radio/CRTV :
 
-Les épisodes disposent désormais de lieux dédiés plutôt que de quelques décors génériques. Les stages prennent en charge :
+- fréquence et force du signal ;
+- code de dossier ;
+- carte de preuve et statut du front ;
+- hiérarchie asymétrique ;
+- brume, parasites, grain, scanlines et marques de rouille ;
+- palette vert de moniteur, ivoire sale et rouge de signal.
 
-- Fog World, transition et Otherworld ;
-- sirènes, néons, lampes, moniteurs, radios et téléviseurs ;
-- chaînes, ventilateurs, ascenseurs, casiers, portes et machineries ;
-- pluie, neige, cendres, pétales, vapeur, vagues et eau ;
-- ombres, passages de trains, véhicules, carrousels et silhouettes ;
-- fatalité propre au lieu et danger télégraphié.
+L’interface reste originale et ne reproduit aucun menu officiel.
 
-L’option **Animations d’arène** permet de couper cette couche sans désactiver le stage.
+## Combat
 
-### Traçabilité et compatibilité
-
-- Audit de couverture exporté dans `data/coverage-audit.json`.
-- Fatalités et animations exportées dans `data/fatalities.json`.
-- Anciens identifiants v0.3 conservés comme alias, y compris les profils renommés.
-- Documents générés automatiquement pour éviter les écarts entre code, roster, stages et statistiques.
-
-## Systèmes de combat
-
-- Otherworld dynamique avec sirène et transformation progressive.
-- Radio de proximité et brouillage contextuel.
-- Dangers d’arène télégraphiés.
-- Garde parfaite, contres, bris de garde et routes d’annulation.
-- Traits, afflictions, projectiles, saisies et Supers par profil.
-- Deux phases progressives par boss.
-- IA adaptative avec douze personnalités.
-- Rites modifiant santé, garde, jauge, vitesse, dangers et Otherworld.
+- Moteur fixe à 60 Hz.
+- Résolution directionnelle des seize commandes.
+- Garde, garde parfaite, contres et bris de garde.
+- Annulations et chaînes data-driven.
+- Projectiles multiples, pièges, auras et téléportations.
+- Armure, invulnérabilité et postures de contre.
+- Jauge Nightmare et désespoir conditionnel.
+- Otherworld dynamique, radio et dangers télégraphiés.
+- Deux phases pour chacun des 75 boss.
+- IA adaptative utilisant distance, propriété des coups et habitudes du joueur.
+- Fatalités Signature, Nightmare et environnementales.
 - Endurance persistante dans Rites du Jugement et Grands Tourments.
 - Rangs S à D pour les Chroniques.
-- Favoris, dossiers, fatalités, records et exports JSON.
-- Clavier 2P, deux gamepads et commandes tactiles P1.
-- Sauvegarde locale, PWA, build statique et fonctionnement hors ligne.
 
 ## Modes
 
-- **Versus** — 1P contre CPU ou 2P local, fatalités, rite et règles configurables.
-- **Arcade** — parcours aléatoire de sept combats.
+- **Confrontation / Versus** — 1P contre CPU ou 2P local.
+- **Descente / Arcade** — parcours de sept combats.
 - **Rites du Jugement** — huit combats modifiés à endurance persistante.
-- **Grands Tourments** — circuit de six boss à endurance.
-- **Observation** — laboratoire de combat, hitboxes, fatalités, IA, Otherworld et phases.
-- **Chroniques de la Brume** — quinze routes avec progression, score et rang persistant.
-- **Archives** — bestiaire, arènes, couverture, fatalités, rites, IA, phases et records.
-- **Roster Command / Finisher Archive / Combat Academy** — routes de compatibilité avec l’organisation de CQC.
+- **Grands Tourments** — six boss successifs.
+- **Salle d’Observation** — hitboxes, jauge libre, reset, inputs, frame data, fidélité, Otherworld et phases.
+- **Chroniques de la Brume** — quinze routes avec progression et rang persistant.
+- **Archives** — bestiaire, 3 680 mouvements, arènes, fatalités, couverture, rites, IA, phases et records.
 
-## Lancer localement
-
-Prérequis : **Node.js 20 ou supérieur**.
-
-```bash
-npm start
-```
-
-Ouvrir `http://127.0.0.1:4173`. Les fichiers `run-windows.bat` et `run-linux-macos.sh` lancent aussi le serveur local.
-
-### QA et build
-
-```bash
-npm test
-npm run build
-npm run verify
-```
-
-- `npm test` régénère les documents, exécute la suite Node et vérifie le build.
-- `npm run build` produit la version statique dans `dist/`.
-- `npm run verify` contrôle catalogue, fatalités, arènes, liens, syntaxe et couverture sans reconstruire `dist/`.
-
-## Commandes de combat
+## Commandes
 
 ### Joueur 1
 
 | Action | Clavier |
 |---|---|
-| Mouvement | Flèches gauche/droite |
-| Saut / accroupi | Flèche haut / bas |
-| Garde / garde parfaite | Espace |
-| Frappe / lourd / technique | J / K / I |
+| Mouvement | ← / → |
+| Saut / accroupi | ↑ / ↓ |
+| Garde | Espace |
+| Léger / lourd / technique | J / K / I |
 | Saisie / Nightmare | U / O |
 | Esquive | L |
 
@@ -133,78 +111,100 @@ npm run verify
 |---|---|
 | Mouvement | Q / D |
 | Saut / accroupi | Z / S |
-| Garde / garde parfaite | A |
-| Frappe / lourd / technique | F / G / H |
+| Garde | A |
+| Léger / lourd / technique | F / G / H |
 | Saisie / Nightmare | R / T |
 | Esquive | V |
 
-Guide complet : [`docs/CONTROLS.md`](docs/CONTROLS.md).
+La direction et l’état aérien sélectionnent les variantes du moveset. Guide complet : [`docs/CONTROLS.md`](docs/CONTROLS.md).
+
+## Lancer localement
+
+Prérequis : **Node.js 20 ou supérieur**.
+
+```bash
+npm start
+```
+
+Ouvrir `http://127.0.0.1:4173`.
+
+### QA et build
+
+```bash
+npm test
+npm run build
+npm run verify
+```
+
+- `npm test` régénère les documents, vérifie les données, exécute la suite Node et construit `dist/`.
+- `npm run build` produit la version statique.
+- `npm run verify` contrôle catalogue, movesets, fatalités, arènes, PWA, liens et syntaxe.
 
 ## Architecture
 
 ```text
 .
-├── index.html                    # Command Center
+├── index.html                    # Command Center radio / CRTV
 ├── modules/
-│   ├── unified-versus.html       # Sélection, règles, fatalités et combat
-│   ├── chronicles.html           # Routes narratives et rangs
-│   ├── archive.html              # Bestiaire, stages, couverture et fatalités
-│   ├── roster-command.html       # Route compatible CQC
-│   ├── finisher-archive.html     # Route compatible CQC
-│   └── combat-academy.html       # Route compatible CQC
+│   ├── unified-versus.html       # sélection, règles, dossiers et combat
+│   ├── chronicles.html           # routes narratives
+│   ├── archive.html              # bestiaire, movesets et traçabilité
+│   ├── roster-command.html       # route compatible CQC
+│   ├── finisher-archive.html     # route compatible CQC
+│   └── combat-academy.html       # route compatible CQC
 ├── src/
-│   ├── data.js                   # Roster, stages, fatalités, rites, IA et phases
-│   ├── fight.js                  # Moteur fixe à 60 Hz et phase Fatality
-│   ├── renderers.js              # Rendu procédural, animations et Otherworld
-│   ├── command.js                # Front de commande
-│   ├── versus.js                 # Modes, sélection, runs et résultats
-│   ├── chronicles.js             # Progression et rangs
-│   ├── archive.js                # Dossiers, couverture et exports
-│   └── shared.js                 # Audio, sauvegarde et utilitaires
-├── data/                         # Exports JSON intégrables
-├── docs/                         # GDD, roster, audit, stages, QA et fidélité
-├── tests/                        # Données, gameplay, rendu et moteur headless
-└── scripts/                      # Serveur, documentation et build reproductibles
+│   ├── data.js                   # catalogue et profils
+│   ├── movesets.js               # 16 actions et fidélité par profil
+│   ├── fight.js                  # moteur, IA, coups, phases et fatalités
+│   ├── renderers.js              # rendu procédural et Otherworld
+│   ├── command.js                # menu principal
+│   ├── versus.js                 # modes et sélection
+│   ├── chronicles.js             # progression
+│   ├── archive.js                # dossiers et exports
+│   └── shared.js                 # audio, sauvegarde et utilitaires
+├── data/                         # exports JSON
+├── docs/                         # GDD, roster, movesets, audit et QA
+├── tests/                        # 49 validations automatisées
+└── scripts/                      # génération, serveur et build
 ```
 
 ## Exports
 
-Les fichiers de `data/` sont régénérés depuis `src/data.js` :
+- `data/roster.json`
+- `data/stages.json`
+- `data/chronicles.json`
+- `data/sources.json`
+- `data/content-stats.json`
+- `data/combat-rules.json`
+- `data/coverage-audit.json`
+- `data/fatalities.json`
+- `data/movesets.json`
 
-- `roster.json`
-- `stages.json`
-- `chronicles.json`
-- `sources.json`
-- `content-stats.json`
-- `combat-rules.json`
-- `coverage-audit.json`
-- `fatalities.json`
+Documents principaux :
 
-Documents générés :
-
+- [`docs/MOVESETS.md`](docs/MOVESETS.md)
 - [`docs/ROSTER.md`](docs/ROSTER.md)
 - [`docs/FIDELITY_MATRIX.md`](docs/FIDELITY_MATRIX.md)
 - [`docs/COVERAGE_AUDIT.md`](docs/COVERAGE_AUDIT.md)
 - [`docs/FATALITIES_AND_STAGES.md`](docs/FATALITIES_AND_STAGES.md)
 - [`docs/COMBAT_SYSTEMS.md`](docs/COMBAT_SYSTEMS.md)
+- [`docs/QA_REPORT.md`](docs/QA_REPORT.md)
 
 ## Qualité
 
-La validation automatisée contrôle notamment :
+La suite v0.5.0 vérifie notamment :
 
-- l’unicité et la résolution des **230 profils**, **123 arènes**, **15 Chroniques** et **16 sources** ;
-- les **460 fatalités**, **123 fatalités d’arène** et **374 animations** ;
-- les alias de sauvegarde v0.3 ;
-- le déclenchement d’une fatalité Signature, d’une fatalité d’arène et du KO classique lorsque le système est désactivé ;
-- les profils de combat, effets, projectiles, saisies, phases, rites et rangs ;
-- le rendu de chaque manifestation et chaque arène, animations activées ou coupées ;
-- les exports, documents, pages, PWA, service worker et build Vercel.
-
-Rapports : [`docs/QA_REPORT.md`](docs/QA_REPORT.md) et [`docs/BROWSER_QA_v0.4.0.md`](docs/BROWSER_QA_v0.4.0.md).
+- 230 profils, 123 arènes, 15 Chroniques et 16 sources ;
+- 3 680 mouvements et leurs références ;
+- variantes directionnelles, désespoir, projectiles, pièges et contres ;
+- 460 fatalités, 123 fatalités d’arène et 374 animations ;
+- 150 transitions de boss ;
+- rendu de chaque manifestation et chaque arène ;
+- exports, documents, pages, PWA, cache et build Vercel.
 
 ## Statut artistique
 
-Le projet constitue une base jouable et documentée. Une fidélité visuelle image par image exigerait une production artistique originale dédiée : recherches autorisées, silhouettes multi-vues, sprites, animations, validation des proportions et de la provenance. Cette release améliore fortement le catalogue et la mise en scène tout en restant une interprétation procédurale, pas une redistribution d’assets officiels.
+Le prototype est jouable et documenté. Une fidélité visuelle image par image exigerait une production artistique originale dédiée : références autorisées, silhouettes multi-vues, sprites, animations correspondant aux seize actions, validation des proportions et contrôle de provenance.
 
 ## Licence et propriété intellectuelle
 

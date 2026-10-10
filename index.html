@@ -20,20 +20,23 @@
     <header class="command-top">
       <div class="brand">
         <small>OTHERWORLD FIGHTING ARCHIVE</small>
-        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.4.0</span></strong>
+        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.5.0</span></strong>
       </div>
-      <div class="profile"><span>LOCAL PROFILE</span><span id="frontName">FOG ARCHIVE</span></div>
+      <div class="signal-cluster">
+        <div class="radio-readout" aria-label="Récepteur radio"><span>RECEIVER</span><strong id="signalFrequency">106.7</strong><i id="signalState">STATIC</i><div class="radio-bars" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
+        <div class="profile"><span>LOCAL PROFILE</span><span id="frontName">FOG ARCHIVE</span></div>
+      </div>
     </header>
     <div class="command-body">
-      <nav class="command-menu" aria-label="Menu principal">
+      <nav class="command-menu" aria-label="Menu principal"><div class="menu-caption"><span>SELECT / SIGNAL</span><b id="caseStamp">CASE 00 — FOG</b></div>
         <button class="command-item active" data-mode="continue">REPRENDRE<small>DERNIER CAUCHEMAR</small></button>
-        <button class="command-item" data-mode="chronicles">CHRONIQUES<small>ROUTES DE LA BRUME</small></button>
-        <button class="command-item" data-mode="versus">VERSUS<small>DUELS ET COMBATS LOCAUX</small></button>
-        <button class="command-item" data-mode="arcade">ARCADE<small>PARCOURS ALÉATOIRE</small></button>
+        <button class="command-item" data-mode="chronicles">CHRONIQUES DE LA BRUME<small>ROUTES, DOSSIERS, CONSÉQUENCES</small></button>
+        <button class="command-item" data-mode="versus">CONFRONTATION<small>DUELS ET COMBATS LOCAUX</small></button>
+        <button class="command-item" data-mode="arcade">DESCENTE<small>PARCOURS ALÉATOIRE DANS L’OTHERWORLD</small></button>
         <button class="command-item" data-mode="ritual">RITES DU JUGEMENT<small>GAUNTLET À ENDURANCE</small></button>
         <button class="command-item" data-mode="boss">GRANDS TOURMENTS<small>BOSS RUSH DE L’OTHERWORLD</small></button>
-        <button class="command-item" data-mode="training">OBSERVATION<small>LABORATOIRE DE COMBAT</small></button>
-        <button class="command-item" data-mode="archive">ARCHIVES<small>BESTIAIRE ET FIDÉLITÉ</small></button>
+        <button class="command-item" data-mode="training">SALLE D’OBSERVATION<small>HITBOXES, MOVESETS, EXPÉRIMENTATION</small></button>
+        <button class="command-item" data-mode="archive">ARCHIVES<small>BESTIAIRE, MOVESETS ET PREUVES</small></button>
         <button class="command-item" data-mode="options">OPTIONS<small>AFFICHAGE, AUDIO, COMMANDES</small></button>
       </nav>
       <section class="command-hero" aria-live="polite">
@@ -42,12 +45,18 @@
           <div id="heroKicker" class="hero-kicker">QUICK RESUME</div>
           <h1 id="heroTitle">RETOUR<br><span>DANS LA BRUME.</span></h1>
           <p id="heroText">Le dernier front reprend avec le même combattant, la même arène et la même règle.</p>
-          <div id="heroChoices" class="hero-choices"></div>
+          <div id="heroChoices" class="hero-choices"></div><div id="heroData" class="hero-data"></div>
         </div>
+      <aside class="hero-evidence" aria-hidden="true">
+          <span>FOG-BORN RECORD</span>
+          <b id="evidenceCode">SHHF/00</b>
+          <p>DO NOT TRUST<br>THE FIRST SIGNAL.</p>
+          <div class="evidence-lines"><i></i><i></i><i></i></div>
+        </aside>
       </section>
     </div>
     <footer class="command-bottom">
-      <span id="contentCount">CHARGEMENT DU CATALOGUE…</span>
+      <span id="contentCount">CHARGEMENT DU CATALOGUE…</span><span class="legal-signal">NON-COMMERCIAL FOG ARCHIVE · NO OFFICIAL ASSETS</span>
       <div class="command-controls"><span data-key="↑↓">MODE</span><span data-key="←→">VARIANTE</span><span data-key="ENTRÉE">VALIDER</span><span data-key="F">PLEIN ÉCRAN</span></div>
     </footer>
   </main>

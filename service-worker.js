@@ -1,12 +1,12 @@
-const CACHE='halo-of-flesh-v0.4.0';
+const CACHE='halo-of-flesh-v0.5.0';
 const SHELL=[
   '/','/index.html','/styles.css','/manifest.webmanifest',
   '/assets/icons/icon-192.svg','/assets/icons/icon-512.svg',
   '/modules/unified-versus.html','/modules/chronicles.html','/modules/archive.html',
   '/modules/roster-command.html','/modules/finisher-archive.html','/modules/combat-academy.html',
   '/modules/versus.css','/modules/chronicles.css','/modules/archive.css',
-  '/src/data.js','/src/shared.js','/src/renderers.js','/src/fight.js','/src/command.js','/src/versus.js','/src/chronicles.js','/src/archive.js',
-  '/data/content-stats.json','/data/sources.json','/data/roster.json','/data/stages.json','/data/chronicles.json','/data/combat-rules.json','/data/coverage-audit.json','/data/fatalities.json'
+  '/src/data.js','/src/movesets.js','/src/shared.js','/src/renderers.js','/src/fight.js','/src/command.js','/src/versus.js','/src/chronicles.js','/src/archive.js',
+  '/data/content-stats.json','/data/sources.json','/data/roster.json','/data/stages.json','/data/chronicles.json','/data/combat-rules.json','/data/coverage-audit.json','/data/fatalities.json','/data/movesets.json'
 ];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

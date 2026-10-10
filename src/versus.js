@@ -1,6 +1,6 @@
 import {
   ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
-  AFFLICTIONS, RITUAL_MODIFIERS, getRitualModifier, getFighter, getStage, createCombatProfile
+  AFFLICTIONS, RITUAL_MODIFIERS, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
@@ -234,9 +234,9 @@ function closeStageGallery() { els.stageGallery.classList.add('hidden'); }
 function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
   renderPortrait(els.dossierPortrait, fighter, { time: performance.now() });
   const profile = createCombatProfile(fighter);
-  const moves = Object.values(profile.moves).map((move) => {
-    const effects = [move.projectile ? 'projectile' : '', move.effect ? AFFLICTIONS[move.effect.id]?.name || move.effect.id : '', move.cancelInto?.length ? `annule vers ${move.cancelInto.join('/')}` : ''].filter(Boolean);
-    return `<li><b>${escapeHTML(move.name)}</b><span>${move.damage} dégâts · ${move.startup}f${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span></li>`;
+  const moves = MOVESET_KEYS.map((key) => profile.moves[key]).map((move) => {
+    const effects = [move.projectile ? `${move.projectileCount || 1} projectile(s)` : '', move.trap ? 'piège' : '', move.teleport ? `téléportation ${move.teleport}` : '', move.counterStance ? 'contre' : '', move.effect ? AFFLICTIONS[move.effect.id]?.name || move.effect.id : '', move.cancelInto?.length ? `annule vers ${move.cancelInto.map((key) => profile.moves[key]?.input || key).join('/')}` : ''].filter(Boolean);
+    return `<li data-fidelity="${escapeHTML(move.fidelity)}"><div><kbd>${escapeHTML(move.input)}</kbd><b>${escapeHTML(move.name)}</b></div><span>${move.damage} dégâts · ${move.startup}/${move.active}/${move.recovery}f · ${escapeHTML(move.level.toUpperCase())}${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span><small>${escapeHTML(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} · ${escapeHTML(move.canonicalBasis)}</small></li>`;
   }).join('');
   const arena = getStage(fighter.stageId);
   const hazard = STAGE_HAZARDS[arena.hazard];
@@ -260,7 +260,7 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
       ${phases}
     </div>
     <div class="adaptation-note"><b>NOTE DE FIDÉLITÉ</b><br>${escapeHTML(fighter.adaptation)} Les proportions, signes distinctifs, posture et rôle sont documentés séparément des règles d’équilibrage.<br><br><strong>STATUT :</strong> ${escapeHTML(fighter.catalogueStatus)} · ${escapeHTML(fighter.nameStatus)} · ${escapeHTML(fighter.evidenceTier)}</div>
-    <h4>MOVESET ADAPTÉ</h4><ul class="move-list">${moves}</ul>`;
+    <h4>MOVESET COMPLET · ${profile.moveset.fidelitySummary.total} COUPS</h4><div class="dossier-move-summary"><span>${profile.moveset.fidelitySummary.direct} DIRECTS</span><span>${profile.moveset.fidelitySummary.composite} COMPOSITES</span><span>${profile.moveset.fidelitySummary.adapted} ADAPTATIONS</span></div><ul class="move-list">${moves}</ul>`;
   els.dossier.classList.remove('hidden');
 }
 function closeDossier() { els.dossier.classList.add('hidden'); }
@@ -389,7 +389,7 @@ function startFight({ preserveRun = false } = {}) {
 
 function installQaBridge() {
   window.__HALO_QA__ = {
-    version: '0.4.0',
+    version: '0.5.0',
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,

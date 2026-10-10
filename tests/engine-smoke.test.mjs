@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { ROSTER, STAGES } from '../src/data.js';
-import { FightEngine } from '../src/fight.js';
+import { FightEngine, resolveMoveKey } from '../src/fight.js';
 
 function installBrowserStubs(){
   globalThis.window=globalThis.window||{};
@@ -122,7 +122,7 @@ test('signature fatality can be forced away from the stage trigger zone',()=>{
   engine.phase='fight';
   const attacker=engine.actors[0],target=engine.actors[1];
   target.x=640;attacker.x=500;target.health=5;
-  engine.applyHit(attacker,target,attacker.profile.moves.light,1);
+  engine.applyHit(attacker,target,attacker.profile.moves.neutralLight,1);
   engine.resolveKnockouts();
   assert.equal(engine.phase,'fatality');
   assert.equal(engine.fatality.stageBased,false);
@@ -139,10 +139,76 @@ test('fatality systems can be disabled for classic knockout behavior',()=>{
   engine.phase='fight';
   const attacker=engine.actors[0],target=engine.actors[1];
   target.health=1;
-  engine.applyHit(attacker,target,attacker.profile.moves.light,1);
+  engine.applyHit(attacker,target,attacker.profile.moves.neutralLight,1);
   engine.resolveKnockouts();
   assert.equal(engine.phase,'roundEnd');
   assert.equal(engine.lastFatality,null);
   assert.equal(target.ko,true);
+  engine.destroy();
+});
+
+
+test('directional inputs resolve all sixteen moves without collapsing to generic attacks',()=>{
+  const engine=makeEngine();
+  const actor=engine.actors[0];
+  actor.facing=1;
+  actor.grounded=true;
+  assert.equal(resolveMoveKey(actor,{right:true},'light'),'forwardLight');
+  assert.equal(resolveMoveKey(actor,{down:true},'light'),'crouchLight');
+  assert.equal(resolveMoveKey(actor,{left:true},'special'),'backSpecial');
+  assert.equal(resolveMoveKey(actor,{right:true},'special'),'forwardSpecial');
+  assert.equal(resolveMoveKey(actor,{down:true},'special'),'downSpecial');
+  actor.grounded=false;
+  assert.equal(resolveMoveKey(actor,{},'light'),'airLight');
+  assert.equal(resolveMoveKey(actor,{},'heavy'),'airHeavy');
+  assert.equal(resolveMoveKey(actor,{},'special'),'airSpecial');
+  engine.destroy();
+});
+
+test('nightmare input becomes the desperation move only below its documented health threshold',()=>{
+  const engine=makeEngine();
+  const actor=engine.actors[0];
+  actor.health=actor.maxHealth;
+  assert.equal(resolveMoveKey(actor,{},'super'),'super');
+  actor.health=actor.maxHealth*.29;
+  assert.equal(resolveMoveKey(actor,{},'super'),'desperation');
+  actor.meter=100;
+  assert.equal(engine.beginAttack(actor,'desperation'),true);
+  const state=engine.snapshot();
+  assert.equal(state.p1.currentMove.key,'desperation');
+  assert.equal(state.p1.currentMove.fidelity,actor.profile.moves.desperation.fidelity);
+  engine.destroy();
+});
+
+test('lore mechanics spawn projectiles and traps from their dedicated move slots',()=>{
+  const airScreamer=ROSTER.find(f=>f.id==='sh1_air_screamer_001');
+  const engine=makeEngine({p1:airScreamer});
+  engine.phase='fight';
+  const actor=engine.actors[0];
+  assert.equal(engine.beginAttack(actor,'neutralSpecial'),true);
+  for(let i=0;i<actor.profile.moves.neutralSpecial.startup+2;i++)engine.update();
+  assert.ok(engine.projectiles.some(projectile=>projectile.owner===actor&&!projectile.trap));
+  engine.destroy();
+
+  const lisa=ROSTER.find(f=>f.id==='pt_lisa_149');
+  const trapEngine=makeEngine({p1:lisa});
+  trapEngine.phase='fight';
+  const trapActor=trapEngine.actors[0];
+  assert.equal(trapEngine.beginAttack(trapActor,'downSpecial'),true);
+  for(let i=0;i<trapActor.profile.moves.downSpecial.startup+2;i++)trapEngine.update();
+  assert.ok(trapEngine.projectiles.some(projectile=>projectile.owner===trapActor&&projectile.trap));
+  trapEngine.destroy();
+});
+
+test('counter stances become active during their attested defensive technique',()=>{
+  const ayakakashi=ROSTER.find(f=>f.id==='shf_ayakakashi_152');
+  const engine=makeEngine({p1:ayakakashi});
+  engine.phase='fight';
+  const actor=engine.actors[0];
+  assert.equal(actor.profile.moves.backSpecial.counterStance,true);
+  assert.equal(engine.beginAttack(actor,'backSpecial'),true);
+  for(let i=0;i<actor.profile.moves.backSpecial.startup+2;i++)engine.update();
+  assert.ok(actor.counterStance>0);
+  assert.equal(engine.snapshot().p1.lastMoveKey,'backSpecial');
   engine.destroy();
 });

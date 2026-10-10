@@ -1,6 +1,14 @@
-# Systèmes de combat — v0.4.0
+# Systèmes de combat — v0.5.0
 
-La v0.4.0 réunit **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
+La v0.5.0 réunit **3680 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
+
+## Architecture des movesets
+
+Chaque manifestation possède **16 commandes** : huit attaques normales contextuelles, une saisie, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.
+
+Répartition : **425 directement attestées**, **2796 composites lore-friendly**, **459 adaptations versus**.
+
+Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation et base canonique.
 
 ## Traits de manifestation
 

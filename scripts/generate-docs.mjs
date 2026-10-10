@@ -15,7 +15,10 @@ import {
   RITUAL_MODIFIERS,
   SOURCE_COVERAGE_TARGETS,
   coverageAudit,
-  createBossPhases
+  createBossPhases,
+  createCombatProfile,
+  MOVESET_KEYS,
+  MOVE_FIDELITY
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -53,7 +56,7 @@ function buildRoster() {
   const lines = [
     `# Roster complet — v${VERSION}`,
     '',
-    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
+    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.moves} coups documentés**, **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
     '',
     '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et fatalités sont des créations ou adaptations originales documentées ; aucun asset officiel n’est inclus.',
     ''
@@ -89,7 +92,7 @@ function buildMatrix() {
   }
   lines.push(
     '',
-    `**Total : ${CONTENT_STATS.fighters} manifestations · ${CONTENT_STATS.bosses} boss · ${CONTENT_STATS.stages} arènes · ${CONTENT_STATS.stageAnimations} animations · ${CONTENT_STATS.fatalities} fatalités combattant · ${CONTENT_STATS.stageFatalities} fatalités d’arène · ${CONTENT_STATS.sources} sources.**`,
+    `**Total : ${CONTENT_STATS.fighters} manifestations · ${CONTENT_STATS.moves} coups · ${CONTENT_STATS.directCanonicalMoves} directement attestés · ${CONTENT_STATS.behaviorCompositeMoves} composites · ${CONTENT_STATS.versusAdaptationMoves} adaptations · ${CONTENT_STATS.bosses} boss · ${CONTENT_STATS.stages} arènes · ${CONTENT_STATS.stageAnimations} animations · ${CONTENT_STATS.sources} sources.**`,
     '',
     '## Contrat de fidélité',
     '',
@@ -117,7 +120,15 @@ function buildCombatSystems() {
   const lines = [
     `# Systèmes de combat — v${VERSION}`,
     '',
-    `La v${VERSION} réunit **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
+    `La v${VERSION} réunit **${CONTENT_STATS.moves} coups documentés**, **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
+    '',
+    '## Architecture des movesets',
+    '',
+    `Chaque manifestation possède **${MOVESET_KEYS.length} commandes** : huit attaques normales contextuelles, une saisie, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.`,
+    '',
+    `Répartition : **${CONTENT_STATS.directCanonicalMoves} directement attestées**, **${CONTENT_STATS.behaviorCompositeMoves} composites lore-friendly**, **${CONTENT_STATS.versusAdaptationMoves} adaptations versus**.`,
+    '',
+    'Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation et base canonique.',
     '',
     '## Traits de manifestation',
     '',
@@ -197,6 +208,43 @@ function buildCoverageAudit() {
   return `${lines.join('\n')}\n`;
 }
 
+function buildMovesets() {
+  const lines = [
+    `# Movesets complets et fidélité — v${VERSION}`,
+    '',
+    `**${CONTENT_STATS.fighters} manifestations · ${CONTENT_STATS.moves} coups · ${CONTENT_STATS.directCanonicalMoves} actions directement attestées · ${CONTENT_STATS.behaviorCompositeMoves} composites lore-friendly · ${CONTENT_STATS.versusAdaptationMoves} adaptations versus.**`,
+    '',
+    '## Légende',
+    ''
+  ];
+  for (const [id, definition] of Object.entries(MOVE_FIDELITY)) lines.push(`- **${md(definition.label)}** (\`${id}\`) — ${md(definition.description)}`);
+  lines.push(
+    '',
+    'Les noms de coups sont des libellés originaux de fan-game. Le statut « directement attesté » qualifie le comportement, l’arme ou l’action observée dans la source, pas l’existence officielle du nom donné au coup.',
+    ''
+  );
+  for (const fighter of ROSTER) {
+    const profile = createCombatProfile(fighter);
+    const summary = profile.moveset.fidelitySummary;
+    lines.push(
+      `## ${md(fighter.name)} — ${md(SOURCE_META[fighter.source]?.short || fighter.source)}`,
+      '',
+      `**${summary.direct} directs · ${summary.composite} composites · ${summary.adapted} adaptations.**`,
+      '',
+      `Comportement source : ${md(fighter.canonicalBehavior)}`,
+      '',
+      '| Input | Coup | Catégorie | Frames S/A/R | Dégâts | Portée | Fidélité | Base canonique |',
+      '|---|---|---|---:|---:|---:|---|---|'
+    );
+    for (const key of MOVESET_KEYS) {
+      const move = profile.moves[key];
+      lines.push(`| \`${md(move.input)}\` | ${md(move.name)} | ${md(move.category)} / ${md(move.level)} | ${move.startup}/${move.active}/${move.recovery} | ${move.damage} | ${move.reach} | ${md(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} | ${md(move.canonicalBasis)} |`);
+    }
+    lines.push('');
+  }
+  return `${lines.join('\n')}\n`;
+}
+
 function buildFatalitiesAndStages() {
   const lines = [
     `# Fatalités, arènes dédiées et animations — v${VERSION}`,
@@ -232,7 +280,8 @@ await Promise.all([
   writeFile(join(docs, 'FIDELITY_MATRIX.md'), buildMatrix()),
   writeFile(join(docs, 'COMBAT_SYSTEMS.md'), buildCombatSystems()),
   writeFile(join(docs, 'COVERAGE_AUDIT.md'), buildCoverageAudit()),
-  writeFile(join(docs, 'FATALITIES_AND_STAGES.md'), buildFatalitiesAndStages())
+  writeFile(join(docs, 'FATALITIES_AND_STAGES.md'), buildFatalitiesAndStages()),
+  writeFile(join(docs, 'MOVESETS.md'), buildMovesets())
 ]);
 
-console.log(`Documentation v${VERSION} générée : roster, couverture, fatalités, arènes et systèmes de combat.`);
+console.log(`Documentation v${VERSION} générée : roster, movesets, couverture, fatalités, arènes et systèmes de combat.`);

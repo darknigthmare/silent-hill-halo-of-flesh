@@ -25,63 +25,63 @@ const modes = {
     title: 'RETOUR<br><span>DANS LA BRUME.</span>',
     text: 'Le dernier front reprend avec le même combattant, la même arène et la même règle.',
     choices: ['DERNIER FRONT','SAUVEGARDE LOCALE'],
-    scene: 'fog'
+    scene: 'fog', frequency: '106.7', code: 'SHHF/00', signal: 'LAST SAVE', data: ['LOCAL MEMORY','FOG LOCK']
   },
   chronicles: {
     kicker: 'NARRATIVE ROUTES',
     title: 'CHRONIQUES<br><span>DE LA BRUME.</span>',
     text: `${CONTENT_STATS.chronicles} routes relient affrontements, dossiers, lieux, rangs et conséquences.`,
     choices: [`${CONTENT_STATS.chronicles} ROUTES`,'RANGS S–D','BOSS FINAUX'],
-    scene: 'chronicles'
+    scene: 'chronicles', frequency: '87.9', code: 'SHHF/14', signal: 'NARRATIVE', data: [`${CONTENT_STATS.chronicles} ROUTES`,'LOCAL RECORD']
   },
   versus: {
-    kicker: 'UNIFIED MONSTER BATTLE',
+    kicker: 'MANIFESTATION CONTACT',
     title: 'CHOISIS<br><span>TON CAUCHEMAR.</span>',
-    text: `Sélection P1/P2, ${CONTENT_STATS.fighters} profils, règles dynamiques, ordinateur, local et ${CONTENT_STATS.stages} arènes.`,
-    choices: ['1P VS CPU','2P LOCAL','1–3 MANCHES'],
-    scene: 'duel'
+    text: `Sélection P1/P2, ${CONTENT_STATS.fighters} manifestations, ${CONTENT_STATS.moves} coups documentés, ordinateur, local et ${CONTENT_STATS.stages} arènes.`,
+    choices: ['1P VS MANIFESTATION','2P LOCAL','MOVESETS 16 COMMANDES'],
+    scene: 'duel', frequency: '93.1', code: 'SHHF/VS', signal: 'CONTACT', data: [`${CONTENT_STATS.fighters} FORMS`,`${CONTENT_STATS.moves} MOVES`]
   },
   arcade: {
     kicker: 'RANDOM DESCENT',
     title: 'TRAVERSE<br><span>L’OTHERWORLD.</span>',
     text: 'Un parcours de sept rencontres, difficulté progressive, Otherworld dynamique et dernier boss aléatoire.',
     choices: ['7 COMBATS','DANGERS D’ARÈNE','RECORD'],
-    scene: 'arcade'
+    scene: 'arcade', frequency: '101.3', code: 'SHHF/07', signal: 'DESCENT', data: ['7 ENCOUNTERS','NO RETURN']
   },
   ritual: {
     kicker: 'SEVEN SEALS GAUNTLET',
     title: 'LES RITES<br><span>DU JUGEMENT.</span>',
     text: `${CONTENT_STATS.rituals - 1} altérations successives, endurance persistante, phases de boss et classement local.`,
     choices: [`${CONTENT_STATS.rituals - 1} RITES`,'ENDURANCE','PHASES DE BOSS'],
-    scene: 'ritual'
+    scene: 'ritual', frequency: '66.6', code: 'SHHF/RT', signal: 'RITUAL', data: [`${CONTENT_STATS.rituals - 1} SEALS`,'ENDURANCE']
   },
   boss: {
     kicker: 'GREAT TORMENTS',
     title: 'LES GRANDS<br><span>TOURMENTS.</span>',
     text: 'Un circuit réservé aux manifestations majeures et aux boss, avec endurance persistante.',
     choices: [`${CONTENT_STATS.bosses} BOSS`,'ENDURANCE','CLASSEMENT LOCAL'],
-    scene: 'boss'
+    scene: 'boss', frequency: '120.4', code: 'SHHF/BX', signal: 'TORMENT', data: [`${CONTENT_STATS.bosses} BOSS`,`${CONTENT_STATS.bossPhases} PHASES`]
   },
   training: {
     kicker: 'OBSERVATION CELL',
     title: 'ÉTUDIE<br><span>LA MANIFESTATION.</span>',
-    text: 'Hitboxes, traits, afflictions, parade parfaite, ressources libres et bascule Otherworld forcée.',
-    choices: ['HITBOXES','FORCER OTHERWORLD','RESET RAPIDE'],
-    scene: 'training'
+    text: 'Frame data, seize commandes par manifestation, hitboxes, traits, afflictions, parade parfaite et Otherworld forcé.',
+    choices: ['16 COMMANDES','FRAME DATA','FORCER OTHERWORLD'],
+    scene: 'training', frequency: '104.8', code: 'SHHF/OB', signal: 'OBSERVE', data: ['16 COMMANDS','FRAME DATA']
   },
   archive: {
     kicker: 'BESTIARY & EVIDENCE',
     title: 'ARCHIVES<br><span>DE L’OTHERWORLD.</span>',
-    text: 'Catalogue filtrable, comportement canonique, adaptation versus, variantes et matrice de fidélité.',
-    choices: [`${CONTENT_STATS.fighters} PROFILS`,`${CONTENT_STATS.sources} SOURCES`,`${CONTENT_STATS.stages} LIEUX`],
-    scene: 'archive'
+    text: 'Catalogue filtrable, 3 680 coups, comportement canonique, adaptation versus et matrice de fidélité.',
+    choices: [`${CONTENT_STATS.fighters} PROFILS`,`${CONTENT_STATS.moves} COUPS`,`${CONTENT_STATS.stages} LIEUX`],
+    scene: 'archive', frequency: '108.2', code: 'SHHF/AR', signal: 'EVIDENCE', data: [`${CONTENT_STATS.moves} MOVES`,`${CONTENT_STATS.sources} SOURCES`]
   },
   options: {
     kicker: 'SYSTEM SETTINGS',
     title: 'RÈGLE<br><span>LE SIGNAL.</span>',
     text: 'Affichage, confort, audio, IA adaptative, fatalités, animations, Otherworld et dangers d’arène.',
     choices: ['ACCESSIBILITÉ','RÈGLES DYNAMIQUES','SAUVEGARDE'],
-    scene: 'options'
+    scene: 'options', frequency: '88.3', code: 'SHHF/OP', signal: 'CONFIG', data: ['ACCESSIBILITY','LOCAL ONLY']
   }
 };
 
@@ -140,6 +140,12 @@ function select(index) {
   $('#heroTitle').innerHTML = data.title;
   $('#heroText').textContent = data.text;
   $('#heroChoices').innerHTML = data.choices.map((label,i)=>`<span class="hero-choice ${i===0?'active':''}">${label}</span>`).join('');
+  $('#heroData').innerHTML = (data.data || []).map((label)=>`<span>${label}</span>`).join('');
+  $('#signalFrequency').textContent = data.frequency || '106.7';
+  $('#signalState').textContent = data.signal || 'STATIC';
+  $('#caseStamp').textContent = `CASE ${String(active).padStart(2,'0')} — ${(data.signal || data.scene).toUpperCase()}`;
+  $('#evidenceCode').textContent = data.code || `SHHF/${String(active).padStart(2,'0')}`;
+  document.documentElement.dataset.scene = data.scene;
   drawHero(data.scene, performance.now());
 }
 function launch(mode = currentMode()) {
@@ -263,20 +269,27 @@ function drawNurse(x,y,scale=1,alpha=1){
 }
 function drawHero(scene,time){
   const w=heroCanvas.width,h=heroCanvas.height;ctx.clearRect(0,0,w,h);
-  const palettes={fog:['#263029','#060907'],chronicles:['#34352e','#070907'],duel:['#302c28','#080706'],arcade:['#332427','#080405'],boss:['#3b2022','#080303'],training:['#20332c','#040806'],archive:['#2f3430','#060806'],options:['#29302c','#050705']};
+  const palettes={fog:['#263029','#060907'],chronicles:['#34352e','#070907'],duel:['#302c28','#080706'],arcade:['#332427','#080405'],ritual:['#351e22','#070304'],boss:['#3b2022','#080303'],training:['#20332c','#040806'],archive:['#2f3430','#060806'],options:['#29302c','#050705']};
   const p=palettes[scene]||palettes.fog;const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,p[0]);g.addColorStop(1,p[1]);ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
   ctx.strokeStyle='rgba(182,191,182,.055)';for(let x=-h;x<w;x+=52){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+h,h);ctx.stroke();}
   for(let i=0;i<7;i++){ctx.fillStyle=`rgba(210,214,205,${.014+i*.006})`;ctx.beginPath();ctx.moveTo(0,120+i*78);for(let x=0;x<w;x+=60)ctx.lineTo(x,120+i*78+Math.sin(x*.012+i)*26);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.fill();}
   const sway=settings.reducedMotion?0:Math.sin(time*.001)*4;
   if(scene==='boss'){drawExecutioner(900+sway,665,1.55,1);drawFlower(1080-sway,667,1.14,.55);}
+  else if(scene==='ritual'){drawFlower(880+sway,667,1.38,.88);drawExecutioner(1060-sway,667,1.1,.62);}
   else if(scene==='archive'){drawNurse(835+sway,665,1.45,.92);drawExecutioner(1040-sway,667,1.18,.75);}
   else if(scene==='chronicles'){drawFlower(890+sway,667,1.42,.95);drawNurse(1070-sway,667,1.05,.62);}
   else if(scene==='training'){drawNurse(860,665,1.35,.95);ctx.strokeStyle='rgba(208,75,83,.55)';ctx.lineWidth=3;ctx.strokeRect(810,390,100,255);ctx.fillStyle='rgba(208,75,83,.12)';ctx.fillRect(790,520,160,80);}
   else{drawExecutioner(850+sway,667,1.42,.9);drawFlower(1065-sway,667,1.18,.82);}
 }
 
-$('#contentCount').textContent = `v${VERSION} · ${CONTENT_STATS.fighters} PROFILS · ${CONTENT_STATS.bosses} BOSS · ${CONTENT_STATS.stages} ARÈNES · ${CONTENT_STATS.chronicles} CHRONIQUES`;
+$('#contentCount').textContent = `v${VERSION} · ${CONTENT_STATS.fighters} MANIFESTATIONS · ${CONTENT_STATS.moves} COUPS · ${CONTENT_STATS.bosses} BOSS · ${CONTENT_STATS.stages} ARÈNES`;
 document.documentElement.dataset.version = VERSION;
+setInterval(()=>{
+  if(settings.reducedMotion)return;
+  const bars=$$('.radio-bars b');
+  bars.forEach((bar,index)=>bar.style.height=`${4+Math.round((.5+.5*Math.sin(performance.now()*.006+index*1.7))*15)}px`);
+},110);
+
 applySettings();select(0);cancelAnimationFrame(raf);requestAnimationFrame(drawCommandBackground);
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 const query=new URLSearchParams(location.search);if(query.get('module')&&moduleUrls[query.get('module')])launch(query.get('module'));

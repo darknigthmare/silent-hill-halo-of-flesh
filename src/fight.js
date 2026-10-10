@@ -125,6 +125,9 @@ function makeActor(data, index, ritual = {}) {
     phaseArmor: 0,
     phaseLock: 0,
     phaseName: null,
+    counterStance: 0,
+    trapCooldown: 0,
+    auraCooldown: 0,
     stats: emptyStats()
   };
 }
@@ -166,6 +169,44 @@ function statusSpeed(actor) {
 }
 function statusMeterScale(actor) { return actor.status?.id === 'static' ? .7 : 1; }
 function canDodge(actor) { return actor.status?.id !== 'bind'; }
+
+function isNightmareMove(move) {
+  return ['nightmare','desperation'].includes(move?.category);
+}
+function isHeavyMove(move) {
+  return move?.button === 'heavy' || ['nightmare','desperation'].includes(move?.category);
+}
+function relativeDirection(actor, controls) {
+  return {
+    toward: actor.facing > 0 ? Boolean(controls.right) : Boolean(controls.left),
+    away: actor.facing > 0 ? Boolean(controls.left) : Boolean(controls.right)
+  };
+}
+export function resolveMoveKey(actor, controls, button) {
+  const direction = relativeDirection(actor, controls);
+  if (button === 'throw') return 'throw';
+  if (button === 'super') return healthRatio(actor) <= (actor.profile.moves.desperation?.healthRequirement || .3) ? 'desperation' : 'super';
+  if (button === 'light') {
+    if (!actor.grounded) return 'airLight';
+    if (controls.down) return 'crouchLight';
+    if (direction.toward) return 'forwardLight';
+    return 'neutralLight';
+  }
+  if (button === 'heavy') {
+    if (!actor.grounded) return 'airHeavy';
+    if (controls.down) return 'crouchHeavy';
+    if (direction.toward) return 'forwardHeavy';
+    return 'neutralHeavy';
+  }
+  if (button === 'special') {
+    if (!actor.grounded) return 'airSpecial';
+    if (controls.down) return 'downSpecial';
+    if (direction.toward) return 'forwardSpecial';
+    if (direction.away) return 'backSpecial';
+    return 'neutralSpecial';
+  }
+  return null;
+}
 
 export function chronicleGrade(stats = {}) {
   const health = clamp(stats.healthRatio ?? 0, 0, 1);
@@ -357,6 +398,9 @@ export class FightEngine {
       actor.lastMoveKey = null;
       actor.lastHit = null;
       actor.moveVariety.clear();
+      actor.counterStance = 0;
+      actor.trapCooldown = 0;
+      actor.auraCooldown = 0;
     });
     this.callbacks.onState(this.snapshot());
   }
@@ -513,24 +557,55 @@ export class FightEngine {
         if (this.rng() < diff.counter && actor.dodgeCooldown === 0) intent.dodge = true;
         else intent.guard = true;
       } else if (distance > preferred + 80) {
-        intent[toward] = true;
-        if (['zoner', 'artillery', 'flyer', 'ghost', 'trickster'].includes(actor.data.archetype) && this.rng() < .55) intent.special = true;
+        const ranged = ['zoner', 'artillery', 'flyer', 'ghost', 'trickster'].includes(actor.data.archetype);
+        if (ranged && this.rng() < .62) {
+          // Conserver une commande neutre lorsqu'un véritable projectile est disponible ;
+          // sinon sélectionner l'assaut avant du moveset au lieu d'un spécial générique.
+          if (actor.profile.moves.neutralSpecial?.projectile) intent.special = true;
+          else { intent[toward] = true; intent.special = true; }
+        } else intent[toward] = true;
       } else if (distance < preferred - 55 && ['zoner', 'artillery', 'ghost', 'trickster'].includes(actor.data.archetype)) {
-        intent[away] = true;
-        if (this.rng() < .24) intent.dodge = true;
-        else if (this.rng() < .42) intent.light = true;
+        if (actor.profile.moves.backSpecial?.teleport || actor.profile.moves.backSpecial?.invulnFrames || actor.profile.moves.backSpecial?.armorFrames) {
+          intent[away] = true;
+          intent.special = true;
+        } else {
+          intent[away] = true;
+          if (this.rng() < .24) intent.dodge = true;
+          else if (this.rng() < .42) intent.light = true;
+        }
       } else if (distance < 78 && ['grappler', 'juggernaut', 'boss'].includes(actor.data.archetype) && this.rng() < .45) {
         intent.throw = true;
       } else if (this.rng() < diff.attack) {
         const roll = this.rng();
         if (actor.meter >= 100 && roll > .84) intent.super = true;
-        else if (roll > .68) intent.heavy = true;
-        else if (roll > .37) intent.special = true;
-        else intent.light = true;
+        else if (roll > .68) {
+          intent.heavy = true;
+          if (distance > 112 && actor.profile.moves.forwardHeavy?.travel) intent[toward] = true;
+          else if (distance < 94 && this.rng() < .28) intent.down = true;
+        } else if (roll > .37) {
+          intent.special = true;
+          const downMove = actor.profile.moves.downSpecial;
+          const forwardMove = actor.profile.moves.forwardSpecial;
+          const backMove = actor.profile.moves.backSpecial;
+          if (distance > 235 && actor.profile.moves.neutralSpecial?.projectile) {
+            // Neutral projectile.
+          } else if (distance > 135 && (forwardMove?.travel || forwardMove?.projectile || forwardMove?.teleport)) {
+            intent[toward] = true;
+          } else if (distance < 92 && (backMove?.teleport || backMove?.invulnFrames || backMove?.armorFrames)) {
+            intent[away] = true;
+          } else if (downMove?.trap || downMove?.aura || downMove?.level === 'low') intent.down = true;
+        } else {
+          intent.light = true;
+          if (distance > 86 && actor.profile.moves.forwardLight?.travel) intent[toward] = true;
+          else if (distance < 72 && this.rng() < .3) intent.down = true;
+        }
       } else if (distance > preferred) intent[toward] = true;
       else intent[away] = true;
 
-      if (['flyer', 'trickster'].includes(actor.data.archetype) && this.rng() < .12) intent.jump = true;
+      if (['flyer', 'trickster'].includes(actor.data.archetype) && this.rng() < .12) {
+        intent.jump = true;
+        if (actor.profile.moves.airSpecial && this.rng() < .55) intent.special = true;
+      }
       actor.aiIntent = intent;
     }
 
@@ -555,6 +630,9 @@ export class FightEngine {
     actor.parryWindow = Math.max(0, actor.parryWindow - 1);
     actor.armorCooldown = Math.max(0, actor.armorCooldown - 1);
     actor.traitPulse = Math.max(0, actor.traitPulse - 1);
+    actor.counterStance = Math.max(0, actor.counterStance - 1);
+    actor.trapCooldown = Math.max(0, actor.trapCooldown - 1);
+    actor.auraCooldown = Math.max(0, actor.auraCooldown - 1);
     if (actor.comboTimer === 0) actor.combo = 0;
     if (this.config.freeMeter) actor.meter = 100;
     if (this.config.autoHeal && this.frame % 30 === 0 && actor.health < actor.maxHealth) actor.health = Math.min(actor.maxHealth, actor.health + 4);
@@ -592,8 +670,8 @@ export class FightEngine {
       this.logInput(actor, 'GARDE');
     }
     actor.blocking = Boolean(controls.guard && actor.grounded);
-    actor.crouching = Boolean(controls.down && actor.grounded && !actor.blocking);
-    actor.state = actor.blocking ? 'block' : actor.crouching ? 'crouch' : 'idle';
+    actor.crouching = Boolean(controls.down && actor.grounded);
+    actor.state = actor.blocking ? (actor.crouching ? 'crouchBlock' : 'block') : actor.crouching ? 'crouch' : actor.counterStance > 0 ? 'counterStance' : 'idle';
 
     if (controls.dodge && actor.dodgeCooldown === 0 && canDodge(actor)) {
       actor.state = 'dodge';
@@ -609,12 +687,12 @@ export class FightEngine {
       actor.grounded = false;
       actor.state = 'jump';
       audio.tone({ freq: 90, duration: .06, gain: .018, slide: 40 });
-    } else if (controls.super && actor.meter >= 100) this.beginAttack(actor, 'super');
-    else if (controls.throw) this.beginAttack(actor, 'throw');
-    else if (controls.special) this.beginAttack(actor, 'special');
-    else if (controls.heavy) this.beginAttack(actor, 'heavy');
-    else if (controls.light) this.beginAttack(actor, controls.down ? 'low' : 'light');
-    else if (!actor.blocking && !actor.crouching) {
+    } else if (controls.super) this.beginAttack(actor, resolveMoveKey(actor, controls, 'super'));
+    else if (controls.throw) this.beginAttack(actor, resolveMoveKey(actor, controls, 'throw'));
+    else if (controls.special) this.beginAttack(actor, resolveMoveKey(actor, controls, 'special'));
+    else if (controls.heavy) this.beginAttack(actor, resolveMoveKey(actor, controls, 'heavy'));
+    else if (controls.light) this.beginAttack(actor, resolveMoveKey(actor, controls, 'light'));
+    else if (!actor.blocking && !actor.crouching && actor.counterStance === 0) {
       let movement = 0;
       if (controls.left) movement--;
       if (controls.right) movement++;
@@ -655,30 +733,54 @@ export class FightEngine {
   beginAttack(actor, key, { cancelled = false } = {}) {
     const move = actor.profile.moves[key];
     if (!move) return false;
-    if (key === 'super') {
-      const ritualCost = Math.round(move.meterCost * (this.ritual.superCostScale || 1));
+    if (move.requiresAir && actor.grounded) return false;
+    if (move.requiresGround && !actor.grounded) return false;
+    if (move.healthRequirement != null && healthRatio(actor) > move.healthRequirement) return false;
+
+    if (isNightmareMove(move)) {
+      const ritualCost = Math.round((move.meterCost || 100) * (this.ritual.superCostScale || 1));
       if (actor.meter < ritualCost) return false;
       actor.meter -= ritualCost;
-      this.superOverlay = { actor, timer: 50, name: move.name };
+      this.superOverlay = { actor, timer: move.category === 'desperation' ? 66 : 50, name: move.name };
       audio.super();
-      vibrate([20, 25, 20, 25, 55]);
+      vibrate(move.category === 'desperation' ? [30, 22, 35, 22, 75] : [20, 25, 20, 25, 55]);
     }
-    actor.attack = { key, move, frame: cancelled ? 2 : 0, spawned: false, hit: false, id: ++actor.attackId, cancelled };
+
+    actor.attack = {
+      key,
+      move,
+      frame: cancelled ? 2 : 0,
+      spawned: false,
+      hit: false,
+      hitCount: 0,
+      nextHitFrame: 0,
+      teleported: false,
+      counterReady: false,
+      id: ++actor.attackId,
+      cancelled
+    };
     actor.state = 'attack';
     actor.blocking = false;
-    actor.crouching = false;
-    if (key === 'throw') actor.vx = actor.facing * 2.2;
-    if (key === 'throw') actor.stats.throws++;
+    actor.crouching = move.stance === 'crouching';
+    if (move.button === 'throw') {
+      actor.vx = actor.facing * 2.2;
+      actor.stats.throws++;
+    }
+    if (move.verticalTravel && actor.grounded && !move.requiresAir) {
+      actor.vy = -Math.min(actor.profile.jump * .72, Math.abs(move.verticalTravel) * 2.2);
+      actor.grounded = false;
+    }
+    if (move.meterGain) actor.meter = clamp(actor.meter + move.meterGain, 0, 100);
 
     if (actor.profile.trait.meterVariety && !actor.moveVariety.has(key)) {
       actor.moveVariety.add(key);
       actor.meter = clamp(actor.meter + actor.profile.trait.meterVariety * 100, 0, 100);
       actor.traitPulse = 16;
-      if (actor.moveVariety.size >= 4) actor.moveVariety.clear();
+      if (actor.moveVariety.size >= 6) actor.moveVariety.clear();
     }
     actor.lastMoveKey = key;
-    this.logInput(actor, move.name);
-    if (actor.index === 0 && Object.prototype.hasOwnProperty.call(this.playerPattern, key)) this.playerPattern[key]++;
+    this.logInput(actor, `${move.input || ''} ${move.name}`.trim());
+    if (actor.index === 0 && Object.prototype.hasOwnProperty.call(this.playerPattern, move.button)) this.playerPattern[move.button]++;
     return true;
   }
 
@@ -687,26 +789,66 @@ export class FightEngine {
     const move = attack.move;
     attack.frame++;
     const total = move.startup + move.active + move.recovery;
+    const activeStart = move.startup;
+    const activeEnd = move.startup + move.active;
 
-    if (move.projectile && !attack.spawned && attack.frame >= move.startup) {
+    if (move.invulnFrames && attack.frame <= move.invulnFrames) actor.invuln = Math.max(actor.invuln, 2);
+
+    if (move.teleport && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
+      attack.teleported = true;
+      const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+      if (move.teleport === 'behind') {
+        const side = enemy.facing > 0 ? -1 : 1;
+        actor.x = clamp(enemy.x + side * 86, inset, WIDTH - inset);
+      } else if (move.teleport === 'cross') {
+        const side = actor.x < enemy.x ? 1 : -1;
+        actor.x = clamp(enemy.x + side * 116, inset, WIDTH - inset);
+      }
+      actor.facing = enemy.x > actor.x ? 1 : -1;
+      actor.invuln = Math.max(actor.invuln, 5);
+      this.spawnImpact(actor.x, actor.y - 110, actor.data.visual.accent, true, 11);
+      audio.tone({ freq: 74, duration: .13, gain: .028, slide: 180 });
+    }
+
+    if ((move.projectile || move.trap) && !attack.spawned && attack.frame >= move.startup) {
       attack.spawned = true;
       this.spawnProjectile(actor, move, attack.id);
     }
-    if (!move.projectile && attack.frame >= move.startup && attack.frame < move.startup + move.active && !attack.hit) {
-      if (intersects(attackBox(actor, move), actorBox(enemy))) {
+
+    const active = attack.frame >= activeStart && attack.frame < activeEnd;
+    if (!move.projectile && !move.trap && active && attack.hitCount < (move.hits || 1) && attack.frame >= attack.nextHitFrame) {
+      const box = attackBox(actor, move);
+      if (move.aura) {
+        box.x = actor.x - move.reach;
+        box.w = move.reach * 2;
+        box.y = actor.y - 230;
+        box.h = 245;
+      }
+      if (intersects(box, actorBox(enemy))) {
         attack.hit = true;
-        this.applyHit(actor, enemy, move, attack.id);
+        attack.hitCount++;
+        attack.nextHitFrame = attack.frame + (move.hitInterval || 4);
+        this.applyHit(actor, enemy, move, attack.id, attack.hitCount > 1 ? .72 : 1);
       }
     }
 
-    if (attack.key === 'heavy' && attack.frame < move.startup) actor.vx = actor.facing * 1.8;
-    if (attack.key === 'special' && !move.projectile && attack.frame < move.startup + move.active) actor.vx = actor.facing * 3.1;
-    if (attack.key === 'super' && !move.projectile && attack.frame < move.startup + move.active) actor.vx = actor.facing * 4.1;
+    if (move.counterStance && !attack.counterReady && attack.frame >= move.startup) {
+      attack.counterReady = true;
+      actor.counterStance = Math.max(actor.counterStance, move.active + 18);
+      actor.invuln = Math.max(actor.invuln, 2);
+      this.addText('COUNTER STANCE', actor.x, actor.y - 220, 'perfect');
+    }
 
-    const cancelStart = move.startup + Math.max(1, move.active - 1);
+    if (attack.frame < activeEnd) {
+      if (move.travel) actor.vx = actor.facing * move.travel;
+      if (!actor.grounded && move.verticalTravel) actor.vy += Math.sign(move.verticalTravel) * Math.abs(move.verticalTravel) * .035;
+    }
+
+    const cancelStart = move.startup + Math.max(1, move.active - 2);
     const cancelEnd = cancelStart + actor.profile.cancelWindow;
     if (attack.hit && attack.frame >= cancelStart && attack.frame <= cancelEnd && move.cancelInto?.length) {
-      const requested = controls.special ? 'special' : controls.heavy ? 'heavy' : controls.light ? 'light' : null;
+      const button = controls.special ? 'special' : controls.heavy ? 'heavy' : controls.light ? 'light' : null;
+      const requested = button ? resolveMoveKey(actor, controls, button) : null;
       if (requested && move.cancelInto.includes(requested)) {
         this.addText('CHAIN', actor.x, actorBox(actor).y - 18, 'chain');
         this.beginAttack(actor, requested, { cancelled: true });
@@ -716,29 +858,37 @@ export class FightEngine {
 
     if (attack.frame >= total) {
       actor.attack = null;
-      actor.state = actor.grounded ? 'idle' : 'jump';
+      actor.state = actor.grounded ? (actor.counterStance > 0 ? 'counterStance' : 'idle') : 'jump';
       actor.vx *= .45;
+      actor.crouching = false;
     }
   }
 
   spawnProjectile(actor, move, attackId) {
-    const isSuper = actor.attack?.key === 'super';
-    const count = isSuper ? 3 : (actor.profile.trait.id === 'suppression' ? 2 : 1);
+    const isSuper = isNightmareMove(move);
+    const count = Math.max(1, move.projectileCount || (actor.profile.trait.id === 'suppression' ? 2 : 1));
     const scale = move.projectileScale || 1;
     for (let index = 0; index < count; index++) {
+      const spread = index - (count - 1) / 2;
+      const trap = Boolean(move.trap);
       this.projectiles.push({
         owner: actor,
         attackId,
         move,
-        x: actor.x + actor.facing * (55 + index * 22),
-        y: actor.y - (115 + index * 28),
-        vx: actor.facing * (move.projectileSpeed || 13) * (1 - index * .08),
-        vy: (index - (count - 1) / 2) * .8,
-        radius: (isSuper ? 18 : 12) * scale,
-        life: isSuper ? 90 : 72,
+        x: trap ? actor.x + actor.facing * Math.min(move.reach * .72, 220) : actor.x + actor.facing * (55 + Math.abs(spread) * 18),
+        y: trap ? FLOOR - 24 : actor.y - (115 + Math.abs(spread) * 22),
+        vx: trap ? 0 : actor.facing * (move.projectileSpeed || 13) * (1 - Math.abs(spread) * .045),
+        vy: trap ? 0 : spread * (move.projectileArc || .8),
+        gravity: move.projectileGravity || 0,
+        homing: move.homing || 0,
+        radius: (trap ? 32 : isSuper ? 18 : 12) * scale,
+        life: trap ? Math.max(90, move.projectileLife || 150) : move.projectileLife || (isSuper ? 96 : 78),
+        maxLife: trap ? Math.max(90, move.projectileLife || 150) : move.projectileLife || (isSuper ? 96 : 78),
         super: isSuper,
+        trap,
         color: actor.data.visual.accent,
-        hit: false
+        hit: false,
+        damageScale: count > 1 ? Math.max(.52, 1 - (count - 1) * .085) : 1
       });
     }
     audio.tone({ freq: isSuper ? 85 : 150, duration: .1, gain: .04, slide: isSuper ? 120 : 40 });
@@ -746,38 +896,82 @@ export class FightEngine {
 
   updateProjectiles() {
     for (const projectile of this.projectiles) {
+      const enemy = this.actors[1 - projectile.owner.index];
+      if (projectile.homing && enemy) {
+        const desired = Math.atan2((enemy.y - 110) - projectile.y, enemy.x - projectile.x);
+        const speed = Math.hypot(projectile.vx, projectile.vy) || 1;
+        const current = Math.atan2(projectile.vy, projectile.vx);
+        let delta = desired - current;
+        while (delta > Math.PI) delta -= TAU;
+        while (delta < -Math.PI) delta += TAU;
+        const angle = current + clamp(delta, -projectile.homing, projectile.homing);
+        projectile.vx = Math.cos(angle) * speed;
+        projectile.vy = Math.sin(angle) * speed;
+      }
+      projectile.vy += projectile.gravity || 0;
       projectile.x += projectile.vx;
       projectile.y += projectile.vy;
       projectile.life--;
-      if (projectile.super) projectile.vy += Math.sin((90 - projectile.life) * .22) * .035;
-      const enemy = this.actors[1 - projectile.owner.index];
+      if (projectile.super && !projectile.trap) projectile.vy += Math.sin((projectile.maxLife - projectile.life) * .22) * .035;
       if (!projectile.hit && enemy.invuln === 0) {
         const box = { x: projectile.x - projectile.radius, y: projectile.y - projectile.radius, w: projectile.radius * 2, h: projectile.radius * 2 };
         if (intersects(box, actorBox(enemy))) {
           projectile.hit = true;
           projectile.life = 0;
-          this.applyHit(projectile.owner, enemy, projectile.move, projectile.attackId, projectile.super ? 1.06 : .92);
+          this.applyHit(projectile.owner, enemy, projectile.move, projectile.attackId, (projectile.super ? 1.02 : .9) * projectile.damageScale);
         }
       }
     }
-    this.projectiles = this.projectiles.filter((projectile) => projectile.life > 0 && projectile.x > -80 && projectile.x < 1360);
+    this.projectiles = this.projectiles.filter((projectile) => projectile.life > 0 && projectile.x > -120 && projectile.x < 1400 && projectile.y > -160 && projectile.y < 820);
   }
 
   applyHit(attacker, target, move, attackId, scale = 1) {
     if (target.invuln > 0 || target.ko) return;
-    const isThrow = move.level === 'throw';
-    const blocked = target.blocking && !isThrow && target.grounded;
+
+    const isThrow = move.level === 'throw' || move.category === 'throw';
+    const isNightmare = isNightmareMove(move);
+    const isHeavy = isHeavyMove(move);
+    const isSpecial = move.category === 'special';
+    const unblockable = Boolean(move.unblockable || move.level === 'unblockable');
+    const lowGuardValid = move.level !== 'low' || target.crouching;
+    const overheadGuardValid = move.level !== 'overhead' || !target.crouching;
+    const blocked = target.blocking && target.grounded && !isThrow && !unblockable && lowGuardValid && overheadGuardValid;
     const counter = Boolean(target.attack && target.attack.frame <= target.attack.move.startup + 1);
+
+    if (target.counterStance > 0 && !isThrow && !isNightmare) {
+      target.counterStance = 0;
+      target.attack = null;
+      target.state = 'idle';
+      const retaliation = Math.max(14, Math.round(move.damage * .34));
+      attacker.health -= retaliation;
+      attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
+      attacker.invuln = Math.max(attacker.invuln, 3);
+      attacker.vx = -attacker.facing * Math.max(5, (move.knockback || 6) * .7);
+      attacker.hitFlash = Math.max(attacker.hitFlash, 7);
+      target.meter = clamp(target.meter + 15, 0, 100);
+      target.stats.counters++;
+      target.stats.damageDealt += retaliation;
+      attacker.stats.damageTaken += retaliation;
+      attacker.lastHit = { attackerIndex: target.index, moveKey: 'counter-stance', isSuper: false, environmental: false, frame: this.frame };
+      this.addText('COUNTER', attacker.x, actorBox(attacker).y - 26, 'counter');
+      this.hitstop = 7;
+      this.shake = Math.max(this.shake, 7);
+      this.spawnImpact(attacker.x, attacker.y - 120, target.data.visual.accent, false, 16);
+      audio.perfectGuard?.();
+      return;
+    }
+
     const guardScale = attacker.profile.trait.guardDamage || 1;
     let ritualDamage = this.ritual.damageScale || 1;
-    if (move === attacker.profile.moves.special) ritualDamage *= this.ritual.specialDamageScale || 1;
-    if (move === attacker.profile.moves.super) ritualDamage *= this.ritual.superDamageScale || 1;
+    if (isSpecial) ritualDamage *= this.ritual.specialDamageScale || 1;
+    if (isNightmare) ritualDamage *= this.ritual.superDamageScale || 1;
     if (attacker.data.boss) ritualDamage *= this.ritual.bossPowerScale || 1;
     let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker));
 
     if (blocked) {
       const perfect = target.parryWindow > 0;
-      const guardDamage = Math.max(6, Math.round(damage * (perfect ? .1 : .34) * guardScale));
+      const moveGuardScale = move.guardDamage || 1;
+      const guardDamage = Math.max(6, Math.round(damage * (perfect ? .1 : .34) * guardScale * moveGuardScale));
       target.guard -= guardDamage;
       if (perfect) {
         target.stats.perfectGuards++;
@@ -790,18 +984,19 @@ export class FightEngine {
         this.shake = Math.max(this.shake, 5);
         audio.perfectGuard?.();
       } else {
-        const chip = Math.round(damage * .14 * (this.ritual.chipScale || 1));
+        const chipScale = isNightmare ? .2 : isSpecial ? .17 : .14;
+        const chip = Math.round(damage * chipScale * (this.ritual.chipScale || 1));
         target.health -= chip;
-        target.lastHit = { attackerIndex: attacker.index, moveKey: 'guard-chip', isSuper: false, environmental: false, frame: this.frame };
+        target.lastHit = { attackerIndex: attacker.index, moveKey: `${move.key || 'move'}-guard-chip`, isSuper: isNightmare, environmental: false, frame: this.frame };
         target.stats.damageTaken += chip;
         attacker.stats.damageDealt += chip;
         target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
         attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain * (this.ritual.meterGainScale || 1), 0, 100);
         target.vx = attacker.facing * (move.knockback || 4) * .42;
-        this.hitstop = 3;
+        this.hitstop = isNightmare ? 6 : 3;
       }
       audio.guard();
-      this.spawnImpact(target.x, target.y - 115, target.data.visual.accent, true);
+      this.spawnImpact(target.x, target.y - 115, target.data.visual.accent, true, isNightmare ? 20 : 12);
       if (target.guard <= 0) {
         target.guard = 0;
         target.guardBreak = 70;
@@ -812,13 +1007,23 @@ export class FightEngine {
       return;
     }
 
-    const armorActive = target.armorCooldown === 0 && (
+    const traitArmorActive = target.armorCooldown === 0 && (
       target.profile.trait.id === 'rustArmor' ||
       (target.profile.trait.id === 'nightmareArmor' && healthRatio(target) > .33)
     );
-    damage = Math.round(damage * (1 - clamp((target.profile.armor || 0) + (target.phaseArmor || 0), 0, .45)));
+    const moveArmorActive = Boolean(target.attack?.move?.armorFrames && target.attack.frame <= target.attack.move.armorFrames);
+    const armorActive = traitArmorActive || moveArmorActive;
+    const effectiveArmor = clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
+    damage = Math.round(damage * (1 - effectiveArmor));
     target.health -= damage;
-    target.lastHit = { attackerIndex: attacker.index, moveKey: move === attacker.profile.moves.super ? 'super' : move === attacker.profile.moves.special ? 'special' : move === attacker.profile.moves.heavy ? 'heavy' : move === attacker.profile.moves.throw ? 'throw' : move === attacker.profile.moves.low ? 'low' : 'light', isSuper: move === attacker.profile.moves.super, environmental: false, frame: this.frame };
+    target.lastHit = {
+      attackerIndex: attacker.index,
+      moveKey: move.key || 'unknown-move',
+      moveName: move.name,
+      isSuper: isNightmare,
+      environmental: false,
+      frame: this.frame
+    };
     attacker.stats.damageDealt += damage;
     target.stats.damageTaken += damage;
     if (counter) {
@@ -826,21 +1031,33 @@ export class FightEngine {
       this.addText('COUNTER', target.x, target.y - 226, 'counter');
     }
 
-    let hitstun = move === attacker.profile.moves.super ? 38 : move === attacker.profile.moves.heavy ? 24 : 14;
+    let hitstun = isNightmare ? 38 : isHeavy ? 24 : isSpecial ? 20 : 14;
     hitstun = Math.round(hitstun * (target.profile.hitstunScale || 1) * (counter ? 1.22 : 1));
     if (armorActive) {
-      target.armorCooldown = target.profile.trait.armorCooldown || 240;
-      hitstun = Math.max(7, Math.round(hitstun * .55));
-      this.addText(target.profile.trait.id === 'rustArmor' ? 'RUST ARMOR' : 'NIGHTMARE ARMOR', target.x, target.y - 246, 'armor');
+      if (traitArmorActive) target.armorCooldown = target.profile.trait.armorCooldown || 240;
+      hitstun = Math.max(5, Math.round(hitstun * (moveArmorActive ? .36 : .55)));
+      const armorLabel = moveArmorActive ? 'MOVE ARMOR' : target.profile.trait.id === 'rustArmor' ? 'RUST ARMOR' : 'NIGHTMARE ARMOR';
+      this.addText(armorLabel, target.x, target.y - 246, 'armor');
     }
     target.hurtFrames = hitstun;
     target.invuln = 4;
     target.hitFlash = 7;
     target.vx = attacker.facing * (move.knockback || 6) * (armorActive ? .45 : 1);
-    if (move.level === 'low') target.vy = -2.5;
-    if (move.level === 'throw') {
-      target.vy = -6.5;
+
+    if (move.launch) {
+      target.vy = -Math.abs(move.launch);
       target.grounded = false;
+    } else if (move.level === 'low') {
+      target.vy = move.knockdown ? -4.2 : -2.5;
+      if (move.knockdown) target.grounded = false;
+    }
+    if (isThrow) {
+      target.vy = -Math.max(6.5, Math.abs(move.launch || 0));
+      target.grounded = false;
+    }
+    if (move.knockdown) {
+      target.hurtFrames = Math.max(target.hurtFrames, 28);
+      target.state = 'knockdown';
     }
 
     const gainScale = statusMeterScale(attacker);
@@ -853,12 +1070,13 @@ export class FightEngine {
 
     if (move.effect) this.applyStatus(target, move.effect, attacker);
 
-    this.shake = Math.max(this.shake, move === attacker.profile.moves.super ? 18 : move === attacker.profile.moves.heavy ? 10 : 6);
-    this.flash = move === attacker.profile.moves.super ? 9 : 3;
-    this.hitstop = move === attacker.profile.moves.super ? 11 : move === attacker.profile.moves.heavy ? 7 : 4;
-    audio.hit(move === attacker.profile.moves.super ? 1.8 : move === attacker.profile.moves.heavy ? 1.25 : .85);
-    vibrate(move === attacker.profile.moves.super ? [35, 20, 55] : [18]);
-    this.spawnImpact(target.x, target.y - 125, attacker.data.visual.accent, false, move === attacker.profile.moves.super ? 26 : 14);
+    const impactPower = isNightmare ? 1.8 : isHeavy ? 1.25 : isSpecial ? 1.08 : .85;
+    this.shake = Math.max(this.shake, isNightmare ? 18 : isHeavy ? 10 : isSpecial ? 8 : 6);
+    this.flash = isNightmare ? 9 : isHeavy ? 5 : 3;
+    this.hitstop = isNightmare ? 11 : isHeavy ? 7 : isSpecial ? 6 : 4;
+    audio.hit(impactPower);
+    vibrate(isNightmare ? [35, 20, 55] : isHeavy ? [24] : [18]);
+    this.spawnImpact(target.x, target.y - 125, attacker.data.visual.accent, false, isNightmare ? 26 : isHeavy ? 19 : 14);
     if (attacker.combo > 1) this.addText(`${attacker.combo} HITS`, attacker.x, actorBox(attacker).y - 22, 'combo');
   }
 
@@ -1376,6 +1594,15 @@ export class FightEngine {
       trait: actor.profile.trait.id,
       bossPhase: actor.bossPhaseIndex + 1,
       bossPhaseName: actor.phaseName,
+      currentMove: actor.attack ? {
+        key: actor.attack.key,
+        input: actor.attack.move.input,
+        name: actor.attack.move.name,
+        fidelity: actor.attack.move.fidelity,
+        frame: actor.attack.frame
+      } : null,
+      lastMoveKey: actor.lastMoveKey || null,
+      movesetFidelity: { ...actor.profile.moveset.fidelitySummary },
       stats: { ...actor.stats }
     });
     return {
@@ -1634,14 +1861,14 @@ export class FightEngine {
       const attack = p1.attack;
       context.fillText(`P1 STATE   ${p1.state.toUpperCase()}`, 33, 185);
       context.fillText(`FRAME      ${attack ? attack.frame : '—'}`, 33, 203);
-      context.fillText(`MOVE       ${attack ? attack.move.name : '—'}`, 33, 221);
-      context.fillText(`DISTANCE   ${Math.round(Math.abs(p1.x - p2.x))}`, 33, 239);
-      context.fillText(`TRAIT      ${p1.profile.trait.name}`, 33, 257);
-      context.fillText(`STATUS     ${p1.status ? AFFLICTIONS[p1.status.id]?.name : '—'}`, 33, 273);
-      context.fillText(`BOSS PHASE ${p2.phaseName || '—'}`, 33, 291);
+      context.fillText(`MOVE       ${attack ? `${attack.move.input} · ${attack.move.name}` : '—'}`, 33, 221);
+      context.fillText(`FIDELITY   ${attack ? attack.move.fidelity.toUpperCase() : '—'}`, 33, 239);
+      context.fillText(`DISTANCE   ${Math.round(Math.abs(p1.x - p2.x))}`, 33, 257);
+      context.fillText(`TRAIT      ${p1.profile.trait.name}`, 33, 275);
+      context.fillText(`STATUS     ${p1.status ? AFFLICTIONS[p1.status.id]?.name : '—'}`, 33, 291);
       context.fillStyle = '#747d75';
       context.font = '700 9px ui-monospace';
-      context.fillText(`INPUTS     ${this.inputHistory.slice(-6).map((entry) => entry.label).join(' › ') || '—'}`, 33, 311);
+      context.fillText(`INPUTS     ${this.inputHistory.slice(-5).map((entry) => entry.label).join(' › ') || '—'}`, 33, 311);
     }
     context.restore();
   }
@@ -1821,32 +2048,56 @@ export class FightEngine {
   renderPause(context) {
     const [p1, p2] = this.actors;
     context.save();
-    context.fillStyle = 'rgba(1,2,1,.88)';
+    context.fillStyle = 'rgba(1,2,1,.91)';
     context.fillRect(0, 0, WIDTH, HEIGHT);
     context.textAlign = 'center';
     context.fillStyle = '#efe9dc';
-    context.font = '900 62px ui-monospace';
-    context.fillText('PAUSE', WIDTH / 2, 205);
+    context.font = '900 58px ui-monospace';
+    context.fillText('PAUSE', WIDTH / 2, 96);
     context.fillStyle = '#a7aca4';
-    context.font = '700 13px ui-monospace';
-    context.fillText('ÉCHAP / START POUR REPRENDRE', WIDTH / 2, 237);
+    context.font = '700 12px ui-monospace';
+    context.fillText('ÉCHAP / START POUR REPRENDRE · LISTE COMPLÈTE DANS ARCHIVES > MOVESETS', WIDTH / 2, 123);
+
+    const displayed = ['neutralLight','forwardLight','crouchLight','neutralHeavy','forwardHeavy','throw','neutralSpecial','forwardSpecial','downSpecial','airSpecial','super','desperation'];
     const drawMoveList = (actor, x, align) => {
       context.textAlign = align;
       context.fillStyle = '#b83b44';
       context.font = '900 16px ui-monospace';
-      context.fillText(actor.data.name.toUpperCase(), x, 305);
+      context.fillText(actor.data.name.toUpperCase(), x, 164);
       context.fillStyle = '#d8d1c4';
-      context.font = '700 12px ui-monospace';
-      context.fillText(actor.profile.trait.name, x, 330);
-      context.fillStyle = '#979e97';
-      context.fillText(actor.profile.trait.description, x, 352, 470);
-      context.fillStyle = '#d8d1c4';
-      context.fillText(`TECHNIQUE · ${actor.profile.moves.special.name}`, x, 390);
-      context.fillText(`NIGHTMARE · ${actor.profile.moves.super.name.replace('NIGHTMARE — ', '')}`, x, 414);
-      context.fillText(`AFFLICTION · ${actor.profile.affliction.name}`, x, 438);
+      context.font = '700 11px ui-monospace';
+      context.fillText(`${actor.profile.trait.name} · ${actor.profile.affliction.name}`, x, 184);
+      context.fillStyle = '#747d75';
+      context.font = '700 9px ui-monospace';
+      const summary = actor.profile.moveset.fidelitySummary;
+      context.fillText(`${summary.direct} DIRECTS · ${summary.composite} COMPOSITES · ${summary.adapted} ADAPTATIONS`, x, 202);
+
+      let y = 232;
+      for (const key of displayed) {
+        const move = actor.profile.moves[key];
+        if (!move) continue;
+        const label = `${move.input.padEnd(10, ' ')} ${move.name}`;
+        context.fillStyle = move.fidelity === 'direct-canonical' ? '#e4ddd0' : move.fidelity === 'behavior-composite' ? '#b8b3a8' : '#8c918b';
+        context.font = key === 'desperation' || key === 'super' ? '900 11px ui-monospace' : '700 10px ui-monospace';
+        context.fillText(label, x, y);
+        y += 29;
+      }
     };
-    drawMoveList(p1, 110, 'left');
-    drawMoveList(p2, WIDTH - 110, 'right');
+    drawMoveList(p1, 72, 'left');
+    drawMoveList(p2, WIDTH - 72, 'right');
+
+    context.textAlign = 'center';
+    context.fillStyle = 'rgba(180,52,62,.16)';
+    context.fillRect(WIDTH / 2 - 132, 160, 264, 410);
+    context.strokeStyle = 'rgba(183,59,68,.38)';
+    context.strokeRect(WIDTH / 2 - 132, 160, 264, 410);
+    context.fillStyle = '#b83b44';
+    context.font = '900 12px ui-monospace';
+    context.fillText('COMMANDE DE COMBAT', WIDTH / 2, 200);
+    context.fillStyle = '#c7c2b6';
+    context.font = '700 10px ui-monospace';
+    const controls = ['L · ATTAQUE LÉGÈRE','H · ATTAQUE LOURDE','S · TECHNIQUE','T · SAISIE','N · NIGHTMARE','DIRECTION + COUP · VARIANTE','AIR + COUP · VARIANTE AÉRIENNE','≤30% HP + N · OTHERWORLD'];
+    controls.forEach((line,index)=>context.fillText(line,WIDTH/2,240+index*34));
     context.restore();
   }
 
