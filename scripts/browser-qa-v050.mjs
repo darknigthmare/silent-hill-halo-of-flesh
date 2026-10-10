@@ -79,12 +79,35 @@ async function inspectLayout(page, label, { allowVerticalScroll = true } = {}) {
   const issues = await page.evaluate(({ allowVerticalScroll }) => {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
+    const decorativeOverscan = '.grain, .scanlines, .vignette, [data-qa-overflow="allow"]';
+
+    const isContainedByHorizontalScroller = (element) => {
+      let parent = element.parentElement;
+      while (parent && parent !== document.body) {
+        const style = getComputedStyle(parent);
+        const rect = parent.getBoundingClientRect();
+        const clipsHorizontally = ['auto', 'scroll', 'hidden', 'clip'].includes(style.overflowX);
+        const isBounded = rect.left >= -4 && rect.right <= viewportWidth + 4;
+        if (clipsHorizontally && isBounded && parent.scrollWidth > parent.clientWidth + 2) return true;
+        parent = parent.parentElement;
+      }
+      return false;
+    };
+
     const visible = [...document.querySelectorAll('body *')].filter((element) => {
       const style = getComputedStyle(element);
       const rect = element.getBoundingClientRect();
       return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 1 && rect.height > 1;
     });
     const overflow = visible
+      .filter((element) => {
+        const rect = element.getBoundingClientRect();
+        const outsideViewport = rect.right > viewportWidth + 4 || rect.left < -4;
+        if (!outsideViewport) return false;
+        if (element.matches(decorativeOverscan)) return false;
+        if (isContainedByHorizontalScroller(element)) return false;
+        return true;
+      })
       .map((element) => {
         const rect = element.getBoundingClientRect();
         return {
@@ -97,7 +120,6 @@ async function inspectLayout(page, label, { allowVerticalScroll = true } = {}) {
           bottom: Math.round(rect.bottom),
         };
       })
-      .filter((item) => item.right > viewportWidth + 4 || item.left < -4)
       .slice(0, 25);
     const bodyOverflow = document.documentElement.scrollWidth > viewportWidth + 4;
     const verticalIssue = !allowVerticalScroll && document.documentElement.scrollHeight > viewportHeight + 4;

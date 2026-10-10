@@ -1,0 +1,160 @@
+{
+  "version": "0.5.0",
+  "generatedAt": "2026-10-10T23:20:56.444Z",
+  "baseURL": "http://127.0.0.1:4173",
+  "browser": "140.0.7339.16",
+  "captures": [
+    {
+      "name": "01-command-center-desktop",
+      "file": "tests/captures-v050/01-command-center-desktop.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "02-options-signal-theme",
+      "file": "tests/captures-v050/02-options-signal-theme.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "03-movesets-complete-desktop",
+      "file": "tests/captures-v050/03-movesets-complete-desktop.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "04-townfall-the-weight-moveset",
+      "file": "tests/captures-v050/04-townfall-the-weight-moveset.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "05-selection-versus-desktop",
+      "file": "tests/captures-v050/05-selection-versus-desktop.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "06-dossier-complete-moveset",
+      "file": "tests/captures-v050/06-dossier-complete-moveset.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "07-observation-frame-data",
+      "file": "tests/captures-v050/07-observation-frame-data.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "08-animated-stage-gallery",
+      "file": "tests/captures-v050/08-animated-stage-gallery.png",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "name": "09-command-center-mobile",
+      "file": "tests/captures-v050/09-command-center-mobile.png",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      }
+    },
+    {
+      "name": "10-movesets-mobile",
+      "file": "tests/captures-v050/10-movesets-mobile.png",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      }
+    },
+    {
+      "name": "11-selection-mobile",
+      "file": "tests/captures-v050/11-selection-mobile.png",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "pageErrors": [],
+  "requestFailures": [],
+  "layoutIssues": [],
+  "assertions": [
+    {
+      "label": "Command version",
+      "passed": true,
+      "detail": "Le Command Center doit afficher v0.5.0."
+    },
+    {
+      "label": "Command totals",
+      "passed": true,
+      "detail": "Le Command Center doit afficher 3680 coups."
+    },
+    {
+      "label": "Moveset count",
+      "passed": true,
+      "detail": "La fiche sélectionnée doit présenter exactement 16 mouvements."
+    },
+    {
+      "label": "Moveset fidelity",
+      "passed": true,
+      "detail": "Au moins une action directement attestée doit être visible."
+    },
+    {
+      "label": "Townfall post-release entry",
+      "passed": true,
+      "detail": "The Weight doit être présent dans le registre Townfall."
+    },
+    {
+      "label": "Roster rendered",
+      "passed": true,
+      "detail": "La grille des manifestations doit être rendue."
+    },
+    {
+      "label": "Dossier 16 moves",
+      "passed": true,
+      "detail": "Le dossier Versus doit présenter 16 mouvements."
+    },
+    {
+      "label": "Observation active",
+      "passed": true,
+      "detail": "Le contrôle Observation doit être disponible."
+    },
+    {
+      "label": "Stage catalogue",
+      "passed": true,
+      "detail": "La galerie doit contenir 123 arènes."
+    }
+  ],
+  "summary": {
+    "captures": 11,
+    "assertions": 9,
+    "passedAssertions": 9,
+    "failedAssertions": 0,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "pageErrors": 0,
+    "requestFailures": 0,
+    "layoutIssues": 0,
+    "success": true
+  }
+}
