@@ -165,7 +165,8 @@ jobs:
         run: |
           git config user.name "darknigthmare"
           git config user.email "chuckykill@hotmail.fr"
-          git add scripts/browser-qa-v050.mjs docs/BROWSER_QA_v0.5.0.md tests/captures-v050
+          git add scripts/browser-qa-v050.mjs docs/BROWSER_QA_v0.5.0.md
+          git add -f tests/captures-v050
           git commit -m "test: validate v0.5.0 interface in Chrome for Testing"
           git push origin main
 
