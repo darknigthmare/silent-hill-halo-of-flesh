@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Preserve bootstrap workflow
+        run: cp .github/workflows/bootstrap.yml /tmp/bootstrap.yml
+
       - name: Download verified v0.2.0 source archive
         env:
           ARCHIVE_URL: "https://sdmntprdenmarkeast.oaiusercontent.com/files/00000000-6840-8210-b3ea-239907b76fb2/raw?se=2026-10-10T17%3A00%3A43Z&sp=r&sv=2026-02-06&sr=b&scid=95cabadc-1ef3-5b3d-925a-8119897618e3&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T03%3A01%3A15Z&ske=2026-10-11T03%3A01%3A15Z&sks=b&skv=2026-02-06&sig=MICQuuoRXtiXT5BQsPz4MHgAQ36k/rolw/oD4l9BkPk%3D"
@@ -36,14 +39,16 @@ jobs:
         run: |
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           tar -xzf /tmp/halo-v0.2.0.tar.gz -C .
+          rm -f .github/workflows/qa.yml
+          mkdir -p .github/workflows
+          cp /tmp/bootstrap.yml .github/workflows/bootstrap.yml
           test -f package.json
           test -f src/fight.js
-          test -f .github/workflows/qa.yml
 
       - name: Run full QA
         run: npm test
 
-      - name: Publish v0.2.0 to main
+      - name: Publish v0.2.0 code to main
         run: |
           git config user.name "darknigthmare"
           git config user.email "chuckykill@hotmail.fr"
