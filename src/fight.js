@@ -60,7 +60,9 @@ function emptyStats() {
     maxCombo: 0,
     hazardsTaken: 0,
     bossPhasesTriggered: 0,
-    ritualDamage: 0
+    ritualDamage: 0,
+    fatalities: 0,
+    stageFatalities: 0
   };
 }
 
@@ -106,6 +108,7 @@ function makeActor(data, index, ritual = {}) {
     koProgress: 0,
     roundWins: 0,
     lastHitBy: null,
+    lastHit: null,
     aiTimer: 0,
     aiIntent: {},
     aiRead: null,
@@ -169,7 +172,8 @@ export function chronicleGrade(stats = {}) {
   const combo = Math.max(0, stats.maxCombo || 0);
   const guards = Math.max(0, stats.perfectGuards || 0);
   const hazards = Math.max(0, stats.hazardsTaken || 0);
-  const score = health * 62 + Math.min(18, combo * 2.5) + Math.min(16, guards * 4) - Math.min(20, hazards * 5);
+  const fatalities = Math.max(0, stats.fatalities || 0) + Math.max(0, stats.stageFatalities || 0);
+  const score = health * 60 + Math.min(18, combo * 2.5) + Math.min(16, guards * 4) + Math.min(8, fatalities * 4) - Math.min(20, hazards * 5);
   if (score >= 86) return 'S';
   if (score >= 72) return 'A';
   if (score >= 56) return 'B';
@@ -197,6 +201,9 @@ export class FightEngine {
       stageHazards: this.settings.stageHazards !== false,
       radioWarning: this.settings.radioWarning !== false,
       adaptiveAI: this.settings.adaptiveAI !== false,
+      fatalities: this.settings.fatalities !== false,
+      stageFatalities: this.settings.stageFatalities !== false,
+      stageAnimations: this.settings.stageAnimations !== false,
       ritualId: 'none',
       initialHealthRatio: 1,
       initialMeter: null,
@@ -228,6 +235,8 @@ export class FightEngine {
     this.hitstop = 0;
     this.superOverlay = null;
     this.bossPhaseOverlay = null;
+    this.fatality = null;
+    this.lastFatality = null;
     this.winner = null;
     this.resultTimer = 0;
     this.rng = seededRandom(this.config.seed);
@@ -290,6 +299,7 @@ export class FightEngine {
       actor.stats = emptyStats();
     });
     this.winner = null;
+    this.lastFatality = null;
     this.resetRound(true);
   }
 
@@ -302,6 +312,7 @@ export class FightEngine {
     this.phase = 'intro';
     this.phaseTimer = 145;
     this.superOverlay = null;
+    this.fatality = null;
     this.flash = 0;
     this.hitstop = 0;
     const ritualOtherworld = Boolean(this.ritual.startOtherworld);
@@ -344,6 +355,7 @@ export class FightEngine {
       actor.bossPhaseIndex = -1;
       actor.status = null;
       actor.lastMoveKey = null;
+      actor.lastHit = null;
       actor.moveVariety.clear();
     });
     this.callbacks.onState(this.snapshot());
@@ -381,6 +393,14 @@ export class FightEngine {
         this.phase = 'fight';
         this.actors.forEach((actor) => { actor.state = 'idle'; });
       }
+      this.input.endFrame();
+      return;
+    }
+
+    if (this.phase === 'fatality') {
+      this.updateFatality();
+      this.updateEffects();
+      this.callbacks.onState(this.snapshot());
       this.input.endFrame();
       return;
     }
@@ -428,16 +448,7 @@ export class FightEngine {
     this.updateHazards();
     this.updateEffects();
 
-    this.actors.forEach((actor) => {
-      if (actor.health <= 0 && !actor.ko) {
-        actor.health = 0;
-        actor.ko = true;
-        actor.state = 'ko';
-        audio.ko();
-        vibrate([45, 25, 90]);
-        this.endRound(this.actors[1 - actor.index], 'K.O.');
-      }
-    });
+    this.resolveKnockouts();
     this.callbacks.onState(this.snapshot());
     this.input.endFrame();
   }
@@ -781,6 +792,7 @@ export class FightEngine {
       } else {
         const chip = Math.round(damage * .14 * (this.ritual.chipScale || 1));
         target.health -= chip;
+        target.lastHit = { attackerIndex: attacker.index, moveKey: 'guard-chip', isSuper: false, environmental: false, frame: this.frame };
         target.stats.damageTaken += chip;
         attacker.stats.damageDealt += chip;
         target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
@@ -806,6 +818,7 @@ export class FightEngine {
     );
     damage = Math.round(damage * (1 - clamp((target.profile.armor || 0) + (target.phaseArmor || 0), 0, .45)));
     target.health -= damage;
+    target.lastHit = { attackerIndex: attacker.index, moveKey: move === attacker.profile.moves.super ? 'super' : move === attacker.profile.moves.special ? 'special' : move === attacker.profile.moves.heavy ? 'heavy' : move === attacker.profile.moves.throw ? 'throw' : move === attacker.profile.moves.low ? 'low' : 'light', isSuper: move === attacker.profile.moves.super, environmental: false, frame: this.frame };
     attacker.stats.damageDealt += damage;
     target.stats.damageTaken += damage;
     if (counter) {
@@ -878,6 +891,7 @@ export class FightEngine {
   applyStatusDamage(actor, damage) {
     if (actor.ko || this.phase !== 'fight') return;
     actor.health -= damage;
+    if (actor.status?.source != null) actor.lastHit = { attackerIndex: actor.status.source, moveKey: 'status', isSuper: false, environmental: false, frame: this.frame };
     actor.stats.damageTaken += damage;
     actor.hitFlash = Math.max(actor.hitFlash, 2);
     this.spawnImpact(actor.x, actor.y - 100, AFFLICTIONS[actor.status?.id]?.color || '#a8323d', false, 4);
@@ -955,6 +969,7 @@ export class FightEngine {
       const guarded = actor.blocking && actor.grounded;
       const damage = Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
       actor.health -= damage;
+      actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
       actor.stats.damageTaken += damage;
       actor.stats.hazardsTaken++;
       actor.hitFlash = 6;
@@ -1116,6 +1131,171 @@ export class FightEngine {
     }
   }
 
+
+  resolveKnockouts() {
+    const defeated = this.actors.filter((actor) => actor.health <= 0 && !actor.ko);
+    if (!defeated.length || this.phase !== 'fight') return;
+    if (defeated.length > 1) {
+      for (const actor of defeated) {
+        actor.health = 0;
+        actor.ko = true;
+        actor.state = 'ko';
+      }
+      audio.ko();
+      vibrate([45, 25, 90]);
+      this.endRound(null, 'DOUBLE K.O.');
+      return;
+    }
+
+    const target = defeated[0];
+    const hit = target.lastHit || { attackerIndex: 1 - target.index, moveKey: 'unknown', isSuper: false, environmental: false };
+    const attacker = hit.attackerIndex == null ? this.actors[1 - target.index] : this.actors[hit.attackerIndex];
+    const nearEdge = target.x < 190 || target.x > WIDTH - 190;
+    const stageBased = this.config.stageFatalities !== false && Boolean(this.stage?.fatality) && (hit.environmental || hit.isSuper || nearEdge);
+    const fighterFatalities = attacker?.data?.fatalities || [];
+    const fighterDefinition = fighterFatalities.find((entry) => entry.type === (hit.isSuper ? 'nightmare' : 'signature')) || fighterFatalities[0];
+    const definition = stageBased ? this.stage.fatality : fighterDefinition;
+
+    if (this.config.fatalities !== false && attacker && definition) {
+      this.startFatality(attacker, target, definition, stageBased, hit);
+      return;
+    }
+
+    target.health = 0;
+    target.ko = true;
+    target.state = 'ko';
+    audio.ko();
+    vibrate([45, 25, 90]);
+    this.endRound(attacker, 'K.O.');
+  }
+
+  startFatality(attacker, target, definition, stageBased = false, hit = {}) {
+    const sequence = Array.isArray(definition.sequence) && definition.sequence.length
+      ? definition.sequence
+      : ['stagger', 'judgment', 'collapse'];
+    const total = Math.max(168, sequence.length * 46);
+    target.health = 1;
+    target.attack = null;
+    target.blocking = false;
+    target.hurtFrames = 0;
+    target.invuln = 0;
+    target.vx = 0;
+    target.vy = 0;
+    target.grounded = true;
+    target.state = 'fatalityTarget';
+    attacker.attack = null;
+    attacker.blocking = false;
+    attacker.vx = 0;
+    attacker.vy = 0;
+    attacker.state = 'fatality';
+    this.projectiles.length = 0;
+    this.hazards.length = 0;
+    this.phase = 'fatality';
+    this.fatality = {
+      attackerIndex: attacker.index,
+      targetIndex: target.index,
+      definition,
+      stageBased,
+      hit,
+      sequence,
+      step: 0,
+      lastStep: -1,
+      timer: total,
+      total,
+      startedAt: this.frame
+    };
+    this.world.triggered = true;
+    this.world.phase = 'otherworld';
+    this.world.amount = Math.max(this.world.amount, stageBased || definition.type === 'nightmare' ? 1 : .78);
+    this.world.siren = Math.max(this.world.siren, 90);
+    this.addText(stageBased ? 'STAGE FATALITY' : 'FATALITY', WIDTH / 2, 252, 'fatality');
+    this.flash = 12;
+    this.shake = 16;
+    audio.siren?.();
+    audio.tone?.({ freq: stageBased ? 54 : 68, duration: .42, gain: .065, slide: 44 });
+    vibrate([60, 35, 80, 45, 110]);
+  }
+
+  updateFatality() {
+    const fatality = this.fatality;
+    if (!fatality) {
+      this.phase = 'fight';
+      return;
+    }
+    const attacker = this.actors[fatality.attackerIndex];
+    const target = this.actors[fatality.targetIndex];
+    const elapsed = fatality.total - fatality.timer;
+    const progress = clamp(elapsed / fatality.total, 0, 1);
+    const stepLength = fatality.total / fatality.sequence.length;
+    fatality.step = Math.min(fatality.sequence.length - 1, Math.floor(elapsed / stepLength));
+
+    const edgeRight = target.x >= WIDTH / 2;
+    const targetGoal = fatality.stageBased ? (edgeRight ? WIDTH - 118 : 118) : WIDTH / 2 + (edgeRight ? 82 : -82);
+    const attackerGoal = fatality.stageBased ? (edgeRight ? WIDTH - 255 : 255) : WIDTH / 2 + (edgeRight ? -78 : 78);
+    target.x += (targetGoal - target.x) * .075;
+    attacker.x += (attackerGoal - attacker.x) * .075;
+    attacker.facing = target.x > attacker.x ? 1 : -1;
+    target.facing = -attacker.facing;
+    attacker.state = 'fatality';
+    target.state = progress > .78 ? 'ko' : 'fatalityTarget';
+    target.koProgress = progress > .76 ? clamp((progress - .76) / .24, 0, .82) : 0;
+
+    if (fatality.step !== fatality.lastStep) {
+      fatality.lastStep = fatality.step;
+      const label = String(fatality.sequence[fatality.step] || 'JUDGMENT').replace(/[-_]/g, ' ').toUpperCase();
+      this.addText(label, target.x, target.y - 245, fatality.stageBased ? 'stageFatality' : 'fatalityStep');
+      const color = fatality.stageBased ? '#b4474c' : attacker.data.visual.accent;
+      this.spawnImpact(target.x, target.y - 115, color, false, 20 + fatality.step * 5);
+      this.shake = Math.max(this.shake, 8 + fatality.step * 3);
+      this.flash = Math.max(this.flash, 4 + fatality.step * 2);
+      audio.tone?.({ freq: Math.max(38, 112 - fatality.step * 17), duration: .18, gain: .045, slide: 35 });
+      if (label.includes('SIREN') || label.includes('OTHERWORLD') || label.includes('BLACKOUT')) this.world.amount = 1;
+    }
+
+    if (fatality.definition.effect === 'chains' || fatality.definition.effect === 'rust') {
+      if (this.frame % 7 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 95, target.y - 60 - this.rng() * 160, '#8f5748', false, 4);
+    } else if (fatality.definition.effect === 'petals' || fatality.definition.effect === 'spores') {
+      if (this.frame % 5 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 130, target.y - 90 - this.rng() * 150, '#b85f76', false, 3);
+    } else if (fatality.definition.effect === 'water' || fatality.definition.effect === 'frost') {
+      if (this.frame % 6 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 110, target.y - 15, '#7aa3ae', true, 5);
+    } else if (fatality.definition.effect === 'fire' || fatality.definition.effect === 'blood') {
+      if (this.frame % 5 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 100, target.y - 40 - this.rng() * 130, '#b63d38', false, 4);
+    }
+
+    fatality.timer--;
+    if (fatality.timer <= 0) this.completeFatality();
+  }
+
+  completeFatality() {
+    const fatality = this.fatality;
+    if (!fatality) return;
+    const attacker = this.actors[fatality.attackerIndex];
+    const target = this.actors[fatality.targetIndex];
+    target.health = 0;
+    target.ko = true;
+    target.state = 'ko';
+    target.koProgress = .22;
+    attacker.state = 'idle';
+    attacker.stats.fatalities++;
+    if (fatality.stageBased) attacker.stats.stageFatalities++;
+    this.lastFatality = {
+      id: fatality.definition.id || null,
+      name: fatality.definition.name,
+      stageBased: fatality.stageBased,
+      stage: this.stage?.name || null,
+      performer: attacker.data.name,
+      victim: target.data.name,
+      effect: fatality.definition.effect || null,
+      sequence: [...fatality.sequence]
+    };
+    this.fatality = null;
+    this.phase = 'fight';
+    audio.ko();
+    audio.tone?.({ freq: 38, duration: .55, gain: .07, slide: 22 });
+    vibrate([90, 50, 130]);
+    this.endRound(attacker, this.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY');
+  }
+
   endRound(winner, label) {
     if (this.phase !== 'fight') return;
     this.phase = 'roundEnd';
@@ -1142,7 +1322,8 @@ export class FightEngine {
           winner: { ...matchWinner.stats, healthRatio: healthRatio(matchWinner), grade: chronicleGrade({ ...matchWinner.stats, healthRatio: healthRatio(matchWinner) }) },
           loser: { ...loser.stats, healthRatio: healthRatio(loser) },
           worldShiftTriggered: this.world.triggered,
-          hazardsTriggered: this.world.hazardsTriggered
+          hazardsTriggered: this.world.hazardsTriggered,
+          lastFatality: this.lastFatality ? { ...this.lastFatality } : null
         }
       });
     } else {
@@ -1206,6 +1387,8 @@ export class FightEngine {
       world: { ...this.world },
       ritual: { id: this.ritual.id, name: this.ritual.name },
       inputHistory: [...this.inputHistory],
+      fatality: this.fatality ? { name: this.fatality.definition.name, stageBased: this.fatality.stageBased, step: this.fatality.step, timer: this.fatality.timer } : null,
+      lastFatality: this.lastFatality ? { ...this.lastFatality } : null,
       winner: this.winner?.data?.name || null,
       paused: this.paused
     };
@@ -1223,15 +1406,19 @@ export class FightEngine {
       height: HEIGHT,
       cinematic: Boolean(this.superOverlay),
       otherworld: this.world.amount,
-      radio: this.config.radioWarning ? this.world.radio : 0
+      radio: this.config.radioWarning ? this.world.radio : 0,
+      animationsEnabled: this.config.stageAnimations !== false
     });
     this.renderHazards(context, time);
     this.renderProjectiles(context);
     const sortedActors = [...this.actors].sort((left, right) => left.y - right.y);
     for (const actor of sortedActors) {
-      const attackProgress = actor.attack
-        ? clamp((actor.attack.frame - actor.attack.move.startup * .5) / (actor.attack.move.active + actor.attack.move.startup), 0, 1)
-        : 0;
+      const fatalityProgress = this.fatality ? clamp((this.fatality.total - this.fatality.timer) / this.fatality.total, 0, 1) : 0;
+      const attackProgress = this.fatality && actor.index === this.fatality.attackerIndex
+        ? Math.sin(Math.min(1, fatalityProgress * 1.35) * Math.PI)
+        : actor.attack
+          ? clamp((actor.attack.frame - actor.attack.move.startup * .5) / (actor.attack.move.active + actor.attack.move.startup), 0, 1)
+          : 0;
       drawMonster(context, actor.data, actor.x, actor.y, {
         facing: actor.facing,
         state: {
@@ -1254,6 +1441,7 @@ export class FightEngine {
     this.renderTexts(context);
     if (this.superOverlay) this.renderSuperOverlay(context);
     if (this.bossPhaseOverlay) this.renderBossPhaseOverlay(context);
+    if (this.fatality) this.renderFatalityOverlay(context);
     this.renderRitualOverlay(context);
     if (this.paused) this.renderPause(context);
     if (this.phase === 'matchEnd') this.renderMatchEnd(context);
@@ -1468,6 +1656,10 @@ export class FightEngine {
         context.font = '900 34px ui-monospace'; context.fillStyle = '#e6dfcf';
       } else if (['fight', 'ko'].includes(text.kind)) {
         context.font = '900 82px ui-monospace'; context.fillStyle = '#a62d36'; context.shadowColor = '#000'; context.shadowBlur = 18;
+      } else if (text.kind === 'fatality') {
+        context.font = '900 68px ui-monospace'; context.fillStyle = '#b01f2c'; context.shadowColor = '#000'; context.shadowBlur = 24;
+      } else if (text.kind === 'fatalityStep' || text.kind === 'stageFatality') {
+        context.font = '900 21px ui-monospace'; context.fillStyle = text.kind === 'stageFatality' ? '#d5ad78' : '#e3d2c1'; context.shadowColor = '#7f1722'; context.shadowBlur = 14;
       } else if (text.kind === 'shift' || text.kind === 'phase') {
         context.font = '900 30px ui-monospace'; context.fillStyle = '#d4c7b2'; context.shadowColor = '#a62d36'; context.shadowBlur = 22;
       } else if (['break', 'perfect', 'counter', 'armor'].includes(text.kind)) {
@@ -1525,6 +1717,85 @@ export class FightEngine {
     context.fillStyle = '#9ea49c';
     context.font = '700 12px ui-monospace';
     context.fillText(`${overlay.actor.data.name.toUpperCase()} · ${overlay.actor.data.signature.toUpperCase()}`, WIDTH / 2, 324);
+    context.restore();
+  }
+
+
+  renderFatalityOverlay(context) {
+    const fatality = this.fatality;
+    if (!fatality) return;
+    const attacker = this.actors[fatality.attackerIndex];
+    const target = this.actors[fatality.targetIndex];
+    const progress = clamp((fatality.total - fatality.timer) / fatality.total, 0, 1);
+    const pulse = .5 + .5 * Math.sin(this.frame * .18);
+    const effect = fatality.definition.effect || 'rust';
+    context.save();
+    context.fillStyle = `rgba(2,0,1,${.22 + Math.sin(Math.min(1, progress * 1.4) * Math.PI) * .42})`;
+    context.fillRect(0, 0, WIDTH, HEIGHT);
+    context.fillStyle = '#020202';
+    context.fillRect(0, 0, WIDTH, 82);
+    context.fillRect(0, HEIGHT - 92, WIDTH, 92);
+
+    if (effect === 'static' || effect === 'flicker' || effect === 'void') {
+      context.globalCompositeOperation = 'screen';
+      for (let y = 92; y < HEIGHT - 92; y += 8) {
+        context.fillStyle = `rgba(224,221,200,${.012 + ((y + this.frame * 5) % 31 === 0 ? .09 : 0)})`;
+        context.fillRect(0, y, WIDTH, 1 + (y % 3));
+      }
+    } else if (effect === 'blood' || effect === 'fire' || effect === 'rust') {
+      const gradient = context.createRadialGradient(WIDTH / 2, FLOOR - 80, 20, WIDTH / 2, FLOOR - 80, 520);
+      gradient.addColorStop(0, `rgba(155,26,33,${.09 + pulse * .12})`);
+      gradient.addColorStop(1, 'rgba(0,0,0,0)');
+      context.fillStyle = gradient;
+      context.fillRect(0, 82, WIDTH, HEIGHT - 174);
+    } else if (effect === 'petals' || effect === 'spores') {
+      context.globalCompositeOperation = 'screen';
+      for (let index = 0; index < 26; index++) {
+        const x = (index * 97 + this.frame * (1 + index % 4)) % WIDTH;
+        const y = 100 + ((index * 43 + this.frame * 1.8) % (HEIGHT - 210));
+        context.save(); context.translate(x, y); context.rotate(this.frame * .03 + index);
+        context.fillStyle = 'rgba(181,74,96,.28)'; context.fillRect(-5, -1, 10, 3); context.restore();
+      }
+    } else if (effect === 'water' || effect === 'frost') {
+      context.fillStyle = `rgba(71,111,123,${.045 + pulse * .055})`;
+      context.fillRect(0, 82, WIDTH, HEIGHT - 174);
+      context.strokeStyle = 'rgba(179,207,211,.16)';
+      for (let index = 0; index < 7; index++) {
+        context.beginPath(); context.ellipse(WIDTH / 2, FLOOR + index * 15, 120 + index * 75 + pulse * 12, 6 + index, 0, 0, TAU); context.stroke();
+      }
+    } else if (effect === 'chains') {
+      context.strokeStyle = 'rgba(143,134,112,.34)'; context.lineWidth = 4;
+      for (let index = 0; index < 7; index++) {
+        const x = 70 + index * 190; const sway = Math.sin(this.frame * .025 + index) * 30;
+        context.beginPath(); context.moveTo(x, 82); context.quadraticCurveTo(x + sway, HEIGHT * .45, x - sway * .4, HEIGHT - 92); context.stroke();
+      }
+    }
+    context.globalCompositeOperation = 'source-over';
+
+    context.textAlign = 'left';
+    context.fillStyle = fatality.stageBased ? '#d5a86f' : '#b8303b';
+    context.font = '900 12px ui-monospace';
+    context.fillText(fatality.stageBased ? 'ENVIRONMENTAL JUDGMENT' : 'SIGNATURE JUDGMENT', 38, 36);
+    context.fillStyle = '#f0e8db';
+    context.font = '900 25px ui-monospace';
+    context.fillText(String(fatality.definition.name || 'FATALITY').toUpperCase(), 38, 65);
+    context.textAlign = 'right';
+    context.fillStyle = '#969b94';
+    context.font = '700 10px ui-monospace';
+    context.fillText(`${attacker.data.name.toUpperCase()} → ${target.data.name.toUpperCase()}`, WIDTH - 38, 39);
+    context.fillText(fatality.stageBased ? this.stage.name.toUpperCase() : attacker.data.game.toUpperCase(), WIDTH - 38, 59);
+
+    const step = String(fatality.sequence[fatality.step] || '').replace(/[-_]/g, ' ').toUpperCase();
+    context.textAlign = 'center';
+    context.fillStyle = '#d8d0c3';
+    context.font = '900 14px ui-monospace';
+    context.fillText(step, WIDTH / 2, HEIGHT - 53);
+    const segmentWidth = Math.min(580, WIDTH * .52) / fatality.sequence.length;
+    const startX = WIDTH / 2 - segmentWidth * fatality.sequence.length / 2;
+    for (let index = 0; index < fatality.sequence.length; index++) {
+      context.fillStyle = index <= fatality.step ? (fatality.stageBased ? '#b88754' : '#9e2631') : '#242824';
+      context.fillRect(startX + index * segmentWidth + 3, HEIGHT - 33, segmentWidth - 6, 4);
+    }
     context.restore();
   }
 
@@ -1600,10 +1871,15 @@ export class FightEngine {
       context.fillStyle = '#a6aaa3';
       context.font = '700 13px ui-monospace';
       context.fillText(`${winner.stats.maxCombo} COMBO MAX · ${winner.stats.perfectGuards} GARDES PARFAITES · ${winner.stats.counters} CONTRES`, WIDTH / 2, 390);
+      if (this.lastFatality) {
+        context.fillStyle = this.lastFatality.stageBased ? '#d0a36f' : '#b83b44';
+        context.font = '900 11px ui-monospace';
+        context.fillText(`${this.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY'} · ${this.lastFatality.name.toUpperCase()}`, WIDTH / 2, 414);
+      }
     }
     context.fillStyle = '#858d86';
     context.font = '700 12px ui-monospace';
-    context.fillText('LE DOSSIER DE RÉSULTAT EST DISPONIBLE HORS DE L’ARÈNE', WIDTH / 2, 425);
+    context.fillText('LE DOSSIER DE RÉSULTAT EST DISPONIBLE HORS DE L’ARÈNE', WIDTH / 2, this.lastFatality ? 448 : 425);
     context.restore();
   }
 }

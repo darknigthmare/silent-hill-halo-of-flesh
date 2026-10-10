@@ -2,7 +2,7 @@
 
 Le projet de référence analysé est **CQC Versus Legacy v0.56**. La reprise concerne sa structure de produit, ses modes, sa navigation, son organisation modulaire et sa lisibilité générale. Le code, les données et l’habillage ont été reconstruits pour l’univers Silent Hill.
 
-| Fonction CQC | Halo of Flesh v0.3.0 | Statut |
+| Fonction CQC | Halo of Flesh v0.4.0 | Statut |
 |---|---|---|
 | Front de commande plein écran | `index.html` | Complet |
 | Fond animé procédural | `src/command.js` | Complet |
@@ -34,7 +34,7 @@ Le projet de référence analysé est **CQC Versus Legacy v0.56**. La reprise co
 
 ## Extensions propres à Halo of Flesh
 
-La v0.3.0 dépasse volontairement la parité stricte sur les points suivants :
+La v0.4.0 dépasse volontairement la parité stricte sur les points suivants :
 
 1. Otherworld dynamique en cours de round.
 2. Radio de proximité et parasites visuels.

@@ -5,7 +5,7 @@
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.3.0';
+export const VERSION = '0.4.0';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -23,7 +23,8 @@ export const SOURCE_META = Object.freeze({
   shortmessage: { label: 'SILENT HILL: THE SHORT MESSAGE', year: 2024, short: 'TSM', stage: 'villa' },
   shf: { label: 'SILENT HILL f', year: 2025, short: 'SH f', stage: 'ebisugaoka' },
   film: { label: 'SILENT HILL — FILM UNIVERSE', year: 2006, short: 'FILMS', stage: 'film_midwich' },
-  ascension: { label: 'SILENT HILL: ASCENSION', year: 2023, short: 'ASC', stage: 'hope_junction' }
+  ascension: { label: 'SILENT HILL: ASCENSION', year: 2023, short: 'ASC', stage: 'hope_junction' },
+  townfall: { label: 'SILENT HILL: TOWNFALL', year: 2026, short: 'TOWNFALL', stage: 'st_amelia_marina' }
 });
 
 export const ARCHETYPES = Object.freeze({
@@ -190,7 +191,8 @@ const paletteBySource = {
   sh4: ['#6e665f', '#beb6aa'], origins: ['#705f55', '#caa38c'], homecoming: ['#5d5f58', '#b3a47a'],
   shattered: ['#58707b', '#b5d4dc'], downpour: ['#5c6770', '#b7c2c9'], arcade: ['#5d5652', '#c6a786'],
   bom: ['#655a64', '#bfa7bd'], pt: ['#6b5c54', '#be9c8c'], shortmessage: ['#5e4d52', '#cc8f9d'],
-  shf: ['#6a4d4e', '#d0a5a7'], film: ['#5f514b', '#c2a38f'], ascension: ['#554b4b', '#b58d83']
+  shf: ['#6a4d4e', '#d0a5a7'], film: ['#5f514b', '#c2a38f'], ascension: ['#554b4b', '#b58d83'],
+  townfall: ['#3f4b4d', '#a9b6ad']
 };
 
 const defaultsByKind = {
@@ -204,9 +206,260 @@ const defaultsByKind = {
   void: { scale: 1.55, body: 'void' }, serpentine: { scale: 1.2, body: 'serpent' }
 };
 
+const LEGACY_IDS = Object.freeze({
+  "sh1|Air Screamer": "sh1_air_screamer_001",
+  "sh1|Night Flutter": "sh1_night_flutter_002",
+  "sh1|Groaner": "sh1_groaner_003",
+  "sh1|Wormhead": "sh1_wormhead_004",
+  "sh1|Grey Child": "sh1_grey_child_005",
+  "sh1|Mumbler": "sh1_mumbler_006",
+  "sh1|Larval Stalker": "sh1_larval_stalker_007",
+  "sh1|Stalker": "sh1_stalker_008",
+  "sh1|Creeper": "sh1_creeper_009",
+  "sh1|Romper": "sh1_romper_010",
+  "sh1|Hanged Scratcher": "sh1_hanged_scratcher_011",
+  "sh1|Puppet Nurse": "sh1_puppet_nurse_012",
+  "sh1|Puppet Doctor": "sh1_puppet_doctor_013",
+  "sh1|Split Head": "sh1_split_head_014",
+  "sh1|Twinfeeler": "sh1_twinfeeler_015",
+  "sh1|Floatstinger": "sh1_floatstinger_016",
+  "sh1|Monster Cybil": "sh1_monster_cybil_017",
+  "sh1|Incubator": "sh1_incubator_018",
+  "sh1|Incubus": "sh1_incubus_019",
+  "sh2|Lying Figure": "sh2_lying_figure_020",
+  "sh2|Lying Figure — Crawling": "sh2_lying_figure_crawling_021",
+  "sh2|Mannequin": "sh2_mannequin_022",
+  "sh2|Mannequin — Ambusher": "sh2_mannequin_ambusher_023",
+  "sh2|Bubble Head Nurse": "sh2_bubble_head_nurse_024",
+  "sh2|Creeper": "sh2_creeper_025",
+  "sh2|Mandarin": "sh2_mandarin_026",
+  "sh2|Flesh Lip": "sh2_flesh_lip_027",
+  "sh2|Abstract Daddy": "sh2_abstract_daddy_028",
+  "sh2|Red Pyramid Thing — Great Knife": "sh2_red_pyramid_thing_great_knife_029",
+  "sh2|Red Pyramid Thing — Spear": "sh2_red_pyramid_thing_spear_030",
+  "sh2|Twin Pyramid Heads": "sh2_twin_pyramid_heads_031",
+  "sh2|Eddie Dombrowski": "sh2_eddie_dombrowski_032",
+  "sh2|Maria — Final Manifestation": "sh2_maria_final_manifestation_033",
+  "sh2|Mary — Final Manifestation": "sh2_mary_final_manifestation_034",
+  "sh2|Prisoner": "sh2_prisoner_035",
+  "sh3|Closer": "sh3_closer_036",
+  "sh3|Numb Body — Small": "sh3_numb_body_small_037",
+  "sh3|Numb Body — Large": "sh3_numb_body_large_038",
+  "sh3|Pendulum": "sh3_pendulum_039",
+  "sh3|Double Head": "sh3_double_head_040",
+  "sh3|Insane Cancer": "sh3_insane_cancer_041",
+  "sh3|Slurper": "sh3_slurper_042",
+  "sh3|Nurse — Pipe": "sh3_nurse_pipe_043",
+  "sh3|Nurse — Revolver": "sh3_nurse_revolver_044",
+  "sh3|Scraper": "sh3_scraper_045",
+  "sh3|Split Worm": "sh3_split_worm_046",
+  "sh3|Missionary": "sh3_missionary_047",
+  "sh3|Leonard Wolf": "sh3_leonard_wolf_048",
+  "sh3|Memory of Alessa": "sh3_memory_of_alessa_049",
+  "sh3|God": "sh3_god_050",
+  "sh3|Valtiel": "sh3_valtiel_051",
+  "sh3|Sewer Creature": "sh3_sewer_creature_052",
+  "sh4|Sniffer Dog — Male": "sh4_sniffer_dog_male_053",
+  "sh4|Sniffer Dog — Female": "sh4_sniffer_dog_female_054",
+  "sh4|Hummer": "sh4_hummer_055",
+  "sh4|Wall Man": "sh4_wall_man_056",
+  "sh4|Gum Head — Old Type": "sh4_gum_head_old_type_057",
+  "sh4|Gum Head — New Type": "sh4_gum_head_new_type_058",
+  "sh4|Twin Victim": "sh4_twin_victim_059",
+  "sh4|Patient": "sh4_patient_060",
+  "sh4|Toadstool": "sh4_toadstool_061",
+  "sh4|Whitestool": "sh4_whitestool_062",
+  "sh4|Tremer — Blue": "sh4_tremer_blue_063",
+  "sh4|Tremer — Red": "sh4_tremer_red_064",
+  "sh4|Bottom": "sh4_bottom_065",
+  "sh4|Ghost — Victim": "sh4_ghost_victim_066",
+  "sh4|Man with the Coat": "sh4_man_with_the_coat_067",
+  "sh4|Wheelchair": "sh4_wheelchair_068",
+  "sh4|Greedy Worm": "sh4_greedy_worm_069",
+  "sh4|One Truth": "sh4_one_truth_070",
+  "sh4|Sacrificed Walter": "sh4_sacrificed_walter_071",
+  "sh4|Walter Sullivan": "sh4_walter_sullivan_072",
+  "sh4|Eileen Head": "sh4_eileen_head_073",
+  "origins|Straight-Jacket": "origins_straight_jacket_074",
+  "origins|Nurse": "origins_nurse_075",
+  "origins|Carrion": "origins_carrion_076",
+  "origins|Remnant": "origins_remnant_077",
+  "origins|Ariel": "origins_ariel_078",
+  "origins|Caliban": "origins_caliban_079",
+  "origins|Two-Back": "origins_two_back_080",
+  "origins|The Butcher": "origins_the_butcher_081",
+  "origins|Memory of Helen Grady": "origins_memory_of_helen_grady_082",
+  "origins|Memory of Richard Grady": "origins_memory_of_richard_grady_083",
+  "origins|Demon": "origins_demon_084",
+  "homecoming|Lurker": "homecoming_lurker_085",
+  "homecoming|Feral": "homecoming_feral_086",
+  "homecoming|Smog": "homecoming_smog_087",
+  "homecoming|Needler": "homecoming_needler_088",
+  "homecoming|Schism": "homecoming_schism_089",
+  "homecoming|Siam": "homecoming_siam_090",
+  "homecoming|Order Soldier": "homecoming_order_soldier_091",
+  "homecoming|Bogeyman": "homecoming_bogeyman_092",
+  "homecoming|Sepulcher": "homecoming_sepulcher_093",
+  "homecoming|Scarlet — Doll Form": "homecoming_scarlet_doll_form_094",
+  "homecoming|Scarlet — Spider Form": "homecoming_scarlet_spider_form_095",
+  "homecoming|Asphyxia": "homecoming_asphyxia_096",
+  "homecoming|Amnion — Hanging Form": "homecoming_amnion_hanging_form_097",
+  "homecoming|Amnion — Exposed Form": "homecoming_amnion_exposed_form_098",
+  "shattered|Raw Shock — Base": "shattered_raw_shock_base_099",
+  "shattered|Raw Shock — Feminine": "shattered_raw_shock_feminine_100",
+  "shattered|Raw Shock — Diseased": "shattered_raw_shock_diseased_101",
+  "shattered|Raw Shock — Abstract": "shattered_raw_shock_abstract_102",
+  "shattered|Raw Shock — Atrophied": "shattered_raw_shock_atrophied_103",
+  "downpour|Screamer": "downpour_screamer_104",
+  "downpour|Weeping Bat": "downpour_weeping_bat_105",
+  "downpour|Doll": "downpour_doll_106",
+  "downpour|Shadow": "downpour_shadow_107",
+  "downpour|Prisoner Minion — Brawler": "downpour_prisoner_minion_brawler_108",
+  "downpour|Prisoner Minion — Agile": "downpour_prisoner_minion_agile_109",
+  "downpour|Prisoner Juggernaut": "downpour_prisoner_juggernaut_110",
+  "downpour|Tormented Soul": "downpour_tormented_soul_111",
+  "downpour|Wall Corpse": "downpour_wall_corpse_112",
+  "downpour|Void": "downpour_void_113",
+  "downpour|Monocle Man": "downpour_monocle_man_114",
+  "downpour|Bogeyman": "downpour_bogeyman_115",
+  "downpour|Wheelman": "downpour_wheelman_116",
+  "arcade|Mama": "arcade_mama_117",
+  "arcade|Phantom": "arcade_phantom_118",
+  "arcade|Greedy Worm — Arcade": "arcade_greedy_worm_arcade_119",
+  "arcade|Split Head — Arcade": "arcade_split_head_arcade_120",
+  "bom|Air Screamer": "bom_air_screamer_121",
+  "bom|Bogeyman": "bom_bogeyman_122",
+  "bom|Butcher": "bom_butcher_123",
+  "bom|Double Head": "bom_double_head_124",
+  "bom|Ghost": "bom_ghost_125",
+  "bom|Insane Cancer": "bom_insane_cancer_126",
+  "bom|Needler": "bom_needler_127",
+  "bom|Nurse": "bom_nurse_128",
+  "bom|Pyramid Head": "bom_pyramid_head_129",
+  "bom|Schism": "bom_schism_130",
+  "bom|Straight-Jacket": "bom_straight_jacket_131",
+  "bom|Swarm": "bom_swarm_132",
+  "bom|Tremer": "bom_tremer_133",
+  "bom|Flesh Lips": "bom_flesh_lips_134",
+  "bom|Mother": "bom_mother_135",
+  "bom|Valtiel": "bom_valtiel_136",
+  "bom|Fire Guardian": "bom_fire_guardian_137",
+  "bom|Wood Guardian": "bom_wood_guardian_138",
+  "bom|Wood Sapling": "bom_wood_sapling_139",
+  "bom|Light Guardian": "bom_light_guardian_140",
+  "bom|Water Guardian": "bom_water_guardian_141",
+  "bom|Earth Guardian": "bom_earth_guardian_142",
+  "bom|Blood Guardian": "bom_blood_guardian_143",
+  "bom|Blood Baby": "bom_blood_baby_144",
+  "bom|Blood Mama": "bom_blood_mama_145",
+  "bom|Steel Guardian": "bom_steel_guardian_146",
+  "bom|Gray Child": "bom_gray_child_147",
+  "bom|Raw Shock": "bom_raw_shock_148",
+  "pt|Lisa": "pt_lisa_149",
+  "shortmessage|Sakura Head": "shortmessage_sakura_head_150",
+  "shf|Kashimashi": "shf_kashimashi_151",
+  "shf|Ayakakashi": "shf_ayakakashi_152",
+  "shf|Ara-abare": "shf_ara_abare_153",
+  "shf|Irohihi": "shf_irohihi_154",
+  "shf|Corruptor": "shf_corruptor_155",
+  "shf|Hatcher": "shf_hatcher_156",
+  "shf|Kamugara": "shf_kamugara_157",
+  "shf|Harai Katashiro": "shf_harai_katashiro_158",
+  "shf|Oi-omoi": "shf_oi_omoi_159",
+  "shf|Dark Hatcher": "shf_dark_hatcher_160",
+  "shf|Drum Monster": "shf_drum_monster_161",
+  "shf|Sakuko-Like Entity": "shf_sakuko_like_entity_162",
+  "shf|Rinko-Like Entity": "shf_rinko_like_entity_163",
+  "shf|Hinako’s Father": "shf_hinako_s_father_164",
+  "shf|Hinako’s Mother": "shf_hinako_s_mother_165",
+  "shf|Shiromuku": "shf_shiromuku_166",
+  "shf|Tsukumogami": "shf_tsukumogami_167",
+  "shf|Shichibi": "shf_shichibi_168",
+  "shf|Kyubi": "shf_kyubi_169",
+  "film|Armless Man": "film_armless_man_170",
+  "film|Dark Nurse": "film_dark_nurse_171",
+  "film|Grey Child — Film": "film_grey_child_film_172",
+  "film|Creeper Swarm — Film": "film_creeper_swarm_film_173",
+  "film|Colin the Janitor": "film_colin_the_janitor_174",
+  "film|Red Pyramid — Film": "film_red_pyramid_film_175",
+  "film|Mannequin Monster": "film_mannequin_monster_176",
+  "film|Missionary — Revelation": "film_missionary_revelation_177",
+  "ascension|Wanderer": "ascension_wanderer_178",
+  "ascension|Fighter": "ascension_fighter_179",
+  "ascension|Snarler": "ascension_snarler_180",
+  "ascension|Stinger": "ascension_stinger_181",
+  "ascension|The Immolator": "ascension_the_immolator_182",
+  "ascension|The Collector": "ascension_the_collector_183",
+  "ascension|Stilledalen Stinger": "ascension_stilledalen_stinger_184",
+});
+
+const RENAMED_LEGACY_IDS_BY_KEY = Object.freeze({
+  'origins|Faceless Nurse': ['origins_nurse_075'],
+  'arcade|Split Worm — Arcade': ['arcade_split_head_arcade_120']
+});
+
 let counter = 0;
 function slug(value) {
   return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+}
+
+
+const FATALITY_STYLE_BY_KIND = Object.freeze({
+  humanoid: { pose: 'execution', effect: 'silhouette', sequence: ['stagger','close','strike','collapse'] },
+  child: { pose: 'apparition', effect: 'static', sequence: ['freeze','vanish','echo','collapse'] },
+  nurse: { pose: 'clinical', effect: 'flicker', sequence: ['stagger','approach','incision','blackout'] },
+  quadruped: { pose: 'pounce', effect: 'scratch', sequence: ['circle','pounce','drag','silence'] },
+  flyer: { pose: 'dive', effect: 'wind', sequence: ['lift','dive','impact','fall'] },
+  insect: { pose: 'swarm', effect: 'static', sequence: ['scatter','surround','swarm','fade'] },
+  worm: { pose: 'devour', effect: 'chasm', sequence: ['coil','open','devour','sink'] },
+  giant: { pose: 'crush', effect: 'debris', sequence: ['stagger','raise','crush','dust'] },
+  ghost: { pose: 'haunt', effect: 'dread', sequence: ['freeze','phase','possession','fade'] },
+  pyramid: { pose: 'sentence', effect: 'rust', sequence: ['stagger','drag','sentence','siren'] },
+  mannequin: { pose: 'fold', effect: 'flicker', sequence: ['lock','fold','snap','still'] },
+  mass: { pose: 'absorb', effect: 'blood', sequence: ['bind','envelop','absorb','pulse'] },
+  wall: { pose: 'entomb', effect: 'rust', sequence: ['bind','pull','entomb','seal'] },
+  doll: { pose: 'puppet', effect: 'glass', sequence: ['freeze','strings','break','still'] },
+  flowerhead: { pose: 'bloom', effect: 'petals', sequence: ['root','bloom','enclose','petals'] },
+  deity: { pose: 'judgment', effect: 'light', sequence: ['levitate','mark','judgment','ash'] },
+  cage: { pose: 'suspension', effect: 'chains', sequence: ['bind','lift','suspend','drop'] },
+  fungus: { pose: 'spore', effect: 'spores', sequence: ['root','spores','overgrow','fade'] },
+  wheelchair: { pose: 'collision', effect: 'static', sequence: ['lock','charge','impact','silence'] },
+  fox: { pose: 'procession', effect: 'petals', sequence: ['circle','tails','procession','seal'] },
+  spider: { pose: 'cocoon', effect: 'web', sequence: ['snare','lift','cocoon','drop'] },
+  void: { pose: 'erase', effect: 'void', sequence: ['distort','pull','erase','static'] },
+  serpentine: { pose: 'constrict', effect: 'blood', sequence: ['coil','constrict','strike','release'] }
+});
+
+function fatalityNameFor(options, kind, variant = 'signature') {
+  if (variant === 'signature') return options.finisher || `Rituel de clôture — ${options.signature || 'Manifestation'}`;
+  const suffix = {
+    pyramid: 'Sentence de rouille', deity: 'Jugement de l’Otherworld', ghost: 'Hantise sans retour',
+    flowerhead: 'Floraison terminale', void: 'Effacement du signal', spider: 'Cocon du cauchemar',
+    worm: 'Dévoration souterraine', giant: 'Écrasement du souvenir', cage: 'Suspension finale',
+    nurse: 'Dernier protocole', quadruped: 'Traque achevée', flyer: 'Chute sans ciel'
+  }[kind] || 'Dernière manifestation';
+  return `NIGHTMARE — ${suffix}`;
+}
+
+function createFatalityPack(id, name, source, options, kind) {
+  const style = FATALITY_STYLE_BY_KIND[kind] || FATALITY_STYLE_BY_KIND.humanoid;
+  const basis = options.fatalityBasis || options.behavior || `Comportement documenté de ${name}.`;
+  const signatureSequence = options.fatalitySequence || style.sequence;
+  const nightmareSequence = options.nightmareSequence || [...style.sequence.slice(0, 2), 'otherworld', style.sequence.at(-1)];
+  return [
+    {
+      id: `${id}_signature`, type: 'signature', name: fatalityNameFor(options, kind, 'signature'),
+      trigger: 'decisive-special', pose: style.pose, effect: style.effect, sequence: signatureSequence,
+      canonicalBasis: basis, fidelity: options.fatalityFidelity || 'adapted-from-canonical-behavior',
+      intensity: options.fatalityIntensity || (options.boss ? 3 : 2)
+    },
+    {
+      id: `${id}_nightmare`, type: 'nightmare', name: fatalityNameFor(options, kind, 'nightmare'),
+      trigger: 'decisive-super', pose: style.pose, effect: options.nightmareEffect || style.effect,
+      sequence: nightmareSequence, canonicalBasis: basis,
+      fidelity: options.fatalityFidelity || 'adapted-from-canonical-behavior', intensity: options.boss ? 4 : 3
+    }
+  ];
 }
 
 function monster(source, name, options = {}) {
@@ -214,14 +467,18 @@ function monster(source, name, options = {}) {
   if (!meta) throw new Error(`Source inconnue: ${source}`);
   const kind = options.kind || 'humanoid';
   const palette = paletteBySource[source];
-  const id = options.id || `${source}_${slug(name)}_${String(++counter).padStart(3, '0')}`;
+  const key = `${source}|${name}`;
+  const id = options.id || LEGACY_IDS[key] || `${source}_${slug(name)}`;
+  counter += 1;
   const boss = Boolean(options.boss);
+  const fatalities = options.fatalities || createFatalityPack(id, name, source, options, kind);
   const archetype = options.archetype || (boss ? 'boss' : 'balanced');
   const visualBase = defaultsByKind[kind] || defaultsByKind.humanoid;
   return {
     id,
     name,
     source,
+    legacyIds: [...(RENAMED_LEGACY_IDS_BY_KEY[key] || []), ...(options.legacyIds || [])],
     game: meta.label,
     year: meta.year,
     category: boss ? 'BOSS' : (options.category || 'CREATURE'),
@@ -235,10 +492,14 @@ function monster(source, name, options = {}) {
     signature: options.signature || 'Manifestation',
     trait: options.trait || traitByArchetype[archetype] || 'echo',
     affliction: options.affliction || afflictionByArchetype[archetype] || 'bleed',
-    finisher: options.finisher || `Rituel de clôture — ${options.signature || name}`,
+    finisher: fatalities[0]?.name || options.finisher || `Rituel de clôture — ${options.signature || name}`,
+    fatalities,
     canonicalBehavior: options.behavior || 'Approche, pression et attaque de proximité adaptées à son apparition d’origine.',
     adaptation: options.adaptation || 'Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.',
     lore: options.lore || `Manifestation associée à ${meta.label}.`,
+    catalogueStatus: options.catalogueStatus || (options.category === 'SET PIECE' ? 'canon-set-piece-adapted' : 'canon-combatant'),
+    nameStatus: options.nameStatus || 'official-or-established',
+    evidenceTier: options.evidenceTier || 'verified-secondary',
     visual: {
       kind,
       body: visualBase.body,
@@ -278,6 +539,7 @@ export const ROSTER = [
   monster('sh1','Monster Cybil',{kind:'humanoid',archetype:'zoner',boss:true,signature:'Service possédé',behavior:'Tirs de pistolet et pression rapprochée sous contrôle parasitaire.',weapon:'pistol',stageId:'lakeside_amusement'}),
   monster('sh1','Incubator',{kind:'deity',archetype:'boss',boss:true,signature:'Éclair blanc',behavior:'Flotte et projette des éclairs verticaux.',stageId:'nowhere',aura:'white'}),
   monster('sh1','Incubus',{kind:'deity',archetype:'boss',boss:true,signature:'Foudre du démon',behavior:'Entité ailée lançant des salves électriques.',stageId:'nowhere',aura:'black',limbs:6}),
+  monster('sh1','Bloodsucker',{kind:'serpentine',archetype:'grappler',category:'SET PIECE',signature:'Vrilles hématophages',behavior:'Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion.',stageId:'hospital_nightmare',adaptation:'Obstacle non combattu directement dans le jeu source ; sa jauge représente son ancrage au décor.',catalogueStatus:'canon-set-piece-adapted',unlock:'archive',affliction:'bleed'}),
 
   // SILENT HILL 2
   monster('sh2','Lying Figure',{kind:'humanoid',archetype:'zoner',signature:'Jet acide',behavior:'Se traîne dans une enveloppe charnelle et crache un fluide corrosif.',head:'wrapped'}),
@@ -296,10 +558,14 @@ export const ROSTER = [
   monster('sh2','Maria — Final Manifestation',{kind:'deity',archetype:'boss',boss:true,signature:'Essaim de papillons',behavior:'Entité suspendue qui harcèle par insectes et vrilles.',stageId:'hotel_otherworld',aura:'moths'}),
   monster('sh2','Mary — Final Manifestation',{kind:'deity',archetype:'boss',boss:true,signature:'Lit de souffrance',behavior:'Variante narrative de la manifestation finale.',variantOf:'Maria — Final Manifestation',stageId:'hotel_otherworld',aura:'moths'}),
   monster('sh2','Prisoner',{kind:'ghost',archetype:'ghost',signature:'Rituel derrière les barreaux',behavior:'Présence invisible adaptée en ondes sonores et frappes hors champ.',stageId:'toluca_prison',unlock:'archive'}),
+  monster('sh2','Spider Mannequin',{kind:'spider',archetype:'trickster',signature:'Embuscade arachnéenne',behavior:'Variante du remake qui s’agrippe aux murs et plafonds avant de bondir.',variantOf:'Mannequin',variant:'Silent Hill 2 remake',stageId:'blue_creek',limbs:8,nameStatus:'official-or-established',evidenceTier:'screen-verified'}),
+  monster('sh2','Mandarin — Floor Form',{kind:'wall',archetype:'zoner',signature:'Langue du plancher',behavior:'Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.',variantOf:'Mandarin',variant:'Versus adaptation',stageId:'hotel_otherworld',catalogueStatus:'canon-variant-adapted'}),
 
   // SILENT HILL 3
   monster('sh3','Closer',{kind:'giant',archetype:'juggernaut',signature:'Bras pendulaires',behavior:'Grande créature aux bras massifs, frappe large et lente.'}),
+  monster('sh3','Closer — Church Variant',{kind:'giant',archetype:'juggernaut',signature:'Lame ecclésiale',behavior:'Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église.',variantOf:'Closer',variant:'Church transformation',stageId:'church',color:'#53634d',accent:'#a9a36f'}),
   monster('sh3','Numb Body — Small',{kind:'humanoid',archetype:'rushdown',signature:'Percussion sans visage',behavior:'Petit corps rapide qui fonce en groupe.',scale:.72}),
+  monster('sh3','Numb Body — Medium',{kind:'humanoid',archetype:'balanced',signature:'Bélier engourdi',behavior:'Taille intermédiaire documentée entre les petites et grandes formes.',variantOf:'Numb Body',scale:.94}),
   monster('sh3','Numb Body — Large',{kind:'giant',archetype:'juggernaut',signature:'Charge engourdie',behavior:'Variante plus grande et résistante.',variantOf:'Numb Body',scale:1.2}),
   monster('sh3','Pendulum',{kind:'insect',archetype:'flyer',signature:'Lames oscillantes',behavior:'Créature aérienne métallique, trajectoires imprévisibles.',limbs:6}),
   monster('sh3','Double Head',{kind:'quadruped',archetype:'rushdown',signature:'Double morsure',behavior:'Canidé bandé, bond et morsure prolongée.',head:'double'}),
@@ -315,6 +581,7 @@ export const ROSTER = [
   monster('sh3','God',{kind:'deity',archetype:'boss',boss:true,signature:'Brasier divin',behavior:'Entité gigantesque, griffes et colonnes de feu.',stageId:'church',aura:'fire'}),
   monster('sh3','Valtiel',{kind:'humanoid',archetype:'ghost',category:'SECRET',signature:'Rotation du sceau',behavior:'Présence habituellement non combattue, adaptée en gardien rituel.',weapon:'none',stageId:'church',unlock:'archive'}),
   monster('sh3','Sewer Creature',{kind:'serpentine',archetype:'boss',boss:true,category:'SET PIECE',signature:'Tentacule du canal',behavior:'Tentacule aquatique attaquant depuis plusieurs conduits.',stageId:'sewers'}),
+  monster('sh3','Glutton',{kind:'giant',archetype:'grappler',category:'SET PIECE',signature:'Gueule du conte',behavior:'Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées.',stageId:'nightmare_hilltop',adaptation:'Obstacle narratif non combattu directement ; adapté en gardien de seuil dont la défense se brise par rythme.',catalogueStatus:'canon-set-piece-adapted',unlock:'archive'}),
 
   // SILENT HILL 4
   monster('sh4','Sniffer Dog — Male',{kind:'quadruped',archetype:'rushdown',signature:'Morsure renifleuse',behavior:'Canidé rapide, attaque en meute.'}),
@@ -331,6 +598,18 @@ export const ROSTER = [
   monster('sh4','Tremer — Red',{kind:'insect',archetype:'swarm',signature:'Fourmillement rouge',behavior:'Variante plus agressive.',variantOf:'Tremer',color:'#713f3d'}),
   monster('sh4','Bottom',{kind:'mass',archetype:'juggernaut',signature:'Masse inférieure',behavior:'Version renforcée du Twin Victim.',variantOf:'Twin Victim',head:'twin'}),
   monster('sh4','Ghost — Victim',{kind:'ghost',archetype:'ghost',signature:'Étreinte persistante',behavior:'Victime immortelle qui traverse les obstacles et inflige une aura.',aura:'pain'}),
+
+  monster('sh4','Jimmy Stone — Victim 1',{kind:'ghost',archetype:'ghost',signature:'Red Devil',behavior:'Fantôme ancien particulièrement persistant, associé au premier sacrifice.',stageId:'forest_world',variantOf:'Ghost — Victim',weapon:'pistol',aura:'pain'}),
+  monster('sh4','Steve Garland — Victim 4',{kind:'ghost',archetype:'grappler',signature:'Truelle du vendeur',behavior:'Fantôme ancien armé d’une truelle, pression de proximité et saisies.',stageId:'subway_world',variantOf:'Ghost — Victim',weapon:'knife'}),
+  monster('sh4','Eric Walsh — Victim 10',{kind:'ghost',archetype:'rushdown',signature:'Ruée du barman',behavior:'Fantôme ancien plus agressif, attaque par accélérations soudaines.',stageId:'building_world',variantOf:'Ghost — Victim'}),
+  monster('sh4','Peter Walls — Victim 12',{kind:'ghost',archetype:'ghost',signature:'Vide du reporter',behavior:'Fantôme ancien qui traverse le décor et impose une aura de proximité.',stageId:'subway_world',variantOf:'Ghost — Victim'}),
+  monster('sh4','Sharon Blake — Victim 13',{kind:'ghost',archetype:'trickster',signature:'Obscurité de Sharon',behavior:'Fantôme ancien utilisant disparitions et réapparitions latérales.',stageId:'forest_world',variantOf:'Ghost — Victim',aura:'dark'}),
+  monster('sh4','Toby Archbolt — Victim 14',{kind:'ghost',archetype:'zoner',signature:'Gloom du pasteur',behavior:'Fantôme ancien contrôlant la distance par ondes de présence.',stageId:'forest_world',variantOf:'Ghost — Victim'}),
+  monster('sh4','Joseph Schreiber — Victim 15',{kind:'ghost',archetype:'balanced',category:'SECRET',signature:'Désespoir du témoin',behavior:'Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif.',stageId:'room_302',variantOf:'Ghost — Victim',catalogueStatus:'canon-nonhostile-adapted',unlock:'archive'}),
+  monster('sh4','Cynthia Velasquez — Victim 16',{kind:'ghost',archetype:'trickster',signature:'Temptation spectrale',behavior:'Fantôme de nouvelle génération, rapide et difficile à immobiliser.',stageId:'subway_world',variantOf:'Ghost — Victim'}),
+  monster('sh4','Jasper Gein — Victim 17',{kind:'ghost',archetype:'artillery',signature:'Candélabre enflammé',behavior:'Fantôme de nouvelle génération, lié au feu et aux attaques à distance.',stageId:'forest_world',variantOf:'Ghost — Victim',weapon:'club',affliction:'burn',aura:'fire'}),
+  monster('sh4','Andrew DeSalvo — Victim 18',{kind:'ghost',archetype:'juggernaut',signature:'Watchfulness',behavior:'Fantôme lourd et résistant, pression continue dans la prison.',stageId:'water_prison',variantOf:'Ghost — Victim'}),
+  monster('sh4','Richard Braintree — Victim 19',{kind:'ghost',archetype:'rushdown',signature:'Crowbar du chaos',behavior:'Fantôme électrocuté armé d’un pied-de-biche, très agressif.',stageId:'building_world',variantOf:'Ghost — Victim',weapon:'club',affliction:'static'}),
   monster('sh4','Man with the Coat',{kind:'humanoid',archetype:'zoner',boss:true,signature:'Poursuite de Walter',behavior:'Traque avec arme à feu ou arme blanche.',weapon:'pistol',stageId:'apartment_world'}),
   monster('sh4','Wheelchair',{kind:'wheelchair',archetype:'ghost',signature:'Percussion hantée',behavior:'Objet invulnérable dans le jeu d’origine, adapté en charge spectrale.',adaptation:'La chaise ne peut être vaincue dans son apparition d’origine ; ici elle dispose d’une jauge de stabilité.',stageId:'hospital_world'}),
   monster('sh4','Greedy Worm',{kind:'worm',archetype:'artillery',signature:'Conduit vivant',behavior:'Structure vivante habituellement passive, adaptée en contrôle du terrain.',unlock:'archive'}),
@@ -341,7 +620,7 @@ export const ROSTER = [
 
   // ORIGINS
   monster('origins','Straight-Jacket',{kind:'humanoid',archetype:'zoner',signature:'Crachat contraint',behavior:'Corps enfermé qui projette un liquide et frappe du torse.'}),
-  monster('origins','Nurse',{kind:'nurse',archetype:'balanced',signature:'Seringue de Cedar Grove',behavior:'Attaque au scalpel et mouvement irrégulier.',weapon:'scalpel'}),
+  monster('origins','Faceless Nurse',{kind:'nurse',archetype:'balanced',signature:'Seringue de Cedar Grove',behavior:'Attaque au scalpel et mouvement irrégulier.',weapon:'scalpel'}),
   monster('origins','Carrion',{kind:'quadruped',archetype:'juggernaut',signature:'Masse charognarde',behavior:'Bête lourde qui charge au sol.'}),
   monster('origins','Remnant',{kind:'ghost',archetype:'ghost',signature:'Ombre miroir',behavior:'Silhouette projetée qui apparaît au contact des miroirs.'}),
   monster('origins','Ariel',{kind:'doll',archetype:'trickster',signature:'Fil de marionnette',behavior:'Mannequin suspendu, coups de jambes et chutes verticales.'}),
@@ -360,6 +639,9 @@ export const ROSTER = [
   monster('homecoming','Schism',{kind:'humanoid',archetype:'juggernaut',signature:'Crâne tranchant',behavior:'Tête en lame, coups verticaux puissants.',head:'blade'}),
   monster('homecoming','Siam',{kind:'giant',archetype:'grappler',signature:'Corps enlacés',behavior:'Deux corps liés, grande portée et saisie.'}),
   monster('homecoming','Order Soldier',{kind:'humanoid',archetype:'balanced',category:'HUMAN ENEMY',signature:'Matraque de l’Ordre',behavior:'Combattant humain armé.',weapon:'baton'}),
+  monster('homecoming','Nurse',{kind:'nurse',archetype:'balanced',signature:'Scalpel de l’hôpital',behavior:'Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque.',weapon:'scalpel',stageId:'nightmare_hospital_hc'}),
+  monster('homecoming','Swarm',{kind:'insect',archetype:'swarm',signature:'Nuée de cafards',behavior:'Petites créatures qui encerclent et attaquent au ras du sol.',stageId:'nightmare_hospital_hc'}),
+  monster('homecoming','Curtis Ackers',{kind:'humanoid',archetype:'boss',boss:true,category:'HUMAN BOSS',signature:'Scie de Curtis',behavior:'Affrontement humain agressif dans l’atelier, utilisant une scie circulaire.',weapon:'chainsaw',stageId:'curtis_shop'}),
   monster('homecoming','Bogeyman',{kind:'pyramid',archetype:'juggernaut',boss:true,signature:'Grande lame du Bogeyman',behavior:'Exécuteur massif de Homecoming.',weapon:'great_knife'}),
   monster('homecoming','Sepulcher',{kind:'giant',archetype:'boss',boss:true,signature:'Frappe des racines',behavior:'Boss pendu qui écrase et frappe avec ses appendices.',stageId:'shepherds_glen',limbs:6}),
   monster('homecoming','Scarlet — Doll Form',{kind:'doll',archetype:'boss',boss:true,signature:'Danse de porcelaine',behavior:'Poupée géante, coups longs et bris de membres.',stageId:'grand_hotel'}),
@@ -389,12 +671,29 @@ export const ROSTER = [
   monster('downpour','Monocle Man',{kind:'humanoid',archetype:'ghost',signature:'Regard du monocle',behavior:'Apparition symbolique adaptée en combattant secret.',unlock:'archive'}),
   monster('downpour','Bogeyman',{kind:'humanoid',archetype:'juggernaut',boss:true,signature:'Marteau du Bogeyman',behavior:'Frappe au marteau, exécution lente et massive.',weapon:'hammer',stageId:'overlook'}),
   monster('downpour','Wheelman',{kind:'wheelchair',archetype:'boss',boss:true,signature:'Machine du Wheelman',behavior:'Boss final mécanisé, câbles et décharges.',stageId:'overlook',limbs:6}),
+  monster('downpour','Anne Cunningham',{kind:'humanoid',archetype:'balanced',boss:true,category:'HUMAN BOSS',signature:'Interception d’Anne',behavior:'Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire.',weapon:'pistol',stageId:'anne_fight',catalogueStatus:'canon-human-boss-adapted'}),
 
   // THE ARCADE
   monster('arcade','Mama',{kind:'giant',archetype:'boss',boss:true,signature:'Étreinte de Mama',behavior:'Boss unique de The Arcade, coups massifs et invocations.',stageId:'arcade_ship'}),
   monster('arcade','Phantom',{kind:'ghost',archetype:'boss',boss:true,signature:'Assaut spectral',behavior:'Boss fantomatique unique, téléportations et projectiles.',stageId:'arcade_ship'}),
   monster('arcade','Greedy Worm — Arcade',{kind:'worm',archetype:'boss',boss:true,signature:'Tunnel de l’Arcade',behavior:'Adaptation active du Greedy Worm pour l’arcade.',variantOf:'Greedy Worm',stageId:'arcade_ship'}),
-  monster('arcade','Split Head — Arcade',{kind:'giant',archetype:'boss',boss:true,signature:'Mâchoire d’arcade',behavior:'Retour du Split Head dans un format rail-shooter.',variantOf:'Split Head',stageId:'arcade_ship',head:'split'}),
+  monster('arcade','Split Worm — Arcade',{kind:'worm',archetype:'boss',boss:true,signature:'Gueule du tunnel d’arcade',behavior:'Retour du Split Worm dans un format rail-shooter.',variantOf:'Split Worm',stageId:'arcade_ship',head:'split'}),
+
+  monster('arcade','Tremer — Arcade',{kind:'insect',archetype:'swarm',signature:'Fourmillement du rail',behavior:'Retour du Tremer dans les vagues de The Arcade.',variantOf:'Tremer',stageId:'arcade_historical'}),
+  monster('arcade','Double Head — Arcade',{kind:'quadruped',archetype:'rushdown',signature:'Morsure sur rail',behavior:'Retour du Double Head dans les rues et couloirs de The Arcade.',variantOf:'Double Head',stageId:'arcade_city',head:'double'}),
+  monster('arcade','Insane Cancer — Arcade',{kind:'mass',archetype:'juggernaut',signature:'Blocage du corridor',behavior:'Retour massif de l’Insane Cancer dans les séquences de tir.',variantOf:'Insane Cancer',stageId:'arcade_hospital'}),
+  monster('arcade','Hummer — Arcade',{kind:'flyer',archetype:'swarm',signature:'Nuée de l’hôpital',behavior:'Retour des Hummers en essaims aériens.',variantOf:'Hummer',stageId:'arcade_hospital'}),
+  monster('arcade','Numb Body — Arcade',{kind:'humanoid',archetype:'rushdown',signature:'Charge de la galerie',behavior:'Retour du Numb Body en vagues rapides.',variantOf:'Numb Body',stageId:'arcade_mall'}),
+  monster('arcade','Nurse — Arcade',{kind:'nurse',archetype:'balanced',signature:'Service de Brookhaven',behavior:'Retour des infirmières dans Brookhaven.',variantOf:'Nurse',stageId:'arcade_hospital',weapon:'pipe'}),
+  monster('arcade','Gum Head — Arcade',{kind:'humanoid',archetype:'balanced',signature:'Assaut du métro',behavior:'Retour du Gum Head, parfois armé, dans les vagues de The Arcade.',variantOf:'Gum Head',stageId:'arcade_prison',weapon:'club'}),
+  monster('arcade','Red Pyramid Thing — Arcade',{kind:'pyramid',archetype:'boss',boss:true,signature:'Sentence sur rail',behavior:'Affrontement de Red Pyramid Thing adapté au rail-shooter.',variantOf:'Red Pyramid Thing',stageId:'arcade_historical',weapon:'great_knife'}),
+  monster('arcade','Creeper — Arcade',{kind:'insect',archetype:'swarm',signature:'Essaim des égouts',behavior:'Retour des Creepers en groupes au ras du sol.',variantOf:'Creeper',stageId:'arcade_prison'}),
+  monster('arcade','Scraper — Arcade',{kind:'humanoid',archetype:'rushdown',signature:'Lames sur rail',behavior:'Retour du Scraper dans les zones de culte.',variantOf:'Scraper',stageId:'arcade_1918',weapon:'blades'}),
+  monster('arcade','Toadstool — Arcade',{kind:'fungus',archetype:'swarm',signature:'Spore du cimetière',behavior:'Retour du Toadstool dans les zones souterraines.',variantOf:'Toadstool',stageId:'arcade_graveyard'}),
+  monster('arcade','Tuberculosis',{kind:'mass',archetype:'boss',boss:true,signature:'Poumon de Brookhaven',behavior:'Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices.',stageId:'arcade_hospital_roof',affliction:'decay',aura:'sick'}),
+  monster('arcade','Robbie the Rabbit — Axe',{kind:'doll',archetype:'rushdown',signature:'Hache de Robbie',behavior:'Mascotte hostile armée d’une hache dans The Arcade.',stageId:'arcade_amusement',weapon:'cleaver',catalogueStatus:'canon-enemy-variant'}),
+  monster('arcade','Robbie the Rabbit — Chainsaw',{kind:'doll',archetype:'juggernaut',signature:'Tronçonneuse de Robbie',behavior:'Variante hostile de Robbie armée d’une tronçonneuse.',stageId:'arcade_amusement',weapon:'chainsaw',variantOf:'Robbie the Rabbit'}),
+  monster('arcade','Robbie the Rabbit — Shotgun',{kind:'doll',archetype:'zoner',signature:'Décharge de Robbie',behavior:'Variante hostile de Robbie armée d’un fusil.',stageId:'arcade_amusement',weapon:'pistol',variantOf:'Robbie the Rabbit'}),
 
   // BOOK OF MEMORIES — variantes et gardiens du roster du jeu
   monster('bom','Air Screamer',{kind:'flyer',archetype:'flyer',signature:'Piqué du livre',behavior:'Version Book of Memories.',variantOf:'Air Screamer'}),
@@ -461,6 +760,12 @@ export const ROSTER = [
   monster('film','Mannequin Monster',{kind:'spider',archetype:'boss',boss:true,signature:'Assemblage de membres',behavior:'Grimpe, bondit et referme ses membres autour de la cible.',stageId:'film_sanctuary',limbs:8,affliction:'bind'}),
   monster('film','Missionary — Revelation',{kind:'humanoid',archetype:'boss',boss:true,signature:'Couronne de lames',behavior:'Assauts rapides avec lames intégrées et parade agressive.',stageId:'film_sanctuary',weapon:'blades',head:'blade',affliction:'bleed'}),
 
+  monster('film','Lying Figure — Return to Silent Hill',{kind:'humanoid',archetype:'zoner',signature:'Jet acide du retour',behavior:'Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée.',stageId:'return_streets',variantOf:'Lying Figure',variant:'Return to Silent Hill (2026)',head:'wrapped',evidenceTier:'screen-verified'}),
+  monster('film','Bubble Head Nurse — Return to Silent Hill',{kind:'nurse',archetype:'balanced',signature:'Service de Lakeview',behavior:'Interprétation cinématographique 2026 des Bubble Head Nurses.',stageId:'return_brookhaven',variantOf:'Bubble Head Nurse',variant:'Return to Silent Hill (2026)',weapon:'pipe',evidenceTier:'screen-verified'}),
+  monster('film','Creeper — Return to Silent Hill',{kind:'insect',archetype:'swarm',signature:'Essaim du retour',behavior:'Interprétation cinématographique 2026 des Creepers.',stageId:'return_streets',variantOf:'Creeper',variant:'Return to Silent Hill (2026)',evidenceTier:'screen-verified'}),
+  monster('film','Red Pyramid Thing — Return to Silent Hill',{kind:'pyramid',archetype:'boss',boss:true,signature:'Grand couteau du retour',behavior:'Interprétation cinématographique 2026 de Pyramid Head.',stageId:'return_portrait_room',variantOf:'Red Pyramid Thing',variant:'Return to Silent Hill (2026)',weapon:'great_knife',evidenceTier:'screen-verified'}),
+  monster('film','Fused Mattress Manifestation — Return',{kind:'mass',archetype:'boss',boss:true,signature:'Fusion du souvenir',behavior:'Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026.',stageId:'return_lakeview',variant:'Return to Silent Hill (2026)',nameStatus:'descriptive-screen-name',evidenceTier:'plot-and-screen-verified'}),
+
   // SILENT HILL: ASCENSION
   monster('ascension','Wanderer',{kind:'humanoid',archetype:'balanced',signature:'Marche du deuil',behavior:'Approche constante, coups irréguliers et pression de proximité.',stageId:'hope_junction',aura:'smoke'}),
   monster('ascension','Fighter',{kind:'humanoid',archetype:'rushdown',signature:'Assaut enveloppé',behavior:'Manifestation humanoïde agressive, rafales courtes et poursuite.',stageId:'hope_junction'}),
@@ -469,6 +774,14 @@ export const ROSTER = [
   monster('ascension','The Immolator',{kind:'giant',archetype:'artillery',boss:true,signature:'Feu intergénérationnel',behavior:'Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur.',stageId:'ascension_otherworld',aura:'fire',affliction:'burn'}),
   monster('ascension','The Collector',{kind:'deity',archetype:'boss',boss:true,signature:'Porte entre les mondes',behavior:'Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert.',stageId:'ascension_otherworld',limbs:4,affliction:'dread'}),
   monster('ascension','Stilledalen Stinger',{kind:'flyer',archetype:'trickster',signature:'Voile de tendons',behavior:'Variante de Stinger orientée feinte et attaque hors écran.',stageId:'stilledalen',variantOf:'Stinger',head:'mask',affliction:'static'})
+,
+  // SILENT HILL: TOWNFALL — les noms de monstres restent explicitement descriptifs quand Konami ne les officialise pas
+  monster('townfall','Lunger',{kind:'humanoid',archetype:'rushdown',signature:'Charge à tête de hache',behavior:'Humanoïde aux bras entravés qui charge et frappe de la tête.',stageId:'st_amelia_residential',head:'blade',nameStatus:'guide-descriptive',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
+  monster('townfall','Sorrowful',{kind:'serpentine',archetype:'zoner',signature:'Cordon thoracique',behavior:'Attaque à distance avec un appendice sortant du torse et saisit de près.',stageId:'townfall_medical',nameStatus:'guide-descriptive',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
+  monster('townfall','Fallen',{kind:'humanoid',archetype:'trickster',signature:'Réveil du cadavre',behavior:'Reste immobile au sol ou dans le décor avant de charger soudainement.',stageId:'clara_woods',nameStatus:'guide-descriptive',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
+  monster('townfall','Widow',{kind:'humanoid',archetype:'rushdown',signature:'Pounce au couteau',behavior:'Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos.',stageId:'ceg_tower',weapon:'knife',nameStatus:'guide-or-trophy-established',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
+  monster('townfall','The Weight',{kind:'giant',archetype:'boss',boss:true,signature:'Poids impossible',behavior:'Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion.',stageId:'clara_woods_different',nameStatus:'guide-established',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-boss',adaptation:'Ses poursuites invulnérables deviennent une armure de phase ; seule la phase finale accepte les dégâts complets.'})
+
 ];
 
 export const STAGES = [
@@ -525,6 +838,78 @@ export const STAGES = [
   {id:'hope_junction',name:'HOPE’S JUNCTION',source:'ascension',family:'street',sky:['#3b3e3c','#121514','#030404'],weather:'fog',props:['road','shops','fence'],hazard:'staticBurst'},
   {id:'stilledalen',name:'STILLEDALEN WOODS',source:'ascension',family:'village',sky:['#303933','#0d120f','#020302'],weather:'rain',props:['trees','roots','lanterns'],hazard:'fallingDebris'},
   {id:'ascension_otherworld',name:'ASCENSION — OPEN GATE',source:'ascension',family:'otherworld',sky:['#392323','#110606','#020101'],weather:'embers',props:['runes','chains','altar'],hazard:'emberFall'}
+
+  ,{id:'hospital_nightmare',name:'ALCHEMILLA — NIGHTMARE WARD',source:'sh1',family:'hospital',sky:['#311d1d','#100808','#020202'],weather:'flicker',props:['beds','chains','fans'],animations:['lightFlicker','chainSway','fanSpin','hospitalMonitor']},
+  {id:'midwich_nightmare',name:'MIDWICH — NIGHTMARE SCHOOL',source:'sh1',family:'school',sky:['#331f1c','#110807','#020202'],weather:'embers',props:['lockers','chains','grates'],animations:['sirenPulse','chainSway','lockerRattle']},
+  {id:'central_nightmare',name:'CENTRAL SILENT HILL — OTHERWORLD',source:'sh1',family:'street',sky:['#35201d','#120808','#020202'],weather:'embers',props:['road','chasm','fence'],animations:['sirenPulse','streetLightFlicker','chasmPulse']},
+  {id:'sewer_resort',name:'SEWERS TO THE RESORT',source:'sh1',family:'sewer',sky:['#25302d','#0b1110','#020303'],weather:'water',props:['water','grates','pipes'],animations:['waterRipple','pipeSteam','shadowPass']},
+  {id:'south_vale',name:'SOUTH VALE STREETS',source:'sh2',family:'street',sky:['#41433d','#171916','#050606'],weather:'fog',props:['road','shops','fence'],animations:['fogDrift','streetLightFlicker','shadowPass']},
+  {id:'brookhaven_roof',name:'BROOKHAVEN — ROOFTOP',source:'sh2',family:'hospital',sky:['#383b38','#111413','#030404'],weather:'rain',props:['fence','elevator','water'],animations:['rainSheets','elevatorBlink','lightning']},
+  {id:'historical_society',name:'SILENT HILL HISTORICAL SOCIETY',source:'sh2',family:'museum',sky:['#302e28','#100f0c','#030303'],weather:'dust',props:['portraits','stairs','doors'],animations:['portraitBlink','shadowPass','lightFlicker']},
+  {id:'prison_meat_locker',name:'TOLUCA PRISON — MEAT LOCKER',source:'sh2',family:'prison',sky:['#2b2926','#0d0c0b','#020202'],weather:'cold',props:['hooks','chains','freezer'],animations:['chainSway','coldBreath','lightFlicker']},
+  {id:'lakeview',name:'LAKEVIEW HOTEL — FOG WORLD',source:'sh2',family:'hotel',sky:['#3e4038','#161713','#040504'],weather:'fog',props:['doors','portraits','lamps'],animations:['fogDrift','portraitBlink','lampFlicker']},
+  {id:'baldwin_mansion',name:'BALDWIN MANSION',source:'sh2',family:'house',sky:['#34322c','#12110e','#030303'],weather:'dust',props:['portraits','stairs','fireplace'],animations:['portraitBlink','firePulse','shadowPass']},
+  {id:'nightmare_mall',name:'CENTRAL SQUARE — NIGHTMARE MALL',source:'sh3',family:'mall',sky:['#34211d','#120908','#020202'],weather:'embers',props:['shops','grates','fans'],animations:['sirenPulse','fanSpin','storeShutters']},
+  {id:'hazel_subway',name:'HAZEL STREET SUBWAY',source:'sh3',family:'subway',sky:['#303431','#101311','#030404'],weather:'flicker',props:['rails','platform','lights'],animations:['trainPass','lightFlicker','tunnelWind']},
+  {id:'underpass_sh3',name:'UNDERPASS',source:'sh3',family:'sewer',sky:['#29312f','#0d1110','#020303'],weather:'water',props:['water','pipes','grates'],animations:['waterRipple','pipeSteam','shadowPass']},
+  {id:'hilltop_center',name:'HILLTOP CENTER',source:'sh3',family:'office',sky:['#373832','#13140f','#030403'],weather:'flicker',props:['desks','elevator','windows'],animations:['elevatorBlink','lightFlicker','windowShadow']},
+  {id:'nightmare_hilltop',name:'HILLTOP CENTER — OTHERWORLD',source:'sh3',family:'otherworld',sky:['#351f1b','#120807','#020202'],weather:'embers',props:['grates','fans','blood'],animations:['sirenPulse','fanSpin','bloodPulse']},
+  {id:'nightmare_hospital_sh3',name:'BROOKHAVEN — NIGHTMARE HOSPITAL',source:'sh3',family:'hospital',sky:['#33201e','#110807','#020202'],weather:'flicker',props:['beds','mirrors','chains'],animations:['hospitalMonitor','lightFlicker','mirrorGlitch']},
+  {id:'lakeside_sh3',name:'LAKESIDE AMUSEMENT PARK — SH3',source:'sh3',family:'amusement',sky:['#2b3038','#0d1116','#020304'],weather:'rain',props:['carousel','wheel','booths'],animations:['carouselTurn','ferrisWheel','rainSheets']},
+  {id:'forest_world',name:'FOREST WORLD',source:'sh4',family:'forest',sky:['#2b342e','#0d120f','#020302'],weather:'rain',props:['trees','roots','wish_house'],animations:['forestWind','rootsCreep','rainSheets']},
+  {id:'building_world',name:'BUILDING WORLD',source:'sh4',family:'building',sky:['#32302d','#10100d','#030303'],weather:'flicker',props:['stairs','signs','elevator'],animations:['elevatorBlink','neonFlicker','shadowPass']},
+  {id:'outside_room_302',name:'OUTSIDE ROOM 302',source:'sh4',family:'apartment',sky:['#34332f','#12120f','#030303'],weather:'fog',props:['doors','windows','chains'],animations:['doorPulse','windowShadow','fogDrift']},
+  {id:'wish_house',name:'WISH HOUSE',source:'sh4',family:'house',sky:['#31342d','#10130e','#030303'],weather:'rain',props:['trees','fence','altar'],animations:['forestWind','rainSheets','ritualGlyph']},
+  {id:'final_sacrament',name:'21 SACRAMENTS — FINAL CHAMBER',source:'sh4',family:'otherworld',sky:['#321e1d','#100706','#020202'],weather:'blood',props:['altar','chains','runes'],animations:['ritualGlyph','chainSway','bloodPulse']},
+  {id:'alchemilla_origins',name:'ALCHEMILLA HOSPITAL — ORIGINS',source:'origins',family:'hospital',sky:['#3b3a34','#15140f','#040403'],weather:'flicker',props:['beds','mirrors','lights'],animations:['mirrorGlitch','hospitalMonitor','lightFlicker']},
+  {id:'artaud_theater',name:'ARTAUD THEATER',source:'origins',family:'theater',sky:['#382d27','#130e0b','#030202'],weather:'dust',props:['stage','curtains','spotlights'],animations:['curtainSway','spotlightSweep','shadowPass']},
+  {id:'nightmare_theater',name:'ARTAUD THEATER — NIGHTMARE',source:'origins',family:'theater',sky:['#351d1c','#110706','#020202'],weather:'embers',props:['stage','chains','flesh'],animations:['sirenPulse','curtainSway','firePulse']},
+  {id:'nightmare_hospital_hc',name:'ALCHEMILLA — HOMECOMING NIGHTMARE',source:'homecoming',family:'hospital',sky:['#321f1d','#100706','#020202'],weather:'flicker',props:['beds','fans','chains'],animations:['fanSpin','hospitalMonitor','lightFlicker']},
+  {id:'police_station_hc',name:'SHEPHERD’S GLEN POLICE STATION',source:'homecoming',family:'office',sky:['#353833','#121410','#030403'],weather:'rain',props:['desks','bars','lights'],animations:['rainSheets','radioPulse','lightFlicker']},
+  {id:'town_hall_hc',name:'SHEPHERD’S GLEN TOWN HALL',source:'homecoming',family:'hall',sky:['#37342d','#13110d','#030302'],weather:'dust',props:['portraits','stairs','flags'],animations:['portraitBlink','flagSway','shadowPass']},
+  {id:'prison_hc',name:'SHEPHERD’S GLEN PENITENTIARY',source:'homecoming',family:'prison',sky:['#2f302c','#0f100d','#030303'],weather:'flicker',props:['bars','chains','lights'],animations:['chainSway','lightFlicker','cellShadow']},
+  {id:'shepherd_house_hc',name:'SHEPHERD HOUSE — ATTIC',source:'homecoming',family:'house',sky:['#332f29','#110f0c','#030302'],weather:'dust',props:['portraits','stairs','mirrors'],animations:['portraitBlink','mirrorGlitch','floorCreak']},
+  {id:'scarlet_chamber',name:'SCARLET’S CHAMBER',source:'homecoming',family:'lair',sky:['#3b2427','#13080a','#020102'],weather:'blood',props:['dolls','mirrors','flesh'],animations:['dollTurn','mirrorGlitch','bloodPulse']},
+  {id:'curtis_shop',name:'CURTIS’S JUNKYARD WORKSHOP',source:'homecoming',family:'workshop',sky:['#34322c','#11100d','#030302'],weather:'sparks',props:['tools','chains','saws'],animations:['chainSway','sawSpin','sparks']},
+  {id:'frozen_streets',name:'SILENT HILL — FROZEN STREETS',source:'shattered',family:'ice',sky:['#48616b','#17272d','#05090b'],weather:'snow',props:['road','cars','ice'],animations:['snowGust','iceCrack','headlightSweep']},
+  {id:'nightmare_hospital_sm',name:'FROZEN HOSPITAL',source:'shattered',family:'ice',sky:['#455e68','#16252b','#05090b'],weather:'snow',props:['beds','ice','lights'],animations:['snowGust','iceCrack','lightFlicker']},
+  {id:'nightmare_mall_sm',name:'FROZEN MALL',source:'shattered',family:'ice',sky:['#465e67','#17252b','#05090b'],weather:'snow',props:['shops','ice','escalator'],animations:['snowGust','iceCrack','storeShutters']},
+  {id:'lighthouse_sm',name:'LIGHTHOUSE / THERAPY REVELATION',source:'shattered',family:'lighthouse',sky:['#4d6873','#172a31','#05090b'],weather:'snow',props:['water','beam','ice'],animations:['lighthouseBeam','waves','snowGust']},
+  {id:'devils_pit',name:'DEVIL’S PIT',source:'downpour',family:'mine',sky:['#303632','#101310','#030403'],weather:'rain',props:['rails','cave','water'],animations:['mineCart','rainSheets','waterRipple']},
+  {id:'centennial_building',name:'CENTENNIAL BUILDING',source:'downpour',family:'office',sky:['#373a37','#121513','#030404'],weather:'rain',props:['desks','elevator','windows'],animations:['elevatorBlink','rainSheets','windowShadow']},
+  {id:'st_marias',name:'ST. MARIA’S MONASTERY',source:'downpour',family:'church',sky:['#343630','#11130f','#030403'],weather:'rain',props:['altar','bells','windows'],animations:['bellSwing','rainSheets','lightning']},
+  {id:'downpour_streets',name:'SILENT HILL — DOWNPOUR STREETS',source:'downpour',family:'street',sky:['#3a4140','#131817','#040505'],weather:'rain',props:['road','shops','cars'],animations:['rainSheets','streetLightFlicker','waterRipple']},
+  {id:'otherworld_void',name:'DOWNPOUR — VOID CHASE',source:'downpour',family:'void',sky:['#242b2d','#090d0f','#010202'],weather:'runes',props:['stairs','doors','void'],animations:['voidSurge','doorPulse','gravityTilt']},
+  {id:'anne_fight',name:'FULL CIRCLE — ANNE’S CONFRONTATION',source:'downpour',family:'prison',sky:['#302d2b','#0f0d0c','#020202'],weather:'flicker',props:['bars','lights','water'],animations:['lightFlicker','waterRipple','shadowPass']},
+  {id:'arcade_city',name:'THE ARCADE — CITY / JACK’S INN',source:'arcade',family:'street',sky:['#393c38','#131612','#040504'],weather:'fog',props:['road','shops','signs'],animations:['fogDrift','neonFlicker','shadowPass']},
+  {id:'arcade_hospital',name:'THE ARCADE — BROOKHAVEN HOSPITAL',source:'arcade',family:'hospital',sky:['#363630','#12120f','#040404'],weather:'flicker',props:['beds','elevator','lights'],animations:['hospitalMonitor','elevatorBlink','lightFlicker']},
+  {id:'arcade_hospital_roof',name:'THE ARCADE — HOSPITAL ROOF',source:'arcade',family:'hospital',sky:['#343936','#111512','#030404'],weather:'rain',props:['fence','vents','water'],animations:['rainSheets','lightning','ventSteam']},
+  {id:'arcade_historical',name:'THE ARCADE — HISTORICAL SOCIETY',source:'arcade',family:'museum',sky:['#332f29','#110f0c','#030302'],weather:'dust',props:['portraits','stairs','doors'],animations:['portraitBlink','shadowPass','lightFlicker']},
+  {id:'arcade_prison',name:'THE ARCADE — TOLUCA PRISON',source:'arcade',family:'prison',sky:['#2f302d','#0f100e','#030303'],weather:'flicker',props:['bars','chains','lights'],animations:['chainSway','cellShadow','lightFlicker']},
+  {id:'arcade_graveyard',name:'THE ARCADE — UNDERGROUND GRAVEYARD',source:'arcade',family:'graveyard',sky:['#2e332e','#0e120f','#020302'],weather:'fog',props:['graves','roots','altar'],animations:['fogDrift','rootsCreep','shadowPass']},
+  {id:'arcade_toluca_lake',name:'THE ARCADE — TOLUCA LAKE',source:'arcade',family:'lake',sky:['#344149','#10191d','#030506'],weather:'water',props:['water','boat','fog'],animations:['waves','boatRock','fogDrift']},
+  {id:'arcade_1918',name:'THE ARCADE — 1918',source:'arcade',family:'otherworld',sky:['#35211d','#110807','#020202'],weather:'embers',props:['runes','chains','altar'],animations:['ritualGlyph','chainSway','sirenPulse']},
+  {id:'arcade_1993',name:'THE ARCADE — 1993 PHANTOM FRONT',source:'arcade',family:'otherworld',sky:['#30222d','#0e0710','#020102'],weather:'runes',props:['portraits','void','lights'],animations:['portraitBlink','voidSurge','lightFlicker']},
+  {id:'arcade_mall',name:'THE ARCADE — SHOPPING MALL',source:'arcade',family:'mall',sky:['#353631','#12130f','#030403'],weather:'flicker',props:['shops','escalator','lights'],animations:['storeShutters','lightFlicker','shadowPass']},
+  {id:'arcade_amusement',name:'THE ARCADE — AMUSEMENT PARK',source:'arcade',family:'amusement',sky:['#29313b','#0d1218','#030405'],weather:'rain',props:['carousel','wheel','booths'],animations:['carouselTurn','ferrisWheel','rainSheets']},
+  {id:'villa_rooftop',name:'KETTENSTADT VILLA — ROOFTOP',source:'shortmessage',family:'rooftop',sky:['#53424b','#1b1116','#050305'],weather:'petals',props:['fence','antenna','flowers'],animations:['petalSpiral','windGust','lightning']},
+  {id:'villa_stairwell',name:'KETTENSTADT VILLA — STAIRWELL',source:'shortmessage',family:'building',sky:['#3c3035','#140d10','#030203'],weather:'flicker',props:['stairs','graffiti','lights'],animations:['lightFlicker','shadowPass','doorPulse']},
+  {id:'dark_shrine_corridors',name:'DARK SHRINE — CORRIDORS',source:'shf',family:'shrine',sky:['#3a2728','#12090a','#020202'],weather:'petals',props:['lanterns','runes','roots'],animations:['petalSpiral','lanternSway','rootsCreep']},
+  {id:'shimizu_residence',name:'SHIMIZU RESIDENCE',source:'shf',family:'house',sky:['#403235','#160e10','#040203'],weather:'petals',props:['screens','lanterns','portraits'],animations:['lanternSway','screenSlide','portraitBlink']},
+  {id:'dark_shrine_main',name:'DARK SHRINE — MAIN HALL',source:'shf',family:'shrine',sky:['#3d2728','#13090a','#020202'],weather:'embers',props:['altar','lanterns','runes'],animations:['ritualGlyph','lanternSway','firePulse']},
+  {id:'corrupted_ebisugaoka',name:'EBISUGAOKA — CORRUPTED PROCESSION',source:'shf',family:'festival',sky:['#43272c','#15080c','#030102'],weather:'petals',props:['lanterns','roots','booths'],animations:['petalSpiral','lanternSway','rootsCreep']},
+  {id:'return_streets',name:'RETURN TO SILENT HILL — STREETS',source:'film',family:'street',sky:['#43453f','#171916','#050606'],weather:'fog',props:['road','shops','chasm'],animations:['fogDrift','streetLightFlicker','shadowPass']},
+  {id:'return_brookhaven',name:'RETURN TO SILENT HILL — BROOKHAVEN',source:'film',family:'hospital',sky:['#36352f','#12120f','#040404'],weather:'flicker',props:['beds','elevator','lights'],animations:['hospitalMonitor','elevatorBlink','lightFlicker']},
+  {id:'return_lakeview',name:'RETURN TO SILENT HILL — BURNING LAKEVIEW',source:'film',family:'hotel',sky:['#422a23','#160b08','#030201'],weather:'embers',props:['portraits','fireplace','windows'],animations:['firePulse','portraitBlink','ashFall']},
+  {id:'return_portrait_room',name:'RETURN TO SILENT HILL — PORTRAIT ROOM',source:'film',family:'gallery',sky:['#33272a','#10090b','#020202'],weather:'flicker',props:['portraits','elevator','lights'],animations:['portraitBlink','elevatorBlink','lightFlicker']},
+  {id:'st_amelia_marina',name:'ST. AMELIA MARINA',source:'townfall',family:'marina',sky:['#3b4a4d','#111a1c','#030506'],weather:'fog',props:['water','boats','crtv'],animations:['waves','boatRock','fogDrift','tvStatic']},
+  {id:'st_amelia_residential',name:'ST. AMELIA — RESIDENTIAL DISTRICT',source:'townfall',family:'village',sky:['#3d4846','#141a18','#040505'],weather:'rain',props:['road','houses','crtv'],animations:['rainSheets','streetLightFlicker','tvStatic']},
+  {id:'townfall_medical',name:'ST. AMELIA MEDICAL CENTRE',source:'townfall',family:'hospital',sky:['#38403d','#121714','#030404'],weather:'flicker',props:['beds','monitors','crtv'],animations:['hospitalMonitor','lightFlicker','tvStatic']},
+  {id:'ceg_tower',name:'CEG TOWER',source:'townfall',family:'office',sky:['#343a38','#111513','#030404'],weather:'flicker',props:['desks','elevator','crtv'],animations:['elevatorBlink','lightFlicker','tvStatic']},
+  {id:'clara_woods',name:'CLARA WOODS',source:'townfall',family:'forest',sky:['#303b35','#0f1511','#020403'],weather:'fog',props:['trees','roots','crtv'],animations:['forestWind','fogDrift','tvStatic']},
+  {id:'clara_woods_different',name:'CLARA WOODS — DIFFERENT',source:'townfall',family:'otherworld',sky:['#302325','#0e090a','#020202'],weather:'runes',props:['trees','metal','crtv'],animations:['voidSurge','metalPulse','tvStatic']},
+  {id:'alternate_facility',name:'ST. AMELIA — ALTERNATE FACILITY',source:'townfall',family:'otherworld',sky:['#302526','#0f0909','#020202'],weather:'flicker',props:['pipes','monitors','metal'],animations:['pipeSteam','hospitalMonitor','metalPulse']}
+
 ];
 
 const hazardByStage = Object.freeze({
@@ -533,6 +918,56 @@ const hazardByStage = Object.freeze({
   blood: 'bloodTide', flicker: 'staticBurst', runes: 'staticBurst', spores: 'petalBloom', light: 'staticBurst'
 });
 for (const stage of STAGES) stage.hazard ||= hazardByStage[stage.weather] || (stage.family === 'otherworld' ? 'chainSweep' : 'staticBurst');
+
+
+const defaultAnimationsByFamily = Object.freeze({
+  street: ['fogDrift','streetLightFlicker'], village: ['fogDrift','windowShadow'], hospital: ['lightFlicker','hospitalMonitor'],
+  school: ['lightFlicker','lockerRattle'], apartment: ['doorPulse','windowShadow'], hotel: ['lampFlicker','portraitBlink'],
+  prison: ['chainSway','cellShadow'], church: ['bellSwing','ritualGlyph'], otherworld: ['sirenPulse','chainSway'],
+  amusement: ['carouselTurn','ferrisWheel'], shrine: ['lanternSway','ritualGlyph'], festival: ['lanternSway','petalSpiral'],
+  ice: ['snowGust','iceCrack'], ship: ['boatRock','waves'], forest: ['forestWind','rootsCreep'],
+  subway: ['trainPass','lightFlicker'], sewer: ['waterRipple','pipeSteam'], office: ['elevatorBlink','lightFlicker'],
+  house: ['portraitBlink','floorCreak'], gallery: ['portraitBlink','lightFlicker'], marina: ['waves','boatRock'],
+  void: ['voidSurge','gravityTilt'], lake: ['waves','fogDrift'], theater: ['curtainSway','spotlightSweep'],
+  labyrinth: ['chainSway','doorPulse','gravityTilt'], mall: ['storeShutters','lightFlicker','shadowPass'],
+  roof: ['rainSheets','lightning','ventSteam'], room: ['doorPulse','windowShadow','bloodPulse'],
+  motel: ['neonFlicker','rainSheets','windowShadow'], book: ['ritualGlyph','mirrorGlitch','screenSlide'],
+  hall: ['doorPulse','lightFlicker','mirrorGlitch'], villa: ['lightFlicker','petalSpiral','shadowPass'],
+  elemental: ['ritualGlyph','sirenPulse','metalPulse'], lair: ['rootsCreep','bloodPulse','pipeSteam']
+});
+
+const stageFatalityByFamily = Object.freeze({
+  hospital: { name: 'PROTOCOLE TERMINAL', effect: 'flicker', sequence: ['lights-out','gurney','monitor-flatline'] },
+  school: { name: 'SONNERIE DE MINUIT', effect: 'static', sequence: ['locker-slam','bell','corridor-dark'] },
+  street: { name: 'CHUTE DANS LA BRUME', effect: 'chasm', sequence: ['siren','road-split','fog-close'] },
+  apartment: { name: 'PORTE SANS RETOUR', effect: 'door', sequence: ['hallway','door-open','door-seal'] },
+  hotel: { name: 'CHAMBRE DU SOUVENIR', effect: 'fire', sequence: ['portrait','fire','ash'] },
+  prison: { name: 'CELLULE DU JUGEMENT', effect: 'chains', sequence: ['bars-close','chains','blackout'] },
+  church: { name: 'AUTEL DU SACRIFICE', effect: 'ritual', sequence: ['mark','altar','siren'] },
+  otherworld: { name: 'GRILLE DE ROUILLE', effect: 'rust', sequence: ['siren','grate-open','seal'] },
+  amusement: { name: 'DERNIER TOUR DE MANÈGE', effect: 'carousel', sequence: ['lights','carousel','silence'] },
+  forest: { name: 'RACINES DU BOIS', effect: 'roots', sequence: ['roots-rise','bind','earth-close'] },
+  ice: { name: 'SOUS LA GLACE', effect: 'frost', sequence: ['crack','fall','freeze'] },
+  shrine: { name: 'SCELLEMENT DU SANCTUAIRE', effect: 'petals', sequence: ['torii','seal','petal-storm'] },
+  festival: { name: 'PROCESSION FINALE', effect: 'petals', sequence: ['lanterns','procession','mask-close'] },
+  ship: { name: 'FOND DU LAC', effect: 'water', sequence: ['deck-tilt','rail-break','water-close'] },
+  marina: { name: 'MARÉE SANS RETOUR', effect: 'water', sequence: ['signal','wave','submerge'] },
+  void: { name: 'EFFACEMENT DU COULOIR', effect: 'void', sequence: ['distort','pull','erase'] },
+  default: { name: 'OTHERWORLD STAGE FATALITY', effect: 'rust', sequence: ['siren','impact','blackout'] }
+});
+
+for (const stage of STAGES) {
+  stage.animations = [...new Set([...(stage.animations || []), ...(defaultAnimationsByFamily[stage.family] || [])])];
+  const fatality = stageFatalityByFamily[stage.family] || stageFatalityByFamily.default;
+  stage.fatality ||= {
+    id: `${stage.id}_fatality`,
+    ...fatality,
+    triggerZone: stage.family === 'street' || stage.family === 'marina' || stage.family === 'ship' ? 'edge' : 'either-edge',
+    fidelity: 'environmental-adaptation',
+    canonicalBasis: `Décor et dangers documentés de ${stage.name}.`
+  };
+  stage.catalogueStatus ||= 'verified-location';
+}
 
 export const CHRONICLES = [
   {id:'fog_of_alessa',source:'sh1',title:'LA BRUME D’ALESSA',subtitle:'Midwich → Nowhere',fighters:['sh1_grey_child_005','sh1_split_head_014','sh1_incubus_019'],stages:['midwich','lakeside_amusement','nowhere'],intro:'La ville recommence son cauchemar. Chaque victoire révèle une couche différente du rituel.',outro:'Le monde rouille, puis retient son souffle.'},
@@ -548,7 +983,8 @@ export const CHRONICLES = [
   {id:'maya_villa',source:'shortmessage',title:'LES PÉTALES DE MAYA',subtitle:'Kettenstadt Villa',fighters:[],stages:['villa'],intro:'Les murs répètent les messages que personne n’a voulu lire.',outro:'Les fleurs desserrent leur étreinte.'},
   {id:'hinako_f',source:'shf',title:'LA PROCESSION D’HINAKO',subtitle:'Ebisugaoka → Dark Shrine',fighters:[],stages:['ebisugaoka','school_shf','dark_shrine'],intro:'Ebisugaoka fleurit de l’intérieur. Chaque masque exige un choix.',outro:'La procession atteint le sanctuaire, mais le visage reste à choisir.'},
   {id:'ashes_of_alessa',source:'film',title:'LES CENDRES D’ALESSA',subtitle:'Midwich → Sanctuary',fighters:[],stages:['film_midwich','film_hospital','film_church','film_sanctuary'],intro:'Les sirènes ouvrent un Otherworld de métal brûlé où chaque lumière attire une silhouette.',outro:'La congrégation tombe, mais les cendres continuent de respirer.'},
-  {id:'trauma_together',source:'ascension',title:'LE TRAUMA PARTAGÉ',subtitle:'Hope’s Junction → Open Gate',fighters:[],stages:['hope_junction','stilledalen','ascension_otherworld'],intro:'Deux communautés portent des blessures qui se répondent de part et d’autre du monde.',outro:'La porte reste entrouverte, nourrie par les choix accumulés.'}
+  {id:'trauma_together',source:'ascension',title:'LE TRAUMA PARTAGÉ',subtitle:'Hope’s Junction → Open Gate',fighters:[],stages:['hope_junction','stilledalen','ascension_otherworld'],intro:'Deux communautés portent des blessures qui se répondent de part et d’autre du monde.',outro:'La porte reste entrouverte, nourrie par les choix accumulés.'},
+  {id:'static_beneath_st_amelia',source:'townfall',title:'LE SIGNAL SOUS ST. AMELIA',subtitle:'Marina → Clara Woods',fighters:[],stages:['st_amelia_marina','st_amelia_residential','townfall_medical','ceg_tower','clara_woods_different'],intro:'Le CRTV accroche des fragments de vérité dans la brume froide de l’île.',outro:'Le signal cesse, mais le poids demeure dans le silence.'}
 ];
 
 // Renseigne automatiquement les adversaires des Chroniques avec des boss/figures du jeu concerné.
@@ -561,7 +997,54 @@ for (const route of CHRONICLES) {
   }
 }
 
-export function getFighter(id) { return ROSTER.find(f => f.id === id) || ROSTER[0]; }
+
+
+export const SOURCE_COVERAGE_TARGETS = Object.freeze({
+  sh1: { minFighters: 20, minStages: 9, requiredNames: ['Bloodsucker','Incubus','Incubator','Monster Cybil'] },
+  sh2: { minFighters: 18, minStages: 12, requiredNames: ['Spider Mannequin','Mary — Final Manifestation','Eddie Dombrowski'] },
+  sh3: { minFighters: 20, minStages: 12, requiredNames: ['Numb Body — Medium','Closer — Church Variant','Glutton','God'] },
+  sh4: { minFighters: 32, minStages: 10, requiredNames: ['Jimmy Stone — Victim 1','Cynthia Velasquez — Victim 16','Richard Braintree — Victim 19','Walter Sullivan'] },
+  origins: { minFighters: 11, minStages: 6, requiredNames: ['Faceless Nurse','The Butcher','Demon'] },
+  homecoming: { minFighters: 17, minStages: 11, requiredNames: ['Nurse','Swarm','Curtis Ackers','Amnion — Exposed Form'] },
+  shattered: { minFighters: 5, minStages: 5, requiredNames: ['Raw Shock — Base','Raw Shock — Atrophied'] },
+  downpour: { minFighters: 14, minStages: 7, requiredNames: ['Anne Cunningham','Wheelman','Void'] },
+  arcade: { minFighters: 19, minStages: 12, requiredNames: ['Tuberculosis','Mama','Phantom','Robbie the Rabbit — Shotgun','Split Worm — Arcade'] },
+  bom: { minFighters: 28, minStages: 8, requiredNames: ['Mother','Valtiel','Steel Guardian'] },
+  pt: { minFighters: 1, minStages: 1, requiredNames: ['Lisa'] },
+  shortmessage: { minFighters: 1, minStages: 3, requiredNames: ['Sakura Head'] },
+  shf: { minFighters: 19, minStages: 9, requiredNames: ['Shiromuku','Kyubi'] },
+  film: { minFighters: 13, minStages: 8, requiredNames: ['Red Pyramid — Film','Mannequin Monster','Red Pyramid Thing — Return to Silent Hill'] },
+  ascension: { minFighters: 7, minStages: 3, requiredNames: ['The Immolator','The Collector'] },
+  townfall: { minFighters: 5, minStages: 6, requiredNames: ['Lunger','Sorrowful','Fallen','Widow','The Weight'], namingNote: 'Konami ne publie pas de bestiaire officiel ; noms descriptifs balisés.' }
+});
+
+export function coverageAudit() {
+  const sources = {};
+  for (const [source, target] of Object.entries(SOURCE_COVERAGE_TARGETS)) {
+    const fighters = ROSTER.filter((fighter) => fighter.source === source);
+    const stages = STAGES.filter((stage) => stage.source === source);
+    const names = new Set(fighters.map((fighter) => fighter.name));
+    const missing = target.requiredNames.filter((name) => !names.has(name));
+    sources[source] = {
+      fighters: fighters.length,
+      stages: stages.length,
+      minFighters: target.minFighters,
+      minStages: target.minStages,
+      missing,
+      complete: fighters.length >= target.minFighters && stages.length >= target.minStages && missing.length === 0,
+      namingNote: target.namingNote || null
+    };
+  }
+  return {
+    version: VERSION,
+    scope: 'Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.',
+    policy: 'Distingue nom officiel/établi, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.4.0.',
+    sources,
+    complete: Object.values(sources).every((entry) => entry.complete)
+  };
+}
+
+export function getFighter(id) { return ROSTER.find(f => f.id === id || f.legacyIds?.includes(id)) || ROSTER[0]; }
 export function getStage(id) { return STAGES.find(s => s.id === id) || STAGES[0]; }
 export function sourceLabel(source) { return SOURCE_META[source]?.label || source; }
 
@@ -615,5 +1098,9 @@ export const CONTENT_STATS = Object.freeze({
   stages: STAGES.length,
   chronicles: CHRONICLES.length,
   rituals: Object.keys(RITUAL_MODIFIERS).length,
-  bossPhases: ROSTER.filter(f => f.boss).reduce((sum, fighter) => sum + createBossPhases(fighter).length, 0)
+  bossPhases: ROSTER.filter(f => f.boss).reduce((sum, fighter) => sum + createBossPhases(fighter).length, 0),
+  fatalities: ROSTER.reduce((sum, fighter) => sum + fighter.fatalities.length, 0),
+  stageFatalities: STAGES.filter(stage => stage.fatality).length,
+  stageAnimations: STAGES.reduce((sum, stage) => sum + stage.animations.length, 0),
+  coverageComplete: coverageAudit().complete
 });

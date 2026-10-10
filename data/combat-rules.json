@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "traits": {
     "echo": {
       "name": "ÉCHO PERSISTANT",
@@ -329,6 +329,154 @@
       "aggression": 1.18,
       "defense": 1.16,
       "mobility": 0.9
+    }
+  },
+  "coverageTargets": {
+    "sh1": {
+      "minFighters": 20,
+      "minStages": 9,
+      "requiredNames": [
+        "Bloodsucker",
+        "Incubus",
+        "Incubator",
+        "Monster Cybil"
+      ]
+    },
+    "sh2": {
+      "minFighters": 18,
+      "minStages": 12,
+      "requiredNames": [
+        "Spider Mannequin",
+        "Mary — Final Manifestation",
+        "Eddie Dombrowski"
+      ]
+    },
+    "sh3": {
+      "minFighters": 20,
+      "minStages": 12,
+      "requiredNames": [
+        "Numb Body — Medium",
+        "Closer — Church Variant",
+        "Glutton",
+        "God"
+      ]
+    },
+    "sh4": {
+      "minFighters": 32,
+      "minStages": 10,
+      "requiredNames": [
+        "Jimmy Stone — Victim 1",
+        "Cynthia Velasquez — Victim 16",
+        "Richard Braintree — Victim 19",
+        "Walter Sullivan"
+      ]
+    },
+    "origins": {
+      "minFighters": 11,
+      "minStages": 6,
+      "requiredNames": [
+        "Faceless Nurse",
+        "The Butcher",
+        "Demon"
+      ]
+    },
+    "homecoming": {
+      "minFighters": 17,
+      "minStages": 11,
+      "requiredNames": [
+        "Nurse",
+        "Swarm",
+        "Curtis Ackers",
+        "Amnion — Exposed Form"
+      ]
+    },
+    "shattered": {
+      "minFighters": 5,
+      "minStages": 5,
+      "requiredNames": [
+        "Raw Shock — Base",
+        "Raw Shock — Atrophied"
+      ]
+    },
+    "downpour": {
+      "minFighters": 14,
+      "minStages": 7,
+      "requiredNames": [
+        "Anne Cunningham",
+        "Wheelman",
+        "Void"
+      ]
+    },
+    "arcade": {
+      "minFighters": 19,
+      "minStages": 12,
+      "requiredNames": [
+        "Tuberculosis",
+        "Mama",
+        "Phantom",
+        "Robbie the Rabbit — Shotgun",
+        "Split Worm — Arcade"
+      ]
+    },
+    "bom": {
+      "minFighters": 28,
+      "minStages": 8,
+      "requiredNames": [
+        "Mother",
+        "Valtiel",
+        "Steel Guardian"
+      ]
+    },
+    "pt": {
+      "minFighters": 1,
+      "minStages": 1,
+      "requiredNames": [
+        "Lisa"
+      ]
+    },
+    "shortmessage": {
+      "minFighters": 1,
+      "minStages": 3,
+      "requiredNames": [
+        "Sakura Head"
+      ]
+    },
+    "shf": {
+      "minFighters": 19,
+      "minStages": 9,
+      "requiredNames": [
+        "Shiromuku",
+        "Kyubi"
+      ]
+    },
+    "film": {
+      "minFighters": 13,
+      "minStages": 8,
+      "requiredNames": [
+        "Red Pyramid — Film",
+        "Mannequin Monster",
+        "Red Pyramid Thing — Return to Silent Hill"
+      ]
+    },
+    "ascension": {
+      "minFighters": 7,
+      "minStages": 3,
+      "requiredNames": [
+        "The Immolator",
+        "The Collector"
+      ]
+    },
+    "townfall": {
+      "minFighters": 5,
+      "minStages": 6,
+      "requiredNames": [
+        "Lunger",
+        "Sorrowful",
+        "Fallen",
+        "Widow",
+        "The Weight"
+      ],
+      "namingNote": "Konami ne publie pas de bestiaire officiel ; noms descriptifs balisés."
     }
   }
 }

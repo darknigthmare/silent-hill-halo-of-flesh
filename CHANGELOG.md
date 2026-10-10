@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.4.0 — 10 octobre 2026
+
+### Couverture et fidélité
+
+- Audit source par source porté à **230 manifestations**, **75 boss**, **16 sources** et **15 Chroniques**.
+- Ajout des fantômes nommés de *Silent Hill 4*, de variantes distinctes de *Silent Hill 2* et *Silent Hill 3*, d’adversaires de *Homecoming*, *The Arcade*, des films récents et de *Townfall*.
+- Ajout de `catalogueStatus`, `nameStatus` et `evidenceTier` pour distinguer nom établi, variante visible et appellation descriptive.
+- Ajout de `data/coverage-audit.json` et d’un audit généré bloquant la release en cas de lacune connue dans le périmètre défini.
+- Conservation des identifiants v0.3 comme alias de sauvegarde.
+
+### Fatalités
+
+- Deux fatalités data-driven pour chaque manifestation : Signature et Nightmare.
+- **460 fatalités de combattant** et **123 fatalités d’arène**.
+- Nouvelle phase moteur `fatality` avec caméra, poses, effets, Otherworld, audio, vibrations, statistiques et résultat.
+- Sélection automatique entre fatalité Signature et fatalité environnementale selon le coup décisif, le danger et la position.
+- Options indépendantes pour fatalités Signature et fatalités d’arène.
+
+### Arènes
+
+- Catalogue porté à **123 arènes dédiées**.
+- Ajout de **374 animations** : éclairage, radio, écrans, chaînes, machineries, eau, météo, ombres, trains, véhicules, pétales, cendres et Otherworld.
+- Option permettant de couper les animations sans retirer l’arène.
+- Galerie, dossiers et Archives enrichis avec animation, danger et fatalité propres au stage.
+
+### Interface, données et QA
+
+- Dossiers de manifestation enrichis avec fatalités, séquences, base documentaire et statut de fidélité.
+- Résultats et records enrichis avec fatalités et fatalités d’arène.
+- Export `data/fatalities.json`.
+- Documentation générée pour le roster, la couverture, les fatalités et les stages.
+- Service worker migré vers `halo-of-flesh-v0.4.0` avec les nouveaux exports hors ligne.
+
 ## 0.3.0 — 10 octobre 2026
 
 ### Modes et progression

@@ -15,7 +15,25 @@
       "desks",
       "fences"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "lightFlicker",
+      "lockerRattle"
+    ],
+    "fatality": {
+      "id": "midwich_fatality",
+      "name": "SONNERIE DE MINUIT",
+      "effect": "static",
+      "sequence": [
+        "locker-slam",
+        "bell",
+        "corridor-dark"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de MIDWICH ELEMENTARY."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "alchemilla",
@@ -33,7 +51,25 @@
       "curtains",
       "lamps"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "alchemilla_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA HOSPITAL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "old_silent_hill",
@@ -51,7 +87,25 @@
       "shops",
       "chasm"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "fogDrift",
+      "streetLightFlicker"
+    ],
+    "fatality": {
+      "id": "old_silent_hill_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de OLD SILENT HILL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "nowhere",
@@ -69,7 +123,25 @@
       "chains",
       "fans"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "sirenPulse",
+      "chainSway"
+    ],
+    "fatality": {
+      "id": "nowhere_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de NOWHERE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "lakeside_amusement",
@@ -87,7 +159,25 @@
       "wheel",
       "booths"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "carouselTurn",
+      "ferrisWheel"
+    ],
+    "fatality": {
+      "id": "lakeside_amusement_fatality",
+      "name": "DERNIER TOUR DE MANÈGE",
+      "effect": "carousel",
+      "sequence": [
+        "lights",
+        "carousel",
+        "silence"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LAKESIDE AMUSEMENT PARK."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "woodside",
@@ -105,7 +195,25 @@
       "doors",
       "trash"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "doorPulse",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "woodside_fatality",
+      "name": "PORTE SANS RETOUR",
+      "effect": "door",
+      "sequence": [
+        "hallway",
+        "door-open",
+        "door-seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de WOOD SIDE APARTMENTS."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "blue_creek",
@@ -123,7 +231,25 @@
       "bars",
       "water"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "doorPulse",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "blue_creek_fatality",
+      "name": "PORTE SANS RETOUR",
+      "effect": "door",
+      "sequence": [
+        "hallway",
+        "door-open",
+        "door-seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BLUE CREEK — STAIRWELL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "brookhaven_sh2",
@@ -141,7 +267,25 @@
       "cages",
       "elevator"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "brookhaven_sh2_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — BASEMENT."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "toluca_prison",
@@ -159,7 +303,25 @@
       "gallows",
       "meat"
     ],
-    "hazard": "frostWave"
+    "hazard": "frostWave",
+    "animations": [
+      "chainSway",
+      "cellShadow"
+    ],
+    "fatality": {
+      "id": "toluca_prison_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de TOLUCA PRISON."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "labyrinth",
@@ -177,7 +339,26 @@
       "door",
       "pit"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "chainSway",
+      "doorPulse",
+      "gravityTilt"
+    ],
+    "fatality": {
+      "id": "labyrinth_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE LABYRINTH."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "hotel_otherworld",
@@ -195,7 +376,25 @@
       "fire",
       "mirrors"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "lampFlicker",
+      "portraitBlink"
+    ],
+    "fatality": {
+      "id": "hotel_otherworld_fatality",
+      "name": "CHAMBRE DU SOUVENIR",
+      "effect": "fire",
+      "sequence": [
+        "portrait",
+        "fire",
+        "ash"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LAKEVIEW HOTEL — OTHERWORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "shopping_mall",
@@ -213,7 +412,26 @@
       "shutters",
       "signs"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "storeShutters",
+      "lightFlicker",
+      "shadowPass"
+    ],
+    "fatality": {
+      "id": "shopping_mall_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CENTRAL SQUARE MALL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "brookhaven_sh3",
@@ -231,7 +449,25 @@
       "pipes",
       "doors"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "brookhaven_sh3_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — FLOODED ROOM."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "church",
@@ -249,7 +485,25 @@
       "fans",
       "flesh"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "bellSwing",
+      "ritualGlyph"
+    ],
+    "fatality": {
+      "id": "church_fatality",
+      "name": "AUTEL DU SACRIFICE",
+      "effect": "ritual",
+      "sequence": [
+        "mark",
+        "altar",
+        "siren"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE CHURCH."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "apartment_roof",
@@ -267,7 +521,26 @@
       "water",
       "antenna"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "rainSheets",
+      "lightning",
+      "ventSteam"
+    ],
+    "fatality": {
+      "id": "apartment_roof_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DAISY VILLA ROOFTOP."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "sewers",
@@ -285,7 +558,25 @@
       "pipes",
       "grates"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "waterRipple",
+      "pipeSteam"
+    ],
+    "fatality": {
+      "id": "sewers_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SEWER CHANNEL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "room_302",
@@ -303,7 +594,26 @@
       "chains",
       "door"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "doorPulse",
+      "windowShadow",
+      "bloodPulse"
+    ],
+    "fatality": {
+      "id": "room_302_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ROOM 302."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "subway_world",
@@ -321,7 +631,25 @@
       "tiles",
       "turnstile"
     ],
-    "hazard": "chainSweep"
+    "hazard": "chainSweep",
+    "animations": [
+      "trainPass",
+      "lightFlicker"
+    ],
+    "fatality": {
+      "id": "subway_world_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SUBWAY WORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "water_prison",
@@ -339,7 +667,25 @@
       "cells",
       "spotlight"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "chainSway",
+      "cellShadow"
+    ],
+    "fatality": {
+      "id": "water_prison_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de WATER PRISON WORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "apartment_world",
@@ -357,7 +703,25 @@
       "doors",
       "umbilical"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "doorPulse",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "apartment_world_fatality",
+      "name": "PORTE SANS RETOUR",
+      "effect": "door",
+      "sequence": [
+        "hallway",
+        "door-open",
+        "door-seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de APARTMENT WORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "hospital_world",
@@ -375,7 +739,25 @@
       "beds",
       "head"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "hospital_world_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HOSPITAL WORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "cedar_grove",
@@ -393,7 +775,25 @@
       "mirrors",
       "gurneys"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "cedar_grove_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CEDAR GROVE SANITARIUM."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "riverside_motel",
@@ -411,7 +811,26 @@
       "neon",
       "pool"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "neonFlicker",
+      "rainSheets",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "riverside_motel_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de RIVERSIDE MOTEL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "shepherds_glen",
@@ -429,7 +848,25 @@
       "road",
       "trees"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "fogDrift",
+      "streetLightFlicker"
+    ],
+    "fatality": {
+      "id": "shepherds_glen_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "grand_hotel",
@@ -447,7 +884,25 @@
       "dolls",
       "boiler"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "lampFlicker",
+      "portraitBlink"
+    ],
+    "fatality": {
+      "id": "grand_hotel_fatality",
+      "name": "CHAMBRE DU SOUVENIR",
+      "effect": "fire",
+      "sequence": [
+        "portrait",
+        "fire",
+        "ash"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de GRAND HOTEL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "nightmare_school",
@@ -465,7 +920,25 @@
       "lockers",
       "maze"
     ],
-    "hazard": "frostWave"
+    "hazard": "frostWave",
+    "animations": [
+      "snowGust",
+      "iceCrack"
+    ],
+    "fatality": {
+      "id": "nightmare_school_fatality",
+      "name": "SOUS LA GLACE",
+      "effect": "frost",
+      "sequence": [
+        "crack",
+        "fall",
+        "freeze"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FROZEN SCHOOL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "overlook",
@@ -483,7 +956,25 @@
       "towers",
       "flood"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "chainSway",
+      "cellShadow"
+    ],
+    "fatality": {
+      "id": "overlook_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de OVERLOOK PENITENTIARY."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "arcade_ship",
@@ -501,7 +992,25 @@
       "crates",
       "chains"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "boatRock",
+      "waves"
+    ],
+    "fatality": {
+      "id": "arcade_ship_fatality",
+      "name": "FOND DU LAC",
+      "effect": "water",
+      "sequence": [
+        "deck-tilt",
+        "rail-break",
+        "water-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LITTLE BARONESS."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_zone",
@@ -519,7 +1028,26 @@
       "doors",
       "altar"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "ritualGlyph",
+      "mirrorGlitch",
+      "screenSlide"
+    ],
+    "fatality": {
+      "id": "book_zone_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BOOK OF MEMORIES — NEXUS."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "looping_hall",
@@ -537,7 +1065,26 @@
       "bathroom",
       "clock"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "doorPulse",
+      "lightFlicker",
+      "mirrorGlitch"
+    ],
+    "fatality": {
+      "id": "looping_hall_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de 204863 — LOOPING HALL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "villa",
@@ -555,7 +1102,26 @@
       "stairs",
       "fence"
     ],
-    "hazard": "petalBloom"
+    "hazard": "petalBloom",
+    "animations": [
+      "lightFlicker",
+      "petalSpiral",
+      "shadowPass"
+    ],
+    "fatality": {
+      "id": "villa_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "ebisugaoka",
@@ -573,7 +1139,25 @@
       "phone",
       "flowers"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "fogDrift",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "ebisugaoka_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de EBISUGAOKA — MAIN STREET."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "dark_shrine",
@@ -591,7 +1175,25 @@
       "lanterns",
       "roots"
     ],
-    "hazard": "petalBloom"
+    "hazard": "petalBloom",
+    "animations": [
+      "lanternSway",
+      "ritualGlyph"
+    ],
+    "fatality": {
+      "id": "dark_shrine_fatality",
+      "name": "SCELLEMENT DU SANCTUAIRE",
+      "effect": "petals",
+      "sequence": [
+        "torii",
+        "seal",
+        "petal-storm"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DARK SHRINE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "school_shf",
@@ -609,7 +1211,25 @@
       "corridor",
       "flowers"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "lockerRattle"
+    ],
+    "fatality": {
+      "id": "school_shf_fatality",
+      "name": "SONNERIE DE MINUIT",
+      "effect": "static",
+      "sequence": [
+        "locker-slam",
+        "bell",
+        "corridor-dark"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de EBISUGAOKA MIDDLE SCHOOL."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "hinako_home",
@@ -627,7 +1247,25 @@
       "doors",
       "roots"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "portraitBlink",
+      "floorCreak"
+    ],
+    "fatality": {
+      "id": "hinako_home_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HINAKO’S HOME."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "festival_square",
@@ -645,7 +1283,25 @@
       "stalls",
       "lanterns"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "lanternSway",
+      "petalSpiral"
+    ],
+    "fatality": {
+      "id": "festival_square_fatality",
+      "name": "PROCESSION FINALE",
+      "effect": "petals",
+      "sequence": [
+        "lanterns",
+        "procession",
+        "mask-close"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FESTIVAL SQUARE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_fire",
@@ -663,7 +1319,26 @@
       "runes",
       "pillars"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_fire_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FIRE ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_wood",
@@ -681,7 +1356,26 @@
       "moss",
       "runes"
     ],
-    "hazard": "petalBloom"
+    "hazard": "petalBloom",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_wood_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de WOOD ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_light",
@@ -699,7 +1393,26 @@
       "runes",
       "pillars"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_light_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LIGHT ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_water",
@@ -717,7 +1430,26 @@
       "runes",
       "bridges"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_water_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de WATER ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_earth",
@@ -735,7 +1467,26 @@
       "runes",
       "cracks"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_earth_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de EARTH ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_blood",
@@ -753,7 +1504,26 @@
       "runes",
       "pools"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_blood_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BLOOD ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "book_steel",
@@ -771,7 +1541,26 @@
       "runes",
       "chains"
     ],
-    "hazard": "chainSweep"
+    "hazard": "chainSweep",
+    "animations": [
+      "ritualGlyph",
+      "sirenPulse",
+      "metalPulse"
+    ],
+    "fatality": {
+      "id": "book_steel_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de STEEL ZONE."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "antique_shop",
@@ -789,7 +1578,25 @@
       "altar",
       "fire"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "sirenPulse",
+      "chainSway"
+    ],
+    "fatality": {
+      "id": "antique_shop_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de GREEN LION ANTIQUES."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "church_hc",
@@ -807,7 +1614,25 @@
       "altar",
       "chains"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "bellSwing",
+      "ritualGlyph"
+    ],
+    "fatality": {
+      "id": "church_hc_fatality",
+      "name": "AUTEL DU SACRIFICE",
+      "effect": "ritual",
+      "sequence": [
+        "mark",
+        "altar",
+        "siren"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN CHURCH."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "underground_hc",
@@ -825,7 +1650,26 @@
       "machines",
       "cocoons"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "rootsCreep",
+      "bloodPulse",
+      "pipeSteam"
+    ],
+    "fatality": {
+      "id": "underground_hc_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de UNDERGROUND LAIR."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "film_midwich",
@@ -843,7 +1687,25 @@
       "fence",
       "chains"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "lightFlicker",
+      "lockerRattle"
+    ],
+    "fatality": {
+      "id": "film_midwich_fatality",
+      "name": "SONNERIE DE MINUIT",
+      "effect": "static",
+      "sequence": [
+        "locker-slam",
+        "bell",
+        "corridor-dark"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de MIDWICH — FILM OTHERWORLD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "film_hospital",
@@ -861,7 +1723,25 @@
       "gurneys",
       "chains"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "fatality": {
+      "id": "film_hospital_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — DARK WARD."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "film_church",
@@ -879,7 +1759,25 @@
       "chains",
       "flesh"
     ],
-    "hazard": "chainSweep"
+    "hazard": "chainSweep",
+    "animations": [
+      "bellSwing",
+      "ritualGlyph"
+    ],
+    "fatality": {
+      "id": "film_church_fatality",
+      "name": "AUTEL DU SACRIFICE",
+      "effect": "ritual",
+      "sequence": [
+        "mark",
+        "altar",
+        "siren"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CHURCH OF THE ORDER."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "film_sanctuary",
@@ -897,7 +1795,26 @@
       "cages",
       "altar"
     ],
-    "hazard": "bloodTide"
+    "hazard": "bloodTide",
+    "animations": [
+      "rootsCreep",
+      "bloodPulse",
+      "pipeSteam"
+    ],
+    "fatality": {
+      "id": "film_sanctuary_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SANCTUARY — REVELATION."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "hope_junction",
@@ -915,7 +1832,25 @@
       "shops",
       "fence"
     ],
-    "hazard": "staticBurst"
+    "hazard": "staticBurst",
+    "animations": [
+      "fogDrift",
+      "streetLightFlicker"
+    ],
+    "fatality": {
+      "id": "hope_junction_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HOPE’S JUNCTION."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "stilledalen",
@@ -933,7 +1868,25 @@
       "roots",
       "lanterns"
     ],
-    "hazard": "fallingDebris"
+    "hazard": "fallingDebris",
+    "animations": [
+      "fogDrift",
+      "windowShadow"
+    ],
+    "fatality": {
+      "id": "stilledalen_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de STILLEDALEN WOODS."
+    },
+    "catalogueStatus": "verified-location"
   },
   {
     "id": "ascension_otherworld",
@@ -951,6 +1904,2655 @@
       "chains",
       "altar"
     ],
-    "hazard": "emberFall"
+    "hazard": "emberFall",
+    "animations": [
+      "sirenPulse",
+      "chainSway"
+    ],
+    "fatality": {
+      "id": "ascension_otherworld_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ASCENSION — OPEN GATE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "hospital_nightmare",
+    "name": "ALCHEMILLA — NIGHTMARE WARD",
+    "source": "sh1",
+    "family": "hospital",
+    "sky": [
+      "#311d1d",
+      "#100808",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "chains",
+      "fans"
+    ],
+    "animations": [
+      "lightFlicker",
+      "chainSway",
+      "fanSpin",
+      "hospitalMonitor"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "hospital_nightmare_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA — NIGHTMARE WARD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "midwich_nightmare",
+    "name": "MIDWICH — NIGHTMARE SCHOOL",
+    "source": "sh1",
+    "family": "school",
+    "sky": [
+      "#331f1c",
+      "#110807",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "lockers",
+      "chains",
+      "grates"
+    ],
+    "animations": [
+      "sirenPulse",
+      "chainSway",
+      "lockerRattle",
+      "lightFlicker"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "midwich_nightmare_fatality",
+      "name": "SONNERIE DE MINUIT",
+      "effect": "static",
+      "sequence": [
+        "locker-slam",
+        "bell",
+        "corridor-dark"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de MIDWICH — NIGHTMARE SCHOOL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "central_nightmare",
+    "name": "CENTRAL SILENT HILL — OTHERWORLD",
+    "source": "sh1",
+    "family": "street",
+    "sky": [
+      "#35201d",
+      "#120808",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "road",
+      "chasm",
+      "fence"
+    ],
+    "animations": [
+      "sirenPulse",
+      "streetLightFlicker",
+      "chasmPulse",
+      "fogDrift"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "central_nightmare_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CENTRAL SILENT HILL — OTHERWORLD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "sewer_resort",
+    "name": "SEWERS TO THE RESORT",
+    "source": "sh1",
+    "family": "sewer",
+    "sky": [
+      "#25302d",
+      "#0b1110",
+      "#020303"
+    ],
+    "weather": "water",
+    "props": [
+      "water",
+      "grates",
+      "pipes"
+    ],
+    "animations": [
+      "waterRipple",
+      "pipeSteam",
+      "shadowPass"
+    ],
+    "hazard": "bloodTide",
+    "fatality": {
+      "id": "sewer_resort_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SEWERS TO THE RESORT."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "south_vale",
+    "name": "SOUTH VALE STREETS",
+    "source": "sh2",
+    "family": "street",
+    "sky": [
+      "#41433d",
+      "#171916",
+      "#050606"
+    ],
+    "weather": "fog",
+    "props": [
+      "road",
+      "shops",
+      "fence"
+    ],
+    "animations": [
+      "fogDrift",
+      "streetLightFlicker",
+      "shadowPass"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "south_vale_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SOUTH VALE STREETS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "brookhaven_roof",
+    "name": "BROOKHAVEN — ROOFTOP",
+    "source": "sh2",
+    "family": "hospital",
+    "sky": [
+      "#383b38",
+      "#111413",
+      "#030404"
+    ],
+    "weather": "rain",
+    "props": [
+      "fence",
+      "elevator",
+      "water"
+    ],
+    "animations": [
+      "rainSheets",
+      "elevatorBlink",
+      "lightning",
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "brookhaven_roof_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — ROOFTOP."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "historical_society",
+    "name": "SILENT HILL HISTORICAL SOCIETY",
+    "source": "sh2",
+    "family": "museum",
+    "sky": [
+      "#302e28",
+      "#100f0c",
+      "#030303"
+    ],
+    "weather": "dust",
+    "props": [
+      "portraits",
+      "stairs",
+      "doors"
+    ],
+    "animations": [
+      "portraitBlink",
+      "shadowPass",
+      "lightFlicker"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "historical_society_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SILENT HILL HISTORICAL SOCIETY."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "prison_meat_locker",
+    "name": "TOLUCA PRISON — MEAT LOCKER",
+    "source": "sh2",
+    "family": "prison",
+    "sky": [
+      "#2b2926",
+      "#0d0c0b",
+      "#020202"
+    ],
+    "weather": "cold",
+    "props": [
+      "hooks",
+      "chains",
+      "freezer"
+    ],
+    "animations": [
+      "chainSway",
+      "coldBreath",
+      "lightFlicker",
+      "cellShadow"
+    ],
+    "hazard": "frostWave",
+    "fatality": {
+      "id": "prison_meat_locker_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de TOLUCA PRISON — MEAT LOCKER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "lakeview",
+    "name": "LAKEVIEW HOTEL — FOG WORLD",
+    "source": "sh2",
+    "family": "hotel",
+    "sky": [
+      "#3e4038",
+      "#161713",
+      "#040504"
+    ],
+    "weather": "fog",
+    "props": [
+      "doors",
+      "portraits",
+      "lamps"
+    ],
+    "animations": [
+      "fogDrift",
+      "portraitBlink",
+      "lampFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "lakeview_fatality",
+      "name": "CHAMBRE DU SOUVENIR",
+      "effect": "fire",
+      "sequence": [
+        "portrait",
+        "fire",
+        "ash"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LAKEVIEW HOTEL — FOG WORLD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "baldwin_mansion",
+    "name": "BALDWIN MANSION",
+    "source": "sh2",
+    "family": "house",
+    "sky": [
+      "#34322c",
+      "#12110e",
+      "#030303"
+    ],
+    "weather": "dust",
+    "props": [
+      "portraits",
+      "stairs",
+      "fireplace"
+    ],
+    "animations": [
+      "portraitBlink",
+      "firePulse",
+      "shadowPass",
+      "floorCreak"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "baldwin_mansion_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BALDWIN MANSION."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_mall",
+    "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+    "source": "sh3",
+    "family": "mall",
+    "sky": [
+      "#34211d",
+      "#120908",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "shops",
+      "grates",
+      "fans"
+    ],
+    "animations": [
+      "sirenPulse",
+      "fanSpin",
+      "storeShutters",
+      "lightFlicker",
+      "shadowPass"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "nightmare_mall_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CENTRAL SQUARE — NIGHTMARE MALL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "hazel_subway",
+    "name": "HAZEL STREET SUBWAY",
+    "source": "sh3",
+    "family": "subway",
+    "sky": [
+      "#303431",
+      "#101311",
+      "#030404"
+    ],
+    "weather": "flicker",
+    "props": [
+      "rails",
+      "platform",
+      "lights"
+    ],
+    "animations": [
+      "trainPass",
+      "lightFlicker",
+      "tunnelWind"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "hazel_subway_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HAZEL STREET SUBWAY."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "underpass_sh3",
+    "name": "UNDERPASS",
+    "source": "sh3",
+    "family": "sewer",
+    "sky": [
+      "#29312f",
+      "#0d1110",
+      "#020303"
+    ],
+    "weather": "water",
+    "props": [
+      "water",
+      "pipes",
+      "grates"
+    ],
+    "animations": [
+      "waterRipple",
+      "pipeSteam",
+      "shadowPass"
+    ],
+    "hazard": "bloodTide",
+    "fatality": {
+      "id": "underpass_sh3_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de UNDERPASS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "hilltop_center",
+    "name": "HILLTOP CENTER",
+    "source": "sh3",
+    "family": "office",
+    "sky": [
+      "#373832",
+      "#13140f",
+      "#030403"
+    ],
+    "weather": "flicker",
+    "props": [
+      "desks",
+      "elevator",
+      "windows"
+    ],
+    "animations": [
+      "elevatorBlink",
+      "lightFlicker",
+      "windowShadow"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "hilltop_center_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HILLTOP CENTER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_hilltop",
+    "name": "HILLTOP CENTER — OTHERWORLD",
+    "source": "sh3",
+    "family": "otherworld",
+    "sky": [
+      "#351f1b",
+      "#120807",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "grates",
+      "fans",
+      "blood"
+    ],
+    "animations": [
+      "sirenPulse",
+      "fanSpin",
+      "bloodPulse",
+      "chainSway"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "nightmare_hilltop_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de HILLTOP CENTER — OTHERWORLD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_hospital_sh3",
+    "name": "BROOKHAVEN — NIGHTMARE HOSPITAL",
+    "source": "sh3",
+    "family": "hospital",
+    "sky": [
+      "#33201e",
+      "#110807",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "mirrors",
+      "chains"
+    ],
+    "animations": [
+      "hospitalMonitor",
+      "lightFlicker",
+      "mirrorGlitch"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "nightmare_hospital_sh3_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — NIGHTMARE HOSPITAL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "lakeside_sh3",
+    "name": "LAKESIDE AMUSEMENT PARK — SH3",
+    "source": "sh3",
+    "family": "amusement",
+    "sky": [
+      "#2b3038",
+      "#0d1116",
+      "#020304"
+    ],
+    "weather": "rain",
+    "props": [
+      "carousel",
+      "wheel",
+      "booths"
+    ],
+    "animations": [
+      "carouselTurn",
+      "ferrisWheel",
+      "rainSheets"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "lakeside_sh3_fatality",
+      "name": "DERNIER TOUR DE MANÈGE",
+      "effect": "carousel",
+      "sequence": [
+        "lights",
+        "carousel",
+        "silence"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LAKESIDE AMUSEMENT PARK — SH3."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "forest_world",
+    "name": "FOREST WORLD",
+    "source": "sh4",
+    "family": "forest",
+    "sky": [
+      "#2b342e",
+      "#0d120f",
+      "#020302"
+    ],
+    "weather": "rain",
+    "props": [
+      "trees",
+      "roots",
+      "wish_house"
+    ],
+    "animations": [
+      "forestWind",
+      "rootsCreep",
+      "rainSheets"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "forest_world_fatality",
+      "name": "RACINES DU BOIS",
+      "effect": "roots",
+      "sequence": [
+        "roots-rise",
+        "bind",
+        "earth-close"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FOREST WORLD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "building_world",
+    "name": "BUILDING WORLD",
+    "source": "sh4",
+    "family": "building",
+    "sky": [
+      "#32302d",
+      "#10100d",
+      "#030303"
+    ],
+    "weather": "flicker",
+    "props": [
+      "stairs",
+      "signs",
+      "elevator"
+    ],
+    "animations": [
+      "elevatorBlink",
+      "neonFlicker",
+      "shadowPass"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "building_world_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de BUILDING WORLD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "outside_room_302",
+    "name": "OUTSIDE ROOM 302",
+    "source": "sh4",
+    "family": "apartment",
+    "sky": [
+      "#34332f",
+      "#12120f",
+      "#030303"
+    ],
+    "weather": "fog",
+    "props": [
+      "doors",
+      "windows",
+      "chains"
+    ],
+    "animations": [
+      "doorPulse",
+      "windowShadow",
+      "fogDrift"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "outside_room_302_fatality",
+      "name": "PORTE SANS RETOUR",
+      "effect": "door",
+      "sequence": [
+        "hallway",
+        "door-open",
+        "door-seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de OUTSIDE ROOM 302."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "wish_house",
+    "name": "WISH HOUSE",
+    "source": "sh4",
+    "family": "house",
+    "sky": [
+      "#31342d",
+      "#10130e",
+      "#030303"
+    ],
+    "weather": "rain",
+    "props": [
+      "trees",
+      "fence",
+      "altar"
+    ],
+    "animations": [
+      "forestWind",
+      "rainSheets",
+      "ritualGlyph",
+      "portraitBlink",
+      "floorCreak"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "wish_house_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de WISH HOUSE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "final_sacrament",
+    "name": "21 SACRAMENTS — FINAL CHAMBER",
+    "source": "sh4",
+    "family": "otherworld",
+    "sky": [
+      "#321e1d",
+      "#100706",
+      "#020202"
+    ],
+    "weather": "blood",
+    "props": [
+      "altar",
+      "chains",
+      "runes"
+    ],
+    "animations": [
+      "ritualGlyph",
+      "chainSway",
+      "bloodPulse",
+      "sirenPulse"
+    ],
+    "hazard": "bloodTide",
+    "fatality": {
+      "id": "final_sacrament_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de 21 SACRAMENTS — FINAL CHAMBER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "alchemilla_origins",
+    "name": "ALCHEMILLA HOSPITAL — ORIGINS",
+    "source": "origins",
+    "family": "hospital",
+    "sky": [
+      "#3b3a34",
+      "#15140f",
+      "#040403"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "mirrors",
+      "lights"
+    ],
+    "animations": [
+      "mirrorGlitch",
+      "hospitalMonitor",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "alchemilla_origins_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA HOSPITAL — ORIGINS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "artaud_theater",
+    "name": "ARTAUD THEATER",
+    "source": "origins",
+    "family": "theater",
+    "sky": [
+      "#382d27",
+      "#130e0b",
+      "#030202"
+    ],
+    "weather": "dust",
+    "props": [
+      "stage",
+      "curtains",
+      "spotlights"
+    ],
+    "animations": [
+      "curtainSway",
+      "spotlightSweep",
+      "shadowPass"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "artaud_theater_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ARTAUD THEATER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_theater",
+    "name": "ARTAUD THEATER — NIGHTMARE",
+    "source": "origins",
+    "family": "theater",
+    "sky": [
+      "#351d1c",
+      "#110706",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "stage",
+      "chains",
+      "flesh"
+    ],
+    "animations": [
+      "sirenPulse",
+      "curtainSway",
+      "firePulse",
+      "spotlightSweep"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "nightmare_theater_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ARTAUD THEATER — NIGHTMARE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_hospital_hc",
+    "name": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+    "source": "homecoming",
+    "family": "hospital",
+    "sky": [
+      "#321f1d",
+      "#100706",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "fans",
+      "chains"
+    ],
+    "animations": [
+      "fanSpin",
+      "hospitalMonitor",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "nightmare_hospital_hc_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA — HOMECOMING NIGHTMARE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "police_station_hc",
+    "name": "SHEPHERD’S GLEN POLICE STATION",
+    "source": "homecoming",
+    "family": "office",
+    "sky": [
+      "#353833",
+      "#121410",
+      "#030403"
+    ],
+    "weather": "rain",
+    "props": [
+      "desks",
+      "bars",
+      "lights"
+    ],
+    "animations": [
+      "rainSheets",
+      "radioPulse",
+      "lightFlicker",
+      "elevatorBlink"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "police_station_hc_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN POLICE STATION."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "town_hall_hc",
+    "name": "SHEPHERD’S GLEN TOWN HALL",
+    "source": "homecoming",
+    "family": "hall",
+    "sky": [
+      "#37342d",
+      "#13110d",
+      "#030302"
+    ],
+    "weather": "dust",
+    "props": [
+      "portraits",
+      "stairs",
+      "flags"
+    ],
+    "animations": [
+      "portraitBlink",
+      "flagSway",
+      "shadowPass",
+      "doorPulse",
+      "lightFlicker",
+      "mirrorGlitch"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "town_hall_hc_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN TOWN HALL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "prison_hc",
+    "name": "SHEPHERD’S GLEN PENITENTIARY",
+    "source": "homecoming",
+    "family": "prison",
+    "sky": [
+      "#2f302c",
+      "#0f100d",
+      "#030303"
+    ],
+    "weather": "flicker",
+    "props": [
+      "bars",
+      "chains",
+      "lights"
+    ],
+    "animations": [
+      "chainSway",
+      "lightFlicker",
+      "cellShadow"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "prison_hc_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN PENITENTIARY."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "shepherd_house_hc",
+    "name": "SHEPHERD HOUSE — ATTIC",
+    "source": "homecoming",
+    "family": "house",
+    "sky": [
+      "#332f29",
+      "#110f0c",
+      "#030302"
+    ],
+    "weather": "dust",
+    "props": [
+      "portraits",
+      "stairs",
+      "mirrors"
+    ],
+    "animations": [
+      "portraitBlink",
+      "mirrorGlitch",
+      "floorCreak"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "shepherd_house_hc_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHEPHERD HOUSE — ATTIC."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "scarlet_chamber",
+    "name": "SCARLET’S CHAMBER",
+    "source": "homecoming",
+    "family": "lair",
+    "sky": [
+      "#3b2427",
+      "#13080a",
+      "#020102"
+    ],
+    "weather": "blood",
+    "props": [
+      "dolls",
+      "mirrors",
+      "flesh"
+    ],
+    "animations": [
+      "dollTurn",
+      "mirrorGlitch",
+      "bloodPulse",
+      "rootsCreep",
+      "pipeSteam"
+    ],
+    "hazard": "bloodTide",
+    "fatality": {
+      "id": "scarlet_chamber_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SCARLET’S CHAMBER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "curtis_shop",
+    "name": "CURTIS’S JUNKYARD WORKSHOP",
+    "source": "homecoming",
+    "family": "workshop",
+    "sky": [
+      "#34322c",
+      "#11100d",
+      "#030302"
+    ],
+    "weather": "sparks",
+    "props": [
+      "tools",
+      "chains",
+      "saws"
+    ],
+    "animations": [
+      "chainSway",
+      "sawSpin",
+      "sparks"
+    ],
+    "hazard": "chainSweep",
+    "fatality": {
+      "id": "curtis_shop_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CURTIS’S JUNKYARD WORKSHOP."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "frozen_streets",
+    "name": "SILENT HILL — FROZEN STREETS",
+    "source": "shattered",
+    "family": "ice",
+    "sky": [
+      "#48616b",
+      "#17272d",
+      "#05090b"
+    ],
+    "weather": "snow",
+    "props": [
+      "road",
+      "cars",
+      "ice"
+    ],
+    "animations": [
+      "snowGust",
+      "iceCrack",
+      "headlightSweep"
+    ],
+    "hazard": "frostWave",
+    "fatality": {
+      "id": "frozen_streets_fatality",
+      "name": "SOUS LA GLACE",
+      "effect": "frost",
+      "sequence": [
+        "crack",
+        "fall",
+        "freeze"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SILENT HILL — FROZEN STREETS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_hospital_sm",
+    "name": "FROZEN HOSPITAL",
+    "source": "shattered",
+    "family": "ice",
+    "sky": [
+      "#455e68",
+      "#16252b",
+      "#05090b"
+    ],
+    "weather": "snow",
+    "props": [
+      "beds",
+      "ice",
+      "lights"
+    ],
+    "animations": [
+      "snowGust",
+      "iceCrack",
+      "lightFlicker"
+    ],
+    "hazard": "frostWave",
+    "fatality": {
+      "id": "nightmare_hospital_sm_fatality",
+      "name": "SOUS LA GLACE",
+      "effect": "frost",
+      "sequence": [
+        "crack",
+        "fall",
+        "freeze"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FROZEN HOSPITAL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "nightmare_mall_sm",
+    "name": "FROZEN MALL",
+    "source": "shattered",
+    "family": "ice",
+    "sky": [
+      "#465e67",
+      "#17252b",
+      "#05090b"
+    ],
+    "weather": "snow",
+    "props": [
+      "shops",
+      "ice",
+      "escalator"
+    ],
+    "animations": [
+      "snowGust",
+      "iceCrack",
+      "storeShutters"
+    ],
+    "hazard": "frostWave",
+    "fatality": {
+      "id": "nightmare_mall_sm_fatality",
+      "name": "SOUS LA GLACE",
+      "effect": "frost",
+      "sequence": [
+        "crack",
+        "fall",
+        "freeze"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FROZEN MALL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "lighthouse_sm",
+    "name": "LIGHTHOUSE / THERAPY REVELATION",
+    "source": "shattered",
+    "family": "lighthouse",
+    "sky": [
+      "#4d6873",
+      "#172a31",
+      "#05090b"
+    ],
+    "weather": "snow",
+    "props": [
+      "water",
+      "beam",
+      "ice"
+    ],
+    "animations": [
+      "lighthouseBeam",
+      "waves",
+      "snowGust"
+    ],
+    "hazard": "frostWave",
+    "fatality": {
+      "id": "lighthouse_sm_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de LIGHTHOUSE / THERAPY REVELATION."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "devils_pit",
+    "name": "DEVIL’S PIT",
+    "source": "downpour",
+    "family": "mine",
+    "sky": [
+      "#303632",
+      "#101310",
+      "#030403"
+    ],
+    "weather": "rain",
+    "props": [
+      "rails",
+      "cave",
+      "water"
+    ],
+    "animations": [
+      "mineCart",
+      "rainSheets",
+      "waterRipple"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "devils_pit_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DEVIL’S PIT."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "centennial_building",
+    "name": "CENTENNIAL BUILDING",
+    "source": "downpour",
+    "family": "office",
+    "sky": [
+      "#373a37",
+      "#121513",
+      "#030404"
+    ],
+    "weather": "rain",
+    "props": [
+      "desks",
+      "elevator",
+      "windows"
+    ],
+    "animations": [
+      "elevatorBlink",
+      "rainSheets",
+      "windowShadow",
+      "lightFlicker"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "centennial_building_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CENTENNIAL BUILDING."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "st_marias",
+    "name": "ST. MARIA’S MONASTERY",
+    "source": "downpour",
+    "family": "church",
+    "sky": [
+      "#343630",
+      "#11130f",
+      "#030403"
+    ],
+    "weather": "rain",
+    "props": [
+      "altar",
+      "bells",
+      "windows"
+    ],
+    "animations": [
+      "bellSwing",
+      "rainSheets",
+      "lightning",
+      "ritualGlyph"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "st_marias_fatality",
+      "name": "AUTEL DU SACRIFICE",
+      "effect": "ritual",
+      "sequence": [
+        "mark",
+        "altar",
+        "siren"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ST. MARIA’S MONASTERY."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "downpour_streets",
+    "name": "SILENT HILL — DOWNPOUR STREETS",
+    "source": "downpour",
+    "family": "street",
+    "sky": [
+      "#3a4140",
+      "#131817",
+      "#040505"
+    ],
+    "weather": "rain",
+    "props": [
+      "road",
+      "shops",
+      "cars"
+    ],
+    "animations": [
+      "rainSheets",
+      "streetLightFlicker",
+      "waterRipple",
+      "fogDrift"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "downpour_streets_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SILENT HILL — DOWNPOUR STREETS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "otherworld_void",
+    "name": "DOWNPOUR — VOID CHASE",
+    "source": "downpour",
+    "family": "void",
+    "sky": [
+      "#242b2d",
+      "#090d0f",
+      "#010202"
+    ],
+    "weather": "runes",
+    "props": [
+      "stairs",
+      "doors",
+      "void"
+    ],
+    "animations": [
+      "voidSurge",
+      "doorPulse",
+      "gravityTilt"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "otherworld_void_fatality",
+      "name": "EFFACEMENT DU COULOIR",
+      "effect": "void",
+      "sequence": [
+        "distort",
+        "pull",
+        "erase"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DOWNPOUR — VOID CHASE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "anne_fight",
+    "name": "FULL CIRCLE — ANNE’S CONFRONTATION",
+    "source": "downpour",
+    "family": "prison",
+    "sky": [
+      "#302d2b",
+      "#0f0d0c",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "bars",
+      "lights",
+      "water"
+    ],
+    "animations": [
+      "lightFlicker",
+      "waterRipple",
+      "shadowPass",
+      "chainSway",
+      "cellShadow"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "anne_fight_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de FULL CIRCLE — ANNE’S CONFRONTATION."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_city",
+    "name": "THE ARCADE — CITY / JACK’S INN",
+    "source": "arcade",
+    "family": "street",
+    "sky": [
+      "#393c38",
+      "#131612",
+      "#040504"
+    ],
+    "weather": "fog",
+    "props": [
+      "road",
+      "shops",
+      "signs"
+    ],
+    "animations": [
+      "fogDrift",
+      "neonFlicker",
+      "shadowPass",
+      "streetLightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_city_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — CITY / JACK’S INN."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_hospital",
+    "name": "THE ARCADE — BROOKHAVEN HOSPITAL",
+    "source": "arcade",
+    "family": "hospital",
+    "sky": [
+      "#363630",
+      "#12120f",
+      "#040404"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "elevator",
+      "lights"
+    ],
+    "animations": [
+      "hospitalMonitor",
+      "elevatorBlink",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_hospital_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — BROOKHAVEN HOSPITAL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_hospital_roof",
+    "name": "THE ARCADE — HOSPITAL ROOF",
+    "source": "arcade",
+    "family": "hospital",
+    "sky": [
+      "#343936",
+      "#111512",
+      "#030404"
+    ],
+    "weather": "rain",
+    "props": [
+      "fence",
+      "vents",
+      "water"
+    ],
+    "animations": [
+      "rainSheets",
+      "lightning",
+      "ventSteam",
+      "lightFlicker",
+      "hospitalMonitor"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "arcade_hospital_roof_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — HOSPITAL ROOF."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_historical",
+    "name": "THE ARCADE — HISTORICAL SOCIETY",
+    "source": "arcade",
+    "family": "museum",
+    "sky": [
+      "#332f29",
+      "#110f0c",
+      "#030302"
+    ],
+    "weather": "dust",
+    "props": [
+      "portraits",
+      "stairs",
+      "doors"
+    ],
+    "animations": [
+      "portraitBlink",
+      "shadowPass",
+      "lightFlicker"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "arcade_historical_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — HISTORICAL SOCIETY."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_prison",
+    "name": "THE ARCADE — TOLUCA PRISON",
+    "source": "arcade",
+    "family": "prison",
+    "sky": [
+      "#2f302d",
+      "#0f100e",
+      "#030303"
+    ],
+    "weather": "flicker",
+    "props": [
+      "bars",
+      "chains",
+      "lights"
+    ],
+    "animations": [
+      "chainSway",
+      "cellShadow",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_prison_fatality",
+      "name": "CELLULE DU JUGEMENT",
+      "effect": "chains",
+      "sequence": [
+        "bars-close",
+        "chains",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — TOLUCA PRISON."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_graveyard",
+    "name": "THE ARCADE — UNDERGROUND GRAVEYARD",
+    "source": "arcade",
+    "family": "graveyard",
+    "sky": [
+      "#2e332e",
+      "#0e120f",
+      "#020302"
+    ],
+    "weather": "fog",
+    "props": [
+      "graves",
+      "roots",
+      "altar"
+    ],
+    "animations": [
+      "fogDrift",
+      "rootsCreep",
+      "shadowPass"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_graveyard_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — UNDERGROUND GRAVEYARD."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_toluca_lake",
+    "name": "THE ARCADE — TOLUCA LAKE",
+    "source": "arcade",
+    "family": "lake",
+    "sky": [
+      "#344149",
+      "#10191d",
+      "#030506"
+    ],
+    "weather": "water",
+    "props": [
+      "water",
+      "boat",
+      "fog"
+    ],
+    "animations": [
+      "waves",
+      "boatRock",
+      "fogDrift"
+    ],
+    "hazard": "bloodTide",
+    "fatality": {
+      "id": "arcade_toluca_lake_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — TOLUCA LAKE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_1918",
+    "name": "THE ARCADE — 1918",
+    "source": "arcade",
+    "family": "otherworld",
+    "sky": [
+      "#35211d",
+      "#110807",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "runes",
+      "chains",
+      "altar"
+    ],
+    "animations": [
+      "ritualGlyph",
+      "chainSway",
+      "sirenPulse"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "arcade_1918_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — 1918."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_1993",
+    "name": "THE ARCADE — 1993 PHANTOM FRONT",
+    "source": "arcade",
+    "family": "otherworld",
+    "sky": [
+      "#30222d",
+      "#0e0710",
+      "#020102"
+    ],
+    "weather": "runes",
+    "props": [
+      "portraits",
+      "void",
+      "lights"
+    ],
+    "animations": [
+      "portraitBlink",
+      "voidSurge",
+      "lightFlicker",
+      "sirenPulse",
+      "chainSway"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_1993_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — 1993 PHANTOM FRONT."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_mall",
+    "name": "THE ARCADE — SHOPPING MALL",
+    "source": "arcade",
+    "family": "mall",
+    "sky": [
+      "#353631",
+      "#12130f",
+      "#030403"
+    ],
+    "weather": "flicker",
+    "props": [
+      "shops",
+      "escalator",
+      "lights"
+    ],
+    "animations": [
+      "storeShutters",
+      "lightFlicker",
+      "shadowPass"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "arcade_mall_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — SHOPPING MALL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "arcade_amusement",
+    "name": "THE ARCADE — AMUSEMENT PARK",
+    "source": "arcade",
+    "family": "amusement",
+    "sky": [
+      "#29313b",
+      "#0d1218",
+      "#030405"
+    ],
+    "weather": "rain",
+    "props": [
+      "carousel",
+      "wheel",
+      "booths"
+    ],
+    "animations": [
+      "carouselTurn",
+      "ferrisWheel",
+      "rainSheets"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "arcade_amusement_fatality",
+      "name": "DERNIER TOUR DE MANÈGE",
+      "effect": "carousel",
+      "sequence": [
+        "lights",
+        "carousel",
+        "silence"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de THE ARCADE — AMUSEMENT PARK."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "villa_rooftop",
+    "name": "KETTENSTADT VILLA — ROOFTOP",
+    "source": "shortmessage",
+    "family": "rooftop",
+    "sky": [
+      "#53424b",
+      "#1b1116",
+      "#050305"
+    ],
+    "weather": "petals",
+    "props": [
+      "fence",
+      "antenna",
+      "flowers"
+    ],
+    "animations": [
+      "petalSpiral",
+      "windGust",
+      "lightning"
+    ],
+    "hazard": "petalBloom",
+    "fatality": {
+      "id": "villa_rooftop_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA — ROOFTOP."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "villa_stairwell",
+    "name": "KETTENSTADT VILLA — STAIRWELL",
+    "source": "shortmessage",
+    "family": "building",
+    "sky": [
+      "#3c3035",
+      "#140d10",
+      "#030203"
+    ],
+    "weather": "flicker",
+    "props": [
+      "stairs",
+      "graffiti",
+      "lights"
+    ],
+    "animations": [
+      "lightFlicker",
+      "shadowPass",
+      "doorPulse"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "villa_stairwell_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA — STAIRWELL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "dark_shrine_corridors",
+    "name": "DARK SHRINE — CORRIDORS",
+    "source": "shf",
+    "family": "shrine",
+    "sky": [
+      "#3a2728",
+      "#12090a",
+      "#020202"
+    ],
+    "weather": "petals",
+    "props": [
+      "lanterns",
+      "runes",
+      "roots"
+    ],
+    "animations": [
+      "petalSpiral",
+      "lanternSway",
+      "rootsCreep",
+      "ritualGlyph"
+    ],
+    "hazard": "petalBloom",
+    "fatality": {
+      "id": "dark_shrine_corridors_fatality",
+      "name": "SCELLEMENT DU SANCTUAIRE",
+      "effect": "petals",
+      "sequence": [
+        "torii",
+        "seal",
+        "petal-storm"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DARK SHRINE — CORRIDORS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "shimizu_residence",
+    "name": "SHIMIZU RESIDENCE",
+    "source": "shf",
+    "family": "house",
+    "sky": [
+      "#403235",
+      "#160e10",
+      "#040203"
+    ],
+    "weather": "petals",
+    "props": [
+      "screens",
+      "lanterns",
+      "portraits"
+    ],
+    "animations": [
+      "lanternSway",
+      "screenSlide",
+      "portraitBlink",
+      "floorCreak"
+    ],
+    "hazard": "petalBloom",
+    "fatality": {
+      "id": "shimizu_residence_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de SHIMIZU RESIDENCE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "dark_shrine_main",
+    "name": "DARK SHRINE — MAIN HALL",
+    "source": "shf",
+    "family": "shrine",
+    "sky": [
+      "#3d2728",
+      "#13090a",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "altar",
+      "lanterns",
+      "runes"
+    ],
+    "animations": [
+      "ritualGlyph",
+      "lanternSway",
+      "firePulse"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "dark_shrine_main_fatality",
+      "name": "SCELLEMENT DU SANCTUAIRE",
+      "effect": "petals",
+      "sequence": [
+        "torii",
+        "seal",
+        "petal-storm"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de DARK SHRINE — MAIN HALL."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "corrupted_ebisugaoka",
+    "name": "EBISUGAOKA — CORRUPTED PROCESSION",
+    "source": "shf",
+    "family": "festival",
+    "sky": [
+      "#43272c",
+      "#15080c",
+      "#030102"
+    ],
+    "weather": "petals",
+    "props": [
+      "lanterns",
+      "roots",
+      "booths"
+    ],
+    "animations": [
+      "petalSpiral",
+      "lanternSway",
+      "rootsCreep"
+    ],
+    "hazard": "petalBloom",
+    "fatality": {
+      "id": "corrupted_ebisugaoka_fatality",
+      "name": "PROCESSION FINALE",
+      "effect": "petals",
+      "sequence": [
+        "lanterns",
+        "procession",
+        "mask-close"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de EBISUGAOKA — CORRUPTED PROCESSION."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "return_streets",
+    "name": "RETURN TO SILENT HILL — STREETS",
+    "source": "film",
+    "family": "street",
+    "sky": [
+      "#43453f",
+      "#171916",
+      "#050606"
+    ],
+    "weather": "fog",
+    "props": [
+      "road",
+      "shops",
+      "chasm"
+    ],
+    "animations": [
+      "fogDrift",
+      "streetLightFlicker",
+      "shadowPass"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "return_streets_fatality",
+      "name": "CHUTE DANS LA BRUME",
+      "effect": "chasm",
+      "sequence": [
+        "siren",
+        "road-split",
+        "fog-close"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de RETURN TO SILENT HILL — STREETS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "return_brookhaven",
+    "name": "RETURN TO SILENT HILL — BROOKHAVEN",
+    "source": "film",
+    "family": "hospital",
+    "sky": [
+      "#36352f",
+      "#12120f",
+      "#040404"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "elevator",
+      "lights"
+    ],
+    "animations": [
+      "hospitalMonitor",
+      "elevatorBlink",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "return_brookhaven_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de RETURN TO SILENT HILL — BROOKHAVEN."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "return_lakeview",
+    "name": "RETURN TO SILENT HILL — BURNING LAKEVIEW",
+    "source": "film",
+    "family": "hotel",
+    "sky": [
+      "#422a23",
+      "#160b08",
+      "#030201"
+    ],
+    "weather": "embers",
+    "props": [
+      "portraits",
+      "fireplace",
+      "windows"
+    ],
+    "animations": [
+      "firePulse",
+      "portraitBlink",
+      "ashFall",
+      "lampFlicker"
+    ],
+    "hazard": "emberFall",
+    "fatality": {
+      "id": "return_lakeview_fatality",
+      "name": "CHAMBRE DU SOUVENIR",
+      "effect": "fire",
+      "sequence": [
+        "portrait",
+        "fire",
+        "ash"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de RETURN TO SILENT HILL — BURNING LAKEVIEW."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "return_portrait_room",
+    "name": "RETURN TO SILENT HILL — PORTRAIT ROOM",
+    "source": "film",
+    "family": "gallery",
+    "sky": [
+      "#33272a",
+      "#10090b",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "portraits",
+      "elevator",
+      "lights"
+    ],
+    "animations": [
+      "portraitBlink",
+      "elevatorBlink",
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "return_portrait_room_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de RETURN TO SILENT HILL — PORTRAIT ROOM."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "st_amelia_marina",
+    "name": "ST. AMELIA MARINA",
+    "source": "townfall",
+    "family": "marina",
+    "sky": [
+      "#3b4a4d",
+      "#111a1c",
+      "#030506"
+    ],
+    "weather": "fog",
+    "props": [
+      "water",
+      "boats",
+      "crtv"
+    ],
+    "animations": [
+      "waves",
+      "boatRock",
+      "fogDrift",
+      "tvStatic"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "st_amelia_marina_fatality",
+      "name": "MARÉE SANS RETOUR",
+      "effect": "water",
+      "sequence": [
+        "signal",
+        "wave",
+        "submerge"
+      ],
+      "triggerZone": "edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ST. AMELIA MARINA."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "st_amelia_residential",
+    "name": "ST. AMELIA — RESIDENTIAL DISTRICT",
+    "source": "townfall",
+    "family": "village",
+    "sky": [
+      "#3d4846",
+      "#141a18",
+      "#040505"
+    ],
+    "weather": "rain",
+    "props": [
+      "road",
+      "houses",
+      "crtv"
+    ],
+    "animations": [
+      "rainSheets",
+      "streetLightFlicker",
+      "tvStatic",
+      "fogDrift",
+      "windowShadow"
+    ],
+    "hazard": "fallingDebris",
+    "fatality": {
+      "id": "st_amelia_residential_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ST. AMELIA — RESIDENTIAL DISTRICT."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "townfall_medical",
+    "name": "ST. AMELIA MEDICAL CENTRE",
+    "source": "townfall",
+    "family": "hospital",
+    "sky": [
+      "#38403d",
+      "#121714",
+      "#030404"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "monitors",
+      "crtv"
+    ],
+    "animations": [
+      "hospitalMonitor",
+      "lightFlicker",
+      "tvStatic"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "townfall_medical_fatality",
+      "name": "PROTOCOLE TERMINAL",
+      "effect": "flicker",
+      "sequence": [
+        "lights-out",
+        "gurney",
+        "monitor-flatline"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ST. AMELIA MEDICAL CENTRE."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "ceg_tower",
+    "name": "CEG TOWER",
+    "source": "townfall",
+    "family": "office",
+    "sky": [
+      "#343a38",
+      "#111513",
+      "#030404"
+    ],
+    "weather": "flicker",
+    "props": [
+      "desks",
+      "elevator",
+      "crtv"
+    ],
+    "animations": [
+      "elevatorBlink",
+      "lightFlicker",
+      "tvStatic"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "ceg_tower_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CEG TOWER."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "clara_woods",
+    "name": "CLARA WOODS",
+    "source": "townfall",
+    "family": "forest",
+    "sky": [
+      "#303b35",
+      "#0f1511",
+      "#020403"
+    ],
+    "weather": "fog",
+    "props": [
+      "trees",
+      "roots",
+      "crtv"
+    ],
+    "animations": [
+      "forestWind",
+      "fogDrift",
+      "tvStatic",
+      "rootsCreep"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "clara_woods_fatality",
+      "name": "RACINES DU BOIS",
+      "effect": "roots",
+      "sequence": [
+        "roots-rise",
+        "bind",
+        "earth-close"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CLARA WOODS."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "clara_woods_different",
+    "name": "CLARA WOODS — DIFFERENT",
+    "source": "townfall",
+    "family": "otherworld",
+    "sky": [
+      "#302325",
+      "#0e090a",
+      "#020202"
+    ],
+    "weather": "runes",
+    "props": [
+      "trees",
+      "metal",
+      "crtv"
+    ],
+    "animations": [
+      "voidSurge",
+      "metalPulse",
+      "tvStatic",
+      "sirenPulse",
+      "chainSway"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "clara_woods_different_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de CLARA WOODS — DIFFERENT."
+    },
+    "catalogueStatus": "verified-location"
+  },
+  {
+    "id": "alternate_facility",
+    "name": "ST. AMELIA — ALTERNATE FACILITY",
+    "source": "townfall",
+    "family": "otherworld",
+    "sky": [
+      "#302526",
+      "#0f0909",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "pipes",
+      "monitors",
+      "metal"
+    ],
+    "animations": [
+      "pipeSteam",
+      "hospitalMonitor",
+      "metalPulse",
+      "sirenPulse",
+      "chainSway"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "alternate_facility_fatality",
+      "name": "GRILLE DE ROUILLE",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "grate-open",
+        "seal"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de ST. AMELIA — ALTERNATE FACILITY."
+    },
+    "catalogueStatus": "verified-location"
   }
 ]

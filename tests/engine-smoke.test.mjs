@@ -99,3 +99,50 @@ test('blood debt ritual drains health at a deterministic one-second cadence',()=
   assert.equal(engine.actors[0].stats.ritualDamage,1);
   engine.destroy();
 });
+
+test('decisive super triggers and completes a stage fatality',()=>{
+  const engine=makeEngine({fatalities:true,stageFatalities:true,roundsToWin:1});
+  engine.phase='fight';
+  const attacker=engine.actors[0],target=engine.actors[1];
+  target.health=10;
+  engine.applyHit(attacker,target,attacker.profile.moves.super,1);
+  engine.resolveKnockouts();
+  assert.equal(engine.phase,'fatality');
+  assert.equal(engine.fatality.stageBased,true);
+  for(let frame=0;frame<400&&engine.phase==='fatality';frame++)engine.update();
+  assert.equal(engine.phase,'roundEnd');
+  assert.equal(engine.lastFatality.stageBased,true);
+  assert.equal(attacker.stats.fatalities,1);
+  assert.equal(attacker.stats.stageFatalities,1);
+  engine.destroy();
+});
+
+test('signature fatality can be forced away from the stage trigger zone',()=>{
+  const engine=makeEngine({fatalities:true,stageFatalities:true,roundsToWin:1});
+  engine.phase='fight';
+  const attacker=engine.actors[0],target=engine.actors[1];
+  target.x=640;attacker.x=500;target.health=5;
+  engine.applyHit(attacker,target,attacker.profile.moves.light,1);
+  engine.resolveKnockouts();
+  assert.equal(engine.phase,'fatality');
+  assert.equal(engine.fatality.stageBased,false);
+  assert.equal(engine.fatality.definition.type,'signature');
+  for(let frame=0;frame<400&&engine.phase==='fatality';frame++)engine.update();
+  assert.equal(engine.lastFatality.stageBased,false);
+  assert.equal(attacker.stats.fatalities,1);
+  assert.equal(attacker.stats.stageFatalities,0);
+  engine.destroy();
+});
+
+test('fatality systems can be disabled for classic knockout behavior',()=>{
+  const engine=makeEngine({fatalities:false,stageFatalities:false,roundsToWin:1});
+  engine.phase='fight';
+  const attacker=engine.actors[0],target=engine.actors[1];
+  target.health=1;
+  engine.applyHit(attacker,target,attacker.profile.moves.light,1);
+  engine.resolveKnockouts();
+  assert.equal(engine.phase,'roundEnd');
+  assert.equal(engine.lastFatality,null);
+  assert.equal(target.ko,true);
+  engine.destroy();
+});

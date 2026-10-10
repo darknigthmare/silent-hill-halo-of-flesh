@@ -2,16 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, createBossPhases, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, createBossPhases, createCombatProfile
 } from '../src/data.js';
 
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.3.0 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.3.0');
+test('v0.4.0 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.4.0');
   assert.deepEqual(CONTENT_STATS,{
-    fighters:184,bosses:68,sources:15,stages:53,chronicles:14,rituals:9,bossPhases:136
+    fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
+    fatalities:460,stageFatalities:123,stageAnimations:374,coverageComplete:true
   });
 });
 
@@ -36,6 +37,8 @@ test('every stage source and hazard resolves',()=>{
     assert.ok(SOURCE_META[stage.source],`${stage.id}: ${stage.source}`);
     assert.ok(STAGE_HAZARDS[stage.hazard],`${stage.id}: ${stage.hazard}`);
     assert.ok(AFFLICTIONS[STAGE_HAZARDS[stage.hazard].effect],`${stage.id}: ${STAGE_HAZARDS[stage.hazard].effect}`);
+    assert.ok(stage.animations.length>=1,stage.id);
+    assert.ok(stage.fatality?.name&&stage.fatality.sequence.length>=3,stage.id);
   }
 });
 
@@ -49,13 +52,15 @@ test('every chronicle reference resolves without invented padding',()=>{
   }
 });
 
-test('film and Ascension source packs are present',()=>{
-  assert.equal(ROSTER.filter(f=>f.source==='film').length,8);
+test('film, Ascension and Townfall source packs are present',()=>{
+  assert.equal(ROSTER.filter(f=>f.source==='film').length,13);
   assert.equal(ROSTER.filter(f=>f.source==='ascension').length,7);
+  assert.equal(ROSTER.filter(f=>f.source==='townfall').length,5);
   assert.ok(STAGES.filter(s=>s.source==='film').length>=4);
   assert.ok(STAGES.filter(s=>s.source==='ascension').length>=3);
   assert.ok(CHRONICLES.some(route=>route.source==='film'));
   assert.ok(CHRONICLES.some(route=>route.source==='ascension'));
+  assert.ok(CHRONICLES.some(route=>route.source==='townfall'));
 });
 
 test('every manifestation has complete dossier metadata',()=>{
@@ -66,6 +71,13 @@ test('every manifestation has complete dossier metadata',()=>{
     assert.ok(fighter.lore.trim().length>=8,fighter.id);
     assert.ok(fighter.canonicalBehavior.trim().length>=8,fighter.id);
     assert.ok(fighter.adaptation.trim().length>=8,fighter.id);
+    assert.equal(fighter.fatalities.length,2,fighter.id);
+    assert.ok(fighter.catalogueStatus&&fighter.nameStatus&&fighter.evidenceTier,fighter.id);
+    for(const fatality of fighter.fatalities){
+      assert.ok(fatality.name.length>=4,fighter.id);
+      assert.ok(fatality.sequence.length>=3,fighter.id);
+      assert.ok(fatality.canonicalBasis.length>=8,fighter.id);
+    }
   }
 });
 
@@ -121,4 +133,28 @@ test('every AI personality and ritual modifier has complete readable metadata',(
     assert.ok(ritual.name.length>=4,id);
     assert.ok(ritual.description.length>=12,id);
   }
+});
+
+
+test('coverage audit reports no known gap inside the v0.4.0 media scope',()=>{
+  const audit=coverageAudit();
+  assert.equal(audit.complete,true);
+  assert.equal(Object.keys(audit.sources).length,Object.keys(SOURCE_META).length);
+  for(const [source,entry] of Object.entries(audit.sources)){
+    assert.equal(entry.complete,true,source);
+    assert.deepEqual(entry.missing,[],source);
+  }
+});
+
+test('legacy fighter IDs still resolve through the compatibility aliases',async()=>{
+  const {getFighter}=await import('../src/data.js');
+  assert.equal(getFighter('origins_nurse_075').name,'Faceless Nurse');
+  assert.equal(getFighter('arcade_split_head_arcade_120').name,'Split Worm — Arcade');
+  assert.equal(getFighter('sh1_air_screamer_001').name,'Air Screamer');
+});
+
+test('fatality and animation totals are derived from the live catalogue',()=>{
+  assert.equal(CONTENT_STATS.fatalities,ROSTER.reduce((sum,f)=>sum+f.fatalities.length,0));
+  assert.equal(CONTENT_STATS.stageFatalities,STAGES.filter(stage=>stage.fatality).length);
+  assert.equal(CONTENT_STATS.stageAnimations,STAGES.reduce((sum,stage)=>sum+stage.animations.length,0));
 });

@@ -59,6 +59,7 @@ const els = {
   resultTitle: $('#resultTitle'), resultText: $('#resultText'), rematch: $('#rematch'), continueRun: $('#continueRun'),
   resultSelect: $('#resultSelect'), resultStats: $('#resultStats'),
   otherworldShift: $('#otherworldShift'), stageHazards: $('#stageHazards'), radioWarning: $('#radioWarning'), adaptiveAI: $('#adaptiveAI'),
+  fatalities: $('#fatalities'), stageFatalities: $('#stageFatalities'), stageAnimations: $('#stageAnimations'),
   forceShift: $('#forceShift'), forceBossPhase: $('#forceBossPhase'),
 };
 
@@ -217,7 +218,7 @@ function renderStageGallery() {
     button.className = `stage-entry${state.stage.id === stage.id ? ' active' : ''}`;
     const canvas = document.createElement('canvas'); canvas.width = 304; canvas.height = 180; button.append(canvas);
     const label = document.createElement('b'); label.textContent = stage.name; button.append(label);
-    const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.hazard]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}`; button.append(meta);
+    const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.hazard]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}<br>${stage.animations?.length || 0} ANIMATIONS · ${escapeHTML(stage.fatality?.name || 'AUCUNE FATALITÉ D’ARÈNE')}`; button.append(meta);
     button.addEventListener('click', () => {
       state.stage = stage; audio.confirm(); renderSelected(); renderStageGallery();
       setTimeout(closeStageGallery, 110);
@@ -242,6 +243,8 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
   const phases = profile.bossPhases?.length
     ? `<div class="dossier-box phases"><b>PHASES DE BOSS</b><ol>${profile.bossPhases.map((phase) => `<li><strong>${escapeHTML(phase.name)}</strong><span>${Math.round(phase.threshold * 100)}% · puissance ×${phase.power.toFixed(2)} · vitesse ×${phase.speed.toFixed(2)}</span></li>`).join('')}</ol></div>`
     : '';
+  const fatalities = (fighter.fatalities || []).map((fatality) => `<li><strong>${escapeHTML(fatality.name)}</strong><span>${escapeHTML(fatality.type.toUpperCase())} · ${escapeHTML(fatality.sequence.join(' › '))}<br><small>${escapeHTML(fatality.canonicalBasis)} · ${escapeHTML(fatality.fidelity)}</small></span></li>`).join('');
+  const stageAnimations = (arena.animations || []).map((id) => escapeHTML(String(id).replace(/([A-Z])/g, ' $1').toUpperCase())).join(' · ');
   els.dossierCopy.innerHTML = `
     <span class="lead">${escapeHTML(fighter.game)} · ${escapeHTML(fighter.category)} · ${escapeHTML(fighter.archetype.toUpperCase())}</span>
     <h3>${escapeHTML(fighter.name)}</h3>
@@ -250,12 +253,13 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
       <div class="dossier-box"><b>COMPORTEMENT SOURCE</b><p>${escapeHTML(fighter.canonicalBehavior)}</p></div>
       <div class="dossier-box trait"><b>TRAIT DE MANIFESTATION</b><p><strong>${escapeHTML(profile.trait.name)}</strong><br>${escapeHTML(profile.trait.description)}</p></div>
       <div class="dossier-box affliction"><b>AFFLICTION SIGNATURE</b><p><strong>${escapeHTML(profile.affliction.name)}</strong><br>${escapeHTML(profile.affliction.description)}</p></div>
-      <div class="dossier-box"><b>FINISHER</b><p>${escapeHTML(fighter.finisher)}</p></div>
+      <div class="dossier-box phases"><b>FATALITÉS</b><ol>${fatalities}</ol></div>
       <div class="dossier-box"><b>IA / DISTANCE</b><p><strong>${escapeHTML(profile.ai.name)}</strong><br>${Math.round(profile.ai.preferredRange)} unités de préférence.</p></div>
-      <div class="dossier-box"><b>ARÈNE ASSOCIÉE</b><p>${escapeHTML(arena.name)}${hazard ? `<br><small>${escapeHTML(hazard.name)}</small>` : ''}</p></div>
+      <div class="dossier-box"><b>ARÈNE ASSOCIÉE</b><p>${escapeHTML(arena.name)}${hazard ? `<br><small>${escapeHTML(hazard.name)}</small>` : ''}<br><small>${escapeHTML(arena.fatality?.name || '')}</small></p></div>
+      <div class="dossier-box"><b>ANIMATIONS D’ARÈNE</b><p>${stageAnimations || 'AUCUNE'}</p></div>
       ${phases}
     </div>
-    <div class="adaptation-note"><b>NOTE DE FIDÉLITÉ</b><br>${escapeHTML(fighter.adaptation)} Les proportions, signes distinctifs, posture et rôle sont documentés séparément des règles d’équilibrage.</div>
+    <div class="adaptation-note"><b>NOTE DE FIDÉLITÉ</b><br>${escapeHTML(fighter.adaptation)} Les proportions, signes distinctifs, posture et rôle sont documentés séparément des règles d’équilibrage.<br><br><strong>STATUT :</strong> ${escapeHTML(fighter.catalogueStatus)} · ${escapeHTML(fighter.nameStatus)} · ${escapeHTML(fighter.evidenceTier)}</div>
     <h4>MOVESET ADAPTÉ</h4><ul class="move-list">${moves}</ul>`;
   els.dossier.classList.remove('hidden');
 }
@@ -350,6 +354,9 @@ function fightConfig() {
     stageHazards: els.stageHazards.checked,
     radioWarning: els.radioWarning.checked,
     adaptiveAI: els.adaptiveAI.checked,
+    fatalities: els.fatalities.checked,
+    stageFatalities: els.stageFatalities.checked,
+    stageAnimations: els.stageAnimations.checked,
     ritualId: currentRitualId(),
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
@@ -374,9 +381,40 @@ function startFight({ preserveRun = false } = {}) {
   const ritual = currentRitual();
   els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `VERSUS · ${ritual.short || ritual.name}`);
   els.gameHelp.textContent = els.mode.value === 'local' && !training ? `${CONTROL_LABELS.p1} · P2: ${CONTROL_LABELS.p2}` : CONTROL_LABELS.p1;
-  saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked } });
+  saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked } });
   state.engine = new FightEngine(els.game, fightConfig());
   state.engine.start();
+  if (params.get('qa') === '1') installQaBridge();
+}
+
+function installQaBridge() {
+  window.__HALO_QA__ = {
+    version: '0.4.0',
+    get engine() { return state.engine; },
+    get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
+    startFight,
+    showSelect,
+    forceOtherworld() { return state.engine?.forceOtherworldShift(); },
+    forceBossPhase() { return state.engine?.forceBossPhase(); },
+    forceFatality(type = 'signature') {
+      const engine = state.engine;
+      if (!engine) return false;
+      const attacker = engine.actors?.[0];
+      const target = engine.actors?.[1];
+      if (!attacker || !target) return false;
+      const stageBased = type === 'stage';
+      const definition = stageBased
+        ? engine.stage?.fatality
+        : attacker.data?.fatalities?.[type === 'nightmare' ? 1 : 0];
+      if (!definition) return false;
+      engine.phase = 'fight';
+      engine.phaseTimer = 0;
+      engine.paused = false;
+      engine.startFatality(attacker, target, definition, stageBased, { isSuper: true, environmental: stageBased });
+      return true;
+    },
+    snapshot() { return state.engine?.snapshot() || null; }
+  };
 }
 
 function handleMatchEnd(result) {
@@ -391,7 +429,7 @@ function handleMatchEnd(result) {
   }
   const winnerStats = result.stats?.winner || {};
   const grade = winnerStats.grade || chronicleGrade(winnerStats);
-  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, hazardsTaken: 0, bestGrade: 'D' });
+  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, hazardsTaken: 0, fatalities: 0, stageFatalities: 0, bestGrade: 'D' });
   records.matches = (records.matches || 0) + 1;
   if (won) records.wins = (records.wins || 0) + 1;
   records.defeated = records.defeated || {};
@@ -400,6 +438,8 @@ function handleMatchEnd(result) {
   records.counters = (records.counters || 0) + (winnerStats.counters || 0);
   records.hazardsTaken = (records.hazardsTaken || 0) + (winnerStats.hazardsTaken || 0);
   records.bossPhases = (records.bossPhases || 0) + (winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0);
+  records.fatalities = (records.fatalities || 0) + (winnerStats.fatalities || 0);
+  records.stageFatalities = (records.stageFatalities || 0) + (winnerStats.stageFatalities || 0);
   if ((GRADE_SCORE[grade] ?? 0) > (GRADE_SCORE[records.bestGrade] ?? 0)) records.bestGrade = grade;
   if (state.run?.type === 'ARCADE') records.arcadeBest = Math.max(records.arcadeBest || 0, state.run.wins);
   if (state.run?.type === 'GRANDS TOURMENTS') records.bossBest = Math.max(records.bossBest || 0, state.run.wins);
@@ -431,6 +471,9 @@ function handleMatchEnd(result) {
       <div class="result-stat"><b>${winnerStats.counters || 0}</b><span>CONTRES</span></div>
       <div class="result-stat"><b>${winnerStats.hazardsTaken || 0}</b><span>DANGERS SUBIS</span></div>
       <div class="result-stat"><b>${(winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0)}</b><span>PHASES RÉVÉLÉES</span></div>
+      <div class="result-stat"><b>${winnerStats.fatalities || 0}</b><span>FATALITÉS</span></div>
+      <div class="result-stat"><b>${winnerStats.stageFatalities || 0}</b><span>FATALITÉS D’ARÈNE</span></div>
+      ${result.stats?.lastFatality ? `<div class="result-stat result-grade"><b>${escapeHTML(result.stats.lastFatality.name)}</b><span>${result.stats.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY SIGNATURE'}</span></div>` : ''}
       ${state.run?.carry ? `<div class="result-stat"><b>${Math.round((state.run.carryHealth || 1) * 100)}%</b><span>ENDURANCE SUIVANTE</span></div>` : ''}`;
     const hasNext = Boolean(state.run && won && state.run.index + 1 < state.run.queue.length);
     els.continueRun.classList.toggle('hidden', !hasNext);
@@ -517,6 +560,9 @@ function init() {
   els.stageHazards.checked = settings.stageHazards !== false;
   els.radioWarning.checked = settings.radioWarning !== false;
   els.adaptiveAI.checked = settings.adaptiveAI !== false;
+  els.fatalities.checked = settings.fatalities !== false;
+  els.stageFatalities.checked = settings.stageFatalities !== false;
+  els.stageAnimations.checked = settings.stageAnimations !== false;
   els.difficulty.value = settings.difficulty || 'normal';
   populateFilters();
   populateRituals();
@@ -526,6 +572,7 @@ function init() {
   renderSelected();
   applyFilters();
   if (state.touchEnabled) { els.mobileP1.textContent = 'TOUCH P1 ON'; }
+  if (params.get('qa') === '1') installQaBridge();
   const shouldAutostart = params.get('autostart') === '1' || params.get('autostart') === 'true';
   if (shouldAutostart) setTimeout(() => startFight(), 120);
 }

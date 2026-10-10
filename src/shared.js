@@ -16,7 +16,8 @@ export function loadSettings() {
   return loadJSON(SETTINGS_KEY, {
     scanlines:true, grain:true, reducedMotion:false, highContrast:false,
     vibration:true, masterVolume:65, difficulty:'normal',
-    otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true
+    otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true,
+    fatalities:true, stageFatalities:true, stageAnimations:true
   });
 }
 export function saveLastFront(front) {

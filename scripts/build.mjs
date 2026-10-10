@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, createBossPhases, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -35,13 +35,16 @@ async function syncData() {
     writeJson(join(dataDir,'chronicles.json'),CHRONICLES),
     writeJson(join(dataDir,'sources.json'),SOURCE_META),
     writeJson(join(dataDir,'content-stats.json'),CONTENT_STATS),
+    writeJson(join(dataDir,'coverage-audit.json'),coverageAudit()),
+    writeJson(join(dataDir,'fatalities.json'),{ version: VERSION, fighters: ROSTER.map(({id,name,source,fatalities})=>({id,name,source,fatalities})), stages: STAGES.map(({id,name,source,fatality,animations})=>({id,name,source,fatality,animations})) }),
     writeJson(join(dataDir,'combat-rules.json'),{
       version: VERSION,
       traits: MANIFESTATION_TRAITS,
       afflictions: AFFLICTIONS,
       hazards: STAGE_HAZARDS,
       rituals: RITUAL_MODIFIERS,
-      aiPersonalities: AI_PERSONALITIES
+      aiPersonalities: AI_PERSONALITIES,
+      coverageTargets: SOURCE_COVERAGE_TARGETS
     })
   ]);
 }
@@ -61,6 +64,8 @@ async function runVerification() {
     stageIds.add(stage.id);
     assert(SOURCE_META[stage.source],`Source d’arène inconnue: ${stage.id}/${stage.source}`);
     assert(hazardIds.has(stage.hazard),`Danger d’arène inconnu: ${stage.id}/${stage.hazard}`);
+    assert(Array.isArray(stage.animations)&&stage.animations.length>=1,`Animations d’arène absentes: ${stage.id}`);
+    assert(stage.fatality&&typeof stage.fatality.name==='string'&&stage.fatality.sequence?.length>=3,`Fatalité d’arène incomplète: ${stage.id}`);
   }
   for (const fighter of ROSTER) {
     assert(!fighterIds.has(fighter.id),`ID de combattant dupliqué: ${fighter.id}`);
@@ -71,6 +76,14 @@ async function runVerification() {
     assert(afflictionIds.has(fighter.affliction),`Affliction inconnue: ${fighter.id}/${fighter.affliction}`);
     assert(aiIds.has(fighter.aiProfile),`Personnalité IA inconnue: ${fighter.id}/${fighter.aiProfile}`);
     assert(typeof fighter.finisher==='string'&&fighter.finisher.trim().length>=4,`Finisher absent: ${fighter.id}`);
+    assert(Array.isArray(fighter.fatalities)&&fighter.fatalities.length===2,`Fatalités incomplètes: ${fighter.id}`);
+    fighter.fatalities.forEach((fatality)=>{
+      assert(typeof fatality.name==='string'&&fatality.name.length>=4,`Nom de fatalité absent: ${fighter.id}`);
+      assert(Array.isArray(fatality.sequence)&&fatality.sequence.length>=3,`Séquence de fatalité absente: ${fighter.id}/${fatality.id}`);
+      assert(typeof fatality.canonicalBasis==='string'&&fatality.canonicalBasis.length>=8,`Base canonique absente: ${fighter.id}/${fatality.id}`);
+      assert(typeof fatality.fidelity==='string'&&fatality.fidelity.length>=4,`Statut de fidélité absent: ${fighter.id}/${fatality.id}`);
+    });
+    assert(typeof fighter.catalogueStatus==='string'&&typeof fighter.nameStatus==='string'&&typeof fighter.evidenceTier==='string',`Traçabilité incomplète: ${fighter.id}`);
     const profile=createCombatProfile(fighter);
     assert(profile.maxHealth>=700&&profile.maxHealth<=1800,`Vitalité hors bornes: ${fighter.id}`);
     assert(Object.keys(profile.moves).length===6,`Moveset incomplet: ${fighter.id}`);
@@ -104,12 +117,17 @@ async function runVerification() {
   assert(CONTENT_STATS.chronicles===CHRONICLES.length,'Statistique chroniques incohérente');
   assert(CONTENT_STATS.rituals===ritualIds.size,'Statistique rites incohérente');
   assert(CONTENT_STATS.bossPhases===ROSTER.filter(f=>f.boss).reduce((sum,fighter)=>sum+createBossPhases(fighter).length,0),'Statistique phases incohérente');
+  assert(CONTENT_STATS.fatalities===ROSTER.reduce((sum,fighter)=>sum+fighter.fatalities.length,0),'Statistique fatalités incohérente');
+  assert(CONTENT_STATS.stageFatalities===STAGES.filter(stage=>stage.fatality).length,'Statistique fatalités d’arène incohérente');
+  assert(CONTENT_STATS.stageAnimations===STAGES.reduce((sum,stage)=>sum+stage.animations.length,0),'Statistique animations incohérente');
+  const audit=coverageAudit();
+  assert(audit.complete&&CONTENT_STATS.coverageComplete,'Audit de couverture incomplet');
 
   const required=[
     'index.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
-    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json'
+    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json'
   ];
   for(const path of required)assert(await exists(join(project,path)),`Fichier requis absent: ${path}`);
 
@@ -129,7 +147,7 @@ async function runVerification() {
       assert(await exists(target),`Référence absente ${relative(project,file)} → ${ref}`);
     }
   }
-  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases};
+  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,coverageComplete:coverageAudit().complete};
 }
 
 await syncData();
@@ -142,8 +160,8 @@ const result=verify?await runVerification():{js:0,html:0,traits:0,afflictions:0,
 if(!verifyOnly){
   const files=await filesUnder(dist);const manifest=[];
   for(const file of files){const bytes=await readFile(file);manifest.push({path:relative(dist,file).replaceAll('\\','/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
-  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases},verified:verify,checks:result,files:manifest};
+  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
   await writeJson(join(dist,'build-manifest.json'),report);
   console.log(`Build v${VERSION}: ${files.length+1} fichiers → ${dist}`);
 }
-if(verify)console.log(`Vérification réussie: ${result.js} JS, ${result.html} HTML, ${ROSTER.length} combattants, ${STAGES.length} arènes, ${CHRONICLES.length} chroniques.`);
+if(verify)console.log(`Vérification réussie: ${result.js} JS, ${result.html} HTML, ${ROSTER.length} combattants, ${STAGES.length} arènes, ${CHRONICLES.length} chroniques, ${CONTENT_STATS.fatalities} fatalités, ${CONTENT_STATS.stageAnimations} animations d’arène.`);

@@ -1,35 +1,41 @@
-# Matrice de fidélité par source — v0.3.0
+# Matrice de fidélité et couverture — v0.4.0
 
-| Source | Manifestations | Boss | Arènes | Chroniques | Traits | Afflictions |
-|---|---:|---:|---:|---:|---:|---:|
-| SILENT HILL | 19 | 6 | 5 | 1 | 10 | 5 |
-| SILENT HILL 2 | 16 | 8 | 6 | 1 | 9 | 5 |
-| SILENT HILL 3 | 17 | 6 | 5 | 1 | 8 | 4 |
-| SILENT HILL 4: THE ROOM | 21 | 4 | 5 | 1 | 8 | 5 |
-| SILENT HILL: ORIGINS | 11 | 4 | 3 | 1 | 7 | 5 |
-| SILENT HILL: HOMECOMING | 14 | 7 | 4 | 1 | 7 | 5 |
-| SILENT HILL: SHATTERED MEMORIES | 5 | 0 | 1 | 1 | 4 | 1 |
-| SILENT HILL: DOWNPOUR | 13 | 3 | 1 | 1 | 8 | 5 |
-| SILENT HILL: THE ARCADE | 4 | 4 | 1 | 0 | 1 | 1 |
-| SILENT HILL: BOOK OF MEMORIES | 28 | 10 | 8 | 1 | 10 | 5 |
-| P.T. | 1 | 0 | 1 | 1 | 1 | 1 |
-| SILENT HILL: THE SHORT MESSAGE | 1 | 1 | 1 | 1 | 1 | 1 |
-| SILENT HILL f | 19 | 10 | 5 | 1 | 7 | 6 |
-| SILENT HILL — FILM UNIVERSE | 8 | 3 | 4 | 1 | 5 | 3 |
-| SILENT HILL: ASCENSION | 7 | 2 | 3 | 1 | 6 | 4 |
+| Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |
+|---|---:|---:|---:|---:|---:|---|
+| SILENT HILL | 20 | 6 | 9 | 25 | 49 | Vérifiée |
+| SILENT HILL 2 | 18 | 8 | 12 | 35 | 48 | Vérifiée |
+| SILENT HILL 3 | 20 | 6 | 12 | 36 | 52 | Vérifiée |
+| SILENT HILL 4: THE ROOM | 32 | 4 | 10 | 29 | 74 | Vérifiée |
+| SILENT HILL: ORIGINS | 11 | 4 | 6 | 17 | 28 | Vérifiée |
+| SILENT HILL: HOMECOMING | 17 | 8 | 11 | 36 | 45 | Vérifiée |
+| SILENT HILL: SHATTERED MEMORIES | 5 | 0 | 5 | 14 | 15 | Vérifiée |
+| SILENT HILL: DOWNPOUR | 14 | 4 | 7 | 25 | 35 | Vérifiée |
+| SILENT HILL: THE ARCADE | 19 | 6 | 12 | 40 | 50 | Vérifiée |
+| SILENT HILL: BOOK OF MEMORIES | 28 | 10 | 8 | 24 | 64 | Vérifiée |
+| P.T. | 1 | 0 | 1 | 3 | 3 | Vérifiée |
+| SILENT HILL: THE SHORT MESSAGE | 1 | 1 | 3 | 9 | 5 | Vérifiée |
+| SILENT HILL f | 19 | 10 | 9 | 24 | 47 | Vérifiée |
+| SILENT HILL — FILM UNIVERSE | 13 | 5 | 8 | 22 | 34 | Vérifiée |
+| SILENT HILL: ASCENSION | 7 | 2 | 3 | 6 | 17 | Vérifiée |
+| SILENT HILL: TOWNFALL | 5 | 1 | 7 | 29 | 17 | Vérifiée |
 
-**Total : 184 manifestations · 68 boss · 53 arènes · 14 Chroniques · 15 sources.**
+**Total : 230 manifestations · 75 boss · 123 arènes · 374 animations · 460 fatalités combattant · 123 fatalités d’arène · 16 sources.**
 
 ## Contrat de fidélité
 
-Chaque profil sépare explicitement cinq couches :
+Chaque profil sépare explicitement six couches :
 
 1. **Catalogue** — nom, source, année, variante, statut de boss et lieu associé.
-2. **Comportement source** — rythme, portée, posture et attaque caractéristique décrits en texte original.
-3. **Silhouette** — primitives et paramètres graphiques originaux organisés par morphologie.
-4. **Adaptation versus** — statistiques, timings, affliction, trait et équilibrage, jamais présentés comme canoniques.
-5. **Provenance** — aucun modèle, sprite, son, texture ou fichier extrait d’un titre officiel.
+2. **Niveau de preuve** — nom officiel/établi, variante d’écran ou nom descriptif signalé.
+3. **Comportement source** — rythme, portée, posture et attaque caractéristique décrits en texte original.
+4. **Silhouette** — primitives et paramètres graphiques originaux organisés par morphologie.
+5. **Adaptation versus** — statistiques, timings, fatalités, affliction et équilibrage, jamais présentés comme canoniques quand ils ne le sont pas.
+6. **Provenance** — aucun modèle, sprite, son, texture ou fichier extrait d’un titre officiel.
 
-## Limite artistique
+## Périmètre
 
-La fidélité documentaire et comportementale est intégrée au catalogue. Une fidélité visuelle finale image par image exige une production artistique dédiée, des références autorisées et une validation de provenance pour chaque variante.
+Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.
+
+Distingue nom officiel/établi, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.4.0.
+
+La mention « vérifiée » signifie qu’aucune lacune connue n’a été retrouvée dans le périmètre des seize packs média intégrés à cette release. Elle ne transforme pas les fatalités originales de ce fan-game en scènes canoniques.

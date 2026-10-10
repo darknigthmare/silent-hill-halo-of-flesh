@@ -41,3 +41,11 @@ test('all manifestations render as fighters and portraits',()=>{
     assert.doesNotThrow(()=>renderPortrait(canvas,fighter,{time:4000}));
   }
 });
+
+test('stage animation layer can be enabled or disabled on every arena',()=>{
+  const ctx=context();
+  for(const stage of STAGES){
+    assert.doesNotThrow(()=>drawStage(ctx,stage,9876,{width:1280,height:720,otherworld:.8,radio:.4,animationsEnabled:true}));
+    assert.doesNotThrow(()=>drawStage(ctx,stage,9876,{width:1280,height:720,otherworld:.8,radio:.4,animationsEnabled:false}));
+  }
+});

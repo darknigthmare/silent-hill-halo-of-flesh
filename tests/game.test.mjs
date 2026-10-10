@@ -95,3 +95,10 @@ test('ritual modifiers stay within bounded gameplay multipliers',()=>{
     }
   }
 });
+
+test('fatalities contribute a bounded bonus to chronicle grading',()=>{
+  const without=chronicleGrade({healthRatio:.72,maxCombo:3,perfectGuards:0,hazardsTaken:0,fatalities:0});
+  const withFatality=chronicleGrade({healthRatio:.72,maxCombo:3,perfectGuards:0,hazardsTaken:0,fatalities:1,stageFatalities:1});
+  const rank={D:0,C:1,B:2,A:3,S:4};
+  assert.ok(rank[withFatality]>=rank[without]);
+});

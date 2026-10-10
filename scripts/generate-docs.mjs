@@ -13,6 +13,8 @@ import {
   STAGE_HAZARDS,
   AI_PERSONALITIES,
   RITUAL_MODIFIERS,
+  SOURCE_COVERAGE_TARGETS,
+  coverageAudit,
   createBossPhases
 } from '../src/data.js';
 
@@ -51,9 +53,9 @@ function buildRoster() {
   const lines = [
     `# Roster complet — v${VERSION}`,
     '',
-    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.bossPhases} transitions de boss**.`,
+    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
     '',
-    '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et finishers sont des créations ou adaptations originales ; aucun asset officiel n’est inclus.',
+    '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et fatalités sont des créations ou adaptations originales documentées ; aucun asset officiel n’est inclus.',
     ''
   ];
 
@@ -61,10 +63,10 @@ function buildRoster() {
     const sourceStages = STAGES.filter((stage) => stage.source === id);
     lines.push(`## ${meta.label} (${meta.year})`, '');
     lines.push(`**${fighters.length} manifestations · ${fighters.filter((fighter) => fighter.boss).length} boss · ${sourceStages.length} arènes**`, '');
-    lines.push('| Manifestation | Type | Archétype | Trait | Affliction | Signature | Arène |', '|---|---|---|---|---|---|---|');
+    lines.push('| Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |', '|---|---|---|---|---|---:|---|---|');
     for (const fighter of fighters) {
       const stage = STAGES.find((entry) => entry.id === fighter.stageId);
-      lines.push(`| ${md(fighter.name)} | ${fighter.boss ? 'Boss' : md(fighter.category)} | \`${md(fighter.archetype)}\` | ${md(MANIFESTATION_TRAITS[fighter.trait]?.name || fighter.trait)} | ${md(AFFLICTIONS[fighter.affliction]?.name || fighter.affliction)} | ${md(fighter.signature)} | ${md(stage?.name || fighter.stageId)} |`);
+      lines.push(`| ${md(fighter.name)} | ${fighter.boss ? 'Boss' : md(fighter.category)} | \`${md(fighter.archetype)}\` | ${md(MANIFESTATION_TRAITS[fighter.trait]?.name || fighter.trait)} | ${md(AFFLICTIONS[fighter.affliction]?.name || fighter.affliction)} | ${fighter.fatalities?.length || 0} | ${md(fighter.catalogueStatus)} / ${md(fighter.nameStatus)} | ${md(stage?.name || fighter.stageId)} |`);
     }
     lines.push('');
   }
@@ -72,32 +74,41 @@ function buildRoster() {
 }
 
 function buildMatrix() {
+  const audit = coverageAudit();
   const lines = [
-    `# Matrice de fidélité par source — v${VERSION}`,
+    `# Matrice de fidélité et couverture — v${VERSION}`,
     '',
-    '| Source | Manifestations | Boss | Arènes | Chroniques | Traits | Afflictions |',
-    '|---|---:|---:|---:|---:|---:|---:|'
+    '| Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |',
+    '|---|---:|---:|---:|---:|---:|---|'
   ];
   for (const row of sourceRows()) {
-    lines.push(`| ${md(row.meta.label)} | ${row.fighters.length} | ${row.bosses.length} | ${row.stages.length} | ${row.chronicles.length} | ${row.traits.size} | ${row.afflictions.size} |`);
+    const entry = audit.sources[row.id];
+    const animations = row.stages.reduce((sum, stage) => sum + (stage.animations?.length || 0), 0);
+    const fatalities = row.fighters.reduce((sum, fighter) => sum + (fighter.fatalities?.length || 0), 0) + row.stages.filter((stage) => stage.fatality).length;
+    lines.push(`| ${md(row.meta.label)} | ${row.fighters.length} | ${row.bosses.length} | ${row.stages.length} | ${animations} | ${fatalities} | ${entry.complete ? 'Vérifiée' : `Lacunes : ${md(entry.missing.join(', '))}`} |`);
   }
   lines.push(
     '',
-    `**Total : ${CONTENT_STATS.fighters} manifestations · ${CONTENT_STATS.bosses} boss · ${CONTENT_STATS.stages} arènes · ${CONTENT_STATS.chronicles} Chroniques · ${CONTENT_STATS.sources} sources.**`,
+    `**Total : ${CONTENT_STATS.fighters} manifestations · ${CONTENT_STATS.bosses} boss · ${CONTENT_STATS.stages} arènes · ${CONTENT_STATS.stageAnimations} animations · ${CONTENT_STATS.fatalities} fatalités combattant · ${CONTENT_STATS.stageFatalities} fatalités d’arène · ${CONTENT_STATS.sources} sources.**`,
     '',
     '## Contrat de fidélité',
     '',
-    'Chaque profil sépare explicitement cinq couches :',
+    'Chaque profil sépare explicitement six couches :',
     '',
     '1. **Catalogue** — nom, source, année, variante, statut de boss et lieu associé.',
-    '2. **Comportement source** — rythme, portée, posture et attaque caractéristique décrits en texte original.',
-    '3. **Silhouette** — primitives et paramètres graphiques originaux organisés par morphologie.',
-    '4. **Adaptation versus** — statistiques, timings, affliction, trait et équilibrage, jamais présentés comme canoniques.',
-    '5. **Provenance** — aucun modèle, sprite, son, texture ou fichier extrait d’un titre officiel.',
+    '2. **Niveau de preuve** — nom officiel/établi, variante d’écran ou nom descriptif signalé.',
+    '3. **Comportement source** — rythme, portée, posture et attaque caractéristique décrits en texte original.',
+    '4. **Silhouette** — primitives et paramètres graphiques originaux organisés par morphologie.',
+    '5. **Adaptation versus** — statistiques, timings, fatalités, affliction et équilibrage, jamais présentés comme canoniques quand ils ne le sont pas.',
+    '6. **Provenance** — aucun modèle, sprite, son, texture ou fichier extrait d’un titre officiel.',
     '',
-    '## Limite artistique',
+    '## Périmètre',
     '',
-    'La fidélité documentaire et comportementale est intégrée au catalogue. Une fidélité visuelle finale image par image exige une production artistique dédiée, des références autorisées et une validation de provenance pour chaque variante.'
+    audit.scope,
+    '',
+    audit.policy,
+    '',
+    'La mention « vérifiée » signifie qu’aucune lacune connue n’a été retrouvée dans le périmètre des seize packs média intégrés à cette release. Elle ne transforme pas les fatalités originales de ce fan-game en scènes canoniques.'
   );
   return `${lines.join('\n')}\n`;
 }
@@ -106,7 +117,7 @@ function buildCombatSystems() {
   const lines = [
     `# Systèmes de combat — v${VERSION}`,
     '',
-    `La v${VERSION} réunit **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**.`,
+    `La v${VERSION} réunit **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
     '',
     '## Traits de manifestation',
     '',
@@ -146,7 +157,72 @@ function buildCombatSystems() {
     '- **Rang de Chronique** : S à D selon vitalité restante, dégâts, combo, gardes parfaites, contres et dangers subis.',
     '- **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.',
     '- **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.',
-    '- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.'
+    '- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.',
+    '- **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.',
+    '- **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.',
+    '- **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.'
+  );
+  return `${lines.join('\n')}\n`;
+}
+
+
+function buildCoverageAudit() {
+  const audit = coverageAudit();
+  const lines = [
+    `# Audit de couverture du roster — v${VERSION}`,
+    '',
+    `**État global : ${audit.complete ? 'COMPLET DANS LE PÉRIMÈTRE DÉFINI' : 'LACUNES RESTANTES'}**`,
+    '',
+    audit.scope,
+    '',
+    audit.policy,
+    '',
+    '| Source | Présents | Minimum audité | Arènes | Minimum | Manquants | Nommage |',
+    '|---|---:|---:|---:|---:|---|---|'
+  ];
+  for (const [source, entry] of Object.entries(audit.sources)) {
+    lines.push(`| ${md(SOURCE_META[source]?.label || source)} | ${entry.fighters} | ${entry.minFighters} | ${entry.stages} | ${entry.minStages} | ${entry.missing.length ? md(entry.missing.join(', ')) : 'Aucun'} | ${md(entry.namingNote || 'Noms officiels ou établis, variantes explicitement balisées')} |`);
+  }
+  lines.push(
+    '',
+    '## Règles de décision',
+    '',
+    '- Les humains réellement affrontés, boss narratifs et set-pieces transformables en combattants sont inclus et balisés.',
+    '- Les variations morphologiques visibles et mécaniquement distinctes peuvent devenir des variantes séparées.',
+    '- Les simples recolorations sans comportement distinct restent fusionnées.',
+    '- Les créatures non combattues dans leur œuvre d’origine sont marquées comme adaptations.',
+    '- Lorsqu’aucun bestiaire officiel ne nomme une créature, le nom descriptif est explicitement signalé.',
+    '- Les fatalités sont originales et inspirées de comportements documentés ; elles ne sont pas présentées comme des scènes officielles.'
+  );
+  return `${lines.join('\n')}\n`;
+}
+
+function buildFatalitiesAndStages() {
+  const lines = [
+    `# Fatalités, arènes dédiées et animations — v${VERSION}`,
+    '',
+    `La release contient **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations de stage**.`,
+    '',
+    '## Fatalités de combattant',
+    '',
+    '| Combattant | Source | Signature | Nightmare | Base de fidélité |',
+    '|---|---|---|---|---|'
+  ];
+  for (const fighter of ROSTER) {
+    const [signature, nightmare] = fighter.fatalities || [];
+    lines.push(`| ${md(fighter.name)} | ${md(SOURCE_META[fighter.source]?.short || fighter.source)} | ${md(signature?.name)} | ${md(nightmare?.name)} | ${md(signature?.canonicalBasis)} |`);
+  }
+  lines.push('', '## Arènes dédiées', '', '| Arène | Source | Famille | Fatalité d’arène | Animations |', '|---|---|---|---|---|');
+  for (const stage of STAGES) {
+    lines.push(`| ${md(stage.name)} | ${md(SOURCE_META[stage.source]?.short || stage.source)} | ${md(stage.family)} | ${md(stage.fatality?.name)} | ${md((stage.animations || []).join(', '))} |`);
+  }
+  lines.push(
+    '',
+    '## Interprétation',
+    '',
+    'Les fatalités traduisent en langage de jeu de combat des gestes, poursuites, armes, postures et symboles associés aux manifestations. Sauf mention explicite, elles sont des compositions originales et non des reconstitutions de scènes officielles.',
+    '',
+    'Les arènes dédiées s’appuient sur des lieux nommés ou clairement reconnaissables. Les animations enrichissent la profondeur visuelle sans utiliser de ressources extraites.'
   );
   return `${lines.join('\n')}\n`;
 }
@@ -154,7 +230,9 @@ function buildCombatSystems() {
 await Promise.all([
   writeFile(join(docs, 'ROSTER.md'), buildRoster()),
   writeFile(join(docs, 'FIDELITY_MATRIX.md'), buildMatrix()),
-  writeFile(join(docs, 'COMBAT_SYSTEMS.md'), buildCombatSystems())
+  writeFile(join(docs, 'COMBAT_SYSTEMS.md'), buildCombatSystems()),
+  writeFile(join(docs, 'COVERAGE_AUDIT.md'), buildCoverageAudit()),
+  writeFile(join(docs, 'FATALITIES_AND_STAGES.md'), buildFatalitiesAndStages())
 ]);
 
-console.log(`Documentation v${VERSION} générée : roster, matrice de fidélité et systèmes de combat.`);
+console.log(`Documentation v${VERSION} générée : roster, couverture, fatalités, arènes et systèmes de combat.`);

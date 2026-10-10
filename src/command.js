@@ -13,7 +13,10 @@ const DEFAULT_SETTINGS = {
   stageHazards: true,
   radioWarning: true,
   screenShake: true,
-  adaptiveAI: true
+  adaptiveAI: true,
+  fatalities: true,
+  stageFatalities: true,
+  stageAnimations: true
 };
 
 const modes = {
@@ -76,7 +79,7 @@ const modes = {
   options: {
     kicker: 'SYSTEM SETTINGS',
     title: 'RÈGLE<br><span>LE SIGNAL.</span>',
-    text: 'Affichage, confort, audio, difficulté, IA adaptative, radio, Otherworld et dangers d’arène.',
+    text: 'Affichage, confort, audio, IA adaptative, fatalités, animations, Otherworld et dangers d’arène.',
     choices: ['ACCESSIBILITÉ','RÈGLES DYNAMIQUES','SAUVEGARDE'],
     scene: 'options'
   }

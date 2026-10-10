@@ -1,6 +1,6 @@
-# Systèmes de combat — v0.3.0
+# Systèmes de combat — v0.4.0
 
-La v0.3.0 réunit **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **136 transitions de boss**.
+La v0.4.0 réunit **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
 
 ## Traits de manifestation
 
@@ -77,7 +77,7 @@ La v0.3.0 réunit **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, 
 
 ## Phases de boss
 
-Les **68 boss** possèdent deux transitions, soit **136 phases déclenchables**. Les seuils sont documentés dans chaque dossier et modifient puissance, vitesse, armure, jauge, Otherworld ou danger d’arène.
+Les **75 boss** possèdent deux transitions, soit **150 phases déclenchables**. Les seuils sont documentés dans chaque dossier et modifient puissance, vitesse, armure, jauge, Otherworld ou danger d’arène.
 
 ## Règles avancées
 
@@ -91,3 +91,6 @@ Les **68 boss** possèdent deux transitions, soit **136 phases déclenchables**.
 - **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.
 - **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.
 - **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.
+- **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.
+- **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.
+- **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.

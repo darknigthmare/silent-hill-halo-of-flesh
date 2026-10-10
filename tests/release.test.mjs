@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS } from '../src/data.js';
+import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit } from '../src/data.js';
 
 const project=resolve(fileURLToPath(new URL('../',import.meta.url)));
 const read=(path)=>readFile(resolve(project,path),'utf8');
@@ -29,12 +29,19 @@ test('exported JSON mirrors the runtime catalogue',async()=>{
   assert.deepEqual(rules.hazards,STAGE_HAZARDS);
   assert.deepEqual(rules.rituals,RITUAL_MODIFIERS);
   assert.deepEqual(rules.aiPersonalities,AI_PERSONALITIES);
+  const coverage=JSON.parse(await read('data/coverage-audit.json'));
+  const fatalities=JSON.parse(await read('data/fatalities.json'));
+  assert.deepEqual(coverage,coverageAudit());
+  assert.equal(fatalities.fighters.length,CONTENT_STATS.fighters);
+  assert.equal(fatalities.stages.length,CONTENT_STATS.stages);
 });
 
 test('generated documentation contains the live totals and rule families',async()=>{
   const roster=await read('docs/ROSTER.md');
   const matrix=await read('docs/FIDELITY_MATRIX.md');
   const systems=await read('docs/COMBAT_SYSTEMS.md');
+  const coverage=await read('docs/COVERAGE_AUDIT.md');
+  const fatalities=await read('docs/FATALITIES_AND_STAGES.md');
   assert.match(roster,new RegExp(`${CONTENT_STATS.fighters} manifestations`));
   assert.match(matrix,new RegExp(`${CONTENT_STATS.stages} arènes`));
   assert.match(systems,new RegExp(`${Object.keys(MANIFESTATION_TRAITS).length} traits`));
@@ -43,6 +50,9 @@ test('generated documentation contains the live totals and rule families',async(
   assert.match(systems,new RegExp(`${Object.keys(RITUAL_MODIFIERS).length} rites`));
   assert.match(systems,new RegExp(`${Object.keys(AI_PERSONALITIES).length} personnalités IA`));
   assert.match(systems,new RegExp(`${CONTENT_STATS.bossPhases} transitions de boss`));
+  assert.match(coverage,/COMPLET DANS LE PÉRIMÈTRE DÉFINI/);
+  assert.match(fatalities,new RegExp(`${CONTENT_STATS.fatalities} fatalités de combattant`));
+  assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} animations de stage`));
 });
 
 test('service worker shell only references existing local files',async()=>{
@@ -67,6 +77,8 @@ test('primary pages expose the expected accessible application landmarks',async(
   }
   assert.match(index,/aria-label="Menu principal"/);
   assert.match(versus,/id="game"/);
+  assert.match(versus,/id="fatalities"/);
+  assert.match(versus,/id="stageAnimations"/);
   assert.match(chronicles,/id="routeList"/);
   assert.match(archive,/id="systemsTab"/);
 });
