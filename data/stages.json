@@ -1,0 +1,956 @@
+[
+  {
+    "id": "midwich",
+    "name": "MIDWICH ELEMENTARY",
+    "source": "sh1",
+    "family": "school",
+    "sky": [
+      "#27302b",
+      "#090c0b",
+      "#020303"
+    ],
+    "weather": "fog",
+    "props": [
+      "lockers",
+      "desks",
+      "fences"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "alchemilla",
+    "name": "ALCHEMILLA HOSPITAL",
+    "source": "sh1",
+    "family": "hospital",
+    "sky": [
+      "#38403a",
+      "#141715",
+      "#050606"
+    ],
+    "weather": "ash",
+    "props": [
+      "beds",
+      "curtains",
+      "lamps"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "old_silent_hill",
+    "name": "OLD SILENT HILL",
+    "source": "sh1",
+    "family": "street",
+    "sky": [
+      "#3e4540",
+      "#161a17",
+      "#050606"
+    ],
+    "weather": "fog",
+    "props": [
+      "road",
+      "shops",
+      "chasm"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "nowhere",
+    "name": "NOWHERE",
+    "source": "sh1",
+    "family": "otherworld",
+    "sky": [
+      "#301d1d",
+      "#0e0808",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "grates",
+      "chains",
+      "fans"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "lakeside_amusement",
+    "name": "LAKESIDE AMUSEMENT PARK",
+    "source": "sh1",
+    "family": "amusement",
+    "sky": [
+      "#26313b",
+      "#0e1218",
+      "#030405"
+    ],
+    "weather": "rain",
+    "props": [
+      "carousel",
+      "wheel",
+      "booths"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "woodside",
+    "name": "WOOD SIDE APARTMENTS",
+    "source": "sh2",
+    "family": "apartment",
+    "sky": [
+      "#37372f",
+      "#141510",
+      "#040504"
+    ],
+    "weather": "fog",
+    "props": [
+      "stairs",
+      "doors",
+      "trash"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "blue_creek",
+    "name": "BLUE CREEK — STAIRWELL",
+    "source": "sh2",
+    "family": "apartment",
+    "sky": [
+      "#332a26",
+      "#120d0b",
+      "#030303"
+    ],
+    "weather": "dust",
+    "props": [
+      "stairs",
+      "bars",
+      "water"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT",
+    "source": "sh2",
+    "family": "hospital",
+    "sky": [
+      "#34332e",
+      "#12120f",
+      "#040404"
+    ],
+    "weather": "dust",
+    "props": [
+      "beds",
+      "cages",
+      "elevator"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "toluca_prison",
+    "name": "TOLUCA PRISON",
+    "source": "sh2",
+    "family": "prison",
+    "sky": [
+      "#2e3331",
+      "#0d100f",
+      "#020303"
+    ],
+    "weather": "cold",
+    "props": [
+      "cells",
+      "gallows",
+      "meat"
+    ],
+    "hazard": "frostWave"
+  },
+  {
+    "id": "labyrinth",
+    "name": "THE LABYRINTH",
+    "source": "sh2",
+    "family": "labyrinth",
+    "sky": [
+      "#2d2521",
+      "#0c0908",
+      "#020202"
+    ],
+    "weather": "water",
+    "props": [
+      "walls",
+      "door",
+      "pit"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "hotel_otherworld",
+    "name": "LAKEVIEW HOTEL — OTHERWORLD",
+    "source": "sh2",
+    "family": "hotel",
+    "sky": [
+      "#39342e",
+      "#15110d",
+      "#030303"
+    ],
+    "weather": "embers",
+    "props": [
+      "stairs",
+      "fire",
+      "mirrors"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "shopping_mall",
+    "name": "CENTRAL SQUARE MALL",
+    "source": "sh3",
+    "family": "mall",
+    "sky": [
+      "#424039",
+      "#18150f",
+      "#050403"
+    ],
+    "weather": "dust",
+    "props": [
+      "shops",
+      "shutters",
+      "signs"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "brookhaven_sh3",
+    "name": "BROOKHAVEN — FLOODED ROOM",
+    "source": "sh3",
+    "family": "hospital",
+    "sky": [
+      "#24343a",
+      "#0a1316",
+      "#020304"
+    ],
+    "weather": "water",
+    "props": [
+      "water",
+      "pipes",
+      "doors"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "church",
+    "name": "THE CHURCH",
+    "source": "sh3",
+    "family": "church",
+    "sky": [
+      "#3d2622",
+      "#130a08",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "altar",
+      "fans",
+      "flesh"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "apartment_roof",
+    "name": "DAISY VILLA ROOFTOP",
+    "source": "sh3",
+    "family": "roof",
+    "sky": [
+      "#42464a",
+      "#171b1e",
+      "#050607"
+    ],
+    "weather": "rain",
+    "props": [
+      "fence",
+      "water",
+      "antenna"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "sewers",
+    "name": "SEWER CHANNEL",
+    "source": "sh3",
+    "family": "sewer",
+    "sky": [
+      "#29342e",
+      "#0b100d",
+      "#020302"
+    ],
+    "weather": "water",
+    "props": [
+      "canal",
+      "pipes",
+      "grates"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "room_302",
+    "name": "ROOM 302",
+    "source": "sh4",
+    "family": "room",
+    "sky": [
+      "#3d392f",
+      "#16130e",
+      "#040403"
+    ],
+    "weather": "dust",
+    "props": [
+      "window",
+      "chains",
+      "door"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "subway_world",
+    "name": "SUBWAY WORLD",
+    "source": "sh4",
+    "family": "subway",
+    "sky": [
+      "#343634",
+      "#111313",
+      "#030303"
+    ],
+    "weather": "sparks",
+    "props": [
+      "train",
+      "tiles",
+      "turnstile"
+    ],
+    "hazard": "chainSweep"
+  },
+  {
+    "id": "water_prison",
+    "name": "WATER PRISON WORLD",
+    "source": "sh4",
+    "family": "prison",
+    "sky": [
+      "#263038",
+      "#0b1014",
+      "#020303"
+    ],
+    "weather": "water",
+    "props": [
+      "tower",
+      "cells",
+      "spotlight"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "apartment_world",
+    "name": "APARTMENT WORLD",
+    "source": "sh4",
+    "family": "apartment",
+    "sky": [
+      "#35302d",
+      "#120f0d",
+      "#030303"
+    ],
+    "weather": "ash",
+    "props": [
+      "hall",
+      "doors",
+      "umbilical"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "hospital_world",
+    "name": "HOSPITAL WORLD",
+    "source": "sh4",
+    "family": "hospital",
+    "sky": [
+      "#3a3735",
+      "#131110",
+      "#030303"
+    ],
+    "weather": "dust",
+    "props": [
+      "wheelchairs",
+      "beds",
+      "head"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "cedar_grove",
+    "name": "CEDAR GROVE SANITARIUM",
+    "source": "origins",
+    "family": "hospital",
+    "sky": [
+      "#3e3934",
+      "#17120f",
+      "#040303"
+    ],
+    "weather": "ash",
+    "props": [
+      "cells",
+      "mirrors",
+      "gurneys"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "riverside_motel",
+    "name": "RIVERSIDE MOTEL",
+    "source": "origins",
+    "family": "motel",
+    "sky": [
+      "#3a342f",
+      "#15110e",
+      "#040303"
+    ],
+    "weather": "rain",
+    "props": [
+      "rooms",
+      "neon",
+      "pool"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "shepherds_glen",
+    "name": "SHEPHERD’S GLEN",
+    "source": "homecoming",
+    "family": "street",
+    "sky": [
+      "#3d423e",
+      "#161a17",
+      "#040504"
+    ],
+    "weather": "fog",
+    "props": [
+      "townhall",
+      "road",
+      "trees"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "grand_hotel",
+    "name": "GRAND HOTEL",
+    "source": "homecoming",
+    "family": "hotel",
+    "sky": [
+      "#3e302c",
+      "#150d0a",
+      "#030202"
+    ],
+    "weather": "embers",
+    "props": [
+      "elevator",
+      "dolls",
+      "boiler"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "nightmare_school",
+    "name": "FROZEN SCHOOL",
+    "source": "shattered",
+    "family": "ice",
+    "sky": [
+      "#27414b",
+      "#0c1a20",
+      "#020405"
+    ],
+    "weather": "snow",
+    "props": [
+      "ice",
+      "lockers",
+      "maze"
+    ],
+    "hazard": "frostWave"
+  },
+  {
+    "id": "overlook",
+    "name": "OVERLOOK PENITENTIARY",
+    "source": "downpour",
+    "family": "prison",
+    "sky": [
+      "#2d3740",
+      "#0d1318",
+      "#020304"
+    ],
+    "weather": "rain",
+    "props": [
+      "cells",
+      "towers",
+      "flood"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "arcade_ship",
+    "name": "LITTLE BARONESS",
+    "source": "arcade",
+    "family": "ship",
+    "sky": [
+      "#2e3436",
+      "#0c1113",
+      "#020303"
+    ],
+    "weather": "water",
+    "props": [
+      "deck",
+      "crates",
+      "chains"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "book_zone",
+    "name": "BOOK OF MEMORIES — NEXUS",
+    "source": "bom",
+    "family": "book",
+    "sky": [
+      "#3b3040",
+      "#140d18",
+      "#030204"
+    ],
+    "weather": "runes",
+    "props": [
+      "pages",
+      "doors",
+      "altar"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "looping_hall",
+    "name": "204863 — LOOPING HALL",
+    "source": "pt",
+    "family": "hall",
+    "sky": [
+      "#3c3730",
+      "#16120d",
+      "#040302"
+    ],
+    "weather": "flicker",
+    "props": [
+      "radio",
+      "bathroom",
+      "clock"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "villa",
+    "name": "KETTENSTADT VILLA",
+    "source": "shortmessage",
+    "family": "villa",
+    "sky": [
+      "#3a3437",
+      "#140f11",
+      "#030203"
+    ],
+    "weather": "petals",
+    "props": [
+      "graffiti",
+      "stairs",
+      "fence"
+    ],
+    "hazard": "petalBloom"
+  },
+  {
+    "id": "ebisugaoka",
+    "name": "EBISUGAOKA — MAIN STREET",
+    "source": "shf",
+    "family": "village",
+    "sky": [
+      "#454039",
+      "#18130f",
+      "#050403"
+    ],
+    "weather": "fog",
+    "props": [
+      "shops",
+      "phone",
+      "flowers"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "dark_shrine",
+    "name": "DARK SHRINE",
+    "source": "shf",
+    "family": "shrine",
+    "sky": [
+      "#3b2326",
+      "#14080a",
+      "#030102"
+    ],
+    "weather": "petals",
+    "props": [
+      "torii",
+      "lanterns",
+      "roots"
+    ],
+    "hazard": "petalBloom"
+  },
+  {
+    "id": "school_shf",
+    "name": "EBISUGAOKA MIDDLE SCHOOL",
+    "source": "shf",
+    "family": "school",
+    "sky": [
+      "#3d3b35",
+      "#15140f",
+      "#040403"
+    ],
+    "weather": "dust",
+    "props": [
+      "desks",
+      "corridor",
+      "flowers"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "hinako_home",
+    "name": "HINAKO’S HOME",
+    "source": "shf",
+    "family": "house",
+    "sky": [
+      "#3b322f",
+      "#140f0d",
+      "#030302"
+    ],
+    "weather": "dust",
+    "props": [
+      "tatami",
+      "doors",
+      "roots"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "festival_square",
+    "name": "FESTIVAL SQUARE",
+    "source": "shf",
+    "family": "festival",
+    "sky": [
+      "#412b2a",
+      "#160b0b",
+      "#030202"
+    ],
+    "weather": "embers",
+    "props": [
+      "drums",
+      "stalls",
+      "lanterns"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "book_fire",
+    "name": "FIRE ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#4d221a",
+      "#170704",
+      "#030101"
+    ],
+    "weather": "embers",
+    "props": [
+      "lava",
+      "runes",
+      "pillars"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "book_wood",
+    "name": "WOOD ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#30402b",
+      "#0d150a",
+      "#020402"
+    ],
+    "weather": "spores",
+    "props": [
+      "roots",
+      "moss",
+      "runes"
+    ],
+    "hazard": "petalBloom"
+  },
+  {
+    "id": "book_light",
+    "name": "LIGHT ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#4a493d",
+      "#17160e",
+      "#030302"
+    ],
+    "weather": "light",
+    "props": [
+      "mirrors",
+      "runes",
+      "pillars"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "book_water",
+    "name": "WATER ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#263e4b",
+      "#09151b",
+      "#020304"
+    ],
+    "weather": "water",
+    "props": [
+      "pools",
+      "runes",
+      "bridges"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "book_earth",
+    "name": "EARTH ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#40372a",
+      "#151008",
+      "#030302"
+    ],
+    "weather": "dust",
+    "props": [
+      "rocks",
+      "runes",
+      "cracks"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "book_blood",
+    "name": "BLOOD ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#471e22",
+      "#160607",
+      "#030101"
+    ],
+    "weather": "blood",
+    "props": [
+      "veins",
+      "runes",
+      "pools"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "book_steel",
+    "name": "STEEL ZONE",
+    "source": "bom",
+    "family": "elemental",
+    "sky": [
+      "#333a40",
+      "#0f1316",
+      "#030405"
+    ],
+    "weather": "sparks",
+    "props": [
+      "gears",
+      "runes",
+      "chains"
+    ],
+    "hazard": "chainSweep"
+  },
+  {
+    "id": "antique_shop",
+    "name": "GREEN LION ANTIQUES",
+    "source": "origins",
+    "family": "otherworld",
+    "sky": [
+      "#3c2b27",
+      "#150c09",
+      "#030202"
+    ],
+    "weather": "embers",
+    "props": [
+      "flauros",
+      "altar",
+      "fire"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "church_hc",
+    "name": "SHEPHERD’S GLEN CHURCH",
+    "source": "homecoming",
+    "family": "church",
+    "sky": [
+      "#3d2926",
+      "#140a08",
+      "#030202"
+    ],
+    "weather": "embers",
+    "props": [
+      "organ",
+      "altar",
+      "chains"
+    ],
+    "hazard": "emberFall"
+  },
+  {
+    "id": "underground_hc",
+    "name": "UNDERGROUND LAIR",
+    "source": "homecoming",
+    "family": "lair",
+    "sky": [
+      "#302a28",
+      "#0e0a09",
+      "#020202"
+    ],
+    "weather": "dust",
+    "props": [
+      "webs",
+      "machines",
+      "cocoons"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "film_midwich",
+    "name": "MIDWICH — FILM OTHERWORLD",
+    "source": "film",
+    "family": "school",
+    "sky": [
+      "#392d29",
+      "#120a08",
+      "#020202"
+    ],
+    "weather": "embers",
+    "props": [
+      "lockers",
+      "fence",
+      "chains"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "film_hospital",
+    "name": "BROOKHAVEN — DARK WARD",
+    "source": "film",
+    "family": "hospital",
+    "sky": [
+      "#34322e",
+      "#100e0c",
+      "#020202"
+    ],
+    "weather": "flicker",
+    "props": [
+      "beds",
+      "gurneys",
+      "chains"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "film_church",
+    "name": "CHURCH OF THE ORDER",
+    "source": "film",
+    "family": "church",
+    "sky": [
+      "#3b2522",
+      "#120706",
+      "#020101"
+    ],
+    "weather": "embers",
+    "props": [
+      "altar",
+      "chains",
+      "flesh"
+    ],
+    "hazard": "chainSweep"
+  },
+  {
+    "id": "film_sanctuary",
+    "name": "SANCTUARY — REVELATION",
+    "source": "film",
+    "family": "lair",
+    "sky": [
+      "#332629",
+      "#100709",
+      "#020102"
+    ],
+    "weather": "ash",
+    "props": [
+      "chains",
+      "cages",
+      "altar"
+    ],
+    "hazard": "bloodTide"
+  },
+  {
+    "id": "hope_junction",
+    "name": "HOPE’S JUNCTION",
+    "source": "ascension",
+    "family": "street",
+    "sky": [
+      "#3b3e3c",
+      "#121514",
+      "#030404"
+    ],
+    "weather": "fog",
+    "props": [
+      "road",
+      "shops",
+      "fence"
+    ],
+    "hazard": "staticBurst"
+  },
+  {
+    "id": "stilledalen",
+    "name": "STILLEDALEN WOODS",
+    "source": "ascension",
+    "family": "village",
+    "sky": [
+      "#303933",
+      "#0d120f",
+      "#020302"
+    ],
+    "weather": "rain",
+    "props": [
+      "trees",
+      "roots",
+      "lanterns"
+    ],
+    "hazard": "fallingDebris"
+  },
+  {
+    "id": "ascension_otherworld",
+    "name": "ASCENSION — OPEN GATE",
+    "source": "ascension",
+    "family": "otherworld",
+    "sky": [
+      "#392323",
+      "#110606",
+      "#020101"
+    ],
+    "weather": "embers",
+    "props": [
+      "runes",
+      "chains",
+      "altar"
+    ],
+    "hazard": "emberFall"
+  }
+]

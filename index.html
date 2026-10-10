@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050807">
+  <meta name="description" content="Silent Hill: Halo of Flesh — archive fan-made de combats de créatures.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>SILENT HILL: HALO OF FLESH</title>
+</head>
+<body>
+<div id="shell">
+  <canvas id="command-bg" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <main id="command">
+    <header class="command-top">
+      <div class="brand">
+        <small>OTHERWORLD FIGHTING ARCHIVE</small>
+        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.2.0</span></strong>
+      </div>
+      <div class="profile"><span>LOCAL PROFILE</span><span id="frontName">FOG ARCHIVE</span></div>
+    </header>
+    <div class="command-body">
+      <nav class="command-menu" aria-label="Menu principal">
+        <button class="command-item active" data-mode="continue">REPRENDRE<small>DERNIER CAUCHEMAR</small></button>
+        <button class="command-item" data-mode="chronicles">CHRONIQUES<small>ROUTES DE LA BRUME</small></button>
+        <button class="command-item" data-mode="versus">VERSUS<small>DUELS ET COMBATS LOCAUX</small></button>
+        <button class="command-item" data-mode="arcade">ARCADE<small>PARCOURS ALÉATOIRE</small></button>
+        <button class="command-item" data-mode="boss">GRANDS TOURMENTS<small>BOSS RUSH DE L’OTHERWORLD</small></button>
+        <button class="command-item" data-mode="training">OBSERVATION<small>LABORATOIRE DE COMBAT</small></button>
+        <button class="command-item" data-mode="archive">ARCHIVES<small>BESTIAIRE ET FIDÉLITÉ</small></button>
+        <button class="command-item" data-mode="options">OPTIONS<small>AFFICHAGE, AUDIO, COMMANDES</small></button>
+      </nav>
+      <section class="command-hero" aria-live="polite">
+        <canvas id="heroCanvas" width="1200" height="760" aria-hidden="true"></canvas>
+        <div class="hero-copy">
+          <div id="heroKicker" class="hero-kicker">QUICK RESUME</div>
+          <h1 id="heroTitle">RETOUR<br><span>DANS LA BRUME.</span></h1>
+          <p id="heroText">Le dernier front reprend avec le même combattant, la même arène et la même règle.</p>
+          <div id="heroChoices" class="hero-choices"></div>
+        </div>
+      </section>
+    </div>
+    <footer class="command-bottom">
+      <span id="contentCount">CHARGEMENT DU CATALOGUE…</span>
+      <div class="command-controls"><span data-key="↑↓">MODE</span><span data-key="←→">VARIANTE</span><span data-key="ENTRÉE">VALIDER</span><span data-key="F">PLEIN ÉCRAN</span></div>
+    </footer>
+  </main>
+  <section id="module-player" aria-label="Module de jeu">
+    <iframe id="moduleFrame" title="Module de jeu Silent Hill"></iframe>
+    <div class="returnbar"><button id="returnCommand">COMMAND</button><button id="reloadModule">RECHARGER</button></div>
+    <div id="loading" class="loading"><div><b>INITIALISATION</b><small>LA BRUME SE REFERME…</small></div></div>
+  </section>
+</div>
+
+<section id="optionsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="optionsTitle">
+  <div class="modal-card">
+    <h2 id="optionsTitle">OPTIONS</h2>
+    <p>Réglages persistants du front de commande et des modules de combat.</p>
+    <div class="option-row"><span>SCANLINES</span><button class="toggle on" data-setting="scanlines">ACTIF</button></div>
+    <div class="option-row"><span>GRAIN ANALOGIQUE</span><button class="toggle on" data-setting="grain">ACTIF</button></div>
+    <div class="option-row"><span>MOUVEMENT RÉDUIT</span><button class="toggle" data-setting="reducedMotion">INACTIF</button></div>
+    <div class="option-row"><span>CONTRASTE RENFORCÉ</span><button class="toggle" data-setting="highContrast">INACTIF</button></div>
+    <div class="option-row"><span>VIBRATIONS</span><button class="toggle on" data-setting="vibration">ACTIF</button></div>
+    <div class="option-row"><span>BASCULE OTHERWORLD</span><button class="toggle on" data-setting="otherworldShift">ACTIF</button></div>
+    <div class="option-row"><span>DANGERS D’ARÈNE</span><button class="toggle on" data-setting="stageHazards">ACTIF</button></div>
+    <div class="option-row"><span>RADIO DE PROXIMITÉ</span><button class="toggle on" data-setting="radioWarning">ACTIF</button></div>
+    <div class="option-row"><span>SECOUSSES D’ÉCRAN</span><button class="toggle on" data-setting="screenShake">ACTIF</button></div>
+    <div class="option-row"><span>VOLUME GÉNÉRAL</span><input type="range" min="0" max="100" step="5" value="65" data-range="masterVolume"></div>
+    <div class="option-row"><span>DIFFICULTÉ IA</span><select id="difficulty"><option value="story">BRUME</option><option value="normal" selected>OTHERWORLD</option><option value="hard">CAUCHEMAR</option></select></div>
+    <div class="option-row"><span>PLEIN ÉCRAN</span><button id="fullscreen" class="toggle">ACTIVER</button></div>
+    <div class="disclaimer">Prototype fan-made non commercial, sans affiliation avec Konami. Le projet contient du code, des effets, des silhouettes et des compositions originales ; aucun sprite, modèle, son ou texture officiel n’est redistribué.</div>
+    <div class="modal-actions"><button id="resetSave">RÉINITIALISER LA SAUVEGARDE</button><button id="closeOptions" class="ui-button primary">FERMER</button></div>
+  </div>
+</section>
+<script type="module" src="src/command.js"></script>
+</body>
+</html>

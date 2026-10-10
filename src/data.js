@@ -1,0 +1,515 @@
+/*
+ * SILENT HILL: HALO OF FLESH — catalogue de prototype.
+ * Les noms identifient les créatures de la franchise à des fins de documentation
+ * et de fan-game non commercial. Les statistiques, timings et silhouettes sont
+ * des adaptations originales ; aucun asset officiel n'est inclus.
+ */
+
+export const VERSION = '0.2.0';
+export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
+
+export const SOURCE_META = Object.freeze({
+  sh1: { label: 'SILENT HILL', year: 1999, short: 'SH1', stage: 'midwich' },
+  sh2: { label: 'SILENT HILL 2', year: 2001, short: 'SH2', stage: 'woodside' },
+  sh3: { label: 'SILENT HILL 3', year: 2003, short: 'SH3', stage: 'shopping_mall' },
+  sh4: { label: 'SILENT HILL 4: THE ROOM', year: 2004, short: 'SH4', stage: 'room_302' },
+  origins: { label: 'SILENT HILL: ORIGINS', year: 2007, short: '0RIGINS', stage: 'cedar_grove' },
+  homecoming: { label: 'SILENT HILL: HOMECOMING', year: 2008, short: 'HC', stage: 'shepherds_glen' },
+  shattered: { label: 'SILENT HILL: SHATTERED MEMORIES', year: 2009, short: 'SM', stage: 'nightmare_school' },
+  downpour: { label: 'SILENT HILL: DOWNPOUR', year: 2012, short: 'DP', stage: 'overlook' },
+  arcade: { label: 'SILENT HILL: THE ARCADE', year: 2007, short: 'ARCADE', stage: 'arcade_ship' },
+  bom: { label: 'SILENT HILL: BOOK OF MEMORIES', year: 2012, short: 'BOM', stage: 'book_zone' },
+  pt: { label: 'P.T.', year: 2014, short: 'P.T.', stage: 'looping_hall' },
+  shortmessage: { label: 'SILENT HILL: THE SHORT MESSAGE', year: 2024, short: 'TSM', stage: 'villa' },
+  shf: { label: 'SILENT HILL f', year: 2025, short: 'SH f', stage: 'ebisugaoka' },
+  film: { label: 'SILENT HILL — FILM UNIVERSE', year: 2006, short: 'FILMS', stage: 'film_midwich' },
+  ascension: { label: 'SILENT HILL: ASCENSION', year: 2023, short: 'ASC', stage: 'hope_junction' }
+});
+
+export const ARCHETYPES = Object.freeze({
+  balanced: { health: 1000, speed: 5.2, jump: 12.7, power: 1, reach: 1, guard: 100, meterGain: 1 },
+  rushdown: { health: 890, speed: 6.6, jump: 13.5, power: .9, reach: .88, guard: 86, meterGain: 1.18 },
+  juggernaut: { health: 1290, speed: 3.55, jump: 9.5, power: 1.3, reach: 1.18, guard: 122, meterGain: .88 },
+  grappler: { health: 1180, speed: 4.1, jump: 10.4, power: 1.22, reach: .98, guard: 114, meterGain: .94 },
+  zoner: { health: 880, speed: 4.8, jump: 12.2, power: .94, reach: 1.32, guard: 88, meterGain: 1.05 },
+  flyer: { health: 820, speed: 6.25, jump: 15.2, power: .86, reach: 1.18, guard: 78, meterGain: 1.22 },
+  swarm: { health: 760, speed: 7.15, jump: 11.8, power: .8, reach: .75, guard: 72, meterGain: 1.28 },
+  ghost: { health: 910, speed: 5, jump: 11.4, power: 1.02, reach: 1.12, guard: 92, meterGain: 1.1 },
+  puppet: { health: 940, speed: 5.5, jump: 12.1, power: .98, reach: 1.05, guard: 92, meterGain: 1.1 },
+  trickster: { health: 870, speed: 6, jump: 13.2, power: .9, reach: 1.08, guard: 82, meterGain: 1.2 },
+  artillery: { health: 1020, speed: 3.9, jump: 9.8, power: 1.15, reach: 1.48, guard: 104, meterGain: .95 },
+  boss: { health: 1450, speed: 4.25, jump: 9.6, power: 1.34, reach: 1.3, guard: 135, meterGain: .82 }
+});
+
+export const MANIFESTATION_TRAITS = Object.freeze({
+  echo: { name: 'ÉCHO PERSISTANT', description: 'Profil équilibré : la jauge monte légèrement lorsque la manifestation varie ses attaques.', meterVariety: .08 },
+  relentless: { name: 'POURSUITE OBSESSIONNELLE', description: 'Gagne de la jauge en avançant vers sa cible et conserve mieux son élan.', forwardMeter: .055, speed: 1.04 },
+  rustArmor: { name: 'ARMURE DE ROUILLE', description: 'Absorbe périodiquement une partie du recul et du hitstun.', damageReduction: .07, armorCooldown: 280 },
+  constriction: { name: 'CONSTRICTION', description: 'Les saisies infligent davantage de dégâts et appliquent Entrave.', throwDamage: 1.2, throwEffect: 'bind' },
+  staticField: { name: 'CHAMP PARASITE', description: 'Les projectiles sont plus larges et appliquent Parasites radio.', projectileScale: 1.18, effect: 'static' },
+  aerialInstinct: { name: 'INSTINCT AÉRIEN', description: 'Saut plus haut et esquive plus longue.', jump: 1.12, dodgeInvuln: 3 },
+  lowProfile: { name: 'PROFIL RAMPANT', description: 'Hurtbox réduite au sol et attaque basse accélérée.', lowProfile: .72, lowStartup: -2 },
+  phaseWalk: { name: 'MARCHE SPECTRALE', description: 'L’esquive traverse plus longtemps les attaques et applique Effroi sur technique.', dodgeInvuln: 5, effect: 'dread' },
+  convulsion: { name: 'CONVULSION', description: 'Les chaînes frappe → lourd → technique disposent d’une fenêtre d’annulation élargie.', cancelWindow: 6 },
+  falsePresence: { name: 'FAUSSE PRÉSENCE', description: 'Une esquive parfaite rend brièvement intangible et accélère la prochaine technique.', dodgeInvuln: 4, recoveryScale: .92 },
+  suppression: { name: 'SUPPRESSION', description: 'Projectiles lourds, garde adverse davantage entamée.', projectileScale: 1.3, guardDamage: 1.18 },
+  nightmareArmor: { name: 'ARMURE DU CAUCHEMAR', description: 'Résistance accrue au recul et au hitstun tant que la vitalité dépasse un tiers.', damageReduction: .08, hitstunScale: .82, armorCooldown: 190 }
+});
+
+export const AFFLICTIONS = Object.freeze({
+  bleed: { name: 'HÉMORRAGIE', duration: 180, color: '#a8323d', description: 'Perd périodiquement de la vitalité.' },
+  static: { name: 'PARASITES RADIO', duration: 150, color: '#c9c8a4', description: 'Vitesse réduite et brouillage de jauge.' },
+  bind: { name: 'ENTRAVE', duration: 90, color: '#8d735b', description: 'Déplacement et esquive fortement limités.' },
+  decay: { name: 'CORROSION', duration: 180, color: '#8b7848', description: 'La garde ne se régénère plus et s’érode.' },
+  burn: { name: 'BRÛLURE', duration: 150, color: '#cf5938', description: 'Dégâts réguliers plus intenses.' },
+  dread: { name: 'EFFROI', duration: 150, color: '#776080', description: 'La jauge Nightmare se dissipe progressivement.' },
+  frost: { name: 'GEL', duration: 120, color: '#7ba5b4', description: 'Vitesse et accélération réduites.' },
+  bloom: { name: 'FLORAISON', duration: 135, color: '#bd6674', description: 'Ralentissement qui s’intensifie près du centre de l’arène.' }
+});
+
+const traitByArchetype = Object.freeze({
+  balanced: 'echo', rushdown: 'relentless', juggernaut: 'rustArmor', grappler: 'constriction',
+  zoner: 'staticField', flyer: 'aerialInstinct', swarm: 'lowProfile', ghost: 'phaseWalk',
+  puppet: 'convulsion', trickster: 'falsePresence', artillery: 'suppression', boss: 'nightmareArmor'
+});
+
+const afflictionByArchetype = Object.freeze({
+  balanced: 'bleed', rushdown: 'bleed', juggernaut: 'decay', grappler: 'bind', zoner: 'static',
+  flyer: 'static', swarm: 'decay', ghost: 'dread', puppet: 'bleed', trickster: 'dread',
+  artillery: 'burn', boss: 'dread'
+});
+
+export const STAGE_HAZARDS = Object.freeze({
+  staticBurst: { name: 'SURSAUT RADIO', telegraph: 85, radius: 165, damage: 34, effect: 'static' },
+  fallingDebris: { name: 'CHUTE DE DÉBRIS', telegraph: 90, radius: 118, damage: 62, effect: 'decay' },
+  bloodTide: { name: 'MARÉE DE SANG', telegraph: 105, radius: 220, damage: 45, effect: 'bleed' },
+  frostWave: { name: 'VAGUE DE GEL', telegraph: 95, radius: 205, damage: 26, effect: 'frost' },
+  petalBloom: { name: 'FLORAISON ROUGE', telegraph: 100, radius: 190, damage: 38, effect: 'bloom' },
+  emberFall: { name: 'PLUIE DE CENDRES', telegraph: 82, radius: 135, damage: 50, effect: 'burn' },
+  chainSweep: { name: 'BALAYAGE DE CHAÎNES', telegraph: 76, radius: 145, damage: 58, effect: 'bind' }
+});
+
+const paletteBySource = {
+  sh1: ['#6d6f61', '#b9b7a4'], sh2: ['#6d6259', '#c8b9a4'], sh3: ['#7b6a50', '#d1b777'],
+  sh4: ['#6e665f', '#beb6aa'], origins: ['#705f55', '#caa38c'], homecoming: ['#5d5f58', '#b3a47a'],
+  shattered: ['#58707b', '#b5d4dc'], downpour: ['#5c6770', '#b7c2c9'], arcade: ['#5d5652', '#c6a786'],
+  bom: ['#655a64', '#bfa7bd'], pt: ['#6b5c54', '#be9c8c'], shortmessage: ['#5e4d52', '#cc8f9d'],
+  shf: ['#6a4d4e', '#d0a5a7'], film: ['#5f514b', '#c2a38f'], ascension: ['#554b4b', '#b58d83']
+};
+
+const defaultsByKind = {
+  humanoid: { scale: 1, body: 'human' }, child: { scale: .72, body: 'child' }, nurse: { scale: .98, body: 'human' },
+  quadruped: { scale: .82, body: 'beast' }, flyer: { scale: .82, body: 'winged' }, insect: { scale: .66, body: 'insect' },
+  worm: { scale: 1.15, body: 'worm' }, giant: { scale: 1.42, body: 'giant' }, ghost: { scale: 1.02, body: 'ghost' },
+  pyramid: { scale: 1.22, body: 'human' }, mannequin: { scale: 1.04, body: 'human' }, mass: { scale: 1.28, body: 'mass' },
+  wall: { scale: 1.22, body: 'wall' }, doll: { scale: .92, body: 'doll' }, flowerhead: { scale: 1.03, body: 'human' },
+  deity: { scale: 1.34, body: 'divine' }, cage: { scale: 1.24, body: 'cage' }, fungus: { scale: .8, body: 'fungus' },
+  wheelchair: { scale: 1.02, body: 'wheelchair' }, fox: { scale: 1.1, body: 'fox' }, spider: { scale: 1.03, body: 'spider' },
+  void: { scale: 1.55, body: 'void' }, serpentine: { scale: 1.2, body: 'serpent' }
+};
+
+let counter = 0;
+function slug(value) {
+  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+}
+
+function monster(source, name, options = {}) {
+  const meta = SOURCE_META[source];
+  if (!meta) throw new Error(`Source inconnue: ${source}`);
+  const kind = options.kind || 'humanoid';
+  const palette = paletteBySource[source];
+  const id = options.id || `${source}_${slug(name)}_${String(++counter).padStart(3, '0')}`;
+  const boss = Boolean(options.boss);
+  const archetype = options.archetype || (boss ? 'boss' : 'balanced');
+  const visualBase = defaultsByKind[kind] || defaultsByKind.humanoid;
+  return {
+    id,
+    name,
+    source,
+    game: meta.label,
+    year: meta.year,
+    category: boss ? 'BOSS' : (options.category || 'CREATURE'),
+    boss,
+    variant: options.variant || null,
+    variantOf: options.variantOf || null,
+    archetype,
+    stageId: options.stageId || meta.stage,
+    signature: options.signature || 'Manifestation',
+    trait: options.trait || traitByArchetype[archetype] || 'echo',
+    affliction: options.affliction || afflictionByArchetype[archetype] || 'bleed',
+    finisher: options.finisher || `Rituel de clôture — ${options.signature || name}`,
+    canonicalBehavior: options.behavior || 'Approche, pression et attaque de proximité adaptées à son apparition d’origine.',
+    adaptation: options.adaptation || 'Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.',
+    lore: options.lore || `Manifestation associée à ${meta.label}.`,
+    visual: {
+      kind,
+      body: visualBase.body,
+      scale: options.scale || visualBase.scale,
+      primary: options.color || palette[0],
+      accent: options.accent || palette[1],
+      secondary: options.secondary || '#2d2b29',
+      motif: options.motif || null,
+      weapon: options.weapon || null,
+      head: options.head || null,
+      limbs: options.limbs || null,
+      aura: options.aura || null
+    },
+    tags: [meta.short, archetype, kind, options.trait || traitByArchetype[archetype] || 'echo', options.affliction || afflictionByArchetype[archetype] || 'bleed', ...(options.tags || [])],
+    unlock: options.unlock || 'base'
+  };
+}
+
+export const ROSTER = [
+  // SILENT HILL (1999)
+  monster('sh1','Air Screamer',{kind:'flyer',archetype:'flyer',signature:'Plongée lacérante',behavior:'Patrouille aérienne, cri et piqué rapide.',lore:'Créature volante de l’Otherworld de Silent Hill.'}),
+  monster('sh1','Night Flutter',{kind:'flyer',archetype:'flyer',signature:'Nuée nocturne',behavior:'Version nocturne plus agressive, sensible à la lumière.',variantOf:'Air Screamer'}),
+  monster('sh1','Groaner',{kind:'quadruped',archetype:'rushdown',signature:'Morsure en course',behavior:'Charge canine basse et harcèlement rapide.'}),
+  monster('sh1','Wormhead',{kind:'quadruped',archetype:'rushdown',signature:'Mâchoire annelée',behavior:'Variante nocturne du Groaner, attaque en bond.',variantOf:'Groaner'}),
+  monster('sh1','Grey Child',{kind:'child',archetype:'grappler',signature:'Étreinte au couteau',behavior:'Approche hésitante puis agrippement et frappe courte.',weapon:'knife'}),
+  monster('sh1','Mumbler',{kind:'child',archetype:'rushdown',signature:'Griffes courtes',behavior:'Se rue sur la cible et enchaîne des coups bas.'}),
+  monster('sh1','Larval Stalker',{kind:'ghost',archetype:'ghost',signature:'Ombre traversante',behavior:'Apparition non offensive adaptée ici en leurre intangible.',adaptation:'Son absence de menace directe devient une mécanique de feinte et d’esquive.',unlock:'archive'}),
+  monster('sh1','Stalker',{kind:'child',archetype:'ghost',signature:'Traque invisible',behavior:'Silhouette enfantine qui frappe après une brève disparition.'}),
+  monster('sh1','Creeper',{kind:'insect',archetype:'swarm',signature:'Essaim rampant',behavior:'Très bas au sol, rapide, difficile à toucher debout.'}),
+  monster('sh1','Romper',{kind:'humanoid',archetype:'rushdown',signature:'Bond de contention',behavior:'Bondit, plaque la cible et frappe au sol.'}),
+  monster('sh1','Hanged Scratcher',{kind:'insect',archetype:'trickster',signature:'Griffe du plafond',behavior:'Se déplace sur les parois et tombe sur la cible.',limbs:6}),
+  monster('sh1','Puppet Nurse',{kind:'nurse',archetype:'balanced',signature:'Scalpel parasité',behavior:'Marche irrégulière, attaque au couteau et sursaut du parasite.',weapon:'scalpel'}),
+  monster('sh1','Puppet Doctor',{kind:'humanoid',archetype:'juggernaut',signature:'Impact parasité',behavior:'Plus robuste que les infirmières, coups lourds et lents.',weapon:'scalpel'}),
+  monster('sh1','Split Head',{kind:'giant',archetype:'boss',boss:true,signature:'Mâchoire séparée',behavior:'Immense gueule verticale, charge et saisie dévorante.',stageId:'nowhere',head:'split'}),
+  monster('sh1','Twinfeeler',{kind:'insect',archetype:'boss',boss:true,signature:'Anneaux souterrains',behavior:'Larve géante qui surgit du sol et balaie l’arène.',stageId:'shopping_mall',limbs:8}),
+  monster('sh1','Floatstinger',{kind:'flyer',archetype:'boss',boss:true,signature:'Dard aérien',behavior:'Boss volant, rafales de poison et piqués.',stageId:'old_silent_hill'}),
+  monster('sh1','Monster Cybil',{kind:'humanoid',archetype:'zoner',boss:true,signature:'Service possédé',behavior:'Tirs de pistolet et pression rapprochée sous contrôle parasitaire.',weapon:'pistol',stageId:'lakeside_amusement'}),
+  monster('sh1','Incubator',{kind:'deity',archetype:'boss',boss:true,signature:'Éclair blanc',behavior:'Flotte et projette des éclairs verticaux.',stageId:'nowhere',aura:'white'}),
+  monster('sh1','Incubus',{kind:'deity',archetype:'boss',boss:true,signature:'Foudre du démon',behavior:'Entité ailée lançant des salves électriques.',stageId:'nowhere',aura:'black',limbs:6}),
+
+  // SILENT HILL 2
+  monster('sh2','Lying Figure',{kind:'humanoid',archetype:'zoner',signature:'Jet acide',behavior:'Se traîne dans une enveloppe charnelle et crache un fluide corrosif.',head:'wrapped'}),
+  monster('sh2','Lying Figure — Crawling',{kind:'humanoid',archetype:'rushdown',signature:'Ruée rampante',behavior:'Variante au sol qui fonce sous les attaques hautes.',variantOf:'Lying Figure',variant:'Remake encounter variant',scale:.82}),
+  monster('sh2','Mannequin',{kind:'mannequin',archetype:'trickster',signature:'Ciseaux de jambes',behavior:'Reste immobile puis attaque avec ses membres doubles.',limbs:4}),
+  monster('sh2','Mannequin — Ambusher',{kind:'mannequin',archetype:'trickster',signature:'Embuscade murale',behavior:'Variante d’embuscade adaptée des rencontres du remake.',variantOf:'Mannequin',variant:'Remake encounter variant',limbs:4}),
+  monster('sh2','Bubble Head Nurse',{kind:'nurse',archetype:'balanced',signature:'Tube d’urgence',behavior:'Déplacements saccadés et coups de tuyau.',weapon:'pipe'}),
+  monster('sh2','Creeper',{kind:'insect',archetype:'swarm',signature:'Passage sous la garde',behavior:'Insecte rapide au ras du sol.',variant:'Silent Hill 2'}),
+  monster('sh2','Mandarin',{kind:'wall',archetype:'zoner',signature:'Langue pendulaire',behavior:'Attaque depuis une grille ou un rebord avec de longs appendices.',stageId:'hotel_otherworld'}),
+  monster('sh2','Flesh Lip',{kind:'cage',archetype:'grappler',boss:true,signature:'Cage suspendue',behavior:'Corps enfermé dans un cadre métallique, saisies et chutes verticales.',stageId:'brookhaven_sh2'}),
+  monster('sh2','Abstract Daddy',{kind:'mass',archetype:'grappler',boss:true,signature:'Écrasement du cadre',behavior:'Charge lourde et saisie oppressante dans un espace étroit.',stageId:'labyrinth'}),
+  monster('sh2','Red Pyramid Thing — Great Knife',{kind:'pyramid',archetype:'juggernaut',boss:true,signature:'Traînée du Grand Couteau',behavior:'Avance lente, portée immense, coups télégraphiés extrêmement puissants.',weapon:'great_knife',stageId:'blue_creek'}),
+  monster('sh2','Red Pyramid Thing — Spear',{kind:'pyramid',archetype:'zoner',boss:true,signature:'Percée de la lance',behavior:'Version finale plus mobile, attaques de lance et pression à distance.',weapon:'spear',stageId:'hotel_otherworld',variantOf:'Red Pyramid Thing'}),
+  monster('sh2','Twin Pyramid Heads',{kind:'pyramid',archetype:'boss',boss:true,signature:'Sentence jumelle',behavior:'Duo synchronisé adapté en combattant unique à doubles frappes.',weapon:'spear',stageId:'hotel_otherworld',limbs:4}),
+  monster('sh2','Eddie Dombrowski',{kind:'humanoid',archetype:'zoner',boss:true,category:'HUMAN BOSS',signature:'Tir de l’abattoir',behavior:'Tire, change de ligne et utilise le décor froid comme couverture.',weapon:'revolver',stageId:'toluca_prison'}),
+  monster('sh2','Maria — Final Manifestation',{kind:'deity',archetype:'boss',boss:true,signature:'Essaim de papillons',behavior:'Entité suspendue qui harcèle par insectes et vrilles.',stageId:'hotel_otherworld',aura:'moths'}),
+  monster('sh2','Mary — Final Manifestation',{kind:'deity',archetype:'boss',boss:true,signature:'Lit de souffrance',behavior:'Variante narrative de la manifestation finale.',variantOf:'Maria — Final Manifestation',stageId:'hotel_otherworld',aura:'moths'}),
+  monster('sh2','Prisoner',{kind:'ghost',archetype:'ghost',signature:'Rituel derrière les barreaux',behavior:'Présence invisible adaptée en ondes sonores et frappes hors champ.',stageId:'toluca_prison',unlock:'archive'}),
+
+  // SILENT HILL 3
+  monster('sh3','Closer',{kind:'giant',archetype:'juggernaut',signature:'Bras pendulaires',behavior:'Grande créature aux bras massifs, frappe large et lente.'}),
+  monster('sh3','Numb Body — Small',{kind:'humanoid',archetype:'rushdown',signature:'Percussion sans visage',behavior:'Petit corps rapide qui fonce en groupe.',scale:.72}),
+  monster('sh3','Numb Body — Large',{kind:'giant',archetype:'juggernaut',signature:'Charge engourdie',behavior:'Variante plus grande et résistante.',variantOf:'Numb Body',scale:1.2}),
+  monster('sh3','Pendulum',{kind:'insect',archetype:'flyer',signature:'Lames oscillantes',behavior:'Créature aérienne métallique, trajectoires imprévisibles.',limbs:6}),
+  monster('sh3','Double Head',{kind:'quadruped',archetype:'rushdown',signature:'Double morsure',behavior:'Canidé bandé, bond et morsure prolongée.',head:'double'}),
+  monster('sh3','Insane Cancer',{kind:'mass',archetype:'juggernaut',signature:'Masse cancéreuse',behavior:'Lent, immense, encaisse puis écrase.'}),
+  monster('sh3','Slurper',{kind:'humanoid',archetype:'rushdown',signature:'Rapt au sol',behavior:'Rampe rapidement et tente de renverser la cible.',scale:.78}),
+  monster('sh3','Nurse — Pipe',{kind:'nurse',archetype:'balanced',signature:'Tuyau clinique',behavior:'Enchaînement de coups de tuyau.',weapon:'pipe'}),
+  monster('sh3','Nurse — Revolver',{kind:'nurse',archetype:'zoner',signature:'Décharge clinique',behavior:'Variante armée capable de tirer.',weapon:'revolver',variantOf:'Nurse'}),
+  monster('sh3','Scraper',{kind:'humanoid',archetype:'rushdown',signature:'Lames de l’ordre',behavior:'Serviteur masqué, enchaînements rapides.',weapon:'blades'}),
+  monster('sh3','Split Worm',{kind:'worm',archetype:'boss',boss:true,signature:'Gueule du tunnel',behavior:'Surgit des ouvertures, mord puis se retire.',stageId:'shopping_mall',head:'split'}),
+  monster('sh3','Missionary',{kind:'humanoid',archetype:'boss',boss:true,signature:'Lames du missionnaire',behavior:'Bloque les tirs et attaque avec deux armes courtes.',weapon:'tonfas',stageId:'apartment_roof'}),
+  monster('sh3','Leonard Wolf',{kind:'giant',archetype:'boss',boss:true,signature:'Assaut submergé',behavior:'Boss massif, charges et émergences aquatiques.',stageId:'brookhaven_sh3'}),
+  monster('sh3','Memory of Alessa',{kind:'humanoid',archetype:'trickster',boss:true,signature:'Arsenal des souvenirs',behavior:'Change d’arme et reproduit plusieurs styles de Heather.',weapon:'arsenal',stageId:'lakeside_amusement'}),
+  monster('sh3','God',{kind:'deity',archetype:'boss',boss:true,signature:'Brasier divin',behavior:'Entité gigantesque, griffes et colonnes de feu.',stageId:'church',aura:'fire'}),
+  monster('sh3','Valtiel',{kind:'humanoid',archetype:'ghost',category:'SECRET',signature:'Rotation du sceau',behavior:'Présence habituellement non combattue, adaptée en gardien rituel.',weapon:'none',stageId:'church',unlock:'archive'}),
+  monster('sh3','Sewer Creature',{kind:'serpentine',archetype:'boss',boss:true,category:'SET PIECE',signature:'Tentacule du canal',behavior:'Tentacule aquatique attaquant depuis plusieurs conduits.',stageId:'sewers'}),
+
+  // SILENT HILL 4
+  monster('sh4','Sniffer Dog — Male',{kind:'quadruped',archetype:'rushdown',signature:'Morsure renifleuse',behavior:'Canidé rapide, attaque en meute.'}),
+  monster('sh4','Sniffer Dog — Female',{kind:'quadruped',archetype:'rushdown',signature:'Bond de la femelle',behavior:'Variante plus agressive.',variantOf:'Sniffer Dog'}),
+  monster('sh4','Hummer',{kind:'flyer',archetype:'swarm',signature:'Nuée bourdonnante',behavior:'Petite créature volante attaquant en groupe.'}),
+  monster('sh4','Wall Man',{kind:'wall',archetype:'artillery',signature:'Bras mural',behavior:'Émerge d’une paroi et contrôle une zone verticale.',stageId:'subway_world'}),
+  monster('sh4','Gum Head — Old Type',{kind:'humanoid',archetype:'balanced',signature:'Clé volée',behavior:'Humanoïde simiesque capable de saisir et d’utiliser des objets.',weapon:'club'}),
+  monster('sh4','Gum Head — New Type',{kind:'humanoid',archetype:'rushdown',signature:'Ruée simiesque',behavior:'Variante plus rapide et agressive.',variantOf:'Gum Head',weapon:'club'}),
+  monster('sh4','Twin Victim',{kind:'giant',archetype:'juggernaut',signature:'Marche des deux corps',behavior:'Grand corps à deux têtes qui charge et martèle.',head:'twin'}),
+  monster('sh4','Patient',{kind:'humanoid',archetype:'juggernaut',signature:'Escalier de l’hôpital',behavior:'Frappe avec une arme lourde et produit des sons discordants.',weapon:'club'}),
+  monster('sh4','Toadstool',{kind:'fungus',archetype:'swarm',signature:'Spore toxique',behavior:'Champignon mobile qui libère une petite zone nocive.'}),
+  monster('sh4','Whitestool',{kind:'fungus',archetype:'swarm',signature:'Poussée pâle',behavior:'Variante de Toadstool.',variantOf:'Toadstool'}),
+  monster('sh4','Tremer — Blue',{kind:'insect',archetype:'swarm',signature:'Fourmillement bleu',behavior:'Très petite créature rapide.',color:'#405c6c'}),
+  monster('sh4','Tremer — Red',{kind:'insect',archetype:'swarm',signature:'Fourmillement rouge',behavior:'Variante plus agressive.',variantOf:'Tremer',color:'#713f3d'}),
+  monster('sh4','Bottom',{kind:'mass',archetype:'juggernaut',signature:'Masse inférieure',behavior:'Version renforcée du Twin Victim.',variantOf:'Twin Victim',head:'twin'}),
+  monster('sh4','Ghost — Victim',{kind:'ghost',archetype:'ghost',signature:'Étreinte persistante',behavior:'Victime immortelle qui traverse les obstacles et inflige une aura.',aura:'pain'}),
+  monster('sh4','Man with the Coat',{kind:'humanoid',archetype:'zoner',boss:true,signature:'Poursuite de Walter',behavior:'Traque avec arme à feu ou arme blanche.',weapon:'pistol',stageId:'apartment_world'}),
+  monster('sh4','Wheelchair',{kind:'wheelchair',archetype:'ghost',signature:'Percussion hantée',behavior:'Objet invulnérable dans le jeu d’origine, adapté en charge spectrale.',adaptation:'La chaise ne peut être vaincue dans son apparition d’origine ; ici elle dispose d’une jauge de stabilité.',stageId:'hospital_world'}),
+  monster('sh4','Greedy Worm',{kind:'worm',archetype:'artillery',signature:'Conduit vivant',behavior:'Structure vivante habituellement passive, adaptée en contrôle du terrain.',unlock:'archive'}),
+  monster('sh4','One Truth',{kind:'giant',archetype:'boss',boss:true,signature:'Visages du puits',behavior:'Forme finale du Twin Victim, attaques lourdes et pulsations.',stageId:'water_prison'}),
+  monster('sh4','Sacrificed Walter',{kind:'mass',archetype:'boss',boss:true,signature:'Rituel des vingt-et-un',behavior:'Corps monumental lié au rituel, invocations et ondes.',stageId:'apartment_world'}),
+  monster('sh4','Walter Sullivan',{kind:'humanoid',archetype:'boss',boss:true,category:'HUMAN BOSS',signature:'Assaut du ritualiste',behavior:'Alterner arme à feu, tronçonneuse et déplacement agressif.',weapon:'chainsaw',stageId:'apartment_world'}),
+  monster('sh4','Eileen Head',{kind:'giant',archetype:'artillery',category:'SET PIECE',signature:'Regard monumental',behavior:'Tête géante non combattue, adaptée en boss de décor.',stageId:'hospital_world',unlock:'archive'}),
+
+  // ORIGINS
+  monster('origins','Straight-Jacket',{kind:'humanoid',archetype:'zoner',signature:'Crachat contraint',behavior:'Corps enfermé qui projette un liquide et frappe du torse.'}),
+  monster('origins','Nurse',{kind:'nurse',archetype:'balanced',signature:'Seringue de Cedar Grove',behavior:'Attaque au scalpel et mouvement irrégulier.',weapon:'scalpel'}),
+  monster('origins','Carrion',{kind:'quadruped',archetype:'juggernaut',signature:'Masse charognarde',behavior:'Bête lourde qui charge au sol.'}),
+  monster('origins','Remnant',{kind:'ghost',archetype:'ghost',signature:'Ombre miroir',behavior:'Silhouette projetée qui apparaît au contact des miroirs.'}),
+  monster('origins','Ariel',{kind:'doll',archetype:'trickster',signature:'Fil de marionnette',behavior:'Mannequin suspendu, coups de jambes et chutes verticales.'}),
+  monster('origins','Caliban',{kind:'giant',archetype:'juggernaut',signature:'Charge de Caliban',behavior:'Grande créature animale à membres disloqués.'}),
+  monster('origins','Two-Back',{kind:'mass',archetype:'grappler',signature:'Étreinte double',behavior:'Masse à deux corps, saisie et écrasement.'}),
+  monster('origins','The Butcher',{kind:'humanoid',archetype:'juggernaut',boss:true,signature:'Couperet du boucher',behavior:'Avance lente, immense portée au couperet.',weapon:'cleaver',stageId:'riverside_motel'}),
+  monster('origins','Memory of Helen Grady',{kind:'cage',archetype:'boss',boss:true,signature:'Cage maternelle',behavior:'Boss suspendu, attaques de cage et projections.',stageId:'cedar_grove'}),
+  monster('origins','Memory of Richard Grady',{kind:'giant',archetype:'boss',boss:true,signature:'Poings du père',behavior:'Boss massif, coups directs et charge.',stageId:'riverside_motel'}),
+  monster('origins','Demon',{kind:'deity',archetype:'boss',boss:true,signature:'Flammes du Flauros',behavior:'Entité ailée, feu et frappes plongeantes.',stageId:'antique_shop',aura:'fire'}),
+
+  // HOMECOMING
+  monster('homecoming','Lurker',{kind:'humanoid',archetype:'rushdown',signature:'Lames rampantes',behavior:'Créature basse aux bras-lames, bond rapide.',limbs:4}),
+  monster('homecoming','Feral',{kind:'quadruped',archetype:'rushdown',signature:'Traque férale',behavior:'Canidé écorché, esquive et morsure.'}),
+  monster('homecoming','Smog',{kind:'humanoid',archetype:'zoner',signature:'Nuage de smog',behavior:'Ouvre sa cage thoracique pour libérer un nuage toxique.',aura:'smoke'}),
+  monster('homecoming','Needler',{kind:'spider',archetype:'trickster',signature:'Garde des lames',behavior:'Bloque de face et frappe avec quatre membres-lames.',limbs:6}),
+  monster('homecoming','Schism',{kind:'humanoid',archetype:'juggernaut',signature:'Crâne tranchant',behavior:'Tête en lame, coups verticaux puissants.',head:'blade'}),
+  monster('homecoming','Siam',{kind:'giant',archetype:'grappler',signature:'Corps enlacés',behavior:'Deux corps liés, grande portée et saisie.'}),
+  monster('homecoming','Order Soldier',{kind:'humanoid',archetype:'balanced',category:'HUMAN ENEMY',signature:'Matraque de l’Ordre',behavior:'Combattant humain armé.',weapon:'baton'}),
+  monster('homecoming','Bogeyman',{kind:'pyramid',archetype:'juggernaut',boss:true,signature:'Grande lame du Bogeyman',behavior:'Exécuteur massif de Homecoming.',weapon:'great_knife'}),
+  monster('homecoming','Sepulcher',{kind:'giant',archetype:'boss',boss:true,signature:'Frappe des racines',behavior:'Boss pendu qui écrase et frappe avec ses appendices.',stageId:'shepherds_glen',limbs:6}),
+  monster('homecoming','Scarlet — Doll Form',{kind:'doll',archetype:'boss',boss:true,signature:'Danse de porcelaine',behavior:'Poupée géante, coups longs et bris de membres.',stageId:'grand_hotel'}),
+  monster('homecoming','Scarlet — Spider Form',{kind:'spider',archetype:'boss',boss:true,signature:'Mue arachnéenne',behavior:'Seconde phase rapide au plafond.',variantOf:'Scarlet',stageId:'grand_hotel',limbs:8}),
+  monster('homecoming','Asphyxia',{kind:'serpentine',archetype:'boss',boss:true,signature:'Anneau de bras',behavior:'Corps composé de multiples bras, balayages circulaires.',stageId:'church_hc',limbs:12}),
+  monster('homecoming','Amnion — Hanging Form',{kind:'spider',archetype:'boss',boss:true,signature:'Pattes de la mère',behavior:'Boss arachnéen suspendu, frappes de pattes.',stageId:'underground_hc',limbs:8}),
+  monster('homecoming','Amnion — Exposed Form',{kind:'mass',archetype:'boss',boss:true,signature:'Noyau exposé',behavior:'Seconde phase vulnérable mais agressive.',variantOf:'Amnion',stageId:'underground_hc'}),
+
+  // SHATTERED MEMORIES
+  monster('shattered','Raw Shock — Base',{kind:'humanoid',archetype:'rushdown',signature:'Étreinte glacée',behavior:'Poursuit et agrippe ; n’est pas affronté directement dans l’original.',adaptation:'Le gameplay original privilégie la fuite ; le versus transforme l’étreinte en projection.',affliction:'frost'}),
+  monster('shattered','Raw Shock — Feminine',{kind:'humanoid',archetype:'grappler',signature:'Étreinte féminine',behavior:'Variation morphologique déterminée par le profil psychologique.',variantOf:'Raw Shock',affliction:'frost'}),
+  monster('shattered','Raw Shock — Diseased',{kind:'humanoid',archetype:'ghost',signature:'Pulsation malade',behavior:'Variation couverte de lésions, aura affaiblissante.',variantOf:'Raw Shock',aura:'sick',affliction:'frost'}),
+  monster('shattered','Raw Shock — Abstract',{kind:'mass',archetype:'trickster',signature:'Forme abstraite',behavior:'Variation géométrique, hitbox changeante.',variantOf:'Raw Shock',affliction:'frost'}),
+  monster('shattered','Raw Shock — Atrophied',{kind:'child',archetype:'rushdown',signature:'Ruée atrophiée',behavior:'Variation plus petite et nerveuse.',variantOf:'Raw Shock',affliction:'frost'}),
+
+  // DOWNPOUR
+  monster('downpour','Screamer',{kind:'humanoid',archetype:'zoner',signature:'Cri incapacitant',behavior:'Cri à distance puis griffes rapprochées.'}),
+  monster('downpour','Weeping Bat',{kind:'humanoid',archetype:'trickster',signature:'Chute de la chauve-souris',behavior:'Grimpe, se camoufle et bondit depuis les hauteurs.'}),
+  monster('downpour','Doll',{kind:'doll',archetype:'trickster',signature:'Ombres de la poupée',behavior:'Projette des silhouettes et se cache derrière ses doubles.'}),
+  monster('downpour','Shadow',{kind:'ghost',archetype:'ghost',signature:'Double intangible',behavior:'Projection invoquée par la Doll.',variantOf:'Doll'}),
+  monster('downpour','Prisoner Minion — Brawler',{kind:'humanoid',archetype:'balanced',signature:'Combo du prisonnier',behavior:'Combattant rapide au corps à corps.'}),
+  monster('downpour','Prisoner Minion — Agile',{kind:'humanoid',archetype:'rushdown',signature:'Esquive du prisonnier',behavior:'Variante plus mobile.',variantOf:'Prisoner Minion'}),
+  monster('downpour','Prisoner Juggernaut',{kind:'giant',archetype:'juggernaut',signature:'Plaquage du juggernaut',behavior:'Très résistant, charge et projection.'}),
+  monster('downpour','Tormented Soul',{kind:'ghost',archetype:'ghost',signature:'Souffle du tourment',behavior:'Apparition liée aux séquences de l’Otherworld.'}),
+  monster('downpour','Wall Corpse',{kind:'wall',archetype:'artillery',signature:'Jet du cadavre mural',behavior:'Créature fixée au mur projetant des substances.'}),
+  monster('downpour','Void',{kind:'void',archetype:'boss',boss:true,category:'CHASE BOSS',signature:'Dévoration de l’espace',behavior:'Poursuite de l’Otherworld adaptée en mur avançant.',stageId:'overlook',adaptation:'Le Void est une menace de poursuite ; ici sa jauge représente la distance restante avant absorption.'}),
+  monster('downpour','Monocle Man',{kind:'humanoid',archetype:'ghost',signature:'Regard du monocle',behavior:'Apparition symbolique adaptée en combattant secret.',unlock:'archive'}),
+  monster('downpour','Bogeyman',{kind:'humanoid',archetype:'juggernaut',boss:true,signature:'Marteau du Bogeyman',behavior:'Frappe au marteau, exécution lente et massive.',weapon:'hammer',stageId:'overlook'}),
+  monster('downpour','Wheelman',{kind:'wheelchair',archetype:'boss',boss:true,signature:'Machine du Wheelman',behavior:'Boss final mécanisé, câbles et décharges.',stageId:'overlook',limbs:6}),
+
+  // THE ARCADE
+  monster('arcade','Mama',{kind:'giant',archetype:'boss',boss:true,signature:'Étreinte de Mama',behavior:'Boss unique de The Arcade, coups massifs et invocations.',stageId:'arcade_ship'}),
+  monster('arcade','Phantom',{kind:'ghost',archetype:'boss',boss:true,signature:'Assaut spectral',behavior:'Boss fantomatique unique, téléportations et projectiles.',stageId:'arcade_ship'}),
+  monster('arcade','Greedy Worm — Arcade',{kind:'worm',archetype:'boss',boss:true,signature:'Tunnel de l’Arcade',behavior:'Adaptation active du Greedy Worm pour l’arcade.',variantOf:'Greedy Worm',stageId:'arcade_ship'}),
+  monster('arcade','Split Head — Arcade',{kind:'giant',archetype:'boss',boss:true,signature:'Mâchoire d’arcade',behavior:'Retour du Split Head dans un format rail-shooter.',variantOf:'Split Head',stageId:'arcade_ship',head:'split'}),
+
+  // BOOK OF MEMORIES — variantes et gardiens du roster du jeu
+  monster('bom','Air Screamer',{kind:'flyer',archetype:'flyer',signature:'Piqué du livre',behavior:'Version Book of Memories.',variantOf:'Air Screamer'}),
+  monster('bom','Bogeyman',{kind:'humanoid',archetype:'juggernaut',signature:'Marteau du livre',behavior:'Version Book of Memories.',weapon:'hammer',variantOf:'Bogeyman'}),
+  monster('bom','Butcher',{kind:'humanoid',archetype:'juggernaut',signature:'Couperet du livre',behavior:'Version Book of Memories.',weapon:'cleaver',variantOf:'The Butcher'}),
+  monster('bom','Double Head',{kind:'quadruped',archetype:'rushdown',signature:'Morsure du livre',behavior:'Version Book of Memories.',variantOf:'Double Head'}),
+  monster('bom','Ghost',{kind:'ghost',archetype:'ghost',signature:'Passage du livre',behavior:'Version Book of Memories.',variantOf:'Ghost — Victim'}),
+  monster('bom','Insane Cancer',{kind:'mass',archetype:'juggernaut',signature:'Tumeur du livre',behavior:'Version Book of Memories.',variantOf:'Insane Cancer'}),
+  monster('bom','Needler',{kind:'spider',archetype:'trickster',signature:'Garde du livre',behavior:'Version Book of Memories.',variantOf:'Needler',limbs:6}),
+  monster('bom','Nurse',{kind:'nurse',archetype:'balanced',signature:'Soins du livre',behavior:'Version Book of Memories.',variantOf:'Nurse'}),
+  monster('bom','Pyramid Head',{kind:'pyramid',archetype:'juggernaut',signature:'Jugement du livre',behavior:'Version Book of Memories.',variantOf:'Red Pyramid Thing',weapon:'great_knife'}),
+  monster('bom','Schism',{kind:'humanoid',archetype:'juggernaut',signature:'Scission du livre',behavior:'Version Book of Memories.',variantOf:'Schism',head:'blade'}),
+  monster('bom','Straight-Jacket',{kind:'humanoid',archetype:'zoner',signature:'Contrainte du livre',behavior:'Version Book of Memories.',variantOf:'Straight-Jacket'}),
+  monster('bom','Swarm',{kind:'insect',archetype:'swarm',signature:'Nuée du livre',behavior:'Petites créatures en essaim.'}),
+  monster('bom','Tremer',{kind:'insect',archetype:'swarm',signature:'Fourmillement du livre',behavior:'Version Book of Memories.',variantOf:'Tremer'}),
+  monster('bom','Flesh Lips',{kind:'cage',archetype:'grappler',boss:true,signature:'Cage du livre',behavior:'Version Book of Memories.',variantOf:'Flesh Lip'}),
+  monster('bom','Mother',{kind:'mass',archetype:'boss',boss:true,signature:'Matrice du livre',behavior:'Boss propre au Book of Memories, invocations et masse charnelle.',stageId:'book_zone'}),
+  monster('bom','Valtiel',{kind:'humanoid',archetype:'boss',boss:true,signature:'Gardien du livre',behavior:'Version boss de Valtiel.',variantOf:'Valtiel',stageId:'book_zone'}),
+  monster('bom','Fire Guardian',{kind:'deity',archetype:'boss',boss:true,signature:'Cercle de feu',behavior:'Gardien élémentaire du feu.',aura:'fire',stageId:'book_fire'}),
+  monster('bom','Wood Guardian',{kind:'deity',archetype:'boss',boss:true,signature:'Racines du bois',behavior:'Gardien élémentaire du bois.',aura:'wood',stageId:'book_wood'}),
+  monster('bom','Wood Sapling',{kind:'fungus',archetype:'swarm',signature:'Jeune racine',behavior:'Invocation du Wood Guardian.',variantOf:'Wood Guardian',stageId:'book_wood'}),
+  monster('bom','Light Guardian',{kind:'deity',archetype:'boss',boss:true,signature:'Rayon de lumière',behavior:'Gardien élémentaire de la lumière.',aura:'light',stageId:'book_light'}),
+  monster('bom','Water Guardian',{kind:'deity',archetype:'boss',boss:true,signature:'Vague du gardien',behavior:'Gardien élémentaire de l’eau.',aura:'water',stageId:'book_water'}),
+  monster('bom','Earth Guardian',{kind:'giant',archetype:'boss',boss:true,signature:'Faille de terre',behavior:'Gardien élémentaire de la terre.',aura:'earth',stageId:'book_earth'}),
+  monster('bom','Blood Guardian',{kind:'deity',archetype:'boss',boss:true,signature:'Marée de sang',behavior:'Gardien élémentaire du sang.',aura:'blood',stageId:'book_blood'}),
+  monster('bom','Blood Baby',{kind:'child',archetype:'swarm',signature:'Morsure du sang',behavior:'Petite invocation de la zone sang.',stageId:'book_blood'}),
+  monster('bom','Blood Mama',{kind:'mass',archetype:'grappler',signature:'Protection maternelle',behavior:'Créature de la zone sang.',stageId:'book_blood'}),
+  monster('bom','Steel Guardian',{kind:'giant',archetype:'boss',boss:true,signature:'Marteau d’acier',behavior:'Gardien élémentaire de l’acier.',aura:'steel',stageId:'book_steel'}),
+  monster('bom','Gray Child',{kind:'child',archetype:'grappler',signature:'Couteau mémoire',behavior:'Contenu d’extension de Book of Memories.',variantOf:'Grey Child',weapon:'knife'}),
+  monster('bom','Raw Shock',{kind:'humanoid',archetype:'rushdown',signature:'Étreinte mémoire',behavior:'Contenu d’extension de Book of Memories.',variantOf:'Raw Shock'}),
+
+  // P.T. / THE SHORT MESSAGE
+  monster('pt','Lisa',{kind:'ghost',archetype:'ghost',signature:'Apparition derrière soi',behavior:'Apparition et saisie soudaine dans la boucle du couloir.',stageId:'looping_hall',adaptation:'P.T. ne propose pas de combat ; Lisa devient un personnage secret de type apparition.',unlock:'archive'}),
+  monster('shortmessage','Sakura Head',{kind:'flowerhead',archetype:'rushdown',boss:true,signature:'Poursuite des pétales',behavior:'Traque rapide, frappes de branches et accélérations soudaines.',stageId:'villa',head:'flowers',aura:'petals',affliction:'bloom'}),
+
+  // SILENT HILL f
+  monster('shf','Kashimashi',{kind:'humanoid',archetype:'balanced',signature:'Murmure double',behavior:'Créature humanoïde aux attaques coordonnées.',affliction:'bloom'}),
+  monster('shf','Ayakakashi',{kind:'humanoid',archetype:'trickster',signature:'Masque trompeur',behavior:'Feinte, disparition brève et frappe latérale.',head:'mask',affliction:'bloom'}),
+  monster('shf','Ara-abare',{kind:'giant',archetype:'juggernaut',signature:'Fureur d’Ebisugaoka',behavior:'Charge brutale et large balayage.'}),
+  monster('shf','Irohihi',{kind:'humanoid',archetype:'zoner',signature:'Fil coloré',behavior:'Contrôle de distance avec appendices.'}),
+  monster('shf','Corruptor',{kind:'fungus',archetype:'artillery',signature:'Floraison corruptrice',behavior:'Propage des zones de corruption au sol.',aura:'rot'}),
+  monster('shf','Hatcher',{kind:'mass',archetype:'grappler',signature:'Éclosion charnelle',behavior:'Ouvre son corps pour saisir et libérer des rejetons.'}),
+  monster('shf','Kamugara',{kind:'deity',archetype:'boss',boss:true,signature:'Sentence du sanctuaire',behavior:'Grande entité rituelle, balayages et sceaux.',stageId:'dark_shrine'}),
+  monster('shf','Harai Katashiro',{kind:'doll',archetype:'trickster',signature:'Purification inversée',behavior:'Effigie rituelle, leurres et déplacements secs.',stageId:'dark_shrine'}),
+  monster('shf','Oi-omoi',{kind:'mass',archetype:'juggernaut',signature:'Poids du regret',behavior:'Masse lourde qui ralentit l’espace proche.'}),
+  monster('shf','Dark Hatcher',{kind:'mass',archetype:'boss',boss:true,signature:'Éclosion obscure',behavior:'Variante renforcée du Hatcher.',variantOf:'Hatcher',stageId:'dark_shrine',aura:'dark'}),
+  monster('shf','Drum Monster',{kind:'giant',archetype:'artillery',signature:'Battement du tambour',behavior:'Ondes rythmiques et impacts à distance.',stageId:'festival_square',motif:'drum'}),
+  monster('shf','Sakuko-Like Entity',{kind:'humanoid',archetype:'boss',boss:true,signature:'Mémoire de Sakuko',behavior:'Manifestation boss associée à Sakuko.',stageId:'school_shf'}),
+  monster('shf','Rinko-Like Entity',{kind:'humanoid',archetype:'boss',boss:true,signature:'Mémoire de Rinko',behavior:'Manifestation boss associée à Rinko.',stageId:'school_shf'}),
+  monster('shf','Hinako’s Father',{kind:'giant',archetype:'boss',boss:true,signature:'Autorité du père',behavior:'Manifestation parentale, frappes lourdes.',stageId:'hinako_home'}),
+  monster('shf','Hinako’s Mother',{kind:'mass',archetype:'boss',boss:true,signature:'Entrave de la mère',behavior:'Manifestation parentale, saisies et zones.',stageId:'hinako_home'}),
+  monster('shf','Shiromuku',{kind:'fox',archetype:'boss',boss:true,signature:'Procession blanche',behavior:'Entité cérémonielle, dashs et rubans tranchants.',stageId:'dark_shrine',aura:'white'}),
+  monster('shf','Tsukumogami',{kind:'doll',archetype:'boss',boss:true,signature:'Objets éveillés',behavior:'Boss d’objets animés, changement de forme.',stageId:'dark_shrine'}),
+  monster('shf','Shichibi',{kind:'fox',archetype:'boss',boss:true,signature:'Sept queues',behavior:'Renard rituel à sept queues, combos multiples.',stageId:'dark_shrine',limbs:7}),
+  monster('shf','Kyubi',{kind:'fox',archetype:'boss',boss:true,signature:'Neuf queues',behavior:'Forme majeure à neuf queues, assauts en éventail.',stageId:'dark_shrine',limbs:9}),
+
+  // UNIVERS CINÉMATOGRAPHIQUE
+  monster('film','Armless Man',{kind:'humanoid',archetype:'zoner',signature:'Projection corrosive',behavior:'Démarche contorsionnée, jet corrosif et pression lente.',stageId:'film_midwich',affliction:'decay',head:'wrapped'}),
+  monster('film','Dark Nurse',{kind:'nurse',archetype:'puppet',signature:'Réflexe à la lumière',behavior:'Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement.',stageId:'film_hospital',weapon:'knife',trait:'convulsion'}),
+  monster('film','Grey Child — Film',{kind:'child',archetype:'swarm',signature:'Étreinte carbonisée',behavior:'Se déplace en groupe et agrippe la cible dans les ruelles en flammes.',stageId:'film_midwich',variantOf:'Grey Child',aura:'smoke'}),
+  monster('film','Creeper Swarm — Film',{kind:'insect',archetype:'swarm',signature:'Déferlement de vermine',behavior:'Attaque en essaim et contourne les défenses au sol.',stageId:'film_midwich',variantOf:'Creeper'}),
+  monster('film','Colin the Janitor',{kind:'ghost',archetype:'grappler',signature:'Barbelés du gardien',behavior:'Rampe, agrippe et propage la corruption autour de lui.',stageId:'film_midwich',affliction:'bind',aura:'rot'}),
+  monster('film','Red Pyramid — Film',{kind:'pyramid',archetype:'boss',boss:true,signature:'Sentence du grand couteau',behavior:'Exécuteur massif, balayages très larges et saisie punitive.',stageId:'film_church',weapon:'great_knife',variantOf:'Red Pyramid Thing',affliction:'bleed'}),
+  monster('film','Mannequin Monster',{kind:'spider',archetype:'boss',boss:true,signature:'Assemblage de membres',behavior:'Grimpe, bondit et referme ses membres autour de la cible.',stageId:'film_sanctuary',limbs:8,affliction:'bind'}),
+  monster('film','Missionary — Revelation',{kind:'humanoid',archetype:'boss',boss:true,signature:'Couronne de lames',behavior:'Assauts rapides avec lames intégrées et parade agressive.',stageId:'film_sanctuary',weapon:'blades',head:'blade',affliction:'bleed'}),
+
+  // SILENT HILL: ASCENSION
+  monster('ascension','Wanderer',{kind:'humanoid',archetype:'balanced',signature:'Marche du deuil',behavior:'Approche constante, coups irréguliers et pression de proximité.',stageId:'hope_junction',aura:'smoke'}),
+  monster('ascension','Fighter',{kind:'humanoid',archetype:'rushdown',signature:'Assaut enveloppé',behavior:'Manifestation humanoïde agressive, rafales courtes et poursuite.',stageId:'hope_junction'}),
+  monster('ascension','Snarler',{kind:'quadruped',archetype:'rushdown',signature:'Traque de la meute',behavior:'Prédateur canin rapide qui bondit après une courte mise en joue.',stageId:'stilledalen'}),
+  monster('ascension','Stinger',{kind:'flyer',archetype:'flyer',signature:'Ailes barbelées',behavior:'Déploie ses ailes, prend de l’altitude puis plonge sur sa cible.',stageId:'stilledalen',head:'mask'}),
+  monster('ascension','The Immolator',{kind:'giant',archetype:'artillery',boss:true,signature:'Feu intergénérationnel',behavior:'Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur.',stageId:'ascension_otherworld',aura:'fire',affliction:'burn'}),
+  monster('ascension','The Collector',{kind:'deity',archetype:'boss',boss:true,signature:'Porte entre les mondes',behavior:'Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert.',stageId:'ascension_otherworld',limbs:4,affliction:'dread'}),
+  monster('ascension','Stilledalen Stinger',{kind:'flyer',archetype:'trickster',signature:'Voile de tendons',behavior:'Variante de Stinger orientée feinte et attaque hors écran.',stageId:'stilledalen',variantOf:'Stinger',head:'mask',affliction:'static'})
+];
+
+export const STAGES = [
+  {id:'midwich',name:'MIDWICH ELEMENTARY',source:'sh1',family:'school',sky:['#27302b','#090c0b','#020303'],weather:'fog',props:['lockers','desks','fences']},
+  {id:'alchemilla',name:'ALCHEMILLA HOSPITAL',source:'sh1',family:'hospital',sky:['#38403a','#141715','#050606'],weather:'ash',props:['beds','curtains','lamps']},
+  {id:'old_silent_hill',name:'OLD SILENT HILL',source:'sh1',family:'street',sky:['#3e4540','#161a17','#050606'],weather:'fog',props:['road','shops','chasm']},
+  {id:'nowhere',name:'NOWHERE',source:'sh1',family:'otherworld',sky:['#301d1d','#0e0808','#020202'],weather:'embers',props:['grates','chains','fans']},
+  {id:'lakeside_amusement',name:'LAKESIDE AMUSEMENT PARK',source:'sh1',family:'amusement',sky:['#26313b','#0e1218','#030405'],weather:'rain',props:['carousel','wheel','booths']},
+  {id:'woodside',name:'WOOD SIDE APARTMENTS',source:'sh2',family:'apartment',sky:['#37372f','#141510','#040504'],weather:'fog',props:['stairs','doors','trash']},
+  {id:'blue_creek',name:'BLUE CREEK — STAIRWELL',source:'sh2',family:'apartment',sky:['#332a26','#120d0b','#030303'],weather:'dust',props:['stairs','bars','water']},
+  {id:'brookhaven_sh2',name:'BROOKHAVEN — BASEMENT',source:'sh2',family:'hospital',sky:['#34332e','#12120f','#040404'],weather:'dust',props:['beds','cages','elevator']},
+  {id:'toluca_prison',name:'TOLUCA PRISON',source:'sh2',family:'prison',sky:['#2e3331','#0d100f','#020303'],weather:'cold',props:['cells','gallows','meat']},
+  {id:'labyrinth',name:'THE LABYRINTH',source:'sh2',family:'labyrinth',sky:['#2d2521','#0c0908','#020202'],weather:'water',props:['walls','door','pit']},
+  {id:'hotel_otherworld',name:'LAKEVIEW HOTEL — OTHERWORLD',source:'sh2',family:'hotel',sky:['#39342e','#15110d','#030303'],weather:'embers',props:['stairs','fire','mirrors']},
+  {id:'shopping_mall',name:'CENTRAL SQUARE MALL',source:'sh3',family:'mall',sky:['#424039','#18150f','#050403'],weather:'dust',props:['shops','shutters','signs']},
+  {id:'brookhaven_sh3',name:'BROOKHAVEN — FLOODED ROOM',source:'sh3',family:'hospital',sky:['#24343a','#0a1316','#020304'],weather:'water',props:['water','pipes','doors']},
+  {id:'church',name:'THE CHURCH',source:'sh3',family:'church',sky:['#3d2622','#130a08','#020202'],weather:'embers',props:['altar','fans','flesh']},
+  {id:'apartment_roof',name:'DAISY VILLA ROOFTOP',source:'sh3',family:'roof',sky:['#42464a','#171b1e','#050607'],weather:'rain',props:['fence','water','antenna']},
+  {id:'sewers',name:'SEWER CHANNEL',source:'sh3',family:'sewer',sky:['#29342e','#0b100d','#020302'],weather:'water',props:['canal','pipes','grates']},
+  {id:'room_302',name:'ROOM 302',source:'sh4',family:'room',sky:['#3d392f','#16130e','#040403'],weather:'dust',props:['window','chains','door']},
+  {id:'subway_world',name:'SUBWAY WORLD',source:'sh4',family:'subway',sky:['#343634','#111313','#030303'],weather:'sparks',props:['train','tiles','turnstile']},
+  {id:'water_prison',name:'WATER PRISON WORLD',source:'sh4',family:'prison',sky:['#263038','#0b1014','#020303'],weather:'water',props:['tower','cells','spotlight']},
+  {id:'apartment_world',name:'APARTMENT WORLD',source:'sh4',family:'apartment',sky:['#35302d','#120f0d','#030303'],weather:'ash',props:['hall','doors','umbilical']},
+  {id:'hospital_world',name:'HOSPITAL WORLD',source:'sh4',family:'hospital',sky:['#3a3735','#131110','#030303'],weather:'dust',props:['wheelchairs','beds','head']},
+  {id:'cedar_grove',name:'CEDAR GROVE SANITARIUM',source:'origins',family:'hospital',sky:['#3e3934','#17120f','#040303'],weather:'ash',props:['cells','mirrors','gurneys']},
+  {id:'riverside_motel',name:'RIVERSIDE MOTEL',source:'origins',family:'motel',sky:['#3a342f','#15110e','#040303'],weather:'rain',props:['rooms','neon','pool']},
+  {id:'shepherds_glen',name:'SHEPHERD’S GLEN',source:'homecoming',family:'street',sky:['#3d423e','#161a17','#040504'],weather:'fog',props:['townhall','road','trees']},
+  {id:'grand_hotel',name:'GRAND HOTEL',source:'homecoming',family:'hotel',sky:['#3e302c','#150d0a','#030202'],weather:'embers',props:['elevator','dolls','boiler']},
+  {id:'nightmare_school',name:'FROZEN SCHOOL',source:'shattered',family:'ice',sky:['#27414b','#0c1a20','#020405'],weather:'snow',props:['ice','lockers','maze']},
+  {id:'overlook',name:'OVERLOOK PENITENTIARY',source:'downpour',family:'prison',sky:['#2d3740','#0d1318','#020304'],weather:'rain',props:['cells','towers','flood']},
+  {id:'arcade_ship',name:'LITTLE BARONESS',source:'arcade',family:'ship',sky:['#2e3436','#0c1113','#020303'],weather:'water',props:['deck','crates','chains']},
+  {id:'book_zone',name:'BOOK OF MEMORIES — NEXUS',source:'bom',family:'book',sky:['#3b3040','#140d18','#030204'],weather:'runes',props:['pages','doors','altar']},
+  {id:'looping_hall',name:'204863 — LOOPING HALL',source:'pt',family:'hall',sky:['#3c3730','#16120d','#040302'],weather:'flicker',props:['radio','bathroom','clock']},
+  {id:'villa',name:'KETTENSTADT VILLA',source:'shortmessage',family:'villa',sky:['#3a3437','#140f11','#030203'],weather:'petals',props:['graffiti','stairs','fence']},
+  {id:'ebisugaoka',name:'EBISUGAOKA — MAIN STREET',source:'shf',family:'village',sky:['#454039','#18130f','#050403'],weather:'fog',props:['shops','phone','flowers']},
+  {id:'dark_shrine',name:'DARK SHRINE',source:'shf',family:'shrine',sky:['#3b2326','#14080a','#030102'],weather:'petals',props:['torii','lanterns','roots']},
+  {id:'school_shf',name:'EBISUGAOKA MIDDLE SCHOOL',source:'shf',family:'school',sky:['#3d3b35','#15140f','#040403'],weather:'dust',props:['desks','corridor','flowers']},
+  {id:'hinako_home',name:'HINAKO’S HOME',source:'shf',family:'house',sky:['#3b322f','#140f0d','#030302'],weather:'dust',props:['tatami','doors','roots']},
+  {id:'festival_square',name:'FESTIVAL SQUARE',source:'shf',family:'festival',sky:['#412b2a','#160b0b','#030202'],weather:'embers',props:['drums','stalls','lanterns']},
+  {id:'book_fire',name:'FIRE ZONE',source:'bom',family:'elemental',sky:['#4d221a','#170704','#030101'],weather:'embers',props:['lava','runes','pillars']},
+  {id:'book_wood',name:'WOOD ZONE',source:'bom',family:'elemental',sky:['#30402b','#0d150a','#020402'],weather:'spores',props:['roots','moss','runes']},
+  {id:'book_light',name:'LIGHT ZONE',source:'bom',family:'elemental',sky:['#4a493d','#17160e','#030302'],weather:'light',props:['mirrors','runes','pillars']},
+  {id:'book_water',name:'WATER ZONE',source:'bom',family:'elemental',sky:['#263e4b','#09151b','#020304'],weather:'water',props:['pools','runes','bridges']},
+  {id:'book_earth',name:'EARTH ZONE',source:'bom',family:'elemental',sky:['#40372a','#151008','#030302'],weather:'dust',props:['rocks','runes','cracks']},
+  {id:'book_blood',name:'BLOOD ZONE',source:'bom',family:'elemental',sky:['#471e22','#160607','#030101'],weather:'blood',props:['veins','runes','pools']},
+  {id:'book_steel',name:'STEEL ZONE',source:'bom',family:'elemental',sky:['#333a40','#0f1316','#030405'],weather:'sparks',props:['gears','runes','chains']},
+  {id:'antique_shop',name:'GREEN LION ANTIQUES',source:'origins',family:'otherworld',sky:['#3c2b27','#150c09','#030202'],weather:'embers',props:['flauros','altar','fire']},
+  {id:'church_hc',name:'SHEPHERD’S GLEN CHURCH',source:'homecoming',family:'church',sky:['#3d2926','#140a08','#030202'],weather:'embers',props:['organ','altar','chains']},
+  {id:'underground_hc',name:'UNDERGROUND LAIR',source:'homecoming',family:'lair',sky:['#302a28','#0e0a09','#020202'],weather:'dust',props:['webs','machines','cocoons']},
+  {id:'film_midwich',name:'MIDWICH — FILM OTHERWORLD',source:'film',family:'school',sky:['#392d29','#120a08','#020202'],weather:'embers',props:['lockers','fence','chains'],hazard:'fallingDebris'},
+  {id:'film_hospital',name:'BROOKHAVEN — DARK WARD',source:'film',family:'hospital',sky:['#34322e','#100e0c','#020202'],weather:'flicker',props:['beds','gurneys','chains'],hazard:'staticBurst'},
+  {id:'film_church',name:'CHURCH OF THE ORDER',source:'film',family:'church',sky:['#3b2522','#120706','#020101'],weather:'embers',props:['altar','chains','flesh'],hazard:'chainSweep'},
+  {id:'film_sanctuary',name:'SANCTUARY — REVELATION',source:'film',family:'lair',sky:['#332629','#100709','#020102'],weather:'ash',props:['chains','cages','altar'],hazard:'bloodTide'},
+  {id:'hope_junction',name:'HOPE’S JUNCTION',source:'ascension',family:'street',sky:['#3b3e3c','#121514','#030404'],weather:'fog',props:['road','shops','fence'],hazard:'staticBurst'},
+  {id:'stilledalen',name:'STILLEDALEN WOODS',source:'ascension',family:'village',sky:['#303933','#0d120f','#020302'],weather:'rain',props:['trees','roots','lanterns'],hazard:'fallingDebris'},
+  {id:'ascension_otherworld',name:'ASCENSION — OPEN GATE',source:'ascension',family:'otherworld',sky:['#392323','#110606','#020101'],weather:'embers',props:['runes','chains','altar'],hazard:'emberFall'}
+];
+
+const hazardByStage = Object.freeze({
+  fog: 'staticBurst', rain: 'fallingDebris', water: 'bloodTide', cold: 'frostWave', snow: 'frostWave',
+  petals: 'petalBloom', embers: 'emberFall', ash: 'fallingDebris', dust: 'fallingDebris', sparks: 'chainSweep',
+  blood: 'bloodTide', flicker: 'staticBurst', runes: 'staticBurst', spores: 'petalBloom', light: 'staticBurst'
+});
+for (const stage of STAGES) stage.hazard ||= hazardByStage[stage.weather] || (stage.family === 'otherworld' ? 'chainSweep' : 'staticBurst');
+
+export const CHRONICLES = [
+  {id:'fog_of_alessa',source:'sh1',title:'LA BRUME D’ALESSA',subtitle:'Midwich → Nowhere',fighters:['sh1_grey_child_005','sh1_split_head_014','sh1_incubus_019'],stages:['midwich','lakeside_amusement','nowhere'],intro:'La ville recommence son cauchemar. Chaque victoire révèle une couche différente du rituel.',outro:'Le monde rouille, puis retient son souffle.'},
+  {id:'james_sentence',source:'sh2',title:'LA SENTENCE DE JAMES',subtitle:'Apartments → Lakeview',fighters:[],stages:['woodside','labyrinth','hotel_otherworld'],intro:'La culpabilité prend des formes qui savent combattre.',outro:'Le lac ne donne pas de réponse, seulement un reflet.'},
+  {id:'heather_birth',source:'sh3',title:'NAÎTRE DEUX FOIS',subtitle:'Mall → Church',fighters:[],stages:['shopping_mall','brookhaven_sh3','church'],intro:'Une mémoire héritée traverse la ville et refuse le destin qu’on lui a préparé.',outro:'Le dieu tombe, mais la mémoire reste.'},
+  {id:'room_21',source:'sh4',title:'LES VINGT-ET-UN SACREMENTS',subtitle:'Room 302 → Apartment World',fighters:[],stages:['room_302','water_prison','apartment_world'],intro:'La chambre est une porte. Chaque victime devient une règle du rituel.',outro:'La chaîne se tend jusqu’au dernier nom.'},
+  {id:'travis_mirrors',source:'origins',title:'LES MIROIRS DE TRAVIS',subtitle:'Sanitarium → Antique Shop',fighters:[],stages:['cedar_grove','riverside_motel','antique_shop'],intro:'Les miroirs ne montrent pas un autre monde : ils montrent ce qui attend déjà.',outro:'Le Flauros se referme sur un passé impossible.'},
+  {id:'alex_home',source:'homecoming',title:'LE FILS QUI REVIENT',subtitle:'Shepherd’s Glen → Underground',fighters:[],stages:['shepherds_glen','grand_hotel','underground_hc'],intro:'Les familles ont bâti leur paix sur une dette de sang.',outro:'La ville réclame ce qu’on lui avait promis.'},
+  {id:'harry_ice',source:'shattered',title:'MÉMOIRE SOUS LA GLACE',subtitle:'Frozen School',fighters:[],stages:['nightmare_school'],intro:'Le profil psychologique transforme chaque poursuivant.',outro:'La glace craque autour d’un souvenir recomposé.'},
+  {id:'murphy_rain',source:'downpour',title:'PLUIE SUR RYALL',subtitle:'Overlook',fighters:[],stages:['overlook'],intro:'La pluie enferme Murphy dans une prison plus vaste que ses murs.',outro:'Le pardon n’est pas une porte ; c’est une décision.'},
+  {id:'book_elements',source:'bom',title:'LES GARDIENS DU LIVRE',subtitle:'Nexus élémentaire',fighters:[],stages:['book_fire','book_wood','book_water','book_blood','book_steel'],intro:'Chaque page donne une forme physique à l’équilibre intérieur.',outro:'Le livre se ferme, mais conserve toutes les traces.'},
+  {id:'loop_204863',source:'pt',title:'204863',subtitle:'Couloir en boucle',fighters:[],stages:['looping_hall'],intro:'Une porte s’ouvre sur le même couloir. Lisa attend derrière le joueur.',outro:'La boucle ne se termine pas ; elle cesse simplement de répondre.'},
+  {id:'maya_villa',source:'shortmessage',title:'LES PÉTALES DE MAYA',subtitle:'Kettenstadt Villa',fighters:[],stages:['villa'],intro:'Les murs répètent les messages que personne n’a voulu lire.',outro:'Les fleurs desserrent leur étreinte.'},
+  {id:'hinako_f',source:'shf',title:'LA PROCESSION D’HINAKO',subtitle:'Ebisugaoka → Dark Shrine',fighters:[],stages:['ebisugaoka','school_shf','dark_shrine'],intro:'Ebisugaoka fleurit de l’intérieur. Chaque masque exige un choix.',outro:'La procession atteint le sanctuaire, mais le visage reste à choisir.'},
+  {id:'ashes_of_alessa',source:'film',title:'LES CENDRES D’ALESSA',subtitle:'Midwich → Sanctuary',fighters:[],stages:['film_midwich','film_hospital','film_church','film_sanctuary'],intro:'Les sirènes ouvrent un Otherworld de métal brûlé où chaque lumière attire une silhouette.',outro:'La congrégation tombe, mais les cendres continuent de respirer.'},
+  {id:'trauma_together',source:'ascension',title:'LE TRAUMA PARTAGÉ',subtitle:'Hope’s Junction → Open Gate',fighters:[],stages:['hope_junction','stilledalen','ascension_otherworld'],intro:'Deux communautés portent des blessures qui se répondent de part et d’autre du monde.',outro:'La porte reste entrouverte, nourrie par les choix accumulés.'}
+];
+
+// Renseigne automatiquement les adversaires des Chroniques avec des boss/figures du jeu concerné.
+for (const route of CHRONICLES) {
+  if (!route.fighters.length) {
+    const pool = ROSTER.filter(f => f.source === route.source);
+    const bosses = pool.filter(f => f.boss);
+    const regular = pool.filter(f => !f.boss);
+    route.fighters = [...regular.slice(0, 2), ...bosses.slice(0, 4)].map(f => f.id).slice(0, 6);
+  }
+}
+
+export function getFighter(id) { return ROSTER.find(f => f.id === id) || ROSTER[0]; }
+export function getStage(id) { return STAGES.find(s => s.id === id) || STAGES[0]; }
+export function sourceLabel(source) { return SOURCE_META[source]?.label || source; }
+
+export function createCombatProfile(fighter) {
+  const base = ARCHETYPES[fighter.archetype] || ARCHETYPES.balanced;
+  const trait = MANIFESTATION_TRAITS[fighter.trait] || MANIFESTATION_TRAITS.echo;
+  const affliction = AFFLICTIONS[fighter.affliction] || AFFLICTIONS.bleed;
+  const scalePower = fighter.boss ? 1.03 : 1;
+  const ranged = ['zoner','artillery','flyer','ghost','trickster'].includes(fighter.archetype);
+  const grappler = ['grappler','juggernaut','boss'].includes(fighter.archetype);
+  const speed = base.speed * (trait.speed || 1);
+  const jump = base.jump * (trait.jump || 1);
+  const power = base.power;
+  const reach = base.reach;
+  const recoveryScale = trait.recoveryScale || 1;
+  const effect = fighter.affliction;
+  const specialEffect = { id: effect, duration: affliction.duration, potency: fighter.boss ? 1.15 : 1 };
+  return {
+    ...base,
+    speed,
+    jump,
+    power,
+    reach,
+    trait: { id: fighter.trait, ...trait },
+    affliction: { id: fighter.affliction, ...affliction },
+    maxHealth: Math.round(base.health * (fighter.boss ? 1.08 : 1)),
+    armor: trait.damageReduction || 0,
+    hitstunScale: trait.hitstunScale || 1,
+    dodgeInvuln: 14 + (trait.dodgeInvuln || 0),
+    cancelWindow: 5 + (trait.cancelWindow || 0),
+    lowProfile: trait.lowProfile || 1,
+    moves: {
+      light: {name:'FRAPPE',startup:5,active:4,recovery:Math.round(11*recoveryScale),damage:Math.round(42*power),reach:72*reach,level:'mid',meter:9,cancelInto:['heavy','special']},
+      heavy: {name:'ATTAQUE LOURDE',startup:14,active:6,recovery:Math.round(24*recoveryScale),damage:Math.round(86*power*scalePower),reach:105*reach,level:'mid',meter:16,knockback:8,cancelInto:['special']},
+      low: {name:'ATTAQUE BASSE',startup:Math.max(6,10+(trait.lowStartup||0)),active:4,recovery:Math.round(18*recoveryScale),damage:Math.round(55*power),reach:88*reach,level:'low',meter:11,cancelInto:['special']},
+      throw: {name:'SAISIE',startup:8,active:3,recovery:Math.round(28*recoveryScale),damage:Math.round((grappler?118:92)*power*(trait.throwDamage||1)),reach:65*reach,level:'throw',meter:18,knockback:12,effect:trait.throwEffect?{id:trait.throwEffect,duration:AFFLICTIONS[trait.throwEffect].duration,potency:1}:null},
+      special: {name:fighter.signature,startup:ranged?18:12,active:ranged?1:6,recovery:Math.round((ranged?25:23)*recoveryScale),damage:Math.round((ranged?104:120)*power),reach:(ranged?700:145)*reach,level:'mid',meter:22,projectile:ranged,projectileSpeed:11+(speed*.65),projectileScale:trait.projectileScale||1,knockback:10,effect:specialEffect},
+      super: {name:`NIGHTMARE — ${fighter.signature}`,startup:28,active:ranged?1:12,recovery:Math.round(42*recoveryScale),damage:Math.round(235*power),reach:(ranged?950:210)*reach,level:'mid',meterCost:100,projectile:ranged,projectileSpeed:15,projectileScale:(trait.projectileScale||1)*1.2,knockback:18,effect:{...specialEffect,duration:Math.round(affliction.duration*1.35),potency:1.35}}
+    }
+  };
+}
+
+export const CONTENT_STATS = Object.freeze({
+  fighters: ROSTER.length,
+  bosses: ROSTER.filter(f => f.boss).length,
+  sources: Object.keys(SOURCE_META).length,
+  stages: STAGES.length,
+  chronicles: CHRONICLES.length
+});

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="versus.css">
+  <title>Halo of Flesh — Versus</title>
+</head>
+<body class="module-body">
+<header class="module-topbar">
+  <div class="module-brand"><small>UNIFIED MONSTER BATTLE</small><strong>HALO OF FLESH</strong><span id="modeTitle">VERSUS</span></div>
+  <div class="top-actions">
+    <button id="mobileP1" class="ui-button">TOUCH P1</button><button id="openGallery" class="ui-button">ARÈNES</button><button id="randomAll" class="ui-button">ALÉATOIRE</button><button id="backCommand" class="ui-button">COMMAND</button>
+  </div>
+</header>
+<section id="selectScreen" class="screen">
+  <div class="select-body">
+    <article id="p1Card" class="side-card active">
+      <span class="slot-tag">PLAYER 1</span><canvas id="p1Portrait" class="portrait" width="360" height="410"></canvas>
+      <div id="p1Info" class="fighter-info"></div><button id="slotP1" class="assign">SÉLECTION P1 ACTIVE</button>
+    </article>
+    <main class="center">
+      <div class="filters">
+        <input id="search" class="ui-input" type="search" placeholder="RECHERCHER UNE MANIFESTATION…" autocomplete="off">
+        <select id="sourceFilter" class="ui-select"><option value="all">TOUS LES JEUX</option></select>
+        <select id="typeFilter" class="ui-select"><option value="all">TOUS LES TYPES</option><option value="regular">CRÉATURES</option><option value="boss">BOSS</option><option value="secret">SECRETS</option><option value="favorites">FAVORIS</option></select>
+        <select id="archetypeFilter" class="ui-select"><option value="all">TOUS LES ARCHÉTYPES</option></select>
+      </div>
+      <div class="roster-wrap"><div id="roster" class="roster scrollbar"></div></div>
+      <div class="pager"><button id="prevPage" class="ui-button">◀</button><span id="pageLabel">PAGE 1 / 1</span><button id="nextPage" class="ui-button">▶</button></div>
+      <div class="setup">
+        <label>MODE<select id="mode" class="ui-select"><option value="cpu">1P VS CPU</option><option value="local">2P LOCAL</option></select></label>
+        <label>MANCHES<select id="rounds" class="ui-select"><option value="1">1 GAGNANTE</option><option value="2" selected>2 GAGNANTES</option><option value="3">3 GAGNANTES</option></select></label>
+        <label>TEMPS<select id="timer" class="ui-select"><option value="60">60</option><option value="99" selected>99</option><option value="0">INFINI</option></select></label>
+        <label>IA<select id="difficulty" class="ui-select"><option value="story">BRUME</option><option value="normal" selected>OTHERWORLD</option><option value="hard">CAUCHEMAR</option></select></label>
+        <button id="stageMini" class="stage-mini"><canvas id="stageCanvas" width="152" height="84"></canvas><div><small>ARÈNE</small><b id="stageName">—</b></div></button>
+        <button id="fighterDossier" class="ui-button">DOSSIER</button>
+        <button id="launch" class="ui-button launch">COMBATTRE</button>
+        <div class="ruleset" aria-label="Règles dynamiques">
+          <label><input id="otherworldShift" type="checkbox" checked> BASCULE OTHERWORLD</label>
+          <label><input id="stageHazards" type="checkbox" checked> DANGERS D’ARÈNE</label>
+          <label><input id="radioWarning" type="checkbox" checked> RADIO DE PROXIMITÉ</label>
+        </div>
+      </div>
+    </main>
+    <article id="p2Card" class="side-card">
+      <span class="slot-tag">PLAYER 2</span><canvas id="p2Portrait" class="portrait" width="360" height="410"></canvas>
+      <div id="p2Info" class="fighter-info"></div><button id="slotP2" class="assign">ACTIVER SÉLECTION P2</button>
+    </article>
+  </div>
+</section>
+<section id="fightScreen" class="screen fight-screen hidden">
+  <div class="game-head"><div class="game-actions"><button id="leaveFight" class="ui-button">SÉLECTION</button><span id="matchLabel" class="badge">VERSUS</span></div><div class="game-actions"><button id="trainingToggle" class="ui-button hidden">OBSERVATION</button><button id="pauseBtn" class="ui-button">PAUSE</button></div></div>
+  <div class="canvas-wrap"><canvas id="game" width="1280" height="720"></canvas><div id="gameHelp" class="game-help"></div></div>
+  <aside id="trainingPanel" class="training-panel hidden"><h3>OBSERVATION</h3><label>HITBOXES <input id="hitboxes" type="checkbox"></label><label>AUTO-SOIN <input id="autoHeal" type="checkbox"></label><label>JAUGE LIBRE <input id="freeMeter" type="checkbox"></label><button id="forceShift" class="ui-button">FORCER OTHERWORLD</button><button id="resetDojo" class="ui-button">RESET</button></aside>
+  <div id="touchLayer" class="touch-layer">
+    <div class="touch-group touch-left"><button class="touch-button" data-player="p1" data-action="up">↑</button><button class="touch-button" data-player="p1" data-action="left">←</button><button class="touch-button" data-player="p1" data-action="guard">G</button><button class="touch-button" data-player="p1" data-action="right">→</button></div>
+    <div class="touch-group touch-right"><button class="touch-button" data-player="p1" data-action="light">J</button><button class="touch-button" data-player="p1" data-action="heavy">K</button><button class="touch-button" data-player="p1" data-action="special">I</button><button class="touch-button" data-player="p1" data-action="throw">U</button><button class="touch-button" data-player="p1" data-action="super">O</button><button class="touch-button" data-player="p1" data-action="dodge">L</button></div>
+  </div>
+  <div id="result" class="result hidden"><div class="result-card"><small id="resultKicker">RÉSULTAT</small><h2 id="resultTitle">—</h2><p id="resultText">—</p><div id="resultStats" class="result-stats"></div><div class="result-actions"><button id="rematch" class="ui-button">REVANCHE</button><button id="continueRun" class="ui-button primary hidden">COMBAT SUIVANT</button><button id="resultSelect" class="ui-button">SÉLECTION</button></div></div></div>
+</section>
+<section id="stageGallery" class="stage-gallery hidden"><div class="gallery-card"><header class="gallery-head"><h2>ARÈNES DE LA BRUME</h2><button id="closeGallery" class="ui-button">FERMER</button></header><div id="stageList" class="stage-list scrollbar"></div></div></section>
+<section id="dossier" class="dossier hidden"><div class="dossier-card"><header class="dossier-head"><h2>DOSSIER DE MANIFESTATION</h2><button id="closeDossier" class="ui-button">FERMER</button></header><div class="dossier-body"><canvas id="dossierPortrait" class="dossier-portrait" width="500" height="700"></canvas><div id="dossierCopy" class="dossier-copy scrollbar"></div></div></div></section>
+<script type="module" src="../src/versus.js"></script>
+</body></html>

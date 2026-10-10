@@ -1,0 +1,19 @@
+{
+  "name": "silent-hill-halo-of-flesh",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Prototype fan-made non commercial de jeu de combat 2D consacré aux manifestations de Silent Hill, avec Otherworld dynamique, traits, afflictions et Chroniques.",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "docs": "node scripts/generate-docs.mjs",
+    "verify": "node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only",
+    "build": "node scripts/generate-docs.mjs && node scripts/build.mjs",
+    "test": "node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
+    "qa": "npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

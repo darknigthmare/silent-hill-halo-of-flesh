@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="chronicles.css">
+  <title>Halo of Flesh — Chroniques</title>
+</head>
+<body class="module-body chronicles-body">
+<header class="module-topbar">
+  <div class="module-brand"><small>FOURTEEN DESCENTS</small><strong>HALO OF FLESH</strong><span>CHRONIQUES</span></div>
+  <div class="top-actions"><span id="progressBadge" class="badge">0/14 TERMINÉES</span><button id="resetProgress" class="ui-button">EFFACER PROGRESSION</button><button id="backCommand" class="ui-button">COMMAND</button></div>
+</header>
+<main class="chronicles-shell">
+  <aside class="route-rail panel"><div class="rail-intro"><small>ARCHIVES DE LA VILLE</small><h1>CHRONIQUES</h1><p>Quatorze descentes thématiques reprennent la structure narrative de CQC : prologue, suite de combats, boss, rang de performance et archive finale.</p></div><div id="routeList" class="route-list scrollbar"></div></aside>
+  <section class="route-stage panel">
+    <div class="route-art"><canvas id="routeCanvas" width="1120" height="520"></canvas><div class="route-overlay"><span id="routeSource" class="route-source">—</span><h2 id="routeTitle">—</h2><p id="routeSubtitle">—</p></div></div>
+    <div class="route-content">
+      <article class="route-copy"><h3>DESCENTE</h3><p id="routeIntro"></p><blockquote id="routeOutro"></blockquote><label class="fighter-select">MANIFESTATION CONTRÔLÉE<select id="playerFighter" class="ui-select"></select></label><div class="route-actions"><button id="launchRoute" class="ui-button primary">COMMENCER LA CHRONIQUE</button><button id="previewRoster" class="ui-button">VOIR LES ADVERSAIRES</button></div></article>
+      <div class="route-path"><div class="path-head"><b>TRAJET DU CAUCHEMAR</b><span id="routeState">NON PARCOURUE</span></div><div id="encounterPath" class="encounter-path"></div></div>
+    </div>
+  </section>
+</main>
+<section id="rosterModal" class="roster-modal hidden"><div class="roster-modal-card"><header><div><small>MANIFESTATIONS DE LA ROUTE</small><h2 id="modalRouteTitle">—</h2></div><button id="closeRoster" class="ui-button">FERMER</button></header><div id="modalRoster" class="modal-roster scrollbar"></div></div></section>
+<script type="module" src="../src/chronicles.js"></script>
+</body></html>

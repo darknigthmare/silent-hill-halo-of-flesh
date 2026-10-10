@@ -1,0 +1,177 @@
+{
+  "version": "0.2.0",
+  "traits": {
+    "echo": {
+      "name": "ÉCHO PERSISTANT",
+      "description": "Profil équilibré : la jauge monte légèrement lorsque la manifestation varie ses attaques.",
+      "meterVariety": 0.08
+    },
+    "relentless": {
+      "name": "POURSUITE OBSESSIONNELLE",
+      "description": "Gagne de la jauge en avançant vers sa cible et conserve mieux son élan.",
+      "forwardMeter": 0.055,
+      "speed": 1.04
+    },
+    "rustArmor": {
+      "name": "ARMURE DE ROUILLE",
+      "description": "Absorbe périodiquement une partie du recul et du hitstun.",
+      "damageReduction": 0.07,
+      "armorCooldown": 280
+    },
+    "constriction": {
+      "name": "CONSTRICTION",
+      "description": "Les saisies infligent davantage de dégâts et appliquent Entrave.",
+      "throwDamage": 1.2,
+      "throwEffect": "bind"
+    },
+    "staticField": {
+      "name": "CHAMP PARASITE",
+      "description": "Les projectiles sont plus larges et appliquent Parasites radio.",
+      "projectileScale": 1.18,
+      "effect": "static"
+    },
+    "aerialInstinct": {
+      "name": "INSTINCT AÉRIEN",
+      "description": "Saut plus haut et esquive plus longue.",
+      "jump": 1.12,
+      "dodgeInvuln": 3
+    },
+    "lowProfile": {
+      "name": "PROFIL RAMPANT",
+      "description": "Hurtbox réduite au sol et attaque basse accélérée.",
+      "lowProfile": 0.72,
+      "lowStartup": -2
+    },
+    "phaseWalk": {
+      "name": "MARCHE SPECTRALE",
+      "description": "L’esquive traverse plus longtemps les attaques et applique Effroi sur technique.",
+      "dodgeInvuln": 5,
+      "effect": "dread"
+    },
+    "convulsion": {
+      "name": "CONVULSION",
+      "description": "Les chaînes frappe → lourd → technique disposent d’une fenêtre d’annulation élargie.",
+      "cancelWindow": 6
+    },
+    "falsePresence": {
+      "name": "FAUSSE PRÉSENCE",
+      "description": "Une esquive parfaite rend brièvement intangible et accélère la prochaine technique.",
+      "dodgeInvuln": 4,
+      "recoveryScale": 0.92
+    },
+    "suppression": {
+      "name": "SUPPRESSION",
+      "description": "Projectiles lourds, garde adverse davantage entamée.",
+      "projectileScale": 1.3,
+      "guardDamage": 1.18
+    },
+    "nightmareArmor": {
+      "name": "ARMURE DU CAUCHEMAR",
+      "description": "Résistance accrue au recul et au hitstun tant que la vitalité dépasse un tiers.",
+      "damageReduction": 0.08,
+      "hitstunScale": 0.82,
+      "armorCooldown": 190
+    }
+  },
+  "afflictions": {
+    "bleed": {
+      "name": "HÉMORRAGIE",
+      "duration": 180,
+      "color": "#a8323d",
+      "description": "Perd périodiquement de la vitalité."
+    },
+    "static": {
+      "name": "PARASITES RADIO",
+      "duration": 150,
+      "color": "#c9c8a4",
+      "description": "Vitesse réduite et brouillage de jauge."
+    },
+    "bind": {
+      "name": "ENTRAVE",
+      "duration": 90,
+      "color": "#8d735b",
+      "description": "Déplacement et esquive fortement limités."
+    },
+    "decay": {
+      "name": "CORROSION",
+      "duration": 180,
+      "color": "#8b7848",
+      "description": "La garde ne se régénère plus et s’érode."
+    },
+    "burn": {
+      "name": "BRÛLURE",
+      "duration": 150,
+      "color": "#cf5938",
+      "description": "Dégâts réguliers plus intenses."
+    },
+    "dread": {
+      "name": "EFFROI",
+      "duration": 150,
+      "color": "#776080",
+      "description": "La jauge Nightmare se dissipe progressivement."
+    },
+    "frost": {
+      "name": "GEL",
+      "duration": 120,
+      "color": "#7ba5b4",
+      "description": "Vitesse et accélération réduites."
+    },
+    "bloom": {
+      "name": "FLORAISON",
+      "duration": 135,
+      "color": "#bd6674",
+      "description": "Ralentissement qui s’intensifie près du centre de l’arène."
+    }
+  },
+  "hazards": {
+    "staticBurst": {
+      "name": "SURSAUT RADIO",
+      "telegraph": 85,
+      "radius": 165,
+      "damage": 34,
+      "effect": "static"
+    },
+    "fallingDebris": {
+      "name": "CHUTE DE DÉBRIS",
+      "telegraph": 90,
+      "radius": 118,
+      "damage": 62,
+      "effect": "decay"
+    },
+    "bloodTide": {
+      "name": "MARÉE DE SANG",
+      "telegraph": 105,
+      "radius": 220,
+      "damage": 45,
+      "effect": "bleed"
+    },
+    "frostWave": {
+      "name": "VAGUE DE GEL",
+      "telegraph": 95,
+      "radius": 205,
+      "damage": 26,
+      "effect": "frost"
+    },
+    "petalBloom": {
+      "name": "FLORAISON ROUGE",
+      "telegraph": 100,
+      "radius": 190,
+      "damage": 38,
+      "effect": "bloom"
+    },
+    "emberFall": {
+      "name": "PLUIE DE CENDRES",
+      "telegraph": 82,
+      "radius": 135,
+      "damage": 50,
+      "effect": "burn"
+    },
+    "chainSweep": {
+      "name": "BALAYAGE DE CHAÎNES",
+      "telegraph": 76,
+      "radius": 145,
+      "damage": 58,
+      "effect": "bind"
+    }
+  }
+}

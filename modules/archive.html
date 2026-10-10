@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="archive.css">
+  <title>Halo of Flesh — Archives</title>
+</head>
+<body class="module-body archive-body">
+<header class="module-topbar">
+  <div class="module-brand"><small>FOG-BORN RECORDS</small><strong>HALO OF FLESH</strong><span>ARCHIVES</span></div>
+  <div class="top-actions"><span id="archiveStats" class="badge">—</span><button id="exportArchive" class="ui-button">EXPORTER JSON</button><button id="backCommand" class="ui-button">COMMAND</button></div>
+</header>
+<main class="archive-shell">
+  <nav class="archive-tabs panel"><button class="archive-tab active" data-tab="bestiary">MANIFESTATIONS</button><button class="archive-tab" data-tab="stages">ARÈNES</button><button class="archive-tab" data-tab="matrix">MATRICE DE FIDÉLITÉ</button><button class="archive-tab" data-tab="finishers">RITUELS / FINISHERS</button><button class="archive-tab" data-tab="systems">SYSTÈMES</button><button class="archive-tab" data-tab="records">RELEVÉS</button></nav>
+  <section id="bestiaryTab" class="archive-view bestiary-view">
+    <div class="catalog panel"><div class="catalog-filters"><input id="archiveSearch" class="ui-input" type="search" placeholder="RECHERCHER…"><select id="archiveSource" class="ui-select"><option value="all">TOUTES LES SOURCES</option></select><select id="archiveType" class="ui-select"><option value="all">TOUS</option><option value="regular">CRÉATURES</option><option value="boss">BOSS</option></select></div><div id="archiveGrid" class="archive-grid scrollbar"></div><div class="archive-pager"><button id="archivePrev" class="ui-button">◀</button><span id="archivePage">—</span><button id="archiveNext" class="ui-button">▶</button></div></div>
+    <article class="archive-dossier panel"><canvas id="archivePortrait" width="520" height="430"></canvas><div id="archiveCopy" class="archive-copy scrollbar"></div></article>
+  </section>
+  <section id="stagesTab" class="archive-view hidden"><div id="archiveStages" class="archive-stage-grid scrollbar"></div></section>
+  <section id="matrixTab" class="archive-view hidden"><div class="matrix-intro panel"><small>PROTOCOLE DE RECONSTITUTION</small><h1>FIDÉLITÉ DOCUMENTÉE,<br>ADAPTATION EXPLICITE.</h1><p>Le registre sépare les caractéristiques canoniques — morphologie, posture, comportement, rôle et lieu — des nécessités d’un jeu de combat. Aucun asset officiel extrait n’est inclus.</p></div><div id="sourceMatrix" class="source-matrix"></div></section>
+  <section id="finishersTab" class="archive-view hidden"><div class="finisher-head panel"><div><small>ARCHIVE CINÉMATIQUE</small><h1>RITUELS DE CLÔTURE</h1><p>Chaque manifestation possède un finisher original inspiré de sa signature et de son comportement, sans reprendre d’animation officielle.</p></div><div class="finisher-tools"><select id="finisherSource" class="ui-select"><option value="all">TOUTES LES SOURCES</option></select><button id="finisherPrev" class="ui-button">◀</button><span id="finisherPage" class="badge">—</span><button id="finisherNext" class="ui-button">▶</button></div></div><div id="finisherGrid" class="finisher-grid scrollbar"></div></section>
+  <section id="systemsTab" class="archive-view hidden"><div class="systems-head panel"><small>PROTOCOLES DE COMBAT v0.2.0</small><h1>TRAITS, AFFLICTIONS<br>ET DANGERS.</h1><p>Chaque manifestation possède désormais un trait de combat et une affliction signature. Les arènes de l’Otherworld peuvent déclencher un danger télégraphié.</p></div><div id="systemsGrid" class="systems-grid scrollbar"></div></section>
+  <section id="recordsTab" class="archive-view hidden"><div id="recordCards" class="record-cards"></div><article class="panel record-log"><h2>PROTOCOLE DE SAUVEGARDE</h2><p>Les combats, victoires, adversaires vaincus, records Arcade et Boss Rush sont conservés localement dans le navigateur. Les données peuvent être supprimées depuis les options du Command Center.</p><pre id="recordRaw"></pre></article></section>
+</main>
+<script type="module" src="../src/archive.js"></script>
+</body></html>
