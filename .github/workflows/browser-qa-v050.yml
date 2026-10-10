@@ -1,0 +1,65 @@
+name: Browser QA v0.5.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/browser-qa-v050.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+
+      - name: Validate source and generated data
+        run: npm test
+
+      - name: Install pinned Playwright runtime
+        env:
+          npm_config_package_lock: "false"
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture and validate the interface
+        run: npm run qa:browser
+
+      - name: Build browser QA package
+        run: |
+          if command -v montage >/dev/null 2>&1; then
+            montage tests/captures-v050/*.png -thumbnail 520x320 -tile 3x -geometry +12+12 tests/captures-v050/contact-sheet-v050.jpg || true
+          fi
+          (cd tests/captures-v050 && zip -qr /tmp/SILENT-HILL-HALO-OF-FLESH_v0.5.0_BROWSER_QA.zip .)
+          mv /tmp/SILENT-HILL-HALO-OF-FLESH_v0.5.0_BROWSER_QA.zip tests/captures-v050/
+
+      - name: Upload browser QA artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: halo-of-flesh-v0.5.0-browser-qa
+          path: |
+            tests/captures-v050
+            docs/BROWSER_QA_v0.5.0.md
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish browser QA evidence
+        run: |
+          git config user.name "darknigthmare"
+          git config user.email "chuckykill@hotmail.fr"
+          git add docs/BROWSER_QA_v0.5.0.md tests/captures-v050
+          git commit -m "test: validate v0.5.0 interface in Chrome for Testing"
+          git push origin main
