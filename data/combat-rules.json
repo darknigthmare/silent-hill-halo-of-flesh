@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "traits": {
     "echo": {
       "name": "ÉCHO PERSISTANT",
@@ -172,6 +172,163 @@
       "radius": 145,
       "damage": 58,
       "effect": "bind"
+    }
+  },
+  "rituals": {
+    "none": {
+      "name": "AUCUN RITE",
+      "short": "STANDARD",
+      "description": "Règles équilibrées sans altération supplémentaire."
+    },
+    "denseFog": {
+      "name": "BRUME ÉPAISSE",
+      "short": "BRUME",
+      "description": "Radio plus nerveuse, réaction de l’IA accélérée et transformation Otherworld plus précoce.",
+      "radioScale": 1.35,
+      "aiReactionScale": 0.88,
+      "shiftThreshold": 0.72
+    },
+    "bloodDebt": {
+      "name": "DETTE DE SANG",
+      "short": "SANG",
+      "description": "La vitalité s’érode lentement, mais les dégâts et la jauge augmentent.",
+      "lifeDrain": 1,
+      "damageScale": 1.08,
+      "meterGainScale": 1.16
+    },
+    "fragileGuard": {
+      "name": "GARDE FISSURÉE",
+      "short": "GARDE",
+      "description": "La garde est réduite, récupère plus lentement et les dégâts de garde sont renforcés.",
+      "guardScale": 0.62,
+      "guardRegenScale": 0.45,
+      "chipScale": 1.32
+    },
+    "staticStorm": {
+      "name": "ORAGE PARASITE",
+      "short": "PARASITES",
+      "description": "Les dangers surviennent plus souvent et la radio devient presque permanente.",
+      "hazardIntervalScale": 0.58,
+      "hazardDamageScale": 0.9,
+      "radioScale": 1.55
+    },
+    "sacredSilence": {
+      "name": "SILENCE SACRÉ",
+      "short": "SILENCE",
+      "description": "La radio se tait, la jauge monte moins vite, mais les techniques signatures frappent plus fort.",
+      "radioDisabled": true,
+      "meterGainScale": 0.72,
+      "specialDamageScale": 1.22
+    },
+    "executionNight": {
+      "name": "NUIT DE L’EXÉCUTION",
+      "short": "EXÉCUTION",
+      "description": "Les Nightmare coûtent moins cher, commencent plus tôt et deviennent plus destructeurs.",
+      "superCostScale": 0.75,
+      "superDamageScale": 1.3,
+      "startMeter": 25
+    },
+    "noEscape": {
+      "name": "AUCUNE ÉCHAPPATOIRE",
+      "short": "CAGE",
+      "description": "L’arène se resserre et les déplacements sont plus rapides.",
+      "arenaInset": 145,
+      "speedScale": 1.08
+    },
+    "redJudgment": {
+      "name": "JUGEMENT ROUGE",
+      "short": "OTHERWORLD",
+      "description": "Le combat commence dans l’Otherworld ; les boss et les dangers deviennent plus menaçants.",
+      "startOtherworld": true,
+      "bossPowerScale": 1.12,
+      "hazardIntervalScale": 0.76,
+      "hazardDamageScale": 1.08
+    }
+  },
+  "aiPersonalities": {
+    "balanced": {
+      "name": "LECTURE PRUDENTE",
+      "preferredRange": 145,
+      "aggression": 1,
+      "defense": 1,
+      "mobility": 1
+    },
+    "rushdown": {
+      "name": "POURSUITE DIRECTE",
+      "preferredRange": 92,
+      "aggression": 1.28,
+      "defense": 0.76,
+      "mobility": 1.18
+    },
+    "juggernaut": {
+      "name": "PRESSION LOURDE",
+      "preferredRange": 112,
+      "aggression": 1.08,
+      "defense": 1.24,
+      "mobility": 0.72
+    },
+    "grappler": {
+      "name": "CAPTURE RITUELLE",
+      "preferredRange": 68,
+      "aggression": 1.16,
+      "defense": 0.9,
+      "mobility": 0.82
+    },
+    "zoner": {
+      "name": "CONTRÔLE DU SIGNAL",
+      "preferredRange": 330,
+      "aggression": 0.92,
+      "defense": 1.08,
+      "mobility": 0.9
+    },
+    "flyer": {
+      "name": "TRAJECTOIRE AÉRIENNE",
+      "preferredRange": 245,
+      "aggression": 1.05,
+      "defense": 0.76,
+      "mobility": 1.3
+    },
+    "swarm": {
+      "name": "PRESSION DE MEUTE",
+      "preferredRange": 78,
+      "aggression": 1.35,
+      "defense": 0.64,
+      "mobility": 1.34
+    },
+    "ghost": {
+      "name": "APPARITION DIFFÉRÉE",
+      "preferredRange": 210,
+      "aggression": 0.94,
+      "defense": 1.12,
+      "mobility": 1.08
+    },
+    "puppet": {
+      "name": "RYTHME CONVULSIF",
+      "preferredRange": 132,
+      "aggression": 1.12,
+      "defense": 0.92,
+      "mobility": 1.05
+    },
+    "trickster": {
+      "name": "FAUSSE OUVERTURE",
+      "preferredRange": 182,
+      "aggression": 1,
+      "defense": 1.08,
+      "mobility": 1.16
+    },
+    "artillery": {
+      "name": "SUPPRESSION DISTANTE",
+      "preferredRange": 390,
+      "aggression": 0.88,
+      "defense": 1.14,
+      "mobility": 0.7
+    },
+    "boss": {
+      "name": "JUGEMENT ADAPTATIF",
+      "preferredRange": 126,
+      "aggression": 1.18,
+      "defense": 1.16,
+      "mobility": 0.9
     }
   }
 }

@@ -5,7 +5,7 @@
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.2.0';
+export const VERSION = '0.3.0';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -89,6 +89,102 @@ export const STAGE_HAZARDS = Object.freeze({
   chainSweep: { name: 'BALAYAGE DE CHAÎNES', telegraph: 76, radius: 145, damage: 58, effect: 'bind' }
 });
 
+
+export const AI_PERSONALITIES = Object.freeze({
+  balanced: { name: 'LECTURE PRUDENTE', preferredRange: 145, aggression: 1, defense: 1, mobility: 1 },
+  rushdown: { name: 'POURSUITE DIRECTE', preferredRange: 92, aggression: 1.28, defense: .76, mobility: 1.18 },
+  juggernaut: { name: 'PRESSION LOURDE', preferredRange: 112, aggression: 1.08, defense: 1.24, mobility: .72 },
+  grappler: { name: 'CAPTURE RITUELLE', preferredRange: 68, aggression: 1.16, defense: .9, mobility: .82 },
+  zoner: { name: 'CONTRÔLE DU SIGNAL', preferredRange: 330, aggression: .92, defense: 1.08, mobility: .9 },
+  flyer: { name: 'TRAJECTOIRE AÉRIENNE', preferredRange: 245, aggression: 1.05, defense: .76, mobility: 1.3 },
+  swarm: { name: 'PRESSION DE MEUTE', preferredRange: 78, aggression: 1.35, defense: .64, mobility: 1.34 },
+  ghost: { name: 'APPARITION DIFFÉRÉE', preferredRange: 210, aggression: .94, defense: 1.12, mobility: 1.08 },
+  puppet: { name: 'RYTHME CONVULSIF', preferredRange: 132, aggression: 1.12, defense: .92, mobility: 1.05 },
+  trickster: { name: 'FAUSSE OUVERTURE', preferredRange: 182, aggression: 1, defense: 1.08, mobility: 1.16 },
+  artillery: { name: 'SUPPRESSION DISTANTE', preferredRange: 390, aggression: .88, defense: 1.14, mobility: .7 },
+  boss: { name: 'JUGEMENT ADAPTATIF', preferredRange: 126, aggression: 1.18, defense: 1.16, mobility: .9 }
+});
+
+export const RITUAL_MODIFIERS = Object.freeze({
+  none: {
+    name: 'AUCUN RITE', short: 'STANDARD', description: 'Règles équilibrées sans altération supplémentaire.'
+  },
+  denseFog: {
+    name: 'BRUME ÉPAISSE', short: 'BRUME', description: 'Radio plus nerveuse, réaction de l’IA accélérée et transformation Otherworld plus précoce.',
+    radioScale: 1.35, aiReactionScale: .88, shiftThreshold: .72
+  },
+  bloodDebt: {
+    name: 'DETTE DE SANG', short: 'SANG', description: 'La vitalité s’érode lentement, mais les dégâts et la jauge augmentent.',
+    lifeDrain: 1, damageScale: 1.08, meterGainScale: 1.16
+  },
+  fragileGuard: {
+    name: 'GARDE FISSURÉE', short: 'GARDE', description: 'La garde est réduite, récupère plus lentement et les dégâts de garde sont renforcés.',
+    guardScale: .62, guardRegenScale: .45, chipScale: 1.32
+  },
+  staticStorm: {
+    name: 'ORAGE PARASITE', short: 'PARASITES', description: 'Les dangers surviennent plus souvent et la radio devient presque permanente.',
+    hazardIntervalScale: .58, hazardDamageScale: .9, radioScale: 1.55
+  },
+  sacredSilence: {
+    name: 'SILENCE SACRÉ', short: 'SILENCE', description: 'La radio se tait, la jauge monte moins vite, mais les techniques signatures frappent plus fort.',
+    radioDisabled: true, meterGainScale: .72, specialDamageScale: 1.22
+  },
+  executionNight: {
+    name: 'NUIT DE L’EXÉCUTION', short: 'EXÉCUTION', description: 'Les Nightmare coûtent moins cher, commencent plus tôt et deviennent plus destructeurs.',
+    superCostScale: .75, superDamageScale: 1.3, startMeter: 25
+  },
+  noEscape: {
+    name: 'AUCUNE ÉCHAPPATOIRE', short: 'CAGE', description: 'L’arène se resserre et les déplacements sont plus rapides.',
+    arenaInset: 145, speedScale: 1.08
+  },
+  redJudgment: {
+    name: 'JUGEMENT ROUGE', short: 'OTHERWORLD', description: 'Le combat commence dans l’Otherworld ; les boss et les dangers deviennent plus menaçants.',
+    startOtherworld: true, bossPowerScale: 1.12, hazardIntervalScale: .76, hazardDamageScale: 1.08
+  }
+});
+
+const BOSS_PHASE_STYLES = Object.freeze({
+  deity: [
+    { threshold: .68, name: 'ASCENSION', power: 1.08, speed: 1.04, armor: .03, meter: 18, otherworld: true },
+    { threshold: .34, name: 'JUGEMENT', power: 1.18, speed: 1.09, armor: .06, meter: 32, hazardBurst: true }
+  ],
+  pyramid: [
+    { threshold: .68, name: 'TRAQUE', power: 1.08, speed: 1.05, armor: .04, meter: 15 },
+    { threshold: .34, name: 'SENTENCE', power: 1.2, speed: 1.1, armor: .08, meter: 30, otherworld: true }
+  ],
+  giant: [
+    { threshold: .68, name: 'MASSE ÉVEILLÉE', power: 1.1, speed: 1.03, armor: .06, meter: 16 },
+    { threshold: .34, name: 'EFFONDREMENT', power: 1.22, speed: 1.08, armor: .1, meter: 28, hazardBurst: true }
+  ],
+  cage: [
+    { threshold: .68, name: 'SUSPENSION', power: 1.09, speed: 1.04, armor: .04, meter: 18 },
+    { threshold: .34, name: 'CONDAMNATION', power: 1.19, speed: 1.08, armor: .07, meter: 32, otherworld: true }
+  ],
+  ghost: [
+    { threshold: .68, name: 'APPARITION', power: 1.06, speed: 1.08, armor: .02, meter: 20 },
+    { threshold: .34, name: 'HANTISE', power: 1.16, speed: 1.14, armor: .04, meter: 35, hazardBurst: true }
+  ],
+  generic: [
+    { threshold: .68, name: 'RÉVÉLATION', power: 1.08, speed: 1.05, armor: .04, meter: 18 },
+    { threshold: .34, name: 'FORME FINALE', power: 1.18, speed: 1.1, armor: .07, meter: 30, otherworld: true }
+  ]
+});
+
+export function createBossPhases(fighter) {
+  if (!fighter?.boss) return [];
+  const style = BOSS_PHASE_STYLES[fighter.visual?.kind] || BOSS_PHASE_STYLES[fighter.visual?.body] || BOSS_PHASE_STYLES.generic;
+  return style.map((phase, index) => ({
+    id: `${fighter.id}_phase_${index + 1}`,
+    index: index + 1,
+    signature: fighter.signature,
+    ...phase
+  }));
+}
+
+export function getRitualModifier(id = 'none') {
+  return RITUAL_MODIFIERS[id] || RITUAL_MODIFIERS.none;
+}
+
 const paletteBySource = {
   sh1: ['#6d6f61', '#b9b7a4'], sh2: ['#6d6259', '#c8b9a4'], sh3: ['#7b6a50', '#d1b777'],
   sh4: ['#6e665f', '#beb6aa'], origins: ['#705f55', '#caa38c'], homecoming: ['#5d5f58', '#b3a47a'],
@@ -133,6 +229,8 @@ function monster(source, name, options = {}) {
     variant: options.variant || null,
     variantOf: options.variantOf || null,
     archetype,
+    aiProfile: options.aiProfile || archetype,
+    phaseStyle: options.phaseStyle || kind,
     stageId: options.stageId || meta.stage,
     signature: options.signature || 'Manifestation',
     trait: options.trait || traitByArchetype[archetype] || 'echo',
@@ -481,6 +579,8 @@ export function createCombatProfile(fighter) {
   const recoveryScale = trait.recoveryScale || 1;
   const effect = fighter.affliction;
   const specialEffect = { id: effect, duration: affliction.duration, potency: fighter.boss ? 1.15 : 1 };
+  const ai = AI_PERSONALITIES[fighter.aiProfile || fighter.archetype] || AI_PERSONALITIES.balanced;
+  const bossPhases = createBossPhases(fighter);
   return {
     ...base,
     speed,
@@ -489,6 +589,8 @@ export function createCombatProfile(fighter) {
     reach,
     trait: { id: fighter.trait, ...trait },
     affliction: { id: fighter.affliction, ...affliction },
+    ai: { id: fighter.aiProfile || fighter.archetype, ...ai },
+    bossPhases,
     maxHealth: Math.round(base.health * (fighter.boss ? 1.08 : 1)),
     armor: trait.damageReduction || 0,
     hitstunScale: trait.hitstunScale || 1,
@@ -511,5 +613,7 @@ export const CONTENT_STATS = Object.freeze({
   bosses: ROSTER.filter(f => f.boss).length,
   sources: Object.keys(SOURCE_META).length,
   stages: STAGES.length,
-  chronicles: CHRONICLES.length
+  chronicles: CHRONICLES.length,
+  rituals: Object.keys(RITUAL_MODIFIERS).length,
+  bossPhases: ROSTER.filter(f => f.boss).reduce((sum, fighter) => sum + createBossPhases(fighter).length, 0)
 });

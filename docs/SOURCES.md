@@ -1,4 +1,4 @@
-# Registre de sources et provenance — v0.2.0
+# Registre de sources et provenance — v0.3.0
 
 ## Principe
 
@@ -26,22 +26,27 @@ Le projet utilise les noms des manifestations pour organiser un registre de fan-
 
 1. Sources officielles publiques : pages de jeu, bandes-annonces, communiqués, crédits et descriptions éditeur.
 2. Documentation interne au média : noms affichés, dossiers, sous-titres et menus.
-3. Ouvrages ou bases secondaires reconnues pour croiser les variantes et translittérations.
-4. Wikis communautaires uniquement comme index de travail, jamais comme unique preuve lorsqu’une source primaire est accessible.
+3. Ouvrages ou bases secondaires reconnues pour croiser variantes et translittérations.
+4. Wikis communautaires comme index de travail, jamais comme unique preuve lorsqu’une source primaire est accessible.
 
 Les références externes ne sont pas redistribuées dans le build. Le dépôt conserve uniquement les données originales nécessaires au prototype.
 
 ## Politique de validation d’un profil
 
-1. Confirmer le nom et la source.
+1. Confirmer nom et source.
 2. Confirmer le statut de créature, variante ou boss.
 3. Relever morphologie, échelle et signes distinctifs sans copier d’asset.
 4. Résumer le comportement source en une phrase originale.
 5. Définir séparément l’adaptation de jeu de combat.
 6. Associer une arène cohérente.
-7. Attribuer un trait et une affliction justifiables par la fonction du profil.
-8. Documenter un finisher original sans présenter cette scène comme canonique.
-9. Vérifier qu’aucun média officiel n’est inclus dans le dépôt.
+7. Attribuer trait, affliction et personnalité IA justifiables.
+8. Pour un boss, documenter deux phases d’adaptation sans les présenter comme canon.
+9. Documenter un finisher original.
+10. Vérifier qu’aucun média officiel n’est inclus.
+
+## Statut des rites, IA et phases
+
+Les rites, profils IA, statistiques, phases de boss et finishers sont des systèmes de gameplay originaux. Ils s’inspirent de l’atmosphère, de la fonction narrative et du comportement général d’une manifestation, mais ne sont pas présentés comme des mécaniques canoniques des œuvres sources.
 
 ## Statut des visuels
 

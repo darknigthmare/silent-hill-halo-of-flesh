@@ -1,6 +1,6 @@
-# Systèmes de combat — v0.2.0
+# Systèmes de combat — v0.3.0
 
-La v0.2.0 ajoute **12 traits**, **8 afflictions** et **7 dangers d’arène** au moteur fixe à 60 Hz.
+La v0.3.0 réunit **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **136 transitions de boss**.
 
 ## Traits de manifestation
 
@@ -44,6 +44,41 @@ La v0.2.0 ajoute **12 traits**, **8 afflictions** et **7 dangers d’arène** au
 | `emberFall` | PLUIE DE CENDRES | 82 f | 135 | 50 | BRÛLURE |
 | `chainSweep` | BALAYAGE DE CHAÎNES | 76 f | 145 | 58 | ENTRAVE |
 
+## Rites du Jugement
+
+| Identifiant | Nom | Effet |
+|---|---|---|
+| `none` | AUCUN RITE | Règles équilibrées sans altération supplémentaire. |
+| `denseFog` | BRUME ÉPAISSE | Radio plus nerveuse, réaction de l’IA accélérée et transformation Otherworld plus précoce. |
+| `bloodDebt` | DETTE DE SANG | La vitalité s’érode lentement, mais les dégâts et la jauge augmentent. |
+| `fragileGuard` | GARDE FISSURÉE | La garde est réduite, récupère plus lentement et les dégâts de garde sont renforcés. |
+| `staticStorm` | ORAGE PARASITE | Les dangers surviennent plus souvent et la radio devient presque permanente. |
+| `sacredSilence` | SILENCE SACRÉ | La radio se tait, la jauge monte moins vite, mais les techniques signatures frappent plus fort. |
+| `executionNight` | NUIT DE L’EXÉCUTION | Les Nightmare coûtent moins cher, commencent plus tôt et deviennent plus destructeurs. |
+| `noEscape` | AUCUNE ÉCHAPPATOIRE | L’arène se resserre et les déplacements sont plus rapides. |
+| `redJudgment` | JUGEMENT ROUGE | Le combat commence dans l’Otherworld ; les boss et les dangers deviennent plus menaçants. |
+
+## Personnalités IA
+
+| Archétype | Nom | Distance | Agressivité | Défense |
+|---|---|---:|---:|---:|
+| `balanced` | LECTURE PRUDENTE | 145 | ×1 | ×1 |
+| `rushdown` | POURSUITE DIRECTE | 92 | ×1.28 | ×0.76 |
+| `juggernaut` | PRESSION LOURDE | 112 | ×1.08 | ×1.24 |
+| `grappler` | CAPTURE RITUELLE | 68 | ×1.16 | ×0.9 |
+| `zoner` | CONTRÔLE DU SIGNAL | 330 | ×0.92 | ×1.08 |
+| `flyer` | TRAJECTOIRE AÉRIENNE | 245 | ×1.05 | ×0.76 |
+| `swarm` | PRESSION DE MEUTE | 78 | ×1.35 | ×0.64 |
+| `ghost` | APPARITION DIFFÉRÉE | 210 | ×0.94 | ×1.12 |
+| `puppet` | RYTHME CONVULSIF | 132 | ×1.12 | ×0.92 |
+| `trickster` | FAUSSE OUVERTURE | 182 | ×1 | ×1.08 |
+| `artillery` | SUPPRESSION DISTANTE | 390 | ×0.88 | ×1.14 |
+| `boss` | JUGEMENT ADAPTATIF | 126 | ×1.18 | ×1.16 |
+
+## Phases de boss
+
+Les **68 boss** possèdent deux transitions, soit **136 phases déclenchables**. Les seuils sont documentés dans chaque dossier et modifient puissance, vitesse, armure, jauge, Otherworld ou danger d’arène.
+
 ## Règles avancées
 
 - **Garde parfaite** : bloquer dans la fenêtre d’impact neutralise davantage de pression, produit un signal visuel/sonore distinct et ouvre une réponse rapide.
@@ -53,4 +88,6 @@ La v0.2.0 ajoute **12 traits**, **8 afflictions** et **7 dangers d’arène** au
 - **Radio de proximité** : l’intensité des parasites augmente avec la proximité et le danger immédiat.
 - **Dangers télégraphiés** : les arènes annoncent une zone avant l’impact afin de rester évitables et lisibles.
 - **Rang de Chronique** : S à D selon vitalité restante, dégâts, combo, gardes parfaites, contres et dangers subis.
-- **Observation** : hitboxes, soin automatique, jauge libre, reset et transformation Otherworld forcée.
+- **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.
+- **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.
+- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.

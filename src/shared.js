@@ -16,7 +16,7 @@ export function loadSettings() {
   return loadJSON(SETTINGS_KEY, {
     scanlines:true, grain:true, reducedMotion:false, highContrast:false,
     vibration:true, masterVolume:65, difficulty:'normal',
-    otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true
+    otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true
   });
 }
 export function saveLastFront(front) {
@@ -34,12 +34,25 @@ export function seededRandom(seed=1){
 export function hashCode(value){let h=2166136261;for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
 export function formatTime(seconds){const s=Math.max(0,Math.floor(seconds));return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;}
 export function escapeHTML(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-export function vibrate(pattern){const settings=loadSettings();if(settings.vibration&&navigator.vibrate)navigator.vibrate(pattern);}
+export function vibrate(pattern){
+  const settings=loadSettings();
+  if(typeof navigator==='undefined'||!settings.vibration||!navigator.vibrate)return false;
+  if(navigator.userActivation&&!navigator.userActivation.hasBeenActive)return false;
+  try{return navigator.vibrate(pattern);}catch{return false;}
+}
 
 class ProceduralAudio {
-  constructor(){this.context=null;this.master=null;this.settings=loadSettings();}
+  constructor(){this.context=null;this.master=null;this.settings=loadSettings();this.unlocked=false;}
+  unlock(){
+    this.unlocked=true;
+    if(!this.ensure())return false;
+    if(this.context?.state==='suspended')void this.context.resume().catch(()=>{});
+    return true;
+  }
   ensure(){
-    if(this.context)return true;
+    if(this.context)return this.context.state!=='closed';
+    const activated=typeof navigator==='undefined'||!navigator.userActivation||navigator.userActivation.hasBeenActive;
+    if(!this.unlocked&&!activated)return false;
     try{this.context=new (window.AudioContext||window.webkitAudioContext)();this.master=this.context.createGain();this.master.gain.value=this.settings.masterVolume/100*.24;this.master.connect(this.context.destination);return true;}catch{return false;}
   }
   tone({freq=180,duration=.08,type='sawtooth',gain=.12,slide=0,when=0}={}){
@@ -64,7 +77,7 @@ class ProceduralAudio {
 export const audio = new ProceduralAudio();
 
 export function attachGlobalAudioUnlock(){
-  const unlock=()=>{audio.ensure();document.removeEventListener('pointerdown',unlock);document.removeEventListener('keydown',unlock);};
+  const unlock=()=>{audio.unlock();document.removeEventListener('pointerdown',unlock);document.removeEventListener('keydown',unlock);};
   document.addEventListener('pointerdown',unlock,{once:true});document.addEventListener('keydown',unlock,{once:true});
 }
 

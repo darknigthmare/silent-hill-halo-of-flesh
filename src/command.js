@@ -12,7 +12,8 @@ const DEFAULT_SETTINGS = {
   otherworldShift: true,
   stageHazards: true,
   radioWarning: true,
-  screenShake: true
+  screenShake: true,
+  adaptiveAI: true
 };
 
 const modes = {
@@ -44,6 +45,13 @@ const modes = {
     choices: ['7 COMBATS','DANGERS D’ARÈNE','RECORD'],
     scene: 'arcade'
   },
+  ritual: {
+    kicker: 'SEVEN SEALS GAUNTLET',
+    title: 'LES RITES<br><span>DU JUGEMENT.</span>',
+    text: `${CONTENT_STATS.rituals - 1} altérations successives, endurance persistante, phases de boss et classement local.`,
+    choices: [`${CONTENT_STATS.rituals - 1} RITES`,'ENDURANCE','PHASES DE BOSS'],
+    scene: 'ritual'
+  },
   boss: {
     kicker: 'GREAT TORMENTS',
     title: 'LES GRANDS<br><span>TOURMENTS.</span>',
@@ -68,7 +76,7 @@ const modes = {
   options: {
     kicker: 'SYSTEM SETTINGS',
     title: 'RÈGLE<br><span>LE SIGNAL.</span>',
-    text: 'Affichage, confort, audio, difficulté, radio, Otherworld et dangers d’arène.',
+    text: 'Affichage, confort, audio, difficulté, IA adaptative, radio, Otherworld et dangers d’arène.',
     choices: ['ACCESSIBILITÉ','RÈGLES DYNAMIQUES','SAUVEGARDE'],
     scene: 'options'
   }
@@ -78,6 +86,7 @@ const moduleUrls = {
   chronicles: 'modules/chronicles.html',
   versus: 'modules/unified-versus.html?mode=versus',
   arcade: 'modules/unified-versus.html?mode=arcade',
+  ritual: 'modules/unified-versus.html?mode=ritual',
   boss: 'modules/unified-versus.html?mode=boss',
   training: 'modules/unified-versus.html?mode=training',
   archive: 'modules/archive.html'

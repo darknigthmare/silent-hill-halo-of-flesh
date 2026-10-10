@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ROSTER, AFFLICTIONS, createCombatProfile } from '../src/data.js';
+import { ROSTER, AFFLICTIONS, RITUAL_MODIFIERS, createBossPhases, createCombatProfile } from '../src/data.js';
 import { chronicleGrade } from '../src/fight.js';
 
 const avg=(items,key)=>items.reduce((sum,item)=>sum+item[key],0)/items.length;
@@ -77,5 +77,21 @@ test('all super moves preserve the manifestation signature',()=>{
     const profile=createCombatProfile(fighter);
     assert.ok(profile.moves.super.name.includes(fighter.signature),fighter.id);
     assert.equal(profile.moves.super.meterCost,100,fighter.id);
+  }
+});
+
+
+test('boss combat profiles embed the same ordered phase definitions as the catalogue',()=>{
+  for(const fighter of ROSTER.filter(f=>f.boss)){
+    const profile=createCombatProfile(fighter);
+    assert.deepEqual(profile.bossPhases,createBossPhases(fighter),fighter.id);
+  }
+});
+
+test('ritual modifiers stay within bounded gameplay multipliers',()=>{
+  for(const [id,ritual] of Object.entries(RITUAL_MODIFIERS)){
+    for(const key of ['damageScale','meterGainScale','guardScale','guardRegenScale','hazardIntervalScale','hazardDamageScale','speedScale','superCostScale','superDamageScale','bossPowerScale']){
+      if(ritual[key]!=null)assert.ok(ritual[key]>.25&&ritual[key]<2,id+'/'+key);
+    }
   }
 });

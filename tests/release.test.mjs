@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS } from '../src/data.js';
+import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS } from '../src/data.js';
 
 const project=resolve(fileURLToPath(new URL('../',import.meta.url)));
 const read=(path)=>readFile(resolve(project,path),'utf8');
@@ -27,6 +27,8 @@ test('exported JSON mirrors the runtime catalogue',async()=>{
   assert.deepEqual(rules.traits,MANIFESTATION_TRAITS);
   assert.deepEqual(rules.afflictions,AFFLICTIONS);
   assert.deepEqual(rules.hazards,STAGE_HAZARDS);
+  assert.deepEqual(rules.rituals,RITUAL_MODIFIERS);
+  assert.deepEqual(rules.aiPersonalities,AI_PERSONALITIES);
 });
 
 test('generated documentation contains the live totals and rule families',async()=>{
@@ -38,6 +40,9 @@ test('generated documentation contains the live totals and rule families',async(
   assert.match(systems,new RegExp(`${Object.keys(MANIFESTATION_TRAITS).length} traits`));
   assert.match(systems,new RegExp(`${Object.keys(AFFLICTIONS).length} afflictions`));
   assert.match(systems,new RegExp(`${Object.keys(STAGE_HAZARDS).length} dangers`));
+  assert.match(systems,new RegExp(`${Object.keys(RITUAL_MODIFIERS).length} rites`));
+  assert.match(systems,new RegExp(`${Object.keys(AI_PERSONALITIES).length} personnalités IA`));
+  assert.match(systems,new RegExp(`${CONTENT_STATS.bossPhases} transitions de boss`));
 });
 
 test('service worker shell only references existing local files',async()=>{

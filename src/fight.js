@@ -1,4 +1,4 @@
-import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile } from './data.js';
+import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 
@@ -58,12 +58,19 @@ function emptyStats() {
     throws: 0,
     statusesApplied: 0,
     maxCombo: 0,
-    hazardsTaken: 0
+    hazardsTaken: 0,
+    bossPhasesTriggered: 0,
+    ritualDamage: 0
   };
 }
 
-function makeActor(data, index) {
-  const profile = createCombatProfile(data);
+function makeActor(data, index, ritual = {}) {
+  const rawProfile = createCombatProfile(data);
+  const profile = {
+    ...rawProfile,
+    speed: rawProfile.speed * (ritual.speedScale || 1),
+    guard: Math.round(rawProfile.guard * (ritual.guardScale || 1))
+  };
   const scale = clamp(data.visual.scale || 1, .62, 1.62);
   return {
     index,
@@ -79,7 +86,7 @@ function makeActor(data, index) {
     maxHealth: profile.maxHealth,
     guard: profile.guard,
     maxGuard: profile.guard,
-    meter: 0,
+    meter: ritual.startMeter || 0,
     grounded: true,
     crouching: false,
     blocking: false,
@@ -101,12 +108,20 @@ function makeActor(data, index) {
     lastHitBy: null,
     aiTimer: 0,
     aiIntent: {},
+    aiRead: null,
     parryWindow: 0,
     armorCooldown: 0,
     status: null,
     lastMoveKey: null,
     moveVariety: new Set(),
     traitPulse: 0,
+    bossPhases: profile.bossPhases || [],
+    bossPhaseIndex: -1,
+    phasePower: 1,
+    phaseSpeed: 1,
+    phaseArmor: 0,
+    phaseLock: 0,
+    phaseName: null,
     stats: emptyStats()
   };
 }
@@ -137,6 +152,7 @@ function intersects(a, b) {
 }
 
 function healthRatio(actor) { return clamp(actor.health / actor.maxHealth, 0, 1); }
+function actorPhasePower(actor) { return actor?.phasePower || 1; }
 function statusSpeed(actor) {
   if (!actor.status) return 1;
   if (actor.status.id === 'static') return .82;
@@ -180,11 +196,19 @@ export class FightEngine {
       otherworldShift: this.settings.otherworldShift !== false,
       stageHazards: this.settings.stageHazards !== false,
       radioWarning: this.settings.radioWarning !== false,
+      adaptiveAI: this.settings.adaptiveAI !== false,
+      ritualId: 'none',
+      initialHealthRatio: 1,
+      initialMeter: null,
       seed: Date.now(),
       ...config
     };
+    this.ritual = { id: this.config.ritualId || 'none', ...getRitualModifier(this.config.ritualId || 'none') };
     this.stage = this.config.stage;
-    this.actors = [makeActor(this.config.p1, 0), makeActor(this.config.p2, 1)];
+    this.actors = [makeActor(this.config.p1, 0, this.ritual), makeActor(this.config.p2, 1, this.ritual)];
+    const initialRatio = clamp(Number(this.config.initialHealthRatio ?? 1), .05, 1);
+    this.actors[0].health = Math.round(this.actors[0].maxHealth * initialRatio);
+    if (this.config.initialMeter != null) this.actors[0].meter = clamp(Number(this.config.initialMeter) || 0, 0, 100);
     this.input = new InputState();
     this.running = false;
     this.paused = false;
@@ -203,6 +227,7 @@ export class FightEngine {
     this.flash = 0;
     this.hitstop = 0;
     this.superOverlay = null;
+    this.bossPhaseOverlay = null;
     this.winner = null;
     this.resultTimer = 0;
     this.rng = seededRandom(this.config.seed);
@@ -210,10 +235,13 @@ export class FightEngine {
     this.callbacks = { onMatchEnd: () => {}, onRoundEnd: () => {}, onState: () => {}, ...config.callbacks };
     this.gamepadPrev = [];
     this.currentPads = [];
+    this.playerPattern = { light: 0, heavy: 0, low: 0, special: 0, throw: 0, super: 0 };
+    this.inputHistory = [];
+    const ritualOtherworld = Boolean(this.ritual.startOtherworld);
     this.world = {
-      phase: 'fog',
-      amount: 0,
-      triggered: false,
+      phase: ritualOtherworld ? 'otherworld' : 'fog',
+      amount: ritualOtherworld ? 1 : 0,
+      triggered: ritualOtherworld,
       siren: 0,
       hazardTimer: 260,
       radio: 0,
@@ -276,9 +304,10 @@ export class FightEngine {
     this.superOverlay = null;
     this.flash = 0;
     this.hitstop = 0;
+    const ritualOtherworld = Boolean(this.ritual.startOtherworld);
     this.world = {
-      phase: 'fog', amount: 0, triggered: false, siren: 0,
-      hazardTimer: 230 + Math.floor(this.rng() * 80), radio: 0, hazardsTriggered: 0
+      phase: ritualOtherworld ? 'otherworld' : 'fog', amount: ritualOtherworld ? 1 : 0, triggered: ritualOtherworld, siren: 0,
+      hazardTimer: Math.round((230 + Math.floor(this.rng() * 80)) * (this.ritual.hazardIntervalScale || 1)), radio: 0, hazardsTriggered: 0
     };
     this.actors.forEach((actor, index) => {
       actor.x = index === 0 ? 310 : 970;
@@ -288,7 +317,7 @@ export class FightEngine {
       actor.facing = index === 0 ? 1 : -1;
       actor.health = actor.maxHealth;
       actor.guard = actor.maxGuard;
-      actor.meter = full ? 0 : clamp(actor.meter * .35, 0, 55);
+      actor.meter = full ? (this.ritual.startMeter || 0) : clamp(actor.meter * .35, 0, 55);
       actor.grounded = true;
       actor.crouching = false;
       actor.blocking = false;
@@ -307,6 +336,12 @@ export class FightEngine {
       actor.koProgress = 0;
       actor.parryWindow = 0;
       actor.armorCooldown = 0;
+      actor.phasePower = 1;
+      actor.phaseSpeed = 1;
+      actor.phaseArmor = 0;
+      actor.phaseLock = 0;
+      actor.phaseName = null;
+      actor.bossPhaseIndex = -1;
       actor.status = null;
       actor.lastMoveKey = null;
       actor.moveVariety.clear();
@@ -383,7 +418,9 @@ export class FightEngine {
     }
 
     this.updateWorld();
+    this.applyRitualTick();
     this.actors.forEach((actor) => this.updateStatus(actor));
+    this.checkBossPhases();
     this.updateActor(this.actors[0], 0);
     this.updateActor(this.actors[1], 1);
     this.resolveBodyCollision();
@@ -429,16 +466,19 @@ export class FightEngine {
 
   computeAI(actor, enemy) {
     const distance = Math.abs(enemy.x - actor.x);
-    const diff = {
+    const baseDiff = {
       story: { react: 24, block: .18, attack: .38, counter: .08 },
       normal: { react: 13, block: .35, attack: .57, counter: .2 },
       hard: { react: 7, block: .56, attack: .76, counter: .38 }
     }[this.config.difficulty] || { react: 13, block: .35, attack: .57, counter: .2 };
-    const preferred = {
-      rushdown: 95, swarm: 78, grappler: 70, juggernaut: 105, boss: 125,
-      zoner: 330, artillery: 390, flyer: 250, ghost: 210, trickster: 180,
-      puppet: 135, balanced: 145
-    }[actor.data.archetype] || 145;
+    const personality = actor.profile.ai || { preferredRange: 145, aggression: 1, defense: 1, mobility: 1 };
+    const diff = {
+      react: Math.max(4, Math.round(baseDiff.react * (this.ritual.aiReactionScale || 1) / Math.max(.65, personality.mobility || 1))),
+      block: clamp(baseDiff.block * (personality.defense || 1), .05, .88),
+      attack: clamp(baseDiff.attack * (personality.aggression || 1), .15, .94),
+      counter: clamp(baseDiff.counter * (personality.defense || 1), .04, .72)
+    };
+    const preferred = personality.preferredRange || 145;
 
     actor.aiTimer--;
     if (actor.aiTimer <= 0) {
@@ -447,8 +487,18 @@ export class FightEngine {
       const away = enemy.x > actor.x ? 'left' : 'right';
       const intent = {};
       const threatened = enemy.attack && distance < Math.max(170, enemy.attack.move.reach * .9);
+      const read = this.config.adaptiveAI ? this.dominantPlayerAction() : null;
+      actor.aiRead = read?.count >= 3 ? read.key : null;
 
-      if (threatened && this.rng() < diff.block) {
+      if (actor.aiRead === 'throw' && distance < 118) {
+        intent[away] = true;
+        if (this.rng() < .38) intent.jump = true;
+      } else if (actor.aiRead === 'special' && distance < 430 && this.rng() < diff.block + .16) {
+        if (actor.dodgeCooldown === 0 && this.rng() < .5) intent.dodge = true;
+        else intent.guard = true;
+      } else if (actor.aiRead === 'heavy' && distance < 150 && this.rng() < diff.counter + .28) {
+        intent.light = true;
+      } else if (threatened && this.rng() < diff.block) {
         if (this.rng() < diff.counter && actor.dodgeCooldown === 0) intent.dodge = true;
         else intent.guard = true;
       } else if (distance > preferred + 80) {
@@ -498,6 +548,14 @@ export class FightEngine {
     if (this.config.freeMeter) actor.meter = 100;
     if (this.config.autoHeal && this.frame % 30 === 0 && actor.health < actor.maxHealth) actor.health = Math.min(actor.maxHealth, actor.health + 4);
 
+    if (actor.phaseLock > 0) {
+      actor.phaseLock--;
+      actor.state = 'phase';
+      actor.vx *= .72;
+      if (actor.phaseLock % 7 === 0) this.spawnImpact(actor.x + (this.rng() - .5) * 80, actor.y - 120 - this.rng() * 80, actor.data.visual.accent, false, 5);
+      this.physics(actor);
+      return;
+    }
     if (actor.hurtFrames > 0) {
       actor.hurtFrames--;
       actor.state = 'hurt';
@@ -518,13 +576,17 @@ export class FightEngine {
       return;
     }
 
-    if (controls.guardPressed && actor.grounded) actor.parryWindow = 7;
+    if (controls.guardPressed && actor.grounded) {
+      actor.parryWindow = 7;
+      this.logInput(actor, 'GARDE');
+    }
     actor.blocking = Boolean(controls.guard && actor.grounded);
     actor.crouching = Boolean(controls.down && actor.grounded && !actor.blocking);
     actor.state = actor.blocking ? 'block' : actor.crouching ? 'crouch' : 'idle';
 
     if (controls.dodge && actor.dodgeCooldown === 0 && canDodge(actor)) {
       actor.state = 'dodge';
+      this.logInput(actor, 'ESQUIVE');
       actor.invuln = profile.dodgeInvuln;
       actor.dodgeCooldown = 42;
       actor.vx = -actor.facing * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0));
@@ -532,6 +594,7 @@ export class FightEngine {
       audio.tone({ freq: 110, duration: .1, gain: .025, slide: 90 });
     } else if (controls.jump && actor.grounded) {
       actor.vy = -profile.jump;
+      this.logInput(actor, 'SAUT');
       actor.grounded = false;
       actor.state = 'jump';
       audio.tone({ freq: 90, duration: .06, gain: .018, slide: 40 });
@@ -545,7 +608,7 @@ export class FightEngine {
       if (controls.left) movement--;
       if (controls.right) movement++;
       if (movement) {
-        const speed = profile.speed * statusSpeed(actor);
+        const speed = profile.speed * actor.phaseSpeed * statusSpeed(actor);
         actor.vx = movement * speed;
         actor.state = actor.grounded ? 'walk' : 'jump';
         const advancing = Math.sign(enemy.x - actor.x) === movement;
@@ -573,7 +636,8 @@ export class FightEngine {
       }
     }
     actor.x += actor.vx;
-    actor.x = clamp(actor.x, 70, 1210);
+    const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+    actor.x = clamp(actor.x, inset, WIDTH - inset);
     if (actor.grounded && actor.state !== 'dodge') actor.vx *= actor.status?.id === 'frost' ? .91 : .84;
   }
 
@@ -581,8 +645,9 @@ export class FightEngine {
     const move = actor.profile.moves[key];
     if (!move) return false;
     if (key === 'super') {
-      if (actor.meter < move.meterCost) return false;
-      actor.meter -= move.meterCost;
+      const ritualCost = Math.round(move.meterCost * (this.ritual.superCostScale || 1));
+      if (actor.meter < ritualCost) return false;
+      actor.meter -= ritualCost;
       this.superOverlay = { actor, timer: 50, name: move.name };
       audio.super();
       vibrate([20, 25, 20, 25, 55]);
@@ -601,6 +666,8 @@ export class FightEngine {
       if (actor.moveVariety.size >= 4) actor.moveVariety.clear();
     }
     actor.lastMoveKey = key;
+    this.logInput(actor, move.name);
+    if (actor.index === 0 && Object.prototype.hasOwnProperty.call(this.playerPattern, key)) this.playerPattern[key]++;
     return true;
   }
 
@@ -691,7 +758,11 @@ export class FightEngine {
     const blocked = target.blocking && !isThrow && target.grounded;
     const counter = Boolean(target.attack && target.attack.frame <= target.attack.move.startup + 1);
     const guardScale = attacker.profile.trait.guardDamage || 1;
-    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1));
+    let ritualDamage = this.ritual.damageScale || 1;
+    if (move === attacker.profile.moves.special) ritualDamage *= this.ritual.specialDamageScale || 1;
+    if (move === attacker.profile.moves.super) ritualDamage *= this.ritual.superDamageScale || 1;
+    if (attacker.data.boss) ritualDamage *= this.ritual.bossPowerScale || 1;
+    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker));
 
     if (blocked) {
       const perfect = target.parryWindow > 0;
@@ -708,12 +779,12 @@ export class FightEngine {
         this.shake = Math.max(this.shake, 5);
         audio.perfectGuard?.();
       } else {
-        const chip = Math.round(damage * .14);
+        const chip = Math.round(damage * .14 * (this.ritual.chipScale || 1));
         target.health -= chip;
         target.stats.damageTaken += chip;
         attacker.stats.damageDealt += chip;
-        target.meter = clamp(target.meter + 5, 0, 100);
-        attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain, 0, 100);
+        target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
+        attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain * (this.ritual.meterGainScale || 1), 0, 100);
         target.vx = attacker.facing * (move.knockback || 4) * .42;
         this.hitstop = 3;
       }
@@ -733,7 +804,7 @@ export class FightEngine {
       target.profile.trait.id === 'rustArmor' ||
       (target.profile.trait.id === 'nightmareArmor' && healthRatio(target) > .33)
     );
-    damage = Math.round(damage * (1 - (target.profile.armor || 0)));
+    damage = Math.round(damage * (1 - clamp((target.profile.armor || 0) + (target.phaseArmor || 0), 0, .45)));
     target.health -= damage;
     attacker.stats.damageDealt += damage;
     target.stats.damageTaken += damage;
@@ -760,8 +831,8 @@ export class FightEngine {
     }
 
     const gainScale = statusMeterScale(attacker);
-    attacker.meter = clamp(attacker.meter + (move.meter || 0) * attacker.profile.meterGain * gainScale, 0, 100);
-    target.meter = clamp(target.meter + Math.max(6, (move.meter || 0) * .55), 0, 100);
+    attacker.meter = clamp(attacker.meter + (move.meter || 0) * attacker.profile.meterGain * gainScale * (this.ritual.meterGainScale || 1), 0, 100);
+    target.meter = clamp(target.meter + Math.max(6, (move.meter || 0) * .55) * (this.ritual.meterGainScale || 1), 0, 100);
     attacker.combo++;
     attacker.comboTimer = 72;
     attacker.stats.maxCombo = Math.max(attacker.stats.maxCombo, attacker.combo);
@@ -816,10 +887,11 @@ export class FightEngine {
     const [p1, p2] = this.actors;
     const distance = Math.abs(p1.x - p2.x);
     const attackNoise = p1.attack || p2.attack ? .22 : 0;
-    this.world.radio = clamp(1 - distance / 620 + this.world.amount * .34 + attackNoise, 0, 1);
+    const radioScale = this.ritual.radioDisabled ? 0 : (this.ritual.radioScale || 1);
+    this.world.radio = clamp((1 - distance / 620 + this.world.amount * .34 + attackNoise) * radioScale, 0, 1);
 
     if (this.config.otherworldShift && !this.world.triggered && this.frame > 260) {
-      const lowHealth = Math.min(healthRatio(p1), healthRatio(p2)) <= .58;
+      const lowHealth = Math.min(healthRatio(p1), healthRatio(p2)) <= (this.ritual.shiftThreshold || .58);
       const lateTimer = Number.isFinite(this.matchTime) && this.config.timeLimit > 0 && this.matchTime <= this.config.timeLimit * .58;
       const finalRound = this.round >= this.config.roundsToWin * 2 - 1;
       if (lowHealth || lateTimer || finalRound) this.triggerOtherworldShift();
@@ -835,7 +907,7 @@ export class FightEngine {
       this.world.hazardTimer--;
       if (this.world.hazardTimer <= 0) {
         this.spawnHazard();
-        this.world.hazardTimer = 250 + Math.floor(this.rng() * 170);
+        this.world.hazardTimer = Math.round((250 + Math.floor(this.rng() * 170)) * (this.ritual.hazardIntervalScale || 1));
       }
     }
   }
@@ -855,7 +927,8 @@ export class FightEngine {
     const profile = STAGE_HAZARDS[id];
     const target = this.actors[Math.floor(this.rng() * this.actors.length)];
     const spread = (this.rng() - .5) * 250;
-    const x = clamp(target.x + spread, 120, 1160);
+    const inset = clamp(this.ritual.arenaInset || 120, 120, 280);
+    const x = clamp(target.x + spread, inset, WIDTH - inset);
     this.hazards.push({ id, profile, x, y: FLOOR, timer: profile.telegraph, maxTimer: profile.telegraph, active: 0, resolved: false });
     this.world.hazardsTriggered++;
   }
@@ -880,7 +953,7 @@ export class FightEngine {
       const distance = Math.abs(actor.x - hazard.x);
       if (distance > hazard.profile.radius || actor.invuln > 0) continue;
       const guarded = actor.blocking && actor.grounded;
-      const damage = Math.round(hazard.profile.damage * (guarded ? .28 : 1));
+      const damage = Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
       actor.health -= damage;
       actor.stats.damageTaken += damage;
       actor.stats.hazardsTaken++;
@@ -893,6 +966,73 @@ export class FightEngine {
     this.shake = Math.max(this.shake, 11);
     this.flash = 5;
     audio.hazard?.();
+  }
+
+  logInput(actor, label) {
+    if (actor.index !== 0 || !label) return;
+    const last = this.inputHistory[this.inputHistory.length - 1];
+    if (last?.label === label && this.frame - last.frame < 8) return;
+    this.inputHistory.push({ label, frame: this.frame });
+    if (this.inputHistory.length > 12) this.inputHistory.shift();
+  }
+
+  dominantPlayerAction() {
+    const entries = Object.entries(this.playerPattern);
+    if (!entries.length) return null;
+    const [key, count] = entries.sort((left, right) => right[1] - left[1])[0];
+    return { key, count };
+  }
+
+  applyRitualTick() {
+    if (!this.ritual.lifeDrain || this.frame % 60 !== 0 || this.phase !== 'fight') return;
+    for (const actor of this.actors) {
+      if (actor.health <= 1 || actor.ko) continue;
+      const damage = Math.min(actor.health - 1, this.ritual.lifeDrain);
+      actor.health -= damage;
+      actor.stats.damageTaken += damage;
+      actor.stats.ritualDamage += damage;
+    }
+  }
+
+  checkBossPhases() {
+    for (const actor of this.actors) {
+      if (!actor.data.boss || !actor.bossPhases.length || actor.ko) continue;
+      const next = actor.bossPhases[actor.bossPhaseIndex + 1];
+      if (next && healthRatio(actor) <= next.threshold) this.advanceBossPhase(actor, next);
+    }
+  }
+
+  forceBossPhase(index = 1) {
+    const actor = this.actors[index]?.data.boss ? this.actors[index] : this.actors.find((entry) => entry.data.boss);
+    if (!actor) return false;
+    const next = actor.bossPhases[actor.bossPhaseIndex + 1];
+    if (!next) return false;
+    this.advanceBossPhase(actor, next, true);
+    this.callbacks.onState(this.snapshot());
+    return true;
+  }
+
+  advanceBossPhase(actor, phase, forced = false) {
+    actor.bossPhaseIndex++;
+    actor.phaseName = phase.name;
+    actor.phasePower = phase.power || 1;
+    actor.phaseSpeed = phase.speed || 1;
+    actor.phaseArmor = phase.armor || 0;
+    actor.phaseLock = forced ? 28 : 52;
+    actor.invuln = Math.max(actor.invuln, actor.phaseLock + 8);
+    actor.meter = clamp(actor.meter + (phase.meter || 0), 0, 100);
+    actor.stats.bossPhasesTriggered++;
+    this.bossPhaseOverlay = { actor, phase, timer: 92 };
+    this.addText(`PHASE ${actor.bossPhaseIndex + 1} — ${phase.name}`, WIDTH / 2, 244, 'phase');
+    this.shake = Math.max(this.shake, 16);
+    this.flash = 9;
+    audio.siren?.();
+    vibrate([35, 25, 35, 25, 85]);
+    if (phase.otherworld && !this.world.triggered) this.triggerOtherworldShift();
+    if (phase.hazardBurst && this.config.stageHazards) {
+      this.spawnHazard();
+      this.world.hazardTimer = Math.round(90 * (this.ritual.hazardIntervalScale || 1));
+    }
   }
 
   resolveBodyCollision() {
@@ -949,6 +1089,10 @@ export class FightEngine {
       this.superOverlay.timer--;
       if (this.superOverlay.timer <= 0) this.superOverlay = null;
     }
+    if (this.bossPhaseOverlay) {
+      this.bossPhaseOverlay.timer--;
+      if (this.bossPhaseOverlay.timer <= 0) this.bossPhaseOverlay = null;
+    }
     this.shake *= .82;
     this.flash = Math.max(0, this.flash - 1);
     for (const particle of this.particles) {
@@ -966,7 +1110,9 @@ export class FightEngine {
     this.texts = this.texts.filter((text) => text.life > 0);
     for (const actor of this.actors) {
       const decay = actor.status?.id === 'decay';
-      if (!actor.blocking && !decay && actor.guard < actor.maxGuard && this.frame % 5 === 0) actor.guard = Math.min(actor.maxGuard, actor.guard + 1);
+      if (!actor.blocking && !decay && actor.guard < actor.maxGuard && this.frame % 5 === 0) {
+        actor.guard = Math.min(actor.maxGuard, actor.guard + (this.ritual.guardRegenScale || 1));
+      }
     }
   }
 
@@ -1047,6 +1193,8 @@ export class FightEngine {
       combo: actor.combo,
       status: actor.status?.id || null,
       trait: actor.profile.trait.id,
+      bossPhase: actor.bossPhaseIndex + 1,
+      bossPhaseName: actor.phaseName,
       stats: { ...actor.stats }
     });
     return {
@@ -1056,6 +1204,8 @@ export class FightEngine {
       p1: actorSnapshot(p1),
       p2: actorSnapshot(p2),
       world: { ...this.world },
+      ritual: { id: this.ritual.id, name: this.ritual.name },
+      inputHistory: [...this.inputHistory],
       winner: this.winner?.data?.name || null,
       paused: this.paused
     };
@@ -1103,6 +1253,8 @@ export class FightEngine {
     this.renderHUD(context);
     this.renderTexts(context);
     if (this.superOverlay) this.renderSuperOverlay(context);
+    if (this.bossPhaseOverlay) this.renderBossPhaseOverlay(context);
+    this.renderRitualOverlay(context);
     if (this.paused) this.renderPause(context);
     if (this.phase === 'matchEnd') this.renderMatchEnd(context);
     if (this.flash) {
@@ -1262,8 +1414,11 @@ export class FightEngine {
     context.fillStyle = '#7f877f';
     context.font = '700 9px ui-monospace';
     context.fillText(this.stage.name, WIDTH / 2, 86);
+    context.fillStyle = this.ritual.id === 'none' ? '#59615b' : '#c34a52';
+    context.font = '900 8px ui-monospace';
+    context.fillText(`RITE · ${this.ritual.name}`, WIDTH / 2, 99);
 
-    if (this.config.radioWarning) {
+    if (this.config.radioWarning && !this.ritual.radioDisabled) {
       const bars = 8;
       const active = Math.ceil(this.world.radio * bars);
       const startX = WIDTH / 2 - 44;
@@ -1279,9 +1434,9 @@ export class FightEngine {
 
     if (this.config.training) {
       context.fillStyle = 'rgba(4,7,5,.74)';
-      context.fillRect(18, 143, 330, 132);
+      context.fillRect(18, 143, 380, 180);
       context.strokeStyle = '#3b433d';
-      context.strokeRect(18, 143, 330, 132);
+      context.strokeRect(18, 143, 380, 180);
       context.textAlign = 'left';
       context.fillStyle = '#c13e46';
       context.font = '900 10px ui-monospace';
@@ -1295,6 +1450,10 @@ export class FightEngine {
       context.fillText(`DISTANCE   ${Math.round(Math.abs(p1.x - p2.x))}`, 33, 239);
       context.fillText(`TRAIT      ${p1.profile.trait.name}`, 33, 257);
       context.fillText(`STATUS     ${p1.status ? AFFLICTIONS[p1.status.id]?.name : '—'}`, 33, 273);
+      context.fillText(`BOSS PHASE ${p2.phaseName || '—'}`, 33, 291);
+      context.fillStyle = '#747d75';
+      context.font = '700 9px ui-monospace';
+      context.fillText(`INPUTS     ${this.inputHistory.slice(-6).map((entry) => entry.label).join(' › ') || '—'}`, 33, 311);
     }
     context.restore();
   }
@@ -1309,7 +1468,7 @@ export class FightEngine {
         context.font = '900 34px ui-monospace'; context.fillStyle = '#e6dfcf';
       } else if (['fight', 'ko'].includes(text.kind)) {
         context.font = '900 82px ui-monospace'; context.fillStyle = '#a62d36'; context.shadowColor = '#000'; context.shadowBlur = 18;
-      } else if (text.kind === 'shift') {
+      } else if (text.kind === 'shift' || text.kind === 'phase') {
         context.font = '900 30px ui-monospace'; context.fillStyle = '#d4c7b2'; context.shadowColor = '#a62d36'; context.shadowBlur = 22;
       } else if (['break', 'perfect', 'counter', 'armor'].includes(text.kind)) {
         context.font = '900 20px ui-monospace'; context.fillStyle = text.kind === 'perfect' ? '#e7d9a8' : text.kind === 'counter' ? '#d86a70' : '#e6b45d';
@@ -1343,6 +1502,48 @@ export class FightEngine {
     context.fillStyle = '#180405';
     context.font = '900 18px ui-monospace';
     context.fillText(overlay.name.toUpperCase(), 0, 30);
+    context.restore();
+  }
+
+  renderBossPhaseOverlay(context) {
+    const overlay = this.bossPhaseOverlay;
+    const progress = 1 - overlay.timer / 92;
+    context.save();
+    context.globalAlpha = Math.sin(Math.min(1, progress * 1.5) * Math.PI) * .92;
+    context.fillStyle = 'rgba(8,1,2,.78)';
+    context.fillRect(0, 178, WIDTH, 190);
+    context.strokeStyle = overlay.actor.data.visual.accent || '#b83a43';
+    context.lineWidth = 2;
+    context.beginPath(); context.moveTo(0, 179); context.lineTo(WIDTH, 179); context.moveTo(0, 367); context.lineTo(WIDTH, 367); context.stroke();
+    context.textAlign = 'center';
+    context.fillStyle = '#c4444d';
+    context.font = '900 15px ui-monospace';
+    context.fillText(`PHASE ${overlay.actor.bossPhaseIndex + 1}`, WIDTH / 2, 228);
+    context.fillStyle = '#f1eadf';
+    context.font = '900 54px ui-monospace';
+    context.fillText(overlay.phase.name, WIDTH / 2, 292);
+    context.fillStyle = '#9ea49c';
+    context.font = '700 12px ui-monospace';
+    context.fillText(`${overlay.actor.data.name.toUpperCase()} · ${overlay.actor.data.signature.toUpperCase()}`, WIDTH / 2, 324);
+    context.restore();
+  }
+
+  renderRitualOverlay(context) {
+    if (this.ritual.id === 'none') return;
+    context.save();
+    if (this.ritual.id === 'denseFog') {
+      const fog = context.createLinearGradient(0, 0, WIDTH, 0);
+      fog.addColorStop(0, 'rgba(210,214,204,.08)'); fog.addColorStop(.5, 'rgba(220,220,210,.02)'); fog.addColorStop(1, 'rgba(210,214,204,.08)');
+      context.fillStyle = fog; context.fillRect(0, 126, WIDTH, HEIGHT - 126);
+    } else if (this.ritual.id === 'bloodDebt') {
+      context.fillStyle = 'rgba(92,0,8,.045)'; context.fillRect(0, 126, WIDTH, HEIGHT - 126);
+    } else if (this.ritual.id === 'staticStorm') {
+      context.globalAlpha = .08 + this.world.radio * .08;
+      context.fillStyle = '#e8eadf';
+      for (let y = 130; y < HEIGHT; y += 7) context.fillRect(0, y + ((this.frame + y) % 5), WIDTH, 1);
+    } else if (this.ritual.id === 'redJudgment') {
+      context.fillStyle = 'rgba(112,0,8,.07)'; context.fillRect(0, 126, WIDTH, HEIGHT - 126);
+    }
     context.restore();
   }
 

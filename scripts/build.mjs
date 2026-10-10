@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, createBossPhases, createCombatProfile
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -39,7 +39,9 @@ async function syncData() {
       version: VERSION,
       traits: MANIFESTATION_TRAITS,
       afflictions: AFFLICTIONS,
-      hazards: STAGE_HAZARDS
+      hazards: STAGE_HAZARDS,
+      rituals: RITUAL_MODIFIERS,
+      aiPersonalities: AI_PERSONALITIES
     })
   ]);
 }
@@ -51,6 +53,8 @@ async function runVerification() {
   const traitIds=new Set(Object.keys(MANIFESTATION_TRAITS));
   const afflictionIds=new Set(Object.keys(AFFLICTIONS));
   const hazardIds=new Set(Object.keys(STAGE_HAZARDS));
+  const aiIds=new Set(Object.keys(AI_PERSONALITIES));
+  const ritualIds=new Set(Object.keys(RITUAL_MODIFIERS));
 
   for (const stage of STAGES) {
     assert(!stageIds.has(stage.id),`ID d’arène dupliqué: ${stage.id}`);
@@ -65,10 +69,18 @@ async function runVerification() {
     assert(stageIds.has(fighter.stageId),`Arène manquante pour ${fighter.name}: ${fighter.stageId}`);
     assert(traitIds.has(fighter.trait),`Trait inconnu: ${fighter.id}/${fighter.trait}`);
     assert(afflictionIds.has(fighter.affliction),`Affliction inconnue: ${fighter.id}/${fighter.affliction}`);
+    assert(aiIds.has(fighter.aiProfile),`Personnalité IA inconnue: ${fighter.id}/${fighter.aiProfile}`);
     assert(typeof fighter.finisher==='string'&&fighter.finisher.trim().length>=4,`Finisher absent: ${fighter.id}`);
     const profile=createCombatProfile(fighter);
     assert(profile.maxHealth>=700&&profile.maxHealth<=1800,`Vitalité hors bornes: ${fighter.id}`);
     assert(Object.keys(profile.moves).length===6,`Moveset incomplet: ${fighter.id}`);
+    assert(profile.ai&&profile.ai.preferredRange>0,`Profil IA incomplet: ${fighter.id}`);
+    const phases=createBossPhases(fighter);
+    assert((fighter.boss&&phases.length===2)||(!fighter.boss&&phases.length===0),`Phases de boss incohérentes: ${fighter.id}`);
+    phases.forEach((phase,index)=>{
+      assert(phase.threshold>0&&phase.threshold<1,`Seuil de phase invalide: ${fighter.id}/${index}`);
+      assert(phase.power>=1&&phase.speed>=1,`Modificateur de phase invalide: ${fighter.id}/${index}`);
+    });
     for(const [key,move] of Object.entries(profile.moves)){
       assert(move.damage>0&&move.startup>=0&&move.reach>0,`Coup invalide: ${fighter.id}/${key}`);
       if(move.effect)assert(afflictionIds.has(move.effect.id),`Effet inconnu: ${fighter.id}/${key}/${move.effect.id}`);
@@ -90,6 +102,8 @@ async function runVerification() {
   assert(CONTENT_STATS.sources===Object.keys(SOURCE_META).length,'Statistique sources incohérente');
   assert(CONTENT_STATS.stages===STAGES.length,'Statistique arènes incohérente');
   assert(CONTENT_STATS.chronicles===CHRONICLES.length,'Statistique chroniques incohérente');
+  assert(CONTENT_STATS.rituals===ritualIds.size,'Statistique rites incohérente');
+  assert(CONTENT_STATS.bossPhases===ROSTER.filter(f=>f.boss).reduce((sum,fighter)=>sum+createBossPhases(fighter).length,0),'Statistique phases incohérente');
 
   const required=[
     'index.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
@@ -115,7 +129,7 @@ async function runVerification() {
       assert(await exists(target),`Référence absente ${relative(project,file)} → ${ref}`);
     }
   }
-  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size};
+  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases};
 }
 
 await syncData();
@@ -128,7 +142,7 @@ const result=verify?await runVerification():{js:0,html:0,traits:0,afflictions:0,
 if(!verifyOnly){
   const files=await filesUnder(dist);const manifest=[];
   for(const file of files){const bytes=await readFile(file);manifest.push({path:relative(dist,file).replaceAll('\\','/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
-  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length},verified:verify,checks:result,files:manifest};
+  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases},verified:verify,checks:result,files:manifest};
   await writeJson(join(dist,'build-manifest.json'),report);
   console.log(`Build v${VERSION}: ${files.length+1} fichiers → ${dist}`);
 }

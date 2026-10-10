@@ -32,6 +32,7 @@
         <label>MANCHES<select id="rounds" class="ui-select"><option value="1">1 GAGNANTE</option><option value="2" selected>2 GAGNANTES</option><option value="3">3 GAGNANTES</option></select></label>
         <label>TEMPS<select id="timer" class="ui-select"><option value="60">60</option><option value="99" selected>99</option><option value="0">INFINI</option></select></label>
         <label>IA<select id="difficulty" class="ui-select"><option value="story">BRUME</option><option value="normal" selected>OTHERWORLD</option><option value="hard">CAUCHEMAR</option></select></label>
+        <label>RITE<select id="ritualSelect" class="ui-select"></select></label>
         <button id="stageMini" class="stage-mini"><canvas id="stageCanvas" width="152" height="84"></canvas><div><small>ARÈNE</small><b id="stageName">—</b></div></button>
         <button id="fighterDossier" class="ui-button">DOSSIER</button>
         <button id="launch" class="ui-button launch">COMBATTRE</button>
@@ -39,6 +40,7 @@
           <label><input id="otherworldShift" type="checkbox" checked> BASCULE OTHERWORLD</label>
           <label><input id="stageHazards" type="checkbox" checked> DANGERS D’ARÈNE</label>
           <label><input id="radioWarning" type="checkbox" checked> RADIO DE PROXIMITÉ</label>
+          <label><input id="adaptiveAI" type="checkbox" checked> IA ADAPTATIVE</label>
         </div>
       </div>
     </main>
@@ -51,7 +53,7 @@
 <section id="fightScreen" class="screen fight-screen hidden">
   <div class="game-head"><div class="game-actions"><button id="leaveFight" class="ui-button">SÉLECTION</button><span id="matchLabel" class="badge">VERSUS</span></div><div class="game-actions"><button id="trainingToggle" class="ui-button hidden">OBSERVATION</button><button id="pauseBtn" class="ui-button">PAUSE</button></div></div>
   <div class="canvas-wrap"><canvas id="game" width="1280" height="720"></canvas><div id="gameHelp" class="game-help"></div></div>
-  <aside id="trainingPanel" class="training-panel hidden"><h3>OBSERVATION</h3><label>HITBOXES <input id="hitboxes" type="checkbox"></label><label>AUTO-SOIN <input id="autoHeal" type="checkbox"></label><label>JAUGE LIBRE <input id="freeMeter" type="checkbox"></label><button id="forceShift" class="ui-button">FORCER OTHERWORLD</button><button id="resetDojo" class="ui-button">RESET</button></aside>
+  <aside id="trainingPanel" class="training-panel hidden"><h3>OBSERVATION</h3><label>HITBOXES <input id="hitboxes" type="checkbox"></label><label>AUTO-SOIN <input id="autoHeal" type="checkbox"></label><label>JAUGE LIBRE <input id="freeMeter" type="checkbox"></label><button id="forceShift" class="ui-button">FORCER OTHERWORLD</button><button id="forceBossPhase" class="ui-button">PHASE BOSS SUIVANTE</button><button id="resetDojo" class="ui-button">RESET</button></aside>
   <div id="touchLayer" class="touch-layer">
     <div class="touch-group touch-left"><button class="touch-button" data-player="p1" data-action="up">↑</button><button class="touch-button" data-player="p1" data-action="left">←</button><button class="touch-button" data-player="p1" data-action="guard">G</button><button class="touch-button" data-player="p1" data-action="right">→</button></div>
     <div class="touch-group touch-right"><button class="touch-button" data-player="p1" data-action="light">J</button><button class="touch-button" data-player="p1" data-action="heavy">K</button><button class="touch-button" data-player="p1" data-action="special">I</button><button class="touch-button" data-player="p1" data-action="throw">U</button><button class="touch-button" data-player="p1" data-action="super">O</button><button class="touch-button" data-player="p1" data-action="dodge">L</button></div>

@@ -11,3 +11,14 @@ html,body{height:100%;overflow:hidden}.archive-body{height:100%;overflow:hidden}
 @media(max-width:760px){.finisher-head{align-items:flex-start;flex-direction:column}.finisher-grid{grid-template-columns:repeat(2,1fr)}}
 
 .trait-box{border-color:#65353a}.affliction-box{border-color:#4c564b}.source-counts{grid-template-columns:repeat(4,1fr)}#systemsTab{overflow:auto;display:grid;grid-template-columns:minmax(300px,.48fr) 1.52fr;gap:12px}.systems-head{padding:28px;align-self:start}.systems-head small{color:#bc3d45;font:900 8px ui-monospace;letter-spacing:.18em}.systems-head h1{font-size:clamp(34px,4vw,62px);line-height:.84;letter-spacing:-.075em;margin:10px 0 16px}.systems-head p{color:#979f97;line-height:1.6}.systems-grid{overflow:auto;display:grid;gap:12px}.system-group{padding:16px;border:1px solid #333a34;background:#090d0a}.system-group h2{margin:0 0 12px;color:#d8d4c9;font-size:20px}.system-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.system-card{padding:12px;border:1px solid #303731;background:#0d120e}.system-card small{color:#a83a43;font:800 7px ui-monospace}.system-card h3{font-size:12px;margin:6px 0}.system-card p{margin:0;color:#8f978f;font-size:11px;line-height:1.45}.system-group.affliction .system-card small{color:#9b8b61}.system-group.hazard .system-card small{color:#c25a45}@media(max-width:950px){#systemsTab{grid-template-columns:1fr}.system-card-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.system-card-grid{grid-template-columns:1fr}}
+
+/* v0.3.0 — phases, rites et IA */
+.phase-archive{margin-top:10px;padding:13px;border:1px solid #6e3035;background:linear-gradient(90deg,#160b0d,#0b100c)}
+.phase-archive>b{display:block;color:#ca414a;font:900 8px ui-monospace;letter-spacing:.14em;margin-bottom:9px}
+.phase-archive article{padding:9px 10px;border-top:1px solid #342b2c}
+.phase-archive article strong{display:block;color:#ddd6ca;font-size:12px}
+.phase-archive article span{display:block;margin-top:4px;color:#818981;font:700 8px ui-monospace}
+.system-group.ritual .system-card{border-color:#5d3034;background:#130c0e}
+.system-group.ritual .system-card small{color:#d04b53}
+.system-group.ai .system-card{border-color:#39473d;background:#0b120d}
+.system-group.ai .system-card small{color:#7ba286}

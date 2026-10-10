@@ -14,7 +14,7 @@ function context(){
   return new Proxy(base,{get(target,key){if(key in target)return target[key];return typeof key==='string'?()=>{}:undefined;},set(target,key,value){target[key]=value;return true;}});
 }
 
-test('all 53 stages render in fog, transition and Otherworld states',()=>{
+test('all stages render in fog, transition and Otherworld states',()=>{
   const ctx=context();
   for(const stage of STAGES){
     for(const otherworld of [0,.5,1]){
@@ -23,7 +23,7 @@ test('all 53 stages render in fog, transition and Otherworld states',()=>{
   }
 });
 
-test('all 184 manifestations render as fighters and portraits',()=>{
+test('all manifestations render as fighters and portraits',()=>{
   const ctx=context();
   const states=[
     {name:'idle',frame:0,status:null},

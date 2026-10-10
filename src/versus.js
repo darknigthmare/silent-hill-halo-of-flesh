@@ -1,11 +1,11 @@
 import {
   ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
-  AFFLICTIONS, getFighter, getStage, createCombatProfile
+  AFFLICTIONS, RITUAL_MODIFIERS, getRitualModifier, getFighter, getStage, createCombatProfile
 } from './data.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
 import {
-  attachGlobalAudioUnlock, audio, escapeHTML, loadJSON, loadSettings,
+  attachGlobalAudioUnlock, audio, clamp, escapeHTML, loadJSON, loadSettings,
   returnToCommand, saveLastFront, writeJSON, RECORDS_KEY, CHRONICLES_KEY
 } from './shared.js';
 
@@ -48,7 +48,7 @@ const els = {
   search: $('#search'), sourceFilter: $('#sourceFilter'), typeFilter: $('#typeFilter'),
   archetypeFilter: $('#archetypeFilter'), roster: $('#roster'), pageLabel: $('#pageLabel'),
   prevPage: $('#prevPage'), nextPage: $('#nextPage'), mode: $('#mode'), rounds: $('#rounds'), timer: $('#timer'),
-  difficulty: $('#difficulty'), stageMini: $('#stageMini'), stageCanvas: $('#stageCanvas'), stageName: $('#stageName'),
+  difficulty: $('#difficulty'), ritualSelect: $('#ritualSelect'), stageMini: $('#stageMini'), stageCanvas: $('#stageCanvas'), stageName: $('#stageName'),
   launch: $('#launch'), fighterDossier: $('#fighterDossier'), openGallery: $('#openGallery'), stageGallery: $('#stageGallery'),
   closeGallery: $('#closeGallery'), stageList: $('#stageList'), dossier: $('#dossier'), closeDossier: $('#closeDossier'),
   dossierPortrait: $('#dossierPortrait'), dossierCopy: $('#dossierCopy'), randomAll: $('#randomAll'), backCommand: $('#backCommand'),
@@ -58,8 +58,8 @@ const els = {
   touchLayer: $('#touchLayer'), mobileP1: $('#mobileP1'), result: $('#result'), resultKicker: $('#resultKicker'),
   resultTitle: $('#resultTitle'), resultText: $('#resultText'), rematch: $('#rematch'), continueRun: $('#continueRun'),
   resultSelect: $('#resultSelect'), resultStats: $('#resultStats'),
-  otherworldShift: $('#otherworldShift'), stageHazards: $('#stageHazards'), radioWarning: $('#radioWarning'),
-  forceShift: $('#forceShift'),
+  otherworldShift: $('#otherworldShift'), stageHazards: $('#stageHazards'), radioWarning: $('#radioWarning'), adaptiveAI: $('#adaptiveAI'),
+  forceShift: $('#forceShift'), forceBossPhase: $('#forceBossPhase'),
 };
 
 function valueScore(value, min, max) {
@@ -115,6 +115,24 @@ function populateFilters() {
     els.archetypeFilter.append(option);
   });
 }
+
+function populateRituals() {
+  els.ritualSelect.textContent = '';
+  for (const [id, ritual] of Object.entries(RITUAL_MODIFIERS)) {
+    const option = document.createElement('option');
+    option.value = id;
+    option.textContent = `${ritual.short || ritual.name} · ${ritual.name}`;
+    option.title = ritual.description;
+    els.ritualSelect.append(option);
+  }
+}
+
+function currentRitualId() {
+  if (state.run?.rituals?.length) return state.run.rituals[state.run.index % state.run.rituals.length];
+  return els.ritualSelect.value || 'none';
+}
+
+function currentRitual() { return { id: currentRitualId(), ...getRitualModifier(currentRitualId()) }; }
 
 function matchesFilters(fighter) {
   const query = els.search.value.trim().toLowerCase();
@@ -221,6 +239,9 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
   }).join('');
   const arena = getStage(fighter.stageId);
   const hazard = STAGE_HAZARDS[arena.hazard];
+  const phases = profile.bossPhases?.length
+    ? `<div class="dossier-box phases"><b>PHASES DE BOSS</b><ol>${profile.bossPhases.map((phase) => `<li><strong>${escapeHTML(phase.name)}</strong><span>${Math.round(phase.threshold * 100)}% · puissance ×${phase.power.toFixed(2)} · vitesse ×${phase.speed.toFixed(2)}</span></li>`).join('')}</ol></div>`
+    : '';
   els.dossierCopy.innerHTML = `
     <span class="lead">${escapeHTML(fighter.game)} · ${escapeHTML(fighter.category)} · ${escapeHTML(fighter.archetype.toUpperCase())}</span>
     <h3>${escapeHTML(fighter.name)}</h3>
@@ -230,7 +251,9 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
       <div class="dossier-box trait"><b>TRAIT DE MANIFESTATION</b><p><strong>${escapeHTML(profile.trait.name)}</strong><br>${escapeHTML(profile.trait.description)}</p></div>
       <div class="dossier-box affliction"><b>AFFLICTION SIGNATURE</b><p><strong>${escapeHTML(profile.affliction.name)}</strong><br>${escapeHTML(profile.affliction.description)}</p></div>
       <div class="dossier-box"><b>FINISHER</b><p>${escapeHTML(fighter.finisher)}</p></div>
+      <div class="dossier-box"><b>IA / DISTANCE</b><p><strong>${escapeHTML(profile.ai.name)}</strong><br>${Math.round(profile.ai.preferredRange)} unités de préférence.</p></div>
       <div class="dossier-box"><b>ARÈNE ASSOCIÉE</b><p>${escapeHTML(arena.name)}${hazard ? `<br><small>${escapeHTML(hazard.name)}</small>` : ''}</p></div>
+      ${phases}
     </div>
     <div class="adaptation-note"><b>NOTE DE FIDÉLITÉ</b><br>${escapeHTML(fighter.adaptation)} Les proportions, signes distinctifs, posture et rôle sont documentés séparément des règles d’équilibrage.</div>
     <h4>MOVESET ADAPTÉ</h4><ul class="move-list">${moves}</ul>`;
@@ -251,6 +274,7 @@ function randomize() {
 function configurePreset() {
   const labels = {
     versus: ['VERSUS', 'COMBATTRE'], arcade: ['ARCADE', 'COMMENCER LE PARCOURS'],
+    ritual: ['RITES DU JUGEMENT', 'OUVRIR LE PREMIER SCEAU'],
     boss: ['GRANDS TOURMENTS', 'AFFRONTER LES BOSS'], training: ['OBSERVATION', 'ENTRER DANS LE LABORATOIRE'],
     chronicle: ['CHRONIQUE', 'POURSUIVRE'],
   };
@@ -263,9 +287,11 @@ function configurePreset() {
     els.rounds.value = '1';
     els.timer.value = '0';
     els.difficulty.disabled = true;
-  } else if (preset === 'arcade' || preset === 'boss' || preset === 'chronicle') {
+  } else if (preset === 'arcade' || preset === 'boss' || preset === 'ritual' || preset === 'chronicle') {
     els.mode.value = 'cpu';
     els.mode.disabled = true;
+    if (preset === 'boss' || preset === 'ritual') els.rounds.value = '1';
+    if (preset === 'ritual') els.ritualSelect.disabled = true;
   }
 }
 
@@ -275,8 +301,14 @@ function buildRun() {
     state.run = { type: 'ARCADE', index: 0, wins: 0, queue: shuffled.slice(0, 7).map((f) => f.id), stages: [...STAGES].sort(() => Math.random() - .5).slice(0, 7).map((s) => s.id) };
   } else if (preset === 'boss') {
     const shuffled = ROSTER.filter((f) => f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
-    state.run = { type: 'GRANDS TOURMENTS', index: 0, wins: 0, queue: shuffled.slice(0, 6).map((f) => f.id), stages: [...STAGES].filter((s) => ['otherworld','church','lair','prison','shrine','book','elemental'].includes(s.family) || s.weather === 'embers').sort(() => Math.random() - .5).slice(0, 6).map((s) => s.id) };
+    state.run = { type: 'GRANDS TOURMENTS', index: 0, wins: 0, queue: shuffled.slice(0, 6).map((f) => f.id), stages: [...STAGES].filter((s) => ['otherworld','church','lair','prison','shrine','book','elemental'].includes(s.family) || s.weather === 'embers').sort(() => Math.random() - .5).slice(0, 6).map((s) => s.id), carry: true, carryHealth: 1, carryMeter: 0, recovery: .18 };
     if (!state.run.stages.length) state.run.stages = STAGES.slice(0, 6).map((s) => s.id);
+  } else if (preset === 'ritual') {
+    const rituals = Object.keys(RITUAL_MODIFIERS).filter((id) => id !== 'none');
+    const regulars = ROSTER.filter((f) => !f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
+    const bosses = ROSTER.filter((f) => f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
+    const queue = rituals.map((_, index) => (index >= rituals.length - 2 || index === 3 ? bosses.shift() : regulars.shift())).filter(Boolean).map((fighter) => fighter.id);
+    state.run = { type: 'RITES DU JUGEMENT', index: 0, wins: 0, queue, stages: [...STAGES].sort(() => Math.random() - .5).slice(0, queue.length).map((stage) => stage.id), rituals, carry: true, carryHealth: 1, carryMeter: 0, recovery: .12 };
   } else if (preset === 'chronicle') {
     const ids = (params.get('queue') || '').split(',').filter(Boolean);
     const stages = (params.get('stages') || '').split(',').filter(Boolean);
@@ -317,6 +349,10 @@ function fightConfig() {
     otherworldShift: els.otherworldShift.checked,
     stageHazards: els.stageHazards.checked,
     radioWarning: els.radioWarning.checked,
+    adaptiveAI: els.adaptiveAI.checked,
+    ritualId: currentRitualId(),
+    initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
+    initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: Date.now(),
     callbacks: { onMatchEnd: handleMatchEnd }
   };
@@ -328,15 +364,17 @@ function startFight({ preserveRun = false } = {}) {
     state.p2 = getFighter(state.run.queue[state.run.index]);
     if (state.run.stages?.length) state.stage = getStage(state.run.stages[state.run.index % state.run.stages.length]);
   }
+  if (state.run?.rituals?.length) els.ritualSelect.value = currentRitualId();
   state.engine?.destroy();
   showFight();
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
   els.touchLayer.style.display = state.touchEnabled ? 'block' : '';
-  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length}` : (training ? 'OBSERVATION' : 'VERSUS');
+  const ritual = currentRitual();
+  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `VERSUS · ${ritual.short || ritual.name}`);
   els.gameHelp.textContent = els.mode.value === 'local' && !training ? `${CONTROL_LABELS.p1} · P2: ${CONTROL_LABELS.p2}` : CONTROL_LABELS.p1;
-  saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked } });
+  saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked } });
   state.engine = new FightEngine(els.game, fightConfig());
   state.engine.start();
 }
@@ -344,10 +382,16 @@ function startFight({ preserveRun = false } = {}) {
 function handleMatchEnd(result) {
   state.lastResult = result;
   const won = result.winner.id === state.p1.id;
-  if (state.run && won) state.run.wins++;
+  if (state.run && won) {
+    state.run.wins++;
+    if (state.run.carry) {
+      state.run.carryHealth = clamp((result.stats?.winner?.healthRatio || .1) + (state.run.recovery || .12), .12, 1);
+      state.run.carryMeter = clamp((result.snapshot?.p1?.meter || 0) * .55, 0, 70);
+    }
+  }
   const winnerStats = result.stats?.winner || {};
   const grade = winnerStats.grade || chronicleGrade(winnerStats);
-  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, perfectGuards: 0, counters: 0, hazardsTaken: 0, bestGrade: 'D' });
+  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, hazardsTaken: 0, bestGrade: 'D' });
   records.matches = (records.matches || 0) + 1;
   if (won) records.wins = (records.wins || 0) + 1;
   records.defeated = records.defeated || {};
@@ -355,9 +399,11 @@ function handleMatchEnd(result) {
   records.perfectGuards = (records.perfectGuards || 0) + (winnerStats.perfectGuards || 0);
   records.counters = (records.counters || 0) + (winnerStats.counters || 0);
   records.hazardsTaken = (records.hazardsTaken || 0) + (winnerStats.hazardsTaken || 0);
+  records.bossPhases = (records.bossPhases || 0) + (winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0);
   if ((GRADE_SCORE[grade] ?? 0) > (GRADE_SCORE[records.bestGrade] ?? 0)) records.bestGrade = grade;
   if (state.run?.type === 'ARCADE') records.arcadeBest = Math.max(records.arcadeBest || 0, state.run.wins);
   if (state.run?.type === 'GRANDS TOURMENTS') records.bossBest = Math.max(records.bossBest || 0, state.run.wins);
+  if (state.run?.type === 'RITES DU JUGEMENT') records.ritualBest = Math.max(records.ritualBest || 0, state.run.wins);
   writeJSON(RECORDS_KEY, records);
   const routeId = params.get('route');
   const completedRun = Boolean(state.run && won && state.run.index + 1 >= state.run.queue.length);
@@ -374,7 +420,8 @@ function handleMatchEnd(result) {
     writeJSON(CHRONICLES_KEY, chronicleProgress);
   }
   setTimeout(() => {
-    els.resultKicker.textContent = state.run ? `${state.run.type} · COMBAT ${state.run.index + 1}` : 'RÉSULTAT';
+    const ritual = currentRitual();
+    els.resultKicker.textContent = state.run ? `${state.run.type} · COMBAT ${state.run.index + 1} · ${ritual.name}` : `RÉSULTAT · ${ritual.name}`;
     els.resultTitle.textContent = result.winner.name;
     els.resultText.textContent = won ? `${result.winner.name} domine ${result.loser.name}.` : `${result.winner.name} impose son cauchemar.`;
     els.resultStats.innerHTML = `
@@ -382,7 +429,9 @@ function handleMatchEnd(result) {
       <div class="result-stat"><b>${winnerStats.maxCombo || 0}</b><span>COMBO MAX</span></div>
       <div class="result-stat"><b>${winnerStats.perfectGuards || 0}</b><span>GARDES PARFAITES</span></div>
       <div class="result-stat"><b>${winnerStats.counters || 0}</b><span>CONTRES</span></div>
-      <div class="result-stat"><b>${winnerStats.hazardsTaken || 0}</b><span>DANGERS SUBIS</span></div>`;
+      <div class="result-stat"><b>${winnerStats.hazardsTaken || 0}</b><span>DANGERS SUBIS</span></div>
+      <div class="result-stat"><b>${(winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0)}</b><span>PHASES RÉVÉLÉES</span></div>
+      ${state.run?.carry ? `<div class="result-stat"><b>${Math.round((state.run.carryHealth || 1) * 100)}%</b><span>ENDURANCE SUIVANTE</span></div>` : ''}`;
     const hasNext = Boolean(state.run && won && state.run.index + 1 < state.run.queue.length);
     els.continueRun.classList.toggle('hidden', !hasNext);
     if (state.run && won && !hasNext) els.resultText.textContent += ` Parcours ${state.run.type.toLowerCase()} terminé : ${state.run.wins}/${state.run.queue.length}.`;
@@ -444,6 +493,7 @@ function bindEvents() {
   els.trainingToggle.addEventListener('click', () => els.trainingPanel.classList.toggle('hidden'));
   [els.hitboxes, els.autoHeal, els.freeMeter].forEach((input) => input.addEventListener('change', updateTraining));
   els.forceShift.addEventListener('click', () => state.engine?.forceOtherworldShift());
+  els.forceBossPhase.addEventListener('click', () => state.engine?.forceBossPhase());
   els.resetDojo.addEventListener('click', () => state.engine?.resetMatch());
   els.mobileP1.addEventListener('click', () => {
     state.touchEnabled = !state.touchEnabled;
@@ -466,7 +516,11 @@ function init() {
   els.otherworldShift.checked = settings.otherworldShift !== false;
   els.stageHazards.checked = settings.stageHazards !== false;
   els.radioWarning.checked = settings.radioWarning !== false;
+  els.adaptiveAI.checked = settings.adaptiveAI !== false;
+  els.difficulty.value = settings.difficulty || 'normal';
   populateFilters();
+  populateRituals();
+  els.ritualSelect.value = params.get('ritual') || 'none';
   configurePreset();
   bindEvents();
   renderSelected();

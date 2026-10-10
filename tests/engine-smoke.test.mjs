@@ -61,3 +61,41 @@ test('training options can be changed without rebuilding the match',()=>{
   assert.equal(state.p2.meter,100);
   engine.destroy();
 });
+
+
+test('boss phases can be forced in Observation and alter the combat snapshot',()=>{
+  const boss=ROSTER.find(f=>f.boss);
+  const engine=makeEngine({training:true,p2:boss});
+  engine.phase='fight';
+  assert.equal(engine.forceBossPhase(1),true);
+  let state=engine.snapshot();
+  assert.equal(state.p2.bossPhase,1);
+  assert.ok(state.p2.bossPhaseName);
+  assert.equal(engine.forceBossPhase(1),true);
+  state=engine.snapshot();
+  assert.equal(state.p2.bossPhase,2);
+  assert.equal(engine.forceBossPhase(1),false);
+  engine.render(9000);
+  engine.destroy();
+});
+
+test('rituals apply initial endurance, meter and starting Otherworld state',()=>{
+  const engine=makeEngine({ritualId:'redJudgment',initialHealthRatio:.42,initialMeter:47});
+  const state=engine.snapshot();
+  assert.ok(Math.abs(state.p1.health/state.p1.maxHealth-.42)<.01);
+  assert.equal(state.p1.meter,47);
+  assert.equal(state.world.phase,'otherworld');
+  assert.equal(state.ritual.id,'redJudgment');
+  engine.destroy();
+});
+
+test('blood debt ritual drains health at a deterministic one-second cadence',()=>{
+  const engine=makeEngine({ritualId:'bloodDebt'});
+  engine.phase='fight';
+  const before=engine.actors[0].health;
+  engine.frame=59;
+  engine.update();
+  assert.equal(engine.actors[0].health,before-1);
+  assert.equal(engine.actors[0].stats.ritualDamage,1);
+  engine.destroy();
+});

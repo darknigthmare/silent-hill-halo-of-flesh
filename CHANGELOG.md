@@ -1,5 +1,39 @@
 # Changelog
 
+## 0.3.0 — 10 octobre 2026
+
+### Modes et progression
+
+- Ajout de **Rites du Jugement**, gauntlet de huit combats à modificateurs tournants.
+- Ajout de huit rites actifs et d’un profil standard, soit neuf configurations exportées.
+- Santé et jauge partiellement persistantes dans Rites du Jugement et Grands Tourments.
+- Résultats enrichis avec rite courant, progression du run et statistiques de phase.
+
+### Boss et IA
+
+- Deux transitions pour chacun des 68 boss, soit **136 phases**.
+- Seuils data-driven avec modification de vitesse, puissance, armure, jauge, dangers et Otherworld.
+- Ajout de douze personnalités IA associées aux archétypes.
+- IA adaptative capable de reconnaître les répétitions de saisie, lourd et technique.
+- Bouton Observation permettant de forcer la phase de boss suivante.
+
+### Combat et interface
+
+- Sélecteur de rite dans la configuration de match.
+- Dossiers enrichis avec personnalité IA et phases ordonnées.
+- Archives étendues aux rites, profils IA et transitions de boss.
+- Panneau Observation enrichi avec état, coup actif, distance, statut, phase et historique d’inputs.
+- Durcissement de l’audio et des vibrations avant interaction utilisateur.
+- Responsive validé sur Command Center et sélection mobile.
+
+### Technique et QA
+
+- Suite portée à **36 tests automatisés**.
+- Tests supplémentaires sur rites, IA, phases, endurance, dette de sang et démarrage Otherworld.
+- Sept captures navigateur v0.3.0, sans exception JavaScript.
+- Exports JSON, documentation et manifeste de build étendus aux nouvelles règles.
+- Cache PWA migré vers `halo-of-flesh-v0.3.0`.
+
 ## 0.2.0 — 10 octobre 2026
 
 ### Contenu
@@ -17,7 +51,7 @@
 - Ajout de la transformation Otherworld dynamique accompagnée d’une sirène procédurale.
 - Ajout de la radio de proximité et de son brouillage visuel.
 - Ajout de la garde parfaite, des contres et des routes d’annulation.
-- IA adaptée aux archétypes et aux nouvelles propriétés de coups.
+- IA adaptée aux archétypes et aux propriétés de coups.
 - Ajout des rangs S à D et de statistiques de performance détaillées.
 
 ### Interface et archives

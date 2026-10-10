@@ -1,6 +1,6 @@
-# Roster complet — v0.2.0
+# Roster complet — v0.3.0
 
-Catalogue synchronisé : **184 manifestations**, dont **68 boss**, réparties sur **15 sources**.
+Catalogue synchronisé : **184 manifestations**, dont **68 boss**, réparties sur **15 sources**, avec **136 transitions de boss**.
 
 > Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et finishers sont des créations ou adaptations originales ; aucun asset officiel n’est inclus.
 

@@ -10,7 +10,10 @@ import {
   CONTENT_STATS,
   MANIFESTATION_TRAITS,
   AFFLICTIONS,
-  STAGE_HAZARDS
+  STAGE_HAZARDS,
+  AI_PERSONALITIES,
+  RITUAL_MODIFIERS,
+  createBossPhases
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -48,7 +51,7 @@ function buildRoster() {
   const lines = [
     `# Roster complet — v${VERSION}`,
     '',
-    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**.`,
+    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.bossPhases} transitions de boss**.`,
     '',
     '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et finishers sont des créations ou adaptations originales ; aucun asset officiel n’est inclus.',
     ''
@@ -103,7 +106,7 @@ function buildCombatSystems() {
   const lines = [
     `# Systèmes de combat — v${VERSION}`,
     '',
-    `La v${VERSION} ajoute **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions** et **${Object.keys(STAGE_HAZARDS).length} dangers d’arène** au moteur fixe à 60 Hz.`,
+    `La v${VERSION} réunit **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**.`,
     '',
     '## Traits de manifestation',
     '',
@@ -121,6 +124,15 @@ function buildCombatSystems() {
   for (const [id, hazard] of Object.entries(STAGE_HAZARDS)) {
     lines.push(`| \`${id}\` | ${md(hazard.name)} | ${hazard.telegraph} f | ${hazard.radius} | ${hazard.damage} | ${md(AFFLICTIONS[hazard.effect]?.name || hazard.effect)} |`);
   }
+  lines.push('', '## Rites du Jugement', '', '| Identifiant | Nom | Effet |', '|---|---|---|');
+  for (const [id, ritual] of Object.entries(RITUAL_MODIFIERS)) {
+    lines.push(`| \`${id}\` | ${md(ritual.name)} | ${md(ritual.description)} |`);
+  }
+  lines.push('', '## Personnalités IA', '', '| Archétype | Nom | Distance | Agressivité | Défense |', '|---|---|---:|---:|---:|');
+  for (const [id, ai] of Object.entries(AI_PERSONALITIES)) {
+    lines.push(`| \`${id}\` | ${md(ai.name)} | ${ai.preferredRange} | ×${ai.aggression} | ×${ai.defense} |`);
+  }
+  lines.push('', '## Phases de boss', '', `Les **${CONTENT_STATS.bosses} boss** possèdent deux transitions, soit **${CONTENT_STATS.bossPhases} phases déclenchables**. Les seuils sont documentés dans chaque dossier et modifient puissance, vitesse, armure, jauge, Otherworld ou danger d’arène.`);
   lines.push(
     '',
     '## Règles avancées',
@@ -132,7 +144,9 @@ function buildCombatSystems() {
     '- **Radio de proximité** : l’intensité des parasites augmente avec la proximité et le danger immédiat.',
     '- **Dangers télégraphiés** : les arènes annoncent une zone avant l’impact afin de rester évitables et lisibles.',
     '- **Rang de Chronique** : S à D selon vitalité restante, dégâts, combo, gardes parfaites, contres et dangers subis.',
-    '- **Observation** : hitboxes, soin automatique, jauge libre, reset et transformation Otherworld forcée.'
+    '- **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.',
+    '- **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.',
+    '- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.'
   );
   return `${lines.join('\n')}\n`;
 }

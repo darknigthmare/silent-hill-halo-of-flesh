@@ -2,16 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, createCombatProfile
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, createBossPhases, createCombatProfile
 } from '../src/data.js';
 
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.2.0 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.2.0');
+test('v0.3.0 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.3.0');
   assert.deepEqual(CONTENT_STATS,{
-    fighters:184,bosses:68,sources:15,stages:53,chronicles:14
+    fighters:184,bosses:68,sources:15,stages:53,chronicles:14,rituals:9,bossPhases:136
   });
 });
 
@@ -27,6 +27,7 @@ test('every fighter source, stage, trait and affliction resolves',()=>{
     assert.ok(stageIds.has(fighter.stageId),`${fighter.name}: ${fighter.stageId}`);
     assert.ok(MANIFESTATION_TRAITS[fighter.trait],`${fighter.name}: ${fighter.trait}`);
     assert.ok(AFFLICTIONS[fighter.affliction],`${fighter.name}: ${fighter.affliction}`);
+    assert.ok(AI_PERSONALITIES[fighter.aiProfile],`${fighter.name}: ${fighter.aiProfile}`);
   }
 });
 
@@ -84,14 +85,40 @@ test('combat profiles are playable, bounded and internally linked',()=>{
   }
 });
 
-test('all 12 traits, 8 afflictions and 7 hazards are represented',()=>{
+test('all 12 traits, 8 afflictions, 7 hazards, 9 rites and 12 AI personalities are represented',()=>{
   assert.equal(Object.keys(MANIFESTATION_TRAITS).length,12);
   assert.equal(Object.keys(AFFLICTIONS).length,8);
   assert.equal(Object.keys(STAGE_HAZARDS).length,7);
+  assert.equal(Object.keys(RITUAL_MODIFIERS).length,9);
+  assert.equal(Object.keys(AI_PERSONALITIES).length,12);
   const usedTraits=new Set(ROSTER.map(f=>f.trait));
   const usedAfflictions=new Set(ROSTER.map(f=>f.affliction));
   const usedHazards=new Set(STAGES.map(s=>s.hazard));
   Object.keys(MANIFESTATION_TRAITS).forEach(id=>assert.ok(usedTraits.has(id),id));
   Object.keys(AFFLICTIONS).forEach(id=>assert.ok(usedAfflictions.has(id),id));
   Object.keys(STAGE_HAZARDS).forEach(id=>assert.ok(usedHazards.has(id),id));
+});
+
+
+test('every boss exposes two ordered combat phases and regular fighters expose none',()=>{
+  for(const fighter of ROSTER){
+    const phases=createBossPhases(fighter);
+    assert.equal(phases.length,fighter.boss?2:0,fighter.name);
+    if(phases.length){
+      assert.ok(phases[0].threshold>phases[1].threshold,fighter.name);
+      assert.ok(phases.every(phase=>phase.power>=1&&phase.speed>=1),fighter.name);
+    }
+  }
+});
+
+test('every AI personality and ritual modifier has complete readable metadata',()=>{
+  for(const [id,ai] of Object.entries(AI_PERSONALITIES)){
+    assert.ok(ai.name.length>=4,id);
+    assert.ok(ai.preferredRange>0,id);
+    assert.ok(ai.aggression>0&&ai.defense>0&&ai.mobility>0,id);
+  }
+  for(const [id,ritual] of Object.entries(RITUAL_MODIFIERS)){
+    assert.ok(ritual.name.length>=4,id);
+    assert.ok(ritual.description.length>=12,id);
+  }
 });

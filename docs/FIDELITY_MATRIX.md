@@ -1,4 +1,4 @@
-# Matrice de fidélité par source — v0.2.0
+# Matrice de fidélité par source — v0.3.0
 
 | Source | Manifestations | Boss | Arènes | Chroniques | Traits | Afflictions |
 |---|---:|---:|---:|---:|---:|---:|
