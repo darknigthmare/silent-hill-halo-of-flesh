@@ -1,24 +1,26 @@
 {
+  "id": "/",
   "name": "Silent Hill: Halo of Flesh",
   "short_name": "Halo of Flesh",
-  "description": "Monster battle fan-made avec 4 600 coups documentés et ripostes contextuelles, roster audité, fatalités, arènes animées, Otherworld dynamique, Chroniques et dossiers de fidélité.",
-  "start_url": "/",
+  "description": "Prototype fan-made non commercial de combat 2D consacré aux manifestations de Silent Hill.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
   "display": "standalone",
-  "background_color": "#040605",
-  "theme_color": "#8b1e24",
-  "orientation": "landscape",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#020302",
+  "theme_color": "#050807",
+  "categories": ["games", "entertainment"],
+  "prefer_related_applications": false,
   "icons": [
-    {
-      "src": "assets/icons/icon-192.svg",
-      "sizes": "192x192",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icons/icon-512.svg",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    { "src": "/assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/assets/icons/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Confrontation", "short_name": "Versus", "url": "/index.html?module=versus", "icons": [{ "src": "/assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }] },
+    { "name": "Salle d’observation", "short_name": "Observation", "url": "/index.html?module=training", "icons": [{ "src": "/assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }] },
+    { "name": "Archives", "short_name": "Archives", "url": "/index.html?module=archive", "icons": [{ "src": "/assets/icons/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml" }] }
   ]
 }

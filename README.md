@@ -6,7 +6,7 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 
 - **Jouer :** https://silent-hill-halo-of-flesh.vercel.app
 - **Dépôt :** https://github.com/darknigthmare/silent-hill-halo-of-flesh
-- **Version :** `0.6.0 — Contextual Doctrine & Lore Integrity`
+- **Version :** `0.6.1 — Signal Recovery & Platform Hardening`
 
 > **Contrat de fidélité** — Le catalogue vise la fidélité documentaire la plus forte possible pour les identités, variantes, proportions relatives, postures, armes, attaques, comportements, fonctions symboliques et lieux. Chaque mouvement distingue ce qui est directement attesté, recomposé de façon lore-friendly ou ajouté pour rendre une manifestation jouable dans un versus. Les silhouettes, animations, effets, sons, frame data, statistiques et fatalités sont des créations originales ou procédurales : aucun asset officiel n’est redistribué.
 
@@ -32,6 +32,25 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 | Rites / personnalités IA | **9 / 12** |
 
 Le périmètre réunit les épisodes principaux et dérivés, *P.T.*, *The Short Message*, *Silent Hill f*, les adaptations cinématographiques, *Silent Hill: Ascension* et *Silent Hill: Townfall*.
+
+## v0.6.1 — Signal Recovery & Platform Hardening
+
+Cette release de stabilité conserve intégralement le roster, les 4 600 mouvements et les règles lore-first de la v0.6.0, puis sécurise leur distribution :
+
+- export et import contrôlés de la mémoire locale ;
+- reset complet des données propres au projet ;
+- purge et réarmement du cache hors ligne ;
+- service worker à caches séparés, shell initial léger et données network-first ;
+- véritable page hors ligne et véritable réponse HTTP 404 ;
+- manifeste PWA enrichi avec raccourcis Confrontation, Observation et Archives ;
+- en-têtes de sécurité alignés entre serveur local et Vercel ;
+- modale accessible avec piège de focus, restauration, états ARIA et région de statut ;
+- communications iframe limitées à la bonne fenêtre et à la même origine ;
+- animations suspendues hors vue et respect renforcé du mouvement réduit.
+
+La suite atteint **63 tests automatisés**. La QA Chromium couvre **13 parcours et 20 assertions**, sans erreur console, avertissement, exception, échec réseau inattendu ni débordement horizontal.
+
+Détails : [`docs/PLATFORM_HARDENING.md`](docs/PLATFORM_HARDENING.md) et [`docs/RELEASE_NOTES_v0.6.1.md`](docs/RELEASE_NOTES_v0.6.1.md).
 
 ## v0.6.0 — Doctrine contextuelle
 
@@ -137,7 +156,7 @@ La direction, l’état aérien et les fenêtres de combat sélectionnent les va
 
 ## Lancer localement
 
-Prérequis : **Node.js 20 ou supérieur**.
+Prérequis : **Node.js 20 ou supérieur**. Pour la QA Chromium, exécuter d’abord `npm install` afin d’installer `playwright-core`.
 
 ```bash
 npm start
@@ -155,7 +174,7 @@ npm run verify
 ```
 
 - `npm test` régénère les documents, vérifie les données, exécute la suite Node et construit `dist/`.
-- `npm run qa:browser` valide onze parcours desktop/mobile dans Chromium et produit des captures.
+- `npm run qa:browser` valide treize parcours desktop/mobile et vingt assertions dans Chromium, puis produit les captures et le rapport machine.
 - `npm run build` produit la version statique.
 - `npm run verify` contrôle catalogue, movesets, fatalités, arènes, PWA, liens et syntaxe.
 
@@ -208,10 +227,11 @@ Documents principaux :
 - [`docs/FATALITIES_AND_STAGES.md`](docs/FATALITIES_AND_STAGES.md)
 - [`docs/COMBAT_SYSTEMS.md`](docs/COMBAT_SYSTEMS.md)
 - [`docs/QA_REPORT.md`](docs/QA_REPORT.md)
+- [`docs/PLATFORM_HARDENING.md`](docs/PLATFORM_HARDENING.md)
 
 ## Qualité
 
-La suite v0.6.0 vérifie notamment :
+La suite v0.6.1 vérifie notamment :
 
 - 230 profils, 123 arènes, 15 Chroniques et 16 sources ;
 - 4 600 mouvements, leurs références et leurs contrats contextuels ;
@@ -219,7 +239,8 @@ La suite v0.6.0 vérifie notamment :
 - 460 fatalités, 123 fatalités d’arène et 374 animations ;
 - 150 transitions de boss ;
 - rendu de chaque manifestation et chaque arène ;
-- exports, documents, pages, PWA, cache et build Vercel.
+- exports, documents, pages, PWA, caches séparés, sauvegardes exportables, sécurité HTTP et build Vercel.
+- 63 contrôles automatisés ainsi que 13 parcours Chromium et 20 assertions navigateur.
 
 ## Statut artistique
 

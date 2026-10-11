@@ -105,42 +105,112 @@ const bg = bgCanvas.getContext('2d');
 const player = $('#module-player');
 const frame = $('#moduleFrame');
 const loading = $('#loading');
+const modal = $('#optionsModal');
+const statusPanel = $('#systemStatus');
+const statusText = $('#systemStatusText');
+const statusAction = $('#systemStatusAction');
+const statusDismiss = $('#systemStatusDismiss');
+const MEMORY_PREFIX = 'sh-halo-of-flesh-';
+const MEMORY_SCHEMA = 'shhf-memory-v1';
+const BOOLEAN_SETTINGS = Object.keys(DEFAULT_SETTINGS).filter(key => typeof DEFAULT_SETTINGS[key] === 'boolean');
+const VALID_DIFFICULTIES = new Set(['story','normal','hard']);
 let active = 0;
-let settings = loadJSON(SETTINGS_KEY, DEFAULT_SETTINGS);
+let settings = normaliseSettings(readStoredObject(SETTINGS_KEY, DEFAULT_SETTINGS));
 let raf = 0;
+let radioTimer = 0;
+let modalReturnFocus = null;
+let deferredInstallPrompt = null;
+let swRegistration = null;
+let statusActionHandler = null;
+let reloadingForWorker = false;
 
-function loadJSON(key, fallback) {
-  try { return { ...fallback, ...JSON.parse(localStorage.getItem(key) || '{}') }; }
-  catch { return { ...fallback }; }
+function isPlainRecord(value) {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+}
+function readStoredObject(key, fallback = {}) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return { ...fallback };
+    const parsed = JSON.parse(raw);
+    return isPlainRecord(parsed) ? { ...fallback, ...parsed } : { ...fallback };
+  } catch {
+    return { ...fallback };
+  }
+}
+function writeStoredObject(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    showStatus('LA MÉMOIRE LOCALE EST INACCESSIBLE.', { tone: 'error' });
+    return false;
+  }
+}
+function normaliseSettings(candidate = {}) {
+  const out = { ...DEFAULT_SETTINGS };
+  for (const key of BOOLEAN_SETTINGS) out[key] = typeof candidate[key] === 'boolean' ? candidate[key] : DEFAULT_SETTINGS[key];
+  const volume = Number(candidate.masterVolume);
+  out.masterVolume = Number.isFinite(volume) ? Math.max(0, Math.min(100, Math.round(volume / 5) * 5)) : DEFAULT_SETTINGS.masterVolume;
+  out.difficulty = VALID_DIFFICULTIES.has(candidate.difficulty) ? candidate.difficulty : DEFAULT_SETTINGS.difficulty;
+  return out;
+}
+function showStatus(message, { actionLabel = '', action = null, tone = '', sticky = false } = {}) {
+  statusText.textContent = message;
+  statusPanel.classList.remove('hidden','offline','success','error');
+  if (tone) statusPanel.classList.add(tone);
+  statusActionHandler = typeof action === 'function' ? action : null;
+  statusAction.textContent = actionLabel || 'APPLIQUER';
+  statusAction.classList.toggle('hidden', !statusActionHandler);
+  statusPanel.dataset.sticky = sticky ? 'true' : 'false';
+  if (!sticky && !statusActionHandler) {
+    window.clearTimeout(showStatus.timer);
+    showStatus.timer = window.setTimeout(() => statusPanel.classList.add('hidden'), 4600);
+  }
+}
+function hideStatus() {
+  statusPanel.classList.add('hidden');
+  statusActionHandler = null;
+  statusAction.classList.add('hidden');
 }
 function saveSettings() {
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
-  window.dispatchEvent(new StorageEvent('storage',{key:SETTINGS_KEY,newValue:JSON.stringify(settings)}));
+  settings = normaliseSettings(settings);
+  if (writeStoredObject(SETTINGS_KEY, settings)) {
+    window.dispatchEvent(new CustomEvent('shhf-settings-changed', { detail: { ...settings } }));
+  }
 }
 function applySettings() {
-  document.querySelector('.scanlines').classList.toggle('hidden', !settings.scanlines);
-  document.querySelector('.grain').classList.toggle('hidden', !settings.grain);
+  document.querySelector('.scanlines')?.classList.toggle('hidden', !settings.scanlines);
+  document.querySelector('.grain')?.classList.toggle('hidden', !settings.grain);
   document.documentElement.classList.toggle('reduced-motion', settings.reducedMotion);
   document.documentElement.classList.toggle('high-contrast', settings.highContrast);
   for (const button of $$('[data-setting]')) {
     const key = button.dataset.setting;
-    button.classList.toggle('on', Boolean(settings[key]));
-    button.textContent = settings[key] ? 'ACTIF' : 'INACTIF';
+    const activeSetting = Boolean(settings[key]);
+    button.classList.toggle('on', activeSetting);
+    button.textContent = activeSetting ? 'ACTIF' : 'INACTIF';
+    button.setAttribute('aria-pressed', String(activeSetting));
   }
-  $('[data-range="masterVolume"]').value = settings.masterVolume;
-  $('#difficulty').value = settings.difficulty;
+  const volume = $('[data-range="masterVolume"]');
+  if (volume) volume.value = String(settings.masterVolume);
+  if ($('#difficulty')) $('#difficulty').value = settings.difficulty;
+  syncAnimation();
 }
 function currentMode() { return items[active]?.dataset.mode || 'continue'; }
-function select(index) {
+function select(index, { focus = false } = {}) {
   active = (index + items.length) % items.length;
-  items.forEach((item,i)=>item.classList.toggle('active',i===active));
+  items.forEach((item,i) => {
+    const selected = i === active;
+    item.classList.toggle('active', selected);
+    item.setAttribute('aria-current', selected ? 'true' : 'false');
+    if (selected && focus) item.focus({ preventScroll: true });
+  });
   const mode = currentMode();
   const data = modes[mode];
   $('#heroKicker').textContent = data.kicker;
   $('#heroTitle').innerHTML = data.title;
   $('#heroText').textContent = data.text;
   $('#heroChoices').innerHTML = data.choices.map((label,i)=>`<span class="hero-choice ${i===0?'active':''}">${label}</span>`).join('');
-  $('#heroData').innerHTML = (data.data || []).map((label)=>`<span>${label}</span>`).join('');
+  $('#heroData').innerHTML = (data.data || []).map(label=>`<span>${label}</span>`).join('');
   $('#signalFrequency').textContent = data.frequency || '106.7';
   $('#signalState').textContent = data.signal || 'STATIC';
   $('#caseStamp').textContent = `DOSSIER ${String(active).padStart(2,'0')} — ${(data.signal || data.scene).toUpperCase()}`;
@@ -151,65 +221,201 @@ function select(index) {
 function launch(mode = currentMode()) {
   if (mode === 'options') return openOptions();
   if (mode === 'continue') {
-    const saved = loadJSON(SAVE_KEY, {});
-    mode = saved.lastMode || 'versus';
+    const saved = readStoredObject(SAVE_KEY, {});
+    mode = moduleUrls[saved.lastMode] ? saved.lastMode : 'versus';
   }
   const url = moduleUrls[mode];
   if (!url) return;
   loading.classList.remove('hidden');
   player.classList.add('show');
+  player.setAttribute('aria-hidden','false');
   frame.src = url;
-  localStorage.setItem(SAVE_KEY, JSON.stringify({ ...loadJSON(SAVE_KEY,{}), lastMode: mode, lastOpened: Date.now() }));
+  writeStoredObject(SAVE_KEY, { ...readStoredObject(SAVE_KEY, {}), lastMode: mode, lastOpened: Date.now() });
+  syncAnimation();
 }
 function closeModule() {
   player.classList.remove('show');
+  player.setAttribute('aria-hidden','true');
   frame.src = 'about:blank';
   loading.classList.remove('hidden');
+  syncAnimation();
+  items[active]?.focus({ preventScroll: true });
 }
-function openOptions() { $('#optionsModal').classList.remove('hidden'); }
-function closeOptions() { $('#optionsModal').classList.add('hidden'); }
+function focusableInModal() {
+  return [...modal.querySelectorAll('button:not([disabled]),select:not([disabled]),input:not([disabled]),a[href]')]
+    .filter(element => !element.hidden && getComputedStyle(element).display !== 'none');
+}
+function openOptions() {
+  modalReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : items[active];
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden','false');
+  $('#shell').inert = true;
+  requestAnimationFrame(() => ($('#closeOptions') || focusableInModal()[0])?.focus());
+}
+function closeOptions() {
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden','true');
+  $('#shell').inert = false;
+  modalReturnFocus?.focus?.({ preventScroll: true });
+}
+function trapModalFocus(event) {
+  if (event.key !== 'Tab' || modal.classList.contains('hidden')) return;
+  const focusable = focusableInModal();
+  if (!focusable.length) return;
+  const first = focusable[0], last = focusable.at(-1);
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+}
+async function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  } catch {
+    showStatus('LE PLEIN ÉCRAN A ÉTÉ REFUSÉ.', { tone: 'error' });
+  }
+}
+function syncFullscreenButton() {
+  const button = $('#fullscreen');
+  if (!button) return;
+  const enabled = Boolean(document.fullscreenElement);
+  button.textContent = enabled ? 'DÉSACTIVER' : 'ACTIVER';
+  button.classList.toggle('on', enabled);
+  button.setAttribute('aria-pressed', String(enabled));
+}
+function collectMemory() {
+  const entries = {};
+  try {
+    for (let i=0;i<localStorage.length;i++) {
+      const key = localStorage.key(i);
+      if (!key?.startsWith(MEMORY_PREFIX)) continue;
+      const raw = localStorage.getItem(key);
+      try { entries[key] = JSON.parse(raw); }
+      catch { entries[key] = raw; }
+    }
+  } catch {}
+  return { schema: MEMORY_SCHEMA, project: 'SILENT HILL: HALO OF FLESH', version: VERSION, exportedAt: new Date().toISOString(), entries };
+}
+function downloadMemory() {
+  const blob = new Blob([`${JSON.stringify(collectMemory(), null, 2)}\n`], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `HALO-OF-FLESH_MEMORY_v${VERSION}_${new Date().toISOString().slice(0,10)}.json`;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  showStatus('MÉMOIRE EXPORTÉE.', { tone: 'success' });
+}
+async function importMemoryFile(file) {
+  if (!file || file.size > 2_000_000) throw new Error('Fichier absent ou trop volumineux.');
+  const payload = JSON.parse(await file.text());
+  if (payload?.schema !== MEMORY_SCHEMA || !isPlainRecord(payload.entries)) throw new Error('Format de mémoire inconnu.');
+  const entries = Object.entries(payload.entries).slice(0,64);
+  let restored = 0;
+  for (const [key,value] of entries) {
+    if (!key.startsWith(MEMORY_PREFIX) || key.length > 160) continue;
+    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+    restored++;
+  }
+  settings = normaliseSettings(readStoredObject(SETTINGS_KEY, DEFAULT_SETTINGS));
+  applySettings();
+  showStatus(`${restored} ENTRÉES DE MÉMOIRE RESTAURÉES.`, { tone: 'success' });
+}
+async function clearOfflineCache() {
+  try {
+    if (navigator.serviceWorker?.controller) {
+      navigator.serviceWorker.controller.postMessage({ type: 'CLEAR_CACHES' });
+      showStatus('PURGE DU CACHE EN COURS…', { sticky: true });
+    } else if ('caches' in window) {
+      await Promise.all((await caches.keys()).filter(key => key.startsWith('halo-of-flesh-')).map(key => caches.delete(key)));
+      showStatus('CACHE HORS LIGNE PURGÉ.', { tone: 'success' });
+    }
+  } catch {
+    showStatus('PURGE DU CACHE IMPOSSIBLE.', { tone: 'error' });
+  }
+}
+function removeProjectMemory() {
+  try {
+    const keys = [];
+    for (let i=0;i<localStorage.length;i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith(MEMORY_PREFIX)) keys.push(key);
+    }
+    keys.forEach(key => localStorage.removeItem(key));
+  } catch {}
+}
+function shouldAnimate() {
+  return !document.hidden && !player.classList.contains('show') && !settings.reducedMotion;
+}
+function syncAnimation() {
+  cancelAnimationFrame(raf);
+  raf = 0;
+  drawCommandBackground(performance.now());
+}
 
 items.forEach((item,i)=>{
   item.addEventListener('mouseenter',()=>select(i));
   item.addEventListener('focus',()=>select(i));
   item.addEventListener('click',()=>{select(i);launch();});
 });
-frame.addEventListener('load',()=>setTimeout(()=>loading.classList.add('hidden'),160));
+frame.addEventListener('load',()=>window.setTimeout(()=>loading.classList.add('hidden'),160));
 $('#returnCommand').addEventListener('click',closeModule);
-$('#reloadModule').addEventListener('click',()=>{loading.classList.remove('hidden');frame.contentWindow?.location.reload();});
+$('#reloadModule').addEventListener('click',()=>{loading.classList.remove('hidden');frame.src = frame.src;});
 $('#closeOptions').addEventListener('click',closeOptions);
-$('#optionsModal').addEventListener('click',event=>{if(event.target.id==='optionsModal')closeOptions();});
-$('#fullscreen').addEventListener('click',()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{}));
+modal.addEventListener('click',event=>{if(event.target===modal)closeOptions();});
+modal.addEventListener('keydown',trapModalFocus);
+$('#fullscreen').addEventListener('click',toggleFullscreen);
+document.addEventListener('fullscreenchange',syncFullscreenButton);
+statusDismiss.addEventListener('click',hideStatus);
+statusAction.addEventListener('click',()=>statusActionHandler?.());
+$('#exportMemory').addEventListener('click',downloadMemory);
+$('#importMemory').addEventListener('click',()=>$('#importMemoryFile').click());
+$('#importMemoryFile').addEventListener('change',async event=>{
+  try { await importMemoryFile(event.target.files?.[0]); closeOptions(); }
+  catch (error) { showStatus(`IMPORT REFUSÉ : ${error.message}`, { tone: 'error', sticky: true }); }
+  finally { event.target.value = ''; }
+});
+$('#clearOfflineCache').addEventListener('click',clearOfflineCache);
 $('#resetSave').addEventListener('click',()=>{
-  if (confirm('Effacer progression, relevés et dernier cauchemar ?')) {
-    localStorage.removeItem(SAVE_KEY);
-    localStorage.removeItem('sh-halo-of-flesh-records-v1');
-    localStorage.removeItem('sh-halo-of-flesh-chronicles-v1');
+  if (confirm('Effacer toute la progression, les réglages, les relevés et le dernier cauchemar ?')) {
+    removeProjectMemory();
+    settings = normaliseSettings(DEFAULT_SETTINGS);
+    applySettings();
+    showStatus('MÉMOIRE LOCALE RÉINITIALISÉE.', { tone: 'success' });
   }
 });
 $$('[data-setting]').forEach(button=>button.addEventListener('click',()=>{
-  const key=button.dataset.setting;settings[key]=!settings[key];saveSettings();applySettings();
+  const key=button.dataset.setting;
+  if (!(key in DEFAULT_SETTINGS)) return;
+  settings[key]=!settings[key];
+  saveSettings();
+  applySettings();
 }));
 $('[data-range="masterVolume"]').addEventListener('input',event=>{settings.masterVolume=Number(event.target.value);saveSettings();});
-$('#difficulty').addEventListener('change',event=>{settings.difficulty=event.target.value;saveSettings();});
+$('#difficulty').addEventListener('change',event=>{settings.difficulty=event.target.value;saveSettings();applySettings();});
 
+document.addEventListener('visibilitychange',syncAnimation);
 addEventListener('keydown',event=>{
+  if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement) return;
   if (player.classList.contains('show')) {
     if (event.code==='Escape') { event.preventDefault(); closeModule(); }
     return;
   }
-  if (!$('#optionsModal').classList.contains('hidden')) {
-    if (event.code==='Escape') closeOptions();
+  if (!modal.classList.contains('hidden')) {
+    if (event.code==='Escape') { event.preventDefault(); closeOptions(); }
     return;
   }
-  if (event.code==='ArrowDown') { event.preventDefault(); select(active+1); }
-  if (event.code==='ArrowUp') { event.preventDefault(); select(active-1); }
+  if (event.code==='ArrowDown') { event.preventDefault(); select(active+1,{focus:true}); }
+  if (event.code==='ArrowUp') { event.preventDefault(); select(active-1,{focus:true}); }
   if (event.code==='Enter') { event.preventDefault(); launch(); }
-  if (event.code==='KeyF') document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{});
+  if (event.code==='KeyF') { event.preventDefault(); void toggleFullscreen(); }
 });
 addEventListener('message',event=>{
-  if (event.data?.type==='SHHF_RETURN') closeModule();
-  if (event.data?.type==='SHHF_OPEN' && moduleUrls[event.data.mode]) launch(event.data.mode);
+  const expectedOrigin = location.origin === 'null' ? 'null' : location.origin;
+  if (event.source !== frame.contentWindow || event.origin !== expectedOrigin || !isPlainRecord(event.data)) return;
+  if (event.data.type==='SHHF_RETURN') closeModule();
+  if (event.data.type==='SHHF_OPEN' && moduleUrls[event.data.mode]) launch(event.data.mode);
 });
 
 function drawCommandBackground(time=0) {
@@ -231,7 +437,8 @@ function drawCommandBackground(time=0) {
   bg.globalAlpha=1;
   bg.strokeStyle='rgba(156,166,157,.055)';
   for(let x=-h;x<w;x+=58){bg.beginPath();bg.moveTo(x+drift*.2,0);bg.lineTo(x+h+drift*.2,h);bg.stroke();}
-  raf=requestAnimationFrame(drawCommandBackground);
+  if (shouldAnimate()) raf=requestAnimationFrame(drawCommandBackground);
+  else raf=0;
 }
 
 function line(x1,y1,x2,y2,width,color){ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
@@ -284,12 +491,75 @@ function drawHero(scene,time){
 
 $('#contentCount').textContent = `v${VERSION} · ${CONTENT_STATS.fighters} MANIFESTATIONS · ${CONTENT_STATS.moves} COUPS · ${CONTENT_STATS.bosses} BOSS · ${CONTENT_STATS.stages} ARÈNES`;
 document.documentElement.dataset.version = VERSION;
-setInterval(()=>{
-  if(settings.reducedMotion)return;
+radioTimer = window.setInterval(()=>{
+  if(!shouldAnimate())return;
   const bars=$$('.radio-bars b');
   bars.forEach((bar,index)=>bar.style.height=`${4+Math.round((.5+.5*Math.sin(performance.now()*.006+index*1.7))*15)}px`);
 },110);
 
-applySettings();select(0);cancelAnimationFrame(raf);requestAnimationFrame(drawCommandBackground);
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
-const query=new URLSearchParams(location.search);if(query.get('module')&&moduleUrls[query.get('module')])launch(query.get('module'));
+function promptWorkerUpdate(registration) {
+  if (!registration?.waiting) return;
+  showStatus('UNE NOUVELLE TRANSMISSION EST PRÊTE.', {
+    actionLabel: 'APPLIQUER',
+    sticky: true,
+    action: () => {
+      reloadingForWorker = true;
+      registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+    }
+  });
+}
+async function registerServiceWorker() {
+  if (!('serviceWorker' in navigator) || !location.protocol.startsWith('http')) return;
+  try {
+    swRegistration = await navigator.serviceWorker.register('/service-worker.js', { scope: '/', updateViaCache: 'none' });
+    promptWorkerUpdate(swRegistration);
+    swRegistration.addEventListener('updatefound',()=>{
+      const installing = swRegistration.installing;
+      installing?.addEventListener('statechange',()=>{
+        if (installing.state === 'installed' && navigator.serviceWorker.controller) promptWorkerUpdate(swRegistration);
+      });
+    });
+    navigator.serviceWorker.addEventListener('controllerchange',()=>{
+      if (reloadingForWorker) location.reload();
+      else showStatus('LE NOUVEAU SIGNAL EST ACTIF.', { tone: 'success' });
+    });
+    navigator.serviceWorker.addEventListener('message',event=>{
+      if (event.data?.type === 'SHHF_SW_ACTIVATED') showStatus(`CACHE HORS LIGNE v${event.data.version} ACTIF.`, { tone: 'success' });
+      if (event.data?.type === 'SHHF_CACHES_CLEARED') showStatus('CACHE HORS LIGNE PURGÉ ET RÉARMÉ.', { tone: 'success' });
+    });
+    window.setTimeout(()=>void swRegistration.update().catch(()=>{}), 1600);
+  } catch {
+    showStatus('LE MODE HORS LIGNE N’A PAS PU ÊTRE ARMÉ.', { tone: 'error' });
+  }
+}
+function syncNetworkStatus() {
+  if (!navigator.onLine) showStatus('SIGNAL RÉSEAU PERDU — MODE HORS LIGNE.', { tone: 'offline', sticky: true });
+  else if (statusPanel.classList.contains('offline')) showStatus('SIGNAL RÉSEAU RÉTABLI.', { tone: 'success' });
+}
+addEventListener('online',syncNetworkStatus);
+addEventListener('offline',syncNetworkStatus);
+addEventListener('beforeinstallprompt',event=>{
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  $('#installRow').classList.remove('hidden');
+});
+addEventListener('appinstalled',()=>{
+  deferredInstallPrompt = null;
+  $('#installRow').classList.add('hidden');
+  showStatus('ARCHIVE INSTALLÉE SUR CET APPAREIL.', { tone: 'success' });
+});
+$('#installApp').addEventListener('click',async()=>{
+  if (!deferredInstallPrompt) return;
+  await deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice.catch(()=>null);
+  deferredInstallPrompt = null;
+  $('#installRow').classList.add('hidden');
+});
+
+applySettings();
+select(0);
+syncFullscreenButton();
+syncNetworkStatus();
+void registerServiceWorker();
+const query=new URLSearchParams(location.search);
+if(query.get('module')&&moduleUrls[query.get('module')])launch(query.get('module'));

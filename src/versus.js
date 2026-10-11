@@ -1,6 +1,6 @@
 import {
   ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
-  AFFLICTIONS, RITUAL_MODIFIERS, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
+  AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
@@ -389,7 +389,7 @@ function startFight({ preserveRun = false } = {}) {
 
 function installQaBridge() {
   window.__HALO_QA__ = {
-    version: '0.6.0',
+    version: VERSION,
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,

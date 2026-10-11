@@ -7,7 +7,7 @@ import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './mo
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.6.0';
+export const VERSION = '0.6.1';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -1040,7 +1040,7 @@ export function coverageAudit() {
   return {
     version: VERSION,
     scope: 'Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.',
-    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.0.',
+    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.1.',
     sources,
     complete: Object.values(sources).every((entry) => entry.complete)
   };

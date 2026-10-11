@@ -1,6 +1,6 @@
-# Systèmes de combat — v0.6.0
+# Systèmes de combat — v0.6.1
 
-La v0.6.0 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
+La v0.6.1 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
 
 ## Architecture des movesets
 

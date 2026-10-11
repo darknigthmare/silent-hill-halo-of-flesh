@@ -1,4 +1,4 @@
-# Game Design Document — SILENT HILL: HALO OF FLESH v0.6.0
+# Game Design Document — SILENT HILL: HALO OF FLESH v0.6.1
 
 ## 1. Vision
 

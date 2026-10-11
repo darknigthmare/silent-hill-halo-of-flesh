@@ -1,4 +1,4 @@
-# Registre de sources et provenance — v0.6.0
+# Registre de sources et provenance — v0.6.1
 
 ## Principe
 

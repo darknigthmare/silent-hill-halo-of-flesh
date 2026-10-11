@@ -1,4 +1,4 @@
-# Matrice de fidélité et couverture — v0.6.0
+# Matrice de fidélité et couverture — v0.6.1
 
 | Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |
 |---|---:|---:|---:|---:|---:|---|
@@ -36,6 +36,6 @@ Chaque profil sépare explicitement six couches :
 
 Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.
 
-Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.0.
+Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.1.
 
 La mention « vérifiée » signifie qu’aucune lacune connue n’a été retrouvée dans le périmètre des seize packs média intégrés à cette release. Elle ne transforme pas les fatalités originales de ce fan-game en scènes canoniques.

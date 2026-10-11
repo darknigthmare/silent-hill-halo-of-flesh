@@ -2,7 +2,7 @@
 
 La reprise concerne l’organisation fonctionnelle, les modes, la navigation modulaire et la lisibilité du projet de référence. Le code, les données, l’interface et l’univers ont été reconstruits pour *Silent Hill*.
 
-| Fonction CQC | Halo of Flesh v0.6.0 | Statut |
+| Fonction CQC | Halo of Flesh v0.6.1 | Statut |
 |---|---|---|
 | Front de commande plein écran | registre CRTV/radio et navigation « Brume » | Étendu |
 | Fond animé procédural | brume, signal et manifestations | Complet |

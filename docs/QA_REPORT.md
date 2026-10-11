@@ -1,16 +1,16 @@
-# Rapport QA — v0.6.0
+# Rapport QA — v0.6.1
 
 **Date : 11 octobre 2026**
 **Commande de référence : `npm test`**
 
 ## Résultat automatisé
 
-- **54 tests exécutés.**
-- **54 réussites.**
+- **63 tests exécutés.**
+- **63 réussites.**
 - **0 échec, 0 test ignoré.**
 - Build statique produit avec succès dans `dist/`.
-- Vérification de **9 modules JavaScript** et **7 pages HTML**.
-- Build final : **35 fichiers statiques**.
+- Vérification de **9 modules JavaScript** et **9 pages HTML**.
+- Build final : **37 fichiers statiques**.
 - Catalogue : **230 manifestations**, **75 boss**, **123 arènes**, **15 Chroniques**, **16 sources**.
 - Doctrines : **4 600 actions**, soit **20 commandes par manifestation**.
 - Fidélité : **447 actions directement attestées**, **3 694 composites lore-friendly**, **459 adaptations Versus explicitement signalées**.
@@ -19,7 +19,7 @@
 
 ## Données, doctrine et provenance
 
-- Totaux v0.6.0 synchronisés et identifiants uniques.
+- Totaux v0.6.1 synchronisés et identifiants uniques.
 - Résolution de chaque source, arène, trait, affliction, danger, rite et personnalité IA.
 - Exactement vingt actions pour chacun des 230 profils.
 - Input, nom, frame data, portée, dégâts, coût, effet, base canonique et niveau de fidélité obligatoires.
@@ -27,49 +27,40 @@
 - Chaque combattant non adapté possède au moins une action directement attestée.
 - Les set-pieces, présences passives et entités normalement non combattues restent signalés comme adaptations.
 - Compatibilité des anciens identifiants et sauvegardes.
-- Exports `roster.json`, `movesets.json`, `combat-rules.json`, `content-stats.json`, `coverage-audit.json` et `fatalities.json` identiques au runtime.
+- Exports JSON identiques aux données vivantes du moteur.
 
 ## Moteur headless
 
-- Avancement et rendu du moteur.
-- Transformation Otherworld forcée.
-- Options Observation modifiables sans reconstruire le match.
-- Phases de boss forcées et reflétées dans le snapshot.
-- Endurance, jauge et Otherworld injectés par les rites.
-- Dette de sang déterministe.
+- Avancement, rendu, Otherworld, rites et phases de boss.
 - Fatalité d’arène, fatalité Signature et KO classique.
-- Résolution des variantes avant, basse, aérienne et directionnelle.
-- Nightmare accessible uniquement sous son seuil de vitalité documenté.
-- Projectiles, pièges et postures de contre issus de leurs slots dédiés.
-- Snapshot contenant input, nom, fidélité et fenêtre contextuelle de l’action active.
+- Variantes avant, basse, aérienne et directionnelle.
+- Projectiles, pièges, auras, téléportations, saisies et postures de contre.
+- Projection arrière, riposte d’esquive, contre de garde parfaite et reversal de relevée.
+- Snapshot contenant input, nom, fidélité, phase et fenêtre contextuelle.
+- Statistiques contextuelles et rangs bornés.
 
-## Quatre ripostes contextuelles
+## Durcissement de plateforme — neuf contrôles dédiés
 
-- **Projection arrière** : changement de côté et chute dure.
-- **Riposte d’esquive** : disponible uniquement dans la fenêtre post-esquive avec invulnérabilité bornée.
-- **Contre de garde parfaite** : ouverture après perfect guard et rupture d’armure.
-- **Attaque de relevée** : reversal pendant le relevé et rebond au sol.
-- Les quatre contrats sont validés pour l’intégralité des 230 manifestations.
-- Les compteurs `backThrows`, `dodgeAttacks`, `guardCounters`, `wakeupAttacks`, `armorBreaks` et `groundBounces` persistent dans les résultats et les Archives.
+1. Normalisation et import/export sécurisé des sauvegardes.
+2. Manifeste PWA complet, identifiant stable, langue, portée et raccourcis.
+3. Service worker à caches séparés et shell initial léger.
+4. Absence de préchargement du lourd `movesets.json`.
+5. Page hors ligne déclarée et présente dans le build.
+6. Véritable page 404 et réponse HTTP correspondante.
+7. En-têtes de sécurité cohérents sur serveur local et Vercel.
+8. Absence de scripts intégrés dans les pages HTML distribuées.
+9. Communications iframe et messages du service worker contrôlés.
 
-## Gameplay et équilibrage structurel
+## Accessibilité et résilience
 
-- Boss plus résistants et puissants en moyenne.
-- Projectiles cohérents pour les profils à distance.
-- Saisies renforcées pour les grapplers.
-- Profils bas, armure, Entrave, projectiles et effets résolus.
-- Phases catalogue/profil identiques.
-- Multiplicateurs de rites bornés.
-- Rangs S–D ordonnés.
-- Bonus de maîtrise contextuelle borné afin de ne pas écraser la performance principale.
-
-## Release, PWA et accessibilité
-
-- Version synchronisée entre package, interface, manifeste et service worker.
-- Documentation générée depuis les données vivantes.
-- Cache PWA composé uniquement de fichiers existants.
-- Landmarks, langue, titres, options Fatality, onglet Movesets et navigation mobile vérifiés.
-- Build bloqué si une action, source, arène, fatalité, animation, alias ou documentation générée est incohérente.
+- Lien d’évitement et landmarks.
+- État ARIA des bascules.
+- Fenêtre d’options avec piège de focus, fermeture Échap et restauration du focus.
+- Région de statut système en direct.
+- Export et import de mémoire vérifiés.
+- Purge et réarmement du cache hors ligne.
+- Respect du mouvement réduit et suspension des animations hors vue.
+- Serveur GET/HEAD, code 405 pour les écritures et protection de chemin.
 
 ## Rendu exhaustif
 
@@ -79,24 +70,25 @@
 
 ## QA navigateur
 
-La passe Chromium / Playwright v0.6.0 est reproductible via `npm run qa:browser`.
+La passe Chromium / Playwright v0.6.1 est reproductible via `npm run qa:browser` après installation des dépendances de développement.
 
-- **11 parcours et 11 assertions réussis.**
+- **13 parcours couverts.**
+- **20/20 assertions réussies.**
 - **0 erreur console.**
 - **0 avertissement console.**
 - **0 exception JavaScript.**
-- **0 requête échouée.**
+- **0 requête échouée inattendue.**
 - **0 débordement horizontal détecté.**
 
-Elle couvre le menu principal, les options CRTV/radio, le registre des movesets, la fiche Townfall de The Weight, la sélection Versus, le dossier à vingt actions, l’Observation contextuelle, la galerie des stages et trois vues mobiles.
+Elle couvre le menu, les options et le focus, l’export de mémoire, le service worker, le cache critique, le repli hors ligne, la vraie 404, le registre des movesets, la fiche Townfall, la sélection Versus, le dossier complet, l’Observation contextuelle, la galerie des stages et trois vues mobiles.
 
-Détail : [`BROWSER_QA_v0.6.0.md`](BROWSER_QA_v0.6.0.md).
+Détail : [`BROWSER_QA_v0.6.1.md`](BROWSER_QA_v0.6.1.md).
 
 ## Limites connues
 
 - La fidélité artistique image par image exige une production graphique originale dédiée.
-- Les composites et adaptations sont explicitement distingués des actions directement observées dans les œuvres sources.
+- Les composites et adaptations sont explicitement distingués des actions directement observées.
 - La couverture complète reste limitée aux seize packs et aux règles d’inclusion documentées.
 - Le multijoueur réseau et le rollback ne sont pas inclus.
-- Le tactile cible principalement le joueur 1.
+- Le tactile cible principalement Sujet I.
 - Les sons restent procéduraux ; aucun enregistrement officiel n’est redistribué.

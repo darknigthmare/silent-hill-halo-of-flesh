@@ -1,4 +1,4 @@
-# Fatalités, arènes dédiées et animations — v0.6.0
+# Fatalités, arènes dédiées et animations — v0.6.1
 
 La release contient **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations de stage**.
 

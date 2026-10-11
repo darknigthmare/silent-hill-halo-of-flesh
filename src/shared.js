@@ -4,21 +4,36 @@ export const SETTINGS_KEY = 'sh-halo-of-flesh-settings-v1';
 export const RECORDS_KEY = 'sh-halo-of-flesh-records-v1';
 export const CHRONICLES_KEY = 'sh-halo-of-flesh-chronicles-v1';
 
+const DEFAULT_SETTINGS = {
+  scanlines:true, grain:true,
+  reducedMotion:typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+  highContrast:typeof matchMedia==='function'&&matchMedia('(prefers-contrast: more)').matches,
+  vibration:true, masterVolume:65, difficulty:'normal',
+  otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true,
+  fatalities:true, stageFatalities:true, stageAnimations:true
+};
+const VALID_DIFFICULTIES = new Set(['story','normal','hard']);
+function isPlainRecord(value){return Boolean(value)&&typeof value==='object'&&!Array.isArray(value);}
+
 export function loadJSON(key, fallback = {}) {
-  try { return { ...fallback, ...JSON.parse(localStorage.getItem(key) || '{}') }; }
-  catch { return { ...fallback }; }
+  try {
+    const raw=localStorage.getItem(key);
+    if(!raw)return { ...fallback };
+    const parsed=JSON.parse(raw);
+    return isPlainRecord(parsed)?{ ...fallback, ...parsed }:{ ...fallback };
+  } catch { return { ...fallback }; }
 }
 export function writeJSON(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-  return value;
+  try{localStorage.setItem(key, JSON.stringify(value));return value;}catch{return null;}
 }
 export function loadSettings() {
-  return loadJSON(SETTINGS_KEY, {
-    scanlines:true, grain:true, reducedMotion:false, highContrast:false,
-    vibration:true, masterVolume:65, difficulty:'normal',
-    otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true,
-    fatalities:true, stageFatalities:true, stageAnimations:true
-  });
+  const candidate=loadJSON(SETTINGS_KEY,DEFAULT_SETTINGS);
+  const settings={...DEFAULT_SETTINGS};
+  for(const [key,value] of Object.entries(DEFAULT_SETTINGS))if(typeof value==='boolean')settings[key]=typeof candidate[key]==='boolean'?candidate[key]:value;
+  const volume=Number(candidate.masterVolume);
+  settings.masterVolume=Number.isFinite(volume)?Math.max(0,Math.min(100,Math.round(volume/5)*5)):65;
+  settings.difficulty=VALID_DIFFICULTIES.has(candidate.difficulty)?candidate.difficulty:'normal';
+  return settings;
 }
 export function saveLastFront(front) {
   const current = loadJSON(SAVE_KEY, {});
@@ -82,12 +97,13 @@ export function attachGlobalAudioUnlock(){
   document.addEventListener('pointerdown',unlock,{once:true});document.addEventListener('keydown',unlock,{once:true});
 }
 
+function parentOrigin(){return location.origin==='null'?'*':location.origin;}
 export function returnToCommand(){
-  if(window.parent!==window)window.parent.postMessage({type:'SHHF_RETURN'},'*');
+  if(window.parent!==window)window.parent.postMessage({type:'SHHF_RETURN'},parentOrigin());
   else location.href='../index.html';
 }
 export function openMode(mode){
-  if(window.parent!==window)window.parent.postMessage({type:'SHHF_OPEN',mode},'*');
+  if(window.parent!==window)window.parent.postMessage({type:'SHHF_OPEN',mode},parentOrigin());
   else location.href=`../index.html?module=${encodeURIComponent(mode)}`;
 }
 

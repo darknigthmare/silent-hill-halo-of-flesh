@@ -16,7 +16,9 @@ test('release version is synchronized across package, UI and service worker',asy
   const worker=await read('service-worker.js');
   assert.equal(pkg.version,VERSION);
   assert.match(index,new RegExp(`v${VERSION.replaceAll('.','\\.')}`));
-  assert.match(worker,new RegExp(`halo-of-flesh-v${VERSION.replaceAll('.','\\.')}`));
+  assert.match(worker,new RegExp(`const VERSION = '${VERSION.replaceAll('.','\\.')}'`));
+  assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}`/);
+  assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}`/);
 });
 
 test('exported JSON mirrors the runtime catalogue',async()=>{
@@ -55,11 +57,14 @@ test('generated documentation contains the live totals and rule families',async(
   assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} animations de stage`));
 });
 
-test('service worker shell only references existing local files',async()=>{
+test('service worker shell only references existing lightweight local files',async()=>{
   const worker=await read('service-worker.js');
-  const shell=worker.match(/const SHELL=\[([\s\S]*?)\];/)?.[1]||'';
-  const refs=[...shell.matchAll(/['"]([^'"]+)['"]/g)].map(match=>match[1]);
+  const blocks=['ESSENTIAL_SHELL','OPTIONAL_SHELL'].map(name=>worker.match(new RegExp(`const ${name}\\s*=\\s*\\[([\\s\\S]*?)\\];`))?.[1]||'');
+  const refs=blocks.flatMap(shell=>[...shell.matchAll(/['"]([^'"]+)['"]/g)].map(match=>match[1]));
   assert.ok(refs.length>=20);
+  assert.ok(refs.includes('/offline.html'));
+  assert.ok(refs.includes('/404.html'));
+  assert.ok(!refs.includes('/data/movesets.json'),'Le catalogue lourd doit rester hors du précache');
   for(const ref of refs){
     if(ref==='/')continue;
     assert.equal(await exists(ref.replace(/^\//,'')),true,`Missing service-worker shell file: ${ref}`);

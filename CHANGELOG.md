@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.6.1 — 11 octobre 2026
+
+### Résilience PWA et récupération
+
+- Séparation du cache statique et du cache runtime.
+- Shell initial allégé ; `movesets.json` n’est plus préchargé pendant l’installation.
+- Navigation et données en network-first, ressources statiques en stale-while-revalidate.
+- Ajout d’une page hors ligne indépendante et d’une vraie page HTTP 404.
+- Mise à jour, purge et réarmement du service worker pilotables depuis l’interface.
+- Manifeste enrichi avec identité stable, langue, portée et raccourcis PWA.
+
+### Mémoire et accessibilité
+
+- Export JSON versionné de la progression, des réglages et des relevés.
+- Import avec validation de schéma et liste blanche des clés autorisées.
+- Réinitialisation globale des données du projet.
+- Lien d’évitement, région de statut, focus visible et états ARIA synchronisés.
+- Modale d’options avec piège de focus, fermeture Échap et restauration du focus.
+- Animation suspendue hors vue et notifications repositionnées sur mobile.
+
+### Serveur et sécurité
+
+- Serveur limité à GET/HEAD, réponse 405 pour les méthodes d’écriture et protection contre la traversée de chemin.
+- En-têtes CSP, frame protection, COOP/CORP, nosniff, référent et permissions alignés entre local et Vercel.
+- Communications iframe validées par fenêtre source et origine.
+- Suppression des scripts intégrés dans les routes HTML de compatibilité.
+
+### QA
+
+- Suite portée à **63 tests automatisés**, tous réussis.
+- Vérification de 9 modules JavaScript, 9 pages HTML et 37 fichiers statiques.
+- QA Chromium : 13 parcours, 20 assertions, zéro erreur console, avertissement, exception, échec réseau inattendu ou débordement horizontal.
+
 ## 0.6.0 — 11 octobre 2026
 
 ### Doctrine contextuelle

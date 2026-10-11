@@ -11,6 +11,12 @@
   <title>SILENT HILL: HALO OF FLESH</title>
 </head>
 <body>
+<a class="skip-link" href="#commandMenu">ALLER AU MENU</a>
+<div id="systemStatus" class="system-status hidden" role="status" aria-live="polite" aria-atomic="true">
+  <span id="systemStatusText">SIGNAL STABLE</span>
+  <button id="systemStatusAction" class="hidden" type="button">APPLIQUER</button>
+  <button id="systemStatusDismiss" type="button" aria-label="Masquer le message système">×</button>
+</div>
 <div id="shell">
   <canvas id="command-bg" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
@@ -20,7 +26,7 @@
     <header class="command-top">
       <div class="brand">
         <small>ARCHIVES DE L’OTHERWORLD</small>
-        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.6.0</span></strong>
+        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.6.1</span></strong>
       </div>
       <div class="signal-cluster">
         <div class="radio-readout" aria-label="Récepteur radio"><span>RÉCEPTEUR</span><strong id="signalFrequency">106.7</strong><i id="signalState">STATIC</i><div class="radio-bars" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
@@ -28,7 +34,7 @@
       </div>
     </header>
     <div class="command-body">
-      <nav class="command-menu" aria-label="Menu principal"><div class="menu-caption"><span>SÉLECTION / SIGNAL</span><b id="caseStamp">CASE 00 — FOG</b></div>
+      <nav id="commandMenu" class="command-menu" aria-label="Menu principal"><div class="menu-caption"><span>SÉLECTION / SIGNAL</span><b id="caseStamp">CASE 00 — FOG</b></div>
         <button class="command-item active" data-mode="continue">REPRENDRE<small>DERNIER CAUCHEMAR</small></button>
         <button class="command-item" data-mode="chronicles">CHRONIQUES DE LA BRUME<small>ROUTES, DOSSIERS, CONSÉQUENCES</small></button>
         <button class="command-item" data-mode="versus">CONFRONTATION<small>DUELS ET COMBATS LOCAUX</small></button>
@@ -61,13 +67,13 @@
     </footer>
   </main>
   <section id="module-player" aria-label="Module de jeu">
-    <iframe id="moduleFrame" title="Module de jeu Silent Hill"></iframe>
+    <iframe id="moduleFrame" title="Module de jeu Silent Hill" allow="fullscreen" referrerpolicy="same-origin"></iframe>
     <div class="returnbar"><button id="returnCommand">RETOUR À LA BRUME</button><button id="reloadModule">RECHARGER</button></div>
     <div id="loading" class="loading"><div><b>INITIALISATION</b><small>LA BRUME SE REFERME…</small></div></div>
   </section>
 </div>
 
-<section id="optionsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="optionsTitle">
+<section id="optionsModal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="optionsTitle">
   <div class="modal-card">
     <h2 id="optionsTitle">OPTIONS</h2>
     <p>Réglages persistants du signal, de la Brume et des modules de combat.</p>
@@ -86,7 +92,14 @@
     <div class="option-row"><span>ANIMATIONS D’ARÈNE</span><button class="toggle on" data-setting="stageAnimations">ACTIF</button></div>
     <div class="option-row"><span>VOLUME GÉNÉRAL</span><input type="range" min="0" max="100" step="5" value="65" data-range="masterVolume"></div>
     <div class="option-row"><span>DIFFICULTÉ IA</span><select id="difficulty"><option value="story">BRUME</option><option value="normal" selected>OTHERWORLD</option><option value="hard">CAUCHEMAR</option></select></div>
-    <div class="option-row"><span>PLEIN ÉCRAN</span><button id="fullscreen" class="toggle">ACTIVER</button></div>
+    <div class="option-row"><span>PLEIN ÉCRAN</span><button id="fullscreen" class="toggle" type="button">ACTIVER</button></div>
+    <div class="option-row install-row hidden" id="installRow"><span>INSTALLATION LOCALE</span><button id="installApp" class="toggle" type="button">INSTALLER</button></div>
+    <div class="memory-tools" aria-label="Gestion de la mémoire locale">
+      <button id="exportMemory" class="ui-button" type="button">EXPORTER LA MÉMOIRE</button>
+      <button id="importMemory" class="ui-button" type="button">IMPORTER UNE MÉMOIRE</button>
+      <button id="clearOfflineCache" class="ui-button" type="button">PURGER LE CACHE HORS LIGNE</button>
+      <input id="importMemoryFile" type="file" accept="application/json,.json" hidden>
+    </div>
     <div class="disclaimer">Prototype fan-made non commercial, sans affiliation avec Konami. Le projet contient du code, des effets, des silhouettes et des compositions originales ; aucun sprite, modèle, son ou texture officiel n’est redistribué.</div>
     <div class="modal-actions"><button id="resetSave">RÉINITIALISER LA SAUVEGARDE</button><button id="closeOptions" class="ui-button primary">FERMER</button></div>
   </div>

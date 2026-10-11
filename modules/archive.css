@@ -12,7 +12,7 @@ html,body{height:100%;overflow:hidden}.archive-body{height:100%;overflow:hidden}
 
 .trait-box{border-color:#65353a}.affliction-box{border-color:#4c564b}.source-counts{grid-template-columns:repeat(4,1fr)}#systemsTab{overflow:auto;display:grid;grid-template-columns:minmax(300px,.48fr) 1.52fr;gap:12px}.systems-head{padding:28px;align-self:start}.systems-head small{color:#bc3d45;font:900 8px ui-monospace;letter-spacing:.18em}.systems-head h1{font-size:clamp(34px,4vw,62px);line-height:.84;letter-spacing:-.075em;margin:10px 0 16px}.systems-head p{color:#979f97;line-height:1.6}.systems-grid{overflow:auto;display:grid;gap:12px}.system-group{padding:16px;border:1px solid #333a34;background:#090d0a}.system-group h2{margin:0 0 12px;color:#d8d4c9;font-size:20px}.system-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.system-card{padding:12px;border:1px solid #303731;background:#0d120e}.system-card small{color:#a83a43;font:800 7px ui-monospace}.system-card h3{font-size:12px;margin:6px 0}.system-card p{margin:0;color:#8f978f;font-size:11px;line-height:1.45}.system-group.affliction .system-card small{color:#9b8b61}.system-group.hazard .system-card small{color:#c25a45}@media(max-width:950px){#systemsTab{grid-template-columns:1fr}.system-card-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.system-card-grid{grid-template-columns:1fr}}
 
-/* v0.6.0 — movesets, couverture, fatalités, stages et traçabilité */
+/* v0.6.1 — movesets, couverture, fatalités, stages et traçabilité */
 .phase-archive{margin-top:10px;padding:13px;border:1px solid #6e3035;background:linear-gradient(90deg,#160b0d,#0b100c)}
 .phase-archive>b{display:block;color:#ca414a;font:900 8px ui-monospace;letter-spacing:.14em;margin-bottom:9px}
 .phase-archive article{padding:9px 10px;border-top:1px solid #342b2c}
@@ -23,7 +23,7 @@ html,body{height:100%;overflow:hidden}.archive-body{height:100%;overflow:hidden}
 .system-group.ai .system-card{border-color:#39473d;background:#0b120d}
 .system-group.ai .system-card small{color:#7ba286}
 
-/* v0.6.0 — registre complet des movesets */
+/* v0.6.1 — registre complet des movesets */
 .moveset-summary{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:12px;padding:12px 14px;border:1px solid #6e3035;background:linear-gradient(90deg,#180c0e,#0a0f0b)}
 .moveset-summary b{color:#d64b54;font:900 9px ui-monospace;letter-spacing:.12em}.moveset-summary span{color:#8f978f;font:700 8px ui-monospace;text-align:right}
 .archive-moves li{display:block;padding:10px 11px;border-left:3px solid #4c534d;background:#090d0a}.archive-moves li[data-fidelity="direct-canonical"]{border-left-color:#d5c9a8}.archive-moves li[data-fidelity="behavior-composite"]{border-left-color:#76897a}.archive-moves li[data-fidelity="versus-adaptation"]{border-left-color:#8c343a}.archive-moves li div{display:flex;align-items:center;gap:9px}.archive-moves li kbd{min-width:72px;padding:4px 6px;border:1px solid #454b45;background:#030504;color:#d5cfc2;font:900 8px ui-monospace;text-align:center}.archive-moves li span{display:block;margin-top:6px;color:#929991}.archive-moves li small{display:block;margin-top:7px;color:#656d66;line-height:1.45}

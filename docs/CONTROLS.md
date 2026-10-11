@@ -1,4 +1,4 @@
-# Contrôles et règles — v0.6.0
+# Contrôles et règles — v0.6.1
 
 ## Clavier
 

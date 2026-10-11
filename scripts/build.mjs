@@ -13,7 +13,7 @@ const dist = join(project, 'dist');
 const dataDir = join(project, 'data');
 const verifyOnly = process.argv.includes('--verify-only');
 const verify = process.argv.includes('--verify') || verifyOnly;
-const roots = ['index.html','styles.css','manifest.webmanifest','service-worker.js','vercel.json','assets','modules','src','data'];
+const roots = ['index.html','offline.html','404.html','styles.css','manifest.webmanifest','service-worker.js','vercel.json','assets','modules','src','data'];
 
 async function filesUnder(folder) {
   const out=[];
@@ -148,7 +148,7 @@ async function runVerification() {
   assert(audit.complete&&CONTENT_STATS.coverageComplete,'Audit de couverture incomplet');
 
   const required=[
-    'index.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
+    'index.html','offline.html','404.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
     'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','src/movesets.js'
@@ -160,17 +160,30 @@ async function runVerification() {
     const result=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});
     assert(result.status===0,`Syntaxe invalide ${relative(project,file)}\n${result.stderr}`);
   }
-  const allFiles=await filesUnder(project);
-  const htmlFiles=allFiles.filter(file=>extname(file)==='.html'&&!file.includes(`${join(project,'dist')}`));
+  const distributedFiles=(await Promise.all(roots.map(async(item)=>{
+    const path=join(project,item);
+    const info=await stat(path);
+    return info.isDirectory()?filesUnder(path):[path];
+  }))).flat();
+  const htmlFiles=distributedFiles.filter(file=>extname(file)==='.html');
   for(const file of htmlFiles){
     const content=await readFile(file,'utf8');
+    const inlineScripts=[...content.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)].filter(match=>match[1].trim().length>0);
+    assert(inlineScripts.length===0,`Script inline interdit par la CSP: ${relative(project,file)}`);
     for(const match of content.matchAll(/(?:src|href)=["']([^"'#?]+)["']/g)){
       const ref=match[1];
       if(/^(https?:|data:|mailto:)/.test(ref))continue;
-      const target=resolve(dirname(file),ref);
-      assert(await exists(target),`Référence absente ${relative(project,file)} → ${ref}`);
+      const target=resolve(dirname(file),ref.replace(/^\//,''));
+      const rootTarget=ref.startsWith('/')?resolve(project,ref.slice(1)):target;
+      assert(await exists(rootTarget),`Référence absente ${relative(project,file)} → ${ref}`);
     }
   }
+  const manifest=JSON.parse(await readFile(join(project,'manifest.webmanifest'),'utf8'));
+  assert(manifest.id==='/'&&manifest.scope==='/'&&manifest.lang==='fr',`Manifeste PWA incomplet`);
+  assert(Array.isArray(manifest.shortcuts)&&manifest.shortcuts.length>=3,`Raccourcis PWA incomplets`);
+  const vercel=JSON.parse(await readFile(join(project,'vercel.json'),'utf8'));
+  const headerKeys=new Set(vercel.headers?.flatMap(rule=>rule.headers||[]).map(header=>header.key));
+  for(const key of ['Content-Security-Policy','Cross-Origin-Opener-Policy','Cross-Origin-Resource-Policy','X-Frame-Options'])assert(headerKeys.has(key),`En-tête Vercel absent: ${key}`);
   return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:coverageAudit().complete};
 }
 
