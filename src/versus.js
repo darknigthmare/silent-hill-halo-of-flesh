@@ -90,8 +90,8 @@ function renderSelected() {
   els.p2Info.innerHTML = fighterInfo(state.p2);
   els.p1Card.classList.toggle('active', state.activeSlot === 1);
   els.p2Card.classList.toggle('active', state.activeSlot === 2);
-  els.slotP1.textContent = state.activeSlot === 1 ? 'SÉLECTION P1 ACTIVE' : 'ACTIVER SÉLECTION P1';
-  els.slotP2.textContent = state.activeSlot === 2 ? 'SÉLECTION P2 ACTIVE' : 'ACTIVER SÉLECTION P2';
+  els.slotP1.textContent = state.activeSlot === 1 ? 'SIGNAL DU SUJET I ACTIF' : 'ACCROCHER LE SUJET I';
+  els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
 }
 
@@ -235,7 +235,7 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
   renderPortrait(els.dossierPortrait, fighter, { time: performance.now() });
   const profile = createCombatProfile(fighter);
   const moves = MOVESET_KEYS.map((key) => profile.moves[key]).map((move) => {
-    const effects = [move.projectile ? `${move.projectileCount || 1} projectile(s)` : '', move.trap ? 'piège' : '', move.teleport ? `téléportation ${move.teleport}` : '', move.counterStance ? 'contre' : '', move.effect ? AFFLICTIONS[move.effect.id]?.name || move.effect.id : '', move.cancelInto?.length ? `annule vers ${move.cancelInto.map((key) => profile.moves[key]?.input || key).join('/')}` : ''].filter(Boolean);
+    const effects = [move.trigger ? `fenêtre ${move.trigger}` : '', move.projectile ? `${move.projectileCount || 1} projectile(s)` : '', move.trap ? 'piège' : '', move.teleport ? `téléportation ${move.teleport}` : '', move.counterStance ? 'contre' : '', move.armorBreak ? 'brise-armure' : '', move.sideSwitch ? 'changement de côté' : '', move.hardKnockdown ? 'chute dure' : '', move.groundBounce ? 'rebond au sol' : '', move.effect ? AFFLICTIONS[move.effect.id]?.name || move.effect.id : '', move.cancelInto?.length ? `annule vers ${move.cancelInto.map((key) => profile.moves[key]?.input || key).join('/')}` : ''].filter(Boolean);
     return `<li data-fidelity="${escapeHTML(move.fidelity)}"><div><kbd>${escapeHTML(move.input)}</kbd><b>${escapeHTML(move.name)}</b></div><span>${move.damage} dégâts · ${move.startup}/${move.active}/${move.recovery}f · ${escapeHTML(move.level.toUpperCase())}${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span><small>${escapeHTML(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} · ${escapeHTML(move.canonicalBasis)}</small></li>`;
   }).join('');
   const arena = getStage(fighter.stageId);
@@ -277,7 +277,7 @@ function randomize() {
 
 function configurePreset() {
   const labels = {
-    versus: ['VERSUS', 'COMBATTRE'], arcade: ['ARCADE', 'COMMENCER LE PARCOURS'],
+    versus: ['CONFRONTATION', 'OUVRIR LE CONTACT'], arcade: ['DESCENTE', 'COMMENCER LE PARCOURS'],
     ritual: ['RITES DU JUGEMENT', 'OUVRIR LE PREMIER SCEAU'],
     boss: ['GRANDS TOURMENTS', 'AFFRONTER LES BOSS'], training: ['OBSERVATION', 'ENTRER DANS LE LABORATOIRE'],
     chronicle: ['CHRONIQUE', 'POURSUIVRE'],
@@ -379,7 +379,7 @@ function startFight({ preserveRun = false } = {}) {
   els.trainingPanel.classList.toggle('hidden', !training);
   els.touchLayer.style.display = state.touchEnabled ? 'block' : '';
   const ritual = currentRitual();
-  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `VERSUS · ${ritual.short || ritual.name}`);
+  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
   els.gameHelp.textContent = els.mode.value === 'local' && !training ? `${CONTROL_LABELS.p1} · P2: ${CONTROL_LABELS.p2}` : CONTROL_LABELS.p1;
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked } });
   state.engine = new FightEngine(els.game, fightConfig());
@@ -389,13 +389,28 @@ function startFight({ preserveRun = false } = {}) {
 
 function installQaBridge() {
   window.__HALO_QA__ = {
-    version: '0.5.0',
+    version: '0.6.0',
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,
     showSelect,
     forceOtherworld() { return state.engine?.forceOtherworldShift(); },
     forceBossPhase() { return state.engine?.forceBossPhase(); },
+    previewContext(moveKey = 'guardCounter') {
+      const engine = state.engine;
+      const actor = engine?.actors?.[0];
+      if (!engine || !actor || !actor.profile.moves[moveKey]) return false;
+      engine.phase = 'fight';
+      engine.phaseTimer = 0;
+      actor.attack = null;
+      actor.hurtFrames = 0;
+      actor.guardBreak = 0;
+      actor.knockdownTimer = 0;
+      actor.grounded = true;
+      const started = engine.beginAttack(actor, moveKey, { context: true });
+      if (started) engine.togglePause(true);
+      return started;
+    },
     forceFatality(type = 'signature') {
       const engine = state.engine;
       if (!engine) return false;
@@ -429,13 +444,19 @@ function handleMatchEnd(result) {
   }
   const winnerStats = result.stats?.winner || {};
   const grade = winnerStats.grade || chronicleGrade(winnerStats);
-  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, hazardsTaken: 0, fatalities: 0, stageFatalities: 0, bestGrade: 'D' });
+  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, guardCounters: 0, dodgeAttacks: 0, wakeupAttacks: 0, backThrows: 0, armorBreaks: 0, groundBounces: 0, hazardsTaken: 0, fatalities: 0, stageFatalities: 0, bestGrade: 'D' });
   records.matches = (records.matches || 0) + 1;
   if (won) records.wins = (records.wins || 0) + 1;
   records.defeated = records.defeated || {};
   if (won) records.defeated[state.p2.id] = (records.defeated[state.p2.id] || 0) + 1;
   records.perfectGuards = (records.perfectGuards || 0) + (winnerStats.perfectGuards || 0);
   records.counters = (records.counters || 0) + (winnerStats.counters || 0);
+  records.guardCounters = (records.guardCounters || 0) + (winnerStats.guardCounters || 0);
+  records.dodgeAttacks = (records.dodgeAttacks || 0) + (winnerStats.dodgeAttacks || 0);
+  records.wakeupAttacks = (records.wakeupAttacks || 0) + (winnerStats.wakeupAttacks || 0);
+  records.backThrows = (records.backThrows || 0) + (winnerStats.backThrows || 0);
+  records.armorBreaks = (records.armorBreaks || 0) + (winnerStats.armorBreaks || 0);
+  records.groundBounces = (records.groundBounces || 0) + (winnerStats.groundBounces || 0);
   records.hazardsTaken = (records.hazardsTaken || 0) + (winnerStats.hazardsTaken || 0);
   records.bossPhases = (records.bossPhases || 0) + (winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0);
   records.fatalities = (records.fatalities || 0) + (winnerStats.fatalities || 0);
@@ -469,6 +490,11 @@ function handleMatchEnd(result) {
       <div class="result-stat"><b>${winnerStats.maxCombo || 0}</b><span>COMBO MAX</span></div>
       <div class="result-stat"><b>${winnerStats.perfectGuards || 0}</b><span>GARDES PARFAITES</span></div>
       <div class="result-stat"><b>${winnerStats.counters || 0}</b><span>CONTRES</span></div>
+      <div class="result-stat"><b>${winnerStats.guardCounters || 0}</b><span>RIPOSTES DE GARDE</span></div>
+      <div class="result-stat"><b>${winnerStats.dodgeAttacks || 0}</b><span>RIPOSTES D’ESQUIVE</span></div>
+      <div class="result-stat"><b>${winnerStats.wakeupAttacks || 0}</b><span>ATTAQUES DE RELEVÉE</span></div>
+      <div class="result-stat"><b>${winnerStats.backThrows || 0}</b><span>PROJECTIONS ARRIÈRE</span></div>
+      <div class="result-stat"><b>${winnerStats.groundBounces || 0}</b><span>REBONDS AU SOL</span></div>
       <div class="result-stat"><b>${winnerStats.hazardsTaken || 0}</b><span>DANGERS SUBIS</span></div>
       <div class="result-stat"><b>${(winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0)}</b><span>PHASES RÉVÉLÉES</span></div>
       <div class="result-stat"><b>${winnerStats.fatalities || 0}</b><span>FATALITÉS</span></div>
@@ -540,7 +566,7 @@ function bindEvents() {
   els.resetDojo.addEventListener('click', () => state.engine?.resetMatch());
   els.mobileP1.addEventListener('click', () => {
     state.touchEnabled = !state.touchEnabled;
-    els.mobileP1.textContent = state.touchEnabled ? 'TOUCH P1 ON' : 'TOUCH P1';
+    els.mobileP1.textContent = state.touchEnabled ? 'TACTILE SUJET I ACTIF' : 'TACTILE SUJET I';
     els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   });
   addEventListener('keydown', (event) => {
@@ -571,7 +597,7 @@ function init() {
   bindEvents();
   renderSelected();
   applyFilters();
-  if (state.touchEnabled) { els.mobileP1.textContent = 'TOUCH P1 ON'; }
+  if (state.touchEnabled) { els.mobileP1.textContent = 'TACTILE SUJET I ACTIF'; }
   if (params.get('qa') === '1') installQaBridge();
   const shouldAutostart = params.get('autostart') === '1' || params.get('autostart') === 'true';
   if (shouldAutostart) setTimeout(() => startFight(), 120);

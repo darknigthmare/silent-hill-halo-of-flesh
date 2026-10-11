@@ -7,7 +7,7 @@ import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './mo
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.5.0';
+export const VERSION = '0.6.0';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -782,7 +782,7 @@ export const ROSTER = [
   monster('townfall','Sorrowful',{kind:'serpentine',archetype:'zoner',signature:'Cordon thoracique',behavior:'Attaque à distance avec un appendice sortant du torse et saisit de près.',stageId:'townfall_medical',nameStatus:'guide-descriptive',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
   monster('townfall','Fallen',{kind:'humanoid',archetype:'trickster',signature:'Réveil du cadavre',behavior:'Reste immobile au sol ou dans le décor avant de charger soudainement.',stageId:'clara_woods',nameStatus:'guide-descriptive',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
   monster('townfall','Widow',{kind:'humanoid',archetype:'rushdown',signature:'Pounce au couteau',behavior:'Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos.',stageId:'ceg_tower',weapon:'knife',nameStatus:'guide-or-trophy-established',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-combatant'}),
-  monster('townfall','The Weight',{kind:'giant',archetype:'boss',boss:true,signature:'Poids impossible',behavior:'Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion.',stageId:'clara_woods_different',nameStatus:'guide-established',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-boss',adaptation:'Ses poursuites invulnérables deviennent une armure de phase ; seule la phase finale accepte les dégâts complets.'})
+  monster('townfall','The Weight',{kind:'giant',archetype:'boss',boss:true,signature:'Poids impossible',behavior:'Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final.',stageId:'clara_woods_different',nameStatus:'guide-established',evidenceTier:'release-week-guide-verified',catalogueStatus:'released-game-boss',adaptation:'Ses poursuites invulnérables deviennent une armure de phase ; ses agrippements infligent de lourds dégâts et seule la phase finale accepte les dégâts complets.'})
 
 ];
 
@@ -1017,7 +1017,7 @@ export const SOURCE_COVERAGE_TARGETS = Object.freeze({
   shf: { minFighters: 19, minStages: 9, requiredNames: ['Shiromuku','Kyubi'] },
   film: { minFighters: 13, minStages: 8, requiredNames: ['Red Pyramid — Film','Mannequin Monster','Red Pyramid Thing — Return to Silent Hill'] },
   ascension: { minFighters: 7, minStages: 3, requiredNames: ['The Immolator','The Collector'] },
-  townfall: { minFighters: 5, minStages: 6, requiredNames: ['Lunger','Sorrowful','Fallen','Widow','The Weight'], namingNote: 'Konami ne publie pas de bestiaire officiel ; noms descriptifs balisés.' }
+  townfall: { minFighters: 5, minStages: 6, requiredNames: ['Lunger','Sorrowful','Fallen','Widow','The Weight'], namingNote: 'L’annonce officielle ne publie pas de bestiaire nommé ; les appellations de guides post-sortie restent balisées comme telles.' }
 });
 
 export function coverageAudit() {
@@ -1040,7 +1040,7 @@ export function coverageAudit() {
   return {
     version: VERSION,
     scope: 'Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.',
-    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.5.0.',
+    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.0.',
     sources,
     complete: Object.values(sources).every((entry) => entry.complete)
   };

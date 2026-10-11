@@ -19,16 +19,16 @@
   <main id="command">
     <header class="command-top">
       <div class="brand">
-        <small>OTHERWORLD FIGHTING ARCHIVE</small>
-        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.5.0</span></strong>
+        <small>ARCHIVES DE L’OTHERWORLD</small>
+        <strong>SILENT HILL <em>FAN PROTOTYPE</em><span>HALO OF FLESH · v0.6.0</span></strong>
       </div>
       <div class="signal-cluster">
-        <div class="radio-readout" aria-label="Récepteur radio"><span>RECEIVER</span><strong id="signalFrequency">106.7</strong><i id="signalState">STATIC</i><div class="radio-bars" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
-        <div class="profile"><span>LOCAL PROFILE</span><span id="frontName">FOG ARCHIVE</span></div>
+        <div class="radio-readout" aria-label="Récepteur radio"><span>RÉCEPTEUR</span><strong id="signalFrequency">106.7</strong><i id="signalState">STATIC</i><div class="radio-bars" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
+        <div class="profile"><span>DOSSIER LOCAL</span><span id="frontName">ARCHIVE DE BRUME</span></div>
       </div>
     </header>
     <div class="command-body">
-      <nav class="command-menu" aria-label="Menu principal"><div class="menu-caption"><span>SELECT / SIGNAL</span><b id="caseStamp">CASE 00 — FOG</b></div>
+      <nav class="command-menu" aria-label="Menu principal"><div class="menu-caption"><span>SÉLECTION / SIGNAL</span><b id="caseStamp">CASE 00 — FOG</b></div>
         <button class="command-item active" data-mode="continue">REPRENDRE<small>DERNIER CAUCHEMAR</small></button>
         <button class="command-item" data-mode="chronicles">CHRONIQUES DE LA BRUME<small>ROUTES, DOSSIERS, CONSÉQUENCES</small></button>
         <button class="command-item" data-mode="versus">CONFRONTATION<small>DUELS ET COMBATS LOCAUX</small></button>
@@ -42,27 +42,27 @@
       <section class="command-hero" aria-live="polite">
         <canvas id="heroCanvas" width="1200" height="760" aria-hidden="true"></canvas>
         <div class="hero-copy">
-          <div id="heroKicker" class="hero-kicker">QUICK RESUME</div>
+          <div id="heroKicker" class="hero-kicker">REPRISE DU SIGNAL</div>
           <h1 id="heroTitle">RETOUR<br><span>DANS LA BRUME.</span></h1>
-          <p id="heroText">Le dernier front reprend avec le même combattant, la même arène et la même règle.</p>
+          <p id="heroText">Le dernier cauchemar reprend avec la même manifestation, la même arène et le même Rite.</p>
           <div id="heroChoices" class="hero-choices"></div><div id="heroData" class="hero-data"></div>
         </div>
       <aside class="hero-evidence" aria-hidden="true">
-          <span>FOG-BORN RECORD</span>
+          <span>DOSSIER NÉ DE LA BRUME</span>
           <b id="evidenceCode">SHHF/00</b>
-          <p>DO NOT TRUST<br>THE FIRST SIGNAL.</p>
+          <p>NE CROYEZ PAS<br>LE PREMIER SIGNAL.</p>
           <div class="evidence-lines"><i></i><i></i><i></i></div>
         </aside>
       </section>
     </div>
     <footer class="command-bottom">
-      <span id="contentCount">CHARGEMENT DU CATALOGUE…</span><span class="legal-signal">NON-COMMERCIAL FOG ARCHIVE · NO OFFICIAL ASSETS</span>
+      <span id="contentCount">CHARGEMENT DU CATALOGUE…</span><span class="legal-signal">ARCHIVE NON COMMERCIALE · AUCUN ASSET OFFICIEL</span>
       <div class="command-controls"><span data-key="↑↓">MODE</span><span data-key="←→">VARIANTE</span><span data-key="ENTRÉE">VALIDER</span><span data-key="F">PLEIN ÉCRAN</span></div>
     </footer>
   </main>
   <section id="module-player" aria-label="Module de jeu">
     <iframe id="moduleFrame" title="Module de jeu Silent Hill"></iframe>
-    <div class="returnbar"><button id="returnCommand">COMMAND</button><button id="reloadModule">RECHARGER</button></div>
+    <div class="returnbar"><button id="returnCommand">RETOUR À LA BRUME</button><button id="reloadModule">RECHARGER</button></div>
     <div id="loading" class="loading"><div><b>INITIALISATION</b><small>LA BRUME SE REFERME…</small></div></div>
   </section>
 </div>
@@ -70,7 +70,7 @@
 <section id="optionsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="optionsTitle">
   <div class="modal-card">
     <h2 id="optionsTitle">OPTIONS</h2>
-    <p>Réglages persistants du front de commande et des modules de combat.</p>
+    <p>Réglages persistants du signal, de la Brume et des modules de combat.</p>
     <div class="option-row"><span>SCANLINES</span><button class="toggle on" data-setting="scanlines">ACTIF</button></div>
     <div class="option-row"><span>GRAIN ANALOGIQUE</span><button class="toggle on" data-setting="grain">ACTIF</button></div>
     <div class="option-row"><span>MOUVEMENT RÉDUIT</span><button class="toggle" data-setting="reducedMotion">INACTIF</button></div>

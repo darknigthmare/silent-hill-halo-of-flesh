@@ -10,7 +10,8 @@
 export const MOVESET_KEYS = Object.freeze([
   'neutralLight','forwardLight','crouchLight','airLight',
   'neutralHeavy','forwardHeavy','crouchHeavy','airHeavy',
-  'throw','neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial',
+  'throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
+  'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial',
   'super','desperation'
 ]);
 
@@ -24,6 +25,10 @@ export const MOVE_INPUTS = Object.freeze({
   crouchHeavy: '↓ + H',
   airHeavy: 'AIR + H',
   throw: 'T',
+  backThrow: '← + T',
+  dodgeAttack: 'DODGE + L',
+  guardCounter: 'P-GUARD + H',
+  wakeupAttack: 'RISE + S',
   neutralSpecial: 'S',
   forwardSpecial: '→ + S',
   backSpecial: '← + S',
@@ -58,6 +63,10 @@ const SLOT_SPECS = Object.freeze({
   crouchHeavy:   { button:'heavy', category:'normal', stance:'crouching', startup:13, active:6, recovery:23, damage:72, reach:104, level:'low', meter:13, knockback:10, knockdown:true, cancelInto:['downSpecial'] },
   airHeavy:      { button:'heavy', category:'aerial', stance:'air', startup:13, active:7, recovery:22, damage:88, reach:96, level:'overhead', meter:14, requiresAir:true, verticalTravel:1.8, knockback:12 },
   throw:         { button:'throw', category:'throw', stance:'standing', startup:8, active:3, recovery:28, damage:94, reach:62, level:'throw', meter:16, knockback:13, effectMode:'throw' },
+  backThrow:     { button:'throw', category:'throw', stance:'standing', startup:9, active:3, recovery:30, damage:90, reach:64, level:'throw', meter:17, knockback:11, launch:7.2, effectMode:'throw', trigger:'back-throw', sideSwitch:true, hardKnockdown:true },
+  dodgeAttack:   { button:'dodge', category:'reversal', stance:'any', startup:6, active:5, recovery:18, damage:58, reach:92, level:'mid', meter:11, knockback:8, travel:2.6, invulnFrames:4, trigger:'dodge-followup', cancelInto:['neutralSpecial','forwardSpecial'] },
+  guardCounter:  { button:'guard', category:'counter', stance:'standing', startup:5, active:5, recovery:22, damage:98, reach:108, level:'mid', meter:18, knockback:13, guardDamage:1.45, armorBreak:true, trigger:'perfect-guard', cancelInto:['forwardSpecial'] },
+  wakeupAttack:  { button:'special', category:'reversal', stance:'grounded-recovery', startup:8, active:8, recovery:28, damage:84, reach:120, level:'low', meter:14, knockback:10, invulnFrames:6, knockdown:true, groundBounce:true, trigger:'wakeup', effectMode:'signature' },
   neutralSpecial:{ button:'special', category:'special', stance:'standing', startup:15, active:6, recovery:26, damage:112, reach:150, level:'mid', meter:20, knockback:10, effectMode:'signature' },
   forwardSpecial:{ button:'special', category:'special', stance:'standing', startup:13, active:10, recovery:29, damage:124, reach:176, level:'mid', meter:22, travel:3.35, knockback:13, effectMode:'signature' },
   backSpecial:   { button:'special', category:'special', stance:'standing', startup:10, active:5, recovery:24, damage:78, reach:150, level:'mid', meter:18, travel:-2.6, invulnFrames:6, effectMode:'signature' },
@@ -162,6 +171,32 @@ const KIND_NAMES = Object.freeze({
   }
 });
 
+const CONTEXT_NAMES = Object.freeze({
+  humanoid:   { backThrow:'Projection brisée', dodgeAttack:'Retour convulsif', guardCounter:'Riposte du corps', wakeupAttack:'Reprise impossible' },
+  child:      { backThrow:'Renversement du couloir', dodgeAttack:'Bond de fuite', guardCounter:'Couteau de réponse', wakeupAttack:'Réveil sous les pupitres' },
+  nurse:      { backThrow:'Contention inversée', dodgeAttack:'Pas clinique', guardCounter:'Contre-protocole', wakeupAttack:'Reprise du service' },
+  quadruped:  { backThrow:'Traction de la meute', dodgeAttack:'Bond latéral', guardCounter:'Morsure de riposte', wakeupAttack:'Relèvement animal' },
+  flyer:      { backThrow:'Largage arrière', dodgeAttack:'Battement d’évasion', guardCounter:'Serre de riposte', wakeupAttack:'Redécollage' },
+  insect:     { backThrow:'Renversement chitineux', dodgeAttack:'Écart parasite', guardCounter:'Mandibule de riposte', wakeupAttack:'Mue de reprise' },
+  worm:       { backThrow:'Rejet annelé', dodgeAttack:'Surgissement latéral', guardCounter:'Mâchoire de réponse', wakeupAttack:'Retour souterrain' },
+  giant:      { backThrow:'Jet monumental', dodgeAttack:'Pas de masse', guardCounter:'Contre-écrasement', wakeupAttack:'Relèvement sismique' },
+  ghost:      { backThrow:'Possession inversée', dodgeAttack:'Déphasage offensif', guardCounter:'Retour spectral', wakeupAttack:'Réapparition du sol' },
+  pyramid:    { backThrow:'Condamnation arrière', dodgeAttack:'Pas de l’exécuteur', guardCounter:'Sentence de riposte', wakeupAttack:'Relèvement du bourreau' },
+  mannequin:  { backThrow:'Nœud inversé', dodgeAttack:'Pliure d’esquive', guardCounter:'Ciseaux de réponse', wakeupAttack:'Redressement articulé' },
+  mass:       { backThrow:'Reflux charnel', dodgeAttack:'Débordement latéral', guardCounter:'Pulsation de riposte', wakeupAttack:'Reconstitution organique' },
+  wall:       { backThrow:'Ensevelissement arrière', dodgeAttack:'Glissement de paroi', guardCounter:'Mur de réponse', wakeupAttack:'Émergence structurelle' },
+  doll:       { backThrow:'Valse inversée', dodgeAttack:'Pas de poupée', guardCounter:'Fil de riposte', wakeupAttack:'Remontage du corps' },
+  flowerhead: { backThrow:'Enracinement arrière', dodgeAttack:'Pas de pétales', guardCounter:'Floraison de riposte', wakeupAttack:'Repousse rouge' },
+  deity:      { backThrow:'Rejet du jugement', dodgeAttack:'Glissement sacré', guardCounter:'Décret de riposte', wakeupAttack:'Résurrection rituelle' },
+  cage:       { backThrow:'Balancement inversé', dodgeAttack:'Oscillation d’évasion', guardCounter:'Barreau de riposte', wakeupAttack:'Suspension retrouvée' },
+  fungus:     { backThrow:'Rejet mycélien', dodgeAttack:'Poussée oblique', guardCounter:'Spore de riposte', wakeupAttack:'Repousse fongique' },
+  wheelchair: { backThrow:'Marche arrière forcée', dodgeAttack:'Écart de roue', guardCounter:'Collision de riposte', wakeupAttack:'Redémarrage hanté' },
+  fox:        { backThrow:'Sceau inversé', dodgeAttack:'Pas du masque', guardCounter:'Queue de riposte', wakeupAttack:'Retour du cortège' },
+  spider:     { backThrow:'Traction du cocon', dodgeAttack:'Pas arachnéen', guardCounter:'Patte de riposte', wakeupAttack:'Remontée au fil' },
+  void:       { backThrow:'Rejet hors du plan', dodgeAttack:'Décalage spatial', guardCounter:'Effacement de riposte', wakeupAttack:'Retour du néant' },
+  serpentine: { backThrow:'Nœud inversé', dodgeAttack:'Ondulation d’évasion', guardCounter:'Vrille de riposte', wakeupAttack:'Reprise annelée' }
+});
+
 const SPECIAL_STYLE = Object.freeze({
   balanced:   { neutral:'Technique signature', forward:'Assaut signature', back:'Retrait trompeur', down:'Piège de proximité', air:'Descente signature' },
   rushdown:   { neutral:'Rafale signature', forward:'Poursuite signature', back:'Feinte arrière', down:'Fauchage signature', air:'Plongée signature' },
@@ -181,7 +216,8 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   sh1_air_screamer_001: {
     neutralSpecial:{name:'Cri d’approche', projectile:true, projectileCount:2, projectileArc:.22, fidelity:'direct-canonical'},
     forwardSpecial:{name:'Plongée lacérante', travel:5.2, hits:2, fidelity:'direct-canonical'},
-    airSpecial:{name:'Piqué en spirale', travel:4.6, verticalTravel:4.4, fidelity:'behavior-composite'}
+    airSpecial:{name:'Piqué en spirale', travel:4.6, verticalTravel:4.4, fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Battement d’écart puis serre', travel:3.4, verticalTravel:1.2, fidelity:'behavior-composite'}
   },
   sh1_split_head_014: {
     forwardHeavy:{name:'Charge à gueule ouverte', reach:170, guardDamage:1.45, fidelity:'direct-canonical'},
@@ -206,7 +242,9 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   sh2_bubble_head_nurse_024: {
     neutralLight:{name:'Coup de tuyau', fidelity:'direct-canonical'},
     forwardHeavy:{name:'Marche convulsive', hits:2, fidelity:'behavior-composite'},
-    neutralSpecial:{name:'Rafale du service', hits:3, fidelity:'behavior-composite'}
+    neutralSpecial:{name:'Rafale du service', hits:3, fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Pas convulsif — coup de tuyau', travel:2.9, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Relèvement saccadé', hits:2, fidelity:'behavior-composite'}
   },
   sh2_abstract_daddy_028: {
     forwardHeavy:{name:'Charge du cadre', armorFrames:16, travel:3.2, fidelity:'direct-canonical'},
@@ -218,12 +256,17 @@ const SPECIFIC_OVERRIDES = Object.freeze({
     neutralHeavy:{name:'Grand Couteau — Vertical', damageScale:1.2, startupAdd:3, guardDamage:1.4, fidelity:'direct-canonical'},
     forwardHeavy:{name:'Grand Couteau — Balayage', reach:190, damageScale:1.15, fidelity:'direct-canonical'},
     crouchHeavy:{name:'Traînée du Grand Couteau', level:'low', travel:2.2, fidelity:'direct-canonical'},
+    backThrow:{name:'Traction derrière l’exécuteur', damageScale:1.22, hardKnockdown:true, fidelity:'behavior-composite'},
+    guardCounter:{name:'Réponse du Grand Couteau', damageScale:1.18, armorBreak:true, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Relèvement silencieux du bourreau', armorFrames:18, fidelity:'behavior-composite'},
     neutralSpecial:{name:'Sentence lente', level:'unblockable', armorFrames:18, startupAdd:8, fidelity:'behavior-composite'},
     forwardSpecial:{name:'Poursuite de l’exécuteur', travel:4.1, armorFrames:14, fidelity:'direct-canonical'}
   },
   sh2_red_pyramid_thing_spear_030: {
     neutralLight:{name:'Pointe de lance', reach:100, fidelity:'direct-canonical'},
     neutralHeavy:{name:'Estoc de la sentence', reach:170, fidelity:'direct-canonical'},
+    backThrow:{name:'Renversement à la hampe', reach:96, hardKnockdown:true, fidelity:'behavior-composite'},
+    guardCounter:{name:'Riposte de la lance', reach:178, damageScale:1.12, fidelity:'behavior-composite'},
     forwardSpecial:{name:'Percée de la lance', reach:230, travel:3.8, fidelity:'direct-canonical'},
     downSpecial:{name:'Balayage double', hits:2, fidelity:'behavior-composite'}
   },
@@ -249,11 +292,19 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   },
   sh4_ghost_victim_066: {
     neutralHeavy:{name:'Main dans le cœur', effectOverride:'dread', fidelity:'direct-canonical'},
+    backThrow:{name:'Possession inversée', teleport:'behind', effectOverride:'dread', fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Déphasage offensif', teleport:'cross', invulnFrames:9, effectOverride:'dread', fidelity:'direct-canonical'},
+    guardCounter:{name:'Retour spectral', teleport:'behind', effectOverride:'dread', fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Émergence depuis le sol', teleport:'behind', effectOverride:'dread', fidelity:'behavior-composite'},
     forwardSpecial:{name:'Émergence du mur', teleport:'behind', fidelity:'direct-canonical'},
     downSpecial:{name:'Aura de céphalée', aura:true, effectOverride:'dread', fidelity:'direct-canonical'}
   },
   sh4_wheelchair_068: {
     forwardHeavy:{name:'Charge invulnérable', armorFrames:22, travel:4.4, fidelity:'direct-canonical'},
+    backThrow:{name:'Marche arrière hantée', sideSwitch:true, hardKnockdown:true, fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Écart de roue autonome', travel:4.4, invulnFrames:10, fidelity:'behavior-composite'},
+    guardCounter:{name:'Collision de riposte', armorBreak:true, travel:3.8, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Redémarrage impossible', armorFrames:20, fidelity:'behavior-composite'},
     neutralSpecial:{name:'Percussion hantée', hits:3, armorFrames:16, fidelity:'direct-canonical'},
     backSpecial:{name:'Recul autonome', travel:-4.2, invulnFrames:10, fidelity:'behavior-composite'}
   },
@@ -279,6 +330,8 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   },
   homecoming_needler_088: {
     neutralHeavy:{name:'Parade des quatre lames', armorFrames:10, hits:2, fidelity:'direct-canonical'},
+    guardCounter:{name:'Riposte des quatre lames', hits:2, armorBreak:true, fidelity:'direct-canonical'},
+    dodgeAttack:{name:'Bond oblique du Needler', travel:3.8, hits:2, fidelity:'behavior-composite'},
     forwardSpecial:{name:'Pounce du Needler', travel:4.7, hits:3, fidelity:'direct-canonical'},
     backSpecial:{name:'Garde frontale', armorFrames:20, fidelity:'direct-canonical'}
   },
@@ -300,11 +353,16 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   shattered_raw_shock_base_099: {
     forwardSpecial:{name:'Poursuite du cauchemar', travel:4.8, armorFrames:6, fidelity:'direct-canonical'},
     throw:{name:'Étreinte glacée', effectOverride:'frost', fidelity:'direct-canonical'},
+    dodgeAttack:{name:'Écart de poursuite', travel:4.2, effectOverride:'frost', fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Relèvement dans la glace', effectOverride:'frost', fidelity:'behavior-composite'},
     backSpecial:{name:'Déformation psychologique', teleport:'cross', fidelity:'behavior-composite'}
   },
   downpour_void_113: {
     neutralSpecial:{name:'Mur du Void', projectile:true, projectileCount:1, projectileScale:2.4, projectileSpeed:5.5, fidelity:'direct-canonical'},
     forwardSpecial:{name:'Dévoration de l’espace', level:'unblockable', travel:2.8, armorFrames:24, fidelity:'direct-canonical'},
+    dodgeAttack:{name:'Décalage du corridor', teleport:'cross', invulnFrames:12, fidelity:'direct-canonical'},
+    guardCounter:{name:'Effacement de riposte', projectile:true, projectileScale:1.8, projectileSpeed:6.2, armorBreak:true, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Retour du néant', teleport:'cross', fidelity:'behavior-composite'},
     backSpecial:{name:'Repli impossible', teleport:'cross', fidelity:'behavior-composite'},
     downSpecial:{name:'Sol effacé', trap:true, effectOverride:'dread', fidelity:'behavior-composite'}
   },
@@ -319,12 +377,19 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   },
   pt_lisa_149: {
     neutralLight:{name:'Tremblement derrière soi', teleport:'behind', fidelity:'direct-canonical'},
+    backThrow:{name:'Saisie derrière l’épaule', teleport:'behind', effectOverride:'dread', fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Apparition après l’angle mort', teleport:'cross', invulnFrames:12, effectOverride:'dread', fidelity:'direct-canonical'},
+    guardCounter:{name:'Retour derrière soi', teleport:'behind', effectOverride:'static', fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Réapparition dans la boucle', teleport:'cross', effectOverride:'dread', fidelity:'behavior-composite'},
     forwardSpecial:{name:'Apparition de Lisa', teleport:'behind', hits:2, effectOverride:'dread', fidelity:'direct-canonical'},
     backSpecial:{name:'Boucle du couloir', teleport:'cross', invulnFrames:12, fidelity:'direct-canonical'},
     downSpecial:{name:'Présence au miroir', trap:true, effectOverride:'static', fidelity:'behavior-composite'}
   },
   shortmessage_sakura_head_150: {
     neutralLight:{name:'Branche de cerisier', fidelity:'direct-canonical'},
+    dodgeAttack:{name:'Accélération de pétales', travel:4.8, hits:2, effectOverride:'bloom', fidelity:'direct-canonical'},
+    guardCounter:{name:'Branches de riposte', hits:3, effectOverride:'bloom', fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Repousse écarlate', effectOverride:'bloom', groundBounce:true, fidelity:'behavior-composite'},
     forwardSpecial:{name:'Poursuite des pétales', travel:5.0, hits:3, effectOverride:'bloom', fidelity:'direct-canonical'},
     downSpecial:{name:'Racines de Maya', trap:true, effectOverride:'bloom', fidelity:'behavior-composite'},
     airSpecial:{name:'Floraison plongeante', verticalTravel:4.2, effectOverride:'bloom', fidelity:'direct-canonical'}
@@ -382,17 +447,27 @@ const SPECIFIC_OVERRIDES = Object.freeze({
   },
   townfall_fallen: {
     backSpecial:{name:'Cadavre immobile', counterStance:true, invulnFrames:10, fidelity:'direct-canonical'},
+    dodgeAttack:{name:'Ruée depuis l’immobilité', teleport:'behind', hits:2, fidelity:'behavior-composite'},
+    guardCounter:{name:'Fausse mort — riposte', counterStance:true, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Réveil soudain du Fallen', teleport:'behind', hits:2, fidelity:'direct-canonical'},
     forwardSpecial:{name:'Réveil soudain', teleport:'behind', hits:2, fidelity:'direct-canonical'},
     crouchHeavy:{name:'Ambuscade du sol', travel:3.2, fidelity:'direct-canonical'}
   },
   townfall_widow: {
     neutralLight:{name:'Coup de couteau', fidelity:'direct-canonical'},
+    backThrow:{name:'Renversement au couteau', hits:2, fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Pounce depuis l’angle mort', teleport:'behind', hits:3, fidelity:'direct-canonical'},
+    guardCounter:{name:'Couteau de riposte', teleport:'behind', fidelity:'behavior-composite'},
     forwardSpecial:{name:'Pounce dans le dos', teleport:'behind', hits:3, fidelity:'direct-canonical'},
     backSpecial:{name:'Angle mort', teleport:'cross', invulnFrames:10, fidelity:'direct-canonical'},
     downSpecial:{name:'Attente dans l’ombre', trap:true, fidelity:'behavior-composite'}
   },
   townfall_the_weight: {
     neutralLight:{name:'Main du fardeau', fidelity:'direct-canonical'},
+    backThrow:{name:'Rejet du captif', damageScale:1.3, hardKnockdown:true, fidelity:'behavior-composite'},
+    dodgeAttack:{name:'Pas de chasse lourd', travel:3.2, armorFrames:18, fidelity:'behavior-composite'},
+    guardCounter:{name:'Fardeau de riposte', damageScale:1.25, armorBreak:true, armorFrames:24, fidelity:'behavior-composite'},
+    wakeupAttack:{name:'Relèvement du fardeau', armorFrames:30, groundBounce:true, fidelity:'behavior-composite'},
     forwardHeavy:{name:'Charge du Weight', travel:4.0, armorFrames:28, level:'unblockable', fidelity:'direct-canonical'},
     neutralSpecial:{name:'Saisie létale', level:'throw', damageScale:1.45, fidelity:'direct-canonical'},
     backSpecial:{name:'Fardeau inviolable', armorFrames:32, fidelity:'direct-canonical'},
@@ -419,6 +494,8 @@ function grapplerArchetype(fighter) {
 function defaultName(slot, fighter, kind) {
   const normal = KIND_NAMES[kind] || KIND_NAMES.humanoid;
   if (normal[slot]) return normal[slot];
+  const context = CONTEXT_NAMES[kind] || CONTEXT_NAMES.humanoid;
+  if (context[slot]) return `${fighter.signature} — ${context[slot]}`;
   const style = SPECIAL_STYLE[fighter.archetype] || SPECIAL_STYLE.balanced;
   if (slot === 'neutralSpecial') return fighter.signature || style.neutral;
   if (slot === 'forwardSpecial') return `${fighter.signature} — ${style.forward}`;
@@ -432,7 +509,7 @@ function defaultName(slot, fighter, kind) {
 
 function fidelityFor(slot, override) {
   if (override?.fidelity) return override.fidelity;
-  if (['neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial'].includes(slot)) return 'behavior-composite';
+  if (['backThrow','dodgeAttack','guardCounter','wakeupAttack','neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial'].includes(slot)) return 'behavior-composite';
   if (['super','desperation'].includes(slot)) return 'versus-adaptation';
   return 'behavior-composite';
 }
@@ -486,6 +563,11 @@ function makeMove(slot, fighter, context, override = {}) {
     trap: Boolean(override.trap),
     aura: Boolean(override.aura),
     counterStance: Boolean(override.counterStance),
+    trigger: override.trigger ?? spec.trigger ?? null,
+    sideSwitch: override.sideSwitch ?? spec.sideSwitch ?? false,
+    hardKnockdown: override.hardKnockdown ?? spec.hardKnockdown ?? false,
+    groundBounce: override.groundBounce ?? spec.groundBounce ?? false,
+    armorBreak: override.armorBreak ?? spec.armorBreak ?? false,
     meterGain: override.meterGain ?? 0,
     effect: null,
     cancelInto: [...(override.cancelInto || spec.cancelInto || [])],
@@ -504,7 +586,7 @@ function makeMove(slot, fighter, context, override = {}) {
     };
   }
 
-  if (slot === 'throw' && grapplerArchetype(fighter)) {
+  if (['throw','backThrow'].includes(slot) && grapplerArchetype(fighter)) {
     move.damage = Math.round(move.damage * 1.18 * (context.throwDamage || 1));
     move.effect ||= context.throwEffect ? { id: context.throwEffect, duration: context.throwEffectDuration || 90, potency: 1 } : null;
   }
@@ -538,7 +620,8 @@ function makeMove(slot, fighter, context, override = {}) {
 const MOVE_ROLE_LABELS = Object.freeze({
   neutralLight: 'contact', forwardLight: 'poursuite', crouchLight: 'attaque basse', airLight: 'attaque aérienne',
   neutralHeavy: 'brise-garde', forwardHeavy: 'charge', crouchHeavy: 'fauchage', airHeavy: 'retombée',
-  throw: 'saisie', neutralSpecial: 'signature', forwardSpecial: 'assaut', backSpecial: 'repli',
+  throw: 'saisie', backThrow: 'projection arrière', dodgeAttack: 'riposte d’esquive', guardCounter: 'contre de garde', wakeupAttack: 'reprise',
+  neutralSpecial: 'signature', forwardSpecial: 'assaut', backSpecial: 'repli',
   downSpecial: 'terrain', airSpecial: 'plongée', super: 'Nightmare', desperation: 'désespoir'
 });
 
@@ -589,10 +672,15 @@ function applyBehaviorEvidence(moves, fighter, overrides = {}) {
   }
   if (/(agripp|saisi|attire|enferme|plaque|étreinte|verrou|morsure prolongée|dévor|contention|capture)/.test(text)) {
     const move = moves.throw;
+    const backMove = moves.backThrow;
     move.reach = Math.max(move.reach, 72);
     move.damage = Math.round(move.damage * 1.08);
+    backMove.reach = Math.max(backMove.reach, 72);
+    backMove.damage = Math.round(backMove.damage * 1.06);
     rename('throw', 'saisie attestée');
+    rename('backThrow', 'retournement de la saisie');
     markDirect('throw', 'grab');
+    if (/(projette|projection|renverse|jette derrière)/.test(text)) markDirect('backThrow', 'grab-reversal');
   }
   if (/(vol|aérien|plonge|piqué|ailes|plafond|hauteur|suspendu)/.test(text)) {
     const move = moves.airSpecial;
@@ -606,8 +694,12 @@ function applyBehaviorEvidence(moves, fighter, overrides = {}) {
     const move = moves.backSpecial;
     move.teleport ||= 'behind';
     move.invulnFrames = Math.max(move.invulnFrames, 7);
+    moves.dodgeAttack.invulnFrames = Math.max(moves.dodgeAttack.invulnFrames, 6);
+    moves.dodgeAttack.teleport ||= /(?:dispari|réappar|téléport|hors écran|miroir)/.test(text) ? 'cross' : null;
     rename('backSpecial', 'apparition attestée');
+    rename('dodgeAttack', 'riposte d’apparition');
     markDirect('backSpecial', 'phase');
+    markDirect('dodgeAttack', 'evasive-strike');
   }
   if (/(sol|souterrain|surgit|rampe|grille|conduit|paroi|mur|plancher|racine)/.test(text)) {
     const move = moves.downSpecial;
@@ -621,8 +713,18 @@ function applyBehaviorEvidence(moves, fighter, overrides = {}) {
     const move = moves.backSpecial;
     move.armorFrames = Math.max(move.armorFrames, fighter.boss ? 22 : 12);
     move.counterStance ||= /(bloque|parade|immobile)/.test(text);
+    moves.guardCounter.guardDamage = Math.max(moves.guardCounter.guardDamage, fighter.boss ? 1.65 : 1.5);
+    moves.guardCounter.armorBreak = true;
     rename('backSpecial', 'garde attestée');
+    rename('guardCounter', 'riposte de garde');
     markDirect('backSpecial', 'defense');
+    if (/(bloque|parade|contre-attaque|riposte)/.test(text)) markDirect('guardCounter', 'guard-counter');
+  }
+  if (/(sol|allong|couch|gisant|immobile|cadavre|relève|redresse|réveille|joue mort|play dead)/.test(text)) {
+    moves.wakeupAttack.invulnFrames = Math.max(moves.wakeupAttack.invulnFrames, 7);
+    moves.wakeupAttack.knockdown = true;
+    rename('wakeupAttack', 'reprise depuis le sol');
+    if (/(relève|redresse|réveille|joue mort|play dead)/.test(text)) markDirect('wakeupAttack', 'ground-recovery');
   }
   if (/(groupe|meute|essaim|multiples|plusieurs|deux corps|double|deux têtes|invocations)/.test(text)) {
     const move = moves.neutralSpecial;

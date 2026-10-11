@@ -1,5 +1,40 @@
 # Changelog
 
+## 0.6.0 — 11 octobre 2026
+
+### Doctrine contextuelle
+
+- Passage de seize à **vingt actions par manifestation**.
+- Catalogue porté à **4 600 mouvements** : 447 directement attestés, 3 694 composites lore-friendly et 459 adaptations versus.
+- Ajout de la projection arrière, de la riposte d’esquive, du contre après garde parfaite et de l’attaque de relevée.
+- Contrats moteur explicites : changement de côté, chute dure, rupture d’armure, invulnérabilité de reversal et rebond au sol.
+- Noms, bases canoniques, frame data et fidélité conservés pour les 230 doctrines.
+
+### Moteur, IA et score
+
+- Fenêtres contextuelles réellement exécutables et refusées hors condition.
+- IA capable d’exploiter ripostes, relevées et projections arrière.
+- HUD de combat et Salle d’Observation enrichis avec les fenêtres `DODGE`, `P-GUARD` et `RISE`.
+- Statistiques persistantes : ripostes de garde, ripostes d’esquive, relevées, projections arrière, ruptures d’armure et rebonds.
+- Bonus de maîtrise contextuelle borné dans le calcul des rangs.
+- Présentations d’introduction et lignes de victoire issues des doctrines.
+
+### Interface Silent Hill
+
+- Désignation Sujet I / Sujet II dans la sélection et les résultats.
+- Navigation « Retour à la Brume » harmonisée.
+- Libellés CRTV/radio localisés et compteur de Chroniques corrigé à quinze.
+- Onglets d’Archives mobiles repliés sur plusieurs lignes au lieu de sortir de l’écran.
+- Registre des vingt commandes et propriétés contextuelles dans les Archives et dossiers Versus.
+
+### Provenance, QA et build
+
+- Description de *The Weight* ajustée aux comportements de recherche, chasse et agrippement observés après la sortie de *Townfall* ; appellations de guides toujours signalées.
+- Validation de chaque contrat contextuel dans `scripts/build.mjs`.
+- Suite automatisée étendue à **54 tests**.
+- QA Chromium : 11 parcours, 11 assertions, zéro erreur console, zéro exception, zéro échec réseau et zéro débordement.
+- Cache PWA, exports JSON, documentation et build statique migrés vers v0.6.0.
+
 ## 0.5.0 — 11 octobre 2026
 
 ### Movesets lore-first

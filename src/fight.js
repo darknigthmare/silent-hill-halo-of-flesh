@@ -56,6 +56,12 @@ function emptyStats() {
     perfectGuards: 0,
     counters: 0,
     throws: 0,
+    backThrows: 0,
+    dodgeAttacks: 0,
+    guardCounters: 0,
+    wakeupAttacks: 0,
+    armorBreaks: 0,
+    groundBounces: 0,
     statusesApplied: 0,
     maxCombo: 0,
     hazardsTaken: 0,
@@ -100,7 +106,12 @@ function makeActor(data, index, ritual = {}) {
     invuln: 0,
     stun: 0,
     dodgeCooldown: 0,
+    dodgeFrames: 0,
+    dodgeFollowupWindow: 0,
     guardBreak: 0,
+    guardCounterWindow: 0,
+    knockdownTimer: 0,
+    wakeupWindow: 0,
     combo: 0,
     comboTimer: 0,
     hitFlash: 0,
@@ -184,7 +195,7 @@ function relativeDirection(actor, controls) {
 }
 export function resolveMoveKey(actor, controls, button) {
   const direction = relativeDirection(actor, controls);
-  if (button === 'throw') return 'throw';
+  if (button === 'throw') return direction.away ? 'backThrow' : 'throw';
   if (button === 'super') return healthRatio(actor) <= (actor.profile.moves.desperation?.healthRequirement || .3) ? 'desperation' : 'super';
   if (button === 'light') {
     if (!actor.grounded) return 'airLight';
@@ -214,7 +225,8 @@ export function chronicleGrade(stats = {}) {
   const guards = Math.max(0, stats.perfectGuards || 0);
   const hazards = Math.max(0, stats.hazardsTaken || 0);
   const fatalities = Math.max(0, stats.fatalities || 0) + Math.max(0, stats.stageFatalities || 0);
-  const score = health * 60 + Math.min(18, combo * 2.5) + Math.min(16, guards * 4) + Math.min(8, fatalities * 4) - Math.min(20, hazards * 5);
+  const contextualMastery = Math.max(0, stats.guardCounters || 0) + Math.max(0, stats.dodgeAttacks || 0) + Math.max(0, stats.wakeupAttacks || 0) + Math.max(0, stats.backThrows || 0);
+  const score = health * 60 + Math.min(18, combo * 2.5) + Math.min(16, guards * 4) + Math.min(8, fatalities * 4) + Math.min(8, contextualMastery * 2) - Math.min(20, hazards * 5);
   if (score >= 86) return 'S';
   if (score >= 72) return 'A';
   if (score >= 56) return 'B';
@@ -380,7 +392,12 @@ export class FightEngine {
       actor.invuln = 0;
       actor.stun = 0;
       actor.dodgeCooldown = 0;
+      actor.dodgeFrames = 0;
+      actor.dodgeFollowupWindow = 0;
       actor.guardBreak = 0;
+      actor.guardCounterWindow = 0;
+      actor.knockdownTimer = 0;
+      actor.wakeupWindow = 0;
       actor.combo = 0;
       actor.comboTimer = 0;
       actor.hitFlash = 0;
@@ -431,6 +448,10 @@ export class FightEngine {
 
     if (this.phase === 'intro') {
       this.phaseTimer--;
+      if (this.phaseTimer === 130) {
+        this.addText(this.actors[0].profile.moveset.presentation.intro, 318, 236, 'intro');
+        this.addText(this.actors[1].profile.moveset.presentation.intro, WIDTH - 318, 236, 'intro');
+      }
       if (this.phaseTimer === 90) this.addText(`ROUND ${this.round}`, WIDTH / 2, 280, 'round');
       if (this.phaseTimer === 30) this.addText('FIGHT', WIDTH / 2, 315, 'fight');
       if (this.phaseTimer <= 0) {
@@ -535,6 +556,10 @@ export class FightEngine {
     };
     const preferred = personality.preferredRange || 145;
 
+    if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && this.rng() < .74) return { special: true };
+    if (actor.guardCounterWindow > 0 && this.rng() < .82) return { heavy: true };
+    if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && this.rng() < .68) return { light: true };
+
     actor.aiTimer--;
     if (actor.aiTimer <= 0) {
       actor.aiTimer = diff.react + Math.floor(this.rng() * Math.max(2, diff.react));
@@ -575,6 +600,7 @@ export class FightEngine {
         }
       } else if (distance < 78 && ['grappler', 'juggernaut', 'boss'].includes(actor.data.archetype) && this.rng() < .45) {
         intent.throw = true;
+        if (this.rng() < .42) intent[away] = true;
       } else if (this.rng() < diff.attack) {
         const roll = this.rng();
         if (actor.meter >= 100 && roll > .84) intent.super = true;
@@ -626,8 +652,11 @@ export class FightEngine {
     actor.hitFlash = Math.max(0, actor.hitFlash - 1);
     actor.invuln = Math.max(0, actor.invuln - 1);
     actor.dodgeCooldown = Math.max(0, actor.dodgeCooldown - 1);
+    actor.dodgeFollowupWindow = Math.max(0, actor.dodgeFollowupWindow - 1);
     actor.comboTimer = Math.max(0, actor.comboTimer - 1);
     actor.parryWindow = Math.max(0, actor.parryWindow - 1);
+    actor.guardCounterWindow = Math.max(0, actor.guardCounterWindow - 1);
+    actor.wakeupWindow = Math.max(0, actor.wakeupWindow - 1);
     actor.armorCooldown = Math.max(0, actor.armorCooldown - 1);
     actor.traitPulse = Math.max(0, actor.traitPulse - 1);
     actor.counterStance = Math.max(0, actor.counterStance - 1);
@@ -642,6 +671,30 @@ export class FightEngine {
       actor.state = 'phase';
       actor.vx *= .72;
       if (actor.phaseLock % 7 === 0) this.spawnImpact(actor.x + (this.rng() - .5) * 80, actor.y - 120 - this.rng() * 80, actor.data.visual.accent, false, 5);
+      this.physics(actor);
+      return;
+    }
+    if (actor.knockdownTimer > 0) {
+      actor.blocking = false;
+      actor.crouching = false;
+      actor.state = 'knockdown';
+      if (!actor.grounded) {
+        actor.knockdownTimer = Math.max(1, actor.knockdownTimer - 1);
+        this.physics(actor);
+        return;
+      }
+      if (actor.wakeupWindow === 0) actor.wakeupWindow = Math.min(18, actor.knockdownTimer);
+      if (controls.special && actor.wakeupWindow > 0) {
+        actor.knockdownTimer = 0;
+        actor.wakeupWindow = 0;
+        actor.hurtFrames = 0;
+        this.addText('WAKE-UP', actor.x, actor.y - 210, 'counter');
+        this.beginAttack(actor, 'wakeupAttack', { context: true });
+        this.physics(actor);
+        return;
+      }
+      actor.knockdownTimer--;
+      if (actor.knockdownTimer <= 0) actor.state = 'idle';
       this.physics(actor);
       return;
     }
@@ -665,6 +718,31 @@ export class FightEngine {
       return;
     }
 
+    if (actor.dodgeFrames > 0) {
+      if (controls.light && actor.dodgeFollowupWindow > 0) {
+        actor.dodgeFrames = 0;
+        actor.dodgeFollowupWindow = 0;
+        this.addText('DODGE ATTACK', actor.x, actor.y - 205, 'chain');
+        this.beginAttack(actor, 'dodgeAttack', { context: true });
+      } else {
+        actor.dodgeFrames--;
+        actor.state = 'dodge';
+        actor.blocking = false;
+        actor.crouching = false;
+      }
+      this.physics(actor);
+      return;
+    }
+
+    if (controls.heavy && actor.guardCounterWindow > 0) {
+      actor.guardCounterWindow = 0;
+      actor.parryWindow = 0;
+      this.addText('GUARD COUNTER', actor.x, actor.y - 218, 'perfect');
+      this.beginAttack(actor, 'guardCounter', { context: true });
+      this.physics(actor);
+      return;
+    }
+
     if (controls.guardPressed && actor.grounded) {
       actor.parryWindow = 7;
       this.logInput(actor, 'GARDE');
@@ -678,6 +756,8 @@ export class FightEngine {
       this.logInput(actor, 'ESQUIVE');
       actor.invuln = profile.dodgeInvuln;
       actor.dodgeCooldown = 42;
+      actor.dodgeFrames = Math.max(10, profile.dodgeInvuln + 5);
+      actor.dodgeFollowupWindow = Math.max(8, profile.dodgeInvuln + 2);
       actor.vx = -actor.facing * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0));
       this.spawnDust(actor.x, actor.y);
       audio.tone({ freq: 110, duration: .1, gain: .025, slide: 90 });
@@ -720,7 +800,7 @@ export class FightEngine {
         actor.y = FLOOR;
         actor.vy = 0;
         actor.grounded = true;
-        if (!actor.attack && actor.hurtFrames === 0) actor.state = 'idle';
+        if (!actor.attack && actor.hurtFrames === 0) actor.state = actor.knockdownTimer > 0 ? 'knockdown' : 'idle';
         this.spawnDust(actor.x, actor.y);
       }
     }
@@ -730,12 +810,13 @@ export class FightEngine {
     if (actor.grounded && actor.state !== 'dodge') actor.vx *= actor.status?.id === 'frost' ? .91 : .84;
   }
 
-  beginAttack(actor, key, { cancelled = false } = {}) {
+  beginAttack(actor, key, { cancelled = false, context = false } = {}) {
     const move = actor.profile.moves[key];
     if (!move) return false;
     if (move.requiresAir && actor.grounded) return false;
     if (move.requiresGround && !actor.grounded) return false;
     if (move.healthRequirement != null && healthRatio(actor) > move.healthRequirement) return false;
+    if (['dodge-followup','perfect-guard','wakeup'].includes(move.trigger) && !context) return false;
 
     if (isNightmareMove(move)) {
       const ritualCost = Math.round((move.meterCost || 100) * (this.ritual.superCostScale || 1));
@@ -766,6 +847,10 @@ export class FightEngine {
       actor.vx = actor.facing * 2.2;
       actor.stats.throws++;
     }
+    if (key === 'backThrow') actor.stats.backThrows++;
+    if (key === 'dodgeAttack') actor.stats.dodgeAttacks++;
+    if (key === 'guardCounter') actor.stats.guardCounters++;
+    if (key === 'wakeupAttack') actor.stats.wakeupAttacks++;
     if (move.verticalTravel && actor.grounded && !move.requiresAir) {
       actor.vy = -Math.min(actor.profile.jump * .72, Math.abs(move.verticalTravel) * 2.2);
       actor.grounded = false;
@@ -931,7 +1016,7 @@ export class FightEngine {
     const isThrow = move.level === 'throw' || move.category === 'throw';
     const isNightmare = isNightmareMove(move);
     const isHeavy = isHeavyMove(move);
-    const isSpecial = move.category === 'special';
+    const isSpecial = ['special','counter','reversal'].includes(move.category);
     const unblockable = Boolean(move.unblockable || move.level === 'unblockable');
     const lowGuardValid = move.level !== 'low' || target.crouching;
     const overheadGuardValid = move.level !== 'overhead' || !target.crouching;
@@ -975,6 +1060,7 @@ export class FightEngine {
       target.guard -= guardDamage;
       if (perfect) {
         target.stats.perfectGuards++;
+        target.guardCounterWindow = Math.max(target.guardCounterWindow, 18);
         target.meter = clamp(target.meter + 14, 0, 100);
         attacker.meter = clamp(attacker.meter + 2, 0, 100);
         attacker.hurtFrames = Math.max(attacker.hurtFrames, 11);
@@ -1012,8 +1098,9 @@ export class FightEngine {
       (target.profile.trait.id === 'nightmareArmor' && healthRatio(target) > .33)
     );
     const moveArmorActive = Boolean(target.attack?.move?.armorFrames && target.attack.frame <= target.attack.move.armorFrames);
-    const armorActive = traitArmorActive || moveArmorActive;
-    const effectiveArmor = clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
+    const armorWasActive = traitArmorActive || moveArmorActive;
+    const armorActive = armorWasActive && !move.armorBreak;
+    const effectiveArmor = move.armorBreak ? 0 : clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
     damage = Math.round(damage * (1 - effectiveArmor));
     target.health -= damage;
     target.lastHit = {
@@ -1030,6 +1117,21 @@ export class FightEngine {
       attacker.stats.counters++;
       this.addText('COUNTER', target.x, target.y - 226, 'counter');
     }
+    if (move.armorBreak && (armorWasActive || (target.profile.armor || 0) + (target.phaseArmor || 0) > .05)) {
+      attacker.stats.armorBreaks++;
+      target.armorCooldown = Math.max(target.armorCooldown, 180);
+      this.addText('ARMOR BREAK', target.x, target.y - 246, 'break');
+    }
+
+    if (move.sideSwitch) {
+      const direction = attacker.facing || 1;
+      const midpoint = (attacker.x + target.x) * .5;
+      const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+      target.x = clamp(midpoint - direction * 46, inset, WIDTH - inset);
+      attacker.x = clamp(midpoint + direction * 58, inset, WIDTH - inset);
+      attacker.facing = -direction;
+      target.facing = direction;
+    }
 
     let hitstun = isNightmare ? 38 : isHeavy ? 24 : isSpecial ? 20 : 14;
     hitstun = Math.round(hitstun * (target.profile.hitstunScale || 1) * (counter ? 1.22 : 1));
@@ -1044,7 +1146,11 @@ export class FightEngine {
     target.hitFlash = 7;
     target.vx = attacker.facing * (move.knockback || 6) * (armorActive ? .45 : 1);
 
-    if (move.launch) {
+    if (move.groundBounce) {
+      target.vy = -Math.max(8.2, Math.abs(move.launch || 0));
+      target.grounded = false;
+      attacker.stats.groundBounces++;
+    } else if (move.launch) {
       target.vy = -Math.abs(move.launch);
       target.grounded = false;
     } else if (move.level === 'low') {
@@ -1055,8 +1161,10 @@ export class FightEngine {
       target.vy = -Math.max(6.5, Math.abs(move.launch || 0));
       target.grounded = false;
     }
-    if (move.knockdown) {
-      target.hurtFrames = Math.max(target.hurtFrames, 28);
+    if (move.knockdown || isThrow || move.hardKnockdown || move.groundBounce) {
+      target.hurtFrames = 0;
+      target.knockdownTimer = Math.max(target.knockdownTimer, move.hardKnockdown ? 56 : isThrow ? 42 : move.groundBounce ? 46 : 34);
+      target.wakeupWindow = 0;
       target.state = 'knockdown';
     }
 
@@ -1313,7 +1421,7 @@ export class FightEngine {
   }
 
   addText(text, x, y, kind = 'default') {
-    const persistent = ['round', 'fight', 'shift'].includes(kind);
+    const persistent = ['round', 'fight', 'shift', 'intro'].includes(kind);
     this.texts.push({ text, x, y, life: persistent ? 78 : 55, max: persistent ? 78 : 55, kind });
   }
 
@@ -1594,6 +1702,12 @@ export class FightEngine {
       trait: actor.profile.trait.id,
       bossPhase: actor.bossPhaseIndex + 1,
       bossPhaseName: actor.phaseName,
+      contextWindows: {
+        dodgeFollowup: actor.dodgeFollowupWindow,
+        guardCounter: actor.guardCounterWindow,
+        wakeup: actor.wakeupWindow,
+        knockdown: actor.knockdownTimer
+      },
       currentMove: actor.attack ? {
         key: actor.attack.key,
         input: actor.attack.move.input,
@@ -1602,6 +1716,7 @@ export class FightEngine {
         frame: actor.attack.frame
       } : null,
       lastMoveKey: actor.lastMoveKey || null,
+      presentation: { ...actor.profile.moveset.presentation },
       movesetFidelity: { ...actor.profile.moveset.fidelitySummary },
       stats: { ...actor.stats }
     });
@@ -1847,11 +1962,33 @@ export class FightEngine {
       context.fillText('RADIO', WIDTH / 2, 122);
     }
 
+    if (!this.config.training) {
+      const drawContextPrompt = (actor, left) => {
+        let label = '';
+        if (actor.guardCounterWindow > 0) label = 'P-GUARD + H · RIPOSTE';
+        else if (actor.dodgeFollowupWindow > 0) label = 'ESQUIVE + L · CONTRE-ATTAQUE';
+        else if (actor.wakeupWindow > 0) label = 'RELEVÉE + S · REVERSAL';
+        if (!label) return;
+        const width = 222;
+        const x = left ? 32 : WIDTH - 32 - width;
+        context.fillStyle = 'rgba(4,7,5,.82)';
+        context.fillRect(x, 138, width, 25);
+        context.strokeStyle = actor.guardCounterWindow > 0 ? '#d6c88f' : '#8d3b43';
+        context.strokeRect(x, 138, width, 25);
+        context.textAlign = 'center';
+        context.fillStyle = actor.guardCounterWindow > 0 ? '#e7ddb2' : '#d8c8ba';
+        context.font = '900 9px ui-monospace';
+        context.fillText(label, x + width / 2, 154);
+      };
+      drawContextPrompt(p1, true);
+      drawContextPrompt(p2, false);
+    }
+
     if (this.config.training) {
       context.fillStyle = 'rgba(4,7,5,.74)';
-      context.fillRect(18, 143, 380, 180);
+      context.fillRect(18, 143, 430, 202);
       context.strokeStyle = '#3b433d';
-      context.strokeRect(18, 143, 380, 180);
+      context.strokeRect(18, 143, 430, 202);
       context.textAlign = 'left';
       context.fillStyle = '#c13e46';
       context.font = '900 10px ui-monospace';
@@ -1859,16 +1996,17 @@ export class FightEngine {
       context.fillStyle = '#b9b9ae';
       context.font = '700 10px ui-monospace';
       const attack = p1.attack;
-      context.fillText(`P1 STATE   ${p1.state.toUpperCase()}`, 33, 185);
+      context.fillText(`SUJET I    ${p1.state.toUpperCase()}`, 33, 185);
       context.fillText(`FRAME      ${attack ? attack.frame : '—'}`, 33, 203);
       context.fillText(`MOVE       ${attack ? `${attack.move.input} · ${attack.move.name}` : '—'}`, 33, 221);
       context.fillText(`FIDELITY   ${attack ? attack.move.fidelity.toUpperCase() : '—'}`, 33, 239);
       context.fillText(`DISTANCE   ${Math.round(Math.abs(p1.x - p2.x))}`, 33, 257);
       context.fillText(`TRAIT      ${p1.profile.trait.name}`, 33, 275);
       context.fillText(`STATUS     ${p1.status ? AFFLICTIONS[p1.status.id]?.name : '—'}`, 33, 291);
+      context.fillText(`CONTEXT    DODGE ${p1.dodgeFollowupWindow || 0} · P-GUARD ${p1.guardCounterWindow || 0} · RISE ${p1.wakeupWindow || 0}`, 33, 309);
       context.fillStyle = '#747d75';
       context.font = '700 9px ui-monospace';
-      context.fillText(`INPUTS     ${this.inputHistory.slice(-5).map((entry) => entry.label).join(' › ') || '—'}`, 33, 311);
+      context.fillText(`INPUTS     ${this.inputHistory.slice(-5).map((entry) => entry.label).join(' › ') || '—'}`, 33, 329);
     }
     context.restore();
   }
@@ -1891,6 +2029,8 @@ export class FightEngine {
         context.font = '900 30px ui-monospace'; context.fillStyle = '#d4c7b2'; context.shadowColor = '#a62d36'; context.shadowBlur = 22;
       } else if (['break', 'perfect', 'counter', 'armor'].includes(text.kind)) {
         context.font = '900 20px ui-monospace'; context.fillStyle = text.kind === 'perfect' ? '#e7d9a8' : text.kind === 'counter' ? '#d86a70' : '#e6b45d';
+      } else if (text.kind === 'intro') {
+        context.font = '900 11px ui-monospace'; context.fillStyle = '#c6c1b5'; context.shadowColor = '#000'; context.shadowBlur = 8;
       } else if (text.kind === 'status') {
         context.font = '900 15px ui-monospace'; context.fillStyle = '#c6b9a9';
       } else if (text.kind === 'chain') {
@@ -2058,7 +2198,6 @@ export class FightEngine {
     context.font = '700 12px ui-monospace';
     context.fillText('ÉCHAP / START POUR REPRENDRE · LISTE COMPLÈTE DANS ARCHIVES > MOVESETS', WIDTH / 2, 123);
 
-    const displayed = ['neutralLight','forwardLight','crouchLight','neutralHeavy','forwardHeavy','throw','neutralSpecial','forwardSpecial','downSpecial','airSpecial','super','desperation'];
     const drawMoveList = (actor, x, align) => {
       context.textAlign = align;
       context.fillStyle = '#b83b44';
@@ -2072,15 +2211,15 @@ export class FightEngine {
       const summary = actor.profile.moveset.fidelitySummary;
       context.fillText(`${summary.direct} DIRECTS · ${summary.composite} COMPOSITES · ${summary.adapted} ADAPTATIONS`, x, 202);
 
-      let y = 232;
-      for (const key of displayed) {
+      let y = 224;
+      for (const key of actor.profile.moveset.order) {
         const move = actor.profile.moves[key];
         if (!move) continue;
         const label = `${move.input.padEnd(10, ' ')} ${move.name}`;
         context.fillStyle = move.fidelity === 'direct-canonical' ? '#e4ddd0' : move.fidelity === 'behavior-composite' ? '#b8b3a8' : '#8c918b';
-        context.font = key === 'desperation' || key === 'super' ? '900 11px ui-monospace' : '700 10px ui-monospace';
+        context.font = key === 'desperation' || key === 'super' ? '900 9px ui-monospace' : '700 8.5px ui-monospace';
         context.fillText(label, x, y);
-        y += 29;
+        y += 21;
       }
     };
     drawMoveList(p1, 72, 'left');
@@ -2088,16 +2227,16 @@ export class FightEngine {
 
     context.textAlign = 'center';
     context.fillStyle = 'rgba(180,52,62,.16)';
-    context.fillRect(WIDTH / 2 - 132, 160, 264, 410);
+    context.fillRect(WIDTH / 2 - 132, 160, 264, 438);
     context.strokeStyle = 'rgba(183,59,68,.38)';
-    context.strokeRect(WIDTH / 2 - 132, 160, 264, 410);
+    context.strokeRect(WIDTH / 2 - 132, 160, 264, 438);
     context.fillStyle = '#b83b44';
     context.font = '900 12px ui-monospace';
-    context.fillText('COMMANDE DE COMBAT', WIDTH / 2, 200);
+    context.fillText('PROTOCOLE DU SIGNAL', WIDTH / 2, 200);
     context.fillStyle = '#c7c2b6';
     context.font = '700 10px ui-monospace';
-    const controls = ['L · ATTAQUE LÉGÈRE','H · ATTAQUE LOURDE','S · TECHNIQUE','T · SAISIE','N · NIGHTMARE','DIRECTION + COUP · VARIANTE','AIR + COUP · VARIANTE AÉRIENNE','≤30% HP + N · OTHERWORLD'];
-    controls.forEach((line,index)=>context.fillText(line,WIDTH/2,240+index*34));
+    const controls = ['L · ATTAQUE LÉGÈRE','H · ATTAQUE LOURDE','S · TECHNIQUE','T · SAISIE','← + T · PROJECTION ARRIÈRE','ESQUIVE + L · RIPOSTE','P-GUARD + H · CONTRE','RELEVÉE + S · REVERSAL','N · NIGHTMARE','≤30% HP + N · OTHERWORLD'];
+    controls.forEach((line,index)=>context.fillText(line,WIDTH/2,234+index*31));
     context.restore();
   }
 
@@ -2121,21 +2260,24 @@ export class FightEngine {
       context.fillText(`RANG ${grade}`, WIDTH / 2, 356);
       context.fillStyle = '#a6aaa3';
       context.font = '700 13px ui-monospace';
-      context.fillText(`${winner.stats.maxCombo} COMBO MAX · ${winner.stats.perfectGuards} GARDES PARFAITES · ${winner.stats.counters} CONTRES`, WIDTH / 2, 390);
+      context.fillText(`${winner.stats.maxCombo} COMBO MAX · ${winner.stats.perfectGuards} GARDES PARFAITES · ${winner.stats.guardCounters} RIPOSTES · ${winner.stats.wakeupAttacks} RELEVÉES`, WIDTH / 2, 390);
+      context.fillStyle = '#777f78';
+      context.font = '700 10px ui-monospace';
+      context.fillText(winner.profile.moveset.presentation.victory.toUpperCase(), WIDTH / 2, 410);
       if (this.lastFatality) {
         context.fillStyle = this.lastFatality.stageBased ? '#d0a36f' : '#b83b44';
         context.font = '900 11px ui-monospace';
-        context.fillText(`${this.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY'} · ${this.lastFatality.name.toUpperCase()}`, WIDTH / 2, 414);
+        context.fillText(`${this.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY'} · ${this.lastFatality.name.toUpperCase()}`, WIDTH / 2, 434);
       }
     }
     context.fillStyle = '#858d86';
     context.font = '700 12px ui-monospace';
-    context.fillText('LE DOSSIER DE RÉSULTAT EST DISPONIBLE HORS DE L’ARÈNE', WIDTH / 2, this.lastFatality ? 448 : 425);
+    context.fillText('LE DOSSIER DE RÉSULTAT EST DISPONIBLE HORS DE L’ARÈNE', WIDTH / 2, this.lastFatality ? 468 : 446);
     context.restore();
   }
 }
 
 export const CONTROL_LABELS = {
-  p1: '← → mouvement · ↑ saut · ESPACE garde/parade · J frappe · K lourd · I technique · U saisie · O cauchemar · L esquive',
-  p2: 'Q D mouvement · Z saut · A garde/parade · F frappe · G lourd · H technique · R saisie · T cauchemar · V esquive'
+  p1: '← → mouvement · ↑ saut · ESPACE garde/parade · J frappe · K lourd · I technique · U saisie · O cauchemar · L esquive · ←+U projection arrière · esquive+J riposte · parade+K contre · relevée+I reversal',
+  p2: 'Q D mouvement · Z saut · A garde/parade · F frappe · G lourd · H technique · R saisie · T cauchemar · V esquive · arrière+R projection · esquive+F riposte · parade+G contre · relevée+H reversal'
 };

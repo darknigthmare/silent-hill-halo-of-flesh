@@ -1,8 +1,10 @@
-# Game Design Document — SILENT HILL: HALO OF FLESH v0.5.0
+# Game Design Document — SILENT HILL: HALO OF FLESH v0.6.0
 
 ## 1. Vision
 
-Un jeu de combat 2D de collection où les manifestations, boss et adversaires significatifs de Silent Hill s’affrontent dans des lieux issus de leurs mondes respectifs. L’organisation de produit reprend la lisibilité modulaire de CQC Versus Legacy, tandis que chaque combattant devient un dossier complet : provenance, morphologie, comportement source, adaptation, seize mouvements, trait, affliction, IA, phases, fatalités et arène.
+Un jeu de combat 2D de collection où les manifestations, boss et adversaires significatifs de *Silent Hill* s’affrontent dans des lieux issus de leurs mondes respectifs. L’organisation de produit reprend la lisibilité modulaire de CQC Versus Legacy, tandis que chaque combattant devient un dossier complet : provenance, morphologie, comportement source, adaptation, vingt mouvements, trait, affliction, IA, phases, fatalités et arène.
+
+Le projet ne cherche pas à transformer toutes les créatures en combattants humanoïdes standards. Il adapte leurs comportements à une arène versus tout en conservant leurs limites, leur rythme et leur fonction symbolique.
 
 ## 2. Piliers
 
@@ -14,9 +16,9 @@ Un profil ne doit pas seulement porter un nom reconnaissable. Sa posture, sa tai
 
 Humanoïdes, quadrupèdes, essaims, fantômes, insectes, masses, divinités, créatures murales, formes aériennes et boss géants ne partagent ni exactement les mêmes volumes, ni les mêmes déplacements, ni les mêmes solutions défensives.
 
-### Seize actions, six boutons
+### Vingt actions, commandes accessibles
 
-Le joueur conserve un schéma accessible : mouvement, garde, léger, lourd, technique, saisie, Nightmare et esquive. La direction et l’état au sol ou en l’air développent ce socle en seize actions par manifestation, sans créer une interface de commandes surchargée.
+Le joueur conserve un schéma compact : mouvement, garde, léger, lourd, technique, saisie, Nightmare et esquive. La direction, l’état au sol ou en l’air et quatre fenêtres contextuelles développent ce socle en vingt actions par manifestation sans ajouter vingt boutons.
 
 ### Otherworld vivant
 
@@ -24,36 +26,44 @@ L’arène participe au combat. La radio réagit à la proximité, la sirène tr
 
 ### Adversaires apprenants
 
-L’IA combine personnalité, distance préférée, propriétés du moveset et lecture des répétitions du joueur. Elle choisit entre projectile neutre, assaut directionnel, retraite spéciale, piège, saisie ou attaque aérienne sans lire l’avenir.
+L’IA combine personnalité, distance préférée, propriétés du moveset, fenêtres disponibles et lecture des répétitions du joueur. Elle choisit sans lire l’avenir entre projectile, assaut directionnel, retraite spéciale, piège, saisie, projection arrière, riposte ou attaque aérienne.
 
 ### Archive jouable
 
-Le roster, les Chroniques, les arènes, les fatalités, les movesets, les rites, les systèmes, les phases et les records forment un registre cohérent plutôt qu’une liste indépendante.
+Le roster, les Chroniques, les arènes, les fatalités, les movesets, les rites, les systèmes, les phases et les relevés forment un registre cohérent plutôt qu’une liste indépendante.
 
 ## 3. Boucle principale
 
-1. Choisir un mode depuis le Command Center radio/CRTV.
-2. Sélectionner P1, P2, l’arène, le rite et les règles.
-3. Lire le dossier, la provenance, le trait, l’affliction et le moveset.
-4. Combattre en gérant garde, jauge, distance, propriétés de coups, phase de boss et événements de scène.
+1. Choisir un mode depuis le registre radio/CRTV.
+2. Accrocher Sujet I, Sujet II, l’arène, le rite et les règles.
+3. Lire le dossier, la provenance, le trait, l’affliction et la doctrine.
+4. Combattre en gérant garde, jauge, distance, propriétés de coups, fenêtres contextuelles, phase de boss et événements de scène.
 5. Déclencher un KO, une fatalité Signature ou une fatalité d’arène.
 6. Recevoir un rang et enregistrer les statistiques.
 7. Continuer un run ou consulter les Archives.
 
 ## 4. Architecture des movesets
 
-Chaque profil possède exactement seize entrées :
+Chaque profil possède exactement vingt entrées :
 
 | Groupe | Actions |
 |---|---|
 | Légers | neutre, avant, bas, air |
 | Lourds | neutre, avant, bas, air |
-| Prise | saisie |
-| Techniques | neutre, avant, arrière, bas, air |
+| Projections | saisie avant, projection arrière |
+| Ripostes contextuelles | sortie d’esquive, contre de garde parfaite, attaque de relevée |
+| Techniques | neutre, avant, arrière, basse, aérienne |
 | Nightmare | Super à jauge pleine |
 | Désespoir | variante à jauge pleine sous 30 % de vitalité |
 
-Chaque entrée peut déclarer : startup, active, recovery, dégâts, portée, niveau de garde, chip, garde, déplacement, déplacement vertical, armor, invulnérabilité, multi-coups, intervalle, projectile, nombre, vitesse, taille, arc, gravité, durée, homing, piège, aura, posture de contre, téléportation, lancement, knockdown, affliction, coût/gain de jauge et annulations.
+Chaque entrée peut déclarer : startup, active, recovery, dégâts, portée, hauteur, chip, garde, coût, déplacement horizontal et vertical, armure, rupture d’armure, invulnérabilité, multi-coups, intervalle, projectile, nombre, vitesse, taille, arc, gravité, durée, homing, piège, aura, posture de contre, téléportation, changement de côté, lancement, knockdown, chute dure, rebond, affliction, gain de jauge et annulations.
+
+### Contrats contextuels
+
+- **Projection arrière** : exige la direction opposée et la saisie, inverse les positions et impose une chute dure.
+- **Riposte d’esquive** : disponible seulement pendant la sortie d’esquive, avec courte invulnérabilité et annulations limitées.
+- **Contre de garde parfaite** : disponible après une parade, brise l’armure et restitue l’initiative.
+- **Attaque de relevée** : disponible pendant la récupération au sol, possède une invulnérabilité courte et provoque un rebond.
 
 ### Niveaux de fidélité
 
@@ -61,20 +71,23 @@ Chaque entrée peut déclarer : startup, active, recovery, dégâts, portée, ni
 - `behavior-composite` : recomposition de comportements attestés pour produire une commande jouable.
 - `versus-adaptation` : action nécessaire au versus, signalée comme telle.
 
-Les 230 profils totalisent 3 680 actions : 425 directes, 2 796 composites et 459 adaptations.
+Les 230 profils totalisent **4 600 actions** : **447 directement attestées**, **3 694 composites** et **459 adaptations versus**.
 
 ## 5. Système de combat
 
 - Mise à jour logique fixe : 60 Hz.
 - Déplacement horizontal, saut et accroupissement.
 - Garde avec jauge, garde parfaite et bris de garde.
-- Résolution contextuelle des coups selon direction et état aérien.
+- Résolution des coups selon direction, orientation, état aérien et fenêtre contextuelle.
 - Contres pendant le démarrage adverse et postures de contre dédiées.
+- Projection arrière avec changement de côté.
+- Chute dure, attaque de relevée et rebond au sol.
+- Rupture d’armure par riposte de garde parfaite.
 - Routes d’annulation déclarées par mouvement.
 - Jauge Nightmare de 0 à 100, coût modifiable par rite.
 - Nightmare et désespoir avec arrêt cinématique.
-- Esquive avec invulnérabilité et délai de récupération.
-- Corps à corps, projectiles, pièges, auras, téléportations, lancer, recul, hitstop et particules.
+- Esquive avec invulnérabilité, délai de récupération et riposte.
+- Corps à corps, projectiles, pièges, auras, téléportations, lancers, recul, hitstop et particules.
 - Statuts persistants avec durée, tick et impact mécanique.
 - Dangers d’arène télégraphiés.
 - Transformation Otherworld progressive ou forcée.
@@ -89,12 +102,15 @@ L’IA évalue :
 - portée préférée ;
 - agressivité, défense et mobilité ;
 - menace du coup adverse ;
-- propriété du coup disponible ;
+- propriétés disponibles ;
+- fenêtre de riposte après esquive ;
+- fenêtre de contre après garde parfaite ;
+- récupération au sol et reversal ;
+- projection arrière des grapplers ;
 - projectile neutre à longue distance ;
-- spécial avant pour fermer la distance ;
-- spécial arrière défensif ou téléporté à courte distance ;
-- piège/attaque basse à portée intermédiaire ;
-- saisie des archétypes lourds ;
+- technique avant pour fermer la distance ;
+- technique arrière défensive ou téléportée ;
+- piège ou attaque basse à portée intermédiaire ;
 - Nightmare ou désespoir lorsque les conditions sont remplies ;
 - répétitions récentes du joueur.
 
@@ -113,22 +129,24 @@ Les 75 boss possèdent deux transitions ordonnées, soit 150 passages de phase. 
 
 ## 9. Modes
 
-- **Confrontation / Versus** : 1P CPU ou 2P local, règles configurables.
-- **Descente / Arcade** : sept combats aléatoires.
+- **Confrontation** : Sujet I contre CPU ou deux sujets locaux, règles configurables.
+- **Descente** : sept combats aléatoires.
 - **Rites du Jugement** : huit combats à modificateurs et endurance.
 - **Grands Tourments** : six boss à endurance.
-- **Salle d’Observation** : timer infini, hitboxes, jauge libre, reset, Otherworld et phase forcés, données de mouvement.
+- **Salle d’Observation** : timer infini, hitboxes, jauge libre, reset, Otherworld et phase forcés, données de mouvement et fenêtres contextuelles.
 - **Chroniques de la Brume** : quinze routes avec score et rang persistant.
-- **Archives** : bestiaire, 3 680 mouvements, arènes, fatalités, couverture, règles, IA, phases et records.
+- **Archives** : bestiaire, 4 600 mouvements, arènes, fatalités, couverture, règles, IA, phases et relevés.
 
 ## 10. Direction artistique et UI
 
 - Palette : vert de moniteur délavé, ivoire sale, noir, rouille et rouge de signal.
 - Menu asymétrique proche d’un registre de surveillance et d’un récepteur CRTV.
 - Fréquence, intensité du signal, codes de dossier et cartes de preuve.
+- Désignation Sujet I / Sujet II et navigation Retour à la Brume.
 - Brume stratifiée et profondeur par plans.
 - Grain, parasites, scanlines et vignetage optionnels.
 - Otherworld interpolé.
+- Prompts contextuels discrets dans le HUD.
 - Interface originale : aucune reproduction d’un menu officiel.
 
 ## 11. Audio et haptique
@@ -137,14 +155,15 @@ Tout l’audio est synthétisé en temps réel : radio, interface, impacts, gard
 
 ## 12. Sauvegarde
 
-`localStorage` conserve réglages, dernier front, favoris, records, meilleurs rangs, progression des Chroniques et runs. Les alias historiques évitent la perte de progression après renommage d’une entrée.
+`localStorage` conserve réglages, dernière confrontation, favoris, relevés, meilleurs rangs, progression des Chroniques et runs. Les alias historiques évitent la perte de progression après renommage d’une entrée. Les nouveaux relevés incluent projections arrière, ripostes d’esquive, contres de garde, relevées, ruptures d’armure et rebonds.
 
 ## 13. Production artistique suivante
 
 1. Référence autorisée par variante.
 2. Proportions multi-vues.
 3. Silhouette neutre originale.
-4. Set de poses correspondant aux seize actions.
+4. Set de poses correspondant aux vingt actions.
 5. Animation propre à la locomotion et aux coups directement attestés.
-6. Validation de lisibilité, échelle, source et droits.
-7. Intégration en sprites originaux ou extension du renderer procédural.
+6. Transitions de chute, relevée et changement de côté adaptées à chaque morphologie.
+7. Validation de lisibilité, échelle, source et droits.
+8. Intégration en sprites originaux ou extension du renderer procédural.

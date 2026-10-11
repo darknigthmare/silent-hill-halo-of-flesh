@@ -148,7 +148,7 @@ test('fatality systems can be disabled for classic knockout behavior',()=>{
 });
 
 
-test('directional inputs resolve all sixteen moves without collapsing to generic attacks',()=>{
+test('directional inputs resolve the twenty-move doctrine without collapsing to generic attacks',()=>{
   const engine=makeEngine();
   const actor=engine.actors[0];
   actor.facing=1;
@@ -156,12 +156,61 @@ test('directional inputs resolve all sixteen moves without collapsing to generic
   assert.equal(resolveMoveKey(actor,{right:true},'light'),'forwardLight');
   assert.equal(resolveMoveKey(actor,{down:true},'light'),'crouchLight');
   assert.equal(resolveMoveKey(actor,{left:true},'special'),'backSpecial');
+  assert.equal(resolveMoveKey(actor,{left:true},'throw'),'backThrow');
+  assert.equal(resolveMoveKey(actor,{right:true},'throw'),'throw');
   assert.equal(resolveMoveKey(actor,{right:true},'special'),'forwardSpecial');
   assert.equal(resolveMoveKey(actor,{down:true},'special'),'downSpecial');
   actor.grounded=false;
   assert.equal(resolveMoveKey(actor,{},'light'),'airLight');
   assert.equal(resolveMoveKey(actor,{},'heavy'),'airHeavy');
   assert.equal(resolveMoveKey(actor,{},'special'),'airSpecial');
+  engine.destroy();
+});
+
+test('dodge follow-up, perfect-guard counter and wake-up reversal require their combat windows',()=>{
+  const engine=makeEngine();
+  engine.phase='fight';
+  const actor=engine.actors[0];
+  assert.equal(engine.beginAttack(actor,'dodgeAttack'),false);
+  assert.equal(engine.beginAttack(actor,'guardCounter'),false);
+  assert.equal(engine.beginAttack(actor,'wakeupAttack'),false);
+
+  actor.dodgeFrames=8;actor.dodgeFollowupWindow=8;
+  engine.setTouch('p1','light','pressed');
+  engine.updateActor(actor,0);
+  assert.equal(actor.attack?.key,'dodgeAttack');
+  assert.equal(actor.stats.dodgeAttacks,1);
+
+  actor.attack=null;actor.state='idle';actor.grounded=true;actor.hurtFrames=0;
+  actor.guardCounterWindow=8;
+  engine.setTouch('p1','heavy','pressed');
+  engine.updateActor(actor,0);
+  assert.equal(actor.attack?.key,'guardCounter');
+  assert.equal(actor.stats.guardCounters,1);
+
+  actor.attack=null;actor.state='knockdown';actor.grounded=true;actor.hurtFrames=0;
+  actor.knockdownTimer=12;actor.wakeupWindow=8;
+  engine.setTouch('p1','special','pressed');
+  engine.updateActor(actor,0);
+  assert.equal(actor.attack?.key,'wakeupAttack');
+  assert.equal(actor.stats.wakeupAttacks,1);
+  engine.destroy();
+});
+
+test('perfect guard opens a counter window and back throw switches sides with hard knockdown',()=>{
+  const engine=makeEngine();
+  engine.phase='fight';
+  const attacker=engine.actors[0],target=engine.actors[1];
+  target.blocking=true;target.grounded=true;target.parryWindow=7;
+  engine.applyHit(attacker,target,attacker.profile.moves.neutralHeavy,1);
+  assert.ok(target.guardCounterWindow>0);
+
+  target.blocking=false;target.parryWindow=0;attacker.hurtFrames=0;
+  attacker.x=480;target.x=555;attacker.facing=1;target.facing=-1;
+  engine.applyHit(attacker,target,attacker.profile.moves.backThrow,2);
+  assert.ok(attacker.x>target.x);
+  assert.equal(attacker.facing,-1);
+  assert.ok(target.knockdownTimer>=50);
   engine.destroy();
 });
 

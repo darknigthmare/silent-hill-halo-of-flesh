@@ -72,7 +72,7 @@ test('chronicle grade boundaries remain ordered',()=>{
   for(let i=1;i<scores.length;i++)assert.ok(rank[scores[i]]>=rank[scores[i-1]],scores.join(','));
 });
 
-test('all manifestations expose sixteen documented moves with a complete fidelity split',()=>{
+test('all manifestations expose twenty documented moves with a complete fidelity split',()=>{
   for(const fighter of ROSTER){
     const profile=createCombatProfile(fighter);
     assert.equal(Object.keys(profile.moves).length,MOVESET_KEYS.length,fighter.id);
@@ -87,9 +87,45 @@ test('all manifestations expose sixteen documented moves with a complete fidelit
       assert.ok(move.input&&move.name&&move.canonicalBasis,`${fighter.id}/${key}`);
       assert.ok(MOVE_FIDELITY[move.fidelity],`${fighter.id}/${key}/${move.fidelity}`);
     }
+    assert.equal(profile.moves.backThrow.trigger,'back-throw',fighter.id);
+    assert.equal(profile.moves.dodgeAttack.trigger,'dodge-followup',fighter.id);
+    assert.equal(profile.moves.guardCounter.trigger,'perfect-guard',fighter.id);
+    assert.equal(profile.moves.wakeupAttack.trigger,'wakeup',fighter.id);
   }
 });
 
+
+
+test('complete doctrines remain distinct instead of collapsing into archetype clones',()=>{
+  const doctrineSignatures=new Set();
+  const moveNameFrequency=new Map();
+  for(const fighter of ROSTER){
+    const moves=Object.values(createCombatProfile(fighter).moves);
+    doctrineSignatures.add(moves.map((move)=>move.name).join('|'));
+    for(const move of moves)moveNameFrequency.set(move.name,(moveNameFrequency.get(move.name)||0)+1);
+  }
+  assert.equal(doctrineSignatures.size,ROSTER.length);
+  assert.ok(moveNameFrequency.size>=2700,`diversité insuffisante: ${moveNameFrequency.size}`);
+  assert.ok(Math.max(...moveNameFrequency.values())<=60,'un nom générique domine trop de doctrines');
+});
+
+test('contextual mastery contributes a bounded chronicle bonus',()=>{
+  const plain=chronicleGrade({healthRatio:.58,maxCombo:2,perfectGuards:0,hazardsTaken:0});
+  const mastered=chronicleGrade({healthRatio:.58,maxCombo:2,perfectGuards:0,hazardsTaken:0,guardCounters:2,dodgeAttacks:1,wakeupAttacks:1,backThrows:1});
+  const rank={D:0,C:1,B:2,A:3,S:4};
+  assert.ok(rank[mastered]>=rank[plain]);
+});
+
+test('contextual moves retain their mechanical contracts for every manifestation',()=>{
+  for(const fighter of ROSTER){
+    const moves=createCombatProfile(fighter).moves;
+    assert.equal(moves.backThrow.sideSwitch,true,fighter.id);
+    assert.equal(moves.backThrow.hardKnockdown,true,fighter.id);
+    assert.ok(moves.dodgeAttack.invulnFrames>=1,fighter.id);
+    assert.equal(moves.guardCounter.armorBreak,true,fighter.id);
+    assert.equal(moves.wakeupAttack.groundBounce,true,fighter.id);
+  }
+});
 
 test('boss combat profiles embed the same ordered phase definitions as the catalogue',()=>{
   for(const fighter of ROSTER.filter(f=>f.boss)){

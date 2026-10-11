@@ -1,4 +1,4 @@
-# Fatalités, arènes dédiées et animations — v0.5.0
+# Fatalités, arènes dédiées et animations — v0.6.0
 
 La release contient **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations de stage**.
 
@@ -235,7 +235,7 @@ La release contient **460 fatalités de combattant**, **123 fatalités d’arèn
 | Sorrowful | TOWNFALL | Rituel de clôture — Cordon thoracique | NIGHTMARE — Dernière manifestation | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | Fallen | TOWNFALL | Rituel de clôture — Réveil du cadavre | NIGHTMARE — Dernière manifestation | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | Widow | TOWNFALL | Rituel de clôture — Pounce au couteau | NIGHTMARE — Dernière manifestation | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
-| The Weight | TOWNFALL | Rituel de clôture — Poids impossible | NIGHTMARE — Écrasement du souvenir | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
+| The Weight | TOWNFALL | Rituel de clôture — Poids impossible | NIGHTMARE — Écrasement du souvenir | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
 
 ## Arènes dédiées
 

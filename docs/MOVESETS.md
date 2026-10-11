@@ -1,6 +1,6 @@
-# Movesets complets et fidélité — v0.5.0
+# Movesets complets et fidélité — v0.6.0
 
-**230 manifestations · 3680 coups · 425 actions directement attestées · 2796 composites lore-friendly · 459 adaptations versus.**
+**230 manifestations · 4600 coups · 447 actions directement attestées · 3694 composites lore-friendly · 459 adaptations versus.**
 
 ## Légende
 
@@ -12,7 +12,7 @@ Les noms de coups sont des libellés originaux de fan-game. Le statut « directe
 
 ## Air Screamer — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Patrouille aérienne, cri et piqué rapide.
 
@@ -27,6 +27,10 @@ Comportement source : Patrouille aérienne, cri et piqué rapide.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 62 | 123 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 76 | 113 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 81 | 73 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
+| `← + T` | Plongée lacérante — Largage arrière | throw / throw | 9/3/30 | 77 | 76 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
+| `DODGE + L` | Battement d’écart puis serre | reversal / mid | 6/5/18 | 50 | 109 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
+| `P-GUARD + H` | Plongée lacérante — Serre de riposte | counter / mid | 5/5/22 | 84 | 127 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
+| `RISE + S` | Plongée lacérante — Redécollage | reversal / low | 8/8/28 | 72 | 142 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
 | `S` | Cri d’approche | special / mid | 15/1/26 | 96 | 680 | DIRECTEMENT ATTESTÉ | Patrouille aérienne, cri et piqué rapide. |
 | `→ + S` | Plongée lacérante | special / mid | 13/10/29 | 107 | 208 | DIRECTEMENT ATTESTÉ | Patrouille aérienne, cri et piqué rapide. |
 | `← + S` | Plongée lacérante — Battement d’évasion | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Patrouille aérienne, cri et piqué rapide. |
@@ -37,7 +41,7 @@ Comportement source : Patrouille aérienne, cri et piqué rapide.
 
 ## Night Flutter — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version nocturne plus agressive, sensible à la lumière.
 
@@ -52,9 +56,13 @@ Comportement source : Version nocturne plus agressive, sensible à la lumière.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 62 | 123 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 76 | 113 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 81 | 73 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
+| `← + T` | Nuée nocturne — Largage arrière | throw / throw | 9/3/30 | 77 | 76 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
+| `DODGE + L` | Nuée nocturne — Battement d’évasion — riposte d’esquive | reversal / mid | 6/5/18 | 50 | 109 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
+| `P-GUARD + H` | Nuée nocturne — Serre de riposte | counter / mid | 5/5/22 | 84 | 127 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
+| `RISE + S` | Nuée nocturne — Redécollage | reversal / low | 8/8/28 | 72 | 142 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `S` | Nuée nocturne | special / mid | 15/1/26 | 96 | 720 | DIRECTEMENT ATTESTÉ | Version nocturne plus agressive, sensible à la lumière. |
 | `→ + S` | Nuée nocturne — Piqué signature | special / mid | 13/10/29 | 107 | 208 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
-| `← + S` | Nuée nocturne — Battement d’évasion | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
+| `← + S` | Nuée nocturne — Battement d’évasion — repli | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `↓ + S` | Nuée nocturne — Rase-mottes | special / low | 19/1/31 | 89 | 720 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `AIR + S` | Nuée nocturne — Plongée terminale | special / overhead | 14/1/24 | 101 | 560 | COMPOSITE LORE-FRIENDLY | Version nocturne plus agressive, sensible à la lumière. |
 | `N` | NIGHTMARE — Nuée nocturne | nightmare / mid | 27/1/43 | 205 | 980 | ADAPTATION VERSUS | Version nocturne plus agressive, sensible à la lumière. |
@@ -62,7 +70,7 @@ Comportement source : Version nocturne plus agressive, sensible à la lumière.
 
 ## Groaner — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Charge canine basse et harcèlement rapide.
 
@@ -77,6 +85,10 @@ Comportement source : Charge canine basse et harcèlement rapide.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
+| `← + T` | Morsure en course — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
+| `DODGE + L` | Morsure en course — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
+| `P-GUARD + H` | Morsure en course — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
+| `RISE + S` | Morsure en course — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
 | `S` | Morsure en course | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Charge canine basse et harcèlement rapide. |
 | `→ + S` | Morsure en course — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Charge canine basse et harcèlement rapide. |
 | `← + S` | Morsure en course — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Charge canine basse et harcèlement rapide. |
@@ -87,7 +99,7 @@ Comportement source : Charge canine basse et harcèlement rapide.
 
 ## Wormhead — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante nocturne du Groaner, attaque en bond.
 
@@ -102,6 +114,10 @@ Comportement source : Variante nocturne du Groaner, attaque en bond.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
+| `← + T` | Mâchoire annelée — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
+| `DODGE + L` | Mâchoire annelée — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
+| `P-GUARD + H` | Mâchoire annelée — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
+| `RISE + S` | Mâchoire annelée — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
 | `S` | Mâchoire annelée | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variante nocturne du Groaner, attaque en bond. |
 | `→ + S` | Mâchoire annelée — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Variante nocturne du Groaner, attaque en bond. |
 | `← + S` | Mâchoire annelée — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variante nocturne du Groaner, attaque en bond. |
@@ -112,7 +128,7 @@ Comportement source : Variante nocturne du Groaner, attaque en bond.
 
 ## Grey Child — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Approche hésitante puis agrippement et frappe courte.
 
@@ -127,6 +143,10 @@ Comportement source : Approche hésitante puis agrippement et frappe courte.
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
 | `T` | Étreinte au couteau — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Approche hésitante puis agrippement et frappe courte. |
+| `← + T` | Étreinte au couteau — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
+| `DODGE + L` | Étreinte au couteau — Bond de fuite | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
+| `P-GUARD + H` | Étreinte au couteau — Couteau de réponse | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
+| `RISE + S` | Étreinte au couteau — Réveil sous les pupitres | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
 | `S` | Étreinte au couteau | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Approche hésitante puis agrippement et frappe courte. |
 | `→ + S` | Étreinte au couteau — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
 | `← + S` | Étreinte au couteau — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Approche hésitante puis agrippement et frappe courte. |
@@ -137,7 +157,7 @@ Comportement source : Approche hésitante puis agrippement et frappe courte.
 
 ## Mumbler — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Se rue sur la cible et enchaîne des coups bas.
 
@@ -152,6 +172,10 @@ Comportement source : Se rue sur la cible et enchaîne des coups bas.
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
 | `T` | Étreinte de Midwich | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
+| `← + T` | Griffes courtes — Renversement du couloir | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
+| `DODGE + L` | Griffes courtes — Bond de fuite | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
+| `P-GUARD + H` | Griffes courtes — Couteau de réponse | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
+| `RISE + S` | Griffes courtes — Réveil sous les pupitres | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
 | `S` | Griffes courtes | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Se rue sur la cible et enchaîne des coups bas. |
 | `→ + S` | Griffes courtes — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
 | `← + S` | Griffes courtes — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Se rue sur la cible et enchaîne des coups bas. |
@@ -162,7 +186,7 @@ Comportement source : Se rue sur la cible et enchaîne des coups bas.
 
 ## Larval Stalker — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Apparition non offensive adaptée ici en leurre intangible.
 
@@ -177,6 +201,10 @@ Comportement source : Apparition non offensive adaptée ici en leurre intangible
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
+| `← + T` | Ombre traversante — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
+| `DODGE + L` | Ombre traversante — riposte d’apparition | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Apparition non offensive adaptée ici en leurre intangible. |
+| `P-GUARD + H` | Ombre traversante — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
+| `RISE + S` | Ombre traversante — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
 | `S` | Ombre traversante | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Apparition non offensive adaptée ici en leurre intangible. |
 | `→ + S` | Ombre traversante — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Apparition non offensive adaptée ici en leurre intangible. |
 | `← + S` | Ombre traversante — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Apparition non offensive adaptée ici en leurre intangible. |
@@ -187,7 +215,7 @@ Comportement source : Apparition non offensive adaptée ici en leurre intangible
 
 ## Stalker — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Silhouette enfantine qui frappe après une brève disparition.
 
@@ -202,6 +230,10 @@ Comportement source : Silhouette enfantine qui frappe après une brève disparit
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
 | `T` | Étreinte de Midwich | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
+| `← + T` | Traque invisible — Renversement du couloir | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
+| `DODGE + L` | Traque invisible — riposte d’apparition | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Silhouette enfantine qui frappe après une brève disparition. |
+| `P-GUARD + H` | Traque invisible — Couteau de réponse | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
+| `RISE + S` | Traque invisible — Réveil sous les pupitres | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
 | `S` | Traque invisible | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Silhouette enfantine qui frappe après une brève disparition. |
 | `→ + S` | Traque invisible — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Silhouette enfantine qui frappe après une brève disparition. |
 | `← + S` | Traque invisible — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Silhouette enfantine qui frappe après une brève disparition. |
@@ -212,7 +244,7 @@ Comportement source : Silhouette enfantine qui frappe après une brève disparit
 
 ## Creeper — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Très bas au sol, rapide, difficile à toucher debout.
 
@@ -227,6 +259,10 @@ Comportement source : Très bas au sol, rapide, difficile à toucher debout.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
+| `← + T` | Essaim rampant — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
+| `DODGE + L` | Essaim rampant — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
+| `P-GUARD + H` | Essaim rampant — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
+| `RISE + S` | Essaim rampant — reprise depuis le sol | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
 | `S` | Essaim rampant | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Très bas au sol, rapide, difficile à toucher debout. |
 | `→ + S` | Essaim rampant — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
 | `← + S` | Essaim rampant — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Très bas au sol, rapide, difficile à toucher debout. |
@@ -237,7 +273,7 @@ Comportement source : Très bas au sol, rapide, difficile à toucher debout.
 
 ## Romper — SH1
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Bondit, plaque la cible et frappe au sol.
 
@@ -252,6 +288,10 @@ Comportement source : Bondit, plaque la cible et frappe au sol.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
 | `T` | Bond de contention — saisie attestée | throw / throw | 8/3/28 | 92 | 72 | DIRECTEMENT ATTESTÉ | Bondit, plaque la cible et frappe au sol. |
+| `← + T` | Bond de contention — retournement de la saisie | throw / throw | 9/3/30 | 86 | 72 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
+| `DODGE + L` | Bond de contention — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
+| `P-GUARD + H` | Bond de contention — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
+| `RISE + S` | Bond de contention — reprise depuis le sol | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
 | `S` | Bond de contention | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Bondit, plaque la cible et frappe au sol. |
 | `→ + S` | Bond de contention — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Bondit, plaque la cible et frappe au sol. |
 | `← + S` | Bond de contention — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Bondit, plaque la cible et frappe au sol. |
@@ -262,7 +302,7 @@ Comportement source : Bondit, plaque la cible et frappe au sol.
 
 ## Hanged Scratcher — SH1
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Se déplace sur les parois et tombe sur la cible.
 
@@ -277,6 +317,10 @@ Comportement source : Se déplace sur les parois et tombe sur la cible.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
 | `T` | Encerclement | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
+| `← + T` | Griffe du plafond — Renversement chitineux | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
+| `DODGE + L` | Griffe du plafond — Écart parasite | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
+| `P-GUARD + H` | Griffe du plafond — Mandibule de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
+| `RISE + S` | Griffe du plafond — Mue de reprise | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
 | `S` | Griffe du plafond | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Se déplace sur les parois et tombe sur la cible. |
 | `→ + S` | Griffe du plafond — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
 | `← + S` | Griffe du plafond — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Se déplace sur les parois et tombe sur la cible. |
@@ -287,7 +331,7 @@ Comportement source : Se déplace sur les parois et tombe sur la cible.
 
 ## Puppet Nurse — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Marche irrégulière, attaque au couteau et sursaut du parasite.
 
@@ -302,6 +346,10 @@ Comportement source : Marche irrégulière, attaque au couteau et sursaut du par
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
+| `← + T` | Scalpel parasité — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
+| `DODGE + L` | Scalpel parasité — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
+| `P-GUARD + H` | Scalpel parasité — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
+| `RISE + S` | Scalpel parasité — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
 | `S` | Scalpel parasité | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Marche irrégulière, attaque au couteau et sursaut du parasite. |
 | `→ + S` | Scalpel parasité — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
 | `← + S` | Scalpel parasité — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Marche irrégulière, attaque au couteau et sursaut du parasite. |
@@ -312,7 +360,7 @@ Comportement source : Marche irrégulière, attaque au couteau et sursaut du par
 
 ## Puppet Doctor — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Plus robuste que les infirmières, coups lourds et lents.
 
@@ -327,6 +375,10 @@ Comportement source : Plus robuste que les infirmières, coups lourds et lents.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
+| `← + T` | Impact parasité — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
+| `DODGE + L` | Impact parasité — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
+| `P-GUARD + H` | Impact parasité — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
+| `RISE + S` | Impact parasité — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
 | `S` | Impact parasité | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Plus robuste que les infirmières, coups lourds et lents. |
 | `→ + S` | Impact parasité — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
 | `← + S` | Impact parasité — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Plus robuste que les infirmières, coups lourds et lents. |
@@ -337,7 +389,7 @@ Comportement source : Plus robuste que les infirmières, coups lourds et lents.
 
 ## Split Head — SH1
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Immense gueule verticale, charge et saisie dévorante.
 
@@ -352,6 +404,10 @@ Comportement source : Immense gueule verticale, charge et saisie dévorante.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
 | `T` | Mâchoire verticale | throw / throw | 8/3/28 | 211 | 81 | DIRECTEMENT ATTESTÉ | Immense gueule verticale, charge et saisie dévorante. |
+| `← + T` | Mâchoire séparée — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
+| `DODGE + L` | Mâchoire séparée — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
+| `P-GUARD + H` | Mâchoire séparée — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
+| `RISE + S` | Mâchoire séparée — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
 | `S` | Dévoration frontale | special / mid | 20/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Immense gueule verticale, charge et saisie dévorante. |
 | `→ + S` | Mâchoire séparée — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Immense gueule verticale, charge et saisie dévorante. |
 | `← + S` | Mâchoire séparée — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Immense gueule verticale, charge et saisie dévorante. |
@@ -362,7 +418,7 @@ Comportement source : Immense gueule verticale, charge et saisie dévorante.
 
 ## Twinfeeler — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Larve géante qui surgit du sol et balaie l’arène.
 
@@ -377,6 +433,10 @@ Comportement source : Larve géante qui surgit du sol et balaie l’arène.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
+| `← + T` | Anneaux souterrains — Renversement chitineux | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
+| `DODGE + L` | Anneaux souterrains — Écart parasite | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
+| `P-GUARD + H` | Anneaux souterrains — Mandibule de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
+| `RISE + S` | Anneaux souterrains — reprise depuis le sol | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
 | `S` | Anneaux souterrains | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Larve géante qui surgit du sol et balaie l’arène. |
 | `→ + S` | Anneaux souterrains — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
 | `← + S` | Anneaux souterrains — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Larve géante qui surgit du sol et balaie l’arène. |
@@ -387,7 +447,7 @@ Comportement source : Larve géante qui surgit du sol et balaie l’arène.
 
 ## Floatstinger — SH1
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Boss volant, rafales de poison et piqués.
 
@@ -402,6 +462,10 @@ Comportement source : Boss volant, rafales de poison et piqués.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
+| `← + T` | Dard aérien — Largage arrière | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
+| `DODGE + L` | Dard aérien — Battement d’évasion | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
+| `P-GUARD + H` | Dard aérien — Serre de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
+| `RISE + S` | Dard aérien — Redécollage | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
 | `S` | Dard aérien | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Boss volant, rafales de poison et piqués. |
 | `→ + S` | Dard aérien — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Boss volant, rafales de poison et piqués. |
 | `← + S` | Dard aérien — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss volant, rafales de poison et piqués. |
@@ -412,7 +476,7 @@ Comportement source : Boss volant, rafales de poison et piqués.
 
 ## Monster Cybil — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Tirs de pistolet et pression rapprochée sous contrôle parasitaire.
 
@@ -427,6 +491,10 @@ Comportement source : Tirs de pistolet et pression rapprochée sous contrôle pa
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 71 | 137 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 87 | 127 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 93 | 82 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
+| `← + T` | Service possédé — Projection brisée | throw / throw | 9/3/30 | 89 | 84 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
+| `DODGE + L` | Service possédé — Retour convulsif | reversal / mid | 6/5/18 | 57 | 121 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
+| `P-GUARD + H` | Service possédé — Riposte du corps | counter / mid | 5/5/22 | 97 | 143 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
+| `RISE + S` | Service possédé — Reprise impossible | reversal / low | 8/8/28 | 83 | 158 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
 | `S` | Service possédé | special / mid | 15/1/26 | 111 | 720 | DIRECTEMENT ATTESTÉ | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
 | `→ + S` | Service possédé — Tir en marche | special / mid | 13/10/29 | 122 | 232 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
 | `← + S` | Service possédé — Repli armé | special / mid | 10/5/24 | 77 | 198 | COMPOSITE LORE-FRIENDLY | Tirs de pistolet et pression rapprochée sous contrôle parasitaire. |
@@ -437,7 +505,7 @@ Comportement source : Tirs de pistolet et pression rapprochée sous contrôle pa
 
 ## Incubator — SH1
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Flotte et projette des éclairs verticaux.
 
@@ -452,6 +520,10 @@ Comportement source : Flotte et projette des éclairs verticaux.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
+| `← + T` | Éclair blanc — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
+| `DODGE + L` | Éclair blanc — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
+| `P-GUARD + H` | Éclair blanc — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
+| `RISE + S` | Éclair blanc — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
 | `S` | Éclair blanc | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Flotte et projette des éclairs verticaux. |
 | `→ + S` | Éclair blanc — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
 | `← + S` | Éclair blanc — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Flotte et projette des éclairs verticaux. |
@@ -462,7 +534,7 @@ Comportement source : Flotte et projette des éclairs verticaux.
 
 ## Incubus — SH1
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Entité ailée lançant des salves électriques.
 
@@ -477,6 +549,10 @@ Comportement source : Entité ailée lançant des salves électriques.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
+| `← + T` | Foudre du démon — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
+| `DODGE + L` | Foudre du démon — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
+| `P-GUARD + H` | Foudre du démon — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
+| `RISE + S` | Foudre du démon — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
 | `S` | Salve de foudre | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Entité ailée lançant des salves électriques. |
 | `→ + S` | Foudre du démon — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
 | `← + S` | Foudre du démon — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Entité ailée lançant des salves électriques. |
@@ -487,7 +563,7 @@ Comportement source : Entité ailée lançant des salves électriques.
 
 ## Bloodsucker — SH1
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion.
 
@@ -502,6 +578,10 @@ Comportement source : Masse de tentacules fixée au décor, attirée par le sang
 | `↓ + H` | Nœud du sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
 | `AIR + H` | Retombée de vrille | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
 | `T` | Constriction | throw / throw | 8/3/28 | 163 | 61 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
+| `← + T` | Vrilles hématophages — Nœud inversé | throw / throw | 9/3/30 | 156 | 63 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
+| `DODGE + L` | Vrilles hématophages — Ondulation d’évasion | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
+| `P-GUARD + H` | Vrilles hématophages — Vrille de riposte | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
+| `RISE + S` | Vrilles hématophages — Reprise annelée | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
 | `S` | Vrilles hématophages | special / mid | 15/1/26 | 137 | 680 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
 | `→ + S` | Vrilles hématophages — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
 | `← + S` | Vrilles hématophages — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Masse de tentacules fixée au décor, attirée par le sang et neutralisée par diversion. |
@@ -512,7 +592,7 @@ Comportement source : Masse de tentacules fixée au décor, attirée par le sang
 
 ## Lying Figure — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Se traîne dans une enveloppe charnelle et crache un fluide corrosif.
 
@@ -527,6 +607,10 @@ Comportement source : Se traîne dans une enveloppe charnelle et crache un fluid
 | `↓ + H` | Ruée rampante | normal / low | 13/6/23 | 68 | 137 | DIRECTEMENT ATTESTÉ | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
+| `← + T` | Jet acide — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
+| `DODGE + L` | Jet acide — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
+| `P-GUARD + H` | Jet acide — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
+| `RISE + S` | Jet acide — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
 | `S` | Jet corrosif | special / mid | 15/1/26 | 105 | 680 | DIRECTEMENT ATTESTÉ | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
 | `→ + S` | Jet acide — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
 | `← + S` | Repli dans l’enveloppe | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Se traîne dans une enveloppe charnelle et crache un fluide corrosif. |
@@ -537,7 +621,7 @@ Comportement source : Se traîne dans une enveloppe charnelle et crache un fluid
 
 ## Lying Figure — Crawling — SH2
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Variante au sol qui fonce sous les attaques hautes.
 
@@ -552,6 +636,10 @@ Comportement source : Variante au sol qui fonce sous les attaques hautes.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
+| `← + T` | Ruée rampante — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
+| `DODGE + L` | Ruée rampante — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
+| `P-GUARD + H` | Ruée rampante — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
+| `RISE + S` | Ruée rampante — reprise depuis le sol | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
 | `S` | Ruée rampante | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variante au sol qui fonce sous les attaques hautes. |
 | `→ + S` | Ruée rampante — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Variante au sol qui fonce sous les attaques hautes. |
 | `← + S` | Ruée rampante — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variante au sol qui fonce sous les attaques hautes. |
@@ -562,7 +650,7 @@ Comportement source : Variante au sol qui fonce sous les attaques hautes.
 
 ## Mannequin — SH2
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Reste immobile puis attaque avec ses membres doubles.
 
@@ -577,6 +665,10 @@ Comportement source : Reste immobile puis attaque avec ses membres doubles.
 | `↓ + H` | Pliure basse | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
 | `AIR + H` | Chute articulée | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
 | `T` | Verrou à quatre jambes | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
+| `← + T` | Ciseaux de jambes — Nœud inversé | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
+| `DODGE + L` | Ciseaux de jambes — Pliure d’esquive | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
+| `P-GUARD + H` | Ciseaux de jambes — riposte de garde | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
+| `RISE + S` | Ciseaux de jambes — reprise depuis le sol | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
 | `S` | Ciseaux de jambes — signature | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Reste immobile puis attaque avec ses membres doubles. |
 | `→ + S` | Ciseaux de jambes — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Reste immobile puis attaque avec ses membres doubles. |
 | `← + S` | Ciseaux de jambes — garde attestée | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Reste immobile puis attaque avec ses membres doubles. |
@@ -587,7 +679,7 @@ Comportement source : Reste immobile puis attaque avec ses membres doubles.
 
 ## Mannequin — Ambusher — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante d’embuscade adaptée des rencontres du remake.
 
@@ -602,6 +694,10 @@ Comportement source : Variante d’embuscade adaptée des rencontres du remake.
 | `↓ + H` | Pliure basse | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
 | `AIR + H` | Chute articulée | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
 | `T` | Nœud de jambes | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
+| `← + T` | Embuscade murale — Nœud inversé | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
+| `DODGE + L` | Embuscade murale — Pliure d’esquive | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
+| `P-GUARD + H` | Embuscade murale — Ciseaux de réponse | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
+| `RISE + S` | Embuscade murale — Redressement articulé | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
 | `S` | Embuscade murale | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Variante d’embuscade adaptée des rencontres du remake. |
 | `→ + S` | Embuscade murale — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
 | `← + S` | Embuscade murale — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Variante d’embuscade adaptée des rencontres du remake. |
@@ -612,7 +708,7 @@ Comportement source : Variante d’embuscade adaptée des rencontres du remake.
 
 ## Bubble Head Nurse — SH2
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Déplacements saccadés et coups de tuyau.
 
@@ -627,6 +723,10 @@ Comportement source : Déplacements saccadés et coups de tuyau.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
+| `← + T` | Tube d’urgence — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
+| `DODGE + L` | Pas convulsif — coup de tuyau | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
+| `P-GUARD + H` | Tube d’urgence — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
+| `RISE + S` | Relèvement saccadé | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
 | `S` | Rafale du service | special / mid | 15/6/26 | 112 | 150 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
 | `→ + S` | Tube d’urgence — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
 | `← + S` | Tube d’urgence — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Déplacements saccadés et coups de tuyau. |
@@ -637,7 +737,7 @@ Comportement source : Déplacements saccadés et coups de tuyau.
 
 ## Creeper — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Insecte rapide au ras du sol.
 
@@ -652,6 +752,10 @@ Comportement source : Insecte rapide au ras du sol.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
+| `← + T` | Passage sous la garde — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
+| `DODGE + L` | Passage sous la garde — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
+| `P-GUARD + H` | Passage sous la garde — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
+| `RISE + S` | Passage sous la garde — reprise depuis le sol | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
 | `S` | Passage sous la garde | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Insecte rapide au ras du sol. |
 | `→ + S` | Passage sous la garde — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
 | `← + S` | Passage sous la garde — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Insecte rapide au ras du sol. |
@@ -662,7 +766,7 @@ Comportement source : Insecte rapide au ras du sol.
 
 ## Mandarin — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Attaque depuis une grille ou un rebord avec de longs appendices.
 
@@ -677,6 +781,10 @@ Comportement source : Attaque depuis une grille ou un rebord avec de longs appen
 | `↓ + H` | Fissure basse | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
 | `AIR + H` | Effondrement | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
 | `T` | Ensevelissement | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
+| `← + T` | Langue pendulaire — Ensevelissement arrière | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
+| `DODGE + L` | Langue pendulaire — Glissement de paroi | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
+| `P-GUARD + H` | Langue pendulaire — Mur de réponse | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
+| `RISE + S` | Langue pendulaire — Émergence structurelle | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
 | `S` | Langue pendulaire | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Attaque depuis une grille ou un rebord avec de longs appendices. |
 | `→ + S` | Langue pendulaire — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
 | `← + S` | Langue pendulaire — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Attaque depuis une grille ou un rebord avec de longs appendices. |
@@ -687,7 +795,7 @@ Comportement source : Attaque depuis une grille ou un rebord avec de longs appen
 
 ## Flesh Lip — SH2
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Corps enfermé dans un cadre métallique, saisies et chutes verticales.
 
@@ -702,6 +810,10 @@ Comportement source : Corps enfermé dans un cadre métallique, saisies et chute
 | `↓ + H` | Traction au sol | normal / low | 13/6/23 | 92 | 102 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
 | `AIR + H` | Écrasement suspendu | aerial / overhead | 13/7/22 | 113 | 94 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
 | `T` | Cage suspendue — saisie attestée | throw / throw | 8/3/28 | 184 | 72 | DIRECTEMENT ATTESTÉ | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
+| `← + T` | Cage suspendue — retournement de la saisie | throw / throw | 9/3/30 | 173 | 72 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
+| `DODGE + L` | Cage suspendue — Oscillation d’évasion | reversal / mid | 6/5/18 | 74 | 90 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
+| `P-GUARD + H` | Cage suspendue — Barreau de riposte | counter / mid | 5/5/22 | 126 | 106 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
+| `RISE + S` | Cage suspendue — Suspension retrouvée | reversal / low | 8/8/28 | 108 | 118 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
 | `S` | Cage suspendue | special / mid | 15/6/26 | 143 | 147 | DIRECTEMENT ATTESTÉ | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
 | `→ + S` | Cage suspendue — Capture en marche | special / mid | 13/10/29 | 159 | 172 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
 | `← + S` | Cage suspendue — Appel du corps | special / mid | 10/5/24 | 100 | 147 | COMPOSITE LORE-FRIENDLY | Corps enfermé dans un cadre métallique, saisies et chutes verticales. |
@@ -712,7 +824,7 @@ Comportement source : Corps enfermé dans un cadre métallique, saisies et chute
 
 ## Abstract Daddy — SH2
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Charge lourde et saisie oppressante dans un espace étroit.
 
@@ -727,6 +839,10 @@ Comportement source : Charge lourde et saisie oppressante dans un espace étroit
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 92 | 102 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 113 | 94 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
 | `T` | Écrasement oppressant | throw / throw | 8/3/28 | 249 | 72 | DIRECTEMENT ATTESTÉ | Charge lourde et saisie oppressante dans un espace étroit. |
+| `← + T` | Écrasement du cadre — retournement de la saisie | throw / throw | 9/3/30 | 173 | 72 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
+| `DODGE + L` | Écrasement du cadre — Débordement latéral | reversal / mid | 6/5/18 | 74 | 90 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
+| `P-GUARD + H` | Écrasement du cadre — Pulsation de riposte | counter / mid | 5/5/22 | 126 | 106 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
+| `RISE + S` | Écrasement du cadre — Reconstitution organique | reversal / low | 8/8/28 | 108 | 118 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
 | `S` | Écrasement du cadre | special / mid | 15/6/26 | 143 | 147 | DIRECTEMENT ATTESTÉ | Charge lourde et saisie oppressante dans un espace étroit. |
 | `→ + S` | Écrasement du cadre — assaut attesté | special / mid | 13/10/29 | 159 | 178 | DIRECTEMENT ATTESTÉ | Charge lourde et saisie oppressante dans un espace étroit. |
 | `← + S` | Écrasement du cadre — Appel du corps | special / mid | 10/5/24 | 100 | 147 | COMPOSITE LORE-FRIENDLY | Charge lourde et saisie oppressante dans un espace étroit. |
@@ -737,7 +853,7 @@ Comportement source : Charge lourde et saisie oppressante dans un espace étroit
 
 ## Red Pyramid Thing — Great Knife — SH2
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Avance lente, portée immense, coups télégraphiés extrêmement puissants.
 
@@ -752,6 +868,10 @@ Comportement source : Avance lente, portée immense, coups télégraphiés extr�
 | `↓ + H` | Traînée du Grand Couteau | normal / low | 13/6/23 | 98 | 123 | DIRECTEMENT ATTESTÉ | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 120 | 113 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 151 | 73 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
+| `← + T` | Traction derrière l’exécuteur | throw / throw | 9/3/30 | 177 | 76 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
+| `DODGE + L` | Traînée du Grand Couteau — Pas de l’exécuteur | reversal / mid | 6/5/18 | 79 | 109 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
+| `P-GUARD + H` | Réponse du Grand Couteau | counter / mid | 5/5/22 | 158 | 127 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
+| `RISE + S` | Relèvement silencieux du bourreau | reversal / low | 8/8/28 | 115 | 142 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
 | `S` | Sentence lente | special / unblockable | 23/6/26 | 153 | 177 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
 | `→ + S` | Poursuite de l’exécuteur | special / mid | 13/10/29 | 169 | 208 | DIRECTEMENT ATTESTÉ | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
 | `← + S` | Traînée du Grand Couteau — Armure du cauchemar | special / mid | 10/5/24 | 106 | 177 | COMPOSITE LORE-FRIENDLY | Avance lente, portée immense, coups télégraphiés extrêmement puissants. |
@@ -762,7 +882,7 @@ Comportement source : Avance lente, portée immense, coups télégraphiés extr�
 
 ## Red Pyramid Thing — Spear — SH2
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Version finale plus mobile, attaques de lance et pression à distance.
 
@@ -777,6 +897,10 @@ Comportement source : Version finale plus mobile, attaques de lance et pression 
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 71 | 137 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 87 | 127 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 93 | 82 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
+| `← + T` | Renversement à la hampe | throw / throw | 9/3/30 | 89 | 127 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
+| `DODGE + L` | Percée de la lance — Pas de l’exécuteur | reversal / mid | 6/5/18 | 57 | 121 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
+| `P-GUARD + H` | Riposte de la lance | counter / mid | 5/5/22 | 108 | 235 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
+| `RISE + S` | Percée de la lance — Relèvement du bourreau | reversal / low | 8/8/28 | 83 | 158 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
 | `S` | Percée de la lance — signature | special / mid | 15/1/26 | 111 | 720 | DIRECTEMENT ATTESTÉ | Version finale plus mobile, attaques de lance et pression à distance. |
 | `→ + S` | Percée de la lance — assaut | special / mid | 13/10/29 | 122 | 304 | DIRECTEMENT ATTESTÉ | Version finale plus mobile, attaques de lance et pression à distance. |
 | `← + S` | Percée de la lance — Repli armé | special / mid | 10/5/24 | 77 | 198 | COMPOSITE LORE-FRIENDLY | Version finale plus mobile, attaques de lance et pression à distance. |
@@ -787,7 +911,7 @@ Comportement source : Version finale plus mobile, attaques de lance et pression 
 
 ## Twin Pyramid Heads — SH2
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Duo synchronisé adapté en combattant unique à doubles frappes.
 
@@ -802,6 +926,10 @@ Comportement source : Duo synchronisé adapté en combattant unique à doubles f
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
+| `← + T` | Sentence jumelle — Condamnation arrière | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
+| `DODGE + L` | Sentence jumelle — Pas de l’exécuteur | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
+| `P-GUARD + H` | Sentence jumelle — Sentence de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
+| `RISE + S` | Sentence jumelle — Relèvement du bourreau | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
 | `S` | Sentence jumelle | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Duo synchronisé adapté en combattant unique à doubles frappes. |
 | `→ + S` | Sentence jumelle — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
 | `← + S` | Sentence jumelle — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Duo synchronisé adapté en combattant unique à doubles frappes. |
@@ -812,7 +940,7 @@ Comportement source : Duo synchronisé adapté en combattant unique à doubles f
 
 ## Eddie Dombrowski — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Tire, change de ligne et utilise le décor froid comme couverture.
 
@@ -827,6 +955,10 @@ Comportement source : Tire, change de ligne et utilise le décor froid comme cou
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 71 | 137 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 87 | 127 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 93 | 82 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
+| `← + T` | Tir de l’abattoir — Projection brisée | throw / throw | 9/3/30 | 89 | 84 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
+| `DODGE + L` | Tir de l’abattoir — Retour convulsif | reversal / mid | 6/5/18 | 57 | 121 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
+| `P-GUARD + H` | Tir de l’abattoir — Riposte du corps | counter / mid | 5/5/22 | 97 | 143 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
+| `RISE + S` | Tir de l’abattoir — Reprise impossible | reversal / low | 8/8/28 | 83 | 158 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
 | `S` | Tir du réfrigérateur | special / mid | 15/1/26 | 111 | 680 | DIRECTEMENT ATTESTÉ | Tire, change de ligne et utilise le décor froid comme couverture. |
 | `→ + S` | Tir de l’abattoir — Tir en marche | special / mid | 13/10/29 | 122 | 232 | COMPOSITE LORE-FRIENDLY | Tire, change de ligne et utilise le décor froid comme couverture. |
 | `← + S` | Repli derrière la carcasse | special / mid | 10/5/24 | 77 | 198 | DIRECTEMENT ATTESTÉ | Tire, change de ligne et utilise le décor froid comme couverture. |
@@ -837,7 +969,7 @@ Comportement source : Tire, change de ligne et utilise le décor froid comme cou
 
 ## Maria — Final Manifestation — SH2
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Entité suspendue qui harcèle par insectes et vrilles.
 
@@ -852,6 +984,10 @@ Comportement source : Entité suspendue qui harcèle par insectes et vrilles.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
+| `← + T` | Essaim de papillons — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
+| `DODGE + L` | Essaim de papillons — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
+| `P-GUARD + H` | Essaim de papillons — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
+| `RISE + S` | Essaim de papillons — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
 | `S` | Essaim de papillons | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Entité suspendue qui harcèle par insectes et vrilles. |
 | `→ + S` | Essaim de papillons — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
 | `← + S` | Essaim de papillons — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Entité suspendue qui harcèle par insectes et vrilles. |
@@ -862,7 +998,7 @@ Comportement source : Entité suspendue qui harcèle par insectes et vrilles.
 
 ## Mary — Final Manifestation — SH2
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante narrative de la manifestation finale.
 
@@ -877,6 +1013,10 @@ Comportement source : Variante narrative de la manifestation finale.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
+| `← + T` | Lit de souffrance — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
+| `DODGE + L` | Lit de souffrance — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
+| `P-GUARD + H` | Lit de souffrance — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
+| `RISE + S` | Lit de souffrance — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
 | `S` | Lit de souffrance | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Variante narrative de la manifestation finale. |
 | `→ + S` | Lit de souffrance — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
 | `← + S` | Lit de souffrance — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Variante narrative de la manifestation finale. |
@@ -887,7 +1027,7 @@ Comportement source : Variante narrative de la manifestation finale.
 
 ## Prisoner — SH2
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Présence invisible adaptée en ondes sonores et frappes hors champ.
 
@@ -902,6 +1042,10 @@ Comportement source : Présence invisible adaptée en ondes sonores et frappes h
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
+| `← + T` | Rituel derrière les barreaux — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
+| `DODGE + L` | Rituel derrière les barreaux — Déphasage offensif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
+| `P-GUARD + H` | Rituel derrière les barreaux — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
+| `RISE + S` | Rituel derrière les barreaux — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
 | `S` | Rituel derrière les barreaux | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Présence invisible adaptée en ondes sonores et frappes hors champ. |
 | `→ + S` | Rituel derrière les barreaux — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
 | `← + S` | Rituel derrière les barreaux — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Présence invisible adaptée en ondes sonores et frappes hors champ. |
@@ -912,7 +1056,7 @@ Comportement source : Présence invisible adaptée en ondes sonores et frappes h
 
 ## Spider Mannequin — SH2
 
-**5 directs · 9 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Variante du remake qui s’agrippe aux murs et plafonds avant de bondir.
 
@@ -927,6 +1071,10 @@ Comportement source : Variante du remake qui s’agrippe aux murs et plafonds av
 | `↓ + H` | Piège de pattes | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
 | `T` | Embuscade arachnéenne — saisie attestée | throw / throw | 8/3/26 | 92 | 72 | DIRECTEMENT ATTESTÉ | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
+| `← + T` | Embuscade arachnéenne — retournement de la saisie | throw / throw | 9/3/28 | 86 | 72 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
+| `DODGE + L` | Embuscade arachnéenne — Pas arachnéen | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
+| `P-GUARD + H` | Embuscade arachnéenne — Patte de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
+| `RISE + S` | Embuscade arachnéenne — Remontée au fil | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
 | `S` | Embuscade arachnéenne | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
 | `→ + S` | Embuscade arachnéenne — assaut attesté | special / mid | 13/10/27 | 112 | 190 | DIRECTEMENT ATTESTÉ | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
 | `← + S` | Embuscade arachnéenne — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Variante du remake qui s’agrippe aux murs et plafonds avant de bondir. |
@@ -937,7 +1085,7 @@ Comportement source : Variante du remake qui s’agrippe aux murs et plafonds av
 
 ## Mandarin — Floor Form — SH2
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.
 
@@ -952,6 +1100,10 @@ Comportement source : Adaptation au sol de la manifestation suspendue sous les g
 | `↓ + H` | Fissure basse | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
 | `AIR + H` | Effondrement | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
 | `T` | Ensevelissement | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
+| `← + T` | Langue du plancher — Ensevelissement arrière | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
+| `DODGE + L` | Langue du plancher — Glissement de paroi | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
+| `P-GUARD + H` | Langue du plancher — Mur de réponse | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
+| `RISE + S` | Langue du plancher — reprise depuis le sol | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
 | `S` | Langue du plancher | special / mid | 15/1/26 | 105 | 720 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
 | `→ + S` | Langue du plancher — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
 | `← + S` | Langue du plancher — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire. |
@@ -962,7 +1114,7 @@ Comportement source : Adaptation au sol de la manifestation suspendue sous les g
 
 ## Closer — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Grande créature aux bras massifs, frappe large et lente.
 
@@ -977,6 +1129,10 @@ Comportement source : Grande créature aux bras massifs, frappe large et lente.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
+| `← + T` | Bras pendulaires — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
+| `DODGE + L` | Bras pendulaires — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
+| `P-GUARD + H` | Bras pendulaires — Contre-écrasement | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
+| `RISE + S` | Bras pendulaires — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
 | `S` | Bras pendulaires | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Grande créature aux bras massifs, frappe large et lente. |
 | `→ + S` | Bras pendulaires — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
 | `← + S` | Bras pendulaires — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Grande créature aux bras massifs, frappe large et lente. |
@@ -987,7 +1143,7 @@ Comportement source : Grande créature aux bras massifs, frappe large et lente.
 
 ## Closer — Church Variant — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église.
 
@@ -1002,6 +1158,10 @@ Comportement source : Variante verdâtre de fin de jeu, plus rapide et plus fort
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
+| `← + T` | Lame ecclésiale — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
+| `DODGE + L` | Lame ecclésiale — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
+| `P-GUARD + H` | Lame ecclésiale — Contre-écrasement | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
+| `RISE + S` | Lame ecclésiale — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
 | `S` | Lame ecclésiale | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
 | `→ + S` | Lame ecclésiale — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
 | `← + S` | Lame ecclésiale — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Variante verdâtre de fin de jeu, plus rapide et plus forte dans l’Église. |
@@ -1012,7 +1172,7 @@ Comportement source : Variante verdâtre de fin de jeu, plus rapide et plus fort
 
 ## Numb Body — Small — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Petit corps rapide qui fonce en groupe.
 
@@ -1027,6 +1187,10 @@ Comportement source : Petit corps rapide qui fonce en groupe.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
+| `← + T` | Percussion sans visage — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
+| `DODGE + L` | Percussion sans visage — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
+| `P-GUARD + H` | Percussion sans visage — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
+| `RISE + S` | Percussion sans visage — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
 | `S` | Percussion sans visage | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Petit corps rapide qui fonce en groupe. |
 | `→ + S` | Percussion sans visage — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Petit corps rapide qui fonce en groupe. |
 | `← + S` | Percussion sans visage — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Petit corps rapide qui fonce en groupe. |
@@ -1037,7 +1201,7 @@ Comportement source : Petit corps rapide qui fonce en groupe.
 
 ## Numb Body — Medium — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Taille intermédiaire documentée entre les petites et grandes formes.
 
@@ -1052,6 +1216,10 @@ Comportement source : Taille intermédiaire documentée entre les petites et gra
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
+| `← + T` | Bélier engourdi — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
+| `DODGE + L` | Bélier engourdi — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
+| `P-GUARD + H` | Bélier engourdi — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
+| `RISE + S` | Bélier engourdi — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
 | `S` | Bélier engourdi | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Taille intermédiaire documentée entre les petites et grandes formes. |
 | `→ + S` | Bélier engourdi — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
 | `← + S` | Bélier engourdi — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Taille intermédiaire documentée entre les petites et grandes formes. |
@@ -1062,7 +1230,7 @@ Comportement source : Taille intermédiaire documentée entre les petites et gra
 
 ## Numb Body — Large — SH3
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Variante plus grande et résistante.
 
@@ -1077,6 +1245,10 @@ Comportement source : Variante plus grande et résistante.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
+| `← + T` | Charge engourdie — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
+| `DODGE + L` | Charge engourdie — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
+| `P-GUARD + H` | Charge engourdie — riposte de garde | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
+| `RISE + S` | Charge engourdie — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Variante plus grande et résistante. |
 | `S` | Charge engourdie | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Variante plus grande et résistante. |
 | `→ + S` | Charge engourdie — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Variante plus grande et résistante. |
 | `← + S` | Charge engourdie — garde attestée | special / mid | 10/5/24 | 101 | 177 | DIRECTEMENT ATTESTÉ | Variante plus grande et résistante. |
@@ -1087,7 +1259,7 @@ Comportement source : Variante plus grande et résistante.
 
 ## Pendulum — SH3
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Créature aérienne métallique, trajectoires imprévisibles.
 
@@ -1102,6 +1274,10 @@ Comportement source : Créature aérienne métallique, trajectoires imprévisibl
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 62 | 123 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 76 | 113 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 81 | 73 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
+| `← + T` | Lames oscillantes — Renversement chitineux | throw / throw | 9/3/30 | 77 | 76 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
+| `DODGE + L` | Lames oscillantes — Écart parasite | reversal / mid | 6/5/18 | 50 | 109 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
+| `P-GUARD + H` | Lames oscillantes — Mandibule de riposte | counter / mid | 5/5/22 | 84 | 127 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
+| `RISE + S` | Lames oscillantes — Mue de reprise | reversal / low | 8/8/28 | 72 | 142 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
 | `S` | Rotation métallique | special / mid | 15/1/26 | 96 | 720 | DIRECTEMENT ATTESTÉ | Créature aérienne métallique, trajectoires imprévisibles. |
 | `→ + S` | Trajectoire erratique | special / mid | 13/10/29 | 107 | 208 | DIRECTEMENT ATTESTÉ | Créature aérienne métallique, trajectoires imprévisibles. |
 | `← + S` | Lames oscillantes — Battement d’évasion | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Créature aérienne métallique, trajectoires imprévisibles. |
@@ -1112,7 +1288,7 @@ Comportement source : Créature aérienne métallique, trajectoires imprévisibl
 
 ## Double Head — SH3
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Canidé bandé, bond et morsure prolongée.
 
@@ -1127,6 +1303,10 @@ Comportement source : Canidé bandé, bond et morsure prolongée.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
 | `T` | Double morsure — saisie attestée | throw / throw | 8/3/28 | 92 | 72 | DIRECTEMENT ATTESTÉ | Canidé bandé, bond et morsure prolongée. |
+| `← + T` | Double morsure — retournement de la saisie | throw / throw | 9/3/30 | 86 | 72 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
+| `DODGE + L` | Double morsure — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
+| `P-GUARD + H` | Double morsure — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
+| `RISE + S` | Double morsure — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
 | `S` | Double morsure — signature | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Canidé bandé, bond et morsure prolongée. |
 | `→ + S` | Double morsure — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Canidé bandé, bond et morsure prolongée. |
 | `← + S` | Double morsure — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Canidé bandé, bond et morsure prolongée. |
@@ -1137,7 +1317,7 @@ Comportement source : Canidé bandé, bond et morsure prolongée.
 
 ## Insane Cancer — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Lent, immense, encaisse puis écrase.
 
@@ -1152,6 +1332,10 @@ Comportement source : Lent, immense, encaisse puis écrase.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
 | `T` | Absorption | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
+| `← + T` | Masse cancéreuse — Reflux charnel | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
+| `DODGE + L` | Masse cancéreuse — Débordement latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
+| `P-GUARD + H` | Masse cancéreuse — riposte de garde | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
+| `RISE + S` | Masse cancéreuse — Reconstitution organique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
 | `S` | Masse cancéreuse | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Lent, immense, encaisse puis écrase. |
 | `→ + S` | Masse cancéreuse — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Lent, immense, encaisse puis écrase. |
 | `← + S` | Masse cancéreuse — garde attestée | special / mid | 10/5/24 | 101 | 177 | DIRECTEMENT ATTESTÉ | Lent, immense, encaisse puis écrase. |
@@ -1162,7 +1346,7 @@ Comportement source : Lent, immense, encaisse puis écrase.
 
 ## Slurper — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Rampe rapidement et tente de renverser la cible.
 
@@ -1177,6 +1361,10 @@ Comportement source : Rampe rapidement et tente de renverser la cible.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
+| `← + T` | Rapt au sol — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
+| `DODGE + L` | Rapt au sol — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
+| `P-GUARD + H` | Rapt au sol — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
+| `RISE + S` | Rapt au sol — reprise depuis le sol | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
 | `S` | Rapt au sol | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Rampe rapidement et tente de renverser la cible. |
 | `→ + S` | Rapt au sol — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
 | `← + S` | Rapt au sol — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Rampe rapidement et tente de renverser la cible. |
@@ -1187,7 +1375,7 @@ Comportement source : Rampe rapidement et tente de renverser la cible.
 
 ## Nurse — Pipe — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Enchaînement de coups de tuyau.
 
@@ -1202,6 +1390,10 @@ Comportement source : Enchaînement de coups de tuyau.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
+| `← + T` | Tuyau clinique — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
+| `DODGE + L` | Tuyau clinique — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
+| `P-GUARD + H` | Tuyau clinique — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
+| `RISE + S` | Tuyau clinique — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
 | `S` | Tuyau clinique | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Enchaînement de coups de tuyau. |
 | `→ + S` | Tuyau clinique — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
 | `← + S` | Tuyau clinique — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Enchaînement de coups de tuyau. |
@@ -1212,7 +1404,7 @@ Comportement source : Enchaînement de coups de tuyau.
 
 ## Nurse — Revolver — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante armée capable de tirer.
 
@@ -1227,6 +1419,10 @@ Comportement source : Variante armée capable de tirer.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
+| `← + T` | Décharge clinique — Contention inversée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
+| `DODGE + L` | Décharge clinique — Pas clinique | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
+| `P-GUARD + H` | Décharge clinique — Contre-protocole | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
+| `RISE + S` | Décharge clinique — Reprise du service | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
 | `S` | Décharge clinique | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Variante armée capable de tirer. |
 | `→ + S` | Décharge clinique — assaut attesté | special / mid | 13/10/29 | 117 | 232 | DIRECTEMENT ATTESTÉ | Variante armée capable de tirer. |
 | `← + S` | Décharge clinique — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Variante armée capable de tirer. |
@@ -1237,7 +1433,7 @@ Comportement source : Variante armée capable de tirer.
 
 ## Scraper — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Serviteur masqué, enchaînements rapides.
 
@@ -1252,6 +1448,10 @@ Comportement source : Serviteur masqué, enchaînements rapides.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
+| `← + T` | Lames de l’ordre — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
+| `DODGE + L` | Lames de l’ordre — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
+| `P-GUARD + H` | Lames de l’ordre — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
+| `RISE + S` | Lames de l’ordre — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
 | `S` | Lames de l’ordre | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Serviteur masqué, enchaînements rapides. |
 | `→ + S` | Lames de l’ordre — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
 | `← + S` | Lames de l’ordre — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Serviteur masqué, enchaînements rapides. |
@@ -1262,7 +1462,7 @@ Comportement source : Serviteur masqué, enchaînements rapides.
 
 ## Split Worm — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Surgit des ouvertures, mord puis se retire.
 
@@ -1277,6 +1477,10 @@ Comportement source : Surgit des ouvertures, mord puis se retire.
 | `↓ + H` | Balayage du segment | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
 | `AIR + H` | Retombée souterraine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
 | `T` | Dévoration partielle | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
+| `← + T` | Gueule du tunnel — Rejet annelé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
+| `DODGE + L` | Gueule du tunnel — Surgissement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
+| `P-GUARD + H` | Gueule du tunnel — Mâchoire de réponse | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
+| `RISE + S` | Gueule du tunnel — Retour souterrain | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
 | `S` | Gueule du tunnel | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Surgit des ouvertures, mord puis se retire. |
 | `→ + S` | Gueule du tunnel — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
 | `← + S` | Gueule du tunnel — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Surgit des ouvertures, mord puis se retire. |
@@ -1287,7 +1491,7 @@ Comportement source : Surgit des ouvertures, mord puis se retire.
 
 ## Missionary — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Bloque les tirs et attaque avec deux armes courtes.
 
@@ -1302,6 +1506,10 @@ Comportement source : Bloque les tirs et attaque avec deux armes courtes.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
+| `← + T` | Lames du missionnaire — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
+| `DODGE + L` | Lames du missionnaire — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
+| `P-GUARD + H` | Lames du missionnaire — riposte de garde | counter / mid | 5/5/22 | 138 | 140 | DIRECTEMENT ATTESTÉ | Bloque les tirs et attaque avec deux armes courtes. |
+| `RISE + S` | Lames du missionnaire — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
 | `S` | Lames du missionnaire | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Bloque les tirs et attaque avec deux armes courtes. |
 | `→ + S` | Lames du missionnaire — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Bloque les tirs et attaque avec deux armes courtes. |
 | `← + S` | Lames du missionnaire — garde attestée | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Bloque les tirs et attaque avec deux armes courtes. |
@@ -1312,7 +1520,7 @@ Comportement source : Bloque les tirs et attaque avec deux armes courtes.
 
 ## Leonard Wolf — SH3
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss massif, charges et émergences aquatiques.
 
@@ -1327,6 +1535,10 @@ Comportement source : Boss massif, charges et émergences aquatiques.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
+| `← + T` | Assaut submergé — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
+| `DODGE + L` | Assaut submergé — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
+| `P-GUARD + H` | Assaut submergé — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
+| `RISE + S` | Assaut submergé — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
 | `S` | Assaut submergé | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss massif, charges et émergences aquatiques. |
 | `→ + S` | Assaut submergé — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Boss massif, charges et émergences aquatiques. |
 | `← + S` | Assaut submergé — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss massif, charges et émergences aquatiques. |
@@ -1337,7 +1549,7 @@ Comportement source : Boss massif, charges et émergences aquatiques.
 
 ## Memory of Alessa — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Change d’arme et reproduit plusieurs styles de Heather.
 
@@ -1352,6 +1564,10 @@ Comportement source : Change d’arme et reproduit plusieurs styles de Heather.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/21 | 68 | 112 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/20 | 83 | 104 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
 | `T` | Étreinte impossible | throw / throw | 8/3/26 | 89 | 67 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
+| `← + T` | Arsenal des souvenirs — Projection brisée | throw / throw | 9/3/28 | 85 | 69 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
+| `DODGE + L` | Arsenal des souvenirs — Retour convulsif | reversal / mid | 6/5/17 | 55 | 99 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
+| `P-GUARD + H` | Arsenal des souvenirs — Riposte du corps | counter / mid | 5/5/20 | 93 | 117 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
+| `RISE + S` | Arsenal des souvenirs — Reprise impossible | reversal / low | 8/8/26 | 79 | 130 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
 | `S` | Arsenal des souvenirs | special / mid | 15/1/24 | 106 | 720 | DIRECTEMENT ATTESTÉ | Change d’arme et reproduit plusieurs styles de Heather. |
 | `→ + S` | Arsenal des souvenirs — Fausse ouverture | special / mid | 13/10/27 | 117 | 190 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
 | `← + S` | Arsenal des souvenirs — Disparition | special / mid | 10/5/22 | 74 | 162 | COMPOSITE LORE-FRIENDLY | Change d’arme et reproduit plusieurs styles de Heather. |
@@ -1362,7 +1578,7 @@ Comportement source : Change d’arme et reproduit plusieurs styles de Heather.
 
 ## God — SH3
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Entité gigantesque, griffes et colonnes de feu.
 
@@ -1377,6 +1593,10 @@ Comportement source : Entité gigantesque, griffes et colonnes de feu.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
+| `← + T` | Brasier divin — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
+| `DODGE + L` | Brasier divin — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
+| `P-GUARD + H` | Brasier divin — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
+| `RISE + S` | Brasier divin — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
 | `S` | Colonne de feu | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Entité gigantesque, griffes et colonnes de feu. |
 | `→ + S` | Brasier divin — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
 | `← + S` | Brasier divin — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Entité gigantesque, griffes et colonnes de feu. |
@@ -1387,7 +1607,7 @@ Comportement source : Entité gigantesque, griffes et colonnes de feu.
 
 ## Valtiel — SH3
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Présence habituellement non combattue, adaptée en gardien rituel.
 
@@ -1402,6 +1622,10 @@ Comportement source : Présence habituellement non combattue, adaptée en gardie
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
+| `← + T` | Rotation du sceau — Projection brisée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
+| `DODGE + L` | Rotation du sceau — Retour convulsif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
+| `P-GUARD + H` | Rotation du sceau — Riposte du corps | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
+| `RISE + S` | Rotation du sceau — Reprise impossible | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
 | `S` | Gardien de la naissance | special / mid | 15/1/26 | 114 | 720 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
 | `→ + S` | Rotation du sceau — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Présence habituellement non combattue, adaptée en gardien rituel. |
 | `← + S` | Rotation de la valve | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Présence habituellement non combattue, adaptée en gardien rituel. |
@@ -1412,7 +1636,7 @@ Comportement source : Présence habituellement non combattue, adaptée en gardie
 
 ## Sewer Creature — SH3
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Tentacule aquatique attaquant depuis plusieurs conduits.
 
@@ -1427,6 +1651,10 @@ Comportement source : Tentacule aquatique attaquant depuis plusieurs conduits.
 | `↓ + H` | Nœud du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
 | `AIR + H` | Retombée de vrille | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
 | `T` | Constriction | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
+| `← + T` | Tentacule du canal — Nœud inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
+| `DODGE + L` | Tentacule du canal — Ondulation d’évasion | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
+| `P-GUARD + H` | Tentacule du canal — Vrille de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
+| `RISE + S` | Tentacule du canal — Reprise annelée | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
 | `S` | Tentacule du canal | special / mid | 15/6/26 | 158 | 195 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
 | `→ + S` | Tentacule du canal — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
 | `← + S` | Tentacule du canal — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Tentacule aquatique attaquant depuis plusieurs conduits. |
@@ -1437,7 +1665,7 @@ Comportement source : Tentacule aquatique attaquant depuis plusieurs conduits.
 
 ## Glutton — SH3
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées.
 
@@ -1452,6 +1680,10 @@ Comportement source : Créature bloquant un passage, neutralisée dans le jeu so
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 163 | 61 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
+| `← + T` | Gueule du conte — Jet monumental | throw / throw | 9/3/30 | 156 | 63 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
+| `DODGE + L` | Gueule du conte — Pas de masse | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
+| `P-GUARD + H` | Gueule du conte — Contre-écrasement | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
+| `RISE + S` | Gueule du conte — Relèvement sismique | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
 | `S` | Gueule du conte | special / mid | 15/6/26 | 137 | 147 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
 | `→ + S` | Gueule du conte — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
 | `← + S` | Gueule du conte — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Créature bloquant un passage, neutralisée dans le jeu source par la récitation d’un conte de fées. |
@@ -1462,7 +1694,7 @@ Comportement source : Créature bloquant un passage, neutralisée dans le jeu so
 
 ## Sniffer Dog — Male — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Canidé rapide, attaque en meute.
 
@@ -1477,6 +1709,10 @@ Comportement source : Canidé rapide, attaque en meute.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
+| `← + T` | Morsure renifleuse — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
+| `DODGE + L` | Morsure renifleuse — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
+| `P-GUARD + H` | Morsure renifleuse — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
+| `RISE + S` | Morsure renifleuse — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
 | `S` | Morsure renifleuse | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Canidé rapide, attaque en meute. |
 | `→ + S` | Morsure renifleuse — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
 | `← + S` | Morsure renifleuse — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Canidé rapide, attaque en meute. |
@@ -1487,7 +1723,7 @@ Comportement source : Canidé rapide, attaque en meute.
 
 ## Sniffer Dog — Female — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante plus agressive.
 
@@ -1502,6 +1738,10 @@ Comportement source : Variante plus agressive.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `← + T` | Bond de la femelle — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `DODGE + L` | Bond de la femelle — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `P-GUARD + H` | Bond de la femelle — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `RISE + S` | Bond de la femelle — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `S` | Bond de la femelle | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variante plus agressive. |
 | `→ + S` | Bond de la femelle — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Variante plus agressive. |
 | `← + S` | Bond de la femelle — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
@@ -1512,7 +1752,7 @@ Comportement source : Variante plus agressive.
 
 ## Hummer — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Petite créature volante attaquant en groupe.
 
@@ -1527,6 +1767,10 @@ Comportement source : Petite créature volante attaquant en groupe.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
+| `← + T` | Nuée bourdonnante — Largage arrière | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
+| `DODGE + L` | Nuée bourdonnante — Battement d’évasion | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
+| `P-GUARD + H` | Nuée bourdonnante — Serre de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
+| `RISE + S` | Nuée bourdonnante — Redécollage | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
 | `S` | Nuée bourdonnante | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Petite créature volante attaquant en groupe. |
 | `→ + S` | Nuée bourdonnante — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
 | `← + S` | Nuée bourdonnante — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Petite créature volante attaquant en groupe. |
@@ -1537,7 +1781,7 @@ Comportement source : Petite créature volante attaquant en groupe.
 
 ## Wall Man — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Émerge d’une paroi et contrôle une zone verticale.
 
@@ -1552,6 +1796,10 @@ Comportement source : Émerge d’une paroi et contrôle une zone verticale.
 | `↓ + H` | Fissure basse | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
 | `AIR + H` | Effondrement | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
 | `T` | Ensevelissement | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
+| `← + T` | Bras mural — Ensevelissement arrière | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
+| `DODGE + L` | Bras mural — Glissement de paroi | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
+| `P-GUARD + H` | Bras mural — Mur de réponse | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
+| `RISE + S` | Bras mural — Émergence structurelle | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
 | `S` | Bras mural | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Émerge d’une paroi et contrôle une zone verticale. |
 | `→ + S` | Bras mural — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
 | `← + S` | Bras mural — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Émerge d’une paroi et contrôle une zone verticale. |
@@ -1562,7 +1810,7 @@ Comportement source : Émerge d’une paroi et contrôle une zone verticale.
 
 ## Gum Head — Old Type — SH4
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Humanoïde simiesque capable de saisir et d’utiliser des objets.
 
@@ -1577,6 +1825,10 @@ Comportement source : Humanoïde simiesque capable de saisir et d’utiliser des
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
 | `T` | Clé volée — saisie attestée | throw / throw | 8/3/28 | 102 | 72 | DIRECTEMENT ATTESTÉ | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
+| `← + T` | Clé volée — retournement de la saisie | throw / throw | 9/3/30 | 95 | 72 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
+| `DODGE + L` | Clé volée — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
+| `P-GUARD + H` | Clé volée — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
+| `RISE + S` | Clé volée — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
 | `S` | Clé volée | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
 | `→ + S` | Clé volée — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
 | `← + S` | Clé volée — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Humanoïde simiesque capable de saisir et d’utiliser des objets. |
@@ -1587,7 +1839,7 @@ Comportement source : Humanoïde simiesque capable de saisir et d’utiliser des
 
 ## Gum Head — New Type — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante plus rapide et agressive.
 
@@ -1602,6 +1854,10 @@ Comportement source : Variante plus rapide et agressive.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
+| `← + T` | Ruée simiesque — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
+| `DODGE + L` | Ruée simiesque — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
+| `P-GUARD + H` | Ruée simiesque — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
+| `RISE + S` | Ruée simiesque — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
 | `S` | Ruée simiesque | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variante plus rapide et agressive. |
 | `→ + S` | Ruée simiesque — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Variante plus rapide et agressive. |
 | `← + S` | Ruée simiesque — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variante plus rapide et agressive. |
@@ -1612,7 +1868,7 @@ Comportement source : Variante plus rapide et agressive.
 
 ## Twin Victim — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Grand corps à deux têtes qui charge et martèle.
 
@@ -1627,6 +1883,10 @@ Comportement source : Grand corps à deux têtes qui charge et martèle.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
+| `← + T` | Marche des deux corps — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
+| `DODGE + L` | Marche des deux corps — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
+| `P-GUARD + H` | Marche des deux corps — Contre-écrasement | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
+| `RISE + S` | Marche des deux corps — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
 | `S` | Marche des deux corps | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Grand corps à deux têtes qui charge et martèle. |
 | `→ + S` | Marche des deux corps — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Grand corps à deux têtes qui charge et martèle. |
 | `← + S` | Marche des deux corps — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Grand corps à deux têtes qui charge et martèle. |
@@ -1637,7 +1897,7 @@ Comportement source : Grand corps à deux têtes qui charge et martèle.
 
 ## Patient — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Frappe avec une arme lourde et produit des sons discordants.
 
@@ -1652,6 +1912,10 @@ Comportement source : Frappe avec une arme lourde et produit des sons discordant
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
+| `← + T` | Escalier de l’hôpital — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
+| `DODGE + L` | Escalier de l’hôpital — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
+| `P-GUARD + H` | Escalier de l’hôpital — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
+| `RISE + S` | Escalier de l’hôpital — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
 | `S` | Escalier de l’hôpital | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Frappe avec une arme lourde et produit des sons discordants. |
 | `→ + S` | Escalier de l’hôpital — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
 | `← + S` | Escalier de l’hôpital — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Frappe avec une arme lourde et produit des sons discordants. |
@@ -1662,7 +1926,7 @@ Comportement source : Frappe avec une arme lourde et produit des sons discordant
 
 ## Toadstool — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Champignon mobile qui libère une petite zone nocive.
 
@@ -1677,6 +1941,10 @@ Comportement source : Champignon mobile qui libère une petite zone nocive.
 | `↓ + H` | Racines fongiques | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
 | `AIR + H` | Pluie toxique | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
 | `T` | Enveloppement mycélien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
+| `← + T` | Spore toxique — Rejet mycélien | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
+| `DODGE + L` | Spore toxique — Poussée oblique | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
+| `P-GUARD + H` | Spore toxique — Spore de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
+| `RISE + S` | Spore toxique — Repousse fongique | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
 | `S` | Spore toxique | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Champignon mobile qui libère une petite zone nocive. |
 | `→ + S` | Spore toxique — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
 | `← + S` | Spore toxique — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Champignon mobile qui libère une petite zone nocive. |
@@ -1687,7 +1955,7 @@ Comportement source : Champignon mobile qui libère une petite zone nocive.
 
 ## Whitestool — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante de Toadstool.
 
@@ -1702,6 +1970,10 @@ Comportement source : Variante de Toadstool.
 | `↓ + H` | Racines fongiques | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
 | `AIR + H` | Pluie toxique | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
 | `T` | Enveloppement mycélien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
+| `← + T` | Poussée pâle — Rejet mycélien | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
+| `DODGE + L` | Poussée pâle — Poussée oblique | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
+| `P-GUARD + H` | Poussée pâle — Spore de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
+| `RISE + S` | Poussée pâle — Repousse fongique | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
 | `S` | Poussée pâle | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Variante de Toadstool. |
 | `→ + S` | Poussée pâle — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
 | `← + S` | Poussée pâle — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Variante de Toadstool. |
@@ -1712,7 +1984,7 @@ Comportement source : Variante de Toadstool.
 
 ## Tremer — Blue — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Très petite créature rapide.
 
@@ -1727,6 +1999,10 @@ Comportement source : Très petite créature rapide.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
+| `← + T` | Fourmillement bleu — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
+| `DODGE + L` | Fourmillement bleu — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
+| `P-GUARD + H` | Fourmillement bleu — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
+| `RISE + S` | Fourmillement bleu — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
 | `S` | Fourmillement bleu | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Très petite créature rapide. |
 | `→ + S` | Fourmillement bleu — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
 | `← + S` | Fourmillement bleu — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Très petite créature rapide. |
@@ -1737,7 +2013,7 @@ Comportement source : Très petite créature rapide.
 
 ## Tremer — Red — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante plus agressive.
 
@@ -1752,6 +2028,10 @@ Comportement source : Variante plus agressive.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `← + T` | Fourmillement rouge — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `DODGE + L` | Fourmillement rouge — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `P-GUARD + H` | Fourmillement rouge — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
+| `RISE + S` | Fourmillement rouge — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `S` | Fourmillement rouge | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Variante plus agressive. |
 | `→ + S` | Fourmillement rouge — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
 | `← + S` | Fourmillement rouge — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Variante plus agressive. |
@@ -1762,7 +2042,7 @@ Comportement source : Variante plus agressive.
 
 ## Bottom — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version renforcée du Twin Victim.
 
@@ -1777,6 +2057,10 @@ Comportement source : Version renforcée du Twin Victim.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
 | `T` | Absorption | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
+| `← + T` | Masse inférieure — Reflux charnel | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
+| `DODGE + L` | Masse inférieure — Débordement latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
+| `P-GUARD + H` | Masse inférieure — Pulsation de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
+| `RISE + S` | Masse inférieure — Reconstitution organique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
 | `S` | Masse inférieure | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version renforcée du Twin Victim. |
 | `→ + S` | Masse inférieure — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
 | `← + S` | Masse inférieure — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version renforcée du Twin Victim. |
@@ -1787,7 +2071,7 @@ Comportement source : Version renforcée du Twin Victim.
 
 ## Ghost — Victim — SH4
 
-**6 directs · 8 composites · 2 adaptations.**
+**7 directs · 11 composites · 2 adaptations.**
 
 Comportement source : Victime immortelle qui traverse les obstacles et inflige une aura.
 
@@ -1802,6 +2086,10 @@ Comportement source : Victime immortelle qui traverse les obstacles et inflige u
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Victime immortelle qui traverse les obstacles et inflige une aura. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Victime immortelle qui traverse les obstacles et inflige une aura. |
 | `T` | Étreinte persistante — saisie attestée | throw / throw | 8/3/28 | 104 | 72 | DIRECTEMENT ATTESTÉ | Victime immortelle qui traverse les obstacles et inflige une aura. |
+| `← + T` | Possession inversée | throw / throw | 9/3/30 | 98 | 72 | COMPOSITE LORE-FRIENDLY | Victime immortelle qui traverse les obstacles et inflige une aura. |
+| `DODGE + L` | Déphasage offensif | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Victime immortelle qui traverse les obstacles et inflige une aura. |
+| `P-GUARD + H` | Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Victime immortelle qui traverse les obstacles et inflige une aura. |
+| `RISE + S` | Émergence depuis le sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Victime immortelle qui traverse les obstacles et inflige une aura. |
 | `S` | Étreinte persistante | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Victime immortelle qui traverse les obstacles et inflige une aura. |
 | `→ + S` | Émergence du mur | special / mid | 13/10/29 | 126 | 197 | DIRECTEMENT ATTESTÉ | Victime immortelle qui traverse les obstacles et inflige une aura. |
 | `← + S` | Étreinte persistante — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Victime immortelle qui traverse les obstacles et inflige une aura. |
@@ -1812,7 +2100,7 @@ Comportement source : Victime immortelle qui traverse les obstacles et inflige u
 
 ## Jimmy Stone — Victim 1 — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien particulièrement persistant, associé au premier sacrifice.
 
@@ -1827,6 +2115,10 @@ Comportement source : Fantôme ancien particulièrement persistant, associé au 
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
+| `← + T` | Red Devil — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
+| `DODGE + L` | Red Devil — Déphasage offensif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
+| `P-GUARD + H` | Red Devil — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
+| `RISE + S` | Red Devil — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
 | `S` | Red Devil | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
 | `→ + S` | Red Devil — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
 | `← + S` | Red Devil — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Fantôme ancien particulièrement persistant, associé au premier sacrifice. |
@@ -1837,7 +2129,7 @@ Comportement source : Fantôme ancien particulièrement persistant, associé au 
 
 ## Steve Garland — Victim 4 — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien armé d’une truelle, pression de proximité et saisies.
 
@@ -1852,6 +2144,10 @@ Comportement source : Fantôme ancien armé d’une truelle, pression de proximi
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
 | `T` | Truelle du vendeur — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
+| `← + T` | Truelle du vendeur — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
+| `DODGE + L` | Truelle du vendeur — Déphasage offensif | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
+| `P-GUARD + H` | Truelle du vendeur — Retour spectral | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
+| `RISE + S` | Truelle du vendeur — Réapparition du sol | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
 | `S` | Truelle du vendeur | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
 | `→ + S` | Truelle du vendeur — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
 | `← + S` | Truelle du vendeur — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Fantôme ancien armé d’une truelle, pression de proximité et saisies. |
@@ -1862,7 +2158,7 @@ Comportement source : Fantôme ancien armé d’une truelle, pression de proximi
 
 ## Eric Walsh — Victim 10 — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien plus agressif, attaque par accélérations soudaines.
 
@@ -1877,6 +2173,10 @@ Comportement source : Fantôme ancien plus agressif, attaque par accélérations
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
+| `← + T` | Ruée du barman — Possession inversée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
+| `DODGE + L` | Ruée du barman — Déphasage offensif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
+| `P-GUARD + H` | Ruée du barman — Retour spectral | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
+| `RISE + S` | Ruée du barman — Réapparition du sol | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
 | `S` | Ruée du barman | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
 | `→ + S` | Ruée du barman — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
 | `← + S` | Ruée du barman — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Fantôme ancien plus agressif, attaque par accélérations soudaines. |
@@ -1887,7 +2187,7 @@ Comportement source : Fantôme ancien plus agressif, attaque par accélérations
 
 ## Peter Walls — Victim 12 — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien qui traverse le décor et impose une aura de proximité.
 
@@ -1902,6 +2202,10 @@ Comportement source : Fantôme ancien qui traverse le décor et impose une aura 
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
+| `← + T` | Vide du reporter — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
+| `DODGE + L` | Vide du reporter — riposte d’apparition | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
+| `P-GUARD + H` | Vide du reporter — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
+| `RISE + S` | Vide du reporter — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
 | `S` | Vide du reporter | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
 | `→ + S` | Vide du reporter — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
 | `← + S` | Vide du reporter — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Fantôme ancien qui traverse le décor et impose une aura de proximité. |
@@ -1912,7 +2216,7 @@ Comportement source : Fantôme ancien qui traverse le décor et impose une aura 
 
 ## Sharon Blake — Victim 13 — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien utilisant disparitions et réapparitions latérales.
 
@@ -1927,6 +2231,10 @@ Comportement source : Fantôme ancien utilisant disparitions et réapparitions l
 | `↓ + H` | Aura au sol | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
 | `T` | Possession brève | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
+| `← + T` | Obscurité de Sharon — Possession inversée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
+| `DODGE + L` | Obscurité de Sharon — riposte d’apparition | reversal / mid | 6/5/17 | 52 | 99 | DIRECTEMENT ATTESTÉ | Fantôme ancien utilisant disparitions et réapparitions latérales. |
+| `P-GUARD + H` | Obscurité de Sharon — Retour spectral | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
+| `RISE + S` | Obscurité de Sharon — Réapparition du sol | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
 | `S` | Obscurité de Sharon | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Fantôme ancien utilisant disparitions et réapparitions latérales. |
 | `→ + S` | Obscurité de Sharon — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Fantôme ancien utilisant disparitions et réapparitions latérales. |
 | `← + S` | Obscurité de Sharon — apparition attestée | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Fantôme ancien utilisant disparitions et réapparitions latérales. |
@@ -1937,7 +2245,7 @@ Comportement source : Fantôme ancien utilisant disparitions et réapparitions l
 
 ## Toby Archbolt — Victim 14 — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Fantôme ancien contrôlant la distance par ondes de présence.
 
@@ -1952,6 +2260,10 @@ Comportement source : Fantôme ancien contrôlant la distance par ondes de prés
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
+| `← + T` | Gloom du pasteur — Possession inversée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
+| `DODGE + L` | Gloom du pasteur — Déphasage offensif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
+| `P-GUARD + H` | Gloom du pasteur — Retour spectral | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
+| `RISE + S` | Gloom du pasteur — Réapparition du sol | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
 | `S` | Gloom du pasteur | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Fantôme ancien contrôlant la distance par ondes de présence. |
 | `→ + S` | Gloom du pasteur — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
 | `← + S` | Gloom du pasteur — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Fantôme ancien contrôlant la distance par ondes de présence. |
@@ -1962,7 +2274,7 @@ Comportement source : Fantôme ancien contrôlant la distance par ondes de prés
 
 ## Joseph Schreiber — Victim 15 — SH4
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif.
 
@@ -1977,6 +2289,10 @@ Comportement source : Présence non hostile dans le jeu source, adaptée comme c
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
+| `← + T` | Désespoir du témoin — Possession inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
+| `DODGE + L` | Désespoir du témoin — Déphasage offensif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
+| `P-GUARD + H` | Désespoir du témoin — Retour spectral | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
+| `RISE + S` | Désespoir du témoin — Réapparition du sol | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
 | `S` | Désespoir du témoin | special / mid | 15/6/26 | 112 | 150 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
 | `→ + S` | Désespoir du témoin — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
 | `← + S` | Désespoir du témoin — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Présence non hostile dans le jeu source, adaptée comme combattant d’archive défensif. |
@@ -1987,7 +2303,7 @@ Comportement source : Présence non hostile dans le jeu source, adaptée comme c
 
 ## Cynthia Velasquez — Victim 16 — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Fantôme de nouvelle génération, rapide et difficile à immobiliser.
 
@@ -2002,6 +2318,10 @@ Comportement source : Fantôme de nouvelle génération, rapide et difficile à 
 | `↓ + H` | Aura au sol | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
 | `T` | Possession brève | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
+| `← + T` | Temptation spectrale — Possession inversée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
+| `DODGE + L` | Temptation spectrale — Déphasage offensif | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
+| `P-GUARD + H` | Temptation spectrale — Retour spectral | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
+| `RISE + S` | Temptation spectrale — Réapparition du sol | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
 | `S` | Temptation spectrale | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
 | `→ + S` | Temptation spectrale — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
 | `← + S` | Temptation spectrale — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, rapide et difficile à immobiliser. |
@@ -2012,7 +2332,7 @@ Comportement source : Fantôme de nouvelle génération, rapide et difficile à 
 
 ## Jasper Gein — Victim 17 — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Fantôme de nouvelle génération, lié au feu et aux attaques à distance.
 
@@ -2027,6 +2347,10 @@ Comportement source : Fantôme de nouvelle génération, lié au feu et aux atta
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
+| `← + T` | Candélabre enflammé — Possession inversée | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
+| `DODGE + L` | Candélabre enflammé — Déphasage offensif | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
+| `P-GUARD + H` | Candélabre enflammé — Retour spectral | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
+| `RISE + S` | Candélabre enflammé — Réapparition du sol | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
 | `S` | Candélabre enflammé | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
 | `→ + S` | Candélabre enflammé — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
 | `← + S` | Candélabre enflammé — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Fantôme de nouvelle génération, lié au feu et aux attaques à distance. |
@@ -2037,7 +2361,7 @@ Comportement source : Fantôme de nouvelle génération, lié au feu et aux atta
 
 ## Andrew DeSalvo — Victim 18 — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Fantôme lourd et résistant, pression continue dans la prison.
 
@@ -2052,6 +2376,10 @@ Comportement source : Fantôme lourd et résistant, pression continue dans la pr
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
+| `← + T` | Watchfulness — Possession inversée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
+| `DODGE + L` | Watchfulness — Déphasage offensif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
+| `P-GUARD + H` | Watchfulness — riposte de garde | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
+| `RISE + S` | Watchfulness — Réapparition du sol | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
 | `S` | Watchfulness | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Fantôme lourd et résistant, pression continue dans la prison. |
 | `→ + S` | Watchfulness — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Fantôme lourd et résistant, pression continue dans la prison. |
 | `← + S` | Watchfulness — garde attestée | special / mid | 10/5/24 | 101 | 177 | DIRECTEMENT ATTESTÉ | Fantôme lourd et résistant, pression continue dans la prison. |
@@ -2062,7 +2390,7 @@ Comportement source : Fantôme lourd et résistant, pression continue dans la pr
 
 ## Richard Braintree — Victim 19 — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Fantôme électrocuté armé d’un pied-de-biche, très agressif.
 
@@ -2077,6 +2405,10 @@ Comportement source : Fantôme électrocuté armé d’un pied-de-biche, très a
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
+| `← + T` | Crowbar du chaos — Possession inversée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
+| `DODGE + L` | Crowbar du chaos — Déphasage offensif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
+| `P-GUARD + H` | Crowbar du chaos — Retour spectral | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
+| `RISE + S` | Crowbar du chaos — Réapparition du sol | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
 | `S` | Crowbar du chaos | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
 | `→ + S` | Crowbar du chaos — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
 | `← + S` | Crowbar du chaos — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Fantôme électrocuté armé d’un pied-de-biche, très agressif. |
@@ -2087,7 +2419,7 @@ Comportement source : Fantôme électrocuté armé d’un pied-de-biche, très a
 
 ## Man with the Coat — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Traque avec arme à feu ou arme blanche.
 
@@ -2102,6 +2434,10 @@ Comportement source : Traque avec arme à feu ou arme blanche.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 71 | 137 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 87 | 127 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 93 | 82 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
+| `← + T` | Poursuite de Walter — Projection brisée | throw / throw | 9/3/30 | 89 | 84 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
+| `DODGE + L` | Poursuite de Walter — Retour convulsif | reversal / mid | 6/5/18 | 57 | 121 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
+| `P-GUARD + H` | Poursuite de Walter — Riposte du corps | counter / mid | 5/5/22 | 97 | 143 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
+| `RISE + S` | Poursuite de Walter — Reprise impossible | reversal / low | 8/8/28 | 83 | 158 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
 | `S` | Poursuite de Walter | special / mid | 15/1/26 | 111 | 720 | DIRECTEMENT ATTESTÉ | Traque avec arme à feu ou arme blanche. |
 | `→ + S` | Poursuite de Walter — assaut attesté | special / mid | 13/10/29 | 122 | 232 | DIRECTEMENT ATTESTÉ | Traque avec arme à feu ou arme blanche. |
 | `← + S` | Poursuite de Walter — Repli armé | special / mid | 10/5/24 | 77 | 198 | COMPOSITE LORE-FRIENDLY | Traque avec arme à feu ou arme blanche. |
@@ -2112,7 +2448,7 @@ Comportement source : Traque avec arme à feu ou arme blanche.
 
 ## Wheelchair — SH4
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Objet invulnérable dans le jeu d’origine, adapté en charge spectrale.
 
@@ -2127,6 +2463,10 @@ Comportement source : Objet invulnérable dans le jeu d’origine, adapté en ch
 | `↓ + H` | Écrasement de roue | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
 | `AIR + H` | Chute mécanique | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
 | `T` | Encastrement | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
+| `← + T` | Marche arrière hantée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
+| `DODGE + L` | Écart de roue autonome | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
+| `P-GUARD + H` | Collision de riposte | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
+| `RISE + S` | Redémarrage impossible | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
 | `S` | Percussion hantée | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
 | `→ + S` | Percussion hantée — assaut attesté | special / mid | 13/10/29 | 126 | 197 | DIRECTEMENT ATTESTÉ | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
 | `← + S` | Recul autonome | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Objet invulnérable dans le jeu d’origine, adapté en charge spectrale. |
@@ -2137,7 +2477,7 @@ Comportement source : Objet invulnérable dans le jeu d’origine, adapté en ch
 
 ## Greedy Worm — SH4
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Structure vivante habituellement passive, adaptée en contrôle du terrain.
 
@@ -2152,6 +2492,10 @@ Comportement source : Structure vivante habituellement passive, adaptée en cont
 | `↓ + H` | Balayage du segment | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
 | `AIR + H` | Retombée souterraine | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
 | `T` | Dévoration partielle | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
+| `← + T` | Conduit vivant — Rejet annelé | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
+| `DODGE + L` | Conduit vivant — Surgissement latéral | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
+| `P-GUARD + H` | Conduit vivant — Mâchoire de réponse | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
+| `RISE + S` | Conduit vivant — Retour souterrain | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
 | `S` | Conduit vivant | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
 | `→ + S` | Conduit vivant — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
 | `← + S` | Conduit vivant — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Structure vivante habituellement passive, adaptée en contrôle du terrain. |
@@ -2162,7 +2506,7 @@ Comportement source : Structure vivante habituellement passive, adaptée en cont
 
 ## One Truth — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Forme finale du Twin Victim, attaques lourdes et pulsations.
 
@@ -2177,6 +2521,10 @@ Comportement source : Forme finale du Twin Victim, attaques lourdes et pulsation
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
+| `← + T` | Visages du puits — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
+| `DODGE + L` | Visages du puits — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
+| `P-GUARD + H` | Visages du puits — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
+| `RISE + S` | Visages du puits — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
 | `S` | Visages du puits | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Forme finale du Twin Victim, attaques lourdes et pulsations. |
 | `→ + S` | Visages du puits — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
 | `← + S` | Visages du puits — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Forme finale du Twin Victim, attaques lourdes et pulsations. |
@@ -2187,7 +2535,7 @@ Comportement source : Forme finale du Twin Victim, attaques lourdes et pulsation
 
 ## Sacrificed Walter — SH4
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Corps monumental lié au rituel, invocations et ondes.
 
@@ -2202,6 +2550,10 @@ Comportement source : Corps monumental lié au rituel, invocations et ondes.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
+| `← + T` | Rituel des vingt-et-un — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
+| `DODGE + L` | Rituel des vingt-et-un — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
+| `P-GUARD + H` | Rituel des vingt-et-un — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
+| `RISE + S` | Rituel des vingt-et-un — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
 | `S` | Rituel des vingt-et-un | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Corps monumental lié au rituel, invocations et ondes. |
 | `→ + S` | Rituel des vingt-et-un — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
 | `← + S` | Rituel des vingt-et-un — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Corps monumental lié au rituel, invocations et ondes. |
@@ -2212,7 +2564,7 @@ Comportement source : Corps monumental lié au rituel, invocations et ondes.
 
 ## Walter Sullivan — SH4
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Alterner arme à feu, tronçonneuse et déplacement agressif.
 
@@ -2227,6 +2579,10 @@ Comportement source : Alterner arme à feu, tronçonneuse et déplacement agress
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
+| `← + T` | Assaut du ritualiste — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
+| `DODGE + L` | Assaut du ritualiste — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
+| `P-GUARD + H` | Assaut du ritualiste — Riposte du corps | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
+| `RISE + S` | Assaut du ritualiste — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
 | `S` | Tir du ritualiste | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Alterner arme à feu, tronçonneuse et déplacement agressif. |
 | `→ + S` | Poursuite de Walter | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Alterner arme à feu, tronçonneuse et déplacement agressif. |
 | `← + S` | Assaut du ritualiste — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Alterner arme à feu, tronçonneuse et déplacement agressif. |
@@ -2237,7 +2593,7 @@ Comportement source : Alterner arme à feu, tronçonneuse et déplacement agress
 
 ## Eileen Head — SH4
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Tête géante non combattue, adaptée en boss de décor.
 
@@ -2252,6 +2608,10 @@ Comportement source : Tête géante non combattue, adaptée en boss de décor.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
+| `← + T` | Regard monumental — Jet monumental | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
+| `DODGE + L` | Regard monumental — Pas de masse | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
+| `P-GUARD + H` | Regard monumental — Contre-écrasement | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
+| `RISE + S` | Regard monumental — Relèvement sismique | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
 | `S` | Regard monumental | special / mid | 15/1/26 | 129 | 720 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
 | `→ + S` | Regard monumental — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
 | `← + S` | Regard monumental — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Tête géante non combattue, adaptée en boss de décor. |
@@ -2262,7 +2622,7 @@ Comportement source : Tête géante non combattue, adaptée en boss de décor.
 
 ## Straight-Jacket — 0RIGINS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Corps enfermé qui projette un liquide et frappe du torse.
 
@@ -2277,6 +2637,10 @@ Comportement source : Corps enfermé qui projette un liquide et frappe du torse.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
+| `← + T` | Crachat contraint — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
+| `DODGE + L` | Crachat contraint — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
+| `P-GUARD + H` | Crachat contraint — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
+| `RISE + S` | Crachat contraint — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
 | `S` | Crachat contraint | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Corps enfermé qui projette un liquide et frappe du torse. |
 | `→ + S` | Crachat contraint — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
 | `← + S` | Crachat contraint — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Corps enfermé qui projette un liquide et frappe du torse. |
@@ -2287,7 +2651,7 @@ Comportement source : Corps enfermé qui projette un liquide et frappe du torse.
 
 ## Faceless Nurse — 0RIGINS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Attaque au scalpel et mouvement irrégulier.
 
@@ -2302,6 +2666,10 @@ Comportement source : Attaque au scalpel et mouvement irrégulier.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
+| `← + T` | Seringue de Cedar Grove — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
+| `DODGE + L` | Seringue de Cedar Grove — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
+| `P-GUARD + H` | Seringue de Cedar Grove — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
+| `RISE + S` | Seringue de Cedar Grove — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
 | `S` | Seringue de Cedar Grove | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Attaque au scalpel et mouvement irrégulier. |
 | `→ + S` | Seringue de Cedar Grove — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
 | `← + S` | Seringue de Cedar Grove — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Attaque au scalpel et mouvement irrégulier. |
@@ -2312,7 +2680,7 @@ Comportement source : Attaque au scalpel et mouvement irrégulier.
 
 ## Carrion — 0RIGINS
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Bête lourde qui charge au sol.
 
@@ -2327,6 +2695,10 @@ Comportement source : Bête lourde qui charge au sol.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
+| `← + T` | Masse charognarde — Traction de la meute | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
+| `DODGE + L` | Masse charognarde — Bond latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
+| `P-GUARD + H` | Masse charognarde — Morsure de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
+| `RISE + S` | Masse charognarde — reprise depuis le sol | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
 | `S` | Masse charognarde | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Bête lourde qui charge au sol. |
 | `→ + S` | Masse charognarde — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Bête lourde qui charge au sol. |
 | `← + S` | Masse charognarde — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Bête lourde qui charge au sol. |
@@ -2337,7 +2709,7 @@ Comportement source : Bête lourde qui charge au sol.
 
 ## Remnant — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Silhouette projetée qui apparaît au contact des miroirs.
 
@@ -2352,6 +2724,10 @@ Comportement source : Silhouette projetée qui apparaît au contact des miroirs.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
+| `← + T` | Ombre miroir — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
+| `DODGE + L` | Ombre miroir — riposte d’apparition | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Silhouette projetée qui apparaît au contact des miroirs. |
+| `P-GUARD + H` | Ombre miroir — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
+| `RISE + S` | Ombre miroir — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
 | `S` | Ombre miroir | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Silhouette projetée qui apparaît au contact des miroirs. |
 | `→ + S` | Ombre miroir — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Silhouette projetée qui apparaît au contact des miroirs. |
 | `← + S` | Ombre miroir — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Silhouette projetée qui apparaît au contact des miroirs. |
@@ -2362,7 +2738,7 @@ Comportement source : Silhouette projetée qui apparaît au contact des miroirs.
 
 ## Ariel — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Mannequin suspendu, coups de jambes et chutes verticales.
 
@@ -2377,6 +2753,10 @@ Comportement source : Mannequin suspendu, coups de jambes et chutes verticales.
 | `↓ + H` | Section basse | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
 | `T` | Fils de contrôle | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
+| `← + T` | Fil de marionnette — Valse inversée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
+| `DODGE + L` | Fil de marionnette — Pas de poupée | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
+| `P-GUARD + H` | Fil de marionnette — Fil de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
+| `RISE + S` | Fil de marionnette — Remontage du corps | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
 | `S` | Fil de marionnette | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Mannequin suspendu, coups de jambes et chutes verticales. |
 | `→ + S` | Fil de marionnette — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
 | `← + S` | Fil de marionnette — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Mannequin suspendu, coups de jambes et chutes verticales. |
@@ -2387,7 +2767,7 @@ Comportement source : Mannequin suspendu, coups de jambes et chutes verticales.
 
 ## Caliban — 0RIGINS
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Grande créature animale à membres disloqués.
 
@@ -2402,6 +2782,10 @@ Comportement source : Grande créature animale à membres disloqués.
 | `↓ + H` | Fauchage à quatre membres | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
+| `← + T` | Charge de Caliban — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
+| `DODGE + L` | Charge de Caliban — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
+| `P-GUARD + H` | Charge de Caliban — Contre-écrasement | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
+| `RISE + S` | Charge de Caliban — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
 | `S` | Charge de Caliban — signature | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Grande créature animale à membres disloqués. |
 | `→ + S` | Charge de Caliban — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Grande créature animale à membres disloqués. |
 | `← + S` | Charge de Caliban — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Grande créature animale à membres disloqués. |
@@ -2412,7 +2796,7 @@ Comportement source : Grande créature animale à membres disloqués.
 
 ## Two-Back — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Masse à deux corps, saisie et écrasement.
 
@@ -2427,6 +2811,10 @@ Comportement source : Masse à deux corps, saisie et écrasement.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
 | `T` | Étreinte double — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Masse à deux corps, saisie et écrasement. |
+| `← + T` | Étreinte double — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
+| `DODGE + L` | Étreinte double — Débordement latéral | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
+| `P-GUARD + H` | Étreinte double — Pulsation de riposte | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
+| `RISE + S` | Étreinte double — Reconstitution organique | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
 | `S` | Étreinte double | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Masse à deux corps, saisie et écrasement. |
 | `→ + S` | Étreinte double — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
 | `← + S` | Étreinte double — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Masse à deux corps, saisie et écrasement. |
@@ -2437,7 +2825,7 @@ Comportement source : Masse à deux corps, saisie et écrasement.
 
 ## The Butcher — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Avance lente, immense portée au couperet.
 
@@ -2452,6 +2840,10 @@ Comportement source : Avance lente, immense portée au couperet.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 98 | 123 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 120 | 113 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 151 | 73 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
+| `← + T` | Couperet du boucher — Projection brisée | throw / throw | 9/3/30 | 145 | 76 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
+| `DODGE + L` | Couperet du boucher — Retour convulsif | reversal / mid | 6/5/18 | 79 | 109 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
+| `P-GUARD + H` | Couperet du boucher — Riposte du corps | counter / mid | 5/5/22 | 134 | 127 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
+| `RISE + S` | Couperet du boucher — Reprise impossible | reversal / low | 8/8/28 | 115 | 142 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
 | `S` | Exécution du motel | special / unblockable | 21/6/26 | 153 | 177 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
 | `→ + S` | Couperet du boucher — Charge signature | special / mid | 13/10/29 | 169 | 208 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
 | `← + S` | Couperet du boucher — Armure du cauchemar | special / mid | 10/5/24 | 106 | 177 | COMPOSITE LORE-FRIENDLY | Avance lente, immense portée au couperet. |
@@ -2462,7 +2854,7 @@ Comportement source : Avance lente, immense portée au couperet.
 
 ## Memory of Helen Grady — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss suspendu, attaques de cage et projections.
 
@@ -2477,6 +2869,10 @@ Comportement source : Boss suspendu, attaques de cage et projections.
 | `↓ + H` | Traction au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
 | `AIR + H` | Écrasement suspendu | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
 | `T` | Suspension | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
+| `← + T` | Cage maternelle — Balancement inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
+| `DODGE + L` | Cage maternelle — Oscillation d’évasion | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
+| `P-GUARD + H` | Cage maternelle — Barreau de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
+| `RISE + S` | Cage maternelle — Suspension retrouvée | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
 | `S` | Cage maternelle | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss suspendu, attaques de cage et projections. |
 | `→ + S` | Cage maternelle — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
 | `← + S` | Cage maternelle — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss suspendu, attaques de cage et projections. |
@@ -2487,7 +2883,7 @@ Comportement source : Boss suspendu, attaques de cage et projections.
 
 ## Memory of Richard Grady — 0RIGINS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss massif, coups directs et charge.
 
@@ -2502,6 +2898,10 @@ Comportement source : Boss massif, coups directs et charge.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
+| `← + T` | Poings du père — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
+| `DODGE + L` | Poings du père — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
+| `P-GUARD + H` | Poings du père — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
+| `RISE + S` | Poings du père — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
 | `S` | Poings du père | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss massif, coups directs et charge. |
 | `→ + S` | Poings du père — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Boss massif, coups directs et charge. |
 | `← + S` | Poings du père — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss massif, coups directs et charge. |
@@ -2512,7 +2912,7 @@ Comportement source : Boss massif, coups directs et charge.
 
 ## Demon — 0RIGINS
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Entité ailée, feu et frappes plongeantes.
 
@@ -2527,6 +2927,10 @@ Comportement source : Entité ailée, feu et frappes plongeantes.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
+| `← + T` | Flammes du Flauros — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
+| `DODGE + L` | Flammes du Flauros — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
+| `P-GUARD + H` | Flammes du Flauros — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
+| `RISE + S` | Flammes du Flauros — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
 | `S` | Flammes du Flauros | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Entité ailée, feu et frappes plongeantes. |
 | `→ + S` | Flammes du Flauros — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Entité ailée, feu et frappes plongeantes. |
 | `← + S` | Flammes du Flauros — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Entité ailée, feu et frappes plongeantes. |
@@ -2537,7 +2941,7 @@ Comportement source : Entité ailée, feu et frappes plongeantes.
 
 ## Lurker — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Créature basse aux bras-lames, bond rapide.
 
@@ -2552,6 +2956,10 @@ Comportement source : Créature basse aux bras-lames, bond rapide.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
+| `← + T` | Lames rampantes — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
+| `DODGE + L` | Lames rampantes — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
+| `P-GUARD + H` | Lames rampantes — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
+| `RISE + S` | Lames rampantes — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
 | `S` | Lames rampantes | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Créature basse aux bras-lames, bond rapide. |
 | `→ + S` | Lames rampantes — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Créature basse aux bras-lames, bond rapide. |
 | `← + S` | Lames rampantes — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Créature basse aux bras-lames, bond rapide. |
@@ -2562,7 +2970,7 @@ Comportement source : Créature basse aux bras-lames, bond rapide.
 
 ## Feral — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Canidé écorché, esquive et morsure.
 
@@ -2577,6 +2985,10 @@ Comportement source : Canidé écorché, esquive et morsure.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
+| `← + T` | Traque férale — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
+| `DODGE + L` | Traque férale — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
+| `P-GUARD + H` | Traque férale — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
+| `RISE + S` | Traque férale — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
 | `S` | Traque férale | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Canidé écorché, esquive et morsure. |
 | `→ + S` | Traque férale — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
 | `← + S` | Traque férale — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Canidé écorché, esquive et morsure. |
@@ -2587,7 +2999,7 @@ Comportement source : Canidé écorché, esquive et morsure.
 
 ## Smog — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Ouvre sa cage thoracique pour libérer un nuage toxique.
 
@@ -2602,6 +3014,10 @@ Comportement source : Ouvre sa cage thoracique pour libérer un nuage toxique.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
+| `← + T` | Nuage de smog — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
+| `DODGE + L` | Nuage de smog — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
+| `P-GUARD + H` | Nuage de smog — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
+| `RISE + S` | Nuage de smog — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
 | `S` | Nuage de smog | special / mid | 15/1/26 | 105 | 680 | DIRECTEMENT ATTESTÉ | Ouvre sa cage thoracique pour libérer un nuage toxique. |
 | `→ + S` | Nuage de smog — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
 | `← + S` | Nuage de smog — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Ouvre sa cage thoracique pour libérer un nuage toxique. |
@@ -2612,7 +3028,7 @@ Comportement source : Ouvre sa cage thoracique pour libérer un nuage toxique.
 
 ## Needler — HC
 
-**4 directs · 10 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Bloque de face et frappe avec quatre membres-lames.
 
@@ -2627,6 +3043,10 @@ Comportement source : Bloque de face et frappe avec quatre membres-lames.
 | `↓ + H` | Piège de pattes | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
 | `T` | Cocon | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
+| `← + T` | Garde des lames — Traction du cocon | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
+| `DODGE + L` | Bond oblique du Needler | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
+| `P-GUARD + H` | Riposte des quatre lames | counter / mid | 5/5/20 | 88 | 117 | DIRECTEMENT ATTESTÉ | Bloque de face et frappe avec quatre membres-lames. |
+| `RISE + S` | Garde des lames — Remontée au fil | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Bloque de face et frappe avec quatre membres-lames. |
 | `S` | Garde des lames | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Bloque de face et frappe avec quatre membres-lames. |
 | `→ + S` | Pounce du Needler | special / mid | 13/10/27 | 112 | 190 | DIRECTEMENT ATTESTÉ | Bloque de face et frappe avec quatre membres-lames. |
 | `← + S` | Garde frontale | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Bloque de face et frappe avec quatre membres-lames. |
@@ -2637,7 +3057,7 @@ Comportement source : Bloque de face et frappe avec quatre membres-lames.
 
 ## Schism — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Tête en lame, coups verticaux puissants.
 
@@ -2652,6 +3072,10 @@ Comportement source : Tête en lame, coups verticaux puissants.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
+| `← + T` | Crâne tranchant — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
+| `DODGE + L` | Crâne tranchant — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
+| `P-GUARD + H` | Crâne tranchant — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
+| `RISE + S` | Crâne tranchant — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
 | `S` | Crâne tranchant | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Tête en lame, coups verticaux puissants. |
 | `→ + S` | Crâne tranchant — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
 | `← + S` | Crâne tranchant — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Tête en lame, coups verticaux puissants. |
@@ -2662,7 +3086,7 @@ Comportement source : Tête en lame, coups verticaux puissants.
 
 ## Siam — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Deux corps liés, grande portée et saisie.
 
@@ -2677,6 +3101,10 @@ Comportement source : Deux corps liés, grande portée et saisie.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
 | `T` | Corps enlacés — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Deux corps liés, grande portée et saisie. |
+| `← + T` | Corps enlacés — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
+| `DODGE + L` | Corps enlacés — Pas de masse | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
+| `P-GUARD + H` | Corps enlacés — Contre-écrasement | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
+| `RISE + S` | Corps enlacés — Relèvement sismique | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
 | `S` | Corps enlacés | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Deux corps liés, grande portée et saisie. |
 | `→ + S` | Corps enlacés — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
 | `← + S` | Corps enlacés — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Deux corps liés, grande portée et saisie. |
@@ -2687,7 +3115,7 @@ Comportement source : Deux corps liés, grande portée et saisie.
 
 ## Order Soldier — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Combattant humain armé.
 
@@ -2702,6 +3130,10 @@ Comportement source : Combattant humain armé.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
+| `← + T` | Matraque de l’Ordre — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
+| `DODGE + L` | Matraque de l’Ordre — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
+| `P-GUARD + H` | Matraque de l’Ordre — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
+| `RISE + S` | Matraque de l’Ordre — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
 | `S` | Matraque de l’Ordre | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Combattant humain armé. |
 | `→ + S` | Matraque de l’Ordre — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
 | `← + S` | Matraque de l’Ordre — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Combattant humain armé. |
@@ -2712,7 +3144,7 @@ Comportement source : Combattant humain armé.
 
 ## Nurse — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque.
 
@@ -2727,6 +3159,10 @@ Comportement source : Réagit à la lumière et frappe au scalpel dans l’hôpi
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
+| `← + T` | Scalpel de l’hôpital — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
+| `DODGE + L` | Scalpel de l’hôpital — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
+| `P-GUARD + H` | Scalpel de l’hôpital — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
+| `RISE + S` | Scalpel de l’hôpital — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
 | `S` | Scalpel de l’hôpital | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
 | `→ + S` | Scalpel de l’hôpital — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
 | `← + S` | Scalpel de l’hôpital — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque. |
@@ -2737,7 +3173,7 @@ Comportement source : Réagit à la lumière et frappe au scalpel dans l’hôpi
 
 ## Swarm — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Petites créatures qui encerclent et attaquent au ras du sol.
 
@@ -2752,6 +3188,10 @@ Comportement source : Petites créatures qui encerclent et attaquent au ras du s
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
+| `← + T` | Nuée de cafards — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
+| `DODGE + L` | Nuée de cafards — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
+| `P-GUARD + H` | Nuée de cafards — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
+| `RISE + S` | Nuée de cafards — reprise depuis le sol | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
 | `S` | Nuée de cafards | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Petites créatures qui encerclent et attaquent au ras du sol. |
 | `→ + S` | Nuée de cafards — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
 | `← + S` | Nuée de cafards — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Petites créatures qui encerclent et attaquent au ras du sol. |
@@ -2762,7 +3202,7 @@ Comportement source : Petites créatures qui encerclent et attaquent au ras du s
 
 ## Curtis Ackers — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Affrontement humain agressif dans l’atelier, utilisant une scie circulaire.
 
@@ -2777,6 +3217,10 @@ Comportement source : Affrontement humain agressif dans l’atelier, utilisant u
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
+| `← + T` | Scie de Curtis — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
+| `DODGE + L` | Scie de Curtis — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
+| `P-GUARD + H` | Scie de Curtis — Riposte du corps | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
+| `RISE + S` | Scie de Curtis — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
 | `S` | Scie de Curtis | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
 | `→ + S` | Scie de Curtis — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
 | `← + S` | Scie de Curtis — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Affrontement humain agressif dans l’atelier, utilisant une scie circulaire. |
@@ -2787,7 +3231,7 @@ Comportement source : Affrontement humain agressif dans l’atelier, utilisant u
 
 ## Bogeyman — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Exécuteur massif de Homecoming.
 
@@ -2802,6 +3246,10 @@ Comportement source : Exécuteur massif de Homecoming.
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 98 | 123 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 120 | 113 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 151 | 73 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
+| `← + T` | Grande lame du Bogeyman — Condamnation arrière | throw / throw | 9/3/30 | 145 | 76 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
+| `DODGE + L` | Grande lame du Bogeyman — Pas de l’exécuteur | reversal / mid | 6/5/18 | 79 | 109 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
+| `P-GUARD + H` | Grande lame du Bogeyman — Sentence de riposte | counter / mid | 5/5/22 | 134 | 127 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
+| `RISE + S` | Grande lame du Bogeyman — Relèvement du bourreau | reversal / low | 8/8/28 | 115 | 142 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
 | `S` | Grande lame du Bogeyman | special / mid | 15/6/26 | 153 | 177 | DIRECTEMENT ATTESTÉ | Exécuteur massif de Homecoming. |
 | `→ + S` | Grande lame du Bogeyman — Charge signature | special / mid | 13/10/29 | 169 | 208 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
 | `← + S` | Grande lame du Bogeyman — Armure du cauchemar | special / mid | 10/5/24 | 106 | 177 | COMPOSITE LORE-FRIENDLY | Exécuteur massif de Homecoming. |
@@ -2812,7 +3260,7 @@ Comportement source : Exécuteur massif de Homecoming.
 
 ## Sepulcher — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss pendu qui écrase et frappe avec ses appendices.
 
@@ -2827,6 +3275,10 @@ Comportement source : Boss pendu qui écrase et frappe avec ses appendices.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
+| `← + T` | Frappe des racines — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
+| `DODGE + L` | Frappe des racines — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
+| `P-GUARD + H` | Frappe des racines — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
+| `RISE + S` | Frappe des racines — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
 | `S` | Frappe des racines | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss pendu qui écrase et frappe avec ses appendices. |
 | `→ + S` | Frappe des racines — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
 | `← + S` | Frappe des racines — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss pendu qui écrase et frappe avec ses appendices. |
@@ -2837,7 +3289,7 @@ Comportement source : Boss pendu qui écrase et frappe avec ses appendices.
 
 ## Scarlet — Doll Form — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Poupée géante, coups longs et bris de membres.
 
@@ -2852,6 +3304,10 @@ Comportement source : Poupée géante, coups longs et bris de membres.
 | `↓ + H` | Section basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
 | `T` | Fils de contrôle | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
+| `← + T` | Danse de porcelaine — Valse inversée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
+| `DODGE + L` | Danse de porcelaine — Pas de poupée | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
+| `P-GUARD + H` | Danse de porcelaine — Fil de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
+| `RISE + S` | Danse de porcelaine — Remontage du corps | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
 | `S` | Danse de porcelaine | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Poupée géante, coups longs et bris de membres. |
 | `→ + S` | Bris de membres | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Poupée géante, coups longs et bris de membres. |
 | `← + S` | Recomposition | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Poupée géante, coups longs et bris de membres. |
@@ -2862,7 +3318,7 @@ Comportement source : Poupée géante, coups longs et bris de membres.
 
 ## Scarlet — Spider Form — HC
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Seconde phase rapide au plafond.
 
@@ -2877,6 +3333,10 @@ Comportement source : Seconde phase rapide au plafond.
 | `↓ + H` | Piège de pattes | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
 | `T` | Cocon | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
+| `← + T` | Mue arachnéenne — Traction du cocon | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
+| `DODGE + L` | Mue arachnéenne — Pas arachnéen | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
+| `P-GUARD + H` | Mue arachnéenne — Patte de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
+| `RISE + S` | Mue arachnéenne — Remontée au fil | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
 | `S` | Mue arachnéenne — signature | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Seconde phase rapide au plafond. |
 | `→ + S` | Mue arachnéenne — assaut | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Seconde phase rapide au plafond. |
 | `← + S` | Mue arachnéenne — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Seconde phase rapide au plafond. |
@@ -2887,7 +3347,7 @@ Comportement source : Seconde phase rapide au plafond.
 
 ## Asphyxia — HC
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Corps composé de multiples bras, balayages circulaires.
 
@@ -2902,6 +3362,10 @@ Comportement source : Corps composé de multiples bras, balayages circulaires.
 | `↓ + H` | Nœud du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
 | `AIR + H` | Retombée de vrille | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
 | `T` | Étreinte asphyxiante | throw / throw | 8/3/28 | 203 | 81 | DIRECTEMENT ATTESTÉ | Corps composé de multiples bras, balayages circulaires. |
+| `← + T` | Anneau de bras — Nœud inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
+| `DODGE + L` | Anneau de bras — Ondulation d’évasion | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
+| `P-GUARD + H` | Anneau de bras — Vrille de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
+| `RISE + S` | Anneau de bras — Reprise annelée | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
 | `S` | Anneau de bras — signature | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Corps composé de multiples bras, balayages circulaires. |
 | `→ + S` | Balayage circulaire | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Corps composé de multiples bras, balayages circulaires. |
 | `← + S` | Anneau de bras — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Corps composé de multiples bras, balayages circulaires. |
@@ -2912,7 +3376,7 @@ Comportement source : Corps composé de multiples bras, balayages circulaires.
 
 ## Amnion — Hanging Form — HC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss arachnéen suspendu, frappes de pattes.
 
@@ -2927,6 +3391,10 @@ Comportement source : Boss arachnéen suspendu, frappes de pattes.
 | `↓ + H` | Piège de pattes | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
 | `T` | Cocon | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
+| `← + T` | Pattes de la mère — Traction du cocon | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
+| `DODGE + L` | Pattes de la mère — Pas arachnéen | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
+| `P-GUARD + H` | Pattes de la mère — Patte de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
+| `RISE + S` | Pattes de la mère — Remontée au fil | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
 | `S` | Pattes de la mère | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss arachnéen suspendu, frappes de pattes. |
 | `→ + S` | Pattes de la mère — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
 | `← + S` | Pattes de la mère — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss arachnéen suspendu, frappes de pattes. |
@@ -2937,7 +3405,7 @@ Comportement source : Boss arachnéen suspendu, frappes de pattes.
 
 ## Amnion — Exposed Form — HC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Seconde phase vulnérable mais agressive.
 
@@ -2952,6 +3420,10 @@ Comportement source : Seconde phase vulnérable mais agressive.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
+| `← + T` | Noyau exposé — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
+| `DODGE + L` | Noyau exposé — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
+| `P-GUARD + H` | Noyau exposé — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
+| `RISE + S` | Noyau exposé — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
 | `S` | Noyau exposé | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Seconde phase vulnérable mais agressive. |
 | `→ + S` | Noyau exposé — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
 | `← + S` | Noyau exposé — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Seconde phase vulnérable mais agressive. |
@@ -2962,7 +3434,7 @@ Comportement source : Seconde phase vulnérable mais agressive.
 
 ## Raw Shock — Base — SM
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Poursuit et agrippe ; n’est pas affronté directement dans l’original.
 
@@ -2977,6 +3449,10 @@ Comportement source : Poursuit et agrippe ; n’est pas affronté directement da
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
 | `T` | Étreinte glacée — saisie | throw / throw | 8/3/28 | 92 | 72 | DIRECTEMENT ATTESTÉ | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
+| `← + T` | Étreinte glacée — retournement de la saisie | throw / throw | 9/3/30 | 86 | 72 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
+| `DODGE + L` | Écart de poursuite | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
+| `P-GUARD + H` | Étreinte glacée — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
+| `RISE + S` | Relèvement dans la glace | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
 | `S` | Étreinte glacée — signature | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
 | `→ + S` | Poursuite du cauchemar | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
 | `← + S` | Déformation psychologique | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Poursuit et agrippe ; n’est pas affronté directement dans l’original. |
@@ -2987,7 +3463,7 @@ Comportement source : Poursuit et agrippe ; n’est pas affronté directement da
 
 ## Raw Shock — Feminine — SM
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variation morphologique déterminée par le profil psychologique.
 
@@ -3002,6 +3478,10 @@ Comportement source : Variation morphologique déterminée par le profil psychol
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
 | `T` | Étreinte féminine — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Variation morphologique déterminée par le profil psychologique. |
+| `← + T` | Étreinte féminine — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
+| `DODGE + L` | Étreinte féminine — Retour convulsif | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
+| `P-GUARD + H` | Étreinte féminine — Riposte du corps | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
+| `RISE + S` | Étreinte féminine — Reprise impossible | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
 | `S` | Étreinte féminine | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Variation morphologique déterminée par le profil psychologique. |
 | `→ + S` | Étreinte féminine — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
 | `← + S` | Étreinte féminine — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Variation morphologique déterminée par le profil psychologique. |
@@ -3012,7 +3492,7 @@ Comportement source : Variation morphologique déterminée par le profil psychol
 
 ## Raw Shock — Diseased — SM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variation couverte de lésions, aura affaiblissante.
 
@@ -3027,6 +3507,10 @@ Comportement source : Variation couverte de lésions, aura affaiblissante.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
+| `← + T` | Pulsation malade — Projection brisée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
+| `DODGE + L` | Pulsation malade — Retour convulsif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
+| `P-GUARD + H` | Pulsation malade — Riposte du corps | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
+| `RISE + S` | Pulsation malade — Reprise impossible | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
 | `S` | Pulsation malade | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Variation couverte de lésions, aura affaiblissante. |
 | `→ + S` | Pulsation malade — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
 | `← + S` | Pulsation malade — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Variation couverte de lésions, aura affaiblissante. |
@@ -3037,7 +3521,7 @@ Comportement source : Variation couverte de lésions, aura affaiblissante.
 
 ## Raw Shock — Abstract — SM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variation géométrique, hitbox changeante.
 
@@ -3052,6 +3536,10 @@ Comportement source : Variation géométrique, hitbox changeante.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
 | `T` | Absorption | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
+| `← + T` | Forme abstraite — Reflux charnel | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
+| `DODGE + L` | Forme abstraite — Débordement latéral | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
+| `P-GUARD + H` | Forme abstraite — Pulsation de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
+| `RISE + S` | Forme abstraite — Reconstitution organique | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
 | `S` | Forme abstraite | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Variation géométrique, hitbox changeante. |
 | `→ + S` | Forme abstraite — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
 | `← + S` | Forme abstraite — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Variation géométrique, hitbox changeante. |
@@ -3062,7 +3550,7 @@ Comportement source : Variation géométrique, hitbox changeante.
 
 ## Raw Shock — Atrophied — SM
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variation plus petite et nerveuse.
 
@@ -3077,6 +3565,10 @@ Comportement source : Variation plus petite et nerveuse.
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
 | `T` | Étreinte de Midwich | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
+| `← + T` | Ruée atrophiée — Renversement du couloir | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
+| `DODGE + L` | Ruée atrophiée — Bond de fuite | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
+| `P-GUARD + H` | Ruée atrophiée — Couteau de réponse | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
+| `RISE + S` | Ruée atrophiée — Réveil sous les pupitres | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
 | `S` | Ruée atrophiée | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variation plus petite et nerveuse. |
 | `→ + S` | Ruée atrophiée — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Variation plus petite et nerveuse. |
 | `← + S` | Ruée atrophiée — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variation plus petite et nerveuse. |
@@ -3087,7 +3579,7 @@ Comportement source : Variation plus petite et nerveuse.
 
 ## Screamer — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Cri à distance puis griffes rapprochées.
 
@@ -3102,6 +3594,10 @@ Comportement source : Cri à distance puis griffes rapprochées.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
+| `← + T` | Cri incapacitant — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
+| `DODGE + L` | Cri incapacitant — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
+| `P-GUARD + H` | Cri incapacitant — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
+| `RISE + S` | Cri incapacitant — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
 | `S` | Cri incapacitant | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Cri à distance puis griffes rapprochées. |
 | `→ + S` | Cri incapacitant — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
 | `← + S` | Cri incapacitant — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Cri à distance puis griffes rapprochées. |
@@ -3112,7 +3608,7 @@ Comportement source : Cri à distance puis griffes rapprochées.
 
 ## Weeping Bat — DP
 
-**4 directs · 10 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Grimpe, se camoufle et bondit depuis les hauteurs.
 
@@ -3127,6 +3623,10 @@ Comportement source : Grimpe, se camoufle et bondit depuis les hauteurs.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
 | `T` | Étreinte impossible | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
+| `← + T` | Chute de la chauve-souris — Projection brisée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
+| `DODGE + L` | Chute de la chauve-souris — riposte d’apparition | reversal / mid | 6/5/17 | 52 | 99 | DIRECTEMENT ATTESTÉ | Grimpe, se camoufle et bondit depuis les hauteurs. |
+| `P-GUARD + H` | Chute de la chauve-souris — Riposte du corps | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
+| `RISE + S` | Chute de la chauve-souris — Reprise impossible | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Grimpe, se camoufle et bondit depuis les hauteurs. |
 | `S` | Chute de la chauve-souris | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Grimpe, se camoufle et bondit depuis les hauteurs. |
 | `→ + S` | Chute de la chauve-souris — assaut attesté | special / mid | 13/10/27 | 112 | 190 | DIRECTEMENT ATTESTÉ | Grimpe, se camoufle et bondit depuis les hauteurs. |
 | `← + S` | Chute de la chauve-souris — apparition attestée | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Grimpe, se camoufle et bondit depuis les hauteurs. |
@@ -3137,7 +3637,7 @@ Comportement source : Grimpe, se camoufle et bondit depuis les hauteurs.
 
 ## Doll — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Projette des silhouettes et se cache derrière ses doubles.
 
@@ -3152,6 +3652,10 @@ Comportement source : Projette des silhouettes et se cache derrière ses doubles
 | `↓ + H` | Section basse | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
 | `T` | Fils de contrôle | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
+| `← + T` | Ombres de la poupée — Valse inversée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
+| `DODGE + L` | Ombres de la poupée — Pas de poupée | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
+| `P-GUARD + H` | Ombres de la poupée — Fil de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
+| `RISE + S` | Ombres de la poupée — Remontage du corps | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
 | `S` | Ombres de la poupée | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Projette des silhouettes et se cache derrière ses doubles. |
 | `→ + S` | Ombres de la poupée — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
 | `← + S` | Ombres de la poupée — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Projette des silhouettes et se cache derrière ses doubles. |
@@ -3162,7 +3666,7 @@ Comportement source : Projette des silhouettes et se cache derrière ses doubles
 
 ## Shadow — DP
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Projection invoquée par la Doll.
 
@@ -3177,6 +3681,10 @@ Comportement source : Projection invoquée par la Doll.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
+| `← + T` | Double intangible — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
+| `DODGE + L` | Double intangible — riposte d’apparition | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Projection invoquée par la Doll. |
+| `P-GUARD + H` | Double intangible — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
+| `RISE + S` | Double intangible — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
 | `S` | Double intangible | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Projection invoquée par la Doll. |
 | `→ + S` | Double intangible — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Projection invoquée par la Doll. |
 | `← + S` | Double intangible — apparition attestée | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Projection invoquée par la Doll. |
@@ -3187,7 +3695,7 @@ Comportement source : Projection invoquée par la Doll.
 
 ## Prisoner Minion — Brawler — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Combattant rapide au corps à corps.
 
@@ -3202,6 +3710,10 @@ Comportement source : Combattant rapide au corps à corps.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
+| `← + T` | Combo du prisonnier — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
+| `DODGE + L` | Combo du prisonnier — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
+| `P-GUARD + H` | Combo du prisonnier — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
+| `RISE + S` | Combo du prisonnier — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
 | `S` | Combo du prisonnier | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Combattant rapide au corps à corps. |
 | `→ + S` | Combo du prisonnier — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
 | `← + S` | Combo du prisonnier — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Combattant rapide au corps à corps. |
@@ -3212,7 +3724,7 @@ Comportement source : Combattant rapide au corps à corps.
 
 ## Prisoner Minion — Agile — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante plus mobile.
 
@@ -3227,6 +3739,10 @@ Comportement source : Variante plus mobile.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
+| `← + T` | Esquive du prisonnier — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
+| `DODGE + L` | Esquive du prisonnier — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
+| `P-GUARD + H` | Esquive du prisonnier — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
+| `RISE + S` | Esquive du prisonnier — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
 | `S` | Esquive du prisonnier | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Variante plus mobile. |
 | `→ + S` | Esquive du prisonnier — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
 | `← + S` | Esquive du prisonnier — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Variante plus mobile. |
@@ -3237,7 +3753,7 @@ Comportement source : Variante plus mobile.
 
 ## Prisoner Juggernaut — DP
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Très résistant, charge et projection.
 
@@ -3252,6 +3768,10 @@ Comportement source : Très résistant, charge et projection.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
+| `← + T` | Plaquage du juggernaut — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
+| `DODGE + L` | Plaquage du juggernaut — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
+| `P-GUARD + H` | Plaquage du juggernaut — riposte de garde | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
+| `RISE + S` | Plaquage du juggernaut — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Très résistant, charge et projection. |
 | `S` | Plaquage du juggernaut | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Très résistant, charge et projection. |
 | `→ + S` | Plaquage du juggernaut — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Très résistant, charge et projection. |
 | `← + S` | Plaquage du juggernaut — garde attestée | special / mid | 10/5/24 | 101 | 177 | DIRECTEMENT ATTESTÉ | Très résistant, charge et projection. |
@@ -3262,7 +3782,7 @@ Comportement source : Très résistant, charge et projection.
 
 ## Tormented Soul — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Apparition liée aux séquences de l’Otherworld.
 
@@ -3277,6 +3797,10 @@ Comportement source : Apparition liée aux séquences de l’Otherworld.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
+| `← + T` | Souffle du tourment — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
+| `DODGE + L` | Souffle du tourment — Déphasage offensif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
+| `P-GUARD + H` | Souffle du tourment — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
+| `RISE + S` | Souffle du tourment — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
 | `S` | Souffle du tourment | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Apparition liée aux séquences de l’Otherworld. |
 | `→ + S` | Souffle du tourment — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
 | `← + S` | Souffle du tourment — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Apparition liée aux séquences de l’Otherworld. |
@@ -3287,7 +3811,7 @@ Comportement source : Apparition liée aux séquences de l’Otherworld.
 
 ## Wall Corpse — DP
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Créature fixée au mur projetant des substances.
 
@@ -3302,6 +3826,10 @@ Comportement source : Créature fixée au mur projetant des substances.
 | `↓ + H` | Fissure basse | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
 | `AIR + H` | Effondrement | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
 | `T` | Ensevelissement | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
+| `← + T` | Jet du cadavre mural — Ensevelissement arrière | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
+| `DODGE + L` | Jet du cadavre mural — Glissement de paroi | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
+| `P-GUARD + H` | Jet du cadavre mural — Mur de réponse | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
+| `RISE + S` | Jet du cadavre mural — reprise depuis le sol | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
 | `S` | Jet du cadavre mural | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Créature fixée au mur projetant des substances. |
 | `→ + S` | Jet du cadavre mural — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
 | `← + S` | Jet du cadavre mural — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Créature fixée au mur projetant des substances. |
@@ -3312,7 +3840,7 @@ Comportement source : Créature fixée au mur projetant des substances.
 
 ## Void — DP
 
-**3 directs · 11 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Poursuite de l’Otherworld adaptée en mur avançant.
 
@@ -3327,6 +3855,10 @@ Comportement source : Poursuite de l’Otherworld adaptée en mur avançant.
 | `↓ + H` | Aspiration du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
 | `AIR + H` | Renversement du plan | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
 | `T` | Dévoration de l’espace — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Poursuite de l’Otherworld adaptée en mur avançant. |
+| `← + T` | Dévoration de l’espace — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
+| `DODGE + L` | Décalage du corridor | reversal / mid | 6/5/18 | 82 | 120 | DIRECTEMENT ATTESTÉ | Poursuite de l’Otherworld adaptée en mur avançant. |
+| `P-GUARD + H` | Effacement de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
+| `RISE + S` | Retour du néant | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
 | `S` | Mur du Void | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Poursuite de l’Otherworld adaptée en mur avançant. |
 | `→ + S` | Dévoration de l’espace | special / unblockable | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Poursuite de l’Otherworld adaptée en mur avançant. |
 | `← + S` | Repli impossible | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Poursuite de l’Otherworld adaptée en mur avançant. |
@@ -3337,7 +3869,7 @@ Comportement source : Poursuite de l’Otherworld adaptée en mur avançant.
 
 ## Monocle Man — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Apparition symbolique adaptée en combattant secret.
 
@@ -3352,6 +3884,10 @@ Comportement source : Apparition symbolique adaptée en combattant secret.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
+| `← + T` | Regard du monocle — Projection brisée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
+| `DODGE + L` | Regard du monocle — Retour convulsif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
+| `P-GUARD + H` | Regard du monocle — Riposte du corps | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
+| `RISE + S` | Regard du monocle — Reprise impossible | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
 | `S` | Regard du monocle | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Apparition symbolique adaptée en combattant secret. |
 | `→ + S` | Regard du monocle — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
 | `← + S` | Regard du monocle — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Apparition symbolique adaptée en combattant secret. |
@@ -3362,7 +3898,7 @@ Comportement source : Apparition symbolique adaptée en combattant secret.
 
 ## Bogeyman — DP
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Frappe au marteau, exécution lente et massive.
 
@@ -3377,6 +3913,10 @@ Comportement source : Frappe au marteau, exécution lente et massive.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 98 | 123 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 120 | 113 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 151 | 73 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
+| `← + T` | Marteau du Bogeyman — Projection brisée | throw / throw | 9/3/30 | 145 | 76 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
+| `DODGE + L` | Marteau du Bogeyman — Retour convulsif | reversal / mid | 6/5/18 | 79 | 109 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
+| `P-GUARD + H` | Marteau du Bogeyman — Riposte du corps | counter / mid | 5/5/22 | 134 | 127 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
+| `RISE + S` | Marteau du Bogeyman — Reprise impossible | reversal / low | 8/8/28 | 115 | 142 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
 | `S` | Marteau du Bogeyman | special / mid | 15/6/26 | 153 | 177 | DIRECTEMENT ATTESTÉ | Frappe au marteau, exécution lente et massive. |
 | `→ + S` | Marteau du Bogeyman — Charge signature | special / mid | 13/10/29 | 169 | 208 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
 | `← + S` | Marteau du Bogeyman — Armure du cauchemar | special / mid | 10/5/24 | 106 | 177 | COMPOSITE LORE-FRIENDLY | Frappe au marteau, exécution lente et massive. |
@@ -3387,7 +3927,7 @@ Comportement source : Frappe au marteau, exécution lente et massive.
 
 ## Wheelman — DP
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Boss final mécanisé, câbles et décharges.
 
@@ -3402,6 +3942,10 @@ Comportement source : Boss final mécanisé, câbles et décharges.
 | `↓ + H` | Écrasement de roue | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
 | `AIR + H` | Chute mécanique | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
 | `T` | Câbles de contention | throw / throw | 8/3/28 | 156 | 81 | DIRECTEMENT ATTESTÉ | Boss final mécanisé, câbles et décharges. |
+| `← + T` | Machine du Wheelman — Marche arrière forcée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
+| `DODGE + L` | Machine du Wheelman — Écart de roue | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
+| `P-GUARD + H` | Machine du Wheelman — Collision de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
+| `RISE + S` | Machine du Wheelman — Redémarrage hanté | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
 | `S` | Décharge des câbles | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss final mécanisé, câbles et décharges. |
 | `→ + S` | Machine du Wheelman — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Boss final mécanisé, câbles et décharges. |
 | `← + S` | Machine du Wheelman — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss final mécanisé, câbles et décharges. |
@@ -3412,7 +3956,7 @@ Comportement source : Boss final mécanisé, câbles et décharges.
 
 ## Anne Cunningham — DP
 
-**0 directs · 14 composites · 2 adaptations.**
+**0 directs · 18 composites · 2 adaptations.**
 
 Comportement source : Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire.
 
@@ -3427,6 +3971,10 @@ Comportement source : Affrontement narratif humain adapté depuis la confrontati
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 76 | 104 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 92 | 96 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 99 | 62 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
+| `← + T` | Interception d’Anne — Projection brisée | throw / throw | 9/3/30 | 95 | 64 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
+| `DODGE + L` | Interception d’Anne — Retour convulsif | reversal / mid | 6/5/18 | 61 | 92 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
+| `P-GUARD + H` | Interception d’Anne — Riposte du corps | counter / mid | 5/5/22 | 103 | 108 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
+| `RISE + S` | Interception d’Anne — Reprise impossible | reversal / low | 8/8/28 | 88 | 120 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
 | `S` | Interception d’Anne | special / mid | 15/6/26 | 118 | 150 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
 | `→ + S` | Interception d’Anne — Assaut signature | special / mid | 13/10/29 | 130 | 176 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
 | `← + S` | Interception d’Anne — Retrait trompeur | special / mid | 10/5/24 | 82 | 150 | COMPOSITE LORE-FRIENDLY | Affrontement narratif humain adapté depuis la confrontation finale et le scénario complémentaire. |
@@ -3437,7 +3985,7 @@ Comportement source : Affrontement narratif humain adapté depuis la confrontati
 
 ## Mama — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss unique de The Arcade, coups massifs et invocations.
 
@@ -3452,6 +4000,10 @@ Comportement source : Boss unique de The Arcade, coups massifs et invocations.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
 | `T` | Étreinte de Mama — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Boss unique de The Arcade, coups massifs et invocations. |
+| `← + T` | Étreinte de Mama — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
+| `DODGE + L` | Étreinte de Mama — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
+| `P-GUARD + H` | Étreinte de Mama — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
+| `RISE + S` | Étreinte de Mama — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
 | `S` | Étreinte de Mama | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss unique de The Arcade, coups massifs et invocations. |
 | `→ + S` | Étreinte de Mama — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
 | `← + S` | Étreinte de Mama — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss unique de The Arcade, coups massifs et invocations. |
@@ -3462,7 +4014,7 @@ Comportement source : Boss unique de The Arcade, coups massifs et invocations.
 
 ## Phantom — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Boss fantomatique unique, téléportations et projectiles.
 
@@ -3477,6 +4029,10 @@ Comportement source : Boss fantomatique unique, téléportations et projectiles.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
+| `← + T` | Assaut spectral — Possession inversée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
+| `DODGE + L` | Assaut spectral — riposte d’apparition | reversal / mid | 6/5/18 | 82 | 120 | DIRECTEMENT ATTESTÉ | Boss fantomatique unique, téléportations et projectiles. |
+| `P-GUARD + H` | Assaut spectral — Retour spectral | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
+| `RISE + S` | Assaut spectral — Réapparition du sol | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
 | `S` | Assaut spectral | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss fantomatique unique, téléportations et projectiles. |
 | `→ + S` | Assaut spectral — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss fantomatique unique, téléportations et projectiles. |
 | `← + S` | Assaut spectral — apparition attestée | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Boss fantomatique unique, téléportations et projectiles. |
@@ -3487,7 +4043,7 @@ Comportement source : Boss fantomatique unique, téléportations et projectiles.
 
 ## Greedy Worm — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Adaptation active du Greedy Worm pour l’arcade.
 
@@ -3502,6 +4058,10 @@ Comportement source : Adaptation active du Greedy Worm pour l’arcade.
 | `↓ + H` | Balayage du segment | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
 | `AIR + H` | Retombée souterraine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
 | `T` | Dévoration partielle | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
+| `← + T` | Tunnel de l’Arcade — Rejet annelé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
+| `DODGE + L` | Tunnel de l’Arcade — Surgissement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
+| `P-GUARD + H` | Tunnel de l’Arcade — Mâchoire de réponse | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
+| `RISE + S` | Tunnel de l’Arcade — Retour souterrain | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
 | `S` | Tunnel de l’Arcade | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Adaptation active du Greedy Worm pour l’arcade. |
 | `→ + S` | Tunnel de l’Arcade — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
 | `← + S` | Tunnel de l’Arcade — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Adaptation active du Greedy Worm pour l’arcade. |
@@ -3512,7 +4072,7 @@ Comportement source : Adaptation active du Greedy Worm pour l’arcade.
 
 ## Split Worm — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour du Split Worm dans un format rail-shooter.
 
@@ -3527,6 +4087,10 @@ Comportement source : Retour du Split Worm dans un format rail-shooter.
 | `↓ + H` | Balayage du segment | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
 | `AIR + H` | Retombée souterraine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
 | `T` | Dévoration partielle | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
+| `← + T` | Gueule du tunnel d’arcade — Rejet annelé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
+| `DODGE + L` | Gueule du tunnel d’arcade — Surgissement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
+| `P-GUARD + H` | Gueule du tunnel d’arcade — Mâchoire de réponse | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
+| `RISE + S` | Gueule du tunnel d’arcade — Retour souterrain | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
 | `S` | Gueule du tunnel d’arcade | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Retour du Split Worm dans un format rail-shooter. |
 | `→ + S` | Gueule du tunnel d’arcade — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
 | `← + S` | Gueule du tunnel d’arcade — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Retour du Split Worm dans un format rail-shooter. |
@@ -3537,7 +4101,7 @@ Comportement source : Retour du Split Worm dans un format rail-shooter.
 
 ## Tremer — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour du Tremer dans les vagues de The Arcade.
 
@@ -3552,6 +4116,10 @@ Comportement source : Retour du Tremer dans les vagues de The Arcade.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
+| `← + T` | Fourmillement du rail — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
+| `DODGE + L` | Fourmillement du rail — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
+| `P-GUARD + H` | Fourmillement du rail — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
+| `RISE + S` | Fourmillement du rail — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
 | `S` | Fourmillement du rail | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Retour du Tremer dans les vagues de The Arcade. |
 | `→ + S` | Fourmillement du rail — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
 | `← + S` | Fourmillement du rail — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Retour du Tremer dans les vagues de The Arcade. |
@@ -3562,7 +4130,7 @@ Comportement source : Retour du Tremer dans les vagues de The Arcade.
 
 ## Double Head — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour du Double Head dans les rues et couloirs de The Arcade.
 
@@ -3577,6 +4145,10 @@ Comportement source : Retour du Double Head dans les rues et couloirs de The Arc
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
+| `← + T` | Morsure sur rail — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
+| `DODGE + L` | Morsure sur rail — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
+| `P-GUARD + H` | Morsure sur rail — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
+| `RISE + S` | Morsure sur rail — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
 | `S` | Morsure sur rail | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Retour du Double Head dans les rues et couloirs de The Arcade. |
 | `→ + S` | Morsure sur rail — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
 | `← + S` | Morsure sur rail — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Retour du Double Head dans les rues et couloirs de The Arcade. |
@@ -3587,7 +4159,7 @@ Comportement source : Retour du Double Head dans les rues et couloirs de The Arc
 
 ## Insane Cancer — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour massif de l’Insane Cancer dans les séquences de tir.
 
@@ -3602,6 +4174,10 @@ Comportement source : Retour massif de l’Insane Cancer dans les séquences de 
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
 | `T` | Absorption | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
+| `← + T` | Blocage du corridor — Reflux charnel | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
+| `DODGE + L` | Blocage du corridor — Débordement latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
+| `P-GUARD + H` | Blocage du corridor — Pulsation de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
+| `RISE + S` | Blocage du corridor — Reconstitution organique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
 | `S` | Blocage du corridor | special / mid | 15/1/26 | 146 | 680 | DIRECTEMENT ATTESTÉ | Retour massif de l’Insane Cancer dans les séquences de tir. |
 | `→ + S` | Blocage du corridor — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
 | `← + S` | Blocage du corridor — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Retour massif de l’Insane Cancer dans les séquences de tir. |
@@ -3612,7 +4188,7 @@ Comportement source : Retour massif de l’Insane Cancer dans les séquences de 
 
 ## Hummer — Arcade — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Retour des Hummers en essaims aériens.
 
@@ -3627,6 +4203,10 @@ Comportement source : Retour des Hummers en essaims aériens.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
+| `← + T` | Nuée de l’hôpital — Largage arrière | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
+| `DODGE + L` | Nuée de l’hôpital — Battement d’évasion | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
+| `P-GUARD + H` | Nuée de l’hôpital — Serre de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
+| `RISE + S` | Nuée de l’hôpital — Redécollage | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
 | `S` | Nuée de l’hôpital | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Retour des Hummers en essaims aériens. |
 | `→ + S` | Nuée de l’hôpital — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
 | `← + S` | Nuée de l’hôpital — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Retour des Hummers en essaims aériens. |
@@ -3637,7 +4217,7 @@ Comportement source : Retour des Hummers en essaims aériens.
 
 ## Numb Body — Arcade — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Retour du Numb Body en vagues rapides.
 
@@ -3652,6 +4232,10 @@ Comportement source : Retour du Numb Body en vagues rapides.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
+| `← + T` | Charge de la galerie — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
+| `DODGE + L` | Charge de la galerie — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
+| `P-GUARD + H` | Charge de la galerie — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
+| `RISE + S` | Charge de la galerie — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
 | `S` | Charge de la galerie | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Retour du Numb Body en vagues rapides. |
 | `→ + S` | Charge de la galerie — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Retour du Numb Body en vagues rapides. |
 | `← + S` | Charge de la galerie — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Retour du Numb Body en vagues rapides. |
@@ -3662,7 +4246,7 @@ Comportement source : Retour du Numb Body en vagues rapides.
 
 ## Nurse — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour des infirmières dans Brookhaven.
 
@@ -3677,6 +4261,10 @@ Comportement source : Retour des infirmières dans Brookhaven.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
+| `← + T` | Service de Brookhaven — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
+| `DODGE + L` | Service de Brookhaven — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
+| `P-GUARD + H` | Service de Brookhaven — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
+| `RISE + S` | Service de Brookhaven — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
 | `S` | Service de Brookhaven | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Retour des infirmières dans Brookhaven. |
 | `→ + S` | Service de Brookhaven — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
 | `← + S` | Service de Brookhaven — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Retour des infirmières dans Brookhaven. |
@@ -3687,7 +4275,7 @@ Comportement source : Retour des infirmières dans Brookhaven.
 
 ## Gum Head — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour du Gum Head, parfois armé, dans les vagues de The Arcade.
 
@@ -3702,6 +4290,10 @@ Comportement source : Retour du Gum Head, parfois armé, dans les vagues de The 
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
+| `← + T` | Assaut du métro — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
+| `DODGE + L` | Assaut du métro — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
+| `P-GUARD + H` | Assaut du métro — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
+| `RISE + S` | Assaut du métro — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
 | `S` | Assaut du métro | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
 | `→ + S` | Assaut du métro — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
 | `← + S` | Assaut du métro — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Retour du Gum Head, parfois armé, dans les vagues de The Arcade. |
@@ -3712,7 +4304,7 @@ Comportement source : Retour du Gum Head, parfois armé, dans les vagues de The 
 
 ## Red Pyramid Thing — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Affrontement de Red Pyramid Thing adapté au rail-shooter.
 
@@ -3727,6 +4319,10 @@ Comportement source : Affrontement de Red Pyramid Thing adapté au rail-shooter.
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
+| `← + T` | Sentence sur rail — Condamnation arrière | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
+| `DODGE + L` | Sentence sur rail — Pas de l’exécuteur | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
+| `P-GUARD + H` | Sentence sur rail — Sentence de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
+| `RISE + S` | Sentence sur rail — Relèvement du bourreau | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
 | `S` | Sentence sur rail | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
 | `→ + S` | Sentence sur rail — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
 | `← + S` | Sentence sur rail — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Affrontement de Red Pyramid Thing adapté au rail-shooter. |
@@ -3737,7 +4333,7 @@ Comportement source : Affrontement de Red Pyramid Thing adapté au rail-shooter.
 
 ## Creeper — Arcade — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Retour des Creepers en groupes au ras du sol.
 
@@ -3752,6 +4348,10 @@ Comportement source : Retour des Creepers en groupes au ras du sol.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
+| `← + T` | Essaim des égouts — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
+| `DODGE + L` | Essaim des égouts — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
+| `P-GUARD + H` | Essaim des égouts — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
+| `RISE + S` | Essaim des égouts — reprise depuis le sol | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
 | `S` | Essaim des égouts | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Retour des Creepers en groupes au ras du sol. |
 | `→ + S` | Essaim des égouts — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
 | `← + S` | Essaim des égouts — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Retour des Creepers en groupes au ras du sol. |
@@ -3762,7 +4362,7 @@ Comportement source : Retour des Creepers en groupes au ras du sol.
 
 ## Scraper — Arcade — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Retour du Scraper dans les zones de culte.
 
@@ -3777,6 +4377,10 @@ Comportement source : Retour du Scraper dans les zones de culte.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
+| `← + T` | Lames sur rail — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
+| `DODGE + L` | Lames sur rail — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
+| `P-GUARD + H` | Lames sur rail — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
+| `RISE + S` | Lames sur rail — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
 | `S` | Lames sur rail | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Retour du Scraper dans les zones de culte. |
 | `→ + S` | Lames sur rail — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
 | `← + S` | Lames sur rail — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Retour du Scraper dans les zones de culte. |
@@ -3787,7 +4391,7 @@ Comportement source : Retour du Scraper dans les zones de culte.
 
 ## Toadstool — Arcade — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Retour du Toadstool dans les zones souterraines.
 
@@ -3802,6 +4406,10 @@ Comportement source : Retour du Toadstool dans les zones souterraines.
 | `↓ + H` | Racines fongiques | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
 | `AIR + H` | Pluie toxique | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
 | `T` | Enveloppement mycélien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
+| `← + T` | Spore du cimetière — Rejet mycélien | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
+| `DODGE + L` | Spore du cimetière — Poussée oblique | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
+| `P-GUARD + H` | Spore du cimetière — Spore de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
+| `RISE + S` | Spore du cimetière — Repousse fongique | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
 | `S` | Spore du cimetière | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Retour du Toadstool dans les zones souterraines. |
 | `→ + S` | Spore du cimetière — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
 | `← + S` | Spore du cimetière — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Retour du Toadstool dans les zones souterraines. |
@@ -3812,7 +4420,7 @@ Comportement source : Retour du Toadstool dans les zones souterraines.
 
 ## Tuberculosis — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices.
 
@@ -3827,6 +4435,10 @@ Comportement source : Boss de toit de Brookhaven, masse respiratoire qui attaque
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
+| `← + T` | Poumon de Brookhaven — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
+| `DODGE + L` | Poumon de Brookhaven — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
+| `P-GUARD + H` | Poumon de Brookhaven — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
+| `RISE + S` | Poumon de Brookhaven — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
 | `S` | Souffle de Brookhaven | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
 | `→ + S` | Poumon de Brookhaven — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
 | `← + S` | Poumon de Brookhaven — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss de toit de Brookhaven, masse respiratoire qui attaque par souffle et appendices. |
@@ -3837,7 +4449,7 @@ Comportement source : Boss de toit de Brookhaven, masse respiratoire qui attaque
 
 ## Robbie the Rabbit — Axe — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Mascotte hostile armée d’une hache dans The Arcade.
 
@@ -3852,6 +4464,10 @@ Comportement source : Mascotte hostile armée d’une hache dans The Arcade.
 | `↓ + H` | Section basse | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
 | `T` | Fils de contrôle | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
+| `← + T` | Hache de Robbie — Valse inversée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
+| `DODGE + L` | Hache de Robbie — Pas de poupée | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
+| `P-GUARD + H` | Hache de Robbie — Fil de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
+| `RISE + S` | Hache de Robbie — Remontage du corps | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
 | `S` | Hache de Robbie | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Mascotte hostile armée d’une hache dans The Arcade. |
 | `→ + S` | Hache de Robbie — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
 | `← + S` | Hache de Robbie — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Mascotte hostile armée d’une hache dans The Arcade. |
@@ -3862,7 +4478,7 @@ Comportement source : Mascotte hostile armée d’une hache dans The Arcade.
 
 ## Robbie the Rabbit — Chainsaw — ARCADE
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante hostile de Robbie armée d’une tronçonneuse.
 
@@ -3877,6 +4493,10 @@ Comportement source : Variante hostile de Robbie armée d’une tronçonneuse.
 | `↓ + H` | Section basse | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
 | `T` | Fils de contrôle | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
+| `← + T` | Tronçonneuse de Robbie — Valse inversée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
+| `DODGE + L` | Tronçonneuse de Robbie — Pas de poupée | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
+| `P-GUARD + H` | Tronçonneuse de Robbie — Fil de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
+| `RISE + S` | Tronçonneuse de Robbie — Remontage du corps | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
 | `S` | Tronçonneuse de Robbie | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Variante hostile de Robbie armée d’une tronçonneuse. |
 | `→ + S` | Tronçonneuse de Robbie — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
 | `← + S` | Tronçonneuse de Robbie — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’une tronçonneuse. |
@@ -3887,7 +4507,7 @@ Comportement source : Variante hostile de Robbie armée d’une tronçonneuse.
 
 ## Robbie the Rabbit — Shotgun — ARCADE
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Variante hostile de Robbie armée d’un fusil.
 
@@ -3902,6 +4522,10 @@ Comportement source : Variante hostile de Robbie armée d’un fusil.
 | `↓ + H` | Section basse | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
 | `T` | Fils de contrôle | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
+| `← + T` | Décharge de Robbie — Valse inversée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
+| `DODGE + L` | Décharge de Robbie — Pas de poupée | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
+| `P-GUARD + H` | Décharge de Robbie — Fil de riposte | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
+| `RISE + S` | Décharge de Robbie — Remontage du corps | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
 | `S` | Décharge de Robbie | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Variante hostile de Robbie armée d’un fusil. |
 | `→ + S` | Décharge de Robbie — assaut attesté | special / mid | 13/10/29 | 117 | 232 | DIRECTEMENT ATTESTÉ | Variante hostile de Robbie armée d’un fusil. |
 | `← + S` | Décharge de Robbie — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Variante hostile de Robbie armée d’un fusil. |
@@ -3912,7 +4536,7 @@ Comportement source : Variante hostile de Robbie armée d’un fusil.
 
 ## Air Screamer — BOM
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -3927,9 +4551,13 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 62 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 76 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 81 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Piqué du livre — Largage arrière | throw / throw | 9/3/30 | 77 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Piqué du livre — Battement d’évasion — riposte d’esquive | reversal / mid | 6/5/18 | 50 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Piqué du livre — Serre de riposte | counter / mid | 5/5/22 | 84 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Piqué du livre — Redécollage | reversal / low | 8/8/28 | 72 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Piqué du livre | special / mid | 15/1/26 | 96 | 720 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Piqué du livre — assaut attesté | special / mid | 13/10/29 | 107 | 208 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
-| `← + S` | Piqué du livre — Battement d’évasion | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + S` | Piqué du livre — Battement d’évasion — repli | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `↓ + S` | Piqué du livre — Rase-mottes | special / low | 19/1/31 | 89 | 720 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + S` | Piqué du livre — attaque aérienne | special / overhead | 14/1/24 | 101 | 560 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `N` | NIGHTMARE — Piqué du livre | nightmare / mid | 27/1/43 | 205 | 980 | ADAPTATION VERSUS | Version Book of Memories. |
@@ -3937,7 +4565,7 @@ Comportement source : Version Book of Memories.
 
 ## Bogeyman — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -3952,6 +4580,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Marteau du livre — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Marteau du livre — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Marteau du livre — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Marteau du livre — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Marteau du livre | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Marteau du livre — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Marteau du livre — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -3962,7 +4594,7 @@ Comportement source : Version Book of Memories.
 
 ## Butcher — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -3977,6 +4609,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Couperet du livre — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Couperet du livre — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Couperet du livre — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Couperet du livre — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Couperet du livre | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Couperet du livre — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Couperet du livre — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -3987,7 +4623,7 @@ Comportement source : Version Book of Memories.
 
 ## Double Head — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4002,6 +4638,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Morsure du livre — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Morsure du livre — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Morsure du livre — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Morsure du livre — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Morsure du livre | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Morsure du livre — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Morsure du livre — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4012,7 +4652,7 @@ Comportement source : Version Book of Memories.
 
 ## Ghost — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4027,6 +4667,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Possession brève | throw / throw | 8/3/28 | 96 | 69 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Passage du livre — Possession inversée | throw / throw | 9/3/30 | 92 | 72 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Passage du livre — Déphasage offensif | reversal / mid | 6/5/18 | 59 | 103 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Passage du livre — Retour spectral | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Passage du livre — Réapparition du sol | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Passage du livre | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Passage du livre — Traversée | special / mid | 13/10/29 | 126 | 197 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Passage du livre — Déphasage | special / mid | 10/5/24 | 80 | 168 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4037,7 +4681,7 @@ Comportement source : Version Book of Memories.
 
 ## Insane Cancer — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4052,6 +4696,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Absorption | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Tumeur du livre — Reflux charnel | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Tumeur du livre — Débordement latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Tumeur du livre — Pulsation de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Tumeur du livre — Reconstitution organique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Tumeur du livre | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Tumeur du livre — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Tumeur du livre — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4062,7 +4710,7 @@ Comportement source : Version Book of Memories.
 
 ## Needler — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4077,6 +4725,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Piège de pattes | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Cocon | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Garde du livre — Traction du cocon | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Garde du livre — Pas arachnéen | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Garde du livre — Patte de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Garde du livre — Remontée au fil | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Garde du livre | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Garde du livre — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Garde du livre — Disparition | special / mid | 10/5/22 | 70 | 162 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4087,7 +4739,7 @@ Comportement source : Version Book of Memories.
 
 ## Nurse — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4102,6 +4754,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Soins du livre — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Soins du livre — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Soins du livre — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Soins du livre — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Soins du livre | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Soins du livre — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Soins du livre — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4112,7 +4768,7 @@ Comportement source : Version Book of Memories.
 
 ## Pyramid Head — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4127,6 +4783,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Jugement du livre — Condamnation arrière | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Jugement du livre — Pas de l’exécuteur | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Jugement du livre — Sentence de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Jugement du livre — Relèvement du bourreau | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Jugement du livre | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Jugement du livre — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Jugement du livre — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4137,7 +4797,7 @@ Comportement source : Version Book of Memories.
 
 ## Schism — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4152,6 +4812,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Scission du livre — Projection brisée | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Scission du livre — Retour convulsif | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Scission du livre — Riposte du corps | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Scission du livre — Reprise impossible | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Scission du livre | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Scission du livre — Charge signature | special / mid | 13/10/29 | 161 | 208 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Scission du livre — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4162,7 +4826,7 @@ Comportement source : Version Book of Memories.
 
 ## Straight-Jacket — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4177,6 +4841,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Contrainte du livre — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Contrainte du livre — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Contrainte du livre — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Contrainte du livre — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Contrainte du livre | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Contrainte du livre — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Contrainte du livre — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4187,7 +4855,7 @@ Comportement source : Version Book of Memories.
 
 ## Swarm — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Petites créatures en essaim.
 
@@ -4202,6 +4870,10 @@ Comportement source : Petites créatures en essaim.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
+| `← + T` | Nuée du livre — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
+| `DODGE + L` | Nuée du livre — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
+| `P-GUARD + H` | Nuée du livre — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
+| `RISE + S` | Nuée du livre — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
 | `S` | Nuée du livre | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Petites créatures en essaim. |
 | `→ + S` | Nuée du livre — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
 | `← + S` | Nuée du livre — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Petites créatures en essaim. |
@@ -4212,7 +4884,7 @@ Comportement source : Petites créatures en essaim.
 
 ## Tremer — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4227,6 +4899,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Fourmillement du livre — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Fourmillement du livre — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Fourmillement du livre — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Fourmillement du livre — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Fourmillement du livre | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Fourmillement du livre — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Fourmillement du livre — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4237,7 +4913,7 @@ Comportement source : Version Book of Memories.
 
 ## Flesh Lips — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version Book of Memories.
 
@@ -4252,6 +4928,10 @@ Comportement source : Version Book of Memories.
 | `↓ + H` | Traction au sol | normal / low | 13/6/23 | 92 | 102 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `AIR + H` | Écrasement suspendu | aerial / overhead | 13/7/22 | 113 | 94 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `T` | Suspension | throw / throw | 8/3/28 | 170 | 61 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `← + T` | Cage du livre — Balancement inversé | throw / throw | 9/3/30 | 163 | 63 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `DODGE + L` | Cage du livre — Oscillation d’évasion | reversal / mid | 6/5/18 | 74 | 90 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `P-GUARD + H` | Cage du livre — Barreau de riposte | counter / mid | 5/5/22 | 126 | 106 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
+| `RISE + S` | Cage du livre — Suspension retrouvée | reversal / low | 8/8/28 | 108 | 118 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `S` | Cage du livre | special / mid | 15/6/26 | 143 | 147 | DIRECTEMENT ATTESTÉ | Version Book of Memories. |
 | `→ + S` | Cage du livre — Capture en marche | special / mid | 13/10/29 | 159 | 172 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
 | `← + S` | Cage du livre — Appel du corps | special / mid | 10/5/24 | 100 | 147 | COMPOSITE LORE-FRIENDLY | Version Book of Memories. |
@@ -4262,7 +4942,7 @@ Comportement source : Version Book of Memories.
 
 ## Mother — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Boss propre au Book of Memories, invocations et masse charnelle.
 
@@ -4277,6 +4957,10 @@ Comportement source : Boss propre au Book of Memories, invocations et masse char
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
+| `← + T` | Matrice du livre — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
+| `DODGE + L` | Matrice du livre — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
+| `P-GUARD + H` | Matrice du livre — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
+| `RISE + S` | Matrice du livre — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
 | `S` | Matrice du livre | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss propre au Book of Memories, invocations et masse charnelle. |
 | `→ + S` | Matrice du livre — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
 | `← + S` | Matrice du livre — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss propre au Book of Memories, invocations et masse charnelle. |
@@ -4287,7 +4971,7 @@ Comportement source : Boss propre au Book of Memories, invocations et masse char
 
 ## Valtiel — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Version boss de Valtiel.
 
@@ -4302,6 +4986,10 @@ Comportement source : Version boss de Valtiel.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
+| `← + T` | Gardien du livre — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
+| `DODGE + L` | Gardien du livre — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
+| `P-GUARD + H` | Gardien du livre — Riposte du corps | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
+| `RISE + S` | Gardien du livre — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
 | `S` | Gardien du livre | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Version boss de Valtiel. |
 | `→ + S` | Gardien du livre — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
 | `← + S` | Gardien du livre — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Version boss de Valtiel. |
@@ -4312,7 +5000,7 @@ Comportement source : Version boss de Valtiel.
 
 ## Fire Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire du feu.
 
@@ -4327,6 +5015,10 @@ Comportement source : Gardien élémentaire du feu.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
+| `← + T` | Cercle de feu — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
+| `DODGE + L` | Cercle de feu — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
+| `P-GUARD + H` | Cercle de feu — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
+| `RISE + S` | Cercle de feu — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
 | `S` | Cercle de feu | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Gardien élémentaire du feu. |
 | `→ + S` | Cercle de feu — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
 | `← + S` | Cercle de feu — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du feu. |
@@ -4337,7 +5029,7 @@ Comportement source : Gardien élémentaire du feu.
 
 ## Wood Guardian — BOM
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire du bois.
 
@@ -4352,6 +5044,10 @@ Comportement source : Gardien élémentaire du bois.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
+| `← + T` | Racines du bois — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
+| `DODGE + L` | Racines du bois — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
+| `P-GUARD + H` | Racines du bois — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
+| `RISE + S` | Racines du bois — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
 | `S` | Racines du bois | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire du bois. |
 | `→ + S` | Racines du bois — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
 | `← + S` | Racines du bois — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du bois. |
@@ -4362,7 +5058,7 @@ Comportement source : Gardien élémentaire du bois.
 
 ## Wood Sapling — BOM
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Invocation du Wood Guardian.
 
@@ -4377,6 +5073,10 @@ Comportement source : Invocation du Wood Guardian.
 | `↓ + H` | Racines fongiques | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
 | `AIR + H` | Pluie toxique | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
 | `T` | Enveloppement mycélien | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
+| `← + T` | Jeune racine — Rejet mycélien | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
+| `DODGE + L` | Jeune racine — Poussée oblique | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
+| `P-GUARD + H` | Jeune racine — Spore de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
+| `RISE + S` | Jeune racine — Repousse fongique | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
 | `S` | Jeune racine | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Invocation du Wood Guardian. |
 | `→ + S` | Jeune racine — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
 | `← + S` | Jeune racine — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Invocation du Wood Guardian. |
@@ -4387,7 +5087,7 @@ Comportement source : Invocation du Wood Guardian.
 
 ## Light Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire de la lumière.
 
@@ -4402,6 +5102,10 @@ Comportement source : Gardien élémentaire de la lumière.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
+| `← + T` | Rayon de lumière — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
+| `DODGE + L` | Rayon de lumière — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
+| `P-GUARD + H` | Rayon de lumière — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
+| `RISE + S` | Rayon de lumière — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
 | `S` | Rayon de lumière | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire de la lumière. |
 | `→ + S` | Rayon de lumière — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
 | `← + S` | Rayon de lumière — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la lumière. |
@@ -4412,7 +5116,7 @@ Comportement source : Gardien élémentaire de la lumière.
 
 ## Water Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire de l’eau.
 
@@ -4427,6 +5131,10 @@ Comportement source : Gardien élémentaire de l’eau.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
+| `← + T` | Vague du gardien — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
+| `DODGE + L` | Vague du gardien — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
+| `P-GUARD + H` | Vague du gardien — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
+| `RISE + S` | Vague du gardien — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
 | `S` | Vague du gardien | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire de l’eau. |
 | `→ + S` | Vague du gardien — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
 | `← + S` | Vague du gardien — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’eau. |
@@ -4437,7 +5145,7 @@ Comportement source : Gardien élémentaire de l’eau.
 
 ## Earth Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire de la terre.
 
@@ -4452,6 +5160,10 @@ Comportement source : Gardien élémentaire de la terre.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
+| `← + T` | Faille de terre — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
+| `DODGE + L` | Faille de terre — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
+| `P-GUARD + H` | Faille de terre — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
+| `RISE + S` | Faille de terre — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
 | `S` | Faille de terre | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire de la terre. |
 | `→ + S` | Faille de terre — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
 | `← + S` | Faille de terre — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de la terre. |
@@ -4462,7 +5174,7 @@ Comportement source : Gardien élémentaire de la terre.
 
 ## Blood Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire du sang.
 
@@ -4477,6 +5189,10 @@ Comportement source : Gardien élémentaire du sang.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
+| `← + T` | Marée de sang — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
+| `DODGE + L` | Marée de sang — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
+| `P-GUARD + H` | Marée de sang — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
+| `RISE + S` | Marée de sang — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
 | `S` | Marée de sang | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire du sang. |
 | `→ + S` | Marée de sang — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
 | `← + S` | Marée de sang — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire du sang. |
@@ -4487,7 +5203,7 @@ Comportement source : Gardien élémentaire du sang.
 
 ## Blood Baby — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Petite invocation de la zone sang.
 
@@ -4502,6 +5218,10 @@ Comportement source : Petite invocation de la zone sang.
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
 | `T` | Étreinte de Midwich | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
+| `← + T` | Morsure du sang — Renversement du couloir | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
+| `DODGE + L` | Morsure du sang — Bond de fuite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
+| `P-GUARD + H` | Morsure du sang — Couteau de réponse | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
+| `RISE + S` | Morsure du sang — Réveil sous les pupitres | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
 | `S` | Morsure du sang | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Petite invocation de la zone sang. |
 | `→ + S` | Morsure du sang — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
 | `← + S` | Morsure du sang — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Petite invocation de la zone sang. |
@@ -4512,7 +5232,7 @@ Comportement source : Petite invocation de la zone sang.
 
 ## Blood Mama — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Créature de la zone sang.
 
@@ -4527,6 +5247,10 @@ Comportement source : Créature de la zone sang.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
 | `T` | Absorption | throw / throw | 8/3/28 | 163 | 61 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
+| `← + T` | Protection maternelle — Reflux charnel | throw / throw | 9/3/30 | 156 | 63 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
+| `DODGE + L` | Protection maternelle — Débordement latéral | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
+| `P-GUARD + H` | Protection maternelle — Pulsation de riposte | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
+| `RISE + S` | Protection maternelle — Reconstitution organique | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
 | `S` | Protection maternelle | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Créature de la zone sang. |
 | `→ + S` | Protection maternelle — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
 | `← + S` | Protection maternelle — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Créature de la zone sang. |
@@ -4537,7 +5261,7 @@ Comportement source : Créature de la zone sang.
 
 ## Steel Guardian — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Gardien élémentaire de l’acier.
 
@@ -4552,6 +5276,10 @@ Comportement source : Gardien élémentaire de l’acier.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
+| `← + T` | Marteau d’acier — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
+| `DODGE + L` | Marteau d’acier — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
+| `P-GUARD + H` | Marteau d’acier — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
+| `RISE + S` | Marteau d’acier — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
 | `S` | Marteau d’acier | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Gardien élémentaire de l’acier. |
 | `→ + S` | Marteau d’acier — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
 | `← + S` | Marteau d’acier — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Gardien élémentaire de l’acier. |
@@ -4562,7 +5290,7 @@ Comportement source : Gardien élémentaire de l’acier.
 
 ## Gray Child — BOM
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Contenu d’extension de Book of Memories.
 
@@ -4577,6 +5305,10 @@ Comportement source : Contenu d’extension de Book of Memories.
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `T` | Étreinte de Midwich | throw / throw | 8/3/28 | 163 | 61 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `← + T` | Couteau mémoire — Renversement du couloir | throw / throw | 9/3/30 | 156 | 63 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `DODGE + L` | Couteau mémoire — Bond de fuite | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `P-GUARD + H` | Couteau mémoire — Couteau de réponse | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `RISE + S` | Couteau mémoire — Réveil sous les pupitres | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `S` | Couteau mémoire | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Contenu d’extension de Book of Memories. |
 | `→ + S` | Couteau mémoire — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `← + S` | Couteau mémoire — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
@@ -4587,7 +5319,7 @@ Comportement source : Contenu d’extension de Book of Memories.
 
 ## Raw Shock — BOM
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Contenu d’extension de Book of Memories.
 
@@ -4602,6 +5334,10 @@ Comportement source : Contenu d’extension de Book of Memories.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `T` | Étreinte mémoire — saisie attestée | throw / throw | 8/3/28 | 92 | 72 | DIRECTEMENT ATTESTÉ | Contenu d’extension de Book of Memories. |
+| `← + T` | Étreinte mémoire — retournement de la saisie | throw / throw | 9/3/30 | 86 | 72 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `DODGE + L` | Étreinte mémoire — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `P-GUARD + H` | Étreinte mémoire — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
+| `RISE + S` | Étreinte mémoire — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `S` | Étreinte mémoire | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Contenu d’extension de Book of Memories. |
 | `→ + S` | Étreinte mémoire — Poursuite signature | special / mid | 13/10/29 | 112 | 155 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
 | `← + S` | Étreinte mémoire — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Contenu d’extension de Book of Memories. |
@@ -4612,7 +5348,7 @@ Comportement source : Contenu d’extension de Book of Memories.
 
 ## Lisa — P.T.
 
-**5 directs · 9 composites · 2 adaptations.**
+**6 directs · 12 composites · 2 adaptations.**
 
 Comportement source : Apparition et saisie soudaine dans la boucle du couloir.
 
@@ -4627,6 +5363,10 @@ Comportement source : Apparition et saisie soudaine dans la boucle du couloir.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 73 | 116 | COMPOSITE LORE-FRIENDLY | Apparition et saisie soudaine dans la boucle du couloir. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 90 | 108 | COMPOSITE LORE-FRIENDLY | Apparition et saisie soudaine dans la boucle du couloir. |
 | `T` | Apparition derrière soi — saisie attestée | throw / throw | 8/3/28 | 104 | 72 | DIRECTEMENT ATTESTÉ | Apparition et saisie soudaine dans la boucle du couloir. |
+| `← + T` | Saisie derrière l’épaule | throw / throw | 9/3/30 | 98 | 72 | COMPOSITE LORE-FRIENDLY | Apparition et saisie soudaine dans la boucle du couloir. |
+| `DODGE + L` | Apparition après l’angle mort | reversal / mid | 6/5/18 | 59 | 103 | DIRECTEMENT ATTESTÉ | Apparition et saisie soudaine dans la boucle du couloir. |
+| `P-GUARD + H` | Retour derrière soi | counter / mid | 5/5/22 | 100 | 121 | COMPOSITE LORE-FRIENDLY | Apparition et saisie soudaine dans la boucle du couloir. |
+| `RISE + S` | Réapparition dans la boucle | reversal / low | 8/8/28 | 86 | 134 | COMPOSITE LORE-FRIENDLY | Apparition et saisie soudaine dans la boucle du couloir. |
 | `S` | Apparition derrière soi | special / mid | 15/1/26 | 114 | 720 | DIRECTEMENT ATTESTÉ | Apparition et saisie soudaine dans la boucle du couloir. |
 | `→ + S` | Apparition de Lisa | special / mid | 13/10/29 | 126 | 197 | DIRECTEMENT ATTESTÉ | Apparition et saisie soudaine dans la boucle du couloir. |
 | `← + S` | Boucle du couloir | special / mid | 10/5/24 | 80 | 168 | DIRECTEMENT ATTESTÉ | Apparition et saisie soudaine dans la boucle du couloir. |
@@ -4637,7 +5377,7 @@ Comportement source : Apparition et saisie soudaine dans la boucle du couloir.
 
 ## Sakura Head — TSM
 
-**4 directs · 10 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Traque rapide, frappes de branches et accélérations soudaines.
 
@@ -4652,6 +5392,10 @@ Comportement source : Traque rapide, frappes de branches et accélérations soud
 | `↓ + H` | Ronces du sol | normal / low | 13/6/23 | 68 | 92 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
 | `AIR + H` | Pluie rouge | aerial / overhead | 13/7/22 | 83 | 84 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
 | `T` | Enracinement | throw / throw | 8/3/28 | 89 | 55 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
+| `← + T` | Poursuite des pétales — Enracinement arrière | throw / throw | 9/3/30 | 85 | 56 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
+| `DODGE + L` | Accélération de pétales | reversal / mid | 6/5/18 | 55 | 81 | DIRECTEMENT ATTESTÉ | Traque rapide, frappes de branches et accélérations soudaines. |
+| `P-GUARD + H` | Branches de riposte | counter / mid | 5/5/22 | 93 | 95 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
+| `RISE + S` | Repousse écarlate | reversal / low | 8/8/28 | 79 | 106 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
 | `S` | Poursuite des pétales — signature | special / mid | 15/6/26 | 106 | 132 | DIRECTEMENT ATTESTÉ | Traque rapide, frappes de branches et accélérations soudaines. |
 | `→ + S` | Poursuite des pétales — assaut | special / mid | 13/10/29 | 117 | 178 | DIRECTEMENT ATTESTÉ | Traque rapide, frappes de branches et accélérations soudaines. |
 | `← + S` | Poursuite des pétales — Feinte arrière | special / mid | 10/5/24 | 74 | 132 | COMPOSITE LORE-FRIENDLY | Traque rapide, frappes de branches et accélérations soudaines. |
@@ -4662,7 +5406,7 @@ Comportement source : Traque rapide, frappes de branches et accélérations soud
 
 ## Kashimashi — SH f
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Créature humanoïde aux attaques coordonnées.
 
@@ -4677,6 +5421,10 @@ Comportement source : Créature humanoïde aux attaques coordonnées.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
 | `T` | Saisie florale | throw / throw | 8/3/28 | 94 | 62 | DIRECTEMENT ATTESTÉ | Créature humanoïde aux attaques coordonnées. |
+| `← + T` | Murmure double — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
+| `DODGE + L` | Murmure double — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
+| `P-GUARD + H` | Murmure double — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
+| `RISE + S` | Murmure double — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
 | `S` | Convulsion de Kashimashi | special / mid | 15/6/26 | 112 | 150 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
 | `→ + S` | Murmure double — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
 | `← + S` | Murmure double — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Créature humanoïde aux attaques coordonnées. |
@@ -4687,7 +5435,7 @@ Comportement source : Créature humanoïde aux attaques coordonnées.
 
 ## Ayakakashi — SH f
 
-**6 directs · 8 composites · 2 adaptations.**
+**7 directs · 11 composites · 2 adaptations.**
 
 Comportement source : Feinte, disparition brève et frappe latérale.
 
@@ -4702,6 +5450,10 @@ Comportement source : Feinte, disparition brève et frappe latérale.
 | `↓ + H` | Upward Slash | normal / low | 13/6/21 | 65 | 112 | DIRECTEMENT ATTESTÉ | Feinte, disparition brève et frappe latérale. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
 | `T` | Étreinte impossible | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
+| `← + T` | Masque trompeur — Projection brisée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
+| `DODGE + L` | Masque trompeur — riposte d’apparition | reversal / mid | 6/5/17 | 52 | 99 | DIRECTEMENT ATTESTÉ | Feinte, disparition brève et frappe latérale. |
+| `P-GUARD + H` | Masque trompeur — Riposte du corps | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
+| `RISE + S` | Masque trompeur — Reprise impossible | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
 | `S` | Masque trompeur | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Feinte, disparition brève et frappe latérale. |
 | `→ + S` | Masque trompeur — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Feinte, disparition brève et frappe latérale. |
 | `← + S` | Imitation d’épouvantail | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Feinte, disparition brève et frappe latérale. |
@@ -4712,7 +5464,7 @@ Comportement source : Feinte, disparition brève et frappe latérale.
 
 ## Ara-abare — SH f
 
-**5 directs · 10 composites · 1 adaptations.**
+**5 directs · 14 composites · 1 adaptations.**
 
 Comportement source : Charge brutale et large balayage.
 
@@ -4727,6 +5479,10 @@ Comportement source : Charge brutale et large balayage.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
+| `← + T` | Fureur d’Ebisugaoka — Jet monumental | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
+| `DODGE + L` | Fureur d’Ebisugaoka — Pas de masse | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
+| `P-GUARD + H` | Fureur d’Ebisugaoka — Contre-écrasement | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
+| `RISE + S` | Fureur d’Ebisugaoka — Relèvement sismique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
 | `S` | Fureur d’Ebisugaoka | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Charge brutale et large balayage. |
 | `→ + S` | Fureur d’Ebisugaoka — assaut attesté | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Charge brutale et large balayage. |
 | `← + S` | Fureur d’Ebisugaoka — Armure du cauchemar | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Charge brutale et large balayage. |
@@ -4737,7 +5493,7 @@ Comportement source : Charge brutale et large balayage.
 
 ## Irohihi — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Contrôle de distance avec appendices.
 
@@ -4752,6 +5508,10 @@ Comportement source : Contrôle de distance avec appendices.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
+| `← + T` | Fil coloré — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
+| `DODGE + L` | Fil coloré — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
+| `P-GUARD + H` | Fil coloré — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
+| `RISE + S` | Fil coloré — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
 | `S` | Fil coloré | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Contrôle de distance avec appendices. |
 | `→ + S` | Fil coloré — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
 | `← + S` | Fil coloré — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Contrôle de distance avec appendices. |
@@ -4762,7 +5522,7 @@ Comportement source : Contrôle de distance avec appendices.
 
 ## Corruptor — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Propage des zones de corruption au sol.
 
@@ -4777,6 +5537,10 @@ Comportement source : Propage des zones de corruption au sol.
 | `↓ + H` | Racines fongiques | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
 | `AIR + H` | Pluie toxique | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
 | `T` | Enveloppement mycélien | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
+| `← + T` | Floraison corruptrice — Rejet mycélien | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
+| `DODGE + L` | Floraison corruptrice — Poussée oblique | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
+| `P-GUARD + H` | Floraison corruptrice — Spore de riposte | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
+| `RISE + S` | Floraison corruptrice — reprise depuis le sol | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
 | `S` | Floraison corruptrice | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Propage des zones de corruption au sol. |
 | `→ + S` | Floraison corruptrice — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
 | `← + S` | Floraison corruptrice — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Propage des zones de corruption au sol. |
@@ -4787,7 +5551,7 @@ Comportement source : Propage des zones de corruption au sol.
 
 ## Hatcher — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Ouvre son corps pour saisir et libérer des rejetons.
 
@@ -4802,6 +5566,10 @@ Comportement source : Ouvre son corps pour saisir et libérer des rejetons.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
 | `T` | Éclosion charnelle — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Ouvre son corps pour saisir et libérer des rejetons. |
+| `← + T` | Éclosion charnelle — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
+| `DODGE + L` | Éclosion charnelle — Débordement latéral | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
+| `P-GUARD + H` | Éclosion charnelle — Pulsation de riposte | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
+| `RISE + S` | Éclosion charnelle — Reconstitution organique | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
 | `S` | Éclosion charnelle | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Ouvre son corps pour saisir et libérer des rejetons. |
 | `→ + S` | Éclosion charnelle — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
 | `← + S` | Éclosion charnelle — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Ouvre son corps pour saisir et libérer des rejetons. |
@@ -4812,7 +5580,7 @@ Comportement source : Ouvre son corps pour saisir et libérer des rejetons.
 
 ## Kamugara — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Grande entité rituelle, balayages et sceaux.
 
@@ -4827,6 +5595,10 @@ Comportement source : Grande entité rituelle, balayages et sceaux.
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
 | `T` | Marquage rituel | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
+| `← + T` | Sentence du sanctuaire — Rejet du jugement | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
+| `DODGE + L` | Sentence du sanctuaire — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
+| `P-GUARD + H` | Sentence du sanctuaire — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
+| `RISE + S` | Sentence du sanctuaire — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
 | `S` | Sentence du sanctuaire | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Grande entité rituelle, balayages et sceaux. |
 | `→ + S` | Sentence du sanctuaire — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
 | `← + S` | Sentence du sanctuaire — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Grande entité rituelle, balayages et sceaux. |
@@ -4837,7 +5609,7 @@ Comportement source : Grande entité rituelle, balayages et sceaux.
 
 ## Harai Katashiro — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Effigie rituelle, leurres et déplacements secs.
 
@@ -4852,6 +5624,10 @@ Comportement source : Effigie rituelle, leurres et déplacements secs.
 | `↓ + H` | Section basse | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
 | `T` | Fils de contrôle | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
+| `← + T` | Purification inversée — Valse inversée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
+| `DODGE + L` | Purification inversée — riposte d’apparition | reversal / mid | 6/5/17 | 52 | 99 | DIRECTEMENT ATTESTÉ | Effigie rituelle, leurres et déplacements secs. |
+| `P-GUARD + H` | Purification inversée — Fil de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
+| `RISE + S` | Purification inversée — Remontage du corps | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
 | `S` | Purification inversée | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Effigie rituelle, leurres et déplacements secs. |
 | `→ + S` | Purification inversée — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Effigie rituelle, leurres et déplacements secs. |
 | `← + S` | Purification inversée — apparition attestée | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Effigie rituelle, leurres et déplacements secs. |
@@ -4862,7 +5638,7 @@ Comportement source : Effigie rituelle, leurres et déplacements secs.
 
 ## Oi-omoi — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Masse lourde qui ralentit l’espace proche.
 
@@ -4877,6 +5653,10 @@ Comportement source : Masse lourde qui ralentit l’espace proche.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 94 | 123 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 114 | 113 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
 | `T` | Absorption | throw / throw | 8/3/28 | 144 | 73 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
+| `← + T` | Poids du regret — Reflux charnel | throw / throw | 9/3/30 | 138 | 76 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
+| `DODGE + L` | Poids du regret — Débordement latéral | reversal / mid | 6/5/18 | 75 | 109 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
+| `P-GUARD + H` | Poids du regret — Pulsation de riposte | counter / mid | 5/5/22 | 127 | 127 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
+| `RISE + S` | Poids du regret — Reconstitution organique | reversal / low | 8/8/28 | 109 | 142 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
 | `S` | Deafening Cry | special / mid | 15/6/26 | 146 | 177 | DIRECTEMENT ATTESTÉ | Masse lourde qui ralentit l’espace proche. |
 | `→ + S` | Flailing Attack | special / mid | 13/10/29 | 161 | 208 | DIRECTEMENT ATTESTÉ | Masse lourde qui ralentit l’espace proche. |
 | `← + S` | Repli des poupées | special / mid | 10/5/24 | 101 | 177 | COMPOSITE LORE-FRIENDLY | Masse lourde qui ralentit l’espace proche. |
@@ -4887,7 +5667,7 @@ Comportement source : Masse lourde qui ralentit l’espace proche.
 
 ## Dark Hatcher — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Variante renforcée du Hatcher.
 
@@ -4902,6 +5682,10 @@ Comportement source : Variante renforcée du Hatcher.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
+| `← + T` | Éclosion obscure — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
+| `DODGE + L` | Éclosion obscure — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
+| `P-GUARD + H` | Éclosion obscure — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
+| `RISE + S` | Éclosion obscure — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
 | `S` | Éclosion obscure | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Variante renforcée du Hatcher. |
 | `→ + S` | Éclosion obscure — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
 | `← + S` | Éclosion obscure — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Variante renforcée du Hatcher. |
@@ -4912,7 +5696,7 @@ Comportement source : Variante renforcée du Hatcher.
 
 ## Drum Monster — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Ondes rythmiques et impacts à distance.
 
@@ -4927,6 +5711,10 @@ Comportement source : Ondes rythmiques et impacts à distance.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 83 | 154 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 101 | 142 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 108 | 92 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
+| `← + T` | Battement du tambour — Jet monumental | throw / throw | 9/3/30 | 103 | 95 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
+| `DODGE + L` | Battement du tambour — Pas de masse | reversal / mid | 6/5/18 | 67 | 136 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
+| `P-GUARD + H` | Battement du tambour — Contre-écrasement | counter / mid | 5/5/22 | 113 | 160 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
+| `RISE + S` | Battement du tambour — Relèvement sismique | reversal / low | 8/8/28 | 97 | 178 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
 | `S` | Battement du tambour | special / mid | 15/1/26 | 129 | 720 | DIRECTEMENT ATTESTÉ | Ondes rythmiques et impacts à distance. |
 | `→ + S` | Battement du tambour — Canon mobile | special / mid | 13/10/29 | 143 | 260 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
 | `← + S` | Battement du tambour — Recul de tir | special / mid | 10/5/24 | 90 | 222 | COMPOSITE LORE-FRIENDLY | Ondes rythmiques et impacts à distance. |
@@ -4937,7 +5725,7 @@ Comportement source : Ondes rythmiques et impacts à distance.
 
 ## Sakuko-Like Entity — SH f
 
-**5 directs · 9 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Manifestation boss associée à Sakuko.
 
@@ -4952,6 +5740,10 @@ Comportement source : Manifestation boss associée à Sakuko.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
+| `← + T` | Mémoire de Sakuko — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
+| `DODGE + L` | Mémoire de Sakuko — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
+| `P-GUARD + H` | Mémoire de Sakuko — Riposte du corps | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
+| `RISE + S` | Mémoire de Sakuko — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Sakuko. |
 | `S` | Mémoire de Sakuko | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Manifestation boss associée à Sakuko. |
 | `→ + S` | Chaîne du sanctuaire | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Manifestation boss associée à Sakuko. |
 | `← + S` | Retraite de la prêtresse | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Manifestation boss associée à Sakuko. |
@@ -4962,7 +5754,7 @@ Comportement source : Manifestation boss associée à Sakuko.
 
 ## Rinko-Like Entity — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Manifestation boss associée à Rinko.
 
@@ -4977,6 +5769,10 @@ Comportement source : Manifestation boss associée à Rinko.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
+| `← + T` | Mémoire de Rinko — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
+| `DODGE + L` | Mémoire de Rinko — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
+| `P-GUARD + H` | Mémoire de Rinko — Riposte du corps | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
+| `RISE + S` | Mémoire de Rinko — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
 | `S` | Mémoire de Rinko | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Manifestation boss associée à Rinko. |
 | `→ + S` | Mémoire de Rinko — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
 | `← + S` | Mémoire de Rinko — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Manifestation boss associée à Rinko. |
@@ -4987,7 +5783,7 @@ Comportement source : Manifestation boss associée à Rinko.
 
 ## Hinako’s Father — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Manifestation parentale, frappes lourdes.
 
@@ -5002,6 +5798,10 @@ Comportement source : Manifestation parentale, frappes lourdes.
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
+| `← + T` | Autorité du père — Jet monumental | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
+| `DODGE + L` | Autorité du père — Pas de masse | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
+| `P-GUARD + H` | Autorité du père — Contre-écrasement | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
+| `RISE + S` | Autorité du père — Relèvement sismique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
 | `S` | Autorité du père | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Manifestation parentale, frappes lourdes. |
 | `→ + S` | Autorité du père — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
 | `← + S` | Autorité du père — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, frappes lourdes. |
@@ -5012,7 +5812,7 @@ Comportement source : Manifestation parentale, frappes lourdes.
 
 ## Hinako’s Mother — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Manifestation parentale, saisies et zones.
 
@@ -5027,6 +5827,10 @@ Comportement source : Manifestation parentale, saisies et zones.
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
 | `T` | Entrave de la mère — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Manifestation parentale, saisies et zones. |
+| `← + T` | Entrave de la mère — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
+| `DODGE + L` | Entrave de la mère — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
+| `P-GUARD + H` | Entrave de la mère — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
+| `RISE + S` | Entrave de la mère — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
 | `S` | Entrave de la mère | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Manifestation parentale, saisies et zones. |
 | `→ + S` | Entrave de la mère — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
 | `← + S` | Entrave de la mère — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Manifestation parentale, saisies et zones. |
@@ -5037,7 +5841,7 @@ Comportement source : Manifestation parentale, saisies et zones.
 
 ## Shiromuku — SH f
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Entité cérémonielle, dashs et rubans tranchants.
 
@@ -5052,6 +5856,10 @@ Comportement source : Entité cérémonielle, dashs et rubans tranchants.
 | `↓ + H` | Cercle inférieur | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
 | `AIR + H` | Descente du kitsune | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
 | `T` | Sceau nuptial | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
+| `← + T` | Procession blanche — Sceau inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
+| `DODGE + L` | Procession blanche — Pas du masque | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
+| `P-GUARD + H` | Procession blanche — Queue de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
+| `RISE + S` | Procession blanche — Retour du cortège | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité cérémonielle, dashs et rubans tranchants. |
 | `S` | Procession blanche — signature | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Entité cérémonielle, dashs et rubans tranchants. |
 | `→ + S` | Rubans tranchants | special / mid | 13/10/29 | 174 | 247 | DIRECTEMENT ATTESTÉ | Entité cérémonielle, dashs et rubans tranchants. |
 | `← + S` | Contre du Shiromuku | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Entité cérémonielle, dashs et rubans tranchants. |
@@ -5062,7 +5870,7 @@ Comportement source : Entité cérémonielle, dashs et rubans tranchants.
 
 ## Tsukumogami — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Boss d’objets animés, changement de forme.
 
@@ -5077,6 +5885,10 @@ Comportement source : Boss d’objets animés, changement de forme.
 | `↓ + H` | Section basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
 | `AIR + H` | Marionnette tombante | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
 | `T` | Fils de contrôle | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
+| `← + T` | Objets éveillés — Valse inversée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
+| `DODGE + L` | Objets éveillés — Pas de poupée | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
+| `P-GUARD + H` | Objets éveillés — Fil de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
+| `RISE + S` | Objets éveillés — Remontage du corps | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
 | `S` | Objets éveillés | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Boss d’objets animés, changement de forme. |
 | `→ + S` | Objets éveillés — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
 | `← + S` | Objets éveillés — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Boss d’objets animés, changement de forme. |
@@ -5087,7 +5899,7 @@ Comportement source : Boss d’objets animés, changement de forme.
 
 ## Shichibi — SH f
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Renard rituel à sept queues, combos multiples.
 
@@ -5102,6 +5914,10 @@ Comportement source : Renard rituel à sept queues, combos multiples.
 | `↓ + H` | Cercle inférieur | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
 | `AIR + H` | Descente du kitsune | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
 | `T` | Sceau nuptial | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
+| `← + T` | Sept queues — Sceau inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
+| `DODGE + L` | Sept queues — Pas du masque | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
+| `P-GUARD + H` | Sept queues — Queue de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
+| `RISE + S` | Sept queues — Retour du cortège | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
 | `S` | Sept queues | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Renard rituel à sept queues, combos multiples. |
 | `→ + S` | Sept queues — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
 | `← + S` | Sept queues — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Renard rituel à sept queues, combos multiples. |
@@ -5112,7 +5928,7 @@ Comportement source : Renard rituel à sept queues, combos multiples.
 
 ## Kyubi — SH f
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Forme majeure à neuf queues, assauts en éventail.
 
@@ -5127,6 +5943,10 @@ Comportement source : Forme majeure à neuf queues, assauts en éventail.
 | `↓ + H` | Cercle inférieur | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
 | `AIR + H` | Descente du kitsune | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
 | `T` | Sceau nuptial | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
+| `← + T` | Neuf queues — Sceau inversé | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
+| `DODGE + L` | Neuf queues — Pas du masque | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
+| `P-GUARD + H` | Neuf queues — Queue de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
+| `RISE + S` | Neuf queues — Retour du cortège | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
 | `S` | Feu du renard | special / mid | 15/6/26 | 158 | 195 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
 | `→ + S` | Assaut de Kyubi | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Forme majeure à neuf queues, assauts en éventail. |
 | `← + S` | Neuf queues — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Forme majeure à neuf queues, assauts en éventail. |
@@ -5137,7 +5957,7 @@ Comportement source : Forme majeure à neuf queues, assauts en éventail.
 
 ## Armless Man — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Démarche contorsionnée, jet corrosif et pression lente.
 
@@ -5152,6 +5972,10 @@ Comportement source : Démarche contorsionnée, jet corrosif et pression lente.
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
+| `← + T` | Projection corrosive — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
+| `DODGE + L` | Projection corrosive — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
+| `P-GUARD + H` | Projection corrosive — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
+| `RISE + S` | Projection corrosive — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
 | `S` | Projection corrosive | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Démarche contorsionnée, jet corrosif et pression lente. |
 | `→ + S` | Projection corrosive — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
 | `← + S` | Projection corrosive — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Démarche contorsionnée, jet corrosif et pression lente. |
@@ -5162,7 +5986,7 @@ Comportement source : Démarche contorsionnée, jet corrosif et pression lente.
 
 ## Dark Nurse — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement.
 
@@ -5177,6 +6001,10 @@ Comportement source : Reste immobile dans l’obscurité puis frappe en réactio
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 71 | 109 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 86 | 101 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 92 | 65 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
+| `← + T` | Réflexe à la lumière — Contention inversée | throw / throw | 9/3/30 | 88 | 67 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
+| `DODGE + L` | Réflexe à la lumière — Pas clinique | reversal / mid | 6/5/18 | 57 | 97 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
+| `P-GUARD + H` | Réflexe à la lumière — riposte de garde | counter / mid | 5/5/22 | 96 | 113 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
+| `RISE + S` | Réflexe à la lumière — reprise depuis le sol | reversal / low | 8/8/28 | 82 | 126 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
 | `S` | Réflexe à la lumière | special / mid | 15/6/26 | 110 | 158 | DIRECTEMENT ATTESTÉ | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
 | `→ + S` | Réflexe à la lumière — Danse articulée | special / mid | 13/10/29 | 122 | 185 | COMPOSITE LORE-FRIENDLY | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
 | `← + S` | Réflexe à la lumière — garde attestée | special / mid | 10/5/24 | 76 | 158 | DIRECTEMENT ATTESTÉ | Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement. |
@@ -5187,7 +6015,7 @@ Comportement source : Reste immobile dans l’obscurité puis frappe en réactio
 
 ## Grey Child — Film — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Se déplace en groupe et agrippe la cible dans les ruelles en flammes.
 
@@ -5202,6 +6030,10 @@ Comportement source : Se déplace en groupe et agrippe la cible dans les ruelles
 | `↓ + H` | Couteau au sol | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
 | `AIR + H` | Chute sans visage | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
 | `T` | Étreinte carbonisée — saisie attestée | throw / throw | 8/3/28 | 81 | 72 | DIRECTEMENT ATTESTÉ | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
+| `← + T` | Étreinte carbonisée — retournement de la saisie | throw / throw | 9/3/30 | 76 | 72 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
+| `DODGE + L` | Étreinte carbonisée — Bond de fuite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
+| `P-GUARD + H` | Étreinte carbonisée — Couteau de réponse | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
+| `RISE + S` | Étreinte carbonisée — Réveil sous les pupitres | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
 | `S` | Étreinte carbonisée | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
 | `→ + S` | Étreinte carbonisée — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
 | `← + S` | Étreinte carbonisée — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Se déplace en groupe et agrippe la cible dans les ruelles en flammes. |
@@ -5212,7 +6044,7 @@ Comportement source : Se déplace en groupe et agrippe la cible dans les ruelles
 
 ## Creeper Swarm — Film — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Attaque en essaim et contourne les défenses au sol.
 
@@ -5227,6 +6059,10 @@ Comportement source : Attaque en essaim et contourne les défenses au sol.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
+| `← + T` | Déferlement de vermine — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
+| `DODGE + L` | Déferlement de vermine — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
+| `P-GUARD + H` | Déferlement de vermine — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
+| `RISE + S` | Déferlement de vermine — reprise depuis le sol | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
 | `S` | Déferlement de vermine | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Attaque en essaim et contourne les défenses au sol. |
 | `→ + S` | Déferlement de vermine — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
 | `← + S` | Déferlement de vermine — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Attaque en essaim et contourne les défenses au sol. |
@@ -5237,7 +6073,7 @@ Comportement source : Attaque en essaim et contourne les défenses au sol.
 
 ## Colin the Janitor — FILMS
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Rampe, agrippe et propage la corruption autour de lui.
 
@@ -5252,6 +6088,10 @@ Comportement source : Rampe, agrippe et propage la corruption autour de lui.
 | `↓ + H` | Aura au sol | normal / low | 13/6/23 | 88 | 102 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
 | `AIR + H` | Chute intangible | aerial / overhead | 13/7/22 | 107 | 94 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
 | `T` | Barbelés du gardien — saisie attestée | throw / throw | 8/3/28 | 176 | 72 | DIRECTEMENT ATTESTÉ | Rampe, agrippe et propage la corruption autour de lui. |
+| `← + T` | Barbelés du gardien — retournement de la saisie | throw / throw | 9/3/30 | 165 | 72 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
+| `DODGE + L` | Barbelés du gardien — Déphasage offensif | reversal / mid | 6/5/18 | 71 | 90 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
+| `P-GUARD + H` | Barbelés du gardien — Retour spectral | counter / mid | 5/5/22 | 120 | 106 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
+| `RISE + S` | Barbelés du gardien — Réapparition du sol | reversal / low | 8/8/28 | 102 | 118 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
 | `S` | Barbelés du gardien | special / mid | 15/6/26 | 137 | 147 | DIRECTEMENT ATTESTÉ | Rampe, agrippe et propage la corruption autour de lui. |
 | `→ + S` | Barbelés du gardien — Capture en marche | special / mid | 13/10/29 | 151 | 172 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
 | `← + S` | Barbelés du gardien — Appel du corps | special / mid | 10/5/24 | 95 | 147 | COMPOSITE LORE-FRIENDLY | Rampe, agrippe et propage la corruption autour de lui. |
@@ -5262,7 +6102,7 @@ Comportement source : Rampe, agrippe et propage la corruption autour de lui.
 
 ## Red Pyramid — Film — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Exécuteur massif, balayages très larges et saisie punitive.
 
@@ -5277,6 +6117,10 @@ Comportement source : Exécuteur massif, balayages très larges et saisie puniti
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
 | `T` | Sentence du grand couteau — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Exécuteur massif, balayages très larges et saisie punitive. |
+| `← + T` | Sentence du grand couteau — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
+| `DODGE + L` | Sentence du grand couteau — Pas de l’exécuteur | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
+| `P-GUARD + H` | Sentence du grand couteau — Sentence de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
+| `RISE + S` | Sentence du grand couteau — Relèvement du bourreau | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
 | `S` | Sentence du grand couteau | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Exécuteur massif, balayages très larges et saisie punitive. |
 | `→ + S` | Sentence du grand couteau — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
 | `← + S` | Sentence du grand couteau — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Exécuteur massif, balayages très larges et saisie punitive. |
@@ -5287,7 +6131,7 @@ Comportement source : Exécuteur massif, balayages très larges et saisie puniti
 
 ## Mannequin Monster — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Grimpe, bondit et referme ses membres autour de la cible.
 
@@ -5302,6 +6146,10 @@ Comportement source : Grimpe, bondit et referme ses membres autour de la cible.
 | `↓ + H` | Piège de pattes | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
 | `AIR + H` | Descente du cocon | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
 | `T` | Cocon | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
+| `← + T` | Assemblage de membres — Traction du cocon | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
+| `DODGE + L` | Assemblage de membres — Pas arachnéen | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
+| `P-GUARD + H` | Assemblage de membres — Patte de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
+| `RISE + S` | Assemblage de membres — Remontée au fil | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
 | `S` | Assemblage de membres | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Grimpe, bondit et referme ses membres autour de la cible. |
 | `→ + S` | Assemblage de membres — assaut attesté | special / mid | 13/10/29 | 174 | 229 | DIRECTEMENT ATTESTÉ | Grimpe, bondit et referme ses membres autour de la cible. |
 | `← + S` | Assemblage de membres — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Grimpe, bondit et referme ses membres autour de la cible. |
@@ -5312,7 +6160,7 @@ Comportement source : Grimpe, bondit et referme ses membres autour de la cible.
 
 ## Missionary — Revelation — FILMS
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Assauts rapides avec lames intégrées et parade agressive.
 
@@ -5327,6 +6175,10 @@ Comportement source : Assauts rapides avec lames intégrées et parade agressive
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
+| `← + T` | Couronne de lames — Projection brisée | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
+| `DODGE + L` | Couronne de lames — Retour convulsif | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
+| `P-GUARD + H` | Couronne de lames — riposte de garde | counter / mid | 5/5/22 | 138 | 140 | DIRECTEMENT ATTESTÉ | Assauts rapides avec lames intégrées et parade agressive. |
+| `RISE + S` | Couronne de lames — Reprise impossible | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
 | `S` | Couronne de lames | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Assauts rapides avec lames intégrées et parade agressive. |
 | `→ + S` | Couronne de lames — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Assauts rapides avec lames intégrées et parade agressive. |
 | `← + S` | Couronne de lames — garde attestée | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Assauts rapides avec lames intégrées et parade agressive. |
@@ -5337,7 +6189,7 @@ Comportement source : Assauts rapides avec lames intégrées et parade agressive
 
 ## Lying Figure — Return to Silent Hill — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée.
 
@@ -5352,6 +6204,10 @@ Comportement source : Interprétation cinématographique 2026 du Lying Figure, c
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 88 | 82 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
+| `← + T` | Jet acide du retour — Projection brisée | throw / throw | 9/3/30 | 85 | 84 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
+| `DODGE + L` | Jet acide du retour — Retour convulsif | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
+| `P-GUARD + H` | Jet acide du retour — Riposte du corps | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
+| `RISE + S` | Jet acide du retour — Reprise impossible | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
 | `S` | Jet acide du retour | special / mid | 15/1/26 | 105 | 720 | DIRECTEMENT ATTESTÉ | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
 | `→ + S` | Jet acide du retour — Tir en marche | special / mid | 13/10/29 | 117 | 232 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
 | `← + S` | Jet acide du retour — Repli armé | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 du Lying Figure, conservant sa silhouette enveloppée. |
@@ -5362,7 +6218,7 @@ Comportement source : Interprétation cinématographique 2026 du Lying Figure, c
 
 ## Bubble Head Nurse — Return to Silent Hill — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Interprétation cinématographique 2026 des Bubble Head Nurses.
 
@@ -5377,6 +6233,10 @@ Comportement source : Interprétation cinématographique 2026 des Bubble Head Nu
 | `↓ + H` | Section du tendon | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
 | `AIR + H` | Protocole aérien | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
 | `T` | Contention médicale | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
+| `← + T` | Service de Lakeview — Contention inversée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
+| `DODGE + L` | Service de Lakeview — Pas clinique | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
+| `P-GUARD + H` | Service de Lakeview — Contre-protocole | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
+| `RISE + S` | Service de Lakeview — Reprise du service | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
 | `S` | Service de Lakeview | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Interprétation cinématographique 2026 des Bubble Head Nurses. |
 | `→ + S` | Service de Lakeview — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
 | `← + S` | Service de Lakeview — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Bubble Head Nurses. |
@@ -5387,7 +6247,7 @@ Comportement source : Interprétation cinématographique 2026 des Bubble Head Nu
 
 ## Creeper — Return to Silent Hill — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Interprétation cinématographique 2026 des Creepers.
 
@@ -5402,6 +6262,10 @@ Comportement source : Interprétation cinématographique 2026 des Creepers.
 | `↓ + H` | Fauchage chitineux | normal / low | 13/6/23 | 58 | 78 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
 | `AIR + H` | Chute de vermine | aerial / overhead | 13/7/22 | 70 | 72 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
 | `T` | Encerclement | throw / throw | 8/3/28 | 75 | 47 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
+| `← + T` | Essaim du retour — Renversement chitineux | throw / throw | 9/3/30 | 72 | 48 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
+| `DODGE + L` | Essaim du retour — Écart parasite | reversal / mid | 6/5/18 | 46 | 69 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
+| `P-GUARD + H` | Essaim du retour — Mandibule de riposte | counter / mid | 5/5/22 | 78 | 81 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
+| `RISE + S` | Essaim du retour — Mue de reprise | reversal / low | 8/8/28 | 67 | 90 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
 | `S` | Essaim du retour | special / mid | 15/6/26 | 90 | 113 | DIRECTEMENT ATTESTÉ | Interprétation cinématographique 2026 des Creepers. |
 | `→ + S` | Essaim du retour — Convergence | special / mid | 13/10/29 | 99 | 132 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
 | `← + S` | Essaim du retour — Dispersion | special / mid | 10/5/24 | 62 | 113 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 des Creepers. |
@@ -5412,7 +6276,7 @@ Comportement source : Interprétation cinématographique 2026 des Creepers.
 
 ## Red Pyramid Thing — Return to Silent Hill — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Interprétation cinématographique 2026 de Pyramid Head.
 
@@ -5427,6 +6291,10 @@ Comportement source : Interprétation cinématographique 2026 de Pyramid Head.
 | `↓ + H` | Découpe basse | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
 | `AIR + H` | Chute du bourreau | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
 | `T` | Condamnation | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
+| `← + T` | Grand couteau du retour — Condamnation arrière | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
+| `DODGE + L` | Grand couteau du retour — Pas de l’exécuteur | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
+| `P-GUARD + H` | Grand couteau du retour — Sentence de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
+| `RISE + S` | Grand couteau du retour — Relèvement du bourreau | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
 | `S` | Grand couteau du retour | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Interprétation cinématographique 2026 de Pyramid Head. |
 | `→ + S` | Grand couteau du retour — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
 | `← + S` | Grand couteau du retour — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Interprétation cinématographique 2026 de Pyramid Head. |
@@ -5437,7 +6305,7 @@ Comportement source : Interprétation cinématographique 2026 de Pyramid Head.
 
 ## Fused Mattress Manifestation — Return — FILMS
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026.
 
@@ -5452,6 +6320,10 @@ Comportement source : Manifestation fusionnant corps et structure de lit dans la
 | `↓ + H` | Rampe d’appendices | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
 | `AIR + H` | Chute de tissus | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
 | `T` | Absorption | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
+| `← + T` | Fusion du souvenir — Reflux charnel | throw / throw | 9/3/30 | 150 | 83 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
+| `DODGE + L` | Fusion du souvenir — Débordement latéral | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
+| `P-GUARD + H` | Fusion du souvenir — Pulsation de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
+| `RISE + S` | Fusion du souvenir — Reconstitution organique | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
 | `S` | Fusion du souvenir | special / mid | 15/6/26 | 158 | 195 | DIRECTEMENT ATTESTÉ | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
 | `→ + S` | Fusion du souvenir — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
 | `← + S` | Fusion du souvenir — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Manifestation fusionnant corps et structure de lit dans la conclusion du film 2026. |
@@ -5462,7 +6334,7 @@ Comportement source : Manifestation fusionnant corps et structure de lit dans la
 
 ## Wanderer — ASC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Approche constante, coups irréguliers et pression de proximité.
 
@@ -5477,6 +6349,10 @@ Comportement source : Approche constante, coups irréguliers et pression de prox
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 72 | 104 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 88 | 96 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 94 | 62 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
+| `← + T` | Marche du deuil — Projection brisée | throw / throw | 9/3/30 | 90 | 64 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
+| `DODGE + L` | Marche du deuil — Retour convulsif | reversal / mid | 6/5/18 | 58 | 92 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
+| `P-GUARD + H` | Marche du deuil — Riposte du corps | counter / mid | 5/5/22 | 98 | 108 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
+| `RISE + S` | Marche du deuil — Reprise impossible | reversal / low | 8/8/28 | 84 | 120 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
 | `S` | Marche du deuil | special / mid | 15/6/26 | 112 | 150 | DIRECTEMENT ATTESTÉ | Approche constante, coups irréguliers et pression de proximité. |
 | `→ + S` | Marche du deuil — Assaut signature | special / mid | 13/10/29 | 124 | 176 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
 | `← + S` | Marche du deuil — Retrait trompeur | special / mid | 10/5/24 | 78 | 150 | COMPOSITE LORE-FRIENDLY | Approche constante, coups irréguliers et pression de proximité. |
@@ -5487,7 +6363,7 @@ Comportement source : Approche constante, coups irréguliers et pression de prox
 
 ## Fighter — ASC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Manifestation humanoïde agressive, rafales courtes et poursuite.
 
@@ -5502,6 +6378,10 @@ Comportement source : Manifestation humanoïde agressive, rafales courtes et pou
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
+| `← + T` | Assaut enveloppé — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
+| `DODGE + L` | Assaut enveloppé — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
+| `P-GUARD + H` | Assaut enveloppé — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
+| `RISE + S` | Assaut enveloppé — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
 | `S` | Assaut enveloppé | special / mid | 15/1/26 | 101 | 680 | DIRECTEMENT ATTESTÉ | Manifestation humanoïde agressive, rafales courtes et poursuite. |
 | `→ + S` | Assaut enveloppé — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Manifestation humanoïde agressive, rafales courtes et poursuite. |
 | `← + S` | Assaut enveloppé — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Manifestation humanoïde agressive, rafales courtes et poursuite. |
@@ -5512,7 +6392,7 @@ Comportement source : Manifestation humanoïde agressive, rafales courtes et pou
 
 ## Snarler — ASC
 
-**2 directs · 12 composites · 2 adaptations.**
+**2 directs · 16 composites · 2 adaptations.**
 
 Comportement source : Prédateur canin rapide qui bondit après une courte mise en joue.
 
@@ -5527,6 +6407,10 @@ Comportement source : Prédateur canin rapide qui bondit après une courte mise 
 | `↓ + H` | Balayage des pattes | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
 | `AIR + H` | Chute de la meute | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
 | `T` | Mâchoire verrouillée | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
+| `← + T` | Traque de la meute — Traction de la meute | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
+| `DODGE + L` | Traque de la meute — Bond latéral | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
+| `P-GUARD + H` | Traque de la meute — Morsure de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
+| `RISE + S` | Traque de la meute — Relèvement animal | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
 | `S` | Traque de la meute | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Prédateur canin rapide qui bondit après une courte mise en joue. |
 | `→ + S` | Traque de la meute — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Prédateur canin rapide qui bondit après une courte mise en joue. |
 | `← + S` | Traque de la meute — Feinte arrière | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Prédateur canin rapide qui bondit après une courte mise en joue. |
@@ -5537,7 +6421,7 @@ Comportement source : Prédateur canin rapide qui bondit après une courte mise 
 
 ## Stinger — ASC
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Déploie ses ailes, prend de l’altitude puis plonge sur sa cible.
 
@@ -5552,9 +6436,13 @@ Comportement source : Déploie ses ailes, prend de l’altitude puis plonge sur 
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/23 | 62 | 123 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/22 | 76 | 113 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/28 | 81 | 73 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
+| `← + T` | Ailes barbelées — Largage arrière | throw / throw | 9/3/30 | 77 | 76 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
+| `DODGE + L` | Ailes barbelées — Battement d’évasion — riposte d’esquive | reversal / mid | 6/5/18 | 50 | 109 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
+| `P-GUARD + H` | Ailes barbelées — Serre de riposte | counter / mid | 5/5/22 | 84 | 127 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
+| `RISE + S` | Ailes barbelées — Redécollage | reversal / low | 8/8/28 | 72 | 142 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `S` | Ailes barbelées | special / mid | 15/1/26 | 96 | 720 | DIRECTEMENT ATTESTÉ | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `→ + S` | Ailes barbelées — assaut attesté | special / mid | 13/10/29 | 107 | 208 | DIRECTEMENT ATTESTÉ | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
-| `← + S` | Ailes barbelées — Battement d’évasion | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
+| `← + S` | Ailes barbelées — Battement d’évasion — repli | special / mid | 10/5/24 | 67 | 177 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `↓ + S` | Ailes barbelées — Rase-mottes | special / low | 19/1/31 | 89 | 720 | COMPOSITE LORE-FRIENDLY | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `AIR + S` | Ailes barbelées — attaque aérienne | special / overhead | 14/1/24 | 101 | 560 | DIRECTEMENT ATTESTÉ | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
 | `N` | NIGHTMARE — Ailes barbelées | nightmare / mid | 27/1/43 | 205 | 980 | ADAPTATION VERSUS | Déploie ses ailes, prend de l’altitude puis plonge sur sa cible. |
@@ -5562,7 +6450,7 @@ Comportement source : Déploie ses ailes, prend de l’altitude puis plonge sur 
 
 ## The Immolator — ASC
 
-**1 directs · 13 composites · 2 adaptations.**
+**1 directs · 17 composites · 2 adaptations.**
 
 Comportement source : Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur.
 
@@ -5577,6 +6465,10 @@ Comportement source : Grande manifestation embrasée qui ferme les voies avec de
 | `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 87 | 154 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
 | `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 106 | 142 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
 | `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 114 | 92 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
+| `← + T` | Feu intergénérationnel — Jet monumental | throw / throw | 9/3/30 | 109 | 95 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
+| `DODGE + L` | Feu intergénérationnel — Pas de masse | reversal / mid | 6/5/18 | 70 | 136 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
+| `P-GUARD + H` | Feu intergénérationnel — Contre-écrasement | counter / mid | 5/5/22 | 118 | 160 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
+| `RISE + S` | Feu intergénérationnel — Relèvement sismique | reversal / low | 8/8/28 | 101 | 178 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
 | `S` | Feu intergénérationnel | special / mid | 15/1/26 | 135 | 720 | DIRECTEMENT ATTESTÉ | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
 | `→ + S` | Feu intergénérationnel — Canon mobile | special / mid | 13/10/29 | 150 | 260 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
 | `← + S` | Feu intergénérationnel — Recul de tir | special / mid | 10/5/24 | 94 | 222 | COMPOSITE LORE-FRIENDLY | Grande manifestation embrasée qui ferme les voies avec des vagues de chaleur. |
@@ -5587,7 +6479,7 @@ Comportement source : Grande manifestation embrasée qui ferme les voies avec de
 
 ## The Collector — ASC
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert.
 
@@ -5602,6 +6494,10 @@ Comportement source : Entité à plusieurs bras qui attire, enferme et projette 
 | `↓ + H` | Cercle du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
 | `AIR + H` | Descente divine | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
 | `T` | Porte entre les mondes — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
+| `← + T` | Porte entre les mondes — retournement de la saisie | throw / throw | 9/3/30 | 159 | 83 | DIRECTEMENT ATTESTÉ | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
+| `DODGE + L` | Porte entre les mondes — Glissement sacré | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
+| `P-GUARD + H` | Porte entre les mondes — Décret de riposte | counter / mid | 5/5/22 | 138 | 140 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
+| `RISE + S` | Porte entre les mondes — Résurrection rituelle | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
 | `S` | Porte entre les mondes | special / mid | 15/1/26 | 158 | 680 | DIRECTEMENT ATTESTÉ | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
 | `→ + S` | Porte entre les mondes — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
 | `← + S` | Porte entre les mondes — Présence inviolable | special / mid | 10/5/24 | 110 | 195 | COMPOSITE LORE-FRIENDLY | Entité à plusieurs bras qui attire, enferme et projette depuis son torse ouvert. |
@@ -5612,7 +6508,7 @@ Comportement source : Entité à plusieurs bras qui attire, enferme et projette 
 
 ## Stilledalen Stinger — ASC
 
-**2 directs · 12 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Variante de Stinger orientée feinte et attaque hors écran.
 
@@ -5627,6 +6523,10 @@ Comportement source : Variante de Stinger orientée feinte et attaque hors écra
 | `↓ + H` | Balayage d’aile | normal / low | 13/6/21 | 65 | 112 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
 | `AIR + H` | Talon météore | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
 | `T` | Enlèvement aérien | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
+| `← + T` | Voile de tendons — Largage arrière | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
+| `DODGE + L` | Voile de tendons — riposte d’apparition | reversal / mid | 6/5/17 | 52 | 99 | DIRECTEMENT ATTESTÉ | Variante de Stinger orientée feinte et attaque hors écran. |
+| `P-GUARD + H` | Voile de tendons — Serre de riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
+| `RISE + S` | Voile de tendons — Redécollage | reversal / low | 8/8/26 | 76 | 130 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
 | `S` | Voile de tendons | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Variante de Stinger orientée feinte et attaque hors écran. |
 | `→ + S` | Voile de tendons — Fausse ouverture | special / mid | 13/10/27 | 112 | 190 | COMPOSITE LORE-FRIENDLY | Variante de Stinger orientée feinte et attaque hors écran. |
 | `← + S` | Voile de tendons — apparition attestée | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Variante de Stinger orientée feinte et attaque hors écran. |
@@ -5637,7 +6537,7 @@ Comportement source : Variante de Stinger orientée feinte et attaque hors écra
 
 ## Lunger — TOWNFALL
 
-**4 directs · 10 composites · 2 adaptations.**
+**4 directs · 14 composites · 2 adaptations.**
 
 Comportement source : Humanoïde aux bras entravés qui charge et frappe de la tête.
 
@@ -5652,6 +6552,10 @@ Comportement source : Humanoïde aux bras entravés qui charge et frappe de la t
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
+| `← + T` | Charge à tête de hache — Projection brisée | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
+| `DODGE + L` | Charge à tête de hache — Retour convulsif | reversal / mid | 6/5/18 | 52 | 81 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
+| `P-GUARD + H` | Charge à tête de hache — Riposte du corps | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
+| `RISE + S` | Charge à tête de hache — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
 | `S` | Headbutt à tête de hache | special / mid | 15/6/26 | 111 | 132 | DIRECTEMENT ATTESTÉ | Humanoïde aux bras entravés qui charge et frappe de la tête. |
 | `→ + S` | Charge à tête de hache — assaut attesté | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Humanoïde aux bras entravés qui charge et frappe de la tête. |
 | `← + S` | Ouverture de porte | special / mid | 10/5/24 | 70 | 132 | COMPOSITE LORE-FRIENDLY | Humanoïde aux bras entravés qui charge et frappe de la tête. |
@@ -5662,7 +6566,7 @@ Comportement source : Humanoïde aux bras entravés qui charge et frappe de la t
 
 ## Sorrowful — TOWNFALL
 
-**3 directs · 11 composites · 2 adaptations.**
+**3 directs · 15 composites · 2 adaptations.**
 
 Comportement source : Attaque à distance avec un appendice sortant du torse et saisit de près.
 
@@ -5677,6 +6581,10 @@ Comportement source : Attaque à distance avec un appendice sortant du torse et 
 | `↓ + H` | Nœud du sol | normal / low | 13/6/23 | 68 | 137 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | `AIR + H` | Retombée de vrille | aerial / overhead | 13/7/22 | 83 | 127 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | `T` | Cordon thoracique — saisie attestée | throw / throw | 8/3/28 | 95 | 82 | DIRECTEMENT ATTESTÉ | Attaque à distance avec un appendice sortant du torse et saisit de près. |
+| `← + T` | Cordon thoracique — retournement de la saisie | throw / throw | 9/3/30 | 90 | 84 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
+| `DODGE + L` | Cordon thoracique — Ondulation d’évasion | reversal / mid | 6/5/18 | 55 | 121 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
+| `P-GUARD + H` | Cordon thoracique — Vrille de riposte | counter / mid | 5/5/22 | 92 | 143 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
+| `RISE + S` | Cordon thoracique — Reprise annelée | reversal / low | 8/8/28 | 79 | 158 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | `S` | Cordon thoracique | special / mid | 15/6/26 | 105 | 198 | DIRECTEMENT ATTESTÉ | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | `→ + S` | Saisie du Sorrowful | special / throw | 13/10/29 | 117 | 191 | DIRECTEMENT ATTESTÉ | Attaque à distance avec un appendice sortant du torse et saisit de près. |
 | `← + S` | Repli voûté | special / mid | 10/5/24 | 73 | 198 | COMPOSITE LORE-FRIENDLY | Attaque à distance avec un appendice sortant du torse et saisit de près. |
@@ -5687,7 +6595,7 @@ Comportement source : Attaque à distance avec un appendice sortant du torse et 
 
 ## Fallen — TOWNFALL
 
-**5 directs · 9 composites · 2 adaptations.**
+**6 directs · 12 composites · 2 adaptations.**
 
 Comportement source : Reste immobile au sol ou dans le décor avant de charger soudainement.
 
@@ -5702,6 +6610,10 @@ Comportement source : Reste immobile au sol ou dans le décor avant de charger s
 | `↓ + H` | Ambuscade du sol | normal / low | 13/6/21 | 65 | 112 | DIRECTEMENT ATTESTÉ | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/20 | 79 | 104 | COMPOSITE LORE-FRIENDLY | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | `T` | Étreinte impossible | throw / throw | 8/3/26 | 85 | 67 | COMPOSITE LORE-FRIENDLY | Reste immobile au sol ou dans le décor avant de charger soudainement. |
+| `← + T` | Réveil du cadavre — Projection brisée | throw / throw | 9/3/28 | 81 | 69 | COMPOSITE LORE-FRIENDLY | Reste immobile au sol ou dans le décor avant de charger soudainement. |
+| `DODGE + L` | Ruée depuis l’immobilité | reversal / mid | 6/5/17 | 52 | 99 | COMPOSITE LORE-FRIENDLY | Reste immobile au sol ou dans le décor avant de charger soudainement. |
+| `P-GUARD + H` | Fausse mort — riposte | counter / mid | 5/5/20 | 88 | 117 | COMPOSITE LORE-FRIENDLY | Reste immobile au sol ou dans le décor avant de charger soudainement. |
+| `RISE + S` | Réveil soudain du Fallen | reversal / low | 8/8/26 | 76 | 130 | DIRECTEMENT ATTESTÉ | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | `S` | Réveil du cadavre | special / mid | 15/1/24 | 101 | 720 | DIRECTEMENT ATTESTÉ | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | `→ + S` | Réveil soudain | special / mid | 13/10/27 | 112 | 190 | DIRECTEMENT ATTESTÉ | Reste immobile au sol ou dans le décor avant de charger soudainement. |
 | `← + S` | Cadavre immobile | special / mid | 10/5/22 | 70 | 162 | DIRECTEMENT ATTESTÉ | Reste immobile au sol ou dans le décor avant de charger soudainement. |
@@ -5712,7 +6624,7 @@ Comportement source : Reste immobile au sol ou dans le décor avant de charger s
 
 ## Widow — TOWNFALL
 
-**4 directs · 10 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
 Comportement source : Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos.
 
@@ -5727,6 +6639,10 @@ Comportement source : Traque depuis les angles sombres et bondit lorsque la cibl
 | `↓ + H` | Fauchage au sol | normal / low | 13/6/23 | 65 | 92 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
 | `AIR + H` | Chute du corps | aerial / overhead | 13/7/22 | 79 | 84 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
 | `T` | Étreinte impossible | throw / throw | 8/3/28 | 85 | 55 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
+| `← + T` | Renversement au couteau | throw / throw | 9/3/30 | 81 | 56 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
+| `DODGE + L` | Pounce depuis l’angle mort | reversal / mid | 6/5/18 | 52 | 81 | DIRECTEMENT ATTESTÉ | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
+| `P-GUARD + H` | Couteau de riposte | counter / mid | 5/5/22 | 88 | 95 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
+| `RISE + S` | Pounce au couteau — Reprise impossible | reversal / low | 8/8/28 | 76 | 106 | COMPOSITE LORE-FRIENDLY | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
 | `S` | Pounce au couteau | special / mid | 15/6/26 | 101 | 132 | DIRECTEMENT ATTESTÉ | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
 | `→ + S` | Pounce dans le dos | special / mid | 13/10/29 | 112 | 178 | DIRECTEMENT ATTESTÉ | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
 | `← + S` | Angle mort | special / mid | 10/5/24 | 70 | 132 | DIRECTEMENT ATTESTÉ | Traque depuis les angles sombres et bondit lorsque la cible lui tourne le dos. |
@@ -5737,26 +6653,30 @@ Comportement source : Traque depuis les angles sombres et bondit lorsque la cibl
 
 ## The Weight — TOWNFALL
 
-**4 directs · 10 composites · 2 adaptations.**
+**5 directs · 13 composites · 2 adaptations.**
 
-Comportement source : Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion.
+Comportement source : Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final.
 
 | Input | Coup | Catégorie | Frames S/A/R | Dégâts | Portée | Fidélité | Base canonique |
 |---|---|---|---:|---:|---:|---|---|
-| `L` | Main du fardeau | normal / mid | 5/3/9 | 48 | 81 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `→ + L` | Pas sismique | command-normal / mid | 7/4/12 | 65 | 107 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `↓ + L` | Écrasement bas | normal / low | 6/4/11 | 53 | 91 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `AIR + L` | Chute lourde | aerial / overhead | 5/5/10 | 56 | 88 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `H` | Marteau colossal | normal / mid | 12/6/21 | 110 | 125 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `→ + H` | Charge du Weight | command-normal / unblockable | 17/7/27 | 144 | 164 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `T` | Soulèvement écrasant | throw / throw | 8/3/28 | 156 | 81 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `S` | Saisie létale | special / throw | 15/6/26 | 228 | 195 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `→ + S` | Poids impossible — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `← + S` | Fardeau inviolable | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `↓ + S` | Barres arrachées | special / low | 19/10/31 | 146 | 247 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `AIR + S` | Poids impossible — Sentence descendante | special / overhead | 14/9/24 | 166 | 215 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `N` | NIGHTMARE — Poids impossible | nightmare / mid | 27/14/43 | 335 | 319 | ADAPTATION VERSUS | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
-| `≤ 30% HP + N` | OTHERWORLD — Poids impossible | desperation / unblockable | 34/18/52 | 397 | 371 | ADAPTATION VERSUS | Poursuivant presque invulnérable, affronté comme boss final après plusieurs séquences d’évasion. |
+| `L` | Main du fardeau | normal / mid | 5/3/9 | 48 | 81 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `→ + L` | Pas sismique | command-normal / mid | 7/4/12 | 65 | 107 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `↓ + L` | Écrasement bas | normal / low | 6/4/11 | 53 | 91 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `AIR + L` | Chute lourde | aerial / overhead | 5/5/10 | 56 | 88 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `H` | Marteau colossal | normal / mid | 12/6/21 | 110 | 125 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `→ + H` | Charge du Weight | command-normal / unblockable | 17/7/27 | 144 | 164 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `↓ + H` | Balayage du sol | normal / low | 13/6/23 | 101 | 135 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `AIR + H` | Impact terminal | aerial / overhead | 13/7/22 | 124 | 125 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `T` | Poids impossible — saisie attestée | throw / throw | 8/3/28 | 168 | 81 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `← + T` | Rejet du captif | throw / throw | 9/3/30 | 207 | 83 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `DODGE + L` | Pas de chasse lourd | reversal / mid | 6/5/18 | 82 | 120 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `P-GUARD + H` | Fardeau de riposte | counter / mid | 5/5/22 | 172 | 140 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `RISE + S` | Relèvement du fardeau | reversal / low | 8/8/28 | 118 | 156 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `S` | Saisie létale | special / throw | 15/6/26 | 228 | 195 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `→ + S` | Poids impossible — Phase d’assaut | special / mid | 13/10/29 | 174 | 229 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `← + S` | Fardeau inviolable | special / mid | 10/5/24 | 110 | 195 | DIRECTEMENT ATTESTÉ | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `↓ + S` | Barres arrachées | special / low | 19/10/31 | 146 | 247 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `AIR + S` | Poids impossible — Sentence descendante | special / overhead | 14/9/24 | 166 | 215 | COMPOSITE LORE-FRIENDLY | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `N` | NIGHTMARE — Poids impossible | nightmare / mid | 27/14/43 | 335 | 319 | ADAPTATION VERSUS | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
+| `≤ 30% HP + N` | OTHERWORLD — Poids impossible | desperation / unblockable | 34/18/52 | 397 | 371 | ADAPTATION VERSUS | Poursuivant presque invulnérable qui cherche, chasse et agrippe sa cible avant l’affrontement final. |
 

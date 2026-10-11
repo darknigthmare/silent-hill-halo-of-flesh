@@ -8,12 +8,12 @@ import {
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.5.0 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.5.0');
+test('v0.6.0 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.6.0');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:374,moves:3680,
-    directCanonicalMoves:425,behaviorCompositeMoves:2796,versusAdaptationMoves:459,coverageComplete:true
+    fatalities:460,stageFatalities:123,stageAnimations:374,moves:4600,
+    directCanonicalMoves:447,behaviorCompositeMoves:3694,versusAdaptationMoves:459,coverageComplete:true
   });
 });
 
@@ -148,7 +148,7 @@ test('every AI personality and ritual modifier has complete readable metadata',(
 });
 
 
-test('coverage audit reports no known gap inside the v0.5.0 media scope',()=>{
+test('coverage audit reports no known gap inside the v0.6.0 media scope',()=>{
   const audit=coverageAudit();
   assert.equal(audit.complete,true);
   assert.equal(Object.keys(audit.sources).length,Object.keys(SOURCE_META).length);

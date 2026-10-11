@@ -21,67 +21,67 @@ const DEFAULT_SETTINGS = {
 
 const modes = {
   continue: {
-    kicker: 'QUICK RESUME',
+    kicker: 'REPRISE DU SIGNAL',
     title: 'RETOUR<br><span>DANS LA BRUME.</span>',
-    text: 'Le dernier front reprend avec le même combattant, la même arène et la même règle.',
-    choices: ['DERNIER FRONT','SAUVEGARDE LOCALE'],
-    scene: 'fog', frequency: '106.7', code: 'SHHF/00', signal: 'LAST SAVE', data: ['LOCAL MEMORY','FOG LOCK']
+    text: 'Le dernier cauchemar reprend avec la même manifestation, la même arène et le même Rite.',
+    choices: ['DERNIER CAUCHEMAR','MÉMOIRE LOCALE'],
+    scene: 'fog', frequency: '106.7', code: 'SHHF/00', signal: 'MÉMOIRE', data: ['MÉMOIRE LOCALE','BRUME VERROUILLÉE']
   },
   chronicles: {
-    kicker: 'NARRATIVE ROUTES',
+    kicker: 'ROUTES NARRATIVES',
     title: 'CHRONIQUES<br><span>DE LA BRUME.</span>',
     text: `${CONTENT_STATS.chronicles} routes relient affrontements, dossiers, lieux, rangs et conséquences.`,
     choices: [`${CONTENT_STATS.chronicles} ROUTES`,'RANGS S–D','BOSS FINAUX'],
-    scene: 'chronicles', frequency: '87.9', code: 'SHHF/14', signal: 'NARRATIVE', data: [`${CONTENT_STATS.chronicles} ROUTES`,'LOCAL RECORD']
+    scene: 'chronicles', frequency: '87.9', code: 'SHHF/15', signal: 'RÉCIT', data: [`${CONTENT_STATS.chronicles} ROUTES`,'RELEVÉ LOCAL']
   },
   versus: {
-    kicker: 'MANIFESTATION CONTACT',
+    kicker: 'CONTACT DE MANIFESTATION',
     title: 'CHOISIS<br><span>TON CAUCHEMAR.</span>',
-    text: `Sélection P1/P2, ${CONTENT_STATS.fighters} manifestations, ${CONTENT_STATS.moves} coups documentés, ordinateur, local et ${CONTENT_STATS.stages} arènes.`,
-    choices: ['1P VS MANIFESTATION','2P LOCAL','MOVESETS 16 COMMANDES'],
-    scene: 'duel', frequency: '93.1', code: 'SHHF/VS', signal: 'CONTACT', data: [`${CONTENT_STATS.fighters} FORMS`,`${CONTENT_STATS.moves} MOVES`]
+    text: `Sélection des sujets I/II, ${CONTENT_STATS.fighters} manifestations, ${CONTENT_STATS.moves} coups documentés, ordinateur, local et ${CONTENT_STATS.stages} arènes.`,
+    choices: ['SUJET I VS MANIFESTATION','DEUX SUJETS LOCAUX',`MOVESETS ${CONTENT_STATS.moves / CONTENT_STATS.fighters} COMMANDES`],
+    scene: 'duel', frequency: '93.1', code: 'SHHF/VS', signal: 'CONTACT', data: [`${CONTENT_STATS.fighters} FORMES`,`${CONTENT_STATS.moves} COUPS`]
   },
   arcade: {
-    kicker: 'RANDOM DESCENT',
+    kicker: 'DESCENTE ALÉATOIRE',
     title: 'TRAVERSE<br><span>L’OTHERWORLD.</span>',
     text: 'Un parcours de sept rencontres, difficulté progressive, Otherworld dynamique et dernier boss aléatoire.',
     choices: ['7 COMBATS','DANGERS D’ARÈNE','RECORD'],
-    scene: 'arcade', frequency: '101.3', code: 'SHHF/07', signal: 'DESCENT', data: ['7 ENCOUNTERS','NO RETURN']
+    scene: 'arcade', frequency: '101.3', code: 'SHHF/07', signal: 'DESCENTE', data: ['7 RENCONTRES','AUCUN RETOUR']
   },
   ritual: {
-    kicker: 'SEVEN SEALS GAUNTLET',
+    kicker: 'ÉPREUVE DES SCEAUX',
     title: 'LES RITES<br><span>DU JUGEMENT.</span>',
     text: `${CONTENT_STATS.rituals - 1} altérations successives, endurance persistante, phases de boss et classement local.`,
     choices: [`${CONTENT_STATS.rituals - 1} RITES`,'ENDURANCE','PHASES DE BOSS'],
-    scene: 'ritual', frequency: '66.6', code: 'SHHF/RT', signal: 'RITUAL', data: [`${CONTENT_STATS.rituals - 1} SEALS`,'ENDURANCE']
+    scene: 'ritual', frequency: '66.6', code: 'SHHF/RT', signal: 'RITUEL', data: [`${CONTENT_STATS.rituals - 1} SCEAUX`,'ENDURANCE']
   },
   boss: {
-    kicker: 'GREAT TORMENTS',
+    kicker: 'GRANDS TOURMENTS',
     title: 'LES GRANDS<br><span>TOURMENTS.</span>',
     text: 'Un circuit réservé aux manifestations majeures et aux boss, avec endurance persistante.',
     choices: [`${CONTENT_STATS.bosses} BOSS`,'ENDURANCE','CLASSEMENT LOCAL'],
-    scene: 'boss', frequency: '120.4', code: 'SHHF/BX', signal: 'TORMENT', data: [`${CONTENT_STATS.bosses} BOSS`,`${CONTENT_STATS.bossPhases} PHASES`]
+    scene: 'boss', frequency: '120.4', code: 'SHHF/BX', signal: 'TOURMENT', data: [`${CONTENT_STATS.bosses} BOSS`,`${CONTENT_STATS.bossPhases} PHASES`]
   },
   training: {
-    kicker: 'OBSERVATION CELL',
+    kicker: 'CELLULE D’OBSERVATION',
     title: 'ÉTUDIE<br><span>LA MANIFESTATION.</span>',
-    text: 'Frame data, seize commandes par manifestation, hitboxes, traits, afflictions, parade parfaite et Otherworld forcé.',
-    choices: ['16 COMMANDES','FRAME DATA','FORCER OTHERWORLD'],
-    scene: 'training', frequency: '104.8', code: 'SHHF/OB', signal: 'OBSERVE', data: ['16 COMMANDS','FRAME DATA']
+    text: 'Frame data, vingt commandes par manifestation, ripostes contextuelles, hitboxes, traits, afflictions, parade parfaite et Otherworld forcé.',
+    choices: [`${CONTENT_STATS.moves / CONTENT_STATS.fighters} COMMANDES`,'RIPOSTES CONTEXTUELLES','FORCER OTHERWORLD'],
+    scene: 'training', frequency: '104.8', code: 'SHHF/OB', signal: 'OBSERVATION', data: [`${CONTENT_STATS.moves / CONTENT_STATS.fighters} COMMANDES`,'DONNÉES DE FRAMES']
   },
   archive: {
-    kicker: 'BESTIARY & EVIDENCE',
+    kicker: 'BESTIAIRE ET PREUVES',
     title: 'ARCHIVES<br><span>DE L’OTHERWORLD.</span>',
-    text: 'Catalogue filtrable, 3 680 coups, comportement canonique, adaptation versus et matrice de fidélité.',
+    text: `Catalogue filtrable, ${CONTENT_STATS.moves.toLocaleString('fr-FR')} coups, comportement canonique, adaptation versus et matrice de fidélité.`,
     choices: [`${CONTENT_STATS.fighters} PROFILS`,`${CONTENT_STATS.moves} COUPS`,`${CONTENT_STATS.stages} LIEUX`],
-    scene: 'archive', frequency: '108.2', code: 'SHHF/AR', signal: 'EVIDENCE', data: [`${CONTENT_STATS.moves} MOVES`,`${CONTENT_STATS.sources} SOURCES`]
+    scene: 'archive', frequency: '108.2', code: 'SHHF/AR', signal: 'PREUVES', data: [`${CONTENT_STATS.moves} COUPS`,`${CONTENT_STATS.sources} SOURCES`]
   },
   options: {
-    kicker: 'SYSTEM SETTINGS',
+    kicker: 'RÉGLAGES DU SYSTÈME',
     title: 'RÈGLE<br><span>LE SIGNAL.</span>',
     text: 'Affichage, confort, audio, IA adaptative, fatalités, animations, Otherworld et dangers d’arène.',
     choices: ['ACCESSIBILITÉ','RÈGLES DYNAMIQUES','SAUVEGARDE'],
-    scene: 'options', frequency: '88.3', code: 'SHHF/OP', signal: 'CONFIG', data: ['ACCESSIBILITY','LOCAL ONLY']
+    scene: 'options', frequency: '88.3', code: 'SHHF/OP', signal: 'RÉGLAGES', data: ['ACCESSIBILITÉ','LOCAL UNIQUEMENT']
   }
 };
 
@@ -143,7 +143,7 @@ function select(index) {
   $('#heroData').innerHTML = (data.data || []).map((label)=>`<span>${label}</span>`).join('');
   $('#signalFrequency').textContent = data.frequency || '106.7';
   $('#signalState').textContent = data.signal || 'STATIC';
-  $('#caseStamp').textContent = `CASE ${String(active).padStart(2,'0')} — ${(data.signal || data.scene).toUpperCase()}`;
+  $('#caseStamp').textContent = `DOSSIER ${String(active).padStart(2,'0')} — ${(data.signal || data.scene).toUpperCase()}`;
   $('#evidenceCode').textContent = data.code || `SHHF/${String(active).padStart(2,'0')}`;
   document.documentElement.dataset.scene = data.scene;
   drawHero(data.scene, performance.now());
@@ -181,7 +181,7 @@ $('#closeOptions').addEventListener('click',closeOptions);
 $('#optionsModal').addEventListener('click',event=>{if(event.target.id==='optionsModal')closeOptions();});
 $('#fullscreen').addEventListener('click',()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{}));
 $('#resetSave').addEventListener('click',()=>{
-  if (confirm('Effacer progression, records et dernier front ?')) {
+  if (confirm('Effacer progression, relevés et dernier cauchemar ?')) {
     localStorage.removeItem(SAVE_KEY);
     localStorage.removeItem('sh-halo-of-flesh-records-v1');
     localStorage.removeItem('sh-halo-of-flesh-chronicles-v1');

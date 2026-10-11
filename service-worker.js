@@ -1,4 +1,4 @@
-const CACHE='halo-of-flesh-v0.5.0';
+const CACHE='halo-of-flesh-v0.6.0';
 const SHELL=[
   '/','/index.html','/styles.css','/manifest.webmanifest',
   '/assets/icons/icon-192.svg','/assets/icons/icon-512.svg',

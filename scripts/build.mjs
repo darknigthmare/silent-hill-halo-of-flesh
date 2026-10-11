@@ -104,6 +104,12 @@ async function runVerification() {
       assert(phase.threshold>0&&phase.threshold<1,`Seuil de phase invalide: ${fighter.id}/${index}`);
       assert(phase.power>=1&&phase.speed>=1,`Modificateur de phase invalide: ${fighter.id}/${index}`);
     });
+    const contextualContract={
+      backThrow:{trigger:'back-throw',sideSwitch:true,hardKnockdown:true},
+      dodgeAttack:{trigger:'dodge-followup'},
+      guardCounter:{trigger:'perfect-guard',armorBreak:true},
+      wakeupAttack:{trigger:'wakeup',groundBounce:true}
+    };
     for(const key of MOVESET_KEYS){
       const move=profile.moves[key];
       assert(move&&move.key===key,`Coup absent ou mal indexé: ${fighter.id}/${key}`);
@@ -112,6 +118,7 @@ async function runVerification() {
       assert(typeof move.canonicalBasis==='string'&&move.canonicalBasis.length>=8,`Base canonique absente: ${fighter.id}/${key}`);
       assert(MOVE_FIDELITY[move.fidelity],`Statut de fidélité inconnu: ${fighter.id}/${key}/${move.fidelity}`);
       if(move.effect)assert(afflictionIds.has(move.effect.id),`Effet inconnu: ${fighter.id}/${key}/${move.effect.id}`);
+      for(const [property,expected] of Object.entries(contextualContract[key]||{}))assert(move[property]===expected,`Contrat contextuel invalide: ${fighter.id}/${key}/${property}`);
       for(const cancel of move.cancelInto||[])assert(profile.moves[cancel],`Annulation inconnue: ${fighter.id}/${key}/${cancel}`);
     }
   }

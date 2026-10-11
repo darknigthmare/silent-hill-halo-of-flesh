@@ -1,10 +1,10 @@
-# Audit de couverture du roster — v0.5.0
+# Audit de couverture du roster — v0.6.0
 
 **État global : COMPLET DANS LE PÉRIMÈTRE DÉFINI**
 
 Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.
 
-Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.5.0.
+Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.0.
 
 | Source | Présents | Minimum audité | Arènes | Minimum | Manquants | Nommage |
 |---|---:|---:|---:|---:|---|---|
@@ -23,7 +23,7 @@ Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et
 | SILENT HILL f | 19 | 19 | 9 | 9 | Aucun | Noms officiels ou établis, variantes explicitement balisées |
 | SILENT HILL — FILM UNIVERSE | 13 | 13 | 8 | 8 | Aucun | Noms officiels ou établis, variantes explicitement balisées |
 | SILENT HILL: ASCENSION | 7 | 7 | 3 | 3 | Aucun | Noms officiels ou établis, variantes explicitement balisées |
-| SILENT HILL: TOWNFALL | 5 | 5 | 7 | 6 | Aucun | Konami ne publie pas de bestiaire officiel ; noms descriptifs balisés. |
+| SILENT HILL: TOWNFALL | 5 | 5 | 7 | 6 | Aucun | L’annonce officielle ne publie pas de bestiaire nommé ; les appellations de guides post-sortie restent balisées comme telles. |
 
 ## Règles de décision
 

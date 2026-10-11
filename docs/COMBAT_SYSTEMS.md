@@ -1,12 +1,12 @@
-# Systèmes de combat — v0.5.0
+# Systèmes de combat — v0.6.0
 
-La v0.5.0 réunit **3680 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
+La v0.6.0 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
 
 ## Architecture des movesets
 
-Chaque manifestation possède **16 commandes** : huit attaques normales contextuelles, une saisie, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.
+Chaque manifestation possède **20 commandes** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.
 
-Répartition : **425 directement attestées**, **2796 composites lore-friendly**, **459 adaptations versus**.
+Répartition : **447 directement attestées**, **3694 composites lore-friendly**, **459 adaptations versus**.
 
 Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation et base canonique.
 
@@ -90,6 +90,10 @@ Les **75 boss** possèdent deux transitions, soit **150 phases déclenchables**.
 ## Règles avancées
 
 - **Garde parfaite** : bloquer dans la fenêtre d’impact neutralise davantage de pression, produit un signal visuel/sonore distinct et ouvre une réponse rapide.
+- **Projection arrière** : maintenir la direction opposée pendant la saisie change de côté et impose une chute dure.
+- **Riposte d’esquive** : une attaque légère pendant la fenêtre de sortie d’esquive déclenche une action propre à la manifestation.
+- **Contre de garde** : une attaque lourde après une garde parfaite consomme la fenêtre de riposte et brise les armures actives.
+- **Reversal de relevée** : une technique pendant la reprise au sol déclenche une action invulnérable documentée séparément.
 - **Contre** : toucher pendant le démarrage adverse augmente l’impact et alimente les statistiques de rang.
 - **Annulations** : les chaînes autorisées sont déclarées coup par coup dans le profil de combat.
 - **Otherworld dynamique** : une sirène annonce la transformation progressive de l’arène pendant le combat.

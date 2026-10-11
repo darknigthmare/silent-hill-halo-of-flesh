@@ -1,4 +1,4 @@
-# Registre de sources et provenance — v0.5.0
+# Registre de sources et provenance — v0.6.0
 
 ## Principe
 
@@ -31,7 +31,7 @@ Silent Hill ; Silent Hill 2 et ses formes distinctes ; Silent Hill 3 ; Silent Hi
 2. Séparer une variante seulement si morphologie, arme, comportement, phase ou fonction diffère réellement.
 3. Relever échelle, posture et signes distinctifs sans copier d’asset.
 4. Résumer les actions observables.
-5. Construire seize commandes et attribuer un niveau de fidélité à chacune.
+5. Construire vingt commandes et attribuer un niveau de fidélité à chacune.
 6. Réserver `direct-canonical` aux actions attestées.
 7. Documenter les composites et adaptations sans les présenter comme officiels.
 8. Associer arène, trait, affliction, IA, phases et fatalités cohérentes.
