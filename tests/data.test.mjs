@@ -2,17 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY,
+  STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary
 } from '../src/data.js';
 
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.6.1 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.6.1');
+test('v0.7.0 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.7.0');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:374,moves:4600,
+    fatalities:460,stageFatalities:123,stageAnimations:374,stageDirectorEvents:446,
+    stageInteractions:359,stageHazardLinks:474,terrainProfiles:14,shiftStyles:15,moves:4600,
     directCanonicalMoves:447,behaviorCompositeMoves:3694,versusAdaptationMoves:459,coverageComplete:true
   });
 });
@@ -40,6 +42,37 @@ test('every stage source and hazard resolves',()=>{
     assert.ok(AFFLICTIONS[STAGE_HAZARDS[stage.hazard].effect],`${stage.id}: ${STAGE_HAZARDS[stage.hazard].effect}`);
     assert.ok(stage.animations.length>=1,stage.id);
     assert.ok(stage.fatality?.name&&stage.fatality.sequence.length>=3,stage.id);
+  }
+});
+
+test('every arena exposes a complete lore-first stage doctrine',()=>{
+  assert.equal(Object.keys(STAGE_TERRAINS).length,14);
+  assert.equal(Object.keys(STAGE_SHIFT_STYLES).length,15);
+  assert.equal(Object.keys(STAGE_EVENTS).length,22);
+  const signatures=new Set();
+  for(const stage of STAGES){
+    const summary=stageDirectorSummary(stage);
+    assert.ok(STAGE_TERRAINS[summary.terrain.id],`${stage.id}: terrain ${summary.terrain.id}`);
+    assert.ok(STAGE_SHIFT_STYLES[summary.shift.style],`${stage.id}: shift ${summary.shift.style}`);
+    assert.ok(stage.lore?.premise?.length>=16,`${stage.id}: lore premise`);
+    assert.ok(stage.lore?.adaptationNotice?.includes('adaptation'),`${stage.id}: adaptation notice`);
+    assert.ok(stage.visibility?.fog>=0&&stage.visibility?.fog<=1,`${stage.id}: fog`);
+    assert.ok(stage.visibility?.darkness>=0&&stage.visibility?.darkness<=1,`${stage.id}: darkness`);
+    assert.ok(stage.director?.events?.length>=1,`${stage.id}: events`);
+    assert.ok(stage.director?.hazardDeck?.length>=1,`${stage.id}: hazard deck`);
+    assert.equal(stage.animationTracks.length,stage.animations.length,`${stage.id}: animation tracks`);
+    assert.ok(stage.interactions.length>=1,`${stage.id}: interactions`);
+    assert.ok(!signatures.has(stage.director.signature),`${stage.id}: duplicate doctrine signature`);
+    signatures.add(stage.director.signature);
+    for(const eventId of stage.director.events)assert.ok(STAGE_EVENTS[eventId],`${stage.id}: event ${eventId}`);
+    for(const hazardId of stage.director.hazardDeck)assert.ok(STAGE_HAZARDS[hazardId],`${stage.id}: hazard ${hazardId}`);
+    for(const interaction of stage.interactions){
+      assert.ok(STAGE_EVENTS[interaction.event],`${stage.id}: interaction ${interaction.event}`);
+      assert.ok(STAGE_INTERACTION_TRIGGERS[interaction.trigger],`${stage.id}: trigger ${interaction.trigger}`);
+      assert.ok(interaction.triggerLabel?.length>=8,`${stage.id}: trigger label`);
+      assert.equal(interaction.fidelityLabel,'MOTIF LORE · RÈGLE VERSUS');
+      assert.match(interaction.fidelity,/adaptation/,`${stage.id}: fidelity`);
+    }
   }
 });
 
@@ -109,15 +142,15 @@ test('every source combatant exposes at least one directly attested action while
   }
 });
 
-test('all 12 traits, 8 afflictions, 7 hazards, 9 rites and 12 AI personalities are represented',()=>{
+test('all 12 traits, 8 afflictions, 29 hazards, 9 rites and 12 AI personalities are represented',()=>{
   assert.equal(Object.keys(MANIFESTATION_TRAITS).length,12);
   assert.equal(Object.keys(AFFLICTIONS).length,8);
-  assert.equal(Object.keys(STAGE_HAZARDS).length,7);
+  assert.equal(Object.keys(STAGE_HAZARDS).length,29);
   assert.equal(Object.keys(RITUAL_MODIFIERS).length,9);
   assert.equal(Object.keys(AI_PERSONALITIES).length,12);
   const usedTraits=new Set(ROSTER.map(f=>f.trait));
   const usedAfflictions=new Set(ROSTER.map(f=>f.affliction));
-  const usedHazards=new Set(STAGES.map(s=>s.hazard));
+  const usedHazards=new Set(STAGES.flatMap(stage=>[stage.hazard,...(stage.director?.hazardDeck||[])]));
   Object.keys(MANIFESTATION_TRAITS).forEach(id=>assert.ok(usedTraits.has(id),id));
   Object.keys(AFFLICTIONS).forEach(id=>assert.ok(usedAfflictions.has(id),id));
   Object.keys(STAGE_HAZARDS).forEach(id=>assert.ok(usedHazards.has(id),id));
@@ -148,7 +181,7 @@ test('every AI personality and ritual modifier has complete readable metadata',(
 });
 
 
-test('coverage audit reports no known gap inside the v0.6.1 media scope',()=>{
+test('coverage audit reports no known gap inside the v0.7.0 media scope',()=>{
   const audit=coverageAudit();
   assert.equal(audit.complete,true);
   assert.equal(Object.keys(audit.sources).length,Object.keys(SOURCE_META).length);
@@ -169,6 +202,17 @@ test('fatality and animation totals are derived from the live catalogue',()=>{
   assert.equal(CONTENT_STATS.fatalities,ROSTER.reduce((sum,f)=>sum+f.fatalities.length,0));
   assert.equal(CONTENT_STATS.stageFatalities,STAGES.filter(stage=>stage.fatality).length);
   assert.equal(CONTENT_STATS.stageAnimations,STAGES.reduce((sum,stage)=>sum+stage.animations.length,0));
+  assert.equal(CONTENT_STATS.stageDirectorEvents,STAGES.reduce((sum,stage)=>sum+stage.director.events.length,0));
+  assert.equal(CONTENT_STATS.stageInteractions,STAGES.reduce((sum,stage)=>sum+stage.interactions.length,0));
+  assert.equal(CONTENT_STATS.stageHazardLinks,STAGES.reduce((sum,stage)=>sum+stage.director.hazardDeck.length,0));
   assert.equal(CONTENT_STATS.moves,ROSTER.length*MOVESET_KEYS.length);
   assert.equal(CONTENT_STATS.directCanonicalMoves+CONTENT_STATS.behaviorCompositeMoves+CONTENT_STATS.versusAdaptationMoves,CONTENT_STATS.moves);
+});
+
+test('stage lore premises remain readable and never fall back to raw catalogue taxonomy',()=>{
+  for(const stage of STAGES){
+    assert.ok(stage.lore?.premise?.length>=48,`${stage.id}: prémisse trop courte`);
+    assert.doesNotMatch(stage.lore.premise,/utilise ses motifs de|ses éléments [a-z_]+/i,stage.id);
+    assert.doesNotMatch(stage.lore.premise,/\b(beds|gurneys|lights|shops|shutters|pipes|grates|roots|runes|chains)\b/i,stage.id);
+  }
 });

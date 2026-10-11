@@ -51,6 +51,7 @@ test('service worker keeps the 8 MB moveset catalogue out of precache and includ
   const blocks=['ESSENTIAL_SHELL','OPTIONAL_SHELL'].map(name=>worker.match(new RegExp(`const ${name}\\s*=\\s*\\[([\\s\\S]*?)\\];`))?.[1]||'').join('\n');
   assert.match(blocks,/\/offline\.html/);
   assert.match(blocks,/\/404\.html/);
+  assert.match(blocks,/\/src\/stage-director\.js/);
   assert.doesNotMatch(blocks,/\/data\/movesets\.json/);
 });
 

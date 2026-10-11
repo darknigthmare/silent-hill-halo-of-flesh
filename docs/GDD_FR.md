@@ -1,4 +1,4 @@
-# Game Design Document — SILENT HILL: HALO OF FLESH v0.6.1
+# Game Design Document — SILENT HILL: HALO OF FLESH v0.7.0
 
 ## 1. Vision
 
@@ -120,7 +120,10 @@ Les règles sont data-driven et exportées dans `data/combat-rules.json`.
 
 - 12 traits modifient mobilité, armure, garde, projectile, esquive ou annulation.
 - 8 afflictions agissent sur vitalité, déplacement, garde ou jauge Nightmare.
-- 7 dangers combinent télégraphe, zone, dégâts et affliction.
+- 29 dangers combinent télégraphe, forme de zone, cible, blocage, dégâts et affliction.
+- 14 terrains modifient mouvement, saut, esquive, friction, recul et récupération de garde.
+- 15 bascules Otherworld possèdent signal, seuil, durée, radio et langage visuel propres.
+- 22 événements environnementaux activent animation, obscurité, radio, danger et parfois terrain temporaire.
 - 9 rites, standard inclus, modifient les règles globales.
 
 ## 8. Phases de boss

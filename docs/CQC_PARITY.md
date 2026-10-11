@@ -2,7 +2,7 @@
 
 La reprise concerne l’organisation fonctionnelle, les modes, la navigation modulaire et la lisibilité du projet de référence. Le code, les données, l’interface et l’univers ont été reconstruits pour *Silent Hill*.
 
-| Fonction CQC | Halo of Flesh v0.6.1 | Statut |
+| Fonction CQC | Halo of Flesh v0.7.0 | Statut |
 |---|---|---|
 | Front de commande plein écran | registre CRTV/radio et navigation « Brume » | Étendu |
 | Fond animé procédural | brume, signal et manifestations | Complet |
@@ -38,7 +38,7 @@ La reprise concerne l’organisation fonctionnelle, les modes, la navigation mod
 3. Vingt commandes par manifestation.
 4. Projection arrière, riposte d’esquive, contre de garde parfaite et reversal de relevée.
 5. Trois niveaux de fidélité visibles mouvement par mouvement.
-6. Douze traits, huit afflictions et sept dangers.
+6. Douze traits, huit afflictions et vingt-neuf dangers.
 7. Neuf rites et douze personnalités IA.
 8. IA utilisant les propriétés et fenêtres réelles du moveset.
 9. Deux phases pour chacun des 75 boss.

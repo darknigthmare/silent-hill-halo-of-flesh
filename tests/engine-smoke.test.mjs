@@ -261,3 +261,115 @@ test('counter stances become active during their attested defensive technique',(
   assert.equal(engine.snapshot().p1.lastMoveKey,'backSpecial');
   engine.destroy();
 });
+
+
+test('terrain profiles alter movement, dodge and friction without replacing the fighter doctrine',()=>{
+  const ice=STAGES.find(stage=>stage.terrain?.id==='ice');
+  const flooded=STAGES.find(stage=>stage.terrain?.id==='flooded');
+  assert.ok(ice&&flooded);
+  const iceEngine=makeEngine({stage:ice,stageTerrain:true});
+  iceEngine.phase='fight';
+  const iceActor=iceEngine.actors[0];
+  iceActor.facing=1;iceActor.vx=0;
+  iceEngine.setTouch('p1','right',true);
+  iceEngine.updateActor(iceActor,0);
+  const firstIceVelocity=iceActor.vx;
+  assert.equal(iceEngine.currentTerrain().slip,true);
+  assert.ok(firstIceVelocity>0);
+  iceEngine.setTouch('p1','right',false);
+  iceEngine.physics(iceActor);
+  assert.ok(Math.abs(iceActor.vx)>0,'la glace doit conserver de l’inertie');
+  iceEngine.destroy();
+
+  const waterEngine=makeEngine({stage:flooded,stageTerrain:true});
+  waterEngine.phase='fight';
+  assert.equal(waterEngine.currentTerrain().id,'flooded');
+  assert.ok(waterEngine.currentTerrain().moveScale<1);
+  const actor=waterEngine.actors[0];
+  actor.facing=1;
+  waterEngine.setTouch('p1','dodge','pressed');
+  waterEngine.updateActor(actor,0);
+  assert.ok(Math.abs(actor.vx)<10.2,'l’eau doit réduire la portée d’esquive');
+  waterEngine.destroy();
+});
+
+test('stage events can darken the scene, pulse terrain and summon their lore-linked hazard',()=>{
+  const stage=STAGES.find(entry=>entry.director?.events?.includes('waterRise'));
+  assert.ok(stage);
+  const engine=makeEngine({stage,stageHazards:true,stageDirector:true,stageTerrain:true});
+  engine.phase='fight';
+  assert.equal(engine.triggerStageEvent('waterRise'),true);
+  const state=engine.snapshot();
+  assert.equal(state.world.director.activeEvent,'waterRise');
+  assert.equal(state.world.director.terrainOverride,'flooded');
+  assert.equal(state.world.terrain.id,'flooded');
+  assert.ok(engine.hazards.some(hazard=>hazard.id==='waterSurge'&&hazard.sourceEvent==='waterRise'));
+  for(let i=0;i<170;i++)engine.updateStageDirector();
+  assert.equal(engine.currentTerrain().id,stage.terrain.id);
+  engine.destroy();
+});
+
+test('each stage uses its own Otherworld cue, duration and start state',()=>{
+  const signalStage=STAGES.find(stage=>stage.shift?.style==='signal'&&!stage.shift.startOtherworld);
+  const immediate=STAGES.find(stage=>stage.shift?.startOtherworld);
+  assert.ok(signalStage&&immediate);
+  const engine=makeEngine({stage:signalStage,otherworldShift:true});
+  engine.phase='fight';
+  engine.triggerOtherworldShift();
+  assert.equal(engine.world.phase,'shifting');
+  assert.equal(engine.world.siren,signalStage.shift.duration);
+  for(let i=0;i<signalStage.shift.duration+5;i++)engine.updateWorld();
+  assert.equal(engine.world.phase,'otherworld');
+  engine.destroy();
+  const other=makeEngine({stage:immediate});
+  assert.equal(other.snapshot().world.phase,'otherworld');
+  assert.equal(other.snapshot().world.amount,1);
+  other.destroy();
+});
+
+test('hazard geometry resolves global, edge, ring, sweep and center doctrines',()=>{
+  const stage=STAGES.find(entry=>entry.director?.hazardDeck?.includes('voidPull'))||STAGES[0];
+  const engine=makeEngine({stage,stageHazards:true});
+  engine.phase='fight';
+  const ids=['sirenShock','roadCollapse','crtvPulse','chainSweep','voidPull'];
+  for(const id of ids){
+    const hazard=engine.spawnHazard(id);
+    assert.equal(hazard.id,id);
+    assert.ok(hazard.zoneMax>=hazard.zoneMin);
+    engine.resolveHazard(hazard);
+    hazard.active=0;hazard.timer=0;
+  }
+  assert.ok(engine.world.hazardsTriggered>=ids.length);
+  engine.destroy();
+});
+
+test('lore interactions answer to heavy impact, Otherworld midpoint and late-round pressure',()=>{
+  const stage=STAGES.find(entry=>entry.interactions?.length===3&&entry.director?.events?.length>=3);
+  assert.ok(stage);
+  const engine=makeEngine({stage,stageHazards:true,stageDirector:true,stageTerrain:true});
+  engine.phase='fight';
+  const [attacker,target]=engine.actors;
+  const heavy=attacker.profile.moves.neutralHeavy;
+  engine.applyHit(attacker,target,heavy,991);
+  assert.equal(engine.stageRuntime.heavyImpactPending,true);
+  engine.updateStageDirector();
+  assert.equal(engine.stageRuntime.activeEvent?.id,stage.interactions[0].event);
+  assert.equal(engine.stageRuntime.lastTrigger,'time-or-first-heavy-impact');
+  assert.ok(engine.stageRuntime.interactionTriggered.includes(stage.interactions[0].id));
+
+  engine.stageRuntime.activeEvent=null;
+  engine.stageRuntime.activeTimer=0;
+  engine.world.amount=.55;
+  engine.updateStageDirector();
+  assert.equal(engine.stageRuntime.activeEvent?.id,stage.interactions[1].event);
+  assert.equal(engine.stageRuntime.lastTrigger,'otherworld-halfway');
+
+  engine.stageRuntime.activeEvent=null;
+  engine.stageRuntime.activeTimer=0;
+  target.health=target.maxHealth*.2;
+  engine.updateStageDirector();
+  assert.equal(engine.stageRuntime.activeEvent?.id,stage.interactions[2].event);
+  assert.equal(engine.stageRuntime.lastTrigger,'low-health-or-late-round');
+  assert.equal(engine.snapshot().world.director.interactionTriggered.length,3);
+  engine.destroy();
+});

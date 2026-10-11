@@ -1,5 +1,5 @@
 {
-  "version": "0.6.1",
+  "version": "0.7.0",
   "traits": {
     "echo": {
       "name": "ÉCHO PERSISTANT",
@@ -129,49 +129,321 @@
       "telegraph": 85,
       "radius": 165,
       "damage": 34,
-      "effect": "static"
+      "effect": "static",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 7,
+      "visual": "static"
     },
     "fallingDebris": {
       "name": "CHUTE DE DÉBRIS",
       "telegraph": 90,
       "radius": 118,
       "damage": 62,
-      "effect": "decay"
+      "effect": "decay",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 9,
+      "visual": "debris"
     },
     "bloodTide": {
       "name": "MARÉE DE SANG",
       "telegraph": 105,
       "radius": 220,
       "damage": 45,
-      "effect": "bleed"
+      "effect": "bleed",
+      "shape": "lane",
+      "targetMode": "center",
+      "knockback": 6,
+      "visual": "blood"
     },
     "frostWave": {
       "name": "VAGUE DE GEL",
       "telegraph": 95,
       "radius": 205,
       "damage": 26,
-      "effect": "frost"
+      "effect": "frost",
+      "shape": "lane",
+      "targetMode": "fighter",
+      "knockback": 5,
+      "visual": "ice"
     },
     "petalBloom": {
       "name": "FLORAISON ROUGE",
       "telegraph": 100,
       "radius": 190,
       "damage": 38,
-      "effect": "bloom"
+      "effect": "bloom",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 4,
+      "visual": "petals"
     },
     "emberFall": {
       "name": "PLUIE DE CENDRES",
       "telegraph": 82,
       "radius": 135,
       "damage": 50,
-      "effect": "burn"
+      "effect": "burn",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 7,
+      "visual": "embers"
     },
     "chainSweep": {
       "name": "BALAYAGE DE CHAÎNES",
       "telegraph": 76,
       "radius": 145,
       "damage": 58,
-      "effect": "bind"
+      "effect": "bind",
+      "shape": "sweep",
+      "targetMode": "side",
+      "knockback": 10,
+      "visual": "chains"
+    },
+    "lockerSlam": {
+      "name": "CLAQUEMENT DE CASIERS",
+      "telegraph": 66,
+      "radius": 105,
+      "damage": 38,
+      "effect": "static",
+      "shape": "lane",
+      "targetMode": "fighter",
+      "knockback": 6,
+      "visual": "locker"
+    },
+    "gurneyRush": {
+      "name": "CHARIOT LANCÉ",
+      "telegraph": 84,
+      "radius": 142,
+      "damage": 58,
+      "effect": "bind",
+      "shape": "sweep",
+      "targetMode": "side",
+      "knockback": 12,
+      "visual": "gurney"
+    },
+    "roadCollapse": {
+      "name": "RUPTURE DE CHAUSSÉE",
+      "telegraph": 112,
+      "radius": 188,
+      "damage": 68,
+      "effect": "decay",
+      "shape": "edge",
+      "targetMode": "edge",
+      "knockback": 14,
+      "visual": "chasm",
+      "unblockable": true
+    },
+    "carouselSweep": {
+      "name": "COURONNE DU MANÈGE",
+      "telegraph": 98,
+      "radius": 154,
+      "damage": 52,
+      "effect": "bind",
+      "shape": "sweep",
+      "targetMode": "center",
+      "knockback": 9,
+      "visual": "carousel"
+    },
+    "trainRush": {
+      "name": "PASSAGE DE LA RAME",
+      "telegraph": 124,
+      "radius": 210,
+      "damage": 82,
+      "effect": "decay",
+      "shape": "sweep",
+      "targetMode": "side",
+      "knockback": 16,
+      "visual": "train",
+      "unblockable": true
+    },
+    "steamVent": {
+      "name": "PURGE DE VAPEUR",
+      "telegraph": 74,
+      "radius": 112,
+      "damage": 44,
+      "effect": "burn",
+      "shape": "lane",
+      "targetMode": "fighter",
+      "knockback": 7,
+      "visual": "steam"
+    },
+    "waterSurge": {
+      "name": "VAGUE D’EAU NOIRE",
+      "telegraph": 106,
+      "radius": 235,
+      "damage": 40,
+      "effect": "frost",
+      "shape": "lane",
+      "targetMode": "center",
+      "knockback": 8,
+      "visual": "water"
+    },
+    "mirrorFracture": {
+      "name": "FRACTURE DU REFLET",
+      "telegraph": 88,
+      "radius": 152,
+      "damage": 46,
+      "effect": "dread",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 7,
+      "visual": "mirror"
+    },
+    "rootSnare": {
+      "name": "PRISE DES RACINES",
+      "telegraph": 92,
+      "radius": 172,
+      "damage": 34,
+      "effect": "bloom",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 4,
+      "visual": "roots"
+    },
+    "spotlightSweep": {
+      "name": "FAISCEAU DE SURVEILLANCE",
+      "telegraph": 80,
+      "radius": 148,
+      "damage": 32,
+      "effect": "dread",
+      "shape": "sweep",
+      "targetMode": "side",
+      "knockback": 5,
+      "visual": "spotlight"
+    },
+    "crtvPulse": {
+      "name": "VERROU CRTV",
+      "telegraph": 70,
+      "radius": 220,
+      "damage": 28,
+      "effect": "static",
+      "shape": "ring",
+      "targetMode": "fighter",
+      "knockback": 4,
+      "visual": "signal"
+    },
+    "sirenShock": {
+      "name": "ONDE DE SIRÈNE",
+      "telegraph": 94,
+      "radius": 270,
+      "damage": 38,
+      "effect": "dread",
+      "shape": "global",
+      "targetMode": "center",
+      "knockback": 6,
+      "visual": "siren"
+    },
+    "voidPull": {
+      "name": "ATTRACTION DU VIDE",
+      "telegraph": 108,
+      "radius": 238,
+      "damage": 42,
+      "effect": "dread",
+      "shape": "center",
+      "targetMode": "center",
+      "knockback": -10,
+      "visual": "void"
+    },
+    "bellToll": {
+      "name": "RÉSONANCE DE LA CLOCHE",
+      "telegraph": 96,
+      "radius": 260,
+      "damage": 30,
+      "effect": "dread",
+      "shape": "global",
+      "targetMode": "center",
+      "knockback": 4,
+      "visual": "bell"
+    },
+    "portraitGaze": {
+      "name": "REGARD DES PORTRAITS",
+      "telegraph": 90,
+      "radius": 176,
+      "damage": 34,
+      "effect": "dread",
+      "shape": "circle",
+      "targetMode": "fighter",
+      "knockback": 4,
+      "visual": "portrait"
+    },
+    "elevatorDrop": {
+      "name": "CHUTE D’ASCENSEUR",
+      "telegraph": 104,
+      "radius": 136,
+      "damage": 64,
+      "effect": "decay",
+      "shape": "lane",
+      "targetMode": "fighter",
+      "knockback": 11,
+      "visual": "elevator"
+    },
+    "roomPulse": {
+      "name": "CONTRACTION DE LA PIÈCE",
+      "telegraph": 92,
+      "radius": 230,
+      "damage": 36,
+      "effect": "dread",
+      "shape": "ring",
+      "targetMode": "center",
+      "knockback": -5,
+      "visual": "room"
+    },
+    "lightningStrike": {
+      "name": "IMPACT DE FOUDRE",
+      "telegraph": 78,
+      "radius": 96,
+      "damage": 62,
+      "effect": "burn",
+      "shape": "lane",
+      "targetMode": "fighter",
+      "knockback": 10,
+      "visual": "lightning"
+    },
+    "iceFracture": {
+      "name": "FISSURE DE GLACE",
+      "telegraph": 100,
+      "radius": 180,
+      "damage": 36,
+      "effect": "frost",
+      "shape": "edge",
+      "targetMode": "fighter",
+      "knockback": 9,
+      "visual": "ice-crack"
+    },
+    "ritualSeal": {
+      "name": "FERMETURE DU SCEAU",
+      "telegraph": 102,
+      "radius": 196,
+      "damage": 42,
+      "effect": "dread",
+      "shape": "ring",
+      "targetMode": "center",
+      "knockback": -6,
+      "visual": "ritual"
+    },
+    "windShear": {
+      "name": "RAFALE LATÉRALE",
+      "telegraph": 82,
+      "radius": 170,
+      "damage": 30,
+      "effect": "frost",
+      "shape": "sweep",
+      "targetMode": "side",
+      "knockback": 13,
+      "visual": "wind"
+    },
+    "doorSlam": {
+      "name": "PORTE CLAQUÉE",
+      "telegraph": 72,
+      "radius": 104,
+      "damage": 40,
+      "effect": "bind",
+      "shape": "edge",
+      "targetMode": "edge",
+      "knockback": 7,
+      "visual": "door"
     }
   },
   "rituals": {
@@ -329,6 +601,525 @@
       "aggression": 1.18,
       "defense": 1.16,
       "mobility": 0.9
+    }
+  },
+  "terrains": {
+    "concrete": {
+      "name": "BÉTON SEC",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Sol stable et neutre."
+    },
+    "wetConcrete": {
+      "name": "BÉTON TREMPÉ",
+      "moveScale": 0.96,
+      "jumpScale": 0.96,
+      "dodgeScale": 1.06,
+      "friction": 0.9,
+      "knockbackScale": 1.08,
+      "guardRegenScale": 0.96,
+      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+    },
+    "flooded": {
+      "name": "EAU STAGNANTE",
+      "moveScale": 0.87,
+      "jumpScale": 0.9,
+      "dodgeScale": 0.9,
+      "friction": 0.8,
+      "knockbackScale": 0.92,
+      "guardRegenScale": 0.92,
+      "splash": true,
+      "description": "L’eau freine les déplacements et les esquives sans rendre le combat illisible."
+    },
+    "ice": {
+      "name": "GLACE DU CAUCHEMAR",
+      "moveScale": 1.02,
+      "jumpScale": 0.95,
+      "dodgeScale": 1.14,
+      "friction": 0.94,
+      "knockbackScale": 1.12,
+      "guardRegenScale": 0.9,
+      "slip": true,
+      "description": "Faible adhérence : les accélérations et esquives prolongent leur glissade."
+    },
+    "steel": {
+      "name": "CAILLEBOTIS MÉTALLIQUE",
+      "moveScale": 0.98,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.98,
+      "friction": 0.86,
+      "knockbackScale": 1.04,
+      "guardRegenScale": 0.94,
+      "description": "Le métal résonne, accentue la radio et transmet les chocs."
+    },
+    "wood": {
+      "name": "PLANCHER ANCIEN",
+      "moveScale": 0.97,
+      "jumpScale": 1,
+      "dodgeScale": 0.96,
+      "friction": 0.85,
+      "knockbackScale": 1,
+      "guardRegenScale": 0.98,
+      "creak": true,
+      "description": "Le plancher trahit les déplacements par des craquements."
+    },
+    "carpet": {
+      "name": "MOQUETTE HUMIDE",
+      "moveScale": 0.92,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.9,
+      "friction": 0.76,
+      "knockbackScale": 0.88,
+      "guardRegenScale": 1.04,
+      "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+    },
+    "mud": {
+      "name": "BOUE ET RACINES",
+      "moveScale": 0.88,
+      "jumpScale": 0.9,
+      "dodgeScale": 0.86,
+      "friction": 0.77,
+      "knockbackScale": 0.9,
+      "guardRegenScale": 0.92,
+      "description": "Le terrain retient les pieds et favorise les attaques de poursuite."
+    },
+    "petals": {
+      "name": "PÉTALES ET VRILLES",
+      "moveScale": 0.93,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.92,
+      "friction": 0.82,
+      "knockbackScale": 0.94,
+      "guardRegenScale": 0.9,
+      "bloom": true,
+      "description": "La flore réagit aux combattants et se densifie pendant la bascule."
+    },
+    "ritualStone": {
+      "name": "PIERRE RITUELLE",
+      "moveScale": 0.97,
+      "jumpScale": 0.94,
+      "dodgeScale": 0.94,
+      "friction": 0.83,
+      "knockbackScale": 1.02,
+      "guardRegenScale": 0.88,
+      "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+    },
+    "unstable": {
+      "name": "STRUCTURE INSTABLE",
+      "moveScale": 0.95,
+      "jumpScale": 0.94,
+      "dodgeScale": 0.98,
+      "friction": 0.87,
+      "knockbackScale": 1.14,
+      "guardRegenScale": 0.9,
+      "description": "Le décor cède sous les impacts lourds et augmente le recul."
+    },
+    "narrow": {
+      "name": "COULOIR ÉTROIT",
+      "moveScale": 0.95,
+      "jumpScale": 0.88,
+      "dodgeScale": 0.84,
+      "friction": 0.84,
+      "knockbackScale": 0.82,
+      "guardRegenScale": 1.02,
+      "description": "Les murs réduisent l’espace de recul et rendent les saisies plus dangereuses."
+    },
+    "void": {
+      "name": "ESPACE IMPOSSIBLE",
+      "moveScale": 0.92,
+      "jumpScale": 1.06,
+      "dodgeScale": 1.02,
+      "friction": 0.88,
+      "knockbackScale": 1.06,
+      "guardRegenScale": 0.86,
+      "gravityPulse": true,
+      "description": "La géométrie altère brièvement la gravité et les distances."
+    },
+    "ash": {
+      "name": "CENDRES ET GRILLE",
+      "moveScale": 0.96,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.96,
+      "friction": 0.83,
+      "knockbackScale": 1.02,
+      "guardRegenScale": 0.92,
+      "description": "La cendre masque les appuis et accompagne les transformations industrielles."
+    }
+  },
+  "shiftStyles": {
+    "rust": {
+      "name": "ROUILLE INDUSTRIELLE",
+      "cue": "SIRÈNE",
+      "duration": 150,
+      "threshold": 0.58,
+      "timerRatio": 0.58,
+      "radioScale": 1.12,
+      "overlay": "rust",
+      "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges."
+    },
+    "decay": {
+      "name": "DÉCOMPOSITION HUMIDE",
+      "cue": "BATTEMENT SOURD",
+      "duration": 170,
+      "threshold": 0.55,
+      "timerRatio": 0.55,
+      "radioScale": 1.06,
+      "overlay": "decay",
+      "description": "La surface familière se dégrade, noircit et révèle un espace gorgé d’eau ou de moisissure."
+    },
+    "flesh": {
+      "name": "MÉTAMORPHOSE ORGANIQUE",
+      "cue": "VENTILATION",
+      "duration": 155,
+      "threshold": 0.6,
+      "timerRatio": 0.56,
+      "radioScale": 1.1,
+      "overlay": "flesh",
+      "description": "Les parois deviennent chair, tuyaux et membranes, sans copier une texture officielle."
+    },
+    "haunting": {
+      "name": "HANTISE DE LA PIÈCE",
+      "cue": "GRÉSILLEMENT",
+      "duration": 180,
+      "threshold": 0.52,
+      "timerRatio": 0.52,
+      "radioScale": 1.18,
+      "overlay": "haunting",
+      "description": "L’espace se contamine par les victimes, les murs et les objets hantés."
+    },
+    "mirror": {
+      "name": "PASSAGE PAR LE MIROIR",
+      "cue": "VERRE FISSURÉ",
+      "duration": 118,
+      "threshold": 0.62,
+      "timerRatio": 0.6,
+      "radioScale": 1.05,
+      "overlay": "mirror",
+      "description": "Le reflet se fracture et remplace progressivement la version normale du lieu."
+    },
+    "ice": {
+      "name": "PRISE DE GLACE",
+      "cue": "CRAQUEMENT",
+      "duration": 120,
+      "threshold": 0.64,
+      "timerRatio": 0.64,
+      "radioScale": 0.72,
+      "overlay": "ice",
+      "description": "Le cauchemar se fige, bleuit et transforme la poursuite en glissade froide."
+    },
+    "storm": {
+      "name": "ORAGE ET DÉLUGE",
+      "cue": "TONNERRE",
+      "duration": 145,
+      "threshold": 0.57,
+      "timerRatio": 0.58,
+      "radioScale": 1.08,
+      "overlay": "storm",
+      "description": "La pluie, les éclairs et l’eau envahissent progressivement l’espace."
+    },
+    "elemental": {
+      "name": "RÉÉCRITURE DU LIVRE",
+      "cue": "PAGE DÉCHIRÉE",
+      "duration": 135,
+      "threshold": 0.6,
+      "timerRatio": 0.6,
+      "radioScale": 0.88,
+      "overlay": "elemental",
+      "description": "La zone adopte l’élément de la page active et ses effets de terrain."
+    },
+    "loop": {
+      "name": "BOUCLE 204863",
+      "cue": "COUP À LA PORTE",
+      "duration": 96,
+      "threshold": 0.66,
+      "timerRatio": 0.7,
+      "radioScale": 1.25,
+      "overlay": "loop",
+      "description": "L’éclairage, la géométrie et les apparitions se répètent avec de légères divergences."
+    },
+    "floral": {
+      "name": "FLORAISON DU TRAUMA",
+      "cue": "PÉTALES",
+      "duration": 140,
+      "threshold": 0.6,
+      "timerRatio": 0.58,
+      "radioScale": 0.9,
+      "overlay": "floral",
+      "description": "Pétales, racines et masses florales envahissent le lieu en réponse au combat."
+    },
+    "shrine": {
+      "name": "PROCESSION DU SANCTUAIRE",
+      "cue": "CLOCHE RITUELLE",
+      "duration": 165,
+      "threshold": 0.56,
+      "timerRatio": 0.55,
+      "radioScale": 0.76,
+      "overlay": "shrine",
+      "description": "Lanternes, marques, bois sacré et floraison composent un Otherworld rituel japonais."
+    },
+    "ash": {
+      "name": "CENDRES ET DÉCOLLEMENT",
+      "cue": "SIRÈNE INDUSTRIELLE",
+      "duration": 145,
+      "threshold": 0.6,
+      "timerRatio": 0.58,
+      "radioScale": 1.15,
+      "overlay": "ash",
+      "description": "La cendre tombe pendant que les couches de surface se détachent vers le métal brûlé."
+    },
+    "ritual": {
+      "name": "PORTE DU TRAUMA",
+      "cue": "CHANT BAS",
+      "duration": 160,
+      "threshold": 0.56,
+      "timerRatio": 0.56,
+      "radioScale": 1.02,
+      "overlay": "ritual",
+      "description": "Les symboles et silhouettes accumulées ouvrent un espace de jugement partagé."
+    },
+    "signal": {
+      "name": "RUPTURE DU SIGNAL",
+      "cue": "CRTV",
+      "duration": 112,
+      "threshold": 0.62,
+      "timerRatio": 0.62,
+      "radioScale": 1.4,
+      "overlay": "signal",
+      "description": "Le CRTV et les parasites réécrivent les volumes sans transformer le lieu en Otherworld rouillé générique."
+    },
+    "void": {
+      "name": "EFFONDREMENT DU VIDE",
+      "cue": "ASPIRATION",
+      "duration": 126,
+      "threshold": 0.55,
+      "timerRatio": 0.54,
+      "radioScale": 1.12,
+      "overlay": "void",
+      "description": "La perspective s’étire et les sorties se replient vers un centre impossible."
+    }
+  },
+  "stageEvents": {
+    "powerFailure": {
+      "name": "PANNE GÉNÉRALE",
+      "duration": 150,
+      "darkness": 0.72,
+      "radioBoost": 0.22,
+      "message": "LES LUMIÈRES S’ÉTEIGNENT",
+      "animation": "lightFlicker"
+    },
+    "sirenCall": {
+      "name": "APPEL DE LA SIRÈNE",
+      "duration": 130,
+      "darkness": 0.18,
+      "radioBoost": 0.5,
+      "hazard": "sirenShock",
+      "message": "LA SIRÈNE APPELLE",
+      "animation": "sirenPulse"
+    },
+    "lockerSlam": {
+      "name": "COULOIR DES CASIERS",
+      "duration": 100,
+      "darkness": 0.22,
+      "radioBoost": 0.25,
+      "hazard": "lockerSlam",
+      "message": "LES CASIERS RÉPONDENT",
+      "animation": "lockerRattle"
+    },
+    "gurneyRush": {
+      "name": "CHARIOT SANS INFIRMIER",
+      "duration": 110,
+      "darkness": 0.16,
+      "radioBoost": 0.18,
+      "hazard": "gurneyRush",
+      "message": "UN CHARIOT TRAVERSE LE SERVICE",
+      "animation": "hospitalMonitor"
+    },
+    "corridorCollapse": {
+      "name": "EFFONDREMENT DU PASSAGE",
+      "duration": 115,
+      "darkness": 0.25,
+      "radioBoost": 0.18,
+      "hazard": "roadCollapse",
+      "message": "LE PASSAGE SE DÉCHIRE",
+      "animation": "chasmPulse"
+    },
+    "carouselStart": {
+      "name": "DERNIER TOUR",
+      "duration": 145,
+      "darkness": 0.08,
+      "radioBoost": 0.12,
+      "hazard": "carouselSweep",
+      "message": "LE MANÈGE REDÉMARRE",
+      "animation": "carouselTurn"
+    },
+    "trainRumble": {
+      "name": "RAME FANTÔME",
+      "duration": 125,
+      "darkness": 0.35,
+      "radioBoost": 0.28,
+      "hazard": "trainRush",
+      "message": "UNE RAME APPROCHE",
+      "animation": "trainPass"
+    },
+    "steamRelease": {
+      "name": "PURGE DES CONDUITES",
+      "duration": 90,
+      "darkness": 0.12,
+      "radioBoost": 0.08,
+      "hazard": "steamVent",
+      "message": "LES CONDUITES PURGENT",
+      "animation": "pipeSteam"
+    },
+    "waterRise": {
+      "name": "MONTÉE DES EAUX",
+      "duration": 160,
+      "darkness": 0.18,
+      "radioBoost": 0.12,
+      "hazard": "waterSurge",
+      "terrainPulse": "flooded",
+      "message": "L’EAU MONTE",
+      "animation": "waterRipple"
+    },
+    "mirrorTurn": {
+      "name": "REFLET INVERSÉ",
+      "duration": 118,
+      "darkness": 0.28,
+      "radioBoost": 0.24,
+      "hazard": "mirrorFracture",
+      "message": "LE REFLET BOUGE AVANT VOUS",
+      "animation": "mirrorGlitch"
+    },
+    "rootWake": {
+      "name": "RACINES ÉVEILLÉES",
+      "duration": 130,
+      "darkness": 0.16,
+      "radioBoost": 0.08,
+      "hazard": "rootSnare",
+      "terrainPulse": "petals",
+      "message": "LES RACINES CHERCHENT UN CORPS",
+      "animation": "rootsCreep"
+    },
+    "spotlightHunt": {
+      "name": "FAISCEAU DE SURVEILLANCE",
+      "duration": 125,
+      "darkness": 0.5,
+      "radioBoost": 0.1,
+      "hazard": "spotlightSweep",
+      "message": "LE FAISCEAU VOUS CHERCHE",
+      "animation": "spotlightSweep"
+    },
+    "crtvLock": {
+      "name": "SIGNAL CRTV",
+      "duration": 112,
+      "darkness": 0.22,
+      "radioBoost": 0.58,
+      "hazard": "crtvPulse",
+      "message": "LE SIGNAL SE VERROUILLE",
+      "animation": "tvStatic"
+    },
+    "bellToll": {
+      "name": "CLOCHE DU JUGEMENT",
+      "duration": 118,
+      "darkness": 0.12,
+      "radioBoost": 0.2,
+      "hazard": "bellToll",
+      "message": "LA CLOCHE COMPTE LES FAUTES",
+      "animation": "bellSwing"
+    },
+    "voidPull": {
+      "name": "ATTRACTION DU VIDE",
+      "duration": 120,
+      "darkness": 0.62,
+      "radioBoost": 0.3,
+      "hazard": "voidPull",
+      "terrainPulse": "void",
+      "message": "LE VIDE TIRE SUR LE SOL",
+      "animation": "voidSurge"
+    },
+    "ashFall": {
+      "name": "CHUTE DE CENDRES",
+      "duration": 150,
+      "darkness": 0.18,
+      "radioBoost": 0.12,
+      "hazard": "emberFall",
+      "terrainPulse": "ash",
+      "message": "LA CENDRE RECOUVRE LE SOL",
+      "animation": "ashFall"
+    },
+    "portraitWatch": {
+      "name": "REGARDS SUR LE MUR",
+      "duration": 105,
+      "darkness": 0.25,
+      "radioBoost": 0.2,
+      "hazard": "portraitGaze",
+      "message": "LES PORTRAITS VOUS SUIVENT",
+      "animation": "portraitBlink"
+    },
+    "elevatorCall": {
+      "name": "APPEL D’ÉTAGE",
+      "duration": 100,
+      "darkness": 0.3,
+      "radioBoost": 0.18,
+      "hazard": "elevatorDrop",
+      "message": "L’ASCENSEUR ARRIVE VIDE",
+      "animation": "elevatorBlink"
+    },
+    "roomBreath": {
+      "name": "RESPIRATION DE LA PIÈCE",
+      "duration": 135,
+      "darkness": 0.34,
+      "radioBoost": 0.32,
+      "hazard": "roomPulse",
+      "message": "LA PIÈCE RESPIRE",
+      "animation": "bloodPulse"
+    },
+    "stormSurge": {
+      "name": "FRONT D’ORAGE",
+      "duration": 135,
+      "darkness": 0.32,
+      "radioBoost": 0.2,
+      "hazard": "lightningStrike",
+      "terrainPulse": "wetConcrete",
+      "message": "L’ORAGE COUPE LA ROUTE",
+      "animation": "lightning"
+    },
+    "iceLock": {
+      "name": "PRISE DU GEL",
+      "duration": 130,
+      "darkness": 0.12,
+      "radioBoost": -0.16,
+      "hazard": "iceFracture",
+      "terrainPulse": "ice",
+      "message": "LA GLACE PREND LE SOL",
+      "animation": "iceCrack"
+    },
+    "ritualWake": {
+      "name": "RÉPONSE DU RITUEL",
+      "duration": 145,
+      "darkness": 0.24,
+      "radioBoost": 0.18,
+      "hazard": "ritualSeal",
+      "terrainPulse": "ritualStone",
+      "message": "LE RITUEL RÉPOND",
+      "animation": "ritualGlyph"
+    }
+  },
+  "stageInteractionTriggers": {
+    "time-or-first-heavy-impact": {
+      "name": "IMPACT LOURD / PREMIER TEMPS",
+      "description": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu."
+    },
+    "otherworld-halfway": {
+      "name": "MI-CHEMIN OTHERWORLD",
+      "description": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression."
+    },
+    "low-health-or-late-round": {
+      "name": "PRESSION DE FIN DE ROUND",
+      "description": "Réagit à une vitalité critique ou au dernier quart du temps réglementaire."
     }
   },
   "coverageTargets": {

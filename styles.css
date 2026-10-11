@@ -101,7 +101,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 }
 @media(max-width:600px){.command-controls{display:none}.option-row{align-items:flex-start;flex-direction:column}.modal-card{padding:20px}}
 
-/* v0.6.1 — Command Center Silent Hill / CRTV evidence pass */
+/* v0.7.0 — Command Center Silent Hill / CRTV evidence pass */
 :root{--rust:#6d2b2e;--mildew:#657066;--bone:#d8d0c1;--signal:#b63a43}
 #shell::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(104deg,transparent 0 17%,rgba(255,255,255,.016) 17.2% 17.5%,transparent 17.7% 72%,rgba(124,37,42,.035) 72.2% 72.5%,transparent 72.7%),repeating-linear-gradient(91deg,transparent 0 97px,rgba(194,197,188,.012) 98px,transparent 99px)}
 #command{background:linear-gradient(90deg,rgba(2,3,2,.24),transparent 38%,rgba(2,3,2,.18))}
@@ -117,7 +117,7 @@ html[data-scene="ritual"] .radio-readout,html[data-scene="boss"] .radio-readout{
 @media(max-width:1180px){.radio-readout{display:none}.command-item{font-size:17px}.hero-evidence{display:none}.hero-copy{max-width:88%}.legal-signal{display:none}}
 @media(max-width:900px){.command-top{border-bottom:0}.menu-caption{margin-left:24px}.command-menu::before{left:6px}.command-item{font-size:20px}.signal-cluster{display:none}}
 
-/* v0.6.1 — accessibilité, statut système et pages de repli */
+/* v0.7.0 — accessibilité, statut système et pages de repli */
 .skip-link{position:fixed;left:16px;top:-72px;z-index:5000;padding:11px 15px;border:1px solid #b63a43;background:#080b09;color:#fff;font:900 10px ui-monospace;letter-spacing:.12em;transition:top .16s ease}.skip-link:focus{top:14px;outline:3px solid rgba(182,58,67,.4);outline-offset:2px}
 .system-status{position:fixed;z-index:4900;left:50%;top:18px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;max-width:min(720px,calc(100vw - 28px));padding:10px 12px 10px 15px;border:1px solid #4a514a;border-left:3px solid #a3343d;background:rgba(6,9,7,.96);box-shadow:0 14px 45px rgba(0,0,0,.6);color:#d7d4ca;font:850 9px ui-monospace;letter-spacing:.08em;text-transform:uppercase}.system-status.offline{border-left-color:#c58b42}.system-status.success{border-left-color:#568568}.system-status.error{border-left-color:#d14b54}.system-status>span{min-width:0;line-height:1.4}.system-status button{flex:none;border:1px solid #4b554d;background:#111712;color:#d7d4ca;padding:7px 9px;font:900 8px ui-monospace;letter-spacing:.08em}.system-status button:hover,.system-status button:focus-visible{border-color:#b63a43;color:#fff}.system-status #systemStatusDismiss{width:28px;height:28px;padding:0;font-size:16px;line-height:1}
 .memory-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px;padding-top:16px;border-top:1px solid #303832}.memory-tools .ui-button{min-height:42px;white-space:normal;line-height:1.25}.install-row.hidden,.system-status.hidden{display:none!important}

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ROSTER, STAGES, SOURCE_META } from '../src/data.js';
+import { ROSTER, STAGES, SOURCE_META, STAGE_SHIFT_STYLES, STAGE_EVENTS } from '../src/data.js';
 import { drawStage, drawMonster, renderPortrait } from '../src/renderers.js';
 
 function gradient(){return {addColorStop(){}};}
@@ -47,5 +47,18 @@ test('stage animation layer can be enabled or disabled on every arena',()=>{
   for(const stage of STAGES){
     assert.doesNotThrow(()=>drawStage(ctx,stage,9876,{width:1280,height:720,otherworld:.8,radio:.4,animationsEnabled:true}));
     assert.doesNotThrow(()=>drawStage(ctx,stage,9876,{width:1280,height:720,otherworld:.8,radio:.4,animationsEnabled:false}));
+  }
+});
+
+
+test('all fifteen Otherworld languages and active stage events render independently',()=>{
+  const ctx=context();
+  for(const style of Object.keys(STAGE_SHIFT_STYLES)){
+    const source=STAGES.find(stage=>stage.shift?.style===style)||STAGES[0];
+    const stage={...source,shift:{...source.shift,style}};
+    assert.doesNotThrow(()=>drawStage(ctx,stage,54321,{width:1280,height:720,otherworld:1,radio:.8,animationsEnabled:true,shift:stage.shift,terrain:stage.terrain,director:{activeEvent:null,darkness:0,fogBoost:0}}));
+  }
+  for(const event of Object.values(STAGE_EVENTS)){
+    assert.doesNotThrow(()=>drawStage(ctx,STAGES[0],67890,{width:1280,height:720,otherworld:.7,radio:.6,animationsEnabled:true,shift:STAGES[0].shift,terrain:STAGES[0].terrain,director:{activeEvent:event,darkness:event.darkness||0,fogBoost:event.fogBoost||0}}));
   }
 });

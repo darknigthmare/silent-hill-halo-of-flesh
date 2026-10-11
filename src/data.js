@@ -1,4 +1,5 @@
 import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './movesets.js';
+import { enrichStage, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary } from './stage-director.js';
 
 /*
  * SILENT HILL: HALO OF FLESH — catalogue de prototype.
@@ -7,7 +8,7 @@ import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './mo
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.6.1';
+export const VERSION = '0.7.0';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -83,13 +84,35 @@ const afflictionByArchetype = Object.freeze({
 });
 
 export const STAGE_HAZARDS = Object.freeze({
-  staticBurst: { name: 'SURSAUT RADIO', telegraph: 85, radius: 165, damage: 34, effect: 'static' },
-  fallingDebris: { name: 'CHUTE DE DÉBRIS', telegraph: 90, radius: 118, damage: 62, effect: 'decay' },
-  bloodTide: { name: 'MARÉE DE SANG', telegraph: 105, radius: 220, damage: 45, effect: 'bleed' },
-  frostWave: { name: 'VAGUE DE GEL', telegraph: 95, radius: 205, damage: 26, effect: 'frost' },
-  petalBloom: { name: 'FLORAISON ROUGE', telegraph: 100, radius: 190, damage: 38, effect: 'bloom' },
-  emberFall: { name: 'PLUIE DE CENDRES', telegraph: 82, radius: 135, damage: 50, effect: 'burn' },
-  chainSweep: { name: 'BALAYAGE DE CHAÎNES', telegraph: 76, radius: 145, damage: 58, effect: 'bind' }
+  staticBurst: { name: 'SURSAUT RADIO', telegraph: 85, radius: 165, damage: 34, effect: 'static', shape: 'circle', targetMode: 'fighter', knockback: 7, visual: 'static' },
+  fallingDebris: { name: 'CHUTE DE DÉBRIS', telegraph: 90, radius: 118, damage: 62, effect: 'decay', shape: 'circle', targetMode: 'fighter', knockback: 9, visual: 'debris' },
+  bloodTide: { name: 'MARÉE DE SANG', telegraph: 105, radius: 220, damage: 45, effect: 'bleed', shape: 'lane', targetMode: 'center', knockback: 6, visual: 'blood' },
+  frostWave: { name: 'VAGUE DE GEL', telegraph: 95, radius: 205, damage: 26, effect: 'frost', shape: 'lane', targetMode: 'fighter', knockback: 5, visual: 'ice' },
+  petalBloom: { name: 'FLORAISON ROUGE', telegraph: 100, radius: 190, damage: 38, effect: 'bloom', shape: 'circle', targetMode: 'fighter', knockback: 4, visual: 'petals' },
+  emberFall: { name: 'PLUIE DE CENDRES', telegraph: 82, radius: 135, damage: 50, effect: 'burn', shape: 'circle', targetMode: 'fighter', knockback: 7, visual: 'embers' },
+  chainSweep: { name: 'BALAYAGE DE CHAÎNES', telegraph: 76, radius: 145, damage: 58, effect: 'bind', shape: 'sweep', targetMode: 'side', knockback: 10, visual: 'chains' },
+  lockerSlam: { name: 'CLAQUEMENT DE CASIERS', telegraph: 66, radius: 105, damage: 38, effect: 'static', shape: 'lane', targetMode: 'fighter', knockback: 6, visual: 'locker' },
+  gurneyRush: { name: 'CHARIOT LANCÉ', telegraph: 84, radius: 142, damage: 58, effect: 'bind', shape: 'sweep', targetMode: 'side', knockback: 12, visual: 'gurney' },
+  roadCollapse: { name: 'RUPTURE DE CHAUSSÉE', telegraph: 112, radius: 188, damage: 68, effect: 'decay', shape: 'edge', targetMode: 'edge', knockback: 14, visual: 'chasm', unblockable: true },
+  carouselSweep: { name: 'COURONNE DU MANÈGE', telegraph: 98, radius: 154, damage: 52, effect: 'bind', shape: 'sweep', targetMode: 'center', knockback: 9, visual: 'carousel' },
+  trainRush: { name: 'PASSAGE DE LA RAME', telegraph: 124, radius: 210, damage: 82, effect: 'decay', shape: 'sweep', targetMode: 'side', knockback: 16, visual: 'train', unblockable: true },
+  steamVent: { name: 'PURGE DE VAPEUR', telegraph: 74, radius: 112, damage: 44, effect: 'burn', shape: 'lane', targetMode: 'fighter', knockback: 7, visual: 'steam' },
+  waterSurge: { name: 'VAGUE D’EAU NOIRE', telegraph: 106, radius: 235, damage: 40, effect: 'frost', shape: 'lane', targetMode: 'center', knockback: 8, visual: 'water' },
+  mirrorFracture: { name: 'FRACTURE DU REFLET', telegraph: 88, radius: 152, damage: 46, effect: 'dread', shape: 'circle', targetMode: 'fighter', knockback: 7, visual: 'mirror' },
+  rootSnare: { name: 'PRISE DES RACINES', telegraph: 92, radius: 172, damage: 34, effect: 'bloom', shape: 'circle', targetMode: 'fighter', knockback: 4, visual: 'roots' },
+  spotlightSweep: { name: 'FAISCEAU DE SURVEILLANCE', telegraph: 80, radius: 148, damage: 32, effect: 'dread', shape: 'sweep', targetMode: 'side', knockback: 5, visual: 'spotlight' },
+  crtvPulse: { name: 'VERROU CRTV', telegraph: 70, radius: 220, damage: 28, effect: 'static', shape: 'ring', targetMode: 'fighter', knockback: 4, visual: 'signal' },
+  sirenShock: { name: 'ONDE DE SIRÈNE', telegraph: 94, radius: 270, damage: 38, effect: 'dread', shape: 'global', targetMode: 'center', knockback: 6, visual: 'siren' },
+  voidPull: { name: 'ATTRACTION DU VIDE', telegraph: 108, radius: 238, damage: 42, effect: 'dread', shape: 'center', targetMode: 'center', knockback: -10, visual: 'void' },
+  bellToll: { name: 'RÉSONANCE DE LA CLOCHE', telegraph: 96, radius: 260, damage: 30, effect: 'dread', shape: 'global', targetMode: 'center', knockback: 4, visual: 'bell' },
+  portraitGaze: { name: 'REGARD DES PORTRAITS', telegraph: 90, radius: 176, damage: 34, effect: 'dread', shape: 'circle', targetMode: 'fighter', knockback: 4, visual: 'portrait' },
+  elevatorDrop: { name: 'CHUTE D’ASCENSEUR', telegraph: 104, radius: 136, damage: 64, effect: 'decay', shape: 'lane', targetMode: 'fighter', knockback: 11, visual: 'elevator' },
+  roomPulse: { name: 'CONTRACTION DE LA PIÈCE', telegraph: 92, radius: 230, damage: 36, effect: 'dread', shape: 'ring', targetMode: 'center', knockback: -5, visual: 'room' },
+  lightningStrike: { name: 'IMPACT DE FOUDRE', telegraph: 78, radius: 96, damage: 62, effect: 'burn', shape: 'lane', targetMode: 'fighter', knockback: 10, visual: 'lightning' },
+  iceFracture: { name: 'FISSURE DE GLACE', telegraph: 100, radius: 180, damage: 36, effect: 'frost', shape: 'edge', targetMode: 'fighter', knockback: 9, visual: 'ice-crack' },
+  ritualSeal: { name: 'FERMETURE DU SCEAU', telegraph: 102, radius: 196, damage: 42, effect: 'dread', shape: 'ring', targetMode: 'center', knockback: -6, visual: 'ritual' },
+  windShear: { name: 'RAFALE LATÉRALE', telegraph: 82, radius: 170, damage: 30, effect: 'frost', shape: 'sweep', targetMode: 'side', knockback: 13, visual: 'wind' },
+  doorSlam: { name: 'PORTE CLAQUÉE', telegraph: 72, radius: 104, damage: 40, effect: 'bind', shape: 'edge', targetMode: 'edge', knockback: 7, visual: 'door' }
 });
 
 
@@ -971,6 +994,8 @@ for (const stage of STAGES) {
   stage.catalogueStatus ||= 'verified-location';
 }
 
+for (const stage of STAGES) enrichStage(stage);
+
 export const CHRONICLES = [
   {id:'fog_of_alessa',source:'sh1',title:'LA BRUME D’ALESSA',subtitle:'Midwich → Nowhere',fighters:['sh1_grey_child_005','sh1_split_head_014','sh1_incubus_019'],stages:['midwich','lakeside_amusement','nowhere'],intro:'La ville recommence son cauchemar. Chaque victoire révèle une couche différente du rituel.',outro:'Le monde rouille, puis retient son souffle.'},
   {id:'james_sentence',source:'sh2',title:'LA SENTENCE DE JAMES',subtitle:'Apartments → Lakeview',fighters:[],stages:['woodside','labyrinth','hotel_otherworld'],intro:'La culpabilité prend des formes qui savent combattre.',outro:'Le lac ne donne pas de réponse, seulement un reflet.'},
@@ -1040,7 +1065,7 @@ export function coverageAudit() {
   return {
     version: VERSION,
     scope: 'Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.',
-    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.1.',
+    policy: 'Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.7.0.',
     sources,
     complete: Object.values(sources).every((entry) => entry.complete)
   };
@@ -1107,6 +1132,11 @@ export const CONTENT_STATS = Object.freeze({
   fatalities: ROSTER.reduce((sum, fighter) => sum + fighter.fatalities.length, 0),
   stageFatalities: STAGES.filter(stage => stage.fatality).length,
   stageAnimations: STAGES.reduce((sum, stage) => sum + stage.animations.length, 0),
+  stageDirectorEvents: STAGES.reduce((sum, stage) => sum + (stage.director?.events?.length || 0), 0),
+  stageInteractions: STAGES.reduce((sum, stage) => sum + (stage.interactions?.length || 0), 0),
+  stageHazardLinks: STAGES.reduce((sum, stage) => sum + (stage.director?.hazardDeck?.length || 0), 0),
+  terrainProfiles: Object.keys(STAGE_TERRAINS).length,
+  shiftStyles: Object.keys(STAGE_SHIFT_STYLES).length,
   moves: ROSTER.length * MOVESET_KEYS.length,
   directCanonicalMoves: ROSTER.reduce((sum, fighter) => sum + createCombatProfile(fighter).moveset.fidelitySummary.direct, 0),
   behaviorCompositeMoves: ROSTER.reduce((sum, fighter) => sum + createCombatProfile(fighter).moveset.fidelitySummary.composite, 0),
@@ -1114,4 +1144,4 @@ export const CONTENT_STATS = Object.freeze({
   coverageComplete: coverageAudit().complete
 });
 
-export { MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY };
+export { MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary };

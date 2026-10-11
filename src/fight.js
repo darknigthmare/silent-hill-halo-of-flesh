@@ -1,5 +1,6 @@
 import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
+import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftStyle } from './stage-director.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 
 const WIDTH = 1280;
@@ -234,6 +235,52 @@ export function chronicleGrade(stats = {}) {
   return 'D';
 }
 
+
+function createStageRuntime(stage) {
+  const director = stage?.director || {};
+  return {
+    eventTimer: Math.max(90, Number(director.initialDelay) || 240),
+    eventCursor: 0,
+    activeEvent: null,
+    activeTimer: 0,
+    darkness: 0,
+    fogBoost: 0,
+    radioBoost: 0,
+    terrainOverride: null,
+    terrainTimer: 0,
+    eventsTriggered: 0,
+    lastEvent: null,
+    eventHistory: [],
+    hazardHistory: [],
+    interactionTriggered: [],
+    heavyImpactPending: false,
+    lastHeavyImpact: null,
+    lastTrigger: null
+  };
+}
+
+function hazardContainsActor(hazard, actor, width = WIDTH) {
+  const radius = hazard.profile.radius || 140;
+  const distance = Math.abs(actor.x - hazard.x);
+  switch (hazard.profile.shape) {
+    case 'global': return true;
+    case 'ring': {
+      const inner = radius * .42;
+      return distance >= inner && distance <= radius;
+    }
+    case 'edge': {
+      const edgeDistance = Math.min(actor.x, width - actor.x);
+      if (hazard.profile.targetMode === 'edge') return edgeDistance <= radius;
+      return distance <= radius;
+    }
+    case 'sweep': return actor.x >= hazard.zoneMin && actor.x <= hazard.zoneMax;
+    case 'lane': return distance <= radius * .72;
+    case 'center': return Math.abs(actor.x - width / 2) <= radius;
+    case 'circle':
+    default: return distance <= radius;
+  }
+}
+
 export class FightEngine {
   constructor(canvas, config = {}) {
     this.canvas = canvas;
@@ -257,6 +304,8 @@ export class FightEngine {
       fatalities: this.settings.fatalities !== false,
       stageFatalities: this.settings.stageFatalities !== false,
       stageAnimations: this.settings.stageAnimations !== false,
+      stageTerrain: this.settings.stageTerrain !== false,
+      stageDirector: this.settings.stageDirector !== false,
       ritualId: 'none',
       initialHealthRatio: 1,
       initialMeter: null,
@@ -299,16 +348,18 @@ export class FightEngine {
     this.currentPads = [];
     this.playerPattern = { light: 0, heavy: 0, low: 0, special: 0, throw: 0, super: 0 };
     this.inputHistory = [];
-    const ritualOtherworld = Boolean(this.ritual.startOtherworld);
+    const stageShift = stageShiftStyle(this.stage);
+    const ritualOtherworld = Boolean(this.ritual.startOtherworld || stageShift.startOtherworld);
     this.world = {
       phase: ritualOtherworld ? 'otherworld' : 'fog',
       amount: ritualOtherworld ? 1 : 0,
       triggered: ritualOtherworld,
       siren: 0,
-      hazardTimer: 260,
+      hazardTimer: Math.max(110, Math.round((this.stage?.director?.cadence || 300) * .82)),
       radio: 0,
       hazardsTriggered: 0
     };
+    this.stageRuntime = createStageRuntime(this.stage);
     this.boundLoop = (time) => this.loop(time);
   }
 
@@ -368,11 +419,13 @@ export class FightEngine {
     this.fatality = null;
     this.flash = 0;
     this.hitstop = 0;
-    const ritualOtherworld = Boolean(this.ritual.startOtherworld);
+    const stageShift = stageShiftStyle(this.stage);
+    const ritualOtherworld = Boolean(this.ritual.startOtherworld || stageShift.startOtherworld);
     this.world = {
       phase: ritualOtherworld ? 'otherworld' : 'fog', amount: ritualOtherworld ? 1 : 0, triggered: ritualOtherworld, siren: 0,
-      hazardTimer: Math.round((230 + Math.floor(this.rng() * 80)) * (this.ritual.hazardIntervalScale || 1)), radio: 0, hazardsTriggered: 0
+      hazardTimer: Math.round(((this.stage?.director?.cadence || 300) * (.78 + this.rng() * .34)) * (this.ritual.hazardIntervalScale || 1)), radio: 0, hazardsTriggered: 0
     };
+    this.stageRuntime = createStageRuntime(this.stage);
     this.actors.forEach((actor, index) => {
       actor.x = index === 0 ? 310 : 970;
       actor.y = FLOOR;
@@ -503,6 +556,7 @@ export class FightEngine {
     }
 
     this.updateWorld();
+    this.updateStageDirector();
     this.applyRitualTick();
     this.actors.forEach((actor) => this.updateStatus(actor));
     this.checkBossPhases();
@@ -758,11 +812,12 @@ export class FightEngine {
       actor.dodgeCooldown = 42;
       actor.dodgeFrames = Math.max(10, profile.dodgeInvuln + 5);
       actor.dodgeFollowupWindow = Math.max(8, profile.dodgeInvuln + 2);
-      actor.vx = -actor.facing * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0));
+      const terrain = this.currentTerrain();
+      actor.vx = -actor.facing * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0)) * terrain.dodgeScale;
       this.spawnDust(actor.x, actor.y);
       audio.tone({ freq: 110, duration: .1, gain: .025, slide: 90 });
     } else if (controls.jump && actor.grounded) {
-      actor.vy = -profile.jump;
+      actor.vy = -profile.jump * this.currentTerrain().jumpScale;
       this.logInput(actor, 'SAUT');
       actor.grounded = false;
       actor.state = 'jump';
@@ -777,8 +832,9 @@ export class FightEngine {
       if (controls.left) movement--;
       if (controls.right) movement++;
       if (movement) {
-        const speed = profile.speed * actor.phaseSpeed * statusSpeed(actor);
-        actor.vx = movement * speed;
+        const terrain = this.currentTerrain();
+        const speed = profile.speed * actor.phaseSpeed * statusSpeed(actor) * terrain.moveScale;
+        actor.vx = terrain.slip ? actor.vx * .64 + movement * speed * .48 : movement * speed;
         actor.state = actor.grounded ? 'walk' : 'jump';
         const advancing = Math.sign(enemy.x - actor.x) === movement;
         if (advancing && profile.trait.forwardMeter && this.frame % 8 === 0) {
@@ -805,9 +861,13 @@ export class FightEngine {
       }
     }
     actor.x += actor.vx;
-    const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+    const inset = this.arenaInset(70);
     actor.x = clamp(actor.x, inset, WIDTH - inset);
-    if (actor.grounded && actor.state !== 'dodge') actor.vx *= actor.status?.id === 'frost' ? .91 : .84;
+    if (actor.grounded && actor.state !== 'dodge') {
+      const terrain = this.currentTerrain();
+      const baseFriction = actor.status?.id === 'frost' ? Math.max(.91, terrain.friction) : terrain.friction;
+      actor.vx *= baseFriction;
+    }
   }
 
   beginAttack(actor, key, { cancelled = false, context = false } = {}) {
@@ -881,7 +941,7 @@ export class FightEngine {
 
     if (move.teleport && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
       attack.teleported = true;
-      const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+      const inset = this.arenaInset(70);
       if (move.teleport === 'behind') {
         const side = enemy.facing > 0 ? -1 : 1;
         actor.x = clamp(enemy.x + side * 86, inset, WIDTH - inset);
@@ -1018,6 +1078,14 @@ export class FightEngine {
     const isHeavy = isHeavyMove(move);
     const isSpecial = ['special','counter','reversal'].includes(move.category);
     const unblockable = Boolean(move.unblockable || move.level === 'unblockable');
+    if (this.stageRuntime && (isHeavy || isNightmare || move.armorBreak || move.groundBounce)) {
+      this.stageRuntime.heavyImpactPending = true;
+      this.stageRuntime.lastHeavyImpact = {
+        frame: this.frame,
+        moveKey: move.key || null,
+        attackerIndex: attacker.index,
+      };
+    }
     const lowGuardValid = move.level !== 'low' || target.crouching;
     const overheadGuardValid = move.level !== 'overhead' || !target.crouching;
     const blocked = target.blocking && target.grounded && !isThrow && !unblockable && lowGuardValid && overheadGuardValid;
@@ -1031,7 +1099,7 @@ export class FightEngine {
       attacker.health -= retaliation;
       attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
       attacker.invuln = Math.max(attacker.invuln, 3);
-      attacker.vx = -attacker.facing * Math.max(5, (move.knockback || 6) * .7);
+      attacker.vx = -attacker.facing * Math.max(5, (move.knockback || 6) * .7) * this.currentTerrain().knockbackScale;
       attacker.hitFlash = Math.max(attacker.hitFlash, 7);
       target.meter = clamp(target.meter + 15, 0, 100);
       target.stats.counters++;
@@ -1078,7 +1146,7 @@ export class FightEngine {
         attacker.stats.damageDealt += chip;
         target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
         attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain * (this.ritual.meterGainScale || 1), 0, 100);
-        target.vx = attacker.facing * (move.knockback || 4) * .42;
+        target.vx = attacker.facing * (move.knockback || 4) * .42 * this.currentTerrain().knockbackScale;
         this.hitstop = isNightmare ? 6 : 3;
       }
       audio.guard();
@@ -1126,7 +1194,7 @@ export class FightEngine {
     if (move.sideSwitch) {
       const direction = attacker.facing || 1;
       const midpoint = (attacker.x + target.x) * .5;
-      const inset = clamp(this.ritual.arenaInset || 70, 70, 260);
+      const inset = this.arenaInset(70);
       target.x = clamp(midpoint - direction * 46, inset, WIDTH - inset);
       attacker.x = clamp(midpoint + direction * 58, inset, WIDTH - inset);
       attacker.facing = -direction;
@@ -1144,7 +1212,7 @@ export class FightEngine {
     target.hurtFrames = hitstun;
     target.invuln = 4;
     target.hitFlash = 7;
-    target.vx = attacker.facing * (move.knockback || 6) * (armorActive ? .45 : 1);
+    target.vx = attacker.facing * (move.knockback || 6) * (armorActive ? .45 : 1) * this.currentTerrain().knockbackScale;
 
     if (move.groundBounce) {
       target.vy = -Math.max(8.2, Math.abs(move.launch || 0));
@@ -1223,54 +1291,184 @@ export class FightEngine {
     this.spawnImpact(actor.x, actor.y - 100, AFFLICTIONS[actor.status?.id]?.color || '#a8323d', false, 4);
   }
 
+  arenaInset(minimum = 70) {
+    const stageInset = this.config.stageTerrain !== false ? Number(this.stage?.director?.arenaInset || this.stage?.gameplay?.arenaInset || minimum) : minimum;
+    const ritualInset = Number(this.ritual.arenaInset || 0);
+    return clamp(Math.max(minimum, stageInset, ritualInset), minimum, 280);
+  }
+
+  currentTerrain() {
+    if (this.config.stageTerrain === false) return stageTerrainProfile({ terrain: { id: 'concrete' } });
+    return stageTerrainProfile(this.stage, this.stageRuntime?.terrainOverride || null);
+  }
+
   updateWorld() {
     const [p1, p2] = this.actors;
     const distance = Math.abs(p1.x - p2.x);
     const attackNoise = p1.attack || p2.attack ? .22 : 0;
-    const radioScale = this.ritual.radioDisabled ? 0 : (this.ritual.radioScale || 1);
-    this.world.radio = clamp((1 - distance / 620 + this.world.amount * .34 + attackNoise) * radioScale, 0, 1);
+    const visibilityScale = this.stage?.visibility?.radioScale || 1;
+    const eventBoost = this.stageRuntime?.radioBoost || 0;
+    const radioScale = this.ritual.radioDisabled ? 0 : (this.ritual.radioScale || 1) * visibilityScale;
+    this.world.radio = clamp((1 - distance / 620 + this.world.amount * .34 + attackNoise + eventBoost) * radioScale, 0, 1);
 
-    if (this.config.otherworldShift && !this.world.triggered && this.frame > 260) {
-      const lowHealth = Math.min(healthRatio(p1), healthRatio(p2)) <= (this.ritual.shiftThreshold || .58);
-      const lateTimer = Number.isFinite(this.matchTime) && this.config.timeLimit > 0 && this.matchTime <= this.config.timeLimit * .58;
+    const shift = stageShiftStyle(this.stage);
+    if (this.config.otherworldShift && !this.world.triggered && this.frame > 180) {
+      const threshold = Math.max(Number(this.ritual.shiftThreshold || 0), Number(shift.threshold || .58));
+      const timerRatio = Math.max(.18, Math.min(.9, Number(shift.timerRatio || .58)));
+      const lowHealth = Math.min(healthRatio(p1), healthRatio(p2)) <= threshold;
+      const lateTimer = Number.isFinite(this.matchTime) && this.config.timeLimit > 0 && this.matchTime <= this.config.timeLimit * timerRatio;
       const finalRound = this.round >= this.config.roundsToWin * 2 - 1;
       if (lowHealth || lateTimer || finalRound) this.triggerOtherworldShift();
     }
 
     if (this.world.phase === 'shifting') {
-      this.world.amount = clamp(this.world.amount + 1 / 150, 0, 1);
+      this.world.amount = clamp(this.world.amount + 1 / Math.max(70, shift.duration || 150), 0, 1);
       this.world.siren--;
       if (this.world.amount >= 1) this.world.phase = 'otherworld';
     }
 
-    if (this.config.stageHazards && this.world.amount >= .55) {
-      this.world.hazardTimer--;
-      if (this.world.hazardTimer <= 0) {
-        this.spawnHazard();
-        this.world.hazardTimer = Math.round((250 + Math.floor(this.rng() * 170)) * (this.ritual.hazardIntervalScale || 1));
+    if (this.config.stageHazards) {
+      const stageReady = this.world.amount >= .38 || this.stage?.shift?.startOtherworld || this.stageRuntime?.activeEvent?.hazard;
+      if (stageReady) {
+        this.world.hazardTimer--;
+        if (this.world.hazardTimer <= 0) {
+          this.spawnHazard();
+          const cadence = this.stage?.director?.cadence || 310;
+          this.world.hazardTimer = Math.round((cadence * (.85 + this.rng() * .55)) * (this.ritual.hazardIntervalScale || 1));
+        }
       }
     }
   }
 
+  updateStageDirector() {
+    const runtime = this.stageRuntime;
+    if (!runtime || this.config.stageDirector === false) return;
+    runtime.darkness *= .965;
+    runtime.fogBoost *= .97;
+    runtime.radioBoost *= .955;
+    if (runtime.terrainTimer > 0) {
+      runtime.terrainTimer--;
+      if (runtime.terrainTimer <= 0) runtime.terrainOverride = null;
+    }
+    if (runtime.activeTimer > 0) {
+      runtime.activeTimer--;
+      if (runtime.activeTimer <= 0) runtime.activeEvent = null;
+    }
+
+    const events = this.stage?.director?.events || [];
+    if (!events.length || runtime.activeEvent) return;
+    runtime.eventTimer--;
+    if (this.tryStageInteraction()) return;
+    if (runtime.eventTimer > 0) return;
+    const id = events[runtime.eventCursor % events.length];
+    runtime.eventCursor++;
+    this.triggerStageEvent(id, { trigger: 'director-cadence' });
+    const cadence = this.stage?.director?.cadence || 320;
+    runtime.eventTimer = Math.round(cadence * (.82 + this.rng() * .46));
+  }
+
+  tryStageInteraction() {
+    const runtime = this.stageRuntime;
+    const interactions = this.stage?.interactions || [];
+    if (!runtime || runtime.activeEvent || !interactions.length) return false;
+    const triggered = new Set(runtime.interactionTriggered || []);
+    const lowHealth = Math.min(...this.actors.map((actor) => healthRatio(actor))) <= .32;
+    const lateRound = Number.isFinite(this.matchTime) && this.config.timeLimit > 0 && this.matchTime <= this.config.timeLimit * .24;
+    for (const interaction of interactions) {
+      if (triggered.has(interaction.id)) continue;
+      let ready = false;
+      if (interaction.trigger === 'time-or-first-heavy-impact') ready = runtime.heavyImpactPending || runtime.eventTimer <= 0;
+      else if (interaction.trigger === 'otherworld-halfway') ready = this.world.amount >= .5;
+      else if (interaction.trigger === 'low-health-or-late-round') ready = lowHealth || lateRound;
+      if (!ready) continue;
+      runtime.interactionTriggered.push(interaction.id);
+      runtime.heavyImpactPending = false;
+      const fired = this.triggerStageEvent(interaction.event, { trigger: interaction.trigger, interactionId: interaction.id });
+      if (fired) {
+        const cadence = this.stage?.director?.cadence || 320;
+        runtime.eventTimer = Math.round(cadence * (.92 + this.rng() * .38));
+        return true;
+      }
+    }
+    return false;
+  }
+
+  triggerStageEvent(id, metadata = {}) {
+    const definition = stageEventDefinition(id);
+    if (!definition || !this.stageRuntime) return false;
+    const runtime = this.stageRuntime;
+    runtime.activeEvent = { id, ...definition, trigger: metadata.trigger || 'manual' };
+    runtime.activeTimer = definition.duration || 120;
+    runtime.darkness = Math.max(runtime.darkness, definition.darkness || 0);
+    runtime.fogBoost = Math.max(runtime.fogBoost, definition.fogBoost || Math.max(0, (definition.darkness || 0) * .22));
+    runtime.radioBoost = Math.max(runtime.radioBoost, definition.radioBoost || 0);
+    runtime.lastEvent = id;
+    runtime.lastTrigger = metadata.trigger || 'manual';
+    runtime.eventsTriggered++;
+    runtime.eventHistory.push(id);
+    if (runtime.eventHistory.length > 8) runtime.eventHistory.shift();
+    if (definition.terrainPulse) {
+      runtime.terrainOverride = definition.terrainPulse;
+      runtime.terrainTimer = definition.duration || 120;
+    }
+    this.addText(definition.message || definition.name, WIDTH / 2, 206, 'stage');
+    if (definition.hazard && this.config.stageHazards) {
+      this.spawnHazard(definition.hazard, { sourceEvent: id });
+      this.world.hazardTimer = Math.max(this.world.hazardTimer, Math.round((definition.duration || 100) * .75));
+    }
+    this.shake = Math.max(this.shake, definition.hazard ? 7 : 3);
+    this.flash = Math.max(this.flash, definition.darkness > .5 ? 2 : 4);
+    if (id === 'sirenCall') audio.siren?.();
+    else if (definition.hazard) audio.hazard?.();
+    else audio.tone({ freq: 72 + runtime.eventsTriggered * 5, duration: .18, gain: .025, slide: -18 });
+    return true;
+  }
+
   triggerOtherworldShift() {
+    const shift = stageShiftStyle(this.stage);
     this.world.triggered = true;
     this.world.phase = 'shifting';
-    this.world.siren = 150;
-    this.addText('SIREN — OTHERWORLD SHIFT', WIDTH / 2, 238, 'shift');
+    this.world.siren = shift.duration || 150;
+    this.addText(`${shift.cue || 'SIRÈNE'} — ${shift.name || 'OTHERWORLD'}`, WIDTH / 2, 238, 'shift');
     audio.siren?.();
     vibrate([40, 45, 40, 45, 80]);
     this.flash = 7;
   }
 
-  spawnHazard() {
-    const id = this.stage?.hazard && STAGE_HAZARDS[this.stage.hazard] ? this.stage.hazard : 'staticBurst';
+  spawnHazard(forcedId = null, metadata = {}) {
+    const deck = stageHazardDeck(this.stage, this.world.phase === 'otherworld' ? 'otherworld' : 'fog').filter((id) => STAGE_HAZARDS[id]);
+    let id = forcedId && STAGE_HAZARDS[forcedId] ? forcedId : deck[Math.floor(this.rng() * Math.max(1, deck.length))];
+    if (!id || !STAGE_HAZARDS[id]) id = this.stage?.hazard && STAGE_HAZARDS[this.stage.hazard] ? this.stage.hazard : 'staticBurst';
+    const history = this.stageRuntime?.hazardHistory || [];
+    if (!forcedId && deck.length > 1 && history.at(-1) === id) id = deck[(deck.indexOf(id) + 1) % deck.length];
     const profile = STAGE_HAZARDS[id];
     const target = this.actors[Math.floor(this.rng() * this.actors.length)];
-    const spread = (this.rng() - .5) * 250;
-    const inset = clamp(this.ritual.arenaInset || 120, 120, 280);
-    const x = clamp(target.x + spread, inset, WIDTH - inset);
-    this.hazards.push({ id, profile, x, y: FLOOR, timer: profile.telegraph, maxTimer: profile.telegraph, active: 0, resolved: false });
+    const inset = this.arenaInset(90);
+    let x = target.x;
+    let side = this.rng() < .5 ? -1 : 1;
+    switch (profile.targetMode) {
+      case 'center': x = WIDTH / 2; break;
+      case 'edge': x = side < 0 ? inset : WIDTH - inset; break;
+      case 'side': x = side < 0 ? inset + profile.radius * .45 : WIDTH - inset - profile.radius * .45; break;
+      case 'fighter':
+      default: x = clamp(target.x + (this.rng() - .5) * 210, inset, WIDTH - inset); break;
+    }
+    const zoneWidth = profile.shape === 'sweep' ? Math.max(260, profile.radius * 2.15) : profile.radius * 2;
+    const hazard = {
+      id, profile, x, y: FLOOR,
+      timer: profile.telegraph, maxTimer: profile.telegraph,
+      active: 0, resolved: false, side,
+      zoneMin: clamp(x - zoneWidth * .5, 0, WIDTH),
+      zoneMax: clamp(x + zoneWidth * .5, 0, WIDTH),
+      sourceEvent: metadata.sourceEvent || null
+    };
+    this.hazards.push(hazard);
     this.world.hazardsTriggered++;
+    if (this.stageRuntime) {
+      this.stageRuntime.hazardHistory.push(id);
+      if (this.stageRuntime.hazardHistory.length > 6) this.stageRuntime.hazardHistory.shift();
+    }
+    return hazard;
   }
 
   updateHazards() {
@@ -1289,10 +1487,10 @@ export class FightEngine {
   resolveHazard(hazard) {
     if (hazard.resolved) return;
     hazard.resolved = true;
+    const terrain = this.currentTerrain();
     for (const actor of this.actors) {
-      const distance = Math.abs(actor.x - hazard.x);
-      if (distance > hazard.profile.radius || actor.invuln > 0) continue;
-      const guarded = actor.blocking && actor.grounded;
+      if (!hazardContainsActor(hazard, actor) || actor.invuln > 0) continue;
+      const guarded = actor.blocking && actor.grounded && !hazard.profile.unblockable;
       const damage = Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
       actor.health -= damage;
       actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
@@ -1300,11 +1498,12 @@ export class FightEngine {
       actor.stats.hazardsTaken++;
       actor.hitFlash = 6;
       actor.hurtFrames = guarded ? 5 : 16;
-      actor.vx = (actor.x >= hazard.x ? 1 : -1) * (guarded ? 3 : 8);
+      const force = (hazard.profile.knockback ?? 8) * terrain.knockbackScale * (guarded ? .38 : 1);
+      actor.vx = force < 0 ? Math.sign(WIDTH / 2 - actor.x || 1) * Math.abs(force) : Math.sign(actor.x - hazard.x || hazard.side || 1) * force;
       if (hazard.profile.effect) this.applyStatus(actor, { id: hazard.profile.effect, duration: AFFLICTIONS[hazard.profile.effect]?.duration || 120, potency: .8 });
       this.spawnImpact(actor.x, actor.y - 80, AFFLICTIONS[hazard.profile.effect]?.color || '#b24a42', false, 18);
     }
-    this.shake = Math.max(this.shake, 11);
+    this.shake = Math.max(this.shake, hazard.profile.unblockable ? 15 : 11);
     this.flash = 5;
     audio.hazard?.();
   }
@@ -1382,8 +1581,9 @@ export class FightEngine {
     const delta = p2.x - p1.x;
     if (Math.abs(delta) < minimum) {
       const push = (minimum - Math.abs(delta)) * .5 * (delta >= 0 ? 1 : -1);
-      p1.x = clamp(p1.x - push, 70, 1210);
-      p2.x = clamp(p2.x + push, 70, 1210);
+      const inset = this.arenaInset(70);
+      p1.x = clamp(p1.x - push, inset, WIDTH - inset);
+      p2.x = clamp(p2.x + push, inset, WIDTH - inset);
     }
   }
 
@@ -1421,7 +1621,7 @@ export class FightEngine {
   }
 
   addText(text, x, y, kind = 'default') {
-    const persistent = ['round', 'fight', 'shift', 'intro'].includes(kind);
+    const persistent = ['round', 'fight', 'shift', 'intro', 'stage'].includes(kind);
     this.texts.push({ text, x, y, life: persistent ? 78 : 55, max: persistent ? 78 : 55, kind });
   }
 
@@ -1445,14 +1645,14 @@ export class FightEngine {
     }
     this.particles = this.particles.filter((particle) => particle.life > 0);
     for (const text of this.texts) {
-      if (!['round', 'fight', 'shift'].includes(text.kind)) text.y -= .45;
+      if (!['round', 'fight', 'shift', 'stage'].includes(text.kind)) text.y -= .45;
       text.life--;
     }
     this.texts = this.texts.filter((text) => text.life > 0);
     for (const actor of this.actors) {
       const decay = actor.status?.id === 'decay';
       if (!actor.blocking && !decay && actor.guard < actor.maxGuard && this.frame % 5 === 0) {
-        actor.guard = Math.min(actor.maxGuard, actor.guard + (this.ritual.guardRegenScale || 1));
+        actor.guard = Math.min(actor.maxGuard, actor.guard + (this.ritual.guardRegenScale || 1) * this.currentTerrain().guardRegenScale);
       }
     }
   }
@@ -1726,7 +1926,23 @@ export class FightEngine {
       time: this.matchTime,
       p1: actorSnapshot(p1),
       p2: actorSnapshot(p2),
-      world: { ...this.world },
+      world: {
+        ...this.world,
+        terrain: this.currentTerrain(),
+        shift: stageShiftStyle(this.stage),
+        director: this.stageRuntime ? {
+          activeEvent: this.stageRuntime.activeEvent?.id || null,
+          activeEventName: this.stageRuntime.activeEvent?.name || null,
+          eventTimer: this.stageRuntime.eventTimer,
+          eventsTriggered: this.stageRuntime.eventsTriggered,
+          interactionTriggered: [...this.stageRuntime.interactionTriggered],
+          lastTrigger: this.stageRuntime.lastTrigger,
+          heavyImpactPending: this.stageRuntime.heavyImpactPending,
+          terrainOverride: this.stageRuntime.terrainOverride,
+          darkness: this.stageRuntime.darkness,
+          fogBoost: this.stageRuntime.fogBoost
+        } : null
+      },
       ritual: { id: this.ritual.id, name: this.ritual.name },
       inputHistory: [...this.inputHistory],
       fatality: this.fatality ? { name: this.fatality.definition.name, stageBased: this.fatality.stageBased, step: this.fatality.step, timer: this.fatality.timer } : null,
@@ -1749,7 +1965,10 @@ export class FightEngine {
       cinematic: Boolean(this.superOverlay),
       otherworld: this.world.amount,
       radio: this.config.radioWarning ? this.world.radio : 0,
-      animationsEnabled: this.config.stageAnimations !== false
+      animationsEnabled: this.config.stageAnimations !== false,
+      director: this.stageRuntime,
+      terrain: this.currentTerrain(),
+      shift: stageShiftStyle(this.stage)
     });
     this.renderHazards(context, time);
     this.renderProjectiles(context);
@@ -1820,32 +2039,60 @@ export class FightEngine {
     for (const hazard of this.hazards) {
       const progress = hazard.timer > 0 ? 1 - hazard.timer / hazard.maxTimer : 1;
       const pulse = .55 + Math.sin(time * .012) * .25;
+      const radius = hazard.profile.radius || 140;
+      const active = hazard.timer <= 0;
       context.save();
-      context.translate(hazard.x, FLOOR + 2);
-      if (hazard.timer > 0) {
-        context.strokeStyle = `rgba(184,58,68,${.28 + progress * .5})`;
-        context.lineWidth = 3 + progress * 4;
-        context.setLineDash([12, 9]);
-        context.beginPath();
-        context.ellipse(0, 0, hazard.profile.radius * (.45 + progress * .55), 24 + progress * 8, 0, 0, TAU);
-        context.stroke();
-        context.setLineDash([]);
-        context.fillStyle = `rgba(142,36,43,${.05 + progress * .12})`;
-        context.beginPath();
-        context.ellipse(0, 0, hazard.profile.radius, 34, 0, 0, TAU);
-        context.fill();
-        context.textAlign = 'center';
-        context.fillStyle = `rgba(239,225,210,${pulse})`;
-        context.font = '900 10px ui-monospace';
-        context.fillText(hazard.profile.name, 0, -38);
-      } else {
+      context.strokeStyle = `rgba(184,58,68,${active ? .65 : .28 + progress * .5})`;
+      context.fillStyle = `rgba(142,36,43,${active ? .15 : .05 + progress * .1})`;
+      context.lineWidth = active ? 7 : 3 + progress * 4;
+      context.setLineDash(active ? [] : [12, 9]);
+      const groundY = FLOOR + 2;
+      switch (hazard.profile.shape) {
+        case 'global':
+          context.fillRect(0, 130, WIDTH, HEIGHT - 130);
+          for (let index = 0; index < 7; index++) {
+            context.beginPath();
+            context.moveTo(0, 170 + index * 70 + Math.sin(time * .008 + index) * 15);
+            context.lineTo(WIDTH, 170 + index * 70 - Math.sin(time * .006 + index) * 18);
+            context.stroke();
+          }
+          break;
+        case 'sweep':
+          context.fillRect(hazard.zoneMin, 150, hazard.zoneMax - hazard.zoneMin, HEIGHT - 150);
+          context.strokeRect(hazard.zoneMin, 150, hazard.zoneMax - hazard.zoneMin, HEIGHT - 150);
+          break;
+        case 'edge': {
+          const left = hazard.x < WIDTH / 2;
+          const x = left ? 0 : WIDTH - radius;
+          context.fillRect(x, 180, radius, HEIGHT - 180);
+          context.strokeRect(x, 180, radius, HEIGHT - 180);
+          break;
+        }
+        case 'ring':
+          context.beginPath(); context.arc(hazard.x, groundY, radius, Math.PI, TAU); context.stroke();
+          context.beginPath(); context.arc(hazard.x, groundY, radius * .42, Math.PI, TAU); context.stroke();
+          break;
+        case 'lane':
+          context.fillRect(hazard.x - radius * .72, 145, radius * 1.44, HEIGHT - 145);
+          context.strokeRect(hazard.x - radius * .72, 145, radius * 1.44, HEIGHT - 145);
+          break;
+        case 'center':
+        case 'circle':
+        default:
+          context.translate(hazard.x, groundY);
+          context.beginPath(); context.ellipse(0, 0, radius * (.45 + progress * .55), 24 + progress * 8, 0, 0, TAU); context.stroke();
+          context.beginPath(); context.ellipse(0, 0, radius, 34, 0, 0, TAU); context.fill();
+          break;
+      }
+      context.setLineDash([]);
+      context.textAlign = 'center';
+      context.fillStyle = `rgba(239,225,210,${pulse})`;
+      context.font = '900 10px ui-monospace';
+      context.fillText(hazard.profile.name, hazard.profile.shape === 'circle' || hazard.profile.shape === 'center' ? 0 : hazard.x, hazard.profile.shape === 'circle' || hazard.profile.shape === 'center' ? -38 : 170);
+      if (active) {
         context.globalCompositeOperation = 'screen';
-        const gradient = context.createRadialGradient(0, -40, 4, 0, -40, hazard.profile.radius);
-        gradient.addColorStop(0, 'rgba(255,235,210,.75)');
-        gradient.addColorStop(.35, 'rgba(164,44,51,.42)');
-        gradient.addColorStop(1, 'rgba(0,0,0,0)');
-        context.fillStyle = gradient;
-        context.fillRect(-hazard.profile.radius, -280, hazard.profile.radius * 2, 320);
+        context.fillStyle = `rgba(255,226,196,${.05 + pulse * .08})`;
+        context.fillRect(0, 0, WIDTH, HEIGHT);
       }
       context.restore();
     }
@@ -1943,10 +2190,15 @@ export class FightEngine {
     context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : 'OTHERWORLD'}`, WIDTH / 2, 68);
     context.fillStyle = '#7f877f';
     context.font = '700 9px ui-monospace';
-    context.fillText(this.stage.name, WIDTH / 2, 86);
+    context.fillText(this.stage.name, WIDTH / 2, 84);
+    const terrain = this.currentTerrain();
+    const activeEvent = this.stageRuntime?.activeEvent;
+    context.fillStyle = activeEvent ? '#c7b790' : '#667068';
+    context.font = '900 8px ui-monospace';
+    context.fillText(activeEvent ? `${activeEvent.name} · ${terrain.name}` : terrain.name, WIDTH / 2, 96);
     context.fillStyle = this.ritual.id === 'none' ? '#59615b' : '#c34a52';
     context.font = '900 8px ui-monospace';
-    context.fillText(`RITE · ${this.ritual.name}`, WIDTH / 2, 99);
+    context.fillText(`RITE · ${this.ritual.name}`, WIDTH / 2, 107);
 
     if (this.config.radioWarning && !this.ritual.radioDisabled) {
       const bars = 8;

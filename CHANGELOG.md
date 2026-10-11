@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.7.0 — 11 octobre 2026
+
+### Gameplay environnemental lore-first
+
+- Ajout de **14 profils de terrain** agissant sur déplacement, saut, esquive, friction, recul et récupération de garde.
+- Ajout de **15 styles de bascule** adaptés aux sources et lieux au lieu d’un Otherworld rouillé universel.
+- Ajout de **22 événements environnementaux** et de leur mise en scène moteur.
+- Extension à **29 dangers** avec formes de zone, cible, télégraphe, blocage et affliction propres.
+- Ajout de **446 événements**, **359 interactions** et **474 liens de danger** sur les 123 arènes.
+- Terrain temporaire pendant la montée des eaux, le gel, la floraison, le rituel et l’attraction du vide.
+- Cadence, visibilité, radio, largeur utile et départ éventuel en Otherworld définis par stage.
+
+### Stages et animations
+
+- Rendu différencié pour rouille, décomposition, chair, hantise, miroir, glace, orage, élément, boucle, floraison, sanctuaire, cendre, rituel, signal CRTV et vide.
+- Animation filtrée selon Fog World, transition ou Otherworld.
+- Événement actif injecté dans les couches animées du stage.
+- Galerie d’Archives transformée en registre détaillé : terrain, bascule, dangers, événements, interactions, animations et base lore.
+- Sélection et dossiers enrichis avec doctrine environnementale complète.
+
+### QA et traçabilité
+
+- Export `data/stage-director.json` et règles complètes dans `data/combat-rules.json`.
+- Documentation automatique `docs/STAGE_DIRECTOR.md`.
+- Tests dédiés aux terrains, bascules, événements, formes de danger et rendu de toutes les doctrines.
+
 ## 0.6.1 — 11 octobre 2026
 
 ### Résilience PWA et récupération

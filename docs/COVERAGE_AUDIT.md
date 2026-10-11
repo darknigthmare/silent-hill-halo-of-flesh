@@ -1,10 +1,10 @@
-# Audit de couverture du roster — v0.6.1
+# Audit de couverture du roster — v0.7.0
 
 **État global : COMPLET DANS LE PÉRIMÈTRE DÉFINI**
 
 Manifestations, boss, humains hostiles et set-pieces adaptables des 16 packs média inclus.
 
-Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.6.1.
+Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et nom descriptif ; aucune lacune connue dans ce périmètre après audit v0.7.0.
 
 | Source | Présents | Minimum audité | Arènes | Minimum | Manquants | Nommage |
 |---|---:|---:|---:|---:|---|---|

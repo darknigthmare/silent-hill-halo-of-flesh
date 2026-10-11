@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit } from '../src/data.js';
+import { VERSION, CONTENT_STATS, MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, coverageAudit, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, STAGES, stageDirectorSummary } from '../src/data.js';
 
 const project=resolve(fileURLToPath(new URL('../',import.meta.url)));
 const read=(path)=>readFile(resolve(project,path),'utf8');
@@ -31,6 +31,14 @@ test('exported JSON mirrors the runtime catalogue',async()=>{
   assert.deepEqual(rules.hazards,STAGE_HAZARDS);
   assert.deepEqual(rules.rituals,RITUAL_MODIFIERS);
   assert.deepEqual(rules.aiPersonalities,AI_PERSONALITIES);
+  assert.deepEqual(rules.terrains,STAGE_TERRAINS);
+  assert.deepEqual(rules.shiftStyles,STAGE_SHIFT_STYLES);
+  assert.deepEqual(rules.stageEvents,STAGE_EVENTS);
+  assert.deepEqual(rules.stageInteractionTriggers,STAGE_INTERACTION_TRIGGERS);
+  const stageDirector=JSON.parse(await read('data/stage-director.json'));
+  assert.equal(stageDirector.version,VERSION);
+  assert.equal(stageDirector.stages.length,CONTENT_STATS.stages);
+  assert.deepEqual(stageDirector.stages[0],{id:STAGES[0].id,name:STAGES[0].name,source:STAGES[0].source,lore:STAGES[0].lore,...stageDirectorSummary(STAGES[0])});
   const coverage=JSON.parse(await read('data/coverage-audit.json'));
   const fatalities=JSON.parse(await read('data/fatalities.json'));
   assert.deepEqual(coverage,coverageAudit());
@@ -44,6 +52,7 @@ test('generated documentation contains the live totals and rule families',async(
   const systems=await read('docs/COMBAT_SYSTEMS.md');
   const coverage=await read('docs/COVERAGE_AUDIT.md');
   const fatalities=await read('docs/FATALITIES_AND_STAGES.md');
+  const stageDirector=await read('docs/STAGE_DIRECTOR.md');
   assert.match(roster,new RegExp(`${CONTENT_STATS.fighters} manifestations`));
   assert.match(matrix,new RegExp(`${CONTENT_STATS.stages} arènes`));
   assert.match(systems,new RegExp(`${Object.keys(MANIFESTATION_TRAITS).length} traits`));
@@ -54,7 +63,11 @@ test('generated documentation contains the live totals and rule families',async(
   assert.match(systems,new RegExp(`${CONTENT_STATS.bossPhases} transitions de boss`));
   assert.match(coverage,/COMPLET DANS LE PÉRIMÈTRE DÉFINI/);
   assert.match(fatalities,new RegExp(`${CONTENT_STATS.fatalities} fatalités de combattant`));
-  assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} animations de stage`));
+  assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} animations`));
+  assert.match(stageDirector,new RegExp(`${CONTENT_STATS.stages} arènes`));
+  assert.match(stageDirector,new RegExp(`${CONTENT_STATS.terrainProfiles} terrains`));
+  assert.match(stageDirector,new RegExp(`${CONTENT_STATS.shiftStyles} bascules`));
+  assert.match(stageDirector,new RegExp(`${CONTENT_STATS.stageDirectorEvents} événements`));
 });
 
 test('service worker shell only references existing lightweight local files',async()=>{
@@ -64,6 +77,7 @@ test('service worker shell only references existing lightweight local files',asy
   assert.ok(refs.length>=20);
   assert.ok(refs.includes('/offline.html'));
   assert.ok(refs.includes('/404.html'));
+  assert.ok(refs.includes('/src/stage-director.js'));
   assert.ok(!refs.includes('/data/movesets.json'),'Le catalogue lourd doit rester hors du précache');
   for(const ref of refs){
     if(ref==='/')continue;
@@ -84,6 +98,9 @@ test('primary pages expose the expected accessible application landmarks',async(
   assert.match(versus,/id="game"/);
   assert.match(versus,/id="fatalities"/);
   assert.match(versus,/id="stageAnimations"/);
+  assert.match(versus,/id="stageTerrain"/);
+  assert.match(versus,/id="stageDirector"/);
   assert.match(chronicles,/id="routeList"/);
   assert.match(archive,/id="systemsTab"/);
+  assert.match(archive,/id="stageDetail"/);
 });

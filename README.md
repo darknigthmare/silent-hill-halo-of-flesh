@@ -6,7 +6,7 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 
 - **Jouer :** https://silent-hill-halo-of-flesh.vercel.app
 - **Dépôt :** https://github.com/darknigthmare/silent-hill-halo-of-flesh
-- **Version :** `0.6.1 — Signal Recovery & Platform Hardening`
+- **Version :** `0.7.0 — Living Otherworld Stage Director`
 
 > **Contrat de fidélité** — Le catalogue vise la fidélité documentaire la plus forte possible pour les identités, variantes, proportions relatives, postures, armes, attaques, comportements, fonctions symboliques et lieux. Chaque mouvement distingue ce qui est directement attesté, recomposé de façon lore-friendly ou ajouté pour rendre une manifestation jouable dans un versus. Les silhouettes, animations, effets, sons, frame data, statistiques et fatalités sont des créations originales ou procédurales : aucun asset officiel n’est redistribué.
 
@@ -27,11 +27,31 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 | Fatalités de combattant | **460** |
 | Fatalités d’arène | **123** |
 | Animations d’arène | **374** |
+| Événements de directeur | **446** |
+| Interactions de lieu | **359** |
+| Liens de danger | **474** |
+| Terrains / bascules Otherworld | **14 / 15** |
 | Transitions de boss | **150** |
-| Traits / afflictions / dangers | **12 / 8 / 7** |
+| Traits / afflictions / dangers | **12 / 8 / 29** |
 | Rites / personnalités IA | **9 / 12** |
 
 Le périmètre réunit les épisodes principaux et dérivés, *P.T.*, *The Short Message*, *Silent Hill f*, les adaptations cinématographiques, *Silent Hill: Ascension* et *Silent Hill: Townfall*.
+
+## v0.7.0 — Living Otherworld Stage Director
+
+Cette passe transforme les 123 arènes en systèmes de combat propres au lieu plutôt qu’en simples variantes visuelles :
+
+- **14 terrains** modifient réellement mouvement, saut, esquive, friction, recul et récupération de garde ;
+- **15 styles de bascule** donnent à chaque source son langage Otherworld : rouille, décomposition, hantise, miroir, glace, boucle, floraison, sanctuaire, signal CRTV ou effondrement du vide ;
+- **22 événements environnementaux** pilotent panne, sirène, casiers, chariot, train, vapeur, montée des eaux, miroir, racines, projecteur, CRTV, cloche, vide, cendre, ascenseur, pièce respirante, orage, gel et rituel ;
+- **29 dangers télégraphiés** utilisent des zones en cercle, ligne, bord, balayage, centre, anneau ou totalité de l’arène ;
+- **446 événements**, **359 interactions** et **474 liens de danger** sont distribués dans les 123 profils de stage ;
+- les trois premières interactions de chaque lieu répondent désormais à un **impact lourd**, au **mi-chemin de la bascule Otherworld** et à la **pression de fin de round**, au lieu de dépendre uniquement d’un chronomètre ;
+- les Archives détaillent terrain, visibilité, transformation, danger, animation, événement et distinction entre motif canonique et règle de versus.
+
+Le moteur prend désormais en charge les sols inondés, glissants, boueux, étroits, instables, floraux, rituels et impossibles. Une arène peut changer temporairement de terrain pendant un événement : l’eau monte, les racines gagnent le sol, la glace prend ou le vide altère la géométrie.
+
+Détails : [`docs/STAGE_DIRECTOR.md`](docs/STAGE_DIRECTOR.md), [`docs/LORE_STAGE_GAMEPLAY.md`](docs/LORE_STAGE_GAMEPLAY.md) et [`docs/RELEASE_NOTES_v0.7.0.md`](docs/RELEASE_NOTES_v0.7.0.md).
 
 ## v0.6.1 — Signal Recovery & Platform Hardening
 
@@ -111,7 +131,8 @@ L’interface reste originale et ne reproduit aucun menu officiel.
 - Projectiles multiples, pièges, auras et téléportations.
 - Armure, invulnérabilité, changement de côté, chute dure et rebond au sol.
 - Jauge Nightmare et désespoir conditionnel.
-- Otherworld dynamique, radio et dangers télégraphiés.
+- Otherworld dynamique par lieu, radio, quatorze terrains et vingt-neuf dangers télégraphiés.
+- Directeur d’arène avec événements, interactions et terrain temporaire cohérents avec la source.
 - Deux phases pour chacun des 75 boss.
 - IA adaptative utilisant distance, propriété des coups et habitudes du joueur.
 - Fatalités Signature, Nightmare et environnementales.
@@ -174,7 +195,7 @@ npm run verify
 ```
 
 - `npm test` régénère les documents, vérifie les données, exécute la suite Node et construit `dist/`.
-- `npm run qa:browser` valide treize parcours desktop/mobile et vingt assertions dans Chromium, puis produit les captures et le rapport machine.
+- `npm run qa:browser` valide quinze parcours desktop/mobile et vingt-six assertions dans Chromium, puis produit les captures et le rapport machine.
 - `npm run build` produit la version statique.
 - `npm run verify` contrôle catalogue, movesets, fatalités, arènes, PWA, liens et syntaxe.
 
@@ -195,6 +216,7 @@ npm run verify
 │   ├── movesets.js               # 20 actions et fidélité par profil
 │   ├── fight.js                  # moteur, IA, contextes, phases et fatalités
 │   ├── renderers.js              # rendu procédural et Otherworld
+│   ├── stage-director.js          # terrains, bascules, événements et interactions de lieu
 │   ├── command.js                # menu principal
 │   ├── versus.js                 # modes et sélection
 │   ├── chronicles.js             # progression
@@ -217,6 +239,7 @@ npm run verify
 - `data/coverage-audit.json`
 - `data/fatalities.json`
 - `data/movesets.json`
+- `data/stage-director.json`
 
 Documents principaux :
 
@@ -226,12 +249,14 @@ Documents principaux :
 - [`docs/COVERAGE_AUDIT.md`](docs/COVERAGE_AUDIT.md)
 - [`docs/FATALITIES_AND_STAGES.md`](docs/FATALITIES_AND_STAGES.md)
 - [`docs/COMBAT_SYSTEMS.md`](docs/COMBAT_SYSTEMS.md)
+- [`docs/STAGE_DIRECTOR.md`](docs/STAGE_DIRECTOR.md)
+- [`docs/LORE_STAGE_GAMEPLAY.md`](docs/LORE_STAGE_GAMEPLAY.md)
 - [`docs/QA_REPORT.md`](docs/QA_REPORT.md)
 - [`docs/PLATFORM_HARDENING.md`](docs/PLATFORM_HARDENING.md)
 
 ## Qualité
 
-La suite v0.6.1 vérifie notamment :
+La suite v0.7.0 vérifie notamment :
 
 - 230 profils, 123 arènes, 15 Chroniques et 16 sources ;
 - 4 600 mouvements, leurs références et leurs contrats contextuels ;
@@ -239,8 +264,9 @@ La suite v0.6.1 vérifie notamment :
 - 460 fatalités, 123 fatalités d’arène et 374 animations ;
 - 150 transitions de boss ;
 - rendu de chaque manifestation et chaque arène ;
-- exports, documents, pages, PWA, caches séparés, sauvegardes exportables, sécurité HTTP et build Vercel.
-- 63 contrôles automatisés ainsi que 13 parcours Chromium et 20 assertions navigateur.
+- les 14 terrains, 15 langages de bascule, 22 événements, 29 dangers, interactions contextuelles et géométries de zone ;
+- exports, documents, pages, PWA, caches séparés, sauvegardes exportables, sécurité HTTP et build Vercel ;
+- **71 contrôles automatisés**, **15 parcours Chromium** et **26 assertions navigateur**.
 
 ## Statut artistique
 

@@ -10,7 +10,7 @@ const DEFAULT_SETTINGS = {
   highContrast:typeof matchMedia==='function'&&matchMedia('(prefers-contrast: more)').matches,
   vibration:true, masterVolume:65, difficulty:'normal',
   otherworldShift:true, stageHazards:true, radioWarning:true, screenShake:true, adaptiveAI:true,
-  fatalities:true, stageFatalities:true, stageAnimations:true
+  fatalities:true, stageFatalities:true, stageAnimations:true, stageTerrain:true, stageDirector:true
 };
 const VALID_DIFFICULTIES = new Set(['story','normal','hard']);
 function isPlainRecord(value){return Boolean(value)&&typeof value==='object'&&!Array.isArray(value);}

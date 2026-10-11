@@ -1,6 +1,6 @@
-# Systèmes de combat — v0.6.1
+# Systèmes de combat — v0.7.0
 
-La v0.6.1 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **7 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**.
+La v0.7.0 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **29 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **374 animations d’arène**, **446 événements**, **14 terrains** et **15 types de bascule**.
 
 ## Architecture des movesets
 
@@ -51,6 +51,28 @@ Chaque coup contient son input, ses frames de démarrage/activité/récupératio
 | `petalBloom` | FLORAISON ROUGE | 100 f | 190 | 38 | FLORAISON |
 | `emberFall` | PLUIE DE CENDRES | 82 f | 135 | 50 | BRÛLURE |
 | `chainSweep` | BALAYAGE DE CHAÎNES | 76 f | 145 | 58 | ENTRAVE |
+| `lockerSlam` | CLAQUEMENT DE CASIERS | 66 f | 105 | 38 | PARASITES RADIO |
+| `gurneyRush` | CHARIOT LANCÉ | 84 f | 142 | 58 | ENTRAVE |
+| `roadCollapse` | RUPTURE DE CHAUSSÉE | 112 f | 188 | 68 | CORROSION |
+| `carouselSweep` | COURONNE DU MANÈGE | 98 f | 154 | 52 | ENTRAVE |
+| `trainRush` | PASSAGE DE LA RAME | 124 f | 210 | 82 | CORROSION |
+| `steamVent` | PURGE DE VAPEUR | 74 f | 112 | 44 | BRÛLURE |
+| `waterSurge` | VAGUE D’EAU NOIRE | 106 f | 235 | 40 | GEL |
+| `mirrorFracture` | FRACTURE DU REFLET | 88 f | 152 | 46 | EFFROI |
+| `rootSnare` | PRISE DES RACINES | 92 f | 172 | 34 | FLORAISON |
+| `spotlightSweep` | FAISCEAU DE SURVEILLANCE | 80 f | 148 | 32 | EFFROI |
+| `crtvPulse` | VERROU CRTV | 70 f | 220 | 28 | PARASITES RADIO |
+| `sirenShock` | ONDE DE SIRÈNE | 94 f | 270 | 38 | EFFROI |
+| `voidPull` | ATTRACTION DU VIDE | 108 f | 238 | 42 | EFFROI |
+| `bellToll` | RÉSONANCE DE LA CLOCHE | 96 f | 260 | 30 | EFFROI |
+| `portraitGaze` | REGARD DES PORTRAITS | 90 f | 176 | 34 | EFFROI |
+| `elevatorDrop` | CHUTE D’ASCENSEUR | 104 f | 136 | 64 | CORROSION |
+| `roomPulse` | CONTRACTION DE LA PIÈCE | 92 f | 230 | 36 | EFFROI |
+| `lightningStrike` | IMPACT DE FOUDRE | 78 f | 96 | 62 | BRÛLURE |
+| `iceFracture` | FISSURE DE GLACE | 100 f | 180 | 36 | GEL |
+| `ritualSeal` | FERMETURE DU SCEAU | 102 f | 196 | 42 | EFFROI |
+| `windShear` | RAFALE LATÉRALE | 82 f | 170 | 30 | GEL |
+| `doorSlam` | PORTE CLAQUÉE | 72 f | 104 | 40 | ENTRAVE |
 
 ## Rites du Jugement
 
@@ -106,3 +128,6 @@ Les **75 boss** possèdent deux transitions, soit **150 phases déclenchables**.
 - **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.
 - **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.
 - **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.
+- **Terrain contextuel** : adhérence, esquive, saut, garde et recul suivent la matière du lieu sans annuler la lisibilité du versus.
+- **Directeur environnemental** : chaque arène alterne événements, dangers et bascule selon sa source, sa famille et ses accessoires.
+- **Otherworld différencié** : rouille, glace, signal CRTV, hantise, floraison, sanctuaire, tempête, vide ou rituel utilisent des règles et overlays distincts.

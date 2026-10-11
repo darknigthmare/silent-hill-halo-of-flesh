@@ -1,4 +1,4 @@
-const VERSION = '0.6.1';
+const VERSION = '0.7.0';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
@@ -12,6 +12,7 @@ const ESSENTIAL_SHELL = [
   '/styles.css',
   '/manifest.webmanifest',
   '/src/data.js',
+  '/src/stage-director.js',
   '/src/movesets.js',
   '/src/shared.js',
   '/src/renderers.js',

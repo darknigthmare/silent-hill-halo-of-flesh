@@ -18,7 +18,11 @@ import {
   createBossPhases,
   createCombatProfile,
   MOVESET_KEYS,
-  MOVE_FIDELITY
+  MOVE_FIDELITY,
+  STAGE_TERRAINS,
+  STAGE_SHIFT_STYLES,
+  STAGE_EVENTS,
+  stageDirectorSummary
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -56,7 +60,7 @@ function buildRoster() {
   const lines = [
     `# Roster complet — v${VERSION}`,
     '',
-    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.moves} coups documentés**, **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
+    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.moves} coups documentés**, **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables**, **${CONTENT_STATS.stageAnimations} animations d’arène** et **${CONTENT_STATS.stageDirectorEvents} événements de lieu**.`,
     '',
     '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et fatalités sont des créations ou adaptations originales documentées ; aucun asset officiel n’est inclus.',
     ''
@@ -120,7 +124,7 @@ function buildCombatSystems() {
   const lines = [
     `# Systèmes de combat — v${VERSION}`,
     '',
-    `La v${VERSION} réunit **${CONTENT_STATS.moves} coups documentés**, **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations d’arène**.`,
+    `La v${VERSION} réunit **${CONTENT_STATS.moves} coups documentés**, **${Object.keys(MANIFESTATION_TRAITS).length} traits**, **${Object.keys(AFFLICTIONS).length} afflictions**, **${Object.keys(STAGE_HAZARDS).length} dangers**, **${Object.keys(RITUAL_MODIFIERS).length} rites**, **${Object.keys(AI_PERSONALITIES).length} personnalités IA** et **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations d’arène**, **${CONTENT_STATS.stageDirectorEvents} événements**, **${CONTENT_STATS.terrainProfiles} terrains** et **${CONTENT_STATS.shiftStyles} types de bascule**.`,
     '',
     '## Architecture des movesets',
     '',
@@ -175,7 +179,10 @@ function buildCombatSystems() {
     '- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.',
     '- **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.',
     '- **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.',
-    '- **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.'
+    '- **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.',
+    '- **Terrain contextuel** : adhérence, esquive, saut, garde et recul suivent la matière du lieu sans annuler la lisibilité du versus.',
+    '- **Directeur environnemental** : chaque arène alterne événements, dangers et bascule selon sa source, sa famille et ses accessoires.',
+    '- **Otherworld différencié** : rouille, glace, signal CRTV, hantise, floraison, sanctuaire, tempête, vide ou rituel utilisent des règles et overlays distincts.'
   );
   return `${lines.join('\n')}\n`;
 }
@@ -253,7 +260,7 @@ function buildFatalitiesAndStages() {
   const lines = [
     `# Fatalités, arènes dédiées et animations — v${VERSION}`,
     '',
-    `La release contient **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène** et **${CONTENT_STATS.stageAnimations} animations de stage**.`,
+    `La release contient **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène**, **${CONTENT_STATS.stageAnimations} animations**, **${CONTENT_STATS.stageDirectorEvents} événements de lieu** et **${CONTENT_STATS.stageInteractions} interactions documentées**.`,
     '',
     '## Fatalités de combattant',
     '',
@@ -264,9 +271,9 @@ function buildFatalitiesAndStages() {
     const [signature, nightmare] = fighter.fatalities || [];
     lines.push(`| ${md(fighter.name)} | ${md(SOURCE_META[fighter.source]?.short || fighter.source)} | ${md(signature?.name)} | ${md(nightmare?.name)} | ${md(signature?.canonicalBasis)} |`);
   }
-  lines.push('', '## Arènes dédiées', '', '| Arène | Source | Famille | Fatalité d’arène | Animations |', '|---|---|---|---|---|');
+  lines.push('', '## Arènes dédiées', '', '| Arène | Source | Terrain | Bascule | Événements | Dangers | Animations | Fatalité |', '|---|---|---|---|---:|---:|---:|---|');
   for (const stage of STAGES) {
-    lines.push(`| ${md(stage.name)} | ${md(SOURCE_META[stage.source]?.short || stage.source)} | ${md(stage.family)} | ${md(stage.fatality?.name)} | ${md((stage.animations || []).join(', '))} |`);
+    lines.push(`| ${md(stage.name)} | ${md(SOURCE_META[stage.source]?.short || stage.source)} | ${md(stage.terrain?.name)} | ${md(stage.shift?.name)} | ${stage.director?.events?.length || 0} | ${stage.director?.hazardDeck?.length || 0} | ${stage.animationTracks?.length || stage.animations?.length || 0} | ${md(stage.fatality?.name)} |`);
   }
   lines.push(
     '',
@@ -279,13 +286,41 @@ function buildFatalitiesAndStages() {
   return `${lines.join('\n')}\n`;
 }
 
+
+function buildStageDirector() {
+  const lines = [
+    `# Directeur d’arènes et gameplay environnemental — v${VERSION}`,
+    '',
+    `**${CONTENT_STATS.stages} arènes · ${CONTENT_STATS.terrainProfiles} terrains · ${CONTENT_STATS.shiftStyles} bascules · ${CONTENT_STATS.stageDirectorEvents} événements · ${CONTENT_STATS.stageHazardLinks} liens de danger · ${CONTENT_STATS.stageInteractions} interactions.**`,
+    '',
+    '> Les lieux, accessoires, climats et motifs sont documentés à partir du catalogue du projet. Les timings, dégâts, zones de danger et déclencheurs restent des adaptations versus originales explicitement séparées du canon.',
+    '',
+    '## Terrains jouables',
+    '',
+    '| ID | Nom | Mouvement | Saut | Esquive | Friction | Recul | Garde | Description |',
+    '|---|---|---:|---:|---:|---:|---:|---:|---|'
+  ];
+  for (const [id, terrain] of Object.entries(STAGE_TERRAINS)) lines.push(`| \`${id}\` | ${md(terrain.name)} | ×${terrain.moveScale} | ×${terrain.jumpScale} | ×${terrain.dodgeScale} | ${terrain.friction} | ×${terrain.knockbackScale} | ×${terrain.guardRegenScale} | ${md(terrain.description)} |`);
+  lines.push('', '## Bascule des mondes', '', '| ID | Nom | Signal | Durée | Seuil | Radio | Description |', '|---|---|---|---:|---:|---:|---|');
+  for (const [id, shift] of Object.entries(STAGE_SHIFT_STYLES)) lines.push(`| \`${id}\` | ${md(shift.name)} | ${md(shift.cue)} | ${shift.duration} f | ${Math.round(shift.threshold * 100)}% | ×${shift.radioScale} | ${md(shift.description)} |`);
+  lines.push('', '## Déclencheurs contextuels', '', '- `time-or-first-heavy-impact` : premier impact lourd, rupture d’armure, rebond au sol ou délai initial du lieu.', '- `otherworld-halfway` : transformation du monde arrivée à mi-course.', '- `low-health-or-late-round` : vitalité critique ou dernier quart du temps réglementaire.', '- `director-cadence` : repli autonome quand aucun déclencheur contextuel ne s’active.', '', 'Les événements conservent leur télégraphie et leur zone évitable ; le snapshot mémorise la cause du déclenchement.', '', '## Événements environnementaux', '', '| ID | Nom | Durée | Danger lié | Terrain temporaire | Message |', '|---|---|---:|---|---|---|');
+  for (const [id, event] of Object.entries(STAGE_EVENTS)) lines.push(`| \`${id}\` | ${md(event.name)} | ${event.duration} f | ${md(STAGE_HAZARDS[event.hazard]?.name || event.hazard || 'Aucun')} | ${md(event.terrainPulse || 'Aucun')} | ${md(event.message)} |`);
+  lines.push('', '## Doctrine par arène', '', '| Arène | Terrain | Bascule | Événements | Déclencheurs | Dangers | Animations | Base lore |', '|---|---|---|---|---|---|---:|---|');
+  for (const stage of STAGES) {
+    const summary = stageDirectorSummary(stage);
+    lines.push(`| ${md(stage.name)} | ${md(summary.terrain.name)} | ${md(summary.shift.name)} | ${md(summary.events.map(event => event.name).join(', '))} | ${md((stage.interactions || []).map(interaction => interaction.triggerLabel || interaction.trigger).join(', '))} | ${md(summary.hazards.map(id => STAGE_HAZARDS[id]?.name || id).join(', '))} | ${summary.animations.length} | ${md(stage.lore?.premise)} |`);
+  }
+  return `${lines.join('\n')}\n`;
+}
+
 await Promise.all([
   writeFile(join(docs, 'ROSTER.md'), buildRoster()),
   writeFile(join(docs, 'FIDELITY_MATRIX.md'), buildMatrix()),
   writeFile(join(docs, 'COMBAT_SYSTEMS.md'), buildCombatSystems()),
   writeFile(join(docs, 'COVERAGE_AUDIT.md'), buildCoverageAudit()),
   writeFile(join(docs, 'FATALITIES_AND_STAGES.md'), buildFatalitiesAndStages()),
-  writeFile(join(docs, 'MOVESETS.md'), buildMovesets())
+  writeFile(join(docs, 'MOVESETS.md'), buildMovesets()),
+  writeFile(join(docs, 'STAGE_DIRECTOR.md'), buildStageDirector())
 ]);
 
-console.log(`Documentation v${VERSION} générée : roster, movesets, couverture, fatalités, arènes et systèmes de combat.`);
+console.log(`Documentation v${VERSION} générée : roster, movesets, couverture, fatalités, arènes, terrains et directeur environnemental.`);

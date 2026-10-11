@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
-  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
+  MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -36,6 +36,7 @@ async function syncData() {
     writeJson(join(dataDir,'sources.json'),SOURCE_META),
     writeJson(join(dataDir,'content-stats.json'),CONTENT_STATS),
     writeJson(join(dataDir,'coverage-audit.json'),coverageAudit()),
+    writeJson(join(dataDir,'stage-director.json'),{ version: VERSION, terrains: STAGE_TERRAINS, shifts: STAGE_SHIFT_STYLES, events: STAGE_EVENTS, interactionTriggers: STAGE_INTERACTION_TRIGGERS, stages: STAGES.map(stage=>({ id:stage.id, name:stage.name, source:stage.source, lore:stage.lore, ...stageDirectorSummary(stage) })) }),
     writeJson(join(dataDir,'fatalities.json'),{ version: VERSION, fighters: ROSTER.map(({id,name,source,fatalities})=>({id,name,source,fatalities})), stages: STAGES.map(({id,name,source,fatality,animations})=>({id,name,source,fatality,animations})) }),
     writeJson(join(dataDir,'movesets.json'),{
       version: VERSION,
@@ -53,6 +54,10 @@ async function syncData() {
       hazards: STAGE_HAZARDS,
       rituals: RITUAL_MODIFIERS,
       aiPersonalities: AI_PERSONALITIES,
+      terrains: STAGE_TERRAINS,
+      shiftStyles: STAGE_SHIFT_STYLES,
+      stageEvents: STAGE_EVENTS,
+      stageInteractionTriggers: STAGE_INTERACTION_TRIGGERS,
       coverageTargets: SOURCE_COVERAGE_TARGETS
     })
   ]);
@@ -67,6 +72,9 @@ async function runVerification() {
   const hazardIds=new Set(Object.keys(STAGE_HAZARDS));
   const aiIds=new Set(Object.keys(AI_PERSONALITIES));
   const ritualIds=new Set(Object.keys(RITUAL_MODIFIERS));
+  const terrainIds=new Set(Object.keys(STAGE_TERRAINS));
+  const shiftIds=new Set(Object.keys(STAGE_SHIFT_STYLES));
+  const stageEventIds=new Set(Object.keys(STAGE_EVENTS));
 
   for (const stage of STAGES) {
     assert(!stageIds.has(stage.id),`ID d’arène dupliqué: ${stage.id}`);
@@ -75,6 +83,14 @@ async function runVerification() {
     assert(hazardIds.has(stage.hazard),`Danger d’arène inconnu: ${stage.id}/${stage.hazard}`);
     assert(Array.isArray(stage.animations)&&stage.animations.length>=1,`Animations d’arène absentes: ${stage.id}`);
     assert(stage.fatality&&typeof stage.fatality.name==='string'&&stage.fatality.sequence?.length>=3,`Fatalité d’arène incomplète: ${stage.id}`);
+    assert(stage.terrain&&terrainIds.has(stage.terrain.id),`Terrain d’arène inconnu: ${stage.id}/${stage.terrain?.id}`);
+    assert(stage.shift&&shiftIds.has(stage.shift.style),`Bascule d’arène inconnue: ${stage.id}/${stage.shift?.style}`);
+    assert(stage.lore?.premise&&stage.lore?.adaptationNotice,`Doctrine lore d’arène incomplète: ${stage.id}`);
+    assert(stage.director&&stage.director.events?.length>=1&&stage.director.hazardDeck?.length>=1,`Directeur d’arène incomplet: ${stage.id}`);
+    stage.director.events.forEach(id=>assert(stageEventIds.has(id),`Événement d’arène inconnu: ${stage.id}/${id}`));
+    stage.director.hazardDeck.forEach(id=>assert(hazardIds.has(id),`Deck de dangers inconnu: ${stage.id}/${id}`));
+    assert(stage.animationTracks?.length===stage.animations.length,`Pistes d’animation incohérentes: ${stage.id}`);
+    assert(stage.interactions?.length>=1,`Interactions d’arène absentes: ${stage.id}`);
   }
   for (const fighter of ROSTER) {
     assert(!fighterIds.has(fighter.id),`ID de combattant dupliqué: ${fighter.id}`);
@@ -142,6 +158,10 @@ async function runVerification() {
   assert(CONTENT_STATS.fatalities===ROSTER.reduce((sum,fighter)=>sum+fighter.fatalities.length,0),'Statistique fatalités incohérente');
   assert(CONTENT_STATS.stageFatalities===STAGES.filter(stage=>stage.fatality).length,'Statistique fatalités d’arène incohérente');
   assert(CONTENT_STATS.stageAnimations===STAGES.reduce((sum,stage)=>sum+stage.animations.length,0),'Statistique animations incohérente');
+  assert(CONTENT_STATS.stageDirectorEvents===STAGES.reduce((sum,stage)=>sum+stage.director.events.length,0),'Statistique événements de lieu incohérente');
+  assert(CONTENT_STATS.stageInteractions===STAGES.reduce((sum,stage)=>sum+stage.interactions.length,0),'Statistique interactions incohérente');
+  assert(CONTENT_STATS.stageHazardLinks===STAGES.reduce((sum,stage)=>sum+stage.director.hazardDeck.length,0),'Statistique decks de danger incohérente');
+  assert(CONTENT_STATS.terrainProfiles===terrainIds.size&&CONTENT_STATS.shiftStyles===shiftIds.size,'Statistique doctrines de terrain incohérente');
   assert(CONTENT_STATS.moves===ROSTER.length*MOVESET_KEYS.length,'Statistique moves incohérente');
   assert(CONTENT_STATS.directCanonicalMoves+CONTENT_STATS.behaviorCompositeMoves+CONTENT_STATS.versusAdaptationMoves===CONTENT_STATS.moves,'Répartition de fidélité incohérente');
   const audit=coverageAudit();
@@ -151,7 +171,7 @@ async function runVerification() {
     'index.html','offline.html','404.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
-    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','src/movesets.js'
+    'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','data/stage-director.json','src/movesets.js','src/stage-director.js'
   ];
   for(const path of required)assert(await exists(join(project,path)),`Fichier requis absent: ${path}`);
 
@@ -184,7 +204,7 @@ async function runVerification() {
   const vercel=JSON.parse(await readFile(join(project,'vercel.json'),'utf8'));
   const headerKeys=new Set(vercel.headers?.flatMap(rule=>rule.headers||[]).map(header=>header.key));
   for(const key of ['Content-Security-Policy','Cross-Origin-Opener-Policy','Cross-Origin-Resource-Policy','X-Frame-Options'])assert(headerKeys.has(key),`En-tête Vercel absent: ${key}`);
-  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:coverageAudit().complete};
+  return {js:jsFiles.length,html:htmlFiles.length,traits:traitIds.size,afflictions:afflictionIds.size,hazards:hazardIds.size,rituals:ritualIds.size,aiPersonalities:aiIds.size,terrains:terrainIds.size,shiftStyles:shiftIds.size,stageEvents:stageEventIds.size,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,stageDirectorEvents:CONTENT_STATS.stageDirectorEvents,stageInteractions:CONTENT_STATS.stageInteractions,stageHazardLinks:CONTENT_STATS.stageHazardLinks,terrains:CONTENT_STATS.terrainProfiles,shiftStyles:CONTENT_STATS.shiftStyles,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:coverageAudit().complete};
 }
 
 await syncData();
@@ -197,8 +217,8 @@ const result=verify?await runVerification():{js:0,html:0,traits:0,afflictions:0,
 if(!verifyOnly){
   const files=await filesUnder(dist);const manifest=[];
   for(const file of files){const bytes=await readFile(file);manifest.push({path:relative(dist,file).replaceAll('\\','/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
-  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
+  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,stageDirectorEvents:CONTENT_STATS.stageDirectorEvents,stageInteractions:CONTENT_STATS.stageInteractions,stageHazardLinks:CONTENT_STATS.stageHazardLinks,terrains:CONTENT_STATS.terrainProfiles,shiftStyles:CONTENT_STATS.shiftStyles,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
   await writeJson(join(dist,'build-manifest.json'),report);
   console.log(`Build v${VERSION}: ${files.length+1} fichiers → ${dist}`);
 }
-if(verify)console.log(`Vérification réussie: ${result.js} JS, ${result.html} HTML, ${ROSTER.length} combattants, ${STAGES.length} arènes, ${CHRONICLES.length} chroniques, ${CONTENT_STATS.fatalities} fatalités, ${CONTENT_STATS.stageAnimations} animations d’arène.`);
+if(verify)console.log(`Vérification réussie: ${result.js} JS, ${result.html} HTML, ${ROSTER.length} combattants, ${STAGES.length} arènes, ${CHRONICLES.length} chroniques, ${CONTENT_STATS.fatalities} fatalités, ${CONTENT_STATS.stageAnimations} animations d’arène, ${CONTENT_STATS.stageDirectorEvents} événements de lieu.`);

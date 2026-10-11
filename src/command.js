@@ -79,7 +79,7 @@ const modes = {
   options: {
     kicker: 'RÉGLAGES DU SYSTÈME',
     title: 'RÈGLE<br><span>LE SIGNAL.</span>',
-    text: 'Affichage, confort, audio, IA adaptative, fatalités, animations, Otherworld et dangers d’arène.',
+    text: 'Affichage, confort, audio, IA adaptative, terrains, mise en scène des lieux, Otherworld et dangers d’arène.',
     choices: ['ACCESSIBILITÉ','RÈGLES DYNAMIQUES','SAUVEGARDE'],
     scene: 'options', frequency: '88.3', code: 'SHHF/OP', signal: 'RÉGLAGES', data: ['ACCESSIBILITÉ','LOCAL UNIQUEMENT']
   }

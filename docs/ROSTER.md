@@ -1,6 +1,6 @@
-# Roster complet — v0.6.1
+# Roster complet — v0.7.0
 
-Catalogue synchronisé : **230 manifestations**, dont **75 boss**, réparties sur **16 sources**, avec **4600 coups documentés**, **150 transitions de boss**, **460 fatalités jouables** et **374 animations d’arène**.
+Catalogue synchronisé : **230 manifestations**, dont **75 boss**, réparties sur **16 sources**, avec **4600 coups documentés**, **150 transitions de boss**, **460 fatalités jouables**, **374 animations d’arène** et **446 événements de lieu**.
 
 > Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et fatalités sont des créations ou adaptations originales documentées ; aucun asset officiel n’est inclus.
 
