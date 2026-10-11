@@ -1,0 +1,64 @@
+name: Publish v0.7.0 Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/release-v070.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TARGET_SHA: 7e7effe7bae473d43ac7f6dd7b3e370c54a1acac
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+
+      - name: Validate release
+        run: npm test
+
+      - name: Build release archives
+        run: |
+          mkdir -p release
+          git archive --format=zip --prefix=SILENT-HILL-HALO-OF-FLESH_v0.7.0/ --output=release/SILENT-HILL-HALO-OF-FLESH_v0.7.0_SOURCE.zip "$TARGET_SHA"
+          (cd dist && zip -qr ../release/SILENT-HILL-HALO-OF-FLESH_v0.7.0_VERCEL_BUILD.zip .)
+          zip -qr release/SILENT-HILL-HALO-OF-FLESH_v0.7.0_DOCUMENTATION.zip \
+            README.md CHANGELOG.md NOTICE.md LICENSE docs \
+            data/content-stats.json data/combat-rules.json data/coverage-audit.json \
+            data/fatalities.json data/stage-director.json data/stages.json
+          (cd release && sha256sum *.zip > SILENT-HILL-HALO-OF-FLESH_v0.7.0_CHECKSUMS.txt)
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.7.0 >/dev/null 2>&1; then
+            gh release upload v0.7.0 release/* --clobber
+          else
+            gh release create v0.7.0 release/* \
+              --target "$TARGET_SHA" \
+              --title "Silent Hill: Halo of Flesh v0.7.0" \
+              --notes-file docs/RELEASE_NOTES_v0.7.0.md
+          fi
+
+      - name: Remove one-time workflow
+        run: |
+          git config user.name "darknigthmare"
+          git config user.email "chuckykill@hotmail.fr"
+          git rm .github/workflows/release-v070.yml
+          git commit -m "ci: remove one-time v0.7.0 release workflow"
+          git push origin main
