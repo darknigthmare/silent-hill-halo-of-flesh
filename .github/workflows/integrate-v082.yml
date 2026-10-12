@@ -1,0 +1,61 @@
+name: Integrate verified v0.8.2
+on:
+  push:
+    branches: [feat/coherent-impact-signal-v082]
+    paths: [.github/workflows/integrate-v082.yml]
+permissions:
+  contents: write
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: feat/coherent-impact-signal-v082
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Download and verify project archive
+        env:
+          SOURCE_URL: "https://sdmntprukwest.oaiusercontent.com/files/00000000-f8cc-8243-a213-f70968d2c031/raw?se=2026-10-12T09%3A11%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=42728e0b-f968-5939-9b83-6a71011849a3&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-12T01%3A18%3A52Z&ske=2026-10-13T01%3A18%3A52Z&sks=b&skv=2026-02-06&sig=LMbkzoIuj9WwUpfloIvsUE4q2WxUAYNhOlxLMoA5KIM%3D"
+        run: |
+          curl --fail --location --retry 2 --max-time 90 "$SOURCE_URL" -o /tmp/halo-v082.tar.gz
+          echo '0b7eb56fce3004de06ef47568747304a986270a4f36252504726ade1866cae13  /tmp/halo-v082.tar.gz' | sha256sum --check --strict
+      - name: Overlay regular source files without deleting unrelated files
+        run: |
+          python3 - <<'PY'
+          import tarfile, pathlib
+          root=pathlib.Path.cwd()
+          with tarfile.open('/tmp/halo-v082.tar.gz','r:gz') as archive:
+              members=archive.getmembers()
+              assert len(members)<2000
+              for member in members:
+                  path=pathlib.PurePosixPath(member.name)
+                  assert member.isfile() and member.size<30000000, member.name
+                  assert not path.is_absolute() and '..' not in path.parts, member.name
+                  assert path.parts[0]=='SILENT-HILL-HALO-OF-FLESH_v0.8.2', member.name
+                  rel=pathlib.Path(*path.parts[1:])
+                  assert rel.parts and rel.parts[0] not in ('.git','node_modules','dist'), member.name
+                  dest=root/rel
+                  assert all(not (root/pathlib.Path(*rel.parts[:n])).is_symlink() for n in range(1,len(rel.parts)+1)), member.name
+                  dest.parent.mkdir(parents=True,exist_ok=True)
+                  dest.write_bytes(archive.extractfile(member).read())
+          PY
+          test -f src/combat-resolution.js
+          test -f tests/resolution-v082.test.mjs
+          test -f docs/QA_v0.8.2.md
+          rm .github/workflows/integrate-v082.yml
+          git add -A
+      - name: Run 146 tests and verify reproducible generated files
+        run: |
+          npm test
+          git diff --exit-code
+      - name: Publish only the feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'feat: coherent impacts, ambient signals and combat state v0.8.2'
+          git push origin HEAD:refs/heads/feat/coherent-impact-signal-v082
+          echo "Published feature commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
