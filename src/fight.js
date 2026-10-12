@@ -1,6 +1,8 @@
 import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
 import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftStyle } from './stage-director.js';
+import { bodyBox, bodyProfile, bodyPushRadius, hasGroundContact, moveBox, overlaps, hazardVolumes, hazardTouches, hazardCounterplay } from './combat-geometry.js';
+import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 
 const WIDTH = 1280;
@@ -80,7 +82,7 @@ function makeActor(data, index, ritual = {}) {
     speed: rawProfile.speed * (ritual.speedScale || 1),
     guard: Math.round(rawProfile.guard * (ritual.guardScale || 1))
   };
-  const scale = clamp(data.visual.scale || 1, .62, 1.62);
+  const scale = bodyProfile(data).scale;
   return {
     index,
     data,
@@ -144,30 +146,9 @@ function makeActor(data, index, ritual = {}) {
   };
 }
 
-function actorBox(actor) {
-  const baseW = clamp(72 * actor.scale, 48, 126);
-  const baseH = clamp(188 * actor.scale, 122, 300);
-  const crouchScale = actor.crouching ? .7 : 1;
-  const lowProfile = actor.crouching || actor.data.visual.kind === 'insect' || actor.data.visual.kind === 'quadruped'
-    ? actor.profile.lowProfile
-    : 1;
-  const h = baseH * crouchScale * lowProfile;
-  const w = baseW * (lowProfile < 1 ? .92 : 1);
-  return { x: actor.x - w / 2, y: actor.y - h, w, h };
-}
-
-function attackBox(actor, move) {
-  const h = move.level === 'low' ? 58 : move.level === 'throw' ? 125 : 105;
-  const y = actor.y - (move.level === 'low' ? 45 : move.level === 'throw' ? 135 : 150);
-  const reach = clamp(move.reach, 48, 940);
-  return actor.facing > 0
-    ? { x: actor.x + 22, y, w: reach, h }
-    : { x: actor.x - 22 - reach, y, w: reach, h };
-}
-
-function intersects(a, b) {
-  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
-}
+function actorBox(actor) { return bodyBox(actor); }
+function attackBox(actor, move) { return moveBox(actor, move); }
+function intersects(a, b) { return overlaps(a, b); }
 
 function healthRatio(actor) { return clamp(actor.health / actor.maxHealth, 0, 1); }
 function actorPhasePower(actor) { return actor?.phasePower || 1; }
@@ -260,25 +241,7 @@ function createStageRuntime(stage) {
 }
 
 function hazardContainsActor(hazard, actor, width = WIDTH) {
-  const radius = hazard.profile.radius || 140;
-  const distance = Math.abs(actor.x - hazard.x);
-  switch (hazard.profile.shape) {
-    case 'global': return true;
-    case 'ring': {
-      const inner = radius * .42;
-      return distance >= inner && distance <= radius;
-    }
-    case 'edge': {
-      const edgeDistance = Math.min(actor.x, width - actor.x);
-      if (hazard.profile.targetMode === 'edge') return edgeDistance <= radius;
-      return distance <= radius;
-    }
-    case 'sweep': return actor.x >= hazard.zoneMin && actor.x <= hazard.zoneMax;
-    case 'lane': return distance <= radius * .72;
-    case 'center': return Math.abs(actor.x - width / 2) <= radius;
-    case 'circle':
-    default: return distance <= radius;
-  }
+  return hazardTouches(hazard, actor, { width, floor: FLOOR });
 }
 
 export class FightEngine {
@@ -552,6 +515,9 @@ export class FightEngine {
         this.matchTime = 0;
         const [p1, p2] = this.actors;
         this.endRound(p1.health === p2.health ? null : (p1.health > p2.health ? p1 : p2), 'TIME');
+        this.callbacks.onState(this.snapshot());
+        this.input.endFrame();
+        return; // No stage impact or attack may change a round after time expires.
       }
     }
 
@@ -594,6 +560,38 @@ export class FightEngine {
     return controls;
   }
 
+  readTelegraphedHazard(actor, reactionFrames = 13) {
+    if (actor.ko || this.phase !== 'fight') return null;
+    const visible = this.hazards.filter(h => h.timer > reactionFrames + 6 &&
+      h.timer <= Math.max(42, reactionFrames * 2 + 35) &&
+      hazardContainsActor(h, actor));
+    if (!visible.length) return null;
+    // Give priority to the soonest danger, not to an unpublished future roll.
+    const hazard = visible.sort((a,b)=>a.timer-b.timer)[0];
+    const inset = this.arenaInset(85);
+    const stride = clamp(actor.profile.speed * Math.min(hazard.timer,60) * this.terrainForActor(actor).moveScale,75,260);
+    const attempts = [-1,1].map(dir => {
+      const candidateX = clamp(actor.x + dir * stride, inset, WIDTH-inset);
+      const escaped = !hazardContainsActor(hazard, { ...actor, x:candidateX });
+      const clearance = hazard.profile.shape === 'edge'
+        ? Math.min(candidateX,WIDTH-candidateX)
+        : Math.abs(candidateX-hazard.x);
+      const unsafeCount = this.hazards.filter(h => (h.timer > 0 || h.active > 0) && hazardTouches(h, {...actor,x:candidateX}, {preview:true})).length;
+      return {dir, candidateX, escaped, clearance, unsafeCount, distance:Math.abs(candidateX-actor.x)};
+    }).filter(item=>item.distance>=25);
+    attempts.sort((a,b)=>a.unsafeCount-b.unsafeCount||Number(b.escaped)-Number(a.escaped)||b.clearance-a.clearance||b.distance-a.distance);
+    const best = attempts[0];
+    // A global wave has no escape lane: blocking is the advertised counterplay.
+    if (hazard.profile.shape === 'global' || !best) return hazard.profile.unblockable ? {} : {guard:true};
+    if (!best.escaped && !hazard.profile.unblockable && hazard.timer < reactionFrames * 2)
+      return {guard:true};
+    const intent = best.dir > 0 ? {right:true} : {left:true};
+    // Rushing archetypes can still dodge but only when the warning is explicit.
+    if (hazard.timer < 32 && actor.dodgeCooldown === 0 && actor.profile.dodgeInvuln >= 8)
+      intent.dodge = true;
+    return intent;
+  }
+
   computeAI(actor, enemy) {
     const distance = Math.abs(enemy.x - actor.x);
     const baseDiff = {
@@ -609,6 +607,15 @@ export class FightEngine {
       counter: clamp(baseDiff.counter * (personality.defense || 1), .04, .72)
     };
     const preferred = personality.preferredRange || 145;
+
+    // Stage awareness belongs to AI too: it reads the same visible telegraphs as humans.
+    // No invisible knowledge of random upcoming events or hazard placement.
+    const environmentalDefense = this.readTelegraphedHazard(actor, baseDiff.react);
+    if (environmentalDefense) {
+      actor.aiIntent = environmentalDefense;
+      actor.aiTimer = Math.max(4,Math.round(baseDiff.react*.75));
+      return { ...environmentalDefense };
+    }
 
     if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && this.rng() < .74) return { special: true };
     if (actor.guardCounterWindow > 0 && this.rng() < .82) return { heavy: true };
@@ -812,12 +819,13 @@ export class FightEngine {
       actor.dodgeCooldown = 42;
       actor.dodgeFrames = Math.max(10, profile.dodgeInvuln + 5);
       actor.dodgeFollowupWindow = Math.max(8, profile.dodgeInvuln + 2);
-      const terrain = this.currentTerrain();
-      actor.vx = -actor.facing * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0)) * terrain.dodgeScale;
+      const terrain = this.terrainForActor(actor);
+      const dodgeDirection = controls.left !== controls.right ? (controls.left ? -1 : 1) : -actor.facing;
+      actor.vx = dodgeDirection * (10.2 + (profile.trait.id === 'falsePresence' ? 1.4 : 0)) * terrain.dodgeScale;
       this.spawnDust(actor.x, actor.y);
       audio.tone({ freq: 110, duration: .1, gain: .025, slide: 90 });
     } else if (controls.jump && actor.grounded) {
-      actor.vy = -profile.jump * this.currentTerrain().jumpScale;
+      actor.vy = -profile.jump * this.terrainForActor(actor).jumpScale;
       this.logInput(actor, 'SAUT');
       actor.grounded = false;
       actor.state = 'jump';
@@ -832,7 +840,7 @@ export class FightEngine {
       if (controls.left) movement--;
       if (controls.right) movement++;
       if (movement) {
-        const terrain = this.currentTerrain();
+        const terrain = this.terrainForActor(actor);
         const speed = profile.speed * actor.phaseSpeed * statusSpeed(actor) * terrain.moveScale;
         actor.vx = terrain.slip ? actor.vx * .64 + movement * speed * .48 : movement * speed;
         actor.state = actor.grounded ? 'walk' : 'jump';
@@ -841,7 +849,7 @@ export class FightEngine {
           actor.meter = clamp(actor.meter + profile.trait.forwardMeter * 8, 0, 100);
           actor.traitPulse = 8;
         }
-      } else actor.vx *= actor.grounded ? .68 : .98;
+      } else actor.vx *= hasGroundContact(actor) ? .68 : .98;
     } else actor.vx *= .75;
 
     if (!actor.attack && actor.hurtFrames === 0 && Math.abs(enemy.x - actor.x) > 8) actor.facing = enemy.x > actor.x ? 1 : -1;
@@ -861,10 +869,10 @@ export class FightEngine {
       }
     }
     actor.x += actor.vx;
-    const inset = this.arenaInset(70);
+    const inset = Math.max(this.arenaInset(70), actorBox(actor).w / 2 + 16);
     actor.x = clamp(actor.x, inset, WIDTH - inset);
     if (actor.grounded && actor.state !== 'dodge') {
-      const terrain = this.currentTerrain();
+      const terrain = this.terrainForActor(actor);
       const baseFriction = actor.status?.id === 'frost' ? Math.max(.91, terrain.friction) : terrain.friction;
       actor.vx *= baseFriction;
     }
@@ -1021,7 +1029,7 @@ export class FightEngine {
         attackId,
         move,
         x: trap ? actor.x + actor.facing * Math.min(move.reach * .72, 220) : actor.x + actor.facing * (55 + Math.abs(spread) * 18),
-        y: trap ? FLOOR - 24 : actor.y - (115 + Math.abs(spread) * 22),
+        y: trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
         vx: trap ? 0 : actor.facing * (move.projectileSpeed || 13) * (1 - Math.abs(spread) * .045),
         vy: trap ? 0 : spread * (move.projectileArc || .8),
         gravity: move.projectileGravity || 0,
@@ -1043,7 +1051,8 @@ export class FightEngine {
     for (const projectile of this.projectiles) {
       const enemy = this.actors[1 - projectile.owner.index];
       if (projectile.homing && enemy) {
-        const desired = Math.atan2((enemy.y - 110) - projectile.y, enemy.x - projectile.x);
+        const targetBody = actorBox(enemy);
+        const desired = Math.atan2(targetBody.y + targetBody.h * .5 - projectile.y, enemy.x - projectile.x);
         const speed = Math.hypot(projectile.vx, projectile.vy) || 1;
         const current = Math.atan2(projectile.vy, projectile.vx);
         let delta = desired - current;
@@ -1302,6 +1311,13 @@ export class FightEngine {
     return stageTerrainProfile(this.stage, this.stageRuntime?.terrainOverride || null);
   }
 
+  terrainForActor(actor) {
+    return hasGroundContact(actor) ? this.currentTerrain() : {
+      ...stageTerrainProfile({ terrain: { id: 'concrete' } }),
+      id: 'air', friction: .98, description: 'Le sol ne freine pas un corps sans contact.'
+    };
+  }
+
   updateWorld() {
     const [p1, p2] = this.actors;
     const distance = Math.abs(p1.x - p2.x);
@@ -1398,6 +1414,7 @@ export class FightEngine {
     if (!definition || !this.stageRuntime) return false;
     const runtime = this.stageRuntime;
     runtime.activeEvent = { id, ...definition, trigger: metadata.trigger || 'manual' };
+    runtime.linkedHazard = null;
     runtime.activeTimer = definition.duration || 120;
     runtime.darkness = Math.max(runtime.darkness, definition.darkness || 0);
     runtime.fogBoost = Math.max(runtime.fogBoost, definition.fogBoost || Math.max(0, (definition.darkness || 0) * .22));
@@ -1413,7 +1430,7 @@ export class FightEngine {
     }
     this.addText(definition.message || definition.name, WIDTH / 2, 206, 'stage');
     if (definition.hazard && this.config.stageHazards) {
-      this.spawnHazard(definition.hazard, { sourceEvent: id });
+      runtime.linkedHazard = this.spawnHazard(definition.hazard, { sourceEvent: id });
       this.world.hazardTimer = Math.max(this.world.hazardTimer, Math.round((definition.duration || 100) * .75));
     }
     this.shake = Math.max(this.shake, definition.hazard ? 7 : 3);
@@ -1457,7 +1474,7 @@ export class FightEngine {
     const hazard = {
       id, profile, x, y: FLOOR,
       timer: profile.telegraph, maxTimer: profile.telegraph,
-      active: 0, resolved: false, side,
+      active: 0, maxActive: 34, resolved: false, hitActors: new Set(), side,
       zoneMin: clamp(x - zoneWidth * .5, 0, WIDTH),
       zoneMax: clamp(x + zoneWidth * .5, 0, WIDTH),
       sourceEvent: metadata.sourceEvent || null
@@ -1476,36 +1493,50 @@ export class FightEngine {
       if (hazard.timer > 0) {
         hazard.timer--;
         if (hazard.timer === 0) {
-          hazard.active = 34;
+          hazard.active = hazard.maxActive || 34;
           this.resolveHazard(hazard);
         }
-      } else if (hazard.active > 0) hazard.active--;
+      } else if (hazard.active > 0) {
+        hazard.active--;
+        if (hazard.active > 0 && ['trainRush','gurneyRush','rootSnare','steamVent','waterSurge','roadCollapse','chainSweep','iceFracture'].includes(hazard.id))
+          this.resolveHazard(hazard, true);
+      }
     }
-    this.hazards = this.hazards.filter((hazard) => hazard.timer > 0 || hazard.active > 0);
+    this.hazards = this.hazards.filter(hazard => hazard.timer > 0 || hazard.active > 0);
   }
 
-  resolveHazard(hazard) {
-    if (hazard.resolved) return;
+  resolveHazard(hazard, continuing = false) {
+    if (hazard.resolved && !continuing) return;
+    const first = !hazard.resolved;
     hazard.resolved = true;
-    const terrain = this.currentTerrain();
+    hazard.hitActors ||= new Set();
+    let hitCount = 0;
     for (const actor of this.actors) {
-      if (!hazardContainsActor(hazard, actor) || actor.invuln > 0) continue;
+      if (actor.ko || hazard.hitActors.has(actor.index) || !hazardContainsActor(hazard, actor) || actor.invuln > 0) continue;
+      hazard.hitActors.add(actor.index);
+      hitCount++;
       const guarded = actor.blocking && actor.grounded && !hazard.profile.unblockable;
-      const damage = Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
-      actor.health -= damage;
+      const damage = Math.min(actor.health, Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1)));
+      actor.health = Math.max(0, actor.health - damage);
       actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
       actor.stats.damageTaken += damage;
       actor.stats.hazardsTaken++;
       actor.hitFlash = 6;
       actor.hurtFrames = guarded ? 5 : 16;
-      const force = (hazard.profile.knockback ?? 8) * terrain.knockbackScale * (guarded ? .38 : 1);
+      if (!guarded) {
+        actor.attack = null; actor.counterStance = 0; actor.dodgeFrames = 0;
+        actor.blocking = false; actor.state = 'hurt';
+      }
+      const force = (hazard.profile.knockback ?? 8) * this.terrainForActor(actor).knockbackScale * (guarded ? .38 : 1);
       actor.vx = force < 0 ? Math.sign(WIDTH / 2 - actor.x || 1) * Math.abs(force) : Math.sign(actor.x - hazard.x || hazard.side || 1) * force;
       if (hazard.profile.effect) this.applyStatus(actor, { id: hazard.profile.effect, duration: AFFLICTIONS[hazard.profile.effect]?.duration || 120, potency: .8 });
-      this.spawnImpact(actor.x, actor.y - 80, AFFLICTIONS[hazard.profile.effect]?.color || '#b24a42', false, 18);
+      this.spawnImpact(actor.x, actorBox(actor).y + actorBox(actor).h * .6, AFFLICTIONS[hazard.profile.effect]?.color || '#b24a42', false, 18);
     }
-    this.shake = Math.max(this.shake, hazard.profile.unblockable ? 15 : 11);
-    this.flash = 5;
-    audio.hazard?.();
+    if (first || hitCount) {
+      this.shake = Math.max(this.shake, hazard.profile.unblockable ? 15 : 11);
+      this.flash = 5;
+      audio.hazard?.();
+    }
   }
 
   logInput(actor, label) {
@@ -1577,13 +1608,23 @@ export class FightEngine {
 
   resolveBodyCollision() {
     const [p1, p2] = this.actors;
-    const minimum = 55 * (p1.scale + p2.scale) * .5;
-    const delta = p2.x - p1.x;
-    if (Math.abs(delta) < minimum) {
-      const push = (minimum - Math.abs(delta)) * .5 * (delta >= 0 ? 1 : -1);
-      const inset = this.arenaInset(70);
-      p1.x = clamp(p1.x - push, inset, WIDTH - inset);
-      p2.x = clamp(p2.x + push, inset, WIDTH - inset);
+    const a = actorBox(p1), b = actorBox(p2);
+    if (a.y + a.h <= b.y || b.y + b.h <= a.y) return; // An actual jump can cross over.
+    const minimum = bodyPushRadius(p1) + bodyPushRadius(p2);
+    const direction = p2.x >= p1.x ? 1 : -1;
+    const missing = minimum - Math.abs(p2.x - p1.x);
+    if (missing <= 0) return;
+    const clampActor = (actor, x) => {
+      const inset = Math.max(this.arenaInset(70), actorBox(actor).w / 2 + 16);
+      return clamp(x, inset, WIDTH - inset);
+    };
+    const old1 = p1.x, old2 = p2.x;
+    p1.x = clampActor(p1, p1.x - direction * missing / 2);
+    p2.x = clampActor(p2, p2.x + direction * missing / 2);
+    const remainder = Math.max(0, minimum - Math.abs(p2.x - p1.x));
+    if (remainder > 0) {
+      if (Math.abs(p1.x-old1) < Math.abs(p2.x-old2)) p2.x = clampActor(p2, p2.x + direction * remainder);
+      else p1.x = clampActor(p1, p1.x - direction * remainder);
     }
   }
 
@@ -1918,6 +1959,7 @@ export class FightEngine {
       lastMoveKey: actor.lastMoveKey || null,
       presentation: { ...actor.profile.moveset.presentation },
       movesetFidelity: { ...actor.profile.moveset.fidelitySummary },
+      body: actorBox(actor), groundContact: hasGroundContact(actor),
       stats: { ...actor.stats }
     });
     return {
@@ -1939,6 +1981,11 @@ export class FightEngine {
           lastTrigger: this.stageRuntime.lastTrigger,
           heavyImpactPending: this.stageRuntime.heavyImpactPending,
           terrainOverride: this.stageRuntime.terrainOverride,
+        hazardWarnings: this.hazards.filter(h=>h.timer>0).map(h=>({
+          id: h.id, label: h.profile.name, frames: h.timer,
+          center: h.x, shape: h.profile.shape, zoneMin:h.zoneMin, zoneMax:h.zoneMax,
+          counterplay: hazardCounterplay(h), zones: hazardVolumes(h), travelZones: hazardVolumes(h,{preview:true})
+        })),
           darkness: this.stageRuntime.darkness,
           fogBoost: this.stageRuntime.fogBoost
         } : null
@@ -1953,11 +2000,13 @@ export class FightEngine {
   }
 
   render(time) {
+    time = this.frame * (1000 / FPS); // Pause and rendering FPS cannot advance stage machinery.
     const context = this.ctx;
     context.save();
     const allowShake = !this.settings.reducedMotion && this.settings.screenShake !== false;
-    const shakeX = allowShake && this.shake ? (this.rng() - .5) * this.shake : 0;
-    const shakeY = allowShake && this.shake ? (this.rng() - .5) * this.shake * .5 : 0;
+    // Drawing never samples combat RNG: two clients update identically at different render FPS.
+    const shakeX = allowShake && this.shake ? Math.sin(this.frame * 12.9898 + 1.34) * this.shake * .5 : 0;
+    const shakeY = allowShake && this.shake ? Math.sin(this.frame * 78.233 + 4.79) * this.shake * .25 : 0;
     context.translate(shakeX, shakeY);
     drawStage(context, this.stage, time, {
       width: WIDTH,
@@ -1968,7 +2017,8 @@ export class FightEngine {
       animationsEnabled: this.config.stageAnimations !== false,
       director: this.stageRuntime,
       terrain: this.currentTerrain(),
-      shift: stageShiftStyle(this.stage)
+      shift: stageShiftStyle(this.stage),
+      reducedMotion: Boolean(this.settings.reducedMotion)
     });
     this.renderHazards(context, time);
     this.renderProjectiles(context);
@@ -2006,7 +2056,7 @@ export class FightEngine {
     this.renderRitualOverlay(context);
     if (this.paused) this.renderPause(context);
     if (this.phase === 'matchEnd') this.renderMatchEnd(context);
-    if (this.flash) {
+    if (this.flash && !this.settings.reducedMotion) {
       context.fillStyle = `rgba(255,245,224,${this.flash * .025})`;
       context.fillRect(-shakeX, -shakeY, WIDTH, HEIGHT);
     }
@@ -2036,66 +2086,36 @@ export class FightEngine {
   }
 
   renderHazards(context, time) {
+    const reduce = Boolean(this.settings.reducedMotion);
     for (const hazard of this.hazards) {
-      const progress = hazard.timer > 0 ? 1 - hazard.timer / hazard.maxTimer : 1;
-      const pulse = .55 + Math.sin(time * .012) * .25;
-      const radius = hazard.profile.radius || 140;
+      const progress = hazard.timer > 0 ? 1 - hazard.timer / Math.max(1,hazard.maxTimer) : 1;
       const active = hazard.timer <= 0;
+      const zones = hazardVolumes(hazard);
       context.save();
-      context.strokeStyle = `rgba(184,58,68,${active ? .65 : .28 + progress * .5})`;
-      context.fillStyle = `rgba(142,36,43,${active ? .15 : .05 + progress * .1})`;
-      context.lineWidth = active ? 7 : 3 + progress * 4;
-      context.setLineDash(active ? [] : [12, 9]);
-      const groundY = FLOOR + 2;
-      switch (hazard.profile.shape) {
-        case 'global':
-          context.fillRect(0, 130, WIDTH, HEIGHT - 130);
-          for (let index = 0; index < 7; index++) {
-            context.beginPath();
-            context.moveTo(0, 170 + index * 70 + Math.sin(time * .008 + index) * 15);
-            context.lineTo(WIDTH, 170 + index * 70 - Math.sin(time * .006 + index) * 18);
-            context.stroke();
-          }
-          break;
-        case 'sweep':
-          context.fillRect(hazard.zoneMin, 150, hazard.zoneMax - hazard.zoneMin, HEIGHT - 150);
-          context.strokeRect(hazard.zoneMin, 150, hazard.zoneMax - hazard.zoneMin, HEIGHT - 150);
-          break;
-        case 'edge': {
-          const left = hazard.x < WIDTH / 2;
-          const x = left ? 0 : WIDTH - radius;
-          context.fillRect(x, 180, radius, HEIGHT - 180);
-          context.strokeRect(x, 180, radius, HEIGHT - 180);
-          break;
-        }
-        case 'ring':
-          context.beginPath(); context.arc(hazard.x, groundY, radius, Math.PI, TAU); context.stroke();
-          context.beginPath(); context.arc(hazard.x, groundY, radius * .42, Math.PI, TAU); context.stroke();
-          break;
-        case 'lane':
-          context.fillRect(hazard.x - radius * .72, 145, radius * 1.44, HEIGHT - 145);
-          context.strokeRect(hazard.x - radius * .72, 145, radius * 1.44, HEIGHT - 145);
-          break;
-        case 'center':
-        case 'circle':
-        default:
-          context.translate(hazard.x, groundY);
-          context.beginPath(); context.ellipse(0, 0, radius * (.45 + progress * .55), 24 + progress * 8, 0, 0, TAU); context.stroke();
-          context.beginPath(); context.ellipse(0, 0, radius, 34, 0, 0, TAU); context.fill();
-          break;
+      context.strokeStyle = active ? 'rgba(222,91,94,.85)' : `rgba(188,97,97,${.4+progress*.4})`;
+      context.fillStyle = active ? 'rgba(154,50,58,.13)' : 'rgba(121,78,68,.07)';
+      context.lineWidth = active ? 3 : 2;
+      context.setLineDash(active ? [] : [10,8]);
+      for (const zone of zones) {
+        context.fillRect(zone.x,zone.y,zone.w,zone.h);
+        context.strokeRect(zone.x,zone.y,zone.w,zone.h);
+        // Floor marks repeat the ACTUAL bounds; ring center remains safe.
+        context.fillRect(zone.x,FLOOR-2,zone.w,4);
       }
       context.setLineDash([]);
-      context.textAlign = 'center';
-      context.fillStyle = `rgba(239,225,210,${pulse})`;
-      context.font = '900 10px ui-monospace';
-      context.fillText(hazard.profile.name, hazard.profile.shape === 'circle' || hazard.profile.shape === 'center' ? 0 : hazard.x, hazard.profile.shape === 'circle' || hazard.profile.shape === 'center' ? -38 : 170);
-      if (active) {
-        context.globalCompositeOperation = 'screen';
-        context.fillStyle = `rgba(255,226,196,${.05 + pulse * .08})`;
-        context.fillRect(0, 0, WIDTH, HEIGHT);
-      }
+      const labelX = clamp(hazard.profile.shape==='center'?WIDTH/2:hazard.x,160,WIDTH-160);
+      context.textAlign='center';context.fillStyle='#e8ddc5';context.font='800 10px ui-monospace';
+      const labelY = Math.max(153, Math.min(...zones.map(z=>z.y))-12);
+      context.fillText(hazard.profile.name,labelX,labelY);
+      context.font='600 9px ui-monospace';context.fillStyle='#bcb8ab';
+      context.fillText(hazardCounterplay(hazard),labelX,labelY+12);
       context.restore();
+      this.renderHazardSetpiece(context,hazard,reduce?0:time);
     }
+  }
+
+  renderHazardSetpiece(context, hazard, time) {
+    drawHazardObjects(context, hazard, time, { reducedMotion: Boolean(this.settings.reducedMotion) });
   }
 
   renderParticles(context) {

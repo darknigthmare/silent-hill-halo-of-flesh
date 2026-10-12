@@ -9,12 +9,12 @@ import {
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.7.0 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.7.0');
+test('v0.8.1 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.8.1');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:374,stageDirectorEvents:446,
-    stageInteractions:359,stageHazardLinks:474,terrainProfiles:14,shiftStyles:15,moves:4600,
+    fatalities:460,stageFatalities:123,stageAnimations:352,stageDirectorEvents:300,
+    stageInteractions:286,stageHazardLinks:335,terrainProfiles:14,shiftStyles:15,moves:4600,
     directCanonicalMoves:447,behaviorCompositeMoves:3694,versusAdaptationMoves:459,coverageComplete:true
   });
 });

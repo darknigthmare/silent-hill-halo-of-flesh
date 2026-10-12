@@ -1,3 +1,17 @@
+# v0.8.1 — Corps, collisions et lieux cohérents
+
+Voir [les notes détaillées](docs/RELEASE_NOTES_v0.8.1.md). 30 régressions supplémentaires ; 109 tests passent. Corrections des collisions, sols, dangers mobiles, motifs des lieux et intérieurs. Navigation navigateur non validée ici.
+
+# v0.8.0 — Living Stage Cinematography
+
+- 22 chorégraphies de décors originaux réellement animées et liées aux événements des 123 stages.
+- Un objet de scène visible accompagne les dangers (rame, chariot, casier, racines, glace, CRTV, etc.) dans les mêmes zones télégraphiées.
+- IA capable d’éviter les dangers annoncés ou de garder lorsqu’aucune voie de fuite n’existe.
+- Contrôle de déterminisme du gameplay indépendant du nombre de rendus graphiques.
+- Codex détaillé des chorégraphies avec provenance déclarée ; prévisualisation à mi-événement.
+- Respect des options animations désactivées et mouvement réduit.
+- Conservation du catalogue 230 combattants / 123 stages / 4 600 mouvements.
+
 # Changelog
 
 ## 0.7.0 — 11 octobre 2026
