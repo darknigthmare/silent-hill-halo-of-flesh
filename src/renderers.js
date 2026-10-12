@@ -1,4 +1,7 @@
 import { hashCode, seededRandom, clamp } from './shared.js';
+import { bodyProfile } from './combat-geometry.js';
+import { drawStageArchitecture } from './stage-architecture.js';
+import { drawStageCinematics } from './stage-cinematics.js';
 
 const TAU=Math.PI*2;
 function rgba(hex,a=1){
@@ -42,7 +45,7 @@ function drawParticles(ctx,w,h,time,type){
   ctx.restore();
 }
 
-function drawOtherworldOverlay(ctx,w,h,time,amount=0,style='rust'){
+function drawOtherworldOverlay(ctx,w,h,time,amount=0,style='rust',element='fire'){
   const strength=clamp(amount,0,1);if(strength<=.001)return;
   const palettes={
     rust:['54,9,11','93,26,21','25,5,5'],decay:['25,34,25','47,57,40','7,13,10'],flesh:['70,12,23','104,35,43','31,6,11'],
@@ -69,7 +72,7 @@ function drawOtherworldOverlay(ctx,w,h,time,amount=0,style='rust'){
     case 'storm':
       drawRain(ctx,w,h,time,155,`rgba(188,206,214,${.16+strength*.22})`);if(Math.sin(time*.0049)>.97){ctx.fillStyle=`rgba(222,230,224,${.08+strength*.15})`;ctx.fillRect(0,0,w,h);}break;
     case 'elemental':{
-      const phase=Math.floor(time/1700)%4;const kind=['embers','rain','sparks','blood'][phase];if(kind==='rain')drawRain(ctx,w,h,time,120);else drawParticles(ctx,w,h,time,kind);break;}
+      const kind={water:'rain',steel:'sparks',blood:'blood',earth:'dust',wood:'spores',light:'light',fire:'embers'}[element]||'dust';if(kind==='rain')drawRain(ctx,w,h,time,120);else drawParticles(ctx,w,h,time,kind);break;}
     case 'loop':
       ctx.strokeStyle=`rgba(145,32,41,${.1+strength*.22})`;ctx.lineWidth=5;for(let i=0;i<7;i++){const inset=35+i*45+Math.sin(time*.003+i)*8;ctx.strokeRect(inset,inset*.35,w-inset*2,h-inset*.75);}break;
     case 'floral':
@@ -236,19 +239,23 @@ function drawStageAnimations(ctx,w,h,stage,time,otherworld=0,director=null){
   ctx.restore();
 }
 
-export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=false,otherworld=0,radio=0,animationsEnabled=true,director=null,terrain=null,shift=null}={}){
+export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=false,otherworld=0,radio=0,animationsEnabled=true,director=null,terrain=null,shift=null,reducedMotion=false}={}){
+  time = animationsEnabled && !reducedMotion ? time : 0;
   const w=width,h=height;const sky=stage?.sky||['#333','#111','#020202'];const visibility=stage?.visibility||{};const activeTerrain=terrain||stage?.terrain||{};const shiftStyle=shift?.style||stage?.shift?.style||'rust';
   ctx.save();
   const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,sky[0]);grad.addColorStop(.52,sky[1]);grad.addColorStop(1,sky[2]);ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
   const halo=ctx.createRadialGradient(w*.72,h*.18,0,w*.72,h*.18,w*.55);halo.addColorStop(0,'rgba(214,213,188,.13)');halo.addColorStop(.32,'rgba(171,172,156,.04)');halo.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=halo;ctx.fillRect(0,0,w,h);
-  drawFarBuildings(ctx,w,h,stage?.family||'street');
+  if (!drawStageArchitecture(ctx,w,h,stage)) drawFarBuildings(ctx,w,h,stage?.family||'street');
   const horizon=h*.57;ctx.fillStyle='rgba(7,9,7,.78)';ctx.fillRect(0,horizon,w,h-horizon);
   const terrainTints={flooded:'40,68,76',ice:'55,83,93',petals:'74,36,43',ritualStone:'58,32,44',ash:'61,47,40',steel:'48,53,51',mud:'48,41,31',void:'36,22,48',wetConcrete:'53,59,57'};
   const tint=terrainTints[activeTerrain.id]||'67,68,58';const floor=ctx.createLinearGradient(0,horizon,0,h);floor.addColorStop(0,`rgba(${tint},.28)`);floor.addColorStop(1,'rgba(4,5,4,.98)');ctx.fillStyle=floor;ctx.fillRect(0,horizon,w,h-horizon);
   ctx.strokeStyle='rgba(160,156,134,.08)';ctx.lineWidth=2;for(let y=horizon;y<h;y+=26+(y-horizon)*.05){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}for(let x=0;x<=w;x+=80){ctx.beginPath();ctx.moveTo(w*.5,horizon);ctx.lineTo(x,h);ctx.stroke();}
   drawProps(ctx,w,h,stage||{},time);
-  if(animationsEnabled)drawStageAnimations(ctx,w,h,stage||{},time,otherworld,director);
-  drawOtherworldOverlay(ctx,w,h,time,otherworld,shiftStyle);
+  if(animationsEnabled){
+    drawStageAnimations(ctx,w,h,stage||{},time,otherworld,director);
+    drawStageCinematics(ctx,w,h,stage||{},director,{reducedMotion});
+  }
+  drawOtherworldOverlay(ctx,w,h,time,otherworld,shiftStyle,String(stage?.id||'').replace(/^book_/,''));
   if(stage?.weather==='rain')drawRain(ctx,w,h,time,115);else drawParticles(ctx,w,h,time,stage?.weather);
   const baseFog=Number.isFinite(visibility.fog)?visibility.fog:(stage?.weather==='fog'?.54:.24);const fogAmount=clamp(baseFog+(director?.fogBoost||0),.04,.96)*(1-otherworld*(shiftStyle==='signal'?.08:.32));drawFog(ctx,w,h,time,fogAmount);
   drawRadioNoise(ctx,w,h,time,radio);
@@ -279,8 +286,8 @@ function drawAura(ctx,visual,time){
   if(!visual.aura)return;ctx.save();ctx.globalCompositeOperation='screen';const color={fire:'#d75a34',white:'#eee8cf',black:'#5f5369',moths:'#b9aa8a',pain:'#8b2f36',sick:'#7f8a4c',smoke:'#8b8f87',rot:'#88673b',dark:'#4e3c5f',petals:'#b75b6a',wood:'#758b4f',light:'#e8d798',water:'#5792a7',earth:'#947554',blood:'#a12f3c',steel:'#96a4aa'}[visual.aura]||visual.accent;for(let i=0;i<7;i++){const a=i/7*TAU+time*.001;ellipse(ctx,Math.cos(a)*45, -95+Math.sin(a*1.7)*70,8+(i%3)*3,5,rgba(color,.13));}ctx.restore();
 }
 function drawHumanoid(ctx,v,state,time,kind='humanoid'){
-  const attack=state?.attackProgress||0;const walk=state?.moving?Math.sin(time*.012)*8:0;const crouch=state?.crouching?18:0;const hurt=state?.hurt?Math.sin(time*.09)*5:0;ctx.translate(hurt,0);
-  const scale=kind==='child'?.72:kind==='giant'?1.22:1;
+  const attack=state?.attackProgress||0;const walk=state?.moving?Math.sin(time*.012)*8:0;const crouch=0;const hurt=state?.hurt?Math.sin(time*.09)*5:0;ctx.translate(hurt,0);
+  const scale=1; // kind dimensions already accounted for by visual.scale
   ctx.scale(scale,scale);const outline='#10120f';const p=v.primary,a=v.accent,s=v.secondary;
   line(ctx,-16,-58,-27+walk,0,19,outline);line(ctx,-16,-58,-27+walk,0,12,p);line(ctx,17,-58,29-walk,0,19,outline);line(ctx,17,-58,29-walk,0,12,p);
   ctx.fillStyle=p;ctx.strokeStyle=outline;ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-36,-151+crouch);ctx.quadraticCurveTo(0,-169+crouch,36,-151+crouch);ctx.lineTo(30,-60);ctx.quadraticCurveTo(0,-43,-30,-60);ctx.closePath();ctx.fill();ctx.stroke();
@@ -350,7 +357,7 @@ function drawDeity(ctx,v,state,time){
 }
 
 export function drawMonster(ctx,fighter,x,y,{facing=1,state={},time=0,alpha=1,portrait=false,shadow=true}={}){
-  if(!fighter)return;const v=fighter.visual||{};ctx.save();ctx.translate(x,y);ctx.scale(facing*(v.scale||1),v.scale||1);ctx.globalAlpha=alpha;
+  if(!fighter)return;const v=fighter.visual||{};const physical=bodyProfile(fighter);const stance=state.crouching&&!['insect','quadruped','worm','serpentine','fungus','wall','cage','flyer','void'].includes(physical.kind)?.68:1;ctx.save();ctx.translate(x,y);ctx.scale(facing*physical.scale,physical.scale*stance);ctx.globalAlpha=alpha;
   if(shadow&&!portrait){ctx.save();ctx.scale(facing,1);ellipse(ctx,0,4,66,12,'rgba(0,0,0,.42)');ctx.restore();}
   if(state.ko)ctx.rotate(-Math.PI/2*(state.koProgress||1));
   if(state.hitFlash){ctx.shadowColor='#fff';ctx.shadowBlur=25;}

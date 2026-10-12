@@ -267,7 +267,7 @@ test('terrain profiles alter movement, dodge and friction without replacing the 
   const ice=STAGES.find(stage=>stage.terrain?.id==='ice');
   const flooded=STAGES.find(stage=>stage.terrain?.id==='flooded');
   assert.ok(ice&&flooded);
-  const iceEngine=makeEngine({stage:ice,stageTerrain:true});
+  const iceEngine=makeEngine({stage:ice,stageTerrain:true,p1:ROSTER.find(f=>f.visual.kind==='nurse')});
   iceEngine.phase='fight';
   const iceActor=iceEngine.actors[0];
   iceActor.facing=1;iceActor.vx=0;
@@ -281,7 +281,7 @@ test('terrain profiles alter movement, dodge and friction without replacing the 
   assert.ok(Math.abs(iceActor.vx)>0,'la glace doit conserver de l’inertie');
   iceEngine.destroy();
 
-  const waterEngine=makeEngine({stage:flooded,stageTerrain:true});
+  const waterEngine=makeEngine({stage:flooded,stageTerrain:true,p1:ROSTER.find(f=>f.visual.kind==='nurse')});
   waterEngine.phase='fight';
   assert.equal(waterEngine.currentTerrain().id,'flooded');
   assert.ok(waterEngine.currentTerrain().moveScale<1);

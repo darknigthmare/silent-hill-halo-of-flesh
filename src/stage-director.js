@@ -6,6 +6,9 @@
  * so every arena exposes a readable lore basis and a deterministic runtime profile.
  */
 
+import { constrainStageDeck, localAnimationAllowed } from './stage-lore-policy.js';
+import { stageChoreographyProfile } from './stage-cinematics.js';
+
 const unique = (values = []) => [...new Set(values.filter(Boolean))];
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 const clone = (value) => JSON.parse(JSON.stringify(value));
@@ -316,13 +319,17 @@ function makeInteraction(stage, eventId, index) {
 }
 
 export function enrichStage(stage) {
+  if (stage.id === 'brookhaven_roof') stage.family = 'roof';
   const source = SOURCE_DIRECTIVES[stage.source] || SOURCE_DIRECTIVES.sh1;
   const family = FAMILY_DIRECTIVES[stage.family] || FAMILY_DIRECTIVES.street;
   const override = STAGE_OVERRIDES[stage.id] || {};
   const shift = shiftFromStage(stage, source, override);
   const terrain = terrainFromStage(stage, source, family, override);
-  const hazardDeck = unique([...(override.hazards || []), ...(family.hazards || []), stage.hazard]);
-  const events = unique([...(override.events || []), ...(family.events || []), ...(source.events || [])]).slice(0, 5);
+  const policy = constrainStageDeck(stage,
+    override.events || unique([...(family.events || []), ...(source.events || [])]).slice(0, 5),
+    override.hazards || unique([...(family.hazards || []), stage.hazard]));
+  const hazardDeck = policy.hazards;
+  const events = policy.events;
   const props = (stage.props || []).map((value) => String(value).replaceAll('_', ' '));
   const note = override.note || generatedLorePremise(stage);
   const baseCadence = stage.family === 'otherworld' || shift.startOtherworld ? 250 : stage.family === 'hall' || stage.source === 'pt' ? 300 : 340;
@@ -350,6 +357,7 @@ export function enrichStage(stage) {
     arenaInset: override.inset || family.inset || 82,
     hazardDeck,
     events,
+    motifPolicy: policy,
     safeMargin: stage.family === 'hall' || stage.family === 'room' ? 86 : 118,
     signature: `${stage.id}:${shift.style}:${terrain.id}:${hazardDeck.join('+')}:${events.join('+')}`,
   };
@@ -362,6 +370,8 @@ export function enrichStage(stage) {
     closeQuarters: ['hall','room','apartment','hospital'].includes(stage.family),
   };
   stage.layers = unique([...(family.layers || []), ...props]);
+  stage.animations = (stage.animations || []).filter(id=>localAnimationAllowed(stage,typeof id==='string'?id:id.id));
+  if (!stage.animations.length) stage.animations = ['fogDrift'];
   stage.animationTracks = (stage.animations || []).map((id) => animationTrack(typeof id === 'string' ? id : id.id, shift.style));
   stage.interactions = events.slice(0, 3).map((eventId, index) => makeInteraction(stage, eventId, index));
   stage.catalogueStatus ||= 'verified-location';
@@ -399,5 +409,7 @@ export function stageDirectorSummary(stage) {
     hazards: [...(stage?.director?.hazardDeck || [])],
     animations: [...(stage?.animationTracks || [])],
     interactions: [...(stage?.interactions || [])],
+    choreography: stageChoreographyProfile(stage).cues,
+    motifPolicy: stage.director?.motifPolicy || null,
   };
 }

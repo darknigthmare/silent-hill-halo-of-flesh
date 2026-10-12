@@ -6,9 +6,22 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 
 - **Jouer :** https://silent-hill-halo-of-flesh.vercel.app
 - **Dépôt :** https://github.com/darknigthmare/silent-hill-halo-of-flesh
-- **Version :** `0.7.0 — Living Otherworld Stage Director`
+- **Version :** `0.8.1 — Corps, collisions et lieux cohérents`
 
 > **Contrat de fidélité** — Le catalogue vise la fidélité documentaire la plus forte possible pour les identités, variantes, proportions relatives, postures, armes, attaques, comportements, fonctions symboliques et lieux. Chaque mouvement distingue ce qui est directement attesté, recomposé de façon lore-friendly ou ajouté pour rendre une manifestation jouable dans un versus. Les silhouettes, animations, effets, sons, frame data, statistiques et fatalités sont des créations originales ou procédurales : aucun asset officiel n’est redistribué.
+
+> **v0.8.1** : chorégraphies de 22 événements environnementaux (123 scènes), objets physiques synchronisés aux avertissements, réactions de l’IA aux dangers visibles et simulateur déterministe indépendant de la fréquence d’affichage. Voir `docs/RELEASE_NOTES_v0.8.1.md`.
+
+## État de cette passe — v0.8.1
+
+- 109/109 tests Node exécutés avec succès, 44 fichiers statiques construits.
+- 30 nouveaux tests ciblés sur les corps, dangers, sols, limites et motifs de stage.
+- Rendu réel des fonctions Canvas dans une page en mémoire : voir `tests/canvas-v081/canvas-report.json` dans le paquet QA (captures non versionnées dans Git).
+- La navigation Chromium vers le serveur local est bloquée par `ERR_BLOCKED_BY_ADMINISTRATOR`. Les écrans, commandes physiques, mobiles et la PWA **ne sont pas certifiés** par cette passe.
+- Les classifications de canon des 4 600 coups proviennent du catalogue existant ; elles n'ont pas été réauditées intégralement. Le champ hérité `coverageComplete` vérifie les cibles internes du catalogue, pas l'exhaustivité de la franchise.
+- Les événements non compatibles avec les accessoires déclarés d'un lieu ont été retirés de ce lieu. Les 22 familles de chorégraphies restent disponibles, mais pas dans chaque arène.
+
+Détails : [notes](docs/RELEASE_NOTES_v0.8.1.md), [QA](docs/QA_v0.8.1.md), [frontière de fidélité](docs/LORE_COHERENCE_v0.8.1.md).
 
 ## Contenu
 
@@ -16,20 +29,20 @@ Prototype fan-made non commercial de **monster battle 2D**, construit sur l’or
 |---|---:|
 | Manifestations jouables | **230** |
 | Boss | **75** |
-| Sources média auditées | **16** |
+| Ensembles média du catalogue | **16** |
 | Arènes | **123** |
 | Chroniques | **15** |
 | Commandes par manifestation | **20** |
 | Mouvements documentés | **4 600** |
-| Actions directement attestées | **447** |
+| Actions étiquetées « attestées » dans le catalogue hérité | **447** |
 | Composites lore-friendly | **3 694** |
 | Adaptations versus | **459** |
 | Fatalités de combattant | **460** |
 | Fatalités d’arène | **123** |
-| Animations d’arène | **374** |
-| Événements de directeur | **446** |
-| Interactions de lieu | **359** |
-| Liens de danger | **474** |
+| Animations d’arène | **352** |
+| Événements de directeur | **300** |
+| Interactions de lieu | **286** |
+| Liens de danger | **335** |
 | Terrains / bascules Otherworld | **14 / 15** |
 | Transitions de boss | **150** |
 | Traits / afflictions / dangers | **12 / 8 / 29** |
