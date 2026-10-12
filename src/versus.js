@@ -219,7 +219,7 @@ function renderStageGallery() {
     button.className = `stage-entry${state.stage.id === stage.id ? ' active' : ''}`;
     const canvas = document.createElement('canvas'); canvas.width = 304; canvas.height = 180; button.append(canvas);
     const label = document.createElement('b'); label.textContent = stage.name; button.append(label);
-    const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.hazard]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}<br>${stage.animationTracks?.length || stage.animations?.length || 0} ANIMATIONS · ${stage.director?.events?.length || 0} ÉVÉNEMENTS<br>${escapeHTML(stage.terrain?.name || 'TERRAIN NEUTRE')} · ${escapeHTML(stage.shift?.name || 'BASCULE STANDARD')}`; button.append(meta);
+    const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.director?.hazardDeck?.[0]]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}${!stage.director?.hazardDeck?.length ? ' · AMBIANCE SANS DÉGÂTS' : ''}<br>${stage.animationTracks?.length || stage.animations?.length || 0} ANIMATIONS · ${stage.director?.events?.length || 0} ÉVÉNEMENTS<br>${escapeHTML(stage.terrain?.name || 'TERRAIN NEUTRE')} · ${escapeHTML(stage.shift?.name || 'BASCULE STANDARD')}`; button.append(meta);
     button.addEventListener('click', () => {
       state.stage = stage; audio.confirm(); renderSelected(); renderStageGallery();
       setTimeout(closeStageGallery, 110);
@@ -240,7 +240,7 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
     return `<li data-fidelity="${escapeHTML(move.fidelity)}"><div><kbd>${escapeHTML(move.input)}</kbd><b>${escapeHTML(move.name)}</b></div><span>${move.damage} dégâts · ${move.startup}/${move.active}/${move.recovery}f · ${escapeHTML(move.level.toUpperCase())}${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span><small>${escapeHTML(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} · ${escapeHTML(move.canonicalBasis)}</small></li>`;
   }).join('');
   const arena = getStage(fighter.stageId);
-  const hazard = STAGE_HAZARDS[arena.hazard];
+  const hazard = STAGE_HAZARDS[arena.director?.hazardDeck?.[0]];
   const phases = profile.bossPhases?.length
     ? `<div class="dossier-box phases"><b>PHASES DE BOSS</b><ol>${profile.bossPhases.map((phase) => `<li><strong>${escapeHTML(phase.name)}</strong><span>${Math.round(phase.threshold * 100)}% · puissance ×${phase.power.toFixed(2)} · vitesse ×${phase.speed.toFixed(2)}</span></li>`).join('')}</ol></div>`
     : '';
@@ -261,7 +261,7 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
       <div class="dossier-box"><b>ARÈNE ASSOCIÉE</b><p>${escapeHTML(arena.name)}${hazard ? `<br><small>${escapeHTML(hazard.name)}</small>` : ''}<br><small>${escapeHTML(arena.fatality?.name || '')}</small></p></div>
       <div class="dossier-box"><b>ANIMATIONS D’ARÈNE</b><p>${stageAnimations || 'AUCUNE'}</p></div>
       <div class="dossier-box"><b>TERRAIN / BASCULE</b><p><strong>${escapeHTML(arena.terrain?.name || 'NEUTRE')}</strong><br>${escapeHTML(arena.terrain?.description || '')}<br><small>${escapeHTML(arena.shift?.name || 'OTHERWORLD')}</small></p></div>
-      <div class="dossier-box"><b>ÉVÉNEMENTS DU LIEU</b><p>${stageEvents || 'AUCUN'}<br><small>${stageHazards || 'AUCUN DANGER'}</small></p></div>
+      <div class="dossier-box"><b>ÉVÉNEMENTS DU LIEU</b><p>${stageEvents || 'AUCUN'}<br><small>${stageHazards || 'AMBIANCE SANS DÉGÂTS ENVIRONNEMENTAUX'}</small></p></div>
       <div class="dossier-box phases"><b>BASE LORE DE L’ARÈNE</b><p>${escapeHTML(arena.lore?.premise || '')}<br><small>${escapeHTML(arena.lore?.adaptationNotice || '')}</small></p></div>
       ${phases}
     </div>

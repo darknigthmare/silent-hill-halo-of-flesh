@@ -25,7 +25,10 @@ export function localEventAllowed(stage, id) {
   return !keys || keys.some(key => props.has(key));
 }
 
+export const AMBIENT_ONLY_HAZARDS = Object.freeze(['staticBurst','sirenShock','crtvPulse','spotlightSweep','bellToll','portraitGaze']);
+
 export function localHazardAllowed(stage, id) {
+  if (AMBIENT_ONLY_HAZARDS.includes(id)) return false;
   if (id === 'lightningStrike') return OUTDOORS.has(stage.family);
   if (id === 'emberFall') return localEventAllowed(stage, 'ashFall');
   if (id === 'iceFracture' || id === 'frostWave') return localEventAllowed(stage, 'iceLock');
@@ -38,7 +41,8 @@ export function constrainStageDeck(stage, events, hazards) {
   const validHazards = unique(hazards).filter(id => localHazardAllowed(stage, id));
   return {
     events: validEvents.length ? validEvents : ['powerFailure'],
-    hazards: validHazards.length ? validHazards : ['staticBurst'],
+    hazards: validHazards,
+    ambienceOnly: validHazards.length === 0,
     excludedEvents: unique(events).filter(id => !validEvents.includes(id)),
     excludedHazards: unique(hazards).filter(id => !validHazards.includes(id)),
     evidenceScope: 'project-catalogue-props-only / not-independent-canon-certification',

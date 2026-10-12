@@ -4,6 +4,8 @@ import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftS
 import { bodyBox, bodyProfile, bodyPushRadius, hasGroundContact, moveBox, overlaps, hazardVolumes, hazardTouches, hazardCounterplay } from './combat-geometry.js';
 import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
+import { takeDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
+import { localHazardAllowed } from './stage-lore-policy.js';
 
 const WIDTH = 1280;
 const HEIGHT = 720;
@@ -46,7 +48,9 @@ class InputState {
   wasPressed(code) { return this.pressed.has(code); }
   wasReleased(code) { return this.released.has(code); }
   endFrame() { this.pressed.clear(); this.released.clear(); }
+  clear() { this.held.clear(); this.pressed.clear(); this.released.clear(); }
   destroy() {
+    this.clear();
     removeEventListener('keydown', this.onDown);
     removeEventListener('keyup', this.onUp);
   }
@@ -229,6 +233,8 @@ function createStageRuntime(stage) {
     radioBoost: 0,
     terrainOverride: null,
     terrainTimer: 0,
+    pendingTerrain: null,
+    suppressedHazards: 0,
     eventsTriggered: 0,
     lastEvent: null,
     eventHistory: [],
@@ -305,6 +311,7 @@ export class FightEngine {
     this.winner = null;
     this.resultTimer = 0;
     this.rng = seededRandom(this.config.seed);
+    this.fxRng = seededRandom(`${this.config.seed}:visual-effects`);
     this.touch = { p1: {}, p2: {} };
     this.callbacks = { onMatchEnd: () => {}, onRoundEnd: () => {}, onState: () => {}, ...config.callbacks };
     this.gamepadPrev = [];
@@ -323,7 +330,15 @@ export class FightEngine {
       hazardsTriggered: 0
     };
     this.stageRuntime = createStageRuntime(this.stage);
+    this.inputBuffer = [null, null];
     this.boundLoop = (time) => this.loop(time);
+    this.onFocusLoss = () => {
+      if (this.phase === 'fight') this.togglePause(true);
+      else this.clearInputs();
+    };
+    this.onVisibilityChange = () => { if (globalThis.document?.hidden) this.onFocusLoss(); };
+    addEventListener('blur', this.onFocusLoss);
+    globalThis.document?.addEventListener('visibilitychange', this.onVisibilityChange);
   }
 
   start() {
@@ -337,15 +352,33 @@ export class FightEngine {
   destroy() {
     this.running = false;
     this.input.destroy();
+    removeEventListener('blur', this.onFocusLoss);
+    globalThis.document?.removeEventListener('visibilitychange', this.onVisibilityChange);
+  }
+
+  clearInputs() {
+    this.input.clear();
+    this.touch = { p1: {}, p2: {} };
+    this.inputBuffer = [null, null];
   }
 
   togglePause(force) {
     this.paused = typeof force === 'boolean' ? force : !this.paused;
+    this.clearInputs();
     this.callbacks.onState(this.snapshot());
   }
 
   setTrainingOptions(options = {}) {
     Object.assign(this.config, options);
+    if (options.stageHazards === false) {
+      this.hazards.length = 0;
+      if (this.stageRuntime) {
+        this.stageRuntime.pendingTerrain = null;
+        this.stageRuntime.terrainOverride = null;
+        this.stageRuntime.terrainTimer = 0;
+        this.stageRuntime.linkedHazard = null;
+      }
+    }
     if (this.config.freeMeter) this.actors.forEach((actor) => { actor.meter = 100; });
   }
 
@@ -371,6 +404,7 @@ export class FightEngine {
   }
 
   resetRound(full = false) {
+    this.clearInputs();
     this.projectiles.length = 0;
     this.particles.length = 0;
     this.texts.length = 0;
@@ -454,8 +488,17 @@ export class FightEngine {
   }
 
   update() {
+    if (this.paused) return;
     this.frame++;
     if (this.hitstop > 0) {
+      this.updateGamepads();
+      for (const index of [0, 1]) {
+        if (index === 1 && this.config.mode !== 'local' && !this.config.training) continue;
+        const controls = this.getControls(index, true);
+        if ([...ATTACK_ACTIONS, 'dodge', 'jump'].some(key => controls[key])) {
+          this.inputBuffer[index] = { controls, expires: this.frame + 8 };
+        }
+      }
       this.hitstop--;
       this.input.endFrame();
       return;
@@ -514,7 +557,7 @@ export class FightEngine {
       if (this.matchTime <= 0) {
         this.matchTime = 0;
         const [p1, p2] = this.actors;
-        this.endRound(p1.health === p2.health ? null : (p1.health > p2.health ? p1 : p2), 'TIME');
+        this.endRound(timeoutWinner(p1, p2), 'TIME');
         this.callbacks.onState(this.snapshot());
         this.input.endFrame();
         return; // No stage impact or attack may change a round after time expires.
@@ -525,6 +568,13 @@ export class FightEngine {
     this.updateStageDirector();
     this.applyRitualTick();
     this.actors.forEach((actor) => this.updateStatus(actor));
+    // Resolve both damage-over-time ticks before any new action or boss transition.
+    if (this.actors.some(actor => actor.health <= 0)) {
+      this.resolveKnockouts();
+      this.callbacks.onState(this.snapshot());
+      this.input.endFrame();
+      return;
+    }
     this.checkBossPhases();
     this.updateActor(this.actors[0], 0);
     this.updateActor(this.actors[1], 1);
@@ -538,7 +588,7 @@ export class FightEngine {
     this.input.endFrame();
   }
 
-  getControls(index) {
+  getControls(index, raw = false) {
     const map = index === 0 ? P1_KEYS : P2_KEYS;
     const touch = this.touch[index === 0 ? 'p1' : 'p2'] || {};
     const ai = index === 1 && this.config.mode !== 'local' && !this.config.training;
@@ -556,6 +606,12 @@ export class FightEngine {
     };
     for (const action of [...ATTACK_ACTIONS, 'jump', 'dodge']) {
       if (touch[action] === 'pressed') touch[action] = true;
+    }
+    if (!raw && this.inputBuffer[index]) {
+      const buffer = this.inputBuffer[index];
+      this.inputBuffer[index] = null;
+      const fresh = [...ATTACK_ACTIONS, 'dodge', 'jump'].some(key => controls[key]);
+      if (!fresh && buffer.expires >= this.frame) return { ...controls, ...buffer.controls };
     }
     return controls;
   }
@@ -706,6 +762,7 @@ export class FightEngine {
   }
 
   updateActor(actor, index) {
+    if (actor.ko || actor.health <= 0) return;
     const enemy = this.actors[1 - index];
     const controls = this.getControls(index);
     const profile = actor.profile;
@@ -731,7 +788,7 @@ export class FightEngine {
       actor.phaseLock--;
       actor.state = 'phase';
       actor.vx *= .72;
-      if (actor.phaseLock % 7 === 0) this.spawnImpact(actor.x + (this.rng() - .5) * 80, actor.y - 120 - this.rng() * 80, actor.data.visual.accent, false, 5);
+      if (actor.phaseLock % 7 === 0) this.spawnImpact(actor.x + (this.fxRng() - .5) * 80, actor.y - 120 - this.fxRng() * 80, actor.data.visual.accent, false, 5);
       this.physics(actor);
       return;
     }
@@ -879,6 +936,7 @@ export class FightEngine {
   }
 
   beginAttack(actor, key, { cancelled = false, context = false } = {}) {
+    if (actor.ko || actor.health <= 0 || actor.phaseLock > 0) return false;
     const move = actor.profile.moves[key];
     if (!move) return false;
     if (move.requiresAir && actor.grounded) return false;
@@ -978,10 +1036,13 @@ export class FightEngine {
         box.h = 245;
       }
       if (intersects(box, actorBox(enemy))) {
-        attack.hit = true;
-        attack.hitCount++;
-        attack.nextHitFrame = attack.frame + (move.hitInterval || 4);
-        this.applyHit(actor, enemy, move, attack.id, attack.hitCount > 1 ? .72 : 1);
+        const result = this.applyHit(actor, enemy, move, attack.id, attack.hitCount > 0 ? .72 : 1);
+        if (result !== false) {
+          attack.hit = true;
+          attack.hitCount++;
+          attack.nextHitFrame = attack.frame + (move.hitInterval || 4);
+        }
+        if (actor.attack !== attack) return; // A parry/counter interrupted THIS swing.
       }
     }
 
@@ -1028,7 +1089,7 @@ export class FightEngine {
         owner: actor,
         attackId,
         move,
-        x: trap ? actor.x + actor.facing * Math.min(move.reach * .72, 220) : actor.x + actor.facing * (55 + Math.abs(spread) * 18),
+        x: trap ? clamp(actor.x + actor.facing * Math.min(move.reach * .72, 220), this.arenaInset(24), WIDTH - this.arenaInset(24)) : actor.x + actor.facing * (actorBox(actor).w * .45 + Math.abs(spread) * 18),
         y: trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
         vx: trap ? 0 : actor.facing * (move.projectileSpeed || 13) * (1 - Math.abs(spread) * .045),
         vy: trap ? 0 : spread * (move.projectileArc || .8),
@@ -1048,6 +1109,7 @@ export class FightEngine {
   }
 
   updateProjectiles() {
+    if (this.phase !== 'fight') return;
     for (const projectile of this.projectiles) {
       const enemy = this.actors[1 - projectile.owner.index];
       if (projectile.homing && enemy) {
@@ -1062,25 +1124,29 @@ export class FightEngine {
         projectile.vx = Math.cos(angle) * speed;
         projectile.vy = Math.sin(angle) * speed;
       }
+      const previous = { x: projectile.x, y: projectile.y };
       projectile.vy += projectile.gravity || 0;
       projectile.x += projectile.vx;
       projectile.y += projectile.vy;
       projectile.life--;
       if (projectile.super && !projectile.trap) projectile.vy += Math.sin((projectile.maxLife - projectile.life) * .22) * .035;
-      if (!projectile.hit && enemy.invuln === 0) {
-        const box = { x: projectile.x - projectile.radius, y: projectile.y - projectile.radius, w: projectile.radius * 2, h: projectile.radius * 2 };
-        if (intersects(box, actorBox(enemy))) {
+      if (!projectile.hit && enemy.health > 0 && !enemy.ko && enemy.invuln === 0) {
+        const contact = sweptProjectileContact(previous, projectile, projectile.radius, actorBox(enemy));
+        if (contact) {
           projectile.hit = true;
           projectile.life = 0;
-          this.applyHit(projectile.owner, enemy, projectile.move, projectile.attackId, (projectile.super ? 1.02 : .9) * projectile.damageScale);
+          projectile.x = contact.x; projectile.y = contact.y;
+          this.applyHit(projectile.owner, enemy, projectile.move, projectile.attackId, (projectile.super ? 1.02 : .9) * projectile.damageScale, { ranged: true, direction: Math.sign(projectile.vx) || Math.sign(enemy.x - previous.x) || projectile.owner.facing });
         }
       }
     }
     this.projectiles = this.projectiles.filter((projectile) => projectile.life > 0 && projectile.x > -120 && projectile.x < 1400 && projectile.y > -160 && projectile.y < 820);
   }
 
-  applyHit(attacker, target, move, attackId, scale = 1) {
-    if (target.invuln > 0 || target.ko) return;
+  applyHit(attacker, target, move, attackId, scale = 1, contact = {}) {
+    if (this.phase !== 'fight' || target.health <= 0 || target.invuln > 0 || target.ko) return false;
+    const ranged = Boolean(contact.ranged || move.projectile || move.trap);
+    const hitDirection = contact.direction || attacker.facing || 1;
 
     const isThrow = move.level === 'throw' || move.category === 'throw';
     const isNightmare = isNightmareMove(move);
@@ -1100,12 +1166,12 @@ export class FightEngine {
     const blocked = target.blocking && target.grounded && !isThrow && !unblockable && lowGuardValid && overheadGuardValid;
     const counter = Boolean(target.attack && target.attack.frame <= target.attack.move.startup + 1);
 
-    if (target.counterStance > 0 && !isThrow && !isNightmare) {
+    if (target.counterStance > 0 && !isThrow && !isNightmare && !ranged) {
       target.counterStance = 0;
       target.attack = null;
       target.state = 'idle';
-      const retaliation = Math.max(14, Math.round(move.damage * .34));
-      attacker.health -= retaliation;
+      const retaliation = takeDamage(attacker, Math.max(14, Math.round(move.damage * .34)));
+      interruptAction(attacker);
       attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
       attacker.invuln = Math.max(attacker.invuln, 3);
       attacker.vx = -attacker.facing * Math.max(5, (move.knockback || 6) * .7) * this.currentTerrain().knockbackScale;
@@ -1140,22 +1206,24 @@ export class FightEngine {
         target.guardCounterWindow = Math.max(target.guardCounterWindow, 18);
         target.meter = clamp(target.meter + 14, 0, 100);
         attacker.meter = clamp(attacker.meter + 2, 0, 100);
-        attacker.hurtFrames = Math.max(attacker.hurtFrames, 11);
-        attacker.vx = -attacker.facing * 5;
+        if (!ranged) {
+          interruptAction(attacker);
+          attacker.hurtFrames = Math.max(attacker.hurtFrames, 11);
+          attacker.vx = -hitDirection * 5;
+        }
         this.addText('PERFECT GUARD', target.x, target.y - 245, 'perfect');
         this.hitstop = 6;
         this.shake = Math.max(this.shake, 5);
         audio.perfectGuard?.();
       } else {
         const chipScale = isNightmare ? .2 : isSpecial ? .17 : .14;
-        const chip = Math.round(damage * chipScale * (this.ritual.chipScale || 1));
-        target.health -= chip;
+        const chip = takeDamage(target, damage * chipScale * (this.ritual.chipScale || 1));
         target.lastHit = { attackerIndex: attacker.index, moveKey: `${move.key || 'move'}-guard-chip`, isSuper: isNightmare, environmental: false, frame: this.frame };
         target.stats.damageTaken += chip;
         attacker.stats.damageDealt += chip;
         target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
         attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain * (this.ritual.meterGainScale || 1), 0, 100);
-        target.vx = attacker.facing * (move.knockback || 4) * .42 * this.currentTerrain().knockbackScale;
+        target.vx = hitDirection * (move.knockback || 4) * .42 * this.currentTerrain().knockbackScale;
         this.hitstop = isNightmare ? 6 : 3;
       }
       audio.guard();
@@ -1178,8 +1246,7 @@ export class FightEngine {
     const armorWasActive = traitArmorActive || moveArmorActive;
     const armorActive = armorWasActive && !move.armorBreak;
     const effectiveArmor = move.armorBreak ? 0 : clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
-    damage = Math.round(damage * (1 - effectiveArmor));
-    target.health -= damage;
+    damage = takeDamage(target, damage * (1 - effectiveArmor));
     target.lastHit = {
       attackerIndex: attacker.index,
       moveKey: move.key || 'unknown-move',
@@ -1218,10 +1285,12 @@ export class FightEngine {
       const armorLabel = moveArmorActive ? 'MOVE ARMOR' : target.profile.trait.id === 'rustArmor' ? 'RUST ARMOR' : 'NIGHTMARE ARMOR';
       this.addText(armorLabel, target.x, target.y - 246, 'armor');
     }
-    target.hurtFrames = hitstun;
+    const staggered = !armorActive || isThrow || move.armorBreak || move.launch || move.knockdown || move.hardKnockdown || move.groundBounce;
+    if (staggered) interruptAction(target);
+    target.hurtFrames = staggered ? hitstun : 0;
     target.invuln = 4;
     target.hitFlash = 7;
-    target.vx = attacker.facing * (move.knockback || 6) * (armorActive ? .45 : 1) * this.currentTerrain().knockbackScale;
+    target.vx = hitDirection * (move.knockback || 6) * (armorActive ? .45 : 1) * this.currentTerrain().knockbackScale;
 
     if (move.groundBounce) {
       target.vy = -Math.max(8.2, Math.abs(move.launch || 0));
@@ -1272,6 +1341,7 @@ export class FightEngine {
     if (target.status?.id === effect.id) {
       target.status.timer = Math.max(target.status.timer, duration);
       target.status.potency = Math.max(target.status.potency, effect.potency || 1);
+      target.status.source = source?.index ?? null; // The refresh owns subsequent ticks.
     } else {
       target.status = { id: effect.id, timer: duration, potency: effect.potency || 1, tick: 0, source: source?.index ?? null };
       this.addText(definition.name, target.x, target.y - 208, 'status');
@@ -1292,9 +1362,14 @@ export class FightEngine {
   }
 
   applyStatusDamage(actor, damage) {
-    if (actor.ko || this.phase !== 'fight') return;
-    actor.health -= damage;
-    if (actor.status?.source != null) actor.lastHit = { attackerIndex: actor.status.source, moveKey: 'status', isSuper: false, environmental: false, frame: this.frame };
+    if (actor.ko || actor.health <= 0 || this.phase !== 'fight') return;
+    damage = takeDamage(actor, damage);
+    const sourceIndex = actor.status?.source;
+    actor.lastHit = { attackerIndex: sourceIndex ?? null, moveKey: actor.status?.id || 'status', isSuper: false, environmental: sourceIndex == null, frame: this.frame };
+    if (sourceIndex != null && this.actors[sourceIndex]) {
+      this.actors[sourceIndex].stats.damageDealt += damage;
+      actor.lastHitBy = sourceIndex;
+    }
     actor.stats.damageTaken += damage;
     actor.hitFlash = Math.max(actor.hitFlash, 2);
     this.spawnImpact(actor.x, actor.y - 100, AFFLICTIONS[actor.status?.id]?.color || '#a8323d', false, 4);
@@ -1397,10 +1472,10 @@ export class FightEngine {
       else if (interaction.trigger === 'otherworld-halfway') ready = this.world.amount >= .5;
       else if (interaction.trigger === 'low-health-or-late-round') ready = lowHealth || lateRound;
       if (!ready) continue;
-      runtime.interactionTriggered.push(interaction.id);
-      runtime.heavyImpactPending = false;
       const fired = this.triggerStageEvent(interaction.event, { trigger: interaction.trigger, interactionId: interaction.id });
       if (fired) {
+        runtime.interactionTriggered.push(interaction.id);
+        runtime.heavyImpactPending = false;
         const cadence = this.stage?.director?.cadence || 320;
         runtime.eventTimer = Math.round(cadence * (.92 + this.rng() * .38));
         return true;
@@ -1413,8 +1488,11 @@ export class FightEngine {
     const definition = stageEventDefinition(id);
     if (!definition || !this.stageRuntime) return false;
     const runtime = this.stageRuntime;
+    const linkedHazard = definition.hazard && this.config.stageHazards ? this.spawnHazard(definition.hazard, { sourceEvent: id }) : null;
+    // No orphaned physical cue when its collision could not be scheduled.
+    if (definition.hazard && this.config.stageHazards && !linkedHazard) return false;
     runtime.activeEvent = { id, ...definition, trigger: metadata.trigger || 'manual' };
-    runtime.linkedHazard = null;
+    runtime.linkedHazard = linkedHazard;
     runtime.activeTimer = definition.duration || 120;
     runtime.darkness = Math.max(runtime.darkness, definition.darkness || 0);
     runtime.fogBoost = Math.max(runtime.fogBoost, definition.fogBoost || Math.max(0, (definition.darkness || 0) * .22));
@@ -1424,13 +1502,16 @@ export class FightEngine {
     runtime.eventsTriggered++;
     runtime.eventHistory.push(id);
     if (runtime.eventHistory.length > 8) runtime.eventHistory.shift();
-    if (definition.terrainPulse) {
-      runtime.terrainOverride = definition.terrainPulse;
-      runtime.terrainTimer = definition.duration || 120;
-    }
+    runtime.pendingTerrain = null;
+    // Changes in traction start with the announced impact, never at warning start.
+    // In ambience-only play, visual events cannot silently change the controls.
     this.addText(definition.message || definition.name, WIDTH / 2, 206, 'stage');
     if (definition.hazard && this.config.stageHazards) {
-      runtime.linkedHazard = this.spawnHazard(definition.hazard, { sourceEvent: id });
+      if (runtime.linkedHazard && definition.terrainPulse && this.config.stageTerrain) {
+        runtime.linkedHazard.terrainPulse = definition.terrainPulse;
+        runtime.linkedHazard.terrainDuration = definition.duration || 120;
+        runtime.pendingTerrain = { id: definition.terrainPulse, hazard: runtime.linkedHazard };
+      }
       this.world.hazardTimer = Math.max(this.world.hazardTimer, Math.round((definition.duration || 100) * .75));
     }
     this.shake = Math.max(this.shake, definition.hazard ? 7 : 3);
@@ -1455,7 +1536,12 @@ export class FightEngine {
   spawnHazard(forcedId = null, metadata = {}) {
     const deck = stageHazardDeck(this.stage, this.world.phase === 'otherworld' ? 'otherworld' : 'fog').filter((id) => STAGE_HAZARDS[id]);
     let id = forcedId && STAGE_HAZARDS[forcedId] ? forcedId : deck[Math.floor(this.rng() * Math.max(1, deck.length))];
-    if (!id || !STAGE_HAZARDS[id]) id = this.stage?.hazard && STAGE_HAZARDS[this.stage.hazard] ? this.stage.hazard : 'staticBurst';
+    const automatic = !forcedId || Boolean(metadata.sourceEvent);
+    if (!id || !STAGE_HAZARDS[id] || (automatic && (!this.config.stageHazards || !localHazardAllowed(this.stage, id)))) return null;
+    if (automatic && this.hazards.filter(h => h.timer > 0 || h.active > 0).length >= 2) {
+      if (this.stageRuntime) this.stageRuntime.suppressedHazards++;
+      return null;
+    }
     const history = this.stageRuntime?.hazardHistory || [];
     if (!forcedId && deck.length > 1 && history.at(-1) === id) id = deck[(deck.indexOf(id) + 1) % deck.length];
     const profile = STAGE_HAZARDS[id];
@@ -1477,7 +1563,8 @@ export class FightEngine {
       active: 0, maxActive: 34, resolved: false, hitActors: new Set(), side,
       zoneMin: clamp(x - zoneWidth * .5, 0, WIDTH),
       zoneMax: clamp(x + zoneWidth * .5, 0, WIDTH),
-      sourceEvent: metadata.sourceEvent || null
+      sourceEvent: metadata.sourceEvent || null,
+      diagnostic: Boolean(forcedId && !metadata.sourceEvent)
     };
     this.hazards.push(hazard);
     this.world.hazardsTriggered++;
@@ -1489,11 +1576,17 @@ export class FightEngine {
   }
 
   updateHazards() {
+    if (this.phase !== 'fight') return;
     for (const hazard of this.hazards) {
       if (hazard.timer > 0) {
         hazard.timer--;
         if (hazard.timer === 0) {
           hazard.active = hazard.maxActive || 34;
+          if (hazard.terrainPulse && this.config.stageTerrain && this.stageRuntime) {
+            this.stageRuntime.terrainOverride = hazard.terrainPulse;
+            this.stageRuntime.terrainTimer = hazard.terrainDuration;
+            if (this.stageRuntime.pendingTerrain?.hazard === hazard) this.stageRuntime.pendingTerrain = null;
+          }
           this.resolveHazard(hazard);
         }
       } else if (hazard.active > 0) {
@@ -1506,26 +1599,24 @@ export class FightEngine {
   }
 
   resolveHazard(hazard, continuing = false) {
-    if (hazard.resolved && !continuing) return;
+    if (this.phase !== 'fight' || !hazard || (hazard.resolved && !continuing)) return;
     const first = !hazard.resolved;
     hazard.resolved = true;
     hazard.hitActors ||= new Set();
     let hitCount = 0;
     for (const actor of this.actors) {
-      if (actor.ko || hazard.hitActors.has(actor.index) || !hazardContainsActor(hazard, actor) || actor.invuln > 0) continue;
+      if (actor.ko || actor.health <= 0 || hazard.hitActors.has(actor.index) || !hazardContainsActor(hazard, actor) || actor.invuln > 0) continue;
       hazard.hitActors.add(actor.index);
       hitCount++;
       const guarded = actor.blocking && actor.grounded && !hazard.profile.unblockable;
-      const damage = Math.min(actor.health, Math.round(hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1)));
-      actor.health = Math.max(0, actor.health - damage);
+      const damage = takeDamage(actor, hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
       actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
       actor.stats.damageTaken += damage;
       actor.stats.hazardsTaken++;
       actor.hitFlash = 6;
       actor.hurtFrames = guarded ? 5 : 16;
       if (!guarded) {
-        actor.attack = null; actor.counterStance = 0; actor.dodgeFrames = 0;
-        actor.blocking = false; actor.state = 'hurt';
+        interruptAction(actor);
       }
       const force = (hazard.profile.knockback ?? 8) * this.terrainForActor(actor).knockbackScale * (guarded ? .38 : 1);
       actor.vx = force < 0 ? Math.sign(WIDTH / 2 - actor.x || 1) * Math.abs(force) : Math.sign(actor.x - hazard.x || hazard.side || 1) * force;
@@ -1567,7 +1658,7 @@ export class FightEngine {
 
   checkBossPhases() {
     for (const actor of this.actors) {
-      if (!actor.data.boss || !actor.bossPhases.length || actor.ko) continue;
+      if (!actor.data.boss || !actor.bossPhases.length || actor.ko || actor.health <= 0 || actor.phaseLock > 0) continue;
       const next = actor.bossPhases[actor.bossPhaseIndex + 1];
       if (next && healthRatio(actor) <= next.threshold) this.advanceBossPhase(actor, next);
     }
@@ -1575,7 +1666,7 @@ export class FightEngine {
 
   forceBossPhase(index = 1) {
     const actor = this.actors[index]?.data.boss ? this.actors[index] : this.actors.find((entry) => entry.data.boss);
-    if (!actor) return false;
+    if (!actor || actor.ko || actor.health <= 0) return false;
     const next = actor.bossPhases[actor.bossPhaseIndex + 1];
     if (!next) return false;
     this.advanceBossPhase(actor, next, true);
@@ -1584,6 +1675,9 @@ export class FightEngine {
   }
 
   advanceBossPhase(actor, phase, forced = false) {
+    if (actor.ko || actor.health <= 0 || (!forced && actor.phaseLock > 0)) return false;
+    interruptAction(actor, 'phase');
+    actor.hurtFrames = 0; actor.knockdownTimer = 0; actor.wakeupWindow = 0;
     actor.bossPhaseIndex++;
     actor.phaseName = phase.name;
     actor.phasePower = phase.power || 1;
@@ -1630,15 +1724,15 @@ export class FightEngine {
 
   spawnImpact(x, y, color, guard = false, count = 14) {
     for (let index = 0; index < count; index++) {
-      const angle = this.rng() * TAU;
-      const speed = 2 + this.rng() * 9;
+      const angle = this.fxRng() * TAU;
+      const speed = 2 + this.fxRng() * 9;
       this.particles.push({
         x, y,
         vx: Math.cos(angle) * speed,
         vy: Math.sin(angle) * speed - (guard ? 0 : 2),
-        life: 18 + this.rng() * 22,
+        life: 18 + this.fxRng() * 22,
         max: 40,
-        size: 2 + this.rng() * 5,
+        size: 2 + this.fxRng() * 5,
         color: guard ? '#d8d5c9' : color,
         kind: guard ? 'spark' : 'blood'
       });
@@ -1648,13 +1742,13 @@ export class FightEngine {
   spawnDust(x, y) {
     for (let index = 0; index < 8; index++) {
       this.particles.push({
-        x: x + (this.rng() - .5) * 38,
+        x: x + (this.fxRng() - .5) * 38,
         y: y - 5,
-        vx: (this.rng() - .5) * 3,
-        vy: -this.rng() * 2,
-        life: 18 + this.rng() * 12,
+        vx: (this.fxRng() - .5) * 3,
+        vy: -this.fxRng() * 2,
+        life: 18 + this.fxRng() * 12,
         max: 30,
-        size: 5 + this.rng() * 9,
+        size: 5 + this.fxRng() * 9,
         color: '#aaa696',
         kind: 'dust'
       });
@@ -1981,8 +2075,12 @@ export class FightEngine {
           lastTrigger: this.stageRuntime.lastTrigger,
           heavyImpactPending: this.stageRuntime.heavyImpactPending,
           terrainOverride: this.stageRuntime.terrainOverride,
+          pendingTerrain: this.stageRuntime.pendingTerrain ? { id: this.stageRuntime.pendingTerrain.id, frames: this.stageRuntime.pendingTerrain.hazard.timer } : null,
+          ambienceOnly: !this.stage?.director?.hazardDeck?.length,
+          suppressedHazards: this.stageRuntime.suppressedHazards,
         hazardWarnings: this.hazards.filter(h=>h.timer>0).map(h=>({
-          id: h.id, label: h.profile.name, frames: h.timer,
+          id: h.id, label: h.profile.name, frames: h.timer, diagnostic: h.diagnostic,
+          terrainAfterImpact: h.terrainPulse || null,
           center: h.x, shape: h.profile.shape, zoneMin:h.zoneMin, zoneMax:h.zoneMax,
           counterplay: hazardCounterplay(h), zones: hazardVolumes(h), travelZones: hazardVolumes(h,{preview:true})
         })),
@@ -2048,6 +2146,7 @@ export class FightEngine {
       }
     }
     this.renderParticles(context);
+    this.renderHazardLabels(context);
     this.renderHUD(context);
     this.renderTexts(context);
     if (this.superOverlay) this.renderSuperOverlay(context);
@@ -2103,15 +2202,26 @@ export class FightEngine {
         context.fillRect(zone.x,FLOOR-2,zone.w,4);
       }
       context.setLineDash([]);
-      const labelX = clamp(hazard.profile.shape==='center'?WIDTH/2:hazard.x,160,WIDTH-160);
-      context.textAlign='center';context.fillStyle='#e8ddc5';context.font='800 10px ui-monospace';
-      const labelY = Math.max(153, Math.min(...zones.map(z=>z.y))-12);
-      context.fillText(hazard.profile.name,labelX,labelY);
-      context.font='600 9px ui-monospace';context.fillStyle='#bcb8ab';
-      context.fillText(hazardCounterplay(hazard),labelX,labelY+12);
       context.restore();
       this.renderHazardSetpiece(context,hazard,reduce?0:time);
     }
+  }
+
+  renderHazardLabels(context) {
+    // Foreground UI layer: a weapon or monster may never hide its warning.
+    this.hazards.forEach((hazard, index) => {
+      const zones = hazardVolumes(hazard);
+      if (!zones.length) return;
+      const lines = [hazard.profile.name, hazardCounterplay(hazard)];
+      if (hazard.terrainPulse && hazard.timer > 0) lines.push(`SOL À L’IMPACT : ${stageTerrainProfile(this.stage, hazard.terrainPulse).name}`);
+      context.save();context.font='800 12px ui-monospace';context.textAlign='center';
+      const width=Math.min(410,Math.max(230,...lines.map(line=>context.measureText(line).width+28)));
+      const x=clamp(hazard.profile.shape==='center'?WIDTH/2:hazard.x,width/2+16,WIDTH-width/2-16);
+      const y=Math.max(158+index*48,Math.min(...zones.map(z=>z.y))-22);
+      context.fillStyle='rgba(9,10,9,.94)';context.fillRect(x-width/2,y-15,width,lines.length*14+7);
+      lines.forEach((line,i)=>{context.font=i?'600 10px ui-monospace':'800 12px ui-monospace';context.fillStyle=i?'#d6d1c2':'#eee3cd';context.fillText(line,x,y+i*14);});
+      context.restore();
+    });
   }
 
   renderHazardSetpiece(context, hazard, time) {

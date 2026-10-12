@@ -86,7 +86,7 @@ async function runVerification() {
     assert(stage.terrain&&terrainIds.has(stage.terrain.id),`Terrain d’arène inconnu: ${stage.id}/${stage.terrain?.id}`);
     assert(stage.shift&&shiftIds.has(stage.shift.style),`Bascule d’arène inconnue: ${stage.id}/${stage.shift?.style}`);
     assert(stage.lore?.premise&&stage.lore?.adaptationNotice,`Doctrine lore d’arène incomplète: ${stage.id}`);
-    assert(stage.director&&stage.director.events?.length>=1&&stage.director.hazardDeck?.length>=1,`Directeur d’arène incomplet: ${stage.id}`);
+    assert(stage.director&&stage.director.events?.length>=1&&Array.isArray(stage.director.hazardDeck),`Directeur d’arène incomplet: ${stage.id}`);
     stage.director.events.forEach(id=>assert(stageEventIds.has(id),`Événement d’arène inconnu: ${stage.id}/${id}`));
     stage.director.hazardDeck.forEach(id=>assert(hazardIds.has(id),`Deck de dangers inconnu: ${stage.id}/${id}`));
     assert(stage.animationTracks?.length===stage.animations.length,`Pistes d’animation incohérentes: ${stage.id}`);

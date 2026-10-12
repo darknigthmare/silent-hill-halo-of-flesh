@@ -1,3 +1,12 @@
+# v0.8.2 — Impacts, avertissements et ambiance
+
+- Interruption réelle des coups ; armure et parades cohérentes ; pas de contre physique à distance sur un projectile.
+- Trajet complet des projectiles et sens d’impact conservé ; dégâts bornés, attribution des afflictions, fin de round avant les actions post-mortem.
+- Transitions automatiques de boss séquentielles ; Observation conserve son passage manuel.
+- Ambiance radio/CRTV/sirène/cloches/portraits/projecteurs séparée des dégâts ; aucune attaque de secours dans un stage calme.
+- Deux avertissements automatiques maximum ; événements refusés non consommés ; terrain changé seulement à l’impact annoncé.
+- Aléatoire cosmétique séparé du gameplay ; mémoire de commande de huit frames pendant hitstop ; touches purgées sur pause, perte de focus et nouveau round.
+
 # v0.8.1 — Corps, collisions et lieux cohérents
 
 Voir [les notes détaillées](docs/RELEASE_NOTES_v0.8.1.md). 30 régressions supplémentaires ; 109 tests passent. Corrections des collisions, sols, dangers mobiles, motifs des lieux et intérieurs. Navigation navigateur non validée ici.
