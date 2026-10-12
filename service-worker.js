@@ -1,4 +1,4 @@
-const VERSION = '0.8.1';
+const VERSION = '0.8.2';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
@@ -18,6 +18,7 @@ const ESSENTIAL_SHELL = [
   '/src/stage-architecture.js',
   '/src/stage-lore-policy.js',
   '/src/combat-geometry.js',
+  '/src/combat-resolution.js',
   '/src/movesets.js',
   '/src/shared.js',
   '/src/renderers.js',

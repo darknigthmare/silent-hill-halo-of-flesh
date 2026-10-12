@@ -1,5 +1,5 @@
 {
-  "version": "0.8.1",
+  "version": "0.8.2",
   "traits": {
     "echo": {
       "name": "ÉCHO PERSISTANT",
@@ -916,7 +916,7 @@
       "duration": 130,
       "darkness": 0.18,
       "radioBoost": 0.5,
-      "hazard": "sirenShock",
+      "gameplayRole": "ambience",
       "message": "LA SIRÈNE APPELLE",
       "animation": "sirenPulse"
     },
@@ -1008,7 +1008,7 @@
       "duration": 125,
       "darkness": 0.5,
       "radioBoost": 0.1,
-      "hazard": "spotlightSweep",
+      "gameplayRole": "ambience",
       "message": "LE FAISCEAU VOUS CHERCHE",
       "animation": "spotlightSweep"
     },
@@ -1017,7 +1017,7 @@
       "duration": 112,
       "darkness": 0.22,
       "radioBoost": 0.58,
-      "hazard": "crtvPulse",
+      "gameplayRole": "ambience",
       "message": "LE SIGNAL SE VERROUILLE",
       "animation": "tvStatic"
     },
@@ -1026,7 +1026,7 @@
       "duration": 118,
       "darkness": 0.12,
       "radioBoost": 0.2,
-      "hazard": "bellToll",
+      "gameplayRole": "ambience",
       "message": "LA CLOCHE COMPTE LES FAUTES",
       "animation": "bellSwing"
     },
@@ -1055,7 +1055,7 @@
       "duration": 105,
       "darkness": 0.25,
       "radioBoost": 0.2,
-      "hazard": "portraitGaze",
+      "gameplayRole": "ambience",
       "message": "LES PORTRAITS VOUS SUIVENT",
       "animation": "portraitBlink"
     },

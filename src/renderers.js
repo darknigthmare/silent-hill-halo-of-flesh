@@ -1,6 +1,6 @@
 import { hashCode, seededRandom, clamp } from './shared.js';
 import { bodyProfile } from './combat-geometry.js';
-import { drawStageArchitecture } from './stage-architecture.js';
+import { drawStageArchitecture, stageSpace } from './stage-architecture.js';
 import { drawStageCinematics } from './stage-cinematics.js';
 
 const TAU=Math.PI*2;
@@ -14,8 +14,21 @@ function ellipse(ctx,x,y,rx,ry,color,stroke=null,width=2,rotation=0){ctx.fillSty
 function polygon(ctx,points,color,stroke=null,width=2){ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)ctx.lineTo(points[i][0],points[i][1]);ctx.closePath();ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke();}}
 function roughLine(ctx,x1,y1,x2,y2,width,color,seed=1){const r=seededRandom(seed);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);const steps=6;for(let i=1;i<steps;i++){const t=i/steps;ctx.lineTo(x1+(x2-x1)*t+(r()-.5)*3,y1+(y2-y1)*t+(r()-.5)*3);}ctx.lineTo(x2,y2);ctx.stroke();}
 
-function drawFog(ctx,w,h,time,intensity=.25){
+function drawFog(ctx,w,h,time,intensity=.25,interior=false){
   ctx.save();ctx.globalCompositeOperation='screen';
+  if(interior){
+    // A closed room gets diffuse haze, not outdoor banks with hard polygon edges.
+    for(let i=0;i<3;i++){
+      const x=w*(.2+i*.3)+Math.sin(time*.00018+i)*w*.05,y=h*(.55+i*.1);
+      ctx.save();ctx.translate(x,y);ctx.scale(1,.22);
+      const g=ctx.createRadialGradient(0,0,0,0,0,w*.52);
+      g.addColorStop(0,`rgba(206,215,204,${intensity*.095})`);
+      g.addColorStop(.6,`rgba(206,215,204,${intensity*.045})`);
+      g.addColorStop(1,'rgba(206,215,204,0)');ctx.fillStyle=g;
+      ctx.fillRect(-w*.52,-w*.52,w*1.04,w*1.04);ctx.restore();
+    }
+    ctx.restore();return;
+  }
   for(let i=0;i<6;i++){
     const y=h*(.38+i*.105)+Math.sin(time*.00021+i*1.7)*18;
     const g=ctx.createLinearGradient(-80,y,w+80,y+50);g.addColorStop(0,'rgba(210,214,206,0)');g.addColorStop(.28,`rgba(210,214,206,${intensity*.25})`);g.addColorStop(.52,`rgba(230,232,225,${intensity*.42})`);g.addColorStop(.78,`rgba(210,214,206,${intensity*.2})`);g.addColorStop(1,'rgba(210,214,206,0)');ctx.fillStyle=g;
@@ -257,7 +270,7 @@ export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=fals
   }
   drawOtherworldOverlay(ctx,w,h,time,otherworld,shiftStyle,String(stage?.id||'').replace(/^book_/,''));
   if(stage?.weather==='rain')drawRain(ctx,w,h,time,115);else drawParticles(ctx,w,h,time,stage?.weather);
-  const baseFog=Number.isFinite(visibility.fog)?visibility.fog:(stage?.weather==='fog'?.54:.24);const fogAmount=clamp(baseFog+(director?.fogBoost||0),.04,.96)*(1-otherworld*(shiftStyle==='signal'?.08:.32));drawFog(ctx,w,h,time,fogAmount);
+  const baseFog=Number.isFinite(visibility.fog)?visibility.fog:(stage?.weather==='fog'?.54:.24);const fogAmount=clamp(baseFog+(director?.fogBoost||0),.04,.96)*(1-otherworld*(shiftStyle==='signal'?.08:.32));drawFog(ctx,w,h,time,fogAmount,stageSpace(stage||{})==='interior');
   drawRadioNoise(ctx,w,h,time,radio);
   const darkness=clamp((visibility.darkness||.25)+(director?.darkness||0)*.7,0,.92);if(darkness>.02){ctx.fillStyle=`rgba(0,0,0,${darkness*.34})`;ctx.fillRect(0,0,w,h);}
   const vignette=ctx.createRadialGradient(w*.5,h*.5,w*.2,w*.5,h*.5,w*.76);vignette.addColorStop(0,'rgba(0,0,0,0)');vignette.addColorStop(1,cinematic?`rgba(0,0,0,${.75+darkness*.18})`:`rgba(0,0,0,${.55+darkness*.25})`);ctx.fillStyle=vignette;ctx.fillRect(0,0,w,h);

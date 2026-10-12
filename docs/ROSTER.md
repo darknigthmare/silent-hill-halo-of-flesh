@@ -1,4 +1,4 @@
-# Roster complet — v0.8.1
+# Roster complet — v0.8.2
 
 Catalogue synchronisé : **230 manifestations**, dont **75 boss**, réparties sur **16 sources**, avec **4600 coups documentés**, **150 transitions de boss**, **460 fatalités jouables**, **352 animations d’arène** et **300 événements de lieu**.
 

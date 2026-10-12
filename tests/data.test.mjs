@@ -1,3 +1,4 @@
+import { AMBIENT_ONLY_HAZARDS } from '../src/stage-lore-policy.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
@@ -9,12 +10,12 @@ import {
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.8.1 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.8.1');
+test('v0.8.2 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.8.2');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
     fatalities:460,stageFatalities:123,stageAnimations:352,stageDirectorEvents:300,
-    stageInteractions:286,stageHazardLinks:335,terrainProfiles:14,shiftStyles:15,moves:4600,
+    stageInteractions:286,stageHazardLinks:255,terrainProfiles:14,shiftStyles:15,moves:4600,
     directCanonicalMoves:447,behaviorCompositeMoves:3694,versusAdaptationMoves:459,coverageComplete:true
   });
 });
@@ -59,7 +60,7 @@ test('every arena exposes a complete lore-first stage doctrine',()=>{
     assert.ok(stage.visibility?.fog>=0&&stage.visibility?.fog<=1,`${stage.id}: fog`);
     assert.ok(stage.visibility?.darkness>=0&&stage.visibility?.darkness<=1,`${stage.id}: darkness`);
     assert.ok(stage.director?.events?.length>=1,`${stage.id}: events`);
-    assert.ok(stage.director?.hazardDeck?.length>=1,`${stage.id}: hazard deck`);
+    assert.ok(Array.isArray(stage.director?.hazardDeck),`${stage.id}: hazard deck`);
     assert.equal(stage.animationTracks.length,stage.animations.length,`${stage.id}: animation tracks`);
     assert.ok(stage.interactions.length>=1,`${stage.id}: interactions`);
     assert.ok(!signatures.has(stage.director.signature),`${stage.id}: duplicate doctrine signature`);
@@ -153,7 +154,8 @@ test('all 12 traits, 8 afflictions, 29 hazards, 9 rites and 12 AI personalities 
   const usedHazards=new Set(STAGES.flatMap(stage=>[stage.hazard,...(stage.director?.hazardDeck||[])]));
   Object.keys(MANIFESTATION_TRAITS).forEach(id=>assert.ok(usedTraits.has(id),id));
   Object.keys(AFFLICTIONS).forEach(id=>assert.ok(usedAfflictions.has(id),id));
-  Object.keys(STAGE_HAZARDS).forEach(id=>assert.ok(usedHazards.has(id),id));
+  Object.keys(STAGE_HAZARDS).forEach(id=>assert.ok(usedHazards.has(id)||AMBIENT_ONLY_HAZARDS.includes(id),id));
+  for (const stage of STAGES) assert.ok(stage.director.hazardDeck.every(id=>!AMBIENT_ONLY_HAZARDS.includes(id)),stage.id);
 });
 
 

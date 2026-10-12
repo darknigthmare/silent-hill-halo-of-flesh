@@ -77,7 +77,6 @@
       "arenaInset": 84,
       "hazardDeck": [
         "lockerSlam",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -93,15 +92,17 @@
         ],
         "hazards": [
           "lockerSlam",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "midwich:rust:concrete:lockerSlam+staticBurst+fallingDebris:lockerSlam+powerFailure+sirenCall"
+      "signature": "midwich:rust:concrete:lockerSlam+fallingDebris:lockerSlam+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -247,7 +248,6 @@
       "intensity": 1.15,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -261,20 +261,21 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "alchemilla:rust:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure"
+      "signature": "alchemilla:rust:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -409,8 +410,7 @@
       "intensity": 1.15,
       "arenaInset": 74,
       "hazardDeck": [
-        "roadCollapse",
-        "staticBurst"
+        "roadCollapse"
       ],
       "events": [
         "corridorCollapse",
@@ -422,15 +422,17 @@
           "powerFailure"
         ],
         "hazards": [
-          "roadCollapse",
+          "roadCollapse"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "old_silent_hill:rust:wetConcrete:roadCollapse+staticBurst:corridorCollapse+powerFailure"
+      "signature": "old_silent_hill:rust:wetConcrete:roadCollapse:corridorCollapse+powerFailure"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -565,7 +567,6 @@
       "intensity": 1.15,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
         "voidPull"
       ],
@@ -581,16 +582,18 @@
           "ritualWake"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "nowhere:rust:steel:sirenShock+chainSweep+voidPull:sirenCall+voidPull+ritualWake"
+      "signature": "nowhere:rust:steel:chainSweep+voidPull:sirenCall+voidPull+ritualWake"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -755,6 +758,7 @@
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -906,8 +910,7 @@
       "intensity": 1.07,
       "arenaInset": 108,
       "hazardDeck": [
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "events": [
         "roomBreath"
@@ -917,19 +920,20 @@
           "roomBreath"
         ],
         "hazards": [
-          "doorSlam",
-          "staticBurst"
+          "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
-          "portraitGaze"
+          "portraitGaze",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "woodside:decay:carpet:doorSlam+staticBurst:roomBreath"
+      "signature": "woodside:decay:carpet:doorSlam:roomBreath"
     },
     "gameplay": {
       "arenaInset": 108,
@@ -1071,6 +1075,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -1212,7 +1217,6 @@
       "intensity": 1.07,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -1228,20 +1232,21 @@
           "elevatorCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "brookhaven_sh2:decay:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall"
+      "signature": "brookhaven_sh2:decay:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -1400,6 +1405,7 @@
         "hazards": [
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
@@ -1555,6 +1561,7 @@
           "waterSurge",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -1716,6 +1723,7 @@
           "emberFall",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -1856,8 +1864,7 @@
       "arenaInset": 82,
       "hazardDeck": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "events": [
         "powerFailure",
@@ -1872,15 +1879,17 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "shopping_mall:flesh:concrete:fallingDebris+doorSlam+staticBurst:powerFailure+corridorCollapse+sirenCall"
+      "signature": "shopping_mall:flesh:concrete:fallingDebris+doorSlam:powerFailure+corridorCollapse+sirenCall"
     },
     "gameplay": {
       "arenaInset": 82,
@@ -2031,7 +2040,6 @@
       "intensity": 1.11,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "fallingDebris",
         "bloodTide"
       ],
@@ -2045,22 +2053,23 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "gurneyRush",
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "gurneyRush",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "brookhaven_sh3:flesh:concrete:staticBurst+fallingDebris+bloodTide:powerFailure+sirenCall"
+      "signature": "brookhaven_sh3:flesh:concrete:fallingDebris+bloodTide:powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -2208,6 +2217,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -2377,6 +2387,7 @@
           "fallingDebris",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -2558,6 +2569,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -2726,6 +2738,7 @@
           "roomPulse",
           "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -2878,8 +2891,7 @@
       "intensity": 1.2,
       "arenaInset": 84,
       "hazardDeck": [
-        "trainRush",
-        "staticBurst"
+        "trainRush"
       ],
       "events": [
         "trainRumble",
@@ -2891,17 +2903,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "trainRush",
-          "staticBurst"
+          "trainRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
-          "steamVent"
+          "steamVent",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "subway_world:haunting:steel:trainRush+staticBurst:trainRumble+powerFailure"
+      "signature": "subway_world:haunting:steel:trainRush:trainRumble+powerFailure"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -3038,7 +3051,6 @@
       "intensity": 1.2,
       "arenaInset": 92,
       "hazardDeck": [
-        "spotlightSweep",
         "waterSurge",
         "chainSweep"
       ],
@@ -3052,16 +3064,18 @@
           "waterRise"
         ],
         "hazards": [
-          "spotlightSweep",
           "waterSurge",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "spotlightSweep"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "water_prison:haunting:flooded:spotlightSweep+waterSurge+chainSweep:spotlightHunt+waterRise"
+      "signature": "water_prison:haunting:flooded:waterSurge+chainSweep:spotlightHunt+waterRise"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -3196,7 +3210,6 @@
       "intensity": 1.2,
       "arenaInset": 108,
       "hazardDeck": [
-        "staticBurst",
         "doorSlam",
         "fallingDebris"
       ],
@@ -3208,20 +3221,21 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "portraitGaze"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "apartment_world:haunting:carpet:staticBurst+doorSlam+fallingDebris:roomBreath"
+      "signature": "apartment_world:haunting:carpet:doorSlam+fallingDebris:roomBreath"
     },
     "gameplay": {
       "arenaInset": 108,
@@ -3345,7 +3359,6 @@
       "intensity": 1.2,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -3361,21 +3374,22 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall",
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "hospital_world:haunting:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+roomBreath"
+      "signature": "hospital_world:haunting:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+roomBreath"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -3522,7 +3536,6 @@
       "intensity": 1.0550000000000002,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -3539,19 +3552,21 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "cedar_grove:mirror:concrete:staticBurst+gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+mirrorTurn"
+      "signature": "cedar_grove:mirror:concrete:gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+mirrorTurn"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -3699,7 +3714,6 @@
       "intensity": 1.0550000000000002,
       "arenaInset": 84,
       "hazardDeck": [
-        "staticBurst",
         "doorSlam",
         "lightningStrike",
         "fallingDebris"
@@ -3714,19 +3728,21 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "riverside_motel:mirror:wetConcrete:staticBurst+doorSlam+lightningStrike+fallingDebris:stormSurge+powerFailure"
+      "signature": "riverside_motel:mirror:wetConcrete:doorSlam+lightningStrike+fallingDebris:stormSurge+powerFailure"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -3867,7 +3883,6 @@
       "intensity": 1.13,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -3885,16 +3900,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "shepherds_glen:rust:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+sirenCall+powerFailure"
+      "signature": "shepherds_glen:rust:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -4055,6 +4072,7 @@
         "hazards": [
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -4225,6 +4243,7 @@
           "frostWave",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -4378,6 +4397,7 @@
         "hazards": [
           "waterSurge"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge",
           "spotlightHunt"
@@ -4538,6 +4558,7 @@
           "fallingDebris",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -4689,8 +4710,7 @@
       "intensity": 0.86,
       "arenaInset": 94,
       "hazardDeck": [
-        "ritualSeal",
-        "staticBurst"
+        "ritualSeal"
       ],
       "events": [
         "ritualWake"
@@ -4700,19 +4720,20 @@
           "ritualWake"
         ],
         "hazards": [
-          "ritualSeal",
-          "staticBurst"
+          "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "book_zone:elemental:ritualStone:ritualSeal+staticBurst:ritualWake"
+      "signature": "book_zone:elemental:ritualStone:ritualSeal:ritualWake"
     },
     "gameplay": {
       "arenaInset": 94,
@@ -4852,6 +4873,7 @@
           "doorSlam",
           "roomPulse"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
@@ -5013,6 +5035,7 @@
           "petalBloom",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake"
         ],
@@ -5168,6 +5191,7 @@
           "rootSnare",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -5318,6 +5342,7 @@
           "ritualSeal",
           "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -5460,7 +5485,6 @@
       "intensity": 0.77,
       "arenaInset": 84,
       "hazardDeck": [
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -5475,20 +5499,21 @@
           "rootWake"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "lockerSlam",
           "bellToll"
         ],
         "excludedHazards": [
+          "staticBurst",
           "lockerSlam"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "school_shf:shrine:concrete:staticBurst+fallingDebris:powerFailure+ritualWake+rootWake"
+      "signature": "school_shf:shrine:concrete:fallingDebris:powerFailure+ritualWake+rootWake"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -5645,6 +5670,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -5811,6 +5837,7 @@
           "petalBloom",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "bellToll"
@@ -5962,6 +5989,7 @@
           "emberFall",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6112,7 +6140,6 @@
       "arenaInset": 92,
       "hazardDeck": [
         "ritualSeal",
-        "staticBurst",
         "petalBloom"
       ],
       "events": [
@@ -6124,19 +6151,20 @@
         ],
         "hazards": [
           "ritualSeal",
-          "staticBurst",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "book_wood:elemental:ritualStone:ritualSeal+staticBurst+petalBloom:ritualWake"
+      "signature": "book_wood:elemental:ritualStone:ritualSeal+petalBloom:ritualWake"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -6269,8 +6297,7 @@
       "intensity": 0.86,
       "arenaInset": 92,
       "hazardDeck": [
-        "ritualSeal",
-        "staticBurst"
+        "ritualSeal"
       ],
       "events": [
         "ritualWake",
@@ -6282,17 +6309,18 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "ritualSeal",
-          "staticBurst"
+          "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "book_light:elemental:ritualStone:ritualSeal+staticBurst:ritualWake+mirrorTurn"
+      "signature": "book_light:elemental:ritualStone:ritualSeal:ritualWake+mirrorTurn"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -6453,6 +6481,7 @@
           "waterSurge",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6603,7 +6632,6 @@
       "arenaInset": 92,
       "hazardDeck": [
         "ritualSeal",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -6615,19 +6643,20 @@
         ],
         "hazards": [
           "ritualSeal",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "book_earth:elemental:ritualStone:ritualSeal+staticBurst+fallingDebris:ritualWake"
+      "signature": "book_earth:elemental:ritualStone:ritualSeal+fallingDebris:ritualWake"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -6776,6 +6805,7 @@
           "bloodTide",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6939,6 +6969,7 @@
           "chainSweep",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "steamRelease"
         ],
@@ -7080,7 +7111,6 @@
       "intensity": 1.0550000000000002,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -7097,19 +7127,21 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "antique_shop:mirror:steel:sirenShock+chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
+      "signature": "antique_shop:mirror:steel:chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -7275,6 +7307,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -7438,6 +7471,7 @@
           "bloodTide",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -7598,6 +7632,7 @@
           "lockerSlam",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -7749,7 +7784,6 @@
       "intensity": 1.1749999999999998,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -7767,20 +7801,21 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "film_hospital:ash:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+ashFall+sirenCall"
+      "signature": "film_hospital:ash:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+ashFall+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -7940,6 +7975,7 @@
           "chainSweep",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -8079,6 +8115,7 @@
         "hazards": [
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -8219,7 +8256,6 @@
       "intensity": 1.03,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -8235,18 +8271,20 @@
           "ritualWake"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "hope_junction:ritual:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+ritualWake"
+      "signature": "hope_junction:ritual:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+ritualWake"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -8392,7 +8430,6 @@
       "intensity": 1.03,
       "arenaInset": 76,
       "hazardDeck": [
-        "staticBurst",
         "fallingDebris",
         "rootSnare"
       ],
@@ -8408,16 +8445,18 @@
           "ritualWake"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris",
           "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "stilledalen:ritual:wetConcrete:staticBurst+fallingDebris+rootSnare:stormSurge+rootWake+ritualWake"
+      "signature": "stilledalen:ritual:wetConcrete:fallingDebris+rootSnare:stormSurge+rootWake+ritualWake"
     },
     "gameplay": {
       "arenaInset": 76,
@@ -8565,8 +8604,7 @@
       "arenaInset": 96,
       "hazardDeck": [
         "ritualSeal",
-        "voidPull",
-        "sirenShock"
+        "voidPull"
       ],
       "events": [
         "ritualWake",
@@ -8579,15 +8617,17 @@
         ],
         "hazards": [
           "ritualSeal",
-          "voidPull",
+          "voidPull"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "sirenShock"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "ascension_otherworld:ritual:ritualStone:ritualSeal+voidPull+sirenShock:ritualWake+voidPull"
+      "signature": "ascension_otherworld:ritual:ritualStone:ritualSeal+voidPull:ritualWake+voidPull"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -8725,8 +8765,7 @@
       "arenaInset": 92,
       "hazardDeck": [
         "gurneyRush",
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "events": [
         "gurneyRush",
@@ -8739,15 +8778,17 @@
         ],
         "hazards": [
           "gurneyRush",
-          "chainSweep",
+          "chainSweep"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "hospital_nightmare:rust:steel:gurneyRush+chainSweep+staticBurst:gurneyRush+sirenCall"
+      "signature": "hospital_nightmare:rust:steel:gurneyRush+chainSweep:gurneyRush+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -8917,6 +8958,7 @@
           "chainSweep",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -9091,6 +9133,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -9269,6 +9312,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -9428,7 +9472,6 @@
       "intensity": 1.07,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -9444,18 +9487,20 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "south_vale:decay:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+powerFailure"
+      "signature": "south_vale:decay:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+powerFailure"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -9628,6 +9673,7 @@
           "fallingDebris",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -9785,7 +9831,6 @@
       "intensity": 1.07,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -9801,18 +9846,20 @@
           "portraitWatch"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "historical_society:decay:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+powerFailure+portraitWatch"
+      "signature": "historical_society:decay:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+powerFailure+portraitWatch"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -9968,8 +10015,7 @@
       "intensity": 1.07,
       "arenaInset": 92,
       "hazardDeck": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "events": [
         "powerFailure"
@@ -9979,9 +10025,9 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll",
@@ -9989,12 +10035,13 @@
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "prison_meat_locker:decay:steel:chainSweep+staticBurst:powerFailure"
+      "signature": "prison_meat_locker:decay:steel:chainSweep:powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -10132,10 +10179,7 @@
       "initialDelay": 254,
       "intensity": 1.07,
       "arenaInset": 104,
-      "hazardDeck": [
-        "portraitGaze",
-        "staticBurst"
-      ],
+      "hazardDeck": [],
       "events": [
         "portraitWatch",
         "powerFailure"
@@ -10145,16 +10189,17 @@
           "portraitWatch",
           "powerFailure"
         ],
-        "hazards": [
+        "hazards": [],
+        "ambienceOnly": true,
+        "excludedEvents": [],
+        "excludedHazards": [
           "portraitGaze",
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "lakeview:decay:carpet:portraitGaze+staticBurst:portraitWatch+powerFailure"
+      "signature": "lakeview:decay:carpet::portraitWatch+powerFailure"
     },
     "gameplay": {
       "arenaInset": 104,
@@ -10300,7 +10345,6 @@
       "arenaInset": 118,
       "hazardDeck": [
         "doorSlam",
-        "portraitGaze",
         "fallingDebris"
       ],
       "events": [
@@ -10316,19 +10360,20 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "portraitGaze",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "baldwin_mansion:decay:wood:doorSlam+portraitGaze+fallingDebris:portraitWatch+roomBreath+powerFailure"
+      "signature": "baldwin_mansion:decay:wood:doorSlam+fallingDebris:portraitWatch+roomBreath+powerFailure"
     },
     "gameplay": {
       "arenaInset": 118,
@@ -10492,7 +10537,6 @@
       "hazardDeck": [
         "fallingDebris",
         "doorSlam",
-        "staticBurst",
         "emberFall"
       ],
       "events": [
@@ -10509,15 +10553,17 @@
         "hazards": [
           "fallingDebris",
           "doorSlam",
-          "staticBurst",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "nightmare_mall:flesh:concrete:fallingDebris+doorSlam+staticBurst+emberFall:powerFailure+corridorCollapse+sirenCall"
+      "signature": "nightmare_mall:flesh:concrete:fallingDebris+doorSlam+emberFall:powerFailure+corridorCollapse+sirenCall"
     },
     "gameplay": {
       "arenaInset": 82,
@@ -10685,8 +10731,7 @@
       "intensity": 1.11,
       "arenaInset": 84,
       "hazardDeck": [
-        "trainRush",
-        "staticBurst"
+        "trainRush"
       ],
       "events": [
         "trainRumble",
@@ -10700,17 +10745,18 @@
           "sirenCall"
         ],
         "hazards": [
-          "trainRush",
-          "staticBurst"
+          "trainRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "steamVent"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "hazel_subway:flesh:steel:trainRush+staticBurst:trainRumble+powerFailure+sirenCall"
+      "signature": "hazel_subway:flesh:steel:trainRush:trainRumble+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -10886,6 +10932,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -11046,7 +11093,6 @@
       "arenaInset": 96,
       "hazardDeck": [
         "elevatorDrop",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -11062,15 +11108,17 @@
         ],
         "hazards": [
           "elevatorDrop",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "hilltop_center:flesh:carpet:elevatorDrop+staticBurst+fallingDebris:elevatorCall+powerFailure+sirenCall"
+      "signature": "hilltop_center:flesh:carpet:elevatorDrop+fallingDebris:elevatorCall+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -11223,7 +11271,6 @@
       "intensity": 1.11,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -11240,17 +11287,19 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "nightmare_hilltop:flesh:steel:sirenShock+chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
+      "signature": "nightmare_hilltop:flesh:steel:chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -11411,7 +11460,6 @@
       "intensity": 1.11,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -11428,19 +11476,21 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "nightmare_hospital_sh3:flesh:concrete:staticBurst+gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+sirenCall"
+      "signature": "nightmare_hospital_sh3:flesh:concrete:gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -11596,8 +11646,7 @@
       "arenaInset": 86,
       "hazardDeck": [
         "carouselSweep",
-        "fallingDebris",
-        "staticBurst"
+        "fallingDebris"
       ],
       "events": [
         "carouselStart",
@@ -11612,15 +11661,17 @@
         ],
         "hazards": [
           "carouselSweep",
-          "fallingDebris",
+          "fallingDebris"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "lakeside_sh3:flesh:wetConcrete:carouselSweep+fallingDebris+staticBurst:carouselStart+powerFailure+sirenCall"
+      "signature": "lakeside_sh3:flesh:wetConcrete:carouselSweep+fallingDebris:carouselStart+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 86,
@@ -11776,7 +11827,6 @@
       "hazardDeck": [
         "rootSnare",
         "windShear",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -11793,17 +11843,19 @@
         "hazards": [
           "rootSnare",
           "windShear",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "forest_world:haunting:mud:rootSnare+windShear+staticBurst+fallingDebris:rootWake+stormSurge+roomBreath"
+      "signature": "forest_world:haunting:mud:rootSnare+windShear+fallingDebris:rootWake+stormSurge+roomBreath"
     },
     "gameplay": {
       "arenaInset": 78,
@@ -11958,8 +12010,7 @@
       "hazardDeck": [
         "fallingDebris",
         "doorSlam",
-        "elevatorDrop",
-        "staticBurst"
+        "elevatorDrop"
       ],
       "events": [
         "corridorCollapse",
@@ -11975,17 +12026,19 @@
         "hazards": [
           "fallingDebris",
           "doorSlam",
-          "elevatorDrop",
-          "staticBurst"
+          "elevatorDrop"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "building_world:haunting:concrete:fallingDebris+doorSlam+elevatorDrop+staticBurst:corridorCollapse+elevatorCall+roomBreath"
+      "signature": "building_world:haunting:concrete:fallingDebris+doorSlam+elevatorDrop:corridorCollapse+elevatorCall+roomBreath"
     },
     "gameplay": {
       "arenaInset": 100,
@@ -12140,7 +12193,6 @@
       "intensity": 1.2,
       "arenaInset": 108,
       "hazardDeck": [
-        "staticBurst",
         "doorSlam",
         "fallingDebris"
       ],
@@ -12152,20 +12204,21 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "portraitGaze"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "outside_room_302:haunting:carpet:staticBurst+doorSlam+fallingDebris:roomBreath"
+      "signature": "outside_room_302:haunting:carpet:doorSlam+fallingDebris:roomBreath"
     },
     "gameplay": {
       "arenaInset": 108,
@@ -12312,6 +12365,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -12464,7 +12518,6 @@
       "intensity": 1.2,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
         "voidPull",
         "bloodTide"
@@ -12481,21 +12534,22 @@
           "roomBreath"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "voidPull",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "sirenShock",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "final_sacrament:haunting:steel:sirenShock+chainSweep+voidPull+bloodTide:sirenCall+voidPull+roomBreath"
+      "signature": "final_sacrament:haunting:steel:chainSweep+voidPull+bloodTide:sirenCall+voidPull+roomBreath"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -12656,7 +12710,6 @@
       "intensity": 1.0550000000000002,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -12673,19 +12726,21 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "alchemilla_origins:mirror:concrete:staticBurst+gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+mirrorTurn"
+      "signature": "alchemilla_origins:mirror:concrete:gurneyRush+fallingDebris+mirrorFracture:gurneyRush+powerFailure+mirrorTurn"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -12841,7 +12896,6 @@
       "intensity": 1.0550000000000002,
       "arenaInset": 92,
       "hazardDeck": [
-        "spotlightSweep",
         "fallingDebris"
       ],
       "events": [
@@ -12854,19 +12908,20 @@
           "powerFailure"
         ],
         "hazards": [
-          "spotlightSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "spotlightSweep",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "artaud_theater:mirror:wood:spotlightSweep+fallingDebris:spotlightHunt+powerFailure"
+      "signature": "artaud_theater:mirror:wood:fallingDebris:spotlightHunt+powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -13023,6 +13078,7 @@
           "fallingDebris",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "mirrorTurn"
@@ -13165,7 +13221,6 @@
       "intensity": 1.13,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -13181,20 +13236,21 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "nightmare_hospital_hc:rust:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+sirenCall"
+      "signature": "nightmare_hospital_hc:rust:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -13349,7 +13405,6 @@
       "intensity": 1.13,
       "arenaInset": 96,
       "hazardDeck": [
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -13362,19 +13417,20 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
-          "elevatorDrop"
+          "elevatorDrop",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "police_station_hc:rust:carpet:staticBurst+fallingDebris:powerFailure+sirenCall"
+      "signature": "police_station_hc:rust:carpet:fallingDebris:powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -13520,7 +13576,6 @@
       "arenaInset": 148,
       "hazardDeck": [
         "doorSlam",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -13534,19 +13589,20 @@
         ],
         "hazards": [
           "doorSlam",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 86,
-      "signature": "town_hall_hc:rust:narrow:doorSlam+staticBurst+fallingDebris:powerFailure+sirenCall"
+      "signature": "town_hall_hc:rust:narrow:doorSlam+fallingDebris:powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 148,
@@ -13704,8 +13760,7 @@
       "intensity": 1.13,
       "arenaInset": 92,
       "hazardDeck": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "events": [
         "sirenCall",
@@ -13717,21 +13772,22 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "prison_hc:rust:steel:chainSweep+staticBurst:sirenCall+powerFailure"
+      "signature": "prison_hc:rust:steel:chainSweep:sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -13876,7 +13932,6 @@
       "arenaInset": 118,
       "hazardDeck": [
         "doorSlam",
-        "portraitGaze",
         "mirrorFracture",
         "fallingDebris"
       ],
@@ -13897,16 +13952,18 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "mirrorFracture",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "portraitGaze"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "shepherd_house_hc:rust:wood:doorSlam+portraitGaze+mirrorFracture+fallingDebris:portraitWatch+mirrorTurn+roomBreath+sirenCall+powerFailure"
+      "signature": "shepherd_house_hc:rust:wood:doorSlam+mirrorFracture+fallingDebris:portraitWatch+mirrorTurn+roomBreath+sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 118,
@@ -14073,6 +14130,7 @@
         "hazards": [
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -14244,6 +14302,7 @@
           "chainSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "steamRelease"
         ],
@@ -14410,6 +14469,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt"
         ],
@@ -14571,6 +14631,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14739,6 +14800,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14903,6 +14965,7 @@
           "frostWave",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt"
         ],
@@ -15064,6 +15127,7 @@
           "fallingDebris",
           "waterSurge"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -15226,7 +15290,6 @@
       "arenaInset": 96,
       "hazardDeck": [
         "elevatorDrop",
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -15242,17 +15305,19 @@
         ],
         "hazards": [
           "elevatorDrop",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "centennial_building:storm:carpet:elevatorDrop+staticBurst+fallingDebris:elevatorCall+powerFailure+waterRise"
+      "signature": "centennial_building:storm:carpet:elevatorDrop+fallingDebris:elevatorCall+powerFailure+waterRise"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -15412,7 +15477,6 @@
       "intensity": 1.065,
       "arenaInset": 98,
       "hazardDeck": [
-        "bellToll",
         "ritualSeal",
         "chainSweep",
         "fallingDebris"
@@ -15429,21 +15493,22 @@
           "waterRise"
         ],
         "hazards": [
-          "bellToll",
           "ritualSeal",
           "chainSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
         "excludedHazards": [
+          "bellToll",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "st_marias:storm:ritualStone:bellToll+ritualSeal+chainSweep+fallingDebris:bellToll+ritualWake+waterRise"
+      "signature": "st_marias:storm:ritualStone:ritualSeal+chainSweep+fallingDebris:bellToll+ritualWake+waterRise"
     },
     "gameplay": {
       "arenaInset": 98,
@@ -15605,7 +15670,6 @@
       "intensity": 1.065,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -15621,16 +15685,18 @@
           "waterRise"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "downpour_streets:storm:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+waterRise"
+      "signature": "downpour_streets:storm:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+waterRise"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -15793,8 +15859,7 @@
       "arenaInset": 124,
       "hazardDeck": [
         "voidPull",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "events": [
         "voidPull",
@@ -15807,15 +15872,17 @@
         ],
         "hazards": [
           "voidPull",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "otherworld_void:void:void:voidPull+doorSlam+staticBurst:voidPull+powerFailure"
+      "signature": "otherworld_void:void:void:voidPull+doorSlam:voidPull+powerFailure"
     },
     "gameplay": {
       "arenaInset": 124,
@@ -15960,8 +16027,7 @@
       "intensity": 1.065,
       "arenaInset": 92,
       "hazardDeck": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "events": [
         "waterRise"
@@ -15971,9 +16037,9 @@
           "waterRise"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll",
@@ -15981,12 +16047,13 @@
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "anne_fight:storm:steel:chainSweep+staticBurst:waterRise"
+      "signature": "anne_fight:storm:steel:chainSweep:waterRise"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -16134,7 +16201,6 @@
       "intensity": 1.1,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -16152,16 +16218,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_city:rust:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+sirenCall+powerFailure"
+      "signature": "arcade_city:rust:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -16322,7 +16390,6 @@
       "intensity": 1.1,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -16340,18 +16407,19 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_hospital:rust:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall+sirenCall"
+      "signature": "arcade_hospital:rust:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -16507,7 +16575,6 @@
       "intensity": 1.1,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "fallingDebris"
       ],
       "events": [
@@ -16520,21 +16587,22 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "gurneyRush",
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "gurneyRush",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_hospital_roof:rust:concrete:staticBurst+fallingDebris:powerFailure+sirenCall"
+      "signature": "arcade_hospital_roof:rust:concrete:fallingDebris:powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -16685,7 +16753,6 @@
       "intensity": 1.1,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -16701,18 +16768,20 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_historical:rust:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+sirenCall+powerFailure"
+      "signature": "arcade_historical:rust:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -16867,8 +16936,7 @@
       "intensity": 1.1,
       "arenaInset": 92,
       "hazardDeck": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "events": [
         "sirenCall",
@@ -16880,21 +16948,22 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_prison:rust:steel:chainSweep+staticBurst:sirenCall+powerFailure"
+      "signature": "arcade_prison:rust:steel:chainSweep:sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -17037,8 +17106,7 @@
       "intensity": 1.1,
       "arenaInset": 82,
       "hazardDeck": [
-        "rootSnare",
-        "staticBurst"
+        "rootSnare"
       ],
       "events": [
         "rootWake",
@@ -17052,17 +17120,18 @@
           "sirenCall"
         ],
         "hazards": [
-          "rootSnare",
-          "staticBurst"
+          "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "frostWave"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_graveyard:rust:mud:rootSnare+staticBurst:rootWake+powerFailure+sirenCall"
+      "signature": "arcade_graveyard:rust:mud:rootSnare:rootWake+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 82,
@@ -17217,7 +17286,6 @@
       "arenaInset": 84,
       "hazardDeck": [
         "waterSurge",
-        "staticBurst",
         "bloodTide"
       ],
       "events": [
@@ -17235,17 +17303,18 @@
         ],
         "hazards": [
           "waterSurge",
-          "staticBurst",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "frostWave"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_toluca_lake:rust:flooded:waterSurge+staticBurst+bloodTide:waterRise+stormSurge+sirenCall+powerFailure"
+      "signature": "arcade_toluca_lake:rust:flooded:waterSurge+bloodTide:waterRise+stormSurge+sirenCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 84,
@@ -17399,7 +17468,6 @@
       "intensity": 1.1,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -17416,17 +17484,19 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_1918:rust:steel:sirenShock+chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
+      "signature": "arcade_1918:rust:steel:chainSweep+emberFall+voidPull:sirenCall+voidPull+powerFailure"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -17582,10 +17652,8 @@
       "intensity": 1.1,
       "arenaInset": 96,
       "hazardDeck": [
-        "sirenShock",
         "chainSweep",
-        "voidPull",
-        "staticBurst"
+        "voidPull"
       ],
       "events": [
         "sirenCall",
@@ -17599,19 +17667,20 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
-          "voidPull",
-          "staticBurst"
+          "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
-          "emberFall"
+          "sirenShock",
+          "emberFall",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_1993:rust:steel:sirenShock+chainSweep+voidPull+staticBurst:sirenCall+voidPull+powerFailure"
+      "signature": "arcade_1993:rust:steel:chainSweep+voidPull:sirenCall+voidPull+powerFailure"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -17781,8 +17850,7 @@
       "arenaInset": 82,
       "hazardDeck": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "events": [
         "powerFailure",
@@ -17797,15 +17865,17 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_mall:rust:concrete:fallingDebris+doorSlam+staticBurst:powerFailure+corridorCollapse+sirenCall"
+      "signature": "arcade_mall:rust:concrete:fallingDebris+doorSlam:powerFailure+corridorCollapse+sirenCall"
     },
     "gameplay": {
       "arenaInset": 82,
@@ -17960,8 +18030,7 @@
       "arenaInset": 86,
       "hazardDeck": [
         "carouselSweep",
-        "fallingDebris",
-        "staticBurst"
+        "fallingDebris"
       ],
       "events": [
         "carouselStart",
@@ -17976,15 +18045,17 @@
         ],
         "hazards": [
           "carouselSweep",
-          "fallingDebris",
+          "fallingDebris"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "arcade_amusement:rust:wetConcrete:carouselSweep+fallingDebris+staticBurst:carouselStart+powerFailure+sirenCall"
+      "signature": "arcade_amusement:rust:wetConcrete:carouselSweep+fallingDebris:carouselStart+powerFailure+sirenCall"
     },
     "gameplay": {
       "arenaInset": 86,
@@ -18157,6 +18228,7 @@
           "petalBloom",
           "lightningStrike"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -18306,8 +18378,7 @@
       "arenaInset": 100,
       "hazardDeck": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "events": [
         "corridorCollapse",
@@ -18320,20 +18391,21 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
-          "staticBurst"
+          "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall",
           "rootWake"
         ],
         "excludedHazards": [
-          "elevatorDrop"
+          "elevatorDrop",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "villa_stairwell:floral:concrete:fallingDebris+doorSlam+staticBurst:corridorCollapse+powerFailure"
+      "signature": "villa_stairwell:floral:concrete:fallingDebris+doorSlam:corridorCollapse+powerFailure"
     },
     "gameplay": {
       "arenaInset": 100,
@@ -18496,6 +18568,7 @@
           "ritualSeal",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -18654,7 +18727,6 @@
       "arenaInset": 118,
       "hazardDeck": [
         "doorSlam",
-        "portraitGaze",
         "petalBloom"
       ],
       "events": [
@@ -18670,20 +18742,21 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn",
           "rootWake"
         ],
         "excludedHazards": [
+          "portraitGaze",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "shimizu_residence:shrine:wood:doorSlam+portraitGaze+petalBloom:portraitWatch+roomBreath+ritualWake"
+      "signature": "shimizu_residence:shrine:wood:doorSlam+petalBloom:portraitWatch+roomBreath+ritualWake"
     },
     "gameplay": {
       "arenaInset": 118,
@@ -18858,6 +18931,7 @@
           "ritualSeal",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll",
           "rootWake"
@@ -19020,6 +19094,7 @@
           "petalBloom",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -19169,7 +19244,6 @@
       "intensity": 1.1749999999999998,
       "arenaInset": 74,
       "hazardDeck": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -19187,16 +19261,18 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "return_streets:ash:wetConcrete:staticBurst+roadCollapse+fallingDebris:corridorCollapse+stormSurge+ashFall+sirenCall"
+      "signature": "return_streets:ash:wetConcrete:roadCollapse+fallingDebris:corridorCollapse+stormSurge+ashFall+sirenCall"
     },
     "gameplay": {
       "arenaInset": 74,
@@ -19350,7 +19426,6 @@
       "intensity": 1.1749999999999998,
       "arenaInset": 92,
       "hazardDeck": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -19370,18 +19445,19 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "return_brookhaven:ash:concrete:staticBurst+gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall+ashFall+sirenCall"
+      "signature": "return_brookhaven:ash:concrete:gurneyRush+fallingDebris:gurneyRush+powerFailure+elevatorCall+ashFall+sirenCall"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -19538,7 +19614,6 @@
       "arenaInset": 104,
       "hazardDeck": [
         "emberFall",
-        "portraitGaze",
         "fallingDebris"
       ],
       "events": [
@@ -19552,15 +19627,17 @@
         ],
         "hazards": [
           "emberFall",
-          "portraitGaze",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "portraitGaze"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "return_lakeview:ash:ash:emberFall+portraitGaze+fallingDebris:ashFall+portraitWatch"
+      "signature": "return_lakeview:ash:ash:emberFall+fallingDebris:ashFall+portraitWatch"
     },
     "gameplay": {
       "arenaInset": 104,
@@ -19710,9 +19787,7 @@
       "intensity": 1.1749999999999998,
       "arenaInset": 110,
       "hazardDeck": [
-        "portraitGaze",
-        "elevatorDrop",
-        "staticBurst"
+        "elevatorDrop"
       ],
       "events": [
         "portraitWatch",
@@ -19726,20 +19801,21 @@
           "sirenCall"
         ],
         "hazards": [
-          "portraitGaze",
-          "elevatorDrop",
-          "staticBurst"
+          "elevatorDrop"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "portraitGaze",
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "return_portrait_room:ash:carpet:portraitGaze+elevatorDrop+staticBurst:portraitWatch+ashFall+sirenCall"
+      "signature": "return_portrait_room:ash:carpet:elevatorDrop:portraitWatch+ashFall+sirenCall"
     },
     "gameplay": {
       "arenaInset": 110,
@@ -19894,7 +19970,6 @@
       "intensity": 1.43,
       "arenaInset": 78,
       "hazardDeck": [
-        "crtvPulse",
         "waterSurge",
         "windShear"
       ],
@@ -19910,16 +19985,18 @@
           "stormSurge"
         ],
         "hazards": [
-          "crtvPulse",
           "waterSurge",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "st_amelia_marina:signal:wetConcrete:crtvPulse+waterSurge+windShear:crtvLock+waterRise+stormSurge"
+      "signature": "st_amelia_marina:signal:wetConcrete:waterSurge+windShear:crtvLock+waterRise+stormSurge"
     },
     "gameplay": {
       "arenaInset": 78,
@@ -20082,7 +20159,6 @@
       "intensity": 1.43,
       "arenaInset": 76,
       "hazardDeck": [
-        "crtvPulse",
         "lightningStrike",
         "fallingDebris"
       ],
@@ -20098,16 +20174,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "st_amelia_residential:signal:wetConcrete:crtvPulse+lightningStrike+fallingDebris:crtvLock+stormSurge+powerFailure"
+      "signature": "st_amelia_residential:signal:wetConcrete:lightningStrike+fallingDebris:crtvLock+stormSurge+powerFailure"
     },
     "gameplay": {
       "arenaInset": 76,
@@ -20275,7 +20353,6 @@
       "intensity": 1.43,
       "arenaInset": 92,
       "hazardDeck": [
-        "crtvPulse",
         "gurneyRush"
       ],
       "events": [
@@ -20290,17 +20367,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "gurneyRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "crtvPulse",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "townfall_medical:signal:concrete:crtvPulse+gurneyRush:crtvLock+gurneyRush+powerFailure"
+      "signature": "townfall_medical:signal:concrete:gurneyRush:crtvLock+gurneyRush+powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -20455,7 +20533,6 @@
       "intensity": 1.43,
       "arenaInset": 96,
       "hazardDeck": [
-        "crtvPulse",
         "elevatorDrop",
         "fallingDebris"
       ],
@@ -20471,16 +20548,18 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "elevatorDrop",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "ceg_tower:signal:carpet:crtvPulse+elevatorDrop+fallingDebris:crtvLock+elevatorCall+powerFailure"
+      "signature": "ceg_tower:signal:carpet:elevatorDrop+fallingDebris:crtvLock+elevatorCall+powerFailure"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -20634,7 +20713,6 @@
       "intensity": 1.43,
       "arenaInset": 78,
       "hazardDeck": [
-        "crtvPulse",
         "rootSnare",
         "windShear"
       ],
@@ -20650,16 +20728,18 @@
           "stormSurge"
         ],
         "hazards": [
-          "crtvPulse",
           "rootSnare",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "clara_woods:signal:mud:crtvPulse+rootSnare+windShear:crtvLock+rootWake+stormSurge"
+      "signature": "clara_woods:signal:mud:rootSnare+windShear:crtvLock+rootWake+stormSurge"
     },
     "gameplay": {
       "arenaInset": 78,
@@ -20822,9 +20902,7 @@
       "intensity": 1.43,
       "arenaInset": 96,
       "hazardDeck": [
-        "crtvPulse",
-        "voidPull",
-        "sirenShock"
+        "voidPull"
       ],
       "events": [
         "crtvLock",
@@ -20836,16 +20914,18 @@
           "voidPull"
         ],
         "hazards": [
+          "voidPull"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "crtvPulse",
-          "voidPull",
           "sirenShock"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       },
       "safeMargin": 118,
-      "signature": "clara_woods_different:signal:void:crtvPulse+voidPull+sirenShock:crtvLock+voidPull"
+      "signature": "clara_woods_different:signal:void:voidPull:crtvLock+voidPull"
     },
     "gameplay": {
       "arenaInset": 96,
@@ -21019,6 +21099,7 @@
         "hazards": [
           "steamVent"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "crtvLock"
         ],

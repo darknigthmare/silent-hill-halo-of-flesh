@@ -1,4 +1,19 @@
-# SILENT HILL: HALO OF FLESH
+# SILENT HILL: HALO OF FLESH — v0.8.2
+
+Prototype de fan. Cette passe ne certifie ni le canon intégral ni une fidélité graphique 1:1.
+
+## Nouveautés : impacts, avertissements et ambiance
+
+Les coups interrompus sont abandonnés, les projectiles utilisent une collision continue, les phases de boss se succèdent sans reprendre un vieux coup et les dégâts sont comptabilisés sans dépasser la vitalité restante. Les avertissements annoncent aussi les changements de sol ; un signal radio ne produit plus une attaque générique. Les détails et limites sont dans `docs/RELEASE_NOTES_v0.8.2.md` et `docs/QA_v0.8.2.md`.
+
+```sh
+npm test
+npm start
+```
+
+Serveur local : http://localhost:4173. Node >=20. Aucun compte ni clé requis pour le moteur local. Le navigateur n'est nécessaire que pour jouer ou lancer les contrôles Canvas/menus, pas pour `npm test`.
+
+## Historique du projet : SILENT HILL: HALO OF FLESH
 
 [![QA](https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/workflows/qa.yml/badge.svg)](https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/workflows/qa.yml)
 

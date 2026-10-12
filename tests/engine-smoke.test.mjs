@@ -301,8 +301,12 @@ test('stage events can darken the scene, pulse terrain and summon their lore-lin
   assert.equal(engine.triggerStageEvent('waterRise'),true);
   const state=engine.snapshot();
   assert.equal(state.world.director.activeEvent,'waterRise');
-  assert.equal(state.world.director.terrainOverride,'flooded');
-  assert.equal(state.world.terrain.id,'flooded');
+  assert.equal(state.world.director.terrainOverride,null);
+  assert.equal(state.world.director.pendingTerrain.id,'flooded');
+  assert.equal(state.world.terrain.id,stage.terrain.id);
+  const warning = engine.hazards.find(h=>h.id==='waterSurge');
+  for(let i=0;i<warning.maxTimer;i++)engine.updateHazards();
+  assert.equal(engine.currentTerrain().id,'flooded');
   assert.ok(engine.hazards.some(hazard=>hazard.id==='waterSurge'&&hazard.sourceEvent==='waterRise'));
   for(let i=0;i<170;i++)engine.updateStageDirector();
   assert.equal(engine.currentTerrain().id,stage.terrain.id);

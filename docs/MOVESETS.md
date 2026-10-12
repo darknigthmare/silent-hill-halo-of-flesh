@@ -1,4 +1,4 @@
-# Movesets complets et fidélité — v0.8.1
+# Movesets complets et fidélité — v0.8.2
 
 **230 manifestations · 4600 coups · 447 actions directement attestées · 3694 composites lore-friendly · 459 adaptations versus.**
 

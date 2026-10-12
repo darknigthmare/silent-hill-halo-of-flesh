@@ -134,7 +134,7 @@ export const STAGE_INTERACTION_TRIGGERS = Object.freeze({
 
 export const STAGE_EVENTS = Object.freeze({
   powerFailure: { name: 'PANNE GÉNÉRALE', duration: 150, darkness: .72, radioBoost: .22, message: 'LES LUMIÈRES S’ÉTEIGNENT', animation: 'lightFlicker' },
-  sirenCall: { name: 'APPEL DE LA SIRÈNE', duration: 130, darkness: .18, radioBoost: .5, hazard: 'sirenShock', message: 'LA SIRÈNE APPELLE', animation: 'sirenPulse' },
+  sirenCall: { name: 'APPEL DE LA SIRÈNE', duration: 130, darkness: .18, radioBoost: .5, gameplayRole: 'ambience', message: 'LA SIRÈNE APPELLE', animation: 'sirenPulse' },
   lockerSlam: { name: 'COULOIR DES CASIERS', duration: 100, darkness: .22, radioBoost: .25, hazard: 'lockerSlam', message: 'LES CASIERS RÉPONDENT', animation: 'lockerRattle' },
   gurneyRush: { name: 'CHARIOT SANS INFIRMIER', duration: 110, darkness: .16, radioBoost: .18, hazard: 'gurneyRush', message: 'UN CHARIOT TRAVERSE LE SERVICE', animation: 'hospitalMonitor' },
   corridorCollapse: { name: 'EFFONDREMENT DU PASSAGE', duration: 115, darkness: .25, radioBoost: .18, hazard: 'roadCollapse', message: 'LE PASSAGE SE DÉCHIRE', animation: 'chasmPulse' },
@@ -144,12 +144,12 @@ export const STAGE_EVENTS = Object.freeze({
   waterRise: { name: 'MONTÉE DES EAUX', duration: 160, darkness: .18, radioBoost: .12, hazard: 'waterSurge', terrainPulse: 'flooded', message: 'L’EAU MONTE', animation: 'waterRipple' },
   mirrorTurn: { name: 'REFLET INVERSÉ', duration: 118, darkness: .28, radioBoost: .24, hazard: 'mirrorFracture', message: 'LE REFLET BOUGE AVANT VOUS', animation: 'mirrorGlitch' },
   rootWake: { name: 'RACINES ÉVEILLÉES', duration: 130, darkness: .16, radioBoost: .08, hazard: 'rootSnare', terrainPulse: 'petals', message: 'LES RACINES CHERCHENT UN CORPS', animation: 'rootsCreep' },
-  spotlightHunt: { name: 'FAISCEAU DE SURVEILLANCE', duration: 125, darkness: .5, radioBoost: .1, hazard: 'spotlightSweep', message: 'LE FAISCEAU VOUS CHERCHE', animation: 'spotlightSweep' },
-  crtvLock: { name: 'SIGNAL CRTV', duration: 112, darkness: .22, radioBoost: .58, hazard: 'crtvPulse', message: 'LE SIGNAL SE VERROUILLE', animation: 'tvStatic' },
-  bellToll: { name: 'CLOCHE DU JUGEMENT', duration: 118, darkness: .12, radioBoost: .2, hazard: 'bellToll', message: 'LA CLOCHE COMPTE LES FAUTES', animation: 'bellSwing' },
+  spotlightHunt: { name: 'FAISCEAU DE SURVEILLANCE', duration: 125, darkness: .5, radioBoost: .1, gameplayRole: 'ambience', message: 'LE FAISCEAU VOUS CHERCHE', animation: 'spotlightSweep' },
+  crtvLock: { name: 'SIGNAL CRTV', duration: 112, darkness: .22, radioBoost: .58, gameplayRole: 'ambience', message: 'LE SIGNAL SE VERROUILLE', animation: 'tvStatic' },
+  bellToll: { name: 'CLOCHE DU JUGEMENT', duration: 118, darkness: .12, radioBoost: .2, gameplayRole: 'ambience', message: 'LA CLOCHE COMPTE LES FAUTES', animation: 'bellSwing' },
   voidPull: { name: 'ATTRACTION DU VIDE', duration: 120, darkness: .62, radioBoost: .3, hazard: 'voidPull', terrainPulse: 'void', message: 'LE VIDE TIRE SUR LE SOL', animation: 'voidSurge' },
   ashFall: { name: 'CHUTE DE CENDRES', duration: 150, darkness: .18, radioBoost: .12, hazard: 'emberFall', terrainPulse: 'ash', message: 'LA CENDRE RECOUVRE LE SOL', animation: 'ashFall' },
-  portraitWatch: { name: 'REGARDS SUR LE MUR', duration: 105, darkness: .25, radioBoost: .2, hazard: 'portraitGaze', message: 'LES PORTRAITS VOUS SUIVENT', animation: 'portraitBlink' },
+  portraitWatch: { name: 'REGARDS SUR LE MUR', duration: 105, darkness: .25, radioBoost: .2, gameplayRole: 'ambience', message: 'LES PORTRAITS VOUS SUIVENT', animation: 'portraitBlink' },
   elevatorCall: { name: 'APPEL D’ÉTAGE', duration: 100, darkness: .3, radioBoost: .18, hazard: 'elevatorDrop', message: 'L’ASCENSEUR ARRIVE VIDE', animation: 'elevatorBlink' },
   roomBreath: { name: 'RESPIRATION DE LA PIÈCE', duration: 135, darkness: .34, radioBoost: .32, hazard: 'roomPulse', message: 'LA PIÈCE RESPIRE', animation: 'bloodPulse' },
   stormSurge: { name: 'FRONT D’ORAGE', duration: 135, darkness: .32, radioBoost: .2, hazard: 'lightningStrike', terrainPulse: 'wetConcrete', message: 'L’ORAGE COUPE LA ROUTE', animation: 'lightning' },
@@ -383,10 +383,10 @@ export function stageEventDefinition(id) {
 }
 
 export function stageHazardDeck(stage, phase = 'fog') {
-  const deck = stage?.director?.hazardDeck || [stage?.hazard || 'staticBurst'];
+  const deck = stage?.director?.hazardDeck || [];
   if (phase === 'fog') {
     const filtered = deck.filter((id) => !['sirenShock','ritualSeal','voidPull'].includes(id));
-    return filtered.length ? filtered : deck;
+    return filtered;
   }
   return deck;
 }

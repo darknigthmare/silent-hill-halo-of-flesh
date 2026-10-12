@@ -1,5 +1,5 @@
 {
-  "version": "0.8.1",
+  "version": "0.8.2",
   "terrains": {
     "concrete": {
       "name": "BÉTON SEC",
@@ -313,7 +313,7 @@
       "duration": 130,
       "darkness": 0.18,
       "radioBoost": 0.5,
-      "hazard": "sirenShock",
+      "gameplayRole": "ambience",
       "message": "LA SIRÈNE APPELLE",
       "animation": "sirenPulse"
     },
@@ -405,7 +405,7 @@
       "duration": 125,
       "darkness": 0.5,
       "radioBoost": 0.1,
-      "hazard": "spotlightSweep",
+      "gameplayRole": "ambience",
       "message": "LE FAISCEAU VOUS CHERCHE",
       "animation": "spotlightSweep"
     },
@@ -414,7 +414,7 @@
       "duration": 112,
       "darkness": 0.22,
       "radioBoost": 0.58,
-      "hazard": "crtvPulse",
+      "gameplayRole": "ambience",
       "message": "LE SIGNAL SE VERROUILLE",
       "animation": "tvStatic"
     },
@@ -423,7 +423,7 @@
       "duration": 118,
       "darkness": 0.12,
       "radioBoost": 0.2,
-      "hazard": "bellToll",
+      "gameplayRole": "ambience",
       "message": "LA CLOCHE COMPTE LES FAUTES",
       "animation": "bellSwing"
     },
@@ -452,7 +452,7 @@
       "duration": 105,
       "darkness": 0.25,
       "radioBoost": 0.2,
-      "hazard": "portraitGaze",
+      "gameplayRole": "ambience",
       "message": "LES PORTRAITS VOUS SUIVENT",
       "animation": "portraitBlink"
     },
@@ -579,14 +579,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "lockerSlam",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -683,11 +682,13 @@
         ],
         "hazards": [
           "lockerSlam",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -746,7 +747,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -820,14 +820,15 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -888,8 +889,7 @@
         }
       ],
       "hazards": [
-        "roadCollapse",
-        "staticBurst"
+        "roadCollapse"
       ],
       "animations": [
         {
@@ -961,11 +961,13 @@
           "powerFailure"
         ],
         "hazards": [
-          "roadCollapse",
+          "roadCollapse"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -1009,7 +1011,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -1037,7 +1039,6 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
         "voidPull"
       ],
@@ -1134,12 +1135,14 @@
           "ritualWake"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -1310,6 +1313,7 @@
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -1361,8 +1365,7 @@
         }
       ],
       "hazards": [
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "animations": [
         {
@@ -1411,14 +1414,15 @@
           "roomBreath"
         ],
         "hazards": [
-          "doorSlam",
-          "staticBurst"
+          "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
-          "portraitGaze"
+          "portraitGaze",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -1558,6 +1562,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -1628,7 +1633,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -1725,14 +1729,15 @@
           "elevatorCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -1834,6 +1839,7 @@
         "hazards": [
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
@@ -1989,6 +1995,7 @@
           "waterSurge",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -2120,6 +2127,7 @@
           "emberFall",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -2188,15 +2196,14 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "animations": [
         {
@@ -2299,11 +2306,13 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -2356,13 +2365,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "fallingDebris",
         "bloodTide"
       ],
@@ -2429,15 +2437,16 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "gurneyRush",
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "gurneyRush",
           "mirrorFracture"
         ],
@@ -2504,7 +2513,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -2604,6 +2613,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -2673,7 +2683,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -2787,6 +2797,7 @@
           "fallingDebris",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -2863,7 +2874,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -2982,6 +2993,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -3126,6 +3138,7 @@
           "roomPulse",
           "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -3190,8 +3203,7 @@
         }
       ],
       "hazards": [
-        "trainRush",
-        "staticBurst"
+        "trainRush"
       ],
       "animations": [
         {
@@ -3263,12 +3275,13 @@
           "powerFailure"
         ],
         "hazards": [
-          "trainRush",
-          "staticBurst"
+          "trainRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
-          "steamVent"
+          "steamVent",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -3314,7 +3327,7 @@
           "duration": 125,
           "darkness": 0.5,
           "radioBoost": 0.1,
-          "hazard": "spotlightSweep",
+          "gameplayRole": "ambience",
           "message": "LE FAISCEAU VOUS CHERCHE",
           "animation": "spotlightSweep"
         },
@@ -3331,7 +3344,6 @@
         }
       ],
       "hazards": [
-        "spotlightSweep",
         "waterSurge",
         "chainSweep"
       ],
@@ -3405,12 +3417,14 @@
           "waterRise"
         ],
         "hazards": [
-          "spotlightSweep",
           "waterSurge",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "spotlightSweep"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -3460,7 +3474,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "doorSlam",
         "fallingDebris"
       ],
@@ -3511,14 +3524,15 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "portraitGaze"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -3589,7 +3603,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -3686,15 +3699,16 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall",
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -3765,7 +3779,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -3863,15 +3876,17 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -3931,7 +3946,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "doorSlam",
         "lightningStrike",
         "fallingDebris"
@@ -4013,15 +4027,17 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -4086,7 +4102,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -4101,7 +4117,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -4210,12 +4225,14 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -4270,7 +4287,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -4375,6 +4392,7 @@
         "hazards": [
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -4521,6 +4539,7 @@
           "frostWave",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -4622,6 +4641,7 @@
         "hazards": [
           "waterSurge"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge",
           "spotlightHunt"
@@ -4696,7 +4716,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -4826,6 +4846,7 @@
           "fallingDebris",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -4878,8 +4899,7 @@
         }
       ],
       "hazards": [
-        "ritualSeal",
-        "staticBurst"
+        "ritualSeal"
       ],
       "animations": [
         {
@@ -4928,14 +4948,15 @@
           "ritualWake"
         ],
         "hazards": [
-          "ritualSeal",
-          "staticBurst"
+          "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -5071,6 +5092,7 @@
           "doorSlam",
           "roomPulse"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
@@ -5186,6 +5208,7 @@
           "petalBloom",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake"
         ],
@@ -5295,6 +5318,7 @@
           "rootSnare",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -5438,6 +5462,7 @@
           "ritualSeal",
           "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -5514,7 +5539,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -5603,14 +5627,15 @@
           "rootWake"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "lockerSlam",
           "bellToll"
         ],
         "excludedHazards": [
+          "staticBurst",
           "lockerSlam"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -5777,6 +5802,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -5889,6 +5915,7 @@
           "petalBloom",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "bellToll"
@@ -6040,6 +6067,7 @@
           "emberFall",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6093,7 +6121,6 @@
       ],
       "hazards": [
         "ritualSeal",
-        "staticBurst",
         "petalBloom"
       ],
       "animations": [
@@ -6151,13 +6178,14 @@
         ],
         "hazards": [
           "ritualSeal",
-          "staticBurst",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6220,8 +6248,7 @@
         }
       ],
       "hazards": [
-        "ritualSeal",
-        "staticBurst"
+        "ritualSeal"
       ],
       "animations": [
         {
@@ -6300,11 +6327,12 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "ritualSeal",
-          "staticBurst"
+          "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6452,6 +6480,7 @@
           "waterSurge",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6505,7 +6534,6 @@
       ],
       "hazards": [
         "ritualSeal",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -6563,13 +6591,14 @@
         ],
         "hazards": [
           "ritualSeal",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "staticBurst",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6715,6 +6744,7 @@
           "bloodTide",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -6827,6 +6857,7 @@
           "chainSweep",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "steamRelease"
         ],
@@ -6876,7 +6907,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -6902,7 +6933,6 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -7000,15 +7030,17 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -7063,7 +7095,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -7172,6 +7204,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -7221,7 +7254,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -7305,6 +7338,7 @@
           "bloodTide",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -7367,7 +7401,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -7484,6 +7518,7 @@
           "lockerSlam",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -7559,13 +7594,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -7674,14 +7708,15 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -7727,7 +7762,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -7779,6 +7814,7 @@
           "chainSweep",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -7839,7 +7875,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -7912,6 +7948,7 @@
         "hazards": [
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -7991,7 +8028,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -8088,14 +8124,16 @@
           "ritualWake"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -8168,7 +8206,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "fallingDebris",
         "rootSnare"
       ],
@@ -8265,12 +8302,14 @@
           "ritualWake"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris",
           "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -8333,8 +8372,7 @@
       ],
       "hazards": [
         "ritualSeal",
-        "voidPull",
-        "sirenShock"
+        "voidPull"
       ],
       "animations": [
         {
@@ -8407,11 +8445,13 @@
         ],
         "hazards": [
           "ritualSeal",
-          "voidPull",
+          "voidPull"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "sirenShock"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -8465,15 +8505,14 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "gurneyRush",
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "animations": [
         {
@@ -8560,11 +8599,13 @@
         ],
         "hazards": [
           "gurneyRush",
-          "chainSweep",
+          "chainSweep"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -8618,7 +8659,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -8716,6 +8757,7 @@
           "chainSweep",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -8771,7 +8813,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -8869,6 +8911,7 @@
           "emberFall",
           "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -8936,7 +8979,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -9071,6 +9114,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -9142,7 +9186,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -9246,14 +9289,16 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -9405,6 +9450,7 @@
           "fallingDebris",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
@@ -9471,13 +9517,12 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -9581,14 +9626,16 @@
           "portraitWatch"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -9637,8 +9684,7 @@
         }
       ],
       "hazards": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "animations": [
         {
@@ -9701,9 +9747,9 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll",
@@ -9711,7 +9757,8 @@
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -9756,7 +9803,7 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         },
@@ -9770,10 +9817,7 @@
           "animation": "lightFlicker"
         }
       ],
-      "hazards": [
-        "portraitGaze",
-        "staticBurst"
-      ],
+      "hazards": [],
       "animations": [
         {
           "id": "fogDrift",
@@ -9850,12 +9894,13 @@
           "portraitWatch",
           "powerFailure"
         ],
-        "hazards": [
+        "hazards": [],
+        "ambienceOnly": true,
+        "excludedEvents": [],
+        "excludedHazards": [
           "portraitGaze",
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -9900,7 +9945,7 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         },
@@ -9926,7 +9971,6 @@
       ],
       "hazards": [
         "doorSlam",
-        "portraitGaze",
         "fallingDebris"
       ],
       "animations": [
@@ -10037,13 +10081,14 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "portraitGaze",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -10108,7 +10153,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -10116,7 +10161,6 @@
       "hazards": [
         "fallingDebris",
         "doorSlam",
-        "staticBurst",
         "emberFall"
       ],
       "animations": [
@@ -10235,11 +10279,13 @@
         "hazards": [
           "fallingDebris",
           "doorSlam",
-          "staticBurst",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -10302,14 +10348,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "trainRush",
-        "staticBurst"
+        "trainRush"
       ],
       "animations": [
         {
@@ -10411,11 +10456,12 @@
           "sirenCall"
         ],
         "hazards": [
-          "trainRush",
-          "staticBurst"
+          "trainRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "steamVent"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -10492,7 +10538,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -10618,6 +10664,7 @@
           "steamVent",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -10682,14 +10729,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "elevatorDrop",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -10793,11 +10839,13 @@
         ],
         "hazards": [
           "elevatorDrop",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -10841,7 +10889,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -10867,7 +10915,6 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -10979,13 +11026,15 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -11048,13 +11097,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -11159,15 +11207,17 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -11230,15 +11280,14 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "carouselSweep",
-        "fallingDebris",
-        "staticBurst"
+        "fallingDebris"
       ],
       "animations": [
         {
@@ -11341,11 +11390,13 @@
         ],
         "hazards": [
           "carouselSweep",
-          "fallingDebris",
+          "fallingDebris"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -11419,7 +11470,6 @@
       "hazards": [
         "rootSnare",
         "windShear",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -11524,13 +11574,15 @@
         "hazards": [
           "rootSnare",
           "windShear",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -11602,8 +11654,7 @@
       "hazards": [
         "fallingDebris",
         "doorSlam",
-        "elevatorDrop",
-        "staticBurst"
+        "elevatorDrop"
       ],
       "animations": [
         {
@@ -11707,13 +11758,15 @@
         "hazards": [
           "fallingDebris",
           "doorSlam",
-          "elevatorDrop",
-          "staticBurst"
+          "elevatorDrop"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -11763,7 +11816,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "doorSlam",
         "fallingDebris"
       ],
@@ -11821,14 +11873,15 @@
           "roomBreath"
         ],
         "hazards": [
-          "staticBurst",
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "staticBurst",
           "portraitGaze"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -11948,6 +12001,7 @@
           "doorSlam",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch",
           "mirrorTurn"
@@ -11999,7 +12053,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -12026,7 +12080,6 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
         "voidPull",
         "bloodTide"
@@ -12138,15 +12191,16 @@
           "roomBreath"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "voidPull",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "portraitWatch"
         ],
         "excludedHazards": [
+          "sirenShock",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -12217,7 +12271,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris",
         "mirrorFracture"
@@ -12322,15 +12375,17 @@
           "mirrorTurn"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris",
           "mirrorFracture"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -12375,7 +12430,7 @@
           "duration": 125,
           "darkness": 0.5,
           "radioBoost": 0.1,
-          "hazard": "spotlightSweep",
+          "gameplayRole": "ambience",
           "message": "LE FAISCEAU VOUS CHERCHE",
           "animation": "spotlightSweep"
         },
@@ -12390,7 +12445,6 @@
         }
       ],
       "hazards": [
-        "spotlightSweep",
         "fallingDebris"
       ],
       "animations": [
@@ -12470,13 +12524,14 @@
           "powerFailure"
         ],
         "hazards": [
-          "spotlightSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
+          "spotlightSweep",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -12588,6 +12643,7 @@
           "fallingDebris",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "mirrorTurn"
@@ -12657,13 +12713,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -12767,14 +12822,15 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -12829,13 +12885,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -12915,14 +12970,15 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall"
         ],
         "excludedHazards": [
-          "elevatorDrop"
+          "elevatorDrop",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -12976,14 +13032,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "doorSlam",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -13078,14 +13133,15 @@
         ],
         "hazards": [
           "doorSlam",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -13130,7 +13186,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -13145,8 +13201,7 @@
         }
       ],
       "hazards": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "animations": [
         {
@@ -13225,16 +13280,17 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -13280,7 +13336,7 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         },
@@ -13310,7 +13366,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -13326,7 +13382,6 @@
       ],
       "hazards": [
         "doorSlam",
-        "portraitGaze",
         "mirrorFracture",
         "fallingDebris"
       ],
@@ -13455,12 +13510,14 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "mirrorFracture",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "portraitGaze"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -13504,7 +13561,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -13600,6 +13657,7 @@
         "hazards": [
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "rootWake",
           "steamRelease"
@@ -13660,7 +13718,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
@@ -13749,6 +13807,7 @@
           "chainSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "steamRelease"
         ],
@@ -13866,6 +13925,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt"
         ],
@@ -14017,6 +14077,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14164,6 +14225,7 @@
           "iceFracture",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14277,6 +14339,7 @@
           "frostWave",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt"
         ],
@@ -14461,6 +14524,7 @@
           "fallingDebris",
           "waterSurge"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14533,7 +14597,6 @@
       ],
       "hazards": [
         "elevatorDrop",
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -14644,13 +14707,15 @@
         ],
         "hazards": [
           "elevatorDrop",
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -14694,7 +14759,7 @@
           "duration": 118,
           "darkness": 0.12,
           "radioBoost": 0.2,
-          "hazard": "bellToll",
+          "gameplayRole": "ambience",
           "message": "LA CLOCHE COMPTE LES FAUTES",
           "animation": "bellSwing"
         },
@@ -14722,7 +14787,6 @@
         }
       ],
       "hazards": [
-        "bellToll",
         "ritualSeal",
         "chainSweep",
         "fallingDebris"
@@ -14834,15 +14898,16 @@
           "waterRise"
         ],
         "hazards": [
-          "bellToll",
           "ritualSeal",
           "chainSweep",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
         "excludedHazards": [
+          "bellToll",
           "emberFall"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -14916,7 +14981,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -15027,12 +15091,14 @@
           "waterRise"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -15094,8 +15160,7 @@
       ],
       "hazards": [
         "voidPull",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "animations": [
         {
@@ -15175,11 +15240,13 @@
         ],
         "hazards": [
           "voidPull",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -15230,8 +15297,7 @@
         }
       ],
       "hazards": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "animations": [
         {
@@ -15301,9 +15367,9 @@
           "waterRise"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll",
@@ -15311,7 +15377,8 @@
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -15377,7 +15444,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -15392,7 +15459,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -15515,12 +15581,14 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -15593,13 +15661,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -15715,12 +15782,13 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -15775,13 +15843,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "fallingDebris"
       ],
       "animations": [
@@ -15868,14 +15935,15 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "gurneyRush",
           "elevatorCall"
         ],
         "excludedHazards": [
+          "staticBurst",
           "gurneyRush",
           "mirrorFracture"
         ],
@@ -15932,7 +16000,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -15947,7 +16015,6 @@
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -16051,14 +16118,16 @@
           "powerFailure"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "stormSurge"
         ],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -16102,7 +16171,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -16117,8 +16186,7 @@
         }
       ],
       "hazards": [
-        "chainSweep",
-        "staticBurst"
+        "chainSweep"
       ],
       "animations": [
         {
@@ -16197,16 +16265,17 @@
           "powerFailure"
         ],
         "hazards": [
-          "chainSweep",
-          "staticBurst"
+          "chainSweep"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "spotlightHunt",
           "bellToll"
         ],
         "excludedHazards": [
           "spotlightSweep",
-          "frostWave"
+          "frostWave",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -16271,14 +16340,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "rootSnare",
-        "staticBurst"
+        "rootSnare"
       ],
       "animations": [
         {
@@ -16380,11 +16448,12 @@
           "sirenCall"
         ],
         "hazards": [
-          "rootSnare",
-          "staticBurst"
+          "rootSnare"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "frostWave"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -16453,7 +16522,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -16469,7 +16538,6 @@
       ],
       "hazards": [
         "waterSurge",
-        "staticBurst",
         "bloodTide"
       ],
       "animations": [
@@ -16585,11 +16653,12 @@
         ],
         "hazards": [
           "waterSurge",
-          "staticBurst",
           "bloodTide"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "frostWave"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -16635,7 +16704,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -16661,7 +16730,6 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
         "emberFall",
         "voidPull"
@@ -16766,13 +16834,15 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
           "emberFall",
           "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "sirenShock"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -16816,7 +16886,7 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         },
@@ -16842,10 +16912,8 @@
         }
       ],
       "hazards": [
-        "sirenShock",
         "chainSweep",
-        "voidPull",
-        "staticBurst"
+        "voidPull"
       ],
       "animations": [
         {
@@ -16961,14 +17029,15 @@
           "powerFailure"
         ],
         "hazards": [
-          "sirenShock",
           "chainSweep",
-          "voidPull",
-          "staticBurst"
+          "voidPull"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
-          "emberFall"
+          "sirenShock",
+          "emberFall",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -17032,15 +17101,14 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "animations": [
         {
@@ -17143,11 +17211,13 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
+          "doorSlam"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -17210,15 +17280,14 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
         "carouselSweep",
-        "fallingDebris",
-        "staticBurst"
+        "fallingDebris"
       ],
       "animations": [
         {
@@ -17321,11 +17390,13 @@
         ],
         "hazards": [
           "carouselSweep",
-          "fallingDebris",
+          "fallingDebris"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "staticBurst"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -17473,6 +17544,7 @@
           "petalBloom",
           "lightningStrike"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -17534,8 +17606,7 @@
       ],
       "hazards": [
         "fallingDebris",
-        "doorSlam",
-        "staticBurst"
+        "doorSlam"
       ],
       "animations": [
         {
@@ -17615,15 +17686,16 @@
         ],
         "hazards": [
           "fallingDebris",
-          "doorSlam",
-          "staticBurst"
+          "doorSlam"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "elevatorCall",
           "rootWake"
         ],
         "excludedHazards": [
-          "elevatorDrop"
+          "elevatorDrop",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -17778,6 +17850,7 @@
           "ritualSeal",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -17824,7 +17897,7 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         },
@@ -17852,7 +17925,6 @@
       ],
       "hazards": [
         "doorSlam",
-        "portraitGaze",
         "petalBloom"
       ],
       "animations": [
@@ -17963,14 +18035,15 @@
         ],
         "hazards": [
           "doorSlam",
-          "portraitGaze",
           "petalBloom"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn",
           "rootWake"
         ],
         "excludedHazards": [
+          "portraitGaze",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -18083,6 +18156,7 @@
           "ritualSeal",
           "emberFall"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll",
           "rootWake"
@@ -18238,6 +18312,7 @@
           "petalBloom",
           "ritualSeal"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "bellToll"
         ],
@@ -18317,13 +18392,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "roadCollapse",
         "fallingDebris"
       ],
@@ -18439,12 +18513,14 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "roadCollapse",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "staticBurst"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -18528,13 +18604,12 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "staticBurst",
         "gurneyRush",
         "fallingDebris"
       ],
@@ -18662,12 +18737,13 @@
           "sirenCall"
         ],
         "hazards": [
-          "staticBurst",
           "gurneyRush",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "staticBurst",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -18724,14 +18800,13 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         }
       ],
       "hazards": [
         "emberFall",
-        "portraitGaze",
         "fallingDebris"
       ],
       "animations": [
@@ -18819,11 +18894,13 @@
         ],
         "hazards": [
           "emberFall",
-          "portraitGaze",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "portraitGaze"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -18867,7 +18944,7 @@
           "duration": 105,
           "darkness": 0.25,
           "radioBoost": 0.2,
-          "hazard": "portraitGaze",
+          "gameplayRole": "ambience",
           "message": "LES PORTRAITS VOUS SUIVENT",
           "animation": "portraitBlink"
         },
@@ -18888,15 +18965,13 @@
           "duration": 130,
           "darkness": 0.18,
           "radioBoost": 0.5,
-          "hazard": "sirenShock",
+          "gameplayRole": "ambience",
           "message": "LA SIRÈNE APPELLE",
           "animation": "sirenPulse"
         }
       ],
       "hazards": [
-        "portraitGaze",
-        "elevatorDrop",
-        "staticBurst"
+        "elevatorDrop"
       ],
       "animations": [
         {
@@ -18998,15 +19073,16 @@
           "sirenCall"
         ],
         "hazards": [
-          "portraitGaze",
-          "elevatorDrop",
-          "staticBurst"
+          "elevatorDrop"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "mirrorTurn"
         ],
         "excludedHazards": [
-          "mirrorFracture"
+          "portraitGaze",
+          "mirrorFracture",
+          "staticBurst"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
@@ -19051,7 +19127,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19079,7 +19155,6 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
         "waterSurge",
         "windShear"
       ],
@@ -19190,12 +19265,14 @@
           "stormSurge"
         ],
         "hazards": [
-          "crtvPulse",
           "waterSurge",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -19239,7 +19316,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19265,7 +19342,6 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
         "lightningStrike",
         "fallingDebris"
       ],
@@ -19383,12 +19459,14 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "lightningStrike",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -19432,7 +19510,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19457,7 +19535,6 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
         "gurneyRush"
       ],
       "animations": [
@@ -19560,11 +19637,12 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "gurneyRush"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
         "excludedHazards": [
+          "crtvPulse",
           "mirrorFracture"
         ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
@@ -19610,7 +19688,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19635,7 +19713,6 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
         "elevatorDrop",
         "fallingDebris"
       ],
@@ -19739,12 +19816,14 @@
           "powerFailure"
         ],
         "hazards": [
-          "crtvPulse",
           "elevatorDrop",
           "fallingDebris"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -19788,7 +19867,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19816,7 +19895,6 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
         "rootSnare",
         "windShear"
       ],
@@ -19927,12 +20005,14 @@
           "stormSurge"
         ],
         "hazards": [
-          "crtvPulse",
           "rootSnare",
           "windShear"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [],
-        "excludedHazards": [],
+        "excludedHazards": [
+          "crtvPulse"
+        ],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -19977,7 +20057,7 @@
           "duration": 112,
           "darkness": 0.22,
           "radioBoost": 0.58,
-          "hazard": "crtvPulse",
+          "gameplayRole": "ambience",
           "message": "LE SIGNAL SE VERROUILLE",
           "animation": "tvStatic"
         },
@@ -19994,9 +20074,7 @@
         }
       ],
       "hazards": [
-        "crtvPulse",
-        "voidPull",
-        "sirenShock"
+        "voidPull"
       ],
       "animations": [
         {
@@ -20089,12 +20167,14 @@
           "voidPull"
         ],
         "hazards": [
+          "voidPull"
+        ],
+        "ambienceOnly": false,
+        "excludedEvents": [],
+        "excludedHazards": [
           "crtvPulse",
-          "voidPull",
           "sirenShock"
         ],
-        "excludedEvents": [],
-        "excludedHazards": [],
         "evidenceScope": "project-catalogue-props-only / not-independent-canon-certification"
       }
     },
@@ -20248,6 +20328,7 @@
         "hazards": [
           "steamVent"
         ],
+        "ambienceOnly": false,
         "excludedEvents": [
           "crtvLock"
         ],
