@@ -1,0 +1,61 @@
+name: Integrate verified v0.9.0
+on:
+  push:
+    branches: [feat/player-journey-v090]
+    paths: [.github/workflows/integrate-v090.yml]
+permissions:
+  contents: write
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: feat/player-journey-v090
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Verify branch base and source archive
+        env:
+          SOURCE_URL: "https://sdmntprnortheu.oaiusercontent.com/files/00000000-9060-81f4-a5bc-0f9ebb61af7c/raw?se=2026-10-14T08%3A53%3A04Z&sp=r&sv=2026-02-06&sr=b&scid=ae52d726-264c-516c-b13f-a51eabefe8b4&skoid=e5f84a89-964a-4fd3-92c2-c2cb3a12ea16&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-14T05%3A00%3A28Z&ske=2026-10-15T05%3A00%3A28Z&sks=b&skv=2026-02-06&sig=ezGFaCjAL4P3iIxGIPvTUhbUwwZ1Wccsgos%2BMLGJHDw%3D"
+        run: |
+          test "$(git rev-parse HEAD^)" = 'c0858f74ef261bf1a943a7e3c87d586d88e3d194'
+          curl --fail --location --retry 2 --max-time 90 "$SOURCE_URL" -o /tmp/halo-v090.tar.gz
+          echo '096d85c19c0d943659261fed71cf76ff93e38e7a314e129e702fc4b35ddfd456  /tmp/halo-v090.tar.gz' | sha256sum --check --strict
+      - name: Overlay only reviewed regular source files
+        run: |
+          python3 - <<'PY'
+          import tarfile, pathlib
+          root=pathlib.Path.cwd()
+          with tarfile.open('/tmp/halo-v090.tar.gz','r:gz') as archive:
+              members=archive.getmembers()
+              assert len(members)==126
+              for member in members:
+                  p=pathlib.PurePosixPath(member.name)
+                  assert member.isfile() and member.size<30000000, member.name
+                  assert not p.is_absolute() and '..' not in p.parts, member.name
+                  assert p.parts[0]=='SILENT-HILL-HALO-OF-FLESH_v0.9.0', member.name
+                  rel=pathlib.Path(*p.parts[1:])
+                  assert rel.parts and rel.parts[0] not in ('.git','node_modules','dist'), member.name
+                  assert all(not (root/pathlib.Path(*rel.parts[:n])).is_symlink() for n in range(1,len(rel.parts)+1)), member.name
+                  dest=root/rel
+                  dest.parent.mkdir(parents=True,exist_ok=True)
+                  dest.write_bytes(archive.extractfile(member).read())
+          PY
+          test -f src/run-progress.js
+          test -f tests/player-journey.test.mjs
+          rm .github/workflows/integrate-v090.yml
+          git add -A
+      - name: Execute tests and verify generated data
+        run: |
+          npm test
+          git diff --exit-code
+      - name: Publish the feature branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'feat: persistent journeys, player attribution, safe saves and controls v0.9.0'
+          git push origin HEAD:refs/heads/feat/player-journey-v090
+          echo "Feature commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
