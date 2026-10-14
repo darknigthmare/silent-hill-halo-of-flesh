@@ -15,3 +15,6 @@ Ce dépôt ne contient aucun fichier extrait d’un jeu commercial :
 Les rendus visuels sont composés à l’exécution à partir de primitives Canvas 2D originales. Les sons sont synthétisés par Web Audio. Les textes de contexte sont des résumés originaux et non des reproductions de scripts.
 
 Le terme « fidélité » désigne ici l’objectif de respecter les caractéristiques reconnaissables, les proportions relatives, la posture, le comportement et le rôle des créatures. Il ne signifie pas que des assets officiels sont fournis ou copiés pixel par pixel.
+
+## Commercialisation et portée de la licence de code
+La licence MIT des contributions de code ne concède aucun droit sur les marques, personnages, designs, histoires ou lieux protégés de Silent Hill. Des dessins originaux ou une mention « fan-game non commercial » ne remplacent pas les autorisations nécessaires. Aucun droit commercial de franchise n'est établi dans ce dépôt. Le projet reste un prototype ; les autorisations et contrats requis doivent être vérifiés avant publication commerciale. Voir `release/readiness.json`.

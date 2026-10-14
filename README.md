@@ -1,3 +1,15 @@
+# État courant — v0.9.0, prototype en développement
+
+La passe actuelle apporte checkpoints de parcours, remappage, commandes tactiles corrigées, résultats par sujet et sauvegardes validées. **Ce projet n'est pas déclaré prêt à commercialiser.** La fidélité exhaustive, les arts définitifs et les droits de franchise ne sont pas certifiés.
+
+Détails : [notes v0.9.0](docs/RELEASE_NOTES_v0.9.0.md), [QA et limites](docs/QA_v0.9.0.md), [conditions de commercialisation](docs/COMMERCIAL_READINESS.md).
+
+`npm test` : suite automatisée. `npm start` : serveur local. `npm run qa:browser` : tests HTTP sur environnement autorisé après installation Playwright. `npm run release:check` : conditions de sortie, actuellement bloquées.
+
+Les sections ci-dessous décrivent l'historique et les systèmes du prototype ; leurs anciens chiffres de QA ne remplacent pas les résultats de la passe actuelle.
+
+---
+
 # SILENT HILL: HALO OF FLESH — v0.8.2
 
 Prototype de fan. Cette passe ne certifie ni le canon intégral ni une fidélité graphique 1:1.

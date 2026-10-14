@@ -1,3 +1,6 @@
+## 0.9.0 — 14 octobre 2026
+Parcours persistants et reprises, résultats par emplacement du joueur (duels miroir corrigés), statistiques personnelles, rangs de Chroniques de bout en bout, commandes reconfigurables, saut/accroupissement tactile, pause accessible, sauvegardes/imports validés et conditions de sortie explicites. 202 tests Node ; les détails et limites de navigateur figurent dans `docs/QA_v0.9.0.md`.
+
 # v0.8.2 — Impacts, avertissements et ambiance
 
 - Interruption réelle des coups ; armure et parades cohérentes ; pas de contre physique à distance sur un projectile.

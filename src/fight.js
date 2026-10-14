@@ -6,6 +6,7 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
+import { loadControls, GamepadSlots } from './player-input.js';
 
 const WIDTH = 1280;
 const HEIGHT = 720;
@@ -25,16 +26,17 @@ const P2_KEYS = {
 const ATTACK_ACTIONS = ['light', 'heavy', 'special', 'throw', 'super'];
 
 class InputState {
-  constructor() {
+  constructor(bindings) {
+    this.bindings = bindings;
     this.held = new Set();
     this.pressed = new Set();
     this.released = new Set();
     this.enabled = true;
     this.onDown = (event) => {
-      if (!this.enabled) return;
+      if (!this.enabled || event.target?.closest?.('input,textarea,select,button,dialog')) return;
       if (!this.held.has(event.code)) this.pressed.add(event.code);
       this.held.add(event.code);
-      if ([...Object.values(P1_KEYS), ...Object.values(P2_KEYS)].includes(event.code)) event.preventDefault();
+      if (this.bindings.players.some(p => Object.values(p).includes(event.code))) event.preventDefault();
     };
     this.onUp = (event) => {
       this.held.delete(event.code);
@@ -287,7 +289,10 @@ export class FightEngine {
     const initialRatio = clamp(Number(this.config.initialHealthRatio ?? 1), .05, 1);
     this.actors[0].health = Math.round(this.actors[0].maxHealth * initialRatio);
     if (this.config.initialMeter != null) this.actors[0].meter = clamp(Number(this.config.initialMeter) || 0, 0, 100);
-    this.input = new InputState();
+    this.bindings = loadControls();
+    this.input = new InputState(this.bindings);
+    this.padSlots = new GamepadSlots();
+    this.padSystemPrevious = [false, false];
     this.running = false;
     this.paused = false;
     this.accumulator = 0;
@@ -333,7 +338,7 @@ export class FightEngine {
     this.inputBuffer = [null, null];
     this.boundLoop = (time) => this.loop(time);
     this.onFocusLoss = () => {
-      if (this.phase === 'fight') this.togglePause(true);
+      if (this.phase !== 'matchEnd') this.togglePause(true);
       else this.clearInputs();
     };
     this.onVisibilityChange = () => { if (globalThis.document?.hidden) this.onFocusLoss(); };
@@ -360,6 +365,7 @@ export class FightEngine {
     this.input.clear();
     this.touch = { p1: {}, p2: {} };
     this.inputBuffer = [null, null];
+    this.gamepadPrev = (this.currentPads || []).map(p => p?.buttons?.map(b => !!b.pressed) || []);
   }
 
   togglePause(force) {
@@ -383,8 +389,11 @@ export class FightEngine {
   }
 
   setTouch(player, action, value) {
-    if (this.touch[player]) this.touch[player][action] = value;
+    if (action === 'up') action = 'jump'; // Older tactile layouts.
+    if (this.touch[player] && Object.hasOwn(this.bindings.players[0], action)) this.touch[player][action] = value;
   }
+
+  setBindings(bindings) { this.bindings = bindings; this.input.bindings = bindings; this.clearInputs(); }
 
   forceOtherworldShift() {
     if (!this.world.triggered) this.triggerOtherworldShift();
@@ -476,6 +485,7 @@ export class FightEngine {
     if (!this.running) return;
     const dt = Math.min(.05, (now - this.lastTime) / 1000 || 0);
     this.lastTime = now;
+    this.updateGamepads();
     if (!this.paused) {
       this.accumulator += dt;
       while (this.accumulator >= STEP) {
@@ -492,6 +502,7 @@ export class FightEngine {
     this.frame++;
     if (this.hitstop > 0) {
       this.updateGamepads();
+      if (this.paused) return;
       for (const index of [0, 1]) {
         if (index === 1 && this.config.mode !== 'local' && !this.config.training) continue;
         const controls = this.getControls(index, true);
@@ -504,6 +515,7 @@ export class FightEngine {
       return;
     }
     this.updateGamepads();
+    if (this.paused) return;
 
     if (this.phase === 'intro') {
       this.phaseTimer--;
@@ -589,7 +601,7 @@ export class FightEngine {
   }
 
   getControls(index, raw = false) {
-    const map = index === 0 ? P1_KEYS : P2_KEYS;
+    const map = this.bindings.players[index];
     const touch = this.touch[index === 0 ? 'p1' : 'p2'] || {};
     const ai = index === 1 && this.config.mode !== 'local' && !this.config.training;
     if (ai) return this.computeAI(this.actors[index], this.actors[1 - index]);
@@ -1975,6 +1987,8 @@ export class FightEngine {
       this.resultTimer = 0;
       const loser = this.actors[1 - matchWinner.index];
       this.callbacks.onMatchEnd({
+        winnerIndex: matchWinner.index,
+        loserIndex: loser.index,
         winner: matchWinner.data,
         loser: loser.data,
         rounds: this.round,
@@ -1994,8 +2008,17 @@ export class FightEngine {
   }
 
   updateGamepads() {
-    const pads = navigator.getGamepads?.() || [];
-    this.currentPads = [pads[0], pads[1]];
+    const pads = typeof navigator !== 'undefined' ? navigator.getGamepads?.() || [] : [];
+    const state = this.padSlots.poll(pads);
+    this.currentPads = state.pads;
+    for (let i = 0; i < 2; i++) {
+      const pad = state.pads[i], active = i === 0 || this.config.mode === 'local' || this.config.training;
+      if (state.changed[i]) this.gamepadPrev[i] = pad.buttons.map(b => !!b.pressed);
+      const start = !!pad?.buttons?.[9]?.pressed;
+      if (state.lost[i] && active && this.phase !== 'matchEnd') this.togglePause(true);
+      if (start && !this.padSystemPrevious[i] && !state.changed[i] && active && this.phase !== 'matchEnd') this.togglePause();
+      this.padSystemPrevious[i] = start;
+    }
   }
 
   readGamepad(index) {
@@ -2007,17 +2030,17 @@ export class FightEngine {
     const released = (button) => !down(button) && Boolean(previous[button]);
     const axes = pad.axes || [];
     const held = {
-      left: axes[0] < -.35 || down(14),
-      right: axes[0] > .35 || down(15),
-      down: axes[1] > .45 || down(13),
+      left: axes[0] < -this.bindings.deadzone || down(14),
+      right: axes[0] > this.bindings.deadzone || down(15),
+      down: axes[1] > this.bindings.deadzone || down(13),
       guard: down(4) || down(5)
     };
     const pressedActions = {
-      guard: pressed(4) || pressed(5),
+      guard: (down(4) || down(5)) && !(previous[4] || previous[5]),
       jump: pressed(0) || pressed(12),
       light: pressed(2), heavy: pressed(3), special: pressed(1), throw: pressed(6), super: pressed(7), dodge: pressed(8)
     };
-    const releasedActions = { guard: released(4) || released(5) };
+    const releasedActions = { guard: !(down(4) || down(5)) && Boolean(previous[4] || previous[5]) };
     this.gamepadPrev[index] = pad.buttons.map((button) => button.pressed);
     return { held, pressed: pressedActions, released: releasedActions };
   }

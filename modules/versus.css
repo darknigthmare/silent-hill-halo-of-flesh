@@ -37,3 +37,32 @@ html,body{width:100%;height:100%;overflow:hidden}.module-body{height:100%;overfl
 
 /* v0.7.0 — movesets complets */
 .dossier-move-summary{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 12px}.dossier-move-summary span{padding:6px 8px;border:1px solid #454d46;background:#090d0a;color:#899189;font:900 7px ui-monospace;letter-spacing:.09em}.move-list li{display:block;border-left:3px solid #4e554f}.move-list li[data-fidelity="direct-canonical"]{border-left-color:#c5b98f}.move-list li[data-fidelity="behavior-composite"]{border-left-color:#708b77}.move-list li[data-fidelity="versus-adaptation"]{border-left-color:#8e333b}.move-list li div{display:flex;align-items:center;gap:9px}.move-list li kbd{min-width:72px;padding:4px 6px;border:1px solid #464c46;background:#030504;color:#e7dfd1;font:900 8px ui-monospace;text-align:center}.move-list li span{display:block;margin-top:6px;text-align:left}.move-list li small{display:block;margin-top:7px;color:#687069;font:700 7px ui-monospace;line-height:1.5}
+
+/* 0.9.0 — legible recovery and controls, within the existing archive treatment. */
+.play-dialog { color:var(--paper,#ddd9c7); background:#171a17; border:1px solid #7d7666; border-top:4px solid #823d35; border-radius:3px; width:min(680px,92vw); max-height:85dvh; overflow:auto; padding:clamp(18px,3vw,32px); box-shadow:0 22px 100px #000b; }
+.play-dialog::backdrop {background:#080b09dd;}
+.play-dialog h2 {font-family:Georgia,serif;letter-spacing:.1em;margin:0 0 18px;}
+.play-dialog p {line-height:1.6;}
+.play-actions {display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;}
+.play-actions .ui-button {min-height:44px;white-space:normal;}
+.play-note {font-size:.85rem;color:#b7b5a6;}
+.binding-grid {display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-block:16px;}
+.binding-grid button {text-align:left;min-height:44px;white-space:normal;}
+.play-status {position:fixed;bottom:18px;left:50%;transform:translateX(-50%);max-width:90vw;z-index:10020;background:#231d18;border:1px solid #b69363;color:#fff2ce;padding:14px 20px;line-height:1.5;box-shadow:0 4px 30px #0009;}
+.run-checkpoint {display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#20241f;border-left:4px solid #8f4940;padding:14px 20px;margin:12px;}
+.run-checkpoint p {margin:0;flex:1 1 260px;line-height:1.5;}
+#bindingMessage {min-height:1.8em;color:#e4b09a;}
+#game:focus-visible {outline:3px solid #b9c29c;outline-offset:2px;}
+.touch-button {touch-action:none;min-width:44px;min-height:44px;}
+@media(max-width:520px){.binding-grid{grid-template-columns:1fr;}.play-actions>.ui-button{flex:1 1 100%;}.run-checkpoint{margin:6px;padding:12px;}.top-actions{flex-wrap:wrap;}}
+#selectScreen:not(.hidden) {display:flex;flex-direction:column;}
+.select-body {height:auto;flex:1;min-height:0;grid-template-columns:minmax(190px,300px) minmax(0,1fr) minmax(190px,300px);}
+.setup {grid-template-columns:repeat(4,minmax(0,1fr));}
+.setup>*,.setup .ui-button {min-width:0;}
+.setup .stage-mini {grid-column:span 2;}
+.setup .ui-button {white-space:normal;min-height:44px;}
+.touch-left {grid-template-areas:". jump ." "left guard right" ". down .";}
+.touch-button[data-action="jump"] {grid-area:jump;}
+.touch-button[data-action="down"] {grid-area:down;}
+@media(max-width:1100px){.select-body{grid-template-columns:180px minmax(0,1fr) 180px;}.filters{grid-template-columns:1fr 1fr;}.roster{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:760px){.select-body{display:flex;flex-direction:column;}.setup{grid-template-columns:1fr 1fr;}.run-checkpoint{flex-shrink:0;}.touch-group{bottom:12px;gap:6px;}.touch-left{left:12px;}.touch-right{right:12px;}.touch-group{grid-template-columns:repeat(3,52px);}.touch-button{width:52px;height:52px;}}

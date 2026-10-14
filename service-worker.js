@@ -1,4 +1,4 @@
-const VERSION = '0.8.2';
+const VERSION = '0.9.0';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
@@ -21,6 +21,10 @@ const ESSENTIAL_SHELL = [
   '/src/combat-resolution.js',
   '/src/movesets.js',
   '/src/shared.js',
+  '/src/save-store.js',
+  '/src/run-progress.js',
+  '/src/player-input.js',
+  '/src/playflow-ui.js',
   '/src/renderers.js',
   '/src/fight.js',
   '/src/command.js',

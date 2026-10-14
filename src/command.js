@@ -1,4 +1,7 @@
 import { CONTENT_STATS, SAVE_KEY, VERSION } from './data.js';
+import { readState, writeState, exportMemory, importMemory, KEYS } from './save-store.js';
+import { loadRun, validateRun } from './run-progress.js';
+import { validControls } from './player-input.js';
 
 const SETTINGS_KEY = 'sh-halo-of-flesh-settings-v1';
 const DEFAULT_SETTINGS = {
@@ -127,24 +130,11 @@ let reloadingForWorker = false;
 function isPlainRecord(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
 }
-function readStoredObject(key, fallback = {}) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return { ...fallback };
-    const parsed = JSON.parse(raw);
-    return isPlainRecord(parsed) ? { ...fallback, ...parsed } : { ...fallback };
-  } catch {
-    return { ...fallback };
-  }
-}
-function writeStoredObject(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-    return true;
-  } catch {
-    showStatus('LA MÉMOIRE LOCALE EST INACCESSIBLE.', { tone: 'error' });
-    return false;
-  }
+function readStoredObject(key, fallback = {}) { return readState(key,fallback); }
+function writeStoredObject(key,value) {
+  const success = Boolean(writeState(key,value));
+  if(!success)showStatus('LA MÉMOIRE LOCALE EST INACCESSIBLE.', { tone: 'error' });
+  return success;
 }
 function normaliseSettings(candidate = {}) {
   const out = { ...DEFAULT_SETTINGS };
@@ -220,11 +210,14 @@ function select(index, { focus = false } = {}) {
 }
 function launch(mode = currentMode()) {
   if (mode === 'options') return openOptions();
+  let resumeUrl = null;
   if (mode === 'continue') {
+    const run = loadRun();
+    if (run && run.status !== 'complete') resumeUrl = `modules/unified-versus.html?preset=${run.mode}&resume=1`;
     const saved = readStoredObject(SAVE_KEY, {});
     mode = moduleUrls[saved.lastMode] ? saved.lastMode : 'versus';
   }
-  const url = moduleUrls[mode];
+  const url = resumeUrl || moduleUrls[mode];
   if (!url) return;
   loading.classList.remove('hidden');
   player.classList.add('show');
@@ -282,19 +275,7 @@ function syncFullscreenButton() {
   button.classList.toggle('on', enabled);
   button.setAttribute('aria-pressed', String(enabled));
 }
-function collectMemory() {
-  const entries = {};
-  try {
-    for (let i=0;i<localStorage.length;i++) {
-      const key = localStorage.key(i);
-      if (!key?.startsWith(MEMORY_PREFIX)) continue;
-      const raw = localStorage.getItem(key);
-      try { entries[key] = JSON.parse(raw); }
-      catch { entries[key] = raw; }
-    }
-  } catch {}
-  return { schema: MEMORY_SCHEMA, project: 'SILENT HILL: HALO OF FLESH', version: VERSION, exportedAt: new Date().toISOString(), entries };
-}
+function collectMemory() { return exportMemory(VERSION); }
 function downloadMemory() {
   const blob = new Blob([`${JSON.stringify(collectMemory(), null, 2)}\n`], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -311,13 +292,9 @@ async function importMemoryFile(file) {
   if (!file || file.size > 2_000_000) throw new Error('Fichier absent ou trop volumineux.');
   const payload = JSON.parse(await file.text());
   if (payload?.schema !== MEMORY_SCHEMA || !isPlainRecord(payload.entries)) throw new Error('Format de mémoire inconnu.');
-  const entries = Object.entries(payload.entries).slice(0,64);
-  let restored = 0;
-  for (const [key,value] of entries) {
-    if (!key.startsWith(MEMORY_PREFIX) || key.length > 160) continue;
-    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
-    restored++;
-  }
+  if(payload.entries[KEYS.run] && !validateRun(payload.entries[KEYS.run])) throw new Error('Parcours importé incompatible.');
+  if(payload.entries[KEYS.controls] && !validControls(payload.entries[KEYS.controls])) throw new Error('Commandes importées invalides.');
+  const restored = importMemory(payload);
   settings = normaliseSettings(readStoredObject(SETTINGS_KEY, DEFAULT_SETTINGS));
   applySettings();
   showStatus(`${restored} ENTRÉES DE MÉMOIRE RESTAURÉES.`, { tone: 'success' });

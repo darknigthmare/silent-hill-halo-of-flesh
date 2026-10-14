@@ -1,7 +1,11 @@
 import {
-  ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
+  CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
+import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
+import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS } from './run-progress.js';
+import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
+import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
 import {
@@ -14,7 +18,7 @@ attachGlobalAudioUnlock();
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const params = new URLSearchParams(location.search);
-const preset = params.get('preset') || params.get('mode') || 'versus';
+let preset = params.get('preset') || params.get('mode') || 'versus';
 const PAGE_SIZE = 30;
 const FAVORITES_KEY = 'sh-halo-of-flesh-favorites-v1';
 const settings = loadSettings();
@@ -36,7 +40,7 @@ const state = {
   mode: preset,
   engine: null,
   run: null,
-  lastResult: null,
+  lastResult: null, generation: 0, settled: false, resultTimer: null, matchId: null,
   touchEnabled: matchMedia('(pointer: coarse)').matches,
   favorites: new Set(loadJSON(FAVORITES_KEY, { ids: [] }).ids || []),
 };
@@ -305,27 +309,47 @@ function configurePreset() {
   }
 }
 
+function selectedRules() {
+  return {mode:els.mode.value,roundsToWin:Number(els.rounds.value),timeLimit:Number(els.timer.value),
+    difficulty:els.difficulty.value,ritualId:els.ritualSelect.value,
+    ...Object.fromEntries(RULE_BOOLEANS.map(k=>[k,els[k].checked]))};
+}
 function buildRun() {
-  if (preset === 'arcade') {
-    const shuffled = [...ROSTER].sort(() => Math.random() - .5).filter((f) => f.id !== state.p1.id);
-    state.run = { type: 'ARCADE', index: 0, wins: 0, queue: shuffled.slice(0, 7).map((f) => f.id), stages: [...STAGES].sort(() => Math.random() - .5).slice(0, 7).map((s) => s.id) };
-  } else if (preset === 'boss') {
-    const shuffled = ROSTER.filter((f) => f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
-    state.run = { type: 'GRANDS TOURMENTS', index: 0, wins: 0, queue: shuffled.slice(0, 6).map((f) => f.id), stages: [...STAGES].filter((s) => ['otherworld','church','lair','prison','shrine','book','elemental'].includes(s.family) || s.weather === 'embers').sort(() => Math.random() - .5).slice(0, 6).map((s) => s.id), carry: true, carryHealth: 1, carryMeter: 0, recovery: .18 };
-    if (!state.run.stages.length) state.run.stages = STAGES.slice(0, 6).map((s) => s.id);
-  } else if (preset === 'ritual') {
-    const rituals = Object.keys(RITUAL_MODIFIERS).filter((id) => id !== 'none');
-    const regulars = ROSTER.filter((f) => !f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
-    const bosses = ROSTER.filter((f) => f.boss && f.id !== state.p1.id).sort(() => Math.random() - .5);
-    const queue = rituals.map((_, index) => (index >= rituals.length - 2 || index === 3 ? bosses.shift() : regulars.shift())).filter(Boolean).map((fighter) => fighter.id);
-    state.run = { type: 'RITES DU JUGEMENT', index: 0, wins: 0, queue, stages: [...STAGES].sort(() => Math.random() - .5).slice(0, queue.length).map((stage) => stage.id), rituals, carry: true, carryHealth: 1, carryMeter: 0, recovery: .12 };
-  } else if (preset === 'chronicle') {
-    const ids = (params.get('queue') || '').split(',').filter(Boolean);
-    const stages = (params.get('stages') || '').split(',').filter(Boolean);
-    state.run = { type: 'CHRONIQUE', index: 0, wins: 0, queue: ids.length ? ids : [state.p2.id], stages };
-  } else state.run = null;
-  if (state.run?.queue.length) state.p2 = getFighter(state.run.queue[0]);
-  if (state.run?.stages?.[0]) state.stage = getStage(state.run.stages[0]);
+  if (!['arcade','boss','ritual','chronicle'].includes(preset)) { state.run=null;return true; }
+  const previous=loadRun();
+  if(previous&&previous.status!=='complete'&&!confirm('Remplacer le parcours sauvegardé par un nouveau parcours ?'))return false;
+  try { state.run=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
+  catch(error){state.run=null;flow.announce(error.message,true);return false;}
+  try {
+    if(preset==='chronicle'){
+      const progress=loadJSON(CHRONICLES_KEY,{completed:[],attempts:{},grades:{},bestStats:{}});
+      progress.attempts={...progress.attempts,[state.run.routeId]:(progress.attempts?.[state.run.routeId]||0)+1};
+      importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.chronicles]:progress,[KEYS.run]:state.run}});
+    } else if(!saveRun(state.run))flow.announce('Parcours jouable, mais sauvegarde indisponible.',true);
+  } catch(error){flow.announce(`${error.message} Le parcours reste jouable sans sauvegarde.`,true);}
+  return true;
+}
+function checkpointNotice() {
+  const saved=loadRun(), banner=$('#runCheckpoint');
+  const pending=saved&&saved.status!=='complete';
+  banner.classList.toggle('hidden',!pending);
+  if(pending)$('#runCheckpointText').textContent=`Parcours ${saved.mode} : ${saved.wins}/${saved.queue.length} victoires. ${saved.status==='won'?'Prochain combat prêt.':'Reprise au début de la rencontre en cours.'}`;
+}
+function restoreCheckpoint() {
+  const saved=loadRun(), resumed=resumeRun(saved);
+  if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return;}
+  state.run=resumed;preset=resumed.mode;state.mode=preset;state.p1=getFighter(resumed.playerId);
+  configurePreset();
+  const rules=resumed.rules;
+  els.rounds.value=String(rules.roundsToWin);els.timer.value=String(rules.timeLimit);els.difficulty.value=rules.difficulty;
+  for(const key of RULE_BOOLEANS)els[key].checked=rules[key]!==false;
+  els.ritualSelect.value=rules.ritualId||'none';
+  startFight({preserveRun:true});
+}
+function retryCurrentFight() {
+  if(state.run&&state.run.status==='lost')state.run=resumeRun(state.run);
+  if(state.run&&['won','complete'].includes(state.run.status))return;
+  startFight({preserveRun:Boolean(state.run)});
 }
 
 function showFight() {
@@ -335,11 +359,12 @@ function showFight() {
   window.scrollTo(0, 0);
 }
 function showSelect() {
+  clearTimeout(state.resultTimer);state.generation++;flow.close();
   state.engine?.destroy(); state.engine = null;
   els.fightScreen.classList.add('hidden');
   els.selectScreen.classList.remove('hidden');
   els.result.classList.add('hidden');
-  renderSelected(); renderRoster();
+  renderSelected(); renderRoster();checkpointNotice();
 }
 
 function fightConfig() {
@@ -366,15 +391,21 @@ function fightConfig() {
     stageTerrain: els.stageTerrain.checked,
     stageDirector: els.stageDirector.checked,
     ritualId: currentRitualId(),
+    ...(state.run?.rules || {}),
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
-    seed: Date.now(),
-    callbacks: { onMatchEnd: handleMatchEnd }
+    seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
+    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot) }
   };
 }
 
 function startFight({ preserveRun = false } = {}) {
-  if (!preserveRun) buildRun();
+  if (!preserveRun && !buildRun()) return;
+  if (state.run && state.run.status !== 'ready') return;
+  clearTimeout(state.resultTimer);state.generation++;state.settled=false;state.lastResult=null;
+  state.matchId=globalThis.crypto?.randomUUID?.() || `match-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  flow.close();
+  if(state.run&&!saveRun(state.run))flow.announce('Progression non sauvegardée : stockage indisponible.',true);
   if (state.run?.queue?.length) {
     state.p2 = getFighter(state.run.queue[state.run.index]);
     if (state.run.stages?.length) state.stage = getStage(state.run.stages[state.run.index % state.run.stages.length]);
@@ -388,10 +419,13 @@ function startFight({ preserveRun = false } = {}) {
   els.touchLayer.style.display = state.touchEnabled ? 'block' : '';
   const ritual = currentRitual();
   els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
-  els.gameHelp.textContent = els.mode.value === 'local' && !training ? `${CONTROL_LABELS.p1} · P2: ${CONTROL_LABELS.p2}` : CONTROL_LABELS.p1;
+  refreshControlHelp();
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
-  state.engine = new FightEngine(els.game, fightConfig());
+  const generation=state.generation, config=fightConfig();
+  config.callbacks.onMatchEnd=result=>{if(generation===state.generation)handleMatchEnd(result);};
+  state.engine = new FightEngine(els.game, config);
   state.engine.start();
+  els.game.focus({preventScroll:true});
   if (params.get('qa') === '1') installQaBridge();
 }
 
@@ -401,7 +435,8 @@ function installQaBridge() {
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,
-    showSelect,
+    showSelect, restoreCheckpoint, continueRun, handleMatchEnd,
+    get run() { return state.run; },
     forceOtherworld() { return state.engine?.forceOtherworldShift(); },
     forceBossPhase() { return state.engine?.forceBossPhase(); },
     triggerStageEvent(id) { return state.engine?.triggerStageEvent(id) || false; },
@@ -442,88 +477,57 @@ function installQaBridge() {
 }
 
 function handleMatchEnd(result) {
-  state.lastResult = result;
-  const won = result.winner.id === state.p1.id;
-  if (state.run && won) {
-    state.run.wins++;
-    if (state.run.carry) {
-      state.run.carryHealth = clamp((result.stats?.winner?.healthRatio || .1) + (state.run.recovery || .12), .12, 1);
-      state.run.carryMeter = clamp((result.snapshot?.p1?.meter || 0) * .55, 0, 70);
+  if(state.settled)return;
+  state.settled=true;state.lastResult=result;
+  const {won,stats:playerStats}=playerOutcome(result);
+  const grade=chronicleGrade(playerStats);
+  if(state.run)state.run=settleRun(state.run,result);
+  const records=updateRecords(loadJSON(RECORDS_KEY,{}),result,state.matchId,state.p2.id,grade,state.run);
+  const entries={[KEYS.records]:records};
+  if(state.run)entries[KEYS.run]=state.run;
+  const route=CHRONICLES.find(r=>r.id===state.run?.routeId);
+  const completedRun=state.run?.status==='complete';
+  let routeGrade=null;
+  if(route&&completedRun){
+    const progress=loadJSON(CHRONICLES_KEY,{completed:[],attempts:{},grades:{},bestStats:{}});
+    const summary=runSummary(state.run);routeGrade=chronicleGrade(summary);
+    progress.completed=[...new Set([...(progress.completed||[]),route.id])];
+    if((GRADE_SCORE[routeGrade]??0)>=(GRADE_SCORE[progress.grades?.[route.id]]??-1)){
+      progress.grades={...progress.grades,[route.id]:routeGrade};progress.bestStats={...progress.bestStats,[route.id]:summary};
     }
+    entries[KEYS.chronicles]=progress;
   }
-  const winnerStats = result.stats?.winner || {};
-  const grade = winnerStats.grade || chronicleGrade(winnerStats);
-  const records = loadJSON(RECORDS_KEY, { matches: 0, wins: 0, defeated: {}, arcadeBest: 0, bossBest: 0, ritualBest: 0, bossPhases: 0, perfectGuards: 0, counters: 0, guardCounters: 0, dodgeAttacks: 0, wakeupAttacks: 0, backThrows: 0, armorBreaks: 0, groundBounces: 0, hazardsTaken: 0, fatalities: 0, stageFatalities: 0, bestGrade: 'D' });
-  records.matches = (records.matches || 0) + 1;
-  if (won) records.wins = (records.wins || 0) + 1;
-  records.defeated = records.defeated || {};
-  if (won) records.defeated[state.p2.id] = (records.defeated[state.p2.id] || 0) + 1;
-  records.perfectGuards = (records.perfectGuards || 0) + (winnerStats.perfectGuards || 0);
-  records.counters = (records.counters || 0) + (winnerStats.counters || 0);
-  records.guardCounters = (records.guardCounters || 0) + (winnerStats.guardCounters || 0);
-  records.dodgeAttacks = (records.dodgeAttacks || 0) + (winnerStats.dodgeAttacks || 0);
-  records.wakeupAttacks = (records.wakeupAttacks || 0) + (winnerStats.wakeupAttacks || 0);
-  records.backThrows = (records.backThrows || 0) + (winnerStats.backThrows || 0);
-  records.armorBreaks = (records.armorBreaks || 0) + (winnerStats.armorBreaks || 0);
-  records.groundBounces = (records.groundBounces || 0) + (winnerStats.groundBounces || 0);
-  records.hazardsTaken = (records.hazardsTaken || 0) + (winnerStats.hazardsTaken || 0);
-  records.bossPhases = (records.bossPhases || 0) + (winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0);
-  records.fatalities = (records.fatalities || 0) + (winnerStats.fatalities || 0);
-  records.stageFatalities = (records.stageFatalities || 0) + (winnerStats.stageFatalities || 0);
-  if ((GRADE_SCORE[grade] ?? 0) > (GRADE_SCORE[records.bestGrade] ?? 0)) records.bestGrade = grade;
-  if (state.run?.type === 'ARCADE') records.arcadeBest = Math.max(records.arcadeBest || 0, state.run.wins);
-  if (state.run?.type === 'GRANDS TOURMENTS') records.bossBest = Math.max(records.bossBest || 0, state.run.wins);
-  if (state.run?.type === 'RITES DU JUGEMENT') records.ritualBest = Math.max(records.ritualBest || 0, state.run.wins);
-  writeJSON(RECORDS_KEY, records);
-  const routeId = params.get('route');
-  const completedRun = Boolean(state.run && won && state.run.index + 1 >= state.run.queue.length);
-  if (routeId) {
-    const chronicleProgress = loadJSON(CHRONICLES_KEY, { completed: [], attempts: {}, grades: {}, bestStats: {} });
-    chronicleProgress.grades = chronicleProgress.grades || {};
-    chronicleProgress.bestStats = chronicleProgress.bestStats || {};
-    const oldGrade = chronicleProgress.grades[routeId] || 'D';
-    if ((GRADE_SCORE[grade] ?? 0) >= (GRADE_SCORE[oldGrade] ?? 0)) {
-      chronicleProgress.grades[routeId] = grade;
-      chronicleProgress.bestStats[routeId] = { ...winnerStats, worldShiftTriggered: result.stats?.worldShiftTriggered, hazardsTriggered: result.stats?.hazardsTriggered };
-    }
-    if (completedRun) chronicleProgress.completed = [...new Set([...(chronicleProgress.completed || []), routeId])];
-    writeJSON(CHRONICLES_KEY, chronicleProgress);
-  }
-  setTimeout(() => {
-    const ritual = currentRitual();
-    els.resultKicker.textContent = state.run ? `${state.run.type} · COMBAT ${state.run.index + 1} · ${ritual.name}` : `RÉSULTAT · ${ritual.name}`;
-    els.resultTitle.textContent = result.winner.name;
-    els.resultText.textContent = won ? `${result.winner.name} domine ${result.loser.name}.` : `${result.winner.name} impose son cauchemar.`;
-    els.resultStats.innerHTML = `
-      <div class="result-stat result-grade"><b>RANG ${escapeHTML(grade)}</b><span>DOSSIER DE PERFORMANCE</span></div>
-      <div class="result-stat"><b>${winnerStats.maxCombo || 0}</b><span>COMBO MAX</span></div>
-      <div class="result-stat"><b>${winnerStats.perfectGuards || 0}</b><span>GARDES PARFAITES</span></div>
-      <div class="result-stat"><b>${winnerStats.counters || 0}</b><span>CONTRES</span></div>
-      <div class="result-stat"><b>${winnerStats.guardCounters || 0}</b><span>RIPOSTES DE GARDE</span></div>
-      <div class="result-stat"><b>${winnerStats.dodgeAttacks || 0}</b><span>RIPOSTES D’ESQUIVE</span></div>
-      <div class="result-stat"><b>${winnerStats.wakeupAttacks || 0}</b><span>ATTAQUES DE RELEVÉE</span></div>
-      <div class="result-stat"><b>${winnerStats.backThrows || 0}</b><span>PROJECTIONS ARRIÈRE</span></div>
-      <div class="result-stat"><b>${winnerStats.groundBounces || 0}</b><span>REBONDS AU SOL</span></div>
-      <div class="result-stat"><b>${winnerStats.hazardsTaken || 0}</b><span>DANGERS SUBIS</span></div>
-      <div class="result-stat"><b>${(winnerStats.bossPhasesTriggered || 0) + (result.stats?.loser?.bossPhasesTriggered || 0)}</b><span>PHASES RÉVÉLÉES</span></div>
-      <div class="result-stat"><b>${winnerStats.fatalities || 0}</b><span>FATALITÉS</span></div>
-      <div class="result-stat"><b>${winnerStats.stageFatalities || 0}</b><span>FATALITÉS D’ARÈNE</span></div>
-      ${result.stats?.lastFatality ? `<div class="result-stat result-grade"><b>${escapeHTML(result.stats.lastFatality.name)}</b><span>${result.stats.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY SIGNATURE'}</span></div>` : ''}
-      ${state.run?.carry ? `<div class="result-stat"><b>${Math.round((state.run.carryHealth || 1) * 100)}%</b><span>ENDURANCE SUIVANTE</span></div>` : ''}`;
-    const hasNext = Boolean(state.run && won && state.run.index + 1 < state.run.queue.length);
-    els.continueRun.classList.toggle('hidden', !hasNext);
-    if (state.run && won && !hasNext) els.resultText.textContent += ` Parcours ${state.run.type.toLowerCase()} terminé : ${state.run.wins}/${state.run.queue.length}.`;
-    els.result.classList.remove('hidden');
-  }, 600);
+  try{importMemory({schema:MEMORY_SCHEMA,entries});}
+  catch(error){flow.announce(error.message,true);}
+  const generation=state.generation;
+  state.resultTimer=setTimeout(()=>{
+    if(generation!==state.generation||!state.engine)return;
+    const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[state.run.mode]):'CONFRONTATION';
+    els.resultKicker.textContent=`${title} · ${won?'VICTOIRE DU SUJET I':'DÉFAITE DU SUJET I'}`;
+    els.resultTitle.textContent=completedRun?'PARCOURS TERMINÉ':result.winner.name;
+    els.resultText.textContent=completedRun?(route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
+      (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
+    const rows=[['RANG DU SUJET I',grade],['COMBO MAX',playerStats.maxCombo||0],['GARDES PARFAITES',playerStats.perfectGuards||0],
+      ['CONTRES',playerStats.counters||0],['DANGERS SUBIS',playerStats.hazardsTaken||0],['FATALITÉS',playerStats.fatalities||0]];
+    if(routeGrade)rows.unshift(['RANG DU PARCOURS COMPLET',routeGrade]);
+    if(state.run?.carry)rows.push(['ENDURANCE CONSERVÉE',`${Math.round(state.run.carryHealth*100)} %`]);
+    els.resultStats.innerHTML=rows.map(([label,value])=>`<div class="result-stat"><b>${escapeHTML(String(value))}</b><span>${escapeHTML(label)}</span></div>`).join('');
+    els.continueRun.classList.toggle('hidden',state.run?.status!=='won');
+    els.rematch.classList.toggle('hidden',!!state.run&&won);
+    els.rematch.textContent=state.run?'RÉESSAYER CETTE RENCONTRE':'REVANCHE';
+    els.result.classList.remove('hidden');state.engine.input.enabled=false;
+    (state.run?.status==='won'?els.continueRun:!won?els.rematch:els.resultSelect).focus();
+  },600);
 }
-
 function continueRun() {
-  if (!state.run) return;
-  state.run.index++;
-  if (state.run.index >= state.run.queue.length) { showSelect(); return; }
-  state.p2 = getFighter(state.run.queue[state.run.index]);
-  if (state.run.stages?.length) state.stage = getStage(state.run.stages[state.run.index % state.run.stages.length]);
-  startFight({ preserveRun: true });
+  if(state.run?.status!=='won')return;
+  state.run=resumeRun(state.run);
+  startFight({preserveRun:true});
+}
+function refreshControlHelp() {
+  const bindings=loadControls();
+  els.gameHelp.textContent=controlsLabel(bindings,0)+(els.mode.value==='local'&&preset!=='training'?` · SUJET II : ${controlsLabel(bindings,1)}`:'');
+  state.engine?.setBindings(bindings);
 }
 
 function updateTraining() {
@@ -535,15 +539,15 @@ function updateTraining() {
 }
 
 function bindTouch() {
-  $$('.touch-button').forEach((button) => {
-    const player = button.dataset.player;
-    const action = button.dataset.action;
-    const press = (event) => { event.preventDefault(); state.engine?.setTouch(player, action, 'pressed'); };
-    const release = (event) => { event.preventDefault(); state.engine?.setTouch(player, action, false); };
-    button.addEventListener('pointerdown', press);
-    button.addEventListener('pointerup', release);
-    button.addEventListener('pointercancel', release);
-    button.addEventListener('pointerleave', release);
+  $$('.touch-button').forEach(button=>{
+    const {player,action}=button.dataset, pointers=new Set();
+    button.setAttribute('aria-label',ACTIONS[action]||action);
+    const release=event=>{event.preventDefault();pointers.delete(event.pointerId);
+      if(!pointers.size)state.engine?.setTouch(player,action,false);};
+    button.addEventListener('pointerdown',event=>{event.preventDefault();pointers.add(event.pointerId);
+      button.setPointerCapture?.(event.pointerId);state.engine?.setTouch(player,action,'pressed');});
+    for(const name of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(name,release);
+    button.style.touchAction='none';
   });
 }
 
@@ -561,11 +565,11 @@ function bindEvents() {
   els.closeDossier.addEventListener('click', closeDossier);
   els.dossier.addEventListener('click', (event) => { if (event.target === els.dossier) closeDossier(); });
   els.randomAll.addEventListener('click', randomize);
-  els.backCommand.addEventListener('click', returnToCommand);
+  els.backCommand.addEventListener('click', () => {state.engine?.destroy();returnToCommand();});
   els.launch.addEventListener('click', () => startFight());
   els.leaveFight.addEventListener('click', showSelect);
   els.resultSelect.addEventListener('click', showSelect);
-  els.rematch.addEventListener('click', () => startFight({ preserveRun: Boolean(state.run) }));
+  els.rematch.addEventListener('click', retryCurrentFight);
   els.continueRun.addEventListener('click', continueRun);
   els.pauseBtn.addEventListener('click', () => state.engine?.togglePause());
   els.trainingToggle.addEventListener('click', () => els.trainingPanel.classList.toggle('hidden'));
@@ -579,14 +583,17 @@ function bindEvents() {
     els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   });
   addEventListener('keydown', (event) => {
+    if(event.defaultPrevented||event.target?.closest?.('dialog,input,textarea,select'))return;
     if (event.code === 'Escape') {
       if (!els.dossier.classList.contains('hidden')) closeDossier();
       else if (!els.stageGallery.classList.contains('hidden')) closeStageGallery();
       else if (!els.fightScreen.classList.contains('hidden')) state.engine?.togglePause();
       else returnToCommand();
     }
-    if (!els.selectScreen.classList.contains('hidden') && event.code === 'Enter') startFight();
+    if (!els.selectScreen.classList.contains('hidden') && event.code === 'Enter' && !event.target?.closest?.('button')) startFight();
   });
+  $('#resumeCheckpoint').addEventListener('click',restoreCheckpoint);
+  $('#discardCheckpoint').addEventListener('click',()=>{if(confirm('Effacer uniquement le parcours en cours ?')){removeState(KEYS.run);checkpointNotice();}});
   bindTouch();
 }
 
@@ -611,7 +618,10 @@ function init() {
   if (state.touchEnabled) { els.mobileP1.textContent = 'TACTILE SUJET I ACTIF'; }
   if (params.get('qa') === '1') installQaBridge();
   const shouldAutostart = params.get('autostart') === '1' || params.get('autostart') === 'true';
-  if (shouldAutostart) setTimeout(() => startFight(), 120);
+  checkpointNotice();
+  if(params.get('resume')==='1')restoreCheckpoint();
+  else if (shouldAutostart) setTimeout(() => startFight(), 120);
 }
 
+const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,onControlsChanged:refreshControlHelp});
 init();
