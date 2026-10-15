@@ -1,4 +1,5 @@
 import { SAVE_KEY, SOURCE_META } from './data.js';
+import { readState, writeState } from './save-store.js';
 
 export const SETTINGS_KEY = 'sh-halo-of-flesh-settings-v1';
 export const RECORDS_KEY = 'sh-halo-of-flesh-records-v1';
@@ -15,17 +16,8 @@ const DEFAULT_SETTINGS = {
 const VALID_DIFFICULTIES = new Set(['story','normal','hard']);
 function isPlainRecord(value){return Boolean(value)&&typeof value==='object'&&!Array.isArray(value);}
 
-export function loadJSON(key, fallback = {}) {
-  try {
-    const raw=localStorage.getItem(key);
-    if(!raw)return { ...fallback };
-    const parsed=JSON.parse(raw);
-    return isPlainRecord(parsed)?{ ...fallback, ...parsed }:{ ...fallback };
-  } catch { return { ...fallback }; }
-}
-export function writeJSON(key, value) {
-  try{localStorage.setItem(key, JSON.stringify(value));return value;}catch{return null;}
-}
+export function loadJSON(key, fallback = {}) { return readState(key, fallback); }
+export function writeJSON(key, value) { return writeState(key, value); }
 export function loadSettings() {
   const candidate=loadJSON(SETTINGS_KEY,DEFAULT_SETTINGS);
   const settings={...DEFAULT_SETTINGS};

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "version": "0.9.0",
+  "channel": "development-prototype",
+  "commercialAuthorized": false,
+  "claims": "A passing local test suite is not a commercial, legal or visual certification.",
+  "gates": [
+    {"id":"ip-rights","status":"blocked","evidence":null,"required":"Written commercial rights for Silent Hill characters, title, environments and other protected material, reviewed by a qualified professional."},
+    {"id":"art-audio","status":"open","evidence":null,"required":"Replace prototype silhouettes with final reviewed animation and audio assets, with a provenance/license inventory."},
+    {"id":"lore-audit","status":"open","evidence":null,"required":"Verify individual fighters, moves, stages and adaptations against precise sources; inherited generated labels do not qualify."},
+    {"id":"full-playthroughs","status":"open","evidence":null,"required":"Uninterrupted end-to-end playthroughs, victory/defeat/retry/ending, without injected outcomes, followed by human acceptance."},
+    {"id":"http-pwa","status":"blocked","evidence":"docs/QA_v0.9.0.md","required":"Real HTTP UI, offline, cache upgrade and service worker regression; local navigation currently blocked by environment policy."},
+    {"id":"devices-performance","status":"open","evidence":null,"required":"Physical controllers, keyboard layouts, touch devices, supported hardware frame-time budgets, long-session and memory tests."},
+    {"id":"desktop-distribution","status":"open","evidence":null,"required":"Build and test platform packages/installers, updates, uninstall, and applicable signing; not satisfied by a static web ZIP."},
+    {"id":"store-compliance","status":"open","evidence":null,"required":"Store agreement, rights validation, content disclosures/ratings, regional legal review and store/build review."}
+  ]
+}

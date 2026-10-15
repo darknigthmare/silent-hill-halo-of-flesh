@@ -10,10 +10,11 @@
 <header class="module-topbar">
   <div class="module-brand"><small>OTHERWORLD CONTACT ARCHIVE</small><strong>HALO OF FLESH</strong><span id="modeTitle">CONFRONTATION</span></div>
   <div class="top-actions">
-    <button id="mobileP1" class="ui-button">TACTILE SUJET I</button><button id="openGallery" class="ui-button">ARÈNES</button><button id="randomAll" class="ui-button">SIGNAL ALÉATOIRE</button><button id="backCommand" class="ui-button">RETOUR À LA BRUME</button>
+    <button id="openControls" class="ui-button">COMMANDES</button><button id="mobileP1" class="ui-button">TACTILE SUJET I</button><button id="openGallery" class="ui-button">ARÈNES</button><button id="randomAll" class="ui-button">SIGNAL ALÉATOIRE</button><button id="backCommand" class="ui-button">RETOUR À LA BRUME</button>
   </div>
 </header>
 <section id="selectScreen" class="screen">
+  <aside id="runCheckpoint" class="run-checkpoint hidden" aria-label="Parcours sauvegardé"><p id="runCheckpointText"></p><button id="resumeCheckpoint" class="ui-button primary">REPRENDRE LE PARCOURS</button><button id="discardCheckpoint" class="ui-button">EFFACER CE PARCOURS</button></aside>
   <div class="select-body">
     <article id="p1Card" class="side-card active">
       <span class="slot-tag">SUJET I</span><canvas id="p1Portrait" class="portrait" width="360" height="410"></canvas>
@@ -58,10 +59,10 @@
 </section>
 <section id="fightScreen" class="screen fight-screen hidden">
   <div class="game-head"><div class="game-actions"><button id="leaveFight" class="ui-button">SÉLECTION</button><span id="matchLabel" class="badge">VERSUS</span></div><div class="game-actions"><button id="trainingToggle" class="ui-button hidden">OBSERVATION</button><button id="pauseBtn" class="ui-button">PAUSE</button></div></div>
-  <div class="canvas-wrap"><canvas id="game" width="1280" height="720"></canvas><div id="gameHelp" class="game-help"></div></div>
+  <div class="canvas-wrap"><canvas id="game" width="1280" height="720" tabindex="0" aria-label="Zone de combat. Échap pour suspendre ; commandes disponibles dans le menu."></canvas><div id="gameHelp" class="game-help"></div></div>
   <aside id="trainingPanel" class="training-panel hidden"><h3>OBSERVATION</h3><label>HITBOXES <input id="hitboxes" type="checkbox"></label><label>AUTO-SOIN <input id="autoHeal" type="checkbox"></label><label>JAUGE LIBRE <input id="freeMeter" type="checkbox"></label><button id="forceShift" class="ui-button">FORCER OTHERWORLD</button><button id="forceBossPhase" class="ui-button">PHASE BOSS SUIVANTE</button><button id="resetDojo" class="ui-button">RESET</button></aside>
   <div id="touchLayer" class="touch-layer">
-    <div class="touch-group touch-left"><button class="touch-button" data-player="p1" data-action="up">↑</button><button class="touch-button" data-player="p1" data-action="left">←</button><button class="touch-button" data-player="p1" data-action="guard">G</button><button class="touch-button" data-player="p1" data-action="right">→</button></div>
+    <div class="touch-group touch-left"><button class="touch-button" data-player="p1" data-action="jump" aria-label="Sauter">↑</button><button class="touch-button" data-player="p1" data-action="down" aria-label="S’accroupir">↓</button><button class="touch-button" data-player="p1" data-action="left" aria-label="Aller à gauche">←</button><button class="touch-button" data-player="p1" data-action="guard">G</button><button class="touch-button" data-player="p1" data-action="right">→</button></div>
     <div class="touch-group touch-right"><button class="touch-button" data-player="p1" data-action="light">J</button><button class="touch-button" data-player="p1" data-action="heavy">K</button><button class="touch-button" data-player="p1" data-action="special">I</button><button class="touch-button" data-player="p1" data-action="throw">U</button><button class="touch-button" data-player="p1" data-action="super">O</button><button class="touch-button" data-player="p1" data-action="dodge">L</button></div>
   </div>
   <div id="result" class="result hidden"><div class="result-card"><small id="resultKicker">RÉSULTAT</small><h2 id="resultTitle">—</h2><p id="resultText">—</p><div id="resultStats" class="result-stats"></div><div class="result-actions"><button id="rematch" class="ui-button">REVANCHE</button><button id="continueRun" class="ui-button primary hidden">COMBAT SUIVANT</button><button id="resultSelect" class="ui-button">SÉLECTION</button></div></div></div>

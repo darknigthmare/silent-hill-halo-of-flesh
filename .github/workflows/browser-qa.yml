@@ -1,0 +1,33 @@
+name: HTTP browser QA
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: browser-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Install the pinned test-only dependency
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install the corresponding Chromium on this CI runner
+        run: npx --no-install playwright-core install --with-deps chromium
+      - name: Build and test the actual HTTP interface
+        run: npm run build && node scripts/http-qa-v090.mjs
+      - name: Retain test report and captures only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: http-qa-v090
+          path: tests/http-v090/
+          retention-days: 14

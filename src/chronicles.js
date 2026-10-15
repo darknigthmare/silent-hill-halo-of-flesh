@@ -55,7 +55,7 @@ function openRoster(){
   els.rosterModal.classList.remove('hidden');
 }
 function launch(){
-  progress.attempts=progress.attempts||{};progress.attempts[selected.id]=(progress.attempts[selected.id]||0)+1;writeJSON(CHRONICLES_KEY,progress);
+  // The run controller counts the attempt when the first encounter actually starts.
   const query=new URLSearchParams({preset:'chronicle',p1:els.playerFighter.value,p2:selected.fighters[0],queue:selected.fighters.join(','),stages:selected.stages.join(','),route:selected.id,autostart:'1'});
   location.href=`unified-versus.html?${query}`;
 }
