@@ -1,0 +1,63 @@
+name: Apply reviewed PR4 raster corrections
+on:
+  push:
+    branches: [feat/bitmap-sprites-v091]
+    paths: ['.review-import/patch.txt']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Check base, digest and exact patch paths
+        run: |
+          set -eu
+          test "$GITHUB_REF" = 'refs/heads/feat/bitmap-sprites-v091'
+          test "$(git rev-parse HEAD^)" = '54536f2854f38dc02586e52769342874e584237c'
+          python3 - <<'PY'
+          import base64, hashlib, lzma, pathlib, subprocess
+          packed = base64.b64decode(pathlib.Path('.review-import/patch.txt').read_bytes(), validate=True)
+          assert hashlib.sha256(packed).hexdigest() == 'f66770cc86dc987c00749febc107dd8cd788e53d30e0a7bd134aacf404825d00'
+          patch = lzma.decompress(packed)
+          assert len(patch) == 22616
+          allowed = {'docs/SPRITE_PIPELINE_v0.9.1.md','scripts/build-sprites.mjs','scripts/http-qa-sprites.mjs','scripts/import-sprite.py','src/sprite-system.js','src/sprite-workshop.js','tests/sprites.test.mjs','tests/test_sprite_import.py'}
+          seen = set()
+          for line in patch.decode().splitlines():
+              if line.startswith('diff --git '):
+                  a,b = line.split()[2:]
+                  assert a.startswith('a/') and b == 'b/' + a[2:] and a[2:] in allowed
+                  seen.add(a[2:])
+          assert seen == allowed
+          temp = pathlib.Path('/tmp/halo-pr4-review.patch'); temp.write_bytes(patch)
+          subprocess.run(['git','apply','--unidiff-zero','--check',str(temp)],check=True)
+          subprocess.run(['git','apply','--unidiff-zero',str(temp)],check=True)
+          PY
+      - name: Validate engine and importer regressions
+        run: |
+          npm test
+          python3 -m venv "$RUNNER_TEMP/review-venv"
+          . "$RUNNER_TEMP/review-venv/bin/activate"
+          python -m pip install 'Pillow==11.3.0'
+          python -m unittest discover -s tests -p 'test_sprite_import.py' -v
+      - name: Verify reviewed final source tree and publish only this feature branch
+        run: |
+          set -eu
+          git add -A
+          copy=$(mktemp)
+          cp .git/index "$copy"
+          GIT_INDEX_FILE="$copy" git update-index --force-remove .review-import/patch.txt .github/workflows/import-review-v091.yml
+          actual=$(GIT_INDEX_FILE="$copy" git write-tree)
+          rm "$copy"
+          echo "Reviewed final source tree: $actual"
+          test "$actual" = 'ff75b49e0e71c00170736566cde0c0bae96935e5'
+          git config user.name darknigthmare
+          git config user.email 7942594+darknigthmare@users.noreply.github.com
+          git commit -m 'fix: address raster review, memory budgets, provenance and exact-byte imports'
+          git push origin HEAD:refs/heads/feat/bitmap-sprites-v091
