@@ -23,13 +23,14 @@ jobs:
       - name: Install the corresponding Chromium on this CI runner
         run: npx --no-install playwright-core install --with-deps chromium
       - name: Build and test the actual HTTP interface
-        run: npm run build && node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs
+        run: npm run build && node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs
       - name: Retain test report and captures only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: http-qa-v091
+          name: http-qa-v092
           path: |
             tests/http-v090/
             tests/http-sprites/
+            tests/http-art-v092/
           retention-days: 14
