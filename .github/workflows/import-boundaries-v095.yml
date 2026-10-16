@@ -2,7 +2,7 @@ name: Import reviewed boundary fixes v095
 on:
   push:
     branches: [feat/bitmap-sprites-v091]
-    paths: ['.art-import/v095-*']
+    paths: ['.art-import/v095-*', '.github/workflows/import-boundaries-v095.yml']
 permissions:
   contents: write
 jobs:
@@ -16,12 +16,12 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - name: Apply exact reviewed source patch
+      - name: Apply exact reviewed source patch without changing workflow files
         shell: bash
         run: |
           set -euo pipefail
           test "$GITHUB_REF" = 'refs/heads/feat/bitmap-sprites-v091'
-          test "$(git rev-parse HEAD^)" = '171ebadcb78023c1496fa4132a95ac13ae7bb1b6'
+          test "$(git rev-parse HEAD^)" = '78e4d23f9827342d72ed5c8eec2c4bf72c60c45f'
           python3 - <<'PY'
           import hashlib, lzma, pathlib, subprocess
           packed = b''.join(pathlib.Path(f'.art-import/v095-part{i}.xz').read_bytes() for i in (1, 2))
@@ -37,8 +37,11 @@ jobs:
                           assert '/'.join(path.parts[1:]) == '.github/workflows/browser-qa.yml'
           tmp = pathlib.Path('/tmp/halo-v095.patch')
           tmp.write_bytes(patch)
-          subprocess.run(['git', 'apply', '--check', str(tmp)], check=True)
-          subprocess.run(['git', 'apply', str(tmp)], check=True)
+          # This workflow has contents permission only. Workflow edits are already
+          # committed through the authorized connector, never by this runner token.
+          exclude = '--exclude=.github/workflows/browser-qa.yml'
+          subprocess.run(['git', 'apply', exclude, '--check', str(tmp)], check=True)
+          subprocess.run(['git', 'apply', exclude, str(tmp)], check=True)
           PY
       - name: Verify engine and authoring regressions
         shell: bash
@@ -61,6 +64,7 @@ jobs:
           rm "$index_copy"
           echo "Reviewed final tree: $actual_tree"
           test "$actual_tree" = '4e9cec41bdd035ee58e04846a299985b2dee8dcb'
+          git diff --cached --exit-code -- .github
           git config user.name darknigthmare
           git config user.email 7942594+darknigthmare@users.noreply.github.com
           git commit -m 'fix: isolate input edges, validate backup saves and guard engine lifecycle'
