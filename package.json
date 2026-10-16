@@ -1,6 +1,6 @@
 {
   "name": "silent-hill-halo-of-flesh",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "private": true,
   "description": "Prototype fan-made non commercial de combat 2D consacré aux manifestations de Silent Hill, avec 230 profils, 4 600 mouvements lore-first et un directeur de 123 arènes : 14 terrains, 15 bascules Otherworld, 22 chorégraphies visuelles d’événements, IA défensive et 29 dangers télégraphiés.",
   "type": "module",
@@ -11,7 +11,7 @@
     "build": "node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs",
     "test": "node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
     "qa": "npm test",
-    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs",
+    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs && node scripts/http-qa-boundaries-v095.mjs",
     "release:check": "node scripts/release-check.mjs",
     "qa:ui": "python scripts/ui-qa-v090.py",
     "sprites:check": "node scripts/build-sprites.mjs",

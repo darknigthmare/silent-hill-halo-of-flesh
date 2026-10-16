@@ -57,42 +57,42 @@ function notify(detail) {
   if(typeof globalThis.dispatchEvent==='function' && typeof CustomEvent==='function')
     globalThis.dispatchEvent(new CustomEvent('shhf-storage-status',{detail}));
 }
-function decode(key, raw) {
+function decode(key, raw, validator) {
   if(raw===null || raw===undefined || raw.length>MAX_BYTES) return null;
-  try {const value=JSON.parse(raw);return validateEntry(key,value)?value:null;}catch{return null;}
+  try {const value=JSON.parse(raw);return validateEntry(key,value)&&(!validator||validator(value))?value:null;}catch{return null;}
 }
-export function readState(key, fallback={}, storage) {
+export function readState(key, fallback={}, storage, validator) {
   const store=storageOrNull(storage);
   try {
-    const raw=store?.getItem(key), value=decode(key,raw);
+    const raw=store?.getItem(key), value=decode(key,raw,validator);
     if(value) return {...fallback,...value};
-    const previous=decode(key,store?.getItem(key+BACKUP));
+    const previous=decode(key,store?.getItem(key+BACKUP),validator);
     if(previous) {notify({kind:'recovered',key});return {...fallback,...previous};}
     if(raw) notify({kind:'invalid',key});
   } catch {notify({kind:'unavailable',key});}
   return {...fallback};
 }
-export function writeState(key,value,storage) {
-  if(!validateEntry(key,value)) {notify({kind:'invalid-write',key});return null;}
+export function writeState(key,value,storage,validator) {
+  if(!validateEntry(key,value)||validator&&!validator(value)) {notify({kind:'invalid-write',key});return null;}
   const store=storageOrNull(storage);
   if(!store) {notify({kind:'unavailable',key});return null;}
   try {
     const raw=JSON.stringify(value);
     if(raw.length>MAX_BYTES) throw new Error('Mémoire trop volumineuse.');
     const old=store.getItem(key);
-    if(decode(key,old)) store.setItem(key+BACKUP,old);
+    if(decode(key,old,validator)) store.setItem(key+BACKUP,old);
     store.setItem(key,raw);
     return value;
   } catch {notify({kind:'unavailable',key});return null;}
 }
 export function removeState(key,storage) {
   if(!ALLOWED.has(key)) return false;
-  try {const s=storageOrNull(storage);if(!s)return false;s.removeItem(key);s.removeItem(key+BACKUP);return true;}
+  try {const s=storageOrNull(storage);if(!s)return false;s.removeItem(key+BACKUP);s.removeItem(key);return true;}
   catch {notify({kind:'unavailable',key});return false;}
 }
-export function exportMemory(version,storage) {
+export function exportMemory(version,storage,validators={}) {
   const entries={};
-  for(const key of ALLOWED){const value=readState(key,{},storage);if(Object.keys(value).length)entries[key]=value;}
+  for(const key of ALLOWED){const value=readState(key,{},storage,validators[key]);if(Object.keys(value).length)entries[key]=value;}
   return {schema:MEMORY_SCHEMA,project:'SILENT HILL: HALO OF FLESH',version,exportedAt:new Date().toISOString(),entries};
 }
 export function importMemory(payload,storage) {

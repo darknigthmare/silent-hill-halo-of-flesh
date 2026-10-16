@@ -1,4 +1,12 @@
-# SILENT HILL: HALO OF FLESH — v0.9.4
+# SILENT HILL: HALO OF FLESH — v0.9.5
+
+Corrections des commandes aux transitions, pause multi-manettes et dialogues,
+récupération des sauvegardes valides, exports de secours et retrait des anciens moteurs.
+[Détails de cette passe](docs/CORRECTIONS_v0.9.5.md).
+
+**Couverture artistique inchangée : 2 candidats / 230 profils, aucun nouveau sprite ni clip animé.**
+
+## Suite de la PR #4 — v0.9.4
 
 Corrections de la garde tactile, des inputs après pause, de la reprise de parcours
 après échec de chargement, des filtres de sélection et du cache hors ligne.

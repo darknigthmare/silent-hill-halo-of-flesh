@@ -277,7 +277,7 @@ function syncFullscreenButton() {
   button.classList.toggle('on', enabled);
   button.setAttribute('aria-pressed', String(enabled));
 }
-function collectMemory() { return exportMemory(VERSION); }
+function collectMemory() { return exportMemory(VERSION,undefined,{[KEYS.run]:validateRun,[KEYS.controls]:validControls}); }
 function downloadMemory() {
   const blob = new Blob([`${JSON.stringify(collectMemory(), null, 2)}\n`], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -376,6 +376,8 @@ $('#difficulty').addEventListener('change',event=>{settings.difficulty=event.tar
 
 document.addEventListener('visibilitychange',syncAnimation);
 addEventListener('keydown',event=>{
+  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.altKey || event.metaKey || event.target?.isContentEditable) return;
+  if (event.repeat && !['ArrowDown','ArrowUp'].includes(event.code)) return;
   if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement) return;
   if (player.classList.contains('show')) {
     if (event.code==='Escape') { event.preventDefault(); closeModule(); }

@@ -26,6 +26,7 @@ const P2_KEYS = {
   light: 'KeyF', heavy: 'KeyG', special: 'KeyH', throw: 'KeyR', super: 'KeyT', dodge: 'KeyV'
 };
 const ATTACK_ACTIONS = ['light', 'heavy', 'special', 'throw', 'super'];
+const IMPULSE_ACTIONS = [...ATTACK_ACTIONS, 'dodge', 'jump'];
 
 class InputState {
   constructor(bindings) {
@@ -37,6 +38,7 @@ class InputState {
     this.onDown = (event) => {
       if (!this.enabled || event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey ||
         event.target?.isContentEditable || event.target?.closest?.('input,textarea,select,button,dialog')) return;
+      if (!this.bindings.players.some(p => Object.values(p).includes(event.code))) return;
       // A repeat delivered after a focus/reset boundary is not a new physical press.
       if (event.repeat && !this.held.has(event.code)) return;
       if (!this.held.has(event.code)) this.pressed.add(event.code);
@@ -298,6 +300,8 @@ export class FightEngine {
     this.padSlots = new GamepadSlots();
     this.padSystemPrevious = [false, false];
     this.running = false;
+    this.destroyed = false;
+    this.animationFrame = null;
     this.paused = false;
     this.accumulator = 0;
     this.lastTime = 0;
@@ -322,7 +326,7 @@ export class FightEngine {
     this.rng = seededRandom(this.config.seed);
     this.fxRng = seededRandom(`${this.config.seed}:visual-effects`);
     this.touch = { p1: {}, p2: {} };
-    this.callbacks = { onMatchEnd: () => {}, onRoundEnd: () => {}, onState: () => {}, ...config.callbacks };
+    this.callbacks = { onMatchEnd: () => {}, onRoundEnd: () => {}, onState: () => {}, canResume: () => true, ...config.callbacks };
     this.gamepadPrev = [];
     this.currentPads = [];
     this.playerPattern = { light: 0, heavy: 0, low: 0, special: 0, throw: 0, super: 0 };
@@ -353,15 +357,21 @@ export class FightEngine {
   }
 
   start() {
-    if (this.running) return;
+    if (this.running || this.destroyed) return;
     this.running = true;
     this.lastTime = performance.now();
-    requestAnimationFrame(this.boundLoop);
+    this.animationFrame = requestAnimationFrame(this.boundLoop);
     audio.ensure();
   }
 
   destroy() {
+    if (this.destroyed) return;
+    this.destroyed = true;
     this.running = false;
+    if (this.animationFrame !== null) globalThis.cancelAnimationFrame?.(this.animationFrame);
+    this.animationFrame = null;
+    this.input.enabled = false;
+    this.clearInputs();
     this.input.destroy();
     removeEventListener('blur', this.onFocusLoss);
     globalThis.document?.removeEventListener('visibilitychange', this.onVisibilityChange);
@@ -377,10 +387,31 @@ export class FightEngine {
   }
 
   togglePause(force) {
-    this.paused = typeof force === 'boolean' ? force : !this.paused;
+    if (this.destroyed) return false;
+    const next = typeof force === 'boolean' ? force : !this.paused;
+    // A gamepad is polled outside the DOM: modal inertness alone cannot stop Start.
+    if (!next && (globalThis.document?.hidden || this.callbacks.canResume() === false)) return false;
+    this.paused = next;
+    this.accumulator = 0;
     this.input.enabled = !this.paused && this.phase !== 'matchEnd';
     this.clearInputs();
     this.callbacks.onState(this.snapshot());
+    return true;
+  }
+
+  discardControlEdges() {
+    // Intro / finish cinematics consume impulses equally on all devices.
+    // Held movement and guard survive, but cannot become a fresh attack or parry.
+    for (let i = 0; i < 2; i++) {
+      const touch = this.touch[i === 0 ? 'p1' : 'p2'];
+      const buttons = this.currentPads?.[i]?.buttons || [];
+      for (const action of Object.keys(touch)) if (touch[action] === 'pressed') touch[action] = true;
+      this.guardHeld[i] = this.input.isDown(this.bindings.players[i].guard) || !!touch.guard ||
+        !!buttons[4]?.pressed || !!buttons[5]?.pressed;
+      this.gamepadPrev[i] = buttons.map(b => !!b.pressed);
+    }
+    this.inputBuffer = [null, null];
+    this.input.endFrame();
   }
 
   setTrainingOptions(options = {}) {
@@ -413,6 +444,7 @@ export class FightEngine {
   }
 
   resetMatch() {
+    if (this.destroyed) return;
     this.round = 1;
     this.actors.forEach((actor) => {
       actor.roundWins = 0;
@@ -424,6 +456,9 @@ export class FightEngine {
   }
 
   resetRound(full = false) {
+    if (this.destroyed) return;
+    this.input.enabled = !this.paused;
+    this.winner = null;
     this.clearInputs();
     this.projectiles.length = 0;
     this.particles.length = 0;
@@ -433,7 +468,9 @@ export class FightEngine {
     this.phase = 'intro';
     this.phaseTimer = 145;
     this.superOverlay = null;
+    this.bossPhaseOverlay = null;
     this.fatality = null;
+    this.shake = 0;
     this.flash = 0;
     this.hitstop = 0;
     const stageShift = stageShiftStyle(this.stage);
@@ -485,6 +522,11 @@ export class FightEngine {
       actor.status = null;
       actor.lastMoveKey = null;
       actor.lastHit = null;
+      actor.lastHitBy = null;
+      actor.aiTimer = 0;
+      actor.aiIntent = {};
+      actor.aiRead = null;
+      actor.traitPulse = 0;
       actor.moveVariety.clear();
       actor.counterStance = 0;
       actor.trapCooldown = 0;
@@ -494,39 +536,45 @@ export class FightEngine {
   }
 
   loop(now) {
-    if (!this.running) return;
-    const dt = Math.min(.05, (now - this.lastTime) / 1000 || 0);
+    this.animationFrame = null;
+    if (!this.running || this.destroyed) return;
+    const dt = Math.max(0, Math.min(.05, (now - this.lastTime) / 1000 || 0));
     this.lastTime = now;
     this.updateGamepads();
-    if (!this.paused) {
+    if (!this.paused && !this.destroyed) {
       this.accumulator += dt;
-      while (this.accumulator >= STEP) {
-        this.update();
+      while (this.accumulator >= STEP && this.running && !this.destroyed && !this.paused) {
         this.accumulator -= STEP;
+        this.update();
       }
     }
+    if (!this.running || this.destroyed) return;
     this.render(now);
-    requestAnimationFrame(this.boundLoop);
+    if (this.running && !this.destroyed) this.animationFrame = requestAnimationFrame(this.boundLoop);
   }
 
   update() {
-    if (this.paused) return;
+    if (this.paused || this.destroyed) return;
     const frozen = this.hitstop > 0;
     this.updateSimulation();
-    if (!frozen && !this.paused) this.actors.forEach(advanceSpriteClock);
+    if (!frozen && !this.paused && !this.destroyed) this.actors.forEach(advanceSpriteClock);
   }
 
   updateSimulation() {
     if (this.paused) return;
     this.frame++;
+    if (this.phase !== 'fight') this.discardControlEdges();
     if (this.hitstop > 0) {
       this.updateGamepads();
       if (this.paused) return;
       for (const index of [0, 1]) {
         if (index === 1 && this.config.mode !== 'local' && !this.config.training) continue;
         const controls = this.getControls(index, true);
-        if ([...ATTACK_ACTIONS, 'dodge', 'jump'].some(key => controls[key])) {
-          this.inputBuffer[index] = { controls, expires: this.frame + 8 };
+        if (this.phase === 'fight' && IMPULSE_ACTIONS.some(key => controls[key])) {
+          this.inputBuffer[index] = {
+            controls: Object.fromEntries(IMPULSE_ACTIONS.map(key => [key, !!controls[key]])),
+            expires: this.frame + 8
+          };
         }
       }
       this.hitstop--;
@@ -535,6 +583,7 @@ export class FightEngine {
     }
     this.updateGamepads();
     if (this.paused) return;
+    if (this.phase !== 'fight') this.discardControlEdges();
 
     if (this.phase === 'intro') {
       this.phaseTimer--;
@@ -644,8 +693,10 @@ export class FightEngine {
     if (!raw && this.inputBuffer[index]) {
       const buffer = this.inputBuffer[index];
       this.inputBuffer[index] = null;
-      const fresh = [...ATTACK_ACTIONS, 'dodge', 'jump'].some(key => controls[key]);
-      if (!fresh && buffer.expires >= this.frame) return { ...controls, ...buffer.controls };
+      const fresh = IMPULSE_ACTIONS.some(key => controls[key]);
+      if (!fresh && buffer.expires >= this.frame) return {
+        ...controls, ...Object.fromEntries(IMPULSE_ACTIONS.map(key => [key, !!buffer.controls[key]]))
+      };
     }
     return controls;
   }
@@ -2002,9 +2053,12 @@ export class FightEngine {
   }
 
   finishRoundTransition() {
+    if (this.destroyed || this.phase !== 'roundEnd') return;
     const matchWinner = this.actors.find((actor) => actor.roundWins >= this.config.roundsToWin);
     if (matchWinner) {
       this.phase = 'matchEnd';
+      this.input.enabled = false;
+      this.clearInputs();
       this.winner = matchWinner;
       this.resultTimer = 0;
       const loser = this.actors[1 - matchWinner.index];
@@ -2030,16 +2084,25 @@ export class FightEngine {
   }
 
   updateGamepads() {
-    const pads = typeof navigator !== 'undefined' ? navigator.getGamepads?.() || [] : [];
+    if (this.destroyed) return;
+    let pads = [];
+    // Permissions Policy may forbid getGamepads; keyboard and touch remain usable.
+    try { pads = globalThis.navigator?.getGamepads?.() || []; } catch { /* Treat it as device loss. */ }
     const state = this.padSlots.poll(pads);
     this.currentPads = state.pads;
+    let lost = false, startPressed = false;
     for (let i = 0; i < 2; i++) {
       const pad = state.pads[i], active = i === 0 || this.config.mode === 'local' || this.config.training;
       if (state.changed[i]) this.gamepadPrev[i] = pad.buttons.map(b => !!b.pressed);
       const start = !!pad?.buttons?.[9]?.pressed;
-      if (state.lost[i] && active && this.phase !== 'matchEnd') this.togglePause(true);
-      if (start && !this.padSystemPrevious[i] && !state.changed[i] && active && this.phase !== 'matchEnd') this.togglePause();
+      lost ||= state.lost[i] && active;
+      startPressed ||= start && !this.padSystemPrevious[i] && !state.changed[i] && active;
       this.padSystemPrevious[i] = start;
+    }
+    // Update ALL physical edges first, then one system decision. Loss always wins.
+    if (this.phase !== 'matchEnd') {
+      if (lost) this.togglePause(true);
+      else if (startPressed) this.togglePause();
     }
   }
 

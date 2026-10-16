@@ -34,7 +34,7 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   }
   function persist(){if(!saveControls(bindings))message.textContent='Commandes non sauvegardées : stockage indisponible.';
     else message.textContent='Commandes enregistrées.';onControlsChanged(bindings);}
-  function openControls(){bindings=loadControls();renderBindings();message.textContent='';
+  function openControls(){bindings=engine()?.bindings||loadControls();renderBindings();message.textContent='';
     if(engine()&&!engine().paused)engine().togglePause(true);
     if(!controls.open)controls.showModal();}
   controls.addEventListener('keydown',e=>{if(!waiting)return;e.preventDefault();e.stopPropagation();
@@ -47,7 +47,7 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   controls.addEventListener('close',()=>{waiting=null;engine()?.clearInputs();});
   find('#bindingDeadzone').addEventListener('input',e=>{bindings={...bindings,deadzone:+e.target.value/100};persist();find('#deadzoneValue').textContent=` ${e.target.value} %`;});
   document.querySelector('#openControls')?.addEventListener('click',openControls);
-  return {announce,openControls,syncPause(snapshot){
+  return {announce,openControls,canResume:()=>!controls.open,syncPause(snapshot){
     if(snapshot.paused&&engine()?.phase!=='matchEnd'){if(!pause.open)pause.showModal();}
     else if(pause.open){pause.close();document.querySelector('#game')?.focus({preventScroll:true});}
     const button=document.querySelector('#pauseBtn');if(button){button.textContent=snapshot.paused?'REPRENDRE':'PAUSE';button.setAttribute('aria-pressed',String(snapshot.paused));}

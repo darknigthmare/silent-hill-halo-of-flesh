@@ -1,4 +1,4 @@
-# Matrice de fidélité et couverture — v0.9.4
+# Matrice de fidélité et couverture — v0.9.5
 
 | Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |
 |---|---:|---:|---:|---:|---:|---|

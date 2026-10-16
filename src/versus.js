@@ -408,7 +408,7 @@ function fightConfig() {
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
-    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot) }
+    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot), canResume: () => flow.canResume() }
   };
 }
 
@@ -571,8 +571,7 @@ function continueRun() {
   if(state.loadingSprites||state.run?.status!=='won')return false;
   return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
 }
-function refreshControlHelp() {
-  const bindings=loadControls();
+function refreshControlHelp(bindings = loadControls()) {
   els.gameHelp.textContent=controlsLabel(bindings,0)+(els.mode.value==='local'&&preset!=='training'?` · SUJET II : ${controlsLabel(bindings,1)}`:'');
   state.engine?.setBindings(bindings);
 }
@@ -626,7 +625,7 @@ function bindEvents() {
     els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   });
   addEventListener('keydown', (event) => {
-    if(event.defaultPrevented||event.repeat||event.target?.isContentEditable||event.target?.closest?.('dialog,input,textarea,select'))return;
+    if(event.defaultPrevented||event.repeat||event.isComposing||event.ctrlKey||event.altKey||event.metaKey||event.target?.isContentEditable||event.target?.closest?.('dialog,input,textarea,select'))return;
     if (event.code === 'Escape') {
       if (!els.dossier.classList.contains('hidden')) closeDossier();
       else if (!els.stageGallery.classList.contains('hidden')) closeStageGallery();

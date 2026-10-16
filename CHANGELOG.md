@@ -1,3 +1,15 @@
+## 0.9.5 — Transitions, pause multi-manettes et récupération des sauvegardes
+
+- Impulsions d'attaque consommées pendant les intros/fins ; garde et directions tenues conservées sans nouveau front de parade.
+- Tampon d'impact limité aux actions ponctuelles ; garde et directions actuelles prioritaires.
+- Une seule décision Start par relevé manettes, déconnexion prioritaire et panne getGamepads tolérée.
+- Reprise refusée derrière le dialogue des commandes ou un document masqué.
+- Moteurs détruits définitivement retirés, animationFrame annulée, callbacks de fin idempotents et états temporaires réinitialisés.
+- Validation métier des sauvegardes et commandes avant choix du primaire ou secours ; secours valide préservé à l'écriture et à l'export.
+- Suppression du secours avant le primaire pour éviter une résurrection après échec de suppression.
+- Touches modifiées réservées au navigateur ; affectations non sauvegardées utilisables dans la session active.
+- Aucun nouveau sprite ou clip animé. Voir docs/CORRECTIONS_v0.9.5.md.
+
 ## 0.9.4 — Reprise fiable, commandes et cache hors ligne
 
 - Garde tactile : un front de pression, une fenêtre de parade, une libération.

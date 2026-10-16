@@ -71,9 +71,9 @@ export function validateRun(value) {
   return true;
 }
 export function loadRun(storage) {
-  const value=readState(KEYS.run,{},storage);return validateRun(value)?value:null;
+  const value=readState(KEYS.run,{},storage,validateRun);return validateRun(value)?value:null;
 }
-export function saveRun(run,storage) {return validateRun(run)?writeState(KEYS.run,run,storage):null;}
+export function saveRun(run,storage) {return validateRun(run)?writeState(KEYS.run,run,storage,validateRun):null;}
 export function playerOutcome(result) {
   if(!result || ![0,1].includes(result.winnerIndex))throw new Error('Résultat sans emplacement de joueur.');
   return {won:result.winnerIndex===0,stats:{...(result.winnerIndex===0?result.stats?.winner:result.stats?.loser)||{}},
