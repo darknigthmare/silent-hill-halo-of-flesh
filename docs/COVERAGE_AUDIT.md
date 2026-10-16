@@ -1,4 +1,4 @@
-# Audit de couverture du roster — v0.9.3
+# Audit de couverture du roster — v0.9.4
 
 **État global : COMPLET DANS LE PÉRIMÈTRE DÉFINI**
 

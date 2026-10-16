@@ -5,6 +5,7 @@ import {
 } from './data.js';
 import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
 import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS } from './run-progress.js';
+import {bindTouchButton} from './touch-controls.js';
 import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
@@ -202,7 +203,7 @@ function renderRoster() {
       event.preventDefault();
       if (state.favorites.has(fighter.id)) state.favorites.delete(fighter.id); else state.favorites.add(fighter.id);
       writeJSON(FAVORITES_KEY, { ids: [...state.favorites] });
-      renderRoster();
+      applyFilters();
     });
     els.roster.append(button);
     renderPortrait(canvas, fighter, { time: performance.now() + start * 19 });
@@ -282,17 +283,18 @@ function closeDossier() { els.dossier.classList.add('hidden'); }
 
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
-  const candidates = state.filtered.length ? state.filtered : ROSTER;
+  const candidates = state.filtered;
   const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
   if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
   state.p1 = randomItem(pool);
-  do { state.p2 = randomItem(pool); } while (pool.length > 1 && state.p2.id === state.p1.id);
+  state.p2 = randomItem(pool.length > 1 ? pool.filter(f => f.id !== state.p1.id) : pool);
   state.stage = randomItem(STAGES);
   audio.confirm();
   renderSelected(); renderRoster();
 }
 
 function configurePreset() {
+  els.mode.disabled=false;els.difficulty.disabled=false;els.ritualSelect.disabled=false;
   const labels = {
     versus: ['CONFRONTATION', 'OUVRIR LE CONTACT'], arcade: ['DESCENTE', 'COMMENCER LE PARCOURS'],
     ritual: ['RITES DU JUGEMENT', 'OUVRIR LE PREMIER SCEAU'],
@@ -342,21 +344,24 @@ function checkpointNotice() {
   banner.classList.toggle('hidden',!pending);
   if(pending)$('#runCheckpointText').textContent=`Parcours ${saved.mode} : ${saved.wins}/${saved.queue.length} victoires. ${saved.status==='won'?'Prochain combat prêt.':'Reprise au début de la rencontre en cours.'}`;
 }
-function restoreCheckpoint() {
-  const saved=loadRun(), resumed=resumeRun(saved);
-  if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return;}
-  state.run=resumed;preset=resumed.mode;state.mode=preset;state.p1=getFighter(resumed.playerId);
+function activateRun(run) {
+  state.run=run;preset=run.mode;state.mode=preset;state.p1=getFighter(run.playerId);
   configurePreset();
-  const rules=resumed.rules;
+  const rules=run.rules;
   els.rounds.value=String(rules.roundsToWin);els.timer.value=String(rules.timeLimit);els.difficulty.value=rules.difficulty;
   for(const key of RULE_BOOLEANS)els[key].checked=rules[key]!==false;
   els.ritualSelect.value=rules.ritualId||'none';
-  startFight({preserveRun:true});
+}
+function restoreCheckpoint() {
+  if(state.loadingSprites)return false;
+  const resumed=resumeRun(loadRun());
+  if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return false;}
+  return startFight({preserveRun:true,runCandidate:resumed});
 }
 function retryCurrentFight() {
-  if(state.run&&state.run.status==='lost')state.run=resumeRun(state.run);
-  if(state.run&&['won','complete'].includes(state.run.status))return;
-  startFight({preserveRun:Boolean(state.run)});
+  if(state.loadingSprites||state.run&&['won','complete'].includes(state.run.status))return false;
+  const candidate=state.run?.status==='lost'?resumeRun(state.run):state.run;
+  return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
 
 function showFight() {
@@ -407,18 +412,18 @@ function fightConfig() {
   };
 }
 
-async function startFight({ preserveRun = false } = {}) {
+async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   if (state.loadingSprites) return false;
   const lease=++state.spriteLease;
-  const selection=()=>JSON.stringify([preset,state.p1.id,state.p2.id,state.stage.id,selectedRules(),$('#artDiagnostic')?.checked]);
+  const selection=()=>JSON.stringify([preset,state.p1.id,state.p2.id,state.stage.id,selectedRules(),$('#artDiagnostic')?.checked,state.run]);
   const originalSelection=selection();
   const diagnostic=$('#artDiagnostic')?.checked===true;
-  let candidate=preserveRun?state.run:null;
+  let candidate=preserveRun?(runCandidate||state.run):null;
   try {
     if(!preserveRun&&['arcade','boss','ritual','chronicle'].includes(preset))candidate=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()});
   } catch(error){flow.announce(error.message,true);return false;}
   // Preflight the WHOLE run before overwriting a checkpoint or counting an attempt.
-  const ids=candidate?[state.p1.id,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
+  const ids=candidate?[candidate.playerId,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
   const fighters=[...new Set(ids)].map(getFighter);
   state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
   $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
@@ -440,7 +445,8 @@ async function startFight({ preserveRun = false } = {}) {
     $('#spriteLaunchStatus').textContent=message;flow.announce(message,true);return false;
   }
   if (!preserveRun && !buildRun(candidate)){pinCombatSprites([]);return false;}
-  if (state.run && state.run.status !== 'ready'){pinCombatSprites([]);return false;}
+  if (candidate && candidate.status !== 'ready'){pinCombatSprites([]);return false;}
+  if (preserveRun && candidate) activateRun(candidate);
   clearTimeout(state.resultTimer);state.generation++;state.settled=false;state.lastResult=null;
   state.matchId=globalThis.crypto?.randomUUID?.() || `match-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   flow.close();
@@ -455,7 +461,7 @@ async function startFight({ preserveRun = false } = {}) {
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
-  els.touchLayer.style.display = state.touchEnabled ? 'block' : '';
+  els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   const ritual = currentRitual();
   els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
   refreshControlHelp();
@@ -467,6 +473,7 @@ async function startFight({ preserveRun = false } = {}) {
   state.engine.start();
   els.game.focus({preventScroll:true});
   if (params.get('qa') === '1') installQaBridge();
+  return true;
 }
 
 function installQaBridge() {
@@ -561,9 +568,8 @@ function handleMatchEnd(result) {
   },600);
 }
 function continueRun() {
-  if(state.run?.status!=='won')return;
-  state.run=resumeRun(state.run);
-  startFight({preserveRun:true});
+  if(state.loadingSprites||state.run?.status!=='won')return false;
+  return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
 }
 function refreshControlHelp() {
   const bindings=loadControls();
@@ -581,14 +587,9 @@ function updateTraining() {
 
 function bindTouch() {
   $$('.touch-button').forEach(button=>{
-    const {player,action}=button.dataset, pointers=new Set();
+    const {player,action}=button.dataset;
     button.setAttribute('aria-label',ACTIONS[action]||action);
-    const release=event=>{event.preventDefault();pointers.delete(event.pointerId);
-      if(!pointers.size)state.engine?.setTouch(player,action,false);};
-    button.addEventListener('pointerdown',event=>{event.preventDefault();pointers.add(event.pointerId);
-      button.setPointerCapture?.(event.pointerId);state.engine?.setTouch(player,action,'pressed');});
-    for(const name of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(name,release);
-    button.style.touchAction='none';
+    bindTouchButton(button,()=>state.engine,player,action);
   });
 }
 
@@ -619,12 +620,13 @@ function bindEvents() {
   els.forceBossPhase.addEventListener('click', () => state.engine?.forceBossPhase());
   els.resetDojo.addEventListener('click', () => state.engine?.resetMatch());
   els.mobileP1.addEventListener('click', () => {
+    state.engine?.clearInputs();
     state.touchEnabled = !state.touchEnabled;
     els.mobileP1.textContent = state.touchEnabled ? 'TACTILE SUJET I ACTIF' : 'TACTILE SUJET I';
     els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   });
   addEventListener('keydown', (event) => {
-    if(event.defaultPrevented||event.target?.closest?.('dialog,input,textarea,select'))return;
+    if(event.defaultPrevented||event.repeat||event.target?.isContentEditable||event.target?.closest?.('dialog,input,textarea,select'))return;
     if (event.code === 'Escape') {
       if (!els.dossier.classList.contains('hidden')) closeDossier();
       else if (!els.stageGallery.classList.contains('hidden')) closeStageGallery();
@@ -634,7 +636,7 @@ function bindEvents() {
     if (!els.selectScreen.classList.contains('hidden') && event.code === 'Enter' && !event.target?.closest?.('button')) startFight();
   });
   $('#resumeCheckpoint').addEventListener('click',restoreCheckpoint);
-  $('#discardCheckpoint').addEventListener('click',()=>{if(confirm('Effacer uniquement le parcours en cours ?')){removeState(KEYS.run);checkpointNotice();}});
+  $('#discardCheckpoint').addEventListener('click',()=>{if(state.loadingSprites)return;if(confirm('Effacer uniquement le parcours en cours ?')){removeState(KEYS.run);checkpointNotice();}});
   bindTouch();
 }
 

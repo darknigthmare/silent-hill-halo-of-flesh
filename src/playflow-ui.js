@@ -6,17 +6,18 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   document.body.append(status);
   let statusTimer;
   function announce(message,persistent=false){clearTimeout(statusTimer);status.textContent=message;status.classList.remove('hidden');
+    const feedback=document.querySelector('#pauseFeedback');if(feedback)feedback.textContent=message;
     if(!persistent)statusTimer=setTimeout(()=>status.classList.add('hidden'),6000);}
   addEventListener('shhf-storage-status',e=>announce(e.detail.kind==='recovered'?'Mémoire précédente récupérée.':'Mémoire locale indisponible ou invalide. Exportez vos données depuis les réglages.',true));
   const pause=document.createElement('dialog');pause.className='play-dialog';pause.setAttribute('aria-labelledby','pauseTitle');
-  pause.innerHTML=`<h2 id="pauseTitle">SIGNAL SUSPENDU</h2><p id="pauseReason">Le combat et les dangers sont arrêtés.</p><div class="play-actions"><button data-pause="resume" class="ui-button primary">REPRENDRE</button><button data-pause="controls" class="ui-button">COMMANDES</button><button data-pause="retry" class="ui-button">RECOMMENCER LE COMBAT</button><button data-pause="select" class="ui-button">RETOUR À LA SÉLECTION</button></div><p class="play-note">Les parcours sont conservés entre les combats. Une interruption en combat reprend au début de cette rencontre.</p>`;
+  pause.innerHTML=`<h2 id="pauseTitle">SIGNAL SUSPENDU</h2><p id="pauseReason">Le combat et les dangers sont arrêtés.</p><p id="pauseFeedback" role="status"></p><div class="play-actions"><button data-pause="resume" class="ui-button primary">REPRENDRE</button><button data-pause="controls" class="ui-button">COMMANDES</button><button data-pause="retry" class="ui-button">RECOMMENCER LE COMBAT</button><button data-pause="select" class="ui-button">RETOUR À LA SÉLECTION</button></div><p class="play-note">Les parcours sont conservés entre les combats. Une interruption en combat reprend au début de cette rencontre.</p>`;
   document.body.append(pause);
   pause.addEventListener('cancel',e=>{e.preventDefault();engine()?.togglePause(false);});
   pause.addEventListener('click',e=>{
     const action=e.target.closest('[data-pause]')?.dataset.pause;if(!action)return;
     if(action==='resume')engine()?.togglePause(false);
     if(action==='select'){pause.close();select();}
-    if(action==='retry'&&confirm('Recommencer cette rencontre ?')){pause.close();retry();}
+    if(action==='retry'&&confirm('Recommencer cette rencontre ?')){void retry();}
     if(action==='controls')openControls();
   });
   const controls=document.createElement('dialog');controls.className='play-dialog controls-dialog';controls.setAttribute('aria-labelledby','controlsTitle');

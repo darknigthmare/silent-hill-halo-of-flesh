@@ -42,7 +42,7 @@ test('service worker separates versioned static and runtime caches with navigati
   assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}`/);
   assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}`/);
   assert.match(worker,/request\.mode\s*===\s*'navigate'/);
-  assert.match(worker,/caches\.match\(OFFLINE_URL\)/);
+  assert.match(worker,/matchCached\(OFFLINE_URL\)/);
   assert.doesNotMatch(worker,/event\.request\.mode==='navigate'\?caches\.match\('\/index\.html'\)/);
 });
 

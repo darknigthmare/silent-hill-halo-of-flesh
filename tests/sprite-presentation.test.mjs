@@ -22,3 +22,9 @@ for(const data of [film,air])for(const facing of [-1,1])for(const x of [80,1200]
 });
 test('camera preserves all stage and actor coordinates through one shared matrix',()=>{const a=actor(),c=combatFraming([a]);const box={x:100,y:300,w:50,h:20};const s=toScreen(box,c);assert.equal((s.x-c.x)/c.scale,box.x);assert.equal((s.y-c.y)/c.scale,box.y);});
 test('camera is deterministic and contains future clip extents, not only the current frame',()=>{const a=actor(),art=structuredClone(spriteFor(film));const second={...art.frames[0],anchor:[.95,.95]};art.frames.push(second);const r={[film.id]:art};assert.deepEqual(combatFraming([a],{registry:r}),combatFraming([a],{registry:r}));for(const f of art.frames){const b=toScreen(visibleSpriteBox(film,f,a.x,a.y),combatFraming([a],{registry:r}));assert.ok(b.x>=0&&b.x+b.w<=1280);}});
+test('calibration v2 records original calibration to reject stale exports',()=>{
+ const art=spriteFor(film),draft=structuredClone(art);draft.frames[0].anchor=[.25,.9];
+ const packet=calibrationPacket(film,art,draft);assert.equal(packet.schema,2);
+ assert.deepEqual(packet.previousFrames[0].anchor,art.frames[0].anchor);packet.previousFrames[0].anchor[0]=0;
+ assert.notEqual(art.frames[0].anchor[0],0);assert.deepEqual(packet.frames[0].anchor,[.25,.9]);
+});

@@ -35,14 +35,16 @@ class InputState {
     this.released = new Set();
     this.enabled = true;
     this.onDown = (event) => {
-      if (!this.enabled || event.target?.closest?.('input,textarea,select,button,dialog')) return;
+      if (!this.enabled || event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey ||
+        event.target?.isContentEditable || event.target?.closest?.('input,textarea,select,button,dialog')) return;
+      // A repeat delivered after a focus/reset boundary is not a new physical press.
+      if (event.repeat && !this.held.has(event.code)) return;
       if (!this.held.has(event.code)) this.pressed.add(event.code);
       this.held.add(event.code);
       if (this.bindings.players.some(p => Object.values(p).includes(event.code))) event.preventDefault();
     };
     this.onUp = (event) => {
-      this.held.delete(event.code);
-      this.released.add(event.code);
+      if (this.held.delete(event.code)) this.released.add(event.code);
     };
     addEventListener('keydown', this.onDown, { passive: false });
     addEventListener('keyup', this.onUp);
@@ -338,6 +340,8 @@ export class FightEngine {
     };
     this.stageRuntime = createStageRuntime(this.stage);
     this.inputBuffer = [null, null];
+    this.guardHeld = [false, false];
+    this.inputEpoch = 0;
     this.boundLoop = (time) => this.loop(time);
     this.onFocusLoss = () => {
       if (this.phase !== 'matchEnd') this.togglePause(true);
@@ -364,6 +368,8 @@ export class FightEngine {
   }
 
   clearInputs() {
+    this.inputEpoch++;
+    this.guardHeld = [false, false];
     this.input.clear();
     this.touch = { p1: {}, p2: {} };
     this.inputBuffer = [null, null];
@@ -372,6 +378,7 @@ export class FightEngine {
 
   togglePause(force) {
     this.paused = typeof force === 'boolean' ? force : !this.paused;
+    this.input.enabled = !this.paused && this.phase !== 'matchEnd';
     this.clearInputs();
     this.callbacks.onState(this.snapshot());
   }
@@ -392,6 +399,8 @@ export class FightEngine {
 
   setTouch(player, action, value) {
     if (action === 'up') action = 'jump'; // Older tactile layouts.
+    if (value !== false && (this.paused || !this.input.enabled || this.phase === 'matchEnd')) return;
+    if (![true, false, 'pressed'].includes(value)) return;
     if (this.touch[player] && Object.hasOwn(this.bindings.players[0], action)) this.touch[player][action] = value;
   }
 
@@ -620,13 +629,16 @@ export class FightEngine {
     const held = (action) => this.input.isDown(map[action]) || Boolean(touch[action]) || Boolean(pad?.held?.[action]);
     const pressed = (action) => this.input.wasPressed(map[action]) || touch[action] === 'pressed' || Boolean(pad?.pressed?.[action]);
     const released = (action) => this.input.wasReleased(map[action]) || Boolean(pad?.released?.[action]);
+    const guard = held('guard'), previousGuard = this.guardHeld[index];
+    this.guardHeld[index] = guard;
     const controls = {
-      left: held('left'), right: held('right'), down: held('down'), guard: held('guard'),
-      guardPressed: pressed('guard'), guardReleased: released('guard'), jump: pressed('jump'),
+      left: held('left'), right: held('right'), down: held('down'), guard,
+      guardPressed: guard && !previousGuard && pressed('guard'),
+      guardReleased: !guard && (previousGuard || released('guard')), jump: pressed('jump'),
       light: pressed('light'), heavy: pressed('heavy'), special: pressed('special'), throw: pressed('throw'),
       super: pressed('super'), dodge: pressed('dodge')
     };
-    for (const action of [...ATTACK_ACTIONS, 'jump', 'dodge']) {
+    for (const action of Object.keys(touch)) {
       if (touch[action] === 'pressed') touch[action] = true;
     }
     if (!raw && this.inputBuffer[index]) {

@@ -8,7 +8,8 @@ import {visibleSpriteBox} from './sprite-framing.js';
 import {bodyBox} from './combat-geometry.js';
 
 export function calibrationPacket(fighter,original,draft){
- return {schema:1,kind:'halo-sprite-calibration',fighterId:fighter.id,source:fighter.source,
+ return {schema:2,kind:'halo-sprite-calibration',fighterId:fighter.id,source:fighter.source,
+  previousFrames:original.frames.map(f=>({path:f.path,sha256:f.sha256,anchor:[...f.anchor],bodyHeight:f.bodyHeight,facing:f.facing})),
   frames:draft.frames.map((f,i)=>({path:original.frames[i].path,sha256:original.frames[i].sha256,
    anchor:[...f.anchor],bodyHeight:f.bodyHeight,facing:f.facing}))};
 }
@@ -82,14 +83,17 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  $('flip').onclick=()=>{presentation*=-1;$('flip').textContent=presentation===1?'VOIR VERS LA GAUCHE':'VOIR VERS LA DROITE';draw();};
  $('boxes').onchange=draw;$('zoom').onchange=draw;
  $('retry').onclick=()=>{const frame=selected()?.frame;if(!frame)return;void spriteCache.load(frame,{retry:true}).then(()=>{if(!disposed)draw();});draw();};
- for(const key of ['anchorX','anchorY','bodyHeight','facing'])$(key).addEventListener('change',()=>{
+ function applyFields(){
   const inputs=['anchorX','anchorY','bodyHeight'].map(k=>$(k));
-  if(inputs.some(i=>!i.value.trim()||!i.checkValidity()||!Number.isFinite(Number(i.value)))){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–1.';return;}
+  if(inputs.some(i=>!i.value.trim()||!i.checkValidity()||!Number.isFinite(Number(i.value)))){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–1.';return false;}
   const frame=selected().frame;frame.anchor=inputs.slice(0,2).map(i=>Number(i.value));frame.bodyHeight=Number(inputs[2].value);frame.facing=Number($('facing').value);
-  dirty.add(currentIndex);$('error').textContent='';draw();
- });
+  const base=original.frames[currentIndex];
+  if(JSON.stringify([frame.anchor,frame.bodyHeight,frame.facing])===JSON.stringify([base.anchor,base.bodyHeight,base.facing]))dirty.delete(currentIndex);else dirty.add(currentIndex);
+  $('error').textContent='';draw();return true;
+ }
+ for(const key of ['anchorX','anchorY','bodyHeight','facing'])$(key).addEventListener('change',applyFields);
  $('reset').onclick=()=>{stop();draft.frames=structuredClone(original.frames);dirty.clear();$('error').textContent='';fields();draw();};
- $('export').onclick=()=>{downloadJSON(calibrationPacket(fighter,original,draft),'HALO_CALIBRATION_'+fighter.id+'.json');$('error').textContent='Export effectué. Appliquer avec scripts/apply-sprite-calibration.py --apply, puis reconstruire le jeu.';};
+ $('export').onclick=()=>{if(!applyFields())return;downloadJSON(calibrationPacket(fighter,original,draft),'HALO_CALIBRATION_'+fighter.id+'.json');$('error').textContent='Export effectué. Appliquer avec scripts/apply-sprite-calibration.py --apply, puis reconstruire le jeu.';};
  const onHidden=()=>{if(document.hidden)stop();};document.addEventListener('visibilitychange',onHidden);
  editor=mountClipEditor({host:panel,fighter,original,draft,getPose:()=>$('pose').value,onChange:()=>{stop();tick=0;currentIndex=-1;draw();}});
  draw();

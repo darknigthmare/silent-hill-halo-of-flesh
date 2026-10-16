@@ -10,8 +10,8 @@ import {
 const fighterIds=new Set(ROSTER.map(f=>f.id));
 const stageIds=new Set(STAGES.map(s=>s.id));
 
-test('v0.9.3 catalogue counts are synchronized',()=>{
-  assert.equal(VERSION,'0.9.3');
+test('v0.9.4 catalogue counts are synchronized',()=>{
+  assert.equal(VERSION,'0.9.4');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
     fatalities:460,stageFatalities:123,stageAnimations:352,stageDirectorEvents:300,

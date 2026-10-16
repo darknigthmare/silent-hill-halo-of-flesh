@@ -1,3 +1,15 @@
+## 0.9.4 — Reprise fiable, commandes et cache hors ligne
+
+- Garde tactile : un front de pression, une fenêtre de parade, une libération.
+- Inputs multipériphériques, composition, répétitions et pointeurs périmés corrigés.
+- Reprise/Combat suivant ne modifient le parcours qu'après préchargement réussi.
+- Échec de recommencement : dialogue de pause conservé et erreur accessible.
+- Filtres vides/favoris et aléatoire sans boucle de tirage corrigés.
+- Quota/CacheStorage ne font plus perdre les réponses réseau ; vrai secours 503.
+- Priorité runtime, mises à jour prolongées et limite de 128 entrées runtime.
+- Brouillons retenus entre poses ; calibration schéma 2 avec contrôle de concurrence.
+- Aucun ajout artistique. Voir docs/CORRECTIONS_v0.9.4.md.
+
 ## 0.9.3 — Montage des clips individuels et publication contrôlée
 
 - Ordre des images, durées par étape, prévisualisation et export JSON dans l’atelier.

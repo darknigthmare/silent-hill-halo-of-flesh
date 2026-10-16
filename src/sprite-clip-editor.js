@@ -11,8 +11,9 @@ export function mountClipEditor({host,fighter,original,draft,getPose,onChange}){
  <p data-clip="status" role="status"></p><p data-clip="error" role="alert"></p>`;
  host.append(section);const $=key=>section.querySelector(`[data-clip="${key}"]`);
  let pose=getPose(),working=createClipDraft(draft,pose),disposed=false;
+ const workingPoses=new Map();
  function message(){const s=clipSummary(draft,working),timing=moveTiming(fighter,pose);
-  $('status').textContent=`${s.steps} étapes · ${s.distinct} images distinctes · ${s.total} ticks à 60 Hz`+(s.animated?' · séquence multi-images candidate':' · pose statique, pas une animation')+'. Brouillon local, non publié.';
+  $('status').textContent=`${s.steps} étapes · ${s.distinct} images distinctes · ${Number.isFinite(s.total)?s.total:'—'} ticks à 60 Hz`+(s.animated?' · séquence multi-images candidate':' · pose statique, pas une animation')+'. Brouillon local, non publié.';
   $('timing').textContent=timing?`${timing.name} — préparation ${timing.startup}, impact ${timing.active}, récupération ${timing.recovery} ticks. Le moteur dure ${timing.total} ticks ; les dégâts et fenêtres de collision ne sont pas modifiés.`:'Durées de présentation uniquement. Les images doivent représenter la pose choisie.';
   $('loop').disabled=!!timing;$('loop').checked=working.loop;$('add').disabled=working.frames.length>=MAX_CLIP_STEPS;
  }
@@ -41,5 +42,5 @@ export function mountClipEditor({host,fighter,original,draft,getPose,onChange}){
   const url=URL.createObjectURL(new Blob([JSON.stringify(packet,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=`HALO_CLIP_${fighter.id}_${pose}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   $('status').textContent+=' Export JSON effectué ; vérifier avec apply-sprite-clip.py. Aucune image ni revue artistique livrée par cet export.';
  }catch(e){$('error').textContent=e.message;}};
- render();return {sync(){if(getPose()===pose)return;pose=getPose();working=createClipDraft(draft,pose);$('error').textContent='';render();},dispose(){disposed=true;section.remove();}};
+ render();return {sync(){if(getPose()===pose)return;workingPoses.set(pose,structuredClone(working));pose=getPose();working=workingPoses.has(pose)?structuredClone(workingPoses.get(pose)):createClipDraft(draft,pose);$('error').textContent='';render();},dispose(){disposed=true;section.remove();}};
 }

@@ -19,15 +19,28 @@ spec.loader.exec_module(importer)
 def apply_packet(root, packet, apply=False):
     root = Path(root).resolve()
     path = root / 'art/registry.json'
-    if path.is_symlink() or (root / 'art').is_symlink():
-        raise ValueError('Registry must not be a symlink')
+    for relative in ('art', 'art/registry.json', 'assets', 'assets/sprites'):
+        location = root / relative
+        if location.resolve() != location or location.is_symlink():
+            raise ValueError('Registry and asset directories must not be symlinks')
     before = path.read_bytes()
     registry = json.loads(before)
-    if not isinstance(packet, dict) or packet.get('schema') != 1 or packet.get('kind') != 'halo-sprite-calibration':
+    if not isinstance(packet, dict) or type(packet.get('schema')) is not int or packet['schema'] not in (1, 2) or packet.get('kind') != 'halo-sprite-calibration':
         raise ValueError('Unsupported calibration format')
+    allowed = {'schema', 'kind', 'fighterId', 'source', 'frames'}
+    if packet['schema'] == 2:
+        allowed.add('previousFrames')
+    if set(packet) != allowed or not isinstance(packet['fighterId'], str) or not isinstance(packet['source'], str):
+        raise ValueError('Unexpected calibration fields or identity')
+    if packet['schema'] == 1 and apply:
+        raise ValueError('Legacy calibration has no concurrency guard; re-export using the current inspector')
     asset = registry.get('assets', {}).get(packet.get('fighterId'))
     if not asset or asset['source'] != packet.get('source'):
         raise ValueError('Unknown fighter or mismatched source')
+    if packet['schema'] == 2:
+        previous = [{key: frame[key] for key in ('path', 'sha256', 'anchor', 'bodyHeight', 'facing')} for frame in asset['frames']]
+        if packet['previousFrames'] != previous:
+            raise ValueError('Stale calibration export: anchors, dimensions, direction or frame set changed')
     entries = packet.get('frames')
     if not isinstance(entries, list) or not entries or len(entries) > 256:
         raise ValueError('Invalid calibration frame list')
@@ -78,9 +91,11 @@ if __name__ == '__main__':
     p.add_argument('--apply', action='store_true')
     try:
         args = p.parse_args()
-        if args.packet.stat().st_size > 256 * 1024:
+        with args.packet.open('rb') as stream:
+            raw = stream.read(256 * 1024 + 1)
+        if len(raw) > 256 * 1024:
             raise ValueError('Calibration file too large')
-        print(json.dumps(apply_packet(args.root, json.loads(args.packet.read_text()), args.apply)))
+        print(json.dumps(apply_packet(args.root, json.loads(raw), args.apply)))
     except (ValueError, TypeError, OSError, KeyError) as error:
         print('Calibration refused: '+str(error), file=sys.stderr)
         sys.exit(2)

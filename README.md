@@ -1,3 +1,13 @@
+# SILENT HILL: HALO OF FLESH — v0.9.4
+
+Corrections de la garde tactile, des inputs après pause, de la reprise de parcours
+après échec de chargement, des filtres de sélection et du cache hors ligne.
+L'atelier conserve les montages entre poses et protège les calibrations contre
+les exports périmés. [Détails et compatibilité](docs/CORRECTIONS_v0.9.4.md).
+
+**Art inchangé : 2 candidats / 230 profils, aucun nouveau sprite ni clip animé livré.**
+Les notes des versions antérieures ci-dessous sont historiques.
+
 ## Suite de la PR #4 — v0.9.3
 
 Montage et export de clips à partir d’images individuelles déjà importées, durées par étape,
@@ -27,7 +37,7 @@ Lire [le pipeline, l’importeur et les limites de validation](docs/SPRITE_PIPEL
 
 ---
 
-# État courant — v0.9.0, prototype en développement
+# Historique — v0.9.0, prototype en développement
 
 La passe actuelle apporte checkpoints de parcours, remappage, commandes tactiles corrigées, résultats par sujet et sauvegardes validées. **Ce projet n'est pas déclaré prêt à commercialiser.** La fidélité exhaustive, les arts définitifs et les droits de franchise ne sont pas certifiés.
 
