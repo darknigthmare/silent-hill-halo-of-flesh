@@ -1,3 +1,15 @@
+# SILENT HILL: HALO OF FLESH — v0.9.1
+
+## Première intégration bitmap individuelle
+
+Deux PNG détaillés natifs, un sujet par image, remplacent les silhouettes géométriques sur leurs identifiants exacts. Les combats, la sélection, l’accueil, les archives et les chroniques utilisent maintenant le pipeline raster. Atelier de suivi : `modules/sprite-workshop.html`.
+
+**Couverture réelle : 2 candidats / 230 profils ; 228 images à produire ; 0 fidélité 1:1 certifiée ; 0 clip animé.** Les autres profils sont conservés et explicitement marqués. Les parcours incomplets graphiquement sont accessibles par le diagnostic moteur volontaire, pas présentés comme une version finale. Le CSS d’interface et les décors procéduraux ne sont pas supprimés.
+
+Lire [le pipeline, l’importeur et les limites de validation](docs/SPRITE_PIPELINE_v0.9.1.md). `npm test` contrôle 233 cas ; les 15 tests Python de l’importeur se lancent séparément. Les rapports historiques ci-dessous sont conservés et ne remplacent pas cet état graphique.
+
+---
+
 # État courant — v0.9.0, prototype en développement
 
 La passe actuelle apporte checkpoints de parcours, remappage, commandes tactiles corrigées, résultats par sujet et sauvegardes validées. **Ce projet n'est pas déclaré prêt à commercialiser.** La fidélité exhaustive, les arts définitifs et les droits de franchise ne sont pas certifiés.

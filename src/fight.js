@@ -2155,10 +2155,11 @@ export class FightEngine {
         facing: actor.facing,
         state: {
           moving: actor.state === 'walk', crouching: actor.crouching, attackProgress,
+          airborne: !actor.grounded, moveKey: actor.attack?.move?.key, frame: actor.attack?.frame ?? this.frame,
           hurt: actor.hurtFrames > 0, hitFlash: actor.hitFlash > 0, ko: actor.ko, koProgress: actor.koProgress,
           status: actor.status?.id || null, traitPulse: actor.traitPulse
         },
-        time,
+        time, diagnostic: Boolean(this.config.artDiagnostic),
         alpha: actor.invuln > 0 && this.frame % 4 < 2 ? .55 : 1
       });
       if (this.config.showHitboxes) {

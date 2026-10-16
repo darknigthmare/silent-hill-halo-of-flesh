@@ -1,3 +1,4 @@
+import { spriteFor, spriteStatus, spriteCache, pinCombatSprites } from './sprite-system.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
@@ -25,13 +26,13 @@ const settings = loadSettings();
 const GRADE_SCORE = Object.freeze({ D: 0, C: 1, B: 2, A: 3, S: 4 });
 
 const defaults = {
-  p1: ROSTER.find((f) => f.name === 'Red Pyramid Thing — Great Knife')?.id || ROSTER[0].id,
-  p2: ROSTER.find((f) => f.name === 'Sakura Head')?.id || ROSTER.find((f) => f.boss)?.id || ROSTER[1].id,
+  p1: 'film_red_pyramid_film_175',
+  p2: 'sh1_air_screamer_001',
   stage: STAGES.find((s) => s.id === 'hotel_otherworld')?.id || STAGES[0].id,
 };
 
 const state = {
-  activeSlot: 1,
+  activeSlot: 1, loadingSprites: false, spriteLease: 0,
   p1: getFighter(params.get('p1') || defaults.p1),
   p2: getFighter(params.get('p2') || defaults.p2),
   stage: getStage(params.get('stage') || defaults.stage),
@@ -77,7 +78,7 @@ function fighterInfo(fighter) {
   return `
     <span class="fighter-source">${escapeHTML(SOURCE_META[fighter.source]?.short || fighter.source)} · ${escapeHTML(fighter.category)}</span>
     <h2>${escapeHTML(fighter.name)}</h2>
-    <p class="fighter-lore">${escapeHTML(fighter.lore)}</p>
+    <p class="fighter-lore">${escapeHTML(fighter.lore)}</p><p class="sprite-status" data-status="${spriteStatus(fighter).kind}">${escapeHTML(spriteStatus(fighter).label)} · ${spriteStatus(fighter).animatedClips} CLIP ANIMÉ</p>
     <div class="stats">
       <div class="stat"><span>VITALITÉ</span><span><i style="width:${valueScore(profile.maxHealth, 700, 1570)}%"></i></span></div>
       <div class="stat"><span>VITESSE</span><span><i style="width:${valueScore(profile.speed, 3, 7.4)}%"></i></span></div>
@@ -90,7 +91,7 @@ function fighterInfo(fighter) {
 
 function renderSelected() {
   renderPortrait(els.p1Portrait, state.p1, { time: performance.now() });
-  renderPortrait(els.p2Portrait, state.p2, { time: performance.now() + 700 });
+  renderPortrait(els.p2Portrait, state.p2, { time: performance.now() + 700, facing: -1 });
   els.p1Info.innerHTML = fighterInfo(state.p1);
   els.p2Info.innerHTML = fighterInfo(state.p2);
   els.p1Card.classList.toggle('active', state.activeSlot === 1);
@@ -98,6 +99,8 @@ function renderSelected() {
   els.slotP1.textContent = state.activeSlot === 1 ? 'SIGNAL DU SUJET I ACTIF' : 'ACCROCHER LE SUJET I';
   els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
+  const current=[state.p1,state.p2].filter(f=>!spriteFor(f));
+  const status=$('#spriteLaunchStatus');if(status)status.textContent=current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
 }
 
 function renderStageMini() {
@@ -141,6 +144,7 @@ function currentRitualId() {
 function currentRitual() { return { id: currentRitualId(), ...getRitualModifier(currentRitualId()) }; }
 
 function matchesFilters(fighter) {
+  if ($('#artReadyOnly')?.checked && !spriteFor(fighter)) return false;
   const query = els.search.value.trim().toLowerCase();
   const source = els.sourceFilter.value;
   const type = els.typeFilter.value;
@@ -179,7 +183,8 @@ function renderRoster() {
     const button = document.createElement('button');
     button.className = 'fighter-card';
     button.dataset.id = fighter.id;
-    button.title = `${fighter.name} — ${fighter.signature}`;
+    button.title = `${fighter.name} — ${fighter.signature} — ${spriteStatus(fighter).label}`;
+    button.dataset.artStatus = spriteStatus(fighter).kind;
     if (state.p1.id === fighter.id || state.p2.id === fighter.id) button.classList.add('selected');
     const canvas = document.createElement('canvas');
     canvas.width = 180; canvas.height = 120;
@@ -277,7 +282,9 @@ function closeDossier() { els.dossier.classList.add('hidden'); }
 
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
-  const pool = state.filtered.length ? state.filtered : ROSTER;
+  const candidates = state.filtered.length ? state.filtered : ROSTER;
+  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
+  if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
   state.p1 = randomItem(pool);
   do { state.p2 = randomItem(pool); } while (pool.length > 1 && state.p2.id === state.p1.id);
   state.stage = randomItem(STAGES);
@@ -314,11 +321,11 @@ function selectedRules() {
     difficulty:els.difficulty.value,ritualId:els.ritualSelect.value,
     ...Object.fromEntries(RULE_BOOLEANS.map(k=>[k,els[k].checked]))};
 }
-function buildRun() {
+function buildRun(candidate = null) {
   if (!['arcade','boss','ritual','chronicle'].includes(preset)) { state.run=null;return true; }
   const previous=loadRun();
   if(previous&&previous.status!=='complete'&&!confirm('Remplacer le parcours sauvegardé par un nouveau parcours ?'))return false;
-  try { state.run=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
+  try { state.run=candidate||createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
   catch(error){state.run=null;flow.announce(error.message,true);return false;}
   try {
     if(preset==='chronicle'){
@@ -359,6 +366,7 @@ function showFight() {
   window.scrollTo(0, 0);
 }
 function showSelect() {
+  state.spriteLease++; state.loadingSprites=false; els.launch.disabled=false; els.launch.removeAttribute('aria-busy'); pinCombatSprites([]);
   clearTimeout(state.resultTimer);state.generation++;flow.close();
   state.engine?.destroy(); state.engine = null;
   els.fightScreen.classList.add('hidden');
@@ -377,7 +385,7 @@ function fightConfig() {
     roundsToWin: Number(els.rounds.value),
     timeLimit: Number(els.timer.value),
     difficulty: els.difficulty.value,
-    training,
+    training, artDiagnostic: $('#artDiagnostic')?.checked === true,
     showHitboxes: training && els.hitboxes.checked,
     autoHeal: training && els.autoHeal.checked,
     freeMeter: training && els.freeMeter.checked,
@@ -399,9 +407,40 @@ function fightConfig() {
   };
 }
 
-function startFight({ preserveRun = false } = {}) {
-  if (!preserveRun && !buildRun()) return;
-  if (state.run && state.run.status !== 'ready') return;
+async function startFight({ preserveRun = false } = {}) {
+  if (state.loadingSprites) return false;
+  const lease=++state.spriteLease;
+  const selection=()=>JSON.stringify([preset,state.p1.id,state.p2.id,state.stage.id,selectedRules(),$('#artDiagnostic')?.checked]);
+  const originalSelection=selection();
+  const diagnostic=$('#artDiagnostic')?.checked===true;
+  let candidate=preserveRun?state.run:null;
+  try {
+    if(!preserveRun&&['arcade','boss','ritual','chronicle'].includes(preset))candidate=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()});
+  } catch(error){flow.announce(error.message,true);return false;}
+  // Preflight the WHOLE run before overwriting a checkpoint or counting an attempt.
+  const ids=candidate?[state.p1.id,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
+  const fighters=[...new Set(ids)].map(getFighter);
+  state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
+  $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
+  let ready;
+  try {
+    ready=await spriteCache.prepare(fighters,{diagnostic});
+    if(ready.ok&&lease===state.spriteLease&&selection()===originalSelection){
+      const pair=candidate?[getFighter(candidate.playerId),getFighter(candidate.queue[candidate.index])]:[state.p1,state.p2];
+      pinCombatSprites(pair);
+      ready=await spriteCache.prepare(pair,{diagnostic});
+    }
+  } catch(error){ready={ok:false,missing:[],failed:['preflight']};}
+  finally {if(lease===state.spriteLease){state.loadingSprites=false;els.launch.disabled=false;els.launch.removeAttribute('aria-busy');}}
+  if(lease!==state.spriteLease||selection()!==originalSelection){if(lease===state.spriteLease)pinCombatSprites([]);flow.announce('Sélection modifiée : chargement annulé. Relance le contact.',true);return false;}
+  if(!ready.ok){
+    pinCombatSprites([]);
+    const names=ready.missing.slice(0,4).map(id=>getFighter(id).name).join(', ');
+    const message=ready.missing.length?`Sprites à produire : ${ready.missing.length}. ${names}${ready.missing.length>4?'…':''}. Aucun parcours ni tentative modifié.`:'Une image n’a pas pu être chargée. Réessaie le contact; aucun parcours ni tentative modifié.';
+    $('#spriteLaunchStatus').textContent=message;flow.announce(message,true);return false;
+  }
+  if (!preserveRun && !buildRun(candidate)){pinCombatSprites([]);return false;}
+  if (state.run && state.run.status !== 'ready'){pinCombatSprites([]);return false;}
   clearTimeout(state.resultTimer);state.generation++;state.settled=false;state.lastResult=null;
   state.matchId=globalThis.crypto?.randomUUID?.() || `match-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   flow.close();
@@ -423,6 +462,7 @@ function startFight({ preserveRun = false } = {}) {
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
   const generation=state.generation, config=fightConfig();
   config.callbacks.onMatchEnd=result=>{if(generation===state.generation)handleMatchEnd(result);};
+  pinCombatSprites([state.p1,state.p2]);
   state.engine = new FightEngine(els.game, config);
   state.engine.start();
   els.game.focus({preventScroll:true});
@@ -432,6 +472,7 @@ function startFight({ preserveRun = false } = {}) {
 function installQaBridge() {
   window.__HALO_QA__ = {
     version: VERSION,
+    spriteStatus, get assetCache(){return spriteCache;},
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,
@@ -598,6 +639,9 @@ function bindEvents() {
 }
 
 function init() {
+  $('#artReadyOnly').addEventListener('change',()=>{state.page=0;applyFilters();});
+  $('#artDiagnostic').checked=params.get('debugArt')==='1';
+  $('#artDiagnostic').addEventListener('change',renderSelected);
   els.otherworldShift.checked = settings.otherworldShift !== false;
   els.stageHazards.checked = settings.stageHazards !== false;
   els.radioWarning.checked = settings.radioWarning !== false;

@@ -6,6 +6,7 @@ import { localEventAllowed,localHazardAllowed,localAnimationAllowed } from '../s
 import { stageSpace } from '../src/stage-architecture.js';
 import { drawStage,drawMonster } from '../src/renderers.js';
 import { drawStageCinematics } from '../src/stage-cinematics.js';
+import { rasterPlacement } from '../src/sprite-system.js';
 import { FightEngine } from '../src/fight.js';
 
 const fighter = kind=>ROSTER.find(f=>f.visual.kind===kind);
@@ -35,11 +36,15 @@ test('small insects no longer inherit a humanoid-height hurtbox',()=>{
 test('quadruped and worm bodies are wide and low rather than standing human boxes',()=>{
   for(const kind of ['quadruped','worm']){const b=bodyBox({data:fighter(kind),x:640,y:594});assert.ok(b.w>b.h);}
 });
-test('child and giant render scale is applied once, not squared by kind',()=>{
-  for(const kind of ['child','giant']){const r=recorder(),f=fighter(kind);drawMonster(r.context,f,0,594);const scales=r.calls.filter(c=>c[0]==='scale');assert.deepEqual(scales[0].slice(1),[f.visual.scale,f.visual.scale]);assert.ok(!scales.some(c=>c[1]===(kind==='child'?.72:1.22)&&c[2]===(kind==='child'?.72:1.22)&&c!==scales[0]));}
+test('child and giant raster calibration applies the existing body scale exactly once',()=>{
+  const frame={width:640,height:427,anchor:[.5,.95],facing:1,bodyHeight:.9};
+  for(const kind of ['child','giant']){const f=fighter(kind),p=bodyProfile(f),image=rasterPlacement(f,frame,640,594);assert.equal(image.height*frame.bodyHeight,p.height*p.scale);assert.ok(Math.abs(image.width/image.height-frame.width/frame.height)<1e-12);}
 });
-test('crouching visual scale and body envelope agree',()=>{
-  const f=fighter('nurse'),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});const scale=r.calls.find(c=>c[0]==='scale');assert.equal(scale[2],f.visual.scale*.68);assert.ok(Math.abs(bodyBox({...a,crouching:true}).h/bodyBox(a).h-.68)<1e-12);
+test('crouching collision stays at .68 while unavailable art is not falsely squash-animated',()=>{
+  const f=fighter('nurse'),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});
+  assert.ok(Math.abs(bodyBox({...a,crouching:true}).h/bodyBox(a).h-.68)<1e-12);
+  assert.ok(!r.calls.some(c=>c[0]==='scale'),'No geometric fallback or squashed standing pose is synthesized.');
+  assert.ok(r.calls.some(c=>c[0]==='fillText'&&c[1]==='VISUEL À PRODUIRE'));
 });
 test('low input reaches a creeper while a standing high attack passes above it',()=>{
   const attacker={data:fighter('nurse'),x:640,y:594,facing:1},target={data:fighter('insect'),x:725,y:594};assert.ok(overlaps(moveBox(attacker,{level:'low',reach:140}),bodyBox(target)));assert.ok(!overlaps(moveBox(attacker,{level:'high',reach:140}),bodyBox(target)));

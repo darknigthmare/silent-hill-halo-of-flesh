@@ -7,8 +7,13 @@ dist/
 tests/captures*/
 assets/screenshots/
 
-# Captures de QA livrées séparément, pas de binaires dans les sources.
+# Captures de QA livrées séparément. Les images de jeu restent versionnées.
 tests/canvas-v082/
 
 tests/ui-v090/
 tests/http-v090/
+
+tests/raster-isolated/
+tests/http-sprites/
+__pycache__/
+art/.import.lock

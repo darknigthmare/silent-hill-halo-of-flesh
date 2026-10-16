@@ -1,15 +1,20 @@
-const VERSION = '0.9.0';
+const VERSION = '0.9.1';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
 const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
+  // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+  "/assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+  // SPRITE_ASSETS_END
   '/',
   '/index.html',
   '/offline.html',
   '/404.html',
   '/styles.css',
+
   '/manifest.webmanifest',
   '/src/data.js',
   '/src/stage-director.js',
@@ -26,6 +31,9 @@ const ESSENTIAL_SHELL = [
   '/src/player-input.js',
   '/src/playflow-ui.js',
   '/src/renderers.js',
+  '/src/sprite-system.js',
+  '/src/sprite-manifest.js',
+  '/src/sprite-workshop.js',
   '/src/fight.js',
   '/src/command.js',
   '/src/versus.js',
@@ -45,6 +53,9 @@ const OPTIONAL_SHELL = [
   '/modules/versus.css',
   '/modules/chronicles.css',
   '/modules/archive.css',
+  '/modules/sprite-workshop.html',
+  '/modules/sprite-workshop.css',
+  '/data/sprite-coverage.json',
 ];
 
 const NEVER_CACHE = new Set([
@@ -150,6 +161,10 @@ self.addEventListener('fetch', (event) => {
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirstNavigation(event));
+    return;
+  }
+  if(url.pathname.startsWith('/assets/sprites/')){
+    event.respondWith((async()=> (await caches.match(request)) || (await storeRuntime(request,await fetch(request))))());
     return;
   }
   if (url.pathname.startsWith('/data/')) {

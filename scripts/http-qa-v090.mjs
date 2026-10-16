@@ -5,7 +5,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-v090');
 await mkdir(out,{recursive:true});
-const report={version:'0.9.0',kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['completed-match state for checkpoint test only'],captures:[]};
+const report={version:'0.9.1',kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['completed-match state for checkpoint test only','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4173';
 let server,browser;
 const assert=(name,ok)=>{report.assertions.push({name,passed:!!ok});if(!ok)throw Error(name);};
@@ -38,15 +38,15 @@ try{
   await capture(page,'01-http-pause');await page.keyboard.press('Escape');
   assert('Escape restores canvas focus',await page.evaluate(()=>!__HALO_QA__.engine.paused&&document.activeElement.id==='game'));
   await page.goto(base+'/modules/chronicles.html');await page.click('#launchRoute');
-  await page.waitForSelector('#fightScreen:not(.hidden)');
+  await page.waitForSelector('#artDiagnostic');await page.waitForTimeout(250);await page.check('#artDiagnostic');await page.click('#launch');await page.waitForSelector('#fightScreen:not(.hidden)');
   assert('chronicle launched from its real menu',await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')).mode==='chronicle'));
   const checkpoint=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));
   // An explicit terminal-state fixture tests persistence, not combat balance or a played victory.
-  await page.goto(base+'/modules/unified-versus.html?qa=1&preset=chronicle&resume=1');await page.waitForFunction(()=>!!window.__HALO_QA__?.engine);
+  await page.goto(base+'/modules/unified-versus.html?qa=1&debugArt=1&preset=chronicle&resume=1');await page.waitForFunction(()=>!!window.__HALO_QA__?.engine);
   await page.evaluate(()=>{const q=__HALO_QA__;q.handleMatchEnd({winnerIndex:0,winner:q.selection.p1,loser:q.selection.p2,stats:{winner:{healthRatio:.6,perfectGuards:2},loser:{}},snapshot:{p1:{meter:50}}});});
   await page.waitForTimeout(700);await page.click('#continueRun');
   await page.goto(base);await page.locator('[data-mode="continue"]').first().click();
-  await frame.locator('#fightScreen:not(.hidden)').waitFor();
+  await frame.locator('#artDiagnostic').waitFor();await page.waitForTimeout(250);await frame.locator('#artDiagnostic').check();await frame.locator('#resumeCheckpoint').click();await frame.locator('#fightScreen:not(.hidden)').waitFor();
   const resumed=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));
   assert('shell Continue resumes exact checkpoint at encounter two',resumed.id===checkpoint.id&&resumed.index===1&&resumed.wins===1);
   await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
