@@ -29,7 +29,7 @@ Les menus conservent leur CSS. Les décors d'arène, les interfaces, les particu
 
 ## Chargement et sauvegardes
 
-Un cache partagé déduplique les images, limite les décodeurs simultanés à quatre et évince les images non épinglées par LRU. Le budget de 64 Mio concerne les images décodées conservées, pas un plafond absolu du processus navigateur pendant le décodage. Les images du combat en cours sont épinglées. Les erreurs et les délais d'attente restent contrôlés ; une erreur n'est pas relancée à chaque image du jeu.
+Un cache partagé déduplique les images, limite les décodeurs simultanés à quatre et évince les images non épinglées par LRU. Le budget de 64 Mio concerne les images décodées conservées, pas un plafond absolu du processus navigateur pendant le décodage. Le cumul des images du combat est contrôlé avant leur épinglage : une paire dépassant 64 Mio est refusée sans remplacer le précédent ensemble protégé. Les décodeurs réservent leur coût estimé avant de démarrer ; une file bloquée par des images protégées renvoie une erreur au lieu de croître ou rester suspendue. Le contrôle d’un long parcours ne conserve que des booléens de décodage, pas un tableau de toutes les images. Les erreurs et les délais d'attente restent contrôlés ; une erreur n'est pas relancée à chaque image du jeu.
 
 Avant un combat normal, le chargement et le décodage sont vérifiés. Avant un nouveau parcours, tous ses identifiants sont contrôlés **avant** de remplacer une sauvegarde ou de compter une tentative. Une modification de sélection pendant le chargement annule le lancement obsolète. La sélection aléatoire normale utilise uniquement les images intégrées.
 
@@ -49,7 +49,7 @@ Exemple avec un fichier réellement produit pour l'identifiant indiqué :
 
 ```bash
 python scripts/import-sprite.py mon-sprite.png \
-  --fighter sh1_air_screamer_001 --source sh1 \
+  --fighter sh1_air_screamer_001 --source sh1 --origin conversation-image-generation \
   --single-subject-reviewed --anchor-x 0.52 --anchor-y 0.95 \
   --body-height 0.58 --dry-run
 ```
@@ -71,11 +71,21 @@ npm run build
 
 ## Validation locale et limites
 
-- 233/233 tests Node réussis, dont 31 nouveaux contrôles du pipeline raster.
-- 15/15 tests de l'importeur réussis. Leurs rectangles synthétiques sont des fixtures techniques ; ils ne sont jamais installés comme art de production.
+- 241/241 tests Node réussis, dont 39 nouveaux contrôles du pipeline raster.
+- 22/22 tests de l'importeur réussis. Leurs rectangles synthétiques sont des fixtures techniques ; ils ne sont jamais installés comme art de production.
 - 13/13 contrôles Chromium d'interface isolée réussis, 6 captures et aucune exception JavaScript. Les modules sont chargés en mémoire, les URL d'assets et le stockage sont substitués : **ce n'est pas une validation HTTP ou PWA**.
 - La navigation HTTP locale est refusée par `ERR_BLOCKED_BY_ADMINISTRATOR`. Aucune politique de navigateur n'a été modifiée. Le workflow GitHub effectue les tests HTTP et hors-ligne indépendamment.
 
 Les scripts `http-qa-v090.mjs` et `http-qa-sprites.mjs` distinguent les tests historiques de parcours (diagnostic explicite et fixture de résultat) des nouveaux tests de chargement de PNG, erreurs, reprise, affichage, sauvegarde et hors-ligne. Leur succès distant doit être vérifié dans la PR.
 
 La fidélité 1:1, les 228 visuels restants, les animations, les angles opposés réellement dessinés, les masques/hitboxes adaptés aux futures animations et le cadrage de toutes les armes au bord des arènes restent à produire ou valider. Aucune partie intégrale de toutes les chroniques, aucun téléphone/manette physique ni aucune autorisation de commercialisation ne sont annoncés.
+
+## Corrections après revue de PR
+
+Les portraits combinent maintenant leur orientation de présentation et le sens natif du fichier, y compris les registres anciens où le portrait reprend la frame de combat sans son champ `facing`. L’importeur inscrit désormais ce champ dans les nouveaux portraits. Les filtres de l’atelier recalent le dossier sur un profil du résultat ; une recherche vide efface le dossier précédent.
+
+La provenance ne se déduit plus du nom du projet : `--origin` accepte `external-unspecified` (valeur neutre par défaut), `artist-created`, `scan` ou `conversation-image-generation`. Chaque frame garde son origine ; les animations de provenance hétérogène sont marquées `mixed`. Le vérificateur de build accepte et contrôle ces valeurs.
+
+Les octets sont lus une seule fois, dans un tampon borné. Leur empreinte, l’analyse Pillow et l’écriture atomique partagent ce même instantané. Une modification ou suppression du fichier source après l’analyse ne peut plus installer d’autres octets sous l’empreinte validée. La CI utilise un environnement virtuel Python, sans modification de l’environnement système.
+
+Les nouveaux contrôles HTTP incluent les filtres de dossier, la recherche vide et le refus d’un ensemble de combat trop lourd. Leur résultat final doit être confirmé sur le commit corrigé ; les 39 contrôles HTTP du commit `54536f2` restent des preuves de la passe initiale.

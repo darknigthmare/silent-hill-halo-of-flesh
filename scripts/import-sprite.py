@@ -7,6 +7,8 @@ Technical acceptance is NOT a certification of Silent Hill accuracy. Pillow is r
 from __future__ import annotations
 import argparse
 import hashlib
+from io import BytesIO
+import stat
 import json
 import os
 from pathlib import Path
@@ -19,13 +21,25 @@ MAX_BYTES = 24 * 1024 * 1024
 MAX_PIXELS = 4096 * 4096
 Image.MAX_IMAGE_PIXELS = MAX_PIXELS
 
-def inspect_image(path: Path) -> dict:
-    if path.is_symlink() or not path.is_file():
+def read_image_snapshot(path: Path) -> bytes:
+    if path.is_symlink():
         raise ValueError('A regular image file is required, not a symlink.')
-    raw = path.read_bytes()
+    fd = os.open(path, os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0) | getattr(os, 'O_NONBLOCK', 0))
+    with os.fdopen(fd, 'rb') as stream:
+        if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
+            raise ValueError('A regular image file is required.')
+        raw = stream.read(MAX_BYTES + 1)
     if len(raw) > MAX_BYTES:
         raise ValueError('Input exceeds the 24 MiB budget.')
-    with Image.open(path) as image:
+    return raw
+
+def inspect_image(path: Path, *, raw: bytes | None = None) -> dict:
+    # Digest, Pillow validation and publication all use this one immutable snapshot.
+    if raw is None:
+        raw = read_image_snapshot(path)
+    if len(raw) > MAX_BYTES:
+        raise ValueError('Input exceeds the 24 MiB budget.')
+    with Image.open(BytesIO(raw)) as image:
         if image.format not in ('PNG', 'WEBP') or getattr(image, 'n_frames', 1) != 1:
             raise ValueError('One static PNG/WebP only; no APNG, animation, SVG or atlas.')
         if image.width < 256 or image.height < 128 or image.width > 4096 or image.height > 4096:
@@ -80,7 +94,8 @@ def import_sprite(args: argparse.Namespace) -> dict:
     if not 1 <= args.ticks <= 600:
         raise ValueError('Simulation ticks per frame must be 1..600.')
     source = args.image.absolute()
-    meta = inspect_image(source)
+    snapshot = read_image_snapshot(source)
+    meta = inspect_image(source, raw=snapshot)
     current = registry['assets'].get(args.fighter)
     if current and not (args.replace or args.append):
         raise ValueError('This ID already has art. Use --append for a new frame or --replace to reset it explicitly.')
@@ -99,24 +114,28 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Output target is a symlink.')
     frame = {k: meta[k] for k in ('sha256', 'bytes', 'width', 'height')}
     frame.update(path=relative, facing=args.facing, anchor=[args.anchor_x, args.anchor_y],
-                 bodyHeight=args.body_height, sourceFile=source.name, sourceSHA256=meta['sha256'])
+                 bodyHeight=args.body_height, sourceFile=source.name, sourceSHA256=meta['sha256'], origin=args.origin)
     if args.append:
         asset = current
         index = len(asset['frames'])
         if index >= 256:
             raise ValueError('Maximum 256 frames per asset.')
+        for previous in asset['frames']:
+            previous.setdefault('origin', asset['origin'])
         asset['frames'].append(frame)
+        origins = {f['origin'] for f in asset['frames']}
+        asset['origin'] = next(iter(origins)) if len(origins) == 1 else 'mixed'
         clip = asset['clips'].setdefault(args.pose, {'frames': [], 'ticksPerFrame': args.ticks, 'loop': args.loop})
         if clip['ticksPerFrame'] != args.ticks or clip['loop'] != args.loop:
             raise ValueError('Clip timing must stay consistent when appending.')
         clip['frames'].append(index)
     else:
         asset = {'fighterId': args.fighter, 'source': args.source, 'status': 'integrated-candidate',
-                 'fidelity': 'unverified', 'origin': 'conversation-image-generation',
+                 'fidelity': 'unverified', 'origin': args.origin,
                  'sourceFile': source.name, 'sourceSHA256': meta['sha256'],
                  'sourceDimensions': [meta['width'], meta['height']], 'singleSubjectReviewed': True,
                  'notes': args.note, 'mirrorPolicy': 'presentation-only; opposite side not independently generated',
-                 'frames': [frame], 'portrait': {k: frame[k] for k in ('path', 'sha256', 'bytes', 'width', 'height')},
+                 'frames': [frame], 'portrait': {k: frame[k] for k in ('path', 'sha256', 'bytes', 'width', 'height', 'facing')},
                  'clips': {'idle': {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}}}
         registry['assets'][args.fighter] = asset
     asset['animatedClips'] = sum(len(set(asset['frames'][i]['sha256'] for i in c['frames'])) > 1 for c in asset['clips'].values())
@@ -135,7 +154,7 @@ def import_sprite(args: argparse.Namespace) -> dict:
             os.close(fd)
             if manifest.read_bytes() != before:
                 raise ValueError('Registry changed during validation; rerun against its latest state.')
-            atomic_write(target, source.read_bytes())
+            atomic_write(target, snapshot)
             atomic_write(manifest, (json.dumps(registry, ensure_ascii=False, indent=2)+'\n').encode())
         finally:
             lock.unlink(missing_ok=True)
@@ -148,6 +167,8 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     p.add_argument('--fighter', required=True, help='Exact ID in data/roster.json')
     p.add_argument('--source', required=True, help='Exact source key, e.g. sh1 or film')
+    p.add_argument('--origin', choices=('external-unspecified', 'artist-created', 'scan', 'conversation-image-generation'),
+                   default='external-unspecified', help='Actual image provenance, not the fictional game source. Never inferred.')
     p.add_argument('--single-subject-reviewed', action='store_true')
     p.add_argument('--anchor-x', type=float, required=True)
     p.add_argument('--anchor-y', type=float, required=True)

@@ -78,13 +78,13 @@ test('LRU eviction frees unpinned decoded images',async()=>{
  const bytes=f.width*f.height*4,h=harness({maxBytes:bytes+1});await h.cache.load({...f,path:'a'});await h.cache.load({...f,path:'b'});assert.equal(h.cache.status('a'),'absent');assert.equal(h.cache.status('b'),'ready');assert.ok(h.cache.bytes<=bytes+1);
 });
 test('current combat images survive LRU eviction',async()=>{
- const bytes=f.width*f.height*4,h=harness({maxBytes:bytes+1});h.cache.pin(['a']);await h.cache.load({...f,path:'a'});await h.cache.load({...f,path:'b'});assert.equal(h.cache.status('a'),'ready');assert.equal(h.cache.status('b'),'absent');
+ const bytes=f.width*f.height*4,h=harness({maxBytes:bytes+1});h.cache.pin([{...f,path:'a'}]);await h.cache.load({...f,path:'a'});await h.cache.load({...f,path:'b'});assert.equal(h.cache.status('a'),'ready');assert.equal(h.cache.status('b'),'error');assert.equal(h.cache.entries.get('b').error,'memory-budget');
 });
 test('preflight refuses missing art before issuing any network load',async()=>{
  const h=harness(),result=await h.cache.prepare([film,getFighter('sh2_red_pyramid_thing_great_knife_029')]);assert.equal(result.ok,false);assert.equal(result.missing.length,1);assert.equal(h.images.length,0);
 });
 test('preflight reports successful decode even when long-run unpinned frames were evicted',async()=>{
- const h=harness({maxBytes:1});const result=await h.cache.prepare([air,film]);assert.equal(result.ok,true);assert.equal(h.cache.bytes,0);
+ const h=harness({maxBytes:f.width*f.height*4+1});const result=await h.cache.prepare([air,film]);assert.equal(result.ok,true);assert.ok(h.cache.bytes<=h.cache.maxBytes);assert.equal(h.cache.entries.size,1);
 });
 test('diagnostic mode is explicit and lists all missing IDs',async()=>{
  const h=harness();const result=await h.cache.prepare([getFighter('sh2_red_pyramid_thing_great_knife_029')],{diagnostic:true});assert.equal(result.ok,true);assert.equal(result.missing.length,1);
@@ -107,4 +107,39 @@ test('all monster entry points route through raster code; command hero has no ol
 });
 test('every actual sprite path is in the generated offline shell',async()=>{
  const sw=await readFile(new URL('../service-worker.js',import.meta.url),'utf8');for(const asset of Object.values(SPRITES))for(const frame of asset.frames)assert.ok(sw.includes('/'+frame.path));assert.ok(sw.includes('/src/sprite-system.js'));assert.ok(sw.includes('/modules/sprite-workshop.html'));
+});
+
+test('portrait orientation combines presentation side with a left-facing native frame',async()=>{
+ const h=harness();await h.cache.load(f);
+ for(const explicit of [false,true])for(const facing of [-1,1]){
+  const left={...art,frames:[{...f,facing:-1}],portrait:{...art.portrait,...(explicit?{facing:-1}:{})}},c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};
+  paintRasterPortrait(canvas,air,{cache:h.cache,facing,registry:{[air.id]:left}});
+  assert.ok(c.calls.some(x=>x[0]==='scale'&&x[1]===-facing));
+ }
+});
+test('over-budget pinned animation sets are rejected before changing the previous lease',()=>{
+ const cost=f.width*f.height*4,h=harness({maxBytes:cost+1});h.cache.pin([{...f,path:'old'}]);
+ assert.throws(()=>h.cache.pin([{...f,path:'one'},{...f,path:'two'}]),/memory/);
+ assert.deepEqual([...h.cache.pins],['old']);assert.equal(h.images.length,0);
+});
+test('mirror combat pins each actual file only once',()=>{
+ const h=harness({maxBytes:f.width*f.height*4});h.cache.pin([f,f]);assert.equal(h.cache.pins.size,1);
+});
+test('pinning unmeasured unknown paths cannot bypass the memory budget',()=>{
+ const h=harness();assert.throws(()=>h.cache.pin(['unmeasured']),/dimensions/);
+});
+test('one oversized image is rejected without invoking a decoder',async()=>{
+ const h=harness({maxBytes:100});assert.equal(await h.cache.load(f),null);assert.equal(h.images.length,0);assert.equal(h.cache.entries.get(f.path).error,'memory-budget');
+});
+test('in-flight reservations bound simultaneous decoded memory, not only the final LRU',async()=>{
+ const cost=f.width*f.height*4,h=harness({maxBytes:cost+1,concurrency:4,delay:5});
+ const results=await Promise.all(Array.from({length:6},(_,i)=>h.cache.load({...f,path:'reserved-'+i}).then(Boolean)));
+ assert.ok(results.every(Boolean));assert.equal(h.peak,1);assert.equal(h.cache.reservedBytes,0);assert.ok(h.cache.bytes<=h.cache.maxBytes);
+});
+test('full pinned cache refuses unrelated decodes without a queued-load deadlock',async()=>{
+ const h=harness({maxBytes:f.width*f.height*4});h.cache.pin([f]);await h.cache.load(f);
+ assert.equal(await h.cache.load({...f,path:'unrelated'}),null);assert.equal(h.cache.queue.length,0);assert.equal(h.cache.reservedBytes,0);assert.equal(h.cache.peek(f.path),h.images[0]);
+});
+test('decoder timeout releases its memory reservation as well as concurrency',async()=>{
+ const h=harness({hang:true,timeout:4});await h.cache.load(f);assert.equal(h.cache.reservedBytes,0);assert.equal(h.cache.active,0);
 });

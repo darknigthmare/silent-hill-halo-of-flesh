@@ -1,6 +1,8 @@
 """Importer tests use simple synthetic fixtures for validation, never production artwork."""
 import importlib.util
 import json
+from hashlib import sha256
+from unittest.mock import patch
 from pathlib import Path
 import tempfile
 import unittest
@@ -59,4 +61,31 @@ class ImportTests(unittest.TestCase):
   with self.assertRaises(ValueError):module.import_sprite(a)
  def test_nan_calibration_rejected(self):
   with self.assertRaises(ValueError):module.import_sprite(self.args('--anchor-x','nan'))
+ def test_neutral_provenance_is_not_claimed_as_generated(self):
+  module.import_sprite(self.args());a=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
+  self.assertEqual(a['origin'],'external-unspecified');self.assertEqual(a['frames'][0]['origin'],'external-unspecified')
+ def test_explicit_provenance_is_preserved(self):
+  module.import_sprite(self.args('--origin','artist-created'));a=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
+  self.assertEqual(a['origin'],'artist-created')
+ def test_mixed_origin_animation_keeps_per_frame_provenance(self):
+  module.import_sprite(self.args('--origin','conversation-image-generation'));im=Image.open(self.image);im.putpixel((130,100),(50,33,70,255));im.save(self.image)
+  module.import_sprite(self.args('--append','--pose','walk','--origin','artist-created'));a=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
+  self.assertEqual(a['origin'],'mixed');self.assertEqual([f['origin'] for f in a['frames']],['conversation-image-generation','artist-created'])
+ def test_portrait_records_native_facing(self):
+  module.import_sprite(self.args('--facing','-1'));a=json.loads((self.root/'art/registry.json').read_text())['assets']['a'];self.assertEqual(a['portrait']['facing'],-1)
+ def test_source_rewrite_after_validation_does_not_change_published_bytes(self):
+  original=self.image.read_bytes();inspect=module.inspect_image
+  def replace_after(path,**kwargs):
+   result=inspect(path,**kwargs);Image.new('RGB',(20,20),'black').save(path);return result
+  with patch.object(module,'inspect_image',side_effect=replace_after):result=module.import_sprite(self.args())
+  actual=(self.root/result['path']).read_bytes();self.assertEqual(actual,original);self.assertEqual(sha256(actual).hexdigest(),result['technical']['sha256'])
+ def test_validation_uses_the_snapshot_not_a_reopened_path(self):
+  original=self.image.read_bytes();self.image.write_bytes(b'not an image')
+  result=module.inspect_image(self.image,raw=original);self.assertEqual(result['sha256'],sha256(original).hexdigest());self.assertEqual(result['width'],300)
+ def test_source_deleted_after_validation_still_copies_validated_snapshot(self):
+  original=self.image.read_bytes();inspect=module.inspect_image
+  def delete_after(path,**kwargs):
+   result=inspect(path,**kwargs);path.unlink();return result
+  with patch.object(module,'inspect_image',side_effect=delete_after):result=module.import_sprite(self.args())
+  self.assertEqual((self.root/result['path']).read_bytes(),original)
 if __name__=='__main__':unittest.main()
