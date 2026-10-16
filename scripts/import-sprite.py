@@ -57,7 +57,10 @@ def inspect_image(path: Path, *, raw: bytes | None = None) -> dict:
         bounds = alpha.point(lambda a: 255 if a >= 32 else 0).getbbox()
         if not bounds or bounds[0] < 1 or bounds[1] < 1 or bounds[2] >= image.width or bounds[3] >= image.height:
             raise ValueError('Visible pixels touch an edge: recover the complete subject before importing.')
-        return {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw),
+        rgba = image.convert('RGBA')
+        rgba.paste((0, 0, 0, 0), mask=alpha.point(lambda a: 255 if a == 0 else 0))
+        return {'pixelSHA256': hashlib.sha256(rgba.tobytes()).hexdigest(),
+                'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw),
                 'width': image.width, 'height': image.height, 'extension': image.format.lower(),
                 'visibleBounds': list(bounds), 'transparentFraction': round(clear, 5)}
 
@@ -104,15 +107,19 @@ def import_sprite(args: argparse.Namespace) -> dict:
     if not current and args.pose != 'idle' or args.replace and args.pose != 'idle':
         raise ValueError('The first frame of an asset must be idle.')
     for ident, art in registry['assets'].items():
-        if ident != args.fighter and any(f['sha256'] == meta['sha256'] for f in art['frames']):
-            raise ValueError('The same bitmap cannot populate another fighter ID.')
-    if args.append and any(f['sha256'] == meta['sha256'] for f in current['frames']):
-        raise ValueError('A repeated frame is not a newly generated pose.')
+        for prior in art['frames']:
+            if ident == args.fighter and not args.append:
+                continue  # An explicitly replaced asset can keep its own original pixels.
+            if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
+                raise ValueError('Invalid registered raster path.')
+            pixels = prior.get('pixelSHA256') or inspect_image(root / prior['path'])['pixelSHA256']
+            if prior['sha256'] == meta['sha256'] or pixels == meta['pixelSHA256']:
+                raise ValueError('Repeated or re-encoded pixels cannot populate another fighter or animation frame.')
     relative = f"assets/sprites/{args.fighter}.{meta['sha256'][:12]}.{meta['extension']}"
     target = root / relative
     if target.is_symlink():
         raise ValueError('Output target is a symlink.')
-    frame = {k: meta[k] for k in ('sha256', 'bytes', 'width', 'height')}
+    frame = {k: meta[k] for k in ('sha256', 'bytes', 'width', 'height', 'visibleBounds', 'pixelSHA256', 'transparentFraction')}
     frame.update(path=relative, facing=args.facing, anchor=[args.anchor_x, args.anchor_y],
                  bodyHeight=args.body_height, sourceFile=source.name, sourceSHA256=meta['sha256'], origin=args.origin)
     if args.append:

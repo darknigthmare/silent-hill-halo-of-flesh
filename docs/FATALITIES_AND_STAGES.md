@@ -1,4 +1,4 @@
-# Fatalités, arènes dédiées et animations — v0.9.1
+# Fatalités, arènes dédiées et animations — v0.9.2
 
 La release contient **460 fatalités de combattant**, **123 fatalités d’arène**, **352 animations**, **300 événements de lieu** et **286 interactions documentées**.
 

@@ -1,5 +1,6 @@
 /** Raster-only monster presentation. Combat geometry is deliberately unchanged. */
 import { SPRITES } from './sprite-manifest.js';
+import {poseFromState,sampleSpriteClip} from './sprite-animation.js';
 import { bodyProfile } from './combat-geometry.js';
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
 const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,Number.isFinite(v)?v:lo));
@@ -21,19 +22,8 @@ export function spriteCoverage(fighters){
     certified:fighters.filter(f=>spriteFor(f)?.fidelity==='verified').length,
     animatedClips:fighters.reduce((n,f)=>n+(spriteFor(f)?.animatedClips||0),0)};
 }
-export function poseKey(state={}){
-  if(state.ko)return 'ko';if(state.hurt)return 'hurt';
-  if(state.moveKey)return state.moveKey;if(state.crouching)return 'crouch';
-  if(state.airborne)return 'jump';if(state.moving)return 'walk';return 'idle';
-}
-/** Simulation ticks, never wall-clock time, select animation frames. */
-export function frameFor(art,state={}){
-  if(!art)return null;
-  const clip=art.clips[poseKey(state)]||art.clips.idle;
-  if(!clip?.frames?.length)return null;
-  const index=Math.floor(Math.max(0,state.frame||0)/Math.max(1,clip.ticksPerFrame||1));
-  return art.frames[clip.frames[clip.loop?index%clip.frames.length:Math.min(index,clip.frames.length-1)]]||null;
-}
+export const poseKey=poseFromState;
+export function frameFor(art,state={}){return sampleSpriteClip(art,state)?.frame||null;}
 export function rasterPlacement(fighter,frame,x,y,facing=1){
   const body=bodyProfile(fighter),scale=body.height*body.scale/(frame.height*frame.bodyHeight);
   const width=frame.width*scale,height=frame.height*scale,flip=(facing<0?-1:1)*frame.facing;
@@ -118,9 +108,9 @@ function drawMissing(ctx,x,y,width,height,text){
   ctx.textAlign='center';ctx.fillStyle='#c6beb0';ctx.font=`600 ${Math.max(9,Math.min(14,width/13))}px system-ui`;
   ctx.fillText(text,x+width/2,y+height*.5,width-12);ctx.restore();
 }
-export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache}={}){
+export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache,registry=SPRITES}={}){
   if(!fighter)return {kind:'missing'};
-  const art=spriteFor(fighter),frame=frameFor(art,state),image=frame&&cache.peek(frame.path);
+  const art=spriteFor(fighter,registry),frame=frameFor(art,state),image=frame&&cache.peek(frame.path);
   if(!image){const p=bodyProfile(fighter),w=Math.max(74,p.width*p.scale),h=p.height*p.scale;
     drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
     // Request only once. A failed file is retried by preflight, not every render frame.
@@ -146,8 +136,8 @@ export function paintRasterPortrait(canvas,fighter,{background=true,facing=1,cac
     const w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);
     if(background){const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'#272b25');g.addColorStop(1,'#080b09');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);}
     const image=frame&&cache.peek(frame.path);
-    if(image){const scale=Math.max(.01,Math.min((w-12)/frame.width,(h-12)/frame.height)),dw=frame.width*scale,dh=frame.height*scale;
-      ctx.save();ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.translate(w/2,h/2);ctx.scale((facing<0?-1:1)*(frame.facing??art.frames.find(f=>f.path===frame.path)?.facing??1),1);ctx.drawImage(image,-dw/2,-dh/2,dw,dh);ctx.restore();
+    if(image){const b=frame.visibleBounds||[0,0,frame.width,frame.height],sw=b[2]-b[0],sh=b[3]-b[1],scale=Math.max(.01,Math.min((w-12)/sw,(h-12)/sh)),dw=sw*scale,dh=sh*scale;
+      ctx.save();ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.translate(w/2,h/2);ctx.scale((facing<0?-1:1)*(frame.facing??art.frames.find(f=>f.path===frame.path)?.facing??1),1);ctx.drawImage(image,b[0],b[1],sw,sh,-dw/2,-dh/2,dw,dh);ctx.restore();
     }else drawMissing(ctx,5,5,Math.max(20,w-10),Math.max(20,h-10),!art?'SPRITE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT');
     if(canvas.dataset){canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=!art?'missing':image?'raster':cache.status(frame.path);}
     canvas.setAttribute?.('role','img');canvas.setAttribute?.('aria-label',fighter.name+' — '+spriteStatus(fighter).label);

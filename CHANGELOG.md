@@ -1,3 +1,14 @@
+## 0.9.2 — Inspection et cadrage des images
+
+- Inspecteur intégré : poses présentes/absentes, chronologie, orientation, repères,
+  calibration exportable et application atomique sur empreintes exactes.
+- Caméra partagée par le monde et les collisions ; HUD indépendant ; enveloppes
+  des images complètes, sans déformer individuellement les personnages.
+- Horloges de poses déterministes, pause/gel d’impact, états garde/esquive/KO/phase.
+- Audit complet des PNG et décodage WebP via Pillow ; transparence, CRC, filtres,
+  troncature et réencodage de copies vérifiés.
+- Aucun nouveau sprite individuel accepté. Voir docs/SPRITE_CONTINUATION_v0.9.2.md.
+
 ## 0.9.0 — 14 octobre 2026
 Parcours persistants et reprises, résultats par emplacement du joueur (duels miroir corrigés), statistiques personnelles, rangs de Chroniques de bout en bout, commandes reconfigurables, saut/accroupissement tactile, pause accessible, sauvegardes/imports validés et conditions de sortie explicites. 202 tests Node ; les détails et limites de navigateur figurent dans `docs/QA_v0.9.0.md`.
 

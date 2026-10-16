@@ -27,7 +27,15 @@ export const SPRITES = {
           0.52,
           0.95
         ],
-        "bodyHeight": 0.58
+        "bodyHeight": 0.58,
+        "visibleBounds": [
+          5,
+          6,
+          1530,
+          1015
+        ],
+        "pixelSHA256": "9de947a9dea3ec95b2c3fcaa62f180f6d70ccdcc643355f0af0b0401427f4d9d",
+        "transparentFraction": 0.67734
       }
     ],
     "portrait": {
@@ -35,7 +43,15 @@ export const SPRITES = {
       "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
       "bytes": 2142783,
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "visibleBounds": [
+        5,
+        6,
+        1530,
+        1015
+      ],
+      "pixelSHA256": "9de947a9dea3ec95b2c3fcaa62f180f6d70ccdcc643355f0af0b0401427f4d9d",
+      "transparentFraction": 0.67734
     },
     "clips": {
       "idle": {
@@ -75,7 +91,15 @@ export const SPRITES = {
           0.67,
           0.95
         ],
-        "bodyHeight": 0.9
+        "bodyHeight": 0.9,
+        "visibleBounds": [
+          34,
+          19,
+          1336,
+          988
+        ],
+        "pixelSHA256": "a71e59df2c65727baee35fedf11b98e0f2abaf286226b800334e810adb9e4fc2",
+        "transparentFraction": 0.76169
       }
     ],
     "portrait": {
@@ -83,7 +107,15 @@ export const SPRITES = {
       "sha256": "36b284a5f726ee2158490be8d96b15e18a6bc315860d22bcc51496900ffaa0e7",
       "bytes": 1660441,
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "visibleBounds": [
+        34,
+        19,
+        1336,
+        988
+      ],
+      "pixelSHA256": "a71e59df2c65727baee35fedf11b98e0f2abaf286226b800334e810adb9e4fc2",
+      "transparentFraction": 0.76169
     },
     "clips": {
       "idle": {

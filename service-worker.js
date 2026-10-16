@@ -1,4 +1,4 @@
-const VERSION = '0.9.1';
+const VERSION = '0.9.2';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
@@ -32,6 +32,9 @@ const ESSENTIAL_SHELL = [
   '/src/playflow-ui.js',
   '/src/renderers.js',
   '/src/sprite-system.js',
+  '/src/sprite-animation.js',
+  '/src/sprite-framing.js',
+  '/src/sprite-inspector.js',
   '/src/sprite-manifest.js',
   '/src/sprite-workshop.js',
   '/src/fight.js',

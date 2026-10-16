@@ -88,4 +88,15 @@ class ImportTests(unittest.TestCase):
    result=inspect(path,**kwargs);path.unlink();return result
   with patch.object(module,'inspect_image',side_effect=delete_after):result=module.import_sprite(self.args())
   self.assertEqual((self.root/result['path']).read_bytes(),original)
+
+ def test_reencoded_clone_refused_for_another_profile(self):
+  module.import_sprite(self.args());im=Image.open(self.image);im.save(self.image,compress_level=0)
+  with self.assertRaises(ValueError):module.import_sprite(self.args('--fighter','b','--source','sh2'))
+ def test_reencoded_frame_is_not_an_animation(self):
+  module.import_sprite(self.args());im=Image.open(self.image);im.save(self.image,compress_level=0)
+  with self.assertRaises(ValueError):module.import_sprite(self.args('--append','--pose','walk'))
+ def test_invisible_rgb_changes_are_not_new_art(self):
+  module.import_sprite(self.args());im=Image.open(self.image);im.putpixel((0,0),(123,42,30,0));im.save(self.image)
+  with self.assertRaises(ValueError):module.import_sprite(self.args('--append','--pose','walk'))
+
 if __name__=='__main__':unittest.main()

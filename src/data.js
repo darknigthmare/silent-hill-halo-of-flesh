@@ -8,7 +8,7 @@ import { enrichStage, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_IN
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.9.1';
+export const VERSION = '0.9.2';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({

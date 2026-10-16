@@ -1,3 +1,12 @@
+## Suite de la PR #4 — v0.9.2
+
+Inspecteur des poses réellement disponibles, export de calibration, cadrage commun
+pour les armes/ailes près des bords, horloges de poses liées à la simulation et
+vérification des pixels PNG/WebP au build. Voir [la documentation de cette passe](docs/SPRITE_CONTINUATION_v0.9.2.md).
+
+**Art : 2 candidats sur 230 profils ; aucun nouveau sprite individuel accepté dans cette passe.**
+Les notes de versions antérieures ci-dessous restent historiques.
+
 # SILENT HILL: HALO OF FLESH — v0.9.1
 
 ## Première intégration bitmap individuelle

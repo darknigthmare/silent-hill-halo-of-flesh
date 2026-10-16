@@ -1,3 +1,5 @@
+import {actorSpriteState,advanceSpriteClock} from './sprite-animation.js';
+import {combatFraming} from './sprite-framing.js';
 import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
 import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftStyle } from './stage-director.js';
@@ -446,6 +448,7 @@ export class FightEngine {
       actor.blocking = false;
       actor.state = 'intro';
       actor.stateFrame = 0;
+      actor.spriteClock = null;
       actor.attack = null;
       actor.hurtFrames = 0;
       actor.invuln = 0;
@@ -498,6 +501,13 @@ export class FightEngine {
   }
 
   update() {
+    if (this.paused) return;
+    const frozen = this.hitstop > 0;
+    this.updateSimulation();
+    if (!frozen && !this.paused) this.actors.forEach(advanceSpriteClock);
+  }
+
+  updateSimulation() {
     if (this.paused) return;
     this.frame++;
     if (this.hitstop > 0) {
@@ -2128,7 +2138,13 @@ export class FightEngine {
     // Drawing never samples combat RNG: two clients update identically at different render FPS.
     const shakeX = allowShake && this.shake ? Math.sin(this.frame * 12.9898 + 1.34) * this.shake * .5 : 0;
     const shakeY = allowShake && this.shake ? Math.sin(this.frame * 78.233 + 4.79) * this.shake * .25 : 0;
-    context.translate(shakeX, shakeY);
+    context.fillStyle = '#080b09';
+    context.fillRect(0, 0, WIDTH, HEIGHT);
+    const camera = combatFraming(this.actors);
+    this.presentationCamera = camera;
+    context.save();
+    context.translate(camera.x + shakeX, camera.y + shakeY);
+    context.scale(camera.scale, camera.scale);
     drawStage(context, this.stage, time, {
       width: WIDTH,
       height: HEIGHT,
@@ -2153,12 +2169,7 @@ export class FightEngine {
           : 0;
       drawMonster(context, actor.data, actor.x, actor.y, {
         facing: actor.facing,
-        state: {
-          moving: actor.state === 'walk', crouching: actor.crouching, attackProgress,
-          airborne: !actor.grounded, moveKey: actor.attack?.move?.key, frame: actor.attack?.frame ?? this.frame,
-          hurt: actor.hurtFrames > 0, hitFlash: actor.hitFlash > 0, ko: actor.ko, koProgress: actor.koProgress,
-          status: actor.status?.id || null, traitPulse: actor.traitPulse
-        },
+        state: { ...actorSpriteState(actor), attackProgress, status: actor.status?.id || null },
         time, diagnostic: Boolean(this.config.artDiagnostic),
         alpha: actor.invuln > 0 && this.frame % 4 < 2 ? .55 : 1
       });
@@ -2171,8 +2182,9 @@ export class FightEngine {
     }
     this.renderParticles(context);
     this.renderHazardLabels(context);
-    this.renderHUD(context);
     this.renderTexts(context);
+    context.restore(); // Leave world/camera space before drawing full-size readable HUD.
+    this.renderHUD(context);
     if (this.superOverlay) this.renderSuperOverlay(context);
     if (this.bossPhaseOverlay) this.renderBossPhaseOverlay(context);
     if (this.fatality) this.renderFatalityOverlay(context);
