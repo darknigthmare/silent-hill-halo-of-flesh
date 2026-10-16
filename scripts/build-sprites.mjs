@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import {resolve,relative} from 'node:path';
 import {ROSTER,VERSION} from '../src/data.js';
 import {auditRaster,MAX_RASTER_BYTES} from './raster-validation.mjs';
+import {validateClip} from '../src/sprite-clips.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const registry=JSON.parse(await readFile(resolve(root,'art/registry.json'),'utf8'));
 const fail=message=>{throw Error('Sprite manifest: '+message);};
@@ -43,7 +44,8 @@ for(const [id,art] of Object.entries(registry.assets)){
   const frameOrigins=new Set(art.frames.map(f=>f.origin??art.origin));
   if((frameOrigins.size>1?'mixed':[...frameOrigins][0])!==art.origin)fail('inconsistent aggregate provenance '+id);
   let animated=0;
-  for(const clip of Object.values(art.clips)){
+  for(const [pose,clip] of Object.entries(art.clips)){
+    try{validateClip(art,pose,clip);}catch(error){fail(id+' '+pose+': '+error.message);}
     if(!Array.isArray(clip.frames)||!clip.frames.length||clip.frames.some(n=>!Number.isInteger(n)||!art.frames[n])||!Number.isInteger(clip.ticksPerFrame)||clip.ticksPerFrame<1||typeof clip.loop!=='boolean')fail('invalid clip '+id);
     if(clip.frameTicks!==undefined&&(!Array.isArray(clip.frameTicks)||clip.frameTicks.length!==clip.frames.length||clip.frameTicks.some(t=>!Number.isInteger(t)||t<1||t>600)))fail('invalid per-frame durations '+id);
     if(new Set(clip.frames.map(i=>runtimeAssets[id].frames[i].pixelSHA256)).size>1)animated++;

@@ -80,7 +80,7 @@ def atomic_write(path: Path, raw: bytes) -> None:
 def import_sprite(args: argparse.Namespace) -> dict:
     root = args.root.resolve()
     manifest = root / 'art/registry.json'
-    if manifest.is_symlink() or (root / 'assets').is_symlink() or (root / 'assets/sprites').is_symlink():
+    if (root / 'art').is_symlink() or manifest.is_symlink() or (root / 'assets').is_symlink() or (root / 'assets/sprites').is_symlink():
         raise ValueError('Output paths must not be symlinks.')
     before = manifest.read_bytes()
     registry = json.loads(before)
@@ -92,6 +92,12 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Inspect the image first and explicitly pass --single-subject-reviewed. No automatic sheet detection is claimed.')
     if not re.fullmatch(r'[a-zA-Z][a-zA-Z0-9_]{0,47}', args.pose):
         raise ValueError('Invalid pose key.')
+    move_keys = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy',
+                 'crouchHeavy','airHeavy','throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
+                 'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
+    known_poses = ('idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase') + move_keys
+    if args.pose not in known_poses or (args.pose in move_keys and args.loop):
+        raise ValueError('Unknown pose or looping attack. Use an exact engine pose and non-looping attack.')
     if not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 1:
         raise ValueError('Anchor and standing-equivalent body calibration must be finite and in range.')
     if not 1 <= args.ticks <= 600:
@@ -133,8 +139,17 @@ def import_sprite(args: argparse.Namespace) -> dict:
         origins = {f['origin'] for f in asset['frames']}
         asset['origin'] = next(iter(origins)) if len(origins) == 1 else 'mixed'
         clip = asset['clips'].setdefault(args.pose, {'frames': [], 'ticksPerFrame': args.ticks, 'loop': args.loop})
-        if clip['ticksPerFrame'] != args.ticks or clip['loop'] != args.loop:
-            raise ValueError('Clip timing must stay consistent when appending.')
+        if clip['loop'] != args.loop:
+            raise ValueError('Clip loop must stay consistent when appending.')
+        if len(clip['frames']) >= 256:
+            raise ValueError('Maximum 256 steps per clip.')
+        durations = clip.get('frameTicks', [clip['ticksPerFrame']] * len(clip['frames']))
+        if len(durations) != len(clip['frames']) or any(type(t) is not int or not 1 <= t <= 600 for t in durations):
+            raise ValueError('Existing clip has invalid durations; repair it before appending.')
+        if sum(durations) + args.ticks > 36000:
+            raise ValueError('Maximum 36,000 ticks per clip.')
+        if 'frameTicks' in clip or args.ticks != clip['ticksPerFrame']:
+            clip['frameTicks'] = durations + [args.ticks]
         clip['frames'].append(index)
     else:
         asset = {'fighterId': args.fighter, 'source': args.source, 'status': 'integrated-candidate',

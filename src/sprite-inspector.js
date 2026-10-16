@@ -1,5 +1,7 @@
 /** In-game inspection of actual frames, with export-only calibration. No network writes. */
 import {MOVESET_KEYS} from './data.js';
+import {mountClipEditor} from './sprite-clip-editor.js';
+import {clipSummary} from './sprite-clips.js';
 import {spriteCache,drawRasterMonster} from './sprite-system.js';
 import {sampleSpriteClip} from './sprite-animation.js';
 import {visibleSpriteBox} from './sprite-framing.js';
@@ -25,13 +27,14 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  panel.innerHTML=`<h3>INSPECTION DES POSES</h3><p class="inspector-note">Seuls les fichiers présents sont affichés. Une pose absente reste signalée, sans animation artificielle.</p>
  <div class="inspector-row"><label>Pose<select data-inspect="pose"></select></label><button type="button" class="ui-button" data-inspect="play">LIRE</button><button type="button" class="ui-button" data-inspect="flip">VOIR VERS LA GAUCHE</button></div>
  <label class="inspector-timeline">Temps de simulation<input data-inspect="tick" type="range" min="0" max="0" step="1" value="0"></label>
- <p data-inspect="status" role="status"></p><div class="inspector-row"><label>Zoom<select data-inspect="zoom"><option value="0.5">50 %</option><option value="1" selected>100 %</option><option value="1.5">150 %</option><option value="2">200 %</option></select></label><label><input data-inspect="boxes" type="checkbox" checked> Repères et collision</label></div>
+ <p data-inspect="status" role="status"></p><button type="button" class="ui-button" data-inspect="retry" hidden>RÉESSAYER CETTE IMAGE</button><div class="inspector-row"><label>Zoom<select data-inspect="zoom"><option value="0.5">50 %</option><option value="1" selected>100 %</option><option value="1.5">150 %</option><option value="2">200 %</option></select></label><label><input data-inspect="boxes" type="checkbox" checked> Repères et collision</label></div>
  <details><summary>CALIBRER CETTE IMAGE</summary><p>Le point d’appui et la hauteur de référence ne modifient pas les collisions du moteur. Exporter ne modifie ni le dépôt ni la sauvegarde.</p><div class="inspector-fields">
  <label>Ancre X<input data-inspect="anchorX" type="number" min="0" max="1" step="0.001"></label><label>Ancre Y<input data-inspect="anchorY" type="number" min="0" max="1" step="0.001"></label><label>Hauteur de référence<input data-inspect="bodyHeight" type="number" min="0.05" max="1" step="0.001"></label><label>Orientation native<select data-inspect="facing"><option value="1">Droite</option><option value="-1">Gauche</option></select></label></div>
  <div class="inspector-row"><button type="button" class="ui-button" data-inspect="reset">RÉINITIALISER</button><button type="button" class="ui-button" data-inspect="export">EXPORTER LA CALIBRATION</button></div><p data-inspect="error" role="alert"></p></details>`;
  host.append(panel);const $=key=>panel.querySelector(`[data-inspect="${key}"]`),ctx=canvas.getContext('2d');
  const poses=[...new Set(['idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase',...MOVESET_KEYS,...Object.keys(art.clips)])];
  for(const key of poses){const o=document.createElement('option');o.value=key;o.textContent=key+(Object.hasOwn(art.clips,key)?' · présent':' · À PRODUIRE');$('pose').append(o);}
+ let editor=null;
  let disposed=false,playing=false,tick=0,lastTime=0,accumulator=0,raf=0,presentation=1,currentIndex=-1;
  const dirty=new Set(),waiting=new Set();
  function selected(){return sampleSpriteClip(draft,stateFor($('pose').value,tick));}
@@ -59,7 +62,13 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
   const clipped=x+visible.x*zoom<0||x+(visible.x+visible.w)*zoom>w||y+visible.y*zoom<0||y+(visible.y+visible.h)*zoom>h;
   $('status').textContent=(sample.fallback?'POSE À PRODUIRE — aperçu idle. ':'')+`Image ${sample.index+1}/${draft.clips[sample.pose].frames.length} · tick ${tick}/${sample.total-1} · ${frame.width} × ${frame.height}`+(clipped?' · Déborde de l’aperçu : réduire le zoom.':'')+(dirty.size?' · Calibration locale non appliquée.':'');
   $('tick').max=sample.total-1;$('tick').value=tick;
-  $('play').disabled=sample.fallback||draft.clips[sample.pose].frames.length<2;
+  const clipDirty=JSON.stringify(original.clips[sample.requested])!==JSON.stringify(draft.clips[sample.requested]);
+  canvas.dataset.clipDraft=String(clipDirty);
+  if(clipDirty)$('status').textContent='BROUILLON DE MONTAGE NON PUBLIÉ — '+$('status').textContent;
+  $('retry').hidden=rendered.kind!=='error';
+  if(rendered.kind==='error')$('status').textContent='IMAGE INDISPONIBLE — le fichier n’a pas été affiché. '+$('status').textContent;
+  if(rendered.kind==='loading')$('status').textContent='CHARGEMENT EN COURS — '+$('status').textContent;
+  $('play').disabled=sample.fallback||!clipSummary(draft,draft.clips[sample.pose]).animated;
  }
  function stop(){playing=false;cancelAnimationFrame(raf);raf=0;$('play').textContent='LIRE';}
  function loop(now){if(!playing||disposed)return;
@@ -69,9 +78,10 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
   if(playing)raf=requestAnimationFrame(loop);
  }
  $('play').onclick=()=>{if(playing)return stop();if($('play').disabled)return;playing=true;lastTime=performance.now();accumulator=0;if(tick>=selected().total-1)tick=0;$('play').textContent='PAUSE';raf=requestAnimationFrame(loop);};
- $('pose').onchange=()=>{stop();tick=0;currentIndex=-1;draw();};$('tick').oninput=()=>{stop();tick=Number($('tick').value);draw();};
+ $('pose').onchange=()=>{stop();tick=0;currentIndex=-1;editor?.sync();draw();};$('tick').oninput=()=>{stop();tick=Number($('tick').value);draw();};
  $('flip').onclick=()=>{presentation*=-1;$('flip').textContent=presentation===1?'VOIR VERS LA GAUCHE':'VOIR VERS LA DROITE';draw();};
  $('boxes').onchange=draw;$('zoom').onchange=draw;
+ $('retry').onclick=()=>{const frame=selected()?.frame;if(!frame)return;void spriteCache.load(frame,{retry:true}).then(()=>{if(!disposed)draw();});draw();};
  for(const key of ['anchorX','anchorY','bodyHeight','facing'])$(key).addEventListener('change',()=>{
   const inputs=['anchorX','anchorY','bodyHeight'].map(k=>$(k));
   if(inputs.some(i=>!i.value.trim()||!i.checkValidity()||!Number.isFinite(Number(i.value)))){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–1.';return;}
@@ -81,6 +91,7 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  $('reset').onclick=()=>{stop();draft.frames=structuredClone(original.frames);dirty.clear();$('error').textContent='';fields();draw();};
  $('export').onclick=()=>{downloadJSON(calibrationPacket(fighter,original,draft),'HALO_CALIBRATION_'+fighter.id+'.json');$('error').textContent='Export effectué. Appliquer avec scripts/apply-sprite-calibration.py --apply, puis reconstruire le jeu.';};
  const onHidden=()=>{if(document.hidden)stop();};document.addEventListener('visibilitychange',onHidden);
+ editor=mountClipEditor({host:panel,fighter,original,draft,getPose:()=>$('pose').value,onChange:()=>{stop();tick=0;currentIndex=-1;draw();}});
  draw();
- return ()=>{disposed=true;stop();document.removeEventListener('visibilitychange',onHidden);panel.remove();};
+ return ()=>{disposed=true;stop();editor?.dispose();document.removeEventListener('visibilitychange',onHidden);panel.remove();};
 }

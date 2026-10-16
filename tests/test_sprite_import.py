@@ -99,4 +99,20 @@ class ImportTests(unittest.TestCase):
   module.import_sprite(self.args());im=Image.open(self.image);im.putpixel((0,0),(123,42,30,0));im.save(self.image)
   with self.assertRaises(ValueError):module.import_sprite(self.args('--append','--pose','walk'))
 
+
+ def test_append_preserves_variable_frame_ticks(self):
+  module.import_sprite(self.args());path=self.root/'art/registry.json';reg=json.loads(path.read_text());reg['assets']['a']['clips']['idle']['frameTicks']=[7];path.write_text(json.dumps(reg))
+  im=Image.open(self.image);im.putpixel((130,100),(51,63,77,255));im.save(self.image)
+  module.import_sprite(self.args('--append','--ticks','3'))
+  clip=json.loads(path.read_text())['assets']['a']['clips']['idle'];self.assertEqual(clip['frameTicks'],[7,3]);self.assertEqual(clip['frames'],[0,1])
+ def test_append_promotes_different_uniform_duration(self):
+  module.import_sprite(self.args('--ticks','4'));im=Image.open(self.image);im.putpixel((130,100),(21,93,107,255));im.save(self.image)
+  module.import_sprite(self.args('--append','--ticks','8'));clip=json.loads((self.root/'art/registry.json').read_text())['assets']['a']['clips']['idle'];self.assertEqual(clip['frameTicks'],[4,8])
+ def test_import_rejects_unknown_or_looping_attack(self):
+  for options in [('--pose','unusedPose'),('--pose','neutralLight','--loop')]:
+   with self.subTest(options=options),self.assertRaises(ValueError):module.import_sprite(self.args(*options))
+ def test_linked_art_folder_is_not_modified(self):
+  art=self.root/'art';art.rename(self.root/'otherart');art.symlink_to(self.root/'otherart',target_is_directory=True)
+  with self.assertRaises(ValueError):module.import_sprite(self.args())
+
 if __name__=='__main__':unittest.main()

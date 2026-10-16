@@ -1,3 +1,13 @@
+## 0.9.3 — Montage des clips individuels et publication contrôlée
+
+- Ordre des images, durées par étape, prévisualisation et export JSON dans l’atelier.
+- Fenêtres préparation/impact/récupération issues du profil de combat, sans modifier les dégâts.
+- Import de timeline avec revue explicite, fichiers/empreintes/ordre vérifiés et garde contre un export périmé.
+- Répéter une image ne compte pas comme une animation ; idle seul ne fabrique pas une nouvelle attaque.
+- Ajout de frame après durées variables corrigé ; les durées existantes sont conservées.
+- Filtre catalogue/dossier synchronisé à la page visible ; erreur d’image et reprise explicite dans l’inspecteur.
+- Aucun nouveau sprite de production : 2/230 candidats, 0 séquence animée livrée, 0 certification 1:1.
+
 ## 0.9.2 — Inspection et cadrage des images
 
 - Inspecteur intégré : poses présentes/absentes, chronologie, orientation, repères,

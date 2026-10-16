@@ -1,3 +1,11 @@
+## Suite de la PR #4 — v0.9.3
+
+Montage et export de clips à partir d’images individuelles déjà importées, durées par étape,
+repères des vraies attaques, publication locale contrôlée et reprise d’un chargement d’inspecteur.
+[Documentation de cette passe](docs/SPRITE_AUTHORING_v0.9.3.md).
+La couverture artistique reste **2 candidats sur 230, aucune nouvelle image ni animation livrée**.
+L’éditeur est un outil de production, pas un générateur d’images ni une certification canonique.
+
 ## Suite de la PR #4 — v0.9.2
 
 Inspecteur des poses réellement disponibles, export de calibration, cadrage commun
