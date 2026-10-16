@@ -1,5 +1,6 @@
 ## 0.9.5 — Transitions, pause multi-manettes et récupération des sauvegardes
 
+- Appuis tactiles brefs conservés entre deux ticks : impulsion distincte du maintien, sans garde réactivée.
 - Impulsions d'attaque consommées pendant les intros/fins ; garde et directions tenues conservées sans nouveau front de parade.
 - Tampon d'impact limité aux actions ponctuelles ; garde et directions actuelles prioritaires.
 - Une seule décision Start par relevé manettes, déconnexion prioritaire et panne getGamepads tolérée.

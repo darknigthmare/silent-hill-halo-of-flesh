@@ -105,3 +105,33 @@ test('full match reset restores live input but preserves an explicit pause',()=>
 test('a retired engine cannot mutate its actors through resetMatch',()=>{
   const {e}=setup();e.actors[0].health=4;e.destroy();e.resetMatch();assert.equal(e.actors[0].health,4);
 });
+
+
+test('a complete touch tap between two ticks remains exactly one attack impulse',()=>{
+  const {e}=setup();e.setTouch('p1','light','pressed');e.setTouch('p1','light',false);
+  assert.equal(e.touch.p1.light,false);assert.equal(e.getControls(0).light,true);
+  assert.equal(e.getControls(0).light,false);e.destroy();
+});
+test('rapid released touch attacks remain isolated by player',()=>{
+  const {e}=setup();e.setTouch('p2','heavy','pressed');e.setTouch('p2','heavy',false);
+  assert.equal(e.getControls(0).heavy,false);assert.equal(e.getControls(1).heavy,true);
+  assert.equal(e.getControls(1).heavy,false);e.destroy();
+});
+test('clear and pause discard unconsumed touch impulses',()=>{
+  const {e}=setup();e.setTouch('p1','jump','pressed');e.setTouch('p1','jump',false);e.clearInputs();
+  assert.equal(e.getControls(0).jump,false);
+  e.setTouch('p1','dodge','pressed');e.setTouch('p1','dodge',false);e.togglePause(true);e.togglePause(false);
+  assert.equal(e.getControls(0).dodge,false);e.destroy();
+});
+test('a released touch guard is never latched like an attack',()=>{
+  const {e}=setup();e.setTouch('p1','guard','pressed');e.setTouch('p1','guard',false);
+  const c=e.getControls(0);assert.equal(c.guard,false);assert.equal(c.guardPressed,false);e.destroy();
+});
+test('an intro tap cannot survive the final intro tick',()=>{
+  const {e}=setup();e.phase='intro';e.phaseTimer=1;e.setTouch('p1','light','pressed');e.setTouch('p1','light',false);
+  e.update();assert.equal(e.phase,'fight');assert.equal(e.getControls(0).light,false);e.destroy();
+});
+test('rapid tap during hitstop is buffered only once',()=>{
+  const {e}=setup();e.hitstop=1;e.setTouch('p1','special','pressed');e.setTouch('p1','special',false);e.update();
+  assert.equal(e.getControls(0).special,true);assert.equal(e.getControls(0).special,false);e.destroy();
+});

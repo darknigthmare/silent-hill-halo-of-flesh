@@ -26,6 +26,12 @@ La reprise est refusée tant que le dialogue des commandes reste ouvert, ou que 
 document est masqué. Fermer le dialogue des commandes ne reprend pas automatiquement
 le combat : la pause reste à lever explicitement.
 
+Un test HTTP a révélé qu'un appui tactile très bref, entièrement relâché entre deux
+ticks, pouvait disparaître. Les impulsions sont maintenant mémorisées séparément des
+boutons maintenus, consommées une seule fois, puis effacées lors des intros et des
+remises à zéro. La garde et les directions restent liées à leur état réellement tenu.
+Trois régressions reproduites sur six cas ciblés supplémentaires avant correction.
+
 ## Durée de vie du moteur
 
 `destroy()` est définitif et idempotent. Il annule la frame programmée, désactive et

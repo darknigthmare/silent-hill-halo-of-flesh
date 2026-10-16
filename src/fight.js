@@ -326,6 +326,7 @@ export class FightEngine {
     this.rng = seededRandom(this.config.seed);
     this.fxRng = seededRandom(`${this.config.seed}:visual-effects`);
     this.touch = { p1: {}, p2: {} };
+    this.touchPressed = { p1: new Set(), p2: new Set() };
     this.callbacks = { onMatchEnd: () => {}, onRoundEnd: () => {}, onState: () => {}, canResume: () => true, ...config.callbacks };
     this.gamepadPrev = [];
     this.currentPads = [];
@@ -382,6 +383,7 @@ export class FightEngine {
     this.guardHeld = [false, false];
     this.input.clear();
     this.touch = { p1: {}, p2: {} };
+    this.touchPressed = { p1: new Set(), p2: new Set() };
     this.inputBuffer = [null, null];
     this.gamepadPrev = (this.currentPads || []).map(p => p?.buttons?.map(b => !!b.pressed) || []);
   }
@@ -403,7 +405,9 @@ export class FightEngine {
     // Intro / finish cinematics consume impulses equally on all devices.
     // Held movement and guard survive, but cannot become a fresh attack or parry.
     for (let i = 0; i < 2; i++) {
-      const touch = this.touch[i === 0 ? 'p1' : 'p2'];
+      const player = i === 0 ? 'p1' : 'p2';
+      const touch = this.touch[player];
+      this.touchPressed[player].clear();
       const buttons = this.currentPads?.[i]?.buttons || [];
       for (const action of Object.keys(touch)) if (touch[action] === 'pressed') touch[action] = true;
       this.guardHeld[i] = this.input.isDown(this.bindings.players[i].guard) || !!touch.guard ||
@@ -432,7 +436,12 @@ export class FightEngine {
     if (action === 'up') action = 'jump'; // Older tactile layouts.
     if (value !== false && (this.paused || !this.input.enabled || this.phase === 'matchEnd')) return;
     if (![true, false, 'pressed'].includes(value)) return;
-    if (this.touch[player] && Object.hasOwn(this.bindings.players[0], action)) this.touch[player][action] = value;
+    if (this.touch[player] && Object.hasOwn(this.bindings.players[0], action)) {
+      // Preserve short taps independently from held state. A release between two
+      // simulation ticks must not erase an attack, but must release guard/movement.
+      if (value === 'pressed' && IMPULSE_ACTIONS.includes(action)) this.touchPressed[player].add(action);
+      this.touch[player][action] = value;
+    }
   }
 
   setBindings(bindings) { this.bindings = bindings; this.input.bindings = bindings; this.clearInputs(); }
@@ -670,13 +679,15 @@ export class FightEngine {
 
   getControls(index, raw = false) {
     const map = this.bindings.players[index];
-    const touch = this.touch[index === 0 ? 'p1' : 'p2'] || {};
+    const player = index === 0 ? 'p1' : 'p2';
+    const touch = this.touch[player] || {};
+    const touchPressed = this.touchPressed[player];
     const ai = index === 1 && this.config.mode !== 'local' && !this.config.training;
     if (ai) return this.computeAI(this.actors[index], this.actors[1 - index]);
 
     const pad = this.readGamepad(index);
     const held = (action) => this.input.isDown(map[action]) || Boolean(touch[action]) || Boolean(pad?.held?.[action]);
-    const pressed = (action) => this.input.wasPressed(map[action]) || touch[action] === 'pressed' || Boolean(pad?.pressed?.[action]);
+    const pressed = (action) => this.input.wasPressed(map[action]) || touch[action] === 'pressed' || touchPressed.has(action) || Boolean(pad?.pressed?.[action]);
     const released = (action) => this.input.wasReleased(map[action]) || Boolean(pad?.released?.[action]);
     const guard = held('guard'), previousGuard = this.guardHeld[index];
     this.guardHeld[index] = guard;
@@ -687,6 +698,7 @@ export class FightEngine {
       light: pressed('light'), heavy: pressed('heavy'), special: pressed('special'), throw: pressed('throw'),
       super: pressed('super'), dodge: pressed('dodge')
     };
+    touchPressed.clear();
     for (const action of Object.keys(touch)) {
       if (touch[action] === 'pressed') touch[action] = true;
     }
