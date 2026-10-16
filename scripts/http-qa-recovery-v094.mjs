@@ -58,6 +58,8 @@ try{
  check('pause retry error is announced inside the modal',await page.locator('#pauseFeedback').isVisible());await shot(page,'03-pause-retry-failure');
  await page.evaluate(()=>{__HALO_QA__.assetCache.prepare=window.savedPrepare;});await page.click('[data-pause=retry]');await page.waitForFunction(()=>__HALO_QA__.engine!==beforeRetry);
  check('successful pause retry closes the dialog only after loading',await page.evaluate(()=>!document.querySelector('[aria-labelledby=pauseTitle]').open&&!__HALO_QA__.engine.paused));
+ check('successful recovery clears the previous pause error',await page.locator('#pauseFeedback').textContent()==='');
+ await page.click('#pauseBtn');check('reopening pause does not repeat a recovered error',await page.locator('#pauseFeedback').textContent()==='');await page.click('[data-pause=resume]');
  await page.goto(base+'/modules/sprite-workshop.html');await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');await page.locator('.clip-editor summary').click();
  await page.click('[data-clip=add]');await page.fill('[data-clip-ticks="0"]','4');await page.fill('[data-clip-ticks="1"]','7');await page.selectOption('[data-inspect=pose]','neutralHeavy');await page.selectOption('[data-inspect=pose]','idle');
  check('switching poses retains working edits even before Preview',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-ticks="0"]').inputValue()==='4'&&await page.locator('[data-clip-ticks="1"]').inputValue()==='7');

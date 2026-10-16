@@ -12,11 +12,12 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   const pause=document.createElement('dialog');pause.className='play-dialog';pause.setAttribute('aria-labelledby','pauseTitle');
   pause.innerHTML=`<h2 id="pauseTitle">SIGNAL SUSPENDU</h2><p id="pauseReason">Le combat et les dangers sont arrêtés.</p><p id="pauseFeedback" role="status"></p><div class="play-actions"><button data-pause="resume" class="ui-button primary">REPRENDRE</button><button data-pause="controls" class="ui-button">COMMANDES</button><button data-pause="retry" class="ui-button">RECOMMENCER LE COMBAT</button><button data-pause="select" class="ui-button">RETOUR À LA SÉLECTION</button></div><p class="play-note">Les parcours sont conservés entre les combats. Une interruption en combat reprend au début de cette rencontre.</p>`;
   document.body.append(pause);
+  function closePause(){pause.querySelector('#pauseFeedback').textContent='';pause.close();}
   pause.addEventListener('cancel',e=>{e.preventDefault();engine()?.togglePause(false);});
   pause.addEventListener('click',e=>{
     const action=e.target.closest('[data-pause]')?.dataset.pause;if(!action)return;
     if(action==='resume')engine()?.togglePause(false);
-    if(action==='select'){pause.close();select();}
+    if(action==='select'){closePause();select();}
     if(action==='retry'&&confirm('Recommencer cette rencontre ?')){void retry();}
     if(action==='controls')openControls();
   });
@@ -49,7 +50,7 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   document.querySelector('#openControls')?.addEventListener('click',openControls);
   return {announce,openControls,canResume:()=>!controls.open,syncPause(snapshot){
     if(snapshot.paused&&engine()?.phase!=='matchEnd'){if(!pause.open)pause.showModal();}
-    else if(pause.open){pause.close();document.querySelector('#game')?.focus({preventScroll:true});}
+    else if(pause.open){closePause();document.querySelector('#game')?.focus({preventScroll:true});}
     const button=document.querySelector('#pauseBtn');if(button){button.textContent=snapshot.paused?'REPRENDRE':'PAUSE';button.setAttribute('aria-pressed',String(snapshot.paused));}
-  },close(){controls.close();pause.close();}};
+  },close(){controls.close();closePause();}};
 }
