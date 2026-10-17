@@ -4,7 +4,7 @@ import {
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
 import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
-import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS } from './run-progress.js';
+import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS, validateRun, runEncounterRules } from './run-progress.js';
 import {bindTouchButton} from './touch-controls.js';
 import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
@@ -41,6 +41,7 @@ const state = {
   filtered: ROSTER,
   mode: preset,
   engine: null,
+  controls: loadControls(),
   run: null,
   lastResult: null, generation: 0, settled: false, resultTimer: null, matchId: null,
   touchEnabled: matchMedia('(pointer: coarse)').matches,
@@ -138,7 +139,7 @@ function populateRituals() {
 }
 
 function currentRitualId() {
-  if (state.run?.rituals?.length) return state.run.rituals[state.run.index % state.run.rituals.length];
+  if (state.run) return runEncounterRules(state.run).ritualId;
   return els.ritualSelect.value || 'none';
 }
 
@@ -333,7 +334,7 @@ function buildRun(candidate = null) {
     if(preset==='chronicle'){
       const progress=loadJSON(CHRONICLES_KEY,{completed:[],attempts:{},grades:{},bestStats:{}});
       progress.attempts={...progress.attempts,[state.run.routeId]:(progress.attempts?.[state.run.routeId]||0)+1};
-      importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.chronicles]:progress,[KEYS.run]:state.run}});
+      importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.chronicles]:progress,[KEYS.run]:state.run}},undefined,{[KEYS.run]:validateRun});
     } else if(!saveRun(state.run))flow.announce('Parcours jouable, mais sauvegarde indisponible.',true);
   } catch(error){flow.announce(`${error.message} Le parcours reste jouable sans sauvegarde.`,true);}
   return true;
@@ -404,7 +405,7 @@ function fightConfig() {
     stageTerrain: els.stageTerrain.checked,
     stageDirector: els.stageDirector.checked,
     ritualId: currentRitualId(),
-    ...(state.run?.rules || {}),
+    ...runEncounterRules(state.run),
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
@@ -470,6 +471,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   config.callbacks.onMatchEnd=result=>{if(generation===state.generation)handleMatchEnd(result);};
   pinCombatSprites([state.p1,state.p2]);
   state.engine = new FightEngine(els.game, config);
+  state.engine.setBindings(state.controls);
   state.engine.start();
   els.game.focus({preventScroll:true});
   if (params.get('qa') === '1') installQaBridge();
@@ -545,7 +547,7 @@ function handleMatchEnd(result) {
     }
     entries[KEYS.chronicles]=progress;
   }
-  try{importMemory({schema:MEMORY_SCHEMA,entries});}
+  try{importMemory({schema:MEMORY_SCHEMA,entries},undefined,{[KEYS.run]:validateRun});}
   catch(error){flow.announce(error.message,true);}
   const generation=state.generation;
   state.resultTimer=setTimeout(()=>{
@@ -571,7 +573,8 @@ function continueRun() {
   if(state.loadingSprites||state.run?.status!=='won')return false;
   return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
 }
-function refreshControlHelp(bindings = loadControls()) {
+function refreshControlHelp(bindings = state.controls) {
+  state.controls=bindings;
   els.gameHelp.textContent=controlsLabel(bindings,0)+(els.mode.value==='local'&&preset!=='training'?` · SUJET II : ${controlsLabel(bindings,1)}`:'');
   state.engine?.setBindings(bindings);
 }
@@ -668,5 +671,5 @@ function init() {
   else if (shouldAutostart) setTimeout(() => startFight(), 120);
 }
 
-const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,onControlsChanged:refreshControlHelp});
+const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,onControlsChanged:refreshControlHelp,getControls:()=>state.controls});
 init();

@@ -35,7 +35,11 @@ export function createRun({mode,playerId,routeId=null,seed=Date.now(),rules={}})
     rituals=Object.keys(RITUAL_MODIFIERS).filter(k=>k!=='none');
     const normal=shuffled(pool.filter(f=>!f.boss),rng), bosses=shuffled(pool.filter(f=>f.boss),rng);
     queue=rituals.map((_,i)=>(i>=rituals.length-2||i===3?bosses.shift():normal.shift()).id);
-  } else queue=shuffled(pool.filter(f=>mode!=='boss'||f.boss),rng).slice(0,mode==='boss'?6:7).map(f=>f.id);
+  } else if(mode==='arcade') {
+    // Reserve the last encounter before drawing the rest of the descent.
+    const finalBoss=shuffled(pool.filter(f=>f.boss),rng)[0];
+    queue=[...shuffled(pool.filter(f=>f.id!==finalBoss.id),rng).slice(0,6).map(f=>f.id),finalBoss.id];
+  } else queue=shuffled(pool.filter(f=>f.boss),rng).slice(0,6).map(f=>f.id);
   if(!stageIds.length)stageIds=queue.map(stageForFighter);
   const carry=mode==='boss'||mode==='ritual';
   return {schema:1,version:VERSION,type:{arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[mode],id:`${mode}-${Date.now()}-${seed}`,mode,playerId,routeId:route?.id||null,seed,
@@ -74,6 +78,11 @@ export function loadRun(storage) {
   const value=readState(KEYS.run,{},storage,validateRun);return validateRun(value)?value:null;
 }
 export function saveRun(run,storage) {return validateRun(run)?writeState(KEYS.run,run,storage,validateRun):null;}
+/** A route's encounter modifier takes precedence over its saved selection defaults. */
+export function runEncounterRules(run) {
+  if(!run)return {};
+  return {...run.rules,ritualId:run.rituals?.length?run.rituals[run.index%run.rituals.length]:run.rules.ritualId};
+}
 export function playerOutcome(result) {
   if(!result || ![0,1].includes(result.winnerIndex))throw new Error('Résultat sans emplacement de joueur.');
   return {won:result.winnerIndex===0,stats:{...(result.winnerIndex===0?result.stats?.winner:result.stats?.loser)||{}},

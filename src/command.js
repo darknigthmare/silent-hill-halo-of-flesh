@@ -296,7 +296,7 @@ async function importMemoryFile(file) {
   if (payload?.schema !== MEMORY_SCHEMA || !isPlainRecord(payload.entries)) throw new Error('Format de mémoire inconnu.');
   if(payload.entries[KEYS.run] && !validateRun(payload.entries[KEYS.run])) throw new Error('Parcours importé incompatible.');
   if(payload.entries[KEYS.controls] && !validControls(payload.entries[KEYS.controls])) throw new Error('Commandes importées invalides.');
-  const restored = importMemory(payload);
+  const restored = importMemory(payload,undefined,{[KEYS.run]:validateRun,[KEYS.controls]:validControls});
   settings = normaliseSettings(readStoredObject(SETTINGS_KEY, DEFAULT_SETTINGS));
   applySettings();
   showStatus(`${restored} ENTRÉES DE MÉMOIRE RESTAURÉES.`, { tone: 'success' });

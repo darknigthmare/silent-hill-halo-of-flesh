@@ -95,19 +95,20 @@ export function exportMemory(version,storage,validators={}) {
   for(const key of ALLOWED){const value=readState(key,{},storage,validators[key]);if(Object.keys(value).length)entries[key]=value;}
   return {schema:MEMORY_SCHEMA,project:'SILENT HILL: HALO OF FLESH',version,exportedAt:new Date().toISOString(),entries};
 }
-export function importMemory(payload,storage) {
+export function importMemory(payload,storage,validators={}) {
   if(!plain(payload)||payload.schema!==MEMORY_SCHEMA||!plain(payload.entries)||!safeTree(payload))
     throw new Error('Format de mémoire invalide.');
   const entries=Object.entries(payload.entries);
   if(!entries.length||entries.length>ALLOWED.size||JSON.stringify(payload).length>MAX_BYTES)
     throw new Error('Mémoire vide ou trop volumineuse.');
   // Validate EVERYTHING before the first write. Unknown keys never pass through.
-  for(const [key,value] of entries) if(!validateEntry(key,value)) throw new Error(`Entrée de mémoire refusée : ${key}`);
+  for(const [key,value] of entries) if(!validateEntry(key,value)||validators[key]&&!validators[key](value))
+    throw new Error(`Entrée de mémoire refusée : ${key}`);
   const s=storageOrNull(storage);if(!s)throw new Error('Stockage indisponible.');
   const originals=new Map();
   for(const [key] of entries) for(const k of [key,key+BACKUP]) originals.set(k,s.getItem(k));
   try {for(const [key,value] of entries) {
-    const old=originals.get(key);if(decode(key,old))s.setItem(key+BACKUP,old);
+    const old=originals.get(key);if(decode(key,old,validators[key]))s.setItem(key+BACKUP,old);
     s.setItem(key,JSON.stringify(value));
   }} catch(error) {
     let rollbackFailed=false;

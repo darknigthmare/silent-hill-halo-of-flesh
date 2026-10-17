@@ -1,5 +1,24 @@
 # SILENT HILL: HALO OF FLESH — v0.9.5
 
+## Continuation du 17 octobre 2026 — phase 1 de production
+
+[**Excel des movesets et animations**](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) :
+230 profils, 123 arènes et 135 sources, avec mouvements actuels, gestes documentés,
+supers, finishers, intros/outros, poses de manche et travaux d’animation.
+Les adaptations et les références manquantes sont identifiées ; aucun clip n’est
+certifié 1:1 par la seule présence d’une fiche.
+
+[Guide du classeur](docs/production/README.md) ·
+[Périmètre et vérification](docs/production/QA_2026-10-17.md) ·
+[Cinq corrections moteur et preuves](docs/CORRECTIONS_CONTINUATION_2026-10-17.md).
+
+La continuation corrige aussi les rites appliqués, le boss final de Descente,
+les secours pendant l’import, les touches de revanche et le déclenchement des
+finishers uniquement à la victoire finale. **415 tests Node réussis** ; la suite
+HTTP ciblée comporte **43 contrôles réussis**. La version reste `0.9.5`.
+
+### Passe précédente — commandes et sauvegardes
+
 Corrections des commandes aux transitions, pause multi-manettes et dialogues,
 récupération des sauvegardes valides, exports de secours et retrait des anciens moteurs.
 [Détails de cette passe](docs/CORRECTIONS_v0.9.5.md).

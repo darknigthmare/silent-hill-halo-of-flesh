@@ -1,7 +1,7 @@
 import { ACTIONS, loadControls, saveControls, rebindControl, defaultControls, keyLabel } from './player-input.js';
 
 /** Native dialogs provide keyboard focus containment and accessible pause actions. */
-export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
+export function installPlayflowUI({engine,select,retry,onControlsChanged,getControls}) {
   const status=document.createElement('p');status.id='playStatus';status.className='play-status hidden';status.setAttribute('role','status');
   document.body.append(status);
   let statusTimer;
@@ -35,7 +35,7 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged}) {
   }
   function persist(){if(!saveControls(bindings))message.textContent='Commandes non sauvegardées : stockage indisponible.';
     else message.textContent='Commandes enregistrées.';onControlsChanged(bindings);}
-  function openControls(){bindings=engine()?.bindings||loadControls();renderBindings();message.textContent='';
+  function openControls(){bindings=engine()?.bindings||getControls?.()||loadControls();renderBindings();message.textContent='';
     if(engine()&&!engine().paused)engine().togglePause(true);
     if(!controls.open)controls.showModal();}
   controls.addEventListener('keydown',e=>{if(!waiting)return;e.preventDefault();e.stopPropagation();

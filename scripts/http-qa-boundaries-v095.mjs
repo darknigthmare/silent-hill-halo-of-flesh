@@ -12,6 +12,7 @@ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.',
  'Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.',
  'Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.',
+ 'Prepared round victories advance all eight Rite encounters to check the real launch configuration; this is not a played campaign.',
  'The two existing candidate PNGs are used. No new production image or animation is added.'
 ]};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
@@ -66,6 +67,14 @@ try {
   check('unsaved bindings still apply to the active engine and help text',await page.evaluate(()=>__HALO_QA__.engine.bindings.players[0].light==='KeyB'&&document.querySelector('#gameHelp').textContent.includes('B Attaque légère')));
   await page.click('#closeBindings');await page.click('[data-pause=controls]');
   check('reopening controls preserves the active session binding after storage failure',/B$/.test(await page.locator('[data-binding=light]').textContent()));
+  await page.click('#closeBindings');await page.evaluate(()=>window.bindingEngine=__HALO_QA__.engine);
+  await page.click('[data-pause=retry]');await page.waitForFunction(()=>__HALO_QA__.engine!==window.bindingEngine);
+  check('retry keeps unsaved bindings on the replacement engine and in its help',await page.evaluate(()=>__HALO_QA__.engine.bindings.players[0].light==='KeyB'&&document.querySelector('#gameHelp').textContent.includes('B Attaque légère')));
+  await page.click('#pauseBtn');await page.click('[data-pause=select]');await page.click('#openControls');
+  check('selection controls keep the unsaved session binding after retiring the engine',/B$/.test(await page.locator('[data-binding=light]').textContent()));
+  await page.click('#closeBindings');await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);
+  check('relaunch from selection applies the session binding before the engine starts',await page.evaluate(()=>__HALO_QA__.engine.bindings.players[0].light==='KeyB'));
+  await page.click('#pauseBtn');await page.click('[data-pause=controls]');
   await page.evaluate(()=>Storage.prototype.setItem=window.nativeSetItem);await page.click('#resetBindings');await page.click('#closeBindings');await page.click('[data-pause=resume]');
   await page.evaluate(()=>{window.retiredEngine=__HALO_QA__.engine;});await page.click('#leaveFight');
   await page.evaluate(()=>{window.retiredFrame=retiredEngine.frame;retiredEngine.start();});await page.waitForTimeout(80);
@@ -78,6 +87,18 @@ try {
   check('a touch attack pressed during intro does not leak into the fight',await page.evaluate(()=>__HALO_QA__.engine.actors[0].lastMoveKey===null));
   await light.click();await page.waitForFunction(()=>__HALO_QA__.engine.actors[0].lastMoveKey==='neutralLight');
   check('a fresh touch press after FIGHT still attacks',true);
+  const firstRound=await page.evaluate(()=>{
+    const e=__HALO_QA__.engine;e.togglePause(true);
+    e.actors[1].health=0;e.actors[1].lastHit={attackerIndex:0,isSuper:true,environmental:false};
+    e.resolveKnockouts();return {roundsToWin:e.config.roundsToWin,phase:e.phase,finisher:!!e.fatality,wins:e.actors[0].roundWins};
+  });
+  check('first-round knockout keeps the match open without a finisher',firstRound.roundsToWin===2&&firstRound.phase==='roundEnd'&&!firstRound.finisher&&firstRound.wins===1);
+  const finalRound=await page.evaluate(()=>{
+    const e=__HALO_QA__.engine;e.finishRoundTransition();e.phase='fight';
+    e.actors[1].health=0;e.actors[1].lastHit={attackerIndex:0,isSuper:true,environmental:false};
+    e.resolveKnockouts();return {phase:e.phase,finisher:!!e.fatality,wins:e.actors[0].roundWins};
+  });
+  check('deciding knockout retains the existing finisher before the final score settles',finalRound.phase==='fatality'&&finalRound.finisher&&finalRound.wins===1);
   await page.goto(base);await page.waitForSelector('.command-item');
   const fixture=await page.evaluate(async()=>{
     const {createRun}=await import('/src/run-progress.js');const {defaultControls}=await import('/src/player-input.js');
@@ -96,10 +117,37 @@ try {
   check('actual memory export contains recovered custom controls',exported.entries['sh-halo-of-flesh-controls-v1'].players[0].light==='KeyB');
   check('export does not rewrite the damaged source',await page.evaluate(raw=>localStorage.getItem('sh-halo-of-flesh-run-v1')===raw,fixture.raw));
   await shot(page,'04-recovered-export');
+  const imported=structuredClone(exported);
+  imported.entries['sh-halo-of-flesh-run-v1'].id+='-import';
+  imported.entries['sh-halo-of-flesh-controls-v1'].players[0].light='KeyC';
+  await page.setInputFiles('#importMemoryFile',{name:'continuation-memory.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(imported))});
+  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-controls-v1')).players[0].light==='KeyC');
+  check('actual import preserves usable route and control backups beneath invalid primary data',await page.evaluate(id=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1:backup')).id===id&&JSON.parse(localStorage.getItem('sh-halo-of-flesh-controls-v1:backup')).players[0].light==='KeyB',fixture.run.id));
+  await page.evaluate(()=>{
+    localStorage.setItem('sh-halo-of-flesh-run-v1','{broken');
+    localStorage.setItem('sh-halo-of-flesh-controls-v1','{broken');
+  });
   await page.goto(versus);await page.waitForFunction(()=>!!window.__HALO_QA__);
   check('recovered route remains offered by the checkpoint banner',await page.locator('#runCheckpoint').isVisible());
   await page.click('#openControls');check('controls UI shows recovered custom binding',/B$/.test(await page.locator('[data-binding=light]').textContent()));
   await page.setViewportSize({width:430,height:932});check('controls recovery dialog fits mobile width',await page.locator('.controls-dialog').evaluate(e=>e.getBoundingClientRect().right<=innerWidth+1));await shot(page,'05-mobile-recovered-controls');
+  await page.setViewportSize({width:1440,height:1000});await page.goto(versus+'&preset=ritual&debugArt=1');
+  await page.waitForFunction(()=>!!window.__HALO_QA__);await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);
+  for(let index=0;index<8;index++){
+    const entry=await page.evaluate(async()=>{
+      const {RITUAL_MODIFIERS}=await import('/src/data.js');
+      const {engine,run}=__HALO_QA__;engine.togglePause(true);
+      const expected=run.rituals[run.index];
+      return {index:run.index,expected,actual:engine.config.ritualId,active:engine.ritual.id,
+        label:document.querySelector('#matchLabel').textContent,short:RITUAL_MODIFIERS[expected].short};
+    });
+    check(`Rite ${index+1} launches the advertised modifier (${entry.expected})`,entry.index===index&&entry.actual===entry.expected&&entry.active===entry.expected&&entry.label.includes(entry.short));
+    if(index===2)await shot(page,'07-actual-rite-config');
+    if(index<7){
+      await page.evaluate(()=>{const {engine}=__HALO_QA__;engine.phase='fight';engine.endRound(engine.actors[0],'K.O.');engine.finishRoundTransition();});
+      check(`Rite ${index+1} advances to its next prepared encounter`,await page.evaluate(()=>__HALO_QA__.continueRun()));
+    }
+  }
   await context.close();
   const offline=await browser.newContext(),off=await offline.newPage();off.on('pageerror',e=>report.errors.push(e.message));
   await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});

@@ -1914,7 +1914,10 @@ export class FightEngine {
     const fighterDefinition = fighterFatalities.find((entry) => entry.type === (hit.isSuper ? 'nightmare' : 'signature')) || fighterFatalities[0];
     const definition = stageBased ? this.stage.fatality : fighterDefinition;
 
-    if (this.config.fatalities !== false && attacker && definition) {
+    // Intermediate rounds preserve the opponent for the next encounter within
+    // this match. Existing finishers are reserved for the deciding victory.
+    const decidesMatch = attacker && attacker.roundWins + 1 >= this.config.roundsToWin;
+    if (this.config.fatalities !== false && decidesMatch && definition) {
       this.startFatality(attacker, target, definition, stageBased, hit);
       return;
     }
