@@ -6,16 +6,18 @@ import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
+import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
-export const IMPLEMENTATION_REVISION = 'presentation-hooks-2026-10-17';
-export const PRESENTATION_CLIPS = Object.freeze({intro:'intro',winRound1:'winRound',loseRound1:'loseRound',winMatch:'winMatch',loseMatch:'loseMatch',outro:'outro'});
+export const IMPLEMENTATION_REVISION = 'excel-runtime-integration-2026-10-17';
+export const PRESENTATION_CLIPS = Object.freeze({intro:'intro',taunt:'taunt',winRound1:'winRound',loseRound1:'loseRound',winMatch:'winMatch',loseMatch:'loseMatch',outro:'outro'});
 export const PROPOSAL_KEYS = ['intro','taunt','winRound1','loseRound1','winMatch','loseMatch','outro','super','finisher'];
 export const CORE_POSES = ['idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase'];
 export const COMBAT_ROLES = ['combatant','stationary-boss','multi-body','scripted-encounter','environmental-obstacle','noncombatant','unverified'];
 const root = fileURLToPath(new URL('../', import.meta.url));
 const planDir = path.join(root, 'docs/production');
+const stageAnimationBaseline=JSON.parse(await fs.readFile(path.join(planDir,'research/stage-animation-baseline.json'),'utf8')).rows;
 const text = value => typeof value === 'string' ? value : value == null ? '' : Array.isArray(value) ? value.map(text).join(' / ') : JSON.stringify(value);
 const genitiveName = name => /^[aeiouyàâéèêëîïôûùüœ]/i.test(name)?`d’${name}`:`de ${name}`;
 const unique = values => [...new Set(values.filter(Boolean))];
@@ -25,7 +27,7 @@ const isNonCombat = status => /non.combat|non.applicable|non.hostil|passi[ fv]|s
 const productionState = (locked,noncombat,proposalStatus='') => locked||isBlocked(proposalStatus)?'À référencer':noncombat||isNonCombat(proposalStatus)?'Rôle à décider':'À produire';
 const poseNames = {idle:'Repos',walk:'Locomotion',crouch:'Posture basse',jump:'Déplacement aérien',guard:'Réaction défensive',dodge:'Évitement',hurt:'Réaction à un impact',knockdown:'Chute de manche',ko:'Défaite',phase:'Changement de phase'};
 const presentationNames = {intro:'Introduction',taunt:'Attitude / provocation',winRound1:'Victoire première manche',loseRound1:'Défaite première manche',winMatch:'Pose de victoire finale',loseMatch:'Pose de défaite finale',outro:'Sortie de combat'};
-const presentationTriggers = {intro:'Avant la première manche, commandes suspendues',taunt:'Commande future à définir, hors hitstun',winRound1:'Manche gagnée, dont la première, quand le match continue',loseRound1:'Manche perdue ou nulle, dont la première, quand le match continue',winMatch:'Victoire du match confirmée',loseMatch:'Défaite finale sans finisher. Après un finisher, tenir la dernière image de la piste cible.',outro:'Sortie du vainqueur après la pose finale. La cible conserve sa défaite finale.'};
+const presentationTriggers = {intro:'Avant la première manche, commandes suspendues',taunt:'Commande P (sujet I), N (sujet II), bouton tactile ou clic du stick gauche. Annulable par déplacement, garde, attaque ou impact ; aucun dégât ni gain de jauge.',winRound1:'Manche gagnée, dont la première, quand le match continue',loseRound1:'Manche perdue ou nulle, dont la première, quand le match continue',winMatch:'Victoire du match confirmée',loseMatch:'Défaite finale sans finisher. Après un finisher, tenir la dernière image de la piste cible.',outro:'Sortie du vainqueur après la pose finale. La cible conserve sa défaite finale.'};
 const categoryNames = {normal:'Normal', 'command-normal':'Normal directionnel',aerial:'Attaque aérienne',throw:'Saisie',special:'Technique',counter:'Contre',reversal:'Relèvement',nightmare:'Super',desperation:'Super de désespoir','dodge-attack':'Attaque après évitement'};
 
 export function combineResearch(parts) {
@@ -157,12 +159,106 @@ function plannedPose(fighter, ref, pose) {
   return `${plans[pose]} ${base}`;
 }
 
+function applyRuntimeProgress(plan){
+  const fighters=new Map(ROSTER.map(f=>[f.id,f])),stages=new Map(STAGES.map(s=>[s.id,s]));
+  const profiles=new Map(ROSTER.map(f=>[f.id,createCombatProfile(f)]));
+  const summaries=new Map(plan.finishers.map(f=>[f.id,cinematicSummary(f.id)]));
+  for(const row of plan.fighters){
+    const profile=profiles.get(row.id),p=profile.referencePolicy;
+    row.runtimePolicy=p;
+    row.enabledMoves=Object.values(profile.moves).filter(m=>m.enabled!==false).length;
+    row.identityNote+=`\nMoteur : ${p.combatEnabled?'combat versus autorisé':'combat désactivé'} ; déplacement ${p.canMove?'autorisé':'désactivé'}, saut ${p.canJump?'autorisé':'désactivé'}, esquive ${p.canDodge?'autorisée':'désactivée'}.`;
+    if(p.adaptationMode==='versus-scripted')row.identityNote+=' Rencontre scénarisée transposée explicitement en versus.';
+    if(row.productionStatus==='À produire')row.productionStatus='En cours';
+  }
+  for(const row of plan.moves){
+    const m=profiles.get(row.fighterId).moves[row.key];
+    row.enabled=m.enabled!==false;row.disabledReason=m.disabledReason||'';
+    row.canonicalVerification=(row.enabled?'Commande active ; règles de la fiche appliquées.':'Commande désactivée : '+row.disabledReason)+' Animation officielle non vérifiée.';
+    if(m.ammoCost)row.canonicalVerification+=` Consomme ${m.ammoCost} munition(s) ; réserve ${profiles.get(row.fighterId).moveset.ammoProfile?.capacity||0}.`;
+    row.target=(row.enabled?'Règle active de versus : ':'Règle inactive : ')+(m.canonicalBasis||'')+'\n'+row.target;
+    if(row.productionStatus==='À produire')row.productionStatus='En cours';
+  }
+  for(const row of plan.finishers){
+    const s=summaries.get(row.id);row.runtimeCinematic=s;
+    row.actorTracks=`finisher@${row.id} / finished@${row.id}. Identités et durées synchronisées ; aucune substitution entre finishers.`;
+    row.currentSequence=s.authored?s.beats.map(b=>`${b.from}–${b.to} : ${b.label}`).join(' → '):'Aucune chorégraphie automatique autorisée pour cet identifiant.';
+    row.existing=s.authored?`Timeline de ${s.duration} ticks, caméra, offsets des acteurs, effets et sons branchés. ${s.beats.length} temps de mise en scène. PNG contextuels absents ; adaptation non certifiée.`:`Séquence non jouée : ${s.reason} PNG contextuels à produire.`;
+    if(s.authored){
+      const r=s.requirements;
+      const bodyNames={humanoid:'humanoïde',nurse:'infirmière',child:'petit corps',giant:'géant',pyramid:'corps pyramidal',mannequin:'mannequin',doll:'poupée',flowerhead:'tête florale',quadruped:'quadrupède',insect:'insecte',flyer:'créature volante',mass:'masse',spider:'araignée',fox:'renard'};
+      const requirements=[`Corps compatibles : ${r.targets.map(kind=>bodyNames[kind]||kind).join(', ')}`,
+        r.weapon?`arme ${r.weapon}`:null,r.props.length?`accessoires ${r.props.join(', ')}`:null,
+        r.propsAny.length?`au moins un appui parmi ${r.propsAny.join(', ')}`:null,
+        r.needsCeiling?'plafond confirmé requis':null,r.zone==='center'?'cible au centre':r.zone==='edge'?'cible près d’un bord':null].filter(Boolean);
+      row.trigger='Victoire décisive uniquement. '+requirements.join(' ; ')+'.';
+      if(row.productionStatus==='À produire')row.productionStatus='En cours';
+    }
+  }
+  for(const row of plan.presentations){
+    const key=PRESENTATION_CLIPS[row.id.slice(row.fighterId.length+1)],s=lorePresentation(fighters.get(row.fighterId),key),p=profiles.get(row.fighterId).referencePolicy;
+    row.runtimePresentation=s;
+    row.engineState=`Clé exacte ${s.clipKey}. ${s.authored?'Mise en scène du sujet branchée.':'Hook disponible ; mise en scène propre à produire.'} ${p.combatEnabled?'':'Combat désactivé pour ce rôle. '}Images contextuelles à produire.`;
+    if(key==='taunt')row.engineState=`${s.clipKey}. ${s.authored?'Attitude jouée':'Hook disponible'}, 66 ticks ; annulable et sensible à la pause. PNG dédiés à produire.`;
+    if(s.authored&&row.productionStatus==='À produire')row.productionStatus='En cours';
+  }
+  for(const row of plan.stages){
+    const s=stages.get(row.id);row.runtimePolicy=s.referencePolicy;row.referenceTracks=s.referenceTracks;
+    row.additionalBindings=plan.stageAnimations.filter(a=>a.stageId===row.id&&!stageAnimationBaseline.some(old=>old.id===a.id));
+    row.shift=s.shift.enabled===false?`${s.shift.style} — ${s.shift.startOtherworld?'Otherworld fixe':'bascule désactivée'}`:s.shift.style;
+    row.locationNote+=`\nMoteur : ${(s.referenceTracks||[]).length} piste(s) de la fiche, ${s.director.events.length} événement(s), ${s.director.hazardDeck.length} danger(s) autorisé(s).`;
+    if(row.additionalBindings.length)row.locationNote+='\nNouveaux raccords de versus : '+row.additionalBindings.map(a=>`${a.id} — ${a.animationName} (${a.type})`).join(' ; ')+'. Ces règles de jeu ne certifient aucune action de l’œuvre.';
+    if(row.productionStatus==='À produire')row.productionStatus='En cours';
+  }
+  const current=new Map(plan.stageAnimations.map(a=>[a.id,a]));
+  // Keep every old workbook ID, including ideas now withdrawn. New contextual
+  // event bindings belong to their existing ':reference:n' production row.
+  plan.stageAnimations=stageAnimationBaseline.map(original=>{
+    const stage=stages.get(original.stageId),candidate=current.get(original.id),track=stage.referenceTracks?.find(t=>t.id===original.id);
+    const row={...(candidate||original),name:stage.name};
+    if(track){
+      row.existing=`Prototype Canvas partiel joué : ${track.implementedElement||track.name}. Aucune capture ni image d’animation créée.`;
+      row.trigger=track.trigger;row.layer=track.layer;row.productionStatus='En cours';row.runtimeTrack=track;
+    }else if(!candidate||(row.type==='Transformation'&&stage.shift.enabled===false)){
+      row.existing='Désactivé après application de la fiche exacte. Conservé dans l’inventaire pour tracer le retrait.';
+      row.trigger='Aucun déclenchement automatique';row.retired=true;
+      row.status='Ancienne adaptation retirée du moteur';
+      row.productionStatus=stage.reference?.blocked?'À référencer':'À tester';
+    }
+    if(plan.stages.find(s=>s.id===row.stageId).productionStatus==='À référencer'||candidate?.productionStatus==='À référencer')row.productionStatus='À référencer';
+    return row;
+  });
+  for(const task of plan.tasks){
+    if(task.id.endsWith(':moves')){
+      const p=profiles.get(task.entityId),enabled=Object.values(p.moves).filter(m=>m.enabled!==false).length;
+      task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
+      task.reason=`Politique de la fiche appliquée : ${enabled}/20 commandes actives. Projectiles, téléportation, effets et annulations limités aux recettes explicites. Captures, PNG et comparaison visuelle encore à réaliser.`;
+    }else if(task.id.endsWith(':cinematics')&&plan.finishers.some(f=>f.entityId===task.entityId&&summaries.get(f.id).authored)){
+      task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
+      task.reason='Clés contextuelles, séquences de résultat, provocation, timelines de finisher, caméra et sons branchés. Poses bitmap dédiées et validation visuelle restantes.';
+    }else if(task.id.endsWith(':stage')){
+      const s=stages.get(task.entityId);task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
+      task.reason=`Contraintes du lieu appliquées : ${s.referenceTracks?.length||0} piste(s) de la fiche jouée(s). Météo, phase et dangers filtrés ; architecture et captures à vérifier.`;
+    }
+  }
+  const hooks=plan.tasks.find(t=>t.id==='global:cinematic-clips');
+  hooks.reason='Neuf hooks, contexte exact par finisher et par résultat, provocation annulable, timeline caméra/acteurs/son. Les PNG dédiés restent à produire.';
+  return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
+    reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
+    disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
+    authoredFighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant'&&summaries.get(f.id).authored).length,
+    authoredStageFinishers:plan.finishers.filter(f=>f.entityType==='Arène'&&summaries.get(f.id).authored).length,
+    authoredPresentations:plan.presentations.filter(p=>p.runtimePresentation.authored).length,
+    referenceStageTracks:STAGES.reduce((n,s)=>n+(s.referenceTracks?.length||0),0),retiredStageItems:plan.stageAnimations.filter(a=>a.retired).length,
+    additionalStageBindings:plan.stages.reduce((n,s)=>n+s.additionalBindings.length,0)};
+}
+
 export function buildProductionPlan(research) {
   validateResearch(research);
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    scope:'PR #4. Inventaire de production uniquement : aucune nouvelle attaque, cinématique ou image publiée par ce catalogue.',
+    scope:'PR #4. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -235,7 +331,8 @@ export function buildProductionPlan(research) {
   task('global:cinematic-clips','engine','Moteur','P1','Ajouter les hooks de présentation bitmap','Huit hooks de présentation disponibles, horloges synchronisées et montage à lecture unique. Pistes par finisher, accessoires, caméra, son et décors bitmap encore à réaliser.','Séquences interruptibles ou verrouillées explicitement, retour menu et pause sûrs, chargement atomique des acteurs et décors.');
   Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
-  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:0,presentationHooks:PRESENTATION_KEYS.length};
+  const runtimeProgress=applyRuntimeProgress(plan);
+  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:runtimeProgress.authoredFinishers,presentationHooks:PRESENTATION_KEYS.length,...runtimeProgress};
   return plan;
 }
 

@@ -2,17 +2,22 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {gzipSync} from 'node:zlib';
 import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
 
-const [planPath,sourcePath,previousReportPath,outPath]=process.argv.slice(2);
-if(!outPath)throw new Error('Usage: update-production-workbook.mjs PLAN EXISTING_XLSX PREVIOUS_REPORT OUTPUT_DIR');
+const [planPath,sourcePath,previousReportPath,outPath,previousPlanPath]=process.argv.slice(2);
+if(!previousPlanPath)throw new Error('Usage: update-production-workbook.mjs PLAN EXISTING_XLSX PREVIOUS_REPORT OUTPUT_DIR PREVIOUS_PLAN');
 const planBytes=await fs.readFile(planPath),plan=JSON.parse(planBytes);
 const sourceSha256=createHash('sha256').update(await fs.readFile(sourcePath)).digest('hex');
 const previous=JSON.parse(await fs.readFile(previousReportPath,'utf8'));
+const previousPlanBytes=await fs.readFile(previousPlanPath),previousPlan=JSON.parse(previousPlanBytes);
+if(createHash('sha256').update(previousPlanBytes).digest('hex')!==previous.planSha256)throw new Error('Previous plan does not match the existing workbook report.');
+const tableKeys={'Combattants':'fighters','Mouvements':'moves','Finishers':'finishers','Présentations':'presentations','Clips':'poses','Arènes':'stages','Animations arènes':'stageAnimations','Actions':'tasks'};
 const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(sourcePath));
-const changes=[];
+const changes=[],layoutChanges=[];
 const sheet=name=>wb.worksheets.getItem(name);
-const normalize=value=>value??null;
+const scalar=value=>value===true?'Oui':value===false?'Non':Array.isArray(value)?value.join(', '):value&&typeof value==='object'?JSON.stringify(value):value;
+const normalize=value=>scalar(value)===''?null:scalar(value)??null;
 function setCell(name,address,value){
  const cell=sheet(name).getRange(address),before=normalize(cell.values[0][0]);
  if(before===normalize(value))return;
@@ -29,26 +34,54 @@ function updateColumns(name,rows,keys){
   let changed=false;
   rows.forEach((row,index)=>{
    if(normalize(before[index][0])!==normalize(row[key])){
-    changes.push({sheet:name,address:`${column}${index+6}`,before:normalize(before[index][0]),after:row[key]});changed=true;
+    changes.push({sheet:name,address:`${column}${index+6}`,before:normalize(before[index][0]),after:scalar(row[key])});changed=true;
+    if(['productionStatus','delivery'].includes(key)||(name==='Actions'&&key==='status')){
+      const old=previousPlan[tableKeys[name]][index][key];
+      if(normalize(before[index][0])!==normalize(old))throw new Error(`Annotated field must be reconciled: ${name}:${row.id}:${key}`);
+    }
    }
   });
-  if(changed)range.values=rows.map(row=>[row[key]]);
+  if(changed)range.values=rows.map(row=>[scalar(row[key])]);
  }
 }
 
-setCell('Synthèse','A3','Références de combat et d’animation — Suivi des hooks moteur — 17 octobre 2026');
-setCell('Synthèse','A32','Huit hooks de présentation sont disponibles. Les deux PNG restent des candidats ; les clips dédiés restent à produire.');
-updateColumns('Présentations',plan.presentations,['trigger','engineState']);
-updateColumns('Finishers',plan.finishers,['actorTracks','existing']);
+setCell('Synthèse','A3','Références de combat et d’animation — Intégration des fiches dans le moteur — 17 octobre 2026');
+setCell('Synthèse','A14','Pistes d’arène inventoriées');
+setCell('Synthèse','A32',`${plan.metrics.reviewedCombatProfiles} fiches appliquées ; ${plan.metrics.authoredFinishers} montages de finisher ; ${plan.metrics.referenceStageTracks} éléments d’arène ; 9 hooks. ${plan.metrics.disabledMoves} commandes bloquées. Images : 2 PNG candidats, 0 clip animé, 0 fidélité 1:1 certifiée.`);
+updateColumns('Combattants',plan.fighters,['identityNote','productionStatus']);
+updateColumns('Mouvements',plan.moves,['currentName','currentClaim','canonicalVerification','target','startup','active','recovery','damage','reach','meterCost','hits','projectile','effect','cancelInto','productionStatus']);
+updateColumns('Présentations',plan.presentations,['trigger','engineState','productionStatus']);
+updateColumns('Finishers',plan.finishers,['name','currentSequence','trigger','actorTracks','existing','productionStatus']);
+updateColumns('Arènes',plan.stages,['name','currentStatus','locationNote','weather','props','layers','terrain','shift','tracks','events','interactions','hazards','productionStatus']);
+updateColumns('Animations arènes',plan.stageAnimations,['name','animationName','existing','trigger','layer','description','status','productionStatus']);
 
 const actionLayout=previous.sheets.Actions;
 const actionIds=sheet('Actions').getRange(`A6:A${plan.tasks.length+5}`).values.map(row=>row[0]);
 if(actionIds.some((id,index)=>id!==plan.tasks[index].id))throw new Error('Task order changed');
-for(const id of ['global:round-boundaries','global:cinematic-clips']){
- const index=plan.tasks.findIndex(task=>task.id===id);if(index<0)throw new Error(`Missing task: ${id}`);
- const oldStatus=sheet('Actions').getRange(`${actionLayout.fields.status}${index+6}`).values[0][0];
- if(!['À faire',plan.tasks[index].status].includes(oldStatus))throw new Error(`Annotated task status must be reconciled before regeneration: ${id}`);
- for(const key of ['reason','acceptance','status','delivery'])setCell('Actions',`${actionLayout.fields[key]}${index+6}`,plan.tasks[index][key]);
+updateColumns('Actions',plan.tasks,['reason','acceptance','status','delivery']);
+
+// Enlarge only rows whose newly written text needs more space. All columns,
+// styles, tables and larger user-selected row heights remain intact.
+const widths=new Map(),heights=new Map();
+for(const change of changes){
+ if(change.sheet==='Synthèse'||typeof change.after!=='string'||!change.after)continue;
+ const [,column,rowText]=change.address.match(/^([A-Z]+)(\d+)$/),row=Number(rowText);
+ const widthKey=change.sheet+':'+column,rowKey=change.sheet+':'+row;
+ if(!widths.has(widthKey))widths.set(widthKey,sheet(change.sheet).getRange(`${column}${row}`).format.columnWidth);
+ const width=widths.get(widthKey);
+ if(!Number.isFinite(width)||width<=3)throw new Error(`Unreadable column width: ${widthKey}`);
+ const lines=change.after.split('\n').reduce((count,line)=>count+Math.max(1,Math.ceil(line.length/Math.max(8,width-3))),0);
+ const required=Math.min(390,18+lines*13);
+ if(!heights.has(rowKey)){
+  const before=sheet(change.sheet).getRange(`A${row}`).format.rowHeight;
+  if(!Number.isFinite(before))throw new Error(`Unreadable row height: ${rowKey}`);
+  heights.set(rowKey,{sheet:change.sheet,row,before,after:before,reason:'Wrap newly updated production text'});
+ }
+ heights.get(rowKey).after=Math.max(heights.get(rowKey).after,required);
+}
+for(const change of heights.values())if(change.after>change.before){
+ sheet(change.sheet).getRange(`A${change.row}`).format.rowHeight=change.after;
+ layoutChanges.push(change);
 }
 
 wb.recalculate();
@@ -74,7 +107,8 @@ const errors=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#N
 if(/#REF!|#DIV\/0!|#VALUE!|#NAME\?|#N\/A|#NUM!|#NULL!|#SPILL!|#CALC!/.test(errors.ndjson))throw new Error('Unexpected formula errors');
 await fs.writeFile(path.join(outPath,'workbook-formula-scan.ndjson'),errors.ndjson);
 
-const previews=[['Synthèse','A1:H36'],['Présentations','I5:N12'],['Finishers','M5:Q10'],['Actions',`D${plan.tasks.length+2}:J${plan.tasks.length+5}`]];
+const extraStageRow=plan.stages.findIndex(stage=>stage.additionalBindings?.length)+6;
+const previews=[['Synthèse','A1:H36'],['Mouvements','H5:M10'],['Présentations','J5:N10'],['Finishers','M5:Q10'],['Animations arènes','E5:K11'],['Actions',`D${plan.tasks.length+2}:J${plan.tasks.length+5}`],['Combattants','K5:L9'],['Arènes','F5:M8'],['Arènes',`F${extraStageRow}:M${extraStageRow+1}`]];
 await fs.mkdir(path.join(outPath,'previews'),{recursive:true});
 for(const [index,[sheetName,range]] of previews.entries()){
  const blob=await wb.render({sheetName,range,scale:1,format:'png'});
@@ -85,10 +119,14 @@ const file=path.join(outPath,path.basename(sourcePath));
 await (await SpreadsheetFile.exportXlsx(wb)).save(file);
 const changeBytes=JSON.stringify(changes,null,2)+'\n';
 await fs.writeFile(path.join(outPath,'workbook-change-log.json'),changeBytes);
+await fs.writeFile(path.join(outPath,'workbook-layout-changes.json'),JSON.stringify(layoutChanges,null,2)+'\n');
+await fs.writeFile(path.join(outPath,'workbook-change-log.json.gz'),gzipSync(changeBytes,{level:9}));
+await fs.writeFile(path.join(outPath,'workbook-layout-changes.json.gz'),gzipSync(JSON.stringify(layoutChanges,null,2)+'\n',{level:9}));
 const report={...previous,planSha256:createHash('sha256').update(planBytes).digest('hex'),file:path.basename(file),metrics:plan.metrics,calculated,
  editableStatusRecalculation:{before,after,restored},visualPreviews:previews.map(([name])=>name),
  operation:'Narrow update of existing workbook',sourceSha256,changedCells:changes.length,
  changesBySheet:Object.fromEntries([...new Set(changes.map(change=>change.sheet))].map(name=>[name,changes.filter(change=>change.sheet===name).length])),
- changeLogSha256:createHash('sha256').update(changeBytes).digest('hex'),engine:'Artifact Tool primary runtime; native Excel desktop not executed'};
+ enlargedRows:layoutChanges.length,
+ changeLogSha256:createHash('sha256').update(changeBytes).digest('hex'),changeLog:'workbook-change-log.json.gz',layoutChangeLog:'workbook-layout-changes.json.gz',engine:'Artifact Tool primary runtime; native Excel desktop not executed'};
 await fs.writeFile(path.join(outPath,'workbook-verification.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({file,changedCells:changes.length,openActions:before,previewSheets:report.visualPreviews}));

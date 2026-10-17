@@ -10,8 +10,8 @@ import {spriteFor} from '../src/sprite-system.js';
 const fighter=getFighter('sh1_air_screamer_001');
 const art=()=>({fighterId:fighter.id,source:fighter.source,frames:[{path:'a.png',sha256:'a',pixelSHA256:'1'},{path:'b.png',sha256:'b',pixelSHA256:'2'}],clips:{idle:{frames:[0],ticksPerFrame:1,loop:false}}});
 const clip=(patch={})=>({frames:[0,1,0],ticksPerFrame:1,frameTicks:[3,5,2],loop:true,...patch});
-test('clip contract keeps thirty old indices and appends eight presentation states',()=>{
- assert.equal(new Set(POSE_KEYS).size,38);assert.equal(BASE_POSE_KEYS.length,10);
+test('clip contract keeps thirty old indices and appends nine presentation states',()=>{
+ assert.equal(new Set(POSE_KEYS).size,39);assert.equal(BASE_POSE_KEYS.length,10);
  assert.deepEqual(POSE_KEYS.slice(0,10),BASE_POSE_KEYS);assert.deepEqual(POSE_KEYS.slice(10,30),MOVESET_KEYS);assert.deepEqual(POSE_KEYS.slice(30),PRESENTATION_KEYS);
 });
 test('native raster is not altered by local timeline editing',()=>{const a=spriteFor(fighter),before=structuredClone(a),draft=structuredClone(a);draft.clips.idle=clip({frames:[0,0],frameTicks:[4,7]});clipPacket(fighter,a,draft,'idle');assert.deepEqual(a,before);});
@@ -84,6 +84,6 @@ test('clip export keeps the exact profile and media identity',()=>{
 });
 test('presentation coverage separates imported static scenes, animation and absent scenes',()=>{
  const a=art();a.clips.intro={frames:[1,1],ticksPerFrame:1,loop:false};a.clips.finisher=clip({loop:false});
- const c=presentationClipCoverage(a);assert.deepEqual(c.present,['intro','finisher']);assert.equal(c.animated,1);assert.equal(c.missing.length,6);
+ const c=presentationClipCoverage(a);assert.deepEqual(c.present,['intro','finisher']);assert.equal(c.animated,1);assert.equal(c.missing.length,PRESENTATION_KEYS.length-2);
  assert.deepEqual(presentationClipCoverage(null),{present:[],missing:[...PRESENTATION_KEYS],animated:0});
 });

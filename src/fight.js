@@ -10,6 +10,7 @@ import { takeDamage, interruptAction, timeoutWinner, sweptProjectileContact } fr
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
+import { loreFinisher, lorePresentation, sampleLoreCinematic, retimeLoreCinematic, sampleLorePresentation, drawLoreCinematic, createLoreAudioPlayer } from './lore-cinematics.js';
 
 const WIDTH = 1280;
 const HEIGHT = 720;
@@ -27,7 +28,10 @@ const P2_KEYS = {
   light: 'KeyF', heavy: 'KeyG', special: 'KeyH', throw: 'KeyR', super: 'KeyT', dodge: 'KeyV'
 };
 const ATTACK_ACTIONS = ['light', 'heavy', 'special', 'throw', 'super'];
-const IMPULSE_ACTIONS = [...ATTACK_ACTIONS, 'dodge', 'jump'];
+const IMPULSE_ACTIONS = [...ATTACK_ACTIONS, 'dodge', 'jump', 'taunt'];
+const referencePolicy=actor=>actor?.profile?.referencePolicy||actor?.profile?.moveset?.referencePolicy||{};
+const ammoProfile=actor=>actor?.profile?.ammoProfile||actor?.profile?.moveset?.ammoProfile;
+const offensiveAllowed=actor=>referencePolicy(actor).combatEnabled!==false;
 
 class InputState {
   constructor(bindings) {
@@ -111,6 +115,7 @@ function makeActor(data, index, ritual = {}) {
     guard: profile.guard,
     maxGuard: profile.guard,
     meter: ritual.startMeter || 0,
+    ammo: Number.isSafeInteger((profile.ammoProfile||profile.moveset?.ammoProfile)?.capacity)?(profile.ammoProfile||profile.moveset.ammoProfile).capacity:null,
     grounded: true,
     crouching: false,
     blocking: false,
@@ -325,6 +330,8 @@ export class FightEngine {
     this.bossPhaseOverlay = null;
     this.fatality = null;
     this.lastFatality = null;
+    this.lastCinematicBlock = null;
+    this.loreAudio = createLoreAudioPlayer(audio);
     this.winner = null;
     this.resultTimer = 0;
     this.rng = seededRandom(this.config.seed);
@@ -337,7 +344,7 @@ export class FightEngine {
     this.playerPattern = { light: 0, heavy: 0, low: 0, special: 0, throw: 0, super: 0 };
     this.inputHistory = [];
     const stageShift = stageShiftStyle(this.stage);
-    const ritualOtherworld = Boolean(this.ritual.startOtherworld || stageShift.startOtherworld);
+    const ritualOtherworld = Boolean(stageShift.startOtherworld || this.ritual.startOtherworld && stageShift.enabled !== false && !this.stage?.reference?.blocked);
     this.world = {
       phase: ritualOtherworld ? 'otherworld' : 'fog',
       amount: ritualOtherworld ? 1 : 0,
@@ -379,6 +386,7 @@ export class FightEngine {
     this.input.enabled = false;
     this.clearInputs();
     this.clearPresentations();
+    this.loreAudio.stop();
     this.input.destroy();
     removeEventListener('blur', this.onFocusLoss);
     globalThis.document?.removeEventListener('visibilitychange', this.onVisibilityChange);
@@ -386,6 +394,14 @@ export class FightEngine {
 
   beginPresentations(kind, tracks, duration, reversible = false) {
     if (this.destroyed) return;
+    tracks=tracks.map((track,index)=>{
+      if(!track)return null;
+      const actor=this.actors[index];
+      if(['finisher','finished'].includes(track.key))return {...track,contextId:track.finisherId,clipKey:`${track.key}@${track.finisherId}`};
+      const lore=lorePresentation(actor,track.key);
+      const stagingDuration=track.key==='outro'&&lore.authored&&lore.bodyKind==='flyer'?OUTRO_TICKS:0;
+      return {...track,contextId:lore.contextId,clipKey:lore.clipKey,lore,stagingDuration};
+    });
     duration = presentationDuration(this.actors, tracks, duration);
     const sequenceId = ++this.presentationSerial;
     this.presentationSequence = { sequenceId, kind, frame: 0, duration, complete: false };
@@ -397,7 +413,7 @@ export class FightEngine {
         return;
       }
       actor.presentation = createActorPresentation({ ...track, sequenceId, actorIndex: index, duration, round: this.round, reversible,
-        clipDuration: presentationClipDuration(actor, track.key) });
+        clipDuration: presentationClipDuration(actor, track) });
     });
     return duration;
   }
@@ -416,12 +432,13 @@ export class FightEngine {
   clearPresentations() {
     this.presentationSequence = null;
     this.actors.forEach((actor) => { actor.presentation = null; });
+    this.loreAudio?.stop();
   }
 
   isPresentingOutro() {
     const presentation = this.winner?.presentation;
     return !this.destroyed && this.phase === 'matchEnd' && presentation?.key === 'outro' &&
-      presentation.clipDuration > 0 && !presentation.complete;
+      (presentation.clipDuration > 0 || presentation.stagingDuration > 0) && !presentation.complete;
   }
 
   clearInputs() {
@@ -440,6 +457,7 @@ export class FightEngine {
     // A gamepad is polled outside the DOM: modal inertness alone cannot stop Start.
     if (!next && (globalThis.document?.hidden || this.callbacks.canResume() === false)) return false;
     this.paused = next;
+    if(next)this.loreAudio.stop();
     this.accumulator = 0;
     this.input.enabled = !this.paused && this.phase !== 'matchEnd';
     this.clearInputs();
@@ -493,9 +511,11 @@ export class FightEngine {
   setBindings(bindings) { this.bindings = bindings; this.input.bindings = bindings; this.clearInputs(); }
 
   forceOtherworldShift() {
+    if(this.destroyed||this.stage?.reference?.blocked||this.stage?.shift?.enabled===false)return false;
     if (!this.world.triggered) this.triggerOtherworldShift();
     else { this.world.phase = 'otherworld'; this.world.amount = 1; this.world.siren = 0; }
     this.callbacks.onState(this.snapshot());
+    return true;
   }
 
   resetMatch() {
@@ -526,11 +546,12 @@ export class FightEngine {
     this.superOverlay = null;
     this.bossPhaseOverlay = null;
     this.fatality = null;
+    this.lastCinematicBlock = null;
     this.shake = 0;
     this.flash = 0;
     this.hitstop = 0;
     const stageShift = stageShiftStyle(this.stage);
-    const ritualOtherworld = Boolean(this.ritual.startOtherworld || stageShift.startOtherworld);
+    const ritualOtherworld = Boolean(stageShift.startOtherworld || this.ritual.startOtherworld && stageShift.enabled !== false && !this.stage?.reference?.blocked);
     this.world = {
       phase: ritualOtherworld ? 'otherworld' : 'fog', amount: ritualOtherworld ? 1 : 0, triggered: ritualOtherworld, siren: 0,
       hazardTimer: Math.round(((this.stage?.director?.cadence || 300) * (.78 + this.rng() * .34)) * (this.ritual.hazardIntervalScale || 1)), radio: 0, hazardsTriggered: 0
@@ -545,6 +566,9 @@ export class FightEngine {
       actor.health = actor.maxHealth;
       actor.guard = actor.maxGuard;
       actor.meter = full ? (this.ritual.startMeter || 0) : clamp(actor.meter * .35, 0, 55);
+      // The ten-shot encounter never reloads itself between rounds. A new match
+      // restores its initial resource; a round reset only does so if explicitly configured.
+      if(ammoProfile(actor)&&(full||ammoProfile(actor).reloadEachRound===true))actor.ammo=ammoProfile(actor).capacity;
       actor.grounded = true;
       actor.crouching = false;
       actor.blocking = false;
@@ -648,8 +672,8 @@ export class FightEngine {
       this.phaseTimer--;
       this.seekPresentations(this.presentationSequence?.duration - this.phaseTimer);
       if (this.phaseTimer === 130 && this.round === 1) {
-        this.addText(this.actors[0].profile.moveset.presentation.intro, 318, 236, 'intro');
-        this.addText(this.actors[1].profile.moveset.presentation.intro, WIDTH - 318, 236, 'intro');
+        this.addText(this.actors[0].presentation?.lore?.name || this.actors[0].data.name, 318, 236, 'intro');
+        this.addText(this.actors[1].presentation?.lore?.name || this.actors[1].data.name, WIDTH - 318, 236, 'intro');
       }
       if (this.phaseTimer === 90) this.addText(`ROUND ${this.round}`, WIDTH / 2, 280, 'round');
       if (this.phaseTimer === 30) this.addText('FIGHT', WIDTH / 2, 315, 'fight');
@@ -750,7 +774,7 @@ export class FightEngine {
       guardPressed: guard && !previousGuard && pressed('guard'),
       guardReleased: !guard && (previousGuard || released('guard')), jump: pressed('jump'),
       light: pressed('light'), heavy: pressed('heavy'), special: pressed('special'), throw: pressed('throw'),
-      super: pressed('super'), dodge: pressed('dodge')
+      super: pressed('super'), dodge: pressed('dodge'), taunt: pressed('taunt')
     };
     touchPressed.clear();
     for (const action of Object.keys(touch)) {
@@ -800,6 +824,7 @@ export class FightEngine {
   }
 
   computeAI(actor, enemy) {
+    if(!offensiveAllowed(actor))return {};
     const distance = Math.abs(enemy.x - actor.x);
     const baseDiff = {
       story: { react: 24, block: .18, attack: .38, counter: .08 },
@@ -917,6 +942,20 @@ export class FightEngine {
     const enemy = this.actors[1 - index];
     const controls = this.getControls(index);
     const profile = actor.profile;
+    const policy=referencePolicy(actor);
+    if(policy.canMove===false){controls.left=false;controls.right=false;actor.vx=0;}
+    if(policy.canJump===false)controls.jump=false;
+    if(policy.canDodge===false)controls.dodge=false;
+    if(!offensiveAllowed(actor))for(const action of ATTACK_ACTIONS)controls[action]=false;
+    if(actor.presentation?.key==='taunt') {
+      const interrupted=actor.hurtFrames>0||actor.knockdownTimer>0||actor.guardBreak>0||actor.phaseLock>0||actor.attack||
+        controls.left||controls.right||controls.down||controls.guard||controls.jump||controls.dodge||ATTACK_ACTIONS.some(key=>controls[key]);
+      if(interrupted)this.cancelTaunt(actor);
+      else {
+        seekActorPresentation(actor.presentation,actor.presentation.frame+1);
+        if(actor.presentation.complete)this.cancelTaunt(actor);
+      }
+    }
 
     actor.hitFlash = Math.max(0, actor.hitFlash - 1);
     actor.invuln = Math.max(0, actor.invuln - 1);
@@ -953,7 +992,7 @@ export class FightEngine {
         return;
       }
       if (actor.wakeupWindow === 0) actor.wakeupWindow = Math.min(18, actor.knockdownTimer);
-      if (controls.special && actor.wakeupWindow > 0) {
+      if (controls.special && actor.wakeupWindow > 0 && actor.profile.moves.wakeupAttack?.enabled!==false && offensiveAllowed(actor)) {
         actor.knockdownTimer = 0;
         actor.wakeupWindow = 0;
         actor.hurtFrames = 0;
@@ -988,7 +1027,7 @@ export class FightEngine {
     }
 
     if (actor.dodgeFrames > 0) {
-      if (controls.light && actor.dodgeFollowupWindow > 0) {
+      if (controls.light && actor.dodgeFollowupWindow > 0 && actor.profile.moves.dodgeAttack?.enabled!==false && offensiveAllowed(actor)) {
         actor.dodgeFrames = 0;
         actor.dodgeFollowupWindow = 0;
         this.addText('DODGE ATTACK', actor.x, actor.y - 205, 'chain');
@@ -1003,7 +1042,7 @@ export class FightEngine {
       return;
     }
 
-    if (controls.heavy && actor.guardCounterWindow > 0) {
+    if (controls.heavy && actor.guardCounterWindow > 0 && actor.profile.moves.guardCounter?.enabled!==false && offensiveAllowed(actor)) {
       actor.guardCounterWindow = 0;
       actor.parryWindow = 0;
       this.addText('GUARD COUNTER', actor.x, actor.y - 218, 'perfect');
@@ -1043,6 +1082,7 @@ export class FightEngine {
     else if (controls.special) this.beginAttack(actor, resolveMoveKey(actor, controls, 'special'));
     else if (controls.heavy) this.beginAttack(actor, resolveMoveKey(actor, controls, 'heavy'));
     else if (controls.light) this.beginAttack(actor, resolveMoveKey(actor, controls, 'light'));
+    else if (controls.taunt && !controls.left && !controls.right && !actor.blocking && !actor.crouching) this.beginTaunt(actor);
     else if (!actor.blocking && !actor.crouching && actor.counterStance === 0) {
       let movement = 0;
       if (controls.left) movement--;
@@ -1060,11 +1100,13 @@ export class FightEngine {
       } else actor.vx *= hasGroundContact(actor) ? .68 : .98;
     } else actor.vx *= .75;
 
+    if (actor.presentation?.key === 'taunt') actor.state = 'taunt';
     if (!actor.attack && actor.hurtFrames === 0 && Math.abs(enemy.x - actor.x) > 8) actor.facing = enemy.x > actor.x ? 1 : -1;
     this.physics(actor);
   }
 
   physics(actor) {
+    if(referencePolicy(actor).canMove===false){actor.vx=0;actor.vy=0;actor.y=FLOOR;actor.grounded=true;}
     if (!actor.grounded) {
       actor.vy += .65;
       actor.y += actor.vy;
@@ -1087,9 +1129,12 @@ export class FightEngine {
   }
 
   beginAttack(actor, key, { cancelled = false, context = false } = {}) {
-    if (actor.ko || actor.health <= 0 || actor.phaseLock > 0) return false;
-    const move = actor.profile.moves[key];
-    if (!move) return false;
+    if (this.destroyed||this.paused||this.phase!=='fight'||actor.ko || actor.health <= 0 || actor.phaseLock > 0||!offensiveAllowed(actor)) return false;
+    const listed=actor.profile.moves[key];
+    if(!listed||listed.enabled===false)return false;
+    const move=actor.ammo===0&&listed.exhaustedMove?listed.exhaustedMove:listed;
+    if(move.enabled===false)return false;
+    if(move.ammoCost&&(!Number.isSafeInteger(actor.ammo)||actor.ammo<move.ammoCost))return false;
     if (move.requiresAir && actor.grounded) return false;
     if (move.requiresGround && !actor.grounded) return false;
     if (move.healthRequirement != null && healthRatio(actor) > move.healthRequirement) return false;
@@ -1103,6 +1148,9 @@ export class FightEngine {
       audio.super();
       vibrate(move.category === 'desperation' ? [30, 22, 35, 22, 75] : [20, 25, 20, 25, 55]);
     }
+
+    this.cancelTaunt(actor);
+    if(move.ammoCost)actor.ammo-=move.ammoCost;
 
     actor.attack = {
       key,
@@ -1121,14 +1169,14 @@ export class FightEngine {
     actor.blocking = false;
     actor.crouching = move.stance === 'crouching';
     if (move.button === 'throw') {
-      actor.vx = actor.facing * 2.2;
+      actor.vx = referencePolicy(actor).canMove === false ? 0 : actor.facing * 2.2;
       actor.stats.throws++;
     }
     if (key === 'backThrow') actor.stats.backThrows++;
     if (key === 'dodgeAttack') actor.stats.dodgeAttacks++;
     if (key === 'guardCounter') actor.stats.guardCounters++;
     if (key === 'wakeupAttack') actor.stats.wakeupAttacks++;
-    if (move.verticalTravel && actor.grounded && !move.requiresAir) {
+    if (move.verticalTravel && actor.grounded && !move.requiresAir && referencePolicy(actor).canJump!==false) {
       actor.vy = -Math.min(actor.profile.jump * .72, Math.abs(move.verticalTravel) * 2.2);
       actor.grounded = false;
     }
@@ -1146,9 +1194,29 @@ export class FightEngine {
     return true;
   }
 
+  beginTaunt(actor) {
+    if(this.destroyed||this.paused||this.phase!=='fight'||actor.ko||actor.health<=0||actor.attack||actor.hurtFrames>0||actor.knockdownTimer>0||actor.guardBreak>0||actor.phaseLock>0||actor.dodgeFrames>0||actor.counterStance>0||!actor.grounded||actor.presentation?.key==='taunt')return false;
+    const lore=lorePresentation(actor,'taunt');
+    if(lore.adaptationStatus!=='adaptation-versus-proposee')return false;
+    const track={key:'taunt',contextId:lore.contextId,clipKey:lore.clipKey};
+    const clipDuration=presentationClipDuration(actor,track),duration=Math.max(66,clipDuration);
+    actor.presentation=createActorPresentation({...track,sequenceId:++this.presentationSerial,actorIndex:actor.index,duration,clipDuration,round:this.round,role:'self',reversible:true,lore});
+    actor.state='taunt';actor.vx=0;actor.blocking=false;actor.crouching=false;
+    this.logInput(actor,'ATTITUDE');
+    return true;
+  }
+
+  cancelTaunt(actor) {
+    if(actor?.presentation?.key!=='taunt')return false;
+    actor.presentation=null;
+    if(actor.state==='taunt')actor.state='idle';
+    return true;
+  }
+
   updateAttack(actor, enemy, controls) {
     const attack = actor.attack;
     const move = attack.move;
+    if(move.enabled===false||!offensiveAllowed(actor)){interruptAction(actor);return;}
     attack.frame++;
     const total = move.startup + move.active + move.recovery;
     const activeStart = move.startup;
@@ -1156,7 +1224,7 @@ export class FightEngine {
 
     if (move.invulnFrames && attack.frame <= move.invulnFrames) actor.invuln = Math.max(actor.invuln, 2);
 
-    if (move.teleport && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
+    if (move.teleport && referencePolicy(actor).canMove!==false && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
       attack.teleported = true;
       const inset = this.arenaInset(70);
       if (move.teleport === 'behind') {
@@ -1205,8 +1273,8 @@ export class FightEngine {
     }
 
     if (attack.frame < activeEnd) {
-      if (move.travel) actor.vx = actor.facing * move.travel;
-      if (!actor.grounded && move.verticalTravel) actor.vy += Math.sign(move.verticalTravel) * Math.abs(move.verticalTravel) * .035;
+      if (move.travel && referencePolicy(actor).canMove!==false) actor.vx = actor.facing * move.travel;
+      if (!actor.grounded && move.verticalTravel && referencePolicy(actor).canJump!==false) actor.vy += Math.sign(move.verticalTravel) * Math.abs(move.verticalTravel) * .035;
     }
 
     const cancelStart = move.startup + Math.max(1, move.active - 2);
@@ -1230,6 +1298,7 @@ export class FightEngine {
   }
 
   spawnProjectile(actor, move, attackId) {
+    if(this.destroyed||this.phase!=='fight'||!offensiveAllowed(actor)||move.enabled===false)return false;
     const isSuper = isNightmareMove(move);
     const count = Math.max(1, move.projectileCount || (actor.profile.trait.id === 'suppression' ? 2 : 1));
     const scale = move.projectileScale || 1;
@@ -1262,6 +1331,7 @@ export class FightEngine {
   updateProjectiles() {
     if (this.phase !== 'fight') return;
     for (const projectile of this.projectiles) {
+      if(!offensiveAllowed(projectile.owner)||projectile.move.enabled===false){projectile.life=0;continue;}
       const enemy = this.actors[1 - projectile.owner.index];
       if (projectile.homing && enemy) {
         const targetBody = actorBox(enemy);
@@ -1295,7 +1365,8 @@ export class FightEngine {
   }
 
   applyHit(attacker, target, move, attackId, scale = 1, contact = {}) {
-    if (this.phase !== 'fight' || target.health <= 0 || target.invuln > 0 || target.ko) return false;
+    if (this.destroyed||this.phase !== 'fight' || !offensiveAllowed(attacker)||move.enabled===false||target.health <= 0 || target.invuln > 0 || target.ko) return false;
+    this.cancelTaunt(target);
     const ranged = Boolean(contact.ranged || move.projectile || move.trap);
     const hitDirection = contact.direction || attacker.facing || 1;
 
@@ -1310,6 +1381,7 @@ export class FightEngine {
         frame: this.frame,
         moveKey: move.key || null,
         attackerIndex: attacker.index,
+        x: target.x,
       };
     }
     const lowGuardValid = move.level !== 'low' || target.crouching;
@@ -1317,7 +1389,7 @@ export class FightEngine {
     const blocked = target.blocking && target.grounded && !isThrow && !unblockable && lowGuardValid && overheadGuardValid;
     const counter = Boolean(target.attack && target.attack.frame <= target.attack.move.startup + 1);
 
-    if (target.counterStance > 0 && !isThrow && !isNightmare && !ranged) {
+    if (offensiveAllowed(target)&&target.counterStance > 0 && !isThrow && !isNightmare && !ranged) {
       target.counterStance = 0;
       target.attack = null;
       target.state = 'idle';
@@ -1325,7 +1397,7 @@ export class FightEngine {
       interruptAction(attacker);
       attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
       attacker.invuln = Math.max(attacker.invuln, 3);
-      attacker.vx = -attacker.facing * Math.max(5, (move.knockback || 6) * .7) * this.currentTerrain().knockbackScale;
+      attacker.vx = referencePolicy(attacker).canMove === false ? 0 : -attacker.facing * Math.max(5, (move.knockback || 6) * .7) * this.currentTerrain().knockbackScale;
       attacker.hitFlash = Math.max(attacker.hitFlash, 7);
       target.meter = clamp(target.meter + 15, 0, 100);
       target.stats.counters++;
@@ -1360,7 +1432,7 @@ export class FightEngine {
         if (!ranged) {
           interruptAction(attacker);
           attacker.hurtFrames = Math.max(attacker.hurtFrames, 11);
-          attacker.vx = -hitDirection * 5;
+          attacker.vx = referencePolicy(attacker).canMove === false ? 0 : -hitDirection * 5;
         }
         this.addText('PERFECT GUARD', target.x, target.y - 245, 'perfect');
         this.hitstop = 6;
@@ -1374,7 +1446,7 @@ export class FightEngine {
         attacker.stats.damageDealt += chip;
         target.meter = clamp(target.meter + 5 * (this.ritual.meterGainScale || 1), 0, 100);
         attacker.meter = clamp(attacker.meter + (move.meter || 0) * .45 * attacker.profile.meterGain * (this.ritual.meterGainScale || 1), 0, 100);
-        target.vx = hitDirection * (move.knockback || 4) * .42 * this.currentTerrain().knockbackScale;
+        target.vx = referencePolicy(target).canMove === false ? 0 : hitDirection * (move.knockback || 4) * .42 * this.currentTerrain().knockbackScale;
         this.hitstop = isNightmare ? 6 : 3;
       }
       audio.guard();
@@ -1418,7 +1490,7 @@ export class FightEngine {
       this.addText('ARMOR BREAK', target.x, target.y - 246, 'break');
     }
 
-    if (move.sideSwitch) {
+    if (move.sideSwitch && referencePolicy(attacker).canMove !== false && referencePolicy(target).canMove !== false) {
       const direction = attacker.facing || 1;
       const midpoint = (attacker.x + target.x) * .5;
       const inset = this.arenaInset(70);
@@ -1441,7 +1513,8 @@ export class FightEngine {
     target.hurtFrames = staggered ? hitstun : 0;
     target.invuln = 4;
     target.hitFlash = 7;
-    target.vx = hitDirection * (move.knockback || 6) * (armorActive ? .45 : 1) * this.currentTerrain().knockbackScale;
+    const fixedTarget = referencePolicy(target).canMove === false;
+    target.vx = fixedTarget ? 0 : hitDirection * (move.knockback || 6) * (armorActive ? .45 : 1) * this.currentTerrain().knockbackScale;
 
     if (move.groundBounce) {
       target.vy = -Math.max(8.2, Math.abs(move.launch || 0));
@@ -1458,6 +1531,7 @@ export class FightEngine {
       target.vy = -Math.max(6.5, Math.abs(move.launch || 0));
       target.grounded = false;
     }
+    if (fixedTarget) { target.vy = 0; target.grounded = true; }
     if (move.knockdown || isThrow || move.hardKnockdown || move.groundBounce) {
       target.hurtFrames = 0;
       target.knockdownTimer = Math.max(target.knockdownTimer, move.hardKnockdown ? 56 : isThrow ? 42 : move.groundBounce ? 46 : 34);
@@ -1486,6 +1560,7 @@ export class FightEngine {
   }
 
   applyStatus(target, effect, source = null) {
+    if(source&&!offensiveAllowed(source))return false;
     const definition = AFFLICTIONS[effect.id];
     if (!definition) return;
     const duration = Math.round((effect.duration || definition.duration) * (effect.potency || 1));
@@ -1502,6 +1577,7 @@ export class FightEngine {
 
   updateStatus(actor) {
     if (!actor.status) return;
+    if(actor.status.source!=null&&!offensiveAllowed(this.actors[actor.status.source])){actor.status=null;return;}
     const status = actor.status;
     status.timer--;
     status.tick++;
@@ -1514,6 +1590,8 @@ export class FightEngine {
 
   applyStatusDamage(actor, damage) {
     if (actor.ko || actor.health <= 0 || this.phase !== 'fight') return;
+    if(actor.status?.source!=null&&!offensiveAllowed(this.actors[actor.status.source]))return;
+    this.cancelTaunt(actor);
     damage = takeDamage(actor, damage);
     const sourceIndex = actor.status?.source;
     actor.lastHit = { attackerIndex: sourceIndex ?? null, moveKey: actor.status?.id || 'status', isSuper: false, environmental: sourceIndex == null, frame: this.frame };
@@ -1597,10 +1675,11 @@ export class FightEngine {
       if (runtime.activeTimer <= 0) runtime.activeEvent = null;
     }
 
-    const events = this.stage?.director?.events || [];
-    if (!events.length || runtime.activeEvent) return;
+    const events = (this.stage?.director?.events || []).filter(id=>!stageEventDefinition(id)?.referenceOnly);
+    if (runtime.activeEvent) return;
     runtime.eventTimer--;
     if (this.tryStageInteraction()) return;
+    if(!events.length)return;
     if (runtime.eventTimer > 0) return;
     const id = events[runtime.eventCursor % events.length];
     runtime.eventCursor++;
@@ -1620,6 +1699,8 @@ export class FightEngine {
       if (triggered.has(interaction.id)) continue;
       let ready = false;
       if (interaction.trigger === 'time-or-first-heavy-impact') ready = runtime.heavyImpactPending || runtime.eventTimer <= 0;
+      else if(interaction.trigger==='local-heavy-impact')ready=Boolean(runtime.heavyImpactPending&&Number.isFinite(runtime.lastHeavyImpact?.x)&&
+        Math.abs(runtime.lastHeavyImpact.x/WIDTH-(interaction.zone?.x??.5))<=(interaction.zone?.radius??.15));
       else if (interaction.trigger === 'otherworld-halfway') ready = this.world.amount >= .5;
       else if (interaction.trigger === 'low-health-or-late-round') ready = lowHealth || lateRound;
       if (!ready) continue;
@@ -1636,6 +1717,7 @@ export class FightEngine {
   }
 
   triggerStageEvent(id, metadata = {}) {
+    if(this.destroyed||this.stage?.reference?.blocked||(this.stage?.referencePolicy?.allowedEvents&&!this.stage.referencePolicy.allowedEvents.includes(id)))return false;
     const definition = stageEventDefinition(id);
     if (!definition || !this.stageRuntime) return false;
     const runtime = this.stageRuntime;
@@ -1674,6 +1756,7 @@ export class FightEngine {
   }
 
   triggerOtherworldShift() {
+    if(this.destroyed||this.stage?.reference?.blocked||this.stage?.shift?.enabled===false)return false;
     const shift = stageShiftStyle(this.stage);
     this.world.triggered = true;
     this.world.phase = 'shifting';
@@ -1682,10 +1765,14 @@ export class FightEngine {
     audio.siren?.();
     vibrate([40, 45, 40, 45, 80]);
     this.flash = 7;
+    return true;
   }
 
   spawnHazard(forcedId = null, metadata = {}) {
-    const deck = stageHazardDeck(this.stage, this.world.phase === 'otherworld' ? 'otherworld' : 'fog').filter((id) => STAGE_HAZARDS[id]);
+    if(this.destroyed||this.stage?.reference?.blocked)return null;
+    const allowed=this.stage?.referencePolicy?.allowedHazards;
+    if(forcedId&&allowed&&!allowed.includes(forcedId)&&!(metadata.diagnostic===true&&this.config.artDiagnostic===true))return null;
+    const deck = stageHazardDeck(this.stage, this.world.phase === 'otherworld' ? 'otherworld' : 'fog').filter((id) => STAGE_HAZARDS[id]&&(!allowed||allowed.includes(id)));
     let id = forcedId && STAGE_HAZARDS[forcedId] ? forcedId : deck[Math.floor(this.rng() * Math.max(1, deck.length))];
     const automatic = !forcedId || Boolean(metadata.sourceEvent);
     if (!id || !STAGE_HAZARDS[id] || (automatic && (!this.config.stageHazards || !localHazardAllowed(this.stage, id)))) return null;
@@ -1760,6 +1847,7 @@ export class FightEngine {
       hazard.hitActors.add(actor.index);
       hitCount++;
       const guarded = actor.blocking && actor.grounded && !hazard.profile.unblockable;
+      this.cancelTaunt(actor);
       const damage = takeDamage(actor, hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
       actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
       actor.stats.damageTaken += damage;
@@ -1770,7 +1858,7 @@ export class FightEngine {
         interruptAction(actor);
       }
       const force = (hazard.profile.knockback ?? 8) * this.terrainForActor(actor).knockbackScale * (guarded ? .38 : 1);
-      actor.vx = force < 0 ? Math.sign(WIDTH / 2 - actor.x || 1) * Math.abs(force) : Math.sign(actor.x - hazard.x || hazard.side || 1) * force;
+      actor.vx = referencePolicy(actor).canMove === false ? 0 : force < 0 ? Math.sign(WIDTH / 2 - actor.x || 1) * Math.abs(force) : Math.sign(actor.x - hazard.x || hazard.side || 1) * force;
       if (hazard.profile.effect) this.applyStatus(actor, { id: hazard.profile.effect, duration: AFFLICTIONS[hazard.profile.effect]?.duration || 120, potency: .8 });
       this.spawnImpact(actor.x, actorBox(actor).y + actorBox(actor).h * .6, AFFLICTIONS[hazard.profile.effect]?.color || '#b24a42', false, 18);
     }
@@ -1828,6 +1916,7 @@ export class FightEngine {
   advanceBossPhase(actor, phase, forced = false) {
     if (actor.ko || actor.health <= 0 || (!forced && actor.phaseLock > 0)) return false;
     interruptAction(actor, 'phase');
+    this.cancelTaunt(actor);
     actor.hurtFrames = 0; actor.knockdownTimer = 0; actor.wakeupWindow = 0;
     actor.bossPhaseIndex++;
     actor.phaseName = phase.name;
@@ -1864,12 +1953,14 @@ export class FightEngine {
       return clamp(x, inset, WIDTH - inset);
     };
     const old1 = p1.x, old2 = p2.x;
-    p1.x = clampActor(p1, p1.x - direction * missing / 2);
-    p2.x = clampActor(p2, p2.x + direction * missing / 2);
+    const fixed1=referencePolicy(p1).canMove===false,fixed2=referencePolicy(p2).canMove===false;
+    if(fixed1&&fixed2)return;
+    if(!fixed1)p1.x = clampActor(p1, p1.x - direction * missing / (fixed2?1:2));
+    if(!fixed2)p2.x = clampActor(p2, p2.x + direction * missing / (fixed1?1:2));
     const remainder = Math.max(0, minimum - Math.abs(p2.x - p1.x));
     if (remainder > 0) {
-      if (Math.abs(p1.x-old1) < Math.abs(p2.x-old2)) p2.x = clampActor(p2, p2.x + direction * remainder);
-      else p1.x = clampActor(p1, p1.x - direction * remainder);
+      if (!fixed2&&(fixed1||Math.abs(p1.x-old1) < Math.abs(p2.x-old2))) p2.x = clampActor(p2, p2.x + direction * remainder);
+      else if(!fixed1)p1.x = clampActor(p1, p1.x - direction * remainder);
     }
   }
 
@@ -1965,15 +2056,14 @@ export class FightEngine {
     const nearEdge = target.x < 190 || target.x > WIDTH - 190;
     const stageBased = this.config.stageFatalities !== false && Boolean(this.stage?.fatality) && (hit.environmental || hit.isSuper || nearEdge);
     const fighterFatalities = attacker?.data?.fatalities || [];
-    const fighterDefinition = fighterFatalities.find((entry) => entry.type === (hit.isSuper ? 'nightmare' : 'signature')) || fighterFatalities[0];
-    const definition = stageBased ? this.stage.fatality : fighterDefinition;
+    const fighterDefinition = fighterFatalities.find((entry) => entry.type === (hit.isSuper ? 'nightmare' : 'signature'));
 
     // Intermediate rounds preserve the opponent for the next encounter within
     // this match. Existing finishers are reserved for the deciding victory.
     const decidesMatch = attacker && attacker.roundWins + 1 >= this.config.roundsToWin;
-    if (this.config.fatalities !== false && decidesMatch && definition) {
-      this.startFatality(attacker, target, definition, stageBased, hit);
-      return;
+    if (this.config.fatalities !== false && decidesMatch) {
+      if(stageBased&&this.startFatality(attacker,target,this.stage.fatality,true,hit))return;
+      if(fighterDefinition&&this.startFatality(attacker,target,fighterDefinition,false,hit))return;
     }
 
     target.health = 0;
@@ -1985,115 +2075,71 @@ export class FightEngine {
   }
 
   startFatality(attacker, target, definition, stageBased = false, hit = {}) {
-    if (this.destroyed || this.phase !== 'fight') return;
-    const sequence = Array.isArray(definition.sequence) && definition.sequence.length
-      ? definition.sequence
-      : ['stagger', 'judgment', 'collapse'];
-    const total = Math.max(168, sequence.length * 46);
-    target.health = 1;
-    target.attack = null;
-    target.blocking = false;
-    target.hurtFrames = 0;
-    target.invuln = 0;
-    target.vx = 0;
-    target.vy = 0;
-    target.grounded = true;
-    target.state = 'fatalityTarget';
-    attacker.attack = null;
-    attacker.blocking = false;
-    attacker.vx = 0;
-    attacker.vy = 0;
-    attacker.state = 'fatality';
-    this.projectiles.length = 0;
-    this.hazards.length = 0;
-    this.phase = 'fatality';
-    this.fatality = {
-      attackerIndex: attacker.index,
-      targetIndex: target.index,
-      definition,
-      stageBased,
-      hit,
-      sequence,
-      step: 0,
-      lastStep: -1,
-      timer: total,
-      total,
-      startedAt: this.frame
-    };
-    this.beginPresentations('finisher', this.actors.map((actor) => ({
-      key: actor === attacker ? 'finisher' : 'finished', role: actor === attacker ? 'attacker' : 'target',
-      finisherId: definition.id || null, stageId: this.stage?.id || null, stageBased
-    })), total);
-    this.fatality.timer = this.fatality.total = this.presentationSequence.duration;
-    this.world.triggered = true;
-    this.world.phase = 'otherworld';
-    this.world.amount = Math.max(this.world.amount, stageBased || definition.type === 'nightmare' ? 1 : .78);
-    this.world.siren = Math.max(this.world.siren, 90);
-    this.addText(stageBased ? 'STAGE FATALITY' : 'FATALITY', WIDTH / 2, 252, 'fatality');
-    this.flash = 12;
-    this.shake = 16;
-    audio.siren?.();
-    audio.tone?.({ freq: stageBased ? 54 : 68, duration: .42, gain: .065, slide: 44 });
-    vibrate([60, 35, 80, 45, 110]);
+    if (this.destroyed || this.phase !== 'fight' || !attacker || !target || target.health > 0 ||
+      attacker.roundWins + 1 < this.config.roundsToWin || this.config.fatalities === false || (stageBased && this.config.stageFatalities === false)) return false;
+    const choreography=loreFinisher({attacker,target,stage:this.stage,definition,stageBased,width:WIDTH});
+    if(!choreography.allowed){this.lastCinematicBlock={id:definition?.id||null,reason:choreography.reason};return false;}
+    this.lastCinematicBlock=null;
+    const total=choreography.duration;
+    this.cancelTaunt(attacker);this.cancelTaunt(target);
+    target.health=1;target.attack=null;target.blocking=false;target.hurtFrames=0;target.invuln=0;
+    target.vx=0;target.vy=0;target.state='fatalityTarget';
+    attacker.attack=null;attacker.blocking=false;attacker.vx=0;attacker.vy=0;attacker.state='fatality';
+    this.projectiles.length=0;this.hazards.length=0;this.phase='fatality';
+    const direction=target.x>=attacker.x?1:-1;
+    this.fatality={attackerIndex:attacker.index,targetIndex:target.index,definition,stageBased,hit,choreography,
+      sequence:choreography.steps.map(step=>step.label),step:0,lastStep:0,timer:total,total,startedAt:this.frame,
+      stageCoordinates:{distance:Math.abs(target.x-attacker.x),direction},cueHistory:[]};
+    this.beginPresentations('finisher',this.actors.map(actor=>({key:actor===attacker?'finisher':'finished',role:actor===attacker?'attacker':'target',
+      finisherId:definition.id,stageId:this.stage?.id||null,stageBased})),total);
+    this.fatality.timer=this.fatality.total=this.presentationSequence.duration;
+    this.fatality.choreography=retimeLoreCinematic(choreography,this.fatality.total);
+    this.seekFatalityStaging(0);
+    this.playFatalityCue(this.fatality.sample);
+    // A finish never changes the location's fixed normal/altered state. Nightmare
+    // is a distinct cut and audio mix, not permission to summon another world.
+    this.addText(stageBased?'CLOTURE DU LIEU':'CLOTURE LORE',WIDTH/2,252,'fatality');
+    return true;
+  }
+
+  seekFatalityStaging(elapsed) {
+    const fatality=this.fatality;if(!fatality)return;
+    fatality.sample=sampleLoreCinematic(fatality.choreography,elapsed,fatality.stageCoordinates);
+    fatality.step=fatality.sample.step;
+    const attacker=this.actors[fatality.attackerIndex],target=this.actors[fatality.targetIndex];
+    attacker.presentation.staging={...fatality.sample.attacker};
+    target.presentation.staging={...fatality.sample.target};
+  }
+
+  playFatalityCue(sample) {
+    const fatality=this.fatality;if(!fatality||!sample)return;
+    fatality.cueHistory.push({step:sample.step,frame:sample.frame,label:sample.label,sound:sample.sound,effect:sample.effect});
+    this.loreAudio.play(sample.sound);
+    const target=this.actors[fatality.targetIndex],staging=target.presentation?.staging||{x:0,y:0};
+    if(['impact','slash','sparks','embers'].includes(sample.effect)) {
+      this.spawnImpact(target.x+staging.x,target.y+staging.y-85,this.actors[fatality.attackerIndex].data.visual.accent,sample.effect==='sparks',sample.effect==='impact'?16:8);
+      this.shake=Math.max(this.shake,sample.effect==='impact'?8:3);
+    }
   }
 
   updateFatality() {
-    if (this.destroyed || this.paused) return;
-    const fatality = this.fatality;
-    if (!fatality) {
-      this.phase = 'fight';
-      this.clearPresentations();
-      return;
-    }
-    const attacker = this.actors[fatality.attackerIndex];
-    const target = this.actors[fatality.targetIndex];
-    const elapsed = fatality.total - fatality.timer;
-    const progress = clamp(elapsed / fatality.total, 0, 1);
-    const stepLength = fatality.total / fatality.sequence.length;
-    fatality.step = Math.min(fatality.sequence.length - 1, Math.floor(elapsed / stepLength));
-
-    const edgeRight = target.x >= WIDTH / 2;
-    const targetGoal = fatality.stageBased ? (edgeRight ? WIDTH - 118 : 118) : WIDTH / 2 + (edgeRight ? 82 : -82);
-    const attackerGoal = fatality.stageBased ? (edgeRight ? WIDTH - 255 : 255) : WIDTH / 2 + (edgeRight ? -78 : 78);
-    target.x += (targetGoal - target.x) * .075;
-    attacker.x += (attackerGoal - attacker.x) * .075;
-    attacker.facing = target.x > attacker.x ? 1 : -1;
-    target.facing = -attacker.facing;
-    attacker.state = 'fatality';
-    target.state = progress > .78 ? 'ko' : 'fatalityTarget';
-    target.koProgress = progress > .76 ? clamp((progress - .76) / .24, 0, .82) : 0;
-
-    if (fatality.step !== fatality.lastStep) {
-      fatality.lastStep = fatality.step;
-      const label = String(fatality.sequence[fatality.step] || 'JUDGMENT').replace(/[-_]/g, ' ').toUpperCase();
-      this.addText(label, target.x, target.y - 245, fatality.stageBased ? 'stageFatality' : 'fatalityStep');
-      const color = fatality.stageBased ? '#b4474c' : attacker.data.visual.accent;
-      this.spawnImpact(target.x, target.y - 115, color, false, 20 + fatality.step * 5);
-      this.shake = Math.max(this.shake, 8 + fatality.step * 3);
-      this.flash = Math.max(this.flash, 4 + fatality.step * 2);
-      audio.tone?.({ freq: Math.max(38, 112 - fatality.step * 17), duration: .18, gain: .045, slide: 35 });
-      if (label.includes('SIREN') || label.includes('OTHERWORLD') || label.includes('BLACKOUT')) this.world.amount = 1;
-    }
-
-    if (fatality.definition.effect === 'chains' || fatality.definition.effect === 'rust') {
-      if (this.frame % 7 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 95, target.y - 60 - this.rng() * 160, '#8f5748', false, 4);
-    } else if (fatality.definition.effect === 'petals' || fatality.definition.effect === 'spores') {
-      if (this.frame % 5 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 130, target.y - 90 - this.rng() * 150, '#b85f76', false, 3);
-    } else if (fatality.definition.effect === 'water' || fatality.definition.effect === 'frost') {
-      if (this.frame % 6 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 110, target.y - 15, '#7aa3ae', true, 5);
-    } else if (fatality.definition.effect === 'fire' || fatality.definition.effect === 'blood') {
-      if (this.frame % 5 === 0) this.spawnImpact(target.x + (this.rng() - .5) * 100, target.y - 40 - this.rng() * 130, '#b63d38', false, 4);
-    }
-
+    if(this.destroyed||this.paused)return;
+    const fatality=this.fatality;
+    if(!fatality){this.phase='fight';this.clearPresentations();return;}
     fatality.timer--;
-    this.seekPresentations(fatality.total - fatality.timer);
-    if (fatality.timer <= 0) this.completeFatality();
+    const elapsed=fatality.total-fatality.timer;
+    this.seekPresentations(elapsed);
+    this.seekFatalityStaging(elapsed);
+    if(fatality.step!==fatality.lastStep){fatality.lastStep=fatality.step;this.playFatalityCue(fatality.sample);}
+    if(fatality.timer<=0)this.completeFatality();
   }
 
   completeFatality() {
     const fatality = this.fatality;
     if (!fatality || this.destroyed) return;
     this.seekPresentations(fatality.total);
+    this.seekFatalityStaging(fatality.total);
+    this.loreAudio.stop();
     const attacker = this.actors[fatality.attackerIndex];
     const target = this.actors[fatality.targetIndex];
     target.health = 0;
@@ -2111,13 +2157,18 @@ export class FightEngine {
       performer: attacker.data.name,
       victim: target.data.name,
       effect: fatality.definition.effect || null,
-      sequence: [...fatality.sequence]
+      sequence: [...fatality.sequence],
+      recipeId: fatality.choreography.recipeId,
+      choreographyDuration: fatality.choreography.duration,
+      baseChoreographyDuration: fatality.choreography.sourceDuration||fatality.choreography.duration,
+      actualDuration: fatality.total,
+      cueHistory: fatality.cueHistory.map(cue=>({...cue})),
+      fidelity: 'original-versus-staging',
+      referenceIds: [...fatality.choreography.referenceIds],
+      artStatus: 'contextual-images-missing'
     };
     this.fatality = null;
     this.phase = 'fight';
-    audio.ko();
-    audio.tone?.({ freq: 38, duration: .55, gain: .07, slide: 22 });
-    vibrate([90, 50, 130]);
     this.endRound(attacker, this.lastFatality.stageBased ? 'STAGE FATALITY' : 'FATALITY');
   }
 
@@ -2216,7 +2267,7 @@ export class FightEngine {
     const pressedActions = {
       guard: (down(4) || down(5)) && !(previous[4] || previous[5]),
       jump: pressed(0) || pressed(12),
-      light: pressed(2), heavy: pressed(3), special: pressed(1), throw: pressed(6), super: pressed(7), dodge: pressed(8)
+      light: pressed(2), heavy: pressed(3), special: pressed(1), throw: pressed(6), super: pressed(7), dodge: pressed(8), taunt: pressed(10)
     };
     const releasedActions = { guard: !(down(4) || down(5)) && Boolean(previous[4] || previous[5]) };
     this.gamepadPrev[index] = pad.buttons.map((button) => button.pressed);
@@ -2232,6 +2283,8 @@ export class FightEngine {
       guard: actor.guard,
       maxGuard: actor.maxGuard,
       meter: actor.meter,
+      ammo: actor.ammo,
+      ammoCapacity: ammoProfile(actor)?.capacity??null,
       wins: actor.roundWins,
       combo: actor.combo,
       status: actor.status?.id || null,
@@ -2293,6 +2346,9 @@ export class FightEngine {
       ritual: { id: this.ritual.id, name: this.ritual.name },
       inputHistory: [...this.inputHistory],
       fatality: this.fatality ? { name: this.fatality.definition.name, stageBased: this.fatality.stageBased, step: this.fatality.step, timer: this.fatality.timer } : null,
+      cinematic: this.fatality ? {id:this.fatality.definition.id,recipeId:this.fatality.choreography.recipeId,frame:this.fatality.total-this.fatality.timer,duration:this.fatality.total,
+        label:this.fatality.sample?.label||null,fidelity:'original-versus-staging',artStatus:this.fatality.choreography.artStatus} : null,
+      lastCinematicBlock: this.lastCinematicBlock ? {...this.lastCinematicBlock}:null,
       lastFatality: this.lastFatality ? { ...this.lastFatality } : null,
       winner: this.winner?.data?.name || null,
       paused: this.paused
@@ -2309,7 +2365,13 @@ export class FightEngine {
     const shakeY = allowShake && this.shake ? Math.sin(this.frame * 78.233 + 4.79) * this.shake * .25 : 0;
     context.fillStyle = '#080b09';
     context.fillRect(0, 0, WIDTH, HEIGHT);
-    const camera = combatFraming(this.actors);
+    const stagedActors=this.actors.map(actor=>{
+      const staging=actor.presentation?.staging||sampleLorePresentation(actor,actor.presentation);
+      return {...actor,x:actor.x+(staging?.x||0),y:actor.y+(staging?.y||0),staging};
+    });
+    const camera = combatFraming(stagedActors);
+    const cinematicScale=this.fatality?.sample?.camera?.scale||1;
+    if(cinematicScale<1&&!this.settings.reducedMotion){camera.x=WIDTH/2-(WIDTH/2-camera.x)*cinematicScale;camera.y=FLOOR-(FLOOR-camera.y)*cinematicScale;camera.scale*=cinematicScale;}
     this.presentationCamera = camera;
     context.save();
     context.translate(camera.x + shakeX, camera.y + shakeY);
@@ -2322,13 +2384,14 @@ export class FightEngine {
       radio: this.config.radioWarning ? this.world.radio : 0,
       animationsEnabled: this.config.stageAnimations !== false,
       director: this.stageRuntime,
+      hazards: this.hazards,
       terrain: this.currentTerrain(),
       shift: stageShiftStyle(this.stage),
       reducedMotion: Boolean(this.settings.reducedMotion)
     });
     this.renderHazards(context, time);
     this.renderProjectiles(context);
-    const sortedActors = [...this.actors].sort((left, right) => left.y - right.y);
+    const sortedActors = [...stagedActors].sort((left, right) => left.y - right.y);
     for (const actor of sortedActors) {
       const fatalityProgress = this.fatality ? clamp((this.fatality.total - this.fatality.timer) / this.fatality.total, 0, 1) : 0;
       const attackProgress = this.fatality && actor.index === this.fatality.attackerIndex
@@ -2340,7 +2403,7 @@ export class FightEngine {
         facing: actor.facing,
         state: { ...actorSpriteState(actor), attackProgress, status: actor.status?.id || null },
         time, diagnostic: Boolean(this.config.artDiagnostic),
-        alpha: actor.invuln > 0 && this.frame % 4 < 2 ? .55 : 1
+        alpha: (actor.invuln > 0 && this.frame % 4 < 2 ? .55 : 1)*(actor.staging?.alpha??1)
       });
       if (this.config.showHitboxes) {
         drawHitboxOverlay(context, actorBox(actor), actor.index === 0 ? '#55d37c' : '#5ca8df', 'HURT');
@@ -2479,6 +2542,12 @@ export class FightEngine {
       context.fillStyle = '#9da299';
       context.font = '700 10px ui-monospace';
       context.fillText(`${actor.data.game} · ${actor.profile.trait.name}`, x, 49);
+      if(Number.isSafeInteger(actor.ammo)){
+        context.font='900 9px ui-monospace';context.fillStyle=actor.ammo?'#d0c4a7':'#bba18e';
+        context.textAlign=left?'right':'left';
+        context.fillText(actor.ammo?`TIRS ${actor.ammo}/${ammoProfile(actor)?.capacity||10}`:'DESARMEE · CONTACT',left?barX+width:barX,119);
+        context.textAlign=left?'left':'right';
+      }
       context.fillStyle = 'rgba(255,255,255,.1)';
       context.fillRect(barX, 59, width, 21);
       const healthGradient = context.createLinearGradient(barX, 0, barX + width, 0);
@@ -2538,15 +2607,15 @@ export class FightEngine {
     if (this.config.radioWarning && !this.ritual.radioDisabled) {
       const bars = 8;
       const active = Math.ceil(this.world.radio * bars);
-      const startX = WIDTH / 2 - 44;
+      const startX = WIDTH / 2 - 27;
       for (let index = 0; index < bars; index++) {
         const height = 3 + index * 1.4;
         context.fillStyle = index < active ? (this.world.amount > .55 ? '#b73942' : '#b7b8a8') : 'rgba(255,255,255,.09)';
-        context.fillRect(startX + index * 12, 110 - height, 7, height);
+        context.fillRect(startX + index * 12, 124 - height, 7, height);
       }
       context.fillStyle = '#737b74';
       context.font = '700 8px ui-monospace';
-      context.fillText('RADIO', WIDTH / 2, 122);
+      context.fillText('RADIO', WIDTH / 2 - 50, 122);
     }
 
     if (!this.config.training) {
@@ -2625,7 +2694,8 @@ export class FightEngine {
       } else {
         context.font = '900 18px ui-monospace'; context.fillStyle = '#e8ddd0';
       }
-      context.fillText(text.text, text.x, text.y);
+      if (text.kind === 'intro') context.fillText(text.text, text.x, text.y, 510);
+      else context.fillText(text.text, text.x, text.y);
       context.restore();
     }
   }
@@ -2676,79 +2746,30 @@ export class FightEngine {
 
 
   renderFatalityOverlay(context) {
-    const fatality = this.fatality;
-    if (!fatality) return;
-    const attacker = this.actors[fatality.attackerIndex];
-    const target = this.actors[fatality.targetIndex];
-    const progress = clamp((fatality.total - fatality.timer) / fatality.total, 0, 1);
-    const pulse = .5 + .5 * Math.sin(this.frame * .18);
-    const effect = fatality.definition.effect || 'rust';
-    context.save();
-    context.fillStyle = `rgba(2,0,1,${.22 + Math.sin(Math.min(1, progress * 1.4) * Math.PI) * .42})`;
-    context.fillRect(0, 0, WIDTH, HEIGHT);
-    context.fillStyle = '#020202';
-    context.fillRect(0, 0, WIDTH, 82);
-    context.fillRect(0, HEIGHT - 92, WIDTH, 92);
-
-    if (effect === 'static' || effect === 'flicker' || effect === 'void') {
-      context.globalCompositeOperation = 'screen';
-      for (let y = 92; y < HEIGHT - 92; y += 8) {
-        context.fillStyle = `rgba(224,221,200,${.012 + ((y + this.frame * 5) % 31 === 0 ? .09 : 0)})`;
-        context.fillRect(0, y, WIDTH, 1 + (y % 3));
-      }
-    } else if (effect === 'blood' || effect === 'fire' || effect === 'rust') {
-      const gradient = context.createRadialGradient(WIDTH / 2, FLOOR - 80, 20, WIDTH / 2, FLOOR - 80, 520);
-      gradient.addColorStop(0, `rgba(155,26,33,${.09 + pulse * .12})`);
-      gradient.addColorStop(1, 'rgba(0,0,0,0)');
-      context.fillStyle = gradient;
-      context.fillRect(0, 82, WIDTH, HEIGHT - 174);
-    } else if (effect === 'petals' || effect === 'spores') {
-      context.globalCompositeOperation = 'screen';
-      for (let index = 0; index < 26; index++) {
-        const x = (index * 97 + this.frame * (1 + index % 4)) % WIDTH;
-        const y = 100 + ((index * 43 + this.frame * 1.8) % (HEIGHT - 210));
-        context.save(); context.translate(x, y); context.rotate(this.frame * .03 + index);
-        context.fillStyle = 'rgba(181,74,96,.28)'; context.fillRect(-5, -1, 10, 3); context.restore();
-      }
-    } else if (effect === 'water' || effect === 'frost') {
-      context.fillStyle = `rgba(71,111,123,${.045 + pulse * .055})`;
-      context.fillRect(0, 82, WIDTH, HEIGHT - 174);
-      context.strokeStyle = 'rgba(179,207,211,.16)';
-      for (let index = 0; index < 7; index++) {
-        context.beginPath(); context.ellipse(WIDTH / 2, FLOOR + index * 15, 120 + index * 75 + pulse * 12, 6 + index, 0, 0, TAU); context.stroke();
-      }
-    } else if (effect === 'chains') {
-      context.strokeStyle = 'rgba(143,134,112,.34)'; context.lineWidth = 4;
-      for (let index = 0; index < 7; index++) {
-        const x = 70 + index * 190; const sway = Math.sin(this.frame * .025 + index) * 30;
-        context.beginPath(); context.moveTo(x, 82); context.quadraticCurveTo(x + sway, HEIGHT * .45, x - sway * .4, HEIGHT - 92); context.stroke();
-      }
-    }
-    context.globalCompositeOperation = 'source-over';
-
-    context.textAlign = 'left';
-    context.fillStyle = fatality.stageBased ? '#d5a86f' : '#b8303b';
-    context.font = '900 12px ui-monospace';
-    context.fillText(fatality.stageBased ? 'ENVIRONMENTAL JUDGMENT' : 'SIGNATURE JUDGMENT', 38, 36);
-    context.fillStyle = '#f0e8db';
-    context.font = '900 25px ui-monospace';
-    context.fillText(String(fatality.definition.name || 'FATALITY').toUpperCase(), 38, 65);
-    context.textAlign = 'right';
-    context.fillStyle = '#969b94';
-    context.font = '700 10px ui-monospace';
-    context.fillText(`${attacker.data.name.toUpperCase()} → ${target.data.name.toUpperCase()}`, WIDTH - 38, 39);
-    context.fillText(fatality.stageBased ? this.stage.name.toUpperCase() : attacker.data.game.toUpperCase(), WIDTH - 38, 59);
-
-    const step = String(fatality.sequence[fatality.step] || '').replace(/[-_]/g, ' ').toUpperCase();
-    context.textAlign = 'center';
-    context.fillStyle = '#d8d0c3';
-    context.font = '900 14px ui-monospace';
-    context.fillText(step, WIDTH / 2, HEIGHT - 53);
-    const segmentWidth = Math.min(580, WIDTH * .52) / fatality.sequence.length;
-    const startX = WIDTH / 2 - segmentWidth * fatality.sequence.length / 2;
-    for (let index = 0; index < fatality.sequence.length; index++) {
-      context.fillStyle = index <= fatality.step ? (fatality.stageBased ? '#b88754' : '#9e2631') : '#242824';
-      context.fillRect(startX + index * segmentWidth + 3, HEIGHT - 33, segmentWidth - 6, 4);
+    const fatality=this.fatality;if(!fatality)return;
+    const attacker=this.actors[fatality.attackerIndex],target=this.actors[fatality.targetIndex];
+    const camera=this.presentationCamera||{x:0,y:0,scale:1};
+    const targetPose=target.presentation?.staging||{x:0,y:0};
+    drawLoreCinematic(context,fatality.sample,{width:WIDTH,height:HEIGHT,reducedMotion:Boolean(this.settings.reducedMotion),
+      color:attacker.data.visual.accent,focusX:(target.x+targetPose.x)*camera.scale+camera.x,
+      focusY:(target.y+targetPose.y-90)*camera.scale+camera.y});
+    context.save();context.fillStyle='#020403';context.fillRect(0,0,WIDTH,82);context.fillRect(0,HEIGHT-96,WIDTH,96);
+    context.textAlign='left';context.fillStyle='#b98771';context.font='900 11px ui-monospace';
+    context.fillText(fatality.stageBased?'CLOTURE DU LIEU · ADAPTATION LORE':fatality.definition.type==='nightmare'?'NIGHTMARE · ADAPTATION LORE':'SIGNATURE · ADAPTATION LORE',32,23);
+    context.fillStyle='#ece7d9';context.font='900 22px ui-monospace';
+    context.fillText(String(fatality.definition.name).toUpperCase(),32,53);
+    context.textAlign='right';context.fillStyle='#a4aaa0';context.font='700 10px ui-monospace';
+    context.fillText(`${attacker.data.name.toUpperCase()} → ${target.data.name.toUpperCase()}`,WIDTH-32,25);
+    context.fillText(fatality.stageBased?this.stage.name:attacker.data.game,WIDTH-32,47);
+    context.textAlign='center';context.fillStyle='#ded3bf';context.font='900 13px ui-monospace';
+    context.fillText(fatality.sample?.label||'',WIDTH/2,HEIGHT-69);
+    const supplied=this.actors.every(actor=>actor.presentation?.clipDuration>0);
+    context.fillStyle='#aeb09e';context.font='700 9px ui-monospace';
+    context.fillText(supplied?'MONTAGES CONTEXTUELS FOURNIS · MISE EN SCENE ORIGINALE':'POSES DEDIEES A PRODUIRE · MISE EN SCENE ORIGINALE',WIDTH/2,HEIGHT-50);
+    let x=WIDTH/2-290;
+    for(let index=0;index<fatality.choreography.steps.length;index++){
+      const step=fatality.choreography.steps[index],width=580*step.ticks/fatality.choreography.duration;
+      context.fillStyle=index<=fatality.step?'#a85c4a':'#29302b';context.fillRect(x+2,HEIGHT-31,width-4,4);x+=width;
     }
     context.restore();
   }
@@ -2783,7 +2804,7 @@ export class FightEngine {
     context.fillText('PAUSE', WIDTH / 2, 96);
     context.fillStyle = '#a7aca4';
     context.font = '700 12px ui-monospace';
-    context.fillText('ÉCHAP / START POUR REPRENDRE · LISTE COMPLÈTE DANS ARCHIVES > MOVESETS', WIDTH / 2, 123);
+    context.fillText('ÉCHAP / START POUR REPRENDRE · COMMANDES ET MOTIFS D’INDISPONIBILITÉ : ARCHIVES > MOVESETS', WIDTH / 2, 123);
 
     const drawMoveList = (actor, x, align) => {
       context.textAlign = align;
@@ -2802,10 +2823,11 @@ export class FightEngine {
       for (const key of actor.profile.moveset.order) {
         const move = actor.profile.moves[key];
         if (!move) continue;
-        const label = `${move.input.padEnd(10, ' ')} ${move.name}`;
-        context.fillStyle = move.fidelity === 'direct-canonical' ? '#e4ddd0' : move.fidelity === 'behavior-composite' ? '#b8b3a8' : '#8c918b';
+        const unavailable = move.enabled === false;
+        const label = `${move.input.padEnd(10, ' ')} ${unavailable ? 'INDISPONIBLE' : move.name}`;
+        context.fillStyle = unavailable ? '#b89f78' : move.fidelity === 'direct-canonical' ? '#e4ddd0' : move.fidelity === 'behavior-composite' ? '#b8b3a8' : '#8c918b';
         context.font = key === 'desperation' || key === 'super' ? '900 9px ui-monospace' : '700 8.5px ui-monospace';
-        context.fillText(label, x, y);
+        context.fillText(label, x, y, 416);
         y += 21;
       }
     };
@@ -2830,8 +2852,8 @@ export class FightEngine {
   renderMatchEnd(context) {
     const winner = this.winner;
     const outro = winner?.presentation;
-    const importedOutro = outro?.key === 'outro' && outro.clipDuration > 0;
-    if (importedOutro && !outro.complete) return;
+    const importedOutro = outro?.key === 'outro' && (outro.clipDuration > 0 || outro.stagingDuration > 0);
+    if (this.isPresentingOutro()) return;
     context.save();
     const alpha = clamp((this.resultTimer - (importedOutro ? outro.duration : 0)) / 35, 0, .9);
     context.fillStyle = `rgba(2,3,2,${alpha})`;
@@ -2853,7 +2875,7 @@ export class FightEngine {
       context.fillText(`${winner.stats.maxCombo} COMBO MAX · ${winner.stats.perfectGuards} GARDES PARFAITES · ${winner.stats.guardCounters} RIPOSTES · ${winner.stats.wakeupAttacks} RELEVÉES`, WIDTH / 2, 390);
       context.fillStyle = '#777f78';
       context.font = '700 10px ui-monospace';
-      context.fillText(winner.profile.moveset.presentation.victory.toUpperCase(), WIDTH / 2, 410);
+      context.fillText(lorePresentation(winner, 'winMatch').name.toUpperCase(), WIDTH / 2, 410, WIDTH - 80);
       if (this.lastFatality) {
         context.fillStyle = this.lastFatality.stageBased ? '#d0a36f' : '#b83b44';
         context.font = '900 11px ui-monospace';

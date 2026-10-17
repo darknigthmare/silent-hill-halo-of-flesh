@@ -1,4 +1,36 @@
-# SILENT HILL: HALO OF FLESH — v0.9.5
+# SILENT HILL: HALO OF FLESH — v0.9.6
+
+## Intégration des fiches de l’Excel — 17 octobre 2026
+
+Les **230 fiches de combattant, 123 fiches de lieu et 135 sources** alimentent
+désormais le moteur et les dossiers du jeu. Les commandes tiennent compte du rôle,
+de l’œuvre, des capacités et de l’anatomie de l’identifiant exact. Le catalogue
+conserve 4 600 emplacements : **3 711 commandes actives, 889 désactivées avec une
+raison explicite**. Les 194 profils compatibles avec un combat de prototype
+incluent des adaptations de rencontres scénarisées, signalées dans leur dossier.
+
+Cette passe raccorde **86 montages de fatalité pour 43 combattants, 7 montages
+de lieu, 301 mises en scène de présentation et 50 éléments visuels d’arène**.
+Elle ajoute la provocation annulable, la réserve de dix tirs de Cybil et les
+clips par contexte exact. Les corps attachés restent ancrés. Les nouvelles
+chroniques séparent les rencontres jouables des dossiers hors combat en
+conservant les chapitres et les arènes d’origine.
+
+[**Intégration, exemples, vérification et limites**](docs/EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) ·
+[**Excel actualisé**](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) ·
+[Comparatif des commandes avec le commit précédent](docs/production/combat-reference-comparison.json).
+
+**Validation locale : 534 tests Node, 79 tests Python, 238 contrôles HTTP dans
+neuf suites, 38 captures et aucune exception JavaScript.**
+[Rapport et périmètre des scénarios](docs/INTEGRATION_QA_2026-10-17.json).
+
+Les montages animent les déplacements d’acteurs, les effets, la caméra et le son
+du prototype. **Images : 2 PNG candidats, 0 clip animé, 0 fidélité 1:1 certifiée.**
+Les images propres aux gestes et aux transitions restent des travaux de production
+identifiés dans l’Excel. Les notes et chiffres des passes antérieures ci-dessous
+sont conservés comme historique.
+
+## Historique — v0.9.5
 
 ## Suite du 17 octobre 2026 — séquences de présentation
 

@@ -68,17 +68,17 @@ function engine(extra={}){
   globalThis.requestAnimationFrame=()=>0;
   const recorder=canvasRecorder();
   return new FightEngine(recorder.canvas,{
-    p1:ROSTER[0],p2:ROSTER.find(f=>f.boss)||ROSTER[1],stage:STAGES.find(s=>s.id==='st_amelia_marina')||STAGES[0],
+    p1:ROSTER[0],p2:ROSTER.find(f=>f.boss)||ROSTER[1],stage:STAGES.find(s=>s.id==='hazel_subway'),artDiagnostic:true,
     mode:'cpu',seed:9081,difficulty:'normal',roundsToWin:2,...extra
   });
 }
 
-test('123 stages expose stable, grounded event choreography without fabricated new events',()=>{
+test('all 123 stages expose only the event choreography allowed by their exact reference',()=>{
   assert.equal(STAGES.length,123);
   for(const stage of STAGES){
     const plan=stageChoreographyProfile(stage);
-    assert.ok(plan.cues.length>=1,`No cues: ${stage.id}`);
-    assert.equal(plan.fidelity,'motif-location-attested / choreography-original-versus');
+    assert.equal(plan.cues.length,stage.referencePolicy.allowedEvents.length,stage.id);
+    assert.equal(plan.fidelity,'reference-linked / original-versus-prototype');
     assert.deepEqual(plan,stageChoreographyProfile(stage));
     for(const cue of plan.cues){
       assert.ok(stage.director.events.includes(cue.event));
@@ -89,9 +89,10 @@ test('123 stages expose stable, grounded event choreography without fabricated n
   }
 });
 
-test('all 22 environmental event families have an independent physical composition',()=>{
-  assert.equal(Object.keys(STAGE_EVENTS).length,22);
-  for(const event of Object.keys(STAGE_EVENTS)){
+test('the 22 legacy event prototypes remain independently renderable for diagnostics',()=>{
+  const legacyEvents=Object.keys(STAGE_EVENTS).filter(id=>!STAGE_EVENTS[id].referenceOnly);
+  assert.equal(legacyEvents.length,22);
+  for(const event of legacyEvents){
     const stage={id:`synthetic-${event}`,name:'Test room',director:{events:[event]}};
     const plan=stageChoreographyProfile(stage);
     assert.equal(plan.cues.length,1,event);
@@ -105,7 +106,7 @@ test('all 22 environmental event families have an independent physical compositi
 
 test('stage cutscenes do not draw without a live event and respect reduced-motion mode',()=>{
   const {context,calls}=canvasRecorder();
-  const stage=STAGES[0];
+  const stage=STAGES.find(s=>s.id==='alchemilla');
   drawStageCinematics(context,1280,720,stage,{activeEvent:null});
   assert.equal(calls.rects,0);
   assert.equal(calls.arcs,0);
@@ -116,7 +117,7 @@ test('stage cutscenes do not draw without a live event and respect reduced-motio
 
 test('reduced motion freezes all 22 decorative event compositions while their timers advance',()=>{
   const drifting=[];
-  for(const id of Object.keys(STAGE_EVENTS)){
+  for(const id of Object.keys(STAGE_EVENTS).filter(id=>!STAGE_EVENTS[id].referenceOnly)){
     // Both samples are outside the entrance/exit fade, so only composition can differ.
     const early=eventTrace(id,96,{reducedMotion:true});
     const late=eventTrace(id,42,{reducedMotion:true});
@@ -127,7 +128,7 @@ test('reduced motion freezes all 22 decorative event compositions while their ti
 });
 
 test('reduced event compositions keep lifetime fades and restore the canvas paint state',()=>{
-  for(const id of Object.keys(STAGE_EVENTS)){
+  for(const id of Object.keys(STAGE_EVENTS).filter(id=>!STAGE_EVENTS[id].referenceOnly)){
     const opacities=[120,114,90,30,6,0].map(timer=>{
       const trace=eventTrace(id,timer,{reducedMotion:true,alpha:.4});
       assert.equal(trace.context.globalAlpha,.4,id+' leaked opacity');
@@ -202,7 +203,7 @@ test('linked hazards suppress every duplicate decorative event in both motion mo
 test('stage hazard AI only reacts to publicly telegraphed imminent threats',()=>{
   const e=engine();e.phase='fight';
   assert.equal(e.readTelegraphedHazard(e.actors[1],13),null);
-  const hazard=e.spawnHazard('rootSnare');hazard.x=e.actors[1].x;hazard.timer=54;
+  const hazard=e.spawnHazard('rootSnare',{diagnostic:true});hazard.x=e.actors[1].x;hazard.timer=54;
   const defense=e.readTelegraphedHazard(e.actors[1],13);
   assert.ok(defense?.left||defense?.right,`Expected movement, got ${JSON.stringify(defense)}`);
   assert.equal(defense.light,undefined);
@@ -214,7 +215,7 @@ test('stage hazard AI only reacts to publicly telegraphed imminent threats',()=>
 
 test('global warning permits guarding instead of requiring a nonexistent safe lane',()=>{
   const e=engine();e.phase='fight';
-  const hazard=e.spawnHazard('sirenShock');hazard.timer=44;
+  const hazard=e.spawnHazard('sirenShock',{diagnostic:true});hazard.timer=44;
   const defense=e.readTelegraphedHazard(e.actors[1],13);
   assert.deepEqual(defense,{guard:true});
   e.destroy();
@@ -222,7 +223,7 @@ test('global warning permits guarding instead of requiring a nonexistent safe la
 
 test('hazard snapshots expose telegraph geometry and player counterplay',()=>{
   const e=engine();e.phase='fight';
-  const hazard=e.spawnHazard('steamVent');
+  const hazard=e.spawnHazard('steamVent',{diagnostic:true});
   const warning=e.snapshot().world.director.hazardWarnings.find(item=>item.id==='steamVent');
   assert.equal(warning.frames,hazard.timer);
   assert.equal(warning.center,hazard.x);
@@ -233,7 +234,7 @@ test('hazard snapshots expose telegraph geometry and player counterplay',()=>{
 
 test('render FPS does not change combat RNG, AI decisions, hazards or actor stats',()=>{
   for(const reducedMotion of [false,true]){
-    const a=engine();const b=engine();
+    const a=engine({stage:STAGES.find(s=>s.id==='alchemilla')});const b=engine({stage:STAGES.find(s=>s.id==='alchemilla')});
     a.settings.reducedMotion=reducedMotion;b.settings.reducedMotion=reducedMotion;
     a.phase='fight';b.phase='fight';
     for(let i=0;i<240;i++){
@@ -250,14 +251,14 @@ test('render FPS does not change combat RNG, AI decisions, hazards or actor stat
 
 test('paused rendering freezes event and hazard clocks despite later wall-clock timestamps',()=>{
   for(const reducedMotion of [false,true]){
-    const e=engine();
+    const e=engine({stage:STAGES.find(s=>s.id==='alchemilla')});
     e.settings.reducedMotion=reducedMotion;e.phase='fight';e.frame=73;
     const id=e.stage.director.events[0];
     e.stageRuntime.activeEvent={...STAGE_EVENTS[id],id};
     e.stageRuntime.activeTimer=60;
     e.stageRuntime.linkedHazard=null;
     const chains=Object.entries(STAGE_HAZARDS).find(([,profile])=>profile.visual==='chains')[0];
-    e.spawnHazard(chains);
+    e.spawnHazard(chains,{diagnostic:true});
     e.paused=true;
     const before=e.snapshot();
     const frames=[1000,900000].map(now=>{
@@ -273,7 +274,7 @@ test('paused rendering freezes event and hazard clocks despite later wall-clock 
 
 test('disabled stage animations leave combat warning silhouettes and hitboxes functional',()=>{
   const e=engine({stageAnimations:false});e.phase='fight';
-  const hazard=e.spawnHazard('trainRush');hazard.timer=2;
+  const hazard=e.spawnHazard('trainRush',{diagnostic:true});hazard.timer=2;
   e.render(800);
   assert.equal(e.hazards.length,1);
   assert.ok(e.snapshot().world.director.hazardWarnings.length===1);

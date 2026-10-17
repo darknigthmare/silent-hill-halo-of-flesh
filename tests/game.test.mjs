@@ -12,22 +12,22 @@ test('bosses retain a meaningful durability and power identity',()=>{
   assert.ok(avg(bosses,'power')>avg(regular,'power'));
 });
 
-test('ranged archetypes produce projectile specials and supers',()=>{
-  const ranged=new Set(['zoner','artillery','flyer','ghost','trickster']);
-  for(const fighter of ROSTER.filter(f=>ranged.has(f.archetype))){
-    const profile=createCombatProfile(fighter);
-    assert.equal(profile.moves.neutralSpecial.projectile,true,fighter.name);
-    assert.equal(profile.moves.super.projectile,true,fighter.name);
+test('projectiles and afflictions require the precise reference policy, never the archetype',()=>{
+  let shots=0;
+  for(const fighter of ROSTER){
+    const profile=createCombatProfile(fighter),caps=profile.referencePolicy.capabilities;
+    for(const move of Object.values(profile.moves)){
+      if(move.projectile){assert.ok(caps.projectile,fighter.id+'/'+move.key);shots++;}
+      if(move.effect)assert.ok(caps.effects.includes(move.effect.id),fighter.id+'/'+move.key);
+    }
   }
+  assert.ok(shots>0,'documented ranged techniques remain available');
 });
 
-test('grappler trait improves throw damage and applies bind',()=>{
-  const grappler=ROSTER.find(f=>f.archetype==='grappler');
-  const balanced=ROSTER.find(f=>f.archetype==='balanced'&&!f.boss);
-  assert.ok(grappler&&balanced);
-  const gp=createCombatProfile(grappler),bp=createCombatProfile(balanced);
-  assert.ok(gp.moves.throw.damage>bp.moves.throw.damage);
-  assert.equal(gp.moves.throw.effect?.id,'bind');
+test('a grappler cannot recover an unsupported bind from its old passive trait',()=>{
+  const fighter=ROSTER.find(f=>f.archetype==='grappler'&&!createCombatProfile(f).referencePolicy.capabilities.effects.includes('bind'));
+  assert.ok(fighter);const p=createCombatProfile(fighter);
+  assert.notEqual(p.trait.throwEffect,'bind');assert.notEqual(p.moves.throw.effect?.id,'bind');
 });
 
 test('low-profile manifestations receive their intended body modifier',()=>{
@@ -38,10 +38,10 @@ test('low-profile manifestations receive their intended body modifier',()=>{
   }
 });
 
-test('static-field and suppression traits enlarge projectiles',()=>{
+test('static-field and suppression multipliers affect only allowed projectile techniques',()=>{
   for(const fighter of ROSTER.filter(f=>['staticField','suppression'].includes(f.trait))){
     const profile=createCombatProfile(fighter);
-    assert.ok(profile.moves.neutralSpecial.projectileScale>1,fighter.name);
+    for(const move of Object.values(profile.moves).filter(m=>m.projectile))assert.ok(move.projectileScale>1,fighter.name);
   }
 });
 

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "01fc2e9d672f05c7bddb373a7a7e489f83821699adf31cfeba8f50cfe697c703",
+  "planSha256": "120157f0cf460d2f6043531ead8fa8d0268f28a1335163fbb1b3ef877e9e8c95",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -246,8 +246,18 @@
     "pngCandidates": 2,
     "animatedClips": 0,
     "certifiedOneToOne": 0,
-    "newGameplaySequences": 0,
-    "presentationHooks": 8
+    "newGameplaySequences": 93,
+    "presentationHooks": 9,
+    "playableFighters": 194,
+    "reviewedCombatProfiles": 230,
+    "disabledMoves": 889,
+    "authoredFinishers": 93,
+    "authoredFighterFinishers": 86,
+    "authoredStageFinishers": 7,
+    "authoredPresentations": 301,
+    "referenceStageTracks": 50,
+    "retiredStageItems": 1161,
+    "additionalStageBindings": 7
   },
   "calculated": [
     230,
@@ -274,19 +284,31 @@
   },
   "visualPreviews": [
     "Synthèse",
+    "Mouvements",
     "Présentations",
     "Finishers",
-    "Actions"
+    "Animations arènes",
+    "Actions",
+    "Combattants",
+    "Arènes",
+    "Arènes"
   ],
   "engine": "Artifact Tool primary runtime; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "a2ddb617c6c73c2c819e1fbdd8cea24947724bba436c7deb5b115ba73fb95dd2",
-  "changedCells": 3703,
+  "sourceSha256": "9ad5c2471e680244927c89a44c0e12ac8824e54dd1e721d0bce3eb9e8d0c53f0",
+  "changedCells": 31235,
   "changesBySheet": {
-    "Synthèse": 2,
-    "Présentations": 2530,
-    "Finishers": 1166,
-    "Actions": 5
+    "Synthèse": 3,
+    "Combattants": 401,
+    "Mouvements": 19861,
+    "Présentations": 2113,
+    "Finishers": 1930,
+    "Arènes": 948,
+    "Animations arènes": 4788,
+    "Actions": 1191
   },
-  "changeLogSha256": "762fe086f13903b97f986951ffd5f3ae2f2fbf8837c5f38502e64667260fe657"
+  "changeLogSha256": "6b3e36c5c8631fae0b9e14f7f5cdbebea7f28cc45f711caf0bfbbf65fe42eef5",
+  "enlargedRows": 7753,
+  "changeLog": "workbook-change-log.json.gz",
+  "layoutChangeLog": "workbook-layout-changes.json.gz"
 }

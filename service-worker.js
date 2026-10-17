@@ -1,4 +1,4 @@
-const VERSION = '0.9.5';
+const VERSION = '0.9.6';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
@@ -17,6 +17,11 @@ const ESSENTIAL_SHELL = [
 
   '/manifest.webmanifest',
   '/src/data.js',
+  '/src/production-reference.js',
+  '/src/combat-reference-policy.js',
+  '/src/stage-reference-policy.js',
+  '/src/lore-cinematics.js',
+  '/src/reference-ui.js',
   '/src/stage-director.js',
   '/src/stage-cinematics.js',
   '/src/stage-hazard-renderer.js',

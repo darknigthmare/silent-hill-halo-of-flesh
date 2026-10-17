@@ -53,7 +53,7 @@ test('generated documentation contains the live totals and rule families',async(
   const coverage=await read('docs/COVERAGE_AUDIT.md');
   const fatalities=await read('docs/FATALITIES_AND_STAGES.md');
   const stageDirector=await read('docs/STAGE_DIRECTOR.md');
-  assert.match(roster,new RegExp(`${CONTENT_STATS.fighters} manifestations`));
+  assert.match(roster,new RegExp(`${CONTENT_STATS.fighters} fiches`));
   assert.match(matrix,new RegExp(`${CONTENT_STATS.stages} arènes`));
   assert.match(systems,new RegExp(`${Object.keys(MANIFESTATION_TRAITS).length} traits`));
   assert.match(systems,new RegExp(`${Object.keys(AFFLICTIONS).length} afflictions`));
@@ -62,8 +62,11 @@ test('generated documentation contains the live totals and rule families',async(
   assert.match(systems,new RegExp(`${Object.keys(AI_PERSONALITIES).length} personnalités IA`));
   assert.match(systems,new RegExp(`${CONTENT_STATS.bossPhases} transitions de boss`));
   assert.match(coverage,/COMPLET DANS LE PÉRIMÈTRE DÉFINI/);
-  assert.match(fatalities,new RegExp(`${CONTENT_STATS.fatalities} fatalités de combattant`));
-  assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} animations`));
+  assert.match(fatalities,new RegExp(`${CONTENT_STATS.fatalities} propositions de fatalité de combattant`));
+  assert.match(fatalities,new RegExp(`${CONTENT_STATS.stageAnimations} boucles`));
+  assert.match(roster,/commandes activées/);
+  assert.match(fatalities,/montages.*conditions d’éligibilité/);
+  assert.match(fatalities,/images propres à chaque action restent à produire/);
   assert.match(stageDirector,new RegExp(`${CONTENT_STATS.stages} arènes`));
   assert.match(stageDirector,new RegExp(`${CONTENT_STATS.terrainProfiles} terrains`));
   assert.match(stageDirector,new RegExp(`${CONTENT_STATS.shiftStyles} bascules`));

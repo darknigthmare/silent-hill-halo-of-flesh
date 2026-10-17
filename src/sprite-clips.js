@@ -2,7 +2,7 @@
  * It changes presentation timings, never gameplay timings, pixels or provenance.
  */
 import {MOVESET_KEYS,createCombatProfile} from './data.js';
-import {POSE_KEYS,PRESENTATION_KEYS,isOneShotPose,isPresentationPose} from './sprite-poses.js';
+import {POSE_KEYS,PRESENTATION_KEYS,isOneShotPose,isPresentationPose,validSpriteClipKey} from './sprite-poses.js';
 export {POSE_KEYS} from './sprite-poses.js';
 export const MAX_CLIP_STEPS=256;
 export const MAX_CLIP_TICKS=36000;
@@ -14,11 +14,11 @@ export function clipSummary(art,clip){
  return {steps:clip?.frames?.length||0,distinct,total:durations.reduce((n,t)=>n+t,0),animated:distinct>1};
 }
 export function presentationClipCoverage(art){
- const present=PRESENTATION_KEYS.filter(key=>own(art?.clips||{},key));
+ const present=Object.keys(art?.clips||{}).filter(isPresentationPose);
  return {present,missing:PRESENTATION_KEYS.filter(key=>!present.includes(key)),animated:present.filter(key=>clipSummary(art,art.clips[key]).animated).length};
 }
 export function validateClip(art,pose,clip){
- if(!POSE_KEYS.includes(pose))throw new Error('Pose inconnue du moteur.');
+ if(!validSpriteClipKey(pose,art))throw new Error('Pose ou contexte inconnu du moteur pour ce sujet.');
  if(!clip||typeof clip!=='object'||Array.isArray(clip)||Object.keys(clip).some(k=>!['frames','frameTicks','ticksPerFrame','loop'].includes(k)))throw new Error('Structure de clip invalide.');
  if(!Array.isArray(clip.frames)||!clip.frames.length||clip.frames.length>MAX_CLIP_STEPS||clip.frames.some(i=>!Number.isInteger(i)||i<0||!art.frames[i]))throw new Error('Choisir de 1 à 256 étapes parmi les images importées.');
  if(!Number.isInteger(clip.ticksPerFrame)||clip.ticksPerFrame<1||clip.ticksPerFrame>600||typeof clip.loop!=='boolean')throw new Error('Durée entière de 1 à 600 ticks et boucle explicite requises.');
@@ -46,7 +46,7 @@ export function clipPacket(fighter,original,draft,pose){
   previousClip:own(original.clips,pose)?structuredClone(original.clips[pose]):null,clip};
 }
 export function createClipDraft(art,pose){
- if(!POSE_KEYS.includes(pose))throw new Error('Pose inconnue du moteur.');
+ if(!validSpriteClipKey(pose,art))throw new Error('Pose ou contexte inconnu du moteur pour ce sujet.');
  if(own(art.clips,pose))return validateClip(art,pose,art.clips[pose]);
  return {frames:[0],ticksPerFrame:1,frameTicks:[1],loop:false};
 }

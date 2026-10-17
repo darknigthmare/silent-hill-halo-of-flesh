@@ -1,4 +1,4 @@
-# Audit de couverture du roster — v0.9.5
+# Audit de couverture du roster — v0.9.6
 
 **État global : COMPLET DANS LE PÉRIMÈTRE DÉFINI**
 
@@ -30,6 +30,6 @@ Distingue nom officiel/établi, nom de guide post-sortie, variante d’écran et
 - Les humains réellement affrontés, boss narratifs et set-pieces transformables en combattants sont inclus et balisés.
 - Les variations morphologiques visibles et mécaniquement distinctes peuvent devenir des variantes séparées.
 - Les simples recolorations sans comportement distinct restent fusionnées.
-- Les créatures non combattues dans leur œuvre d’origine sont marquées comme adaptations.
+- Les sujets non combattants, obstacles et identités non confirmées restent consultables ; leurs commandes offensives sont désactivées. Une rencontre scénarisée n’est jouable que si la politique de sa fiche l’autorise comme adaptation versus.
 - Lorsqu’aucun bestiaire officiel ne nomme une créature, le nom descriptif est explicitement signalé.
 - Les fatalités sont originales et inspirées de comportements documentés ; elles ne sont pas présentées comme des scènes officielles.

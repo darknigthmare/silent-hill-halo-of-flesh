@@ -3,6 +3,7 @@ from pathlib import Path
 from zipfile import ZipFile
 import argparse
 import hashlib
+import gzip
 import json
 import posixpath
 import xml.etree.ElementTree as ET
@@ -14,6 +15,11 @@ TABLES = {'Combattants': 'fighters', 'Mouvements': 'moves', 'Finishers': 'finish
           'Présentations': 'presentations', 'Clips': 'poses', 'Arènes': 'stages',
           'Animations arènes': 'stageAnimations', 'Actions': 'tasks',
           'Gestes référencés': 'observations', 'Sources': 'sources'}
+
+
+def read_json(path):
+    data = path.read_bytes()
+    return json.loads(gzip.decompress(data) if path.suffix == '.gz' else data)
 
 
 def verify(plan_path, workbook_path):
@@ -109,10 +115,23 @@ def verify(plan_path, workbook_path):
                 urls = [value(cells.get(f'{headers["Lien de référence"]}{i}')) for i in range(6,6+len(data))]
                 assert urls == [s['url'] for s in plan['sources']], 'URL text mismatch'
                 report['sourceUrls'] = len(urls)
-            for header, field in ({'Intégration à prévoir': 'engineState', 'Déclenchement prévu': 'trigger'} if name == 'Présentations'
-                                  else {'Pistes à produire': 'actorTracks', 'État technique actuel': 'existing'} if name == 'Finishers'
-                                  else {}).items():
+            current_fields = {
+                'Combattants': {'Décision de fidélité': 'identityNote'},
+                'Mouvements': {'Nom actuel': 'currentName', 'Mention actuelle du dépôt': 'currentClaim',
+                               'Validation du geste actuel': 'canonicalVerification', 'Cible / révision attendue': 'target'},
+                'Présentations': {'Intégration à prévoir': 'engineState', 'Déclenchement prévu': 'trigger'},
+                'Finishers': {'Pistes à produire': 'actorTracks', 'État technique actuel': 'existing',
+                              'Séquence actuelle': 'currentSequence', 'Déclenchement prévu': 'trigger'},
+                'Arènes': {'Décision de fidélité': 'locationNote', 'Météo actuelle': 'weather',
+                          'Transformation moteur': 'shift'},
+                'Animations arènes': {'État actuel': 'existing', 'Déclenchement / durée': 'trigger',
+                                      'Travail attendu': 'description', 'Fidélité / nature': 'status'},
+                'Actions': {'Constat': 'reason', 'Critère de livraison': 'acceptance'}
+            }
+            for header, field in current_fields.get(name, {}).items():
                 assert [value(cells.get(f'{headers[header]}{i}')) for i in range(6,6+len(data))] == [r[field] for r in data], f'Integration mismatch: {name}:{field}'
+            if name == 'Mouvements':
+                assert [value(cells.get(f'{headers["Projectile actuel"]}{i}')) for i in range(6,6+len(data))] == ['Oui' if r['projectile'] else 'Non' for r in data], 'Projectile availability mismatch'
             report['sheets'][name] = {'dataRows': len(data), 'tableRef': table.get('ref'),
                                     'frozenRows': 5, 'frozenColumns': 3, 'validationLists': len(validations)}
     report['totalDataRows'] = sum(v['dataRows'] for v in report['sheets'].values())
@@ -121,7 +140,7 @@ def verify(plan_path, workbook_path):
     return report
 
 
-def compare_source(source_path, workbook_path, change_log_path):
+def compare_source(source_path, workbook_path, change_log_path, layout_change_log_path=None):
     """Compare all cells and native structures, allowing only the authored change log."""
     def canonical(element):
         if element is None:
@@ -183,12 +202,33 @@ def compare_source(source_path, workbook_path, change_log_path):
 
     before, after = snapshot(source_path), snapshot(workbook_path)
     assert list(before) == list(after), 'Narrow edit changed worksheet order'
-    changes = json.loads(change_log_path.read_text())
+    changes = read_json(change_log_path)
     allowed = {(change['sheet'],change['address']): change for change in changes}
     assert len(allowed) == len(changes), 'Repeated authored change address'
+    layout_changes = read_json(layout_change_log_path) if layout_change_log_path else []
+    allowed_heights = {(change['sheet'],str(change['row'])): change for change in layout_changes}
+    assert len(allowed_heights) == len(layout_changes), 'Repeated row height change'
+    touched_rows = {(change['sheet'], ''.join(c for c in change['address'] if c.isdigit())) for change in changes if isinstance(change['after'],str)}
+    assert set(allowed_heights) <= touched_rows, 'Resized row contains no authored text change'
+    verified_heights = set()
+    def equivalent_value(value):
+        return None if value == '' else value
     count = 0
     for name in before:
-        assert before[name]['features'] == after[name]['features'], f'Native layout/features changed: {name}'
+        old_features, new_features = before[name]['features'], after[name]['features']
+        assert {k:v for k,v in old_features.items() if k != 'rowHeights'} == {k:v for k,v in new_features.items() if k != 'rowHeights'}, f'Native layout/features changed: {name}'
+        old_rows, new_rows = old_features['rowHeights'], new_features['rowHeights']
+        assert len(old_rows) == len(new_rows), f'Row layout scope changed: {name}'
+        for old_row, new_row in zip(old_rows, new_rows):
+            key = (name,old_row[0])
+            change = allowed_heights.get(key)
+            if change:
+                assert old_row[0] == new_row[0] and old_row[2:] == new_row[2:], f'Other row properties changed: {key}'
+                assert float(old_row[1]) == change['before'] and float(new_row[1]) == change['after'], f'Unmatched row height change: {key}'
+                assert 0 < change['before'] < change['after'] <= 390, f'Unexpected resize: {key}'
+                verified_heights.add(key)
+            else:
+                assert old_row == new_row, f'Unrelated row height changed: {key}'
         old_cells, new_cells = before[name]['cells'], after[name]['cells']
         assert set(old_cells) == set(new_cells), f'Cell scope changed: {name}'
         for address, old in old_cells.items():
@@ -197,12 +237,14 @@ def compare_source(source_path, workbook_path, change_log_path):
             assert old['style'] == new['style'], f'Cell formatting changed: {name}!{address}'
             change = allowed.get((name,address))
             if change:
-                assert old['value'] == change['before'] and new['value'] == change['after'], f'Unmatched authored change: {name}!{address}'
+                assert equivalent_value(old['value']) == equivalent_value(change['before']) and equivalent_value(new['value']) == equivalent_value(change['after']), f'Unmatched authored change: {name}!{address}'
             elif not old['formula']:
                 assert old['value'] == new['value'], f'Unrelated cell changed: {name}!{address}'
             count += 1
+    assert verified_heights == set(allowed_heights), 'Unverified row height changes'
     return {'passed': True, 'comparedCells': count, 'authoredChanges': len(changes),
-            'unchanged': ['worksheet order','unrelated values','all formulas','effective cell formatting','native layout and validation features']}
+            'enlargedRows': len(verified_heights),
+            'unchanged': ['worksheet order','unrelated values','all formulas','effective cell formatting','column widths','unrelated row heights','native tables and validation features']}
 
 
 if __name__ == '__main__':
@@ -212,11 +254,12 @@ if __name__ == '__main__':
     parser.add_argument('report', type=Path)
     parser.add_argument('--compare-source', type=Path)
     parser.add_argument('--change-log', type=Path)
+    parser.add_argument('--layout-change-log', type=Path)
     args = parser.parse_args()
     result = verify(args.plan, args.workbook)
     if args.compare_source or args.change_log:
         if not (args.compare_source and args.change_log):
             parser.error('--compare-source and --change-log must be provided together')
-        result['preservation'] = compare_source(args.compare_source, args.workbook, args.change_log)
+        result['preservation'] = compare_source(args.compare_source, args.workbook, args.change_log, args.layout_change_log)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps({k: result[k] for k in ['passed','bytes','totalDataRows','sourceUrls','summaryFormulas','errors']}, ensure_ascii=False))

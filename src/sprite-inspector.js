@@ -2,7 +2,8 @@
 import {MOVESET_KEYS} from './data.js';
 import {mountClipEditor} from './sprite-clip-editor.js';
 import {clipSummary,moveTiming} from './sprite-clips.js';
-import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel} from './sprite-poses.js';
+import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel,splitSpriteClipKey,contextualPresentationKeys} from './sprite-poses.js';
+import {FIGHTER_REFERENCES,STAGE_REFERENCES} from './production-reference.js';
 import {spriteCache,drawRasterMonster} from './sprite-system.js';
 import {sampleSpriteClip} from './sprite-animation.js';
 import {visibleSpriteBox} from './sprite-framing.js';
@@ -16,7 +17,7 @@ export function calibrationPacket(fighter,original,draft){
 }
 export function previewSpriteState(pose,tick){
  const frame=Number.isFinite(tick)?Math.max(0,Math.floor(tick)):0;
- if(isPresentationPose(pose))return {presentation:{key:pose,id:'workshop:'+pose,frame},frame};
+ if(isPresentationPose(pose)){const {pose:key,contextId}=splitSpriteClipKey(pose);return {presentation:{key,contextId,clipKey:pose,id:'workshop:'+pose,frame},frame};}
  const names={idle:{},walk:{moving:true},crouch:{crouching:true},jump:{airborne:true},guard:{blocking:true},
   dodge:{dodging:true},hurt:{hurt:true},ko:{ko:true},knockdown:{knockdown:true},phase:{phase:true}};
  return {...(Object.hasOwn(names,pose)?names[pose]:{moveKey:pose}),frame};
@@ -38,7 +39,12 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  host.append(panel);const $=key=>panel.querySelector(`[data-inspect="${key}"]`),ctx=canvas.getContext('2d');
  const label=key=>moveTiming(fighter,key)?.name||poseLabel(key);
  function optionText(key){return label(key)+' · '+key+(Object.hasOwn(draft.clips,key)?(JSON.stringify(original.clips[key])!==JSON.stringify(draft.clips[key])?' · BROUILLON LOCAL':' · présent'):' · À PRODUIRE');}
- for(const [name,keys] of [['Poses de base',BASE_POSE_KEYS],['Attaques',MOVESET_KEYS],['Présentations · lecture unique',PRESENTATION_KEYS]]){
+ const stageIds=Object.keys(STAGE_REFERENCES),fighterIds=Object.keys(FIGHTER_REFERENCES);
+ for(const [name,keys] of [['Poses de base',BASE_POSE_KEYS],['Attaques',MOVESET_KEYS],['Présentations génériques · lecture unique',PRESENTATION_KEYS],
+  ['Séquences exactes du sujet',contextualPresentationKeys(fighter.id)],
+  ['Fatalités d’arène · exécutant',stageIds.map(id=>`finisher@${id}_fatality`)],
+  ['Fatalités de sujet · réaction de la cible',fighterIds.flatMap(id=>['signature','nightmare'].map(type=>`finished@${id}_${type}`))],
+  ['Fatalités d’arène · réaction de la cible',stageIds.map(id=>`finished@${id}_fatality`)]]){
   const group=document.createElement('optgroup');group.label=name;
   for(const key of keys){const o=document.createElement('option');o.value=key;o.textContent=optionText(key);group.append(o);}$('pose').append(group);
  }
@@ -66,7 +72,8 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
    ctx.strokeStyle='#e8c775';ctx.beginPath();ctx.moveTo(-9,0);ctx.lineTo(9,0);ctx.moveTo(0,-9);ctx.lineTo(0,9);ctx.stroke();}
   ctx.restore();canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=rendered.kind;
   canvas.dataset.pose=sample.pose;canvas.dataset.requestedPose=sample.requested;canvas.dataset.frameIndex=sample.frameIndex;
-  canvas.dataset.presentationKey=isPresentationPose(sample.requested)?sample.requested:'';
+  canvas.dataset.presentationKey=isPresentationPose(sample.requested)?splitSpriteClipKey(sample.requested).pose:'';
+  canvas.dataset.presentationContext=splitSpriteClipKey(sample.requested).contextId||'';
   canvas.dataset.presentationFrame=isPresentationPose(sample.requested)?String(tick):'';
   canvas.setAttribute('role','img');canvas.setAttribute('aria-label',fighter.name+' — '+label(sample.requested)+(sample.fallback?' absente, aperçu de repos':''));
   const clipped=x+visible.x*zoom<0||x+(visible.x+visible.w)*zoom>w||y+visible.y*zoom<0||y+(visible.y+visible.h)*zoom>h;

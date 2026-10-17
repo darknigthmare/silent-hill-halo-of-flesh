@@ -110,7 +110,7 @@ function drawMissing(ctx,x,y,width,height,text){
 }
 export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache,registry=SPRITES}={}){
   if(!fighter)return {kind:'missing'};
-  const art=spriteFor(fighter,registry),frame=frameFor(art,state),image=frame&&cache.peek(frame.path);
+  const art=spriteFor(fighter,registry),sample=sampleSpriteClip(art,state),frame=sample?.frame,image=frame&&cache.peek(frame.path);
   if(!image){const p=bodyProfile(fighter),w=Math.max(74,p.width*p.scale),h=p.height*p.scale;
     drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
     // Request only once. A failed file is retried by preflight, not every render frame.
@@ -124,8 +124,8 @@ export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,sha
   // No squash/stretch, polygon limbs, hue-swapped clones, or rotating a standing image into a fake death frame.
   if(state.hitFlash){ctx.shadowColor='#ddd8c7';ctx.shadowBlur=10;}
   ctx.drawImage(image,p.localX,p.localY,p.width,p.height);ctx.restore();
-  if(diagnostic&&!art.clips[poseKey(state)]){ctx.save();ctx.fillStyle='#d2c9b8';ctx.textAlign='center';ctx.font='11px system-ui';ctx.fillText('POSE '+poseKey(state).toUpperCase()+' À PRODUIRE',x,y+22);ctx.restore();}
-  return {kind:'raster',path:frame.path,pose:art.clips[poseKey(state)]?poseKey(state):'idle',...p};
+  if(diagnostic&&sample.fallback){ctx.save();ctx.fillStyle='#d2c9b8';ctx.textAlign='center';ctx.font='11px system-ui';ctx.fillText('POSE '+sample.requested.toUpperCase()+' À PRODUIRE',x,y+22);ctx.restore();}
+  return {kind:'raster',path:frame.path,pose:sample.pose,requestedClipKey:sample.requested,fallback:sample.fallback,...p};
 }
 const portraitRequests=new WeakMap();
 export function paintRasterPortrait(canvas,fighter,{background=true,facing=1,cache=spriteCache,registry=SPRITES}={}){

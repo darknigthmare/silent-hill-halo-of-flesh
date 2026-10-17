@@ -81,16 +81,18 @@ async function runVerification() {
     stageIds.add(stage.id);
     assert(SOURCE_META[stage.source],`Source d’arène inconnue: ${stage.id}/${stage.source}`);
     assert(hazardIds.has(stage.hazard),`Danger d’arène inconnu: ${stage.id}/${stage.hazard}`);
-    assert(Array.isArray(stage.animations)&&stage.animations.length>=1,`Animations d’arène absentes: ${stage.id}`);
+    assert(Array.isArray(stage.animations)&&(stage.animations.length>=1||stage.referencePolicy),`Animations d’arène absentes sans décision de référence: ${stage.id}`);
     assert(stage.fatality&&typeof stage.fatality.name==='string'&&stage.fatality.sequence?.length>=3,`Fatalité d’arène incomplète: ${stage.id}`);
     assert(stage.terrain&&terrainIds.has(stage.terrain.id),`Terrain d’arène inconnu: ${stage.id}/${stage.terrain?.id}`);
     assert(stage.shift&&shiftIds.has(stage.shift.style),`Bascule d’arène inconnue: ${stage.id}/${stage.shift?.style}`);
     assert(stage.lore?.premise&&stage.lore?.adaptationNotice,`Doctrine lore d’arène incomplète: ${stage.id}`);
-    assert(stage.director&&stage.director.events?.length>=1&&Array.isArray(stage.director.hazardDeck),`Directeur d’arène incomplet: ${stage.id}`);
+    assert(stage.director&&Array.isArray(stage.director.events)&&Array.isArray(stage.director.hazardDeck),`Directeur d’arène incomplet: ${stage.id}`);
+    assert(JSON.stringify(stage.director.events)===JSON.stringify(stage.referencePolicy.allowedEvents),`Événement non autorisé par la fiche: ${stage.id}`);
+    assert(JSON.stringify(stage.director.hazardDeck)===JSON.stringify(stage.referencePolicy.allowedHazards),`Danger non autorisé par la fiche: ${stage.id}`);
     stage.director.events.forEach(id=>assert(stageEventIds.has(id),`Événement d’arène inconnu: ${stage.id}/${id}`));
     stage.director.hazardDeck.forEach(id=>assert(hazardIds.has(id),`Deck de dangers inconnu: ${stage.id}/${id}`));
     assert(stage.animationTracks?.length===stage.animations.length,`Pistes d’animation incohérentes: ${stage.id}`);
-    assert(stage.interactions?.length>=1,`Interactions d’arène absentes: ${stage.id}`);
+    assert(Array.isArray(stage.interactions)&&stage.interactions.every(i=>stage.director.events.includes(i.event)),`Interaction sans événement autorisé: ${stage.id}`);
   }
   for (const fighter of ROSTER) {
     assert(!fighterIds.has(fighter.id),`ID de combattant dupliqué: ${fighter.id}`);

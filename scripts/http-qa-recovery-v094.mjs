@@ -8,7 +8,7 @@ import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-recovery-v094');await mkdir(out,{recursive:true});
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4179';let server,browser;
 const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
- 'A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result ticks produce the engine match callback; no campaign victory is claimed.',
+ 'A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result/outro ticks produce the engine match callback and the result screen; no campaign victory is claimed.',
  'SpriteCache.prepare is temporarily made to fail for the pause retry test. No production file is changed.',
  'Timeline steps reference the same existing PNG; no new art or animation is produced.',
  'CacheStorage is deliberately emptied before the final offline fallback test.'
@@ -49,6 +49,7 @@ try{
   winner.health=winner.maxHealth*.6;winner.meter=35;winner.stats.damageTaken=winner.maxHealth-winner.health;
   loser.health=0;loser.ko=false;loser.lastHit={attackerIndex:0,moveKey:'neutralLight',isSuper:false,environmental:false};
   e.resolveKnockouts();const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+  const outroTicks=e.winner?.presentation?.duration||0;for(let tick=0;tick<outroTicks&&e.isPresentingOutro();tick++)e.update();
   window.beforeContinue={run:JSON.stringify(q.run),saved:localStorage.getItem('sh-halo-of-flesh-run-v1'),engine:e};
   document.querySelector('#artDiagnostic').checked=false;document.querySelector('#playStatus').textContent='';
   return e.phase==='matchEnd'&&e.winner===winner&&winner.roundWins===e.config.roundsToWin&&loser.ko&&loser.presentation?.key==='loseMatch'&&q.run.status==='won';

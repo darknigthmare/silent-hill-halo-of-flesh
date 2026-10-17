@@ -52,17 +52,18 @@ test('the plan inventories every current move, finisher, presentation and core p
   }
 });
 
-test('all stage animation families include the live stage contents and its researched proposals',()=>{
+test('stage inventory retains retired ideas and maps each live binding to its exact production row',()=>{
   const refs=new Map(research.stages.map(s=>[s.id,s]));
   for(const stage of STAGES){
-    const rows=plan.stageAnimations.filter(a=>a.stageId===stage.id);
-    const expected={Boucle:stage.animationTracks.length,'Événement':stage.director.events.length,
-      Interaction:stage.interactions.length,Danger:stage.director.hazardDeck.length,
-      Transformation:1,'Proposition du lieu':refs.get(stage.id).animations.length};
-    for(const [type,count] of Object.entries(expected))
-      assert.equal(rows.filter(a=>a.type===type).length,count,`${stage.id}: ${type}`);
-    assert.equal(rows.length,Object.values(expected).reduce((sum,value)=>sum+value,0),stage.id);
+    const rows=plan.stageAnimations.filter(a=>a.stageId===stage.id),byId=new Map(rows.map(r=>[r.id,r]));
+    for(const track of stage.animationTracks)assert.equal(byId.get(`${stage.id}:loop:${track.id}`)?.retired,undefined);
+    for(const track of stage.referenceTracks){assert.ok(byId.has(track.id),track.id);assert.equal(byId.get(track.id).runtimeTrack.id,track.id);}
+    for(const event of stage.director.events)assert.ok(byId.has(`${stage.id}:event:${event}`)||stage.referenceTracks.some(t=>t.event===event),stage.id+'/'+event);
+    for(const hazard of stage.director.hazardDeck)assert.ok(byId.has(`${stage.id}:hazard:${hazard}`)||plan.stages.find(s=>s.id===stage.id).additionalBindings.some(b=>b.id===`${stage.id}:hazard:${hazard}`),stage.id+'/'+hazard);
+    assert.equal(rows.filter(r=>r.type==='Proposition du lieu').length,refs.get(stage.id).animations.length);
+    for(const row of rows.filter(r=>r.retired)){assert.match(row.existing,/Désactivé/);assert.equal(row.trigger,'Aucun déclenchement automatique');}
   }
+  assert.equal(plan.stageAnimations.length,1799,'phase-one row identities stay stable for workbook annotations');
 });
 
 test('generated IDs are unique and all ownership, source and observation links resolve',()=>{
@@ -119,7 +120,7 @@ test('researched editions override inherited labels and genuine remake variants 
 });
 
 test('engine timing remains distinct from unmeasured source frames and no artwork is certified 1:1',()=>{
-  assert.equal(plan.phase,1);assert.equal(plan.metrics.certifiedOneToOne,0);assert.equal(plan.metrics.newGameplaySequences,0);
+  assert.equal(plan.phase,1);assert.equal(plan.metrics.certifiedOneToOne,0);assert.equal(plan.metrics.newGameplaySequences,plan.finishers.filter(f=>f.runtimeCinematic.authored).length);
   for(const fighter of plan.fighters)assert.equal(fighter.oneToOneValidated,false,fighter.id);
   for(const observation of plan.observations){
     assert.match(observation.sourceTiming,/non mesuré/i,observation.id);
@@ -152,15 +153,19 @@ test('implementation progress maps to real hooks while every unproduced artistic
  for(const [proposal,clip] of Object.entries(PRESENTATION_CLIPS)){
   assert.ok(PRESENTATION_KEYS.includes(clip),proposal);
   for(const row of plan.presentations.filter(row=>row.id.endsWith(':'+proposal))){
-   assert.match(row.engineState,new RegExp(`Hook ${clip} disponible`));
+   assert.ok(row.engineState.includes(`${clip}@${row.id}`),row.id);
    assert.notEqual(row.productionStatus,'Validé');
   }
  }
- for(const row of plan.presentations.filter(row=>row.id.endsWith(':taunt')))assert.match(row.engineState,/à définir/);
+ for(const row of plan.presentations.filter(row=>row.id.endsWith(':taunt'))){
+  assert.match(row.engineState,/66 ticks.*annulable.*pause/);
+  assert.match(row.trigger,/aucun dégât ni gain de jauge/);
+ }
  const task=id=>plan.tasks.find(row=>row.id===id);
  assert.equal(task('global:round-boundaries').status,'Validé');
  assert.equal(task('global:cinematic-clips').status,'En cours');
- for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène'))assert.equal(row.status,'À faire',row.id);
+ for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène'))assert.notEqual(row.status,'Validé',row.id);
+ for(const row of plan.tasks.filter(row=>row.id.endsWith(':art')))assert.equal(row.status,'À faire',row.id);
  assert.equal(plan.metrics.animatedClips,0);assert.equal(plan.metrics.certifiedOneToOne,0);
 });
 
@@ -175,7 +180,7 @@ test('unverified roles and locations remain blocked through their moves, poses a
 });
 
 test('a blocked proposal cannot enter production solely because the fighter identity is documented',()=>{
-  const fighter=plan.fighters.find(row=>row.targetRole==='combatant'&&row.productionStatus==='À produire');
+  const fighter=plan.fighters.find(row=>row.targetRole==='combatant'&&row.productionStatus==='En cours');
   assert.ok(fighter,'a documented combatant must exercise proposal-level blocking');
   const changed=mutated(r=>{
     const ref=r.fighters.find(row=>row.id===fighter.id);
@@ -189,9 +194,9 @@ test('a blocked proposal cannot enter production solely because the fighter iden
   ];
   assert.ok(rows.length>=expectedProposals.length);
   for(const row of rows)assert.equal(row.productionStatus,'À référencer',row.id);
-  assert.equal(blocked.fighters.find(row=>row.id===fighter.id).productionStatus,'À produire');
+  assert.equal(blocked.fighters.find(row=>row.id===fighter.id).productionStatus,'En cours');
   for(const row of blocked.moves.filter(row=>row.fighterId===fighter.id&&!['super','desperation'].includes(row.key)))
-    assert.equal(row.productionStatus,'À produire',`${row.id}: a blocked proposal does not erase a documented ordinary slot`);
+    assert.equal(row.productionStatus,'En cours',`${row.id}: a blocked proposal does not erase a documented ordinary slot`);
 });
 
 test('missing, unknown and duplicated scope IDs cannot yield an apparently complete plan',()=>{

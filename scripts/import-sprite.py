@@ -24,8 +24,36 @@ BASE_POSE_KEYS = ('idle','walk','crouch','jump','guard','dodge','hurt','knockdow
 MOVE_KEYS = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy',
              'crouchHeavy','airHeavy','throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
              'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
-PRESENTATION_KEYS = ('intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished')
+PRESENTATION_KEYS = ('intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt')
 POSE_KEYS = BASE_POSE_KEYS + MOVE_KEYS + PRESENTATION_KEYS
+
+def validate_pose_key(pose: str, fighter_id: str, root: Path | None = None) -> str:
+    """Return the base pose after checking the exact production context and owner."""
+    if not isinstance(pose, str) or len(pose) > 240:
+        raise ValueError('Invalid pose key.')
+    parts = pose.split('@')
+    base = parts[0]
+    if base not in POSE_KEYS or len(parts) > 2:
+        raise ValueError('Unknown engine pose.')
+    if len(parts) == 1:
+        return base
+    if base not in PRESENTATION_KEYS or root is None:
+        raise ValueError('Invalid presentation context.')
+    index = json.loads((root / 'data/production-reference-index.json').read_text())
+    fighters, stages = index['fighters'], index['stages']
+    context = parts[1]
+    if base in ('finisher', 'finished'):
+        match = re.fullmatch(r'([a-z0-9_]+)_(signature|nightmare|fatality)', context)
+        if not match:
+            raise ValueError('Invalid finisher context.')
+        ident, kind = match.groups()
+        valid = ident in stages if kind == 'fatality' else ident in fighters and (base == 'finished' or ident == fighter_id)
+    else:
+        kind = {'winRound':'winRound1','loseRound':'loseRound1'}.get(base,base)
+        valid = fighter_id in fighters and context == f'{fighter_id}:{kind}'
+    if not valid:
+        raise ValueError('Unknown production context or wrong exact fighter owner.')
+    return base
 
 def read_image_snapshot(path: Path) -> bytes:
     if path.is_symlink():
@@ -96,11 +124,8 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Unknown fighter ID or wrong source. Cross-game aliases are refused.')
     if not args.single_subject_reviewed:
         raise ValueError('Inspect the image first and explicitly pass --single-subject-reviewed. No automatic sheet detection is claimed.')
-    if not re.fullmatch(r'[a-zA-Z][a-zA-Z0-9_]{0,47}', args.pose):
-        raise ValueError('Invalid pose key.')
-    if args.pose not in POSE_KEYS:
-        raise ValueError('Unknown pose. Use an exact engine pose.')
-    if args.pose in MOVE_KEYS + PRESENTATION_KEYS and args.loop:
+    base_pose = validate_pose_key(args.pose, args.fighter, root)
+    if base_pose in MOVE_KEYS + PRESENTATION_KEYS and args.loop:
         raise ValueError('Attacks and presentations must play once; looping is refused.')
     if not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 1:
         raise ValueError('Anchor and standing-equivalent body calibration must be finite and in range.')
@@ -202,7 +227,7 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument('--anchor-y', type=float, required=True)
     p.add_argument('--body-height', type=float, required=True, help='Standing-equivalent reference height / full image height, not crouched visible bounds')
     p.add_argument('--facing', type=int, choices=(-1, 1), default=1)
-    p.add_argument('--pose', default='idle', help='Exact engine key; presentations: '+', '.join(PRESENTATION_KEYS))
+    p.add_argument('--pose', default='idle', help='Exact engine key or presentation@production-ID; presentations: '+', '.join(PRESENTATION_KEYS))
     p.add_argument('--ticks', type=int, default=1)
     p.add_argument('--loop', action='store_true', help='Base poses only; attacks and presentation sequences play once.')
     actions = p.add_mutually_exclusive_group()

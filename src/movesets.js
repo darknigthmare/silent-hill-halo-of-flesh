@@ -1,8 +1,10 @@
+import { combatReferencePolicy, combatReferenceRecipe } from './combat-reference-policy.js';
+
 /*
  * SILENT HILL: HALO OF FLESH — movesets lore-first.
  *
  * Les mouvements sont séparés en trois niveaux de fidélité :
- * - direct-canonical : attaque ou comportement directement attesté dans le jeu source ;
+ * - direct-canonical : catégorie réservée à une validation explicite, jamais déduite du texte ;
  * - behavior-composite : combinaison jouable de plusieurs comportements attestés ;
  * - versus-adaptation : ajout nécessaire au format versus, explicitement signalé.
  */
@@ -483,10 +485,6 @@ function normaliseKind(fighter) {
   return KIND_NAMES[fighter.visual?.kind] ? fighter.visual.kind : 'humanoid';
 }
 
-function rangedArchetype(fighter) {
-  return ['zoner','artillery','flyer','ghost','trickster'].includes(fighter.archetype);
-}
-
 function grapplerArchetype(fighter) {
   return ['grappler','juggernaut','boss'].includes(fighter.archetype);
 }
@@ -577,7 +575,7 @@ function makeMove(slot, fighter, context, override = {}) {
   };
 
   const wantsEffect = spec.effectMode || override.effectOverride;
-  const effectId = override.effectOverride || context.effectId;
+  const effectId = override.effectOverride === undefined ? context.effectId : override.effectOverride;
   if (wantsEffect && effectId) {
     move.effect = {
       id: effectId,
@@ -588,28 +586,10 @@ function makeMove(slot, fighter, context, override = {}) {
 
   if (['throw','backThrow'].includes(slot) && grapplerArchetype(fighter)) {
     move.damage = Math.round(move.damage * 1.18 * (context.throwDamage || 1));
-    move.effect ||= context.throwEffect ? { id: context.throwEffect, duration: context.throwEffectDuration || 90, potency: 1 } : null;
-  }
-
-  if (['neutralSpecial','downSpecial','airSpecial'].includes(slot) && rangedArchetype(fighter) && override.projectile == null) {
-    move.projectile = true;
-    move.active = 1;
-    move.reach = Math.max(move.reach, slot === 'airSpecial' ? 560 : 720);
-    move.projectileCount = slot === 'downSpecial' ? 2 : 1;
-  }
-
-  if (slot === 'super' && rangedArchetype(fighter) && override.projectile == null) {
-    move.projectile = true;
-    move.active = 1;
-    move.reach = 980;
-    move.projectileCount = fighter.boss ? 5 : 3;
-    move.projectileScale *= 1.22;
-    move.projectileSpeed = 14.5;
+    if (override.effectOverride === undefined) move.effect ||= context.throwEffect ? { id: context.throwEffect, duration: context.throwEffectDuration || 90, potency: 1 } : null;
   }
 
   if (slot === 'desperation') {
-    move.projectile = rangedArchetype(fighter) && override.projectile !== false;
-    move.projectileCount = move.projectile ? Math.max(5, move.projectileCount) : move.projectileCount;
     move.projectileScale *= 1.35;
     move.armorFrames = Math.max(move.armorFrames, fighter.boss ? 28 : 16);
   }
@@ -638,125 +618,108 @@ function disambiguateMoveNames(moves) {
   }
 }
 
-function applyBehaviorEvidence(moves, fighter, overrides = {}) {
-  const text = `${fighter.canonicalBehavior || ''} ${fighter.signature || ''}`.toLowerCase();
-  const eligible = !String(fighter.catalogueStatus || '').includes('adapted');
-  const markDirect = (key, tag) => {
-    if (!eligible || overrides[key]?.fidelity) return;
-    moves[key].fidelity = 'direct-canonical';
-    moves[key].tags = [...new Set([...(moves[key].tags || []), `evidence:${tag}`])];
-  };
-  const rename = (key, suffix) => {
-    if (overrides[key]?.name) return;
-    moves[key].name = `${fighter.signature} — ${suffix}`;
-  };
-
-  if (eligible) markDirect('neutralSpecial', 'signature');
-
-  if (/(crache|projett|tir|salve|éclair|foudre|feu|poison|cri|onde|fluide|nuage|souffle|dard|rafale)/.test(text)) {
-    const move = moves.neutralSpecial;
-    move.projectile = true;
-    move.active = 1;
-    move.reach = Math.max(move.reach, 680);
-    move.projectileCount = /(salve|rafale|plusieurs|multiples)/.test(text) ? Math.max(move.projectileCount, 3) : Math.max(move.projectileCount, 1);
-    move.projectileScale = Math.max(move.projectileScale, fighter.boss ? 1.24 : 1.05);
-    markDirect('neutralSpecial', 'projectile');
-  }
-  if (/(charge|ruée|bond|plonge|piqué|fonce|poursuit|accélération|dash)/.test(text)) {
-    const move = moves.forwardSpecial;
-    move.travel = Math.max(Math.abs(move.travel || 0), fighter.boss ? 4.1 : 3.55);
-    move.reach = Math.max(move.reach, 178);
-    move.knockback = Math.max(move.knockback, 13);
-    rename('forwardSpecial', 'assaut attesté');
-    markDirect('forwardSpecial', 'rush');
-  }
-  if (/(agripp|saisi|attire|enferme|plaque|étreinte|verrou|morsure prolongée|dévor|contention|capture)/.test(text)) {
-    const move = moves.throw;
-    const backMove = moves.backThrow;
-    move.reach = Math.max(move.reach, 72);
-    move.damage = Math.round(move.damage * 1.08);
-    backMove.reach = Math.max(backMove.reach, 72);
-    backMove.damage = Math.round(backMove.damage * 1.06);
-    rename('throw', 'saisie attestée');
-    rename('backThrow', 'retournement de la saisie');
-    markDirect('throw', 'grab');
-    if (/(projette|projection|renverse|jette derrière)/.test(text)) markDirect('backThrow', 'grab-reversal');
-  }
-  if (/(vol|aérien|plonge|piqué|ailes|plafond|hauteur|suspendu)/.test(text)) {
-    const move = moves.airSpecial;
-    move.requiresAir = true;
-    move.requiresGround = false;
-    move.verticalTravel = Math.max(Math.abs(move.verticalTravel || 0), 2.8);
-    rename('airSpecial', 'attaque aérienne');
-    markDirect('airSpecial', 'aerial');
-  }
-  if (/(dispari|réappar|traverse|téléport|intangible|camoufle|hors écran|miroir|illusion|leurre)/.test(text)) {
-    const move = moves.backSpecial;
-    move.teleport ||= 'behind';
-    move.invulnFrames = Math.max(move.invulnFrames, 7);
-    moves.dodgeAttack.invulnFrames = Math.max(moves.dodgeAttack.invulnFrames, 6);
-    moves.dodgeAttack.teleport ||= /(?:dispari|réappar|téléport|hors écran|miroir)/.test(text) ? 'cross' : null;
-    rename('backSpecial', 'apparition attestée');
-    rename('dodgeAttack', 'riposte d’apparition');
-    markDirect('backSpecial', 'phase');
-    markDirect('dodgeAttack', 'evasive-strike');
-  }
-  if (/(sol|souterrain|surgit|rampe|grille|conduit|paroi|mur|plancher|racine)/.test(text)) {
-    const move = moves.downSpecial;
-    move.level = 'low';
-    move.trap ||= /(souterrain|sol|racine|grille|conduit)/.test(text);
-    move.reach = Math.max(move.reach, move.trap ? 250 : 195);
-    rename('downSpecial', 'attaque du terrain');
-    markDirect('downSpecial', 'ground');
-  }
-  if (/(bloque|invulnérable|encaisse|carapace|résistant|parade|armure|immobile)/.test(text)) {
-    const move = moves.backSpecial;
-    move.armorFrames = Math.max(move.armorFrames, fighter.boss ? 22 : 12);
-    move.counterStance ||= /(bloque|parade|immobile)/.test(text);
-    moves.guardCounter.guardDamage = Math.max(moves.guardCounter.guardDamage, fighter.boss ? 1.65 : 1.5);
-    moves.guardCounter.armorBreak = true;
-    rename('backSpecial', 'garde attestée');
-    rename('guardCounter', 'riposte de garde');
-    markDirect('backSpecial', 'defense');
-    if (/(bloque|parade|contre-attaque|riposte)/.test(text)) markDirect('guardCounter', 'guard-counter');
-  }
-  if (/(sol|allong|couch|gisant|immobile|cadavre|relève|redresse|réveille|joue mort|play dead)/.test(text)) {
-    moves.wakeupAttack.invulnFrames = Math.max(moves.wakeupAttack.invulnFrames, 7);
-    moves.wakeupAttack.knockdown = true;
-    rename('wakeupAttack', 'reprise depuis le sol');
-    if (/(relève|redresse|réveille|joue mort|play dead)/.test(text)) markDirect('wakeupAttack', 'ground-recovery');
-  }
-  if (/(groupe|meute|essaim|multiples|plusieurs|deux corps|double|deux têtes|invocations)/.test(text)) {
-    const move = moves.neutralSpecial;
-    move.hits = Math.max(move.hits, 2);
-    move.hitInterval = Math.min(move.hitInterval, 4);
-    if (move.projectile) move.projectileCount = Math.max(move.projectileCount, 2);
-    markDirect('neutralSpecial', 'multi');
-  }
-
-  // Les adaptations explicites restent déclarées et ne sont jamais promues en action canonique.
-  if (!eligible) {
-    for (const move of Object.values(moves)) {
-      if (move.fidelity === 'direct-canonical' && !overrides[move.key]?.fidelity) move.fidelity = 'behavior-composite';
-    }
-  }
-}
-
 export function buildLoreMoveset(fighter, context = {}) {
   const overrides = SPECIFIC_OVERRIDES[fighter.id] || {};
+  const referencePolicy = combatReferencePolicy(fighter);
+  const recipe = combatReferenceRecipe(fighter);
   const moves = {};
-  for (const slot of MOVESET_KEYS) moves[slot] = makeMove(slot, fighter, context, overrides[slot] || {});
+  for (const slot of MOVESET_KEYS) {
+    const legacy = overrides[slot] || {};
+    const isSuper = slot === 'super' || slot === 'desperation';
+    // Desperation changes the versus risk/reward, never the source's inventory.
+    const researched = recipe.moves?.[slot] || (slot === 'desperation' ? recipe.moves?.super : null) || {};
+    const override = {
+      ...legacy, ...researched,
+      projectile:Boolean(researched.projectile),
+      teleport:researched.teleport || null,
+      trap:Boolean(researched.trap),
+      aura:Boolean(researched.aura),
+      effectOverride:researched.effectOverride || null,
+      canonicalBasis:referencePolicy.observedBasis || 'Gestes non relevés pour cette édition ; transposition de prototype uniquement.',
+      fidelity:isSuper || !referencePolicy.observedBasis || referencePolicy.adaptationMode === 'versus-scripted'
+        ? 'versus-adaptation' : 'behavior-composite',
+      tags:[...(legacy.tags || []).filter(tag => !tag.startsWith('evidence:')), 'reference-policy', 'versus-timing']
+    };
+    // Turning off a generated projectile must also remove its one-frame active
+    // window and its full-screen reach; otherwise it becomes an invisible beam.
+    if (legacy.projectile && !override.projectile) {
+      override.active = researched.active ?? SLOT_SPECS[slot].active;
+      override.reach = researched.reach ?? SLOT_SPECS[slot].reach;
+    }
+    if (legacy.teleport && !override.teleport && researched.invulnFrames == null) {
+      override.invulnFrames = SLOT_SPECS[slot].invulnFrames || 0;
+    }
+    if (researched.hits > 1 && !override.projectile && !override.trap) {
+      const interval = Math.max(2, override.hitInterval ?? SLOT_SPECS[slot].hitInterval ?? 4);
+      override.active = Math.max(override.active ?? SLOT_SPECS[slot].active, 1 + (researched.hits - 1) * interval);
+    }
+    // Outdated names such as “cutting ribbons” or an apparition must not survive
+    // removal of that ability. An explicit researched name wins when available.
+    if (!researched.name && (legacy.projectile || legacy.teleport || legacy.trap || legacy.aura)) {
+      override.name = `${fighter.name} — ${MOVE_ROLE_LABELS[slot]}`;
+    }
+    if (isSuper && !researched.name) override.name = referencePolicy.superName || `${fighter.name} — séquence de versus`;
+    if (slot === 'desperation') override.name = `${override.name || defaultName(slot, fighter, normaliseKind(fighter))} — dernier recours`;
+    const move = makeMove(slot, fighter, context, override);
+    move.referenceIds = [...referencePolicy.referenceIds];
+    move.referenceStatus = referencePolicy.observedBasis ? 'observed-behavior-versus-transposition' : 'unverified-versus-prototype';
+    move.sourceTimingMeasured = false;
+    if (isSuper) move.description = referencePolicy.superDescription;
+    if (researched.ammoCost != null) move.ammoCost = researched.ammoCost;
 
-  // Le coup signature doit toujours porter le nom et l’identité du profil.
-  if (!overrides.neutralSpecial?.name) moves.neutralSpecial.name = fighter.signature;
-  moves.super.name = overrides.super?.name || `NIGHTMARE — ${fighter.signature}`;
-  moves.desperation.name = overrides.desperation?.name || `OTHERWORLD — ${fighter.signature}`;
+    const disabledReason = !referencePolicy.combatEnabled ? 'Ce rôle ne possède pas de kit de combat autonome.'
+      : isSuper && !referencePolicy.superEnabled ? referencePolicy.superReason
+      : recipe.disabledSlots?.[slot] || (move.requiresAir && !referencePolicy.canJump
+        ? 'Le corps documenté ne permet pas ce saut libre.'
+        : slot === 'dodgeAttack' && !referencePolicy.canDodge ? 'Ce corps attaché ne dispose pas d’une esquive libre.'
+        : slot === 'backThrow' && !referencePolicy.canMove ? 'La projection avec échange de places est incompatible avec le support fixe.' : '');
+    move.enabled = !disabledReason;
+    move.disabledReason = disabledReason || null;
+    if (!move.enabled) {
+      move.referenceStatus = 'blocked-reference';
+      move.fidelity = 'versus-adaptation';
+      move.projectile = false;
+      move.teleport = null;
+      move.trap = false;
+      move.aura = false;
+      move.effect = null;
+    }
+    if (!referencePolicy.canMove) move.travel = 0;
+    if (!referencePolicy.canJump) {
+      move.verticalTravel = 0;
+      move.airControl = 0;
+    }
+    moves[slot] = move;
+  }
 
-  applyBehaviorEvidence(moves, fighter, overrides);
+  if (recipe.ammoProfile?.exhaustion === 'unarmed') {
+    for (const slot of MOVESET_KEYS) {
+      const move = moves[slot];
+      if (!move.enabled) continue;
+      const exhausted = structuredClone(move);
+      exhausted.ammoCost = 0;
+      exhausted.projectile = false;
+      exhausted.projectileCount = 1;
+      exhausted.effect = null;
+      exhausted.active = SLOT_SPECS[slot].active;
+      exhausted.reach = Math.round(SLOT_SPECS[slot].reach * (context.reach || 1));
+      exhausted.name = `Bras désarmé — ${MOVE_ROLE_LABELS[slot]}`;
+      if (slot === 'neutralSpecial') {
+        exhausted.name = 'Étranglement après la dernière munition';
+        exhausted.level = 'throw';
+        exhausted.reach = 72;
+        exhausted.hits = 1;
+      }
+      move.exhaustedMove = exhausted;
+    }
+  }
   disambiguateMoveNames(moves);
 
-  // Les annulations ne doivent jamais pointer vers une entrée inexistante.
-  for (const move of Object.values(moves)) move.cancelInto = move.cancelInto.filter((key) => moves[key]);
+  // Disabled catalogue slots stay addressable for the workshop, not executable.
+  for (const move of Object.values(moves)) {
+    move.cancelInto = move.enabled ? move.cancelInto.filter((key) => moves[key]?.enabled) : [];
+    if (move.exhaustedMove) move.exhaustedMove.cancelInto = [...move.cancelInto];
+  }
 
   const direct = Object.values(moves).filter((move) => move.fidelity === 'direct-canonical').length;
   const composite = Object.values(moves).filter((move) => move.fidelity === 'behavior-composite').length;
@@ -766,6 +729,8 @@ export function buildLoreMoveset(fighter, context = {}) {
     moves,
     order: MOVESET_KEYS,
     inputMap: MOVE_INPUTS,
+    referencePolicy,
+    ammoProfile: recipe.ammoProfile || null,
     presentation: {
       intro: fighter.boss ? `L’arène se déforme autour de ${fighter.name}.` : `${fighter.name} émerge de la brume.`,
       taunt: fighter.canonicalBehavior,
@@ -773,8 +738,8 @@ export function buildLoreMoveset(fighter, context = {}) {
       defeat: fighter.boss ? 'La phase du cauchemar se brise.' : 'La manifestation se dissout dans le brouillard.'
     },
     fidelitySummary: { direct, composite, adapted, total: MOVESET_KEYS.length },
-    canonicalBasis: fighter.canonicalBehavior,
-    adaptationNote: fighter.adaptation
+    canonicalBasis: referencePolicy.observedBasis || fighter.canonicalBehavior,
+    adaptationNote: 'Gestes transposés depuis les fiches de recherche ; commandes, distances, dégâts et durées propres au versus. Aucune animation 1:1 validée.'
   };
 }
 

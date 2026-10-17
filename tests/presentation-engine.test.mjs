@@ -4,6 +4,7 @@ import { FightEngine } from '../src/fight.js';
 import { ROSTER, STAGES } from '../src/data.js';
 import { SPRITES } from '../src/sprite-manifest.js';
 import { OUTRO_TICKS } from '../src/presentation-sequences.js';
+import { cinematicSummary } from '../src/lore-cinematics.js';
 
 const engines = new Set();
 const restoredArt = new Map();
@@ -163,7 +164,8 @@ test('a final ordinary knockout settles once, then only the winner exits while t
   assert.equal(attacker.presentation.frame, 0); assert.equal(target.presentation.complete, true);
   assert.equal(attacker.presentation.clipDuration, 0);
   let overlays = 0; engine.ctx.fillRect = () => overlays++;
-  engine.renderMatchEnd(engine.ctx); assert.equal(overlays, 1, 'without an imported exit clip the result display keeps its existing timing');
+  engine.renderMatchEnd(engine.ctx); assert.equal(overlays, 0, 'the original composed exit finishes before the result veil, without becoming an animated image');
+  assert.equal(attacker.presentation.stagingDuration, OUTRO_TICKS);
   const heldDefeat = { ...target.presentation };
   engine.togglePause(true); ticks(engine, 30); assert.equal(attacker.presentation.frame, 0);
   engine.togglePause(false); ticks(engine, OUTRO_TICKS + 30);
@@ -187,14 +189,16 @@ test('a final timeout uses win and loss match clips without converting the livin
   assert.ok(engine.actors.every(actor => !actor.ko));
 });
 
-test('both signature and stage finishers synchronize attacker and target to the existing cinematic timer', () => {
+test('both signature and stage finishers synchronize compatible actors to the authored cinematic timer', () => {
   for (const stageBased of [false, true]) {
     const matches = [];
-    const engine = makeEngine({ stageFatalities: stageBased, callbacks: { onMatchEnd: result => matches.push(result) } });
+    const pairing=stageBased?{p1:ROSTER.find(f=>f.id==='sh2_bubble_head_nurse_024'),p2:ROSTER.find(f=>f.id==='film_red_pyramid_film_175'),stage:STAGES.find(s=>s.id==='hazel_subway')}:{};
+    const engine = makeEngine({ ...pairing,stageFatalities: stageBased, callbacks: { onMatchEnd: result => matches.push(result) } });
     enterFight(engine); engine.round = 2; engine.actors[1].roundWins = 1;
+    if(stageBased){engine.actors[0].x=145;engine.actors[1].x=355;}
     knockout(engine, 1, stageBased);
     const { total, definition } = engine.fatality;
-    assert.equal(total, Math.max(168, definition.sequence.length * 46));
+    assert.equal(total, cinematicSummary(definition.id).duration);
     assert.deepEqual(presentationKeys(engine), ['finished', 'finisher']);
     assert.equal(engine.actors[0].presentation.sequenceId, engine.actors[1].presentation.sequenceId);
     for (const actor of engine.actors) {
@@ -256,8 +260,8 @@ test('a reentrant result callback can retry or leave without an outro replacing 
 });
 
 test('imported presentation clips extend both actor tracks without altering combat timings or the match clock', () => {
-  importedClips(ROSTER[0], { intro: [180, 170], winRound: [190, 170], winMatch: [170, 170], outro: [110, 90], finisher: [180, 180] });
-  importedClips(ROSTER[1], { intro: [190, 190], loseRound: [150, 150], loseMatch: [190, 190], finished: [190, 210] });
+  importedClips(ROSTER[0], { intro: [180, 170], winRound: [190, 170], winMatch: [170, 170], outro: [110, 90], [`finisher@${ROSTER[0].id}_signature`]: [180, 180] });
+  importedClips(ROSTER[1], { intro: [190, 190], loseRound: [150, 150], loseMatch: [190, 190], [`finished@${ROSTER[0].id}_signature`]: [190, 210] });
   const matches = [];
   const engine = makeEngine({ callbacks: { onMatchEnd: result => matches.push(result) } });
   const gameplay = { ...engine.actors[0].profile.moves.neutralLight };
@@ -336,11 +340,11 @@ test('an imported outro handles Start edges and controller loss with the same pa
   assert.equal(engine.actors[0].presentation.frame, disconnected + 1);
 });
 
-test('completed and unimported outros retain the existing settled-result focus and gamepad behavior', () => {
+test('completed imported and composed outros retain settled-result focus and gamepad behavior', () => {
   for (const imported of [true, false]) {
     importedClips(ROSTER[0], imported ? { outro: [270, 270] } : { idle: [270, 270] });
     const engine = ordinaryResult();
-    if (imported) ticks(engine, engine.actors[0].presentation.duration);
+    ticks(engine, engine.actors[0].presentation.duration);
     assert.equal(engine.isPresentingOutro(), false);
     engine.onFocusLoss(); document.hidden = true; engine.onVisibilityChange();
     assert.equal(engine.paused, false);

@@ -24,9 +24,8 @@ POSE_KEYS = importer.POSE_KEYS
 MAX_STEPS, MAX_TICKS = 256, 36000
 
 
-def validate_clip(asset: dict, pose: str, clip: dict) -> dict:
-    if pose not in POSE_KEYS:
-        raise ValueError('Unknown engine pose')
+def validate_clip(asset: dict, pose: str, clip: dict, root: Path | None = None) -> dict:
+    base_pose = importer.validate_pose_key(pose, asset['fighterId'], root)
     if not isinstance(clip, dict) or not {'frames','ticksPerFrame','loop'} <= set(clip) or set(clip) - {'frames','ticksPerFrame','frameTicks','loop'}:
         raise ValueError('Invalid clip fields')
     frames = clip['frames']
@@ -38,9 +37,9 @@ def validate_clip(asset: dict, pose: str, clip: dict) -> dict:
     durations = clip.get('frameTicks', [ticks] * len(frames))
     if not isinstance(durations, list) or len(durations) != len(frames) or any(type(t) is not int or not 1 <= t <= 600 for t in durations) or sum(durations) > MAX_TICKS:
         raise ValueError('Invalid per-frame durations or total duration')
-    if pose in MOVE_KEYS and clip['loop']:
+    if base_pose in MOVE_KEYS and clip['loop']:
         raise ValueError('Attacks cannot loop independently of the engine')
-    if pose in PRESENTATION_KEYS and clip['loop']:
+    if base_pose in PRESENTATION_KEYS and clip['loop']:
         raise ValueError('Presentations must play once; looping is refused')
     return dict(frames=list(frames), ticksPerFrame=ticks, frameTicks=list(durations), loop=clip['loop'])
 
@@ -72,7 +71,7 @@ def apply_packet(root: Path, packet: dict, apply: bool = False, pose_reviewed: b
     previous = asset['clips'].get(pose)
     if packet['previousClip'] != previous:
         raise ValueError('Stale clip export; the previous timeline changed')
-    clip = validate_clip(asset, pose, packet['clip'])
+    clip = validate_clip(asset, pose, packet['clip'], root)
     if apply and not pose_reviewed:
         raise ValueError('Inspect the complete pose and pass --pose-reviewed before publishing')
     pixels = []

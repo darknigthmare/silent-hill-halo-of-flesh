@@ -12,7 +12,8 @@ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.',
  'Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.',
  'Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.',
- 'Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result ticks produce each engine result; this is not a played campaign.',
+ 'Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result/outro ticks produce each engine result; this is not a played campaign.',
+ 'Air Screamer performs the prepared decisive aerial finisher against the film candidate. The inverse film grip is incompatible with a flying target and is not substituted.',
  'The two existing candidate PNGs are used. No new production image or animation is added.'
 ]};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
@@ -30,7 +31,7 @@ try {
     }});
   });
   const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));page.on('dialog',d=>d.accept());
-  const versus=base+'/modules/unified-versus.html?qa=1';
+  const versus=base+'/modules/unified-versus.html?qa=1&p1=sh1_air_screamer_001&p2=film_red_pyramid_film_175';
   await page.goto(versus);await page.waitForFunction(()=>!!window.__HALO_QA__);
   await page.locator('body').click({position:{x:5,y:5}});await page.keyboard.press('Alt+Enter');
   check('modified Enter does not launch a combat from selection',await page.evaluate(()=>!__HALO_QA__.engine));
@@ -94,7 +95,9 @@ try {
   });
   check('first-round knockout keeps the match open without a finisher',firstRound.roundsToWin===2&&firstRound.phase==='roundEnd'&&!firstRound.finisher&&firstRound.wins===1);
   const finalRound=await page.evaluate(()=>{
-    const e=__HALO_QA__.engine;e.finishRoundTransition();e.phase='fight';
+    const e=__HALO_QA__.engine;e.running=false;e.togglePause(false);
+    const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+    const introTicks=e.phaseTimer;for(let tick=0;tick<introTicks;tick++)e.update();e.togglePause(true);
     e.actors[1].health=0;e.actors[1].lastHit={attackerIndex:0,isSuper:true,environmental:false};
     e.resolveKnockouts();return {phase:e.phase,finisher:!!e.fatality,wins:e.actors[0].roundWins};
   });
@@ -150,6 +153,7 @@ try {
         e.config.fatalities=false;e.round=e.config.roundsToWin;winner.roundWins=e.config.roundsToWin-1;loser.roundWins=0;
         loser.health=0;loser.ko=false;loser.lastHit={attackerIndex:0,moveKey:'neutralLight',isSuper:false,environmental:false};
         e.resolveKnockouts();const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+        const outroTicks=e.winner?.presentation?.duration||0;for(let tick=0;tick<outroTicks&&e.isPresentingOutro();tick++)e.update();
         return e.phase==='matchEnd'&&e.winner===winner&&winner.roundWins===e.config.roundsToWin&&loser.ko&&loser.presentation?.key==='loseMatch'&&q.run.status==='won';
       });
       check(`Rite ${index+1} advances from a coherent match end to its next prepared encounter`,completed&&await page.evaluate(()=>__HALO_QA__.continueRun()));

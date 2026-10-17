@@ -1,10 +1,11 @@
+import {fighterReferenceHTML,stageReferenceHTML,finisherReferenceHTML,moveAvailabilityHTML,fighterRoleLabel,COMBAT_ROLE_LABELS} from './reference-ui.js';
 import { spriteFor, spriteStatus, spriteCache, pinCombatSprites } from './sprite-system.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
 import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
-import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS, validateRun, runEncounterRules } from './run-progress.js';
+import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS, validateRun, runEncounterRules, chronicleEncounterPlan, runCombatBlockers, CHRONICLE_ENCOUNTER_FORMAT } from './run-progress.js';
 import {bindTouchButton} from './touch-controls.js';
 import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
@@ -88,7 +89,7 @@ function fighterInfo(fighter) {
       <div class="stat"><span>PORTÉE</span><span><i style="width:${valueScore(profile.reach, .7, 1.55)}%"></i></span></div>
     </div>
     <div class="trait-line"><span class="trait-chip">${escapeHTML(profile.trait.name)}</span><span class="trait-chip affliction-chip">${escapeHTML(profile.affliction.name)}</span></div>
-    <div class="signature">${escapeHTML(fighter.signature)}</div>`;
+    <div class="signature">${escapeHTML(fighter.signature)}</div><p class="fighter-role">${escapeHTML(fighterRoleLabel(fighter,profile))}</p>`;
 }
 
 function renderSelected() {
@@ -102,7 +103,8 @@ function renderSelected() {
   els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
   const current=[state.p1,state.p2].filter(f=>!spriteFor(f));
-  const status=$('#spriteLaunchStatus');if(status)status.textContent=current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
+  const blocked=[state.p1,state.p2].filter(f=>createCombatProfile(f).referencePolicy?.combatEnabled===false);
+  const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
 }
 
 function renderStageMini() {
@@ -248,14 +250,14 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
   const profile = createCombatProfile(fighter);
   const moves = MOVESET_KEYS.map((key) => profile.moves[key]).map((move) => {
     const effects = [move.trigger ? `fenêtre ${move.trigger}` : '', move.projectile ? `${move.projectileCount || 1} projectile(s)` : '', move.trap ? 'piège' : '', move.teleport ? `téléportation ${move.teleport}` : '', move.counterStance ? 'contre' : '', move.armorBreak ? 'brise-armure' : '', move.sideSwitch ? 'changement de côté' : '', move.hardKnockdown ? 'chute dure' : '', move.groundBounce ? 'rebond au sol' : '', move.effect ? AFFLICTIONS[move.effect.id]?.name || move.effect.id : '', move.cancelInto?.length ? `annule vers ${move.cancelInto.map((key) => profile.moves[key]?.input || key).join('/')}` : ''].filter(Boolean);
-    return `<li data-fidelity="${escapeHTML(move.fidelity)}"><div><kbd>${escapeHTML(move.input)}</kbd><b>${escapeHTML(move.name)}</b></div><span>${move.damage} dégâts · ${move.startup}/${move.active}/${move.recovery}f · ${escapeHTML(move.level.toUpperCase())}${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span><small>${escapeHTML(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} · ${escapeHTML(move.canonicalBasis)}</small></li>`;
+    return `<li data-fidelity="${escapeHTML(move.fidelity)}" data-enabled="${move.enabled!==false}">${moveAvailabilityHTML(move)}<div><kbd>${escapeHTML(move.input)}</kbd><b>${escapeHTML(move.name)}</b></div><span>${move.damage} dégâts · ${move.startup}/${move.active}/${move.recovery}f · ${escapeHTML(move.level.toUpperCase())}${effects.length ? ` · ${escapeHTML(effects.join(' · '))}` : ''}</span><small>${escapeHTML(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} · ${escapeHTML(move.canonicalBasis)}</small></li>`;
   }).join('');
   const arena = getStage(fighter.stageId);
   const hazard = STAGE_HAZARDS[arena.director?.hazardDeck?.[0]];
   const phases = profile.bossPhases?.length
     ? `<div class="dossier-box phases"><b>PHASES DE BOSS</b><ol>${profile.bossPhases.map((phase) => `<li><strong>${escapeHTML(phase.name)}</strong><span>${Math.round(phase.threshold * 100)}% · puissance ×${phase.power.toFixed(2)} · vitesse ×${phase.speed.toFixed(2)}</span></li>`).join('')}</ol></div>`
     : '';
-  const fatalities = (fighter.fatalities || []).map((fatality) => `<li><strong>${escapeHTML(fatality.name)}</strong><span>${escapeHTML(fatality.type.toUpperCase())} · ${escapeHTML(fatality.sequence.join(' › '))}<br><small>${escapeHTML(fatality.canonicalBasis)} · ${escapeHTML(fatality.fidelity)}</small></span></li>`).join('');
+  const fatalities = (fighter.fatalities || []).map(fatality=>`<li>${finisherReferenceHTML(fighter,fatality)}</li>`).join('');
   const stageAnimations = (arena.animationTracks || arena.animations || []).map((entry) => escapeHTML(String(typeof entry === 'string' ? entry : entry.id).replace(/([A-Z])/g, ' $1').toUpperCase())).join(' · ');
   const stageEvents = (arena.director?.events || []).map((id) => escapeHTML(String(id).replace(/([A-Z])/g, ' $1').toUpperCase())).join(' · ');
   const stageHazards = (arena.director?.hazardDeck || []).map((id) => escapeHTML(STAGE_HAZARDS[id]?.name || id)).join(' · ');
@@ -278,13 +280,14 @@ function openDossier(fighter = state.activeSlot === 1 ? state.p1 : state.p2) {
     </div>
     <div class="adaptation-note"><b>NOTE DE FIDÉLITÉ</b><br>${escapeHTML(fighter.adaptation)} Les proportions, signes distinctifs, posture et rôle sont documentés séparément des règles d’équilibrage.<br><br><strong>STATUT :</strong> ${escapeHTML(fighter.catalogueStatus)} · ${escapeHTML(fighter.nameStatus)} · ${escapeHTML(fighter.evidenceTier)}</div>
     <h4>MOVESET COMPLET · ${profile.moveset.fidelitySummary.total} COUPS</h4><div class="dossier-move-summary"><span>${profile.moveset.fidelitySummary.direct} DIRECTS</span><span>${profile.moveset.fidelitySummary.composite} COMPOSITES</span><span>${profile.moveset.fidelitySummary.adapted} ADAPTATIONS</span></div><ul class="move-list">${moves}</ul>`;
+  els.dossierCopy.innerHTML += fighterReferenceHTML(fighter,profile)+stageReferenceHTML(arena);
   els.dossier.classList.remove('hidden');
 }
 function closeDossier() { els.dossier.classList.add('hidden'); }
 
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
-  const candidates = state.filtered;
+  const candidates = state.filtered.filter(f=>createCombatProfile(f).referencePolicy.combatEnabled);
   const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
   if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
   state.p1 = randomItem(pool);
@@ -317,6 +320,20 @@ function configurePreset() {
     if (preset === 'boss' || preset === 'ritual') els.rounds.value = '1';
     if (preset === 'ritual') els.ritualSelect.disabled = true;
   }
+  renderChronicleDossiers();
+}
+
+function renderChronicleDossiers(run=null) {
+  const plan=run||(preset==='chronicle'?chronicleEncounterPlan(params.get('route')):null);
+  const dossiers=plan?.chronicleFormat===CHRONICLE_ENCOUNTER_FORMAT?plan.referenceDossiers:[];
+  for(const [id,anchor,interactive] of [['chronicleReferenceDossiers',$('#runCheckpoint'),true],['fightReferenceDossiers',$('.game-head'),false]]){
+    let panel=$('#'+id);
+    if(!panel){panel=document.createElement('aside');panel.id=id;panel.className='adaptation-note hidden';anchor.insertAdjacentElement('afterend',panel);}
+    panel.classList.toggle('hidden',!dossiers.length);
+    if(!dossiers.length){panel.replaceChildren();continue;}
+    panel.innerHTML=`<details${interactive?' open':''}><summary>${dossiers.length} dossier(s) hors combat dans cette chronique</summary><p>${plan.queue.length} rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.</p><ol>${dossiers.map(dossier=>`<li value="${dossier.chapterIndex+1}"><strong>Chapitre ${dossier.chapterIndex+1} · ${escapeHTML(getFighter(dossier.fighterId).name)}</strong> — ${escapeHTML(COMBAT_ROLE_LABELS[dossier.role]||dossier.role)} · ${escapeHTML(getStage(dossier.stageId).name)}${interactive?` <button class="ui-button" data-run-dossier="${escapeHTML(dossier.fighterId)}">CONSULTER LE DOSSIER</button>`:''}</li>`).join('')}</ol></details>`;
+    if(interactive)panel.querySelectorAll('[data-run-dossier]').forEach(button=>button.addEventListener('click',()=>openDossier(getFighter(button.dataset.runDossier))));
+  }
 }
 
 function selectedRules() {
@@ -343,7 +360,12 @@ function checkpointNotice() {
   const saved=loadRun(), banner=$('#runCheckpoint');
   const pending=saved&&saved.status!=='complete';
   banner.classList.toggle('hidden',!pending);
-  if(pending)$('#runCheckpointText').textContent=`Parcours ${saved.mode} : ${saved.wins}/${saved.queue.length} victoires. ${saved.status==='won'?'Prochain combat prêt.':'Reprise au début de la rencontre en cours.'}`;
+  if(pending){
+    const blockers=runCombatBlockers(saved);
+    $('#runCheckpointText').textContent=`Parcours ${saved.mode} : ${saved.wins}/${saved.queue.length} victoires. `+(blockers.length?
+      `Reprise suspendue : ${blockers.map(entry=>getFighter(entry.fighterId).name).join(' · ')} exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée.`:
+      saved.status==='won'?'Prochain combat prêt.':'Reprise au début de la rencontre en cours.');
+  }
 }
 function activateRun(run) {
   state.run=run;preset=run.mode;state.mode=preset;state.p1=getFighter(run.playerId);
@@ -352,6 +374,7 @@ function activateRun(run) {
   els.rounds.value=String(rules.roundsToWin);els.timer.value=String(rules.timeLimit);els.difficulty.value=rules.difficulty;
   for(const key of RULE_BOOLEANS)els[key].checked=rules[key]!==false;
   els.ritualSelect.value=rules.ritualId||'none';
+  renderChronicleDossiers(run);
 }
 function restoreCheckpoint() {
   if(state.loadingSprites)return false;
@@ -429,6 +452,12 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   // Preflight the WHOLE run before overwriting a checkpoint or counting an attempt.
   const ids=candidate?[candidate.playerId,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
   const fighters=[...new Set(ids)].map(getFighter);
+  const unavailable=fighters.filter(f=>createCombatProfile(f).referencePolicy?.combatEnabled===false);
+  if(unavailable.length){
+    const preservation=preserveRun&&candidate?' Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite.':'';
+    flow.announce(`${unavailable.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.${preservation}`,true);return false;
+  }
+  renderChronicleDossiers(candidate);
   state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
   $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
   let ready;
@@ -467,7 +496,8 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   els.trainingPanel.classList.toggle('hidden', !training);
   els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   const ritual = currentRitual();
-  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
+  const chapter=state.run?.chronicleFormat===CHRONICLE_ENCOUNTER_FORMAT?` · CHAPITRE ${state.run.chapterIndices[state.run.index]+1}`:'';
+  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length}${chapter} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
   refreshControlHelp();
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
   const generation=state.generation, config=fightConfig();
@@ -556,17 +586,17 @@ function handleMatchEnd(result) {
   const generation=state.generation;
   const revealResult=()=>{
     if(generation!==state.generation||!state.engine||state.engine.destroyed||state.engine.phase!=='matchEnd')return;
-    const outro=state.engine.actors[result.winnerIndex]?.presentation;
-    // An imported exit must finish on simulated time, including pauses. Records
+    // Every staged or imported exit must finish on simulated time, including pauses. Records
     // were already settled above, and leaving/retrying invalidates this callback.
-    if(outro?.key==='outro'&&outro.clipDuration>0&&!outro.complete){
+    if(state.engine.isPresentingOutro()){
       state.resultTimer=setTimeout(revealResult,50);
       return;
     }
     const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[state.run.mode]):'CONFRONTATION';
     els.resultKicker.textContent=`${title} · ${won?'VICTOIRE DU SUJET I':'DÉFAITE DU SUJET I'}`;
-    els.resultTitle.textContent=completedRun?'PARCOURS TERMINÉ':result.winner.name;
-    els.resultText.textContent=completedRun?(route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
+    const dossiers=state.run?.referenceDossiers||[];
+    els.resultTitle.textContent=completedRun?(dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
+    els.resultText.textContent=completedRun?(dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
       (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
     const rows=[['RANG DU SUJET I',grade],['COMBO MAX',playerStats.maxCombo||0],['GARDES PARFAITES',playerStats.perfectGuards||0],
       ['CONTRES',playerStats.counters||0],['DANGERS SUBIS',playerStats.hazardsTaken||0],['FATALITÉS',playerStats.fatalities||0]];

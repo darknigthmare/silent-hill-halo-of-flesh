@@ -6,13 +6,13 @@ import {resolve} from 'node:path';
 import {VERSION} from '../src/data.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-v090');
 await mkdir(out,{recursive:true});
-const report={version:VERSION,kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result ticks and the engine match callback for checkpoint QA only; no played victory is claimed.','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
+const report={version:VERSION,kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result/outro ticks and the engine match callback for checkpoint QA only; no played victory is claimed.','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4173';
 let server,browser;
 const assert=(name,ok)=>{report.assertions.push({name,passed:!!ok});if(!ok)throw Error(name);};
 const capture=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
 try{
-  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4173'],{cwd:root,stdio:'ignore'});
+  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4173','--dist'],{cwd:root,stdio:'ignore'});
   let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}
   assert('HTTP server starts',available);
   browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
@@ -52,6 +52,7 @@ try{
     winner.health=winner.maxHealth*.6;winner.meter=50;winner.stats.perfectGuards=2;winner.stats.damageTaken=winner.maxHealth-winner.health;
     loser.health=0;loser.ko=false;loser.lastHit={attackerIndex:0,moveKey:'neutralLight',isSuper:false,environmental:false};
     e.resolveKnockouts();const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+    const outroTicks=e.winner?.presentation?.duration||0;for(let tick=0;tick<outroTicks&&e.isPresentingOutro();tick++)e.update();
     return e.phase==='matchEnd'&&e.winner===winner&&winner.roundWins===e.config.roundsToWin&&loser.ko&&loser.presentation?.key==='loseMatch'&&q.run.status==='won';
   });
   assert('prepared checkpoint victory reaches a coherent engine match end',completed);

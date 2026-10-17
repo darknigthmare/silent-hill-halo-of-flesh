@@ -28,7 +28,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: http-qa-v095
+          name: http-qa-v096
           path: |
             tests/http-v090/
             tests/http-sprites/
@@ -37,4 +37,6 @@ jobs:
             tests/http-recovery-v094/
             tests/http-boundaries-v095/
             tests/http-presentations/
+            tests/http-reference-integration/
+            tests/http-chronicles/
           retention-days: 14

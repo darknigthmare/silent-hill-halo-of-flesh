@@ -45,7 +45,11 @@ test('every Rite encounter applies its actual modifier to the engine across chec
       const profile=createCombatProfile(getFighter(run.playerId));
       assert.equal(engine.actors[0].maxGuard,Math.round(profile.guard*(modifier.guardScale||1)));
       assert.equal(engine.actors[0].profile.speed,profile.speed*(modifier.speedScale||1));
-      if(modifier.startOtherworld)assert.equal(engine.world.phase,'otherworld');
+      if(modifier.startOtherworld){
+        const stage=getStage(run.stages[index]);
+        assert.equal(engine.world.phase,stage.shift.enabled||stage.shift.startOtherworld?'otherworld':'fog',
+          'a rite preserves a fixed source phase while applying its other modifiers');
+      }
       assert.deepEqual(run.rules,savedRules,'deriving an encounter must not rewrite saved defaults');
     } finally {engine.destroy();}
     run=settleRun(run,{winnerIndex:0,stats:{winner:{healthRatio:.75}},snapshot:{p1:{meter:0}}});

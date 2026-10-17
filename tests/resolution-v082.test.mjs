@@ -7,6 +7,18 @@ import { takeDamage, timeoutWinner, sweptProjectileContact } from '../src/combat
 import { AMBIENT_ONLY_HAZARDS, constrainStageDeck } from '../src/stage-lore-policy.js';
 import { stageHazardDeck } from '../src/stage-director.js';
 
+const stageById=id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,`stage fixture ${id}`);return s;};
+
+// These visual-only event definitions still have a runtime contract, even when
+// no researched location currently authorizes them. This isolated catalogue is
+// never merged into a production stage or assigned a canonical reference.
+function syntheticAmbientStage(events){
+  return {id:'test_ambient_contract',name:'SYNTHETIC AMBIENT FIXTURE',source:'test-fixture',family:'room',
+    props:['crtv','bells','spotlights','portraits'],terrain:{id:'concrete'},
+    shift:{enabled:false,startOtherworld:false},director:{events,hazardDeck:[]},interactions:[],
+    referencePolicy:{allowedEvents:events,allowedHazards:[],automaticFinishers:false}};
+}
+
 function engine(extra = {}) {
   globalThis.window ||= {};
   globalThis.localStorage = { getItem: () => null, setItem() {} };
@@ -101,7 +113,7 @@ test('time-out compares remaining health percentages, including exact ties', () 
   a.health=300; assert.equal(timeoutWinner(a,b),b);
 });
 test('no direct hit, projectile or hazard can alter a finished round', () => {
-  const e=engine(),[a,b]=e.actors,h=e.spawnHazard('sirenShock'); e.phase='roundEnd';
+  const e=engine({stage:stageById('book_wood')}),[a,b]=e.actors,h=e.spawnHazard('rootSnare');assert.ok(h);h.x=b.x;e.phase='roundEnd';
   e.applyHit(a,b,hit(a),1); e.resolveHazard(h); e.applyStatusDamage(b,900);
   assert.equal(b.health,b.maxHealth); assert.equal(h.resolved,false); e.destroy();
 });
@@ -139,12 +151,14 @@ test('ambient signal hazards are absent from all 123 automatic decks', () => {
 test('a calm deck is intentionally empty, without the old staticBurst fallback', () => {
   const stage=STAGES.find(s=>s.id==='lakeview'),e=engine({stage});
   assert.deepEqual(stage.director.hazardDeck,[]); assert.equal(e.spawnHazard(),null);
-  e.triggerStageEvent('portraitWatch'); assert.equal(e.hazards.length,0); assert.equal(e.snapshot().world.director.ambienceOnly,true); e.destroy();
+  assert.equal(e.triggerStageEvent('portraitWatch'),false);assert.equal(e.stageRuntime.activeEvent,null);assert.equal(e.hazards.length,0); assert.equal(e.snapshot().world.director.ambienceOnly,true); e.destroy();
 });
-test('CRTV and siren events retain their visual event but spawn no attack', () => {
-  const stage=STAGES.find(s=>s.id==='st_amelia_marina'),e=engine({stage});
-  for(const id of ['crtvLock','sirenCall','bellToll','spotlightHunt','portraitWatch']){
-    e.triggerStageEvent(id); assert.equal(e.stageRuntime.activeEvent.id,id); assert.equal(e.hazards.length,0);
+test('isolated CRTV, siren and other ambient definitions retain visuals without spawning attacks', () => {
+  const events=['crtvLock','sirenCall','bellToll','spotlightHunt','portraitWatch'];
+  const e=engine({stage:syntheticAmbientStage(events)}),hp=e.actors.map(a=>a.health);
+  for(const id of events){
+    assert.equal(e.triggerStageEvent(id),true);assert.equal(e.stageRuntime.activeEvent.id,id);assert.equal(e.hazards.length,0);
+    assert.equal(e.stageRuntime.pendingTerrain,null);assert.deepEqual(e.actors.map(a=>a.health),hp);
   } e.destroy();
 });
 test('an empty fog phase does not fall back to restricted Otherworld dangers', () => {
@@ -152,25 +166,25 @@ test('an empty fog phase does not fall back to restricted Otherworld dangers', (
   assert.deepEqual(stageHazardDeck(stage,'fog'),[]); assert.equal(stageHazardDeck(stage,'otherworld').length,2);
 });
 test('at most two automatic hazard warnings overlap; deferred warnings do not change terrain', () => {
-  const e=engine(),r=e.stageRuntime;
-  for(let i=0;i<8;i++)e.triggerStageEvent('gurneyRush');
+  const e=engine({stage:stageById('hazel_subway')}),r=e.stageRuntime;
+  for(let i=0;i<8;i++)assert.equal(e.triggerStageEvent('trainRumble'),i<2);
   assert.equal(e.hazards.length,2); assert.equal(r.suppressedHazards,6); assert.equal(r.terrainOverride,null); e.destroy();
 });
 test('terrain changes only after every telegraph frame, then returns to the base floor', () => {
-  const e=engine({stage:STAGES.find(s=>s.id==='st_amelia_marina')}),base=e.currentTerrain().id;
-  e.triggerStageEvent('waterRise');const h=e.hazards[0];assert.equal(e.currentTerrain().id,base);
+  const e=engine({stage:stageById('book_water')}),base=e.currentTerrain().id;
+  assert.equal(e.triggerStageEvent('waterRise'),true);const h=e.hazards[0];assert.ok(h);assert.equal(e.currentTerrain().id,base);
   for(let i=0;i<h.maxTimer-1;i++){e.updateHazards();assert.equal(e.currentTerrain().id,base);}
   assert.equal(e.snapshot().world.director.pendingTerrain.frames,1);e.updateHazards();assert.equal(e.currentTerrain().id,'flooded');
   assert.equal(e.stageRuntime.pendingTerrain,null);
   e.stageRuntime.eventTimer=10000;for(let i=0;i<h.terrainDuration;i++)e.updateStageDirector();assert.equal(e.currentTerrain().id,base); e.destroy();
 });
 test('disabling environmental damage preserves ambient events without hidden traction pulses', () => {
-  const e=engine({stageHazards:false}),base=e.currentTerrain().id;
-  e.triggerStageEvent('waterRise');assert.equal(e.stageRuntime.activeEvent.id,'waterRise');assert.equal(e.hazards.length,0);
+  const e=engine({stage:stageById('book_water'),stageHazards:false}),base=e.currentTerrain().id;
+  assert.equal(e.triggerStageEvent('waterRise'),true);assert.equal(e.stageRuntime.activeEvent.id,'waterRise');assert.equal(e.hazards.length,0);
   assert.equal(e.currentTerrain().id,base);assert.equal(e.stageRuntime.pendingTerrain,null); e.destroy();
 });
 test('turning hazards off clears live damage and pending floor changes immediately', () => {
-  const e=engine();e.triggerStageEvent('waterRise');assert.ok(e.hazards.length);
+  const e=engine({stage:stageById('book_water')});assert.equal(e.triggerStageEvent('waterRise'),true);assert.ok(e.hazards.length);
   e.setTrainingOptions({stageHazards:false});assert.equal(e.hazards.length,0);assert.equal(e.stageRuntime.pendingTerrain,null);assert.equal(e.stageRuntime.terrainOverride,null);e.destroy();
 });
 test('safe local policy retains empty hazards instead of inventing a physical prop', () => {
@@ -179,15 +193,16 @@ test('safe local policy retains empty hazards instead of inventing a physical pr
 });
 
 test('a refused physical event does not draw an orphaned duplicate object', () => {
-  const e=engine();e.spawnHazard('gurneyRush');e.spawnHazard('gurneyRush');
-  assert.equal(e.triggerStageEvent('gurneyRush'),false);assert.equal(e.stageRuntime.activeEvent,null);
+  const e=engine({stage:stageById('hazel_subway')});assert.ok(e.spawnHazard('trainRush'));assert.ok(e.spawnHazard('trainRush'));
+  assert.equal(e.triggerStageEvent('trainRumble'),false);assert.equal(e.stageRuntime.activeEvent,null);
   assert.equal(e.stageRuntime.eventsTriggered,0);e.destroy();
 });
 test('a blocked interaction is not marked as consumed and retries once room is free', () => {
-  const stage=STAGES.find(s=>s.interactions[0]?.event==='gurneyRush'),e=engine({stage});
-  e.spawnHazard('gurneyRush');e.spawnHazard('gurneyRush');e.stageRuntime.heavyImpactPending=true;
+  const stage=stageById('hazel_subway'),e=engine({stage});
+  assert.equal(stage.interactions[0].event,'trainRumble');
+  assert.ok(e.spawnHazard('trainRush'));assert.ok(e.spawnHazard('trainRush'));e.stageRuntime.heavyImpactPending=true;
   assert.equal(e.tryStageInteraction(),false);assert.equal(e.stageRuntime.interactionTriggered.length,0);
-  e.hazards.length=0;assert.equal(e.tryStageInteraction(),true);assert.equal(e.stageRuntime.interactionTriggered.length,1);e.destroy();
+  e.hazards.length=0;assert.equal(e.tryStageInteraction(),true);assert.equal(e.stageRuntime.interactionTriggered.length,1);assert.equal(e.stageRuntime.activeEvent.id,'trainRumble');assert.equal(e.hazards.length,1);e.destroy();
 });
 test('a command pressed during short hitstop is executed once on return to simulation', () => {
   const e=engine();e.hitstop=3;e.setTouch('p1','heavy','pressed');

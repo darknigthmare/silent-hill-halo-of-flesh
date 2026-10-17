@@ -1,5 +1,5 @@
 {
-  "version": "0.9.5",
+  "version": "0.9.6",
   "traits": {
     "echo": {
       "name": "ÉCHO PERSISTANT",
@@ -1106,9 +1106,40 @@
       "terrainPulse": "ritualStone",
       "message": "LE RITUEL RÉPOND",
       "animation": "ritualGlyph"
+    },
+    "referenceLightReply": {
+      "name": "VOYANT DU PALIER",
+      "duration": 100,
+      "darkness": 0.04,
+      "radioBoost": 0.04,
+      "gameplayRole": "ambience",
+      "referenceOnly": true,
+      "message": "LE VOYANT RÉPOND"
+    },
+    "referenceDustRelease": {
+      "name": "POUSSIÈRE DU PLÂTRE",
+      "duration": 130,
+      "darkness": 0,
+      "radioBoost": 0,
+      "gameplayRole": "ambience",
+      "referenceOnly": true,
+      "message": "LE PLÂTRE FRÉMIT"
+    },
+    "referenceSteamPurge": {
+      "name": "ROBINET DU PASSAGE",
+      "duration": 108,
+      "darkness": 0.03,
+      "radioBoost": 0,
+      "gameplayRole": "ambience",
+      "referenceOnly": true,
+      "message": "TROIS PURGES AU FOND DU PASSAGE"
     }
   },
   "stageInteractionTriggers": {
+    "local-heavy-impact": {
+      "name": "IMPACT LOURD À PROXIMITÉ",
+      "description": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+    },
     "time-or-first-heavy-impact": {
       "name": "IMPACT LOURD / PREMIER TEMPS",
       "description": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu."

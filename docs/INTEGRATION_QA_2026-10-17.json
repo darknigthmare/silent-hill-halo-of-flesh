@@ -1,0 +1,2840 @@
+{
+  "schema": 1,
+  "date": "2026-10-17",
+  "version": "0.9.6",
+  "baselineCommit": "843449e78c02ce53564a033439dab1fd8c8fb204",
+  "node": {
+    "passed": 534,
+    "failed": 0,
+    "command": "npm test"
+  },
+  "python": {
+    "passed": 79,
+    "failed": 0,
+    "command": "python3 -m unittest discover -s tests -p 'test_*.py' -v"
+  },
+  "browser": {
+    "suites": 9,
+    "passed": 238,
+    "failed": 0,
+    "captures": 38,
+    "javascriptErrors": 0,
+    "servedBuild": "dist",
+    "scope": "Nine suites executed on v0.9.6; art, presentations and reference integration rerun after the final runtime corrections. Publication CI reruns all suites on its exact commit."
+  },
+  "browserReports": [
+    {
+      "report": "tests/http-v090/http-report.json",
+      "sha256": "16ecdaeb406a166b559d59b797bb639f72c66c4e19caf75aeefe8246f55c7fa6",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 15,
+      "captures": 3,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "kind": "http-browser-smoke",
+        "assertions": [
+          {
+            "name": "HTTP server starts",
+            "passed": true
+          },
+          {
+            "name": "shell menu renders",
+            "passed": true
+          },
+          {
+            "name": "real same-origin iframe loads the selection",
+            "passed": true
+          },
+          {
+            "name": "binding persists through HTTP reload",
+            "passed": true
+          },
+          {
+            "name": "real keyboard input jumps after normal intro",
+            "passed": true
+          },
+          {
+            "name": "native pause dialog stops the fight",
+            "passed": true
+          },
+          {
+            "name": "paused clock remains stopped",
+            "passed": true
+          },
+          {
+            "name": "Escape restores canvas focus",
+            "passed": true
+          },
+          {
+            "name": "chronicle launched from its real menu",
+            "passed": true
+          },
+          {
+            "name": "prepared checkpoint victory reaches a coherent engine match end",
+            "passed": true
+          },
+          {
+            "name": "shell Continue resumes exact checkpoint at encounter two",
+            "passed": true
+          },
+          {
+            "name": "service worker controls real HTTP page",
+            "passed": true
+          },
+          {
+            "name": "cached shell reloads offline",
+            "passed": true
+          },
+          {
+            "name": "mobile-size controls dialog fits screen",
+            "passed": true
+          },
+          {
+            "name": "no JavaScript page exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "fixtures": [
+          "Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result/outro ticks and the engine match callback for checkpoint QA only; no played victory is claimed.",
+          "explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign"
+        ],
+        "captures": [
+          "01-http-pause.png",
+          "02-offline-shell.png",
+          "03-http-mobile-controls.png"
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-sprites/report.json",
+      "sha256": "499263cebf4d5e58a4358005c664802aba4aba5882f8532519e0d0ef0ed962c2",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 30,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "kind": "real HTTP raster and offline checks",
+        "checks": [
+          {
+            "name": "static build HTTP server starts",
+            "passed": true
+          },
+          {
+            "name": "HTTP exact PNG digest: sh1_air_screamer_001",
+            "passed": true
+          },
+          {
+            "name": "HTTP exact PNG digest: film_red_pyramid_film_175",
+            "passed": true
+          },
+          {
+            "name": "both exact-ID candidate portraits decode from HTTP",
+            "passed": true
+          },
+          {
+            "name": "catalogue remains 30 per page",
+            "passed": true
+          },
+          {
+            "name": "available-only filter has exactly two profiles",
+            "passed": true
+          },
+          {
+            "name": "random chooses only available art",
+            "passed": true
+          },
+          {
+            "name": "normal battle loads without diagnostic mode",
+            "passed": true
+          },
+          {
+            "name": "pause freezes the actual simulation",
+            "passed": true
+          },
+          {
+            "name": "missing art blocks normal launch instead of fake monster geometry",
+            "passed": true
+          },
+          {
+            "name": "engine diagnostic is an explicit opt-in",
+            "passed": true
+          },
+          {
+            "name": "whole-run art gate preserves existing checkpoint byte-for-byte",
+            "passed": true
+          },
+          {
+            "name": "workshop displays 2 of 230, not full art coverage",
+            "passed": true
+          },
+          {
+            "name": "workshop has two integrated candidates",
+            "passed": true
+          },
+          {
+            "name": "unproduced queue is paginated",
+            "passed": true
+          },
+          {
+            "name": "missing-art paging advances",
+            "passed": true
+          },
+          {
+            "name": "workshop missing filter selects a matching missing dossier",
+            "passed": true
+          },
+          {
+            "name": "workshop empty search clears the stale dossier",
+            "passed": true
+          },
+          {
+            "name": "workshop ready filter restores a matching image dossier",
+            "passed": true
+          },
+          {
+            "name": "workshop source filter updates exact dossier identity",
+            "passed": true
+          },
+          {
+            "name": "real service worker controls the page",
+            "passed": true
+          },
+          {
+            "name": "both native PNG portraits and modules load fully offline",
+            "passed": true
+          },
+          {
+            "name": "normal raster battle launches offline",
+            "passed": true
+          },
+          {
+            "name": "mobile selection stays inside viewport width",
+            "passed": true
+          },
+          {
+            "name": "workshop detail can scroll to its final link",
+            "passed": true
+          },
+          {
+            "name": "aggregate combat memory budget blocks launch before a new engine",
+            "passed": true
+          },
+          {
+            "name": "image failure never starts an invisible normal fight",
+            "passed": true
+          },
+          {
+            "name": "explicit retry recovers from an image load error",
+            "passed": true
+          },
+          {
+            "name": "stale preflight cannot launch a newly changed selection",
+            "passed": true
+          },
+          {
+            "name": "no uncaught JavaScript exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-selection.png",
+          "02-battle.png",
+          "03-workshop.png",
+          "04-offline.png",
+          "05-mobile.png"
+        ],
+        "fixtures": [
+          "saved arcade checkpoint for non-mutation assertion; no completed campaign simulated as play"
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-art-v092/report.json",
+      "sha256": "ca4bfc8bc5a9ac868bd2ddbdd622bee21e54a481ea998050afc5025faac33c0d",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 17,
+      "captures": 4,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "checks": [
+          {
+            "name": "static server ready",
+            "passed": true
+          },
+          {
+            "name": "live inspector mounts using actual loaded bitmap",
+            "passed": true
+          },
+          {
+            "name": "single-frame image does not claim an animated clip",
+            "passed": true
+          },
+          {
+            "name": "missing pose explicitly reports idle fallback",
+            "passed": true
+          },
+          {
+            "name": "presentation direction toggle operates",
+            "passed": true
+          },
+          {
+            "name": "local calibration marked unapplied",
+            "passed": true
+          },
+          {
+            "name": "editing does not mutate authoritative asset registry",
+            "passed": true
+          },
+          {
+            "name": "calibration is exported as a separate file",
+            "passed": true
+          },
+          {
+            "name": "invalid body calibration refused visibly",
+            "passed": true
+          },
+          {
+            "name": "reset removes local edits",
+            "passed": true
+          },
+          {
+            "name": "changing filter disposes obsolete inspector",
+            "passed": true
+          },
+          {
+            "name": "paging keeps dossier inside visible page",
+            "passed": true
+          },
+          {
+            "name": "inspector controls fit mobile width",
+            "passed": true
+          },
+          {
+            "name": "all 123 stages render with full native sprite envelopes at edges",
+            "passed": true
+          },
+          {
+            "name": "stopped simulation does not advance pose clocks through rendering",
+            "passed": true
+          },
+          {
+            "name": "inspector and supporting modules work offline",
+            "passed": true
+          },
+          {
+            "name": "no unhandled page exception",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-inspector.png",
+          "02-mobile-inspector.png",
+          "03-edge-camera.png",
+          "04-offline-inspector.png"
+        ],
+        "fixtures": [
+          "Direct actor placement at both stage edges and synthetic world amounts exercise only the render envelope; they do not certify or enable a fixed-stage transition. The genuine stage and complete world state are restored for the capture."
+        ],
+        "browser": "143.0.7499.0",
+        "stagedCamera": {
+          "renders": 738,
+          "zoomed": 738,
+          "failures": []
+        },
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-clips-v093/report.json",
+      "sha256": "66347ede8caf0c70efe583740b96a0d3066ffdf1822d5eb33cf511ff8dee20b5",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 20,
+      "captures": 4,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "checks": [
+          {
+            "name": "static HTTP server starts",
+            "passed": true
+          },
+          {
+            "name": "one disposable editor mounts beside the real bitmap",
+            "passed": true
+          },
+          {
+            "name": "new step references an existing image instead of creating an asset",
+            "passed": true
+          },
+          {
+            "name": "reordering preserves each step duration",
+            "passed": true
+          },
+          {
+            "name": "draft duration drives the actual inspector timeline",
+            "passed": true
+          },
+          {
+            "name": "repeated static art cannot enable animation playback",
+            "passed": true
+          },
+          {
+            "name": "local preview is explicitly marked as an unpublished draft",
+            "passed": true
+          },
+          {
+            "name": "export contains exact frame identity and previous timeline",
+            "passed": true
+          },
+          {
+            "name": "invalid duration is visibly rejected",
+            "passed": true
+          },
+          {
+            "name": "reset restores original timeline without a new image",
+            "passed": true
+          },
+          {
+            "name": "actual move phases are exposed and independent looping is forbidden",
+            "passed": true
+          },
+          {
+            "name": "idle alone cannot be exported as a newly invented attack pose",
+            "passed": true
+          },
+          {
+            "name": "editing and export do not change authoritative art or player saves",
+            "passed": true
+          },
+          {
+            "name": "filter reset keeps the dossier on the visible first page",
+            "passed": true
+          },
+          {
+            "name": "filter navigation leaves exactly one live editor",
+            "passed": true
+          },
+          {
+            "name": "timeline controls fit the mobile viewport",
+            "passed": true
+          },
+          {
+            "name": "new authoring modules and controls work completely offline",
+            "passed": true
+          },
+          {
+            "name": "failed inspector load says the frame is not displayed",
+            "passed": true
+          },
+          {
+            "name": "explicit retry recovers the inspector without reloading the page",
+            "passed": true
+          },
+          {
+            "name": "no unhandled browser exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-clip-authoring.png",
+          "02-mobile-editor.png",
+          "03-offline-editor.png",
+          "04-recovered-inspector.png"
+        ],
+        "fixtures": [
+          "Two repeated steps referencing the same real PNG test static-vs-animation accounting; no new artwork is created."
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-recovery-v094/report.json",
+      "sha256": "0a58e91b92e21008cf3a59bbcc01d748da7110aef04c3281782d652a62c27c18",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 25,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "checks": [
+          {
+            "name": "static HTTP server ready",
+            "passed": true
+          },
+          {
+            "name": "random selection respects an empty filter without escaping to the whole roster",
+            "passed": true
+          },
+          {
+            "name": "constant random source still picks two distinct candidates without an unbounded loop",
+            "passed": true
+          },
+          {
+            "name": "favorite filter shows the bookmarked candidate",
+            "passed": true
+          },
+          {
+            "name": "removing the last favorite immediately updates the filtered list",
+            "passed": true
+          },
+          {
+            "name": "blocked checkpoint resume preserves the complete prior selection",
+            "passed": true
+          },
+          {
+            "name": "blocked checkpoint resume does not commit a pending run or replace the saved won checkpoint",
+            "passed": true
+          },
+          {
+            "name": "retrying resume after an explicit diagnostic opt-in restores the right player and encounter",
+            "passed": true
+          },
+          {
+            "name": "prepared continuation victory produces a coherent terminal engine and result",
+            "passed": true
+          },
+          {
+            "name": "failed Continue leaves in-memory win and current engine intact",
+            "passed": true
+          },
+          {
+            "name": "failed Continue leaves persistent checkpoint intact and the action remains available",
+            "passed": true
+          },
+          {
+            "name": "a second Continue retries the same next encounter exactly once",
+            "passed": true
+          },
+          {
+            "name": "real held pointer guard keeps blocking but no longer refreshes perfect parry",
+            "passed": true
+          },
+          {
+            "name": "real pointer release removes blocking",
+            "passed": true
+          },
+          {
+            "name": "failed pause retry keeps the pause dialog and old engine usable",
+            "passed": true
+          },
+          {
+            "name": "pause retry error is announced inside the modal",
+            "passed": true
+          },
+          {
+            "name": "successful pause retry closes the dialog only after loading",
+            "passed": true
+          },
+          {
+            "name": "successful recovery clears the previous pause error",
+            "passed": true
+          },
+          {
+            "name": "reopening pause does not repeat a recovered error",
+            "passed": true
+          },
+          {
+            "name": "switching poses retains working edits even before Preview",
+            "passed": true
+          },
+          {
+            "name": "invalid visible calibration cannot silently export the previous valid values",
+            "passed": true
+          },
+          {
+            "name": "calibration export includes the previous exact anchors as a concurrency guard",
+            "passed": true
+          },
+          {
+            "name": "updated editor controls stay within mobile viewport",
+            "passed": true
+          },
+          {
+            "name": "empty offline cache returns a real 503 instead of a rejected navigation",
+            "passed": true
+          },
+          {
+            "name": "no unhandled browser exceptions in recovery scenarios",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-filter-empty.png",
+          "02-retryable-continuation.png",
+          "03-pause-retry-failure.png",
+          "04-preserved-drafts.png",
+          "05-mobile-recovery.png",
+          "06-empty-offline-fallback.png"
+        ],
+        "fixtures": [
+          "A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result/outro ticks produce the engine match callback and the result screen; no campaign victory is claimed.",
+          "SpriteCache.prepare is temporarily made to fail for the pause retry test. No production file is changed.",
+          "Timeline steps reference the same existing PNG; no new art or animation is produced.",
+          "CacheStorage is deliberately emptied before the final offline fallback test."
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-boundaries-v095/report.json",
+      "sha256": "d28d7292eaec80291daaeaaf174dc8e76e88de6386b850d3119ca7a72992cf1d",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 43,
+      "captures": 7,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "checks": [
+          {
+            "name": "static HTTP server ready",
+            "passed": true
+          },
+          {
+            "name": "modified Enter does not launch a combat from selection",
+            "passed": true
+          },
+          {
+            "name": "two simultaneous Starts pause the real engine and open one native dialog",
+            "passed": true
+          },
+          {
+            "name": "holding both Starts cannot cancel the pause",
+            "passed": true
+          },
+          {
+            "name": "Start cannot resume behind the open controls dialog",
+            "passed": true
+          },
+          {
+            "name": "a fresh Start resumes after closing the child dialog",
+            "passed": true
+          },
+          {
+            "name": "Gamepad API denial pauses attached devices without a page exception",
+            "passed": true
+          },
+          {
+            "name": "keyboard combat remains usable when the Gamepad API is denied",
+            "passed": true
+          },
+          {
+            "name": "failed control persistence is visible",
+            "passed": true
+          },
+          {
+            "name": "unsaved bindings still apply to the active engine and help text",
+            "passed": true
+          },
+          {
+            "name": "reopening controls preserves the active session binding after storage failure",
+            "passed": true
+          },
+          {
+            "name": "retry keeps unsaved bindings on the replacement engine and in its help",
+            "passed": true
+          },
+          {
+            "name": "selection controls keep the unsaved session binding after retiring the engine",
+            "passed": true
+          },
+          {
+            "name": "relaunch from selection applies the session binding before the engine starts",
+            "passed": true
+          },
+          {
+            "name": "returning to selection retires the engine and cannot restart its old loop",
+            "passed": true
+          },
+          {
+            "name": "a touch attack pressed during intro does not leak into the fight",
+            "passed": true
+          },
+          {
+            "name": "a fresh touch press after FIGHT still attacks",
+            "passed": true
+          },
+          {
+            "name": "first-round knockout keeps the match open without a finisher",
+            "passed": true
+          },
+          {
+            "name": "deciding knockout retains the existing finisher before the final score settles",
+            "passed": true
+          },
+          {
+            "name": "actual memory export contains the valid backup route",
+            "passed": true
+          },
+          {
+            "name": "actual memory export contains recovered custom controls",
+            "passed": true
+          },
+          {
+            "name": "export does not rewrite the damaged source",
+            "passed": true
+          },
+          {
+            "name": "actual import preserves usable route and control backups beneath invalid primary data",
+            "passed": true
+          },
+          {
+            "name": "recovered route remains offered by the checkpoint banner",
+            "passed": true
+          },
+          {
+            "name": "controls UI shows recovered custom binding",
+            "passed": true
+          },
+          {
+            "name": "controls recovery dialog fits mobile width",
+            "passed": true
+          },
+          {
+            "name": "Rite 1 launches the advertised modifier (denseFog)",
+            "passed": true
+          },
+          {
+            "name": "Rite 1 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 2 launches the advertised modifier (bloodDebt)",
+            "passed": true
+          },
+          {
+            "name": "Rite 2 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 3 launches the advertised modifier (fragileGuard)",
+            "passed": true
+          },
+          {
+            "name": "Rite 3 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 4 launches the advertised modifier (staticStorm)",
+            "passed": true
+          },
+          {
+            "name": "Rite 4 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 5 launches the advertised modifier (sacredSilence)",
+            "passed": true
+          },
+          {
+            "name": "Rite 5 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 6 launches the advertised modifier (executionNight)",
+            "passed": true
+          },
+          {
+            "name": "Rite 6 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 7 launches the advertised modifier (noEscape)",
+            "passed": true
+          },
+          {
+            "name": "Rite 7 advances from a coherent match end to its next prepared encounter",
+            "passed": true
+          },
+          {
+            "name": "Rite 8 launches the advertised modifier (redJudgment)",
+            "passed": true
+          },
+          {
+            "name": "resume guard is also active with offline modules",
+            "passed": true
+          },
+          {
+            "name": "no unhandled browser exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-two-controllers-paused.png",
+          "02-child-dialog-stays-paused.png",
+          "03-keyboard-after-pad-denial.png",
+          "04-recovered-export.png",
+          "05-mobile-recovered-controls.png",
+          "07-actual-rite-config.png",
+          "06-offline-modal-guard.png"
+        ],
+        "fixtures": [
+          "Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.",
+          "Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.",
+          "Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.",
+          "Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result/outro ticks produce each engine result; this is not a played campaign.",
+          "Air Screamer performs the prepared decisive aerial finisher against the film candidate. The inverse film grip is incompatible with a flying target and is not substituted.",
+          "The two existing candidate PNGs are used. No new production image or animation is added."
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-presentations/report.json",
+      "sha256": "89e7ece1be517281671731793281bc6d35c6141208aa062ed7f6f9bef5f44220",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 57,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "base": "http://127.0.0.1:4181",
+        "checks": [
+          {
+            "name": "static HTTP server ready",
+            "passed": true
+          },
+          {
+            "name": "both first-intro actors have synchronized distinct presentation identities",
+            "passed": true
+          },
+          {
+            "name": "absent intro clips do not manufacture imported duration",
+            "passed": true
+          },
+          {
+            "name": "real pause freezes intro tracks, match time and score",
+            "passed": true
+          },
+          {
+            "name": "real retry retires the prior engine and starts fresh synchronized intros",
+            "passed": true
+          },
+          {
+            "name": "an attack pressed during intro is discarded before the fight",
+            "passed": true
+          },
+          {
+            "name": "intermediate knockout uses reversible winRound and loseRound without a fatality",
+            "passed": true
+          },
+          {
+            "name": "repeated intermediate resolution awards the point and round callback once",
+            "passed": true
+          },
+          {
+            "name": "next round restores health and clears old poses instead of replaying intros",
+            "passed": true
+          },
+          {
+            "name": "decisive finisher gives attacker and target the same scene clock",
+            "passed": true
+          },
+          {
+            "name": "real pause freezes both finisher tracks and their outcome",
+            "passed": true
+          },
+          {
+            "name": "finisher settles once, then keeps finished while the winner uses winMatch",
+            "passed": true
+          },
+          {
+            "name": "records settle synchronously and only once before the result panel",
+            "passed": true
+          },
+          {
+            "name": "only the winner starts the imported outro; finished remains held",
+            "passed": true
+          },
+          {
+            "name": "pending imported outro offers a real pause dialog and resume control",
+            "passed": true
+          },
+          {
+            "name": "after 600 ms a paused outro keeps the result hidden and its frame unchanged",
+            "passed": true
+          },
+          {
+            "name": "match-end canvas overlay is not painted over the unfinished paused outro",
+            "passed": true
+          },
+          {
+            "name": "result appears after simulated outro completion and keeps the target final pose",
+            "passed": true
+          },
+          {
+            "name": "match-end canvas overlay resumes only after the outro completes",
+            "passed": true
+          },
+          {
+            "name": "ordinary decisive result uses winMatch and loseMatch",
+            "passed": true
+          },
+          {
+            "name": "ordinary loser stays in its completed loseMatch during winner outro",
+            "passed": true
+          },
+          {
+            "name": "leaving during outro invalidates the delayed result callback",
+            "passed": true
+          },
+          {
+            "name": "timing fixture restores the original SPRITES registry after local scenes",
+            "passed": true
+          },
+          {
+            "name": "the composed Air Screamer exit starts with no imported clip and keeps its result pending",
+            "passed": true
+          },
+          {
+            "name": "a paused composed outro stays hidden beyond 600 ms without a result veil",
+            "passed": true
+          },
+          {
+            "name": "the composed outro reveals its own result only after simulated completion",
+            "passed": true
+          },
+          {
+            "name": "prepared dojo result settles before its pending 540-tick outro",
+            "passed": true
+          },
+          {
+            "name": "real dojo RESET destroys the old engine and starts a new first intro",
+            "passed": true
+          },
+          {
+            "name": "dojo reset preserves active training options and bindings",
+            "passed": true
+          },
+          {
+            "name": "obsolete dojo result does not reveal after RESET and 600 ms",
+            "passed": true
+          },
+          {
+            "name": "new dojo engine accepts the preserved fresh input after its intro",
+            "passed": true
+          },
+          {
+            "name": "a new dojo victory after RESET is counted exactly once",
+            "passed": true
+          },
+          {
+            "name": "the new dojo result is revealable after its own completed outro",
+            "passed": true
+          },
+          {
+            "name": "dojo timing fixture restores original SPRITES without new artwork",
+            "passed": true
+          },
+          {
+            "name": "workshop retains thirty old keys, adds taunt and exact production contexts",
+            "passed": true
+          },
+          {
+            "name": "workshop intro is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop intro refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop winRound is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop winRound refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop loseRound is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop loseRound refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop winMatch is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop winMatch refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop loseMatch is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop loseMatch refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop outro is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop outro refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop finisher is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop finisher refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop finished is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop finished refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "workshop taunt is one-shot and shows the actual missing-clip fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop taunt refuses an idle-only fabricated presentation",
+            "passed": true
+          },
+          {
+            "name": "presentation authoring controls fit the mobile viewport",
+            "passed": true
+          },
+          {
+            "name": "both new presentation modules import entirely offline",
+            "passed": true
+          },
+          {
+            "name": "offline combat preserves synchronized intro and real pause",
+            "passed": true
+          },
+          {
+            "name": "no unhandled JavaScript browser exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-intro-paused.png",
+          "02-finisher-paused.png",
+          "03-outro-waiting-paused.png",
+          "04-dojo-reset-inputs.png",
+          "05-workshop-mobile.png",
+          "06-offline-presentations.png"
+        ],
+        "scenes": {
+          "intro": {
+            "phase": "intro",
+            "frame": 9,
+            "paused": true,
+            "round": 1,
+            "phaseTimer": 141,
+            "matchTime": 99,
+            "tracks": [
+              {
+                "key": "intro",
+                "id": "presentation:1:0:intro:sh1_air_screamer_001:intro",
+                "sequenceId": 1,
+                "frame": 9,
+                "duration": 150,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0.06,
+                "complete": false,
+                "role": "participant",
+                "round": 1,
+                "reversible": true,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001:intro",
+                "clipKey": "intro@sh1_air_screamer_001:intro",
+                "lore": {
+                  "contextId": "sh1_air_screamer_001:intro",
+                  "clipKey": "intro@sh1_air_screamer_001:intro",
+                  "name": "Entrée proposée — Air Screamer",
+                  "description": "Une ombre traverse le décor, le corps descend en battant des ailes puis se pose au point d’appui.",
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "flyer",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              },
+              {
+                "key": "intro",
+                "id": "presentation:1:1:intro:film_red_pyramid_film_175:intro",
+                "sequenceId": 1,
+                "frame": 9,
+                "duration": 150,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0.06,
+                "complete": false,
+                "role": "participant",
+                "round": 1,
+                "reversible": true,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "film_red_pyramid_film_175:intro",
+                "clipKey": "intro@film_red_pyramid_film_175:intro",
+                "lore": {
+                  "contextId": "film_red_pyramid_film_175:intro",
+                  "clipKey": "intro@film_red_pyramid_film_175:intro",
+                  "name": "Red Pyramid — Film — entrée en scène",
+                  "description": "Le casque coupe le halo de la porte avant l’entrée du torse.",
+                  "referenceIds": [
+                    "EXT47",
+                    "EXT49"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "pyramid",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              }
+            ],
+            "wins": [
+              0,
+              0
+            ],
+            "health": [
+              820,
+              1566
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              false
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              0,
+              0
+            ],
+            "fatality": null,
+            "roundEvents": 0,
+            "matchEvents": 0,
+            "records": {},
+            "resultHidden": true
+          },
+          "intermediateRound": {
+            "phase": "roundEnd",
+            "frame": 169,
+            "paused": true,
+            "round": 1,
+            "phaseTimer": 145,
+            "matchTime": 98.68333333333335,
+            "tracks": [
+              {
+                "key": "winRound",
+                "id": "presentation:2:0:winRound:sh1_air_screamer_001:winRound1",
+                "sequenceId": 2,
+                "frame": 0,
+                "duration": 145,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0,
+                "complete": false,
+                "role": "winner",
+                "round": 1,
+                "reversible": true,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001:winRound1",
+                "clipKey": "winRound@sh1_air_screamer_001:winRound1",
+                "lore": {
+                  "contextId": "sh1_air_screamer_001:winRound1",
+                  "clipKey": "winRound@sh1_air_screamer_001:winRound1",
+                  "name": "Victoire manche 1 proposée — Air Screamer",
+                  "description": "Rester posé, ailes entrouvertes et tête tournée vers la cible.",
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "flyer",
+                  "authored": true,
+                  "reversible": true,
+                  "artStatus": "contextual-images-missing"
+                }
+              },
+              {
+                "key": "loseRound",
+                "id": "presentation:2:1:loseRound:film_red_pyramid_film_175:loseRound1",
+                "sequenceId": 2,
+                "frame": 0,
+                "duration": 145,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0,
+                "complete": false,
+                "role": "loser",
+                "round": 1,
+                "reversible": true,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "film_red_pyramid_film_175:loseRound1",
+                "clipKey": "loseRound@film_red_pyramid_film_175:loseRound1",
+                "lore": {
+                  "contextId": "film_red_pyramid_film_175:loseRound1",
+                  "clipKey": "loseRound@film_red_pyramid_film_175:loseRound1",
+                  "name": "Défaite de première manche — reprise possible",
+                  "description": "Red Pyramid — Film cède sur un appui, baisse le buste puis se relève lentement; conserver accessoires et silhouette.",
+                  "referenceIds": [
+                    "EXT47",
+                    "EXT49"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "pyramid",
+                  "authored": true,
+                  "reversible": true,
+                  "artStatus": "contextual-images-missing"
+                }
+              }
+            ],
+            "wins": [
+              1,
+              0
+            ],
+            "health": [
+              820,
+              0
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              true
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              0,
+              0
+            ],
+            "fatality": null,
+            "roundEvents": 1,
+            "matchEvents": 0,
+            "records": {},
+            "resultHidden": true
+          },
+          "finisher": {
+            "phase": "fatality",
+            "frame": 459,
+            "paused": true,
+            "round": 2,
+            "phaseTimer": 0,
+            "matchTime": 99,
+            "tracks": [
+              {
+                "key": "finisher",
+                "id": "presentation:3:0:finisher:sh1_air_screamer_001_nightmare",
+                "sequenceId": 3,
+                "frame": 0,
+                "duration": 225,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0,
+                "complete": false,
+                "role": "attacker",
+                "round": 2,
+                "reversible": false,
+                "finisherId": "sh1_air_screamer_001_nightmare",
+                "stageId": "hotel_otherworld",
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001_nightmare",
+                "clipKey": "finisher@sh1_air_screamer_001_nightmare",
+                "lore": null,
+                "staging": {
+                  "x": 0,
+                  "y": 0,
+                  "alpha": 1,
+                  "pose": "takeoff"
+                }
+              },
+              {
+                "key": "finished",
+                "id": "presentation:3:1:finished:sh1_air_screamer_001_nightmare",
+                "sequenceId": 3,
+                "frame": 0,
+                "duration": 225,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0,
+                "complete": false,
+                "role": "target",
+                "round": 2,
+                "reversible": false,
+                "finisherId": "sh1_air_screamer_001_nightmare",
+                "stageId": "hotel_otherworld",
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001_nightmare",
+                "clipKey": "finished@sh1_air_screamer_001_nightmare",
+                "lore": null,
+                "staging": {
+                  "x": 0,
+                  "y": 0,
+                  "alpha": 1,
+                  "pose": "track"
+                }
+              }
+            ],
+            "wins": [
+              1,
+              0
+            ],
+            "health": [
+              820,
+              1
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              false
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              0,
+              0
+            ],
+            "fatality": {
+              "timer": 225,
+              "total": 225
+            },
+            "roundEvents": 1,
+            "matchEvents": 0,
+            "records": {},
+            "resultHidden": true
+          },
+          "finalPoses": {
+            "phase": "roundEnd",
+            "frame": 684,
+            "paused": true,
+            "round": 2,
+            "phaseTimer": 145,
+            "matchTime": 99,
+            "tracks": [
+              {
+                "key": "winMatch",
+                "id": "presentation:4:0:winMatch:sh1_air_screamer_001:winMatch",
+                "sequenceId": 4,
+                "frame": 0,
+                "duration": 145,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 0,
+                "complete": false,
+                "role": "winner",
+                "round": 2,
+                "reversible": false,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001:winMatch",
+                "clipKey": "winMatch@sh1_air_screamer_001:winMatch",
+                "lore": {
+                  "contextId": "sh1_air_screamer_001:winMatch",
+                  "clipKey": "winMatch@sh1_air_screamer_001:winMatch",
+                  "name": "Victoire du match proposée — Air Screamer",
+                  "description": "Un cercle de vol autour du point de chute puis sortie par le haut.",
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "flyer",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              },
+              {
+                "key": "finished",
+                "id": "presentation:3:1:finished:sh1_air_screamer_001_nightmare",
+                "sequenceId": 3,
+                "frame": 224,
+                "duration": 225,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 1,
+                "complete": true,
+                "role": "target",
+                "round": 2,
+                "reversible": false,
+                "finisherId": "sh1_air_screamer_001_nightmare",
+                "stageId": "hotel_otherworld",
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001_nightmare",
+                "clipKey": "finished@sh1_air_screamer_001_nightmare",
+                "lore": null,
+                "staging": {
+                  "x": 171.6,
+                  "y": 34,
+                  "alpha": 0.35,
+                  "pose": "held"
+                }
+              }
+            ],
+            "wins": [
+              2,
+              0
+            ],
+            "health": [
+              820,
+              0
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              true
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              1,
+              0
+            ],
+            "fatality": null,
+            "roundEvents": 2,
+            "matchEvents": 0,
+            "records": {},
+            "resultHidden": true
+          },
+          "outro": {
+            "phase": "matchEnd",
+            "frame": 829,
+            "paused": true,
+            "round": 2,
+            "phaseTimer": 0,
+            "matchTime": 99,
+            "tracks": [
+              {
+                "key": "outro",
+                "id": "presentation:5:0:outro:sh1_air_screamer_001:outro",
+                "sequenceId": 5,
+                "frame": 0,
+                "duration": 540,
+                "clipDuration": 540,
+                "stagingDuration": 90,
+                "progress": 0,
+                "complete": false,
+                "role": "winner",
+                "round": 2,
+                "reversible": false,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001:outro",
+                "clipKey": "outro@sh1_air_screamer_001:outro",
+                "lore": {
+                  "contextId": "sh1_air_screamer_001:outro",
+                  "clipKey": "outro@sh1_air_screamer_001:outro",
+                  "name": "Sortie proposée — Air Screamer",
+                  "description": "Recul sur les pattes, battements croissants puis départ hors champ dans le brouillard.",
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "flyer",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              },
+              {
+                "key": "finished",
+                "id": "presentation:3:1:finished:sh1_air_screamer_001_nightmare",
+                "sequenceId": 3,
+                "frame": 224,
+                "duration": 225,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 1,
+                "complete": true,
+                "role": "target",
+                "round": 2,
+                "reversible": false,
+                "finisherId": "sh1_air_screamer_001_nightmare",
+                "stageId": "hotel_otherworld",
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001_nightmare",
+                "clipKey": "finished@sh1_air_screamer_001_nightmare",
+                "lore": null,
+                "staging": {
+                  "x": 171.6,
+                  "y": 34,
+                  "alpha": 0.35,
+                  "pose": "held"
+                }
+              }
+            ],
+            "wins": [
+              2,
+              0
+            ],
+            "health": [
+              820,
+              0
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              true
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              1,
+              0
+            ],
+            "fatality": null,
+            "roundEvents": 2,
+            "matchEvents": 1,
+            "records": {
+              "defeated": {
+                "film_red_pyramid_film_175": 1
+              },
+              "appliedMatches": [
+                "55ee4509-65a6-4acf-ac12-a29894322454"
+              ],
+              "matches": 1,
+              "wins": 1,
+              "perfectGuards": 0,
+              "counters": 0,
+              "guardCounters": 0,
+              "dodgeAttacks": 0,
+              "wakeupAttacks": 0,
+              "backThrows": 0,
+              "armorBreaks": 0,
+              "groundBounces": 0,
+              "hazardsTaken": 0,
+              "fatalities": 1,
+              "stageFatalities": 0,
+              "bossPhases": 0,
+              "bestGrade": "B"
+            },
+            "resultHidden": true
+          },
+          "composedOutro": {
+            "phase": "matchEnd",
+            "frame": 295,
+            "paused": true,
+            "round": 1,
+            "phaseTimer": 0,
+            "matchTime": 99,
+            "tracks": [
+              {
+                "key": "outro",
+                "id": "presentation:3:0:outro:sh1_air_screamer_001:outro",
+                "sequenceId": 3,
+                "frame": 0,
+                "duration": 90,
+                "clipDuration": 0,
+                "stagingDuration": 90,
+                "progress": 0,
+                "complete": false,
+                "role": "winner",
+                "round": 1,
+                "reversible": false,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "sh1_air_screamer_001:outro",
+                "clipKey": "outro@sh1_air_screamer_001:outro",
+                "lore": {
+                  "contextId": "sh1_air_screamer_001:outro",
+                  "clipKey": "outro@sh1_air_screamer_001:outro",
+                  "name": "Sortie proposée — Air Screamer",
+                  "description": "Recul sur les pattes, battements croissants puis départ hors champ dans le brouillard.",
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "flyer",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              },
+              {
+                "key": "loseMatch",
+                "id": "presentation:2:1:loseMatch:film_red_pyramid_film_175:loseMatch",
+                "sequenceId": 2,
+                "frame": 144,
+                "duration": 145,
+                "clipDuration": 0,
+                "stagingDuration": 0,
+                "progress": 1,
+                "complete": true,
+                "role": "loser",
+                "round": 1,
+                "reversible": false,
+                "finisherId": null,
+                "stageId": null,
+                "stageBased": false,
+                "contextId": "film_red_pyramid_film_175:loseMatch",
+                "clipKey": "loseMatch@film_red_pyramid_film_175:loseMatch",
+                "lore": {
+                  "contextId": "film_red_pyramid_film_175:loseMatch",
+                  "clipKey": "loseMatch@film_red_pyramid_film_175:loseMatch",
+                  "name": "Défaite finale",
+                  "description": "Les appuis de Red Pyramid — Film cèdent; le corps reste au sol avec ses accessoires dans une pose finale distincte du recul de manche.",
+                  "referenceIds": [
+                    "EXT47",
+                    "EXT49"
+                  ],
+                  "adaptationStatus": "adaptation-versus-proposee",
+                  "bodyKind": "pyramid",
+                  "authored": true,
+                  "reversible": false,
+                  "artStatus": "contextual-images-missing"
+                }
+              }
+            ],
+            "wins": [
+              2,
+              0
+            ],
+            "health": [
+              820,
+              0
+            ],
+            "maxHealth": [
+              820,
+              1566
+            ],
+            "ko": [
+              false,
+              true
+            ],
+            "lastMoves": [
+              null,
+              null
+            ],
+            "fatalities": [
+              0,
+              0
+            ],
+            "fatality": null,
+            "roundEvents": 4,
+            "matchEvents": 3,
+            "records": {
+              "defeated": {
+                "film_red_pyramid_film_175": 3
+              },
+              "appliedMatches": [
+                "55ee4509-65a6-4acf-ac12-a29894322454",
+                "26cdda16-6e9b-4e98-8ca2-0bd11d855404",
+                "cf197435-76df-46ee-a9f4-49e7c00408c3"
+              ],
+              "matches": 3,
+              "wins": 3,
+              "perfectGuards": 0,
+              "counters": 0,
+              "guardCounters": 0,
+              "dodgeAttacks": 0,
+              "wakeupAttacks": 0,
+              "backThrows": 0,
+              "armorBreaks": 0,
+              "groundBounces": 0,
+              "hazardsTaken": 0,
+              "fatalities": 1,
+              "stageFatalities": 0,
+              "bossPhases": 0,
+              "bestGrade": "B"
+            },
+            "resultHidden": true
+          }
+        },
+        "fixtures": [
+          "Local round knockouts, decisive score states and simulation advancement are prepared through the explicit ?qa=1 bridge. No fight or campaign is claimed as played.",
+          "The first intro is sought to tick 80 while paused solely to make the real retry/reset comparison deterministic.",
+          "A timing-only outro clip holds the existing candidate PNG for 540 simulated ticks in memory. It bypasses the dedicated-image import gate only as a test fixture; it is not new art, a produced animation, or a fidelity review.",
+          "Original SPRITES entries are retained and restored before navigation and again on failure when that page is still available. No registry, PNG, gameplay file or save outside the isolated browser context is edited.",
+          "The dojo uses its real RESET button, real control rebinding and prepared match results. These are lifecycle tests, not a played training session.",
+          "The prepared finisher uses Air Screamer against the film candidate, a compatible body pairing. The authored aerial outro is also exercised with no imported outro clip; its staging is not new animation artwork.",
+          "Keyboard, viewport and offline browser checks do not certify a physical controller or mobile device."
+        ],
+        "browser": "143.0.7499.0",
+        "outroFixture": {
+          "id": "sh1_air_screamer_001",
+          "framePath": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+          "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
+          "ticks": 540,
+          "fixtureOnly": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-reference-integration/report.json",
+      "sha256": "b44696b97e488e2827f623c8acf530441b5dd606a6254a659c522da6a92c535b",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 22,
+      "captures": 3,
+      "javascriptErrors": 0,
+      "browser": "143.0.7499.0",
+      "details": {
+        "version": "0.9.6",
+        "base": "http://127.0.0.1:4182",
+        "build": "dist",
+        "checks": [
+          {
+            "name": "static HTTP server ready",
+            "passed": true
+          },
+          {
+            "name": "real launch loads the current reference-constrained profile",
+            "passed": true
+          },
+          {
+            "name": "Air Screamer keyboard special cannot damage a distant opponent or spawn a projectile",
+            "passed": true
+          },
+          {
+            "name": "the same Air Screamer input hits at contact with its moving physical attack",
+            "passed": true
+          },
+          {
+            "name": "Mannequin forward light travels locally instead of crossing behind a distant target",
+            "passed": true
+          },
+          {
+            "name": "Cybil accepts and emits exactly ten pistol shots while ammunition reaches zero",
+            "passed": true
+          },
+          {
+            "name": "the eleventh Cybil input becomes a short unarmed grab without an eleventh projectile",
+            "passed": true
+          },
+          {
+            "name": "real retry resets the encounter pistol and retires the exhausted engine",
+            "passed": true
+          },
+          {
+            "name": "Wall Man ignores real move, jump and dodge inputs while anchored",
+            "passed": true
+          },
+          {
+            "name": "a real hit and prepared body overlap cannot dislodge the fixed boss",
+            "passed": true
+          },
+          {
+            "name": "keyboard taunt plays an exact context while combat time continues without damage or meter gain",
+            "passed": true
+          },
+          {
+            "name": "fresh directional input cancels taunt immediately and moves the subject",
+            "passed": true
+          },
+          {
+            "name": "fresh attack input also cancels taunt without losing the attack",
+            "passed": true
+          },
+          {
+            "name": "noncombatant launch is visibly refused even when diagnostic artwork is enabled",
+            "passed": true
+          },
+          {
+            "name": "refused contact preserves primary checkpoint, backup, records and chapter attempts",
+            "passed": true
+          },
+          {
+            "name": "the refused subject still has its real source dossier and disabled commands",
+            "passed": true
+          },
+          {
+            "name": "Air Screamer dossier exposes the referenced edition, foot attack and source links",
+            "passed": true
+          },
+          {
+            "name": "workshop signature chooses the exact production context and honestly holds missing-art fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop nightmare chooses the exact production context and honestly holds missing-art fallback",
+            "passed": true
+          },
+          {
+            "name": "workshop target reaction can select a different finisher identity without borrowing its image",
+            "passed": true
+          },
+          {
+            "name": "context selection and workshop controls fit a mobile viewport",
+            "passed": true
+          },
+          {
+            "name": "no unhandled JavaScript browser exceptions",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "captures": [
+          "01-air-screamer-contact.png",
+          "02-source-dossier-desktop.png",
+          "03-workshop-context-mobile.png"
+        ],
+        "scenes": {
+          "airScreamer": {
+            "phase": "fight",
+            "frame": 238,
+            "paused": false,
+            "time": 97.63333333333341,
+            "projectiles": 0,
+            "actors": [
+              {
+                "id": "sh1_air_screamer_001",
+                "x": 492.008936,
+                "y": 594,
+                "grounded": true,
+                "health": 820,
+                "meter": 24.4,
+                "ammo": null,
+                "move": "neutralSpecial",
+                "activeMove": "Plongée des serres",
+                "presentation": null,
+                "damage": 88,
+                "policy": {
+                  "id": "sh1_air_screamer_001",
+                  "source": "sh1",
+                  "edition": "SH1 original 1999, région à fixer",
+                  "role": "combatant",
+                  "adaptationMode": "versus-transposition",
+                  "combatEnabled": true,
+                  "canMove": true,
+                  "canJump": true,
+                  "canDodge": true,
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "observedBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+                  "superEnabled": true,
+                  "superReason": "",
+                  "superName": "Super proposé — Air Screamer",
+                  "superDescription": "Plongée brisée : montée courte lisible, piqué transversal puis reprise d’altitude ; aucun projectile ajouté.",
+                  "capabilities": {
+                    "reviewed": true,
+                    "projectile": false,
+                    "teleport": false,
+                    "trap": false,
+                    "aura": false,
+                    "effects": []
+                  }
+                }
+              },
+              {
+                "id": "film_red_pyramid_film_175",
+                "x": 563.798936,
+                "y": 594,
+                "grounded": true,
+                "health": 1478,
+                "meter": 11,
+                "ammo": null,
+                "move": null,
+                "activeMove": null,
+                "presentation": null,
+                "damage": 0,
+                "policy": {
+                  "id": "film_red_pyramid_film_175",
+                  "source": "film",
+                  "edition": "film",
+                  "role": "scripted-encounter",
+                  "adaptationMode": "versus-scripted",
+                  "combatEnabled": true,
+                  "canMove": true,
+                  "canJump": true,
+                  "canDodge": true,
+                  "referenceIds": [
+                    "EXT47",
+                    "EXT49"
+                  ],
+                  "observedBasis": "",
+                  "superEnabled": false,
+                  "superReason": "Les gestes de cette édition restent à relever avant de produire un super.",
+                  "superName": "Red Pyramid — Film — séquence de pression",
+                  "superDescription": "Chorégraphie originale : anticipation centrée sur « casque et grande lame film », enchaînement limité autour de « Great Knife », puis récupération exposée; aucun nouveau pouvoir ajouté.",
+                  "capabilities": {
+                    "reviewed": true,
+                    "projectile": false,
+                    "teleport": false,
+                    "trap": false,
+                    "aura": false,
+                    "effects": []
+                  }
+                }
+              }
+            ]
+          },
+          "mannequin": {
+            "accepted": true,
+            "start": 260,
+            "end": 276.7411199999999,
+            "target": 1100,
+            "teleported": false,
+            "moveTeleport": null,
+            "projectiles": 0
+          },
+          "cybil": {
+            "initial": 10,
+            "accepted": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "counts": [
+              9,
+              8,
+              7,
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            "emitted": 10,
+            "eleventh": true,
+            "remaining": 0,
+            "phase": "fight",
+            "fallback": {
+              "name": "Étranglement après la dernière munition",
+              "projectile": false,
+              "level": "throw",
+              "reach": 72
+            },
+            "scene": {
+              "phase": "fight",
+              "frame": 627,
+              "paused": false,
+              "time": 91.25000000000044,
+              "projectiles": 1,
+              "actors": [
+                {
+                  "id": "sh1_monster_cybil_017",
+                  "x": 260,
+                  "y": 594,
+                  "grounded": true,
+                  "health": 950,
+                  "meter": 42,
+                  "ammo": 0,
+                  "move": "neutralSpecial",
+                  "activeMove": "Étranglement après la dernière munition",
+                  "presentation": null,
+                  "damage": 184,
+                  "policy": {
+                    "id": "sh1_monster_cybil_017",
+                    "source": "sh1",
+                    "edition": "SH1 original 1999, région à fixer",
+                    "role": "combatant",
+                    "adaptationMode": "versus-transposition",
+                    "combatEnabled": true,
+                    "canMove": true,
+                    "canJump": true,
+                    "canDodge": true,
+                    "referenceIds": [
+                      "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+                    ],
+                    "observedBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+                    "superEnabled": false,
+                    "superReason": "Le super alterne tir et prise désarmée ; sa chorégraphie par phase reste à intégrer.",
+                    "superName": "Super proposé — Monster Cybil",
+                    "superDescription": "Dernière munition : pression par tir, approche puis prise uniquement en phase désarmée.",
+                    "capabilities": {
+                      "reviewed": true,
+                      "projectile": true,
+                      "teleport": false,
+                      "trap": false,
+                      "aura": false,
+                      "effects": []
+                    }
+                  }
+                },
+                {
+                  "id": "film_red_pyramid_film_175",
+                  "x": 1143.7820384652828,
+                  "y": 594,
+                  "grounded": true,
+                  "health": 1382,
+                  "meter": 22,
+                  "ammo": null,
+                  "move": null,
+                  "activeMove": null,
+                  "presentation": null,
+                  "damage": 0,
+                  "policy": {
+                    "id": "film_red_pyramid_film_175",
+                    "source": "film",
+                    "edition": "film",
+                    "role": "scripted-encounter",
+                    "adaptationMode": "versus-scripted",
+                    "combatEnabled": true,
+                    "canMove": true,
+                    "canJump": true,
+                    "canDodge": true,
+                    "referenceIds": [
+                      "EXT47",
+                      "EXT49"
+                    ],
+                    "observedBasis": "",
+                    "superEnabled": false,
+                    "superReason": "Les gestes de cette édition restent à relever avant de produire un super.",
+                    "superName": "Red Pyramid — Film — séquence de pression",
+                    "superDescription": "Chorégraphie originale : anticipation centrée sur « casque et grande lame film », enchaînement limité autour de « Great Knife », puis récupération exposée; aucun nouveau pouvoir ajouté.",
+                    "capabilities": {
+                      "reviewed": true,
+                      "projectile": false,
+                      "teleport": false,
+                      "trap": false,
+                      "aura": false,
+                      "effects": []
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "wallMan": {
+            "start": 260,
+            "x": 260,
+            "y": 594,
+            "grounded": true,
+            "damaged": true,
+            "otherX": 368.58
+          },
+          "taunt": {
+            "phase": "fight",
+            "frame": 163,
+            "paused": false,
+            "time": 98.78333333333335,
+            "projectiles": 0,
+            "actors": [
+              {
+                "id": "sh1_air_screamer_001",
+                "x": 260,
+                "y": 594,
+                "grounded": true,
+                "health": 820,
+                "meter": 0,
+                "ammo": null,
+                "move": null,
+                "activeMove": null,
+                "presentation": {
+                  "key": "taunt",
+                  "id": "presentation:2:0:taunt:sh1_air_screamer_001:taunt",
+                  "sequenceId": 2,
+                  "frame": 12,
+                  "duration": 66,
+                  "clipDuration": 0,
+                  "stagingDuration": 0,
+                  "progress": 0.18181818181818182,
+                  "complete": false,
+                  "role": "self",
+                  "round": 1,
+                  "reversible": true,
+                  "finisherId": null,
+                  "stageId": null,
+                  "stageBased": false,
+                  "contextId": "sh1_air_screamer_001:taunt",
+                  "clipKey": "taunt@sh1_air_screamer_001:taunt",
+                  "lore": {
+                    "contextId": "sh1_air_screamer_001:taunt",
+                    "clipKey": "taunt@sh1_air_screamer_001:taunt",
+                    "name": "Attitude / provocation proposée — Air Screamer",
+                    "description": "Déployer brièvement les ailes et produire un cri, sans dégâts soniques.",
+                    "referenceIds": [
+                      "CL_SH1_ENEMIES",
+                      "CL_SH1_CREATURES"
+                    ],
+                    "adaptationStatus": "adaptation-versus-proposee",
+                    "bodyKind": "flyer",
+                    "authored": true,
+                    "reversible": true,
+                    "artStatus": "contextual-images-missing"
+                  }
+                },
+                "damage": 0,
+                "policy": {
+                  "id": "sh1_air_screamer_001",
+                  "source": "sh1",
+                  "edition": "SH1 original 1999, région à fixer",
+                  "role": "combatant",
+                  "adaptationMode": "versus-transposition",
+                  "combatEnabled": true,
+                  "canMove": true,
+                  "canJump": true,
+                  "canDodge": true,
+                  "referenceIds": [
+                    "CL_SH1_ENEMIES",
+                    "CL_SH1_CREATURES"
+                  ],
+                  "observedBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+                  "superEnabled": true,
+                  "superReason": "",
+                  "superName": "Super proposé — Air Screamer",
+                  "superDescription": "Plongée brisée : montée courte lisible, piqué transversal puis reprise d’altitude ; aucun projectile ajouté.",
+                  "capabilities": {
+                    "reviewed": true,
+                    "projectile": false,
+                    "teleport": false,
+                    "trap": false,
+                    "aura": false,
+                    "effects": []
+                  }
+                }
+              },
+              {
+                "id": "film_red_pyramid_film_175",
+                "x": 1100,
+                "y": 594,
+                "grounded": true,
+                "health": 1566,
+                "meter": 0,
+                "ammo": null,
+                "move": null,
+                "activeMove": null,
+                "presentation": null,
+                "damage": 0,
+                "policy": {
+                  "id": "film_red_pyramid_film_175",
+                  "source": "film",
+                  "edition": "film",
+                  "role": "scripted-encounter",
+                  "adaptationMode": "versus-scripted",
+                  "combatEnabled": true,
+                  "canMove": true,
+                  "canJump": true,
+                  "canDodge": true,
+                  "referenceIds": [
+                    "EXT47",
+                    "EXT49"
+                  ],
+                  "observedBasis": "",
+                  "superEnabled": false,
+                  "superReason": "Les gestes de cette édition restent à relever avant de produire un super.",
+                  "superName": "Red Pyramid — Film — séquence de pression",
+                  "superDescription": "Chorégraphie originale : anticipation centrée sur « casque et grande lame film », enchaînement limité autour de « Great Knife », puis récupération exposée; aucun nouveau pouvoir ajouté.",
+                  "capabilities": {
+                    "reviewed": true,
+                    "projectile": false,
+                    "teleport": false,
+                    "trap": false,
+                    "aura": false,
+                    "effects": []
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "fixtures": [
+          "The explicit ?qa=1 bridge stops the animation loop and advances actual simulation ticks after the real launch button. Positions and one hit/collision are prepared; these are regression scenes, not a played campaign.",
+          "The explicit art diagnostic is enabled for subjects without imported PNGs. Existing candidate images remain unchanged; no diagnostic shape is counted as produced artwork.",
+          "Cybil fires ten accepted shots toward a distant opponent before an eleventh input resolves to the unarmed contact move. Actual emitted projectiles are counted, including hits and misses. No ammunition, health or move definition is injected.",
+          "A valid local checkpoint is prepared solely to verify that a refused noncombatant contact cannot overwrite progression or records.",
+          "Browser keyboard input and a narrow viewport do not certify a physical controller or mobile device. Missing contextual clips must remain visibly missing."
+        ],
+        "browser": "143.0.7499.0",
+        "passed": true
+      }
+    },
+    {
+      "report": "tests/http-chronicles/report.json",
+      "sha256": "3b1af570f8849177e7b16ba6e8da9cefa02a77c0f63cea0c7983f7759d15afe2",
+      "version": "0.9.6",
+      "passed": true,
+      "checks": 9,
+      "captures": 0,
+      "javascriptErrors": 0,
+      "browser": null,
+      "details": {
+        "version": "0.9.6",
+        "base": "http://127.0.0.1:4189",
+        "build": "dist",
+        "checks": [
+          {
+            "name": "static HTTP server ready",
+            "passed": true
+          },
+          {
+            "name": "new chapter selection explicitly lists the sacrificed Walter dossier outside victories",
+            "passed": true,
+            "detail": "1 dossier(s) hors combat dans cette chronique5 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 5 · Sacrificed Walter — Rencontre scénarisée · WATER PRISON WORLD CONSULTER LE DOSSIER"
+          },
+          {
+            "name": "the noncombatant chapter remains consultable through its actual reference dossier",
+            "passed": true
+          },
+          {
+            "name": "real launch uses the marked compatible queue and original first chapter arena",
+            "passed": true,
+            "detail": {
+              "format": "reference-encounters-v1",
+              "queue": [
+                "sh4_sniffer_dog_male_053",
+                "sh4_sniffer_dog_female_054",
+                "sh4_man_with_the_coat_067",
+                "sh4_one_truth_070",
+                "sh4_walter_sullivan_072"
+              ],
+              "stages": [
+                "room_302",
+                "water_prison",
+                "apartment_world",
+                "room_302",
+                "apartment_world"
+              ],
+              "chapterIndices": [
+                0,
+                1,
+                2,
+                3,
+                5
+              ],
+              "dossiers": [
+                {
+                  "chapterIndex": 4,
+                  "fighterId": "sh4_sacrificed_walter_071",
+                  "stageId": "water_prison",
+                  "role": "scripted-encounter"
+                }
+              ],
+              "stage": "room_302",
+              "expectedStage": "room_302",
+              "roleBlocked": false
+            }
+          },
+          {
+            "name": "fight view retains the chapter dossier notice without interactive archive controls",
+            "passed": true
+          },
+          {
+            "name": "legacy checkpoint is visible with its earned win and explicit suspended continuation",
+            "passed": true,
+            "detail": "Parcours chronicle : 1/6 victoires. Reprise suspendue : Sacrificed Walter exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée."
+          },
+          {
+            "name": "resuming a blocked legacy chapter explains that it was neither removed nor rewritten",
+            "passed": true,
+            "detail": "Sacrificed Walter : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+          },
+          {
+            "name": "refused legacy resume leaves checkpoint backup records and attempts byte-for-byte unchanged",
+            "passed": true
+          },
+          {
+            "name": "no unhandled browser errors",
+            "passed": true,
+            "detail": []
+          }
+        ],
+        "errors": [],
+        "scenes": {
+          "preview": "1 dossier(s) hors combat dans cette chronique5 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 5 · Sacrificed Walter — Rencontre scénarisée · WATER PRISON WORLD CONSULTER LE DOSSIER",
+          "launched": {
+            "format": "reference-encounters-v1",
+            "queue": [
+              "sh4_sniffer_dog_male_053",
+              "sh4_sniffer_dog_female_054",
+              "sh4_man_with_the_coat_067",
+              "sh4_one_truth_070",
+              "sh4_walter_sullivan_072"
+            ],
+            "stages": [
+              "room_302",
+              "water_prison",
+              "apartment_world",
+              "room_302",
+              "apartment_world"
+            ],
+            "chapterIndices": [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            "dossiers": [
+              {
+                "chapterIndex": 4,
+                "fighterId": "sh4_sacrificed_walter_071",
+                "stageId": "water_prison",
+                "role": "scripted-encounter"
+              }
+            ],
+            "stage": "room_302",
+            "expectedStage": "room_302",
+            "roleBlocked": false
+          },
+          "legacyNotice": "Parcours chronicle : 1/6 victoires. Reprise suspendue : Sacrificed Walter exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée.",
+          "blocked": {
+            "engine": false,
+            "message": "Sacrificed Walter : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+          }
+        },
+        "fixtures": "Isolated browser storage and an old checkpoint prepared for regression verification. No campaign is claimed as played.",
+        "passed": true
+      }
+    }
+  ],
+  "distribution": {
+    "fileCount": 71,
+    "manifest": [
+      {
+        "path": "404.html",
+        "sha256": "1b06dbe2b286ee58a8c4d6f2a288c27392cc53dcdd979ac8d496628638557652",
+        "bytes": 1072
+      },
+      {
+        "path": "assets/icons/icon-192.svg",
+        "sha256": "e313ddc97d6836fb6a91968fa69feffc3accc984406cd75be6b6552e1ff44d23",
+        "bytes": 472
+      },
+      {
+        "path": "assets/icons/icon-512.svg",
+        "sha256": "e313ddc97d6836fb6a91968fa69feffc3accc984406cd75be6b6552e1ff44d23",
+        "bytes": 472
+      },
+      {
+        "path": "assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+        "sha256": "36b284a5f726ee2158490be8d96b15e18a6bc315860d22bcc51496900ffaa0e7",
+        "bytes": 1660441
+      },
+      {
+        "path": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+        "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
+        "bytes": 2142783
+      },
+      {
+        "path": "build-manifest.json",
+        "sha256": "680871196018157cf9f819d8a0dbb49a6b76d1a74173b7a15cc99a07c5a1e09f",
+        "bytes": 12287
+      },
+      {
+        "path": "data/chronicles.json",
+        "sha256": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d",
+        "bytes": 8246
+      },
+      {
+        "path": "data/combat-rules.json",
+        "sha256": "662d191d95dd2983fe86efde5ecc163b479562653407b59ae4fe971794a1731a",
+        "bytes": 35110
+      },
+      {
+        "path": "data/content-stats.json",
+        "sha256": "da9a3e052b00422419e2360b44d673b9afae2ecebff2be492c8bf89ff4ffd3e5",
+        "bytes": 470
+      },
+      {
+        "path": "data/coverage-audit.json",
+        "sha256": "a53eb073509cb51e15a28ba23237a4dd957ffbf1a006212795f040736a5118c8",
+        "bytes": 3365
+      },
+      {
+        "path": "data/fatalities.json",
+        "sha256": "377edfd43bef99509d1bf6798fd939bc2e62b2a6b0509fc287a483747a7fdcfa",
+        "bytes": 355010
+      },
+      {
+        "path": "data/movesets.json",
+        "sha256": "f3287a4f7768c6c9ba0e55c4ae29f926cd2d36b7f017576752e5090fadd43d7d",
+        "bytes": 9497580
+      },
+      {
+        "path": "data/production-reference-index.json",
+        "sha256": "69419b464f1e42a8620bed8385b864d0496d4382e95ca21a9e482be46e7ca706",
+        "bytes": 12823
+      },
+      {
+        "path": "data/roster.json",
+        "sha256": "21acaecaa964e3b293faaa5bba958fb0db04438c1aba132e710dc1ff31647a60",
+        "bytes": 1639322
+      },
+      {
+        "path": "data/sources.json",
+        "sha256": "a783771effa7918f62f64e99183ddf2e1768c8e804849860ebc60a7e79dc0f6f",
+        "bytes": 1952
+      },
+      {
+        "path": "data/sprite-coverage.json",
+        "sha256": "6e3169252744b4855788a5f33d8a8e7e90c57aed06dad550a0f24e65907b6fed",
+        "bytes": 127385
+      },
+      {
+        "path": "data/stage-director.json",
+        "sha256": "d995f8a5686614509609e7fc812c8b386d031043d4ef946de4d0cfb3fa7d853b",
+        "bytes": 999436
+      },
+      {
+        "path": "data/stages.json",
+        "sha256": "592b62f90da31e9aa8940392b8a2aff1b95ebb35a0a6b288b7a1a04f1a844c38",
+        "bytes": 1091943
+      },
+      {
+        "path": "index.html",
+        "sha256": "c11a8fb343bb9aff1611e88fdd3fc86596d0568a4d390f5138d22b8bbe8b6f0d",
+        "bytes": 8809
+      },
+      {
+        "path": "manifest.webmanifest",
+        "sha256": "b44307f45e47d8621bb78dc03d0adae7a6427bb92f68f1b12059c230a25407de",
+        "bytes": 1409
+      },
+      {
+        "path": "modules/archive.css",
+        "sha256": "4c1b1388868546defa76cf83dd3ad9d015e5ac060c49bf7f4e5e981145c26a3e",
+        "bytes": 19269
+      },
+      {
+        "path": "modules/archive.html",
+        "sha256": "6ca4559184e7477f4df928f398a015b4d9a30f2536e27f5100b6b18852357bb9",
+        "bytes": 5971
+      },
+      {
+        "path": "modules/chronicles.css",
+        "sha256": "c0d0b21ba7ae27dbff689317dee8bf8a5bd4d3ca4164d7583cf5e5a1a5d8d4f5",
+        "bytes": 6111
+      },
+      {
+        "path": "modules/chronicles.html",
+        "sha256": "085ef8fb1bd4a63a9d5a03c6485d62dfe3250b33a383731b73fcece52d0eb275",
+        "bytes": 2517
+      },
+      {
+        "path": "modules/combat-academy.html",
+        "sha256": "aec646facb287a1f3eb722c51a3d5bf72e4474ebb6b30ad8d5a264e8f1f82ef1",
+        "bytes": 535
+      },
+      {
+        "path": "modules/finisher-archive.html",
+        "sha256": "d33f8ee0aab6e8e9848e59239233571893173e80b33c0b21d2a318a627149d09",
+        "bytes": 511
+      },
+      {
+        "path": "modules/roster-command.html",
+        "sha256": "ffc4ae4a02eadcfa0a12841f6b9945669e4d3f742b33ca1f46e04c307b57b6d5",
+        "bytes": 524
+      },
+      {
+        "path": "modules/sprite-workshop.css",
+        "sha256": "e3943271a82f5e82f2b49a8634f0e1c0c21f219a0cd53179e1bba699341cbc2a",
+        "bytes": 4115
+      },
+      {
+        "path": "modules/sprite-workshop.html",
+        "sha256": "ff9b031b9944a0ed7220cb2a4aaa105c78c938faa60646a85748b05231dd984b",
+        "bytes": 1886
+      },
+      {
+        "path": "modules/unified-versus.html",
+        "sha256": "d49c6af6d166fe73c42680487b3b78666f38ca87b0e5674ea4e623ed960be114",
+        "bytes": 9202
+      },
+      {
+        "path": "modules/versus.css",
+        "sha256": "61037bf22d3776639d1bf4d3f7303800d70ac9ec9593115017492dfd1277629d",
+        "bytes": 18291
+      },
+      {
+        "path": "offline.html",
+        "sha256": "879a06a74381682e89a14ec4888fe2dce7bbefc8a5f168c62c58ab32507abc1e",
+        "bytes": 1183
+      },
+      {
+        "path": "service-worker.js",
+        "sha256": "542545aad18ade011ba1817d0abe1dc7c5f1a5a6e469d67ee5eb8c9d351c8acc",
+        "bytes": 7689
+      },
+      {
+        "path": "src/archive.js",
+        "sha256": "7bdf9059c0b806d94b5d7c3902731b784edef1752a41815312c22d6fa8481669",
+        "bytes": 26841
+      },
+      {
+        "path": "src/chronicles.js",
+        "sha256": "dca93aecd03b55fbd7159e224caa236fb8a2d3bafa9d7cb72013cbbe1703a73e",
+        "bytes": 6589
+      },
+      {
+        "path": "src/combat-geometry.js",
+        "sha256": "ea4ea47c039569a7375ed0ae98febc17c75f1406e4918b540c031352a1c86395",
+        "bytes": 6222
+      },
+      {
+        "path": "src/combat-reference-policy.js",
+        "sha256": "e61b71f7277e70ae960c7517cd6be91c8d31c3429ba0b13e36468f07e4d9d6b1",
+        "bytes": 23198
+      },
+      {
+        "path": "src/combat-resolution.js",
+        "sha256": "d2a89df8e603614e7e004d15aa3036563829ae9819c8a322f685c44c08cc0353",
+        "bytes": 2137
+      },
+      {
+        "path": "src/command.js",
+        "sha256": "56970c2da95e3108d3efe8781cc3291febb6bc350c8f8cc784e7d398ac94f726",
+        "bytes": 26074
+      },
+      {
+        "path": "src/data.js",
+        "sha256": "91e415e3b4745bca9a6429a4c3d363244f0881ab271075f7c768463c00c42e27",
+        "bytes": 128257
+      },
+      {
+        "path": "src/fight.js",
+        "sha256": "5519254a499cfa0c53f68c1653ed09289a5c7ccd121e500c6ffd35730d7ee3c8",
+        "bytes": 136776
+      },
+      {
+        "path": "src/lore-cinematics.js",
+        "sha256": "c4b508abcd0683f0d065e154f66f681b3b0cd6039905e9e27a063486dc8ab298",
+        "bytes": 41435
+      },
+      {
+        "path": "src/movesets.js",
+        "sha256": "ef6f77ccd7c40d405c45f4b93714644cfe674ef8733cd247e822a3e36694be06",
+        "bytes": 52469
+      },
+      {
+        "path": "src/player-input.js",
+        "sha256": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1",
+        "bytes": 4433
+      },
+      {
+        "path": "src/playflow-ui.js",
+        "sha256": "7e9f4aa26797fb00b86c799ea64e56ad65331a22b420a883986e535707062e5f",
+        "bytes": 6814
+      },
+      {
+        "path": "src/presentation-sequences.js",
+        "sha256": "9432ad52191d57050a3e2d7dde98c709d8b6885be82dfcc7db80b5e8f8c11ed7",
+        "bytes": 2645
+      },
+      {
+        "path": "src/production-reference.js",
+        "sha256": "eebc34b3de52764e13d8ec056e844e279c4842fdf79cd8a754f35c08ae726599",
+        "bytes": 1337082
+      },
+      {
+        "path": "src/reference-ui.js",
+        "sha256": "855b0954b10430c0e466453384a2e1995536ca5a647d618ee9c6febb7b9bfdce",
+        "bytes": 5654
+      },
+      {
+        "path": "src/renderers.js",
+        "sha256": "764f410d2de227e99eee798e64bafa133b4feec00b294d5c08ff0d31ece65bbb",
+        "bytes": 33724
+      },
+      {
+        "path": "src/run-progress.js",
+        "sha256": "2d8ce745875ff2dd78d9dbf53a438629b62cfd57346542ffb57fe59bc3f332aa",
+        "bytes": 11916
+      },
+      {
+        "path": "src/save-store.js",
+        "sha256": "b4a17314928a91ad5780755c266ce188590f4e1a5d0b2d47f698d7241f65503b",
+        "bytes": 7585
+      },
+      {
+        "path": "src/shared.js",
+        "sha256": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e",
+        "bytes": 7384
+      },
+      {
+        "path": "src/sprite-animation.js",
+        "sha256": "f2d356cff823af74a617fb27a2bd4a7d45f82a2a95b6d05930c4c87a9588da00",
+        "bytes": 3911
+      },
+      {
+        "path": "src/sprite-clip-editor.js",
+        "sha256": "c09fa26265b45dd185f19358e080d196250aba5589dcd1f84f6bed1edb85fe94",
+        "bytes": 6454
+      },
+      {
+        "path": "src/sprite-clips.js",
+        "sha256": "cf002cbdf1f9d0cb190f0fc7cd9497da51d747f1f3aea398f07f1e0fbae76e35",
+        "bytes": 4345
+      },
+      {
+        "path": "src/sprite-framing.js",
+        "sha256": "283f6ac7799b4054867330c6df0bbb9e83c498f8093c6c9bbaf470787c9af2ad",
+        "bytes": 1690
+      },
+      {
+        "path": "src/sprite-inspector.js",
+        "sha256": "0c9ae2cd81285c8ce956f45c68e40ebcd5487255778ef9d7a0264df91057826c",
+        "bytes": 12575
+      },
+      {
+        "path": "src/sprite-manifest.js",
+        "sha256": "88cfa737d266dc987a7b5597e37201ad439bd7f2f23bf74be0971b581c72a9c1",
+        "bytes": 4029
+      },
+      {
+        "path": "src/sprite-poses.js",
+        "sha256": "a1a2049d0c2af62df49e86a6f9eec46b7ab2cf64d092cf437804b1fa530ff045",
+        "bytes": 2892
+      },
+      {
+        "path": "src/sprite-system.js",
+        "sha256": "d3480e955e9e028ef3152bbf9dd0605a1ae8d25f20343cf33808e9c141326f9d",
+        "bytes": 10568
+      },
+      {
+        "path": "src/sprite-workshop.js",
+        "sha256": "48e0aa80f8ed992318852366277330faec72e2534fbca82d2a8f063f76da44c8",
+        "bytes": 5333
+      },
+      {
+        "path": "src/stage-architecture.js",
+        "sha256": "1b86ad88b0c0b88e1593758fdf72e012f5dc2644fad9daf515c78711fe4d82c1",
+        "bytes": 3588
+      },
+      {
+        "path": "src/stage-cinematics.js",
+        "sha256": "a51489232415bac1bcc17d051dd7338c16d3d8ca2da7ec5c2700bfa8e3c42958",
+        "bytes": 20227
+      },
+      {
+        "path": "src/stage-director.js",
+        "sha256": "02a6bcbf411aa6480c55fefcb5231b25e3de18f7e556325f5569e7332c029e83",
+        "bytes": 49276
+      },
+      {
+        "path": "src/stage-hazard-renderer.js",
+        "sha256": "b5d21d9c623e342bc3b6ba02eaa2ac68475bb6ff834f38d8c3358816ac2707cb",
+        "bytes": 5324
+      },
+      {
+        "path": "src/stage-lore-policy.js",
+        "sha256": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
+        "bytes": 3778
+      },
+      {
+        "path": "src/stage-reference-policy.js",
+        "sha256": "d12c421d5a84f1c56de74d5dd48d8956c459c685012eea4a34dea303c08e26bc",
+        "bytes": 21398
+      },
+      {
+        "path": "src/touch-controls.js",
+        "sha256": "d356deec1f6d8aceecb63aa0980a83f399ad675340ffaa8ef24e7c133b59a446",
+        "bytes": 1315
+      },
+      {
+        "path": "src/versus.js",
+        "sha256": "15848ff4f1ad198b0cd9f929c28ffcd0b869fbb43a6de7f62e94f85163c8ee62",
+        "bytes": 45358
+      },
+      {
+        "path": "styles.css",
+        "sha256": "60435f60021e80e7a5f73c9606c4d413046d84397e4a214e8788efd230396c21",
+        "bytes": 22409
+      },
+      {
+        "path": "vercel.json",
+        "sha256": "df755c0aac631a4e87922e7950243a6173aface1d6ac3177bd2fbee3d1c41412",
+        "bytes": 1650
+      }
+    ]
+  },
+  "workbook": {
+    "schema": 1,
+    "xlsxSha256": "7c27131cd67d9a9f675fd89d05e395613d0e56a3a1ffb3a20cb6c38f00f4d9fc",
+    "planSha256": "120157f0cf460d2f6043531ead8fa8d0268f28a1335163fbb1b3ef877e9e8c95",
+    "bytes": 1448569,
+    "sheets": {
+      "Combattants": {
+        "dataRows": 230,
+        "tableRef": "A5:V235",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Mouvements": {
+        "dataRows": 4600,
+        "tableRef": "A5:AE4605",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Finishers": {
+        "dataRows": 583,
+        "tableRef": "A5:Q588",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Présentations": {
+        "dataRows": 1610,
+        "tableRef": "A5:N1615",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Clips": {
+        "dataRows": 2300,
+        "tableRef": "A5:M2305",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Arènes": {
+        "dataRows": 123,
+        "tableRef": "A5:S128",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Animations arènes": {
+        "dataRows": 1799,
+        "tableRef": "A5:L1804",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 1
+      },
+      "Actions": {
+        "dataRows": 875,
+        "tableRef": "A5:K880",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 2
+      },
+      "Gestes référencés": {
+        "dataRows": 435,
+        "tableRef": "A5:I440",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 0
+      },
+      "Sources": {
+        "dataRows": 135,
+        "tableRef": "A5:G140",
+        "frozenRows": 5,
+        "frozenColumns": 3,
+        "validationLists": 0
+      }
+    },
+    "errors": [],
+    "sourceUrls": 135,
+    "summaryFormulas": 80,
+    "checks": [
+      "ZIP CRC",
+      "worksheet scope",
+      "row IDs and totals",
+      "frozen panes",
+      "native tables and filters",
+      "validation lists",
+      "all cached error cells",
+      "summary formula caches",
+      "source URLs",
+      "numeric engine data",
+      "empty source timing fields",
+      "blocked production statuses"
+    ],
+    "totalDataRows": 12690,
+    "passed": true,
+    "limits": "Read-only OOXML verification; no claim of a native Excel desktop session or a full animation review.",
+    "preservation": {
+      "passed": true,
+      "comparedCells": 249556,
+      "authoredChanges": 31235,
+      "enlargedRows": 7753,
+      "unchanged": [
+        "worksheet order",
+        "unrelated values",
+        "all formulas",
+        "effective cell formatting",
+        "column widths",
+        "unrelated row heights",
+        "native tables and validation features"
+      ]
+    }
+  },
+  "limits": [
+    "No dedicated animated bitmap clip created or 1:1 certified",
+    "Prepared KO, clocks, inputs and sprites metadata are explicitly declared QA fixtures",
+    "No full campaign playthrough or physical gamepad certification",
+    "Native Excel desktop was not executed"
+  ]
+}

@@ -98,7 +98,7 @@ class ClipTests(unittest.TestCase):
             with self.assertRaises(ValueError):self.apply()
     def test_publication_reuses_importer_key_contract(self):
         self.assertEqual(module.POSE_KEYS,module.importer.POSE_KEYS)
-        self.assertEqual(len(set(module.POSE_KEYS)),38)
+        self.assertEqual(len(set(module.POSE_KEYS)),39)
     def test_each_presentation_can_publish_dedicated_frames_once(self):
         for pose in module.PRESENTATION_KEYS:
             with self.subTest(pose=pose):
@@ -122,3 +122,19 @@ class ClipTests(unittest.TestCase):
         self.apply(packet,apply=True,pose_reviewed=True);before=self.path.read_bytes()
         with self.assertRaisesRegex(ValueError,'Stale'):self.apply(packet,apply=True,pose_reviewed=True)
         self.assertEqual(self.path.read_bytes(),before)
+
+
+class ContextKeyTests(unittest.TestCase):
+    def test_context_uses_exact_fighter_and_stage_identities(self):
+        validate = module.importer.validate_pose_key
+        fighter = 'sh1_air_screamer_001'
+        for pose in ['taunt@'+fighter+':taunt', 'winRound@'+fighter+':winRound1', 'finisher@'+fighter+'_signature', 'finished@film_red_pyramid_film_175_nightmare', 'finisher@midwich_fatality']:
+            self.assertEqual(validate(pose, fighter, ROOT), pose.split('@')[0])
+    def test_context_rejects_wrong_owner_unknown_id_and_path(self):
+        for pose in ['intro@film_red_pyramid_film_175:intro','finisher@film_red_pyramid_film_175_signature','finished@missing_signature','intro@../escape','finisher@@midwich_fatality','winRound@sh1_air_screamer_001:winRound','taunt@']:
+            with self.subTest(pose=pose), self.assertRaises(ValueError):
+                module.importer.validate_pose_key(pose, 'sh1_air_screamer_001', ROOT)
+    def test_contextual_loop_is_rejected_by_publication(self):
+        asset = dict(fighterId='sh1_air_screamer_001', frames=[{}])
+        with self.assertRaisesRegex(ValueError,'Presentations'):
+            module.validate_clip(asset,'finisher@sh1_air_screamer_001_signature',dict(frames=[0],ticksPerFrame=3,loop=True),ROOT)

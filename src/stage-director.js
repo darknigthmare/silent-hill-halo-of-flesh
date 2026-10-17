@@ -8,6 +8,7 @@
 
 import { constrainStageDeck, localAnimationAllowed } from './stage-lore-policy.js';
 import { stageChoreographyProfile } from './stage-cinematics.js';
+import { applyStageReferencePolicy, stageReferenceHazardAllowed } from './stage-reference-policy.js';
 
 const unique = (values = []) => [...new Set(values.filter(Boolean))];
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -118,6 +119,10 @@ export const STAGE_SHIFT_STYLES = Object.freeze({
 });
 
 export const STAGE_INTERACTION_TRIGGERS = Object.freeze({
+  'local-heavy-impact': {
+    name: 'IMPACT LOURD À PROXIMITÉ',
+    description: 'Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction.',
+  },
   'time-or-first-heavy-impact': {
     name: 'IMPACT LOURD / PREMIER TEMPS',
     description: 'Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu.',
@@ -155,6 +160,9 @@ export const STAGE_EVENTS = Object.freeze({
   stormSurge: { name: 'FRONT D’ORAGE', duration: 135, darkness: .32, radioBoost: .2, hazard: 'lightningStrike', terrainPulse: 'wetConcrete', message: 'L’ORAGE COUPE LA ROUTE', animation: 'lightning' },
   iceLock: { name: 'PRISE DU GEL', duration: 130, darkness: .12, radioBoost: -.16, hazard: 'iceFracture', terrainPulse: 'ice', message: 'LA GLACE PREND LE SOL', animation: 'iceCrack' },
   ritualWake: { name: 'RÉPONSE DU RITUEL', duration: 145, darkness: .24, radioBoost: .18, hazard: 'ritualSeal', terrainPulse: 'ritualStone', message: 'LE RITUEL RÉPOND', animation: 'ritualGlyph' },
+  referenceLightReply: { name: 'VOYANT DU PALIER', duration: 100, darkness: .04, radioBoost: .04, gameplayRole: 'ambience', referenceOnly: true, message: 'LE VOYANT RÉPOND' },
+  referenceDustRelease: { name: 'POUSSIÈRE DU PLÂTRE', duration: 130, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE PLÂTRE FRÉMIT' },
+  referenceSteamPurge: { name: 'ROBINET DU PASSAGE', duration: 108, darkness: .03, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'TROIS PURGES AU FOND DU PASSAGE' },
 });
 
 const SOURCE_DIRECTIVES = Object.freeze({
@@ -318,8 +326,8 @@ function makeInteraction(stage, eventId, index) {
   };
 }
 
-export function enrichStage(stage) {
-  if (stage.id === 'brookhaven_roof') stage.family = 'roof';
+export function enrichStage(stage, reference) {
+  if (['brookhaven_roof','arcade_hospital_roof'].includes(stage.id)) stage.family = 'roof';
   const source = SOURCE_DIRECTIVES[stage.source] || SOURCE_DIRECTIVES.sh1;
   const family = FAMILY_DIRECTIVES[stage.family] || FAMILY_DIRECTIVES.street;
   const override = STAGE_OVERRIDES[stage.id] || {};
@@ -375,6 +383,19 @@ export function enrichStage(stage) {
   stage.animationTracks = (stage.animations || []).map((id) => animationTrack(typeof id === 'string' ? id : id.id, shift.style));
   stage.interactions = events.slice(0, 3).map((eventId, index) => makeInteraction(stage, eventId, index));
   stage.catalogueStatus ||= 'verified-location';
+  const projected = applyStageReferencePolicy(stage, reference);
+  if (projected.shift.style !== stage.shift.style) {
+    projected.shift = {...projected.shift,...STAGE_SHIFT_STYLES[projected.shift.style],style:projected.shift.style,
+      enabled:projected.shift.enabled,startOtherworld:projected.shift.startOtherworld,referenceState:projected.shift.referenceState};
+  }
+  projected.terrain = stageTerrainProfile(projected);
+  projected.interactions = projected.interactions.map(interaction=>({...interaction,
+    triggerLabel:STAGE_INTERACTION_TRIGGERS[interaction.trigger]?.name || interaction.trigger,
+    triggerDescription:STAGE_INTERACTION_TRIGGERS[interaction.trigger]?.description || '',
+  }));
+  projected.gameplay = {...projected.gameplay,environmentalDirector:!projected.reference.blocked,terrainRules:!projected.reference.blocked};
+  projected.director.signature = `${stage.id}:${projected.shift.style}:${projected.terrain.id}:${projected.referencePolicy.worldState}:${projected.director.hazardDeck.join('+')}:${projected.director.events.join('+')}`;
+  Object.assign(stage,projected);
   return stage;
 }
 
@@ -383,7 +404,7 @@ export function stageEventDefinition(id) {
 }
 
 export function stageHazardDeck(stage, phase = 'fog') {
-  const deck = stage?.director?.hazardDeck || [];
+  const deck = (stage?.director?.hazardDeck || []).filter(id=>stageReferenceHazardAllowed(stage,id));
   if (phase === 'fog') {
     const filtered = deck.filter((id) => !['sirenShock','ritualSeal','voidPull'].includes(id));
     return filtered;
@@ -410,6 +431,9 @@ export function stageDirectorSummary(stage) {
     animations: [...(stage?.animationTracks || [])],
     interactions: [...(stage?.interactions || [])],
     choreography: stageChoreographyProfile(stage).cues,
+    reference: stage.reference || null,
+    referencePolicy: stage.referencePolicy || null,
+    referenceTracks: [...(stage.referenceTracks || [])],
     motifPolicy: stage.director?.motifPolicy || null,
   };
 }

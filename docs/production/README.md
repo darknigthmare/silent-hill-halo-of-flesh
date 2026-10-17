@@ -1,8 +1,8 @@
-# Références de combat et d’animation — phase 1
+# Références de combat et d’animation — suivi d’intégration
 
-Ce dossier prépare la réalisation des movesets, supers, finishers, introductions, sorties, poses de manche et animations de lieux de **SILENT HILL: HALO OF FLESH**. Le point de comparaison est la PR #4 au commit `d11cf4e8c03668aa535631cb2ef60767ee51e75b` (v0.9.5).
+Ce dossier suit la réalisation des movesets, supers, finishers, introductions, sorties, poses de manche et animations de lieux de **SILENT HILL: HALO OF FLESH**. Le catalogue initial conserve son point de comparaison dans la PR #4 au commit `d11cf4e8c03668aa535631cb2ef60767ee51e75b`. L’intégration v0.9.6 prolonge le commit `843449e78c02ce53564a033439dab1fd8c8fb204`.
 
-Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les fichiers JSON et les scripts permettent d’en contrôler la couverture et de le reconstruire. Le jeu ne charge aucun fichier de ce dossier : les propositions restent en phase de préparation. Le [relevé de vérification](QA_2026-10-17.md) décrit les comptes et leurs limites.
+Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
 ## Contenu
 
@@ -22,9 +22,9 @@ Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_H
 
 ## Ce que signifie la fidélité
 
-**Une identité documentée ne valide pas automatiquement un mouvement.** Un bestiaire peut attester une morsure, un rampement ou une arme sans établir la préparation, les frames actives, la portée ni les transitions d’un jeu de versus. La mention `direct-canonical` du catalogue existant est donc conservée comme une affirmation à contrôler, pas comme une certification indépendante.
+**Une identité documentée ne valide pas automatiquement un mouvement.** Un bestiaire peut attester une morsure, un rampement ou une arme sans établir la préparation, les frames actives, la portée ni les transitions d’un jeu de versus. Les 4 600 emplacements sont désormais classés comme composites de gestes ou adaptations de versus ; aucun n’est présenté comme une animation 1:1 directement attestée. Les paramètres d’une commande désactivée restent visibles comme données du catalogue, sans être exécutés.
 
-Les gestes décrits par les sources, les contraintes de l’œuvre et les propositions de chorégraphie sont séparés. Les supers, poses de victoire, finishers et adaptations de commande sont signalés comme propositions. Lorsqu’une référence manque ou qu’un profil représente un élément non combattant, son rôle doit être décidé avant de lui produire un moveset libre.
+Les gestes décrits par les sources, les contraintes de l’œuvre et les propositions de chorégraphie sont séparés. Les supers, poses de victoire, finishers et adaptations de commande portent leur statut de production. Lorsqu’une référence manque ou qu’un profil représente un élément non combattant, ses commandes incompatibles sont bloquées ; le dossier reste consultable.
 
 Les œuvres originales, remakes, films et reprises dans *The Arcade* ou *Book of Memories* ne sont pas interchangeables. Une variante conserve son ID et peut pointer vers une base documentée ; elle ne reçoit pas les attaques d’une autre version par simple ressemblance de nom.
 
@@ -42,22 +42,33 @@ La victoire finale, la défaite finale et la sortie sont suivies séparément. U
 
 ## Suivi de l’intégration après la phase 1
 
-La [passe de présentation du 17 octobre](../PRESENTATION_SEQUENCES_2026-10-17.md)
-ajoute les huit clés de clip `intro`, `winRound`, `loseRound`, `winMatch`,
-`loseMatch`, `outro`, `finisher` et `finished` au moteur et à l’atelier.
-`winRound1` et `loseRound1` ciblent les clés de manche réversibles. Les cellules
-de suivi décrivent maintenant ces points d’intégration et les images manquantes.
-L’action globale des poses de manche est validée ; la cinématique reste en cours
-pour ses montages et pistes spécialisés. **874 actions restent ouvertes sur 875,
-dont 127 P0 ; aucun clip animé ni fidélité 1:1 n’est certifié.**
+La v0.9.6 applique les 230 fiches de rôle et de capacité : **3 711 commandes
+actives et 889 désactivées avec une raison**, sur les 4 600 emplacements conservés.
+Les dossiers et l’atelier exposent l’édition exacte et les références.
+
+Les neuf clés `intro`, `winRound`, `loseRound`, `winMatch`, `loseMatch`, `outro`,
+`finisher`, `finished` et `taunt` utilisent des contextes précis. Les 93 montages
+de fatalité écrits, les 301 présentations composées et les 50 éléments partiels
+d’arène sont identifiés dans leurs lignes. Les images propres à ces gestes
+restent à produire. Les 1 799 lignes d’animation d’arène gardent leurs IDs ;
+1 161 éléments retirés du moteur restent listés pour tracer leur désactivation.
+Sept nouveaux raccords sont détaillés dans les fiches d’arènes concernées.
+
+L’action globale des poses de manche est validée ; les travaux techniques en
+cours ne valident pas automatiquement les images. **874 actions restent ouvertes
+sur 875, dont 127 P0 ; aucun clip animé ni fidélité 1:1 n’est certifié.**
 
 Pour une mise à jour ciblée, `scripts/update-production-workbook.mjs` prend le
-JSON du plan, le classeur existant, le rapport `workbook-verification.json`
-précédent et un dossier de sortie. Il conserve les champs de travail non concernés.
+nouveau JSON du plan, le classeur existant, le précédent rapport
+`workbook-verification.json`, le dossier de sortie et le précédent JSON du plan.
+L’empreinte du précédent plan et les champs annotables sont contrôlés avant
+d’écrire. Les IDs, l’ordre et les champs de travail non concernés sont conservés.
 Le vérificateur accepte `--compare-source CLASSEUR_SOURCE --change-log JOURNAL_JSON`
-pour contrôler les cellules, styles, formules et propriétés des feuilles avant
-de remplacer le fichier. Une reconstruction complète reste un autre parcours,
-avec la précaution décrite ci-dessous pour les annotations manuelles.
+et `--layout-change-log JOURNAL_HAUTEURS`. Les journaux peuvent être des `.json.gz`.
+Il compare toutes les cellules et propriétés natives ; seules les augmentations
+de hauteur enregistrées, nécessaires au nouveau texte, sont admises.
+Une reconstruction complète reste un autre parcours, avec la précaution décrite
+ci-dessous pour les annotations manuelles.
 
 ## Format artistique
 
@@ -68,8 +79,8 @@ L’état actuel des images est repris du registre `src/sprite-manifest.js`. Une
 ## Mise à jour et contrôles
 
 1. Modifier les recherches sourcées dans `research/classic.json` ou `research/extended.json`, en conservant les IDs.
-2. Exécuter `node scripts/build-production-plan.mjs` depuis la racine du dépôt. Le script refuse les omissions de profils ou d’arènes, les références inconnues et les propositions canoniques sans preuve.
-3. Vérifier le catalogue avec `node --test tests/production-plan.test.mjs`.
+2. Exécuter `node scripts/build-production-reference.mjs`, puis `node scripts/build-production-plan.mjs` depuis la racine du dépôt. Les scripts refusent les omissions, les doublons, les références inconnues et les propositions canoniques sans preuve. `npm test` reconstruit et vérifie aussi le registre distribué.
+3. Vérifier le catalogue avec `node --test tests/production-plan.test.mjs tests/reference-authoring.test.mjs`.
 4. Dans un environnement disposant de `@oai/artifact-tool`, exécuter `node scripts/build-production-workbook.mjs docs/production/production-plan.json /tmp/halo-workbook`. Le script recalcule les formules, exerce le changement de statut puis le restaure, vérifie les compteurs et rend chaque onglet avant l’export.
 5. Exécuter `python3 scripts/verify-production-workbook.py docs/production/production-plan.json /tmp/halo-workbook/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx /tmp/halo-workbook/workbook-export-verification.json`. Ce contrôle lit le fichier exporté sans le modifier et refuse toute cellule d’erreur, référence perdue ou divergence des données.
 
@@ -77,4 +88,7 @@ Le JSON complet `production-plan.json` est un intermédiaire regénérable, excl
 
 Les états, responsables et relevés vidéo du classeur sont des champs de travail modifiables. Ils ne sont pas importés automatiquement dans le jeu ou dans les JSON. **Une reconstruction remplace le classeur généré** : reporter d’abord les décisions conservées dans les sources du catalogue, ou garder la copie de travail annotée avant de reconstruire. Il n’y a pas de synchronisation bidirectionnelle implicite.
 
-Les contrôles vérifient la couverture et la traçabilité de la première phase. Ils ne prouvent pas que toutes les animations sont réalisées, que le canon est exhaustif sur tous les médias, ni que les campagnes ont été jouées intégralement.
+Les contrôles vérifient la couverture du suivi, sa traçabilité et les raccords
+effectivement exécutés. Ils ne prouvent pas que toutes les animations sont
+réalisées, que le canon est exhaustif sur tous les médias, ni que les campagnes
+ont été jouées intégralement.

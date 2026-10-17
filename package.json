@@ -1,22 +1,23 @@
 {
   "name": "silent-hill-halo-of-flesh",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "private": true,
-  "description": "Prototype fan-made non commercial de combat 2D consacré aux manifestations de Silent Hill, avec 230 profils, 4 600 mouvements lore-first et un directeur de 123 arènes : 14 terrains, 15 bascules Otherworld, 22 chorégraphies visuelles d’événements, IA défensive et 29 dangers télégraphiés.",
+  "description": "Prototype fan-made non commercial de combat 2D consacré aux manifestations de Silent Hill : 230 fiches référencées, commandes contraintes par leur œuvre, chorégraphies lore et directeur de 123 lieux. Images et fidélité 1:1 suivies séparément dans le classeur de production.",
   "type": "module",
   "scripts": {
     "start": "node scripts/server.mjs",
     "docs": "node scripts/generate-docs.mjs",
-    "verify": "node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only",
-    "build": "node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs",
-    "test": "node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
+    "verify": "node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only",
+    "build": "node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs",
+    "test": "node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
     "qa": "npm test",
-    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs && node scripts/http-qa-boundaries-v095.mjs && node scripts/http-qa-presentations.mjs",
+    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs && node scripts/http-qa-boundaries-v095.mjs && node scripts/http-qa-presentations.mjs && node scripts/http-qa-reference-integration.mjs && node scripts/http-qa-chronicles.mjs",
     "release:check": "node scripts/release-check.mjs",
     "qa:ui": "python scripts/ui-qa-v090.py",
     "sprites:check": "node scripts/build-sprites.mjs",
     "qa:sprites": "node scripts/http-qa-sprites.mjs",
-    "test:art": "python -m unittest discover -s tests -p 'test_*.py' -v"
+    "test:art": "python -m unittest discover -s tests -p 'test_*.py' -v",
+    "references:check": "node scripts/build-production-reference.mjs --check"
   },
   "engines": {
     "node": ">=20"

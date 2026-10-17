@@ -1,5 +1,5 @@
 /** Per-actor presentation clock. No random numbers, wall time or physics writes. */
-import {PRESENTATION_KEYS} from './sprite-poses.js';
+import {PRESENTATION_KEYS,validSpriteClipKey} from './sprite-poses.js';
 const presentationOf=state=>PRESENTATION_KEYS.includes(state?.presentation?.key)?state.presentation:null;
 const frameTick=value=>Number.isFinite(value)?Math.max(0,Math.floor(value)):0;
 export function actorSpriteState(actor){
@@ -27,12 +27,21 @@ export function advanceSpriteClock(actor){
  const identity=presentation?`${pose}:presentation:${presentation.id??presentation.sequenceId??''}`:pose+':'+(actor.attack?.id??'');
  actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?actor.spriteClock.tick+1:0};
 }
+export function requestedSpriteClipKey(state={}){
+ const pose=poseFromState(state),presentation=presentationOf(state);
+ return presentation?.clipKey||(presentation?.contextId?`${pose}@${presentation.contextId}`:pose);
+}
 export function sampleSpriteClip(art,state={}){
  if(!art)return null;
- const requested=poseFromState(state),has=key=>Object.prototype.hasOwnProperty.call(art.clips||{},key);
- const pose=has(requested)?requested:'idle',clip=has(pose)?art.clips[pose]:null;
+ const requestedPose=poseFromState(state),requested=requestedSpriteClipKey(state),presentation=presentationOf(state);
+ const has=key=>Object.prototype.hasOwnProperty.call(art.clips||{},key)&&(!presentation||art.clips[key]?.loop===false);
+ const validContext=!requested.includes('@')||validSpriteClipKey(requested,art);
+ const strictContext=Boolean(presentation?.contextId||requested.includes('@'))&&['finisher','finished'].includes(requestedPose);
+ const pose=validContext&&has(requested)?requested:!strictContext&&has(requestedPose)?requestedPose:'idle';
+ const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
  if(!clip?.frames?.length)return null;
  const durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame||1);
+ if(durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1))return null;
  const total=durations.reduce((n,t)=>n+t,0);
  if(!Number.isSafeInteger(total)||total<1)return null;
  // The engine's shared sequence tick also drives direct inspector samples.
@@ -41,5 +50,7 @@ export function sampleSpriteClip(art,state={}){
  tick=clip.loop?tick%total:Math.min(tick,total-1);
  let index=0,elapsed=0;while(index<durations.length-1&&tick>=elapsed+durations[index])elapsed+=durations[index++];
  const frameIndex=clip.frames[index],frame=art.frames[frameIndex];
- return frame?{requested,pose,fallback:pose!==requested,frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
+ return frame?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
+  fallbackReason:pose===requested?null:strictContext?'missing-contextual-finisher':pose===requestedPose?'generic-presentation':'missing-presentation',
+  frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
 }

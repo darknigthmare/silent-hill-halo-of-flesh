@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-v092');await mkdir(out,{recursive:true});
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4177';let server,browser;
-const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Direct actor placement at both stage edges and world-state changes for render-envelope QA only.']};
+const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Direct actor placement at both stage edges and synthetic world amounts exercise only the render envelope; they do not certify or enable a fixed-stage transition. The genuine stage and complete world state are restored for the capture.']};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
 try{
@@ -33,6 +33,7 @@ try{
  const matrix=await page.evaluate(async()=>{
   const {STAGES}=await import('/src/data.js'),{spriteFor}=await import('/src/sprite-system.js'),{visibleSpriteBox,toScreen}=await import('/src/sprite-framing.js');
   const e=__HALO_QA__.engine;e.running=false;e.paused=false;e.shake=0;e.texts=[];e.hazards=[];e.particles=[];
+  const originalStage=e.stage,originalWorld=structuredClone(e.world);
   const failures=[];let renders=0,zoomed=0;
   for(const stage of STAGES)for(const amount of [0,.5,1])for(const facing of [-1,1]){
    e.stage=stage;e.world.amount=amount;e.actors[0].x=80;e.actors[0].facing=facing;e.actors[1].x=1200;e.actors[1].facing=-facing;
@@ -41,7 +42,7 @@ try{
     if(b.x<-.001||b.x+b.w>1280.001||b.y<131.999||b.y+b.h>694.001)failures.push(stage.id+':'+a.data.id);}
    if(e.actors[0].x!==80||e.actors[1].x!==1200)failures.push('physical coordinates altered');
   }
-  e.stage=STAGES[0];e.world.amount=0;e.render(0);return {renders,zoomed,failures};
+  e.stage=originalStage;e.world=originalWorld;e.render(0);return {renders,zoomed,failures};
  });report.stagedCamera=matrix;check('all 123 stages render with full native sprite envelopes at edges',matrix.renders===738&&matrix.failures.length===0&&matrix.zoomed>0);await shot(page,'03-edge-camera');
  // No wall-clock dependency in presentation: pausing cannot consume clip ticks.
  const frozen=await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)));await page.waitForTimeout(100);check('stopped simulation does not advance pose clocks through rendering',await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)))===frozen);

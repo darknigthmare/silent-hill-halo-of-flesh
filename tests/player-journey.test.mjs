@@ -102,12 +102,13 @@ test('results: route summary uses the whole route, not merely the final encounte
 });
 for(const route of CHRONICLES)test(`chronicle state-machine: ${route.id} survives save/reload at every encounter`,()=>{
   const s=new Memory();let run=make('chronicle',{routeId:route.id});
-  for(let i=0;i<route.fighters.length;i++){
+  const encounters=run.queue.length;
+  for(let i=0;i<encounters;i++){
     assert.equal(run.index,i);saveRun(run,s);run=loadRun(s);assert.ok(run);
     run=settleRun(run,result());saveRun(run,s);run=loadRun(s);assert.equal(run.wins,i+1);
-    if(i<route.fighters.length-1)run=resumeRun(run);
+    if(i<encounters-1)run=resumeRun(run);
   }
-  assert.equal(run.status,'complete');assert.equal(run.results.length,route.fighters.length);
+  assert.equal(run.status,'complete');assert.equal(run.results.length,encounters);
 });
 test('controls: defaults cover both subjects without shared keys',()=>{assert.ok(validControls(defaultControls()));});
 test('controls: rebinding survives storage/reload without modifying defaults',()=>{

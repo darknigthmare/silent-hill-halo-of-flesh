@@ -8,8 +8,8 @@ import {VERSION} from '../src/data.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-presentations');
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4181';
-const keys=['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished'];
-const versus=base+'/modules/unified-versus.html?qa=1';
+const keys=['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt'];
+const versus=base+'/modules/unified-versus.html?qa=1&p1=sh1_air_screamer_001&p2=film_red_pyramid_film_175';
 await mkdir(out,{recursive:true});
 let server,browser;
 const pages=[];
@@ -19,6 +19,7 @@ const report={version:VERSION,base,checks:[],errors:[],captures:[],scenes:{},fix
  'A timing-only outro clip holds the existing candidate PNG for 540 simulated ticks in memory. It bypasses the dedicated-image import gate only as a test fixture; it is not new art, a produced animation, or a fidelity review.',
  'Original SPRITES entries are retained and restored before navigation and again on failure when that page is still available. No registry, PNG, gameplay file or save outside the isolated browser context is edited.',
  'The dojo uses its real RESET button, real control rebinding and prepared match results. These are lifecycle tests, not a played training session.',
+ 'The prepared finisher uses Air Screamer against the film candidate, a compatible body pairing. The authored aerial outro is also exercised with no imported outro clip; its staging is not new animation artwork.',
  'Keyboard, viewport and offline browser checks do not certify a physical controller or mobile device.'
 ]};
 function check(name,passed,detail){
@@ -139,13 +140,26 @@ try{
 
  // A second prepared local match covers ordinary loseMatch and stale reveal cancellation.
  await page.click('#rematch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='intro');await page.evaluate(()=>__PRESENTATION_QA__.watch());
- current=await page.evaluate(()=>{const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;e.togglePause(true);e.phase='fight';e.clearPresentations();e.clearInputs();e.config.fatalities=false;return q.knockout(true);});
+ current=await page.evaluate(()=>{const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;q.advance(e.phaseTimer);e.config.fatalities=false;return q.knockout(true);});
  check('ordinary decisive result uses winMatch and loseMatch',current.tracks[0].key==='winMatch'&&current.tracks[1].key==='loseMatch'&&current.tracks.every(t=>!t.reversible),current);
  current=await page.evaluate(()=>{const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;q.advance(e.phaseTimer);q.retired=e;return q.snapshot();});
  check('ordinary loser stays in its completed loseMatch during winner outro',current.tracks[0].key==='outro'&&current.tracks[1].key==='loseMatch'&&current.tracks[1].complete,current.tracks);
  await page.click('[data-pause=select]');await page.waitForSelector('#selectScreen:not(.hidden)');await page.waitForTimeout(750);
  check('leaving during outro invalidates the delayed result callback',await page.evaluate(()=>!__HALO_QA__.engine&&__PRESENTATION_QA__.retired.destroyed&&__PRESENTATION_QA__.retired.actors.every(a=>a.presentation===null)&&document.querySelector('#result').classList.contains('hidden')));
  check('timing fixture restores the original SPRITES registry after local scenes',await restore(page));
+
+ // A real composed exit also owns the result gate, even though it imports no new images.
+ await page.uncheck('#fatalities');await page.click('#launch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='intro');
+ current=await page.evaluate(()=>{
+  const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;q.watch();q.advance(e.phaseTimer);q.knockout(true);q.advance(e.phaseTimer);
+  q.composedOverlayCount=q.resultOverlays;return q.snapshot();
+ });report.scenes.composedOutro=current;
+ check('the composed Air Screamer exit starts with no imported clip and keeps its result pending',current.phase==='matchEnd'&&current.tracks[0].key==='outro'&&current.tracks[0].clipDuration===0&&current.tracks[0].stagingDuration===90&&!current.tracks[0].complete&&current.resultHidden,current);
+ const frozenComposed=JSON.stringify(current);await page.waitForTimeout(750);
+ check('a paused composed outro stays hidden beyond 600 ms without a result veil',JSON.stringify(await scene(page))===frozenComposed&&await page.locator('#result').isHidden()&&await page.evaluate(()=>__PRESENTATION_QA__.resultOverlays===__PRESENTATION_QA__.composedOverlayCount&&__HALO_QA__.engine.isPresentingOutro()));
+ await page.click('[data-pause=resume]');await page.evaluate(()=>{const e=__HALO_QA__.engine;__PRESENTATION_QA__.advance(e.actors[0].presentation.duration-e.resultTimer+2,false);});
+ await page.waitForSelector('#result:not(.hidden)');
+ check('the composed outro reveals its own result only after simulated completion',await page.evaluate(()=>__HALO_QA__.engine.actors[0].presentation.complete&&!__HALO_QA__.engine.isPresentingOutro()));
 
  // The dojo RESET button must retire the old result callback and allow a later match to settle.
  await page.goto(versus+'&preset=training');await page.waitForFunction(()=>!!window.__HALO_QA__);await quietRules(page);await page.uncheck('#fatalities');
@@ -154,7 +168,7 @@ try{
  const dojoBefore=(await scene(page)).records.matches||0;
  await page.evaluate(()=>__PRESENTATION_QA__.installOutro());
  current=await page.evaluate(()=>{
-  const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;e.phase='fight';e.clearPresentations();e.clearInputs();q.knockout(true);q.advance(e.phaseTimer,false);
+  const q=__PRESENTATION_QA__,e=__HALO_QA__.engine;q.advance(e.phaseTimer);q.knockout(true);q.advance(e.phaseTimer,false);
   q.retired=e;q.oldBindings=JSON.stringify(e.bindings);return q.snapshot();
  });
  check('prepared dojo result settles before its pending 540-tick outro',current.phase==='matchEnd'&&current.tracks[0].clipDuration===540&&!current.tracks[0].complete&&current.records.matches===dojoBefore+1&&current.resultHidden,current);
@@ -179,7 +193,7 @@ try{
  check('dojo timing fixture restores original SPRITES without new artwork',await restore(page));
 
  await page.goto(base+'/modules/sprite-workshop.html');await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');
- check('workshop retains thirty old keys and exposes eight presentation keys',await page.locator('[data-inspect=pose] option').count()===38);
+ check('workshop retains thirty old keys, adds taunt and exact production contexts',await page.locator('[data-inspect=pose] option').evaluateAll(options=>options.filter(o=>!o.value.includes('@')).length===39&&options.some(o=>o.value==='finisher@sh1_air_screamer_001_signature')&&options.some(o=>o.value==='finished@midwich_fatality')));
  await page.locator('.clip-editor summary').click();
  for(const key of keys){
   await page.selectOption('[data-inspect=pose]',key);
