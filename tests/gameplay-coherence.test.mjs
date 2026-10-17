@@ -6,9 +6,11 @@ import { localEventAllowed,localHazardAllowed,localAnimationAllowed } from '../s
 import { stageSpace } from '../src/stage-architecture.js';
 import { drawStage,drawMonster } from '../src/renderers.js';
 import { drawStageCinematics } from '../src/stage-cinematics.js';
+import { rasterPlacement } from '../src/sprite-system.js';
 import { FightEngine } from '../src/fight.js';
 
 const fighter = kind=>ROSTER.find(f=>f.visual.kind===kind);
+const stageById = id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,`stage fixture ${id}`);return s;};
 function recorder(){
   const calls=[];const gradient={addColorStop:(...a)=>calls.push(['stop',...a])};
   const context = new Proxy({canvas:{width:1280,height:720},globalAlpha:1,
@@ -35,16 +37,22 @@ test('small insects no longer inherit a humanoid-height hurtbox',()=>{
 test('quadruped and worm bodies are wide and low rather than standing human boxes',()=>{
   for(const kind of ['quadruped','worm']){const b=bodyBox({data:fighter(kind),x:640,y:594});assert.ok(b.w>b.h);}
 });
-test('child and giant render scale is applied once, not squared by kind',()=>{
-  for(const kind of ['child','giant']){const r=recorder(),f=fighter(kind);drawMonster(r.context,f,0,594);const scales=r.calls.filter(c=>c[0]==='scale');assert.deepEqual(scales[0].slice(1),[f.visual.scale,f.visual.scale]);assert.ok(!scales.some(c=>c[1]===(kind==='child'?.72:1.22)&&c[2]===(kind==='child'?.72:1.22)&&c!==scales[0]));}
+test('child and giant raster calibration applies the existing body scale exactly once',()=>{
+  const frame={width:640,height:427,anchor:[.5,.95],facing:1,bodyHeight:.9};
+  for(const kind of ['child','giant']){const f=fighter(kind),p=bodyProfile(f),image=rasterPlacement(f,frame,640,594);assert.equal(image.height*frame.bodyHeight,p.height*p.scale);assert.ok(Math.abs(image.width/image.height-frame.width/frame.height)<1e-12);}
 });
-test('crouching visual scale and body envelope agree',()=>{
-  const f=fighter('nurse'),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});const scale=r.calls.find(c=>c[0]==='scale');assert.equal(scale[2],f.visual.scale*.68);assert.ok(Math.abs(bodyBox({...a,crouching:true}).h/bodyBox(a).h-.68)<1e-12);
+test('crouching collision stays at .68 while unavailable art is not falsely squash-animated',()=>{
+  const f=fighter('nurse'),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});
+  assert.ok(Math.abs(bodyBox({...a,crouching:true}).h/bodyBox(a).h-.68)<1e-12);
+  assert.ok(!r.calls.some(c=>c[0]==='scale'),'No geometric fallback or squashed standing pose is synthesized.');
+  assert.ok(r.calls.some(c=>c[0]==='fillText'&&c[1]==='VISUEL À PRODUIRE'));
 });
 test('low input reaches a creeper while a standing high attack passes above it',()=>{
   const attacker={data:fighter('nurse'),x:640,y:594,facing:1},target={data:fighter('insect'),x:725,y:594};assert.ok(overlaps(moveBox(attacker,{level:'low',reach:140}),bodyBox(target)));assert.ok(!overlaps(moveBox(attacker,{level:'high',reach:140}),bodyBox(target)));
 });
 test('projectiles leave the firing creature body instead of a universal human chest height',()=>{
+  // A synthetic projectile tests body-relative emission; no projectile ability
+  // is attributed to this insect's production moveset.
   const e=make({p1:fighter('insect')});const a=e.actors[0],move=a.profile.moves.neutralSpecial;e.spawnProjectile(a,{...move,trap:false,projectile:true,projectileCount:1},1);const shot=e.projectiles[0],body=bodyBox(a);assert.ok(shot.y>=body.y&&shot.y<=body.y+body.h);e.destroy();
 });
 test('water slows grounded actors but not flyers, suspended cages or jumping actors',()=>{
@@ -83,22 +91,22 @@ test('train and gurney collision travel monotonically within their announced lan
   for(const id of ['trainRush','gurneyRush'])for(const side of [-1,1]){const h=hazard(id);h.side=side;h.timer=0;let previous=null;for(let active=34;active>=1;active--){h.active=active;const b=hazardVolumes(h)[0],warning=hazardVolumes(h,{preview:true})[0];assert.ok(b.x>=warning.x&&b.x+b.w<=warning.x+warning.w+1e-8);if(previous!==null)assert.ok((b.x-previous)*side>=0);previous=b.x;}}
 });
 test('a passing train hits an actor once, not once per active frame',()=>{
-  const e=make();const a=e.actors[0];a.x=640;const h=e.spawnHazard('trainRush');Object.assign(h,{x:640,zoneMin:400,zoneMax:880,side:1,timer:1});let first=null;for(let i=0;i<35;i++){e.updateHazards();if(a.stats.hazardsTaken&&first===null)first=i;}assert.equal(a.stats.hazardsTaken,1);assert.ok(first!==null);e.destroy();
+  const e=make({stage:stageById('hazel_subway')});const a=e.actors[0];a.x=640;const h=e.spawnHazard('trainRush');assert.ok(h);Object.assign(h,{x:640,zoneMin:400,zoneMax:880,side:1,timer:1});let first=null;for(let i=0;i<35;i++){e.updateHazards();if(a.stats.hazardsTaken&&first===null)first=i;}assert.equal(a.stats.hazardsTaken,1);assert.ok(first!==null);e.destroy();
 });
 test('a physical prop does not damage the far end of its path before it arrives',()=>{
-  const e=make();const a=e.actors[0];a.x=910;const h=e.spawnHazard('gurneyRush');Object.assign(h,{x:680,zoneMin:400,zoneMax:960,side:1,timer:0,active:34});e.resolveHazard(h);assert.equal(a.stats.hazardsTaken,0);h.active=1;e.resolveHazard(h,true);assert.equal(a.stats.hazardsTaken,1);e.destroy();
+  const e=make({stage:stageById('hazel_subway')});const a=e.actors[0];a.x=910;const h=e.spawnHazard('trainRush');assert.ok(h);Object.assign(h,{x:680,zoneMin:400,zoneMax:960,side:1,timer:0,active:34});e.resolveHazard(h);assert.equal(a.stats.hazardsTaken,0);h.active=1;e.resolveHazard(h,true);assert.equal(a.stats.hazardsTaken,1);e.destroy();
 });
 test('unguarded environmental damage interrupts an attack instead of permitting a ghost swing',()=>{
-  const e=make();const a=e.actors[0];e.beginAttack(a,'neutralHeavy');assert.ok(a.attack);const h=e.spawnHazard('sirenShock');e.resolveHazard(h);assert.equal(a.attack,null);assert.ok(a.hurtFrames>0);e.destroy();
+  const e=make({stage:stageById('book_wood')});const a=e.actors[0];e.beginAttack(a,'neutralHeavy');assert.ok(a.attack);const h=e.spawnHazard('rootSnare');assert.ok(h);Object.assign(h,{x:a.x,timer:0,active:34});e.resolveHazard(h);assert.equal(a.attack,null);assert.ok(a.hurtFrames>0);assert.equal(a.stats.hazardsTaken,1);e.destroy();
 });
 test('no damage is applied after time-out has already ended the round',()=>{
-  const e=make();e.matchTime=.0001;e.actors[0].health=500;e.actors[1].health=499;const h=e.spawnHazard('sirenShock');h.timer=1;const hp=e.actors.map(a=>a.health);e.update();assert.notEqual(e.phase,'fight');assert.deepEqual(e.actors.map(a=>a.health),hp);assert.equal(h.resolved,false);e.destroy();
+  const e=make({stage:stageById('book_wood')});e.matchTime=.0001;e.actors[0].health=500;e.actors[1].health=499;const h=e.spawnHazard('rootSnare');assert.ok(h);h.x=e.actors[0].x;h.timer=1;const hp=e.actors.map(a=>a.health);e.update();assert.notEqual(e.phase,'fight');assert.deepEqual(e.actors.map(a=>a.health),hp);assert.equal(h.resolved,false);e.destroy();
 });
 test('all stage decks obey their own listed props instead of injecting source-wide setpieces',()=>{
   for(const s of STAGES){for(const id of s.director.events)assert.ok(localEventAllowed(s,id),`${s.id}/${id}`);for(const id of s.director.hazardDeck)assert.ok(localHazardAllowed(s,id),`${s.id}/${id}`);for(const id of s.animations)assert.ok(localAnimationAllowed(s,id),`${s.id}/${id}`);}
 });
 test('Lakeview local rules cannot inherit an unrelated generic fire or mirror event',()=>{
-  const s=STAGES.find(s=>s.id==='lakeview');assert.deepEqual(s.director.events,['portraitWatch','powerFailure']);assert.ok(!s.director.hazardDeck.includes('emberFall'));assert.ok(!s.animations.includes('mirrorGlitch'));
+  const s=stageById('lakeview');assert.deepEqual(s.director.events,[]);assert.equal(s.shift.enabled,false);assert.equal(s.shift.startOtherworld,false);assert.ok(!s.director.hazardDeck.includes('emberFall'));assert.ok(!s.animations.includes('mirrorGlitch'));
 });
 test('Brookhaven roof is outside, with no hospital-bed or gurney animation',()=>{
   const s=STAGES.find(s=>s.id==='brookhaven_roof');assert.equal(stageSpace(s),'exterior');assert.ok(!s.director.events.includes('gurneyRush'));assert.ok(!s.animations.includes('hospitalMonitor'));
@@ -113,8 +121,8 @@ test('disabled ambience freezes weather and machinery as well as the extra anima
   const s=STAGES.find(s=>s.id==='st_amelia_marina');const a=recorder(),b=recorder();drawStage(a.context,s,1000,{animationsEnabled:false});drawStage(b.context,s,9000,{animationsEnabled:false});assert.deepEqual(JSON.parse(JSON.stringify(a.calls)),JSON.parse(JSON.stringify(b.calls)));
 });
 test('linked stage event draws no second independently placed damaging prop',()=>{
-  const s=STAGES.find(s=>s.director.events.includes('gurneyRush')),r=recorder();drawStageCinematics(r.context,1280,720,s,{activeEvent:{id:'gurneyRush',...STAGE_EVENTS.gurneyRush},activeTimer:50,linkedHazard:hazard('gurneyRush')});assert.equal(r.calls.length,0);
+  const s=stageById('hazel_subway'),r=recorder();drawStageCinematics(r.context,1280,720,s,{activeEvent:{id:'trainRumble',...STAGE_EVENTS.trainRumble},activeTimer:50,linkedHazard:hazard('trainRush')});assert.equal(r.calls.length,0);
 });
 test('snapshots provide exact hurtboxes and warning/travel volumes for Observation',()=>{
-  const e=make();e.spawnHazard('rootSnare');const s=e.snapshot();assert.deepEqual(s.p1.body,bodyBox(e.actors[0]));assert.ok(s.world.director.hazardWarnings[0].zones.length>0);assert.ok(s.world.director.hazardWarnings[0].counterplay.includes('SAUT'));e.destroy();
+  const e=make({stage:stageById('book_wood')});assert.ok(e.spawnHazard('rootSnare'));const s=e.snapshot();assert.deepEqual(s.p1.body,bodyBox(e.actors[0]));assert.ok(s.world.director.hazardWarnings[0].zones.length>0);assert.ok(s.world.director.hazardWarnings[0].counterplay.includes('SAUT'));e.destroy();
 });

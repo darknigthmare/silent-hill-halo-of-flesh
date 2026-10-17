@@ -1,11 +1,13 @@
 import { ROSTER, STAGES, CHRONICLES, RITUAL_MODIFIERS, VERSION } from './data.js';
 import { seededRandom } from './shared.js';
 import { KEYS, plain, readState, writeState, validateEntry } from './save-store.js';
+import { combatReferencePolicy } from './combat-reference-policy.js';
 
 const fighters=new Map(ROSTER.map(f=>[f.id,f]));
 const stages=new Map(STAGES.map(s=>[s.id,s]));
 const routes=new Map(CHRONICLES.map(r=>[r.id,r]));
 export const RUN_MODES=['arcade','boss','ritual','chronicle'];
+export const CHRONICLE_ENCOUNTER_FORMAT='reference-encounters-v1';
 export const RULE_BOOLEANS=['otherworldShift','stageHazards','radioWarning','adaptiveAI','fatalities','stageFatalities','stageAnimations','stageTerrain','stageDirector'];
 export function normalizeRules(input={}) {
   return {mode:input.mode==='local'?'local':'cpu',roundsToWin:[1,2,3].includes(+input.roundsToWin)?+input.roundsToWin:2,
@@ -23,23 +25,49 @@ export function stageForFighter(id) {
   const associated=stages.get(f.stageId);
   return (associated?.source===f.source?associated:STAGES.find(s=>s.source===f.source)||STAGES[0]).id;
 }
+/** Keep the authored chapter order and its original stage assignment. A dossier
+ * is visible narrative material, never a victory or a simulated encounter. */
+export function chronicleEncounterPlan(routeId) {
+  const route=routes.get(routeId);if(!route)return null;
+  const plan={chronicleFormat:CHRONICLE_ENCOUNTER_FORMAT,queue:[],stages:[],chapterIndices:[],referenceDossiers:[]};
+  route.fighters.forEach((fighterId,chapterIndex)=>{
+    const policy=combatReferencePolicy(fighters.get(fighterId));
+    const stageId=route.stages[chapterIndex%route.stages.length];
+    if(policy.combatEnabled){plan.queue.push(fighterId);plan.stages.push(stageId);plan.chapterIndices.push(chapterIndex);}
+    else plan.referenceDossiers.push({chapterIndex,fighterId,stageId,role:policy.role});
+  });
+  return plan;
+}
+const sameList=(actual,expected)=>Array.isArray(actual)&&actual.length===expected.length&&actual.every((value,index)=>value===expected[index]);
+function sameDossiers(actual,expected) {
+  const keys=['chapterIndex','fighterId','stageId','role'];
+  return Array.isArray(actual)&&actual.length===expected.length&&actual.every((entry,index)=>plain(entry)&&
+    Object.keys(entry).length===keys.length&&keys.every(key=>Object.hasOwn(entry,key)&&entry[key]===expected[index][key]));
+}
 export function createRun({mode,playerId,routeId=null,seed=Date.now(),rules={}}) {
   if(!RUN_MODES.includes(mode)||!fighters.has(playerId))throw new Error('Parcours inconnu.');
+  if(!combatReferencePolicy(fighters.get(playerId)).combatEnabled)throw new Error('Le rôle de ce sujet ne permet pas un parcours de combat ; sa fiche reste consultable.');
   seed=Number(seed)>>>0;
-  const rng=seededRandom(seed), pool=ROSTER.filter(f=>f.id!==playerId);
-  let queue=[],stageIds=[],rituals=[],route=null;
+  const rng=seededRandom(seed), pool=ROSTER.filter(f=>f.id!==playerId&&combatReferencePolicy(f).combatEnabled);
+  let queue=[],stageIds=[],rituals=[],route=null,chronicle=null;
   if(mode==='chronicle') {
     route=routes.get(routeId);if(!route)throw new Error('Chronique inconnue : choisissez un dossier existant.');
-    queue=[...route.fighters];stageIds=queue.map((_,i)=>route.stages[i%route.stages.length]);
+    chronicle=chronicleEncounterPlan(routeId);queue=chronicle.queue;stageIds=chronicle.stages;
+    if(!queue.length)throw new Error('Cette chronique ne possède pas encore de rencontre combattante compatible ; ses chapitres restent des dossiers consultables.');
   } else if(mode==='ritual') {
     rituals=Object.keys(RITUAL_MODIFIERS).filter(k=>k!=='none');
     const normal=shuffled(pool.filter(f=>!f.boss),rng), bosses=shuffled(pool.filter(f=>f.boss),rng);
     queue=rituals.map((_,i)=>(i>=rituals.length-2||i===3?bosses.shift():normal.shift()).id);
-  } else queue=shuffled(pool.filter(f=>mode!=='boss'||f.boss),rng).slice(0,mode==='boss'?6:7).map(f=>f.id);
+  } else if(mode==='arcade') {
+    // Reserve the last encounter before drawing the rest of the descent.
+    const finalBoss=shuffled(pool.filter(f=>f.boss),rng)[0];
+    queue=[...shuffled(pool.filter(f=>f.id!==finalBoss.id),rng).slice(0,6).map(f=>f.id),finalBoss.id];
+  } else queue=shuffled(pool.filter(f=>f.boss),rng).slice(0,6).map(f=>f.id);
   if(!stageIds.length)stageIds=queue.map(stageForFighter);
   const carry=mode==='boss'||mode==='ritual';
   return {schema:1,version:VERSION,type:{arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[mode],id:`${mode}-${Date.now()}-${seed}`,mode,playerId,routeId:route?.id||null,seed,
     queue,stages:stageIds,rituals,index:0,wins:0,status:'ready',carry,carryHealth:1,carryMeter:0,
+    ...(chronicle?{chronicleFormat:chronicle.chronicleFormat,chapterIndices:chronicle.chapterIndices,referenceDossiers:chronicle.referenceDossiers}:{}),
     recovery:mode==='boss'?.18:.12,rules:normalizeRules({...rules,mode:'cpu'}),results:[],updatedAt:Date.now()};
 }
 export function validateRun(value) {
@@ -63,17 +91,39 @@ export function validateRun(value) {
   if(['ready','lost'].includes(value.status) && value.wins!==value.index)return false;
   if(value.status==='complete' && value.index!==value.queue.length-1)return false;
   if(value.status==='won' && value.index===value.queue.length-1)return false;
+  const hasFormat=Object.hasOwn(value,'chronicleFormat');
+  const hasChapters=Object.hasOwn(value,'chapterIndices'),hasDossiers=Object.hasOwn(value,'referenceDossiers');
+  if((hasFormat||hasChapters||hasDossiers)&&(value.mode!=='chronicle'||!hasFormat||!hasChapters||!hasDossiers||value.chronicleFormat!==CHRONICLE_ENCOUNTER_FORMAT))return false;
   if(value.mode==='chronicle') {
     const route=routes.get(value.routeId);
-    if(!route || JSON.stringify(value.queue)!==JSON.stringify(route.fighters) ||
-      value.stages.some((id,i)=>id!==route.stages[i%route.stages.length]))return false;
+    if(!route)return false;
+    if(hasFormat){
+      const expected=chronicleEncounterPlan(route.id);
+      if(!sameList(value.queue,expected.queue)||!sameList(value.stages,expected.stages)||
+        !sameList(value.chapterIndices,expected.chapterIndices)||!sameDossiers(value.referenceDossiers,expected.referenceDossiers))return false;
+    }else if(!sameList(value.queue,route.fighters)||value.stages.some((id,i)=>id!==route.stages[i%route.stages.length]))return false;
   }
   return true;
 }
 export function loadRun(storage) {
-  const value=readState(KEYS.run,{},storage);return validateRun(value)?value:null;
+  const value=readState(KEYS.run,{},storage,validateRun);return validateRun(value)?value:null;
 }
-export function saveRun(run,storage) {return validateRun(run)?writeState(KEYS.run,run,storage):null;}
+/** Old checkpoints remain valid and unchanged, even if a later policy prevents
+ * their remaining encounter from starting. The UI explains those blockers. */
+export function runCombatBlockers(run) {
+  if(!validateRun(run)||run.status==='complete')return [];
+  const start=run.status==='won'?run.index+1:run.index;
+  return [...new Set([run.playerId,...run.queue.slice(start)])].flatMap(fighterId=>{
+    const policy=combatReferencePolicy(fighters.get(fighterId));
+    return policy.combatEnabled?[]:[{fighterId,role:policy.role}];
+  });
+}
+export function saveRun(run,storage) {return validateRun(run)?writeState(KEYS.run,run,storage,validateRun):null;}
+/** A route's encounter modifier takes precedence over its saved selection defaults. */
+export function runEncounterRules(run) {
+  if(!run)return {};
+  return {...run.rules,ritualId:run.rituals?.length?run.rituals[run.index%run.rituals.length]:run.rules.ritualId};
+}
 export function playerOutcome(result) {
   if(!result || ![0,1].includes(result.winnerIndex))throw new Error('Résultat sans emplacement de joueur.');
   return {won:result.winnerIndex===0,stats:{...(result.winnerIndex===0?result.stats?.winner:result.stats?.loser)||{}},

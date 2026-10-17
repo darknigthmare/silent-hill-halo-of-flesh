@@ -1,4 +1,124 @@
-# État courant — v0.9.0, prototype en développement
+# SILENT HILL: HALO OF FLESH — v0.9.6
+
+## Intégration des fiches de l’Excel — 17 octobre 2026
+
+Les **230 fiches de combattant, 123 fiches de lieu et 135 sources** alimentent
+désormais le moteur et les dossiers du jeu. Les commandes tiennent compte du rôle,
+de l’œuvre, des capacités et de l’anatomie de l’identifiant exact. Le catalogue
+conserve 4 600 emplacements : **3 711 commandes actives, 889 désactivées avec une
+raison explicite**. Les 194 profils compatibles avec un combat de prototype
+incluent des adaptations de rencontres scénarisées, signalées dans leur dossier.
+
+Cette passe raccorde **86 montages de fatalité pour 43 combattants, 7 montages
+de lieu, 301 mises en scène de présentation et 50 éléments visuels d’arène**.
+Elle ajoute la provocation annulable, la réserve de dix tirs de Cybil et les
+clips par contexte exact. Les corps attachés restent ancrés. Les nouvelles
+chroniques séparent les rencontres jouables des dossiers hors combat en
+conservant les chapitres et les arènes d’origine.
+
+[**Intégration, exemples, vérification et limites**](docs/EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) ·
+[**Excel actualisé**](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) ·
+[Comparatif des commandes avec le commit précédent](docs/production/combat-reference-comparison.json).
+
+**Validation locale : 534 tests Node, 79 tests Python, 238 contrôles HTTP dans
+neuf suites, 38 captures et aucune exception JavaScript.**
+[Rapport et périmètre des scénarios](docs/INTEGRATION_QA_2026-10-17.json).
+
+Les montages animent les déplacements d’acteurs, les effets, la caméra et le son
+du prototype. **Images : 2 PNG candidats, 0 clip animé, 0 fidélité 1:1 certifiée.**
+Les images propres aux gestes et aux transitions restent des travaux de production
+identifiés dans l’Excel. Les notes et chiffres des passes antérieures ci-dessous
+sont conservés comme historique.
+
+## Historique — v0.9.5
+
+## Suite du 17 octobre 2026 — séquences de présentation
+
+Le moteur et l’atelier acceptent maintenant huit clips de présentation :
+introduction, victoire/défaite de manche, victoire/défaite finale, sortie et
+pistes attaquant/cible du finisher. Leur lecture suit la simulation et la pause ;
+les clips importés peuvent prolonger la scène sans modifier les timings des attaques.
+Le panneau de résultat attend la fin d’une véritable outro importée.
+
+Cette passe corrige aussi les sorties de focus pendant l’outro, les anciens
+résultats après un RESET du dojo et le mouvement décoratif résiduel de 22 familles
+de cinématiques d’arène lorsque les mouvements réduits sont activés.
+
+[Détails de l’intégration et limites](docs/PRESENTATION_SEQUENCES_2026-10-17.md) ·
+[Excel actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+**471 tests Node, 76 tests Python et 202 contrôles HTTP réussis dans sept suites.**
+Les 52 contrôles de présentation sont inclus. Les parcours produisent 35 captures
+et ne signalent aucune erreur JavaScript. La suite complète fait partie de
+`npm run qa:browser` et de la CI.
+**Images : 2 candidats / 230 profils, 0 clip animé, 0 fidélité 1:1 certifiée.**
+Les huit points d’intégration livrés ne constituent pas huit animations produites.
+
+## Continuation du 17 octobre 2026 — phase 1 de production
+
+[**Excel des movesets et animations**](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) :
+230 profils, 123 arènes et 135 sources, avec mouvements actuels, gestes documentés,
+supers, finishers, intros/outros, poses de manche et travaux d’animation.
+Les adaptations et les références manquantes sont identifiées ; aucun clip n’est
+certifié 1:1 par la seule présence d’une fiche.
+
+[Guide du classeur](docs/production/README.md) ·
+[Périmètre et vérification](docs/production/QA_2026-10-17.md) ·
+[Cinq corrections moteur et preuves](docs/CORRECTIONS_CONTINUATION_2026-10-17.md).
+
+La continuation corrige aussi les rites appliqués, le boss final de Descente,
+les secours pendant l’import, les touches de revanche et le déclenchement des
+finishers uniquement à la victoire finale. **415 tests Node réussis** ; la suite
+HTTP ciblée comporte **43 contrôles réussis**. La version reste `0.9.5`.
+
+### Passe précédente — commandes et sauvegardes
+
+Corrections des commandes aux transitions, pause multi-manettes et dialogues,
+récupération des sauvegardes valides, exports de secours et retrait des anciens moteurs.
+[Détails de cette passe](docs/CORRECTIONS_v0.9.5.md).
+
+**Couverture artistique inchangée : 2 candidats / 230 profils, aucun nouveau sprite ni clip animé.**
+
+## Suite de la PR #4 — v0.9.4
+
+Corrections de la garde tactile, des inputs après pause, de la reprise de parcours
+après échec de chargement, des filtres de sélection et du cache hors ligne.
+L'atelier conserve les montages entre poses et protège les calibrations contre
+les exports périmés. [Détails et compatibilité](docs/CORRECTIONS_v0.9.4.md).
+
+**Art inchangé : 2 candidats / 230 profils, aucun nouveau sprite ni clip animé livré.**
+Les notes des versions antérieures ci-dessous sont historiques.
+
+## Suite de la PR #4 — v0.9.3
+
+Montage et export de clips à partir d’images individuelles déjà importées, durées par étape,
+repères des vraies attaques, publication locale contrôlée et reprise d’un chargement d’inspecteur.
+[Documentation de cette passe](docs/SPRITE_AUTHORING_v0.9.3.md).
+La couverture artistique reste **2 candidats sur 230, aucune nouvelle image ni animation livrée**.
+L’éditeur est un outil de production, pas un générateur d’images ni une certification canonique.
+
+## Suite de la PR #4 — v0.9.2
+
+Inspecteur des poses réellement disponibles, export de calibration, cadrage commun
+pour les armes/ailes près des bords, horloges de poses liées à la simulation et
+vérification des pixels PNG/WebP au build. Voir [la documentation de cette passe](docs/SPRITE_CONTINUATION_v0.9.2.md).
+
+**Art : 2 candidats sur 230 profils ; aucun nouveau sprite individuel accepté dans cette passe.**
+Les notes de versions antérieures ci-dessous restent historiques.
+
+# SILENT HILL: HALO OF FLESH — v0.9.1
+
+## Première intégration bitmap individuelle
+
+Deux PNG détaillés natifs, un sujet par image, remplacent les silhouettes géométriques sur leurs identifiants exacts. Les combats, la sélection, l’accueil, les archives et les chroniques utilisent maintenant le pipeline raster. Atelier de suivi : `modules/sprite-workshop.html`.
+
+**Couverture réelle : 2 candidats / 230 profils ; 228 images à produire ; 0 fidélité 1:1 certifiée ; 0 clip animé.** Les autres profils sont conservés et explicitement marqués. Les parcours incomplets graphiquement sont accessibles par le diagnostic moteur volontaire, pas présentés comme une version finale. Le CSS d’interface et les décors procéduraux ne sont pas supprimés.
+
+Lire [le pipeline, l’importeur et les limites de validation](docs/SPRITE_PIPELINE_v0.9.1.md). `npm test` contrôle 233 cas ; les 15 tests Python de l’importeur se lancent séparément. Les rapports historiques ci-dessous sont conservés et ne remplacent pas cet état graphique.
+
+---
+
+# Historique — v0.9.0, prototype en développement
 
 La passe actuelle apporte checkpoints de parcours, remappage, commandes tactiles corrigées, résultats par sujet et sauvegardes validées. **Ce projet n'est pas déclaré prêt à commercialiser.** La fidélité exhaustive, les arts définitifs et les droits de franchise ne sont pas certifiés.
 

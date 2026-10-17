@@ -1,5 +1,6 @@
 import { buildLoreMoveset, MOVESET_KEYS, MOVE_INPUTS, MOVE_FIDELITY } from './movesets.js';
 import { enrichStage, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary } from './stage-director.js';
+import { FIGHTER_REFERENCES, STAGE_REFERENCES } from './production-reference.js';
 
 /*
  * SILENT HILL: HALO OF FLESH — catalogue de prototype.
@@ -8,7 +9,7 @@ import { enrichStage, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_IN
  * des adaptations originales ; aucun asset officiel n'est inclus.
  */
 
-export const VERSION = '0.9.0';
+export const VERSION = '0.9.6';
 export const SAVE_KEY = 'sh-halo-of-flesh-save-v1';
 
 export const SOURCE_META = Object.freeze({
@@ -994,7 +995,8 @@ for (const stage of STAGES) {
   stage.catalogueStatus ||= 'verified-location';
 }
 
-for (const stage of STAGES) enrichStage(stage);
+for (const fighter of ROSTER) fighter.reference = FIGHTER_REFERENCES[fighter.id];
+for (const stage of STAGES) enrichStage(stage, STAGE_REFERENCES[stage.id]);
 
 export const CHRONICLES = [
   {id:'fog_of_alessa',source:'sh1',title:'LA BRUME D’ALESSA',subtitle:'Midwich → Nowhere',fighters:['sh1_grey_child_005','sh1_split_head_014','sh1_incubus_019'],stages:['midwich','lakeside_amusement','nowhere'],intro:'La ville recommence son cauchemar. Chaque victoire révèle une couche différente du rituel.',outro:'Le monde rouille, puis retient son souffle.'},
@@ -1100,15 +1102,30 @@ export function createCombatProfile(fighter) {
     effectId: effect,
     effectDuration: affliction.duration
   });
+  const referencePolicy=loreMoveset.referencePolicy;
+  const caps=referencePolicy?.capabilities;
+  const filterEffects=referencePolicy?.combatEnabled===false||caps?.reviewed===true;
+  const allowedEffect=id=>!filterEffects||(referencePolicy.combatEnabled!==false&&caps.effects.includes(id));
+  const safeTrait={id:fighter.trait,...trait};
+  const removedEffects=['effect','throwEffect'].filter(key=>safeTrait[key]&&!allowedEffect(safeTrait[key]));
+  for(const key of removedEffects)delete safeTrait[key];
+  if(caps?.reviewed&&!caps.projectile)delete safeTrait.projectileScale;
+  if(removedEffects.length||(caps?.reviewed&&!caps.projectile&&trait.projectileScale)){
+    safeTrait.name='TRAIT VERSUS LIMITÉ';
+    safeTrait.description='Les bonus physiques de ce profil restent des règles d’équilibrage. Les effets offensifs non retenus par sa fiche sont désactivés.';
+  }
+  const displayedEffect=allowedEffect(fighter.affliction)?fighter.affliction:caps?.effects?.[0];
+  const safeAffliction=displayedEffect?{id:displayedEffect,...AFFLICTIONS[displayedEffect]}:{id:null,name:'AUCUNE AFFLICTION',duration:0,color:'#9ca392',description:'La fiche ne retient aucun effet persistant pour ces attaques.'};
   return {
     ...base,
-    speed,
-    jump,
+    speed:referencePolicy?.canMove===false?0:speed,
+    jump:referencePolicy?.canJump===false?0:jump,
     power,
     reach,
-    trait: { id: fighter.trait, ...trait },
-    affliction: { id: fighter.affliction, ...affliction },
-    ai: { id: fighter.aiProfile || fighter.archetype, ...ai },
+    trait:safeTrait,
+    affliction:safeAffliction,
+    referencePolicy,
+    ai: { id: fighter.aiProfile || fighter.archetype, ...ai, ...(caps?.reviewed&&!caps.projectile?{preferredRange:Math.min(ai.preferredRange,140)}:{}) },
     bossPhases,
     maxHealth: Math.round(base.health * (fighter.boss ? 1.08 : 1)),
     armor: trait.damageReduction || 0,

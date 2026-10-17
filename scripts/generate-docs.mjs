@@ -24,9 +24,25 @@ import {
   STAGE_EVENTS,
   stageDirectorSummary
 } from '../src/data.js';
+import { cinematicSummary } from '../src/lore-cinematics.js';
+import { REFERENCE_SOURCES } from '../src/production-reference.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
 const docs = join(project, 'docs');
+const profiles = new Map(ROSTER.map(fighter => [fighter.id, createCombatProfile(fighter)]));
+const runtimeCounts = {
+  playable: [...profiles.values()].filter(profile => profile.referencePolicy.combatEnabled).length,
+  enabled: [...profiles.values()].flatMap(profile => Object.values(profile.moves)).filter(move => move.enabled).length,
+  fighterFinishers: ROSTER.flatMap(fighter => fighter.fatalities).filter(definition => cinematicSummary(definition.id).authored).length,
+  stageFinishers: STAGES.filter(stage => cinematicSummary(stage.fatality.id).authored).length,
+  referenceTracks: STAGES.reduce((count, stage) => count + stage.referenceTracks.length, 0)
+};
+function sourceLinks(ids = []) {
+  return [...new Set(ids)].map(id => REFERENCE_SOURCES[id]).filter(Boolean).map(source => `[${md(source.title)}](${source.url})`).join(' · ');
+}
+function worldState(stage) {
+  return stage.shift.enabled ? `${stage.shift.name} — transition versus autorisée` : `${stage.referencePolicy.worldState} — aucune bascule`;
+}
 
 function md(value = '') {
   return String(value)
@@ -60,7 +76,9 @@ function buildRoster() {
   const lines = [
     `# Roster complet — v${VERSION}`,
     '',
-    `Catalogue synchronisé : **${CONTENT_STATS.fighters} manifestations**, dont **${CONTENT_STATS.bosses} boss**, réparties sur **${CONTENT_STATS.sources} sources**, avec **${CONTENT_STATS.moves} coups documentés**, **${CONTENT_STATS.bossPhases} transitions de boss**, **${CONTENT_STATS.fatalities} fatalités jouables**, **${CONTENT_STATS.stageAnimations} animations d’arène** et **${CONTENT_STATS.stageDirectorEvents} événements de lieu**.`,
+    `Catalogue synchronisé : **${CONTENT_STATS.fighters} fiches**, dont **${runtimeCounts.playable} profils compatibles avec un combat de prototype**. Les ${CONTENT_STATS.moves} emplacements comprennent **${runtimeCounts.enabled} commandes activées**. ${CONTENT_STATS.fatalities} propositions de fatalité de combattant sont inventoriées ; **${runtimeCounts.fighterFinishers} montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.`,
+    '',
+    'Les rôles non combattants et les identités non confirmées restent consultables. Les rencontres scénarisées autorisées sont explicitement des adaptations versus. Aucun clip animé ni fidélité 1:1 n’est certifié.',
     '',
     '> Les noms servent à documenter le fan-prototype. Les silhouettes, statistiques, timings, effets et fatalités sont des créations ou adaptations originales documentées ; aucun asset officiel n’est inclus.',
     ''
@@ -73,7 +91,8 @@ function buildRoster() {
     lines.push('| Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |', '|---|---|---|---|---|---:|---|---|');
     for (const fighter of fighters) {
       const stage = STAGES.find((entry) => entry.id === fighter.stageId);
-      lines.push(`| ${md(fighter.name)} | ${fighter.boss ? 'Boss' : md(fighter.category)} | \`${md(fighter.archetype)}\` | ${md(MANIFESTATION_TRAITS[fighter.trait]?.name || fighter.trait)} | ${md(AFFLICTIONS[fighter.affliction]?.name || fighter.affliction)} | ${fighter.fatalities?.length || 0} | ${md(fighter.catalogueStatus)} / ${md(fighter.nameStatus)} | ${md(stage?.name || fighter.stageId)} |`);
+      const profile = profiles.get(fighter.id), policy = profile.referencePolicy;
+      lines.push(`| ${md(fighter.name)} | ${md(policy.role)} | \`${md(fighter.archetype)}\` | ${md(profile.trait.name)} | ${md(profile.affliction.name)} | ${fighter.fatalities.filter(definition => cinematicSummary(definition.id).authored).length} montages / 2 propositions | ${policy.combatEnabled ? md(policy.adaptationMode) : 'Dossier uniquement'} · ${md(fighter.catalogueStatus)} / ${md(fighter.nameStatus)} | ${md(stage?.name || fighter.stageId)} |`);
     }
     lines.push('');
   }
@@ -85,14 +104,14 @@ function buildMatrix() {
   const lines = [
     `# Matrice de fidélité et couverture — v${VERSION}`,
     '',
-    '| Source | Manifestations | Boss | Arènes | Animations | Fatalités | Couverture |',
+    '| Source | Manifestations | Boss | Arènes | Boucles conservées | Propositions de fatalité | Couverture interne |',
     '|---|---:|---:|---:|---:|---:|---|'
   ];
   for (const row of sourceRows()) {
     const entry = audit.sources[row.id];
     const animations = row.stages.reduce((sum, stage) => sum + (stage.animations?.length || 0), 0);
     const fatalities = row.fighters.reduce((sum, fighter) => sum + (fighter.fatalities?.length || 0), 0) + row.stages.filter((stage) => stage.fatality).length;
-    lines.push(`| ${md(row.meta.label)} | ${row.fighters.length} | ${row.bosses.length} | ${row.stages.length} | ${animations} | ${fatalities} | ${entry.complete ? 'Vérifiée' : `Lacunes : ${md(entry.missing.join(', '))}`} |`);
+    lines.push(`| ${md(row.meta.label)} | ${row.fighters.length} | ${row.bosses.length} | ${row.stages.length} | ${animations} | ${fatalities} | ${entry.complete ? 'Cibles de catalogue présentes' : `Lacunes : ${md(entry.missing.join(', '))}`} |`);
   }
   lines.push(
     '',
@@ -115,7 +134,7 @@ function buildMatrix() {
     '',
     audit.policy,
     '',
-    'La mention « vérifiée » signifie qu’aucune lacune connue n’a été retrouvée dans le périmètre des seize packs média intégrés à cette release. Elle ne transforme pas les fatalités originales de ce fan-game en scènes canoniques.'
+    'La couverture interne vérifie les cibles déclarées du catalogue. Elle ne prouve pas l’exhaustivité de la franchise, la jouabilité des 230 rôles ni la fidélité visuelle. Les fiches de recherche déterminent séparément les restrictions d’exécution. Aucun clip animé et aucune fidélité 1:1 ne sont certifiés.'
   );
   return `${lines.join('\n')}\n`;
 }
@@ -128,11 +147,13 @@ function buildCombatSystems() {
     '',
     '## Architecture des movesets',
     '',
-    `Chaque manifestation possède **${MOVESET_KEYS.length} commandes** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.`,
+    `Chaque fiche conserve **${MOVESET_KEYS.length} emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **${runtimeCounts.enabled} commandes sont activées ; ${CONTENT_STATS.moves - runtimeCounts.enabled} sont désactivées avec une raison explicite.**`,
     '',
     `Répartition : **${CONTENT_STATS.directCanonicalMoves} directement attestées**, **${CONTENT_STATS.behaviorCompositeMoves} composites lore-friendly**, **${CONTENT_STATS.versusAdaptationMoves} adaptations versus**.`,
     '',
-    'Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation et base canonique.',
+    'Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation, références et état d’exécution. Les nombres sont des paramètres de versus non mesurés dans la source ; les valeurs d’une commande désactivée restent documentées mais ne sont pas exécutées.',
+    '',
+    'Les projectiles, téléportations, auras et afflictions exigent une capacité autorisée pour l’identifiant exact. Un trait passif ne peut pas réintroduire un effet retiré. Cybil possède dix tirs puis une phase désarmée. Les corps attachés conservent leur ancrage, même sous une projection arrière. La provocation P1 P / P2 N / manette L3 est annulable et n’accorde ni dégâts, ni jauge, ni invulnérabilité.',
     '',
     '## Traits de manifestation',
     '',
@@ -164,21 +185,21 @@ function buildCombatSystems() {
     '## Règles avancées',
     '',
     '- **Garde parfaite** : bloquer dans la fenêtre d’impact neutralise davantage de pression, produit un signal visuel/sonore distinct et ouvre une réponse rapide.',
-    '- **Projection arrière** : maintenir la direction opposée pendant la saisie change de côté et impose une chute dure.',
+    '- **Projection arrière** : une saisie compatible peut changer de côté ; la cible attachée au décor conserve son ancrage.',
     '- **Riposte d’esquive** : une attaque légère pendant la fenêtre de sortie d’esquive déclenche une action propre à la manifestation.',
     '- **Contre de garde** : une attaque lourde après une garde parfaite consomme la fenêtre de riposte et brise les armures actives.',
     '- **Reversal de relevée** : une technique pendant la reprise au sol déclenche une action invulnérable documentée séparément.',
     '- **Contre** : toucher pendant le démarrage adverse augmente l’impact et alimente les statistiques de rang.',
     '- **Annulations** : les chaînes autorisées sont déclarées coup par coup dans le profil de combat.',
-    '- **Otherworld dynamique** : une sirène annonce la transformation progressive de l’arène pendant le combat.',
+    '- **Otherworld** : seules les phases de lieux autorisant une transition peuvent basculer. Les lieux normaux, déjà altérés ou non confirmés conservent leur état, y compris sous un rite.',
     '- **Radio de proximité** : l’intensité des parasites augmente avec la proximité et le danger immédiat.',
     '- **Dangers télégraphiés** : les arènes annoncent une zone avant l’impact afin de rester évitables et lisibles.',
     '- **Rang de Chronique** : S à D selon vitalité restante, dégâts, combo, gardes parfaites, contres et dangers subis.',
     '- **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.',
     '- **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.',
     '- **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.',
-    '- **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.',
-    '- **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.',
+    `- **Fatalités de combattant** : ${runtimeCounts.fighterFinishers} montages originaux écrits, uniquement à la victoire finale, après vérification de l’identité, de l’arme et des corps. Les autres propositions restent à produire.`,
+    `- **Fatalités d’arène** : ${runtimeCounts.stageFinishers} montages propres à un lieu, sous conditions de zone, d’accessoires et de mécanisme autorisé. Aucun repli vers une exécution générique incompatible.`,
     '- **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.',
     '- **Terrain contextuel** : adhérence, esquive, saut, garde et recul suivent la matière du lieu sans annuler la lisibilité du versus.',
     '- **Directeur environnemental** : chaque arène alterne événements, dangers et bascule selon sa source, sa famille et ses accessoires.',
@@ -212,7 +233,7 @@ function buildCoverageAudit() {
     '- Les humains réellement affrontés, boss narratifs et set-pieces transformables en combattants sont inclus et balisés.',
     '- Les variations morphologiques visibles et mécaniquement distinctes peuvent devenir des variantes séparées.',
     '- Les simples recolorations sans comportement distinct restent fusionnées.',
-    '- Les créatures non combattues dans leur œuvre d’origine sont marquées comme adaptations.',
+    '- Les sujets non combattants, obstacles et identités non confirmées restent consultables ; leurs commandes offensives sont désactivées. Une rencontre scénarisée n’est jouable que si la politique de sa fiche l’autorise comme adaptation versus.',
     '- Lorsqu’aucun bestiaire officiel ne nomme une créature, le nom descriptif est explicitement signalé.',
     '- Les fatalités sont originales et inspirées de comportements documentés ; elles ne sont pas présentées comme des scènes officielles.'
   );
@@ -235,21 +256,25 @@ function buildMovesets() {
     ''
   );
   for (const fighter of ROSTER) {
-    const profile = createCombatProfile(fighter);
+    const profile = profiles.get(fighter.id);
     const summary = profile.moveset.fidelitySummary;
     lines.push(
       `## ${md(fighter.name)} — ${md(SOURCE_META[fighter.source]?.short || fighter.source)}`,
       '',
       `**${summary.direct} directs · ${summary.composite} composites · ${summary.adapted} adaptations.**`,
       '',
-      `Comportement source : ${md(fighter.canonicalBehavior)}`,
+      `Édition : ${md(fighter.reference.referenceEdition)}. Rôle : ${md(profile.referencePolicy.role)}. ${profile.referencePolicy.combatEnabled ? 'Combat de prototype autorisé.' : 'Dossier consultable ; combat désactivé.'}`,
       '',
-      '| Input | Coup | Catégorie | Frames S/A/R | Dégâts | Portée | Fidélité | Base canonique |',
-      '|---|---|---|---:|---:|---:|---|---|'
+      `Gestes relevés : ${fighter.reference.observedMoves.map(move => `${md(move.name)} — ${md(move.description)}`).join(' ; ') || 'Aucun geste de combat attesté dans cette fiche.'}`,
+      '',
+      `Références : ${sourceLinks(fighter.reference.referenceIds)}`,
+      '',
+      '| Input | Coup | Exécution | Catégorie | Frames S/A/R du prototype | Dégâts | Portée | Fidélité | Base de l’adaptation |',
+      '|---|---|---|---|---:|---:|---:|---|---|'
     );
     for (const key of MOVESET_KEYS) {
       const move = profile.moves[key];
-      lines.push(`| \`${md(move.input)}\` | ${md(move.name)} | ${md(move.category)} / ${md(move.level)} | ${move.startup}/${move.active}/${move.recovery} | ${move.damage} | ${move.reach} | ${md(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} | ${md(move.canonicalBasis)} |`);
+      lines.push(`| \`${md(move.input)}\` | ${md(move.name)} | ${move.enabled ? 'Activée' : `Désactivée — ${md(move.disabledReason)}`} | ${md(move.category)} / ${md(move.level)} | ${move.startup}/${move.active}/${move.recovery} | ${move.damage} | ${move.reach} | ${md(MOVE_FIDELITY[move.fidelity]?.label || move.fidelity)} | ${md(move.canonicalBasis)} |`);
     }
     lines.push('');
   }
@@ -260,20 +285,23 @@ function buildFatalitiesAndStages() {
   const lines = [
     `# Fatalités, arènes dédiées et animations — v${VERSION}`,
     '',
-    `La release contient **${CONTENT_STATS.fatalities} fatalités de combattant**, **${CONTENT_STATS.stageFatalities} fatalités d’arène**, **${CONTENT_STATS.stageAnimations} animations**, **${CONTENT_STATS.stageDirectorEvents} événements de lieu** et **${CONTENT_STATS.stageInteractions} interactions documentées**.`,
+    `Le catalogue contient **${CONTENT_STATS.fatalities} propositions de fatalité de combattant** et **${CONTENT_STATS.stageFatalities} propositions d’arène**. **${runtimeCounts.fighterFinishers} montages de combattant et ${runtimeCounts.stageFinishers} montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent ${CONTENT_STATS.stageAnimations} boucles et jouent ${runtimeCounts.referenceTracks} éléments visuels partiels issus des fiches, ${CONTENT_STATS.stageDirectorEvents} événements et ${CONTENT_STATS.stageInteractions} interactions.`,
+    '',
+    'Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.',
     '',
     '## Fatalités de combattant',
     '',
-    '| Combattant | Source | Signature | Nightmare | Base de fidélité |',
-    '|---|---|---|---|---|'
+    '| Combattant | Source | Signature | Nightmare | État | Base de production |',
+    '|---|---|---|---|---|---|'
   ];
   for (const fighter of ROSTER) {
     const [signature, nightmare] = fighter.fatalities || [];
-    lines.push(`| ${md(fighter.name)} | ${md(SOURCE_META[fighter.source]?.short || fighter.source)} | ${md(signature?.name)} | ${md(nightmare?.name)} | ${md(signature?.canonicalBasis)} |`);
+    const montage = cinematicSummary(signature.id);
+    lines.push(`| ${md(fighter.name)} | ${md(SOURCE_META[fighter.source]?.short || fighter.source)} | ${md(signature?.name)} | ${md(nightmare?.name)} | ${montage.authored ? 'Deux montages écrits, conditions requises' : md(montage.reason)} | ${md(fighter.reference.proposals.finisher.description)} |`);
   }
   lines.push('', '## Arènes dédiées', '', '| Arène | Source | Terrain | Bascule | Événements | Dangers | Animations | Fatalité |', '|---|---|---|---|---:|---:|---:|---|');
   for (const stage of STAGES) {
-    lines.push(`| ${md(stage.name)} | ${md(SOURCE_META[stage.source]?.short || stage.source)} | ${md(stage.terrain?.name)} | ${md(stage.shift?.name)} | ${stage.director?.events?.length || 0} | ${stage.director?.hazardDeck?.length || 0} | ${stage.animationTracks?.length || stage.animations?.length || 0} | ${md(stage.fatality?.name)} |`);
+    lines.push(`| ${md(stage.name)} | ${md(SOURCE_META[stage.source]?.short || stage.source)} | ${md(stage.terrain?.name)} | ${md(worldState(stage))} | ${stage.director?.events?.length || 0} | ${stage.director?.hazardDeck?.length || 0} | ${stage.referenceTracks.length} éléments de fiche / ${stage.animations.length} boucles | ${md(stage.fatality?.name)} — ${cinematicSummary(stage.fatality.id).authored ? 'montage écrit, conditions requises' : 'à produire'} |`);
   }
   lines.push(
     '',
@@ -308,8 +336,11 @@ function buildStageDirector() {
   lines.push('', '## Doctrine par arène', '', '| Arène | Terrain | Bascule | Événements | Déclencheurs | Dangers | Animations | Base lore |', '|---|---|---|---|---|---|---:|---|');
   for (const stage of STAGES) {
     const summary = stageDirectorSummary(stage);
-    lines.push(`| ${md(stage.name)} | ${md(summary.terrain.name)} | ${md(summary.shift.name)} | ${md(summary.events.map(event => event.name).join(', '))} | ${md((stage.interactions || []).map(interaction => interaction.triggerLabel || interaction.trigger).join(', '))} | ${md(summary.hazards.map(id => STAGE_HAZARDS[id]?.name || id).join(', '))} | ${summary.animations.length} | ${md(stage.lore?.premise)} |`);
+    lines.push(`| ${md(stage.name)} | ${md(summary.terrain.name)} | ${md(worldState(stage))} | ${md(summary.events.map(event => event.name).join(', '))} | ${md((stage.interactions || []).map(interaction => interaction.triggerLabel || interaction.trigger).join(', '))} | ${md(summary.hazards.map(id => STAGE_HAZARDS[id]?.name || id).join(', '))} | ${summary.animations.length} | ${md(stage.lore?.premise)} |`);
   }
+  lines.push('', '## Réactions issues des fiches', '',
+    `Les ${runtimeCounts.referenceTracks} éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement \`local-heavy-impact\` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.`, '',
+    'Les états et listes de mécanismes de la fiche sont également vérifiés lors des appels directs du moteur, des transitions de boss et des rites. Une famille de décor ne suffit pas à autoriser un événement.');
   return `${lines.join('\n')}\n`;
 }
 

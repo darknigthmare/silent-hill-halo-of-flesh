@@ -26,6 +26,17 @@ function makeEngine(extra={}){
   const canvas={width:1280,height:720,getContext:()=>ctx};
   return new FightEngine(canvas,{p1:ROSTER[0],p2:ROSTER.find(f=>f.boss)||ROSTER[1],stage:STAGES[0],mode:'local',roundsToWin:1,timeLimit:60,seed:1234,...extra});
 }
+function stageById(id){const stage=STAGES.find(s=>s.id===id);assert.ok(stage,`stage fixture ${id}`);return stage;}
+
+// Engine contracts below can exercise the entire geometry/trigger vocabulary
+// without granting those events to any researched production location.
+function syntheticStage({hazards=[],events=[],interactions=[]}={}){
+  return {id:'test_engine_contract',name:'SYNTHETIC ENGINE FIXTURE',source:'test-fixture',family:'room',
+    props:['chains','portraits'],layers:[],animations:[],terrain:{id:'concrete'},
+    shift:{enabled:false,startOtherworld:false},
+    director:{hazardDeck:hazards,events,initialDelay:1000,cadence:1000},interactions,
+    referencePolicy:{allowedHazards:hazards,allowedEvents:events,automaticFinishers:false}};
+}
 
 test('fight engine advances and renders with a headless canvas contract',()=>{
   const engine=makeEngine();
@@ -40,7 +51,7 @@ test('fight engine advances and renders with a headless canvas contract',()=>{
 });
 
 test('forced Otherworld shift reaches a renderable transformed state',()=>{
-  const engine=makeEngine({stageHazards:true,otherworldShift:true,radioWarning:true});
+  const engine=makeEngine({stage:stageById('cedar_grove'),stageHazards:true,otherworldShift:true,radioWarning:true});
   engine.phase='fight';engine.forceOtherworldShift();
   for(let i=0;i<180;i++)engine.update();
   engine.render(8000);
@@ -80,7 +91,7 @@ test('boss phases can be forced in Observation and alter the combat snapshot',()
 });
 
 test('rituals apply initial endurance, meter and starting Otherworld state',()=>{
-  const engine=makeEngine({ritualId:'redJudgment',initialHealthRatio:.42,initialMeter:47});
+  const engine=makeEngine({stage:stageById('cedar_grove'),ritualId:'redJudgment',initialHealthRatio:.42,initialMeter:47});
   const state=engine.snapshot();
   assert.ok(Math.abs(state.p1.health/state.p1.maxHealth-.42)<.01);
   assert.equal(state.p1.meter,47);
@@ -101,10 +112,11 @@ test('blood debt ritual drains health at a deterministic one-second cadence',()=
 });
 
 test('decisive super triggers and completes a stage fatality',()=>{
-  const engine=makeEngine({fatalities:true,stageFatalities:true,roundsToWin:1});
+  const nurse=ROSTER.find(f=>f.id==='sh1_puppet_nurse_012');
+  const engine=makeEngine({p2:nurse,stage:stageById('midwich_nightmare'),fatalities:true,stageFatalities:true,roundsToWin:1});
   engine.phase='fight';
   const attacker=engine.actors[0],target=engine.actors[1];
-  target.health=10;
+  target.x=640;target.grounded=true;target.health=10;
   engine.applyHit(attacker,target,attacker.profile.moves.super,1);
   engine.resolveKnockouts();
   assert.equal(engine.phase,'fatality');
@@ -214,8 +226,9 @@ test('perfect guard opens a counter window and back throw switches sides with ha
   engine.destroy();
 });
 
-test('nightmare input becomes the desperation move only below its documented health threshold',()=>{
+test('nightmare input becomes the desperation move only below its versus health threshold',()=>{
   const engine=makeEngine();
+  engine.phase='fight';
   const actor=engine.actors[0];
   actor.health=actor.maxHealth;
   assert.equal(resolveMoveKey(actor,{},'super'),'super');
@@ -229,9 +242,9 @@ test('nightmare input becomes the desperation move only below its documented hea
   engine.destroy();
 });
 
-test('lore mechanics spawn projectiles and traps from their dedicated move slots',()=>{
-  const airScreamer=ROSTER.find(f=>f.id==='sh1_air_screamer_001');
-  const engine=makeEngine({p1:airScreamer});
+test('documented gunfire and an isolated synthetic trap spawn from their dedicated slots',()=>{
+  const eddie=ROSTER.find(f=>f.id==='sh2_eddie_dombrowski_032');
+  const engine=makeEngine({p1:eddie});
   engine.phase='fight';
   const actor=engine.actors[0];
   assert.equal(engine.beginAttack(actor,'neutralSpecial'),true);
@@ -239,19 +252,28 @@ test('lore mechanics spawn projectiles and traps from their dedicated move slots
   assert.ok(engine.projectiles.some(projectile=>projectile.owner===actor&&!projectile.trap));
   engine.destroy();
 
-  const lisa=ROSTER.find(f=>f.id==='pt_lisa_149');
-  const trapEngine=makeEngine({p1:lisa});
+  // No current fighter is assigned a trap by the reference policy. Keep this
+  // engine contract with an actor-local synthetic move, never a roster edit.
+  const trapEngine=makeEngine();
   trapEngine.phase='fight';
   const trapActor=trapEngine.actors[0];
+  assert.equal(trapActor.profile.moves.downSpecial.trap,false);
+  const trapPolicy={...trapActor.profile.referencePolicy,
+    capabilities:{...trapActor.profile.referencePolicy.capabilities,reviewed:false,trap:true}};
+  trapActor.profile={...trapActor.profile,referencePolicy:trapPolicy,moves:{...trapActor.profile.moves,
+    downSpecial:{...trapActor.profile.moves.downSpecial,name:'SYNTHETIC STATIONARY TRAP',
+      fidelity:'adaptation-versus',referenceIds:[],canonicalBasis:'Synthetic engine contract only.',
+      trap:true,projectile:false,travel:0,effect:null,projectileCount:1,projectileLife:150}}};
   assert.equal(trapEngine.beginAttack(trapActor,'downSpecial'),true);
   for(let i=0;i<trapActor.profile.moves.downSpecial.startup+2;i++)trapEngine.update();
-  assert.ok(trapEngine.projectiles.some(projectile=>projectile.owner===trapActor&&projectile.trap));
+  const trap=trapEngine.projectiles.find(projectile=>projectile.owner===trapActor&&projectile.trap);
+  assert.ok(trap);assert.equal(trap.vx,0);assert.equal(trap.vy,0);
   trapEngine.destroy();
 });
 
 test('counter stances become active during their attested defensive technique',()=>{
-  const ayakakashi=ROSTER.find(f=>f.id==='shf_ayakakashi_152');
-  const engine=makeEngine({p1:ayakakashi});
+  const shiromuku=ROSTER.find(f=>f.id==='shf_shiromuku_166');
+  const engine=makeEngine({p1:shiromuku});
   engine.phase='fight';
   const actor=engine.actors[0];
   assert.equal(actor.profile.moves.backSpecial.counterStance,true);
@@ -314,15 +336,14 @@ test('stage events can darken the scene, pulse terrain and summon their lore-lin
 });
 
 test('each stage uses its own Otherworld cue, duration and start state',()=>{
-  const signalStage=STAGES.find(stage=>stage.shift?.style==='signal'&&!stage.shift.startOtherworld);
-  const immediate=STAGES.find(stage=>stage.shift?.startOtherworld);
-  assert.ok(signalStage&&immediate);
-  const engine=makeEngine({stage:signalStage,otherworldShift:true});
+  const mirrorStage=stageById('cedar_grove');
+  const immediate=stageById('midwich_nightmare');
+  const engine=makeEngine({stage:mirrorStage,otherworldShift:true});
   engine.phase='fight';
-  engine.triggerOtherworldShift();
+  assert.equal(engine.triggerOtherworldShift(),true);
   assert.equal(engine.world.phase,'shifting');
-  assert.equal(engine.world.siren,signalStage.shift.duration);
-  for(let i=0;i<signalStage.shift.duration+5;i++)engine.updateWorld();
+  assert.equal(engine.world.siren,mirrorStage.shift.duration);
+  for(let i=0;i<mirrorStage.shift.duration+5;i++)engine.updateWorld();
   assert.equal(engine.world.phase,'otherworld');
   engine.destroy();
   const other=makeEngine({stage:immediate});
@@ -331,13 +352,14 @@ test('each stage uses its own Otherworld cue, duration and start state',()=>{
   other.destroy();
 });
 
-test('hazard geometry resolves global, edge, ring, sweep and center doctrines',()=>{
-  const stage=STAGES.find(entry=>entry.director?.hazardDeck?.includes('voidPull'))||STAGES[0];
+test('isolated hazard geometry resolves global, edge, ring, sweep and center contracts',()=>{
+  const ids=['sirenShock','roadCollapse','crtvPulse','chainSweep','voidPull'];
+  const stage=syntheticStage({hazards:ids});
   const engine=makeEngine({stage,stageHazards:true});
   engine.phase='fight';
-  const ids=['sirenShock','roadCollapse','crtvPulse','chainSweep','voidPull'];
   for(const id of ids){
     const hazard=engine.spawnHazard(id);
+    assert.ok(hazard,`declared geometry ${id}`);
     assert.equal(hazard.id,id);
     assert.ok(hazard.zoneMax>=hazard.zoneMin);
     engine.resolveHazard(hazard);
@@ -347,9 +369,10 @@ test('hazard geometry resolves global, edge, ring, sweep and center doctrines',(
   engine.destroy();
 });
 
-test('lore interactions answer to heavy impact, Otherworld midpoint and late-round pressure',()=>{
-  const stage=STAGES.find(entry=>entry.interactions?.length===3&&entry.director?.events?.length>=3);
-  assert.ok(stage);
+test('isolated interactions answer to heavy impact, Otherworld midpoint and late-round pressure',()=>{
+  const events=['powerFailure','sirenCall','portraitWatch'];
+  const triggers=['time-or-first-heavy-impact','otherworld-halfway','low-health-or-late-round'];
+  const stage=syntheticStage({events,interactions:events.map((event,index)=>({id:`test_trigger_${index}`,event,trigger:triggers[index]}))});
   const engine=makeEngine({stage,stageHazards:true,stageDirector:true,stageTerrain:true});
   engine.phase='fight';
   const [attacker,target]=engine.actors;
@@ -376,4 +399,11 @@ test('lore interactions answer to heavy impact, Otherworld midpoint and late-rou
   assert.equal(engine.stageRuntime.lastTrigger,'low-health-or-late-round');
   assert.equal(engine.snapshot().world.director.interactionTriggered.length,3);
   engine.destroy();
+});
+
+test('sprite presentation clock is frozen by hitstop and pause, not advanced by render calls',()=>{
+ const engine=makeEngine();engine.phase='fight';engine.update();const actor=engine.actors[0];
+ const before=structuredClone(actor.spriteClock);for(let n=0;n<8;n++)engine.render(n*133);
+ assert.deepEqual(actor.spriteClock,before);engine.hitstop=4;engine.update();assert.deepEqual(actor.spriteClock,before);
+ engine.paused=true;engine.update();assert.deepEqual(actor.spriteClock,before);engine.paused=false;engine.hitstop=0;engine.update();assert.equal(actor.spriteClock.tick,before.tick+1);engine.destroy();
 });

@@ -4,6 +4,7 @@
  * declared event deck, not inferred as an additional canonical occurrence.
  * Visual animation NEVER advances or samples gameplay RNG.
  */
+import { stageReferenceEventAllowed } from './stage-reference-policy.js';
 const TAU = Math.PI * 2;
 const limit = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
 const ease = t => t*t*(3-2*t);
@@ -39,16 +40,21 @@ const DESCRIPTIONS = Object.freeze({
 });
 
 export function stageChoreographyProfile(stage) {
-  const events = stage?.director?.events || [];
+  const events = (stage?.director?.events || []).filter(id=>stageReferenceEventAllowed(stage,id));
   return {
     id: stage?.id || 'unknown',
     location: stage?.name || 'unknown',
-    fidelity: 'motif-location-attested / choreography-original-versus',
-    cues: events.filter(id=>DESCRIPTIONS[id]).map(id => {
+    fidelity: stage?.reference ? 'reference-linked / original-versus-prototype' : 'project-catalogue / original-versus',
+    cues: events.flatMap(id => {
+      const tracks=(stage?.referenceTracks || []).filter(track=>track.event===id);
+      if(tracks.length)return [{event:id,prop:tracks[0].key,description:tracks[0].description,layer:tracks[0].layer,
+        anchor:{...tracks[0].anchor},direction:1,referenceTracks:tracks.map(track=>track.id),evidence:tracks.flatMap(track=>track.evidence)}];
+      if(!DESCRIPTIONS[id])return [];
       const [prop,description,layer] = DESCRIPTIONS[id];
       const seed=hash(`${stage?.id || ''}:${id}`);
       const x=limit(.19+(seed%602)/1000,.18,.82);
-      return {event:id,prop,description,layer,anchor:{x,y:layer==='air'?.29:layer==='ground'?.815:.59},direction:seed%2?-1:1};
+      return [{event:id,prop,description,layer,anchor:{x,y:layer==='air'?.29:layer==='ground'?.815:.59},direction:seed%2?-1:1,
+        evidence:[...(stage?.reference?.referenceIds || [])],fidelity:'original-versus-adaptation'}];
     })
   };
 }
@@ -58,6 +64,155 @@ function rect(ctx,x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(x,y,w,h);}
 function orb(ctx,x,y,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();}
 function path(ctx,pts,color,width=2){ctx.beginPath();ctx.moveTo(...pts[0]);for(const p of pts.slice(1))ctx.lineTo(...p);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();}
 function glow(ctx,x,y,r,tint,power=.3){const g=ctx.createRadialGradient(x,y,1,x,y,r);g.addColorStop(0,`rgba(${tint},${power})`);g.addColorStop(1,`rgba(${tint},0)`);ctx.fillStyle=g;ctx.fillRect(x-r,y-r,2*r,2*r);}
+
+/** Original, deliberately small scenery prototypes. Never draw an actor or a hitbox. */
+function referenceTrack(ctx,w,h,track,time,progress=null) {
+  const x=track.anchor.x*w,y=track.anchor.y*h,t=Number.isFinite(time)?Math.max(0,time):0;
+  const pulse=.5+.5*Math.sin(t*.0012),sway=Math.sin(t*.0008);
+  ctx.save();
+  switch(track.key){
+    case 'fogLayers':
+      for(let i=0;i<2;i++){
+        const px=x+Math.sin(t*(i?.00013:.00008)+i)*w*.14,py=y+i*h*.1;
+        ctx.save();ctx.translate(px,py);ctx.scale(1,.14);
+        const g=ctx.createRadialGradient(0,0,0,0,0,w*.54);
+        g.addColorStop(0,`rgba(198,210,204,${i?.07:.09})`);g.addColorStop(1,'rgba(198,210,204,0)');
+        ctx.fillStyle=g;ctx.fillRect(-w*.54,-w*.54,w*1.08,w*1.08);ctx.restore();
+      }break;
+    case 'snowDepth':case 'ashDepth':{
+      const snow=track.key==='snowDepth';
+      for(let i=0;i<38;i++){
+        const px=((i*173+t*(snow?.008:.005)*(1+i%3))%(w+30))-15;
+        const py=((i*61+t*(snow?.025:.014))%(h*.71));
+        if(snow){ctx.fillStyle='rgba(223,235,237,.29)';ctx.beginPath();ctx.ellipse(px,py,1+i%3,1+i%3,0,0,TAU);ctx.fill();}
+        else rect(ctx,px,py,1+i%3,2+i%2,'rgba(171,164,151,.23)');
+      }break;
+    }
+    case 'fanEccentric':{
+      ctx.strokeStyle='#45534e';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,36,0,TAU);ctx.stroke();
+      const px=x+Math.sin(t*.002)*1.1,py=y+Math.cos(t*.002)*.7;
+      for(let i=0;i<5;i++){const angle=t*.0015+i*TAU/5;line(ctx,px,py,px+Math.cos(angle)*29,py+Math.sin(angle)*29,6,'rgba(119,131,120,.36)');}
+      for(let i=-2;i<=2;i++)line(ctx,x-32,y+i*10,x+32,y+i*10,1,'rgba(29,38,34,.66)');
+      break;
+    }
+    case 'curtainBreathe':{
+      const height=h*.24,offset=sway*5;
+      ctx.fillStyle='rgba(145,131,112,.17)';ctx.beginPath();ctx.moveTo(x-25,y);
+      ctx.lineTo(x+25,y);ctx.quadraticCurveTo(x+19+offset,y+height*.5,x+20+offset,y+height);
+      ctx.lineTo(x-21+offset,y+height);ctx.quadraticCurveTo(x-30+offset,y+height*.5,x-25,y);ctx.closePath();ctx.fill();
+      line(ctx,x-29,y,x+29,y,2,'rgba(116,128,113,.35)');break;
+    }
+    case 'chainPendulum':
+      ctx.strokeStyle='rgba(130,130,113,.36)';ctx.lineWidth=2;
+      for(let i=0;i<9;i++){ctx.beginPath();ctx.ellipse(x+sway*i*.43,y+i*12,3.5,7,0,0,TAU);ctx.stroke();}break;
+    case 'waterRings':
+      for(let i=0;i<6;i++){
+        const radius=12+((t*.008+i*13)%62);
+        ctx.strokeStyle=`rgba(134,174,181,${.16*(1-radius/90)})`;ctx.lineWidth=1;
+        ctx.beginPath();ctx.ellipse(x+(i-2.5)*w*.11,y+(i%2)*11,radius,radius*.08,0,0,TAU);ctx.stroke();
+      }break;
+    case 'waterSwell':
+      for(let i=0;i<3;i++){
+        ctx.strokeStyle=`rgba(126,163,168,${.07+i*.025})`;ctx.lineWidth=1.5;
+        ctx.beginPath();
+        for(let px=-w*.4;px<=w*.4;px+=16){
+          const py=y+i*10+Math.sin(px*.008+t*.00065+i)*2.5;
+          if(px===-w*.4)ctx.moveTo(x+px,py);else ctx.lineTo(x+px,py);
+        }
+        ctx.stroke();
+      }break;
+    case 'dustDrift':
+      for(let i=0;i<24;i++){
+        const px=x-64+(i*31)%132+Math.sin(t*.0007+i)*5,py=y+((i*29+t*.014)%100);
+        rect(ctx,px,py,1+i%2,1+i%2,'rgba(172,163,142,.19)');
+      }break;
+    case 'mirrorContamination':{
+      rect(ctx,x-49,y-77,98,154,'rgba(38,48,45,.56)');
+      ctx.strokeStyle='rgba(133,144,131,.37)';ctx.lineWidth=3;ctx.strokeRect(x-52,y-80,104,160);
+      const extent=16+((t%24000)/24000)*109;
+      path(ctx,[[x-25,y-70],[x-17,y-50],[x-21,y-31],[x-8,y-70+extent]],'rgba(16,20,17,.76)',5);
+      break;
+    }
+    case 'lightSequence':
+      for(let i=0;i<4;i++){
+        const px=x+(i-1.5)*w*.12,py=y+i*8,level=.015+.085*Math.max(0,Math.sin(t*.0009-i*.85));
+        rect(ctx,px-19,py,38,4,'rgba(131,140,123,.29)');glow(ctx,px,py+4,51,'190,200,171',level);
+      }break;
+    case 'signFlicker':{
+      rect(ctx,x-62,y-20,124,40,'rgba(21,25,24,.68)');
+      for(let i=0;i<5;i++){
+        const level=.07+.15*Math.max(0,Math.sin(t*.0017+i*1.9)*Math.sin(t*.00037+i));
+        rect(ctx,x-51+i*22,y-8,13,17,`rgba(179,94,93,${level})`);
+      }break;
+    }
+    case 'paperFlutter':{
+      const a=Math.sin(t*.0013)*3;
+      ctx.fillStyle='rgba(184,174,140,.43)';ctx.beginPath();ctx.moveTo(x-12,y);
+      ctx.lineTo(x+12,y);ctx.lineTo(x+12+a,y+25);ctx.lineTo(x-10+a,y+23);ctx.closePath();ctx.fill();
+      line(ctx,x-11,y,x+11,y,1,'rgba(49,46,35,.58)');break;
+    }
+    case 'rootBorder':
+      for(let i=0;i<4;i++){
+        const px=x+i*13;
+        ctx.strokeStyle='rgba(91,53,58,.32)';ctx.lineWidth=2+i%2;ctx.beginPath();ctx.moveTo(px,y);
+        ctx.quadraticCurveTo(px+9+sway*3,y-23,px+8+Math.sin(i)*8,y-45-i*8);ctx.stroke();
+      }break;
+    case 'flowerBorder':
+      for(let i=0;i<5;i++){
+        const px=x+i*11,py=y-7-i%2*13,spread=1+.7*(.5+.5*Math.sin(t*.0007-i*.45));
+        line(ctx,px,y+8,px,py,1,'rgba(62,71,40,.35)');
+        ctx.fillStyle='rgba(141,49,49,.38)';
+        for(let petal=0;petal<4;petal++){
+          const angle=petal*Math.PI/2+.2;
+          ctx.beginPath();ctx.ellipse(px+Math.cos(angle)*3,py+Math.sin(angle)*3,spread*3,spread,angle,0,TAU);ctx.fill();
+        }
+      }break;
+    case 'lanternGlow':
+      for(let i=0;i<2;i++){
+        const px=i?w-x:x;
+        rect(ctx,px-11,y-15,22,34,'rgba(107,58,49,.38)');
+        glow(ctx,px,y,42,'187,99,66',.07+pulse*.04);line(ctx,px,y-15,px,y-40,1,'rgba(90,72,54,.57)');
+      }break;
+    case 'doorReply':{
+      const height=h*.2,gap=5+2*sway;
+      rect(ctx,x-38,y-height,76,height,'rgba(21,24,21,.49)');
+      rect(ctx,x-36,y-height+2,70-gap,height-4,'rgba(70,61,45,.46)');
+      rect(ctx,x+34-gap,y-height+3,gap,height-6,'rgba(164,151,110,.1)');break;
+    }
+    case 'shutterLift':{
+      const height=h*.18,bottom=y-3-2*sway;
+      rect(ctx,x-52,y-height,104,height,'rgba(15,24,21,.55)');
+      rect(ctx,x-49,y-height+2,98,bottom-y+height,'rgba(86,91,80,.36)');
+      for(let py=y-height+9;py<bottom;py+=10)line(ctx,x-49,py,x+49,py,1,'rgba(37,43,37,.6)');
+      line(ctx,x-49,bottom,x+49,bottom,2,'rgba(135,131,108,.4)');break;
+    }
+    case 'lampReply':{
+      const level=progress===null?.045+pulse*.015:.025+.11*Math.sin(progress*Math.PI)**2;
+      rect(ctx,x-13,y-7,26,14,'rgba(34,40,34,.8)');rect(ctx,x-5,y-3,10,6,'rgba(147,151,107,.45)');
+      glow(ctx,x,y,40,'182,174,126',level);break;
+    }
+    case 'pipePurge':{
+      const p=progress===null?(t%1800)/1800:progress;
+      line(ctx,x-30,y-50,x-30,y,9,'rgba(71,83,73,.46)');line(ctx,x-30,y,x,y,8,'rgba(82,91,79,.46)');
+      for(let i=0;i<3;i++){
+        const local=limit(p*3-i),amount=Math.sin(local*Math.PI);
+        for(let j=0;j<3;j++)glow(ctx,x+9+local*34+j*7,y-local*40-j*8,8+j*5,'172,184,166',amount*.05);
+      }break;
+    }
+    default:break;
+  }
+  ctx.restore();
+}
+
+/** Returns the exact rendered proposal IDs; unbound proposals remain unproduced. */
+export function drawStageReferenceTracks(ctx,w,h,stage,time,{reducedMotion=false}={}) {
+  if(stage?.reference?.blocked)return [];
+  const tracks=(stage?.referenceTracks || []).filter(track=>!track.event);
+  const visualTime=reducedMotion?0:time;
+  for(const track of tracks)referenceTrack(ctx,w,h,track,visualTime);
+  return tracks.map(track=>track.id);
+}
+
 function setpiece(ctx,w,h,cue,elapsed,progress,reduced){
   const x=cue.anchor.x*w, ground=h*.805, rear=h*.73, direction=cue.direction;
   const moving=reduced?.5:Math.sin(elapsed*.087);
@@ -213,10 +368,11 @@ function setpiece(ctx,w,h,cue,elapsed,progress,reduced){
 }
 
 /** Draws on the BACKGROUND pass; combatants and hitbox warnings stay on top. */
-export function drawStageCinematics(ctx,w,h,stage,director,{reducedMotion=false}={}) {
+export function drawStageCinematics(ctx,w,h,stage,director,{reducedMotion=false,hazards=[]}={}) {
   const event=director?.activeEvent;
-  if(!event)return;
+  if(!event||!stageReferenceEventAllowed(stage,event.id))return;
   if (director.linkedHazard && event.hazard) return; // physical instance drawn by the hitbox-aligned pass
+  if(event.hazard&&hazards.some(hazard=>hazard.id===event.hazard&&(hazard.timer>0||hazard.active>0)))return;
   const cue=stageChoreographyProfile(stage).cues.find(entry=>entry.event===event.id);
   if(!cue)return;
   const total=Math.max(1,event.duration||120);
@@ -224,6 +380,12 @@ export function drawStageCinematics(ctx,w,h,stage,director,{reducedMotion=false}
   const progress=elapsed/total;
   const opacity=band(0,.12,progress)*(1-band(.88,1,progress));
   ctx.save();ctx.globalAlpha*=opacity;
-  setpiece(ctx,w,h,cue,elapsed,progress,Boolean(reducedMotion));
+  // Freeze both clocks for decorative motion, including progress-driven travel.
+  // Keep the live event fade; linked physical hazards still use collision geometry.
+  const visualElapsed=reducedMotion ? total*.5 : elapsed;
+  const visualProgress=reducedMotion ? .5 : progress;
+  if(cue.referenceTracks){
+    for(const track of stage.referenceTracks.filter(track=>cue.referenceTracks.includes(track.id)))referenceTrack(ctx,w,h,track,visualElapsed*(1000/60),visualProgress);
+  }else setpiece(ctx,w,h,cue,visualElapsed,visualProgress,Boolean(reducedMotion));
   ctx.restore();
 }

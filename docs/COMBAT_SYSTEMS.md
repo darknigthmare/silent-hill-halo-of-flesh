@@ -1,14 +1,16 @@
-# Systèmes de combat — v0.9.0
+# Systèmes de combat — v0.9.6
 
-La v0.9.0 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **29 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **352 animations d’arène**, **300 événements**, **14 terrains** et **15 types de bascule**.
+La v0.9.6 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **29 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **105 animations d’arène**, **21 événements**, **14 terrains** et **15 types de bascule**.
 
 ## Architecture des movesets
 
-Chaque manifestation possède **20 commandes** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir.
+Chaque fiche conserve **20 emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **3711 commandes sont activées ; 889 sont désactivées avec une raison explicite.**
 
-Répartition : **447 directement attestées**, **3694 composites lore-friendly**, **459 adaptations versus**.
+Répartition : **0 directement attestées**, **2711 composites lore-friendly**, **1889 adaptations versus**.
 
-Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation et base canonique.
+Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation, références et état d’exécution. Les nombres sont des paramètres de versus non mesurés dans la source ; les valeurs d’une commande désactivée restent documentées mais ne sont pas exécutées.
+
+Les projectiles, téléportations, auras et afflictions exigent une capacité autorisée pour l’identifiant exact. Un trait passif ne peut pas réintroduire un effet retiré. Cybil possède dix tirs puis une phase désarmée. Les corps attachés conservent leur ancrage, même sous une projection arrière. La provocation P1 P / P2 N / manette L3 est annulable et n’accorde ni dégâts, ni jauge, ni invulnérabilité.
 
 ## Traits de manifestation
 
@@ -112,21 +114,21 @@ Les **75 boss** possèdent deux transitions, soit **150 phases déclenchables**.
 ## Règles avancées
 
 - **Garde parfaite** : bloquer dans la fenêtre d’impact neutralise davantage de pression, produit un signal visuel/sonore distinct et ouvre une réponse rapide.
-- **Projection arrière** : maintenir la direction opposée pendant la saisie change de côté et impose une chute dure.
+- **Projection arrière** : une saisie compatible peut changer de côté ; la cible attachée au décor conserve son ancrage.
 - **Riposte d’esquive** : une attaque légère pendant la fenêtre de sortie d’esquive déclenche une action propre à la manifestation.
 - **Contre de garde** : une attaque lourde après une garde parfaite consomme la fenêtre de riposte et brise les armures actives.
 - **Reversal de relevée** : une technique pendant la reprise au sol déclenche une action invulnérable documentée séparément.
 - **Contre** : toucher pendant le démarrage adverse augmente l’impact et alimente les statistiques de rang.
 - **Annulations** : les chaînes autorisées sont déclarées coup par coup dans le profil de combat.
-- **Otherworld dynamique** : une sirène annonce la transformation progressive de l’arène pendant le combat.
+- **Otherworld** : seules les phases de lieux autorisant une transition peuvent basculer. Les lieux normaux, déjà altérés ou non confirmés conservent leur état, y compris sous un rite.
 - **Radio de proximité** : l’intensité des parasites augmente avec la proximité et le danger immédiat.
 - **Dangers télégraphiés** : les arènes annoncent une zone avant l’impact afin de rester évitables et lisibles.
 - **Rang de Chronique** : S à D selon vitalité restante, dégâts, combo, gardes parfaites, contres et dangers subis.
 - **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.
 - **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.
 - **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.
-- **Fatalités signature** : deux séquences data-driven par manifestation, déclenchées par coup décisif, avec base canonique et statut de fidélité.
-- **Fatalités d’arène** : chaque lieu possède une exécution environnementale originale dérivée de ses dangers et de sa mise en scène.
+- **Fatalités de combattant** : 86 montages originaux écrits, uniquement à la victoire finale, après vérification de l’identité, de l’arme et des corps. Les autres propositions restent à produire.
+- **Fatalités d’arène** : 7 montages propres à un lieu, sous conditions de zone, d’accessoires et de mécanisme autorisé. Aucun repli vers une exécution générique incompatible.
 - **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.
 - **Terrain contextuel** : adhérence, esquive, saut, garde et recul suivent la matière du lieu sans annuler la lisibilité du versus.
 - **Directeur environnemental** : chaque arène alterne événements, dangers et bascule selon sa source, sa famille et ses accessoires.

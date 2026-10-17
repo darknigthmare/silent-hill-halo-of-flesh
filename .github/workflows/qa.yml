@@ -31,3 +31,17 @@ jobs:
 
       - name: Verify generated files are committed
         run: git diff --exit-code
+
+  sprite-importer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Validate raster importer
+        run: |
+          python3 -m venv "$RUNNER_TEMP/halo-importer-venv"
+          . "$RUNNER_TEMP/halo-importer-venv/bin/activate"
+          python -m pip install 'Pillow==11.3.0'
+          python -m unittest discover -s tests -p 'test_*.py' -v
