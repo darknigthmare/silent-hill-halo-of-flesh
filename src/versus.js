@@ -359,8 +359,11 @@ function restoreCheckpoint() {
   if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return false;}
   return startFight({preserveRun:true,runCandidate:resumed});
 }
+function canRetryCurrentFight() {
+  return !state.loadingSprites&&!(state.run&&['won','complete'].includes(state.run.status));
+}
 function retryCurrentFight() {
-  if(state.loadingSprites||state.run&&['won','complete'].includes(state.run.status))return false;
+  if(!canRetryCurrentFight())return false;
   const candidate=state.run?.status==='lost'?resumeRun(state.run):state.run;
   return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
@@ -496,6 +499,7 @@ function installQaBridge() {
       if (!engine || !actor || !actor.profile.moves[moveKey]) return false;
       engine.phase = 'fight';
       engine.phaseTimer = 0;
+      engine.clearPresentations();
       actor.attack = null;
       actor.hurtFrames = 0;
       actor.guardBreak = 0;
@@ -550,8 +554,15 @@ function handleMatchEnd(result) {
   try{importMemory({schema:MEMORY_SCHEMA,entries},undefined,{[KEYS.run]:validateRun});}
   catch(error){flow.announce(error.message,true);}
   const generation=state.generation;
-  state.resultTimer=setTimeout(()=>{
-    if(generation!==state.generation||!state.engine)return;
+  const revealResult=()=>{
+    if(generation!==state.generation||!state.engine||state.engine.destroyed||state.engine.phase!=='matchEnd')return;
+    const outro=state.engine.actors[result.winnerIndex]?.presentation;
+    // An imported exit must finish on simulated time, including pauses. Records
+    // were already settled above, and leaving/retrying invalidates this callback.
+    if(outro?.key==='outro'&&outro.clipDuration>0&&!outro.complete){
+      state.resultTimer=setTimeout(revealResult,50);
+      return;
+    }
     const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[state.run.mode]):'CONFRONTATION';
     els.resultKicker.textContent=`${title} · ${won?'VICTOIRE DU SUJET I':'DÉFAITE DU SUJET I'}`;
     els.resultTitle.textContent=completedRun?'PARCOURS TERMINÉ':result.winner.name;
@@ -567,7 +578,8 @@ function handleMatchEnd(result) {
     els.rematch.textContent=state.run?'RÉESSAYER CETTE RENCONTRE':'REVANCHE';
     els.result.classList.remove('hidden');state.engine.input.enabled=false;
     (state.run?.status==='won'?els.continueRun:!won?els.rematch:els.resultSelect).focus();
-  },600);
+  };
+  state.resultTimer=setTimeout(revealResult,600);
 }
 function continueRun() {
   if(state.loadingSprites||state.run?.status!=='won')return false;
@@ -620,7 +632,7 @@ function bindEvents() {
   [els.hitboxes, els.autoHeal, els.freeMeter].forEach((input) => input.addEventListener('change', updateTraining));
   els.forceShift.addEventListener('click', () => state.engine?.forceOtherworldShift());
   els.forceBossPhase.addEventListener('click', () => state.engine?.forceBossPhase());
-  els.resetDojo.addEventListener('click', () => state.engine?.resetMatch());
+  els.resetDojo.addEventListener('click', () => {if(preset==='training'&&state.engine)void retryCurrentFight();});
   els.mobileP1.addEventListener('click', () => {
     state.engine?.clearInputs();
     state.touchEnabled = !state.touchEnabled;
@@ -671,5 +683,5 @@ function init() {
   else if (shouldAutostart) setTimeout(() => startFight(), 120);
 }
 
-const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,onControlsChanged:refreshControlHelp,getControls:()=>state.controls});
+const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,canRetry:canRetryCurrentFight,onControlsChanged:refreshControlHelp,getControls:()=>state.controls});
 init();

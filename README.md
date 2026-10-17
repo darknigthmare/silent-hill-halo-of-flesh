@@ -1,5 +1,27 @@
 # SILENT HILL: HALO OF FLESH — v0.9.5
 
+## Suite du 17 octobre 2026 — séquences de présentation
+
+Le moteur et l’atelier acceptent maintenant huit clips de présentation :
+introduction, victoire/défaite de manche, victoire/défaite finale, sortie et
+pistes attaquant/cible du finisher. Leur lecture suit la simulation et la pause ;
+les clips importés peuvent prolonger la scène sans modifier les timings des attaques.
+Le panneau de résultat attend la fin d’une véritable outro importée.
+
+Cette passe corrige aussi les sorties de focus pendant l’outro, les anciens
+résultats après un RESET du dojo et le mouvement décoratif résiduel de 22 familles
+de cinématiques d’arène lorsque les mouvements réduits sont activés.
+
+[Détails de l’intégration et limites](docs/PRESENTATION_SEQUENCES_2026-10-17.md) ·
+[Excel actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+**471 tests Node, 76 tests Python et 202 contrôles HTTP réussis dans sept suites.**
+Les 52 contrôles de présentation sont inclus. Les parcours produisent 35 captures
+et ne signalent aucune erreur JavaScript. La suite complète fait partie de
+`npm run qa:browser` et de la CI.
+**Images : 2 candidats / 230 profils, 0 clip animé, 0 fidélité 1:1 certifiée.**
+Les huit points d’intégration livrés ne constituent pas huit animations produites.
+
 ## Continuation du 17 octobre 2026 — phase 1 de production
 
 [**Excel des movesets et animations**](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) :

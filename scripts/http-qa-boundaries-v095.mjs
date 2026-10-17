@@ -12,7 +12,7 @@ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.',
  'Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.',
  'Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.',
- 'Prepared round victories advance all eight Rite encounters to check the real launch configuration; this is not a played campaign.',
+ 'Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result ticks produce each engine result; this is not a played campaign.',
  'The two existing candidate PNGs are used. No new production image or animation is added.'
 ]};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
@@ -144,8 +144,15 @@ try {
     check(`Rite ${index+1} launches the advertised modifier (${entry.expected})`,entry.index===index&&entry.actual===entry.expected&&entry.active===entry.expected&&entry.label.includes(entry.short));
     if(index===2)await shot(page,'07-actual-rite-config');
     if(index<7){
-      await page.evaluate(()=>{const {engine}=__HALO_QA__;engine.phase='fight';engine.endRound(engine.actors[0],'K.O.');engine.finishRoundTransition();});
-      check(`Rite ${index+1} advances to its next prepared encounter`,await page.evaluate(()=>__HALO_QA__.continueRun()));
+      const completed=await page.evaluate(()=>{
+        const q=__HALO_QA__,e=q.engine,[winner,loser]=e.actors;e.running=false;e.togglePause(false);
+        const introTicks=e.phase==='intro'?e.phaseTimer:0;for(let tick=0;tick<introTicks;tick++)e.update();
+        e.config.fatalities=false;e.round=e.config.roundsToWin;winner.roundWins=e.config.roundsToWin-1;loser.roundWins=0;
+        loser.health=0;loser.ko=false;loser.lastHit={attackerIndex:0,moveKey:'neutralLight',isSuper:false,environmental:false};
+        e.resolveKnockouts();const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+        return e.phase==='matchEnd'&&e.winner===winner&&winner.roundWins===e.config.roundsToWin&&loser.ko&&loser.presentation?.key==='loseMatch'&&q.run.status==='won';
+      });
+      check(`Rite ${index+1} advances from a coherent match end to its next prepared encounter`,completed&&await page.evaluate(()=>__HALO_QA__.continueRun()));
     }
   }
   await context.close();

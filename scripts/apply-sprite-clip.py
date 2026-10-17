@@ -18,10 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('sprite_import', Path(__file__).with_name('import-sprite.py'))
 importer = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(importer)
-MOVE_KEYS = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy',
-             'crouchHeavy','airHeavy','throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
-             'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
-POSE_KEYS = ('idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase') + MOVE_KEYS
+MOVE_KEYS = importer.MOVE_KEYS
+PRESENTATION_KEYS = importer.PRESENTATION_KEYS
+POSE_KEYS = importer.POSE_KEYS
 MAX_STEPS, MAX_TICKS = 256, 36000
 
 
@@ -41,6 +40,8 @@ def validate_clip(asset: dict, pose: str, clip: dict) -> dict:
         raise ValueError('Invalid per-frame durations or total duration')
     if pose in MOVE_KEYS and clip['loop']:
         raise ValueError('Attacks cannot loop independently of the engine')
+    if pose in PRESENTATION_KEYS and clip['loop']:
+        raise ValueError('Presentations must play once; looping is refused')
     return dict(frames=list(frames), ticksPerFrame=ticks, frameTicks=list(durations), loop=clip['loop'])
 
 

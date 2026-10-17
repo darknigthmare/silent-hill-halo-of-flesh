@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "97ab7f8cb6c93a0b11d25c7d30b4bb2665c58da889ea69531b099ba70ebcc29d",
+  "planSha256": "01fc2e9d672f05c7bddb373a7a7e489f83821699adf31cfeba8f50cfe697c703",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -246,7 +246,8 @@
     "pngCandidates": 2,
     "animatedClips": 0,
     "certifiedOneToOne": 0,
-    "newGameplaySequences": 0
+    "newGameplaySequences": 0,
+    "presentationHooks": 8
   },
   "calculated": [
     230,
@@ -263,26 +264,29 @@
     2,
     0,
     0,
-    875,
-    128
+    874,
+    127
   ],
   "editableStatusRecalculation": {
-    "before": 875,
-    "after": 874,
-    "restored": 875
+    "before": 874,
+    "after": 873,
+    "restored": 874
   },
   "visualPreviews": [
     "Synthèse",
-    "Combattants",
-    "Mouvements",
-    "Finishers",
     "Présentations",
-    "Clips",
-    "Arènes",
-    "Animations arènes",
-    "Actions",
-    "Gestes référencés",
-    "Sources"
+    "Finishers",
+    "Actions"
   ],
-  "engine": "Artifact Tool primary runtime; native Excel desktop not executed"
+  "engine": "Artifact Tool primary runtime; native Excel desktop not executed",
+  "operation": "Narrow update of existing workbook",
+  "sourceSha256": "a2ddb617c6c73c2c819e1fbdd8cea24947724bba436c7deb5b115ba73fb95dd2",
+  "changedCells": 3703,
+  "changesBySheet": {
+    "Synthèse": 2,
+    "Présentations": 2530,
+    "Finishers": 1166,
+    "Actions": 5
+  },
+  "changeLogSha256": "762fe086f13903b97f986951ffd5f3ae2f2fbf8837c5f38502e64667260fe657"
 }

@@ -114,5 +114,30 @@ class ImportTests(unittest.TestCase):
  def test_linked_art_folder_is_not_modified(self):
   art=self.root/'art';art.rename(self.root/'otherart');art.symlink_to(self.root/'otherart',target_is_directory=True)
   with self.assertRaises(ValueError):module.import_sprite(self.args())
+ def test_all_presentation_keys_import_dedicated_one_shot_frames(self):
+  module.import_sprite(self.args());im=Image.open(self.image)
+  for n,pose in enumerate(module.PRESENTATION_KEYS):
+   with self.subTest(pose=pose):
+    im.putpixel((130+n,100),(10+n,50+n,120+n,255));im.save(self.image)
+    report=module.import_sprite(self.args('--append','--pose',pose,'--ticks','7'))
+    self.assertEqual(report['pose'],pose)
+    asset=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
+    self.assertFalse(asset['clips'][pose]['loop']);self.assertEqual(asset['clips'][pose]['ticksPerFrame'],7)
+    self.assertEqual(asset['source'],'sh1');self.assertEqual(asset['fidelity'],'unverified')
+ def test_presentation_loop_refused_without_writing(self):
+  module.import_sprite(self.args());before=(self.root/'art/registry.json').read_bytes()
+  for pose in module.PRESENTATION_KEYS:
+   with self.subTest(pose=pose),self.assertRaisesRegex(ValueError,'play once'):
+    module.import_sprite(self.args('--append','--pose',pose,'--loop'))
+  self.assertEqual((self.root/'art/registry.json').read_bytes(),before)
+ def test_presentation_requires_existing_idle_and_distinct_pixels(self):
+  with self.assertRaisesRegex(ValueError,'first frame'):module.import_sprite(self.args('--pose','intro'))
+  module.import_sprite(self.args())
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--append','--pose','finisher'))
+ def test_append_refuses_an_existing_asset_from_another_source(self):
+  module.import_sprite(self.args());path=self.root/'art/registry.json';reg=json.loads(path.read_text());reg['assets']['a']['source']='film';path.write_text(json.dumps(reg))
+  before=path.read_bytes()
+  with self.assertRaisesRegex(ValueError,'fighter/source'):module.import_sprite(self.args('--append','--pose','winRound'))
+  self.assertEqual(path.read_bytes(),before)
 
 if __name__=='__main__':unittest.main()

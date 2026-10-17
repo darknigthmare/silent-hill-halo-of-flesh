@@ -70,8 +70,9 @@ def verify(plan_path, workbook_path):
                 assert all(isinstance(value(c), (float, int)) for c in formulas), 'Missing numeric formula caches'
                 expected = [plan['metrics'][k] for k in ['fighters','stages','moves','supers',
                     'fighterFinishers','stageFinishers','presentations','poses','stageAnimations',
-                    'observations','sources','pngCandidates','animatedClips','certifiedOneToOne','tasks']]
-                expected.append(sum(t['priority'] == 'P0' for t in plan['tasks']))
+                    'observations','sources','pngCandidates','animatedClips','certifiedOneToOne']]
+                expected.append(sum(t['status'] != 'Validé' for t in plan['tasks']))
+                expected.append(sum(t['priority'] == 'P0' and t['status'] != 'Validé' for t in plan['tasks']))
                 assert [value(cells.get(f'B{i}')) for i in range(6,22)] == expected, 'Summary totals differ'
                 continue
             data = plan[TABLES[name]]
@@ -92,6 +93,8 @@ def verify(plan_path, workbook_path):
             if name not in ('Sources','Gestes référencés'):
                 assert len(validations) >= (2 if name == 'Actions' else 1), f'Missing validation: {name}'
             headers = {value(c): address[:-1] for address,c in cells.items() if address.endswith('5') and address[:-1].isalpha()}
+            table_headers = [column.get('name') for column in table.findall('s:tableColumns/s:tableColumn', NS)]
+            assert table_headers == list(headers), f'Native table headers differ from visible headers: {name}'
             status_key = 'status' if name == 'Actions' else 'productionStatus'
             status_column = headers.get('État' if name == 'Actions' else 'État de production')
             if status_column:
@@ -106,6 +109,10 @@ def verify(plan_path, workbook_path):
                 urls = [value(cells.get(f'{headers["Lien de référence"]}{i}')) for i in range(6,6+len(data))]
                 assert urls == [s['url'] for s in plan['sources']], 'URL text mismatch'
                 report['sourceUrls'] = len(urls)
+            for header, field in ({'Intégration à prévoir': 'engineState', 'Déclenchement prévu': 'trigger'} if name == 'Présentations'
+                                  else {'Pistes à produire': 'actorTracks', 'État technique actuel': 'existing'} if name == 'Finishers'
+                                  else {}).items():
+                assert [value(cells.get(f'{headers[header]}{i}')) for i in range(6,6+len(data))] == [r[field] for r in data], f'Integration mismatch: {name}:{field}'
             report['sheets'][name] = {'dataRows': len(data), 'tableRef': table.get('ref'),
                                     'frozenRows': 5, 'frozenColumns': 3, 'validationLists': len(validations)}
     report['totalDataRows'] = sum(v['dataRows'] for v in report['sheets'].values())
@@ -114,12 +121,102 @@ def verify(plan_path, workbook_path):
     return report
 
 
+def compare_source(source_path, workbook_path, change_log_path):
+    """Compare all cells and native structures, allowing only the authored change log."""
+    def canonical(element):
+        if element is None:
+            return None
+        return (element.tag, tuple(sorted(element.attrib.items())), element.text or '',
+                tuple(canonical(child) for child in element))
+
+    def snapshot(file):
+        result = {}
+        with ZipFile(file) as z:
+            strings = [''.join(item.itertext()) for item in ET.fromstring(z.read('xl/sharedStrings.xml'))] if 'xl/sharedStrings.xml' in z.namelist() else []
+            book = ET.fromstring(z.read('xl/workbook.xml'))
+            rels = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
+            styles = ET.fromstring(z.read('xl/styles.xml'))
+            xfs = list(styles.find('s:cellXfs', NS))
+            fonts, fills, borders = [list(styles.find(f's:{name}', NS)) for name in ['fonts','fills','borders']]
+            formats = {x.get('numFmtId'): x.get('formatCode') for x in styles.findall('s:numFmts/s:numFmt', NS)}
+
+            def style(index):
+                xf = xfs[int(index or 0)]
+                refs = {'fontId','fillId','borderId','numFmtId'}
+                return (tuple(sorted((k,v) for k,v in xf.attrib.items() if k not in refs)),
+                        tuple(canonical(child) for child in xf),
+                        canonical(fonts[int(xf.get('fontId','0'))]), canonical(fills[int(xf.get('fillId','0'))]),
+                        canonical(borders[int(xf.get('borderId','0'))]), formats.get(xf.get('numFmtId'), xf.get('numFmtId')))
+
+            for item in book.findall('s:sheets/s:sheet', NS):
+                target = rels[item.get('{'+NS['r']+'}id')]
+                location = target.lstrip('/') if target.startswith('/') else posixpath.normpath('xl/'+target)
+                xml = ET.fromstring(z.read(location))
+                cells = {}
+                for cell in xml.findall('s:sheetData/s:row/s:c', NS):
+                    raw = cell.findtext('s:v', None, NS)
+                    if cell.get('t') == 's':
+                        value = strings[int(raw)]
+                    elif cell.get('t') == 'inlineStr':
+                        value = ''.join(cell.find('s:is', NS).itertext())
+                    elif raw is None or cell.get('t') in ('str','e'):
+                        value = raw
+                    else:
+                        value = float(raw)
+                    cells[cell.get('r')] = {'value': value, 'formula': cell.findtext('s:f', None, NS), 'style': style(cell.get('s'))}
+                features = {tag: tuple(canonical(x) for x in xml.findall('s:'+tag, NS))
+                            for tag in ['cols','sheetFormatPr','mergeCells','dataValidations','conditionalFormatting','sheetProtection','autoFilter','drawing','legacyDrawing','hyperlinks','pageMargins','pageSetup','printOptions']}
+                features['pane'] = canonical(xml.find('s:sheetViews/s:sheetView/s:pane', NS))
+                features['rowHeights'] = [(row.get('r'),row.get('ht'),row.get('hidden'),row.get('outlineLevel')) for row in xml.findall('s:sheetData/s:row', NS)]
+                table_parts = xml.findall('s:tableParts/s:tablePart', NS)
+                tables = []
+                if table_parts:
+                    rel_path = posixpath.join(posixpath.dirname(location), '_rels', posixpath.basename(location)+'.rels')
+                    table_rels = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read(rel_path))}
+                    for part in table_parts:
+                        target = table_rels[part.get('{'+NS['r']+'}id')]
+                        table_path = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join(posixpath.dirname(location),target))
+                        tables.append(canonical(ET.fromstring(z.read(table_path))))
+                features['tables'] = tuple(tables)
+                result[item.get('name')] = {'cells': cells, 'features': features}
+        return result
+
+    before, after = snapshot(source_path), snapshot(workbook_path)
+    assert list(before) == list(after), 'Narrow edit changed worksheet order'
+    changes = json.loads(change_log_path.read_text())
+    allowed = {(change['sheet'],change['address']): change for change in changes}
+    assert len(allowed) == len(changes), 'Repeated authored change address'
+    count = 0
+    for name in before:
+        assert before[name]['features'] == after[name]['features'], f'Native layout/features changed: {name}'
+        old_cells, new_cells = before[name]['cells'], after[name]['cells']
+        assert set(old_cells) == set(new_cells), f'Cell scope changed: {name}'
+        for address, old in old_cells.items():
+            new = new_cells[address]
+            assert old['formula'] == new['formula'], f'Formula changed: {name}!{address}'
+            assert old['style'] == new['style'], f'Cell formatting changed: {name}!{address}'
+            change = allowed.get((name,address))
+            if change:
+                assert old['value'] == change['before'] and new['value'] == change['after'], f'Unmatched authored change: {name}!{address}'
+            elif not old['formula']:
+                assert old['value'] == new['value'], f'Unrelated cell changed: {name}!{address}'
+            count += 1
+    return {'passed': True, 'comparedCells': count, 'authoredChanges': len(changes),
+            'unchanged': ['worksheet order','unrelated values','all formulas','effective cell formatting','native layout and validation features']}
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('plan', type=Path)
     parser.add_argument('workbook', type=Path)
     parser.add_argument('report', type=Path)
+    parser.add_argument('--compare-source', type=Path)
+    parser.add_argument('--change-log', type=Path)
     args = parser.parse_args()
     result = verify(args.plan, args.workbook)
+    if args.compare_source or args.change_log:
+        if not (args.compare_source and args.change_log):
+            parser.error('--compare-source and --change-log must be provided together')
+        result['preservation'] = compare_source(args.compare_source, args.workbook, args.change_log)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     print(json.dumps({k: result[k] for k in ['passed','bytes','totalDataRows','sourceUrls','summaryFormulas','errors']}, ensure_ascii=False))

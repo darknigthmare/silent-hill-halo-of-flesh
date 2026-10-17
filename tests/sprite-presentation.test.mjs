@@ -5,6 +5,7 @@ import {combatFraming,visibleSpriteBox,toScreen} from '../src/sprite-framing.js'
 import {calibrationPacket} from '../src/sprite-inspector.js';
 import {getFighter} from '../src/data.js';
 import {spriteFor} from '../src/sprite-system.js';
+import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 const film=getFighter('film_red_pyramid_film_175'),air=getFighter('sh1_air_screamer_001');
 const actor=()=>({data:film,x:310,y:594,facing:1,state:'idle',grounded:true});
 test('pose clock starts at zero and resets on entering a new state',()=>{const a=actor();advanceSpriteClock(a);assert.equal(a.spriteClock.tick,0);advanceSpriteClock(a);assert.equal(a.spriteClock.tick,1);a.state='walk';advanceSpriteClock(a);assert.equal(a.spriteClock.tick,0);});
@@ -27,4 +28,58 @@ test('calibration v2 records original calibration to reject stale exports',()=>{
  const packet=calibrationPacket(film,art,draft);assert.equal(packet.schema,2);
  assert.deepEqual(packet.previousFrames[0].anchor,art.frames[0].anchor);packet.previousFrames[0].anchor[0]=0;
  assert.notEqual(art.frames[0].anchor[0],0);assert.deepEqual(packet.frames[0].anchor,[.25,.9]);
+});
+
+test('round presentation overrides interrupted KO, phase and attack poses without changing combat state',()=>{
+ const a={...actor(),ko:true,hurtFrames:20,phaseLock:8,knockdownTimer:40,
+  attack:{key:'neutralHeavy',id:7,frame:90},presentation:{key:'loseRound',id:'round-1',frame:3,reversible:true}};
+ const before=structuredClone(a),state=actorSpriteState(a);
+ assert.equal(poseFromState(state),'loseRound');assert.equal(state.frame,3);
+ assert.deepEqual(a,before);
+ state.presentation.frame=99;assert.equal(a.presentation.frame,3);
+});
+
+test('all eight authored presentation slots are sampled through the engine state contract',()=>{
+ const art={frames:[{name:'idle'},{name:'preparation'},{name:'conclusion'}],clips:{idle:{frames:[0],ticksPerFrame:1,loop:false}}};
+ for(const key of PRESENTATION_KEYS){
+  art.clips[key]={frames:[1,2],frameTicks:[3,5],ticksPerFrame:1,loop:false};
+  const a={...actor(),ko:true,attack:{key:'super',id:9,frame:70},presentation:{key,id:key,frame:2}};
+  let sample=sampleSpriteClip(art,actorSpriteState(a));
+  assert.equal(sample.pose,key);assert.equal(sample.fallback,false);assert.equal(sample.frame.name,'preparation');
+  a.presentation.frame=3;sample=sampleSpriteClip(art,actorSpriteState(a));
+  assert.equal(sample.frame.name,'conclusion');
+  a.presentation.frame=1000;assert.equal(sampleSpriteClip(art,actorSpriteState(a)).tick,7);
+ }
+});
+
+test('paired finisher tracks share the authoritative tick despite unrelated earlier sprite and attack clocks',()=>{
+ const a={...actor(),spriteClock:{identity:'idle:',tick:712},presentation:{key:'finisher',id:'sequence:0',sequenceId:'sequence',frame:46}},
+  b={...actor(),attack:{key:'neutralLight',id:88,frame:12},spriteClock:{tick:5},presentation:{key:'finished',id:'sequence:1',sequenceId:'sequence',frame:46}};
+ for(const target of [a,b]){advanceSpriteClock(target);advanceSpriteClock(target);assert.equal(actorSpriteState(target).frame,46);assert.equal(target.spriteClock.tick,46);}
+ a.presentation.frame=b.presentation.frame=47;
+ for(const target of [a,b]){advanceSpriteClock(target);assert.equal(actorSpriteState(target).frame,47);}
+});
+
+test('restarting or leaving a cinematic resets the presentation identity without carrying its last frame into idle',()=>{
+ const a={...actor(),presentation:{key:'intro',id:'first-intro',frame:100}};
+ advanceSpriteClock(a);const previous=a.spriteClock.identity;
+ a.presentation={key:'intro',id:'retry-intro',frame:0};advanceSpriteClock(a);
+ assert.notEqual(a.spriteClock.identity,previous);assert.equal(actorSpriteState(a).frame,0);
+ a.presentation=null;advanceSpriteClock(a);assert.equal(poseFromState(actorSpriteState(a)),'idle');assert.equal(actorSpriteState(a).frame,0);
+});
+
+test('missing cinematic art reports its actual fallback and does not invent a dedicated clip',()=>{
+ const art=spriteFor(film),before=structuredClone(art);
+ for(const key of PRESENTATION_KEYS){
+  const sample=sampleSpriteClip(art,{presentation:{key,frame:7},ko:true});
+  assert.equal(sample.requested,key);assert.equal(sample.pose,'idle');assert.equal(sample.fallback,true);
+ }
+ assert.deepEqual(art,before);
+});
+
+test('only supported presentation keys override gameplay poses and invalid ticks cannot escape clip bounds',()=>{
+ for(const key of ['constructor','__proto__','not-a-sequence',''])assert.equal(poseFromState({presentation:{key,frame:0},ko:true}),'ko');
+ const art={frames:[{},{}],clips:{intro:{frames:[0,1],frameTicks:[3,5],ticksPerFrame:1,loop:false},idle:{frames:[0],ticksPerFrame:1,loop:false}}};
+ for(const frame of [-1,NaN,Infinity,'4'])assert.equal(sampleSpriteClip(art,{presentation:{key:'intro',frame},frame:900}).tick,0);
+ assert.equal(sampleSpriteClip(art,{presentation:{key:'intro',frame:4.9},frame:900}).tick,4);
 });

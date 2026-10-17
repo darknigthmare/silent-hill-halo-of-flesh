@@ -34,6 +34,8 @@ const ESSENTIAL_SHELL = [
   '/src/renderers.js',
   '/src/sprite-system.js',
   '/src/sprite-animation.js',
+  '/src/sprite-poses.js',
+  '/src/presentation-sequences.js',
   '/src/sprite-framing.js',
   '/src/sprite-inspector.js',
   '/src/sprite-clips.js',

@@ -20,6 +20,12 @@ from PIL import Image, UnidentifiedImageError
 MAX_BYTES = 24 * 1024 * 1024
 MAX_PIXELS = 4096 * 4096
 Image.MAX_IMAGE_PIXELS = MAX_PIXELS
+BASE_POSE_KEYS = ('idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase')
+MOVE_KEYS = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy',
+             'crouchHeavy','airHeavy','throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
+             'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
+PRESENTATION_KEYS = ('intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished')
+POSE_KEYS = BASE_POSE_KEYS + MOVE_KEYS + PRESENTATION_KEYS
 
 def read_image_snapshot(path: Path) -> bytes:
     if path.is_symlink():
@@ -92,12 +98,10 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Inspect the image first and explicitly pass --single-subject-reviewed. No automatic sheet detection is claimed.')
     if not re.fullmatch(r'[a-zA-Z][a-zA-Z0-9_]{0,47}', args.pose):
         raise ValueError('Invalid pose key.')
-    move_keys = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy',
-                 'crouchHeavy','airHeavy','throw','backThrow','dodgeAttack','guardCounter','wakeupAttack',
-                 'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
-    known_poses = ('idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase') + move_keys
-    if args.pose not in known_poses or (args.pose in move_keys and args.loop):
-        raise ValueError('Unknown pose or looping attack. Use an exact engine pose and non-looping attack.')
+    if args.pose not in POSE_KEYS:
+        raise ValueError('Unknown pose. Use an exact engine pose.')
+    if args.pose in MOVE_KEYS + PRESENTATION_KEYS and args.loop:
+        raise ValueError('Attacks and presentations must play once; looping is refused.')
     if not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 1:
         raise ValueError('Anchor and standing-equivalent body calibration must be finite and in range.')
     if not 1 <= args.ticks <= 600:
@@ -106,6 +110,8 @@ def import_sprite(args: argparse.Namespace) -> dict:
     snapshot = read_image_snapshot(source)
     meta = inspect_image(source, raw=snapshot)
     current = registry['assets'].get(args.fighter)
+    if current and (current.get('fighterId') != args.fighter or current.get('source') != args.source):
+        raise ValueError('Existing asset has a different exact fighter/source; no cross-edition append.')
     if current and not (args.replace or args.append):
         raise ValueError('This ID already has art. Use --append for a new frame or --replace to reset it explicitly.')
     if args.append and not current:
@@ -196,9 +202,9 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument('--anchor-y', type=float, required=True)
     p.add_argument('--body-height', type=float, required=True, help='Standing-equivalent reference height / full image height, not crouched visible bounds')
     p.add_argument('--facing', type=int, choices=(-1, 1), default=1)
-    p.add_argument('--pose', default='idle', help='idle, walk, crouch, hurt, ko or exact combat move key')
+    p.add_argument('--pose', default='idle', help='Exact engine key; presentations: '+', '.join(PRESENTATION_KEYS))
     p.add_argument('--ticks', type=int, default=1)
-    p.add_argument('--loop', action='store_true')
+    p.add_argument('--loop', action='store_true', help='Base poses only; attacks and presentation sequences play once.')
     actions = p.add_mutually_exclusive_group()
     actions.add_argument('--append', action='store_true')
     actions.add_argument('--replace', action='store_true')

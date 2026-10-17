@@ -5,9 +5,12 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
+import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
+export const IMPLEMENTATION_REVISION = 'presentation-hooks-2026-10-17';
+export const PRESENTATION_CLIPS = Object.freeze({intro:'intro',winRound1:'winRound',loseRound1:'loseRound',winMatch:'winMatch',loseMatch:'loseMatch',outro:'outro'});
 export const PROPOSAL_KEYS = ['intro','taunt','winRound1','loseRound1','winMatch','loseMatch','outro','super','finisher'];
 export const CORE_POSES = ['idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase'];
 export const COMBAT_ROLES = ['combatant','stationary-boss','multi-body','scripted-encounter','environmental-obstacle','noncombatant','unverified'];
@@ -22,7 +25,7 @@ const isNonCombat = status => /non.combat|non.applicable|non.hostil|passi[ fv]|s
 const productionState = (locked,noncombat,proposalStatus='') => locked||isBlocked(proposalStatus)?'À référencer':noncombat||isNonCombat(proposalStatus)?'Rôle à décider':'À produire';
 const poseNames = {idle:'Repos',walk:'Locomotion',crouch:'Posture basse',jump:'Déplacement aérien',guard:'Réaction défensive',dodge:'Évitement',hurt:'Réaction à un impact',knockdown:'Chute de manche',ko:'Défaite',phase:'Changement de phase'};
 const presentationNames = {intro:'Introduction',taunt:'Attitude / provocation',winRound1:'Victoire première manche',loseRound1:'Défaite première manche',winMatch:'Pose de victoire finale',loseMatch:'Pose de défaite finale',outro:'Sortie de combat'};
-const presentationTriggers = {intro:'Avant la première manche, commandes suspendues',taunt:'Commande future à définir, hors hitstun',winRound1:'Première manche gagnée, match non terminé',loseRound1:'Première manche perdue, match non terminé',winMatch:'Victoire du match confirmée',loseMatch:'Défaite du match confirmée',outro:'Après la pose finale ou le finisher'};
+const presentationTriggers = {intro:'Avant la première manche, commandes suspendues',taunt:'Commande future à définir, hors hitstun',winRound1:'Manche gagnée, dont la première, quand le match continue',loseRound1:'Manche perdue ou nulle, dont la première, quand le match continue',winMatch:'Victoire du match confirmée',loseMatch:'Défaite finale sans finisher. Après un finisher, tenir la dernière image de la piste cible.',outro:'Sortie du vainqueur après la pose finale. La cible conserve sa défaite finale.'};
 const categoryNames = {normal:'Normal', 'command-normal':'Normal directionnel',aerial:'Attaque aérienne',throw:'Saisie',special:'Technique',counter:'Contre',reversal:'Relèvement',nightmare:'Super',desperation:'Super de désespoir','dodge-attack':'Attaque après évitement'};
 
 export function combineResearch(parts) {
@@ -158,7 +161,7 @@ export function buildProductionPlan(research) {
   validateResearch(research);
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
-  const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,
+  const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
     scope:'PR #4. Inventaire de production uniquement : aucune nouvelle attaque, cinématique ou image publiée par ce catalogue.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
@@ -193,13 +196,13 @@ export function buildProductionPlan(research) {
       plan.finishers.push({id:finisher.id,entityId:f.id,entityType:'Combattant',name:f.name,source:f.source,edition:referenceEdition(f,ref),type:finisher.type,currentName:finisher.name,currentSequence:finisher.sequence.join(' → '),
         proposalName:p.name+(finisher.type==='nightmare'?' — montage Nightmare':''),description:p.description+(finisher.type==='nightmare'?' Décliner le montage de cette capacité pour la variante Nightmare. Aucune nouvelle anatomie ou capacité n’est justifiée par la seule jauge.':''),status:p.status,basis:text(p.basis),referenceIds:rowRefs(p.evidence||ref.referenceIds),
         trigger:'Uniquement quand la victoire du match est acquise. Jamais à la fin de la première manche si une reprise est prévue.',
-        actorTracks:'Attaquant, cible, caméra, accessoires, son et effets séparés',existing:'Séquence procédurale existante, chorégraphie bitmap dédiée absente',productionStatus:productionState(locked,noncombat,p.status)});
+        actorTracks:'Hooks attaquant finisher et cible finished synchronisés. Montages distincts par finisher, caméra, accessoires, son et effets à produire.',existing:'Hooks finisher/finished disponibles sur le timer de la séquence. Chorégraphie bitmap dédiée absente.',productionStatus:productionState(locked,noncombat,p.status)});
     }
     for(const key of Object.keys(presentationNames)){
       const p=ref.proposals[key];
       plan.presentations.push({id:`${f.id}:${key}`,fighterId:f.id,name:f.name,source:f.source,edition:referenceEdition(f,ref),type:presentationNames[key],proposalName:p.name,description:p.description,status:p.status,basis:text(p.basis),referenceIds:rowRefs(p.evidence||ref.referenceIds),trigger:presentationTriggers[key],
         continuity:key==='winRound1'||key==='loseRound1'?'Transition réversible. Même personnage et équipements prêts pour la manche suivante.':'Respecter la forme et le rôle propres à cette œuvre.',
-        engineState:'Hook et clip dédiés à ajouter après cette phase',productionStatus:productionState(locked,noncombat,p.status)});
+        engineState:PRESENTATION_CLIPS[key]?`Hook ${PRESENTATION_CLIPS[key]} disponible. ${art?.clips?.[PRESENTATION_CLIPS[key]]?'Clip candidat à vérifier.':'PNG dédiés à produire.'}`:'Commande et hook de provocation à définir.',productionStatus:productionState(locked,noncombat,p.status)});
     }
     for(const pose of CORE_POSES){
       const clip=art?.clips?.[pose];
@@ -224,13 +227,15 @@ export function buildProductionPlan(research) {
     ref.animations.forEach((a,index)=>add(`reference:${index+1}`,'Proposition du lieu',a.name,'Non réalisée','Selon la fiche référencée','À séparer par profondeur',a.description,a.status,a.evidence||ref.referenceIds));
     plan.finishers.push({id:s.fatality.id,entityId:s.id,entityType:'Arène',name:s.name,source:s.source,edition:SOURCE_META[s.source]?.label||s.source,type:'stage',currentName:s.fatality.name,currentSequence:s.fatality.sequence.join(' → '),proposalName:s.fatality.name,
       description:'Réviser cette proposition depuis les motifs de la fiche du lieu. Rejeter toute action supposant un accessoire ou un danger non présent. Prévoir entrée de la cible, action du décor, occultation et plan de sortie.',
-      status:'Adaptation environnementale à confirmer',basis:`Fiche lieu ${s.id}`,referenceIds:rids,trigger:'Victoire définitive du match, zone de décor compatible et option finisher activée',actorTracks:'Décor interactif, cible, caméra, effets, son',existing:'Finisher procédural présent, séquence bitmap dédiée absente',productionStatus:isBlocked(ref.locationStatus)?'À référencer':'À produire'});
+      status:'Adaptation environnementale à confirmer',basis:`Fiche lieu ${s.id}`,referenceIds:rids,trigger:'Victoire définitive du match, zone de décor compatible et option finisher activée',actorTracks:'Hooks attaquant/cible synchronisés. Pistes propres au décor, caméra, effets et son à produire.',existing:'Hooks finisher/finished disponibles. Décor procédural présent, séquence bitmap propre au lieu absente.',productionStatus:isBlocked(ref.locationStatus)?'À référencer':'À produire'});
     task(`${s.id}:stage`,s.id,'Arène',isBlocked(ref.locationStatus)?'P0':'P1','Réviser et animer le lieu',ref.locationNote,'Architecture, époque, profondeur, props et animations validés dans cette œuvre. Déclencheurs de versus identifiés.',ref.referenceIds);
   }
   task('global:round-boundaries','engine','Moteur','P0','Séparer fin de manche et fin de match','Les propositions nécessitent des états distincts de victoire et défaite de première manche.','Une défaite de manche ne lance pas une mort irréversible ni un finisher. Match, nul, reprise et départ anticipé couverts.');
-  task('global:cinematic-clips','engine','Moteur','P1','Ajouter les hooks de présentation bitmap','Les dix états de base et les vingt attaques sont connus du registre. Les intros/outros/poses de manche ont besoin de hooks supplémentaires.','Séquences interruptibles ou verrouillées explicitement, retour menu et pause sûrs, chargement atomique des acteurs et décors.');
+  Object.assign(plan.tasks.at(-1),{status:'Validé',delivery:IMPLEMENTATION_REVISION});
+  task('global:cinematic-clips','engine','Moteur','P1','Ajouter les hooks de présentation bitmap','Huit hooks de présentation disponibles, horloges synchronisées et montage à lecture unique. Pistes par finisher, accessoires, caméra, son et décors bitmap encore à réaliser.','Séquences interruptibles ou verrouillées explicitement, retour menu et pause sûrs, chargement atomique des acteurs et décors.');
+  Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
-  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:0};
+  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:0,presentationHooks:PRESENTATION_KEYS.length};
   return plan;
 }
 
@@ -240,7 +245,7 @@ export async function writePlan() {
   const payload=JSON.stringify(plan,null,2)+'\n';
   await fs.mkdir(planDir,{recursive:true});
   await fs.writeFile(path.join(planDir,'production-plan.json'),payload);
-  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,baseCommit:BASE_COMMIT,sha256:sha256(payload),metrics:plan.metrics},null,2)+'\n');
+  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,sha256:sha256(payload),metrics:plan.metrics},null,2)+'\n');
   console.log(JSON.stringify({output:'docs/production/production-plan.json',...plan.metrics},null,2));
   return plan;
 }

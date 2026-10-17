@@ -4,7 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {ROSTER,STAGES,createCombatProfile} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
-import {combineResearch,validateResearch,buildProductionPlan,PROPOSAL_KEYS,CORE_POSES} from '../scripts/build-production-plan.mjs';
+import {combineResearch,validateResearch,buildProductionPlan,PROPOSAL_KEYS,CORE_POSES,PRESENTATION_CLIPS} from '../scripts/build-production-plan.mjs';
+import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 
 const parts=await Promise.all(['classic','extended'].map(async name=>
   JSON.parse(await readFile(new URL(`../docs/production/research/${name}.json`,import.meta.url),'utf8'))));
@@ -144,6 +145,23 @@ test('planning is deterministic and leaves both research and gameplay catalogues
   assert.equal(digest(research),beforeResearch);assert.equal(digest({ROSTER,STAGES,SPRITES}),beforeRuntime);
   assert.equal(plan.metrics.fighters,ROSTER.length);assert.equal(plan.metrics.stages,STAGES.length);
   assert.equal(plan.metrics.moves,ROSTER.reduce((sum,f)=>sum+createCombatProfile(f).moveset.order.length,0));
+});
+
+test('implementation progress maps to real hooks while every unproduced artistic sequence remains open',()=>{
+ assert.equal(plan.metrics.presentationHooks,PRESENTATION_KEYS.length);
+ for(const [proposal,clip] of Object.entries(PRESENTATION_CLIPS)){
+  assert.ok(PRESENTATION_KEYS.includes(clip),proposal);
+  for(const row of plan.presentations.filter(row=>row.id.endsWith(':'+proposal))){
+   assert.match(row.engineState,new RegExp(`Hook ${clip} disponible`));
+   assert.notEqual(row.productionStatus,'Validé');
+  }
+ }
+ for(const row of plan.presentations.filter(row=>row.id.endsWith(':taunt')))assert.match(row.engineState,/à définir/);
+ const task=id=>plan.tasks.find(row=>row.id===id);
+ assert.equal(task('global:round-boundaries').status,'Validé');
+ assert.equal(task('global:cinematic-clips').status,'En cours');
+ for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène'))assert.equal(row.status,'À faire',row.id);
+ assert.equal(plan.metrics.animatedClips,0);assert.equal(plan.metrics.certifiedOneToOne,0);
 });
 
 test('unverified roles and locations remain blocked through their moves, poses and finishers',()=>{

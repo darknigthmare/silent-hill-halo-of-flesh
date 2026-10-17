@@ -9,6 +9,7 @@ import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
+import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
 
 const WIDTH = 1280;
 const HEIGHT = 720;
@@ -115,6 +116,7 @@ function makeActor(data, index, ritual = {}) {
     blocking: false,
     state: 'intro',
     stateFrame: 0,
+    presentation: null,
     attack: null,
     attackId: 0,
     hurtFrames: 0,
@@ -310,6 +312,8 @@ export class FightEngine {
     this.phase = 'intro';
     this.phaseTimer = 150;
     this.round = 1;
+    this.presentationSerial = 0;
+    this.presentationSequence = null;
     this.projectiles = [];
     this.particles = [];
     this.texts = [];
@@ -349,12 +353,13 @@ export class FightEngine {
     this.inputEpoch = 0;
     this.boundLoop = (time) => this.loop(time);
     this.onFocusLoss = () => {
-      if (this.phase !== 'matchEnd') this.togglePause(true);
+      if (this.phase !== 'matchEnd' || this.isPresentingOutro()) this.togglePause(true);
       else this.clearInputs();
     };
     this.onVisibilityChange = () => { if (globalThis.document?.hidden) this.onFocusLoss(); };
     addEventListener('blur', this.onFocusLoss);
     globalThis.document?.addEventListener('visibilitychange', this.onVisibilityChange);
+    this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
   }
 
   start() {
@@ -373,9 +378,50 @@ export class FightEngine {
     this.animationFrame = null;
     this.input.enabled = false;
     this.clearInputs();
+    this.clearPresentations();
     this.input.destroy();
     removeEventListener('blur', this.onFocusLoss);
     globalThis.document?.removeEventListener('visibilitychange', this.onVisibilityChange);
+  }
+
+  beginPresentations(kind, tracks, duration, reversible = false) {
+    if (this.destroyed) return;
+    duration = presentationDuration(this.actors, tracks, duration);
+    const sequenceId = ++this.presentationSerial;
+    this.presentationSequence = { sequenceId, kind, frame: 0, duration, complete: false };
+    this.actors.forEach((actor, index) => {
+      const track = tracks[index];
+      // An omitted track holds the previous final pose, including a finished target.
+      if (!track) {
+        seekActorPresentation(actor.presentation, actor.presentation?.duration);
+        return;
+      }
+      actor.presentation = createActorPresentation({ ...track, sequenceId, actorIndex: index, duration, round: this.round, reversible,
+        clipDuration: presentationClipDuration(actor, track.key) });
+    });
+    return duration;
+  }
+
+  seekPresentations(elapsed) {
+    const sequence = this.presentationSequence;
+    if (!sequence) return;
+    const tick = Number.isFinite(elapsed) ? Math.max(0, Math.floor(elapsed)) : 0;
+    sequence.frame = Math.min(tick, sequence.duration - 1);
+    sequence.complete = tick >= sequence.duration;
+    for (const actor of this.actors) {
+      if (actor.presentation?.sequenceId === sequence.sequenceId) seekActorPresentation(actor.presentation, tick);
+    }
+  }
+
+  clearPresentations() {
+    this.presentationSequence = null;
+    this.actors.forEach((actor) => { actor.presentation = null; });
+  }
+
+  isPresentingOutro() {
+    const presentation = this.winner?.presentation;
+    return !this.destroyed && this.phase === 'matchEnd' && presentation?.key === 'outro' &&
+      presentation.clipDuration > 0 && !presentation.complete;
   }
 
   clearInputs() {
@@ -469,6 +515,7 @@ export class FightEngine {
     this.input.enabled = !this.paused;
     this.winner = null;
     this.clearInputs();
+    this.clearPresentations();
     this.projectiles.length = 0;
     this.particles.length = 0;
     this.texts.length = 0;
@@ -541,6 +588,7 @@ export class FightEngine {
       actor.trapCooldown = 0;
       actor.auraCooldown = 0;
     });
+    if (this.round === 1) this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
     this.callbacks.onState(this.snapshot());
   }
 
@@ -564,13 +612,15 @@ export class FightEngine {
 
   update() {
     if (this.paused || this.destroyed) return;
+    // Diagnostic/training callers may explicitly skip the pre-round countdown.
+    if (this.phase === 'fight' && this.presentationSequence) this.clearPresentations();
     const frozen = this.hitstop > 0;
     this.updateSimulation();
     if (!frozen && !this.paused && !this.destroyed) this.actors.forEach(advanceSpriteClock);
   }
 
   updateSimulation() {
-    if (this.paused) return;
+    if (this.paused || this.destroyed) return;
     this.frame++;
     if (this.phase !== 'fight') this.discardControlEdges();
     if (this.hitstop > 0) {
@@ -596,7 +646,8 @@ export class FightEngine {
 
     if (this.phase === 'intro') {
       this.phaseTimer--;
-      if (this.phaseTimer === 130) {
+      this.seekPresentations(this.presentationSequence?.duration - this.phaseTimer);
+      if (this.phaseTimer === 130 && this.round === 1) {
         this.addText(this.actors[0].profile.moveset.presentation.intro, 318, 236, 'intro');
         this.addText(this.actors[1].profile.moveset.presentation.intro, WIDTH - 318, 236, 'intro');
       }
@@ -604,6 +655,7 @@ export class FightEngine {
       if (this.phaseTimer === 30) this.addText('FIGHT', WIDTH / 2, 315, 'fight');
       if (this.phaseTimer <= 0) {
         this.phase = 'fight';
+        this.clearPresentations();
         this.actors.forEach((actor) => { actor.state = 'idle'; });
       }
       this.input.endFrame();
@@ -620,6 +672,7 @@ export class FightEngine {
 
     if (this.phase === 'roundEnd') {
       this.phaseTimer--;
+      this.seekPresentations(this.presentationSequence?.duration - this.phaseTimer);
       this.actors.forEach((actor) => {
         if (actor.ko) actor.koProgress = clamp(actor.koProgress + .035, 0, 1);
       });
@@ -631,6 +684,7 @@ export class FightEngine {
 
     if (this.phase === 'matchEnd') {
       this.resultTimer++;
+      this.seekPresentations(this.resultTimer);
       this.updateEffects();
       this.input.endFrame();
       return;
@@ -1931,6 +1985,7 @@ export class FightEngine {
   }
 
   startFatality(attacker, target, definition, stageBased = false, hit = {}) {
+    if (this.destroyed || this.phase !== 'fight') return;
     const sequence = Array.isArray(definition.sequence) && definition.sequence.length
       ? definition.sequence
       : ['stagger', 'judgment', 'collapse'];
@@ -1965,6 +2020,11 @@ export class FightEngine {
       total,
       startedAt: this.frame
     };
+    this.beginPresentations('finisher', this.actors.map((actor) => ({
+      key: actor === attacker ? 'finisher' : 'finished', role: actor === attacker ? 'attacker' : 'target',
+      finisherId: definition.id || null, stageId: this.stage?.id || null, stageBased
+    })), total);
+    this.fatality.timer = this.fatality.total = this.presentationSequence.duration;
     this.world.triggered = true;
     this.world.phase = 'otherworld';
     this.world.amount = Math.max(this.world.amount, stageBased || definition.type === 'nightmare' ? 1 : .78);
@@ -1978,9 +2038,11 @@ export class FightEngine {
   }
 
   updateFatality() {
+    if (this.destroyed || this.paused) return;
     const fatality = this.fatality;
     if (!fatality) {
       this.phase = 'fight';
+      this.clearPresentations();
       return;
     }
     const attacker = this.actors[fatality.attackerIndex];
@@ -2024,12 +2086,14 @@ export class FightEngine {
     }
 
     fatality.timer--;
+    this.seekPresentations(fatality.total - fatality.timer);
     if (fatality.timer <= 0) this.completeFatality();
   }
 
   completeFatality() {
     const fatality = this.fatality;
-    if (!fatality) return;
+    if (!fatality || this.destroyed) return;
+    this.seekPresentations(fatality.total);
     const attacker = this.actors[fatality.attackerIndex];
     const target = this.actors[fatality.targetIndex];
     target.health = 0;
@@ -2058,11 +2122,19 @@ export class FightEngine {
   }
 
   endRound(winner, label) {
-    if (this.phase !== 'fight') return;
+    if (this.destroyed || this.phase !== 'fight') return;
     this.phase = 'roundEnd';
     this.phaseTimer = 145;
     if (winner) winner.roundWins++;
     this.winner = winner;
+    const final = Boolean(winner && winner.roundWins >= this.config.roundsToWin);
+    this.phaseTimer = this.beginPresentations(final ? 'matchResult' : 'roundResult', this.actors.map((actor) => {
+      if (final && actor !== winner && actor.presentation?.key === 'finished') return null;
+      return {
+        key: actor === winner ? (final ? 'winMatch' : 'winRound') : (final ? 'loseMatch' : 'loseRound'),
+        role: winner ? (actor === winner ? 'winner' : 'loser') : 'draw'
+      };
+    }), this.phaseTimer, !final);
     this.addText(label || 'K.O.', WIDTH / 2, 290, label === 'TIME' ? 'round' : 'ko');
     this.callbacks.onRoundEnd({ winner: winner?.data || null, round: this.round, reason: label, snapshot: this.snapshot() });
   }
@@ -2071,12 +2143,14 @@ export class FightEngine {
     if (this.destroyed || this.phase !== 'roundEnd') return;
     const matchWinner = this.actors.find((actor) => actor.roundWins >= this.config.roundsToWin);
     if (matchWinner) {
+      this.seekPresentations(this.presentationSequence?.duration);
       this.phase = 'matchEnd';
       this.input.enabled = false;
       this.clearInputs();
       this.winner = matchWinner;
       this.resultTimer = 0;
       const loser = this.actors[1 - matchWinner.index];
+      const completedSequence = this.presentationSequence?.sequenceId;
       this.callbacks.onMatchEnd({
         winnerIndex: matchWinner.index,
         loserIndex: loser.index,
@@ -2092,6 +2166,10 @@ export class FightEngine {
           lastFatality: this.lastFatality ? { ...this.lastFatality } : null
         }
       });
+      // The callback may leave, retry or pause. Only this same settled match may exit.
+      if (!this.destroyed && this.phase === 'matchEnd' && this.winner === matchWinner && this.presentationSequence?.sequenceId === completedSequence) {
+        this.beginPresentations('outro', this.actors.map((actor) => actor === matchWinner ? { key: 'outro', role: 'winner' } : null), OUTRO_TICKS);
+      }
     } else {
       this.round++;
       this.resetRound(false);
@@ -2115,7 +2193,7 @@ export class FightEngine {
       this.padSystemPrevious[i] = start;
     }
     // Update ALL physical edges first, then one system decision. Loss always wins.
-    if (this.phase !== 'matchEnd') {
+    if (this.phase !== 'matchEnd' || this.isPresentingOutro()) {
       if (lost) this.togglePause(true);
       else if (startPressed) this.togglePause();
     }
@@ -2175,6 +2253,7 @@ export class FightEngine {
       } : null,
       lastMoveKey: actor.lastMoveKey || null,
       presentation: { ...actor.profile.moveset.presentation },
+      presentationSequence: actor.presentation ? { ...actor.presentation } : null,
       movesetFidelity: { ...actor.profile.moveset.fidelitySummary },
       body: actorBox(actor), groundContact: hasGroundContact(actor),
       stats: { ...actor.stats }
@@ -2750,8 +2829,11 @@ export class FightEngine {
 
   renderMatchEnd(context) {
     const winner = this.winner;
+    const outro = winner?.presentation;
+    const importedOutro = outro?.key === 'outro' && outro.clipDuration > 0;
+    if (importedOutro && !outro.complete) return;
     context.save();
-    const alpha = clamp(this.resultTimer / 35, 0, .9);
+    const alpha = clamp((this.resultTimer - (importedOutro ? outro.duration : 0)) / 35, 0, .9);
     context.fillStyle = `rgba(2,3,2,${alpha})`;
     context.fillRect(0, 0, WIDTH, HEIGHT);
     context.textAlign = 'center';

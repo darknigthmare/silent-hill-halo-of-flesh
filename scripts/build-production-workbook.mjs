@@ -125,7 +125,7 @@ summary.getRange('I1:I40').format.columnWidth=3;
 summary.getRange('A2').values=[['SILENT HILL: HALO OF FLESH']];
 summary.getRange('A2:H2').format.font={...font,bold:true,size:16,color:C.brand};
 summary.getRange('A2:H2').format.rowHeight=28;
-summary.getRange('A3').values=[['Phase 1 — Références de combat et d’animation — 17 octobre 2026']];
+summary.getRange('A3').values=[['Références de combat et d’animation — Suivi des hooks moteur — 17 octobre 2026']];
 summary.getRange('A3:H3').format.font={...font,color:C.muted,italic:true};
 summary.getRange('A4:H4').format.borders={bottom:{style:'thin',color:C.line}};
 const metrics=[
@@ -177,7 +177,7 @@ const rules=[
  'Les cases jaunes de statut, de responsable et de relevé vidéo sont modifiables. Les filtres permettent le suivi par œuvre.',
  'Les durées et FPS des sources restent vides tant qu’aucune capture image par image ne les a établis.',
  'Les nombres de préparation, dégâts et portée proviennent du moteur actuel. Ils ne sont pas des valeurs officielles Silent Hill.',
- 'Les deux PNG actuels sont des candidats. Cette phase ne produit aucune nouvelle image ni nouvelle séquence de gameplay.',
+ 'Huit hooks de présentation sont disponibles. Les deux PNG restent des candidats ; les clips dédiés restent à produire.',
  'Format prévu : un PNG transparent indépendant par image, silhouette entière, accessoires et appuis contrôlés.',
  'Les rôles non combattants, obstacles et variantes incertaines restent visibles pour être décidés, sans leur inventer de canon.',
  `Base de comparaison : PR #4, commit ${plan.baseCommit}.`
@@ -204,7 +204,7 @@ const errors=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#N
 await fs.writeFile(path.join(out,'workbook-formula-scan.ndjson'),errors.ndjson);
 if(/#REF!|#DIV\/0!|#VALUE!|#NAME\?|#NUM!|#NULL!|#SPILL!|#CALC!/.test(errors.ndjson))throw new Error('Unexpected formula errors, inspect the saved scan.');
 
-const expected=[plan.metrics.fighters,plan.metrics.stages,plan.metrics.moves,plan.metrics.supers,plan.metrics.fighterFinishers,plan.metrics.stageFinishers,plan.metrics.presentations,plan.metrics.poses,plan.metrics.stageAnimations,plan.metrics.observations,plan.metrics.sources,plan.metrics.pngCandidates,plan.metrics.animatedClips,0,plan.metrics.tasks,plan.tasks.filter(t=>t.priority==='P0').length];
+const expected=[plan.metrics.fighters,plan.metrics.stages,plan.metrics.moves,plan.metrics.supers,plan.metrics.fighterFinishers,plan.metrics.stageFinishers,plan.metrics.presentations,plan.metrics.poses,plan.metrics.stageAnimations,plan.metrics.observations,plan.metrics.sources,plan.metrics.pngCandidates,plan.metrics.animatedClips,0,plan.tasks.filter(t=>t.status!=='Validé').length,plan.tasks.filter(t=>t.priority==='P0'&&t.status!=='Validé').length];
 const calculated=summary.getRange(`B6:B${5+metrics.length}`).values.map(r=>r[0]);
 if(expected.some((value,i)=>value!==calculated[i]))throw new Error('Summary counts differ from production data: '+JSON.stringify({expected,calculated}));
 

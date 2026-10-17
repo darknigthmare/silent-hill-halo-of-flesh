@@ -1,7 +1,8 @@
 /** In-game inspection of actual frames, with export-only calibration. No network writes. */
 import {MOVESET_KEYS} from './data.js';
 import {mountClipEditor} from './sprite-clip-editor.js';
-import {clipSummary} from './sprite-clips.js';
+import {clipSummary,moveTiming} from './sprite-clips.js';
+import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel} from './sprite-poses.js';
 import {spriteCache,drawRasterMonster} from './sprite-system.js';
 import {sampleSpriteClip} from './sprite-animation.js';
 import {visibleSpriteBox} from './sprite-framing.js';
@@ -13,10 +14,12 @@ export function calibrationPacket(fighter,original,draft){
   frames:draft.frames.map((f,i)=>({path:original.frames[i].path,sha256:original.frames[i].sha256,
    anchor:[...f.anchor],bodyHeight:f.bodyHeight,facing:f.facing}))};
 }
-function stateFor(pose,tick){
+export function previewSpriteState(pose,tick){
+ const frame=Number.isFinite(tick)?Math.max(0,Math.floor(tick)):0;
+ if(isPresentationPose(pose))return {presentation:{key:pose,id:'workshop:'+pose,frame},frame};
  const names={idle:{},walk:{moving:true},crouch:{crouching:true},jump:{airborne:true},guard:{blocking:true},
   dodge:{dodging:true},hurt:{hurt:true},ko:{ko:true},knockdown:{knockdown:true},phase:{phase:true}};
- return {...(Object.hasOwn(names,pose)?names[pose]:{moveKey:pose}),frame:tick};
+ return {...(Object.hasOwn(names,pose)?names[pose]:{moveKey:pose}),frame};
 }
 function downloadJSON(packet,name){
  const url=URL.createObjectURL(new Blob([JSON.stringify(packet,null,2)+'\n'],{type:'application/json'}));
@@ -25,20 +28,24 @@ function downloadJSON(packet,name){
 export function mountSpriteInspector({host,canvas,fighter,art}){
  const original=art,draft=structuredClone(art),registry={[fighter.id]:draft},panel=document.createElement('section');
  panel.className='sprite-inspector';panel.setAttribute('aria-label','Inspection et calibration du sprite');
- panel.innerHTML=`<h3>INSPECTION DES POSES</h3><p class="inspector-note">Seuls les fichiers présents sont affichés. Une pose absente reste signalée, sans animation artificielle.</p>
- <div class="inspector-row"><label>Pose<select data-inspect="pose"></select></label><button type="button" class="ui-button" data-inspect="play">LIRE</button><button type="button" class="ui-button" data-inspect="flip">VOIR VERS LA GAUCHE</button></div>
+ panel.innerHTML=`<h3>INSPECTION DES POSES ET SÉQUENCES</h3><p class="inspector-note">Seuls les fichiers présents sont affichés. Une pose ou séquence absente reste signalée, sans animation artificielle.</p>
+ <div class="inspector-row"><label>Pose ou séquence<select data-inspect="pose"></select></label><button type="button" class="ui-button" data-inspect="play">LIRE</button><button type="button" class="ui-button" data-inspect="flip">VOIR VERS LA GAUCHE</button></div>
  <label class="inspector-timeline">Temps de simulation<input data-inspect="tick" type="range" min="0" max="0" step="1" value="0"></label>
  <p data-inspect="status" role="status"></p><button type="button" class="ui-button" data-inspect="retry" hidden>RÉESSAYER CETTE IMAGE</button><div class="inspector-row"><label>Zoom<select data-inspect="zoom"><option value="0.5">50 %</option><option value="1" selected>100 %</option><option value="1.5">150 %</option><option value="2">200 %</option></select></label><label><input data-inspect="boxes" type="checkbox" checked> Repères et collision</label></div>
  <details><summary>CALIBRER CETTE IMAGE</summary><p>Le point d’appui et la hauteur de référence ne modifient pas les collisions du moteur. Exporter ne modifie ni le dépôt ni la sauvegarde.</p><div class="inspector-fields">
  <label>Ancre X<input data-inspect="anchorX" type="number" min="0" max="1" step="0.001"></label><label>Ancre Y<input data-inspect="anchorY" type="number" min="0" max="1" step="0.001"></label><label>Hauteur de référence<input data-inspect="bodyHeight" type="number" min="0.05" max="1" step="0.001"></label><label>Orientation native<select data-inspect="facing"><option value="1">Droite</option><option value="-1">Gauche</option></select></label></div>
  <div class="inspector-row"><button type="button" class="ui-button" data-inspect="reset">RÉINITIALISER</button><button type="button" class="ui-button" data-inspect="export">EXPORTER LA CALIBRATION</button></div><p data-inspect="error" role="alert"></p></details>`;
  host.append(panel);const $=key=>panel.querySelector(`[data-inspect="${key}"]`),ctx=canvas.getContext('2d');
- const poses=[...new Set(['idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase',...MOVESET_KEYS,...Object.keys(art.clips)])];
- for(const key of poses){const o=document.createElement('option');o.value=key;o.textContent=key+(Object.hasOwn(art.clips,key)?' · présent':' · À PRODUIRE');$('pose').append(o);}
+ const label=key=>moveTiming(fighter,key)?.name||poseLabel(key);
+ function optionText(key){return label(key)+' · '+key+(Object.hasOwn(draft.clips,key)?(JSON.stringify(original.clips[key])!==JSON.stringify(draft.clips[key])?' · BROUILLON LOCAL':' · présent'):' · À PRODUIRE');}
+ for(const [name,keys] of [['Poses de base',BASE_POSE_KEYS],['Attaques',MOVESET_KEYS],['Présentations · lecture unique',PRESENTATION_KEYS]]){
+  const group=document.createElement('optgroup');group.label=name;
+  for(const key of keys){const o=document.createElement('option');o.value=key;o.textContent=optionText(key);group.append(o);}$('pose').append(group);
+ }
  let editor=null;
  let disposed=false,playing=false,tick=0,lastTime=0,accumulator=0,raf=0,presentation=1,currentIndex=-1;
  const dirty=new Set(),waiting=new Set();
- function selected(){return sampleSpriteClip(draft,stateFor($('pose').value,tick));}
+ function selected(){return sampleSpriteClip(draft,previewSpriteState($('pose').value,tick));}
  function fields(){const sample=selected();if(!sample)return;const frame=sample.frame;currentIndex=sample.frameIndex;
   $('anchorX').value=frame.anchor[0];$('anchorY').value=frame.anchor[1];$('bodyHeight').value=frame.bodyHeight;$('facing').value=frame.facing;
  }
@@ -50,7 +57,7 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
    for(let i=x%36;i<w;i+=36){ctx.moveTo(i,0);ctx.lineTo(i,h);}for(let i=y%36;i<h;i+=36){ctx.moveTo(0,i);ctx.lineTo(w,i);}ctx.stroke();
    ctx.strokeStyle='#a4ad83';ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
   ctx.save();ctx.translate(x,y);ctx.scale(zoom,zoom);
-  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state:stateFor($('pose').value,tick),facing:presentation,shadow:false});
+  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state:previewSpriteState($('pose').value,tick),facing:presentation,shadow:false});
   if(rendered.kind==='loading'&&!waiting.has(frame.path)){waiting.add(frame.path);void spriteCache.load(frame).then(()=>{waiting.delete(frame.path);if(!disposed)draw();});}
   const visible=visibleSpriteBox(fighter,frame,0,0,presentation);
   if($('boxes').checked){const collision=bodyBox({data:fighter,x:0,y:0,crouching:$('pose').value==='crouch'});
@@ -59,11 +66,14 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
    ctx.strokeStyle='#e8c775';ctx.beginPath();ctx.moveTo(-9,0);ctx.lineTo(9,0);ctx.moveTo(0,-9);ctx.lineTo(0,9);ctx.stroke();}
   ctx.restore();canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=rendered.kind;
   canvas.dataset.pose=sample.pose;canvas.dataset.requestedPose=sample.requested;canvas.dataset.frameIndex=sample.frameIndex;
-  canvas.setAttribute('role','img');canvas.setAttribute('aria-label',fighter.name+' — '+sample.requested+(sample.fallback?' absente, aperçu idle':''));
+  canvas.dataset.presentationKey=isPresentationPose(sample.requested)?sample.requested:'';
+  canvas.dataset.presentationFrame=isPresentationPose(sample.requested)?String(tick):'';
+  canvas.setAttribute('role','img');canvas.setAttribute('aria-label',fighter.name+' — '+label(sample.requested)+(sample.fallback?' absente, aperçu de repos':''));
   const clipped=x+visible.x*zoom<0||x+(visible.x+visible.w)*zoom>w||y+visible.y*zoom<0||y+(visible.y+visible.h)*zoom>h;
-  $('status').textContent=(sample.fallback?'POSE À PRODUIRE — aperçu idle. ':'')+`Image ${sample.index+1}/${draft.clips[sample.pose].frames.length} · tick ${tick}/${sample.total-1} · ${frame.width} × ${frame.height}`+(clipped?' · Déborde de l’aperçu : réduire le zoom.':'')+(dirty.size?' · Calibration locale non appliquée.':'');
+  $('status').textContent=(sample.fallback?(isPresentationPose(sample.requested)?'SÉQUENCE À PRODUIRE — aperçu idle. ':'POSE À PRODUIRE — aperçu idle. '):'')+`Image ${sample.index+1}/${draft.clips[sample.pose].frames.length} · tick ${tick}/${sample.total-1} · ${frame.width} × ${frame.height}`+(isPresentationPose(sample.requested)&&!sample.fallback?' · Lecture unique.':'')+(clipped?' · Déborde de l’aperçu : réduire le zoom.':'')+(dirty.size?' · Calibration locale non appliquée.':'');
   $('tick').max=sample.total-1;$('tick').value=tick;
   const clipDirty=JSON.stringify(original.clips[sample.requested])!==JSON.stringify(draft.clips[sample.requested]);
+  $('pose').selectedOptions[0].textContent=optionText($('pose').value);
   canvas.dataset.clipDraft=String(clipDirty);
   if(clipDirty)$('status').textContent='BROUILLON DE MONTAGE NON PUBLIÉ — '+$('status').textContent;
   $('retry').hidden=rendered.kind!=='error';

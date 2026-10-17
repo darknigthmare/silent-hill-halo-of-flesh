@@ -96,3 +96,29 @@ class ClipTests(unittest.TestCase):
         for clip in [dict(frames=[0]*257,ticksPerFrame=1,loop=False),dict(frames=[0]*61,ticksPerFrame=600,loop=False)]:
             self.packet['clip']=clip
             with self.assertRaises(ValueError):self.apply()
+    def test_publication_reuses_importer_key_contract(self):
+        self.assertEqual(module.POSE_KEYS,module.importer.POSE_KEYS)
+        self.assertEqual(len(set(module.POSE_KEYS)),38)
+    def test_each_presentation_can_publish_dedicated_frames_once(self):
+        for pose in module.PRESENTATION_KEYS:
+            with self.subTest(pose=pose):
+                packet=copy.deepcopy(self.packet);packet.update(pose=pose,previousClip=None);packet['clip']['loop']=False
+                report=self.apply(packet,apply=True,pose_reviewed=True)
+                self.assertEqual(report['pose'],pose);self.assertTrue(report['applied']);self.assertFalse(report['artworkCertified'])
+                clip=json.loads(self.path.read_text())['assets']['a']['clips'][pose]
+                self.assertFalse(clip['loop']);self.assertEqual(clip['frameTicks'],[3,5,2])
+    def test_every_presentation_refuses_loop_and_idle_only(self):
+        before=self.path.read_bytes()
+        for pose in module.PRESENTATION_KEYS:
+            packet=copy.deepcopy(self.packet);packet.update(pose=pose,previousClip=None)
+            with self.subTest(pose=pose),self.assertRaisesRegex(ValueError,'Presentations'):self.apply(packet)
+            packet['clip']=dict(frames=[0,0],ticksPerFrame=2,loop=False)
+            with self.subTest(pose=pose),self.assertRaisesRegex(ValueError,'dedicated'):self.apply(packet)
+        self.assertEqual(self.path.read_bytes(),before)
+    def test_presentation_exports_keep_frame_and_stale_guards(self):
+        packet=copy.deepcopy(self.packet);packet.update(pose='finished',previousClip=None);packet['clip']['loop']=False
+        wrong=copy.deepcopy(packet);wrong['frameSet'][0]['sha256']='changed'
+        with self.assertRaisesRegex(ValueError,'Frame order or content'):self.apply(wrong)
+        self.apply(packet,apply=True,pose_reviewed=True);before=self.path.read_bytes()
+        with self.assertRaisesRegex(ValueError,'Stale'):self.apply(packet,apply=True,pose_reviewed=True)
+        self.assertEqual(self.path.read_bytes(),before)

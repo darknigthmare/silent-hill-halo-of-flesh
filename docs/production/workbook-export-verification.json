@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "xlsxSha256": "a2ddb617c6c73c2c819e1fbdd8cea24947724bba436c7deb5b115ba73fb95dd2",
-  "planSha256": "97ab7f8cb6c93a0b11d25c7d30b4bb2665c58da889ea69531b099ba70ebcc29d",
-  "bytes": 1401321,
+  "xlsxSha256": "9ad5c2471e680244927c89a44c0e12ac8824e54dd1e721d0bce3eb9e8d0c53f0",
+  "planSha256": "01fc2e9d672f05c7bddb373a7a7e489f83821699adf31cfeba8f50cfe697c703",
+  "bytes": 1403037,
   "sheets": {
     "Combattants": {
       "dataRows": 230,
@@ -94,5 +94,17 @@
   ],
   "totalDataRows": 12690,
   "passed": true,
-  "limits": "Read-only OOXML verification; no claim of a native Excel desktop session or a full animation review."
+  "limits": "Read-only OOXML verification; no claim of a native Excel desktop session or a full animation review.",
+  "preservation": {
+    "passed": true,
+    "comparedCells": 249556,
+    "authoredChanges": 3703,
+    "unchanged": [
+      "worksheet order",
+      "unrelated values",
+      "all formulas",
+      "effective cell formatting",
+      "native layout and validation features"
+    ]
+  }
 }

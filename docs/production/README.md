@@ -40,6 +40,25 @@ Les poses `winRound1` et `loseRound1` représentent une transition réversible :
 
 La victoire finale, la défaite finale et la sortie sont suivies séparément. Un finisher prévoit plusieurs pistes synchronisées : attaquant, cible, accessoires, décor éventuel, caméra, effets et son. Sa définition du dépôt est inventoriée même quand la chorégraphie dédiée n’existe pas encore.
 
+## Suivi de l’intégration après la phase 1
+
+La [passe de présentation du 17 octobre](../PRESENTATION_SEQUENCES_2026-10-17.md)
+ajoute les huit clés de clip `intro`, `winRound`, `loseRound`, `winMatch`,
+`loseMatch`, `outro`, `finisher` et `finished` au moteur et à l’atelier.
+`winRound1` et `loseRound1` ciblent les clés de manche réversibles. Les cellules
+de suivi décrivent maintenant ces points d’intégration et les images manquantes.
+L’action globale des poses de manche est validée ; la cinématique reste en cours
+pour ses montages et pistes spécialisés. **874 actions restent ouvertes sur 875,
+dont 127 P0 ; aucun clip animé ni fidélité 1:1 n’est certifié.**
+
+Pour une mise à jour ciblée, `scripts/update-production-workbook.mjs` prend le
+JSON du plan, le classeur existant, le rapport `workbook-verification.json`
+précédent et un dossier de sortie. Il conserve les champs de travail non concernés.
+Le vérificateur accepte `--compare-source CLASSEUR_SOURCE --change-log JOURNAL_JSON`
+pour contrôler les cellules, styles, formules et propriétés des feuilles avant
+de remplacer le fichier. Une reconstruction complète reste un autre parcours,
+avec la précaution décrite ci-dessous pour les annotations manuelles.
+
 ## Format artistique
 
 Le format demandé reste **une image PNG transparente indépendante par image de sprite**, corps entier et accessoires visibles, avec une qualité détaillée cohérente avec les références du projet. Le cahier n’autorise ni des silhouettes CSS/Canvas de remplacement, ni l’attribution d’un PNG de film à sa version jeu, ni la duplication d’une seule image pour annoncer une animation.

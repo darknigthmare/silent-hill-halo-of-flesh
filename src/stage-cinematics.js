@@ -224,6 +224,10 @@ export function drawStageCinematics(ctx,w,h,stage,director,{reducedMotion=false}
   const progress=elapsed/total;
   const opacity=band(0,.12,progress)*(1-band(.88,1,progress));
   ctx.save();ctx.globalAlpha*=opacity;
-  setpiece(ctx,w,h,cue,elapsed,progress,Boolean(reducedMotion));
+  // Freeze both clocks for decorative motion, including progress-driven travel.
+  // Keep the live event fade; linked physical hazards still use collision geometry.
+  const visualElapsed=reducedMotion ? total*.5 : elapsed;
+  const visualProgress=reducedMotion ? .5 : progress;
+  setpiece(ctx,w,h,cue,visualElapsed,visualProgress,Boolean(reducedMotion));
   ctx.restore();
 }

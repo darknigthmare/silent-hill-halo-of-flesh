@@ -6,7 +6,7 @@ import {resolve} from 'node:path';
 import {VERSION} from '../src/data.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-v090');
 await mkdir(out,{recursive:true});
-const report={version:VERSION,kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['completed-match state for checkpoint test only','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
+const report={version:VERSION,kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result ticks and the engine match callback for checkpoint QA only; no played victory is claimed.','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4173';
 let server,browser;
 const assert=(name,ok)=>{report.assertions.push({name,passed:!!ok});if(!ok)throw Error(name);};
@@ -43,10 +43,19 @@ try{
   await page.waitForSelector('#artDiagnostic');await page.waitForTimeout(250);await page.check('#artDiagnostic');await page.click('#launch');await page.waitForSelector('#fightScreen:not(.hidden)');
   assert('chronicle launched from its real menu',await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')).mode==='chronicle'));
   const checkpoint=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));
-  // An explicit terminal-state fixture tests persistence, not combat balance or a played victory.
+  // Prepare a deciding KO; the engine creates its terminal state and result together.
   await page.goto(base+'/modules/unified-versus.html?qa=1&debugArt=1&preset=chronicle&resume=1');await page.waitForFunction(()=>!!window.__HALO_QA__?.engine);
-  await page.evaluate(()=>{const q=__HALO_QA__;q.handleMatchEnd({winnerIndex:0,winner:q.selection.p1,loser:q.selection.p2,stats:{winner:{healthRatio:.6,perfectGuards:2},loser:{}},snapshot:{p1:{meter:50}}});});
-  await page.waitForTimeout(700);await page.click('#continueRun');
+  const completed=await page.evaluate(()=>{
+    const q=__HALO_QA__,e=q.engine,[winner,loser]=e.actors;e.running=false;
+    const introTicks=e.phase==='intro'?e.phaseTimer:0;for(let tick=0;tick<introTicks;tick++)e.update();
+    e.config.fatalities=false;e.round=e.config.roundsToWin;winner.roundWins=e.config.roundsToWin-1;loser.roundWins=0;
+    winner.health=winner.maxHealth*.6;winner.meter=50;winner.stats.perfectGuards=2;winner.stats.damageTaken=winner.maxHealth-winner.health;
+    loser.health=0;loser.ko=false;loser.lastHit={attackerIndex:0,moveKey:'neutralLight',isSuper:false,environmental:false};
+    e.resolveKnockouts();const resultTicks=e.phaseTimer;for(let tick=0;tick<resultTicks;tick++)e.update();
+    return e.phase==='matchEnd'&&e.winner===winner&&winner.roundWins===e.config.roundsToWin&&loser.ko&&loser.presentation?.key==='loseMatch'&&q.run.status==='won';
+  });
+  assert('prepared checkpoint victory reaches a coherent engine match end',completed);
+  await page.locator('#continueRun').waitFor({state:'visible'});await page.click('#continueRun');
   await page.goto(base);await page.locator('[data-mode="continue"]').first().click();
   await frame.locator('#artDiagnostic').waitFor();await page.waitForTimeout(250);await frame.locator('#artDiagnostic').check();await frame.locator('#resumeCheckpoint').click();await frame.locator('#fightScreen:not(.hidden)').waitFor();
   const resumed=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));

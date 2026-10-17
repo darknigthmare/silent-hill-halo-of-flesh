@@ -1,7 +1,7 @@
 import { ACTIONS, loadControls, saveControls, rebindControl, defaultControls, keyLabel } from './player-input.js';
 
 /** Native dialogs provide keyboard focus containment and accessible pause actions. */
-export function installPlayflowUI({engine,select,retry,onControlsChanged,getControls}) {
+export function installPlayflowUI({engine,select,retry,onControlsChanged,getControls,canRetry=()=>true}) {
   const status=document.createElement('p');status.id='playStatus';status.className='play-status hidden';status.setAttribute('role','status');
   document.body.append(status);
   let statusTimer;
@@ -49,7 +49,10 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged,getCont
   find('#bindingDeadzone').addEventListener('input',e=>{bindings={...bindings,deadzone:+e.target.value/100};persist();find('#deadzoneValue').textContent=` ${e.target.value} %`;});
   document.querySelector('#openControls')?.addEventListener('click',openControls);
   return {announce,openControls,canResume:()=>!controls.open,syncPause(snapshot){
-    if(snapshot.paused&&engine()?.phase!=='matchEnd'){if(!pause.open)pause.showModal();}
+    const current=engine(),outro=current?.isPresentingOutro?.()===true;
+    pause.querySelector('#pauseReason').textContent=outro?'La sortie de scène est arrêtée. Le résultat du match est déjà enregistré.':'Le combat et les dangers sont arrêtés.';
+    pause.querySelector('[data-pause=retry]').disabled=!canRetry();
+    if(snapshot.paused&&(current?.phase!=='matchEnd'||outro)){if(!pause.open)pause.showModal();}
     else if(pause.open){closePause();document.querySelector('#game')?.focus({preventScroll:true});}
     const button=document.querySelector('#pauseBtn');if(button){button.textContent=snapshot.paused?'REPRENDRE':'PAUSE';button.setAttribute('aria-pressed',String(snapshot.paused));}
   },close(){controls.close();closePause();}};
