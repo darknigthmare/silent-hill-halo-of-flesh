@@ -7,8 +7,25 @@ dist/
 tests/captures*/
 assets/screenshots/
 
-# Captures de QA livrées séparément, pas de binaires dans les sources.
+# Captures de QA livrées séparément. Les images de jeu restent versionnées.
 tests/canvas-v082/
 
 tests/ui-v090/
 tests/http-v090/
+
+tests/raster-isolated/
+tests/http-sprites/
+__pycache__/
+art/.import.lock
+
+tests/http-art-v092/
+
+tests/http-clips-v093/
+
+tests/http-recovery-v094/
+
+tests/http-boundaries-v095/
+tests/http-presentations/
+
+# JSON de travail regénérable ; recherches, synthèse et Excel restent versionnés.
+docs/production/production-plan.json

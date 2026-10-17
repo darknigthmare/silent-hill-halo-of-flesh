@@ -1,9 +1,11 @@
+import { spriteFor, spriteStatus, spriteCache, pinCombatSprites } from './sprite-system.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
 } from './data.js';
 import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
-import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS } from './run-progress.js';
+import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS, validateRun, runEncounterRules } from './run-progress.js';
+import {bindTouchButton} from './touch-controls.js';
 import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
@@ -25,13 +27,13 @@ const settings = loadSettings();
 const GRADE_SCORE = Object.freeze({ D: 0, C: 1, B: 2, A: 3, S: 4 });
 
 const defaults = {
-  p1: ROSTER.find((f) => f.name === 'Red Pyramid Thing — Great Knife')?.id || ROSTER[0].id,
-  p2: ROSTER.find((f) => f.name === 'Sakura Head')?.id || ROSTER.find((f) => f.boss)?.id || ROSTER[1].id,
+  p1: 'film_red_pyramid_film_175',
+  p2: 'sh1_air_screamer_001',
   stage: STAGES.find((s) => s.id === 'hotel_otherworld')?.id || STAGES[0].id,
 };
 
 const state = {
-  activeSlot: 1,
+  activeSlot: 1, loadingSprites: false, spriteLease: 0,
   p1: getFighter(params.get('p1') || defaults.p1),
   p2: getFighter(params.get('p2') || defaults.p2),
   stage: getStage(params.get('stage') || defaults.stage),
@@ -39,6 +41,7 @@ const state = {
   filtered: ROSTER,
   mode: preset,
   engine: null,
+  controls: loadControls(),
   run: null,
   lastResult: null, generation: 0, settled: false, resultTimer: null, matchId: null,
   touchEnabled: matchMedia('(pointer: coarse)').matches,
@@ -77,7 +80,7 @@ function fighterInfo(fighter) {
   return `
     <span class="fighter-source">${escapeHTML(SOURCE_META[fighter.source]?.short || fighter.source)} · ${escapeHTML(fighter.category)}</span>
     <h2>${escapeHTML(fighter.name)}</h2>
-    <p class="fighter-lore">${escapeHTML(fighter.lore)}</p>
+    <p class="fighter-lore">${escapeHTML(fighter.lore)}</p><p class="sprite-status" data-status="${spriteStatus(fighter).kind}">${escapeHTML(spriteStatus(fighter).label)} · ${spriteStatus(fighter).animatedClips} CLIP ANIMÉ</p>
     <div class="stats">
       <div class="stat"><span>VITALITÉ</span><span><i style="width:${valueScore(profile.maxHealth, 700, 1570)}%"></i></span></div>
       <div class="stat"><span>VITESSE</span><span><i style="width:${valueScore(profile.speed, 3, 7.4)}%"></i></span></div>
@@ -90,7 +93,7 @@ function fighterInfo(fighter) {
 
 function renderSelected() {
   renderPortrait(els.p1Portrait, state.p1, { time: performance.now() });
-  renderPortrait(els.p2Portrait, state.p2, { time: performance.now() + 700 });
+  renderPortrait(els.p2Portrait, state.p2, { time: performance.now() + 700, facing: -1 });
   els.p1Info.innerHTML = fighterInfo(state.p1);
   els.p2Info.innerHTML = fighterInfo(state.p2);
   els.p1Card.classList.toggle('active', state.activeSlot === 1);
@@ -98,6 +101,8 @@ function renderSelected() {
   els.slotP1.textContent = state.activeSlot === 1 ? 'SIGNAL DU SUJET I ACTIF' : 'ACCROCHER LE SUJET I';
   els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
+  const current=[state.p1,state.p2].filter(f=>!spriteFor(f));
+  const status=$('#spriteLaunchStatus');if(status)status.textContent=current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
 }
 
 function renderStageMini() {
@@ -134,13 +139,14 @@ function populateRituals() {
 }
 
 function currentRitualId() {
-  if (state.run?.rituals?.length) return state.run.rituals[state.run.index % state.run.rituals.length];
+  if (state.run) return runEncounterRules(state.run).ritualId;
   return els.ritualSelect.value || 'none';
 }
 
 function currentRitual() { return { id: currentRitualId(), ...getRitualModifier(currentRitualId()) }; }
 
 function matchesFilters(fighter) {
+  if ($('#artReadyOnly')?.checked && !spriteFor(fighter)) return false;
   const query = els.search.value.trim().toLowerCase();
   const source = els.sourceFilter.value;
   const type = els.typeFilter.value;
@@ -179,7 +185,8 @@ function renderRoster() {
     const button = document.createElement('button');
     button.className = 'fighter-card';
     button.dataset.id = fighter.id;
-    button.title = `${fighter.name} — ${fighter.signature}`;
+    button.title = `${fighter.name} — ${fighter.signature} — ${spriteStatus(fighter).label}`;
+    button.dataset.artStatus = spriteStatus(fighter).kind;
     if (state.p1.id === fighter.id || state.p2.id === fighter.id) button.classList.add('selected');
     const canvas = document.createElement('canvas');
     canvas.width = 180; canvas.height = 120;
@@ -197,7 +204,7 @@ function renderRoster() {
       event.preventDefault();
       if (state.favorites.has(fighter.id)) state.favorites.delete(fighter.id); else state.favorites.add(fighter.id);
       writeJSON(FAVORITES_KEY, { ids: [...state.favorites] });
-      renderRoster();
+      applyFilters();
     });
     els.roster.append(button);
     renderPortrait(canvas, fighter, { time: performance.now() + start * 19 });
@@ -277,15 +284,18 @@ function closeDossier() { els.dossier.classList.add('hidden'); }
 
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
-  const pool = state.filtered.length ? state.filtered : ROSTER;
+  const candidates = state.filtered;
+  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
+  if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
   state.p1 = randomItem(pool);
-  do { state.p2 = randomItem(pool); } while (pool.length > 1 && state.p2.id === state.p1.id);
+  state.p2 = randomItem(pool.length > 1 ? pool.filter(f => f.id !== state.p1.id) : pool);
   state.stage = randomItem(STAGES);
   audio.confirm();
   renderSelected(); renderRoster();
 }
 
 function configurePreset() {
+  els.mode.disabled=false;els.difficulty.disabled=false;els.ritualSelect.disabled=false;
   const labels = {
     versus: ['CONFRONTATION', 'OUVRIR LE CONTACT'], arcade: ['DESCENTE', 'COMMENCER LE PARCOURS'],
     ritual: ['RITES DU JUGEMENT', 'OUVRIR LE PREMIER SCEAU'],
@@ -314,17 +324,17 @@ function selectedRules() {
     difficulty:els.difficulty.value,ritualId:els.ritualSelect.value,
     ...Object.fromEntries(RULE_BOOLEANS.map(k=>[k,els[k].checked]))};
 }
-function buildRun() {
+function buildRun(candidate = null) {
   if (!['arcade','boss','ritual','chronicle'].includes(preset)) { state.run=null;return true; }
   const previous=loadRun();
   if(previous&&previous.status!=='complete'&&!confirm('Remplacer le parcours sauvegardé par un nouveau parcours ?'))return false;
-  try { state.run=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
+  try { state.run=candidate||createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
   catch(error){state.run=null;flow.announce(error.message,true);return false;}
   try {
     if(preset==='chronicle'){
       const progress=loadJSON(CHRONICLES_KEY,{completed:[],attempts:{},grades:{},bestStats:{}});
       progress.attempts={...progress.attempts,[state.run.routeId]:(progress.attempts?.[state.run.routeId]||0)+1};
-      importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.chronicles]:progress,[KEYS.run]:state.run}});
+      importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.chronicles]:progress,[KEYS.run]:state.run}},undefined,{[KEYS.run]:validateRun});
     } else if(!saveRun(state.run))flow.announce('Parcours jouable, mais sauvegarde indisponible.',true);
   } catch(error){flow.announce(`${error.message} Le parcours reste jouable sans sauvegarde.`,true);}
   return true;
@@ -335,21 +345,27 @@ function checkpointNotice() {
   banner.classList.toggle('hidden',!pending);
   if(pending)$('#runCheckpointText').textContent=`Parcours ${saved.mode} : ${saved.wins}/${saved.queue.length} victoires. ${saved.status==='won'?'Prochain combat prêt.':'Reprise au début de la rencontre en cours.'}`;
 }
-function restoreCheckpoint() {
-  const saved=loadRun(), resumed=resumeRun(saved);
-  if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return;}
-  state.run=resumed;preset=resumed.mode;state.mode=preset;state.p1=getFighter(resumed.playerId);
+function activateRun(run) {
+  state.run=run;preset=run.mode;state.mode=preset;state.p1=getFighter(run.playerId);
   configurePreset();
-  const rules=resumed.rules;
+  const rules=run.rules;
   els.rounds.value=String(rules.roundsToWin);els.timer.value=String(rules.timeLimit);els.difficulty.value=rules.difficulty;
   for(const key of RULE_BOOLEANS)els[key].checked=rules[key]!==false;
   els.ritualSelect.value=rules.ritualId||'none';
-  startFight({preserveRun:true});
+}
+function restoreCheckpoint() {
+  if(state.loadingSprites)return false;
+  const resumed=resumeRun(loadRun());
+  if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return false;}
+  return startFight({preserveRun:true,runCandidate:resumed});
+}
+function canRetryCurrentFight() {
+  return !state.loadingSprites&&!(state.run&&['won','complete'].includes(state.run.status));
 }
 function retryCurrentFight() {
-  if(state.run&&state.run.status==='lost')state.run=resumeRun(state.run);
-  if(state.run&&['won','complete'].includes(state.run.status))return;
-  startFight({preserveRun:Boolean(state.run)});
+  if(!canRetryCurrentFight())return false;
+  const candidate=state.run?.status==='lost'?resumeRun(state.run):state.run;
+  return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
 
 function showFight() {
@@ -359,6 +375,7 @@ function showFight() {
   window.scrollTo(0, 0);
 }
 function showSelect() {
+  state.spriteLease++; state.loadingSprites=false; els.launch.disabled=false; els.launch.removeAttribute('aria-busy'); pinCombatSprites([]);
   clearTimeout(state.resultTimer);state.generation++;flow.close();
   state.engine?.destroy(); state.engine = null;
   els.fightScreen.classList.add('hidden');
@@ -377,7 +394,7 @@ function fightConfig() {
     roundsToWin: Number(els.rounds.value),
     timeLimit: Number(els.timer.value),
     difficulty: els.difficulty.value,
-    training,
+    training, artDiagnostic: $('#artDiagnostic')?.checked === true,
     showHitboxes: training && els.hitboxes.checked,
     autoHeal: training && els.autoHeal.checked,
     freeMeter: training && els.freeMeter.checked,
@@ -391,17 +408,49 @@ function fightConfig() {
     stageTerrain: els.stageTerrain.checked,
     stageDirector: els.stageDirector.checked,
     ritualId: currentRitualId(),
-    ...(state.run?.rules || {}),
+    ...runEncounterRules(state.run),
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
-    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot) }
+    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot), canResume: () => flow.canResume() }
   };
 }
 
-function startFight({ preserveRun = false } = {}) {
-  if (!preserveRun && !buildRun()) return;
-  if (state.run && state.run.status !== 'ready') return;
+async function startFight({ preserveRun = false, runCandidate = null } = {}) {
+  if (state.loadingSprites) return false;
+  const lease=++state.spriteLease;
+  const selection=()=>JSON.stringify([preset,state.p1.id,state.p2.id,state.stage.id,selectedRules(),$('#artDiagnostic')?.checked,state.run]);
+  const originalSelection=selection();
+  const diagnostic=$('#artDiagnostic')?.checked===true;
+  let candidate=preserveRun?(runCandidate||state.run):null;
+  try {
+    if(!preserveRun&&['arcade','boss','ritual','chronicle'].includes(preset))candidate=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()});
+  } catch(error){flow.announce(error.message,true);return false;}
+  // Preflight the WHOLE run before overwriting a checkpoint or counting an attempt.
+  const ids=candidate?[candidate.playerId,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
+  const fighters=[...new Set(ids)].map(getFighter);
+  state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
+  $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
+  let ready;
+  try {
+    ready=await spriteCache.prepare(fighters,{diagnostic});
+    if(ready.ok&&lease===state.spriteLease&&selection()===originalSelection){
+      const pair=candidate?[getFighter(candidate.playerId),getFighter(candidate.queue[candidate.index])]:[state.p1,state.p2];
+      pinCombatSprites(pair);
+      ready=await spriteCache.prepare(pair,{diagnostic});
+    }
+  } catch(error){ready={ok:false,missing:[],failed:['preflight']};}
+  finally {if(lease===state.spriteLease){state.loadingSprites=false;els.launch.disabled=false;els.launch.removeAttribute('aria-busy');}}
+  if(lease!==state.spriteLease||selection()!==originalSelection){if(lease===state.spriteLease)pinCombatSprites([]);flow.announce('Sélection modifiée : chargement annulé. Relance le contact.',true);return false;}
+  if(!ready.ok){
+    pinCombatSprites([]);
+    const names=ready.missing.slice(0,4).map(id=>getFighter(id).name).join(', ');
+    const message=ready.missing.length?`Sprites à produire : ${ready.missing.length}. ${names}${ready.missing.length>4?'…':''}. Aucun parcours ni tentative modifié.`:'Une image n’a pas pu être chargée. Réessaie le contact; aucun parcours ni tentative modifié.';
+    $('#spriteLaunchStatus').textContent=message;flow.announce(message,true);return false;
+  }
+  if (!preserveRun && !buildRun(candidate)){pinCombatSprites([]);return false;}
+  if (candidate && candidate.status !== 'ready'){pinCombatSprites([]);return false;}
+  if (preserveRun && candidate) activateRun(candidate);
   clearTimeout(state.resultTimer);state.generation++;state.settled=false;state.lastResult=null;
   state.matchId=globalThis.crypto?.randomUUID?.() || `match-${Date.now()}-${Math.random().toString(36).slice(2)}`;
   flow.close();
@@ -416,22 +465,26 @@ function startFight({ preserveRun = false } = {}) {
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
-  els.touchLayer.style.display = state.touchEnabled ? 'block' : '';
+  els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   const ritual = currentRitual();
   els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
   refreshControlHelp();
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
   const generation=state.generation, config=fightConfig();
   config.callbacks.onMatchEnd=result=>{if(generation===state.generation)handleMatchEnd(result);};
+  pinCombatSprites([state.p1,state.p2]);
   state.engine = new FightEngine(els.game, config);
+  state.engine.setBindings(state.controls);
   state.engine.start();
   els.game.focus({preventScroll:true});
   if (params.get('qa') === '1') installQaBridge();
+  return true;
 }
 
 function installQaBridge() {
   window.__HALO_QA__ = {
     version: VERSION,
+    spriteStatus, get assetCache(){return spriteCache;},
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,
@@ -446,6 +499,7 @@ function installQaBridge() {
       if (!engine || !actor || !actor.profile.moves[moveKey]) return false;
       engine.phase = 'fight';
       engine.phaseTimer = 0;
+      engine.clearPresentations();
       actor.attack = null;
       actor.hurtFrames = 0;
       actor.guardBreak = 0;
@@ -497,11 +551,18 @@ function handleMatchEnd(result) {
     }
     entries[KEYS.chronicles]=progress;
   }
-  try{importMemory({schema:MEMORY_SCHEMA,entries});}
+  try{importMemory({schema:MEMORY_SCHEMA,entries},undefined,{[KEYS.run]:validateRun});}
   catch(error){flow.announce(error.message,true);}
   const generation=state.generation;
-  state.resultTimer=setTimeout(()=>{
-    if(generation!==state.generation||!state.engine)return;
+  const revealResult=()=>{
+    if(generation!==state.generation||!state.engine||state.engine.destroyed||state.engine.phase!=='matchEnd')return;
+    const outro=state.engine.actors[result.winnerIndex]?.presentation;
+    // An imported exit must finish on simulated time, including pauses. Records
+    // were already settled above, and leaving/retrying invalidates this callback.
+    if(outro?.key==='outro'&&outro.clipDuration>0&&!outro.complete){
+      state.resultTimer=setTimeout(revealResult,50);
+      return;
+    }
     const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[state.run.mode]):'CONFRONTATION';
     els.resultKicker.textContent=`${title} · ${won?'VICTOIRE DU SUJET I':'DÉFAITE DU SUJET I'}`;
     els.resultTitle.textContent=completedRun?'PARCOURS TERMINÉ':result.winner.name;
@@ -517,15 +578,15 @@ function handleMatchEnd(result) {
     els.rematch.textContent=state.run?'RÉESSAYER CETTE RENCONTRE':'REVANCHE';
     els.result.classList.remove('hidden');state.engine.input.enabled=false;
     (state.run?.status==='won'?els.continueRun:!won?els.rematch:els.resultSelect).focus();
-  },600);
+  };
+  state.resultTimer=setTimeout(revealResult,600);
 }
 function continueRun() {
-  if(state.run?.status!=='won')return;
-  state.run=resumeRun(state.run);
-  startFight({preserveRun:true});
+  if(state.loadingSprites||state.run?.status!=='won')return false;
+  return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
 }
-function refreshControlHelp() {
-  const bindings=loadControls();
+function refreshControlHelp(bindings = state.controls) {
+  state.controls=bindings;
   els.gameHelp.textContent=controlsLabel(bindings,0)+(els.mode.value==='local'&&preset!=='training'?` · SUJET II : ${controlsLabel(bindings,1)}`:'');
   state.engine?.setBindings(bindings);
 }
@@ -540,14 +601,9 @@ function updateTraining() {
 
 function bindTouch() {
   $$('.touch-button').forEach(button=>{
-    const {player,action}=button.dataset, pointers=new Set();
+    const {player,action}=button.dataset;
     button.setAttribute('aria-label',ACTIONS[action]||action);
-    const release=event=>{event.preventDefault();pointers.delete(event.pointerId);
-      if(!pointers.size)state.engine?.setTouch(player,action,false);};
-    button.addEventListener('pointerdown',event=>{event.preventDefault();pointers.add(event.pointerId);
-      button.setPointerCapture?.(event.pointerId);state.engine?.setTouch(player,action,'pressed');});
-    for(const name of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(name,release);
-    button.style.touchAction='none';
+    bindTouchButton(button,()=>state.engine,player,action);
   });
 }
 
@@ -576,14 +632,15 @@ function bindEvents() {
   [els.hitboxes, els.autoHeal, els.freeMeter].forEach((input) => input.addEventListener('change', updateTraining));
   els.forceShift.addEventListener('click', () => state.engine?.forceOtherworldShift());
   els.forceBossPhase.addEventListener('click', () => state.engine?.forceBossPhase());
-  els.resetDojo.addEventListener('click', () => state.engine?.resetMatch());
+  els.resetDojo.addEventListener('click', () => {if(preset==='training'&&state.engine)void retryCurrentFight();});
   els.mobileP1.addEventListener('click', () => {
+    state.engine?.clearInputs();
     state.touchEnabled = !state.touchEnabled;
     els.mobileP1.textContent = state.touchEnabled ? 'TACTILE SUJET I ACTIF' : 'TACTILE SUJET I';
     els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   });
   addEventListener('keydown', (event) => {
-    if(event.defaultPrevented||event.target?.closest?.('dialog,input,textarea,select'))return;
+    if(event.defaultPrevented||event.repeat||event.isComposing||event.ctrlKey||event.altKey||event.metaKey||event.target?.isContentEditable||event.target?.closest?.('dialog,input,textarea,select'))return;
     if (event.code === 'Escape') {
       if (!els.dossier.classList.contains('hidden')) closeDossier();
       else if (!els.stageGallery.classList.contains('hidden')) closeStageGallery();
@@ -593,11 +650,14 @@ function bindEvents() {
     if (!els.selectScreen.classList.contains('hidden') && event.code === 'Enter' && !event.target?.closest?.('button')) startFight();
   });
   $('#resumeCheckpoint').addEventListener('click',restoreCheckpoint);
-  $('#discardCheckpoint').addEventListener('click',()=>{if(confirm('Effacer uniquement le parcours en cours ?')){removeState(KEYS.run);checkpointNotice();}});
+  $('#discardCheckpoint').addEventListener('click',()=>{if(state.loadingSprites)return;if(confirm('Effacer uniquement le parcours en cours ?')){removeState(KEYS.run);checkpointNotice();}});
   bindTouch();
 }
 
 function init() {
+  $('#artReadyOnly').addEventListener('change',()=>{state.page=0;applyFilters();});
+  $('#artDiagnostic').checked=params.get('debugArt')==='1';
+  $('#artDiagnostic').addEventListener('change',renderSelected);
   els.otherworldShift.checked = settings.otherworldShift !== false;
   els.stageHazards.checked = settings.stageHazards !== false;
   els.radioWarning.checked = settings.radioWarning !== false;
@@ -623,5 +683,5 @@ function init() {
   else if (shouldAutostart) setTimeout(() => startFight(), 120);
 }
 
-const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,onControlsChanged:refreshControlHelp});
+const flow=installPlayflowUI({engine:()=>state.engine,select:showSelect,retry:retryCurrentFight,canRetry:canRetryCurrentFight,onControlsChanged:refreshControlHelp,getControls:()=>state.controls});
 init();

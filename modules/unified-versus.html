@@ -10,10 +10,11 @@
 <header class="module-topbar">
   <div class="module-brand"><small>OTHERWORLD CONTACT ARCHIVE</small><strong>HALO OF FLESH</strong><span id="modeTitle">CONFRONTATION</span></div>
   <div class="top-actions">
-    <button id="openControls" class="ui-button">COMMANDES</button><button id="mobileP1" class="ui-button">TACTILE SUJET I</button><button id="openGallery" class="ui-button">ARÈNES</button><button id="randomAll" class="ui-button">SIGNAL ALÉATOIRE</button><button id="backCommand" class="ui-button">RETOUR À LA BRUME</button>
+    <a class="ui-button" href="sprite-workshop.html">SPRITES</a><button id="openControls" class="ui-button">COMMANDES</button><button id="mobileP1" class="ui-button">TACTILE SUJET I</button><button id="openGallery" class="ui-button">ARÈNES</button><button id="randomAll" class="ui-button">SIGNAL ALÉATOIRE</button><button id="backCommand" class="ui-button">RETOUR À LA BRUME</button>
   </div>
 </header>
 <section id="selectScreen" class="screen">
+  <aside class="sprite-migration-note"><strong>TRANSITION VERS LES SPRITES BITMAP</strong><span>Deux candidats détaillés intégrés. Les autres visuels sont signalés, pas remplacés par des clones. Les parcours attendent toutes leurs images.</span><a href="sprite-workshop.html">Voir la couverture réelle</a></aside>
   <aside id="runCheckpoint" class="run-checkpoint hidden" aria-label="Parcours sauvegardé"><p id="runCheckpointText"></p><button id="resumeCheckpoint" class="ui-button primary">REPRENDRE LE PARCOURS</button><button id="discardCheckpoint" class="ui-button">EFFACER CE PARCOURS</button></aside>
   <div class="select-body">
     <article id="p1Card" class="side-card active">
@@ -27,7 +28,8 @@
         <select id="typeFilter" class="ui-select"><option value="all">TOUS LES TYPES</option><option value="regular">CRÉATURES</option><option value="boss">BOSS</option><option value="secret">SECRETS</option><option value="favorites">FAVORIS</option></select>
         <select id="archetypeFilter" class="ui-select"><option value="all">TOUS LES ARCHÉTYPES</option></select>
       </div>
-      <div class="roster-wrap"><div id="roster" class="roster scrollbar"></div></div>
+      <div class="roster-wrap"><label class="sprite-filter"><input id="artReadyOnly" type="checkbox"> Images intégrées uniquement</label>
+<div id="roster" class="roster scrollbar"></div></div>
       <div class="pager"><button id="prevPage" class="ui-button">◀</button><span id="pageLabel">PAGE 1 / 1</span><button id="nextPage" class="ui-button">▶</button></div>
       <div class="setup">
         <label>MODE<select id="mode" class="ui-select"><option value="cpu">1P VS CPU</option><option value="local">2P LOCAL</option></select></label>
@@ -38,6 +40,8 @@
         <button id="stageMini" class="stage-mini"><canvas id="stageCanvas" width="152" height="84"></canvas><div><small>ARÈNE</small><b id="stageName">—</b></div></button>
         <button id="fighterDossier" class="ui-button">DOSSIER</button>
         <button id="launch" class="ui-button launch">COMBATTRE</button>
+<p id="spriteLaunchStatus" class="sprite-launch-status" role="status" aria-live="polite"></p>
+<label class="sprite-filter diagnostic"><input id="artDiagnostic" type="checkbox"> Diagnostic moteur : autoriser les fiches sans image, avec cartouche explicite. Aucun faux monstre.</label>
         <div class="ruleset" aria-label="Règles dynamiques">
           <label><input id="otherworldShift" type="checkbox" checked> BASCULE OTHERWORLD</label>
           <label><input id="stageHazards" type="checkbox" checked> DANGERS D’ARÈNE</label>

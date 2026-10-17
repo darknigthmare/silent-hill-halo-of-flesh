@@ -377,3 +377,10 @@ test('lore interactions answer to heavy impact, Otherworld midpoint and late-rou
   assert.equal(engine.snapshot().world.director.interactionTriggered.length,3);
   engine.destroy();
 });
+
+test('sprite presentation clock is frozen by hitstop and pause, not advanced by render calls',()=>{
+ const engine=makeEngine();engine.phase='fight';engine.update();const actor=engine.actors[0];
+ const before=structuredClone(actor.spriteClock);for(let n=0;n<8;n++)engine.render(n*133);
+ assert.deepEqual(actor.spriteClock,before);engine.hitstop=4;engine.update();assert.deepEqual(actor.spriteClock,before);
+ engine.paused=true;engine.update();assert.deepEqual(actor.spriteClock,before);engine.paused=false;engine.hitstop=0;engine.update();assert.equal(actor.spriteClock.tick,before.tick+1);engine.destroy();
+});

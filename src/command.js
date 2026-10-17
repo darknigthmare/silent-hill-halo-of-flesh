@@ -1,3 +1,5 @@
+import { drawRasterMonster, spriteCache, spriteFor } from './sprite-system.js';
+import { getFighter } from './data.js';
 import { CONTENT_STATS, SAVE_KEY, VERSION } from './data.js';
 import { readState, writeState, exportMemory, importMemory, KEYS } from './save-store.js';
 import { loadRun, validateRun } from './run-progress.js';
@@ -275,7 +277,7 @@ function syncFullscreenButton() {
   button.classList.toggle('on', enabled);
   button.setAttribute('aria-pressed', String(enabled));
 }
-function collectMemory() { return exportMemory(VERSION); }
+function collectMemory() { return exportMemory(VERSION,undefined,{[KEYS.run]:validateRun,[KEYS.controls]:validControls}); }
 function downloadMemory() {
   const blob = new Blob([`${JSON.stringify(collectMemory(), null, 2)}\n`], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -294,7 +296,7 @@ async function importMemoryFile(file) {
   if (payload?.schema !== MEMORY_SCHEMA || !isPlainRecord(payload.entries)) throw new Error('Format de mémoire inconnu.');
   if(payload.entries[KEYS.run] && !validateRun(payload.entries[KEYS.run])) throw new Error('Parcours importé incompatible.');
   if(payload.entries[KEYS.controls] && !validControls(payload.entries[KEYS.controls])) throw new Error('Commandes importées invalides.');
-  const restored = importMemory(payload);
+  const restored = importMemory(payload,undefined,{[KEYS.run]:validateRun,[KEYS.controls]:validControls});
   settings = normaliseSettings(readStoredObject(SETTINGS_KEY, DEFAULT_SETTINGS));
   applySettings();
   showStatus(`${restored} ENTRÉES DE MÉMOIRE RESTAURÉES.`, { tone: 'success' });
@@ -374,6 +376,8 @@ $('#difficulty').addEventListener('change',event=>{settings.difficulty=event.tar
 
 document.addEventListener('visibilitychange',syncAnimation);
 addEventListener('keydown',event=>{
+  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.altKey || event.metaKey || event.target?.isContentEditable) return;
+  if (event.repeat && !['ArrowDown','ArrowUp'].includes(event.code)) return;
   if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement || event.target instanceof HTMLTextAreaElement) return;
   if (player.classList.contains('show')) {
     if (event.code==='Escape') { event.preventDefault(); closeModule(); }
@@ -418,52 +422,18 @@ function drawCommandBackground(time=0) {
   else raf=0;
 }
 
-function line(x1,y1,x2,y2,width,color){ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();}
-function drawExecutioner(x,y,scale=1,alpha=1){
-  ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.globalAlpha=alpha;
-  ctx.fillStyle='rgba(0,0,0,.38)';ctx.beginPath();ctx.ellipse(0,18,82,18,0,0,Math.PI*2);ctx.fill();
-  ctx.fillStyle='#353733';ctx.strokeStyle='#0b0c0b';ctx.lineWidth=7;
-  ctx.beginPath();ctx.moveTo(-43,-177);ctx.lineTo(40,-173);ctx.lineTo(56,-44);ctx.lineTo(26,-18);ctx.lineTo(-28,-19);ctx.lineTo(-53,-54);ctx.closePath();ctx.fill();ctx.stroke();
-  ctx.fillStyle='#64564f';ctx.beginPath();ctx.moveTo(-45,-195);ctx.lineTo(70,-160);ctx.lineTo(-5,-111);ctx.lineTo(-75,-145);ctx.closePath();ctx.fill();ctx.stroke();
-  line(-24,-24,-39,18,28,'#242723');line(24,-24,36,18,28,'#242723');
-  line(-30,-146,-61,-74,23,'#383a35');line(34,-143,74,-78,23,'#383a35');
-  ctx.save();ctx.translate(74,-72);ctx.rotate(-.72);ctx.fillStyle='#6c6b60';ctx.strokeStyle='#161715';ctx.lineWidth=7;ctx.fillRect(0,-8,150,16);ctx.strokeRect(0,-8,150,16);ctx.beginPath();ctx.moveTo(132,-48);ctx.lineTo(214,-8);ctx.lineTo(131,38);ctx.closePath();ctx.fill();ctx.stroke();ctx.restore();
-  ctx.restore();
-}
-function drawFlower(x,y,scale=1,alpha=1){
-  ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.globalAlpha=alpha;
-  ctx.fillStyle='rgba(0,0,0,.36)';ctx.beginPath();ctx.ellipse(0,15,62,13,0,0,Math.PI*2);ctx.fill();
-  line(-19,-48,-31,12,20,'#342b2c');line(19,-48,30,12,20,'#342b2c');
-  ctx.fillStyle='#4c3538';ctx.strokeStyle='#100b0c';ctx.lineWidth=6;ctx.beginPath();ctx.moveTo(-36,-148);ctx.quadraticCurveTo(0,-169,39,-146);ctx.lineTo(27,-48);ctx.lineTo(-28,-48);ctx.closePath();ctx.fill();ctx.stroke();
-  line(-30,-133,-62,-68,17,'#473035');line(31,-131,64,-77,17,'#473035');
-  const petals=13;for(let i=0;i<petals;i++){const a=i/petals*Math.PI*2;ctx.save();ctx.rotate(a);ctx.fillStyle=i%2?'#7f323a':'#9f444c';ctx.beginPath();ctx.ellipse(0,-190,22,58,0,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.restore();}
-  ctx.fillStyle='#1a0d0e';ctx.beginPath();ctx.arc(0,-184,31,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#c16a70';ctx.lineWidth=4;for(let i=0;i<8;i++){const a=i/8*Math.PI*2;line(Math.cos(a)*8,-184+Math.sin(a)*8,Math.cos(a)*28,-184+Math.sin(a)*28,3,'#c16a70');}
-  ctx.restore();
-}
-function drawNurse(x,y,scale=1,alpha=1){
-  ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.globalAlpha=alpha;
-  ctx.fillStyle='rgba(0,0,0,.3)';ctx.beginPath();ctx.ellipse(0,10,50,11,0,0,Math.PI*2);ctx.fill();
-  line(-16,-55,-26,9,18,'#5b5750');line(17,-55,28,9,18,'#5b5750');
-  ctx.fillStyle='#817b70';ctx.strokeStyle='#141512';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(-36,-143);ctx.lineTo(32,-143);ctx.lineTo(46,-53);ctx.lineTo(-45,-53);ctx.closePath();ctx.fill();ctx.stroke();
-  line(-31,-130,-58,-73,16,'#7c756a');line(30,-129,54,-80,16,'#7c756a');
-  ctx.fillStyle='#b9b09f';ctx.beginPath();ctx.arc(0,-176,27,0,Math.PI*2);ctx.fill();ctx.stroke();
-  ctx.strokeStyle='#6f4a4c';ctx.lineWidth=5;for(let i=-18;i<=18;i+=9){line(i,-192,-i*.7,-159,4,'#6f4a4c');}
-  line(54,-80,118,-34,8,'#66645b');
-  ctx.restore();
-}
 function drawHero(scene,time){
   const w=heroCanvas.width,h=heroCanvas.height;ctx.clearRect(0,0,w,h);
   const palettes={fog:['#263029','#060907'],chronicles:['#34352e','#070907'],duel:['#302c28','#080706'],arcade:['#332427','#080405'],ritual:['#351e22','#070304'],boss:['#3b2022','#080303'],training:['#20332c','#040806'],archive:['#2f3430','#060806'],options:['#29302c','#050705']};
   const p=palettes[scene]||palettes.fog;const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,p[0]);g.addColorStop(1,p[1]);ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
   ctx.strokeStyle='rgba(182,191,182,.055)';for(let x=-h;x<w;x+=52){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+h,h);ctx.stroke();}
   for(let i=0;i<7;i++){ctx.fillStyle=`rgba(210,214,205,${.014+i*.006})`;ctx.beginPath();ctx.moveTo(0,120+i*78);for(let x=0;x<w;x+=60)ctx.lineTo(x,120+i*78+Math.sin(x*.012+i)*26);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.fill();}
-  const sway=settings.reducedMotion?0:Math.sin(time*.001)*4;
-  if(scene==='boss'){drawExecutioner(900+sway,665,1.55,1);drawFlower(1080-sway,667,1.14,.55);}
-  else if(scene==='ritual'){drawFlower(880+sway,667,1.38,.88);drawExecutioner(1060-sway,667,1.1,.62);}
-  else if(scene==='archive'){drawNurse(835+sway,665,1.45,.92);drawExecutioner(1040-sway,667,1.18,.75);}
-  else if(scene==='chronicles'){drawFlower(890+sway,667,1.42,.95);drawNurse(1070-sway,667,1.05,.62);}
-  else if(scene==='training'){drawNurse(860,665,1.35,.95);ctx.strokeStyle='rgba(208,75,83,.55)';ctx.lineWidth=3;ctx.strokeRect(810,390,100,255);ctx.fillStyle='rgba(208,75,83,.12)';ctx.fillRect(790,520,160,80);}
-  else{drawExecutioner(850+sway,667,1.42,.9);drawFlower(1065-sway,667,1.18,.82);}
+  // Only real, isolated bitmap candidates. No geometric nurse/flower/executioner fallback.
+  const lead=getFighter('film_red_pyramid_film_175'),flyer=getFighter('sh1_air_screamer_001');
+  ctx.save();ctx.translate(885,650);ctx.scale(1.32,1.32);drawRasterMonster(ctx,lead,0,0,{shadow:false});ctx.restore();
+  if(scene!=='training'){ctx.save();ctx.translate(1120,425);ctx.scale(.62,.62);drawRasterMonster(ctx,flyer,0,0,{facing:-1,shadow:false,alpha:.65});ctx.restore();}
+  ctx.fillStyle='#bfb6a6';ctx.font='11px system-ui';ctx.textAlign='right';ctx.fillText('IMAGES CANDIDATES · 2 / 230 · POSES STATIQUES',w-24,h-20);
+
 }
 
 $('#contentCount').textContent = `v${VERSION} · ${CONTENT_STATS.fighters} MANIFESTATIONS · ${CONTENT_STATS.moves} COUPS · ${CONTENT_STATS.bosses} BOSS · ${CONTENT_STATS.stages} ARÈNES`;
@@ -540,3 +510,5 @@ syncNetworkStatus();
 void registerServiceWorker();
 const query=new URLSearchParams(location.search);
 if(query.get('module')&&moduleUrls[query.get('module')])launch(query.get('module'));
+
+Promise.all(['film_red_pyramid_film_175','sh1_air_screamer_001'].map(id=>spriteCache.load(spriteFor(id)?.frames[0]))).then(()=>{drawHero(modes[currentMode()]?.scene||'fog',0);}).catch(()=>{});

@@ -15,8 +15,8 @@ export function validControls(value){
     for(const a of Object.keys(ACTIONS)){if(!keyAllowed(p[a]))return false;codes.push(p[a]);}}
   return new Set(codes).size===codes.length;
 }
-export function loadControls(storage){const v=readState(KEYS.controls,{},storage);return validControls(v)?v:defaultControls();}
-export function saveControls(value,storage){if(!validControls(value))throw new Error('Commandes invalides ou touches en conflit.');return writeState(KEYS.controls,value,storage);}
+export function loadControls(storage){const v=readState(KEYS.controls,{},storage,validControls);return validControls(v)?v:defaultControls();}
+export function saveControls(value,storage){if(!validControls(value))throw new Error('Commandes invalides ou touches en conflit.');return writeState(KEYS.controls,value,storage,validControls);}
 export function rebindControl(value,player,action,code){
   if(!validControls(value)||![0,1].includes(player)||!Object.hasOwn(ACTIONS,action)||!keyAllowed(code))throw new Error('Cette touche est réservée ou non prise en charge.');
   const next={...value,players:value.players.map(p=>({...p}))};

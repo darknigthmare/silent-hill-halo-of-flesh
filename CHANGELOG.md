@@ -1,3 +1,49 @@
+## 0.9.5 — Transitions, pause multi-manettes et récupération des sauvegardes
+
+- Appuis tactiles brefs conservés entre deux ticks : impulsion distincte du maintien, sans garde réactivée.
+- Impulsions d'attaque consommées pendant les intros/fins ; garde et directions tenues conservées sans nouveau front de parade.
+- Tampon d'impact limité aux actions ponctuelles ; garde et directions actuelles prioritaires.
+- Une seule décision Start par relevé manettes, déconnexion prioritaire et panne getGamepads tolérée.
+- Reprise refusée derrière le dialogue des commandes ou un document masqué.
+- Moteurs détruits définitivement retirés, animationFrame annulée, callbacks de fin idempotents et états temporaires réinitialisés.
+- Validation métier des sauvegardes et commandes avant choix du primaire ou secours ; secours valide préservé à l'écriture et à l'export.
+- Suppression du secours avant le primaire pour éviter une résurrection après échec de suppression.
+- Touches modifiées réservées au navigateur ; affectations non sauvegardées utilisables dans la session active.
+- Aucun nouveau sprite ou clip animé. Voir docs/CORRECTIONS_v0.9.5.md.
+
+## 0.9.4 — Reprise fiable, commandes et cache hors ligne
+
+- Garde tactile : un front de pression, une fenêtre de parade, une libération.
+- Inputs multipériphériques, composition, répétitions et pointeurs périmés corrigés.
+- Reprise/Combat suivant ne modifient le parcours qu'après préchargement réussi.
+- Échec de recommencement : dialogue de pause conservé et erreur accessible.
+- Filtres vides/favoris et aléatoire sans boucle de tirage corrigés.
+- Quota/CacheStorage ne font plus perdre les réponses réseau ; vrai secours 503.
+- Priorité runtime, mises à jour prolongées et limite de 128 entrées runtime.
+- Brouillons retenus entre poses ; calibration schéma 2 avec contrôle de concurrence.
+- Aucun ajout artistique. Voir docs/CORRECTIONS_v0.9.4.md.
+
+## 0.9.3 — Montage des clips individuels et publication contrôlée
+
+- Ordre des images, durées par étape, prévisualisation et export JSON dans l’atelier.
+- Fenêtres préparation/impact/récupération issues du profil de combat, sans modifier les dégâts.
+- Import de timeline avec revue explicite, fichiers/empreintes/ordre vérifiés et garde contre un export périmé.
+- Répéter une image ne compte pas comme une animation ; idle seul ne fabrique pas une nouvelle attaque.
+- Ajout de frame après durées variables corrigé ; les durées existantes sont conservées.
+- Filtre catalogue/dossier synchronisé à la page visible ; erreur d’image et reprise explicite dans l’inspecteur.
+- Aucun nouveau sprite de production : 2/230 candidats, 0 séquence animée livrée, 0 certification 1:1.
+
+## 0.9.2 — Inspection et cadrage des images
+
+- Inspecteur intégré : poses présentes/absentes, chronologie, orientation, repères,
+  calibration exportable et application atomique sur empreintes exactes.
+- Caméra partagée par le monde et les collisions ; HUD indépendant ; enveloppes
+  des images complètes, sans déformer individuellement les personnages.
+- Horloges de poses déterministes, pause/gel d’impact, états garde/esquive/KO/phase.
+- Audit complet des PNG et décodage WebP via Pillow ; transparence, CRC, filtres,
+  troncature et réencodage de copies vérifiés.
+- Aucun nouveau sprite individuel accepté. Voir docs/SPRITE_CONTINUATION_v0.9.2.md.
+
 ## 0.9.0 — 14 octobre 2026
 Parcours persistants et reprises, résultats par emplacement du joueur (duels miroir corrigés), statistiques personnelles, rangs de Chroniques de bout en bout, commandes reconfigurables, saut/accroupissement tactile, pause accessible, sauvegardes/imports validés et conditions de sortie explicites. 202 tests Node ; les détails et limites de navigateur figurent dans `docs/QA_v0.9.0.md`.
 

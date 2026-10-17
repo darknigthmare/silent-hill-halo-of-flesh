@@ -1,15 +1,20 @@
-const VERSION = '0.9.0';
+const VERSION = '0.9.5';
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-v${VERSION}`;
 const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
+  // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+  "/assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+  // SPRITE_ASSETS_END
   '/',
   '/index.html',
   '/offline.html',
   '/404.html',
   '/styles.css',
+
   '/manifest.webmanifest',
   '/src/data.js',
   '/src/stage-director.js',
@@ -24,8 +29,19 @@ const ESSENTIAL_SHELL = [
   '/src/save-store.js',
   '/src/run-progress.js',
   '/src/player-input.js',
+  '/src/touch-controls.js',
   '/src/playflow-ui.js',
   '/src/renderers.js',
+  '/src/sprite-system.js',
+  '/src/sprite-animation.js',
+  '/src/sprite-poses.js',
+  '/src/presentation-sequences.js',
+  '/src/sprite-framing.js',
+  '/src/sprite-inspector.js',
+  '/src/sprite-clips.js',
+  '/src/sprite-clip-editor.js',
+  '/src/sprite-manifest.js',
+  '/src/sprite-workshop.js',
   '/src/fight.js',
   '/src/command.js',
   '/src/versus.js',
@@ -45,6 +61,9 @@ const OPTIONAL_SHELL = [
   '/modules/versus.css',
   '/modules/chronicles.css',
   '/modules/archive.css',
+  '/modules/sprite-workshop.html',
+  '/modules/sprite-workshop.css',
+  '/data/sprite-coverage.json',
 ];
 
 const NEVER_CACHE = new Set([
@@ -80,48 +99,58 @@ async function installShell() {
   await Promise.allSettled(OPTIONAL_SHELL.map((path) => cacheOne(cache, path)));
 }
 
+// A cached copy is an optimization, never a condition for delivering a valid response.
+const MAX_RUNTIME_ENTRIES = 128;
+async function matchCached(request, options = {}) {
+  try {
+    for (const name of [RUNTIME_CACHE, STATIC_CACHE]) {
+      const response = await (await caches.open(name)).match(request, options);
+      if (response) return response;
+    }
+  } catch { /* CacheStorage may be disabled; the network can still work. */ }
+  return null;
+}
 async function storeRuntime(request, response) {
   if (!canStore(request, response)) return response;
-  const cache = await caches.open(RUNTIME_CACHE);
-  await cache.put(request, response.clone());
+  try {
+    const cache = await caches.open(RUNTIME_CACHE);
+    await cache.put(request, response.clone());
+    const keys = await cache.keys();
+    await Promise.all(keys.slice(0, Math.max(0, keys.length - MAX_RUNTIME_ENTRIES)).map(key => cache.delete(key)));
+  } catch { /* Quota/security failures must not discard already fetched bytes. */ }
   return response;
 }
-
 async function networkFirstNavigation(event) {
   const request = event.request;
   try {
-    const preload = await event.preloadResponse;
-    if (preload) return storeRuntime(request, preload);
-    const response = await fetch(request);
-    return storeRuntime(request, response);
+    let preload;
+    try { preload = await event.preloadResponse; } catch { /* Retry ordinary fetch. */ }
+    return await storeRuntime(request, preload || await fetch(request));
   } catch {
-    const cached = await caches.match(request, { ignoreSearch: true });
-    return cached || caches.match(OFFLINE_URL) || new Response('Archive hors ligne indisponible.', {
+    const cached = await matchCached(request, { ignoreSearch: true });
+    if (cached) return cached;
+    const fallback = await matchCached(OFFLINE_URL);
+    return fallback || new Response('Archive hors ligne indisponible.', {
       status: 503,
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
   }
 }
-
-async function staleWhileRevalidate(request) {
-  const cached = await caches.match(request, { ignoreSearch: true });
-  const update = fetch(request)
-    .then((response) => storeRuntime(request, response))
-    .catch(() => null);
-  if (cached) {
-    void update;
-    return cached;
-  }
-  return (await update) || Response.error();
+async function staleWhileRevalidate(event) {
+  const request = event.request;
+  const update = fetch(request).then(response => storeRuntime(request, response)).catch(() => null);
+  // Register synchronously: a returned cached response must not terminate the refresh.
+  event.waitUntil(update.then(() => undefined));
+  const cached = await matchCached(request, { ignoreSearch: true });
+  return cached || (await update) || Response.error();
 }
-
 async function networkFirstData(request) {
   const url = new URL(request.url);
   if (NEVER_CACHE.has(url.pathname)) return fetch(request);
   try {
     return await storeRuntime(request, await fetch(request));
   } catch {
-    return (await caches.match(request, { ignoreSearch: true })) || Response.error();
+    return (await matchCached(request, { ignoreSearch: true })) || Response.error();
   }
 }
 
@@ -152,11 +181,15 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(networkFirstNavigation(event));
     return;
   }
+  if(url.pathname.startsWith('/assets/sprites/')){
+    event.respondWith((async()=>{try{return (await matchCached(request)) || (await storeRuntime(request,await fetch(request)));}catch{return Response.error();}})());
+    return;
+  }
   if (url.pathname.startsWith('/data/')) {
     event.respondWith(networkFirstData(request));
     return;
   }
-  event.respondWith(staleWhileRevalidate(request));
+  event.respondWith(staleWhileRevalidate(event));
 });
 
 self.addEventListener('message', (event) => {
