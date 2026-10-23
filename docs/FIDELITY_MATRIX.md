@@ -19,7 +19,7 @@
 | SILENT HILL: ASCENSION | 7 | 2 | 3 | 3 | 17 | Cibles de catalogue présentes |
 | SILENT HILL: TOWNFALL | 5 | 1 | 7 | 4 | 17 | Cibles de catalogue présentes |
 
-**Total : 230 manifestations · 4600 coups · 0 directement attestés · 2711 composites · 1889 adaptations · 75 boss · 123 arènes · 105 animations · 16 sources.**
+**Total : 230 manifestations · 4600 coups · 0 directement attestés · 2692 composites · 1908 adaptations · 75 boss · 123 arènes · 105 animations · 16 sources.**
 
 ## Contrat de fidélité
 

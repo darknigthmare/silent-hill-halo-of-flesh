@@ -105,7 +105,7 @@ test('every authored exact finisher has a viable real pairing and contiguous syn
       plans++;
     }
   }
-  assert.equal(plans, 86);
+  assert.equal(plans, 104);
   assert.equal(LORE_CINEMATIC_COVERAGE.animatedImagesCreated, 0);
 });
 

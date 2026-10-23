@@ -1,43 +1,43 @@
 {
   "schema": 1,
   "date": "2026-10-23",
-  "verifiedAt": "2026-10-23T04:23:15.732288+00:00",
+  "verifiedAt": "2026-10-23T21:24:11.385073+00:00",
   "version": "0.9.6",
-  "baselineCommit": "92b6713d1f0c80e2c7e387c98e53795b21e84518",
+  "baselineCommit": "25fd0c9dd6b7d010f42fd57164c3baad20fb7c03",
   "node": {
-    "passed": 604,
+    "passed": 651,
     "failed": 0,
     "command": "npm test",
-    "log": "/workspace/.cloud-env/halo/logs/fidelity-full-node-tests.log",
-    "logSha256": "92dbf7393b94ff36c5b7aac57748292cd1344430789095d21f4e87eebee894f8"
+    "log": "/workspace/.cloud-env/halo/logs/parallel-full-node-tests.log",
+    "logSha256": "ba1de06555c7200b28ae35ffa6a3048631d1a3de9cac122f5e4bced7ef05657b"
   },
   "python": {
-    "passed": 96,
+    "passed": 98,
     "failed": 0,
     "command": "/workspace/.cloud-env/halo/venv/bin/python -m unittest discover -s tests -p test_*.py -v",
-    "log": "/workspace/.cloud-env/halo/logs/fidelity-full-python-tests.log",
-    "logSha256": "b5daf32b0dc79f6adbd9cb6289790c0d873aa4b251eaaba5e40885079657f7f2"
+    "log": "/workspace/.cloud-env/halo/logs/parallel-full-python-tests.log",
+    "logSha256": "3985d8e11521c0457693eadd82e0db714341d261ea6c623b02f880c629baefbe"
   },
   "browser": {
-    "suites": 11,
-    "passed": 305,
+    "suites": 13,
+    "passed": 367,
     "failed": 0,
-    "captures": 45,
+    "captures": 54,
     "javascriptErrors": 0,
     "servedBuild": "dist",
     "command": "npm run qa:browser",
-    "log": "/workspace/.cloud-env/halo/logs/fidelity-full-browser-tests.log",
-    "logSha256": "10e51376ce9270e7461bd3670ae44e353c4cc25d4592c71a8bf4cee93c3b59a5",
-    "artifactDirectory": "/workspace/shared/halo-of-flesh/validation-fidelity-2026-10-23"
+    "log": "/workspace/.cloud-env/halo/logs/parallel-full-browser-tests.log",
+    "logSha256": "501d8dd7311f727600093ed3d61690d4063649248f9b803db5159533055bcddc",
+    "artifactDirectory": "/workspace/shared/halo-of-flesh/validation-parallel-2026-10-23"
   },
   "build": {
-    "files": 83,
-    "sourceFilesCompared": 82,
+    "files": 87,
+    "sourceFilesCompared": 86,
     "sourceMismatches": [],
-    "sha256": "dddc9b9618adda993bdcd6e41514e1f5e9d78caace30c052b76def90368f3bc4",
+    "sha256": "78a06339ff5f7792bc07ac8fba1a1a04d39fb13c23bb77e4f9c6d8c730880e21",
     "digestFormat": "sorted relative path UTF-8 + NUL + raw SHA256 file digest",
     "diffWhitespaceCheck": "passed",
-    "cacheRevision": "fidelity-20261023-pass2"
+    "cacheRevision": "parallel-20261023-pass3"
   },
   "browserReports": [
     {
@@ -57,11 +57,11 @@
     },
     {
       "report": "tests/http-sprites/report.json",
-      "sha256": "01ad484a3bc8f71a5e040c13bb84479769d63a033dc64e694f0331236c8874e4",
+      "sha256": "43f71c70cab174aa275517743400ce1a774297c1798e72c529468ded75c6740d",
       "version": "0.9.6",
       "build": "dist (server configured by suite)",
       "passed": true,
-      "checks": 31,
+      "checks": 34,
       "captures": 5,
       "javascriptErrors": 0,
       "browser": "154.0.8037.57",
@@ -135,7 +135,7 @@
     },
     {
       "report": "tests/http-presentations/report.json",
-      "sha256": "9ce48bbfee3857aa10fbc39a55b1eaf00efa03494d28ad680977d4989741bab3",
+      "sha256": "ed70880bd9fa5d076e4750105231dca15eed02f330f1ba66221d6629b95c12cb",
       "version": "0.9.6",
       "build": "dist (server configured by suite)",
       "passed": true,
@@ -155,7 +155,7 @@
     },
     {
       "report": "tests/http-reference-integration/report.json",
-      "sha256": "be7bc3102b50ea2c8b65b7fbe44fe762a29757ec93efeb24b14b9a81764dfb52",
+      "sha256": "3cbccbb6e8da33797ff8db017d1a89f19b1b936b4977685315e0057fa9b93df8",
       "version": "0.9.6",
       "build": "dist",
       "passed": true,
@@ -190,7 +190,7 @@
     },
     {
       "report": "tests/http-stage-bitmaps/report.json",
-      "sha256": "bbe421bef3a02f12fd5637abc15eb4686eaec922a219dc58a9e53e9878a95ebc",
+      "sha256": "b177eec62d9d5c2db0fc2591bac8c23d6a87a6c4aaad792f42016c05698f96db",
       "version": "0.9.6",
       "build": "dist",
       "passed": true,
@@ -216,42 +216,100 @@
       "fixtures": [
         "Four transparent colored rectangles and an exact SH3 Alessa manifest are intercepted in Playwright only. No production artwork or 1:1 certification is created."
       ]
+    },
+    {
+      "report": "tests/http-source-expansion/report.json",
+      "sha256": "2f5af948b7b5201ffe5765205997218344c586b165d360214c51040c90dc1ba3",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 24,
+      "captures": 4,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "The explicit ?qa=1 bridge stops the animation loop and advances real simulation ticks after the normal launch button. Actor positions, facing and one knockdown timer are prepared. No campaign or source-game playthrough is claimed.",
+        "Art diagnostic is explicitly enabled for profiles without production PNGs. No synthetic picture, source-animation certification or source timing measurement is created by this suite.",
+        "Attacks are triggered by actual keyboard inputs. Projectile instrumentation only counts the real spawn method; ammunition, damage formulas, move definitions and actor identities are not replaced.",
+        "The Needler rear scene moves the shooter after its actual bullet has spawned. A separate prepared knockdown checks vulnerability, without claiming that its timer is measured from Homecoming.",
+        "Smog is made to prepare its real smoke attack using the second keyboard while an actual Eddie bullet is in flight. The 2x opening multiplier, opening window, damage and counter bonus are authored versus values.",
+        "Mary and Maria use their real moth projectile. The resulting bind restricts movement and dodge in the versus engine; original struggle inputs, stun animation and duration are not reproduced.",
+        "Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices."
+      ]
+    },
+    {
+      "report": "tests/http-cinematic-expansion/report.json",
+      "sha256": "a25dbbe978c83bcf8f2d7343e2a1c386cbe58a5d08de91aabb104c9ee9c91fa0",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 35,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.",
+        "The ?qa=1 bridge stops requestAnimationFrame and advances actual simulation ticks. Two prepared target KOs per match exercise ordinary round scoring and the real deciding-finisher gate; no prior win score or cinematic recipe is injected.",
+        "Keyboard taunt, directional cancellation and the real pause/resume controls are used. Prepared local mirror-free pairings and state advancement are regression scenes, not played fights or a campaign.",
+        "The missing contextual sprite check permits an existing candidate idle fallback or an explicit missing-profile cartouche. Neither is counted as a produced attack, KO or finisher pose.",
+        "All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified."
+      ]
     }
   ],
   "workbook": {
     "file": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
-    "sha256": "ce6dc4992771bdcf512df9322dd9c425f29310dd494dd7f12b3953d0e91b2eec",
-    "planSha256": "912ad86d26e657afb468237628e17c47b57d303cc5d62cbfab515f9099b17b5e",
+    "sha256": "90075c77d1a24723cf7b04dcb08b295de2f1f9aba9fe6ad97055cb2aa10e5ab8",
+    "planSha256": "8c3fb02661677987072389e8c7ecfc730b8ce22a5afc7a1ccc9e9297e418110c",
     "preservation": {
       "passed": true,
       "comparedCells": 249556,
-      "authoredChanges": 196,
-      "enlargedRows": 109,
+      "authoredChanges": 2390,
+      "enlargedRows": 644,
+      "appendedSourceRows": 1,
+      "appendedSourceCells": 7,
+      "auditedFormulaExpansions": 1,
       "unchanged": [
         "worksheet order",
         "unrelated values",
-        "all formulas",
+        "all unrelated formulas",
         "effective cell formatting",
         "column widths",
         "unrelated row heights",
-        "native tables and validation features"
+        "native tables and validation features outside the audited Sources expansion",
+        "unrelated ZIP members"
       ]
     },
     "recalculatedFormulas": 80,
-    "sourceUrlsPreserved": 135,
-    "openActions": 873,
-    "openP0": 127,
+    "sourceUrlsPreserved": 136,
+    "openActions": 862,
+    "openP0": 116,
     "completedTechnicalAction": "global:cinematic-clips",
-    "missingActionsCsv": "/workspace/shared/halo-of-flesh/recherche-fidelity-2026-10-23-pass2/manquants-excel.csv"
+    "missingActionsCsv": "/workspace/shared/halo-of-flesh/recherche-parallel-2026-10-23/manquants-excel.csv",
+    "validatedActions": [
+      "sh1_larval_stalker_007:role",
+      "sh1_bloodsucker:role",
+      "sh3_valtiel_051:role",
+      "sh3_sewer_creature_052:role",
+      "sh3_glutton:role",
+      "sh4_toadstool_061:role",
+      "sh4_whitestool_062:role",
+      "sh4_tremer_blue_063:role",
+      "sh4_tremer_red_064:role",
+      "sh4_wheelchair_068:role",
+      "bom_valtiel_136:role",
+      "global:round-boundaries",
+      "global:cinematic-clips"
+    ],
+    "structureChangeLog": "docs/production/workbook-structure-changes.json.gz"
   },
   "artwork": {
-    "illustratedProfiles": 3,
-    "activePngFiles": 7,
+    "illustratedProfiles": 6,
+    "activePngFiles": 10,
     "candidateAnimatedClips": 1,
-    "stageBitmapCandidates": 0,
+    "stageBitmapCandidates": 1,
     "certifiedOneToOne": 0,
     "sourceTimingRowsMeasured": 0,
-    "unillustratedProfiles": 227,
+    "unillustratedProfiles": 224,
     "alessaWeaponImages": {
       "present": [
         "knife",
@@ -261,87 +319,98 @@
       "missing": [
         "smg"
       ]
-    }
+    },
+    "stagePngFiles": 1
   },
   "independentReview": {
-    "report": "/workspace/.cloud-env/halo/review/stage-assets-review.md",
-    "scope": "Rollback, retry, cancellation, malformed descriptors, actor decoding failures, final offline cache. Excluded from automated browser check count.",
-    "artifactDirectory": "/workspace/shared/halo-of-flesh/validation-2026-10-23/review"
+    "scope": "Read-only review of roles, combat and scene consistency. Smog forbidden AI choices and mixed Toluca gallows/cell scene fixed before final validation.",
+    "report": "/workspace/shared/halo-of-flesh/validation-parallel-2026-10-23/independent-review.md"
   },
   "limits": [
-    "Regression scenes use prepared positions and state. They are not an original-game playthrough or source animation certification.",
-    "All 4600 move rows still have blank source FPS and start/impact/end timecodes.",
-    "Air Screamer flight and three Alessa weapon images are authored candidates. No 1:1 artwork certification.",
-    "The image tool refused the attempted Alessa SMG image under violence. It remains missing, without substitution.",
-    "Alessa source inventory images establish weapon silhouettes, not the uncaptured handgun and pipe holds.",
-    "Stage bitmap loading is tested with synthetic HTTP fixtures; there are no production stage PNGs.",
-    "Workbook preservation is verified through OOXML without a native Excel desktop session."
+    "Prepared positions, local KOs and simulation advancement verify regressions; no played campaign or source animation certification is claimed.",
+    "All 4600 original move timing records remain blank; the timing CLI smoke test uses synthetic video only.",
+    "Three new actor PNGs and one Midwich background are authored static candidates. No 1:1 artwork certification.",
+    "The Mannequin candidates remain excluded for wrong anatomy. The last correction was refused by the image tool under sexual; no retry or workaround followed.",
+    "The Alessa SMG image remains missing after its prior image-tool refusal; no weapon substitution is used.",
+    "The Midwich wide camera, courtyard facade extent and paving are extrapolations. Gallows and piano prototypes remain inactive in incompatible scenes.",
+    "New finishers and presentations are versus compositions and lack contextual PNG animations.",
+    "Workbook preservation is checked in OOXML. Only the explicitly audited Sources append and one source-count formula expansion change native scope; no desktop Excel session is claimed."
   ],
-  "pass": "fidelity-source-2026-10-23-pass2",
-  "fidelityReview": {
-    "sourceProofs": "/workspace/shared/halo-of-flesh/references/sh1/strict-mechanics-2026-10-23.json",
-    "alessaProvenance": "art/reference-provenance-alessa.json",
-    "actualProductionImages": "/workspace/shared/halo-of-flesh/validation-fidelity-2026-10-23/production-alessa",
-    "scope": "Real production PNGs inspected in source gameplay; excluded from automated dist check count. Prepared phase damage, no played fight or source animation certification.",
-    "reportSha256": "17045425c37b19a3026a9d5cbe5b6d3cafcc9a6c97f1d873b1566720827432a4",
-    "additionalSourceChecks": 13,
-    "captures": 10,
-    "finalMissingCard": {
-      "passed": true,
-      "frame": 458,
-      "phase": "fight",
-      "paused": false,
-      "weaponIndex": 3,
-      "sample": null,
-      "card": {
-        "rect": [
-          232,
-          379,
-          156,
-          215
-        ],
-        "font": "600 12px system-ui",
-        "text": "POSE D’ARME À PRODUIRE",
-        "naturalTextWidth": 155.20913696289062,
-        "maxTextWidth": 144,
-        "frame": 458
-      },
-      "particles": 0,
-      "phaseOverlay": null,
-      "canvas": {
-        "width": 1280,
-        "height": 720
-      },
-      "errors": [],
-      "visualReview": {
-        "readableAtNativeSize": true,
-        "weaponSubstitution": false,
-        "clipping": false,
-        "horizontalTextScale": 0.9277804310865368,
-        "comment": "Much more legible than the initial 80px card; the browser still compresses text horizontally by about 7.2% because natural width155.21 exceeds maxWidth144. No clipping or overlap seen."
-      }
-    },
-    "readOnlyCodeReview": "No concrete weapon substitution or identity bypass found. Missing SMG returns null before image lookup; three active pixel hashes are distinct and verified from PNG contents."
-  },
   "publicationChecks": {
-    "nodeCi": "Isolated Python venv with Pillow 11.3.0 and explicit HALO_PYTHON for npm test.",
-    "browserCi": "Retains both new suite directories; launch defaults to the Chromium installed by Playwright, with QA_BROWSER_EXECUTABLE still supported.",
-    "targetedStageBuildTests": 5,
-    "targetedBrowserChecks": 37,
-    "githubCiExecution": "Not observed; these are local validation results.",
-    "logs": [
-      {
-        "file": "/workspace/.cloud-env/halo/logs/push-ci-png-tests.log",
-        "sha256": "3c0a94e510c65d860ab22da326592d3908b0b16afa20c9e447e1e6d03737fe66"
-      },
-      {
-        "file": "/workspace/.cloud-env/halo/logs/push-ci-stage-browser.log",
-        "sha256": "bbe421bef3a02f12fd5637abc15eb4686eaec922a219dc58a9e53e9878a95ebc"
-      },
-      {
-        "file": "/workspace/.cloud-env/halo/logs/push-ci-alessa-browser.log",
-        "sha256": "8e5cab31623ce76c112548bd3717540c85b5624d697467065c2bd6edee256600"
-      }
-    ]
-  }
+    "nodeCi": "Python venv, Pillow 11.3.0 and HALO_PYTHON configured.",
+    "browserCi": "PNG validation venv configured; all 13 suite reports retained; Playwright Chromium default or explicit executable supported.",
+    "githubCiExecution": "Not observed; these are local validation results."
+  },
+  "passId": "parallel-production-2026-10-23-pass3",
+  "production": {
+    "fighters": 230,
+    "stages": 123,
+    "moves": 4600,
+    "supers": 460,
+    "fighterFinishers": 460,
+    "stageFinishers": 123,
+    "presentations": 1610,
+    "poses": 2300,
+    "stageAnimations": 1799,
+    "observations": 435,
+    "sources": 136,
+    "tasks": 875,
+    "pngCandidates": 6,
+    "animatedClips": 1,
+    "certifiedOneToOne": 0,
+    "newGameplaySequences": 111,
+    "presentationHooks": 9,
+    "openActions": 862,
+    "openP0": 116,
+    "playableFighters": 194,
+    "reviewedCombatProfiles": 230,
+    "disabledMoves": 906,
+    "authoredFinishers": 111,
+    "authoredFighterFinishers": 104,
+    "authoredStageFinishers": 7,
+    "authoredPresentations": 364,
+    "resolvedRoleDecisions": 11,
+    "stageBitmapCandidates": 1,
+    "stageBitmapLayers": 1,
+    "stageBitmapFiles": 1,
+    "sourceTimingSchema": 1,
+    "measuredSourceMoves": 0,
+    "referenceStageTracks": 53,
+    "retiredStageItems": 1161,
+    "visibleReferenceStageTracks": 52,
+    "maskedReferenceStageTracks": 1,
+    "additionalStageBindings": 11
+  },
+  "additionalSourceReports": [
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-parallel-2026-10-23/production-art/report.json",
+      "sha256": "836b574ff95518d037d956297c7246cf90741dc4c84f741f1587900acf85f436",
+      "checks": 28,
+      "captures": 7,
+      "scope": [
+        "Each mirror match is launched through the real selection and Launch button with art diagnostic disabled and real Midwich stage.",
+        "The explicit qa=1 bridge stops animation after launch and advances the ordinary intro clock. Local player positions, facing and grounded state are prepared solely for consistent image inspection. No played fight or original source timing is claimed.",
+        "After the ordinary intro, 150 further local idle simulation ticks clear transient announcements before capture. No health damage, attack or phase is injected.",
+        "Draw calls are observed without replacing any PNG, manifest, cache image or renderer. A separate native canvas calls the actual drawStage export against the already-prepared stage cache to confirm that replace mode issues one raster draw without procedural geometry.",
+        "Source PNGs remain candidate artwork. Screenshots and checks verify loading, placement and rendering, not 1:1 certification."
+      ]
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-parallel-2026-10-23/stage-proposals/report.json",
+      "sha256": "c69a454699c6a3399d9d4bd4b6df5c69e390e69808545620b4ee9a9af03d6bab",
+      "checks": 16,
+      "captures": 3,
+      "scope": [
+        "Normal launch with existing production Air Screamer and Alessa knife PNGs. Source-stage Canvas proposals are authored adaptations, not generated original-game footage.",
+        "Positions and idle actors are prepared through ?qa=1. A real keyboard heavy attack triggers each local reaction. Simulation ticks and pause are advanced explicitly; no played fight is claimed."
+      ]
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-parallel-2026-10-23/source-timing-fixture/report.json",
+      "sha256": "12fe7bc6779052848523b483e8fc23dd255f2948dc18c3a333befecd97c85d98",
+      "checks": 3,
+      "captures": 0,
+      "scope": "See report"
+    }
+  ]
 }

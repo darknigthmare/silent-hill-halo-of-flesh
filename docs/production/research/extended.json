@@ -251,7 +251,7 @@
       "title": "Silent Hill Memories — Book of Memories, Walkthrough",
       "type": "secondaire-guide",
       "scope": "Valtiel donneur de missions; sept zones",
-      "consultedAt": "2026-10-17",
+      "consultedAt": "2026-10-23",
       "webRef": "turn20view4",
       "accessStatus": "page-consultee",
       "caveat": "Synthèse documentaire; mouvements non encore mesurés image par image.",
@@ -868,6 +868,15 @@
       "accessStatus": "page-consultee",
       "caveat": "Synthèse documentaire; mouvements non encore mesurés image par image.",
       "wordLimit": 200
+    },
+    {
+      "id": "HC_ENEMIES_20261023",
+      "url": "https://www.silenthillmemories.net/sh5/creatures_en.htm",
+      "title": "Silent Hill: Homecoming — Creatures",
+      "type": "guide-specialise-secondaire",
+      "scope": "Attaques du Smog, poumons exposés et blocage frontal du Needler ; œuvre Homecoming uniquement.",
+      "consultedAt": "2026-10-23",
+      "caveat": "Descriptions textuelles consultées ; timings, multiplicateurs et fenêtres du versus ne sont pas des mesures du jeu original."
     }
   ],
   "fighters": [
@@ -2464,34 +2473,38 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "La faiblesse des poumons reste exposée pendant l’action; pas d’armure illimitée.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023",
+        "EXT06"
       ],
       "observedMoves": [
         {
-          "name": "Nuage aveuglant",
-          "description": "Nuage aveuglant",
+          "name": "Exhalation toxique",
+          "description": "Émet un nuage de fumée toxique ; le guide décrit cette exhalation comme son attaque.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         },
         {
-          "name": "Charge côtes ouvertes",
-          "description": "Charge côtes ouvertes",
+          "name": "Poumons exposés",
+          "description": "Ouvre sa cage thoracique lorsqu’il prépare et souffle son nuage ; les poumons exposés sont alors vulnérables aux tirs.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         }
       ],
       "constraints": [
-        "La faiblesse des poumons reste exposée pendant l’action; pas d’armure illimitée.",
+        "Poumons vulnérables pendant la préparation et l’exhalation ; aucun nombre de tirs universel ni multiplicateur de dégâts n’est repris comme mesure officielle.",
+        "Aucune charge percutante autonome n’est attestée par le guide consulté ; les mouvements d’approche et variantes de commande restent des adaptations du versus.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
@@ -2506,7 +2519,7 @@
         },
         "finisher": {
           "name": "Smog — clôture du cauchemar",
-          "description": "Ouverture des côtes, contact bref puis nuage qui remplit le cadre.",
+          "description": "Ouverture des côtes, exhalation rapprochée puis nuage qui remplit le cadre. Montage original de résultat, sans coup de charge autonome.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT04"
@@ -2573,7 +2586,8 @@
       "artDirectionFocus": "thorax et poumons",
       "existingCatalogueBehavior": "Ouvre sa cage thoracique pour libérer un nuage toxique.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008)"
     },
     {
       "combatRole": "combatant",
@@ -2584,34 +2598,37 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Conserver la protection frontale de tête; suspension dépend du stage.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023",
+        "EXT06"
       ],
       "observedMoves": [
         {
           "name": "Frappe des membres-lames",
-          "description": "Frappe des membres-lames",
+          "description": "Attaque avec ses grandes lames et peut renverser Alex. Il peut aussi saisir Alex avec les pattes avant ; le jeu original propose alors une commande de dégagement.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         },
         {
-          "name": "Bond depuis plafond",
-          "description": "Bond depuis plafond",
+          "name": "Blocage frontal",
+          "description": "Peut arrêter les attaques d’Alex, y compris les tirs d’armes à feu ; le dos reste vulnérable.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         }
       ],
       "constraints": [
-        "Conserver la protection frontale de tête; suspension dépend du stage.",
+        "Protection frontale par les membres-lames et vulnérabilité de dos ; les postures disponibles et fenêtres défensives du versus restent des choix de raccord, sans cadence source mesurée.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
@@ -2693,7 +2710,8 @@
       "artDirectionFocus": "quatre membres et tête protégée",
       "existingCatalogueBehavior": "Bloque de face et frappe avec quatre membres-lames.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008)"
     },
     {
       "combatRole": "combatant",
@@ -10276,7 +10294,7 @@
       "source": "bom",
       "baseId": null,
       "identityStatus": "non-combattant-documente",
-      "identityNote": "Corriger boss=true : donneur de missions et récompenses, aucune attaque attestée.",
+      "identityNote": "Messager rencontré au début de chaque zone, puis donneur de récompense si la mission est réussie. Retenu comme donneur de missions non combattant ; le statut de boss du catalogue n’est pas une preuve d’attaque.",
       "referenceIds": [
         "EXT21"
       ],
@@ -10376,7 +10394,20 @@
       "artDirectionFocus": "posture de messager",
       "existingCatalogueBehavior": "Version boss de Valtiel.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "roleDecision": {
+        "fighterId": "bom_valtiel_136",
+        "status": "resolved",
+        "decision": "noncombatant",
+        "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+        "rationale": "Messager rencontré au début de chaque zone, puis donneur de récompense si la mission est réussie. Retenu comme donneur de missions non combattant ; le statut de boss du catalogue n’est pas une preuve d’attaque.",
+        "evidence": [
+          "EXT21"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     },
     {
       "combatRole": "combatant",

@@ -1,5 +1,9 @@
 # Références complémentaires et travaux restant à réaliser
 
+Ce document conserve le relevé de la passe de fidélité précédente. Les
+[chantiers parallèles](CHANTIERS_PARALLELES_2026-10-23.md) décrivent l'état
+suivant du classeur, des images et des validations.
+
 La demande porte sur la réalisation des propositions du classeur et sur la
 fidélité aux œuvres d'origine. Ces deux validations restent distinctes : les
 supers, finishers et transitions de versus inventés pour le projet n'ont pas

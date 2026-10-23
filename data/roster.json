@@ -1310,9 +1310,11 @@
       "source": "sh1",
       "baseId": null,
       "identityStatus": "non-combattant-canonique",
-      "identityNote": "Le catalogue le traite comme combattant, mais la référence le décrit inoffensif. Nomenclature des deux formes à verrouiller selon l’édition.",
+      "identityNote": "Ce profil désigne la petite ombre enfantine qui trébuche à l’école et au parc, décrite comme non agressive dans le commentaire de création. Il reste distinct du Stalker armé et hostile de Nowhere ; aucun kit offensif.",
       "referenceIds": [
-        "CL_LARVAL"
+        "CL_LARVAL",
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
       ],
       "observedMoves": [
         {
@@ -1327,7 +1329,7 @@
         }
       ],
       "constraints": [
-        "Les noms Stalker/Larval Stalker divergent entre l’index du guide Piggyback SH1 et les appellations spécialisées actuelles. La fidélité exige une capture de la morphologie et du comportement dans l’édition choisie ; ne pas déduire la dangerosité du seul nom.",
+        "Profil limité à la petite ombre non agressive appelée Larval Stalker dans le commentaire de création traduit ; ne pas lui transférer le couteau ni les attaques du Stalker de Nowhere. La région de capture visuelle reste à fixer.",
         "Apparition inoffensive ; aucun coup, garde ou prise canonique.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
         "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
@@ -1407,7 +1409,20 @@
         }
       },
       "combatRole": "noncombatant",
-      "referenceEdition": "SH1 original 1999, région à fixer"
+      "referenceEdition": "SH1 original 1999, région à fixer",
+      "roleDecision": {
+        "fighterId": "sh1_larval_stalker_007",
+        "status": "resolved",
+        "decision": "noncombatant",
+        "edition": "SH1 original 1999, région à fixer",
+        "rationale": "Ce profil désigne la petite ombre enfantine qui trébuche à l’école et au parc, décrite comme non agressive dans le commentaire de création. Il reste distinct du Stalker armé et hostile de Nowhere ; aucun kit offensif.",
+        "evidence": [
+          "CL_SH1_ENEMIES",
+          "CL_SH1_CREATURES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -4041,9 +4056,10 @@
       "source": "sh1",
       "baseId": null,
       "identityStatus": "obstacle-scripté-adapte",
-      "identityNote": "Obstacle de puzzle attaquant lors de l’interaction, pas combattant libre.",
+      "identityNote": "Obstacle fixé au mur de la chambre 204 : les tentacules défendent une plaque et sont détournés par la poche de sang. Classé comme interaction de puzzle, sans locomotion ni kit autonome.",
       "referenceIds": [
-        "CL_SH1_07_NIGHTMARE_HOSPITAL"
+        "CL_SH1_07_NIGHTMARE_HOSPITAL",
+        "CL_SH1_CREATURES"
       ],
       "observedMoves": [
         {
@@ -4147,7 +4163,20 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH1 original 1999, région à fixer"
+      "referenceEdition": "SH1 original 1999, région à fixer",
+      "roleDecision": {
+        "fighterId": "sh1_bloodsucker",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH1 original 1999, région à fixer",
+        "rationale": "Obstacle fixé au mur de la chambre 204 : les tentacules défendent une plaque et sont détournés par la poche de sang. Classé comme interaction de puzzle, sans locomotion ni kit autonome.",
+        "evidence": [
+          "CL_SH1_07_NIGHTMARE_HOSPITAL",
+          "CL_SH1_CREATURES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -4454,18 +4483,21 @@
       ],
       "observedMoves": [
         {
-          "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh2_lying_figure_020 ; seules les différences explicites de cette fiche sont à produire.",
+          "name": "Percussion rampante",
+          "description": "Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
           "evidence": [
             "CL_SH2_ENEMIES",
             "CL_SH2_CREATURES"
           ],
-          "status": "heritage-documente",
-          "captureStatus": "capture-variante-a-relever",
-          "timecode": ""
+          "status": "documente-secondaire",
+          "animationMeasured": false,
+          "timecode": null,
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré.",
+          "captureStatus": "capture-variante-a-relever"
         }
       ],
       "constraints": [
+        "Le guide distingue le jet acide en station debout de la percussion en état rampant. Cette fiche couchée ne reçoit pas automatiquement le projectile de la forme debout.",
         "Ne pas transformer le rampement en nouvelle espèce ni importer automatiquement les pointes/remanences toxiques du remake.",
         "Bras enfermés ; aucun poing, arme tenue ou ouverture des mains.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
@@ -4474,7 +4506,7 @@
       "proposals": {
         "super": {
           "name": "Super proposé — Lying Figure — Crawling",
-          "description": "Variante à réaliser avec son apparence propre. Souffle contrarié : projection télégraphiée puis glissement bas ; enchaînement versus original.",
+          "description": "Assaut rampant proposé : courte anticipation au sol, percussion par le corps puis repli bas. Enchaînement original du versus, sans jet acide ni membre libéré.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH2_ENEMIES",
@@ -4483,7 +4515,7 @@
         },
         "finisher": {
           "name": "Clôture lore proposée — Lying Figure — Crawling",
-          "description": "Variante à réaliser avec son apparence propre. Dernier souffle : projection à courte portée, chute de la cible derrière un voile sombre.",
+          "description": "Dernier passage proposé : percussion rampante au contact, puis glissement du corps hors du cadrage de la cible. Montage original réservé à la victoire finale, sans projection acide.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH2_ENEMIES",
@@ -4492,7 +4524,7 @@
         },
         "intro": {
           "name": "Entrée proposée — Lying Figure — Crawling",
-          "description": "Variante à réaliser avec son apparence propre. Entrer en traînant le corps, relever le buste en plusieurs spasmes.",
+          "description": "Entrer en rampant, bras enfermés, et stabiliser le haut du torse sans passer à la forme debout. Mise en scène originale du projet.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH2_ENEMIES",
@@ -6773,7 +6805,8 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_SH2_10_THE_LABYRINTH"
+        "CL_SH2_10_THE_LABYRINTH",
+        "CL_SH2_BOSSES"
       ],
       "observedMoves": [
         {
@@ -6809,6 +6842,7 @@
         }
       ],
       "constraints": [
+        "Les projectiles du revolver sont des balles d’arme à feu ; ne pas les assimiler à une décharge magique. Portée, dégâts et cadence restent ceux du versus.",
         "Humain ; revolver et déplacements originaux 2001.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
         "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
@@ -6987,7 +7021,7 @@
       "observedMoves": [
         {
           "name": "Essaim",
-          "description": "Nuage d’insectes noirs.",
+          "description": "Essaim de papillons qui entoure James, le blesse et entrave momentanément ses actions ; le guide conseille de se dégager par les commandes.",
           "evidence": [
             "CL_SH2_BOSSES",
             "CL_SH2_CREATURES"
@@ -7031,6 +7065,7 @@
         }
       ],
       "constraints": [
+        "L’essaim de papillons peut entraver James ; la durée, la portée et le ralentissement du moteur sont des adaptations du versus, sans relevé officiel de frames.",
         "Cage suspendue 2001 ; séparer identité de l’issue narrative.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
         "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
@@ -7229,6 +7264,7 @@
         }
       ],
       "constraints": [
+        "L’essaim de papillons peut entraver James ; la durée, la portée et le ralentissement du moteur sont des adaptations du versus, sans relevé officiel de frames.",
         "Aucune identité finale universelle ; ne pas importer la version 2024 à pattes mécaniques.",
         "Cage suspendue 2001 ; séparer identité de l’issue narrative.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
@@ -11646,7 +11682,7 @@
       "source": "sh3",
       "baseId": null,
       "identityStatus": "non-combattant-canonique",
-      "identityNote": "Valtiel n’est pas un adversaire affronté dans SH3 ; fichier versus à requalifier.",
+      "identityNote": "Observateur et serviteur qui manipule les vannes et emporte Heather après certaines morts ; les deux descriptions indiquent qu’il ne l’attaque pas. Rôle sans combat, distinct de ses autres œuvres.",
       "referenceIds": [
         "CL_SH3_CREATURES",
         "CL_SH3_ENEMIES"
@@ -11764,7 +11800,20 @@
         }
       },
       "combatRole": "noncombatant",
-      "referenceEdition": "SH3 original 2003"
+      "referenceEdition": "SH3 original 2003",
+      "roleDecision": {
+        "fighterId": "sh3_valtiel_051",
+        "status": "resolved",
+        "decision": "noncombatant",
+        "edition": "SH3 original 2003",
+        "rationale": "Observateur et serviteur qui manipule les vannes et emporte Heather après certaines morts ; les deux descriptions indiquent qu’il ne l’attaque pas. Rôle sans combat, distinct de ses autres œuvres.",
+        "evidence": [
+          "CL_SH3_CREATURES",
+          "CL_SH3_ENEMIES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -11855,7 +11904,7 @@
       "source": "sh3",
       "baseId": null,
       "identityStatus": "obstacle-scripté-adapte",
-      "identityNote": "Piège de séquence, aucune anatomie jouable entière établie.",
+      "identityNote": "Rencontre scriptée sous la passerelle : traverser sans résoudre le danger tue Heather ; le sèche-cheveux branché puis jeté dans l’eau neutralise le monstre. Aucun corps complet ni kit de combat libre n’est établi.",
       "referenceIds": [
         "CL_SH3_05_UNDERPASS"
       ],
@@ -11961,7 +12010,19 @@
         }
       },
       "combatRole": "scripted-encounter",
-      "referenceEdition": "SH3 original 2003"
+      "referenceEdition": "SH3 original 2003",
+      "roleDecision": {
+        "fighterId": "sh3_sewer_creature_052",
+        "status": "resolved",
+        "decision": "scripted-encounter",
+        "edition": "SH3 original 2003",
+        "rationale": "Rencontre scriptée sous la passerelle : traverser sans résoudre le danger tue Heather ; le sèche-cheveux branché puis jeté dans l’eau neutralise le monstre. Aucun corps complet ni kit de combat libre n’est établi.",
+        "evidence": [
+          "CL_SH3_05_UNDERPASS"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -12052,7 +12113,7 @@
       "source": "sh3",
       "baseId": null,
       "identityStatus": "non-combattant-canonique",
-      "identityNote": "Monstre de conte matérialisé et obstacle de puzzle ; pas combattant libre.",
+      "identityNote": "Manifestation du conte bloquant la sortie du Hilltop Center ; les armes ne permettent pas de franchir cet obstacle, qui disparaît après lecture de la fin du conte. Rôle de puzzle, sans duel autonome.",
       "referenceIds": [
         "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
         "CL_SH3_CREATURES"
@@ -12170,7 +12231,20 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH3 original 2003"
+      "referenceEdition": "SH3 original 2003",
+      "roleDecision": {
+        "fighterId": "sh3_glutton",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH3 original 2003",
+        "rationale": "Manifestation du conte bloquant la sortie du Hilltop Center ; les armes ne permettent pas de franchir cet obstacle, qui disparaît après lecture de la fin du conte. Rôle de puzzle, sans duel autonome.",
+        "evidence": [
+          "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
+          "CL_SH3_CREATURES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -13808,9 +13882,10 @@
       "source": "sh4",
       "baseId": null,
       "identityStatus": "danger-passif-canonique",
-      "identityNote": "Danger passif au contact ; le moveset libre serait une adaptation.",
+      "identityNote": "Champignon passif enraciné ; ne lance aucune attaque. Le contact blesse Henry et détruit le champignon : classé comme danger de passage, sans kit offensif autonome.",
       "referenceIds": [
-        "CL_SH4_04_WATER_PRISON_WORLD"
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
@@ -13904,7 +13979,20 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "fighterId": "sh4_toadstool_061",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH4 original 2004",
+        "rationale": "Champignon passif enraciné ; ne lance aucune attaque. Le contact blesse Henry et détruit le champignon : classé comme danger de passage, sans kit offensif autonome.",
+        "evidence": [
+          "CL_SH4_ENEMIES",
+          "CL_SH4_04_WATER_PRISON_WORLD"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -13995,7 +14083,7 @@
       "source": "sh4",
       "baseId": "sh4_toadstool_061",
       "identityStatus": "danger-passif-canonique",
-      "identityNote": "Variante végétale passive ; pas d’attaque autonome.",
+      "identityNote": "Forme fongique passive sans attaque autonome ; le contact inflige un dégât et la détruit. Classée comme obstacle de passage, sans transfert de gestes de combat humanoïde.",
       "referenceIds": [
         "CL_SH4_ENEMIES"
       ],
@@ -14092,7 +14180,19 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "fighterId": "sh4_whitestool_062",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH4 original 2004",
+        "rationale": "Forme fongique passive sans attaque autonome ; le contact inflige un dégât et la détruit. Classée comme obstacle de passage, sans transfert de gestes de combat humanoïde.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -14183,9 +14283,10 @@
       "source": "sh4",
       "baseId": null,
       "identityStatus": "danger-contact-canonique",
-      "identityNote": "Créature minuscule de contact, pas combattant au kit classique.",
+      "identityNote": "Petite créature rampante qui éclate lorsqu’elle est écrasée ou touchée, blessant Henry au contact. Rôle de petit danger de passage ; aucune commande de combat libre n’est attestée.",
       "referenceIds": [
-        "CL_SH4_04_WATER_PRISON_WORLD"
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
@@ -14279,7 +14380,20 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "fighterId": "sh4_tremer_blue_063",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH4 original 2004",
+        "rationale": "Petite créature rampante qui éclate lorsqu’elle est écrasée ou touchée, blessant Henry au contact. Rôle de petit danger de passage ; aucune commande de combat libre n’est attestée.",
+        "evidence": [
+          "CL_SH4_ENEMIES",
+          "CL_SH4_04_WATER_PRISON_WORLD"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -14370,9 +14484,10 @@
       "source": "sh4",
       "baseId": "sh4_tremer_blue_063",
       "identityStatus": "danger-contact-canonique",
-      "identityNote": "Forme rouge ; ne pas lui inventer un élément feu.",
+      "identityNote": "Forme rouge de la petite créature rampante à explosion de contact. Sa couleur n’atteste aucun pouvoir de feu ; rôle de danger de passage sans kit autonome.",
       "referenceIds": [
-        "CL_SH4_05_BUILDING_WORLD"
+        "CL_SH4_05_BUILDING_WORLD",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
@@ -14467,7 +14582,20 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "fighterId": "sh4_tremer_red_064",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH4 original 2004",
+        "rationale": "Forme rouge de la petite créature rampante à explosion de contact. Sa couleur n’atteste aucun pouvoir de feu ; rôle de danger de passage sans kit autonome.",
+        "evidence": [
+          "CL_SH4_ENEMIES",
+          "CL_SH4_05_BUILDING_WORLD"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -17351,7 +17479,7 @@
       "source": "sh4",
       "baseId": null,
       "identityStatus": "danger-environnemental-adapte",
-      "identityNote": "Danger roulant sans volonté d’attaque ciblée ; invulnérabilité et contrôle versus à adapter.",
+      "identityNote": "Fauteuil vide se déplaçant sans ciblage offensif ; collision renversante et proximité dangereuse, indestructible mais interrompu brièvement par les coups. Classé comme danger mobile de décor, sans combattant ni décès de manche.",
       "referenceIds": [
         "CL_SH4_ENEMIES"
       ],
@@ -17457,7 +17585,19 @@
         }
       },
       "combatRole": "environmental-obstacle",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "fighterId": "sh4_wheelchair_068",
+        "status": "resolved",
+        "decision": "environmental-obstacle",
+        "edition": "SH4 original 2004",
+        "rationale": "Fauteuil vide se déplaçant sans ciblage offensif ; collision renversante et proximité dangereuse, indestructible mais interrompu brièvement par les coups. Classé comme danger mobile de décor, sans combattant ni décès de manche.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {
@@ -21227,34 +21367,38 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "La faiblesse des poumons reste exposée pendant l’action; pas d’armure illimitée.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023",
+        "EXT06"
       ],
       "observedMoves": [
         {
-          "name": "Nuage aveuglant",
-          "description": "Nuage aveuglant",
+          "name": "Exhalation toxique",
+          "description": "Émet un nuage de fumée toxique ; le guide décrit cette exhalation comme son attaque.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         },
         {
-          "name": "Charge côtes ouvertes",
-          "description": "Charge côtes ouvertes",
+          "name": "Poumons exposés",
+          "description": "Ouvre sa cage thoracique lorsqu’il prépare et souffle son nuage ; les poumons exposés sont alors vulnérables aux tirs.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         }
       ],
       "constraints": [
-        "La faiblesse des poumons reste exposée pendant l’action; pas d’armure illimitée.",
+        "Poumons vulnérables pendant la préparation et l’exhalation ; aucun nombre de tirs universel ni multiplicateur de dégâts n’est repris comme mesure officielle.",
+        "Aucune charge percutante autonome n’est attestée par le guide consulté ; les mouvements d’approche et variantes de commande restent des adaptations du versus.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
@@ -21269,7 +21413,7 @@
         },
         "finisher": {
           "name": "Smog — clôture du cauchemar",
-          "description": "Ouverture des côtes, contact bref puis nuage qui remplit le cadre.",
+          "description": "Ouverture des côtes, exhalation rapprochée puis nuage qui remplit le cadre. Montage original de résultat, sans coup de charge autonome.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT04"
@@ -21336,7 +21480,8 @@
       "artDirectionFocus": "thorax et poumons",
       "existingCatalogueBehavior": "Ouvre sa cage thoracique pour libérer un nuage toxique.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008)"
     }
   },
   {
@@ -21430,34 +21575,37 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Conserver la protection frontale de tête; suspension dépend du stage.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023",
+        "EXT06"
       ],
       "observedMoves": [
         {
           "name": "Frappe des membres-lames",
-          "description": "Frappe des membres-lames",
+          "description": "Attaque avec ses grandes lames et peut renverser Alex. Il peut aussi saisir Alex avec les pattes avant ; le jeu original propose alors une commande de dégagement.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         },
         {
-          "name": "Bond depuis plafond",
-          "description": "Bond depuis plafond",
+          "name": "Blocage frontal",
+          "description": "Peut arrêter les attaques d’Alex, y compris les tirs d’armes à feu ; le dos reste vulnérable.",
           "evidence": [
-            "EXT04"
+            "HC_ENEMIES_20261023",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
           "timecode": null,
-          "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
+          "reviewRequired": "Relever la capture de cette œuvre ; aucun timing source mesuré."
         }
       ],
       "constraints": [
-        "Conserver la protection frontale de tête; suspension dépend du stage.",
+        "Protection frontale par les membres-lames et vulnérabilité de dos ; les postures disponibles et fenêtres défensives du versus restent des choix de raccord, sans cadence source mesurée.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
@@ -21539,7 +21687,8 @@
       "artDirectionFocus": "quatre membres et tête protégée",
       "existingCatalogueBehavior": "Bloque de face et frappe avec quatre membres-lames.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008)"
     }
   },
   {
@@ -34685,7 +34834,7 @@
       "source": "bom",
       "baseId": null,
       "identityStatus": "non-combattant-documente",
-      "identityNote": "Corriger boss=true : donneur de missions et récompenses, aucune attaque attestée.",
+      "identityNote": "Messager rencontré au début de chaque zone, puis donneur de récompense si la mission est réussie. Retenu comme donneur de missions non combattant ; le statut de boss du catalogue n’est pas une preuve d’attaque.",
       "referenceIds": [
         "EXT21"
       ],
@@ -34785,7 +34934,20 @@
       "artDirectionFocus": "posture de messager",
       "existingCatalogueBehavior": "Version boss de Valtiel.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "roleDecision": {
+        "fighterId": "bom_valtiel_136",
+        "status": "resolved",
+        "decision": "noncombatant",
+        "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+        "rationale": "Messager rencontré au début de chaque zone, puis donneur de récompense si la mission est réussie. Retenu comme donneur de missions non combattant ; le statut de boss du catalogue n’est pas une preuve d’attaque.",
+        "evidence": [
+          "EXT21"
+        ],
+        "reviewedAt": "2026-10-23",
+        "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+      }
     }
   },
   {

@@ -5,9 +5,12 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
+import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
+import {validateStageBitmap} from '../src/stage-bitmaps.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
+import {SOURCE_TIMING_SCHEMA} from './source-timing.mjs';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
@@ -26,6 +29,9 @@ const sha256 = value => createHash('sha256').update(value).digest('hex');
 const isBlocked = status => /bloqu|unverified|unconfirmed|non.vérif|non.verif|reference-required|unresolved|unknown|[àa].v[ée]rifier|[àa].r[ée]f[ée]rencer|a.confirmer|non.confirme|documentation.partielle|a.reconcilier/i.test(status || '');
 const isNonCombat = status => /non.combat|non.applicable|non.hostil|passi[ fv]|set.piece|environment|obstacle|scenery/i.test(status || '');
 const productionState = (locked,noncombat,proposalStatus='') => locked||isBlocked(proposalStatus)?'À référencer':noncombat||isNonCombat(proposalStatus)?'Rôle à décider':'À produire';
+const RESOLVED_NONCOMBAT_ROLES = new Set(['noncombatant','environmental-obstacle','scripted-encounter']);
+const roleNames = {noncombatant:'non-combattant', 'environmental-obstacle':'obstacle du décor', 'scripted-encounter':'rencontre scénarisée sans combat autonome'};
+const validReviewDate = value => typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value+'T00:00:00Z'))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;
 const poseNames = {idle:'Repos',walk:'Locomotion',crouch:'Posture basse',jump:'Déplacement aérien',guard:'Réaction défensive',dodge:'Évitement',hurt:'Réaction à un impact',knockdown:'Chute de manche',ko:'Défaite',phase:'Changement de phase'};
 const presentationNames = {intro:'Introduction',taunt:'Attitude / provocation',winRound1:'Victoire première manche',loseRound1:'Défaite première manche',winMatch:'Pose de victoire finale',loseMatch:'Pose de défaite finale',outro:'Sortie de combat'};
 const presentationTriggers = {intro:'Avant la première manche, commandes suspendues',taunt:'Commande P (sujet I), N (sujet II), bouton tactile ou clic du stick gauche. Annulable par déplacement, garde, attaque ou impact ; aucun dégât ni gain de jauge.',winRound1:'Manche gagnée, dont la première, quand le match continue',loseRound1:'Manche perdue ou nulle, dont la première, quand le match continue',winMatch:'Victoire du match confirmée',loseMatch:'Défaite finale sans finisher. Après un finisher, tenir la dernière image de la piste cible.',outro:'Sortie du vainqueur après la pose finale. La cible conserve sa défaite finale.'};
@@ -60,6 +66,7 @@ export function validateResearch(research, roster=ROSTER, stages=STAGES) {
     return seen;
   };
   const sourceIds=ids(research.sources,'source'), fighterIds=ids(research.fighters,'fighter'), stageIds=ids(research.stages,'stage');
+  const rosterById=new Map(roster.map(f=>[f.id,f]));
   const checkScope=(expected,actual,label)=>{
     for(const id of expected)if(!actual.has(id))errors.push(`${label}: missing ${id}`);
     for(const id of actual)if(!expected.has(id))errors.push(`${label}: unknown ${id}`);
@@ -78,6 +85,19 @@ export function validateResearch(research, roster=ROSTER, stages=STAGES) {
     if(!fighter.identityStatus || !fighter.identityNote)errors.push(`fighter ${fighter.id}: missing identity decision`);
     if(!COMBAT_ROLES.includes(fighter.combatRole))errors.push(`fighter ${fighter.id}: missing/unknown combat role ${fighter.combatRole}`);
     checkEvidence(fighter.referenceIds, fighter.id);
+    const decision=fighter.roleDecision;
+    if(decision!==undefined){
+      const label=`fighter ${fighter.id}: role decision`;
+      if(!decision||typeof decision!=='object'||Array.isArray(decision)||!['pending','resolved'].includes(decision.status))errors.push(`${label}: unsupported status`);
+      else if(decision.status==='resolved'){
+        if(decision.fighterId!==fighter.id||fighter.source!==rosterById.get(fighter.id)?.source)errors.push(`${label}: identity/source mismatch`);
+        if(!RESOLVED_NONCOMBAT_ROLES.has(decision.decision)||decision.decision!==fighter.combatRole||isBlocked(fighter.identityStatus))errors.push(`${label}: incompatible role or unresolved identity`);
+        if(!fighter.referenceEdition||decision.edition!==fighter.referenceEdition)errors.push(`${label}: exact researched edition required`);
+        if(typeof decision.rationale!=='string'||!decision.rationale.trim()||!validReviewDate(decision.reviewedAt))errors.push(`${label}: rationale and valid review date required`);
+        if(!Array.isArray(decision.evidence)||!decision.evidence.length||new Set(decision.evidence).size!==decision.evidence.length||decision.evidence.some(id=>typeof id!=='string'||!fighter.referenceIds?.includes(id)))errors.push(`${label}: evidence must belong to this fighter`);
+        checkEvidence(decision.evidence,label);
+      }
+    }
     if(fighter.baseId && !fighterIds.has(fighter.baseId))errors.push(`fighter ${fighter.id}: unknown base ${fighter.baseId}`);
     if(!Array.isArray(fighter.observedMoves) || !Array.isArray(fighter.constraints))errors.push(`fighter ${fighter.id}: missing observations/constraints`);
     for(const observed of fighter.observedMoves||[]){
@@ -126,6 +146,28 @@ function referenceEdition(fighter, reference={}) {
   return `${fighter.game} (${fighter.year})`;
 }
 function rowRefs(refs) {return unique(refs||[]).join(', ');}
+
+export function roleDecisionRuntimeCompatible(decision,fighter,profile){
+  const policy=profile?.referencePolicy;
+  return Boolean(typeof fighter?.id==='string'&&decision?.status==='resolved'&&decision.fighterId===fighter.id&&
+    RESOLVED_NONCOMBAT_ROLES.has(decision.decision)&&policy?.id===fighter.id&&policy.source===fighter.source&&
+    policy.edition===decision.edition&&policy.role===decision.decision&&policy.capabilities?.reviewed===true&&
+    policy.combatEnabled===false&&policy.canMove===false&&policy.canJump===false&&policy.canDodge===false&&policy.superEnabled===false&&
+    profile.moves&&!Array.isArray(profile.moves)&&Object.values(profile.moves).length>0&&Object.values(profile.moves).every(move=>move.enabled===false));
+}
+
+function roleDecisionNote(decision){
+  return `Rôle confirmé le ${decision.reviewedAt} : ${roleNames[decision.decision]} (${decision.edition}). ${decision.rationale} Preuves : ${rowRefs(decision.evidence)}. Cette décision ne valide ni image, ni animation, ni mouvement offensif.`;
+}
+
+function stageBitmapProgress(stage){
+  const art=STAGE_BITMAPS[stage.id];
+  if(!art)return null;
+  validateStageBitmap(stage,art);
+  return {layers:art.layers.length,files:new Set(art.layers.flatMap(layer=>layer.frames.map(frame=>frame.path))).size,
+    layerNames:art.layers.map(layer=>layer.id),mode:art.mode,scene:art.scene||'',
+    static:art.layers.every(layer=>new Set(layer.frames.map(frame=>frame.path)).size===1)};
+}
 function plannedPose(fighter, ref, pose) {
   const base=`Conserver les contraintes de la fiche ${fighter.id}.`;
   if(isBlocked(ref.identityStatus)||ref.combatRole==='unverified')return 'Attendre une référence de cette version avant de dessiner cette pose.';
@@ -161,12 +203,17 @@ function plannedPose(fighter, ref, pose) {
 }
 
 function runtimeReferenceNote(profile){
+  const policy=profile.referencePolicy;
+  if(policy.id==='homecoming_smog_087'&&policy.firearmExposure)return `Smog : seuls le souffle et ses déclinaisons de super sont actifs ; aucun coup ou prise ajoutés. Poumons exposés pendant préparation/activité du souffle ; dégâts des balles multipliés par ${policy.firearmExposure.damageScale} dans le versus. Ce multiplicateur et les fenêtres ne sont pas des mesures de Homecoming ; aucun timing source mesuré.`;
+  if(policy.id==='homecoming_needler_088'&&policy.defense?.frontalMelee)return 'Needler : défense frontale des lames contre le contact physique et les balles, y compris silencieuses ; dos, attaque et chute vulnérables. Aucun contre gratuit ; commande d’attente et projection arrière retirées. Fenêtres et exceptions de garde adaptées au versus, sans timings source mesurés.';
+  if(policy.id==='sh2_lying_figure_crawling_021')return 'Lying Figure rampante de SH2 original : percussion au sol sans jet acide, sans saisie ni projection arrière. Ne pas emprunter l’attaque à distance de la forme debout ; portée, vitesse et déclinaisons de super adaptées au versus.';
+  if(['sh2_maria_final_manifestation_033','sh2_mary_final_manifestation_034'].includes(policy.id))return 'Essaim de Mary/Maria, SH2 original : le projectile applique une entrave locale du versus. La capture source avec lutte pour se libérer n’est pas reproduite ; durée, portée et restrictions ne sont pas des mesures de SH2.';
   const stagger=nonDamagingStagger({id:profile.referencePolicy.id,source:profile.referencePolicy.source},profile.moves.downSpecial);
   if(stagger)return `Coup de sol du Split Worm : 0 dégât de santé, déséquilibre local des cibles au sol ; pas de chip, riposte, vol de vie, jauge ni crédit de dégâts. ${stagger.frames} ticks de déséquilibre et garde accroupie adaptés au versus ; aucun timing source mesuré.`;
   const field=profile.referencePolicy.proximityField;
   if(field)return `Champ passif local d’Incubator : rayon ${field.radius} px, ${field.damage} dégât(s), chute ${field.knockdown} ticks, récupération ${field.cooldown} ticks ; aucune jauge ni combo gratuits. Portée, dégâts et durées adaptés au versus. Décharges bleues, RGB de travail sans palette source certifiée.`;
   if(profile.referencePolicy.id==='sh1_incubus_019')return 'Décharges rouges propres à Incubus ; RGB de travail sans palette source certifiée. Aucun champ passif de proximité emprunté à Incubator.';
-  if(profile.referencePolicy.defense?.frontalVisibleBullets)return 'Défense du Missionary SH3 : balles visibles arrêtées de face en posture disponible ; dos, chute, attaque et tir silencieux restent vulnérables. Aucun contre ni gain de jauge automatique. États et fenêtres adaptés au versus, sans timings source mesurés.';
+  if(profile.referencePolicy.id==='sh3_missionary_047'&&profile.referencePolicy.defense?.frontalVisibleBullets)return 'Défense du Missionary SH3 : balles visibles arrêtées de face en posture disponible ; dos, chute, attaque et tir silencieux restent vulnérables. Aucun contre ni gain de jauge automatique. États et fenêtres adaptés au versus, sans timings source mesurés.';
   const phases=profile.moveset.weaponPhases;
   if(phases?.length){
     const art=SPRITES[profile.referencePolicy.id],missing=phases.filter(p=>!art?.clips[`idle@${profile.referencePolicy.id}:weapon:${p.id}`]);
@@ -181,9 +228,15 @@ function applyRuntimeProgress(plan){
   const fighters=new Map(ROSTER.map(f=>[f.id,f])),stages=new Map(STAGES.map(s=>[s.id,s]));
   const profiles=new Map(ROSTER.map(f=>[f.id,createCombatProfile(f)]));
   const summaries=new Map(plan.finishers.map(f=>[f.id,cinematicSummary(f.id)]));
+  const resolvedRoles=new Map();
   for(const row of plan.fighters){
     const profile=profiles.get(row.id),p=profile.referencePolicy;
     row.runtimePolicy=p;
+    row.roleResolved=roleDecisionRuntimeCompatible(row.roleDecision,fighters.get(row.id),profile);
+    if(row.roleResolved){
+      resolvedRoles.set(row.id,row.roleDecision);row.identityNote+='\n'+roleDecisionNote(row.roleDecision);
+      row.productionStatus='En cours';
+    }
     const weaponNote=runtimeReferenceNote(profile);
     if(weaponNote)row.identityNote+='\n'+weaponNote;
     row.enabledMoves=Object.values(profile.moves).filter(m=>m.enabled!==false).length;
@@ -196,6 +249,12 @@ function applyRuntimeProgress(plan){
     row.enabled=m.enabled!==false;row.disabledReason=m.disabledReason||'';
     row.canonicalVerification=(row.enabled?'Commande active ; règles de la fiche appliquées.':'Commande désactivée : '+row.disabledReason)+' Animation officielle non vérifiée.';
     const profile=profiles.get(row.fighterId),weaponNote=runtimeReferenceNote(profile);
+    if(resolvedRoles.has(row.fighterId)){
+      const decision=resolvedRoles.get(row.fighterId);
+      row.canonicalVerification+=' '+roleDecisionNote(decision);
+      row.target=`Rôle confirmé comme ${roleNames[decision.decision]}. Ne produire aucune attaque autonome ; vérifier que cette commande reste désactivée. Les chiffres du catalogue sont conservés comme paramètres inertes du versus.`;
+      if(row.productionStatus==='Rôle à décider')row.productionStatus='À tester';
+    }
     if(weaponNote)row.canonicalVerification+=' '+weaponNote;
     if(m.ammoCost)row.canonicalVerification+=` Consomme ${m.ammoCost} munition(s) ; réserve ${profiles.get(row.fighterId).moveset.ammoProfile?.capacity||0}.`;
     row.target=(row.enabled?'Règle active de versus : ':'Règle inactive : ')+(m.canonicalBasis||'')+'\n'+row.target;
@@ -212,6 +271,10 @@ function applyRuntimeProgress(plan){
     row.actorTracks=`finisher@${row.id} / finished@${row.id}. Identités et durées synchronisées ; aucune substitution entre finishers.`;
     row.currentSequence=s.authored?s.beats.map(b=>`${b.from}–${b.to} : ${b.label}`).join(' → '):'Aucune chorégraphie automatique autorisée pour cet identifiant.';
     row.existing=s.authored?`Timeline de ${s.duration} ticks, caméra, offsets des acteurs, effets et sons branchés. ${s.beats.length} temps de mise en scène. PNG contextuels absents ; adaptation non certifiée.`:`Séquence non jouée : ${s.reason} PNG contextuels à produire.`;
+    if(row.entityType==='Combattant'&&resolvedRoles.has(row.entityId)){
+      row.existing+=' '+roleDecisionNote(resolvedRoles.get(row.entityId));
+      if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
+    }
     if(s.authored){
       const r=s.requirements;
       const bodyNames={humanoid:'humanoïde',nurse:'infirmière',child:'petit corps',giant:'géant',pyramid:'corps pyramidal',mannequin:'mannequin',doll:'poupée',flowerhead:'tête florale',quadruped:'quadrupède',insect:'insecte',flyer:'créature volante',mass:'masse',spider:'araignée',fox:'renard'};
@@ -228,13 +291,28 @@ function applyRuntimeProgress(plan){
     row.runtimePresentation=s;
     row.engineState=`Clé exacte ${s.clipKey}. ${s.authored?'Mise en scène du sujet branchée.':'Hook disponible ; mise en scène propre à produire.'} ${p.combatEnabled?'':'Combat désactivé pour ce rôle. '}Images contextuelles à produire.`;
     if(key==='taunt')row.engineState=`${s.clipKey}. ${s.authored?'Attitude jouée':'Hook disponible'}, 66 ticks ; annulable et sensible à la pause. PNG dédiés à produire.`;
+    if(resolvedRoles.has(row.fighterId)){
+      row.engineState+=' '+roleDecisionNote(resolvedRoles.get(row.fighterId));
+      if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
+    }
     if(s.authored&&row.productionStatus==='À produire')row.productionStatus='En cours';
+  }
+  for(const row of plan.poses)if(resolvedRoles.has(row.fighterId)){
+    const decision=resolvedRoles.get(row.fighterId);
+    row.description=`Rôle confirmé comme ${roleNames[decision.decision]}. Ne pas forcer une posture de combattant ; relever seulement la présence ou interaction autorisée par la référence. `+roleDecisionNote(decision);
+    if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
   }
   for(const row of plan.stages){
     const s=stages.get(row.id);row.runtimePolicy=s.referencePolicy;row.referenceTracks=s.referenceTracks;
+    row.bitmapProgress=stageBitmapProgress(s);
     row.additionalBindings=plan.stageAnimations.filter(a=>a.stageId===row.id&&!stageAnimationBaseline.some(old=>old.id===a.id));
     row.shift=s.shift.enabled===false?`${s.shift.style} — ${s.shift.startOtherworld?'Otherworld fixe':'bascule désactivée'}`:s.shift.style;
     row.locationNote+=`\nMoteur : ${(s.referenceTracks||[]).length} piste(s) de la fiche, ${s.director.events.length} événement(s), ${s.director.hazardDeck.length} danger(s) autorisé(s).`;
+    if(row.bitmapProgress){
+      const bitmap=row.bitmapProgress;
+      row.locationNote+=`\nDécor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s), mode ${bitmap.mode}${bitmap.scene?' ; vue '+bitmap.scene:''} ; couches ${bitmap.layerNames.join(', ')}. Images de travail non certifiées ; profondeur, animation et comparaison source à vérifier.`;
+      if(bitmap.mode==='replace')row.locationNote+=' Les pistes procédurales restent préparées mais sont masquées par cette vue bitmap.';
+    }
     if(row.additionalBindings.length)row.locationNote+='\nNouveaux raccords de versus : '+row.additionalBindings.map(a=>`${a.id} — ${a.animationName} (${a.type})`).join(' ; ')+'. Ces règles de jeu ne certifient aucune action de l’œuvre.';
     if(row.productionStatus==='À produire')row.productionStatus='En cours';
   }
@@ -245,8 +323,10 @@ function applyRuntimeProgress(plan){
     const stage=stages.get(original.stageId),candidate=current.get(original.id),track=stage.referenceTracks?.find(t=>t.id===original.id);
     const row={...(candidate||original),name:stage.name};
     if(track){
-      row.existing=`Prototype Canvas partiel joué : ${track.implementedElement||track.name}. Aucune capture ni image d’animation créée.`;
-      row.trigger=track.trigger;row.layer=track.layer;row.productionStatus='En cours';row.runtimeTrack=track;
+      const bitmap=plan.stages.find(s=>s.id===stage.id).bitmapProgress,masked=bitmap?.mode==='replace';
+      row.existing=masked?`Piste de moteur préparée : ${track.implementedElement||track.name}, mais masquée par la vue bitmap${bitmap.static?' statique':''}${bitmap.scene?' '+bitmap.scene:''}. Aucun geste de cette piste n’est affiché dans cette vue ; animation contextuelle à produire.`:`Prototype Canvas partiel joué : ${track.implementedElement||track.name}. Aucune capture ni image d’animation créée.`;
+      row.trigger=masked?'Non affichée dans la vue bitmap ; déclencheur préparé : '+track.trigger:track.trigger;
+      row.layer=track.layer;row.productionStatus='En cours';row.runtimeTrack=track;row.runtimeTrackVisible=!masked;
     }else if(!candidate||(row.type==='Transformation'&&stage.shift.enabled===false)){
       row.existing='Désactivé après application de la fiche exacte. Conservé dans l’inventaire pour tracer le retrait.';
       row.trigger='Aucun déclenchement automatique';row.retired=true;
@@ -257,9 +337,14 @@ function applyRuntimeProgress(plan){
     return row;
   });
   for(const task of plan.tasks){
-    if(task.id.endsWith(':art')){
+    if(task.id.endsWith(':role')&&resolvedRoles.has(task.entityId)){
+      const decision=resolvedRoles.get(task.entityId);
+      task.status='Validé';task.delivery='role-reference-review-'+decision.reviewedAt;
+      task.reason=roleDecisionNote(decision)+' Le moteur conserve toutes les commandes autonomes désactivées.';
+      task.referenceIds=rowRefs(decision.evidence);
+    }else if(task.id.endsWith(':art')){
       const art=SPRITES[task.entityId];
-      if(art?.frames.length>1){
+      if(art?.frames.length>0){
         task.status='En cours';task.delivery=art.animatedClips>0?'reference-continuation-2026-10-23':'fidelity-source-pass-2026-10-23';
         task.reason=`${art.frames.length} images indépendantes, ${art.animatedClips} montage(s) animé(s) candidat(s). Poses ${Object.keys(art.clips).join(', ')} uniquement ; autres gestes et comparaison temporelle source encore à réaliser. Aucune fidélité 1:1 certifiée.`;
         if(task.entityId==='sh3_memory_of_alessa_049')task.reason+=' Couteau, pistolet et tuyau présents ; mitraillette manquante signalée par cartouche, sans image de remplacement.';
@@ -270,24 +355,39 @@ function applyRuntimeProgress(plan){
       task.reason=`Politique de la fiche appliquée : ${enabled}/20 commandes actives. Projectiles, téléportation, effets et annulations limités aux recettes explicites. Captures, PNG et comparaison visuelle encore à réaliser.`;
       const weaponNote=runtimeReferenceNote(p);
       if(weaponNote){task.reason+=' '+weaponNote;task.delivery='reference-continuation-2026-10-23';}
-    }else if(task.id.endsWith(':cinematics')&&plan.finishers.some(f=>f.entityId===task.entityId&&summaries.get(f.id).authored)){
+    }else if(task.id.endsWith(':cinematics')&&(plan.finishers.some(f=>f.entityId===task.entityId&&summaries.get(f.id).authored)||plan.presentations.some(p=>p.fighterId===task.entityId&&p.runtimePresentation.authored))){
       task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
-      task.reason='Clés contextuelles, séquences de résultat, provocation, timelines de finisher, caméra et sons branchés. Poses bitmap dédiées et validation visuelle restantes.';
+      const presentations=plan.presentations.filter(p=>p.fighterId===task.entityId),finishers=plan.finishers.filter(f=>f.entityId===task.entityId);
+      task.reason=`${presentations.filter(p=>p.runtimePresentation.authored).length}/${presentations.length} présentations et ${finishers.filter(f=>summaries.get(f.id).authored).length}/${finishers.length} timelines de finisher composées. Clés contextuelles, séquences de résultat, provocation, caméra et sons branchés. Poses bitmap dédiées et validation visuelle restantes.`;
     }else if(task.id.endsWith(':stage')){
       const s=stages.get(task.entityId);task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
-      task.reason=`Contraintes du lieu appliquées : ${s.referenceTracks?.length||0} piste(s) de la fiche jouée(s). Météo, phase et dangers filtrés ; architecture et captures à vérifier.`;
+      const bitmap=plan.stages.find(row=>row.id===task.entityId).bitmapProgress;
+      const tracks=s.referenceTracks?.length||0,masked=bitmap?.mode==='replace';
+      task.reason=`Contraintes du lieu appliquées : ${masked?0:tracks} piste(s) de la fiche rendue(s)${masked?`, ${tracks} piste(s) préparée(s) mais masquée(s) par la vue bitmap`:''}. Météo, phase et dangers filtrés ; architecture et captures à vérifier.`;
+      if(bitmap)task.reason+=` Décor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s). Montage animé et fidélité à vérifier ; aucune certification.`;
     }
   }
   const hooks=plan.tasks.find(t=>t.id==='global:cinematic-clips');
   hooks.status='Validé';hooks.delivery='reference-continuation-2026-10-23';
   hooks.reason='Neuf hooks, contexte exact par finisher et par résultat, provocation annulable, timeline caméra/acteurs/son. Chargement atomique acteurs et couches bitmap du lieu : panne, reprise et annulation vérifiées ; ancien combat et images conservés en cas d’échec. Raccord technique validé ; PNG dédiés et décors restent à produire dans leurs actions artistiques.';
+  const capture=plan.tasks.find(t=>t.id==='global:reference-capture');
+  capture.status='En cours';capture.delivery='source-timing-pipeline-2026-10-23';
+  capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet est candidat et ne certifie ni le geste ni la fidélité 1:1.`;
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
     authoredFighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant'&&summaries.get(f.id).authored).length,
     authoredStageFinishers:plan.finishers.filter(f=>f.entityType==='Arène'&&summaries.get(f.id).authored).length,
     authoredPresentations:plan.presentations.filter(p=>p.runtimePresentation.authored).length,
+    resolvedRoleDecisions:resolvedRoles.size,
+    stageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress).length,
+    stageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0),0),
+    stageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
+    sourceTimingSchema:SOURCE_TIMING_SCHEMA,
+    measuredSourceMoves:plan.moves.filter(m=>m.sourceFrameRate!==''&&m.sourceStart!==''&&m.sourceImpact!==''&&m.sourceEnd!=='').length,
     referenceStageTracks:STAGES.reduce((n,s)=>n+(s.referenceTracks?.length||0),0),retiredStageItems:plan.stageAnimations.filter(a=>a.retired).length,
+    visibleReferenceStageTracks:plan.stageAnimations.filter(a=>a.runtimeTrack&&a.runtimeTrackVisible).length,
+    maskedReferenceStageTracks:plan.stageAnimations.filter(a=>a.runtimeTrack&&!a.runtimeTrackVisible).length,
     additionalStageBindings:plan.stages.reduce((n,s)=>n+s.additionalBindings.length,0)};
 }
 
@@ -311,6 +411,7 @@ export function buildProductionPlan(research) {
     const artState=art ? 'PNG candidat, fidélité à valider' : 'PNG à produire';
     plan.fighters.push({id:f.id,name:f.name,source:f.source,game:f.game,sourceYear:f.year,edition:referenceEdition(f,ref),variant:f.variant||'',currentVariantLabel:f.variantOf||'',baseId:ref.baseId||'',category:f.category,boss:f.boss,
       currentRole:f.catalogueStatus,targetRole:ref.combatRole||'',currentEvidence:f.evidenceTier,identityStatus:ref.identityStatus,identityNote:ref.identityNote,
+      roleDecision:ref.roleDecision?Object.fromEntries(['status','fighterId','decision','edition','evidence','rationale','reviewedAt'].filter(key=>ref.roleDecision[key]!==undefined).map(key=>[key,structuredClone(ref.roleDecision[key])])):null,
       constraints:ref.constraints.join('\n'),referenceIds:rowRefs(ref.referenceIds),observationIds:observationIds.join(', '),documentedActions:observations.filter(o=>!isBlocked(o.status)&&!isNonCombat(o.status)).length,
       currentMoves:profile.moveset.order.length,currentFinishers:f.fatalities.length,artState,animatedClips:art?.animatedClips||0,oneToOneValidated:false,productionStatus:locked?'À référencer':noncombat?'Rôle à décider':'À produire'});
 
@@ -375,7 +476,7 @@ export function buildProductionPlan(research) {
   Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
   const runtimeProgress=applyRuntimeProgress(plan);
-  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:runtimeProgress.authoredFinishers,presentationHooks:PRESENTATION_KEYS.length,...runtimeProgress};
+  plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:runtimeProgress.authoredFinishers,presentationHooks:PRESENTATION_KEYS.length,openActions:plan.tasks.filter(t=>t.status!=='Validé').length,openP0:plan.tasks.filter(t=>t.status!=='Validé'&&t.priority==='P0').length,...runtimeProgress};
   return plan;
 }
 

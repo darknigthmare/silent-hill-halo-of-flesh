@@ -530,6 +530,24 @@
       "gameplayRole": "ambience",
       "referenceOnly": true,
       "message": "TROIS PURGES AU FOND DU PASSAGE"
+    },
+    "referenceCellReply": {
+      "name": "PORTE DE CELLULE",
+      "duration": 96,
+      "darkness": 0,
+      "radioBoost": 0,
+      "gameplayRole": "ambience",
+      "referenceOnly": true,
+      "message": "UNE PORTE VIBRE AU FOND"
+    },
+    "referenceWashroomReply": {
+      "name": "TROU DE LA SALLE DE BAIN",
+      "duration": 108,
+      "darkness": 0,
+      "radioBoost": 0,
+      "gameplayRole": "ambience",
+      "referenceOnly": true,
+      "message": "UNE LUEUR DANS LE PASSAGE"
     }
   },
   "interactionTriggers": {
@@ -2421,7 +2439,7 @@
       "name": "TOLUCA PRISON",
       "source": "sh2",
       "lore": {
-        "premise": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet.",
+        "premise": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus.",
         "canonicalBasis": "CL_SH2_09_TOLUCA_PRISON",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -2451,11 +2469,60 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [],
+      "events": [
+        {
+          "id": "referenceCellReply",
+          "name": "PORTE DE CELLULE",
+          "duration": 96,
+          "darkness": 0,
+          "radioBoost": 0,
+          "gameplayRole": "ambience",
+          "referenceOnly": true,
+          "message": "UNE PORTE VIBRE AU FOND"
+        }
+      ],
       "hazards": [],
       "animations": [],
-      "interactions": [],
-      "choreography": [],
+      "interactions": [
+        {
+          "id": "toluca_prison_referenceCellReply_1",
+          "event": "referenceCellReply",
+          "name": "Une porte de cellule sur ses charnières",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
+          "referenceIds": [
+            "CL_SH2_09_TOLUCA_PRISON"
+          ],
+          "proposalId": "toluca_prison:reference:3",
+          "zone": {
+            "x": 0.28,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "choreography": [
+        {
+          "event": "referenceCellReply",
+          "prop": "cellDoorReply",
+          "description": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
+          "layer": "background",
+          "anchor": {
+            "x": 0.28,
+            "y": 0.61
+          },
+          "direction": 1,
+          "referenceTracks": [
+            "toluca_prison:reference:3"
+          ],
+          "evidence": [
+            "CL_SH2_09_TOLUCA_PRISON"
+          ]
+        }
+      ],
       "reference": {
         "id": "toluca_prison",
         "source": "sh2",
@@ -2464,7 +2531,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "TOLUCA PRISON",
         "correctedName": null,
-        "locationNote": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet.",
+        "locationNote": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus.",
         "referenceIds": [
           "CL_SH2_09_TOLUCA_PRISON"
         ],
@@ -2514,7 +2581,9 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [],
+        "allowedEvents": [
+          "referenceCellReply"
+        ],
         "allowedHazards": [],
         "automaticFinishers": true,
         "weather": "cold",
@@ -2543,17 +2612,45 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "toluca_prison:reference:3"
+        ],
         "pendingProposalIds": [
           "toluca_prison:reference:1",
           "toluca_prison:reference:2",
-          "toluca_prison:reference:3",
           "toluca_prison:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "toluca_prison:reference:3",
+          "key": "cellDoorReply",
+          "name": "Une porte de cellule sur ses charnières",
+          "description": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
+          "proposalIndex": 2,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_09_TOLUCA_PRISON"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.28,
+            "y": 0.61
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referenceCellReply",
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Une porte de cellule sur ses charnières",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceCellReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -2594,7 +2691,7 @@
       "name": "THE LABYRINTH",
       "source": "sh2",
       "lore": {
-        "premise": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts.",
+        "premise": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits.",
         "canonicalBasis": "CL_SH2_10_THE_LABYRINTH",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -2637,7 +2734,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "THE LABYRINTH",
         "correctedName": null,
-        "locationNote": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts.",
+        "locationNote": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits.",
         "referenceIds": [
           "CL_SH2_10_THE_LABYRINTH"
         ],
@@ -2691,7 +2788,7 @@
         "allowedHazards": [],
         "automaticFinishers": true,
         "weather": "dust",
-        "interior": false,
+        "interior": true,
         "baselineMotion": true,
         "suppression": [
           {
@@ -2741,15 +2838,41 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "labyrinth:reference:2"
+        ],
         "pendingProposalIds": [
           "labyrinth:reference:1",
-          "labyrinth:reference:2",
           "labyrinth:reference:3",
           "labyrinth:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "labyrinth:reference:2",
+          "key": "cubeTurn",
+          "name": "Cube de commande, orientation de fond",
+          "description": "Le cube tourne lentement dans un espace de fond sécurisé ; pas de modification du sol actif.",
+          "proposalIndex": 1,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_10_THE_LABYRINTH"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.69,
+            "y": 0.49
+          },
+          "trigger": "ambient",
+          "event": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Cube de commande, orientation de fond",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -4231,7 +4354,7 @@
       "name": "ROOM 302",
       "source": "sh4",
       "lore": {
-        "premise": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante.",
+        "premise": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive.",
         "canonicalBasis": "CL_SH4_01_ROOM_302",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -4262,11 +4385,60 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [],
+      "events": [
+        {
+          "id": "referenceWashroomReply",
+          "name": "TROU DE LA SALLE DE BAIN",
+          "duration": 108,
+          "darkness": 0,
+          "radioBoost": 0,
+          "gameplayRole": "ambience",
+          "referenceOnly": true,
+          "message": "UNE LUEUR DANS LE PASSAGE"
+        }
+      ],
       "hazards": [],
       "animations": [],
-      "interactions": [],
-      "choreography": [],
+      "interactions": [
+        {
+          "id": "room_302_referenceWashroomReply_1",
+          "event": "referenceWashroomReply",
+          "name": "Lueur contenue du trou de la salle de bain",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+          "referenceIds": [
+            "CL_SH4_01_ROOM_302"
+          ],
+          "proposalId": "room_302:reference:3",
+          "zone": {
+            "x": 0.78,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "choreography": [
+        {
+          "event": "referenceWashroomReply",
+          "prop": "washroomHoleReply",
+          "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+          "layer": "background",
+          "anchor": {
+            "x": 0.78,
+            "y": 0.49
+          },
+          "direction": 1,
+          "referenceTracks": [
+            "room_302:reference:3"
+          ],
+          "evidence": [
+            "CL_SH4_01_ROOM_302"
+          ]
+        }
+      ],
       "reference": {
         "id": "room_302",
         "source": "sh4",
@@ -4275,7 +4447,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "ROOM 302",
         "correctedName": null,
-        "locationNote": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante.",
+        "locationNote": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive.",
         "referenceIds": [
           "CL_SH4_01_ROOM_302"
         ],
@@ -4325,7 +4497,9 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [],
+        "allowedEvents": [
+          "referenceWashroomReply"
+        ],
         "allowedHazards": [],
         "automaticFinishers": true,
         "weather": "dust",
@@ -4370,11 +4544,11 @@
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "room_302:reference:2"
+          "room_302:reference:2",
+          "room_302:reference:3"
         ],
         "pendingProposalIds": [
           "room_302:reference:1",
-          "room_302:reference:3",
           "room_302:reference:4"
         ]
       },
@@ -4402,10 +4576,36 @@
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
           "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "room_302:reference:3",
+          "key": "washroomHoleReply",
+          "name": "Lueur contenue du trou de la salle de bain",
+          "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+          "proposalIndex": 2,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_01_ROOM_302"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.78,
+            "y": 0.49
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referenceWashroomReply",
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lueur contenue du trou de la salle de bain",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
         }
       ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceWashroomReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [

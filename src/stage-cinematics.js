@@ -4,7 +4,7 @@
  * declared event deck, not inferred as an additional canonical occurrence.
  * Visual animation NEVER advances or samples gameplay RNG.
  */
-import { stageReferenceEventAllowed } from './stage-reference-policy.js';
+import { stageReferenceEventAllowed, stageReferenceTrackAllowed } from './stage-reference-policy.js';
 const TAU = Math.PI * 2;
 const limit = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
 const ease = t => t*t*(3-2*t);
@@ -46,7 +46,7 @@ export function stageChoreographyProfile(stage) {
     location: stage?.name || 'unknown',
     fidelity: stage?.reference ? 'reference-linked / original-versus-prototype' : 'project-catalogue / original-versus',
     cues: events.flatMap(id => {
-      const tracks=(stage?.referenceTracks || []).filter(track=>track.event===id);
+      const tracks=(stage?.referenceTracks || []).filter(track=>track.event===id&&stageReferenceTrackAllowed(stage,track));
       if(tracks.length)return [{event:id,prop:tracks[0].key,description:tracks[0].description,layer:tracks[0].layer,
         anchor:{...tracks[0].anchor},direction:1,referenceTracks:tracks.map(track=>track.id),evidence:tracks.flatMap(track=>track.evidence)}];
       if(!DESCRIPTIONS[id])return [];
@@ -199,6 +199,59 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
         for(let j=0;j<3;j++)glow(ctx,x+9+local*34+j*7,y-local*40-j*8,8+j*5,'172,184,166',amount*.05);
       }break;
     }
+    case 'pianoKeyReply':{
+      const response=progress===null?0:Math.sin(progress*Math.PI),keyY=y-11+response*3;
+      rect(ctx,x-59,y-52,118,58,'rgba(42,33,28,.8)');
+      line(ctx,x-63,y-53,x+63,y-53,5,'rgba(92,79,59,.65)');
+      for(let i=0;i<7;i++){
+        const px=x-52+i*15,py=i===3?keyY:y-11;
+        rect(ctx,px,py,14,22,'rgba(179,176,154,.72)');
+        line(ctx,px,py+22,px+13,py+22,1,'rgba(29,29,22,.75)');
+      }
+      for(const i of [0,1,3,4,5])rect(ctx,x-43+i*15,y-12,8,13,'rgba(15,18,16,.95)');
+      line(ctx,x-51,y+16,x-51,y+48,5,'rgba(58,43,32,.65)');line(ctx,x+51,y+16,x+51,y+48,5,'rgba(58,43,32,.65)');
+      break;
+    }
+    case 'ropePendulum':{
+      line(ctx,x-69,y-7,x+69,y-7,7,'rgba(85,72,49,.53)');
+      for(const offset of [-38,0,38]){
+        const drift=offset===0?sway*1.8:0,px=x+offset;
+        line(ctx,px,y-7,px+drift,y+72,2,'rgba(151,139,104,.48)');
+        ctx.strokeStyle='rgba(151,139,104,.48)';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(px+drift,y+87,6,14,0,0,TAU);ctx.stroke();
+      }
+      break;
+    }
+    case 'cellDoorReply':{
+      const p=progress===null?0:progress,shake=Math.sin(p*TAU*5)*Math.sin(p*Math.PI)*2;
+      rect(ctx,x-38,y-h*.2,76,h*.2,'rgba(17,22,20,.8)');
+      for(let i=0;i<6;i++)line(ctx,x-31+i*12+shake,y-h*.2+4,x-31+i*12+shake,y-3,3,'rgba(115,119,103,.5)');
+      line(ctx,x-34+shake,y-h*.2+5,x+34+shake,y-h*.2+5,4,'rgba(93,103,89,.55)');
+      line(ctx,x-34+shake,y-4,x+34+shake,y-4,4,'rgba(93,103,89,.55)');
+      rect(ctx,x+18+shake,y-h*.1,8,5,'rgba(142,136,106,.56)');
+      break;
+    }
+    case 'cubeTurn':{
+      const a=t*.00019,cos=Math.cos(a),sin=Math.sin(a),size=32;
+      const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]].map(([px,py,pz])=>{
+        const rx=px*cos-pz*sin,depth=px*sin+pz*cos;
+        return {x:x+rx*size,y:y+py*size*.83-depth*size*.3,z:depth};
+      });
+      const faces=[[0,1,2,3],[4,7,6,5],[0,4,5,1],[3,2,6,7],[1,5,6,2],[0,3,7,4]].map((indices,i)=>({indices,i,z:indices.reduce((sum,index)=>sum+vertices[index].z,0)/4})).sort((left,right)=>left.z-right.z);
+      rect(ctx,x-21,y+36,42,22,'rgba(57,60,50,.7)');rect(ctx,x-37,y+57,74,6,'rgba(91,91,69,.38)');
+      for(const face of faces){
+        const points=face.indices.map(index=>vertices[index]);
+        ctx.fillStyle=['#555747','#6a6550','#75745b','#414b43','#4f5b50','#655c49'][face.i];
+        ctx.beginPath();ctx.moveTo(points[0].x,points[0].y);for(const point of points.slice(1))ctx.lineTo(point.x,point.y);ctx.closePath();ctx.fill();
+        ctx.strokeStyle='rgba(15,23,20,.8)';ctx.lineWidth=2;ctx.stroke();
+      }
+      break;
+    }
+    case 'washroomHoleReply':{
+      const response=progress===null?0:Math.sin(progress*Math.PI)**2;
+      ctx.save();ctx.translate(x,y);ctx.scale(.78,1);
+      glow(ctx,0,0,36,'176,183,153',response*.16);ctx.restore();
+      break;
+    }
     default:break;
   }
   ctx.restore();
@@ -207,7 +260,7 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
 /** Returns the exact rendered proposal IDs; unbound proposals remain unproduced. */
 export function drawStageReferenceTracks(ctx,w,h,stage,time,{reducedMotion=false}={}) {
   if(stage?.reference?.blocked)return [];
-  const tracks=(stage?.referenceTracks || []).filter(track=>!track.event);
+  const tracks=(stage?.referenceTracks || []).filter(track=>!track.event&&stageReferenceTrackAllowed(stage,track));
   const visualTime=reducedMotion?0:time;
   for(const track of tracks)referenceTrack(ctx,w,h,track,visualTime);
   return tracks.map(track=>track.id);

@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-23",
+  "scope": "Décisions P0 de rôle uniquement, sans validation des gestes ni des images.",
+  "sources": [
+    {
+      "id": "CL_SH1_ENEMIES",
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+      "bytes": 35155
+    },
+    {
+      "id": "CL_SH1_CREATURES",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "b3c234bbb57d844f68a3e6c586d9555b184336a3704ab6b680ba79b126d1f979",
+      "bytes": 26677
+    },
+    {
+      "id": "CL_SH1_07_NIGHTMARE_HOSPITAL",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_07_nightmare_hospital_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "f11f4d0caa4d006b7b7ec221418b2a62c4178f7e5a9ecb2667013f31d148f420",
+      "bytes": 41212
+    },
+    {
+      "id": "CL_SH3_ENEMIES",
+      "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22",
+      "bytes": 31503
+    },
+    {
+      "id": "CL_SH3_CREATURES",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/068-069_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "661eb2f7e95c80c2392438bde9000cd87332b76ae1a4f50d31f4e025c4515e82",
+      "bytes": 26845
+    },
+    {
+      "id": "CL_SH3_05_UNDERPASS",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "f8373c0438dfb58430552e2ce56c4838c8be188e34c65134d3e4608ce3e42ca0",
+      "bytes": 30277
+    },
+    {
+      "id": "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_08_nightmare_hilltop_center_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "674e25a1a68769c526300bfe449cd76e0a1e78d412d5d4aea8a6e0050de8c3f9",
+      "bytes": 31537
+    },
+    {
+      "id": "CL_SH4_ENEMIES",
+      "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+      "bytes": 55413
+    },
+    {
+      "id": "EXT21",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "524cf1bbe02bac9e9a7737c4fde04435512befce9527c40105ccc68b18bb3b63",
+      "bytes": 23635
+    },
+    {
+      "id": "CL_SH4_05_BUILDING_WORLD",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_05_building_world_en.htm",
+      "httpStatus": 200,
+      "exit": 0,
+      "sha256": "c0a2977de0329c9e3e51e7950868e368b7780f1194769f739cab3d010699c6d3",
+      "bytes": 36561
+    }
+  ],
+  "resolved": [
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "status": "resolved",
+      "decision": "noncombatant",
+      "edition": "SH1 original 1999, région à fixer",
+      "rationale": "Ce profil désigne la petite ombre enfantine qui trébuche à l’école et au parc, décrite comme non agressive dans le commentaire de création. Il reste distinct du Stalker armé et hostile de Nowhere ; aucun kit offensif.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh1_bloodsucker",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH1 original 1999, région à fixer",
+      "rationale": "Obstacle fixé au mur de la chambre 204 : les tentacules défendent une plaque et sont détournés par la poche de sang. Classé comme interaction de puzzle, sans locomotion ni kit autonome.",
+      "evidence": [
+        "CL_SH1_07_NIGHTMARE_HOSPITAL",
+        "CL_SH1_CREATURES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh3_valtiel_051",
+      "status": "resolved",
+      "decision": "noncombatant",
+      "edition": "SH3 original 2003",
+      "rationale": "Observateur et serviteur qui manipule les vannes et emporte Heather après certaines morts ; les deux descriptions indiquent qu’il ne l’attaque pas. Rôle sans combat, distinct de ses autres œuvres.",
+      "evidence": [
+        "CL_SH3_CREATURES",
+        "CL_SH3_ENEMIES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh3_glutton",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH3 original 2003",
+      "rationale": "Manifestation du conte bloquant la sortie du Hilltop Center ; les armes ne permettent pas de franchir cet obstacle, qui disparaît après lecture de la fin du conte. Rôle de puzzle, sans duel autonome.",
+      "evidence": [
+        "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
+        "CL_SH3_CREATURES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh3_sewer_creature_052",
+      "status": "resolved",
+      "decision": "scripted-encounter",
+      "edition": "SH3 original 2003",
+      "rationale": "Rencontre scriptée sous la passerelle : traverser sans résoudre le danger tue Heather ; le sèche-cheveux branché puis jeté dans l’eau neutralise le monstre. Aucun corps complet ni kit de combat libre n’est établi.",
+      "evidence": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh4_toadstool_061",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH4 original 2004",
+      "rationale": "Champignon passif enraciné ; ne lance aucune attaque. Le contact blesse Henry et détruit le champignon : classé comme danger de passage, sans kit offensif autonome.",
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "CL_SH4_04_WATER_PRISON_WORLD"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh4_whitestool_062",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH4 original 2004",
+      "rationale": "Forme fongique passive sans attaque autonome ; le contact inflige un dégât et la détruit. Classée comme obstacle de passage, sans transfert de gestes de combat humanoïde.",
+      "evidence": [
+        "CL_SH4_ENEMIES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh4_tremer_blue_063",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH4 original 2004",
+      "rationale": "Petite créature rampante qui éclate lorsqu’elle est écrasée ou touchée, blessant Henry au contact. Rôle de petit danger de passage ; aucune commande de combat libre n’est attestée.",
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "CL_SH4_04_WATER_PRISON_WORLD"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh4_tremer_red_064",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH4 original 2004",
+      "rationale": "Forme rouge de la petite créature rampante à explosion de contact. Sa couleur n’atteste aucun pouvoir de feu ; rôle de danger de passage sans kit autonome.",
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "CL_SH4_05_BUILDING_WORLD"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "sh4_wheelchair_068",
+      "status": "resolved",
+      "decision": "environmental-obstacle",
+      "edition": "SH4 original 2004",
+      "rationale": "Fauteuil vide se déplaçant sans ciblage offensif ; collision renversante et proximité dangereuse, indestructible mais interrompu brièvement par les coups. Classé comme danger mobile de décor, sans combattant ni décès de manche.",
+      "evidence": [
+        "CL_SH4_ENEMIES"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    },
+    {
+      "fighterId": "bom_valtiel_136",
+      "status": "resolved",
+      "decision": "noncombatant",
+      "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "rationale": "Messager rencontré au début de chaque zone, puis donneur de récompense si la mission est réussie. Retenu comme donneur de missions non combattant ; le statut de boss du catalogue n’est pas une preuve d’attaque.",
+      "evidence": [
+        "EXT21"
+      ],
+      "reviewedAt": "2026-10-23",
+      "limits": "Décision de rôle uniquement ; poses, images, animations et mesures de source restent à produire ou à vérifier. Les capacités de versus ne sont pas certifiées par cette décision."
+    }
+  ],
+  "leftOpen": [
+    {
+      "fighterId": "sh2_prisoner_035",
+      "reason": "Commentaire de création accessible confirme voix invisible et présence dans la prison ; source actuelle ne suffit pas ici pour certifier toute l’innocuité et la version exacte du profil."
+    },
+    {
+      "fighterId": "sh4_greedy_worm_069",
+      "reason": "Page wiki directe non consultée dans cette passe ; aucune nouvelle preuve suffisante d’innocuité trouvée dans les guides accessibles."
+    },
+    {
+      "fighterId": "sh4_joseph_schreiber_victim_15",
+      "reason": "Fichier de victime confirme identité et numéro, mais pas un kit individuel ni à lui seul la non-hostilité de la manifestation ; tâche laissée ouverte."
+    }
+  ],
+  "limits": [
+    "Les guides d’un même site ne sont pas nécessairement des auteurs indépendants.",
+    "Les commentaires de création sont des traductions non officielles d’un livre japonais.",
+    "Aucun FPS, timecode ou PNG ne devient certifié par une décision de rôle."
+  ]
+}

@@ -30,6 +30,11 @@ de Split Worm. Trois images fixes d’armes d’Alessa sont intégrées ; la
 mitraillette et les animations restent à produire. Elles ne constituent pas
 une certification des animations.
 
+Les [chantiers parallèles](CHANTIERS_PARALLELES_2026-10-23.md) ajoutent trois
+sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
+neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
+de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
+
 ## Ce que signifie la fidélité
 
 **Une identité documentée ne valide pas automatiquement un mouvement.** Un bestiaire peut attester une morsure, un rampement ou une arme sans établir la préparation, les frames actives, la portée ni les transitions d’un jeu de versus. Les 4 600 emplacements sont désormais classés comme composites de gestes ou adaptations de versus ; aucun n’est présenté comme une animation 1:1 directement attestée. Les paramètres d’une commande désactivée restent visibles comme données du catalogue, sans être exécutés.
@@ -52,28 +57,30 @@ La victoire finale, la défaite finale et la sortie sont suivies séparément. U
 
 ## Suivi de l’intégration après la phase 1
 
-La v0.9.6 et sa continuation appliquent les 230 fiches de rôle et de capacité : **3 713 commandes
-actives et 887 désactivées avec une raison**, sur les 4 600 emplacements conservés.
+La v0.9.6 et sa continuation appliquent les 230 fiches de rôle et de capacité : **3 694 commandes
+actives et 906 désactivées avec une raison**, sur les 4 600 emplacements conservés.
 Les dossiers et l’atelier exposent l’édition exacte et les références.
 
 Les neuf clés `intro`, `winRound`, `loseRound`, `winMatch`, `loseMatch`, `outro`,
-`finisher`, `finished` et `taunt` utilisent des contextes précis. Les 93 montages
-de fatalité écrits, les 301 présentations composées et les 50 éléments partiels
+`finisher`, `finished` et `taunt` utilisent des contextes précis. Les 111 montages
+de fatalité écrits, les 364 présentations composées et les 53 éléments partiels
 d’arène sont identifiés dans leurs lignes. Les images propres à ces gestes
 restent à produire. Les 1 799 lignes d’animation d’arène gardent leurs IDs ;
 1 161 éléments retirés du moteur restent listés pour tracer leur désactivation.
-Sept nouveaux raccords sont détaillés dans les fiches d’arènes concernées.
+Dix nouveaux raccords sont détaillés dans les fiches d’arènes concernées.
+Une piste de Midwich reste masquée par la vue bitmap de la cour ; le plan
+distingue les pistes préparées des 52 pistes actuellement rendues.
 
 Les actions globales des poses de manche et des hooks bitmap sont validées.
 Le chargement des acteurs et des couches de décor est atomique ; les images
-dédiées restent des productions distinctes. **873 actions restent ouvertes
-sur 875, dont 127 P0. Un montage de vol candidat utilise trois images indépendantes ;
-trois images fixes d’Alessa portent la couverture à trois profils et sept PNG
-actifs ; aucune fidélité 1:1 n’est certifiée.**
+dédiées restent des productions distinctes. Onze décisions de rôle sont aussi
+validées, sans fermer leurs productions artistiques. **862 actions restent ouvertes
+sur 875, dont 116 P0. Six profils utilisent dix PNG acteurs et un décor utilise
+un PNG ; un seul montage est animé, aucune fidélité 1:1 n’est certifiée.**
 
-La [validation du 23 octobre](../INTEGRATION_QA_2026-10-23.json) couvre 604 tests
-Node, 96 tests Python et 305 contrôles navigateur dans onze suites. Les 45
-captures, cadres de test et leurs limites sont conservés avec les rapports.
+La [validation du 23 octobre](../INTEGRATION_QA_2026-10-23.json) documente les suites
+avec 651 tests Node, 98 tests Python et 367 contrôles navigateur dans treize suites.
+Les 54 captures, scènes préparées et limites sont conservées avec les rapports.
 
 Pour une mise à jour ciblée, `scripts/update-production-workbook.mjs` prend le
 nouveau JSON du plan, le classeur existant, le précédent rapport
@@ -82,8 +89,11 @@ L’empreinte du précédent plan et les champs annotables sont contrôlés avan
 d’écrire. Les IDs, l’ordre et les champs de travail non concernés sont conservés.
 Le vérificateur accepte `--compare-source CLASSEUR_SOURCE --change-log JOURNAL_JSON`
 et `--layout-change-log JOURNAL_HAUTEURS`. Les journaux peuvent être des `.json.gz`.
-Il compare toutes les cellules et propriétés natives ; seules les augmentations
-de hauteur enregistrées, nécessaires au nouveau texte, sont admises.
+Il compare toutes les cellules et propriétés natives. Les augmentations de hauteur
+nécessaires au nouveau texte sont enregistrées. L'exporteur Python autorise aussi
+l'ajout strict en fin de Sources, avec `--structure-change-log JOURNAL_STRUCTURE`
+obligatoire au contrôle : seules les cellules nouvelles, la table/son filtre et
+la plage de la formule de comptage des sources peuvent être élargis.
 Une reconstruction complète reste un autre parcours, avec la précaution décrite
 ci-dessous pour les annotations manuelles.
 

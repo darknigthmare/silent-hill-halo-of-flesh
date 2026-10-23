@@ -2,7 +2,8 @@
 """Narrow, verified OOXML update without a spreadsheet application.
 
 Usage: update-production-workbook.py PLAN EXISTING_XLSX PREVIOUS_REPORT OUTPUT_DIR PREVIOUS_PLAN
-The row scope is fixed. Untouched ZIP members and unrelated XML are preserved.
+Row scope is fixed except an audited append at the end of Sources.
+Untouched ZIP members and unrelated XML are preserved.
 Only the workbook's COUNTA/COUNTIFS/SUM arithmetic is supported; other formulas
 fail closed. No source timings, art approvals or certification are invented.
 """
@@ -38,6 +39,8 @@ ROLES = {'combatant': 'Combattant', 'stationary-boss': 'Boss fixe',
          'unverified': 'Rôle à vérifier'}
 ANNOTATED = {'owner', 'delivery', 'productionStatus', 'sourceFrameRate',
              'sourceStart', 'sourceImpact', 'sourceEnd'}
+SOURCE_FIELDS = {'id': 'A', 'title': 'B', 'type': 'C', 'scope': 'D',
+                 'caveat': 'E', 'consultedAt': 'F', 'url': 'G'}
 
 
 def scalar(value, field=None):
@@ -113,6 +116,8 @@ class WorkbookEditor:
         self.sheets = {}
         self.changes = []
         self.layout_changes = []
+        self.structure_changes = []
+        self.added_cells = set()
         for item in book.findall('s:sheets/s:sheet', NS):
             target = relationships[item.get(REL + 'id')]
             location = target.lstrip('/') if target.startswith('/') else posixpath.normpath('xl/' + target)
@@ -125,7 +130,7 @@ class WorkbookEditor:
             values = {address: self._read_cell(cell) for address, cell in cells.items()}
             self.sheets[item.get('name')] = {
                 'path': location, 'raw': raw, 'xml': xml, 'prefix': prefix.group(1) or '',
-                'cells': cells, 'values': values, 'writes': {}, 'heights': {},
+                'cells': cells, 'values': values, 'writes': {}, 'heights': {}, 'formula_writes': {},
                 'rows': {row.get('r'): row for row in xml.findall('s:sheetData/s:row', NS)}}
 
     def _read_cell(self, cell):
@@ -160,11 +165,12 @@ class WorkbookEditor:
         if has_formula != formula_cache:
             raise ValueError(f'Refuse changing formula content: {name}!{address}')
         before = sheet['values'][address]
-        if normalize(before) == normalize(after):
+        added = (name, address) in self.added_cells
+        if normalize(before) == normalize(after) and not added:
             return
         after = scalar(after)
         self.changes.append({'sheet': name, 'address': address, 'before': before, 'after': after,
-                             **({'kind': 'formula-cache'} if formula_cache else {})})
+                             **({'kind': 'source-append-cell'} if added else {'kind': 'formula-cache'} if formula_cache else {})})
         sheet['values'][address] = after
         sheet['writes'][address] = (after, formula_cache)
         if isinstance(after, str) and after and not formula_cache and name != 'Synthèse':
@@ -179,6 +185,107 @@ class WorkbookEditor:
             current = float(sheet['rows'][row].get('ht'))
             if required > current:
                 sheet['heights'][row] = max(required, sheet['heights'].get(row, current))
+
+    def append_sources(self, records, layout, old_count):
+        """Only extend the existing seven-column Sources table, never insert rows."""
+        if not records or layout.get('fields') != SOURCE_FIELDS or layout.get('columns') != 7:
+            raise ValueError('Row scope changed: Sources (unsupported append layout)')
+        sheet = self.sheets['Sources']
+        old_end, new_end = old_count + 5, old_count + 5 + len(records)
+        old_range, new_range = f'A5:G{old_end}', f'A5:G{new_end}'
+        if layout.get('rows') != old_count or layout.get('range') != old_range:
+            raise ValueError('Row scope changed: Sources (stale table range)')
+        if not sheet['rows'] or max(map(int, sheet['rows'])) != old_end:
+            raise ValueError('Refuse appending over reserved or annotated source rows')
+        template = sheet['rows'][str(old_end)]
+        if set(template.attrib) - {'r', 'ht', 'customHeight'} or not 0 < float(template.get('ht', '0')) <= 390:
+            raise ValueError('Unsupported source template row properties')
+        source_formula = f"COUNTA('Sources'!$A$6:$A${old_end})"
+        target_formula = f"COUNTA('Sources'!$A$6:$A${new_end})"
+        formulas = [(name, address, cell.findtext('s:f', None, NS))
+                    for name, item in self.sheets.items() for address, cell in item['cells'].items()
+                    if 'Sources' in (cell.findtext('s:f', None, NS) or '')]
+        if formulas != [('Synthèse', 'B16', source_formula)]:
+            raise ValueError('Only the native Sources count formula may be extended')
+        rel_path = posixpath.join(posixpath.dirname(sheet['path']), '_rels', posixpath.basename(sheet['path']) + '.rels')
+        parts = sheet['xml'].findall('s:tableParts/s:tablePart', NS)
+        if len(parts) != 1 or rel_path not in self.parts:
+            raise ValueError('Missing native Sources table')
+        relations = {item.get('Id'): item.get('Target') for item in ET.fromstring(self.parts[rel_path])}
+        target = relations.get(parts[0].get(REL + 'id'))
+        if not target:
+            raise ValueError('Missing native Sources table relationship')
+        table_path = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join(posixpath.dirname(sheet['path']), target))
+        table_raw = self.parts[table_path].decode('utf8')
+        table = ET.fromstring(table_raw)
+        filters = table.findall('s:autoFilter', NS)
+        if (table.get('name') != 'Plansources' or table.get('displayName') != 'Plansources'
+                or table.get('ref') != old_range or len(filters) != 1 or filters[0].get('ref') != old_range
+                or len(table.findall('s:tableColumns/s:tableColumn', NS)) != 7
+                or table.get('totalsRowCount', '0') != '0'):
+            raise ValueError('Unsupported native Sources table')
+        prefix = sheet['prefix']
+        rows_xml = []
+        for number, record in enumerate(records, old_end + 1):
+            if any(field not in record or not isinstance(record[field], str) for field in SOURCE_FIELDS):
+                raise ValueError('Source append requires every mapped source field as text')
+            if not record['id'] or not record['url'].startswith('https://'):
+                raise ValueError('Source append requires an ID and HTTPS URL')
+            cells = []
+            for column in SOURCE_FIELDS.values():
+                old_cell = sheet['cells'].get(column + str(old_end))
+                if old_cell is None or old_cell.find('s:f', NS) is not None:
+                    raise ValueError('Unsupported source template cells')
+                address = column + str(number)
+                style = old_cell.get('s', '0')
+                if not style.isdigit():
+                    raise ValueError('Invalid source cell style')
+                cells.append(f'<{prefix}c r="{address}" s="{style}" t="str"/>')
+                self.added_cells.add(('Sources', address))
+            attrs = {'r': str(number), 'ht': template.get('ht')}
+            if template.get('customHeight') is not None:
+                attrs['customHeight'] = template.get('customHeight')
+            rows_xml.append('<' + prefix + 'row ' + ' '.join(f'{key}="{value}"' for key, value in attrs.items()) + '>' + ''.join(cells) + '</' + prefix + 'row>')
+        closing = f'</{prefix}sheetData>'
+        if sheet['raw'].count(closing) != 1:
+            raise ValueError('Ambiguous source sheetData')
+        raw = sheet['raw'].replace(closing, ''.join(rows_xml) + closing)
+        dimension = sheet['xml'].find('s:dimension', NS)
+        old_dimension = dimension.get('ref') if dimension is not None else None
+        new_dimension = None
+        if old_dimension is not None:
+            match = re.fullmatch(r'(A[1-5]:G)' + str(old_end), old_dimension)
+            if match is None:
+                raise ValueError('Unsupported source dimension')
+            new_dimension = match[1] + str(new_end)
+            raw, count = re.subn(r'(<(?:[\w.-]+:)?dimension\b[^>]*\bref=")' + re.escape(old_dimension) + '"', lambda m: m[1] + new_dimension + '"', raw)
+            if count != 1:
+                raise ValueError('Ambiguous source dimension')
+        sheet['raw'], sheet['xml'] = raw, ET.fromstring(raw)
+        for row in sheet['xml'].findall('s:sheetData/s:row', NS):
+            if int(row.get('r')) <= old_end:
+                continue
+            sheet['rows'][row.get('r')] = row
+            for cell in row:
+                sheet['cells'][cell.get('r')] = cell
+                sheet['values'][cell.get('r')] = None
+        table_raw, count = re.subn(r'(<(?:[\w.-]+:)?(?:table|autoFilter)\b[^>]*\bref=")' + re.escape(old_range) + '"', lambda m: m[1] + new_range + '"', table_raw)
+        if count != 2:
+            raise ValueError('Ambiguous source table range expansion')
+        self.parts[table_path] = table_raw.encode('utf8')
+        summary = self.sheets['Synthèse']
+        summary['cells']['B16'].find('s:f', NS).text = target_formula
+        summary['formula_writes']['B16'] = (source_formula, target_formula)
+        summary['writes']['B16'] = (summary['values']['B16'], True)
+        self.structure_changes.append({'kind': 'append-sources', 'sheet': 'Sources',
+            'oldRows': old_count, 'newRows': new_end - 5, 'oldRange': old_range, 'newRange': new_range,
+            'templateRow': old_end, 'appendedRows': list(range(old_end + 1, new_end + 1)),
+            'appendedIds': [record['id'] for record in records], 'columns': list(SOURCE_FIELDS.values()),
+            'tablePath': table_path, 'oldDimension': old_dimension, 'newDimension': new_dimension,
+            'formula': {'sheet': 'Synthèse', 'address': 'B16', 'before': source_formula, 'after': target_formula}})
+        for number, record in enumerate(records, old_end + 1):
+            for field, column in SOURCE_FIELDS.items():
+                self.set_value('Sources', column + str(number), record[field])
 
     def _shared_index(self, value, original_index):
         if any(item.tag == '{' + MAIN + '}r' for item in self.shared_items[original_index]):
@@ -223,6 +330,11 @@ class WorkbookEditor:
             formula = re.search(rf'<{prefix}f\b[^>]*?(?:/>|>.*?</{prefix}f>)', body, re.S)
             insertion = formula.end() if formula else 0
             body = body[:insertion] + payload + body[insertion:]
+        if address in sheet['formula_writes']:
+            _, updated_formula = sheet['formula_writes'][address]
+            body, count = re.subn(rf'(<{prefix}f\b[^>]*>).*?(</{prefix}f>)', lambda m: m[1] + text_value(updated_formula) + m[2], body, flags=re.S)
+            if count != 1:
+                raise ValueError('Ambiguous source count formula')
         if re.search(r'\bt=', opening):
             opening = re.sub(r'\bt=("[^"]*"|\x27[^\x27]*\x27)', f't="{new_kind}"', opening, count=1)
         else:
@@ -452,7 +564,15 @@ def apply_plan(workbook, plan, previous_plan, previous_report):
     for name, table in TABLES.items():
         layout = previous_report['sheets'][name]
         old_rows, new_rows = previous_plan[table], plan[table]
-        if len(old_rows) != len(new_rows) or len(new_rows) != layout['rows']:
+        appending_sources = name == 'Sources' and len(new_rows) > len(old_rows)
+        if appending_sources:
+            old_ids, new_ids = [row.get('id') for row in old_rows], [row.get('id') for row in new_rows]
+            if (len(old_rows) != layout['rows'] or new_ids[:len(old_ids)] != old_ids
+                    or any(not isinstance(value, str) or not value for value in new_ids)
+                    or len(set(new_ids)) != len(new_ids)):
+                raise ValueError('Row scope changed: Sources (only unique trailing IDs may be appended)')
+            workbook.append_sources(new_rows[len(old_rows):], layout, len(old_rows))
+        elif len(old_rows) != len(new_rows) or len(new_rows) != layout['rows']:
             raise ValueError('Row scope changed: ' + name)
         for index, (old, new) in enumerate(zip(old_rows, new_rows), 6):
             if old['id'] != new['id'] or workbook.value(name, 'A' + str(index)) != old['id']:
@@ -498,8 +618,9 @@ def update_workbook(plan_path, source_path, report_path, output_path, previous_p
         raise ValueError('Previous plan does not match the existing workbook report')
     if (output_path / source_path.name).resolve() == source_path.resolve():
         raise ValueError('Output must not overwrite the source workbook')
-    names = [source_path.name, 'workbook-change-log.json', 'workbook-layout-changes.json',
+    names = [source_path.name, 'workbook-change-log.json', 'workbook-layout-changes.json', 'workbook-structure-changes.json',
              'workbook-change-log.json.gz', 'workbook-layout-changes.json.gz',
+             'workbook-structure-changes.json.gz',
              'workbook-verification.json', 'workbook-export-verification.json']
     if any((output_path / name).exists() for name in names):
         raise ValueError('Output files already exist; choose a new review directory')
@@ -524,12 +645,13 @@ def update_workbook(plan_path, source_path, report_path, output_path, previous_p
         workbook.write(candidate)
         change_bytes = (json.dumps(workbook.changes, ensure_ascii=False, indent=2) + '\n').encode()
         layout_bytes = (json.dumps(workbook.layout_changes, ensure_ascii=False, indent=2) + '\n').encode()
-        for name, payload in [('workbook-change-log', change_bytes), ('workbook-layout-changes', layout_bytes)]:
+        structure_bytes = (json.dumps(workbook.structure_changes, ensure_ascii=False, indent=2) + '\n').encode()
+        for name, payload in [('workbook-change-log', change_bytes), ('workbook-layout-changes', layout_bytes), ('workbook-structure-changes', structure_bytes)]:
             (staging / (name + '.json')).write_bytes(payload)
             (staging / (name + '.json.gz')).write_bytes(gzip.compress(payload, mtime=0))
         validation = validator.verify(plan_path, candidate)
         validation['preservation'] = validator.compare_source(source_path, candidate,
-            staging / 'workbook-change-log.json', staging / 'workbook-layout-changes.json')
+            staging / 'workbook-change-log.json', staging / 'workbook-layout-changes.json', staging / 'workbook-structure-changes.json')
         (staging / 'workbook-export-verification.json').write_text(json.dumps(validation, ensure_ascii=False, indent=2) + '\n')
         report = {'schema': previous_report['schema'], 'input': plan_path.name,
                   'planSha256': hashlib.sha256(plan_bytes).hexdigest(), 'file': source_path.name,
@@ -542,8 +664,14 @@ def update_workbook(plan_path, source_path, report_path, output_path, previous_p
                   'enlargedRows': len(workbook.layout_changes), 'recalculatedFormulas': formulas,
                   'changeLogSha256': hashlib.sha256(change_bytes).hexdigest(),
                   'changeLog': 'workbook-change-log.json.gz', 'layoutChangeLog': 'workbook-layout-changes.json.gz',
+                  'structureChangeLog': 'workbook-structure-changes.json.gz',
+                  'structureChangeLogSha256': hashlib.sha256(structure_bytes).hexdigest(),
+                  'appendedSources': sum(len(change['appendedRows']) for change in workbook.structure_changes),
                   'verification': {'passed': True, 'preservation': validation['preservation']},
                   'limits': 'No visual preview, native Excel session, source timing measurement or art certification performed.'}
+        if workbook.structure_changes:
+            change = workbook.structure_changes[0]
+            report['sheets']['Sources'].update(rows=change['newRows'], range=change['newRange'])
         (staging / 'workbook-verification.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
         for name in names:
             os.replace(staging / name, output_path / name)

@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import xml.etree.ElementTree as ET
 import tempfile
 import unittest
 from xml.sax.saxutils import escape
@@ -85,6 +86,34 @@ class WorkbookUpdateTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.directory = Path(self.temporary.name)
         self.source = self.directory / 'source.xlsx'
+
+    def actual_baseline(self):
+        fixture = ROOT / 'docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx'
+        report = json.loads((ROOT / 'docs/production/workbook-verification.json').read_text())
+        workbook = UPDATE.WorkbookEditor(fixture)
+        previous = {'metrics': deepcopy(report['metrics'])}
+        reverse_roles = {value: key for key, value in UPDATE.ROLES.items()}
+        for sheet, table in UPDATE.TABLES.items():
+            layout = report['sheets'][sheet]
+            previous[table] = []
+            for index in range(6, 6 + layout['rows']):
+                record = {}
+                for field, column in layout['fields'].items():
+                    value = workbook.value(sheet, column + str(index))
+                    if field in {'boss', 'projectile', 'oneToOneValidated'}:
+                        value = value == 'Oui'
+                    if field == 'targetRole':
+                        value = reverse_roles.get(value, value)
+                    record[field] = '' if value is None else value
+                previous[table].append(record)
+        return fixture, report, previous
+
+    @staticmethod
+    def appended_source():
+        return {'id': 'QA_APPEND_ONLY_SOURCE', 'title': 'Synthetic source append fixture',
+                'type': 'technical-fixture', 'scope': 'Only verifies preservation of workbook sources.',
+                'caveat': 'No original footage or artwork certification. ' * 12,
+                'consultedAt': '2026-10-23', 'url': 'https://example.invalid/append-only-source'}
 
     def test_formula_caches_use_current_data_including_sum_and_open_p0_counts(self):
         tiny_workbook(self.source)
@@ -171,6 +200,93 @@ class WorkbookUpdateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Previous plan does not match'):
             UPDATE.update_workbook(plan, self.source, report_path, output, plan)
         self.assertFalse(output.exists())
+
+    def test_source_append_updates_only_trailing_cells_table_ranges_and_one_count_formula(self):
+        fixture, report, previous = self.actual_baseline()
+        payload = (json.dumps(previous, ensure_ascii=False, indent=2) + '\n').encode()
+        report['planSha256'] = hashlib.sha256(payload).hexdigest()
+        old_path, report_path, plan_path = [self.directory / name for name in ['old.json', 'report.json', 'new.json']]
+        old_path.write_bytes(payload)
+        report_path.write_text(json.dumps(report))
+        plan = deepcopy(previous)
+        source = self.appended_source()
+        plan['sources'].append(source)
+        plan['metrics']['sources'] = len(plan['sources'])
+        plan_path.write_text(json.dumps(plan, ensure_ascii=False))
+        destination = self.directory / 'append'
+        result = UPDATE.update_workbook(plan_path, fixture, report_path, destination, old_path)
+        output = destination / fixture.name
+        exported, original = UPDATE.WorkbookEditor(output), UPDATE.WorkbookEditor(fixture)
+        end = len(plan['sources']) + 5
+        for field, column in UPDATE.SOURCE_FIELDS.items():
+            self.assertEqual(exported.value('Sources', column + str(end)), source[field])
+            self.assertEqual(exported.sheets['Sources']['cells'][column + str(end)].get('s'), original.sheets['Sources']['cells'][column + str(end - 1)].get('s'))
+        self.assertEqual(exported.value('Synthèse', 'B16'), len(plan['sources']))
+        self.assertEqual(exported.sheets['Synthèse']['cells']['B16'].findtext('s:f', namespaces=UPDATE.NS), f"COUNTA('Sources'!$A$6:$A${end})")
+        self.assertEqual(result['sheets']['Sources']['rows'], len(plan['sources']))
+        self.assertEqual(result['sheets']['Sources']['range'], f'A5:G{end}')
+        preservation = result['verification']['preservation']
+        self.assertTrue(preservation['passed'])
+        self.assertEqual(preservation['appendedSourceRows'], 1)
+        self.assertEqual(preservation['appendedSourceCells'], 7)
+        self.assertEqual(preservation['auditedFormulaExpansions'], 1)
+        self.assertEqual(len(result['recalculatedFormulas']), 80)
+        structure = json.loads((destination / 'workbook-structure-changes.json').read_text())
+        allowed_parts = {original.sheets['Sources']['path'], original.sheets['Synthèse']['path'], structure[0]['tablePath']}
+        with ZipFile(fixture) as before, ZipFile(output) as after:
+            self.assertEqual(before.namelist(), after.namelist())
+            for name in before.namelist():
+                if name not in allowed_parts:
+                    self.assertEqual(before.read(name), after.read(name), name)
+            table = ET.fromstring(after.read(structure[0]['tablePath']))
+            self.assertEqual(table.get('ref'), f'A5:G{end}')
+            self.assertEqual(table.find('s:autoFilter', UPDATE.NS).get('ref'), f'A5:G{end}')
+        validator = UPDATE.load_validator()
+        logs = [destination / name for name in ['workbook-change-log.json', 'workbook-layout-changes.json', 'workbook-structure-changes.json']]
+        with self.assertRaises(AssertionError):
+            validator.compare_source(fixture, output, *logs[:2])
+        forged = deepcopy(structure)
+        forged[0]['formula']['after'] = 'SUM(1,136)'
+        forged_path = self.directory / 'forged-structure.json'
+        forged_path.write_text(json.dumps(forged))
+        with self.assertRaisesRegex(AssertionError, 'exact Sources count formula'):
+            validator.compare_source(fixture, output, *logs[:2], forged_path)
+        # Wrong new-cell style, another formula, a row flag and unrelated ZIP bytes
+        # must each fail independently, even with the genuine append journal.
+        source_part, summary_part = original.sheets['Sources']['path'], original.sheets['Synthèse']['path']
+        source_prefix = original.sheets['Sources']['prefix']
+        with ZipFile(output) as archive:
+            entries = {name: archive.read(name) for name in archive.namelist()}
+        mutations = [
+            (source_part, lambda raw: raw.replace(f'r="G{end}" s="16"'.encode(), f'r="G{end}" s="0"'.encode(), 1)),
+            (summary_part, lambda raw: raw.replace(b"COUNTA('Combattants'!$A$6:$A$235)", b'SUM(230)', 1)),
+            (source_part, lambda raw: raw.replace(f'<{source_prefix}row r="{end}"'.encode(), f'<{source_prefix}row hidden="1" r="{end}"'.encode(), 1)),
+            (source_part, lambda raw: raw.replace(f'r="A{end - 1}" s="10"'.encode(), f'r="A{end - 1}" cm="1" s="10"'.encode(), 1)),
+            ('xl/styles.xml', lambda raw: raw + b' ')
+        ]
+        for number, (part, mutate) in enumerate(mutations):
+            changed = mutate(entries[part])
+            self.assertTrue(changed != entries[part], 'Tamper fixture failed to alter ' + part)
+            tampered = self.directory / f'tampered-{number}.xlsx'
+            with ZipFile(tampered, 'w') as archive:
+                for name, value in entries.items():
+                    archive.writestr(name, changed if name == part else value)
+            with self.assertRaises(AssertionError, msg=part):
+                validator.compare_source(fixture, tampered, *logs)
+
+    def test_source_append_refuses_reordering_insertion_deletion_and_other_table_expansion(self):
+        fixture, report, previous = self.actual_baseline()
+        for mutate in [
+            lambda plan: plan['sources'].insert(0, self.appended_source()),
+            lambda plan: plan['sources'].reverse(),
+            lambda plan: plan['sources'].pop(),
+            lambda plan: plan['sources'].append(deepcopy(plan['sources'][0])),
+            lambda plan: plan['fighters'].append(deepcopy(plan['fighters'][0]))
+        ]:
+            plan = deepcopy(previous)
+            mutate(plan)
+            with self.assertRaisesRegex(ValueError, 'Row scope changed|Order or IDs changed'):
+                UPDATE.apply_plan(UPDATE.WorkbookEditor(fixture), plan, previous, report)
 
     def test_actual_workbook_updates_all_mapped_tables_and_recalculates_80_formulas(self):
         # Reconstruct the mapped baseline from the fixture workbook, independently

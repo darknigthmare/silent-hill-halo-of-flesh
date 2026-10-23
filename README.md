@@ -1,6 +1,29 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Continuation du 23 octobre 2026
+## Chantiers parallèles du 23 octobre 2026
+
+Les six chantiers ont avancé ensemble : trois nouveaux sprites SH2 candidats,
+un premier décor bitmap de la cour Midwich, 18 finishers et 63 présentations
+supplémentaires, trois pistes de lieu et onze décisions de rôle sourcées.
+Le suivi compte **862 actions ouvertes, dont 116 P0**. Les onze actions clôturées
+concernent le rôle des sujets ; les images et animations restent à valider.
+
+La couverture atteint **6 profils, 10 PNG acteurs et 1 PNG de décor**, avec un
+seul montage animé candidat et aucune certification 1:1. Le Mannequin généré
+reste exclu pour anatomie incorrecte après refus de sa dernière correction par
+l'outil d'image. Les gestes de Crawling, Needler, Smog, Eddie et Mary/Maria sont
+corrigés ; le catalogue conserve 3 694 commandes actives et 906 désactivées.
+
+Un outil de relevés source contrôle identité, édition, empreinte vidéo, FPS et
+frames annotées. Les 4 600 relevés originaux restent à effectuer.
+
+**Validation : 651 tests Node, 98 tests Python et 367 contrôles navigateur dans
+treize suites ; 54 captures et aucune erreur JavaScript.**
+
+[Détails, sources et limites](docs/production/CHANTIERS_PARALLELES_2026-10-23.md) ·
+[Classeur](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Passe de fidélité précédente — 23 octobre 2026
 
 Memory of Alessa dispose des quatre phases d’armes dans l’ordre SH3 : couteau,
 pistolet, tuyau et mitraillette. Cybil abandonne son arme après dix tirs ou sous
@@ -375,6 +398,9 @@ La direction, l’état aérien et les fenêtres de combat sélectionnent les va
 ## Lancer localement
 
 Prérequis : **Node.js 20 ou supérieur**. Pour la QA Chromium, exécuter d’abord `npm install` afin d’installer `playwright-core`.
+La validation des décors PNG et les outils artistiques demandent aussi Python 3
+et Pillow : `python3 -m pip install -r requirements-art.txt`. Avec un environnement
+virtuel, définir `HALO_PYTHON` vers son exécutable Python avant le build et les tests.
 
 ```bash
 npm start

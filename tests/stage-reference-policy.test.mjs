@@ -91,7 +91,7 @@ test('geographic corrections change the actual displayed name and retain the for
 test('the first Room 302 and distinct SH4 subway cannot inherit later hauntings or the SH3 train hazard',()=>{
   const room=stage('room_302'),subway=stage('subway_world'),hazel=stage('hazel_subway');
   assert.equal(room.shift.enabled,false);assert.equal(room.shift.startOtherworld,false);assert.equal(room.referencePolicy.worldState,'fixed-normal');
-  assert.deepEqual(room.director.events,[]);assert.deepEqual(room.director.hazardDeck,[]);assert.ok(!room.animations.includes('doorPulse'));
+  assert.deepEqual(room.director.events,['referenceWashroomReply']);assert.deepEqual(room.director.hazardDeck,[]);assert.ok(!room.animations.includes('doorPulse'));
   assert.ok(!subway.director.events.includes('trainRumble'));assert.ok(!subway.director.hazardDeck.includes('trainRush'));
   assert.ok(hazel.director.events.includes('trainRumble'));assert.deepEqual(hazel.director.hazardDeck,['trainRush']);
 });
@@ -125,7 +125,7 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,50);assert.equal(keys.size,20);assert.equal(keys.size,Object.keys(STAGE_REFERENCE_TRACKS).length);
+  assert.equal(tracks.length,53);assert.equal(keys.size,23);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];

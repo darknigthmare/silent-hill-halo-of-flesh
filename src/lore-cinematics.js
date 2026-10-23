@@ -54,6 +54,13 @@ const RECIPES={
     beat('CHUTE DERRIERE LE VOILE',32,frame('release',.38),frame('fall',.22,36,.35), 'mist','hit',.97),
     beat('RETOUR A LA CONTRAINTE',48,frame('hold',.25),frame('held',.22,36,.35), 'mist','silence',1)
   ]},
+  proneRam:{targets:STANDING,maxTargetHeight:310,steps:[
+    beat('CORPS MAINTENU AU SOL',37,frame('prone-crawl',.12),frame('watch'), 'dust','scrape',.98),
+    beat('PERCUSSION RAMPANTE',29,frame('prone-ram',.7),frame('unbalanced',.1,12), 'impact','hit',.95),
+    beat('CIBLE DESEQUILIBREE',27,frame('prone-brace',.65),frame('fall',.22,35), 'dust','cloth',.94),
+    beat('OCCULTATION BASSE',34,frame('prone-withdraw',.46),frame('occluded',.22,35,.24), 'vignette','silence',.98),
+    beat('RETRAIT TOUJOURS COUCHE',49,frame('prone-crawl',.31),frame('held',.22,35,.24), 'vignette','scrape',1)
+  ]},
   mannequinStillness:{targets:PHYSICAL,steps:[
     beat('IMMOBILITE',48,frame('still'),frame('watch'), 'vignette','silence'),
     beat('RUPTURE DE POSTURE',18,frame('leg-raise',.26),frame('brace'), 'wind','rush',.96),
@@ -173,6 +180,69 @@ const RECIPES={
     beat('CADRE FERME',31,frame('hold',.7),frame('occluded',.1,29,.2), 'vignette','breath',.97),
     beat('REPLI SANS NOUVEAU CORPS',48,frame('retract',.48),frame('held',.1,36,.2), 'vignette','silence',1)
   ]},
+  childThreshold:{targets:STANDING,weapon:'knife',maxTargetHeight:310,propsAny:['door','doors','corridor'],steps:[
+    beat('LAME PRES DU CORPS',39,frame('knife-close',.08),frame('watch'), 'vignette','breath',.98),
+    beat('PRISE A HAUTEUR DES JAMBES',28,frame('low-grip',.71),frame('unbalanced',.03,12), 'vignette','cloth',.95),
+    beat('CHUTE DEVANT LE SEUIL',24,frame('brace-low',.68),frame('fall',.12,35), 'impact','hit',.94),
+    beat('COULOIR OCCULTE',41,frame('knife-held',.48),frame('occluded',.12,35,.22), 'shutter','silence',.97),
+    beat('PETITE SILHOUETTE IMMOBILE',48,frame('hold',.4),frame('held',.12,35,.22), 'vignette','breath',1)
+  ]},
+  clawThreshold:{targets:STANDING,maxTargetHeight:310,propsAny:['door','doors','corridor'],steps:[
+    beat('GRIFFES BASSES',36,frame('claws-low',.12),frame('watch'), 'dust','scrape',.98),
+    beat('CROCHETAGE DES APPUIS',30,frame('claw-hook',.69),frame('unbalanced',.01,18), 'impact','cloth',.95),
+    beat('TRACTION VERS LE SEUIL',33,frame('pull-low',.48),frame('fall',-.19,37), 'dust','scrape',.94),
+    beat('REPLI DANS L ANGLE',31,frame('retract-claws',.33),frame('occluded',-.25,37,.2), 'blackout','silence',.98),
+    beat('GRIFFES AU REPOS',47,frame('hold-low',.28),frame('held',-.25,37,.2), 'vignette','breath',1)
+  ]},
+  fourPointPin:{targets:STANDING,maxTargetHeight:310,steps:[
+    beat('QUATRE APPUIS',33,frame('four-supports',-.1),frame('brace'), 'dust','breath',.98),
+    beat('BOND DE PLAQUAGE',29,frame('pounce',.72,-31),frame('recoil',.08,10), 'wind','rush',.95),
+    beat('APPUI AU DESSUS DE LA CIBLE',27,frame('pin-low',.83),frame('fall',.16,36), 'impact','heavy',.94),
+    beat('OMBRE DU TORSE',38,frame('pin-hold',.8),frame('occluded',.16,36,.24), 'vignette','breath',.97),
+    beat('MAINTIEN SUR LES MAINS',48,frame('four-supports',.67),frame('held',.16,36,.24), 'vignette','silence',1)
+  ]},
+  closingArmFrame:{targets:STANDING,maxTargetHeight:310,propsAny:['door','doors','corridor','hallway'],steps:[
+    beat('BRAS DEVANT LE PASSAGE',43,frame('arms-forward',.14),frame('brace'), 'vignette','creak',.97),
+    beat('POUSSEE DU BRAS',30,frame('arm-press',.64),frame('backstep',.15,5), 'impact','heavy',.94),
+    beat('SILHOUETTE CONTRE L ENCADREMENT',29,frame('arm-hold',.74),frame('gripped',.24,13), 'vignette','creak',.93),
+    beat('PASSAGE MASQUE',36,frame('occlude',.79),frame('occluded',.24,32,.17), 'shutter','silence',.97),
+    beat('RETRAIT DES BRAS EXISTANTS',45,frame('arms-retract',.51),frame('held',.24,32,.17), 'vignette','breath',1)
+  ]},
+  revolverDoor:{targets:STANDING,weapon:'revolver',propsAny:['door','doors','corridor','ward'],steps:[
+    beat('REVOLVER PRES DU TORSE',40,frame('revolver-held',.1),frame('watch'), 'vignette','metal',.98),
+    beat('MENACE A COURTE PORTEE',32,frame('revolver-level',.49),frame('brace',.03), 'vignette','breath',.95),
+    beat('CADRE DEVANT LE CONTACT',28,frame('approach',.66),frame('occluded',.08,6,.35), 'shutter','cloth',.94),
+    beat('COUP DE CROSSE HORS CHAMP',24,frame('revolver-butt',.7),frame('fall',.14,35,.2), 'blackout','hit',.96),
+    beat('ARME ABAISSEE SANS TIR AJOUTE',49,frame('revolver-lowered',.4),frame('held',.14,35,.2), 'vignette','silence',1)
+  ]},
+  patientBedside:{targets:STANDING,weapon:'club',propsAny:['beds','gurneys'],steps:[
+    beat('CLUB DANS LE PASSAGE',39,frame('club-drag',.16),frame('brace'), 'vignette','scrape',.98),
+    beat('APPROCHE DU LIT',32,frame('club-ready',.51),frame('backstep',.09), 'vignette','step',.95),
+    beat('COUP DERRIERE LE MOBILIER',26,frame('club-down',.72),frame('fall',.2,33,.4), 'shutter','heavy',.94),
+    beat('BRAS AU REPOS',33,frame('club-low',.53),frame('occluded',.2,35,.18), 'vignette','breath',.98),
+    beat('SILENCE HOSPITALIER',48,frame('hold',.46),frame('held',.2,35,.18), 'vignette','silence',1)
+  ]},
+  screamBackGrip:{targets:STANDING,maxTargetHeight:310,steps:[
+    beat('APPROCHE A DECOUVERT',37,frame('approach',.29),frame('watch'), 'vignette','step',.98),
+    beat('CRI COURT SANS PROJECTILE',24,frame('scream',.45),frame('brace',.04), 'vignette','hiss',.95),
+    beat('DEPLACEMENT VERS LE DOS',35,frame('pass-side',1.08),frame('turn',.05), 'wind','rush',.94),
+    beat('SAISIE DORSALE',28,frame('back-grip',1.03),frame('fall',.08,34,.4), 'impact','hit',.95),
+    beat('RETRAIT DU CORPS UNIQUE',51,frame('withdraw',.69),frame('held',.08,34,.24), 'vignette','breath',1)
+  ]},
+  barredHeavyThrow:{targets:STANDING,maxTargetHeight:310,propsAny:['bars','cells'],steps:[
+    beat('PRESENCE DEVANT LA GRILLE',42,frame('heavy-stance',.11),frame('brace'), 'vignette','breath',.98),
+    beat('SAISIE RAPPROCHEE',32,frame('two-hand-grip',.69),frame('gripped',.05,5), 'vignette','creak',.95),
+    beat('PROJECTION LOURDE',28,frame('throw',.73),frame('thrown',.38,24), 'impact','heavy',.93),
+    beat('GRILLE DEVANT LA CHUTE',32,frame('release',.57),frame('occluded',.43,38,.2), 'rail-shadow','metal',.97),
+    beat('POIDS DE NOUVEAU STABLE',46,frame('heavy-stance',.47),frame('held',.43,38,.2), 'vignette','silence',1)
+  ]},
+  hammerSentence:{targets:STANDING,weapon:'hammer',maxTargetHeight:310,steps:[
+    beat('MARTEAU PRES DU SOL',43,frame('hammer-low',.12),frame('brace'), 'vignette','scrape',.98),
+    beat('IMMOBILISATION RAPPROCHEE',33,frame('one-hand-hold',.67),frame('gripped',.04), 'vignette','creak',.95),
+    beat('ARMEMENT UNIQUE DU MARTEAU',35,frame('hammer-up',.68),frame('held',.04), 'vignette','metal',.92),
+    beat('ABATTEMENT UNIQUE OCCULTE',25,frame('hammer-down',.72),frame('fall',.15,36,.22), 'blackout','heavy',.96),
+    beat('MARTEAU CONSERVE',47,frame('hammer-low',.45),frame('held',.15,36,.22), 'vignette','silence',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -187,7 +257,7 @@ const FIGHTER_RECIPES=Object.freeze({
   sh1_groaner_003:'canineClamp',sh1_wormhead_004:'canineClamp',sh3_double_head_040:'canineClamp',
   sh4_sniffer_dog_male_053:'canineClamp',sh4_sniffer_dog_female_054:'canineClamp',homecoming_feral_086:'canineClamp',
   sh1_split_head_014:'splitJaw',sh1_puppet_nurse_012:'clinicalDoor',sh1_puppet_doctor_013:'clinicalDoor',
-  sh2_lying_figure_020:'constrainedBreath',sh2_lying_figure_crawling_021:'constrainedBreath',
+  sh2_lying_figure_020:'constrainedBreath',sh2_lying_figure_crawling_021:'proneRam',
   sh2_mannequin_022:'mannequinStillness',sh2_mannequin_ambusher_023:'mannequinStillness',
   sh2_spider_mannequin:'ceilingAmbush',homecoming_scarlet_spider_form_095:'ceilingAmbush',
   sh2_bubble_head_nurse_024:'pipeCurtain',sh3_nurse_pipe_043:'clinicalDoor',
@@ -199,8 +269,26 @@ const FIGHTER_RECIPES=Object.freeze({
   homecoming_needler_088:'needleCross',homecoming_schism_089:'headBlade',homecoming_siam_090:'doubleDown',
   homecoming_scarlet_doll_form_094:'doubleDown',origins_faceless_nurse:'clinicalInjection',origins_the_butcher_081:'butcherClamp',
   homecoming_asphyxia_096:'enclosingArms',film_mannequin_monster_176:'enclosingArms',
-  film_red_pyramid_film_175:'filmGrip'
+  film_red_pyramid_film_175:'filmGrip',
+  sh1_grey_child_005:'childThreshold',sh1_mumbler_006:'clawThreshold',sh1_romper_010:'fourPointPin',
+  sh3_closer_036:'closingArmFrame',sh3_nurse_revolver_044:'revolverDoor',sh4_patient_060:'patientBedside',
+  downpour_screamer_104:'screamBackGrip',downpour_prisoner_juggernaut_110:'barredHeavyThrow',downpour_bogeyman_115:'hammerSentence'
 });
+
+/* Presentation intent belongs to the exact subject. These world-space edits
+ * stage its workbook proposal; they do not draw the absent limb/weapon poses. */
+const PRESENTATION_STAGING=Object.freeze({
+  sh1_grey_child_005:{id:'grey-child-knife-threshold',entry:18,retreat:48,recoil:6,poses:['knife-close-entry','knife-head-inclination','knife-side-held','seated-support-recovery','knife-return-to-threshold','knife-visible-final-hold','watchful-threshold-retreat']},
+  sh1_mumbler_006:{id:'mumbler-low-claws',entry:26,retreat:43,recoil:9,poses:['low-claw-entry','claws-ground-threat','claws-supported-hold','low-body-regains-support','claws-turn-to-shadow','claws-relaxed-final-hold','low-shadow-retreat']},
+  sh1_romper_010:{id:'romper-four-supports',entry:57,retreat:61,recoil:11,landing:34,poses:['four-support-landing','torso-threat-on-four-supports','four-support-watch','shoulder-recovery-to-four-supports','four-support-final-watch','side-support-final-hold','four-support-departure']},
+  sh3_closer_036:{id:'closer-arms-in-passage',entry:17,retreat:24,recoil:8,poses:['closer-arms-entry','closer-arm-extension-threat','closer-arms-held','closer-arms-regain-support','closer-passage-held','closer-arms-final-hold','closer-arms-withdraw']},
+  sh3_nurse_revolver_044:{id:'sh3-revolver-held',entry:12,retreat:30,recoil:8,poses:['revolver-close-entry','revolver-mute-threat','revolver-held-at-side','revolver-visible-recovery','revolver-lowered-final-watch','revolver-visible-final-hold','revolver-retained-exit']},
+  sh4_patient_060:{id:'sh4-patient-club-weight',entry:20,retreat:29,recoil:10,poses:['patient-club-weighted-entry','patient-club-mute-threat','patient-club-stable-hold','patient-club-support-recovery','patient-club-final-watch','patient-club-final-hold','patient-club-weighted-retreat']},
+  downpour_screamer_104:{id:'downpour-screamer-presence',entry:29,retreat:40,recoil:9,poses:['screamer-close-entry','screamer-mute-threat-without-wave','screamer-watch','screamer-regains-support','screamer-final-watch','screamer-final-hold','screamer-recedes']},
+  downpour_prisoner_juggernaut_110:{id:'downpour-juggernaut-weight',entry:11,retreat:20,recoil:6,poses:['juggernaut-presence-awaiting-bar-pose','juggernaut-fist-threat','juggernaut-weight-stable','juggernaut-weight-recovery','juggernaut-final-watch','juggernaut-weight-final-hold','juggernaut-weight-retreat']},
+  downpour_bogeyman_115:{id:'downpour-hammer-weight',entry:15,retreat:26,recoil:7,poses:['hammer-raised-entry','hammer-mute-threat','hammer-weight-stable','hammer-retained-recovery','hammer-lowered-final-watch','hammer-retained-final-hold','hammer-weighted-exit']}
+});
+const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 
 function compileRecipe(recipe,type) {
   const steps=recipe.steps.map(step=>({...step,attacker:{...step.attacker},target:{...step.target}}));
@@ -354,10 +442,12 @@ export function cinematicSummary(definitionId) {
 export function lorePresentation(actor,key) {
   const data=dataOf(actor),ref=sourceOf(actor),proposal=proposalFor(actor,key);
   const contextId=`${data.id}:${proposalKey(key)}`;
-  return {contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
+  const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=PRESENTATION_STAGING[data.id];
+  return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored:approvedProposal(proposal)&&Boolean(FIGHTER_RECIPES[data.id]),
-    reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing'};
+    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon),
+    stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
+    reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
 }
 
 /** Pure sampling. x offsets use the initial actor distance, y values are world
@@ -398,9 +488,22 @@ export function retimeLoreCinematic(plan,duration) {
  * A missing authored presentation adds no arbitrary limb motion. */
 export function sampleLorePresentation(actor,presentation) {
   const ref=presentation?.lore;if(!ref?.authored)return neutral();
+  const data=dataOf(actor);
+  if(ref.ownerId!==data.id||ref.source!==data.source)return neutral();
   const key=presentation.key,p=clamp(presentation.progress||0),body=ref.bodyKind;
   const locomotion=combatPolicy(actor).canMove!==false;
   const facing=actor.facing||1;
+  const staging=PRESENTATION_STAGING[data.id];
+  if(staging&&ref.stagingId===staging.id){
+    const pose=staging.poses[PRESENTATION_POSE_INDEX[key]];
+    if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(p)):0,
+      y:locomotion&&combatPolicy(actor).canJump!==false&&staging.landing?-staging.landing*(1-ease(p)):0,
+      alpha:clamp(p*4),pose};
+    if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,y:0,alpha:1,
+      pose:p<.6?pose:pose+'-ready'};
+    if(key==='outro'&&locomotion)return {x:-facing*staging.retreat*ease(p),y:0,alpha:1-clamp((p-.6)/.4),pose};
+    return {...neutral(),pose:pose||'hold'};
+  }
   if(key==='intro') {
     if(body==='flyer')return {x:-facing*55*(1-ease(p)),y:-95*(1-ease(p)),alpha:clamp(p*4),pose:'descent-to-support'};
     if(locomotion&&body==='quadruped')return {x:-facing*65*(1-ease(p)),y:0,alpha:clamp(p*5),pose:'low-approach'};
@@ -417,6 +520,7 @@ export function sampleLorePresentation(actor,presentation) {
 }
 
 export const LORE_CINEMATIC_COVERAGE=Object.freeze({fighterIds:Object.freeze(Object.keys(FIGHTER_RECIPES)),recipes:Object.freeze(Object.keys(RECIPES)),
+  presentationStagingIds:Object.freeze(Object.keys(PRESENTATION_STAGING)),
   stageIds:Object.freeze(Object.keys(STAGE_RECIPES)),fidelity:'original-versus-staging',animatedImagesCreated:0});
 
 /** Procedural light, mist and cutaways only. Never draw a replacement monster,

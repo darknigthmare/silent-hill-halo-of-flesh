@@ -1,5 +1,5 @@
 /* Original perspective sets. These are not traced recreations of official maps. */
-const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior']);
+const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth']);
 export function stageSpace(stage) {
   return stage?.id === 'brookhaven_roof' ? 'exterior' : INTERIORS.has(stage?.family) ? 'interior' : 'exterior';
 }
@@ -45,10 +45,15 @@ export function drawStageArchitecture(c,w,h,stage) {
     c.fillStyle='#101715';c.fillRect(doorX,doorY,doorW,h*.25);
     c.fillStyle=medical?'#4c6159':'#403b30';c.fillRect(doorX+4,doorY+4,doorW-8,h*.25-8);
     c.fillStyle='#a09c7f';c.fillRect(doorX+doorW-16,doorY+h*.14,5,10);
-    if(stage.id==='room_302') {
+    if(stage.id==='room_302'&&stage.source==='sh4') {
       line(c,doorX,doorY+33,doorX+doorW,doorY+133,'#70726a',4);
       line(c,doorX+doorW,doorY+24,doorX,doorY+142,'#70726a',4);
       c.fillStyle='#b3aa8f';c.font='12px ui-monospace';c.textAlign='center';c.fillText('302',vx,doorY+25);
+      // The early washroom opening is a fixed rear prop, never a duel portal.
+      const holeX=w*.78,holeY=h*.49;
+      c.fillStyle='#0a1010';c.beginPath();c.ellipse(holeX,holeY,31,39,-.12,0,Math.PI*2);c.fill();
+      c.strokeStyle='rgba(120,119,99,.36)';c.lineWidth=4;c.stroke();
+      for(const [dx,dy] of [[-35,-24],[32,-28],[-34,31],[34,32]])line(c,holeX+dx*.75,holeY+dy*.75,holeX+dx*1.25,holeY+dy*1.25,'rgba(22,25,22,.65)',2);
     }
   }
   // Fixtures share the wall plane with shadows behind, not an outside skyline.

@@ -59,7 +59,8 @@ test('documented jets, gunfire and the final SH2 insect swarm survive without gr
     const p = profile(id);
     assert.equal(p.moves.neutralSpecial.projectile, true, id);
     assert.equal(p.moves.neutralSpecial.projectileCount, 1, id);
-    assert.equal(p.moves.neutralSpecial.effect, null, id);
+    const swarm=['sh2_maria_final_manifestation_033','sh2_mary_final_manifestation_034'].includes(id);
+    assert.equal(p.moves.neutralSpecial.effect?.id??null, swarm?'bind':null, id);
     assert.equal(p.moves.forwardSpecial.projectile, false, id);
     assert.equal(p.moves.airSpecial.projectile, false, id);
   }

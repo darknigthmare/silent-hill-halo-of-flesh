@@ -4,7 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {ROSTER,STAGES,createCombatProfile} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
-import {combineResearch,validateResearch,buildProductionPlan,PROPOSAL_KEYS,CORE_POSES,PRESENTATION_CLIPS} from '../scripts/build-production-plan.mjs';
+import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
+import {combineResearch,validateResearch,buildProductionPlan,roleDecisionRuntimeCompatible,PROPOSAL_KEYS,CORE_POSES,PRESENTATION_CLIPS} from '../scripts/build-production-plan.mjs';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 
 const parts=await Promise.all(['classic','extended'].map(async name=>
@@ -137,6 +138,9 @@ test('engine timing remains distinct from unmeasured source frames and no artwor
   }
   assert.equal(plan.metrics.pngCandidates,ROSTER.filter(f=>SPRITES[f.id]).length);
   assert.equal(plan.metrics.animatedClips,ROSTER.reduce((sum,f)=>sum+(SPRITES[f.id]?.animatedClips||0),0));
+  const capture=plan.tasks.find(t=>t.id==='global:reference-capture');
+  assert.equal(capture.status,'En cours');assert.match(capture.reason,/FPS rationnels.*ffprobe.*Zéro relevé original livré/);
+  assert.equal(plan.metrics.sourceTimingSchema,1);assert.equal(plan.metrics.measuredSourceMoves,0);
 });
 
 test('planning is deterministic and leaves both research and gameplay catalogues unchanged',()=>{
@@ -165,10 +169,96 @@ test('implementation progress maps to real hooks while every unproduced artistic
  assert.equal(task('global:round-boundaries').status,'Validé');
  assert.equal(task('global:cinematic-clips').status,'Validé');
  assert.match(task('global:cinematic-clips').reason,/Chargement atomique acteurs et couches bitmap du lieu.*PNG dédiés et décors restent à produire/);
- for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène'))assert.notEqual(row.status,'Validé',row.id);
+ for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène')){
+  const resolved=row.id.endsWith(':role')&&plan.fighters.find(f=>f.id===row.entityId)?.roleResolved;
+  assert.equal(row.status==='Validé',Boolean(resolved),row.id);
+ }
  for(const row of plan.tasks.filter(row=>row.id.endsWith(':art')))
-  assert.equal(row.status,SPRITES[row.entityId]?.frames.length>1?'En cours':'À faire',row.id);
+  assert.equal(row.status,SPRITES[row.entityId]?.frames.length>0?'En cours':'À faire',row.id);
  assert.equal(plan.metrics.animatedClips,1);assert.equal(plan.metrics.certifiedOneToOne,0);
+});
+
+function roleFixture(){
+ const changed=mutated(r=>{for(const f of r.fighters)delete f.roleDecision;});
+ const ref=changed.fighters.find(f=>f.id==='sh3_glutton');
+ ref.roleDecision={status:'resolved',fighterId:ref.id,decision:ref.combatRole,edition:ref.referenceEdition,
+  evidence:[ref.referenceIds[0]],rationale:'Fixture: source-confirmed obstruction, with no autonomous combat.',reviewedAt:'2026-10-23'};
+ return {changed,ref,fighter:ROSTER.find(f=>f.id===ref.id)};
+}
+
+test('a sourced noncombat role closes only its identity decision while production remains open',()=>{
+ const {changed,ref}=roleFixture(),generated=buildProductionPlan(changed);
+ const row=generated.fighters.find(f=>f.id===ref.id),tasks=generated.tasks.filter(t=>t.entityId===ref.id);
+ assert.equal(row.roleResolved,true);assert.match(row.identityNote,/Rôle confirmé.*obstacle du décor.*SH3 original 2003/);
+ assert.equal(tasks.find(t=>t.id.endsWith(':role')).status,'Validé');
+ for(const t of tasks.filter(t=>!t.id.endsWith(':role')))assert.notEqual(t.status,'Validé',t.id);
+ for(const m of generated.moves.filter(m=>m.fighterId===ref.id)){
+  assert.equal(m.enabled,false);assert.equal(m.productionStatus,'À tester');assert.match(m.target,/Ne produire aucune attaque autonome/);
+  for(const key of ['sourceFrameRate','sourceStart','sourceImpact','sourceEnd'])assert.equal(m[key],'');
+ }
+ for(const p of [...generated.poses,...generated.presentations].filter(p=>p.fighterId===ref.id))assert.equal(p.productionStatus,'À produire',p.id);
+ assert.equal(generated.metrics.resolvedRoleDecisions,1);
+ assert.equal(generated.metrics.openActions,generated.tasks.filter(t=>t.status!=='Validé').length);
+ assert.equal(generated.metrics.openP0,generated.tasks.filter(t=>t.status!=='Validé'&&t.priority==='P0').length);
+});
+
+test('a role review rejects forged identity, borrowed evidence, unknown edition and malformed approval',()=>{
+ const corruptions=[
+  (d,r)=>d.fighterId='sh3_valtiel_051',
+  d=>d.edition='SH2 remake 2024',
+  (d,r)=>delete r.referenceEdition,
+  d=>d.decision='combatant',
+  d=>d.evidence=[],
+  d=>d.evidence=['CL_SH1_07_NIGHTMARE_HOSPITAL'],
+  d=>d.evidence.push(d.evidence[0]),
+  d=>d.evidence=['UNKNOWN_SOURCE'],
+  d=>d.rationale=' ',
+  d=>d.reviewedAt='2026-02-30',
+  d=>d.status='approved',
+  (d,r)=>r.identityStatus='unverified'
+ ];
+ for(const corrupt of corruptions){
+  const {changed,ref}=roleFixture();corrupt(ref.roleDecision,ref);
+  assert.throws(()=>validateResearch(changed),/role decision/);
+ }
+});
+
+test('a role review cannot close a runtime that still exposes combat or belongs to another edition',()=>{
+ const {ref,fighter}=roleFixture(),profile=createCombatProfile(fighter),decision=ref.roleDecision;
+ assert.equal(roleDecisionRuntimeCompatible(decision,fighter,profile),true);
+ assert.equal(roleDecisionRuntimeCompatible(decision,null,profile),false);
+ for(const change of [
+  p=>p.referencePolicy.id='sh3_valtiel_051',p=>p.referencePolicy.source='film',
+  p=>p.referencePolicy.edition='SH3 HD Collection',p=>p.referencePolicy.role='combatant',
+  p=>p.referencePolicy.capabilities.reviewed=false,
+  ...['combatEnabled','canMove','canJump','canDodge','superEnabled'].map(key=>p=>p.referencePolicy[key]=true),
+  p=>Object.values(p.moves)[0].enabled=true,p=>p.moves={}
+ ]){
+  const forged=structuredClone(profile);change(forged);
+  assert.equal(roleDecisionRuntimeCompatible(decision,fighter,forged),false);
+ }
+ const {changed,ref:pending}=roleFixture();pending.roleDecision={status:'pending'};
+ const generated=buildProductionPlan(changed);
+ assert.equal(generated.tasks.find(t=>t.id===pending.id+':role').status,'À faire');
+ assert.equal(generated.fighters.find(f=>f.id===pending.id).roleResolved,false);
+});
+
+test('replacement bitmap scenery keeps procedural proposals prepared and visibly unproduced in the workbook',()=>{
+ const stage=STAGES.find(s=>s.id==='midwich'),previous=STAGE_BITMAPS[stage.id],sha='1'.repeat(64);
+ STAGE_BITMAPS[stage.id]={stageId:stage.id,source:stage.source,status:'integrated-candidate',fidelity:'unverified',mode:'replace',scene:'normal-courtyard',
+  layers:[{id:'background',rect:[0,0,1,1],ticksPerFrame:1,loop:false,frames:[{path:`assets/stages/${stage.id}.${sha.slice(0,12)}.png`,sha256:sha,bytes:100,width:1280,height:720}]}]};
+ try{
+  const generated=buildProductionPlan(research),row=generated.stages.find(s=>s.id===stage.id);
+  assert.equal(row.bitmapProgress.files,1);assert.equal(row.bitmapProgress.scene,'normal-courtyard');
+  assert.match(row.locationNote,/mode replace.*normal-courtyard/);
+  for(const animation of generated.stageAnimations.filter(a=>a.stageId===stage.id&&a.runtimeTrack)){
+   assert.equal(animation.runtimeTrackVisible,false);assert.match(animation.existing,/préparée.*masquée.*statique.*normal-courtyard/);
+   assert.doesNotMatch(animation.existing,/partiel joué/);assert.equal(animation.productionStatus,'En cours');
+  }
+  const task=generated.tasks.find(t=>t.id===stage.id+':stage');
+  assert.equal(task.status,'En cours');assert.match(task.reason,/0 piste\(s\).*préparée\(s\).*masquée\(s\)/);
+  assert.equal(generated.metrics.certifiedOneToOne,0);assert.ok(generated.metrics.stageBitmapCandidates>=1);
+ }finally{if(previous)STAGE_BITMAPS[stage.id]=previous;else delete STAGE_BITMAPS[stage.id];}
 });
 
 test('the workbook exposes delivered weapon phases and the flight candidate without claiming measured source animation',()=>{
@@ -197,6 +287,15 @@ test('the workbook exposes delivered weapon phases and the flight candidate with
  assert.match(idle.existing,/3 images indépendantes.*24 ticks.*non certifiés/);
  assert.equal(plan.tasks.find(row=>row.id==='sh1_air_screamer_001:art').status,'En cours');
  assert.equal(plan.fighters.find(row=>row.id==='sh1_air_screamer_001').oneToOneValidated,false);
+});
+
+test('new combat rules retain their own source and describe versus limits in the workbook',()=>{
+ const fighter=id=>plan.fighters.find(f=>f.id===id);
+ assert.match(fighter('homecoming_smog_087').identityNote,/Smog.*dégâts des balles multipliés par 2 dans le versus.*aucun timing source mesuré/);
+ const needler=fighter('homecoming_needler_088').identityNote;
+ assert.match(needler,/Needler.*contact physique.*balles.*silencieuses/);assert.doesNotMatch(needler,/Missionary/);
+ assert.match(fighter('sh2_lying_figure_crawling_021').identityNote,/rampante.*sans jet acide.*forme debout/);
+ for(const id of ['sh2_mary_final_manifestation_034','sh2_maria_final_manifestation_033'])assert.match(fighter(id).identityNote,/entrave locale du versus.*capture source.*n’est pas reproduite/);
 });
 
 test('unverified roles and locations remain blocked through their moves, poses and finishers',()=>{

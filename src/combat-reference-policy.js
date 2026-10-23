@@ -23,6 +23,7 @@ const PHASE_SUPER_LIMITS = Object.freeze({
 // owned by a humanoid or an inherited weapon from a different work.
 const FIREARM_SHOT_SLOTS = Object.freeze({
   sh1_monster_cybil_017:['neutralSpecial'],
+  sh2_eddie_dombrowski_032:['neutralSpecial','downSpecial','super','desperation'],
   sh3_nurse_revolver_044:['neutralSpecial','super','desperation'],
   sh3_memory_of_alessa_049:['neutralSpecial','super','desperation'],
   sh4_man_with_the_coat_067:['neutralSpecial','super','desperation'],
@@ -120,7 +121,7 @@ define('sh1_monster_cybil_017', {
   // damage retain the existing versus values, not source-measured frame data.
   moves:{...weaponKit('Crosse du pistolet'), neutralSpecial:shot('Tir du pistolet', {ammoCost:1,knockdown:true})}
 });
-define('sh2_lying_figure_020 sh2_lying_figure_crawling_021', {
+define('sh2_lying_figure_020', {
   disabledSlots:{throw:'Les bras sont enfermés ; aucune saisie de cette version n’est documentée.',
     backThrow:'Les bras sont enfermés ; aucune projection arrière n’est documentée.'},
   moves:{
@@ -129,6 +130,19 @@ define('sh2_lying_figure_020 sh2_lying_figure_crawling_021', {
     forwardSpecial:contact('Rampement percutant', {travel:3.3, level:'low'}),
     neutralSpecial:shot('Jet thoracique'), super:shot('Souffle contrarié'), desperation:shot('Dernier jet thoracique')
   }
+});
+// SH2 (2001), enemies_en.htm: acid is emitted while standing; the prone
+// creature instead collides with James while scrambling. This fixed crawling
+// profile must not borrow the standing form's ranged attack. Speed, reach and
+// input variants below remain authored versus values.
+define('sh2_lying_figure_crawling_021', {
+  disabledSlots:{throw:'Les bras sont enfermés ; aucune saisie de cette version n’est documentée.',
+    backThrow:'Les bras sont enfermés ; aucune projection arrière n’est documentée.'},
+  moves:{...weaponKit('Percussion du corps rampant'),
+    neutralSpecial:contact('Percussion rampante',{travel:3.3,level:'low',hits:1,reach:150}),
+    forwardSpecial:contact('Rampement percutant',{travel:3.3,level:'low',hits:1}),
+    super:contact('Percussion rampante — assaut prolongé',{travel:3.7,level:'low',hits:2,reach:180}),
+    desperation:contact('Dernier assaut rampant',{travel:4,level:'low',hits:2,reach:195})}
 });
 define('sh2_mannequin_022 sh2_mannequin_ambusher_023 sh2_spider_mannequin', {moves:{
   ...weaponKit('Jambes supérieures'),
@@ -149,9 +163,12 @@ define('sh2_eddie_dombrowski_032', {moves:{
   super:shot('Angle de tir'), desperation:shot('Dernier tir de revolver')
 }});
 define('sh2_maria_final_manifestation_033 sh2_mary_final_manifestation_034', {moves:{
-  neutralSpecial:shot('Nuage d’insectes noirs', {projectileScale:1.25, projectileSpeed:8}),
-  super:shot('Dernier appel — essaim', {projectileScale:1.4, projectileSpeed:8}),
-  desperation:shot('Ultime essaim', {projectileScale:1.4, projectileSpeed:8})
+  // The original moth swarm catches James in an animation he can escape by
+  // struggling (SH2 bosses_en.htm). Bind is this versus game's limited movement
+  // and dodge restriction, not a recreated struggle or measured source timing.
+  neutralSpecial:shot('Nuage d’insectes noirs', {projectileScale:1.25, projectileSpeed:8,effectOverride:'bind'}),
+  super:shot('Dernier appel — essaim', {projectileScale:1.4, projectileSpeed:8,effectOverride:'bind'}),
+  desperation:shot('Ultime essaim', {projectileScale:1.4, projectileSpeed:8,effectOverride:'bind'})
 }});
 define('sh2_mandarin_026', {moves:{...weaponKit('Appendice sous la grille'),
   neutralSpecial:contact('Frappe à travers la grille'), super:contact('Sous les pieds', {hits:2})}});
@@ -274,11 +291,35 @@ define('origins_demon_084', {moves:{
 }});
 define('homecoming_nurse', {moves:weaponKit('Scalpel')});
 define('homecoming_order_soldier_091', {moves:weaponKit('Tube — variante de contact')});
-define('homecoming_smog_087', {moves:{
+define('homecoming_smog_087', {
+  aiSignatureOnly:true,
+  disabledSlots:Object.fromEntries([
+    'neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy','crouchHeavy','airHeavy',
+    'throw','backThrow','dodgeAttack','guardCounter','wakeupAttack','forwardSpecial','backSpecial','downSpecial','airSpecial'
+  ].map(key=>[key,'La seule attaque documentée du Smog est son exhalation ; ce contact, bond ou prise n’est pas attesté.'])),
+  moves:{
   neutralSpecial:nearAura('Nuage de smog rapproché'),
   downSpecial:contact('Percussion de la cage thoracique', {armorFrames:0}),
   super:nearAura('Exhalation puis ouverture', {armorFrames:0, active:14})
-}});
+},
+  // Homecoming creatures_en.htm + walkthrough_en.htm: exposed lungs while
+  // preparing its smoke are vulnerable to gunfire. The 2x multiplier and the
+  // startup/active opening are versus tuning, never source damage or frames.
+  firearmExposure:{slots:['neutralSpecial','super','desperation'],damageScale:2,sourceTimingMeasured:false}
+});
+// Homecoming creatures_en.htm: the four blades block frontal attacks including
+// gunfire, while the back is vulnerable. The available grounded posture and
+// armor-break/Nightmare exceptions are versus choices. A silencer does not
+// remove a physical bullet from this defense (unlike Missionary's visual cue).
+define('homecoming_needler_088', {
+  defense:{frontalVisibleBullets:true,frontalMelee:true,silencedBullets:true},
+  disabledSlots:{backSpecial:'La garde des lames est une défense de posture ; cette attente ne produit pas une frappe gratuite.',
+    backThrow:'Aucune projection arrière avec échange de places n’est documentée pour cette forme.'},
+  moves:{...weaponKit('Membres-lames'),
+    neutralHeavy:contact('Abattement des membres-lames',{knockdown:true,armorFrames:0}),
+    forwardSpecial:contact('Assaut des membres-lames',{knockdown:true,travel:4.7,hits:3}),
+    throw:contact('Prise des membres antérieurs',{level:'throw',reach:90,hits:1})}
+});
 define('homecoming_asphyxia_096', {moves:{
   neutralSpecial:shot('Jet toxique'), forwardSpecial:contact('Balayage de la queue', {hits:2}),
   super:shot('Pression par jet toxique')
@@ -433,6 +474,8 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     canJump: combatEnabled && !attached && role !== 'stationary-boss' && !GROUND_ONLY.has(ref?.id),
     canDodge: combatEnabled && !attached,
     ...(recipe.defense?{defense:{...recipe.defense}}:{}),
+    ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
+    ...(recipe.aiSignatureOnly?{aiSignatureOnly:true}:{}),
     ...(combatEnabled&&recipe.proximityField?{proximityField:{...recipe.proximityField}}:{}),
     referenceIds: [...(ref?.referenceIds || [])],
     observedBasis: observed.map(move => `${move.name} : ${move.description}`).join(' '),
@@ -456,11 +499,24 @@ export function combatReferenceRecipe(fighter) {
   return structuredClone(ref ? RECIPES[ref.id] || {} : {});
 }
 
-export function isVisibleFirearmProjectile(fighter, move) {
+export function isFirearmProjectile(fighter, move) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES);
-  if(!ref||!move?.projectile||move.trap||move.silenced===true||
+  if(!ref||!move?.projectile||move.trap||
     !FIREARM_SHOT_SLOTS[ref.id]?.includes(move.key))return false;
   return ref.id!=='sh3_memory_of_alessa_049'||['handgun','smg'].includes(move.weaponPhaseId);
+}
+
+export function isVisibleFirearmProjectile(fighter, move) {
+  return move?.silenced!==true&&isFirearmProjectile(fighter,move);
+}
+
+export function firearmExposure(fighter, attack) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES);
+  const exposure=ref&&RECIPES[ref.id]?.firearmExposure;
+  if(!exposure||!attack?.move?.aura||!exposure.slots.includes(attack.key)||
+    attack.move.key!==attack.key||!Number.isFinite(attack.frame)||attack.frame<1||
+    attack.frame>=attack.move.startup+attack.move.active)return null;
+  return {...exposure,slots:[...exposure.slots]};
 }
 
 export function nonDamagingStagger(fighter,move) {

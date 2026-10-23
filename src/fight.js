@@ -8,7 +8,7 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
-import { isVisibleFirearmProjectile, nonDamagingStagger } from './combat-reference-policy.js';
+import { isVisibleFirearmProjectile, isFirearmProjectile, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -45,14 +45,21 @@ function updateWeaponState(actor) {
   const threshold=resource.disarmBelowHealthRatio;
   if(actor.ammo===0||(Number.isFinite(threshold)&&actor.health>0&&actor.health<actor.maxHealth*threshold))actor.weaponDiscarded=true;
 }
-function deflectsFrontalBullet(attacker,target,move,direction) {
+function bladeDefenseAvailable(target,direction) {
   const policy=referencePolicy(target);
-  return policy.defense?.frontalVisibleBullets===true&&
-    policy.id===target.data.id&&policy.source===target.data.source&&
-    isVisibleFirearmProjectile(attacker.data,move)&&direction*target.facing<0&&
+  return policy.id===target.data.id&&policy.source===target.data.source&&direction*target.facing<0&&
     target.grounded&&!target.attack&&!target.hurtFrames&&!target.knockdownTimer&&
     !target.guardBreak&&!target.phaseLock&&!target.dodgeFrames&&!target.counterStance&&
     ['idle','walk','crouch','block','crouchBlock'].includes(target.state);
+}
+function deflectsFrontalBullet(attacker,target,move,direction) {
+  const defense=referencePolicy(target).defense;
+  return defense?.frontalVisibleBullets===true&&bladeDefenseAvailable(target,direction)&&
+    (defense.silencedBullets===true?isFirearmProjectile(attacker.data,move):isVisibleFirearmProjectile(attacker.data,move));
+}
+function deflectsFrontalMelee(target,move,direction,ranged) {
+  return referencePolicy(target).defense?.frontalMelee===true&&bladeDefenseAvailable(target,direction)&&
+    !ranged&&!move.aura&&!move.trap&&!move.armorBreak&&!isNightmareMove(move);
 }
 
 class InputState {
@@ -888,6 +895,20 @@ export class FightEngine {
       return { ...environmentalDefense };
     }
 
+    if(referencePolicy(actor).aiSignatureOnly===true){
+      // Resolve this source-limited kit before generic counter/wakeup windows
+      // or adaptive reads can request its disabled punches and follow-ups.
+      actor.aiIntent={};actor.aiRead=null;
+      const signature=actor.profile.moves.neutralSpecial;
+      if(!signature?.enabled||!actor.grounded||actor.attack||actor.knockdownTimer>0||actor.dodgeFrames>0||
+        actor.hurtFrames>0||actor.guardBreak>0||actor.phaseLock>0)return {};
+      actor.aiTimer--;
+      if(distance>Math.min(preferred,signature.reach))return {[enemy.x>actor.x?'right':'left']:true};
+      if(actor.aiTimer>0)return {guard:true};
+      actor.aiTimer=diff.react+Math.floor(this.rng()*Math.max(2,diff.react));
+      return this.rng()<diff.attack?{special:true}:{guard:true};
+    }
+
     if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && this.rng() < .74) return { special: true };
     if (actor.guardCounterWindow > 0 && this.rng() < .82) return { heavy: true };
     if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && this.rng() < .68) return { light: true };
@@ -1478,10 +1499,11 @@ export class FightEngine {
     const isHeavy = isHeavyMove(move);
     const isSpecial = ['special','counter','reversal'].includes(move.category);
     const unblockable = Boolean(move.unblockable || move.level === 'unblockable');
-    if(!isThrow&&!unblockable&&deflectsFrontalBullet(attacker,target,move,hitDirection)){
+    if(!isThrow&&!unblockable&&(deflectsFrontalBullet(attacker,target,move,hitDirection)||
+      deflectsFrontalMelee(target,move,hitDirection,ranged))){
       // A blade deflection is neither a perfect guard nor a free retaliation.
       // Silenced-shot metadata is supported, but no silenced weapon is authored.
-      this.addText('TIR DÉVIÉ',target.x,target.y-240,'guard');
+      this.addText(ranged?'TIR DÉVIÉ':'PARADE DES LAMES',target.x,target.y-240,'guard');
       this.spawnImpact(target.x,target.y-115,target.data.visual.accent,true,12);
       audio.guard();
       return;
@@ -1529,7 +1551,13 @@ export class FightEngine {
     if (isSpecial) ritualDamage *= this.ritual.specialDamageScale || 1;
     if (isNightmare) ritualDamage *= this.ritual.superDamageScale || 1;
     if (attacker.data.boss) ritualDamage *= this.ritual.bossPowerScale || 1;
-    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker));
+    // Smog opens its lungs for the actual preparation/exhalation attack. The
+    // configured multiplier is versus tuning; armor-break, status damage and
+    // non-firearm projectiles do not inherit a free weak-point bonus.
+    const exposure=ranged&&isFirearmProjectile(attacker.data,move)&&
+      target.attack&&target.profile.moves[target.attack.key]===target.attack.move
+      ?firearmExposure(target.data,target.attack):null;
+    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker) * (exposure?.damageScale||1));
 
     if (blocked) {
       const perfect = target.parryWindow > 0;

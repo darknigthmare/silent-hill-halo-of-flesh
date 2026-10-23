@@ -1,6 +1,6 @@
 # Roster complet — v0.9.6
 
-Catalogue synchronisé : **230 fiches**, dont **194 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3713 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **86 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
+Catalogue synchronisé : **230 fiches**, dont **194 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3694 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **104 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
 
 Les rôles non combattants et les identités non confirmées restent consultables. Les rencontres scénarisées autorisées sont explicitement des adaptations versus. Aucun clip animé ni fidélité 1:1 n’est certifié.
 
@@ -16,12 +16,12 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Night Flutter | combatant | `flyer` | INSTINCT AÉRIEN | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Groaner | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Wormhead | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
-| Grey Child | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
-| Mumbler | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
+| Grey Child | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
+| Mumbler | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Larval Stalker | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Stalker | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
-| Romper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
+| Romper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Hanged Scratcher | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Puppet Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Puppet Doctor | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
@@ -52,8 +52,8 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Red Pyramid Thing — Spear | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Twin Pyramid Heads | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Eddie Dombrowski | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | TOLUCA PRISON |
-| Maria — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
-| Mary — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
+| Maria — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
+| Mary — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Prisoner | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | TOLUCA PRISON |
 | Spider Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
 | Mandarin — Floor Form | unverified | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-variant-adapted / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
@@ -64,7 +64,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
+| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Closer — Church Variant | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
 | Numb Body — Small | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Numb Body — Medium | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
@@ -74,7 +74,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Slurper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Nurse — Pipe | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
+| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Scraper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Split Worm | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Missionary | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DAISY VILLA ROOFTOP |
@@ -98,7 +98,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Gum Head — Old Type | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
 | Gum Head — New Type | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
 | Twin Victim | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Patient | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
+| Patient | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
 | Toadstool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
 | Whitestool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
 | Tremer — Blue | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
@@ -184,18 +184,18 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Screamer | combatant | `zoner` | TRAIT VERSUS LIMITÉ | ENTRAVE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
+| Screamer | combatant | `zoner` | TRAIT VERSUS LIMITÉ | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Weeping Bat | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Doll | environmental-obstacle | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Shadow | multi-body | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Prisoner Minion — Brawler | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Prisoner Minion — Agile | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
-| Prisoner Juggernaut | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
+| Prisoner Juggernaut | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Tormented Soul | environmental-obstacle | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Wall Corpse | environmental-obstacle | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Void | environmental-obstacle | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Monocle Man | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
-| Bogeyman | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
+| Bogeyman | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Wheelman | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OVERLOOK PENITENTIARY |
 | Anne Cunningham | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-human-boss-adapted / official-or-established | FULL CIRCLE — ANNE’S CONFRONTATION |
 

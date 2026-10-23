@@ -8,7 +8,7 @@ const unique = values => [...new Set(values.filter(Boolean))];
 const copy = value => JSON.parse(JSON.stringify(value));
 const has = (stage, ...props) => props.some(prop => (stage.props || []).includes(prop));
 const unresolved = /non.confirme|non.confirmee|a.identifier|a.documenter|a.corroborer|a.verifier|a.relever|a.fixer|a.preciser|composite.a.separer/;
-const INTERIOR = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','sewer','church','lair','otherworld']);
+const INTERIOR = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','sewer','church','lair','otherworld','labyrinth']);
 const ALTERED = new Set(['nowhere','hospital_nightmare','midwich_nightmare','central_nightmare','hotel_otherworld','brookhaven_sh3','nightmare_mall','nightmare_hilltop','nightmare_hospital_sh3','outside_room_302','final_sacrament','nightmare_theater','nightmare_hospital_hc','scarlet_chamber','nightmare_school','frozen_streets','nightmare_hospital_sm','nightmare_mall_sm','otherworld_void','dark_shrine','dark_shrine_corridors','dark_shrine_main','corrupted_ebisugaoka','film_midwich','ascension_otherworld']);
 const TRANSITIONS = new Set(['cedar_grove','alchemilla_origins','film_church','ebisugaoka','stilledalen','hope_junction']);
 const NARRATIVE_ONLY = new Set(['looping_hall','villa','villa_rooftop','villa_stairwell','final_sacrament','otherworld_void','anne_fight','arcade_1918','arcade_1993']);
@@ -65,6 +65,11 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   shutterLift: {name:'Rideau métallique partiellement relevé',layer:'background',replaces:['storeShutters']},
   lampReply: {name:'Voyant après impact',layer:'background',replaces:['elevatorBlink']},
   pipePurge: {name:'Trois jets derrière la protection',layer:'background',replaces:['pipeSteam','ventSteam']},
+  pianoKeyReply: {name:'Une touche du piano répond à l’impact',layer:'background',replaces:[],stageId:'midwich',source:'sh1',pendingLocation:'music-room'},
+  ropePendulum: {name:'Corde du gibet, appui fixe',layer:'background',replaces:[],stageId:'toluca_prison',source:'sh2',pendingLocation:'gallows-courtyard'},
+  cellDoorReply: {name:'Une porte de cellule sur ses charnières',layer:'background',replaces:[],stageId:'toluca_prison',source:'sh2'},
+  cubeTurn: {name:'Cube de commande, orientation de fond',layer:'background',replaces:[],stageId:'labyrinth',source:'sh2'},
+  washroomHoleReply: {name:'Lueur contenue du trou de la salle de bain',layer:'background',replaces:[],stageId:'room_302',source:'sh4'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -77,6 +82,8 @@ const BINDINGS = Object.freeze({
   central_nightmare:[['dustDrift',1,[.67,.61]]],
   sewer_resort:[['waterRings',1,[.58,.72]]],
   blue_creek:[['waterRings',1,[.5,.72]]],
+  toluca_prison:[['cellDoorReply',2,[.28,.61],'referenceCellReply']],
+  labyrinth:[['cubeTurn',1,[.69,.49]]],
   hotel_otherworld:[['waterRings',1,[.51,.72]],['dustDrift',2,[.73,.39],'referenceDustRelease']],
   south_vale:[['fogLayers',1,[.5,.55]]],
   brookhaven_roof:[['paperFlutter',1,[.73,.65]]],
@@ -85,7 +92,7 @@ const BINDINGS = Object.freeze({
   nightmare_mall:[['dustDrift',1,[.24,.53]]],
   underpass_sh3:[['fanEccentric',1,[.79,.27]],['pipePurge',2,[.2,.58],'referenceSteamPurge']],
   nightmare_hospital_sh3:[['mirrorContamination',1,[.73,.39]]],
-  room_302:[['chainPendulum',1,[.52,.34]]],
+  room_302:[['chainPendulum',1,[.52,.34]],['washroomHoleReply',2,[.78,.49],'referenceWashroomReply']],
   apartment_world:[['doorReply',1,[.5,.57]]],
   riverside_motel:[['signFlicker',0,[.72,.31]],['curtainBreathe',1,[.29,.38]]],
   shepherds_glen:[['fogLayers',0,[.5,.55]]],
@@ -138,6 +145,14 @@ export function stageReferenceEventAllowed(stage, id) {
 }
 export function stageReferenceHazardAllowed(stage, id) {
   return !stage?.reference?.blocked && (!stage?.referencePolicy || stage.referencePolicy.allowedHazards.includes(id));
+}
+/** A new exact-location prop cannot be borrowed by a similarly named work. */
+export function stageReferenceTrackAllowed(stage, track) {
+  const definition=STAGE_REFERENCE_TRACKS[track?.key];
+  if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
+  if(!definition.stageId)return true;
+  return stage?.id===definition.stageId&&stage?.source===definition.source&&track.source===definition.source&&
+    track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`;
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;
@@ -209,7 +224,7 @@ export function applyStageReferencePolicy(stage, reference) {
   };
   const referenceTracks = blocked ? [] : (BINDINGS[stage.id] || []).flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
-    if (!proposal || !definition || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
+    if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
       evidence:[...(proposal.evidence || reference.referenceIds || [])],layer:definition.layer,anchor:{x:anchor[0],y:anchor[1]},
       trigger:event ? 'local-heavy-impact' : 'ambient',event:event || null,

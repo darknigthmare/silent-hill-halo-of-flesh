@@ -21,14 +21,19 @@ function harness(Type=StageBitmapCache,options={}){
   return {cache,failures,held,images,release(path){pending.get(path)?.();pending.delete(path);}};
 }
 const context=()=>{const calls=[];return {calls,save(){},restore(){},drawImage(...args){calls.push(args);}};};
-test('production bitmap stage registry starts empty and preserves procedural stages',async()=>{
-  assert.deepEqual(STAGE_BITMAPS,{});assert.equal(stageBitmapFor(stage),null);
-  assert.equal((await new StageBitmapCache().prepare(STAGES)).ok,true);
-  assert.equal(drawStageBitmaps(context(),stage,0).kind,'unregistered');
+test('production stage candidates are exact and unregistered stages retain procedural rendering',async()=>{
+  for(const [id,art] of Object.entries(STAGE_BITMAPS)){
+    const subject=STAGES.find(item=>item.id===id);assert.ok(subject);assert.equal(stageBitmapFor(subject),art);
+    assert.equal(art.fidelity,'unverified');
+  }
+  const procedural=STAGES.find(item=>!Object.hasOwn(STAGE_BITMAPS,item.id));assert.ok(procedural);
+  assert.equal(stageBitmapFor(procedural),null);
+  assert.equal((await new StageBitmapCache({registry:{}}).prepare(STAGES)).ok,true);
+  assert.equal(drawStageBitmaps(context(),procedural,0).kind,'unregistered');
 });
 test('stage declarations require exact identity/source, provenance and versioned stage paths',()=>{
   const art=artFor();assert.equal(validateStageBitmap(stage,art),art);
-  for(const mutate of [a=>a.source='sh2',a=>a.stageId='alchemilla',a=>a.fidelity='verified',a=>a.layers[0].rect=[0,0,2,1],a=>a.layers[0].frames[0].path='assets/sprites/fixture.png',a=>a.layers[0].frames[0].sha256='0'.repeat(64)]){
+  for(const mutate of [a=>a.source='sh2',a=>a.stageId='alchemilla',a=>a.fidelity='verified',a=>a.layers[0].fit='unknown',a=>a.layers[0].rect=[0,0,2,1],a=>a.layers[0].frames[0].path='assets/sprites/fixture.png',a=>a.layers[0].frames[0].sha256='0'.repeat(64)]){
     const broken=structuredClone(art);mutate(broken);assert.throws(()=>validateStageBitmap(stage,broken),/Stage bitmap/);
     assert.equal(drawStageBitmaps(context(),stage,0,{registry:{[stage.id]:broken}}).kind,'error');
   }
@@ -51,7 +56,7 @@ test('a failed declared stage blocks diagnostics and can be retried',async()=>{
   const art=artFor(),frame=art.layers[0].frames[0],h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),actor=harness(SpriteCache);
   h.failures.add(frame.path);
   const options={fighterCache:actor.cache,stageCache:h.cache,diagnostic:true};
-  const missing=getFighter('sh2_lying_figure_020');assert.equal(missing.id,'sh2_lying_figure_020');
+  const missing=getFighter('sh2_mannequin_022');assert.equal(missing.id,'sh2_mannequin_022');
   const failed=await prepareCombatAssets([missing],[stage],options);assert.deepEqual(failed.missing,[missing.id]);
   assert.equal(failed.ok,false);assert.equal(failed.stageFailed,true);assert.ok(failed.failed.includes(frame.path));
   h.failures.clear();assert.equal((await prepareCombatAssets([],stage,options)).ok,true);assert.equal(h.images.length,2);
@@ -78,6 +83,7 @@ test('ready stage layers draw cached images in declared rectangles on simulation
 });
 test('live renderer paints an overlay once and replaces procedural geometry when requested',()=>{
   const art=artFor(stage,{mode:'overlay'}),frame=art.layers[0].frames[0],image={fixture:true},previous=stageBitmapCache.entries.get(frame.path);
+  const previousArt=STAGE_BITMAPS[stage.id];
   STAGE_BITMAPS[stage.id]=art;stageBitmapCache.entries.set(frame.path,{status:'ready',image,used:0,frame});
   const makeContext=()=>{const calls=[],gradient={addColorStop(){}};return new Proxy({calls,createLinearGradient:()=>gradient,createRadialGradient:()=>gradient},{get:(object,key)=>key in object?object[key]:(...args)=>calls.push([key,...args])});};
   try{
@@ -85,7 +91,15 @@ test('live renderer paints an overlay once and replaces procedural geometry when
     assert.equal(overlay.calls.filter(call=>call[0]==='drawImage').length,1);assert.ok(overlay.calls.some(call=>call[0]==='fillRect'));
     art.mode='replace';const replace=makeContext();drawStage(replace,stage,0,{width:100,height:80});
     assert.equal(replace.calls.filter(call=>call[0]==='drawImage').length,1);assert.ok(!replace.calls.some(call=>call[0]==='fillRect'));
-  }finally{delete STAGE_BITMAPS[stage.id];if(previous)stageBitmapCache.entries.set(frame.path,previous);else stageBitmapCache.entries.delete(frame.path);}
+  }finally{if(previousArt)STAGE_BITMAPS[stage.id]=previousArt;else delete STAGE_BITMAPS[stage.id];if(previous)stageBitmapCache.entries.set(frame.path,previous);else stageBitmapCache.entries.delete(frame.path);}
+});
+test('cover and contain preserve native scenery proportions instead of stretching architecture',async()=>{
+  const art=artFor(),layer=art.layers[0],frame=layer.frames[0];frame.width=200;frame.height=100;
+  const h=harness(StageBitmapCache,{registry:{[stage.id]:art}});await h.cache.prepare(stage);const image=h.cache.peek(frame.path);
+  layer.fit='cover';const cover=context();drawStageBitmaps(cover,stage,0,{cache:h.cache,width:100,height:80});
+  assert.deepEqual(cover.calls[0],[image,37.5,0,125,100,0,0,100,80]);
+  layer.fit='contain';const contain=context();drawStageBitmaps(contain,stage,0,{cache:h.cache,width:100,height:80});
+  assert.deepEqual(contain.calls[0],[image,0,15,100,50]);
 });
 test('both leases are validated before either cache mutates',async()=>{
   const art=artFor(),h=harness(StageBitmapCache,{registry:{[stage.id]:art},maxBytes:16}),actor=harness(SpriteCache);

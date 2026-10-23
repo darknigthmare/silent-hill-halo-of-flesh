@@ -1,6 +1,6 @@
 # Directeur d’arènes et gameplay environnemental — v0.9.6
 
-**123 arènes · 14 terrains · 15 bascules · 21 événements · 9 liens de danger · 21 interactions.**
+**123 arènes · 14 terrains · 15 bascules · 23 événements · 9 liens de danger · 23 interactions.**
 
 > Les lieux, accessoires, climats et motifs sont documentés à partir du catalogue du projet. Les timings, dégâts, zones de danger et déclencheurs restent des adaptations versus originales explicitement séparées du canon.
 
@@ -81,6 +81,8 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | `referenceLightReply` | VOYANT DU PALIER | 100 f | Aucun | Aucun | LE VOYANT RÉPOND |
 | `referenceDustRelease` | POUSSIÈRE DU PLÂTRE | 130 f | Aucun | Aucun | LE PLÂTRE FRÉMIT |
 | `referenceSteamPurge` | ROBINET DU PASSAGE | 108 f | Aucun | Aucun | TROIS PURGES AU FOND DU PASSAGE |
+| `referenceCellReply` | PORTE DE CELLULE | 96 f | Aucun | Aucun | UNE PORTE VIBRE AU FOND |
+| `referenceWashroomReply` | TROU DE LA SALLE DE BAIN | 108 f | Aucun | Aucun | UNE LUEUR DANS LE PASSAGE |
 
 ## Doctrine par arène
 
@@ -94,15 +96,15 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | WOOD SIDE APARTMENTS | MOQUETTE HUMIDE | fixed-normal — aucune bascule |  |  |  | 0 | Wood Side original 2001 ; éclairage et architecture du remake ne sont pas interchangeables. |
 | BLUE CREEK — STAIRWELL | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 0 | Cage d’escalier du premier duel Pyramid Head, SH2 original. |
 | BROOKHAVEN — BASEMENT | BÉTON SEC | unresolved — aucune bascule |  |  |  | 0 | Le libellé « Basement » doit préciser le couloir Otherworld de la poursuite et son ascenseur. |
-| TOLUCA PRISON | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule |  |  |  | 0 | Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. |
-| THE LABYRINTH | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 0 | Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. |
+| TOLUCA PRISON | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | PORTE DE CELLULE | IMPACT LOURD À PROXIMITÉ |  | 0 | Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus. |
+| THE LABYRINTH | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 0 | Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits. |
 | LAKEVIEW HOTEL — OTHERWORLD | BÉTON TREMPÉ | fixed-altered — aucune bascule | POUSSIÈRE DU PLÂTRE | IMPACT LOURD À PROXIMITÉ |  | 1 | État ruiné du Lakeview après la cassette, SH2 original. |
 | CENTRAL SQUARE MALL | BÉTON SEC | fixed-normal — aucune bascule | PANNE GÉNÉRALE | IMPACT LOURD / PREMIER TEMPS |  | 1 | Central Square Shopping Center de SH3 avant son état Nightmare. |
 | BROOKHAVEN — FLOODED ROOM | BÉTON SEC | fixed-altered — aucune bascule |  |  |  | 1 | Salle d’eau du boss Leonard sous Brookhaven Otherworld, SH3. |
 | THE CHURCH | PIERRE RITUELLE | fixed-normal — aucune bascule |  |  |  | 0 | Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. |
 | DAISY VILLA ROOFTOP | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 0 | Toit Daisy Villa du combat Missionary de SH3. |
 | SEWER CHANNEL | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 2 | Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. |
-| ROOM 302 | PLANCHER ANCIEN | fixed-normal — aucune bascule |  |  |  | 0 | Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. |
+| ROOM 302 | PLANCHER ANCIEN | fixed-normal — aucune bascule | TROU DE LA SALLE DE BAIN | IMPACT LOURD À PROXIMITÉ |  | 0 | Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive. |
 | SUBWAY WORLD | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule |  |  |  | 1 | Subway World de SH4 ; trains traversables et escalator avec Wallmen. |
 | WATER PRISON WORLD | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 0 | Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. |
 | APARTMENT WORLD | MOQUETTE HUMIDE | fixed-normal — aucune bascule |  |  |  | 0 | South Ashfield Heights de SH4 vu depuis les couloirs et logements. |
@@ -212,6 +214,6 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 
 ## Réactions issues des fiches
 
-Les 50 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
+Les 53 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
 
 Les états et listes de mécanismes de la fiche sont également vérifiés lors des appels directs du moteur, des transitions de boss et des rites. Une famille de décor ne suffit pas à autoriser un événement.

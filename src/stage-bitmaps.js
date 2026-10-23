@@ -20,6 +20,7 @@ export function validateStageBitmap(stage,art){
   const ids=new Set(),paths=new Map();
   for(const layer of art.layers){
     if(!layer||!/^[a-z0-9_-]{1,64}$/.test(layer.id)||ids.has(layer.id))fail('invalid/duplicate layer');ids.add(layer.id);
+    if(layer.fit!==undefined&&!['stretch','cover','contain'].includes(layer.fit))fail('invalid layer fit');
     if(!Array.isArray(layer.frames)||!layer.frames.length||layer.frames.length>120||!Number.isSafeInteger(layer.ticksPerFrame)||layer.ticksPerFrame<1||layer.ticksPerFrame>600||typeof layer.loop!=='boolean')fail('invalid frame clock');
     if(!Array.isArray(layer.rect)||layer.rect.length!==4||!layer.rect.every(Number.isFinite)||layer.rect[0]<0||layer.rect[1]<0||layer.rect[2]<=0||layer.rect[3]<=0||layer.rect[0]+layer.rect[2]>1||layer.rect[1]+layer.rect[3]>1)fail('invalid layer rectangle');
     for(const frame of layer.frames){
@@ -91,7 +92,18 @@ export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache
   for(const layer of art.layers){
     const index=layer.loop?Math.floor(tick/layer.ticksPerFrame)%layer.frames.length:Math.min(layer.frames.length-1,Math.floor(tick/layer.ticksPerFrame));
     const frame=layer.frames[index],image=cache.peek(frame.path),[x,y,w,h]=layer.rect;
-    context.drawImage(image,x*width,y*height,w*width,h*height);
+    const destination=[x*width,y*height,w*width,h*height];
+    if(!layer.fit||layer.fit==='stretch')context.drawImage(image,...destination);
+    else{
+      const [dx,dy,dw,dh]=destination,scale=Math[layer.fit==='cover'?'max':'min'](dw/frame.width,dh/frame.height);
+      if(layer.fit==='cover'){
+        const sw=dw/scale,sh=dh/scale;
+        context.drawImage(image,(frame.width-sw)/2,(frame.height-sh)/2,sw,sh,dx,dy,dw,dh);
+      }else{
+        const rw=frame.width*scale,rh=frame.height*scale;
+        context.drawImage(image,dx+(dw-rw)/2,dy+(dh-rh)/2,rw,rh);
+      }
+    }
   }
   context.restore();return {kind:'raster',mode:art.mode,layers:art.layers.length};
 }
