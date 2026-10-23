@@ -26,8 +26,12 @@ MOVE_KEYS = ('neutralLight','forwardLight','crouchLight','airLight','neutralHeav
              'neutralSpecial','forwardSpecial','backSpecial','downSpecial','airSpecial','super','desperation')
 PRESENTATION_KEYS = ('intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt')
 POSE_KEYS = BASE_POSE_KEYS + MOVE_KEYS + PRESENTATION_KEYS
+WEAPON_IDLE_OWNER = 'sh3_memory_of_alessa_049'
+WEAPON_IDLE_SOURCE = 'sh3'
+WEAPON_IDLE_WEAPONS = ('knife', 'handgun', 'pipe', 'smg')
+WEAPON_IDLE_KEYS = tuple(f'idle@{WEAPON_IDLE_OWNER}:weapon:{weapon}' for weapon in WEAPON_IDLE_WEAPONS)
 
-def validate_pose_key(pose: str, fighter_id: str, root: Path | None = None) -> str:
+def validate_pose_key(pose: str, fighter_id: str, root: Path | None = None, source: str | None = None) -> str:
     """Return the base pose after checking the exact production context and owner."""
     if not isinstance(pose, str) or len(pose) > 240:
         raise ValueError('Invalid pose key.')
@@ -37,11 +41,18 @@ def validate_pose_key(pose: str, fighter_id: str, root: Path | None = None) -> s
         raise ValueError('Unknown engine pose.')
     if len(parts) == 1:
         return base
+    context = parts[1]
+    if ':weapon:' in context:
+        if pose not in WEAPON_IDLE_KEYS or fighter_id != WEAPON_IDLE_OWNER or source not in (None, WEAPON_IDLE_SOURCE) or root is None:
+            raise ValueError('Invalid exact fighter/source or weapon idle context.')
+        index = json.loads((root / 'data/production-reference-index.json').read_text())
+        if not isinstance(index.get('fighters'), dict) or index['fighters'].get(fighter_id) != WEAPON_IDLE_SOURCE:
+            raise ValueError('Weapon idle context requires the exact SH3 production owner.')
+        return base
     if base not in PRESENTATION_KEYS or root is None:
         raise ValueError('Invalid presentation context.')
     index = json.loads((root / 'data/production-reference-index.json').read_text())
     fighters, stages = index['fighters'], index['stages']
-    context = parts[1]
     if base in ('finisher', 'finished'):
         match = re.fullmatch(r'([a-z0-9_]+)_(signature|nightmare|fatality)', context)
         if not match:
@@ -54,6 +65,41 @@ def validate_pose_key(pose: str, fighter_id: str, root: Path | None = None) -> s
     if not valid:
         raise ValueError('Unknown production context or wrong exact fighter owner.')
     return base
+
+
+def validate_weapon_clips(asset: dict, *, pose: str | None = None, clip: dict | None = None,
+                          pixel_hashes: list[str] | None = None) -> None:
+    """Keep the four weapon idles isolated; only knife may share generic idle.
+
+    Authoring checks cached pixel identities first. Publication supplies freshly
+    inspected hashes so re-encoded images cannot borrow another weapon's pixels.
+    """
+    clips = dict(asset.get('clips', {}))
+    if pose is not None:
+        clips[pose] = clip
+    contextual = {key: value for key, value in clips.items() if ':weapon:' in key}
+    if not contextual:
+        return
+    if asset.get('fighterId') != WEAPON_IDLE_OWNER or asset.get('source') != WEAPON_IDLE_SOURCE or any(key not in WEAPON_IDLE_KEYS for key in contextual):
+        raise ValueError('Weapon idle clips require the exact SH3 fighter/source and one of four weapon keys.')
+    frames = asset.get('frames', [])
+    pixels = pixel_hashes if pixel_hashes is not None else [frame.get('pixelSHA256') or frame.get('sha256') for frame in frames]
+    if len(pixels) != len(frames) or any(not isinstance(value, str) or not value for value in pixels):
+        raise ValueError('Weapon idle clips require valid pixel identities.')
+
+    def identities(value):
+        indices = value.get('frames') if isinstance(value, dict) else None
+        if not isinstance(indices, list) or not indices or any(type(index) is not int or not 0 <= index < len(pixels) for index in indices):
+            raise ValueError('Weapon idle clips require existing frames and a generic idle clip.')
+        return {pixels[index] for index in indices}
+
+    generic = identities(clips.get('idle'))
+    contexts = {key: identities(value) for key, value in contextual.items()}
+    for key, selected in contexts.items():
+        if key != WEAPON_IDLE_KEYS[0] and selected & generic:
+            raise ValueError('A weapon idle needs dedicated pixels distinct from generic idle.')
+        if any(selected & other for other_key, other in contexts.items() if other_key != key):
+            raise ValueError('Weapon idle clips cannot borrow another weapon\'s pixels.')
 
 def read_image_snapshot(path: Path) -> bytes:
     if path.is_symlink():
@@ -124,7 +170,7 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Unknown fighter ID or wrong source. Cross-game aliases are refused.')
     if not args.single_subject_reviewed:
         raise ValueError('Inspect the image first and explicitly pass --single-subject-reviewed. No automatic sheet detection is claimed.')
-    base_pose = validate_pose_key(args.pose, args.fighter, root)
+    base_pose = validate_pose_key(args.pose, args.fighter, root, args.source)
     if base_pose in MOVE_KEYS + PRESENTATION_KEYS and args.loop:
         raise ValueError('Attacks and presentations must play once; looping is refused.')
     if not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 1:
@@ -143,13 +189,29 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('Cannot append to an ID without an idle frame.')
     if not current and args.pose != 'idle' or args.replace and args.pose != 'idle':
         raise ValueError('The first frame of an asset must be idle.')
+    weapon_pixels = None
+    inspected_weapon_pixels = {}
+    if args.fighter == WEAPON_IDLE_OWNER and args.source == WEAPON_IDLE_SOURCE:
+        weapon_pixels = []
+        if args.append:
+            # Old registry pixel hashes are only caches, not authoring evidence.
+            # Recheck every retained image against its digest before appending.
+            for prior in current['frames']:
+                if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
+                    raise ValueError('Invalid registered weapon raster path.')
+                previous_meta = inspect_image(root / prior['path'])
+                if previous_meta['sha256'] != prior['sha256']:
+                    raise ValueError('Registered weapon image no longer matches its digest.')
+                weapon_pixels.append(previous_meta['pixelSHA256'])
+                inspected_weapon_pixels[prior['path']] = previous_meta['pixelSHA256']
+        weapon_pixels.append(meta['pixelSHA256'])
     for ident, art in registry['assets'].items():
         for prior in art['frames']:
             if ident == args.fighter and not args.append:
                 continue  # An explicitly replaced asset can keep its own original pixels.
             if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
                 raise ValueError('Invalid registered raster path.')
-            pixels = prior.get('pixelSHA256') or inspect_image(root / prior['path'])['pixelSHA256']
+            pixels = (inspected_weapon_pixels.get(prior['path']) if ident == args.fighter else None) or prior.get('pixelSHA256') or inspect_image(root / prior['path'])['pixelSHA256']
             if prior['sha256'] == meta['sha256'] or pixels == meta['pixelSHA256']:
                 raise ValueError('Repeated or re-encoded pixels cannot populate another fighter or animation frame.')
     relative = f"assets/sprites/{args.fighter}.{meta['sha256'][:12]}.{meta['extension']}"
@@ -191,7 +253,9 @@ def import_sprite(args: argparse.Namespace) -> dict:
                  'frames': [frame], 'portrait': {k: frame[k] for k in ('path', 'sha256', 'bytes', 'width', 'height', 'facing')},
                  'clips': {'idle': {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}}}
         registry['assets'][args.fighter] = asset
-    asset['animatedClips'] = sum(len(set(asset['frames'][i]['sha256'] for i in c['frames'])) > 1 for c in asset['clips'].values())
+    validate_weapon_clips(asset, pixel_hashes=weapon_pixels)
+    animation_pixels = weapon_pixels if weapon_pixels is not None else [frame['sha256'] for frame in asset['frames']]
+    asset['animatedClips'] = sum(len({animation_pixels[index] for index in clip['frames']}) > 1 for clip in asset['clips'].values())
     report = {'fighterId': args.fighter, 'source': args.source, 'path': relative, 'pose': args.pose,
               'frames': len(asset['frames']), 'animatedClips': asset['animatedClips'], 'fidelity': 'unverified',
               'technical': meta, 'dryRun': args.dry_run}
@@ -227,7 +291,7 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument('--anchor-y', type=float, required=True)
     p.add_argument('--body-height', type=float, required=True, help='Standing-equivalent reference height / full image height, not crouched visible bounds')
     p.add_argument('--facing', type=int, choices=(-1, 1), default=1)
-    p.add_argument('--pose', default='idle', help='Exact engine key or presentation@production-ID; presentations: '+', '.join(PRESENTATION_KEYS))
+    p.add_argument('--pose', default='idle', help='Exact engine key, presentation@production-ID, or Alessa idle@exact-ID:weapon:knife|handgun|pipe|smg; presentations: '+', '.join(PRESENTATION_KEYS))
     p.add_argument('--ticks', type=int, default=1)
     p.add_argument('--loop', action='store_true', help='Base poses only; attacks and presentation sequences play once.')
     actions = p.add_mutually_exclusive_group()

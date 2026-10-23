@@ -11192,18 +11192,19 @@
       "source": "bom",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+      "identityNote": "Version Book of Memories uniquement; le bestiaire décrit un rejeton engendré par sa mère, sans attester une invocation de celle-ci par le rejeton. Les attaques autonomes restent à relever dans cette édition.",
       "referenceIds": [
         "EXT20"
       ],
       "observedMoves": [
         {
-          "name": "Invocation de Blood Mama",
-          "description": "Invocation de Blood Mama",
+          "name": "Naissance depuis sa mère",
+          "description": "Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "evidence": [
             "EXT20"
           ],
           "status": "documente-secondaire",
+          "kind": "transition",
           "animationMeasured": false,
           "timecode": null,
           "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
@@ -11211,14 +11212,15 @@
       ],
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+        "Naissance depuis sa mère attestée par le bestiaire ; aucune attaque autonome ni invocation de Blood Mama par Blood Baby ne doit être déduite de cette description.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
       "proposals": {
         "super": {
           "name": "Blood Baby — séquence de pression",
-          "description": "Chorégraphie originale : anticipation centrée sur « rejeton », enchaînement limité autour de « Invocation de Blood Mama », puis récupération exposée; aucun nouveau pouvoir ajouté.",
-          "status": "adaptation-versus-proposee",
+          "description": "Super suspendu : relever les actions propres à Blood Baby dans Book of Memories avant de chorégraphier une séquence de versus. Le fait d'être engendré par sa mère ne justifie pas le pouvoir inverse d'invoquer Blood Mama.",
+          "status": "bloque-reference",
           "basis": [
             "EXT20"
           ]

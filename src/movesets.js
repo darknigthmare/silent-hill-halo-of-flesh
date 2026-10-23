@@ -1,4 +1,4 @@
-import { combatReferencePolicy, combatReferenceRecipe } from './combat-reference-policy.js';
+import { combatReferencePolicy, combatReferenceRecipe, nonDamagingStagger } from './combat-reference-policy.js';
 
 /*
  * SILENT HILL: HALO OF FLESH — movesets lore-first.
@@ -545,11 +545,14 @@ function makeMove(slot, fighter, context, override = {}) {
     hitInterval: Math.max(2, override.hitInterval ?? spec.hitInterval ?? 4),
     projectile: override.projectile ?? false,
     projectileCount: Math.max(1, override.projectileCount ?? 1),
+    ...(override.projectileBurstCount?{projectileBurstCount:Math.max(1,override.projectileBurstCount),
+      projectileBurstInterval:Math.max(1,override.projectileBurstInterval||1)}:{}),
     projectileSpeed: override.projectileSpeed ?? (10.5 + (context.speed || 5) * .58),
     projectileScale: override.projectileScale ?? context.projectileScale ?? 1,
     projectileArc: override.projectileArc ?? 0,
     projectileGravity: override.projectileGravity ?? 0,
     projectileLife: override.projectileLife ?? 82,
+    ...(override.projectileColor?{projectileColor:override.projectileColor}:{}),
     homing: override.homing ?? 0,
     armorFrames: override.armorFrames ?? spec.armorFrames ?? 0,
     invulnFrames: override.invulnFrames ?? spec.invulnFrames ?? 0,
@@ -618,10 +621,12 @@ function disambiguateMoveNames(moves) {
   }
 }
 
-export function buildLoreMoveset(fighter, context = {}) {
+export function buildLoreMoveset(fighter, context = {}, weaponPhaseIndex = null) {
   const overrides = SPECIFIC_OVERRIDES[fighter.id] || {};
   const referencePolicy = combatReferencePolicy(fighter);
-  const recipe = combatReferenceRecipe(fighter);
+  const declaredRecipe = combatReferenceRecipe(fighter);
+  const phase = declaredRecipe.weaponPhases?.[weaponPhaseIndex??0];
+  const recipe = phase?{...declaredRecipe,moves:phase.moves}:declaredRecipe;
   const moves = {};
   for (const slot of MOVESET_KEYS) {
     const legacy = overrides[slot] || {};
@@ -661,9 +666,16 @@ export function buildLoreMoveset(fighter, context = {}) {
     if (isSuper && !researched.name) override.name = referencePolicy.superName || `${fighter.name} — séquence de versus`;
     if (slot === 'desperation') override.name = `${override.name || defaultName(slot, fighter, normaliseKind(fighter))} — dernier recours`;
     const move = makeMove(slot, fighter, context, override);
+    if(nonDamagingStagger(fighter,move)){
+      // Explicit source exception to the generated move's minimum of 1 HP.
+      move.damage=0;move.meter=0;move.meterGain=0;move.effect=null;
+      move.knockback=0;move.knockdown=false;move.groundBounce=false;
+      move.cancelInto=[];
+    }
     move.referenceIds = [...referencePolicy.referenceIds];
     move.referenceStatus = referencePolicy.observedBasis ? 'observed-behavior-versus-transposition' : 'unverified-versus-prototype';
     move.sourceTimingMeasured = false;
+    if(phase)move.weaponPhaseId=phase.id;
     if (isSuper) move.description = referencePolicy.superDescription;
     if (researched.ammoCost != null) move.ammoCost = researched.ammoCost;
 
@@ -705,7 +717,7 @@ export function buildLoreMoveset(fighter, context = {}) {
       exhausted.reach = Math.round(SLOT_SPECS[slot].reach * (context.reach || 1));
       exhausted.name = `Bras désarmé — ${MOVE_ROLE_LABELS[slot]}`;
       if (slot === 'neutralSpecial') {
-        exhausted.name = 'Étranglement après la dernière munition';
+        exhausted.name = 'Étranglement après abandon du pistolet';
         exhausted.level = 'throw';
         exhausted.reach = 72;
         exhausted.hits = 1;
@@ -731,6 +743,10 @@ export function buildLoreMoveset(fighter, context = {}) {
     inputMap: MOVE_INPUTS,
     referencePolicy,
     ammoProfile: recipe.ammoProfile || null,
+    weaponPhases:weaponPhaseIndex===null&&declaredRecipe.weaponPhases?.length
+      ? declaredRecipe.weaponPhases.map((entry,index)=>({id:entry.id,name:entry.name,weapon:entry.weapon,
+        index,threshold:entry.threshold,moves:buildLoreMoveset(fighter,context,index).moves,
+        fidelity:'source-weapon-order-versus-timing',sourceTimingMeasured:false})) : null,
     presentation: {
       intro: fighter.boss ? `L’arène se déforme autour de ${fighter.name}.` : `${fighter.name} émerge de la brume.`,
       taunt: fighter.canonicalBehavior,

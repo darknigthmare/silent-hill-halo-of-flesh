@@ -20,6 +20,16 @@ Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_H
 | Gestes référencés | Observations concises reliées à des sources et à l’édition exacte. |
 | Sources | URL, titre, type, date de consultation, portée et limites de chaque référence. |
 
+Les [recherches complémentaires du 23 octobre 2026](RECHERCHE_1TO1_2026-10-23.md)
+documentent les nouvelles références techniques et visuelles consultées, les
+phases d’Alessa, la phase désarmée de Cybil et le montage candidat d’Air Screamer. Elles
+documentent aussi les défenses de Missionary et d’Incubator et le raccord des
+décors bitmap. La passe suivante corrige la chute provoquée par la balle de
+Cybil, distingue les attaques d’Air/Night et retire les dégâts du coup de sol
+de Split Worm. Trois images fixes d’armes d’Alessa sont intégrées ; la
+mitraillette et les animations restent à produire. Elles ne constituent pas
+une certification des animations.
+
 ## Ce que signifie la fidélité
 
 **Une identité documentée ne valide pas automatiquement un mouvement.** Un bestiaire peut attester une morsure, un rampement ou une arme sans établir la préparation, les frames actives, la portée ni les transitions d’un jeu de versus. Les 4 600 emplacements sont désormais classés comme composites de gestes ou adaptations de versus ; aucun n’est présenté comme une animation 1:1 directement attestée. Les paramètres d’une commande désactivée restent visibles comme données du catalogue, sans être exécutés.
@@ -42,8 +52,8 @@ La victoire finale, la défaite finale et la sortie sont suivies séparément. U
 
 ## Suivi de l’intégration après la phase 1
 
-La v0.9.6 applique les 230 fiches de rôle et de capacité : **3 711 commandes
-actives et 889 désactivées avec une raison**, sur les 4 600 emplacements conservés.
+La v0.9.6 et sa continuation appliquent les 230 fiches de rôle et de capacité : **3 713 commandes
+actives et 887 désactivées avec une raison**, sur les 4 600 emplacements conservés.
 Les dossiers et l’atelier exposent l’édition exacte et les références.
 
 Les neuf clés `intro`, `winRound`, `loseRound`, `winMatch`, `loseMatch`, `outro`,
@@ -54,9 +64,16 @@ restent à produire. Les 1 799 lignes d’animation d’arène gardent leurs IDs
 1 161 éléments retirés du moteur restent listés pour tracer leur désactivation.
 Sept nouveaux raccords sont détaillés dans les fiches d’arènes concernées.
 
-L’action globale des poses de manche est validée ; les travaux techniques en
-cours ne valident pas automatiquement les images. **874 actions restent ouvertes
-sur 875, dont 127 P0 ; aucun clip animé ni fidélité 1:1 n’est certifié.**
+Les actions globales des poses de manche et des hooks bitmap sont validées.
+Le chargement des acteurs et des couches de décor est atomique ; les images
+dédiées restent des productions distinctes. **873 actions restent ouvertes
+sur 875, dont 127 P0. Un montage de vol candidat utilise trois images indépendantes ;
+trois images fixes d’Alessa portent la couverture à trois profils et sept PNG
+actifs ; aucune fidélité 1:1 n’est certifiée.**
+
+La [validation du 23 octobre](../INTEGRATION_QA_2026-10-23.json) couvre 604 tests
+Node, 96 tests Python et 305 contrôles navigateur dans onze suites. Les 45
+captures, cadres de test et leurs limites sont conservés avec les rapports.
 
 Pour une mise à jour ciblée, `scripts/update-production-workbook.mjs` prend le
 nouveau JSON du plan, le classeur existant, le précédent rapport
@@ -69,6 +86,14 @@ Il compare toutes les cellules et propriétés natives ; seules les augmentation
 de hauteur enregistrées, nécessaires au nouveau texte, sont admises.
 Une reconstruction complète reste un autre parcours, avec la précaution décrite
 ci-dessous pour les annotations manuelles.
+
+Sans `@oai/artifact-tool`, `scripts/update-production-workbook.py` propose le même
+contrat de cinq chemins avec la bibliothèque standard Python. Il modifie les
+cellules concernées dans le ZIP existant, préserve les autres parties, protège
+les champs annotables et recalcule les 80 formules prises en charge. Un périmètre,
+une formule ou une annotation non réconciliés provoquent un refus. Les journaux
+et le vérificateur de préservation accompagnent l’export ; aucun lancement
+d’Excel natif ou aperçu visuel du classeur n’est prétendu.
 
 ## Format artistique
 

@@ -1,4 +1,5 @@
 import { FIGHTER_REFERENCES } from './production-reference.js';
+import { ALESSA_WEAPON_PHASES } from './weapon-phases.js';
 
 // Gameplay transpositions of the observations collected for the production plan.
 // An archetype, a name, or an occurrence of “cry / ground / apparition” is never
@@ -16,8 +17,18 @@ const ATTACHED_BODIES = new Set(['sh4_one_truth_070']);
 const MOBILE_STATIONARY = new Set(['sh1_twinfeeler_015']);
 const PHASE_SUPER_LIMITS = Object.freeze({
   sh1_monster_cybil_017: 'Le super alterne tir et prise désarmée ; sa chorégraphie par phase reste à intégrer.',
-  sh3_memory_of_alessa_049: 'Seule la phase couteau est active ; les quatre armes et leurs transitions restent à intégrer.',
-  bom_blood_baby_144: 'L’invocation de Blood Mama demande un second acteur ; aucun projectile de remplacement.'
+  bom_blood_baby_144: 'La source décrit un rejeton créé par sa mère ; aucune invocation de Blood Mama par Blood Baby n’est attestée. Attaque propre à relever.'
+});
+// Classify only the explicitly authored firearm shots, never every projectile
+// owned by a humanoid or an inherited weapon from a different work.
+const FIREARM_SHOT_SLOTS = Object.freeze({
+  sh1_monster_cybil_017:['neutralSpecial'],
+  sh3_nurse_revolver_044:['neutralSpecial','super','desperation'],
+  sh3_memory_of_alessa_049:['neutralSpecial','super','desperation'],
+  sh4_man_with_the_coat_067:['neutralSpecial','super','desperation'],
+  sh4_walter_sullivan_072:['neutralSpecial','super','desperation'],
+  downpour_anne_cunningham:['neutralSpecial','super'],
+  arcade_robbie_the_rabbit_shotgun:['neutralSpecial','super','desperation']
 });
 
 const shot = (name, extra = {}) => ({ name, projectile:true, active:1, hits:1,
@@ -47,11 +58,17 @@ function weaponKit(weapon) {
 }
 
 define('sh1_air_screamer_001 sh1_night_flutter_002', {
+  // Shared SH1 controller: standing bite (attack 40), hovering bite (41),
+  // gliding scratch (42). Decomp @8a16aab, air_screamer.h:116–118 and
+  // air_screamer.c:13509–13547. Input variants and numerical tuning stay versus.
   moves:{
     ...weaponKit('Serres'),
-    neutralLight:contact('Heurt de tête à terre'),
-    neutralSpecial:contact('Plongée des serres', {travel:3.5, hits:1, reach:150}),
-    forwardSpecial:contact('Approche plongeante', {travel:4, hits:1}),
+    neutralLight:contact('Morsure au sol'),
+    airLight:contact('Morsure en vol stationnaire'),
+    airHeavy:contact('Griffure en vol plané'),
+    neutralSpecial:contact('Griffure en vol plané — approche', {travel:3.5, hits:1, reach:150}),
+    forwardSpecial:contact('Griffure planée — traversée', {travel:4, hits:1}),
+    airSpecial:contact('Griffure planée — descente'),
     super:contact('Plongée brisée', {travel:3.7, hits:2, reach:210}),
     desperation:contact('Plongée brisée — dernière attaque', {travel:4.1, hits:2, reach:235})
   }
@@ -70,17 +87,38 @@ define('sh1_floatstinger_016', {moves:{
   forwardSpecial:contact('Heurt de l’abdomen', {travel:3}),
   super:shot('Cercle toxique — projection'), desperation:shot('Dernier jet corrosif')
 }});
-define('sh1_incubator_018', {moves:{
-  neutralSpecial:shot('Décharge bleue'), super:shot('Jugement bleu'), desperation:shot('Foudre bleue du dénouement')
+define('sh1_incubator_018', {
+  // SH1 NTSC-U 1.1 decomp @8a16aab: Unknown23_Update is Incubator
+  // (map7_s03_3.c:8137). unknown23.c:870–885 checks planar distance <2.5;
+  // :358–378 emits attack 68, amount 1, with an outward angle. The SH1 boss
+  // guide independently identifies the knockdown field and blue/red lightning:
+  // https://www.silenthillmemories.net/sh1/bosses_en.htm
+  // Pixels, HP conversion, cooldown, recovery and RGB values below are versus
+  // choices, not measured source timings, dimensions or a canonical palette.
+  proximityField:{id:'incubator-proximity',radius:150,cooldown:90,damage:1,
+    knockback:6,knockdown:34,invuln:8,fidelity:'source-knockdown-versus-tuning',sourceTimingMeasured:false},
+  moves:{
+  neutralSpecial:shot('Décharge bleue',{projectileColor:'#80baff'}),
+  super:shot('Jugement bleu',{projectileColor:'#80baff'}),
+  desperation:shot('Foudre bleue du dénouement',{projectileColor:'#80baff'})
 }});
 define('sh1_incubus_019', {moves:{
-  neutralSpecial:shot('Décharge rouge'), super:shot('Orage du rituel'), desperation:shot('Foudre rouge du dénouement')
+  neutralSpecial:shot('Décharge rouge',{projectileColor:'#ff6868'}),
+  super:shot('Orage du rituel',{projectileColor:'#ff6868'}),
+  desperation:shot('Foudre rouge du dénouement',{projectileColor:'#ff6868'})
 }});
 define('sh1_monster_cybil_017', {
-  ammoProfile:{capacity:10, exhaustion:'unarmed'},
-  disabledSlots:{throw:'La prise appartient à la phase désarmée ; utiliser S après épuisement des dix tirs.',
+  // SH1 NTSC-U 1.1: initial health 4000, discard triggered strictly below 2000
+  // or after ten shots. The ratio maps that source rule to this versus health pool.
+  // shdecompilations/silent-hill-decomp@8a16aab925373696eaec2935dfe4f4c012b139e8
+  // src/maps/characters/monster_cybil.c (MonsterCybil_Init; func_800D9AB4).
+  ammoProfile:{capacity:10, exhaustion:'unarmed', disarmBelowHealthRatio:.5},
+  disabledSlots:{throw:'La prise appartient à la phase désarmée ; utiliser S après abandon du pistolet (dix tirs ou vitalité sous la moitié).',
     backThrow:'La projection arrière armée n’est pas documentée dans cette rencontre.'},
-  moves:{...weaponKit('Crosse du pistolet'), neutralSpecial:shot('Tir du pistolet', {ammoCost:1})}
+  // The bullet is source attack 63 (monster_cybil.c:1182–1185), routed to
+  // DamageThrownFront/Back (bodyprog/player_control.c:7133–7145). Recovery and
+  // damage retain the existing versus values, not source-measured frame data.
+  moves:{...weaponKit('Crosse du pistolet'), neutralSpecial:shot('Tir du pistolet', {ammoCost:1,knockdown:true})}
 });
 define('sh2_lying_figure_020 sh2_lying_figure_crawling_021', {
   disabledSlots:{throw:'Les bras sont enfermés ; aucune saisie de cette version n’est documentée.',
@@ -134,7 +172,40 @@ define('sh3_pendulum_039', {moves:{
 define('sh3_nurse_revolver_044', {moves:{...weaponKit('Crosse du revolver'),
   neutralSpecial:shot('Tir de revolver'), super:shot('Ligne de soin — tir'), desperation:shot('Dernier tir de la Nurse')
 }});
-define('sh3_memory_of_alessa_049', {moves:weaponKit('Couteau — phase initiale')});
+// SH3 boss guide (Andrew Haffenden): the ground pound "does no damage but
+// staggers Heather". https://www.silenthillmemories.net/sh3/bosses_en.htm
+// Zero health damage is sourced. This local, grounded collision, crouch guard
+// and 18-tick stagger use versus rules; no original animation was measured.
+define('sh3_split_worm_046', {
+  nonDamagingStaggers:{downSpecial:{frames:18,groundedOnly:true,sourceTimingMeasured:false}},
+  moves:{downSpecial:contact('Frappe du sol — déséquilibre',{meter:0})}
+});
+// SH3 (2003), bosses_en.htm, Missionary: frontal gunfire is stopped by its
+// blades; a silencer hides the muzzle flash. Downed targets remain vulnerable.
+// The runtime's attack/recovery exclusions are versus state choices, not
+// measured windows from the source. No automatic counter or perfect guard.
+define('sh3_missionary_047', {defense:{frontalVisibleBullets:true}});
+// Each SH3 form equips exactly one weapon. Inputs, quarter-health boundaries,
+// burst size, approach distance and recovery remain original versus choices.
+const alessaWeaponPhases=ALESSA_WEAPON_PHASES.map((phase,index)=>{
+  const firearm=phase.id==='handgun'||phase.id==='smg';
+  const weapon=firearm?`Crosse du ${phase.id==='smg'?'pistolet-mitrailleur':'pistolet'}`:phase.weapon;
+  const moves={...weaponKit(weapon)};
+  const pressure=`Mémoire alternée — ${phase.weapon}`;
+  if(firearm){
+    const burst=phase.id==='smg'?{projectileBurstCount:3,projectileBurstInterval:5,active:11,damageScale:.45}:{};
+    moves.neutralSpecial=shot(phase.id==='smg'?'Rafale de la mitraillette':'Tir du pistolet',
+      {...burst,projectileArc:0,projectileLife:60});
+    moves.super=shot(pressure,{...burst,travel:1.8});
+    moves.desperation=shot(`${pressure} — dernier recours`,{...burst,travel:2.1});
+  }else{
+    moves.neutralSpecial=contact(`${phase.weapon} — frappe de la phase`,{hits:1,reach:phase.id==='pipe'?190:120});
+    moves.super=contact(pressure,{hits:2,travel:1.8,reach:phase.id==='pipe'?215:150});
+    moves.desperation=contact(`${pressure} — dernier recours`,{hits:2,travel:2.1,reach:phase.id==='pipe'?235:165});
+  }
+  return {...phase,index,moves};
+});
+define('sh3_memory_of_alessa_049', {moves:alessaWeaponPhases[0].moves,weaponPhases:alessaWeaponPhases});
 define('sh3_god_050', {moves:{
   ...weaponKit('Bras de la forme incomplète'),
   neutralSpecial:shot('Flammes projetées au sol', {effectOverride:'burn', projectileSpeed:8}),
@@ -347,7 +418,9 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     : PHASE_SUPER_LIMITS[ref.id] || (proposal?.status !== 'adaptation-versus-proposee'
       ? proposal?.description || 'Référence du super manquante.'
       : !observed.length ? 'Les gestes de cette édition restent à relever avant de produire un super.' : '');
-  const moves = combatEnabled ? Object.values(recipe.moves || {}) : [];
+  const moves = combatEnabled ? (recipe.weaponPhases?.length
+    ? recipe.weaponPhases.flatMap(phase=>Object.values(phase.moves||{}))
+    : Object.values(recipe.moves || {})) : [];
   const effects = [...new Set(moves.map(move => move.effectOverride).filter(Boolean))];
   return {
     id: fighter?.id || null,
@@ -359,6 +432,8 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     canMove: combatEnabled && !attached,
     canJump: combatEnabled && !attached && role !== 'stationary-boss' && !GROUND_ONLY.has(ref?.id),
     canDodge: combatEnabled && !attached,
+    ...(recipe.defense?{defense:{...recipe.defense}}:{}),
+    ...(combatEnabled&&recipe.proximityField?{proximityField:{...recipe.proximityField}}:{}),
     referenceIds: [...(ref?.referenceIds || [])],
     observedBasis: observed.map(move => `${move.name} : ${move.description}`).join(' '),
     superEnabled: !superReason,
@@ -379,4 +454,18 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
 export function combatReferenceRecipe(fighter) {
   const ref = matchingReference(fighter, FIGHTER_REFERENCES);
   return structuredClone(ref ? RECIPES[ref.id] || {} : {});
+}
+
+export function isVisibleFirearmProjectile(fighter, move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES);
+  if(!ref||!move?.projectile||move.trap||move.silenced===true||
+    !FIREARM_SHOT_SLOTS[ref.id]?.includes(move.key))return false;
+  return ref.id!=='sh3_memory_of_alessa_049'||['handgun','smg'].includes(move.weaponPhaseId);
+}
+
+export function nonDamagingStagger(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES);
+  if(!ref||!move||move.projectile||move.trap||move.aura||move.level==='throw')return null;
+  const stagger=RECIPES[ref.id]?.nonDamagingStaggers?.[move.key];
+  return stagger?{...stagger}:null;
 }

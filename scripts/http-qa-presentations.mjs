@@ -27,6 +27,12 @@ function check(name,passed,detail){
  if(!passed)throw Error(name);
 }
 async function shot(page,name){await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');}
+async function selectStaticWorkshopSubject(page){
+ const id='film_red_pyramid_film_175';
+ await page.selectOption('#spriteSource','film');await page.fill('#spriteSearch',id);
+ await page.locator(`.sprite-card[data-id="${id}"]`).click();
+ await page.waitForFunction(id=>{const c=document.querySelector('#spriteDetail canvas');return c?.dataset.spriteId===id&&c.dataset.artStatus==='raster';},id);
+}
 async function newPage(context){const page=await context.newPage();pages.push(page);page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());return page;}
 async function quietRules(page){for(const id of ['stageHazards','stageDirector','otherworldShift','stageFatalities'])await page.uncheck('#'+id);}
 async function installFixtures(page){
@@ -192,8 +198,8 @@ try{
  check('the new dojo result is revealable after its own completed outro',await page.evaluate(before=>__PRESENTATION_QA__.records().matches===before+2&&__HALO_QA__.engine.actors[0].presentation.complete,dojoBefore));
  check('dojo timing fixture restores original SPRITES without new artwork',await restore(page));
 
- await page.goto(base+'/modules/sprite-workshop.html');await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');
- check('workshop retains thirty old keys, adds taunt and exact production contexts',await page.locator('[data-inspect=pose] option').evaluateAll(options=>options.filter(o=>!o.value.includes('@')).length===39&&options.some(o=>o.value==='finisher@sh1_air_screamer_001_signature')&&options.some(o=>o.value==='finished@midwich_fatality')));
+ await page.goto(base+'/modules/sprite-workshop.html');await selectStaticWorkshopSubject(page);
+ check('workshop retains thirty old keys, adds taunt and exact production contexts',await page.locator('[data-inspect=pose] option').evaluateAll(options=>options.filter(o=>!o.value.includes('@')).length===39&&options.some(o=>o.value==='finisher@film_red_pyramid_film_175_signature')&&options.some(o=>o.value==='finished@midwich_fatality')));
  await page.locator('.clip-editor summary').click();
  for(const key of keys){
   await page.selectOption('[data-inspect=pose]',key);
@@ -207,7 +213,7 @@ try{
 
  const offline=await browser.newContext({viewport:{width:1280,height:900}}),off=await newPage(offline);
  await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
- await offline.setOffline(true);await off.goto(base+'/modules/sprite-workshop.html');await off.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');
+ await offline.setOffline(true);await off.goto(base+'/modules/sprite-workshop.html');await selectStaticWorkshopSubject(off);
  const modules=await off.evaluate(async()=>{const [poses,sequences]=await Promise.all([import('/src/sprite-poses.js'),import('/src/presentation-sequences.js')]);return {keys:poses.PRESENTATION_KEYS,durationFunction:typeof sequences.presentationDuration,actorFunction:typeof sequences.createActorPresentation};});
  check('both new presentation modules import entirely offline',JSON.stringify(modules.keys)===JSON.stringify(keys)&&modules.durationFunction==='function'&&modules.actorFunction==='function',modules);
  await off.goto(versus);await off.waitForFunction(()=>!!window.__HALO_QA__);await off.selectOption('#mode','local');await quietRules(off);await off.click('#launch');await off.waitForFunction(()=>__HALO_QA__.engine?.phase==='intro');await off.click('#pauseBtn');

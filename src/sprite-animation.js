@@ -1,5 +1,6 @@
 /** Per-actor presentation clock. No random numbers, wall time or physics writes. */
 import {PRESENTATION_KEYS,validSpriteClipKey} from './sprite-poses.js';
+import {ALESSA_FIGHTER_ID,weaponPhase} from './weapon-phases.js';
 const presentationOf=state=>PRESENTATION_KEYS.includes(state?.presentation?.key)?state.presentation:null;
 const frameTick=value=>Number.isFinite(value)?Math.max(0,Math.floor(value)):0;
 export function actorSpriteState(actor){
@@ -8,6 +9,7 @@ export function actorSpriteState(actor){
   blocking:!!actor.blocking,crouching:!!actor.crouching,airborne:!actor.grounded,
   moving:actor.state==='walk',moveKey:actor.attack?.key||actor.attack?.move?.key,
   frame:actor.spriteClock?.tick??0,hitFlash:actor.hitFlash>0};
+ if(actor.data?.id===ALESSA_FIGHTER_ID&&actor.data.source==='sh3')state.weaponContext=`${ALESSA_FIGHTER_ID}:weapon:${weaponPhase(actor)?.id||'unavailable'}`;
  const presentation=presentationOf(actor);
  if(presentation){
   state.presentation={...presentation};
@@ -22,22 +24,27 @@ export function poseFromState(s={}){
  if(s.crouching)return 'crouch';if(s.airborne)return 'jump';if(s.moving)return 'walk';return 'idle';
 }
 export function advanceSpriteClock(actor){
- const pose=poseFromState(actorSpriteState(actor));
+ const state=actorSpriteState(actor),pose=poseFromState(state);
  const presentation=presentationOf(actor);
- const identity=presentation?`${pose}:presentation:${presentation.id??presentation.sequenceId??''}`:pose+':'+(actor.attack?.id??'');
+ const identity=presentation?`${pose}:presentation:${presentation.id??presentation.sequenceId??''}`:pose+':'+(actor.attack?.id??'')+':'+(state.weaponContext||'');
  actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?actor.spriteClock.tick+1:0};
 }
 export function requestedSpriteClipKey(state={}){
  const pose=poseFromState(state),presentation=presentationOf(state);
- return presentation?.clipKey||(presentation?.contextId?`${pose}@${presentation.contextId}`:pose);
+ return presentation?.clipKey||(presentation?.contextId?`${pose}@${presentation.contextId}`:pose==='idle'&&state.weaponContext!==undefined?`idle@${state.weaponContext}`:pose);
 }
 export function sampleSpriteClip(art,state={}){
  if(!art)return null;
  const requestedPose=poseFromState(state),requested=requestedSpriteClipKey(state),presentation=presentationOf(state);
  const has=key=>Object.prototype.hasOwnProperty.call(art.clips||{},key)&&(!presentation||art.clips[key]?.loop===false);
+ const idle=state.weaponContext!==undefined?`idle@${state.weaponContext}`:'idle';
+ // An exact weapon context can never borrow the portrait's generic knife.
+ if(state.weaponContext!==undefined&&(!validSpriteClipKey(idle,art)||!Object.prototype.hasOwnProperty.call(art.clips||{},idle)||!art.clips[idle]?.frames?.length))return null;
  const validContext=!requested.includes('@')||validSpriteClipKey(requested,art);
  const strictContext=Boolean(presentation?.contextId||requested.includes('@'))&&['finisher','finished'].includes(requestedPose);
- const pose=validContext&&has(requested)?requested:!strictContext&&has(requestedPose)?requestedPose:'idle';
+ // This SH3 contract currently provides four weapon idles only. Generic attack,
+ // KO or presentation art has no weapon identity and cannot dress another phase.
+ const pose=state.weaponContext!==undefined?idle:validContext&&has(requested)?requested:!strictContext&&requestedPose!=='idle'&&has(requestedPose)?requestedPose:idle;
  const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
  if(!clip?.frames?.length)return null;
  const durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame||1);
@@ -47,10 +54,13 @@ export function sampleSpriteClip(art,state={}){
  // The engine's shared sequence tick also drives direct inspector samples.
  // No clip may read an obsolete attack clock after a round/finisher transition.
  let tick=frameTick(presentationOf(state)?.frame??state.frame);
+ // A newly animated idle must not masquerade as a missing death, hit or attack.
+ // Hold its first image while preserving the explicit missing-pose result.
+ if(pose===idle&&pose!==requested)tick=0;
  tick=clip.loop?tick%total:Math.min(tick,total-1);
  let index=0,elapsed=0;while(index<durations.length-1&&tick>=elapsed+durations[index])elapsed+=durations[index++];
  const frameIndex=clip.frames[index],frame=art.frames[frameIndex];
  return frame?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
-  fallbackReason:pose===requested?null:strictContext?'missing-contextual-finisher':pose===requestedPose?'generic-presentation':'missing-presentation',
+  fallbackReason:pose===requested?null:state.weaponContext!==undefined&&pose===idle?'missing-weapon-pose':strictContext?'missing-contextual-finisher':pose===requestedPose?'generic-presentation':'missing-presentation',
   frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
 }

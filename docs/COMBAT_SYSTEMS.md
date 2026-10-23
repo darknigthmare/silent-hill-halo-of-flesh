@@ -4,13 +4,16 @@ La v0.9.6 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, 
 
 ## Architecture des movesets
 
-Chaque fiche conserve **20 emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **3711 commandes sont activées ; 889 sont désactivées avec une raison explicite.**
+Chaque fiche conserve **20 emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **3713 commandes sont activées ; 887 sont désactivées avec une raison explicite.**
 
 Répartition : **0 directement attestées**, **2711 composites lore-friendly**, **1889 adaptations versus**.
 
 Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation, références et état d’exécution. Les nombres sont des paramètres de versus non mesurés dans la source ; les valeurs d’une commande désactivée restent documentées mais ne sont pas exécutées.
 
-Les projectiles, téléportations, auras et afflictions exigent une capacité autorisée pour l’identifiant exact. Un trait passif ne peut pas réintroduire un effet retiré. Cybil possède dix tirs puis une phase désarmée. Les corps attachés conservent leur ancrage, même sous une projection arrière. La provocation P1 P / P2 N / manette L3 est annulable et n’accorde ni dégâts, ni jauge, ni invulnérabilité.
+Les projectiles, téléportations, auras et afflictions exigent une capacité autorisée pour l’identifiant exact. Un trait passif ne peut pas réintroduire un effet retiré. Cybil possède dix tirs et abandonne son arme lorsque les munitions sont épuisées ou que sa santé passe strictement sous 50 %. La phase désarmée persiste entre les manches, sans consommer les balles abandonnées. Les corps attachés conservent leur ancrage, même sous une projection arrière. La provocation P1 P / P2 N / manette L3 est annulable et n’accorde ni dégâts, ni jauge, ni invulnérabilité.
+
+Memory of Alessa suit quatre armes dans l’ordre SH3 : couteau, pistolet, tuyau puis mitraillette. La récupération verrouille chaque changement ; les coups de contact, tirs et rafales suivent uniquement l’arme équipée. Les quarts de vitalité, la récupération et la cadence de trois tirs sont des adaptations de versus, sans relevé officiel de timings. La naissance de Blood Baby depuis sa mère ne lui accorde pas le pouvoir inverse d’invoquer Blood Mama.
+Le Missionary de SH3 dévie les balles visibles de face lorsqu’il est disponible ; dos, chute et attaque restent vulnérables. Cette défense ne donne ni jauge ni contre automatique. Incubator possède un champ passif local qui renverse vers l’extérieur ; Incubus ne le reçoit pas. Leurs décharges sont respectivement bleues et rouges. Les états, dimensions, durées, dégâts et valeurs RGB du versus ne sont pas des mesures officielles.
 
 ## Traits de manifestation
 

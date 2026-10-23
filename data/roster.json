@@ -95,7 +95,7 @@
       "observedMoves": [
         {
           "name": "Piqué",
-          "description": "Frappe avec les pattes.",
+          "description": "Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -106,7 +106,7 @@
         },
         {
           "name": "Au sol",
-          "description": "Coup de tête en avant.",
+          "description": "Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -3405,14 +3405,16 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+        "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+        "CL_SH1_BOSSES"
       ],
       "observedMoves": [
         {
           "name": "Tir",
-          "description": "Tir de pistolet.",
+          "description": "Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos.",
           "evidence": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -3649,7 +3651,7 @@
         },
         {
           "name": "État du boss",
-          "description": "Apparition immobile ; dénouement selon branche.",
+          "description": "Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "evidence": [
             "CL_SH1_BOSSES"
           ],
@@ -10722,7 +10724,8 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+        "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+        "CL_SH3_BOSSES"
       ],
       "observedMoves": [
         {
@@ -10737,9 +10740,10 @@
         },
         {
           "name": "Défense",
-          "description": "Bloque puis contre-attaque.",
+          "description": "Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage.",
           "evidence": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -36261,18 +36265,19 @@
       "source": "bom",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+      "identityNote": "Version Book of Memories uniquement; le bestiaire décrit un rejeton engendré par sa mère, sans attester une invocation de celle-ci par le rejeton. Les attaques autonomes restent à relever dans cette édition.",
       "referenceIds": [
         "EXT20"
       ],
       "observedMoves": [
         {
-          "name": "Invocation de Blood Mama",
-          "description": "Invocation de Blood Mama",
+          "name": "Naissance depuis sa mère",
+          "description": "Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "evidence": [
             "EXT20"
           ],
           "status": "documente-secondaire",
+          "kind": "transition",
           "animationMeasured": false,
           "timecode": null,
           "reviewRequired": "Relever vidéo/capture du jeu ou film exact; aucun minutage inventé."
@@ -36280,14 +36285,15 @@
       ],
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+        "Naissance depuis sa mère attestée par le bestiaire ; aucune attaque autonome ni invocation de Blood Mama par Blood Baby ne doit être déduite de cette description.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
         "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
       ],
       "proposals": {
         "super": {
           "name": "Blood Baby — séquence de pression",
-          "description": "Chorégraphie originale : anticipation centrée sur « rejeton », enchaînement limité autour de « Invocation de Blood Mama », puis récupération exposée; aucun nouveau pouvoir ajouté.",
-          "status": "adaptation-versus-proposee",
+          "description": "Super suspendu : relever les actions propres à Blood Baby dans Book of Memories avant de chorégraphier une séquence de versus. Le fait d'être engendré par sa mère ne justifie pas le pouvoir inverse d'invoquer Blood Mama.",
+          "status": "bloque-reference",
           "basis": [
             "EXT20"
           ]

@@ -1,5 +1,42 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Continuation du 23 octobre 2026
+
+Memory of Alessa dispose des quatre phases d’armes dans l’ordre SH3 : couteau,
+pistolet, tuyau et mitraillette. Cybil abandonne son arme après dix tirs ou sous
+la moitié de sa santé. La fiche de Blood Baby distingue sa naissance depuis sa
+mère d’une invocation non attestée. Le catalogue conserve **3 713 commandes
+actives et 887 désactivées**.
+
+Le Missionary de SH3 dévie les balles visibles de face en posture disponible.
+Incubator renverse à proximité ; ses décharges sont bleues, celles d’Incubus
+rouges. Les paramètres de ces adaptations du versus restent identifiés.
+Le coup de sol de Split Worm déséquilibre sans infliger de dégâts. La balle
+de Cybil renverse la cible ; les morsures au sol et stationnaire et la griffure
+planée d’Air/Night sont distinguées d’après le contrôleur SH1.
+
+Air Screamer possède un montage de vol candidat à partir de trois PNG distincts,
+reconstruits avec les vues avant et arrière du jeu original. Alessa dispose de
+trois images fixes distinctes : couteau, pistolet et tuyau, comparées au modèle
+et aux armes de SH3. La mitraillette manque ; chaque phase conserve son propre
+contexte, y compris pendant un KO ou une attaque sans clip. Les trois profils
+illustrés utilisent sept PNG actifs ; **un montage est animé, aucune fidélité
+1:1 n’est certifiée**. Le classeur est mis à jour avec les phases, les références
+et les travaux encore ouverts, en préservant ses annotations et ses 80 formules.
+
+Le chargement des acteurs et des futurs décors bitmap est atomique, avec reprise
+et annulation vérifiées. Cette action technique est validée ; **873 actions
+restent ouvertes**, dont 127 P0, pour la production et les vérifications restantes.
+
+**Validation : 604 tests Node, 96 tests Python et 305 contrôles navigateur dans
+onze suites, avec 45 captures et aucune erreur JavaScript.**
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-23.json).
+
+[Recherche, réalisation et limites de cette continuation](docs/production/RECHERCHE_1TO1_2026-10-23.md) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+Les relevés datés ci-dessous décrivent les livraisons antérieures.
+
 ## Intégration des fiches de l’Excel — 17 octobre 2026
 
 Les **230 fiches de combattant, 123 fiches de lieu et 135 sources** alimentent

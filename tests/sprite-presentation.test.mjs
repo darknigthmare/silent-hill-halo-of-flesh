@@ -14,6 +14,17 @@ test('a repeated move resets the state clock by attack identity',()=>{const a=ac
 test('KO and hurt cannot inherit an interrupted attack frame clock',()=>{const a=actor();a.attack={key:'neutralLight',id:2,frame:40};a.ko=true;advanceSpriteClock(a);assert.equal(actorSpriteState(a).frame,0);assert.equal(poseFromState(actorSpriteState(a)),'ko');});
 test('per-frame durations sample correct frame boundaries',()=>{const a={frames:[{},{}],clips:{idle:{frames:[0,1],ticksPerFrame:1,frameTicks:[2,5],loop:true}}};assert.equal(sampleSpriteClip(a,{frame:1}).index,0);assert.equal(sampleSpriteClip(a,{frame:2}).index,1);assert.equal(sampleSpriteClip(a,{frame:6}).index,1);assert.equal(sampleSpriteClip(a,{frame:7}).index,0);});
 test('missing move reports fallback rather than pretending it was animated',()=>{const a=spriteFor(film),s=sampleSpriteClip(a,{moveKey:'neutralHeavy',frame:18});assert.equal(s.requested,'neutralHeavy');assert.equal(s.pose,'idle');assert.equal(s.fallback,true);});
+test('the authored flight loop advances only for idle and cannot animate a missing KO, hit or attack',()=>{
+ const art=spriteFor(air);
+ assert.equal(sampleSpriteClip(art,{frame:6}).frameIndex,1);
+ assert.equal(sampleSpriteClip(art,{frame:18}).frameIndex,2);
+ for(const state of [{ko:true},{hurt:true},{phase:true},{moveKey:'neutralHeavy'},
+  {presentation:{key:'loseMatch',frame:18}}]){
+  const sample=sampleSpriteClip(art,{...state,frame:18});
+  assert.equal(sample.pose,'idle');assert.equal(sample.fallback,true);
+  assert.equal(sample.frameIndex,0);assert.equal(sample.tick,0);
+ }
+});
 test('inherited clip names never resolve as a real pose',()=>assert.equal(sampleSpriteClip(spriteFor(film),{moveKey:'constructor'}).pose,'idle'));
 test('calibration export preserves exact original image identities',()=>{const a=spriteFor(film),draft=structuredClone(a);draft.frames[0].anchor=[.6,.91];const p=calibrationPacket(film,a,draft);assert.equal(p.kind,'halo-sprite-calibration');assert.equal(p.frames[0].sha256,a.frames[0].sha256);assert.deepEqual(p.frames[0].anchor,[.6,.91]);assert.notDeepEqual(a.frames[0].anchor,p.frames[0].anchor);});
 for(const data of [film,air])for(const facing of [-1,1])for(const x of [80,1200])test(`camera fits entire ${data.id} at ${x} facing ${facing}`,()=>{

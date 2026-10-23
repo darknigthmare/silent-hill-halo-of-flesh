@@ -131,7 +131,7 @@ test('archetypes and legacy lore keywords cannot promote a sourced contact fight
   const moves = buildLoreMoveset(misleading).moves;
   assert.ok(Object.values(moves).every(move => !move.projectile && !move.trap && !move.teleport && !move.aura && !move.effect));
   assert.ok(Object.values(moves).every(move => move.fidelity !== 'direct-canonical'));
-  assert.match(moves.neutralSpecial.canonicalBasis, /Frappe avec les pattes/);
+  assert.match(moves.neutralSpecial.canonicalBasis, /pattes en vol plané \(GlideScratchAttack\)/);
   assert.doesNotMatch(moves.neutralSpecial.canonicalBasis, /salve de feu/);
 });
 
@@ -176,7 +176,7 @@ test('Silent Hill f attacks use the recorded limb and fire behaviors without tra
 
 test('Cybil provides a finite pistol phase and independent unarmed fallback; Alessa does not mix four weapons', () => {
   const cybil = profile('sh1_monster_cybil_017');
-  assert.deepEqual(cybil.moveset.ammoProfile, {capacity:10, exhaustion:'unarmed'});
+  assert.deepEqual(cybil.moveset.ammoProfile, {capacity:10, exhaustion:'unarmed', disarmBelowHealthRatio:.5});
   assert.equal(cybil.moves.neutralSpecial.ammoCost, 1);
   const unarmed = cybil.moves.neutralSpecial.exhaustedMove;
   assert.equal(unarmed.enabled, true);
@@ -193,7 +193,8 @@ test('Cybil provides a finite pistol phase and independent unarmed fallback; Ale
   const alessa = profile('sh3_memory_of_alessa_049');
   assert.ok(activeMoves('sh3_memory_of_alessa_049').every(move => !move.projectile));
   assert.match(alessa.moves.neutralHeavy.name, /Couteau/);
-  assert.equal(alessa.moves.super.enabled, false);
+  assert.equal(alessa.moves.super.enabled, true);
+  assert.deepEqual(alessa.moveset.weaponPhases.map(phase=>phase.id),['knife','handgun','pipe','smg']);
 });
 
 test('all roster moves respect enabled cancellation targets, scoped capabilities and unmeasured source timing', () => {

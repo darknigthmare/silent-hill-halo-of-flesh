@@ -349,6 +349,73 @@ test('Cybil spends exactly ten accepted shots, changes all exhausted attacks, pr
   engine.resetMatch(); assert.equal(actor.ammo, 10); assert.equal(engine.round, 1); assert.equal(actor.presentation.key, 'intro');
 });
 
+test('Cybil keeps the pistol at exactly half health and discards it strictly below without spending the remaining ammunition', () => {
+  const engine = engineFor({ p1: fighter('sh1_monster_cybil_017'), fatalities: false }); enterFight(engine);
+  const [actor, target] = engine.actors;
+  actor.health = actor.maxHealth / 2;
+  assert.equal(engine.beginAttack(actor, 'neutralSpecial'), true);
+  assert.equal(actor.attack.move.projectile, true);
+  assert.equal(actor.weaponDiscarded, false);
+  assert.equal(actor.ammo, 9);
+
+  // A real damage path crosses the strict source boundary; unused rounds are
+  // retained as ammunition, rather than fabricated as nine additional shots.
+  engine.applyStatusDamage(actor, 1);
+  assert.equal(actor.health, actor.maxHealth / 2 - 1);
+  assert.equal(actor.weaponDiscarded, true);
+  assert.equal(actor.ammo, 9);
+  assert.equal(engine.snapshot().p1.weaponDiscarded, true);
+  assert.equal(actor.attack.move.projectile, true, 'the already accepted shot is not rewritten');
+  ticks(engine, 120); // Allow the existing versus boss-phase recovery to finish.
+  assert.equal(actor.phaseLock, 0);
+  actor.x = 110; target.x = 1150;
+  const targetHealth = target.health;
+  assert.equal(engine.beginAttack(actor, 'neutralSpecial'), true);
+  const unarmed = actor.attack.move;
+  assert.equal(unarmed, actor.profile.moves.neutralSpecial.exhaustedMove);
+  assert.equal(unarmed.projectile, false);
+  assert.equal(unarmed.level, 'throw');
+  assert.ok(unarmed.reach < 100);
+  ticks(engine, unarmed.startup + unarmed.active + unarmed.recovery + 4);
+  assert.equal(engine.projectiles.length, 0);
+  assert.equal(target.health, targetHealth, 'the discarded pistol cannot damage a distant target');
+  assert.equal(actor.ammo, 9);
+});
+
+test('Cybil cannot recover a discarded pistol by healing or changing rounds; a full retry restores the armed encounter', () => {
+  const engine = engineFor({ p1: fighter('sh1_monster_cybil_017'), roundsToWin: 2, fatalities: false }); enterFight(engine);
+  const actor = engine.actors[0];
+  actor.health = actor.maxHealth / 2 - 1;
+  actor.hurtFrames = 5;
+  engine.update();
+  assert.equal(actor.weaponDiscarded, true, 'the health transition is observed even during recovery');
+  assert.equal(actor.ammo, 10);
+  actor.health = actor.maxHealth;
+  ticks(engine, 60);
+  assert.equal(actor.weaponDiscarded, true);
+  engine.resetRound(); enterFight(engine);
+  assert.equal(actor.health, actor.maxHealth);
+  assert.equal(actor.weaponDiscarded, true);
+  assert.equal(actor.ammo, 10);
+  assert.equal(engine.beginAttack(actor, 'neutralSpecial'), true);
+  assert.equal(actor.attack.move.projectile, false);
+  assert.equal(actor.ammo, 10);
+
+  engine.resetMatch(); enterFight(engine);
+  assert.equal(actor.weaponDiscarded, false);
+  assert.equal(actor.ammo, 10);
+  assert.equal(engine.beginAttack(actor, 'neutralSpecial'), true);
+  assert.equal(actor.attack.move.projectile, true);
+  assert.equal(actor.ammo, 9);
+
+  // Retain the engine's explicit reload-each-round override for custom rules.
+  actor.profile.moveset.ammoProfile = { ...actor.profile.moveset.ammoProfile, reloadEachRound: true };
+  actor.health = actor.maxHealth / 2 - 1;
+  engine.resetRound(); enterFight(engine);
+  assert.equal(actor.weaponDiscarded, false);
+  assert.equal(actor.ammo, 10);
+});
+
 test('passive roles cannot leak damage through projectiles, status or counters and attached bodies resist locomotion and pushing', () => {
   const passive = engineFor({ p1: fighter('sh1_larval_stalker_007'), fatalities: false }); enterFight(passive);
   const [actor, target] = passive.actors, copiedMove = { ...target.profile.moves.neutralLight, enabled: true, projectile: true };

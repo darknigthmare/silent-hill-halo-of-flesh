@@ -26,7 +26,14 @@ jobs:
         with:
           node-version: 22
 
+      - name: Set up PNG validation
+        run: |
+          python3 -m venv "$RUNNER_TEMP/halo-qa-venv"
+          "$RUNNER_TEMP/halo-qa-venv/bin/python" -m pip install 'Pillow==11.3.0'
+
       - name: Run full QA
+        env:
+          HALO_PYTHON: ${{ runner.temp }}/halo-qa-venv/bin/python
         run: npm test
 
       - name: Verify generated files are committed

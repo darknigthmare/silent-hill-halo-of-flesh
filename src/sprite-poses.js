@@ -1,6 +1,7 @@
 /** Exact clip keys shared by authoring and playback. No inferred artwork or game timing. */
 import {MOVESET_KEYS} from './movesets.js';
 import {FIGHTER_REFERENCES,STAGE_REFERENCES} from './production-reference.js';
+import {ALESSA_FIGHTER_ID,ALESSA_WEAPON_PHASES} from './weapon-phases.js';
 
 export const BASE_POSE_KEYS=Object.freeze(['idle','walk','crouch','jump','guard','dodge','hurt','knockdown','ko','phase']);
 export const PRESENTATION_KEYS=Object.freeze(['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt']);
@@ -16,13 +17,21 @@ export const POSE_LABELS=Object.freeze({
 export const splitSpriteClipKey=key=>{const [pose,contextId,...extra]=String(key).split('@');return {pose,contextId:contextId||null,validParts:extra.length===0};};
 export const isPresentationPose=key=>PRESENTATION_KEYS.includes(splitSpriteClipKey(key).pose);
 export const isOneShotPose=key=>MOVESET_KEYS.includes(key)||isPresentationPose(key);
-export const poseLabel=key=>{const {pose,contextId}=splitSpriteClipKey(key);return (Object.hasOwn(POSE_LABELS,pose)?POSE_LABELS[pose]:pose)+(contextId?' · '+contextId:'');};
+export function weaponIdleClipKeys(fighter){
+ if(fighter?.id!==undefined&&fighter?.fighterId!==undefined&&fighter.id!==fighter.fighterId)return [];
+ return (fighter?.fighterId??fighter?.id)===ALESSA_FIGHTER_ID&&fighter.source==='sh3'
+  ?ALESSA_WEAPON_PHASES.map(phase=>`idle@${ALESSA_FIGHTER_ID}:weapon:${phase.id}`):[];
+}
+export const isWeaponIdleClipKey=(key,art)=>weaponIdleClipKeys(art).includes(key);
+export const poseLabel=key=>{const {pose,contextId}=splitSpriteClipKey(key),weapon=ALESSA_WEAPON_PHASES.find(phase=>key===`idle@${ALESSA_FIGHTER_ID}:weapon:${phase.id}`);
+ return weapon?`Repos · ${weapon.name}`:(Object.hasOwn(POSE_LABELS,pose)?POSE_LABELS[pose]:pose)+(contextId?' · '+contextId:'');};
 const productionType={winRound:'winRound1',loseRound:'loseRound1'};
 /** Context is the production entity, never another edition's alias or a free-form path. */
 export function validSpriteClipKey(key,art={}){
  const {pose,contextId,validParts}=splitSpriteClipKey(key);
  if(!validParts||!POSE_KEYS.includes(pose))return false;
  if(contextId===null)return key===pose;
+ if(pose==='idle')return isWeaponIdleClipKey(key,art);
  if(!PRESENTATION_KEYS.includes(pose)||key.length>240)return false;
  if(pose==='finisher'||pose==='finished'){
   const match=contextId.match(/^([a-z0-9_]+)_(signature|nightmare|fatality)$/);

@@ -163,10 +163,40 @@ test('implementation progress maps to real hooks while every unproduced artistic
  }
  const task=id=>plan.tasks.find(row=>row.id===id);
  assert.equal(task('global:round-boundaries').status,'Validé');
- assert.equal(task('global:cinematic-clips').status,'En cours');
+ assert.equal(task('global:cinematic-clips').status,'Validé');
+ assert.match(task('global:cinematic-clips').reason,/Chargement atomique acteurs et couches bitmap du lieu.*PNG dédiés et décors restent à produire/);
  for(const row of plan.tasks.filter(row=>row.entityType==='Combattant'||row.entityType==='Arène'))assert.notEqual(row.status,'Validé',row.id);
- for(const row of plan.tasks.filter(row=>row.id.endsWith(':art')))assert.equal(row.status,'À faire',row.id);
- assert.equal(plan.metrics.animatedClips,0);assert.equal(plan.metrics.certifiedOneToOne,0);
+ for(const row of plan.tasks.filter(row=>row.id.endsWith(':art')))
+  assert.equal(row.status,SPRITES[row.entityId]?.frames.length>1?'En cours':'À faire',row.id);
+ assert.equal(plan.metrics.animatedClips,1);assert.equal(plan.metrics.certifiedOneToOne,0);
+});
+
+test('the workbook exposes delivered weapon phases and the flight candidate without claiming measured source animation',()=>{
+ const missionary=plan.fighters.find(row=>row.id==='sh3_missionary_047');
+ assert.match(missionary.identityNote,/balles visibles arrêtées de face.*sans timings source mesurés/);
+ assert.ok(plan.moves.filter(row=>row.fighterId===missionary.id).every(row=>row.canonicalVerification.includes('dos, chute, attaque')));
+ assert.match(plan.fighters.find(row=>row.id==='sh1_incubator_018').identityNote,/Champ passif local.*adaptés au versus.*Décharges bleues/);
+ assert.match(plan.fighters.find(row=>row.id==='sh1_incubus_019').identityNote,/Décharges rouges.*Aucun champ passif/);
+ const cybil=plan.fighters.find(row=>row.id==='sh1_monster_cybil_017');
+ assert.match(cybil.identityNote,/10 tirs.*strictement sous 50 %/);
+ const alessa=plan.fighters.find(row=>row.id==='sh3_memory_of_alessa_049');
+ const alessaIdle=plan.poses.find(row=>row.id===alessa.id+':pose:idle');
+ assert.equal(alessaIdle.productionStatus,'En cours');
+ assert.match(alessaIdle.existing,/3\/4 candidates ; à produire : MITRAILLETTE/);
+ assert.match(alessaIdle.existing,/Aucun emprunt d’image entre armes, ni animation source certifiée/);
+ const phases=createCombatProfile(ROSTER.find(f=>f.id===alessa.id)).moveset.weaponPhases;
+ for(const phase of phases){
+  assert.ok(alessa.identityNote.includes(phase.name));
+  for(const row of plan.moves.filter(row=>row.fighterId===alessa.id)){
+   assert.ok(row.target.includes(phase.moves[row.key].name),`${row.id}: active-weapon variant missing`);
+   assert.equal(row.sourceFrameRate,'');
+  }
+ }
+ const idle=plan.poses.find(row=>row.id==='sh1_air_screamer_001:pose:idle');
+ assert.equal(idle.productionStatus,'En cours');
+ assert.match(idle.existing,/3 images indépendantes.*24 ticks.*non certifiés/);
+ assert.equal(plan.tasks.find(row=>row.id==='sh1_air_screamer_001:art').status,'En cours');
+ assert.equal(plan.fighters.find(row=>row.id==='sh1_air_screamer_001').oneToOneValidated,false);
 });
 
 test('unverified roles and locations remain blocked through their moves, poses and finishers',()=>{

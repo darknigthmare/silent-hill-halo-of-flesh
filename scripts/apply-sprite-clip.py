@@ -25,7 +25,7 @@ MAX_STEPS, MAX_TICKS = 256, 36000
 
 
 def validate_clip(asset: dict, pose: str, clip: dict, root: Path | None = None) -> dict:
-    base_pose = importer.validate_pose_key(pose, asset['fighterId'], root)
+    base_pose = importer.validate_pose_key(pose, asset['fighterId'], root, asset.get('source'))
     if not isinstance(clip, dict) or not {'frames','ticksPerFrame','loop'} <= set(clip) or set(clip) - {'frames','ticksPerFrame','frameTicks','loop'}:
         raise ValueError('Invalid clip fields')
     frames = clip['frames']
@@ -41,7 +41,9 @@ def validate_clip(asset: dict, pose: str, clip: dict, root: Path | None = None) 
         raise ValueError('Attacks cannot loop independently of the engine')
     if base_pose in PRESENTATION_KEYS and clip['loop']:
         raise ValueError('Presentations must play once; looping is refused')
-    return dict(frames=list(frames), ticksPerFrame=ticks, frameTicks=list(durations), loop=clip['loop'])
+    normalized = dict(frames=list(frames), ticksPerFrame=ticks, frameTicks=list(durations), loop=clip['loop'])
+    importer.validate_weapon_clips(asset, pose=pose, clip=normalized)
+    return normalized
 
 
 def apply_packet(root: Path, packet: dict, apply: bool = False, pose_reviewed: bool = False) -> dict:
@@ -86,10 +88,11 @@ def apply_packet(root: Path, packet: dict, apply: bool = False, pose_reviewed: b
         pixels.append(meta['pixelSHA256'])
     distinct = len({pixels[i] for i in clip['frames']})
     # Idle/recovery reuse is allowed, but one idle PNG must not manufacture a new attack.
-    if pose != 'idle' and previous is None:
+    if pose != 'idle' and previous is None and pose != importer.WEAPON_IDLE_KEYS[0]:
         idle_pixels = {pixels[i] for i in asset['clips']['idle']['frames']}
         if not any(pixels[i] not in idle_pixels for i in clip['frames']):
             raise ValueError('A new pose needs an actual dedicated image, not only idle reuse')
+    importer.validate_weapon_clips(asset, pose=pose, clip=clip, pixel_hashes=pixels)
     asset['clips'][pose] = clip
     asset['animatedClips'] = sum(len({pixels[i] for i in c['frames']}) > 1 for c in asset['clips'].values())
     if apply:

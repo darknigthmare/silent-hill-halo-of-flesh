@@ -46,7 +46,7 @@ for(const [id,art] of Object.entries(registry.assets)){
   if((frameOrigins.size>1?'mixed':[...frameOrigins][0])!==art.origin)fail('inconsistent aggregate provenance '+id);
   let animated=0;
   for(const [pose,clip] of Object.entries(art.clips)){
-    try{validateClip(art,pose,clip);}catch(error){fail(id+' '+pose+': '+error.message);}
+    try{validateClip(runtimeAssets[id],pose,clip);}catch(error){fail(id+' '+pose+': '+error.message);}
     if(!Array.isArray(clip.frames)||!clip.frames.length||clip.frames.some(n=>!Number.isInteger(n)||!art.frames[n])||!Number.isInteger(clip.ticksPerFrame)||clip.ticksPerFrame<1||typeof clip.loop!=='boolean')fail('invalid clip '+id);
     if(clip.frameTicks!==undefined&&(!Array.isArray(clip.frameTicks)||clip.frameTicks.length!==clip.frames.length||clip.frameTicks.some(t=>!Number.isInteger(t)||t<1||t>600)))fail('invalid per-frame durations '+id);
     if(new Set(clip.frames.map(i=>runtimeAssets[id].frames[i].pixelSHA256)).size>1)animated++;
@@ -66,3 +66,6 @@ const paths=[...new Set(Object.values(registry.assets).flatMap(a=>[...a.frames,a
 if(!worker.includes('// SPRITE_ASSETS_BEGIN')||!worker.includes('// SPRITE_ASSETS_END'))fail('service worker asset markers missing');
 await writeFile(workerPath,worker.replace(/  \/\/ SPRITE_ASSETS_BEGIN[\s\S]*?  \/\/ SPRITE_ASSETS_END/,
   '  // SPRITE_ASSETS_BEGIN\n'+paths.map(p=>'  '+JSON.stringify(p)+',').join('\n')+'\n  // SPRITE_ASSETS_END'));
+
+const {buildStageBitmaps}=await import('./build-stage-bitmaps.mjs');
+await buildStageBitmaps();

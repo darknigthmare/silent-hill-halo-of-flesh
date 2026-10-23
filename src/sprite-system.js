@@ -34,17 +34,22 @@ export function rasterPlacement(fighter,frame,x,y,facing=1){
 export class SpriteCache{
   constructor({createImage=()=>new Image(),url=assetURL,concurrency=4,maxBytes=64*1024*1024,timeout=12000}={}){
     this.createImage=createImage;this.url=url;this.concurrency=concurrency;this.maxBytes=maxBytes;this.timeout=timeout;
-    this.entries=new Map();this.queue=[];this.active=0;this.clock=0;this.bytes=0;this.reservedBytes=0;this.pins=new Set();this.pumping=false;
+    this.entries=new Map();this.queue=[];this.active=0;this.clock=0;this.bytes=0;this.reservedBytes=0;this.pins=new Set();this.pinDescriptors=new Map();this.pumping=false;
   }
   peek(path){const e=this.entries.get(path);if(e?.status==='ready'){e.used=++this.clock;return e.image;}return null;}
   status(path){return this.entries.get(path)?.status||'absent';}
-  pin(frames=[]){
+  validatePins(frames=[]){
     const unique=new Map(frames.map(frame=>{const f=typeof frame==='string'?this.entries.get(frame)?.frame:frame;
       if(!f)throw new RangeError('Pinning requires frame dimensions.');return [f.path,f];}));
     const required=[...unique.values()].reduce((n,frame)=>n+frame.width*frame.height*4,0);
     if(!Number.isSafeInteger(required)||required<0||required>this.maxBytes)
       throw new RangeError('Combat sprite set exceeds the decoded-memory budget.');
+    return unique;
+  }
+  pinnedFrames(){return [...this.pinDescriptors.values()];}
+  pin(frames=[]){
     // Validate the entire set before replacing the previous lease; mirrored fighters share one image.
+    const unique=this.validatePins(frames);this.pinDescriptors=unique;
     this.pins=new Set(unique.keys());this.evict();this.pump();
   }
   evict(extra=0){for(const [key,e] of [...this.entries].sort((a,b)=>a[1].used-b[1].used)){
@@ -97,7 +102,7 @@ export class SpriteCache{
     // Only its current pair is pinned and loaded again immediately before the engine starts.
     const decoded=await Promise.all(descriptors.map(f=>this.load(f,{retry}).then(Boolean)));
     const failed=descriptors.filter((f,i)=>!decoded[i]).map(f=>f.path);
-    return {ok:diagnostic||(!missing.length&&!failed.length),missing:missing.map(f=>f.id),failed};
+    return {ok:!failed.length&&(diagnostic||!missing.length),missing:missing.map(f=>f.id),failed};
   }
 }
 export const spriteCache=new SpriteCache();
@@ -111,11 +116,11 @@ function drawMissing(ctx,x,y,width,height,text){
 export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache,registry=SPRITES}={}){
   if(!fighter)return {kind:'missing'};
   const art=spriteFor(fighter,registry),sample=sampleSpriteClip(art,state),frame=sample?.frame,image=frame&&cache.peek(frame.path);
-  if(!image){const p=bodyProfile(fighter),w=Math.max(74,p.width*p.scale),h=p.height*p.scale;
-    drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
+  if(!image){const p=bodyProfile(fighter),w=Math.max(156,p.width*p.scale),h=p.height*p.scale;
+    drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':!frame?state.weaponContext?'POSE D’ARME À PRODUIRE':'POSE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
     // Request only once. A failed file is retried by preflight, not every render frame.
     if(frame&&cache.status(frame.path)==='absent')void cache.load(frame);
-    return {kind:!art?'missing':cache.status(frame.path)==='error'?'error':'loading'};
+    return {kind:!art||!frame?'missing':cache.status(frame.path)==='error'?'error':'loading'};
   }
   const p=rasterPlacement(fighter,frame,x,y,facing);
   ctx.save();ctx.globalAlpha=clamp(alpha,0,1);
@@ -124,7 +129,7 @@ export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,sha
   // No squash/stretch, polygon limbs, hue-swapped clones, or rotating a standing image into a fake death frame.
   if(state.hitFlash){ctx.shadowColor='#ddd8c7';ctx.shadowBlur=10;}
   ctx.drawImage(image,p.localX,p.localY,p.width,p.height);ctx.restore();
-  if(diagnostic&&sample.fallback){ctx.save();ctx.fillStyle='#d2c9b8';ctx.textAlign='center';ctx.font='11px system-ui';ctx.fillText('POSE '+sample.requested.toUpperCase()+' À PRODUIRE',x,y+22);ctx.restore();}
+  if(sample.fallback&&(diagnostic||state.weaponContext)){ctx.save();ctx.fillStyle='#d2c9b8';ctx.textAlign='center';ctx.font='11px system-ui';ctx.fillText('POSE '+sample.requested.toUpperCase()+' À PRODUIRE',x,y+22);ctx.restore();}
   return {kind:'raster',path:frame.path,pose:sample.pose,requestedClipKey:sample.requested,fallback:sample.fallback,...p};
 }
 const portraitRequests=new WeakMap();

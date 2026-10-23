@@ -6,7 +6,9 @@ import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftS
 import { bodyBox, bodyProfile, bodyPushRadius, hasGroundContact, moveBox, overlaps, hazardVolumes, hazardTouches, hazardCounterplay } from './combat-geometry.js';
 import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
-import { takeDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
+import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
+import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
+import { isVisibleFirearmProjectile, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -32,6 +34,26 @@ const IMPULSE_ACTIONS = [...ATTACK_ACTIONS, 'dodge', 'jump', 'taunt'];
 const referencePolicy=actor=>actor?.profile?.referencePolicy||actor?.profile?.moveset?.referencePolicy||{};
 const ammoProfile=actor=>actor?.profile?.ammoProfile||actor?.profile?.moveset?.ammoProfile;
 const offensiveAllowed=actor=>referencePolicy(actor).combatEnabled!==false;
+function takeDamage(actor,requested) {
+  const before=Number.isFinite(actor.health)?Math.max(0,actor.health):0;
+  applyDamage(actor,requested);
+  return preserveWeaponPhaseBoundary(actor,before);
+}
+function updateWeaponState(actor) {
+  const resource=ammoProfile(actor);
+  if(resource?.exhaustion!=='unarmed')return;
+  const threshold=resource.disarmBelowHealthRatio;
+  if(actor.ammo===0||(Number.isFinite(threshold)&&actor.health>0&&actor.health<actor.maxHealth*threshold))actor.weaponDiscarded=true;
+}
+function deflectsFrontalBullet(attacker,target,move,direction) {
+  const policy=referencePolicy(target);
+  return policy.defense?.frontalVisibleBullets===true&&
+    policy.id===target.data.id&&policy.source===target.data.source&&
+    isVisibleFirearmProjectile(attacker.data,move)&&direction*target.facing<0&&
+    target.grounded&&!target.attack&&!target.hurtFrames&&!target.knockdownTimer&&
+    !target.guardBreak&&!target.phaseLock&&!target.dodgeFrames&&!target.counterStance&&
+    ['idle','walk','crouch','block','crouchBlock'].includes(target.state);
+}
 
 class InputState {
   constructor(bindings) {
@@ -116,6 +138,9 @@ function makeActor(data, index, ritual = {}) {
     maxGuard: profile.guard,
     meter: ritual.startMeter || 0,
     ammo: Number.isSafeInteger((profile.ammoProfile||profile.moveset?.ammoProfile)?.capacity)?(profile.ammoProfile||profile.moveset.ammoProfile).capacity:null,
+    weaponDiscarded: false,
+    weaponPhaseIndex: profile.moveset?.weaponPhases?.length?0:null,
+    weaponTransition: null,
     grounded: true,
     crouching: false,
     blocking: false,
@@ -161,6 +186,7 @@ function makeActor(data, index, ritual = {}) {
     counterStance: 0,
     trapCooldown: 0,
     auraCooldown: 0,
+    proximityCooldown: 0,
     stats: emptyStats()
   };
 }
@@ -558,6 +584,7 @@ export class FightEngine {
     };
     this.stageRuntime = createStageRuntime(this.stage);
     this.actors.forEach((actor, index) => {
+      updateWeaponState(actor);
       actor.x = index === 0 ? 310 : 970;
       actor.y = FLOOR;
       actor.vx = 0;
@@ -568,7 +595,16 @@ export class FightEngine {
       actor.meter = full ? (this.ritual.startMeter || 0) : clamp(actor.meter * .35, 0, 55);
       // The ten-shot encounter never reloads itself between rounds. A new match
       // restores its initial resource; a round reset only does so if explicitly configured.
-      if(ammoProfile(actor)&&(full||ammoProfile(actor).reloadEachRound===true))actor.ammo=ammoProfile(actor).capacity;
+      if(ammoProfile(actor)&&(full||ammoProfile(actor).reloadEachRound===true)){
+        actor.ammo=ammoProfile(actor).capacity;
+        actor.weaponDiscarded=false;
+      }
+      actor.weaponTransition=null;
+      if(actor.profile.moveset.weaponPhases?.length){
+        actor.weaponPhaseIndex=0;
+        actor.profile.moves=actor.profile.moveset.weaponPhases[0].moves;
+        actor.profile.moveset={...actor.profile.moveset,moves:actor.profile.moves};
+      }
       actor.grounded = true;
       actor.crouching = false;
       actor.blocking = false;
@@ -611,6 +647,7 @@ export class FightEngine {
       actor.counterStance = 0;
       actor.trapCooldown = 0;
       actor.auraCooldown = 0;
+      actor.proximityCooldown = 0;
     });
     if (this.round === 1) this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
     this.callbacks.onState(this.snapshot());
@@ -742,10 +779,12 @@ export class FightEngine {
       this.input.endFrame();
       return;
     }
+    this.checkWeaponPhases();
     this.checkBossPhases();
     this.updateActor(this.actors[0], 0);
     this.updateActor(this.actors[1], 1);
     this.resolveBodyCollision();
+    this.updateProximityFields();
     this.updateProjectiles();
     this.updateHazards();
     this.updateEffects();
@@ -939,6 +978,7 @@ export class FightEngine {
 
   updateActor(actor, index) {
     if (actor.ko || actor.health <= 0) return;
+    updateWeaponState(actor);
     const enemy = this.actors[1 - index];
     const controls = this.getControls(index);
     const profile = actor.profile;
@@ -970,6 +1010,7 @@ export class FightEngine {
     actor.counterStance = Math.max(0, actor.counterStance - 1);
     actor.trapCooldown = Math.max(0, actor.trapCooldown - 1);
     actor.auraCooldown = Math.max(0, actor.auraCooldown - 1);
+    actor.proximityCooldown = Math.max(0, actor.proximityCooldown - 1);
     if (actor.comboTimer === 0) actor.combo = 0;
     if (this.config.freeMeter) actor.meter = 100;
     if (this.config.autoHeal && this.frame % 30 === 0 && actor.health < actor.maxHealth) actor.health = Math.min(actor.maxHealth, actor.health + 4);
@@ -977,6 +1018,7 @@ export class FightEngine {
     if (actor.phaseLock > 0) {
       actor.phaseLock--;
       actor.state = 'phase';
+      if(actor.phaseLock===0&&actor.weaponTransition)this.completeWeaponPhase(actor);
       actor.vx *= .72;
       if (actor.phaseLock % 7 === 0) this.spawnImpact(actor.x + (this.fxRng() - .5) * 80, actor.y - 120 - this.fxRng() * 80, actor.data.visual.accent, false, 5);
       this.physics(actor);
@@ -1130,9 +1172,10 @@ export class FightEngine {
 
   beginAttack(actor, key, { cancelled = false, context = false } = {}) {
     if (this.destroyed||this.paused||this.phase!=='fight'||actor.ko || actor.health <= 0 || actor.phaseLock > 0||!offensiveAllowed(actor)) return false;
+    updateWeaponState(actor);
     const listed=actor.profile.moves[key];
     if(!listed||listed.enabled===false)return false;
-    const move=actor.ammo===0&&listed.exhaustedMove?listed.exhaustedMove:listed;
+    const move=actor.weaponDiscarded&&listed.exhaustedMove?listed.exhaustedMove:listed;
     if(move.enabled===false)return false;
     if(move.ammoCost&&(!Number.isSafeInteger(actor.ammo)||actor.ammo<move.ammoCost))return false;
     if (move.requiresAir && actor.grounded) return false;
@@ -1151,6 +1194,7 @@ export class FightEngine {
 
     this.cancelTaunt(actor);
     if(move.ammoCost)actor.ammo-=move.ammoCost;
+    updateWeaponState(actor);
 
     actor.attack = {
       key,
@@ -1240,8 +1284,11 @@ export class FightEngine {
       audio.tone({ freq: 74, duration: .13, gain: .028, slide: 180 });
     }
 
-    if ((move.projectile || move.trap) && !attack.spawned && attack.frame >= move.startup) {
-      attack.spawned = true;
+    const projectilesEmitted=attack.projectilesEmitted||0;
+    if ((move.projectile || move.trap) && projectilesEmitted<(move.projectileBurstCount||1) &&
+      attack.frame>=move.startup+projectilesEmitted*(move.projectileBurstInterval||1)) {
+      attack.projectilesEmitted=projectilesEmitted+1;
+      attack.spawned=attack.projectilesEmitted>=(move.projectileBurstCount||1);
       this.spawnProjectile(actor, move, attack.id);
     }
 
@@ -1299,6 +1346,8 @@ export class FightEngine {
 
   spawnProjectile(actor, move, attackId) {
     if(this.destroyed||this.phase!=='fight'||!offensiveAllowed(actor)||move.enabled===false)return false;
+    const equipped=weaponPhase(actor);
+    if(equipped&&move.weaponPhaseId!==equipped.id)return false;
     const isSuper = isNightmareMove(move);
     const count = Math.max(1, move.projectileCount || (actor.profile.trait.id === 'suppression' ? 2 : 1));
     const scale = move.projectileScale || 1;
@@ -1320,12 +1369,48 @@ export class FightEngine {
         maxLife: trap ? Math.max(90, move.projectileLife || 150) : move.projectileLife || (isSuper ? 96 : 78),
         super: isSuper,
         trap,
-        color: actor.data.visual.accent,
+        color: move.projectileColor || actor.data.visual.accent,
         hit: false,
         damageScale: count > 1 ? Math.max(.52, 1 - (count - 1) * .085) : 1
       });
     }
     audio.tone({ freq: isSuper ? 85 : 150, duration: .1, gain: .04, slide: isSuper ? 120 : 40 });
+  }
+
+  updateProximityFields() {
+    if(this.paused||this.destroyed||this.phase!=='fight'||this.hitstop>0)return;
+    for(const source of this.actors){
+      const policy=referencePolicy(source),field=policy.proximityField;
+      // A copied policy or another ending form cannot inherit Incubator's field.
+      if(source.data.id!=='sh1_incubator_018'||source.data.source!=='sh1'||
+        policy.id!==source.data.id||policy.source!==source.data.source||
+        !field||!offensiveAllowed(source)||source.ko||source.health<=0||source.phaseLock>0||source.proximityCooldown>0)continue;
+      const target=this.actors[1-source.index];
+      if(!target||target.ko||target.health<=0||target.invuln>0||target.knockdownTimer>0||target.phaseLock>0)continue;
+      const a=actorBox(source),b=actorBox(target),distance=Math.abs(target.x-source.x);
+      if(!Number.isFinite(distance)||distance>=field.radius||a.y>=b.y+b.h||a.y+a.h<=b.y)continue;
+      // Passive local contact bypasses attack rewards, guard counters and combos.
+      // The normal damage wrapper still preserves Alessa's current phase budget.
+      const damage=takeDamage(target,field.damage);
+      updateWeaponState(target);
+      this.cancelTaunt(target);
+      interruptAction(target,'knockdown');
+      target.hurtFrames=0;
+      target.knockdownTimer=field.knockdown;
+      target.wakeupWindow=0;
+      target.invuln=field.invuln;
+      target.hitFlash=5;
+      const fixed=referencePolicy(target).canMove===false;
+      target.vx=fixed?0:(Math.sign(target.x-source.x)||source.facing||1)*field.knockback;
+      target.vy=fixed?0:-4.2;
+      target.grounded=fixed;
+      target.lastHitBy=source.index;
+      target.lastHit={attackerIndex:source.index,moveKey:field.id,isSuper:false,environmental:false,frame:this.frame};
+      source.stats.damageDealt+=damage;
+      target.stats.damageTaken+=damage;
+      source.proximityCooldown=field.cooldown;
+      this.spawnImpact(target.x,b.y+b.h*.55,'#80baff',false,9);
+    }
   }
 
   updateProjectiles() {
@@ -1366,6 +1451,24 @@ export class FightEngine {
 
   applyHit(attacker, target, move, attackId, scale = 1, contact = {}) {
     if (this.destroyed||this.phase !== 'fight' || !offensiveAllowed(attacker)||move.enabled===false||target.health <= 0 || target.invuln > 0 || target.ko) return false;
+    const stagger=nonDamagingStagger(attacker.data,move);
+    if(stagger&&attacker.profile.moves[move.key]===move&&!contact.ranged){
+      if(target.knockdownTimer>0||target.phaseLock>0||stagger.groundedOnly&&!hasGroundContact(target))return false;
+      // A sourced non-damaging action never reaches chip, counter retaliation,
+      // damage floors, status effects, damage credit or attack/meter rewards.
+      const blocked=target.blocking&&target.grounded&&target.crouching;
+      if(!blocked){
+        this.cancelTaunt(target);
+        interruptAction(target);
+        target.hurtFrames=Math.max(target.hurtFrames,stagger.frames);
+        target.vx=0;
+        target.invuln=Math.max(target.invuln,4);
+        this.addText('DÉSÉQUILIBRE',target.x,target.y-165,'counter');
+      }
+      this.hitstop=Math.max(this.hitstop,3);
+      this.spawnImpact(target.x,target.y-24,attacker.data.visual.accent,blocked,7);
+      return;
+    }
     this.cancelTaunt(target);
     const ranged = Boolean(contact.ranged || move.projectile || move.trap);
     const hitDirection = contact.direction || attacker.facing || 1;
@@ -1375,6 +1478,14 @@ export class FightEngine {
     const isHeavy = isHeavyMove(move);
     const isSpecial = ['special','counter','reversal'].includes(move.category);
     const unblockable = Boolean(move.unblockable || move.level === 'unblockable');
+    if(!isThrow&&!unblockable&&deflectsFrontalBullet(attacker,target,move,hitDirection)){
+      // A blade deflection is neither a perfect guard nor a free retaliation.
+      // Silenced-shot metadata is supported, but no silenced weapon is authored.
+      this.addText('TIR DÉVIÉ',target.x,target.y-240,'guard');
+      this.spawnImpact(target.x,target.y-115,target.data.visual.accent,true,12);
+      audio.guard();
+      return;
+    }
     if (this.stageRuntime && (isHeavy || isNightmare || move.armorBreak || move.groundBounce)) {
       this.stageRuntime.heavyImpactPending = true;
       this.stageRuntime.lastHeavyImpact = {
@@ -1394,6 +1505,7 @@ export class FightEngine {
       target.attack = null;
       target.state = 'idle';
       const retaliation = takeDamage(attacker, Math.max(14, Math.round(move.damage * .34)));
+      updateWeaponState(attacker);
       interruptAction(attacker);
       attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
       attacker.invuln = Math.max(attacker.invuln, 3);
@@ -1441,6 +1553,7 @@ export class FightEngine {
       } else {
         const chipScale = isNightmare ? .2 : isSpecial ? .17 : .14;
         const chip = takeDamage(target, damage * chipScale * (this.ritual.chipScale || 1));
+        updateWeaponState(target);
         target.lastHit = { attackerIndex: attacker.index, moveKey: `${move.key || 'move'}-guard-chip`, isSuper: isNightmare, environmental: false, frame: this.frame };
         target.stats.damageTaken += chip;
         attacker.stats.damageDealt += chip;
@@ -1470,6 +1583,7 @@ export class FightEngine {
     const armorActive = armorWasActive && !move.armorBreak;
     const effectiveArmor = move.armorBreak ? 0 : clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
     damage = takeDamage(target, damage * (1 - effectiveArmor));
+    updateWeaponState(target);
     target.lastHit = {
       attackerIndex: attacker.index,
       moveKey: move.key || 'unknown-move',
@@ -1593,6 +1707,7 @@ export class FightEngine {
     if(actor.status?.source!=null&&!offensiveAllowed(this.actors[actor.status.source]))return;
     this.cancelTaunt(actor);
     damage = takeDamage(actor, damage);
+    updateWeaponState(actor);
     const sourceIndex = actor.status?.source;
     actor.lastHit = { attackerIndex: sourceIndex ?? null, moveKey: actor.status?.id || 'status', isSuper: false, environmental: sourceIndex == null, frame: this.frame };
     if (sourceIndex != null && this.actors[sourceIndex]) {
@@ -1849,6 +1964,7 @@ export class FightEngine {
       const guarded = actor.blocking && actor.grounded && !hazard.profile.unblockable;
       this.cancelTaunt(actor);
       const damage = takeDamage(actor, hazard.profile.damage * (this.ritual.hazardDamageScale || 1) * (guarded ? .28 : 1));
+      updateWeaponState(actor);
       actor.lastHit = { attackerIndex: null, moveKey: hazard.id, isSuper: false, environmental: true, frame: this.frame };
       actor.stats.damageTaken += damage;
       actor.stats.hazardsTaken++;
@@ -1888,11 +2004,50 @@ export class FightEngine {
     if (!this.ritual.lifeDrain || this.frame % 60 !== 0 || this.phase !== 'fight') return;
     for (const actor of this.actors) {
       if (actor.health <= 1 || actor.ko) continue;
-      const damage = Math.min(actor.health - 1, this.ritual.lifeDrain);
+      let damage = Math.min(actor.health - 1, this.ritual.lifeDrain);
+      const beforeHealth=actor.health;
       actor.health -= damage;
+      damage=preserveWeaponPhaseBoundary(actor,beforeHealth);
+      updateWeaponState(actor);
       actor.stats.damageTaken += damage;
       actor.stats.ritualDamage += damage;
     }
+  }
+
+  checkWeaponPhases() {
+    for(const actor of this.actors){
+      if(!actor.ko&&actor.phaseLock===0&&weaponPhaseReady(actor))this.advanceWeaponPhase(actor);
+    }
+  }
+
+  advanceWeaponPhase(actor,forced=false) {
+    const current=weaponPhase(actor),next=nextWeaponPhase(actor);
+    if(this.destroyed||this.paused||this.phase!=='fight'||!current||!next||actor.ko||actor.health<=0||actor.weaponTransition||actor.phaseLock>0)return false;
+    // A hit crossing both thresholds shares one recovery; a due balancing buff
+    // must not consume the first fresh input after the new weapon is equipped.
+    const buff=actor.bossPhases[actor.bossPhaseIndex+1];
+    if(buff&&healthRatio(actor)<=buff.threshold)this.advanceBossPhase(actor,buff,forced);
+    interruptAction(actor,'phase');
+    this.cancelTaunt(actor);
+    actor.hurtFrames=0;actor.knockdownTimer=0;actor.wakeupWindow=0;
+    actor.weaponTransition={from:current.id,to:next.id,index:next.index};
+    actor.phaseLock=forced?28:52;
+    actor.invuln=Math.max(actor.invuln,actor.phaseLock+8);
+    this.addText(`ARME ${next.index+1}/4 — ${next.name}`,WIDTH/2,244,'phase');
+    return true;
+  }
+
+  completeWeaponPhase(actor) {
+    const transition=actor.weaponTransition;
+    const next=actor.profile.moveset.weaponPhases?.[transition?.index];
+    if(this.destroyed||this.paused||!transition||!next||actor.phaseLock>0||actor.ko||actor.health<=0)return false;
+    actor.weaponPhaseIndex=next.index;
+    actor.profile.moves=next.moves;
+    actor.profile.moveset={...actor.profile.moveset,moves:next.moves};
+    actor.weaponTransition=null;
+    actor.spriteClock=null;
+    actor.state='idle';
+    return true;
   }
 
   checkBossPhases() {
@@ -1906,6 +2061,11 @@ export class FightEngine {
   forceBossPhase(index = 1) {
     const actor = this.actors[index]?.data.boss ? this.actors[index] : this.actors.find((entry) => entry.data.boss);
     if (!actor || actor.ko || actor.health <= 0) return false;
+    if(weaponPhase(actor)){
+      const changed=this.advanceWeaponPhase(actor,true);
+      if(changed)this.callbacks.onState(this.snapshot());
+      return changed;
+    }
     const next = actor.bossPhases[actor.bossPhaseIndex + 1];
     if (!next) return false;
     this.advanceBossPhase(actor, next, true);
@@ -2285,6 +2445,11 @@ export class FightEngine {
       meter: actor.meter,
       ammo: actor.ammo,
       ammoCapacity: ammoProfile(actor)?.capacity??null,
+      weaponDiscarded: actor.weaponDiscarded,
+      weaponPhase:weaponPhase(actor)?{id:weaponPhase(actor).id,name:weaponPhase(actor).name,
+        index:actor.weaponPhaseIndex+1,total:actor.profile.moveset.weaponPhases.length,
+        transition:actor.weaponTransition?{from:actor.weaponTransition.from,to:actor.weaponTransition.to,
+          remaining:actor.phaseLock}:null,fidelity:'source-weapon-order-versus-timing'}:null,
       wins: actor.roundWins,
       combo: actor.combo,
       status: actor.status?.id || null,
@@ -2543,9 +2708,18 @@ export class FightEngine {
       context.font = '700 10px ui-monospace';
       context.fillText(`${actor.data.game} · ${actor.profile.trait.name}`, x, 49);
       if(Number.isSafeInteger(actor.ammo)){
-        context.font='900 9px ui-monospace';context.fillStyle=actor.ammo?'#d0c4a7':'#bba18e';
+        context.font='900 9px ui-monospace';context.fillStyle=actor.weaponDiscarded?'#bba18e':'#d0c4a7';
         context.textAlign=left?'right':'left';
-        context.fillText(actor.ammo?`TIRS ${actor.ammo}/${ammoProfile(actor)?.capacity||10}`:'DESARMEE · CONTACT',left?barX+width:barX,119);
+        context.fillText(actor.weaponDiscarded?'DESARMEE · CONTACT':`TIRS ${actor.ammo}/${ammoProfile(actor)?.capacity||10}`,left?barX+width:barX,119);
+        context.textAlign=left?'left':'right';
+      }
+      const equipped=weaponPhase(actor);
+      if(equipped){
+        const next=actor.weaponTransition?nextWeaponPhase(actor):null;
+        context.font='900 9px ui-monospace';context.fillStyle='#d0c4a7';
+        context.textAlign=left?'right':'left';
+        context.fillText(`ARME ${actor.weaponPhaseIndex+1}/4 · ${equipped.name}${next?' → '+next.name:''}`,
+          left?barX+width:barX,119);
         context.textAlign=left?'left':'right';
       }
       context.fillStyle = 'rgba(255,255,255,.1)';

@@ -1,6 +1,6 @@
 # Roster complet — v0.9.6
 
-Catalogue synchronisé : **230 fiches**, dont **194 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3711 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **86 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
+Catalogue synchronisé : **230 fiches**, dont **194 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3713 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **86 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
 
 Les rôles non combattants et les identités non confirmées restent consultables. Les rencontres scénarisées autorisées sont explicitement des adaptations versus. Aucun clip animé ni fidélité 1:1 n’est certifié.
 

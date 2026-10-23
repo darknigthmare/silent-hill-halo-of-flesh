@@ -662,7 +662,7 @@
       "observedMoves": [
         {
           "name": "Piqué",
-          "description": "Frappe avec les pattes.",
+          "description": "Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -673,7 +673,7 @@
         },
         {
           "name": "Au sol",
-          "description": "Coup de tête en avant.",
+          "description": "Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -2644,14 +2644,16 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+        "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+        "CL_SH1_BOSSES"
       ],
       "observedMoves": [
         {
           "name": "Tir",
-          "description": "Tir de pistolet.",
+          "description": "Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos.",
           "evidence": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -2805,7 +2807,7 @@
         },
         {
           "name": "État du boss",
-          "description": "Apparition immobile ; dénouement selon branche.",
+          "description": "Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "evidence": [
             "CL_SH1_BOSSES"
           ],
@@ -7056,7 +7058,8 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+        "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+        "CL_SH3_BOSSES"
       ],
       "observedMoves": [
         {
@@ -7071,9 +7074,10 @@
         },
         {
           "name": "Défense",
-          "description": "Bloque puis contre-attaque.",
+          "description": "Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage.",
           "evidence": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",

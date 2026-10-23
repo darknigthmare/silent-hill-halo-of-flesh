@@ -1,5 +1,6 @@
 import {fighterReferenceHTML,stageReferenceHTML,finisherReferenceHTML,moveAvailabilityHTML,fighterRoleLabel,COMBAT_ROLE_LABELS} from './reference-ui.js';
-import { spriteFor, spriteStatus, spriteCache, pinCombatSprites } from './sprite-system.js';
+import { spriteFor, spriteStatus, spriteCache } from './sprite-system.js';
+import {stageBitmapCache,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
@@ -398,7 +399,7 @@ function showFight() {
   window.scrollTo(0, 0);
 }
 function showSelect() {
-  state.spriteLease++; state.loadingSprites=false; els.launch.disabled=false; els.launch.removeAttribute('aria-busy'); pinCombatSprites([]);
+  state.spriteLease++; state.loadingSprites=false; els.launch.disabled=false; els.launch.removeAttribute('aria-busy'); pinCombatAssets([],[]);
   clearTimeout(state.resultTimer);state.generation++;flow.close();
   state.engine?.destroy(); state.engine = null;
   els.fightScreen.classList.add('hidden');
@@ -441,6 +442,7 @@ function fightConfig() {
 
 async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   if (state.loadingSprites) return false;
+  const previousAnnouncement=flow.announcementId;
   const lease=++state.spriteLease;
   const selection=()=>JSON.stringify([preset,state.p1.id,state.p2.id,state.stage.id,selectedRules(),$('#artDiagnostic')?.checked,state.run]);
   const originalSelection=selection();
@@ -458,30 +460,41 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
     flow.announce(`${unavailable.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.${preservation}`,true);return false;
   }
   renderChronicleDossiers(candidate);
+  const stageIds=candidate?.stages?.length?[...new Set(candidate.stages)]:[state.stage.id];
+  const stages=stageIds.map(id=>STAGES.find(stage=>stage.id===id));
+  if(stages.some(stage=>!stage)){flow.announce('Une arène du parcours est indisponible. La progression reste intacte.',true);return false;}
+  const currentStage=candidate?.stages?.length?stages.find(stage=>stage.id===candidate.stages[candidate.index%candidate.stages.length]):state.stage;
+  const restorePins=captureCombatAssetPins();
+  const retainedActors=state.engine&&!state.engine.destroyed?state.engine.actors.map(actor=>actor.data):[];
+  const retainedStage=state.engine&&!state.engine.destroyed?state.engine.stage:null;
   state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
   $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
   let ready;
   try {
-    ready=await spriteCache.prepare(fighters,{diagnostic});
+    ready=await prepareCombatAssets(fighters,stages,{diagnostic});
     if(ready.ok&&lease===state.spriteLease&&selection()===originalSelection){
       const pair=candidate?[getFighter(candidate.playerId),getFighter(candidate.queue[candidate.index])]:[state.p1,state.p2];
-      pinCombatSprites(pair);
-      ready=await spriteCache.prepare(pair,{diagnostic});
+      // Keep the previous engine's images pinned until the entire replacement
+      // pair+stage is decoded. Failure or cancellation can restore its lease.
+      pinCombatAssets([...pair,...retainedActors],[currentStage,retainedStage].filter(Boolean));
+      ready=await prepareCombatAssets(pair,[currentStage],{diagnostic});
     }
   } catch(error){ready={ok:false,missing:[],failed:['preflight']};}
   finally {if(lease===state.spriteLease){state.loadingSprites=false;els.launch.disabled=false;els.launch.removeAttribute('aria-busy');}}
-  if(lease!==state.spriteLease||selection()!==originalSelection){if(lease===state.spriteLease)pinCombatSprites([]);flow.announce('Sélection modifiée : chargement annulé. Relance le contact.',true);return false;}
+  if(lease!==state.spriteLease||selection()!==originalSelection){if(lease===state.spriteLease)restorePins();flow.announce('Sélection modifiée : chargement annulé. Relance le contact.',true);return false;}
   if(!ready.ok){
-    pinCombatSprites([]);
+    restorePins();
     const names=ready.missing.slice(0,4).map(id=>getFighter(id).name).join(', ');
-    const message=ready.missing.length?`Sprites à produire : ${ready.missing.length}. ${names}${ready.missing.length>4?'…':''}. Aucun parcours ni tentative modifié.`:'Une image n’a pas pu être chargée. Réessaie le contact; aucun parcours ni tentative modifié.';
+    const message=ready.stageFailed?'Une image du décor n’a pas pu être chargée. Réessaie le contact; aucun parcours ni tentative modifié.':ready.missing.length?`Sprites à produire : ${ready.missing.length}. ${names}${ready.missing.length>4?'…':''}. Aucun parcours ni tentative modifié.`:'Une image n’a pas pu être chargée. Réessaie le contact; aucun parcours ni tentative modifié.';
     $('#spriteLaunchStatus').textContent=message;flow.announce(message,true);return false;
   }
-  if (!preserveRun && !buildRun(candidate)){pinCombatSprites([]);return false;}
-  if (candidate && candidate.status !== 'ready'){pinCombatSprites([]);return false;}
+  if (!preserveRun && !buildRun(candidate)){restorePins();return false;}
+  if (candidate && candidate.status !== 'ready'){restorePins();return false;}
   if (preserveRun && candidate) activateRun(candidate);
   clearTimeout(state.resultTimer);state.generation++;state.settled=false;state.lastResult=null;
   state.matchId=globalThis.crypto?.randomUUID?.() || `match-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  flow.clearAnnouncement(previousAnnouncement);
+  $('#spriteLaunchStatus').textContent='';
   flow.close();
   if(state.run&&!saveRun(state.run))flow.announce('Progression non sauvegardée : stockage indisponible.',true);
   if (state.run?.queue?.length) {
@@ -502,9 +515,10 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
   const generation=state.generation, config=fightConfig();
   config.callbacks.onMatchEnd=result=>{if(generation===state.generation)handleMatchEnd(result);};
-  pinCombatSprites([state.p1,state.p2]);
+  pinCombatAssets([state.p1,state.p2],[state.stage]);
   state.engine = new FightEngine(els.game, config);
   state.engine.setBindings(state.controls);
+  flow.syncPause(state.engine.snapshot());
   state.engine.start();
   els.game.focus({preventScroll:true});
   if (params.get('qa') === '1') installQaBridge();
@@ -514,7 +528,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
 function installQaBridge() {
   window.__HALO_QA__ = {
     version: VERSION,
-    spriteStatus, get assetCache(){return spriteCache;},
+    spriteStatus, get assetCache(){return spriteCache;}, get stageAssetCache(){return stageBitmapCache;},
     get engine() { return state.engine; },
     get selection() { return { p1: state.p1, p2: state.p2, stage: state.stage, mode: preset }; },
     startFight,

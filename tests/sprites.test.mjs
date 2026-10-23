@@ -12,13 +12,13 @@ function harness({fail=false,hang=false,wrong=false,delay=0,...options}={}){
  const images=[];let pending=0,peak=0;
  const cache=new SpriteCache({url:x=>x,timeout:80,...options,createImage:()=>{
   const im={naturalWidth:f.width,naturalHeight:f.height,decode:async()=>{}};
-  Object.defineProperty(im,'src',{set(path){images.push(im);pending++;peak=Math.max(peak,pending);if(hang)return;setTimeout(()=>{pending--;if(wrong)im.naturalWidth=4;if(fail)im.onerror?.();else im.onload?.();},delay);}});return im;
+  Object.defineProperty(im,'src',{set(path){const registered=Object.values(SPRITES).flatMap(asset=>asset.frames).find(frame=>frame.path===path)||f;im.naturalWidth=registered.width;im.naturalHeight=registered.height;images.push(im);pending++;peak=Math.max(peak,pending);if(hang)return;setTimeout(()=>{pending--;if(wrong)im.naturalWidth=4;if(fail)im.onerror?.();else im.onload?.();},delay);}});return im;
  }});return {cache,images,get peak(){return peak;}};
 }
 function ctx(){const calls=[],gradient={addColorStop(){}};return new Proxy({calls,canvas:{width:720,height:500},createLinearGradient:()=>gradient},{get:(o,k)=>k in o?o[k]:(...a)=>calls.push([k,...a])});}
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('raster coverage counts real exact-ID assets, not roster entries or resized copies',()=>{
- const c=spriteCoverage(ROSTER);assert.equal(c.total,230);assert.equal(c.integrated,2);assert.equal(c.missing.length,228);assert.equal(c.certified,0);assert.equal(c.animatedClips,0);
+ const c=spriteCoverage(ROSTER);assert.equal(c.total,230);assert.equal(c.integrated,3);assert.equal(c.missing.length,227);assert.equal(c.certified,0);assert.equal(c.animatedClips,1);
 });
 test('film bitmap is not silently used for the SH2 original or spear',()=>{
  assert.ok(spriteFor(film));assert.equal(spriteFor('sh2_red_pyramid_thing_great_knife_029'),null);assert.equal(spriteFor('sh2_red_pyramid_thing_spear_030'),null);
@@ -29,10 +29,13 @@ test('unknown and inherited property names never resolve as images',()=>{
 });
 test('no ID case normalization or fuzzy aliases are used',()=>assert.equal(spriteFor(air.id.toUpperCase()),null));
 test('each runtime bitmap has its actual digest, PNG header and native dimensions',async()=>{
- const paths=new Set();for(const asset of Object.values(SPRITES))for(const frame of asset.frames){const b=await readFile(new URL('../'+frame.path,import.meta.url));assert.equal(createHash('sha256').update(b).digest('hex'),frame.sha256);assert.equal(b.length,frame.bytes);assert.equal(b.readUInt32BE(16),1536);assert.equal(b.readUInt32BE(20),1024);assert.equal(b[25],6);paths.add(frame.path);}assert.equal(paths.size,2);
+ const paths=new Set();for(const asset of Object.values(SPRITES))for(const frame of asset.frames){const b=await readFile(new URL('../'+frame.path,import.meta.url));assert.equal(createHash('sha256').update(b).digest('hex'),frame.sha256);assert.equal(b.length,frame.bytes);assert.equal(b.readUInt32BE(16),frame.width);assert.equal(b.readUInt32BE(20),frame.height);assert.equal(b[25],6);paths.add(frame.path);}assert.equal(paths.size,7);
 });
 test('mirrored presentation reuses an image but is not counted as generated animation',()=>{
- assert.match(art.mirrorPolicy,/not independently/);assert.equal(art.animatedClips,0);assert.equal(art.frames.length,1);
+ const single=spriteFor(film);
+ assert.match(single.mirrorPolicy,/not independently/);assert.equal(single.animatedClips,0);assert.equal(single.frames.length,1);
+ assert.match(art.mirrorPolicy,/not independently/);assert.equal(art.animatedClips,1);assert.equal(art.frames.length,3);
+ assert.equal(new Set(art.frames.map(frame=>frame.pixelSHA256)).size,3,'flight uses genuinely different images');
 });
 test('pose priority and missing pose fallback are explicit',()=>{
  assert.equal(poseKey({ko:true,hurt:true}), 'ko');assert.equal(poseKey({hurt:true,moveKey:'neutralLight'}),'hurt');assert.equal(poseKey({crouching:true}),'crouch');assert.equal(frameFor(art,{ko:true,frame:900}),f);
@@ -45,7 +48,7 @@ test('non-looping future pose clips hold their final actual frame',()=>{
  const a={frames:[{path:'a'},{path:'b'}],clips:{idle:{frames:[0,1],ticksPerFrame:2,loop:false}}};assert.equal(frameFor(a,{frame:99}),a.frames[1]);
 });
 test('native aspect ratio is preserved for all roster size profiles',()=>{
- for(const fighter of ROSTER){const p=rasterPlacement(fighter,f,640,594);near(p.width/p.height,1.5);near(p.height*f.bodyHeight,bodyProfile(fighter).height*bodyProfile(fighter).scale);}
+ for(const fighter of ROSTER){const p=rasterPlacement(fighter,f,640,594);near(p.width/p.height,f.width/f.height);near(p.height*f.bodyHeight,bodyProfile(fighter).height*bodyProfile(fighter).scale);}
 });
 test('left and right raster anchors are exact mirror positions around the actor',()=>{
  const a=rasterPlacement(film,spriteFor(film).frames[0],500,594,1),b=rasterPlacement(film,spriteFor(film).frames[0],500,594,-1);near(a.x+b.x+a.width,1000);near(a.y,b.y);near(a.width,b.width);
@@ -112,7 +115,8 @@ test('every actual sprite path is in the generated offline shell',async()=>{
 test('portrait orientation combines presentation side with a left-facing native frame',async()=>{
  const h=harness();await h.cache.load(f);
  for(const explicit of [false,true])for(const facing of [-1,1]){
-  const left={...art,frames:[{...f,facing:-1}],portrait:{...art.portrait,...(explicit?{facing:-1}:{})}},c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};
+  const portrait={...art.portrait};if(explicit)portrait.facing=-1;else delete portrait.facing;
+  const left={...art,frames:[{...f,facing:-1}],portrait},c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};
   paintRasterPortrait(canvas,air,{cache:h.cache,facing,registry:{[air.id]:left}});
   assert.ok(c.calls.some(x=>x[0]==='scale'&&x[1]===-facing));
  }

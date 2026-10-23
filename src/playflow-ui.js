@@ -4,10 +4,15 @@ import { ACTIONS, loadControls, saveControls, rebindControl, defaultControls, ke
 export function installPlayflowUI({engine,select,retry,onControlsChanged,getControls,canRetry=()=>true}) {
   const status=document.createElement('p');status.id='playStatus';status.className='play-status hidden';status.setAttribute('role','status');
   document.body.append(status);
-  let statusTimer;
-  function announce(message,persistent=false){clearTimeout(statusTimer);status.textContent=message;status.classList.remove('hidden');
+  let statusTimer,announcementId=0;
+  function announce(message,persistent=false){announcementId++;clearTimeout(statusTimer);status.textContent=message;status.classList.remove('hidden');
     const feedback=document.querySelector('#pauseFeedback');if(feedback)feedback.textContent=message;
     if(!persistent)statusTimer=setTimeout(()=>status.classList.add('hidden'),6000);}
+  function clearAnnouncement(expectedId=announcementId){
+    // A completed retry dismisses its old error, while a newer storage warning survives.
+    if(expectedId!==announcementId)return;
+    clearTimeout(statusTimer);status.textContent='';status.classList.add('hidden');
+  }
   addEventListener('shhf-storage-status',e=>announce(e.detail.kind==='recovered'?'Mémoire précédente récupérée.':'Mémoire locale indisponible ou invalide. Exportez vos données depuis les réglages.',true));
   const pause=document.createElement('dialog');pause.className='play-dialog';pause.setAttribute('aria-labelledby','pauseTitle');
   pause.innerHTML=`<h2 id="pauseTitle">SIGNAL SUSPENDU</h2><p id="pauseReason">Le combat et les dangers sont arrêtés.</p><p id="pauseFeedback" role="status"></p><div class="play-actions"><button data-pause="resume" class="ui-button primary">REPRENDRE</button><button data-pause="controls" class="ui-button">COMMANDES</button><button data-pause="retry" class="ui-button">RECOMMENCER LE COMBAT</button><button data-pause="select" class="ui-button">RETOUR À LA SÉLECTION</button></div><p class="play-note">Les parcours sont conservés entre les combats. Une interruption en combat reprend au début de cette rencontre.</p>`;
@@ -48,7 +53,7 @@ export function installPlayflowUI({engine,select,retry,onControlsChanged,getCont
   controls.addEventListener('close',()=>{waiting=null;engine()?.clearInputs();});
   find('#bindingDeadzone').addEventListener('input',e=>{bindings={...bindings,deadzone:+e.target.value/100};persist();find('#deadzoneValue').textContent=` ${e.target.value} %`;});
   document.querySelector('#openControls')?.addEventListener('click',openControls);
-  return {announce,openControls,canResume:()=>!controls.open,syncPause(snapshot){
+  return {announce,clearAnnouncement,get announcementId(){return announcementId;},openControls,canResume:()=>!controls.open,syncPause(snapshot){
     const current=engine(),outro=current?.isPresentingOutro?.()===true;
     pause.querySelector('#pauseReason').textContent=outro?'La sortie de scène est arrêtée. Le résultat du match est déjà enregistré.':'Le combat et les dangers sont arrêtés.';
     pause.querySelector('[data-pause=retry]').disabled=!canRetry();

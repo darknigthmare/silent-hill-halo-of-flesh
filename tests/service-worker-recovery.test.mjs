@@ -17,7 +17,7 @@ function worker({offline=false,quota=false,cacheUnavailable=false}={}){
  const scope={location:{origin},registration:{},clients:{claim:async()=>{},matchAll:async()=>[]},addEventListener:(k,fn)=>listeners.set(k,fn)};
  const context=vm.createContext({self:scope,caches,URL,Request:LocalRequest,Response,console,fetch:async req=>{calls.push(key(req));if(offline)throw Error('offline');return new Response('NETWORK',{headers:{'Cache-Control':'public'}});}});
  vm.runInContext(source,context);
- return {context,stores,calls,cache,async fetch(path,{mode='cors',preload}={}){
+ return {context,stores,calls,cache,staticCache:vm.runInContext('STATIC_CACHE',context),runtimeCache:vm.runInContext('RUNTIME_CACHE',context),async fetch(path,{mode='cors',preload}={}){
   const request=new LocalRequest(path);Object.defineProperty(request,'mode',{value:mode});
   let response;const background=[];listeners.get('fetch')({request,preloadResponse:Promise.resolve(preload),respondWith(p){response=p;},waitUntil(p){background.push(p);}});
   const resolved=await response;await Promise.all(background);return {response:resolved,background:background.length};
@@ -43,23 +43,23 @@ test('blocked CacheStorage does not prevent otherwise available online resources
  }
 });
 test('background revalidation is attached to the fetch event lifetime',async()=>{
- const w=worker();await w.cache('halo-of-flesh-static-v'+/const VERSION = '([^']+)'/.exec(source)[1]).put('/src/data.js',new Response('CACHED'));
+ const w=worker();await w.cache(w.staticCache).put('/src/data.js',new Response('CACHED'));
  const {background}=await w.fetch('/src/data.js');assert.equal(background,1);
 });
 test('new runtime entries take precedence over an older shell entry',async()=>{
- const w=worker({offline:true});const version=/const VERSION = '([^']+)'/.exec(source)[1];
- await w.cache(`halo-of-flesh-static-v${version}`).put('/data/check.json',new Response('OLD'));
- await w.cache(`halo-of-flesh-runtime-v${version}`).put('/data/check.json',new Response('NEW'));
+ const w=worker({offline:true});
+ await w.cache(w.staticCache).put('/data/check.json',new Response('OLD'));
+ await w.cache(w.runtimeCache).put('/data/check.json',new Response('NEW'));
  assert.equal(await (await w.fetch('/data/check.json')).response.text(),'NEW');
 });
 test('offline fallback is used only for navigation, never as JavaScript bytes',async()=>{
- const w=worker({offline:true});const version=/const VERSION = '([^']+)'/.exec(source)[1];await w.cache(`halo-of-flesh-static-v${version}`).put('/offline.html',new Response('OFFLINE'));
+ const w=worker({offline:true});await w.cache(w.staticCache).put('/offline.html',new Response('OFFLINE'));
  assert.equal(await (await w.fetch('/unknown',{mode:'navigate'})).response.text(),'OFFLINE');
  assert.equal((await w.fetch('/src/absent.js')).response.type,'error');
 });
 test('runtime cache remains bounded across repeated query URLs',async()=>{
  const w=worker();for(let i=0;i<150;i++)await w.fetch('/data/query.json?i='+i);
- const version=/const VERSION = '([^']+)'/.exec(source)[1],cache=w.cache(`halo-of-flesh-runtime-v${version}`);
+ const cache=w.cache(w.runtimeCache);
  assert.equal((await cache.keys()).length,128);assert.equal(await cache.match('/data/query.json?i=0'),undefined);assert.ok(await cache.match('/data/query.json?i=149'));
 });
 test('navigation preload survives a storage quota failure',async()=>{

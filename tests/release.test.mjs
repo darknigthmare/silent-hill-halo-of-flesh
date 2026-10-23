@@ -17,8 +17,9 @@ test('release version is synchronized across package, UI and service worker',asy
   assert.equal(pkg.version,VERSION);
   assert.match(index,new RegExp(`v${VERSION.replaceAll('.','\\.')}`));
   assert.match(worker,new RegExp(`const VERSION = '${VERSION.replaceAll('.','\\.')}'`));
-  assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}`/);
-  assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}`/);
+  assert.match(worker,/const BITMAP_REVISION = '[a-f0-9]{64}';/);
+  assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}-\$\{CACHE_REVISION\}-\$\{BITMAP_REVISION\}`/);
+  assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}-\$\{CACHE_REVISION\}-\$\{BITMAP_REVISION\}`/);
 });
 
 test('exported JSON mirrors the runtime catalogue',async()=>{

@@ -2,7 +2,7 @@
 import {MOVESET_KEYS} from './data.js';
 import {mountClipEditor} from './sprite-clip-editor.js';
 import {clipSummary,moveTiming} from './sprite-clips.js';
-import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel,splitSpriteClipKey,contextualPresentationKeys} from './sprite-poses.js';
+import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel,splitSpriteClipKey,contextualPresentationKeys,weaponIdleClipKeys} from './sprite-poses.js';
 import {FIGHTER_REFERENCES,STAGE_REFERENCES} from './production-reference.js';
 import {spriteCache,drawRasterMonster} from './sprite-system.js';
 import {sampleSpriteClip} from './sprite-animation.js';
@@ -17,6 +17,8 @@ export function calibrationPacket(fighter,original,draft){
 }
 export function previewSpriteState(pose,tick){
  const frame=Number.isFinite(tick)?Math.max(0,Math.floor(tick)):0;
+ const {pose:base,contextId:weaponContext}=splitSpriteClipKey(pose);
+ if(base==='idle'&&weaponContext)return {weaponContext,frame};
  if(isPresentationPose(pose)){const {pose:key,contextId}=splitSpriteClipKey(pose);return {presentation:{key,contextId,clipKey:pose,id:'workshop:'+pose,frame},frame};}
  const names={idle:{},walk:{moving:true},crouch:{crouching:true},jump:{airborne:true},guard:{blocking:true},
   dodge:{dodging:true},hurt:{hurt:true},ko:{ko:true},knockdown:{knockdown:true},phase:{phase:true}};
@@ -41,29 +43,42 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  function optionText(key){return label(key)+' · '+key+(Object.hasOwn(draft.clips,key)?(JSON.stringify(original.clips[key])!==JSON.stringify(draft.clips[key])?' · BROUILLON LOCAL':' · présent'):' · À PRODUIRE');}
  const stageIds=Object.keys(STAGE_REFERENCES),fighterIds=Object.keys(FIGHTER_REFERENCES);
  for(const [name,keys] of [['Poses de base',BASE_POSE_KEYS],['Attaques',MOVESET_KEYS],['Présentations génériques · lecture unique',PRESENTATION_KEYS],
+  ['Memory of Alessa · arme exacte',weaponIdleClipKeys(fighter)],
   ['Séquences exactes du sujet',contextualPresentationKeys(fighter.id)],
   ['Fatalités d’arène · exécutant',stageIds.map(id=>`finisher@${id}_fatality`)],
   ['Fatalités de sujet · réaction de la cible',fighterIds.flatMap(id=>['signature','nightmare'].map(type=>`finished@${id}_${type}`))],
   ['Fatalités d’arène · réaction de la cible',stageIds.map(id=>`finished@${id}_fatality`)]]){
-  const group=document.createElement('optgroup');group.label=name;
+  if(!keys.length)continue;const group=document.createElement('optgroup');group.label=name;
   for(const key of keys){const o=document.createElement('option');o.value=key;o.textContent=optionText(key);group.append(o);}$('pose').append(group);
  }
  let editor=null;
  let disposed=false,playing=false,tick=0,lastTime=0,accumulator=0,raf=0,presentation=1,currentIndex=-1;
  const dirty=new Set(),waiting=new Set();
- function selected(){return sampleSpriteClip(draft,previewSpriteState($('pose').value,tick));}
+ const weaponKeys=weaponIdleClipKeys(fighter);let weaponContext=weaponKeys[0]?splitSpriteClipKey(weaponKeys[0]).contextId:null;
+ function previewState(){const state=previewSpriteState($('pose').value,tick);if(weaponContext&&$('pose').value!=='idle'&&!state.weaponContext)state.weaponContext=weaponContext;return state;}
+ function selected(){return sampleSpriteClip(draft,previewState());}
  function fields(){const sample=selected();if(!sample)return;const frame=sample.frame;currentIndex=sample.frameIndex;
   $('anchorX').value=frame.anchor[0];$('anchorY').value=frame.anchor[1];$('bodyHeight').value=frame.bodyHeight;$('facing').value=frame.facing;
  }
- function draw(){if(disposed)return;const sample=selected();if(!sample)return;
-  if(currentIndex!==sample.frameIndex)fields();
-  const frame=sample.frame,w=canvas.width,h=canvas.height,zoom=Number($('zoom').value)*.9,x=w/2,y=h*.86;
+ function draw(){if(disposed)return;const sample=selected();
+  const w=canvas.width,h=canvas.height,zoom=Number($('zoom').value)*.9,x=w/2,y=h*.86;
   ctx.clearRect(0,0,w,h);ctx.fillStyle='#0b100d';ctx.fillRect(0,0,w,h);
+  for(const key of ['anchorX','anchorY','bodyHeight','facing','reset','export','tick'])$(key).disabled=!sample;
+  if(!sample){
+   currentIndex=-1;ctx.save();ctx.translate(x,y);ctx.scale(zoom,zoom);
+   drawRasterMonster(ctx,fighter,0,0,{registry,state:previewState(),facing:presentation,shadow:false});ctx.restore();
+   for(const key of ['anchorX','anchorY','bodyHeight'])$(key).value='';
+   Object.assign(canvas.dataset,{spriteId:fighter.id,artStatus:'missing',pose:'',requestedPose:$('pose').value,frameIndex:'',presentationKey:'',presentationContext:'',presentationFrame:'',weaponContext:previewState().weaponContext||'',clipDraft:'false'});
+   canvas.setAttribute('role','img');canvas.setAttribute('aria-label',fighter.name+' — '+label($('pose').value)+' à produire');
+   $('status').textContent='POSE D’ARME À PRODUIRE — '+poseLabel(`idle@${weaponContext}`)+'. Aucune image de cette arme n’est importée. Le couteau ne remplace pas une autre arme.';
+   $('tick').max=0;$('tick').value=0;$('play').disabled=true;$('retry').hidden=true;return;
+  }
+  if(currentIndex!==sample.frameIndex)fields();const frame=sample.frame;
   if($('boxes').checked){ctx.strokeStyle='#28382d';ctx.lineWidth=1;ctx.beginPath();
    for(let i=x%36;i<w;i+=36){ctx.moveTo(i,0);ctx.lineTo(i,h);}for(let i=y%36;i<h;i+=36){ctx.moveTo(0,i);ctx.lineTo(w,i);}ctx.stroke();
    ctx.strokeStyle='#a4ad83';ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
   ctx.save();ctx.translate(x,y);ctx.scale(zoom,zoom);
-  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state:previewSpriteState($('pose').value,tick),facing:presentation,shadow:false});
+  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state:previewState(),facing:presentation,shadow:false});
   if(rendered.kind==='loading'&&!waiting.has(frame.path)){waiting.add(frame.path);void spriteCache.load(frame).then(()=>{waiting.delete(frame.path);if(!disposed)draw();});}
   const visible=visibleSpriteBox(fighter,frame,0,0,presentation);
   if($('boxes').checked){const collision=bodyBox({data:fighter,x:0,y:0,crouching:$('pose').value==='crouch'});
@@ -75,9 +90,11 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
   canvas.dataset.presentationKey=isPresentationPose(sample.requested)?splitSpriteClipKey(sample.requested).pose:'';
   canvas.dataset.presentationContext=splitSpriteClipKey(sample.requested).contextId||'';
   canvas.dataset.presentationFrame=isPresentationPose(sample.requested)?String(tick):'';
+  canvas.dataset.weaponContext=previewState().weaponContext||'';
   canvas.setAttribute('role','img');canvas.setAttribute('aria-label',fighter.name+' — '+label(sample.requested)+(sample.fallback?' absente, aperçu de repos':''));
   const clipped=x+visible.x*zoom<0||x+(visible.x+visible.w)*zoom>w||y+visible.y*zoom<0||y+(visible.y+visible.h)*zoom>h;
   $('status').textContent=(sample.fallback?(isPresentationPose(sample.requested)?'SÉQUENCE À PRODUIRE — aperçu idle. ':'POSE À PRODUIRE — aperçu idle. '):'')+`Image ${sample.index+1}/${draft.clips[sample.pose].frames.length} · tick ${tick}/${sample.total-1} · ${frame.width} × ${frame.height}`+(isPresentationPose(sample.requested)&&!sample.fallback?' · Lecture unique.':'')+(clipped?' · Déborde de l’aperçu : réduire le zoom.':'')+(dirty.size?' · Calibration locale non appliquée.':'');
+  if(previewState().weaponContext)$('status').textContent=poseLabel(`idle@${previewState().weaponContext}`)+' · '+$('status').textContent;
   $('tick').max=sample.total-1;$('tick').value=tick;
   const clipDirty=JSON.stringify(original.clips[sample.requested])!==JSON.stringify(draft.clips[sample.requested]);
   $('pose').selectedOptions[0].textContent=optionText($('pose').value);
@@ -96,11 +113,12 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
   if(playing)raf=requestAnimationFrame(loop);
  }
  $('play').onclick=()=>{if(playing)return stop();if($('play').disabled)return;playing=true;lastTime=performance.now();accumulator=0;if(tick>=selected().total-1)tick=0;$('play').textContent='PAUSE';raf=requestAnimationFrame(loop);};
- $('pose').onchange=()=>{stop();tick=0;currentIndex=-1;editor?.sync();draw();};$('tick').oninput=()=>{stop();tick=Number($('tick').value);draw();};
+ $('pose').onchange=()=>{stop();tick=0;currentIndex=-1;const key=$('pose').value;if(weaponKeys.includes(key))weaponContext=splitSpriteClipKey(key).contextId;else if(key==='idle'&&weaponKeys[0])weaponContext=splitSpriteClipKey(weaponKeys[0]).contextId;editor?.sync();draw();};$('tick').oninput=()=>{stop();tick=Number($('tick').value);draw();};
  $('flip').onclick=()=>{presentation*=-1;$('flip').textContent=presentation===1?'VOIR VERS LA GAUCHE':'VOIR VERS LA DROITE';draw();};
  $('boxes').onchange=draw;$('zoom').onchange=draw;
  $('retry').onclick=()=>{const frame=selected()?.frame;if(!frame)return;void spriteCache.load(frame,{retry:true}).then(()=>{if(!disposed)draw();});draw();};
  function applyFields(){
+  if(!selected()){$('error').textContent='Importer une image de cette arme avant de la calibrer.';return false;}
   const inputs=['anchorX','anchorY','bodyHeight'].map(k=>$(k));
   if(inputs.some(i=>!i.value.trim()||!i.checkValidity()||!Number.isFinite(Number(i.value)))){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–1.';return false;}
   const frame=selected().frame;frame.anchor=inputs.slice(0,2).map(i=>Number(i.value));frame.bodyHeight=Number(inputs[2].value);frame.facing=Number($('facing').value);

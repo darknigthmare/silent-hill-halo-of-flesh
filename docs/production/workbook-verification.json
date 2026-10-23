@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "120157f0cf460d2f6043531ead8fa8d0268f28a1335163fbb1b3ef877e9e8c95",
+  "planSha256": "912ad86d26e657afb468237628e17c47b57d303cc5d62cbfab515f9099b17b5e",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -243,14 +243,14 @@
     "observations": 435,
     "sources": 135,
     "tasks": 875,
-    "pngCandidates": 2,
-    "animatedClips": 0,
+    "pngCandidates": 3,
+    "animatedClips": 1,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 93,
     "presentationHooks": 9,
     "playableFighters": 194,
     "reviewedCombatProfiles": 230,
-    "disabledMoves": 889,
+    "disabledMoves": 887,
     "authoredFinishers": 93,
     "authoredFighterFinishers": 86,
     "authoredStageFinishers": 7,
@@ -271,44 +271,529 @@
     1799,
     435,
     135,
-    2,
+    3,
+    1,
     0,
-    0,
-    874,
+    873,
     127
   ],
-  "editableStatusRecalculation": {
-    "before": 874,
-    "after": 873,
-    "restored": 874
-  },
-  "visualPreviews": [
-    "Synthèse",
-    "Mouvements",
-    "Présentations",
-    "Finishers",
-    "Animations arènes",
-    "Actions",
-    "Combattants",
-    "Arènes",
-    "Arènes"
-  ],
-  "engine": "Artifact Tool primary runtime; native Excel desktop not executed",
+  "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "9ad5c2471e680244927c89a44c0e12ac8824e54dd1e721d0bce3eb9e8d0c53f0",
-  "changedCells": 31235,
+  "sourceSha256": "2d551380bccc37c1e9fa1e5badec2ff836030085816bb48817c2c82674c4842f",
+  "changedCells": 196,
   "changesBySheet": {
-    "Synthèse": 3,
-    "Combattants": 401,
-    "Mouvements": 19861,
-    "Présentations": 2113,
-    "Finishers": 1930,
-    "Arènes": 948,
-    "Animations arènes": 4788,
-    "Actions": 1191
+    "Combattants": 5,
+    "Mouvements": 154,
+    "Finishers": 2,
+    "Présentations": 7,
+    "Clips": 12,
+    "Actions": 10,
+    "Gestes référencés": 4,
+    "Synthèse": 2
   },
-  "changeLogSha256": "6b3e36c5c8631fae0b9e14f7f5cdbebea7f28cc45f711caf0bfbbf65fe42eef5",
-  "enlargedRows": 7753,
+  "enlargedRows": 109,
+  "recalculatedFormulas": [
+    {
+      "sheet": "Synthèse",
+      "address": "B6",
+      "formula": "COUNTA('Combattants'!$A$6:$A$235)",
+      "value": 230
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E6",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D6)",
+      "value": 20
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F6",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D6)",
+      "value": 9
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G6",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D6)",
+      "value": 400
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H6",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D6)",
+      "value": 41
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B7",
+      "formula": "COUNTA('Arènes'!$A$6:$A$128)",
+      "value": 123
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E7",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D7)",
+      "value": 18
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F7",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D7)",
+      "value": 12
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G7",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D7)",
+      "value": 360
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H7",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D7)",
+      "value": 39
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B8",
+      "formula": "COUNTA('Mouvements'!$A$6:$A$4605)",
+      "value": 4600
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E8",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D8)",
+      "value": 20
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F8",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D8)",
+      "value": 12
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G8",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D8)",
+      "value": 400
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H8",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D8)",
+      "value": 50
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B9",
+      "formula": "COUNTIFS('Mouvements'!$E$6:$E$4605,\"super\")+COUNTIFS('Mouvements'!$E$6:$E$4605,\"desperation\")",
+      "value": 460
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E9",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D9)",
+      "value": 32
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F9",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D9)",
+      "value": 10
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G9",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D9)",
+      "value": 640
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H9",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D9)",
+      "value": 53
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B10",
+      "formula": "COUNTIFS('Finishers'!$D$6:$D$588,\"Combattant\")",
+      "value": 460
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E10",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D10)",
+      "value": 11
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F10",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D10)",
+      "value": 6
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G10",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D10)",
+      "value": 220
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H10",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D10)",
+      "value": 22
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B11",
+      "formula": "COUNTIFS('Finishers'!$D$6:$D$588,\"Arène\")",
+      "value": 123
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E11",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D11)",
+      "value": 17
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F11",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D11)",
+      "value": 11
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G11",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D11)",
+      "value": 340
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H11",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D11)",
+      "value": 37
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B12",
+      "formula": "COUNTA('Présentations'!$A$6:$A$1615)",
+      "value": 1610
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E12",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D12)",
+      "value": 5
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F12",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D12)",
+      "value": 5
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G12",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D12)",
+      "value": 100
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H12",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D12)",
+      "value": 3
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B13",
+      "formula": "COUNTA('Clips'!$A$6:$A$2305)",
+      "value": 2300
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E13",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D13)",
+      "value": 14
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F13",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D13)",
+      "value": 7
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G13",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D13)",
+      "value": 280
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H13",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D13)",
+      "value": 21
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B14",
+      "formula": "COUNTA('Animations arènes'!$A$6:$A$1804)",
+      "value": 1799
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E14",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D14)",
+      "value": 19
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F14",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D14)",
+      "value": 12
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G14",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D14)",
+      "value": 380
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H14",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D14)",
+      "value": 20
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B15",
+      "formula": "COUNTA('Gestes référencés'!$A$6:$A$440)",
+      "value": 435
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E15",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D15)",
+      "value": 28
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F15",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D15)",
+      "value": 8
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G15",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D15)",
+      "value": 560
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H15",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D15)",
+      "value": 31
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B16",
+      "formula": "COUNTA('Sources'!$A$6:$A$140)",
+      "value": 135
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E16",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D16)",
+      "value": 1
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F16",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D16)",
+      "value": 1
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G16",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D16)",
+      "value": 20
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H16",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D16)",
+      "value": 3
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B17",
+      "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
+      "value": 3
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E17",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D17)",
+      "value": 1
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F17",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D17)",
+      "value": 3
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G17",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D17)",
+      "value": 20
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H17",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D17)",
+      "value": 1
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B18",
+      "formula": "SUM('Combattants'!$S$6:$S$235)",
+      "value": 1
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E18",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D18)",
+      "value": 19
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F18",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D18)",
+      "value": 9
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G18",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D18)",
+      "value": 380
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H18",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D18)",
+      "value": 78
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B19",
+      "formula": "COUNTIFS('Combattants'!$T$6:$T$235,\"Oui\")",
+      "value": 0
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E19",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D19)",
+      "value": 13
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F19",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D19)",
+      "value": 8
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G19",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D19)",
+      "value": 260
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H19",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D19)",
+      "value": 17
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B20",
+      "formula": "COUNTA('Actions'!$A$6:$A$880)-COUNTIFS('Actions'!$H$6:$H$880,\"Validé\")",
+      "value": 873
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E20",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D20)",
+      "value": 7
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F20",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D20)",
+      "value": 3
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G20",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D20)",
+      "value": 140
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H20",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D20)",
+      "value": 8
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "B21",
+      "formula": "COUNTIFS('Actions'!$D$6:$D$880,\"P0\",'Actions'!$H$6:$H$880,\"<>Validé\")",
+      "value": 127
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "E21",
+      "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D21)",
+      "value": 5
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "F21",
+      "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D21)",
+      "value": 7
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "G21",
+      "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D21)",
+      "value": 100
+    },
+    {
+      "sheet": "Synthèse",
+      "address": "H21",
+      "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D21)",
+      "value": 11
+    }
+  ],
+  "changeLogSha256": "ccf1d511dbc5e44fdf55025af96375f0c7794eb3b348c79d228f331eed5bfd70",
   "changeLog": "workbook-change-log.json.gz",
-  "layoutChangeLog": "workbook-layout-changes.json.gz"
+  "layoutChangeLog": "workbook-layout-changes.json.gz",
+  "verification": {
+    "passed": true,
+    "preservation": {
+      "passed": true,
+      "comparedCells": 249556,
+      "authoredChanges": 196,
+      "enlargedRows": 109,
+      "unchanged": [
+        "worksheet order",
+        "unrelated values",
+        "all formulas",
+        "effective cell formatting",
+        "column widths",
+        "unrelated row heights",
+        "native tables and validation features"
+      ]
+    }
+  },
+  "limits": "No visual preview, native Excel session, source timing measurement or art certification performed."
 }

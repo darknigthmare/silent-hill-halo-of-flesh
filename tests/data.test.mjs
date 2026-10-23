@@ -126,7 +126,8 @@ test('combat profiles are playable, bounded and internally linked',()=>{
     assert.equal(Object.keys(profile.moves).length,MOVESET_KEYS.length,fighter.name);
     assert.deepEqual(profile.moveset.order,MOVESET_KEYS,fighter.name);
     for(const [key,move] of Object.entries(profile.moves)){
-      assert.ok(move.damage>0,`${fighter.name}/${key}`);
+      if(fighter.id==='sh3_split_worm_046'&&fighter.source==='sh3'&&key==='downSpecial')assert.equal(move.damage,0,'the sourced ground pound only staggers');
+      else assert.ok(move.damage>0,`${fighter.name}/${key}`);
       assert.ok(move.startup>=0,`${fighter.name}/${key}`);
       assert.ok(move.reach>0,`${fighter.name}/${key}`);
       assert.ok(move.input&&move.canonicalBasis,`${fighter.name}/${key}`);

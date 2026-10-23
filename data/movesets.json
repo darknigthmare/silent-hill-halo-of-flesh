@@ -57,7 +57,7 @@
         "neutralLight": {
           "key": "neutralLight",
           "input": "L",
-          "name": "Heurt de tête à terre",
+          "name": "Morsure au sol",
           "button": "light",
           "category": "normal",
           "stance": "standing",
@@ -106,7 +106,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -175,7 +175,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -243,7 +243,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -263,7 +263,7 @@
         "airLight": {
           "key": "airLight",
           "input": "AIR + L",
-          "name": "Serres — coup en retombée",
+          "name": "Morsure en vol stationnaire",
           "button": "light",
           "category": "aerial",
           "stance": "air",
@@ -311,7 +311,7 @@
             "airHeavy",
             "airSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -379,7 +379,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -446,7 +446,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -513,7 +513,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -533,7 +533,7 @@
         "airHeavy": {
           "key": "airHeavy",
           "input": "AIR + H",
-          "name": "Serres — frappe descendante",
+          "name": "Griffure en vol plané",
           "button": "heavy",
           "category": "aerial",
           "stance": "air",
@@ -578,7 +578,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -643,7 +643,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -708,7 +708,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -776,7 +776,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -843,7 +843,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -908,7 +908,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -928,7 +928,7 @@
         "neutralSpecial": {
           "key": "neutralSpecial",
           "input": "S",
-          "name": "Plongée des serres",
+          "name": "Griffure en vol plané — approche",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -973,7 +973,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -993,7 +993,7 @@
         "forwardSpecial": {
           "key": "forwardSpecial",
           "input": "→ + S",
-          "name": "Approche plongeante",
+          "name": "Griffure planée — traversée",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -1038,7 +1038,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1103,7 +1103,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1168,7 +1168,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1188,7 +1188,7 @@
         "airSpecial": {
           "key": "airSpecial",
           "input": "AIR + S",
-          "name": "Serres — retombée",
+          "name": "Griffure planée — descente",
           "button": "special",
           "category": "special",
           "stance": "air",
@@ -1233,7 +1233,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1299,7 +1299,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "versus-adaptation",
           "tags": [
             "flyer",
@@ -1367,7 +1367,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "versus-adaptation",
           "tags": [
             "flyer",
@@ -1407,7 +1407,7 @@
         "neutralLight": {
           "key": "neutralLight",
           "input": "L",
-          "name": "Heurt de tête à terre",
+          "name": "Morsure au sol",
           "button": "light",
           "category": "normal",
           "stance": "standing",
@@ -1456,7 +1456,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1525,7 +1525,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1593,7 +1593,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1613,7 +1613,7 @@
         "airLight": {
           "key": "airLight",
           "input": "AIR + L",
-          "name": "Serres — coup en retombée",
+          "name": "Morsure en vol stationnaire",
           "button": "light",
           "category": "aerial",
           "stance": "air",
@@ -1661,7 +1661,7 @@
             "airHeavy",
             "airSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1729,7 +1729,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1796,7 +1796,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1863,7 +1863,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1883,7 +1883,7 @@
         "airHeavy": {
           "key": "airHeavy",
           "input": "AIR + H",
-          "name": "Serres — frappe descendante",
+          "name": "Griffure en vol plané",
           "button": "heavy",
           "category": "aerial",
           "stance": "air",
@@ -1928,7 +1928,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -1993,7 +1993,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2058,7 +2058,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2126,7 +2126,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2193,7 +2193,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2258,7 +2258,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2278,7 +2278,7 @@
         "neutralSpecial": {
           "key": "neutralSpecial",
           "input": "S",
-          "name": "Plongée des serres",
+          "name": "Griffure en vol plané — approche",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -2323,7 +2323,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2343,7 +2343,7 @@
         "forwardSpecial": {
           "key": "forwardSpecial",
           "input": "→ + S",
-          "name": "Approche plongeante",
+          "name": "Griffure planée — traversée",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -2388,7 +2388,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2453,7 +2453,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2518,7 +2518,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2538,7 +2538,7 @@
         "airSpecial": {
           "key": "airSpecial",
           "input": "AIR + S",
-          "name": "Serres — retombée",
+          "name": "Griffure planée — descente",
           "button": "special",
           "category": "special",
           "stance": "air",
@@ -2583,7 +2583,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "behavior-composite",
           "tags": [
             "flyer",
@@ -2649,7 +2649,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "versus-adaptation",
           "tags": [
             "flyer",
@@ -2717,7 +2717,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Piqué : Frappe avec les pattes. Au sol : Coup de tête en avant.",
+          "canonicalBasis": "Piqué : Frappe des pattes en vol plané (GlideScratchAttack) ; la morsure en vol stationnaire est distincte (HoverBiteAttack) dans la décompilation SH1 NTSC 1.1. Au sol : Contact frontal au sol : morsure (StandBiteAttack) dans la décompilation SH1 NTSC 1.1 ; le guide décrit ce geste comme un coup de tête.",
           "fidelity": "versus-adaptation",
           "tags": [
             "flyer",
@@ -21914,7 +21914,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -21924,7 +21924,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -21982,7 +21983,7 @@
               "neutralHeavy",
               "neutralSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -21992,7 +21993,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22053,7 +22055,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22063,7 +22065,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22121,7 +22124,7 @@
               "forwardHeavy",
               "forwardSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22131,7 +22134,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22191,7 +22195,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22201,7 +22205,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22258,7 +22263,7 @@
               "crouchHeavy",
               "downSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22268,7 +22273,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22328,7 +22334,7 @@
             "airHeavy",
             "airSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22338,7 +22344,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22395,7 +22402,7 @@
               "airHeavy",
               "airSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22405,7 +22412,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22465,7 +22473,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22475,7 +22483,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22532,7 +22541,7 @@
               "neutralSpecial",
               "forwardSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22542,7 +22551,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22601,7 +22611,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22611,7 +22621,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22667,7 +22678,7 @@
             "cancelInto": [
               "forwardSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22677,7 +22688,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22736,7 +22748,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22746,7 +22758,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22802,7 +22815,7 @@
             "cancelInto": [
               "downSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22812,7 +22825,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -22869,7 +22883,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -22879,7 +22893,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -22933,7 +22948,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -22943,7 +22958,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23000,7 +23016,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -23010,12 +23026,13 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
           "enabled": false,
-          "disabledReason": "La prise appartient à la phase désarmée ; utiliser S après épuisement des dix tirs."
+          "disabledReason": "La prise appartient à la phase désarmée ; utiliser S après abandon du pistolet (dix tirs ou vitalité sous la moitié)."
         },
         "backThrow": {
           "key": "backThrow",
@@ -23065,7 +23082,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -23075,7 +23092,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
@@ -23133,7 +23151,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23143,7 +23161,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23200,7 +23219,7 @@
               "neutralSpecial",
               "forwardSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23210,7 +23229,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23269,7 +23289,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23279,7 +23299,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23335,7 +23356,7 @@
             "cancelInto": [
               "forwardSpecial"
             ],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23345,7 +23366,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23402,7 +23424,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23412,7 +23434,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23466,7 +23489,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23476,7 +23499,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23519,7 +23543,7 @@
           "invulnFrames": 0,
           "guardDamage": 1,
           "unblockable": false,
-          "knockdown": false,
+          "knockdown": true,
           "launch": 0,
           "teleport": null,
           "trap": false,
@@ -23533,7 +23557,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23543,7 +23567,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23553,7 +23578,7 @@
           "exhaustedMove": {
             "key": "neutralSpecial",
             "input": "S",
-            "name": "Étranglement après la dernière munition",
+            "name": "Étranglement après abandon du pistolet",
             "button": "special",
             "category": "special",
             "stance": "standing",
@@ -23584,7 +23609,7 @@
             "invulnFrames": 0,
             "guardDamage": 1,
             "unblockable": false,
-            "knockdown": false,
+            "knockdown": true,
             "launch": 0,
             "teleport": null,
             "trap": false,
@@ -23598,7 +23623,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23608,7 +23633,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23665,7 +23691,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23675,7 +23701,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23729,7 +23756,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23739,7 +23766,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23796,7 +23824,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23806,7 +23834,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23860,7 +23889,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -23870,7 +23899,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -23927,7 +23957,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -23937,7 +23967,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -23991,7 +24022,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -24001,7 +24032,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -24058,7 +24090,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -24068,7 +24100,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -24122,7 +24155,7 @@
             "meterGain": 0,
             "effect": null,
             "cancelInto": [],
-            "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+            "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
             "fidelity": "behavior-composite",
             "tags": [
               "humanoid",
@@ -24132,7 +24165,8 @@
               "versus-timing"
             ],
             "referenceIds": [
-              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+              "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+              "CL_SH1_BOSSES"
             ],
             "referenceStatus": "observed-behavior-versus-transposition",
             "sourceTimingMeasured": false,
@@ -24190,7 +24224,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -24200,7 +24234,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
@@ -24258,7 +24293,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Tir : Tir de pistolet. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
+          "canonicalBasis": "Tir : Tir de pistolet qui renverse Harry ; la décompilation SH1 NTSC 1.1 associe cette balle à l’attaque 63 et à une projection de face ou de dos. Contact armé : Coup de crosse. Sans arme : Étranglement ou frappe du bras. Munitions épuisées : Après dix tirs, abandonne le pistolet. Résolution alternative : Le liquide peut expulser le parasite.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -24268,7 +24303,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
+            "CL_SH1_BOSSES"
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
@@ -24347,7 +24383,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24416,7 +24452,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24484,7 +24520,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24549,7 +24585,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -24617,7 +24653,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24684,7 +24720,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24751,7 +24787,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24816,7 +24852,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -24881,7 +24917,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -24946,7 +24982,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -25011,7 +25047,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -25078,7 +25114,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25143,7 +25179,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25189,6 +25225,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#80baff",
           "homing": 0,
           "armorFrames": 0,
           "invulnFrames": 0,
@@ -25208,7 +25245,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25273,7 +25310,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25338,7 +25375,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25403,7 +25440,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "behavior-composite",
           "tags": [
             "deity",
@@ -25468,7 +25505,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -25515,6 +25552,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#80baff",
           "homing": 0,
           "armorFrames": 0,
           "invulnFrames": 0,
@@ -25534,7 +25572,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -25583,6 +25621,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#80baff",
           "homing": 0,
           "armorFrames": 28,
           "invulnFrames": 0,
@@ -25602,7 +25641,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; dénouement selon branche.",
+          "canonicalBasis": "Foudre : Série de décharges bleues. État du boss : Apparition immobile ; champ de proximité qui renverse Harry lorsqu’il s’approche ; dénouement selon branche.",
           "fidelity": "versus-adaptation",
           "tags": [
             "deity",
@@ -26546,6 +26585,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#ff6868",
           "homing": 0,
           "armorFrames": 0,
           "invulnFrames": 0,
@@ -26877,6 +26917,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#ff6868",
           "homing": 0,
           "armorFrames": 0,
           "invulnFrames": 0,
@@ -26946,6 +26987,7 @@
           "projectileArc": 0,
           "projectileGravity": 0,
           "projectileLife": 60,
+          "projectileColor": "#ff6868",
           "homing": 0,
           "armorFrames": 28,
           "invulnFrames": 0,
@@ -70353,18 +70395,18 @@
         "downSpecial": {
           "key": "downSpecial",
           "input": "↓ + S",
-          "name": "Gueule du tunnel — Rituel de zone",
+          "name": "Frappe du sol — déséquilibre",
           "button": "special",
           "category": "special",
           "stance": "crouching",
           "startup": 19,
           "active": 10,
           "recovery": 31,
-          "damage": 146,
+          "damage": 0,
           "reach": 247,
           "level": "low",
-          "meter": 21,
-          "knockback": 8,
+          "meter": 0,
+          "knockback": 0,
           "travel": 0,
           "verticalTravel": 0,
           "requiresAir": false,
@@ -70690,7 +70732,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -70700,7 +70742,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -70759,7 +70802,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -70769,7 +70812,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -70827,7 +70871,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -70837,7 +70881,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -70895,7 +70940,7 @@
             "airHeavy",
             "airSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -70905,7 +70950,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -70963,7 +71009,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -70973,7 +71019,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71030,7 +71077,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71040,7 +71087,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71097,7 +71145,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71107,7 +71155,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71162,7 +71211,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71172,7 +71221,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71227,7 +71277,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71237,7 +71287,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71292,7 +71343,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71302,7 +71353,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71360,7 +71412,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71370,7 +71422,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71427,7 +71480,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71437,7 +71490,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71492,7 +71546,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71502,7 +71556,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71557,7 +71612,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71567,7 +71622,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71622,7 +71678,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71632,7 +71688,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71687,7 +71744,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71697,7 +71754,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71752,7 +71810,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71762,7 +71820,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71817,7 +71876,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "behavior-composite",
           "tags": [
             "humanoid",
@@ -71827,7 +71886,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71883,7 +71943,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -71893,7 +71953,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -71951,7 +72012,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque puis contre-attaque. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
+          "canonicalBasis": "Relevé : Agite les deux armes. Défense : Bloque les tirs visibles de face avec ses lames et peut contre-attaquer au contact. Dos et chute exposés ; le silencieux masque le flash du tir et empêche ce blocage. Estoc : Pointe une lame vers la cible. Balayage : Coupe latéralement au contact. Frappe courue : Court puis balaie avec une lame.",
           "fidelity": "versus-adaptation",
           "tags": [
             "humanoid",
@@ -71961,7 +72022,8 @@
             "versus-timing"
           ],
           "referenceIds": [
-            "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+            "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+            "CL_SH3_BOSSES"
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
@@ -73341,7 +73403,7 @@
         "neutralLight": {
           "key": "neutralLight",
           "input": "L",
-          "name": "Couteau — phase initiale — coup bref",
+          "name": "Couteau — coup bref",
           "button": "light",
           "category": "normal",
           "stance": "standing",
@@ -73405,13 +73467,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "forwardLight": {
           "key": "forwardLight",
           "input": "→ + L",
-          "name": "Couteau — phase initiale — approche",
+          "name": "Couteau — approche",
           "button": "light",
           "category": "command-normal",
           "stance": "standing",
@@ -73475,13 +73538,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "crouchLight": {
           "key": "crouchLight",
           "input": "↓ + L",
-          "name": "Couteau — phase initiale — frappe basse",
+          "name": "Couteau — frappe basse",
           "button": "light",
           "category": "normal",
           "stance": "crouching",
@@ -73544,13 +73608,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "airLight": {
           "key": "airLight",
           "input": "AIR + L",
-          "name": "Couteau — phase initiale — coup en retombée",
+          "name": "Couteau — coup en retombée",
           "button": "light",
           "category": "aerial",
           "stance": "air",
@@ -73613,13 +73678,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "neutralHeavy": {
           "key": "neutralHeavy",
           "input": "H",
-          "name": "Couteau — phase initiale — frappe appuyée",
+          "name": "Couteau — frappe appuyée",
           "button": "heavy",
           "category": "normal",
           "stance": "standing",
@@ -73682,13 +73748,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "forwardHeavy": {
           "key": "forwardHeavy",
           "input": "→ + H",
-          "name": "Couteau — phase initiale — grande frappe",
+          "name": "Couteau — grande frappe",
           "button": "heavy",
           "category": "command-normal",
           "stance": "standing",
@@ -73750,13 +73817,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "crouchHeavy": {
           "key": "crouchHeavy",
           "input": "↓ + H",
-          "name": "Couteau — phase initiale — balayage bas",
+          "name": "Couteau — balayage bas",
           "button": "heavy",
           "category": "normal",
           "stance": "crouching",
@@ -73818,13 +73886,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "airHeavy": {
           "key": "airHeavy",
           "input": "AIR + H",
-          "name": "Couteau — phase initiale — frappe descendante",
+          "name": "Couteau — frappe descendante",
           "button": "heavy",
           "category": "aerial",
           "stance": "air",
@@ -73884,6 +73953,7 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
@@ -73950,6 +74020,7 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
@@ -74016,6 +74087,7 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
@@ -74085,6 +74157,7 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
@@ -74153,6 +74226,7 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
@@ -74219,13 +74293,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "neutralSpecial": {
           "key": "neutralSpecial",
           "input": "S",
-          "name": "Couteau — phase initiale — pression rapprochée",
+          "name": "Couteau — frappe de la phase",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -74233,7 +74308,7 @@
           "active": 6,
           "recovery": 24,
           "damage": 106,
-          "reach": 162,
+          "reach": 130,
           "level": "mid",
           "meter": 20,
           "knockback": 10,
@@ -74285,13 +74360,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "forwardSpecial": {
           "key": "forwardSpecial",
           "input": "→ + S",
-          "name": "Couteau — phase initiale — approche offensive",
+          "name": "Couteau — approche offensive",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -74351,13 +74427,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "backSpecial": {
           "key": "backSpecial",
           "input": "← + S",
-          "name": "Couteau — phase initiale — recul puis réponse",
+          "name": "Couteau — recul puis réponse",
           "button": "special",
           "category": "special",
           "stance": "standing",
@@ -74417,13 +74494,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "downSpecial": {
           "key": "downSpecial",
           "input": "↓ + S",
-          "name": "Couteau — phase initiale — réponse basse",
+          "name": "Couteau — réponse basse",
           "button": "special",
           "category": "special",
           "stance": "crouching",
@@ -74483,13 +74561,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "airSpecial": {
           "key": "airSpecial",
           "input": "AIR + S",
-          "name": "Couteau — phase initiale — retombée",
+          "name": "Couteau — retombée",
           "button": "special",
           "category": "special",
           "stance": "air",
@@ -74549,13 +74628,14 @@
           ],
           "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "enabled": true,
           "disabledReason": null
         },
         "super": {
           "key": "super",
           "input": "N",
-          "name": "Super proposé — Memory of Alessa",
+          "name": "Mémoire alternée — Couteau",
           "button": "super",
           "category": "nightmare",
           "stance": "any",
@@ -74563,17 +74643,17 @@
           "active": 14,
           "recovery": 40,
           "damage": 225,
-          "reach": 265,
+          "reach": 162,
           "level": "mid",
           "meter": 0,
           "meterCost": 100,
           "knockback": 20,
-          "travel": 0,
+          "travel": 1.8,
           "verticalTravel": 0,
           "requiresAir": false,
           "requiresGround": true,
           "airControl": 0,
-          "hits": 3,
+          "hits": 2,
           "hitInterval": 5,
           "projectile": false,
           "projectileCount": 1,
@@ -74614,16 +74694,17 @@
             "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
             "CL_SH3_BOSSES"
           ],
-          "referenceStatus": "blocked-reference",
+          "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "description": "Mémoire alternée : déplacement entre deux chevaux puis attaque de l’arme active ; variante par phase.",
-          "enabled": false,
-          "disabledReason": "Seule la phase couteau est active ; les quatre armes et leurs transitions restent à intégrer."
+          "enabled": true,
+          "disabledReason": null
         },
         "desperation": {
           "key": "desperation",
           "input": "≤ 30% HP + N",
-          "name": "Super proposé — Memory of Alessa — dernier recours",
+          "name": "Mémoire alternée — Couteau — dernier recours — dernier recours",
           "button": "super",
           "category": "desperation",
           "stance": "any",
@@ -74631,18 +74712,18 @@
           "active": 18,
           "recovery": 48,
           "damage": 266,
-          "reach": 308,
+          "reach": 178,
           "level": "unblockable",
           "meter": 0,
           "meterCost": 100,
           "healthRequirement": 0.3,
           "knockback": 24,
-          "travel": 0,
+          "travel": 2.1,
           "verticalTravel": 0,
           "requiresAir": false,
           "requiresGround": true,
           "airControl": 0,
-          "hits": 4,
+          "hits": 2,
           "hitInterval": 5,
           "projectile": false,
           "projectileCount": 1,
@@ -74683,11 +74764,12 @@
             "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
             "CL_SH3_BOSSES"
           ],
-          "referenceStatus": "blocked-reference",
+          "referenceStatus": "observed-behavior-versus-transposition",
           "sourceTimingMeasured": false,
+          "weaponPhaseId": "knife",
           "description": "Mémoire alternée : déplacement entre deux chevaux puis attaque de l’arme active ; variante par phase.",
-          "enabled": false,
-          "disabledReason": "Seule la phase couteau est active ; les quatre armes et leurs transitions restent à intégrer."
+          "enabled": true,
+          "disabledReason": null
         }
       }
     },
@@ -243327,7 +243409,7 @@
             "neutralHeavy",
             "neutralSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243396,7 +243478,7 @@
             "forwardHeavy",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243464,7 +243546,7 @@
             "crouchHeavy",
             "downSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243532,7 +243614,7 @@
             "airHeavy",
             "airSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243600,7 +243682,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243667,7 +243749,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243734,7 +243816,7 @@
           "cancelInto": [
             "downSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243799,7 +243881,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243864,7 +243946,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243929,7 +244011,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -243997,7 +244079,7 @@
             "neutralSpecial",
             "forwardSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244064,7 +244146,7 @@
           "cancelInto": [
             "forwardSpecial"
           ],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244129,7 +244211,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244194,7 +244276,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244259,7 +244341,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244324,7 +244406,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244389,7 +244471,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244454,7 +244536,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "behavior-composite",
           "tags": [
             "child",
@@ -244520,7 +244602,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "versus-adaptation",
           "tags": [
             "child",
@@ -244534,9 +244616,9 @@
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
-          "description": "Chorégraphie originale : anticipation centrée sur « rejeton », enchaînement limité autour de « Invocation de Blood Mama », puis récupération exposée; aucun nouveau pouvoir ajouté.",
+          "description": "Super suspendu : relever les actions propres à Blood Baby dans Book of Memories avant de chorégraphier une séquence de versus. Le fait d'être engendré par sa mère ne justifie pas le pouvoir inverse d'invoquer Blood Mama.",
           "enabled": false,
-          "disabledReason": "L’invocation de Blood Mama demande un second acteur ; aucun projectile de remplacement."
+          "disabledReason": "La source décrit un rejeton créé par sa mère ; aucune invocation de Blood Mama par Blood Baby n’est attestée. Attaque propre à relever."
         },
         "desperation": {
           "key": "desperation",
@@ -244588,7 +244670,7 @@
           "meterGain": 0,
           "effect": null,
           "cancelInto": [],
-          "canonicalBasis": "Invocation de Blood Mama : Invocation de Blood Mama",
+          "canonicalBasis": "Naissance depuis sa mère : Le bestiaire décrit Blood Baby comme un rejeton difforme engendré par sa mère. Cette relation de naissance ne décrit ni une attaque ni un pouvoir d'invocation de Blood Mama par Blood Baby.",
           "fidelity": "versus-adaptation",
           "tags": [
             "child",
@@ -244602,9 +244684,9 @@
           ],
           "referenceStatus": "blocked-reference",
           "sourceTimingMeasured": false,
-          "description": "Chorégraphie originale : anticipation centrée sur « rejeton », enchaînement limité autour de « Invocation de Blood Mama », puis récupération exposée; aucun nouveau pouvoir ajouté.",
+          "description": "Super suspendu : relever les actions propres à Blood Baby dans Book of Memories avant de chorégraphier une séquence de versus. Le fait d'être engendré par sa mère ne justifie pas le pouvoir inverse d'invoquer Blood Mama.",
           "enabled": false,
-          "disabledReason": "L’invocation de Blood Mama demande un second acteur ; aucun projectile de remplacement."
+          "disabledReason": "La source décrit un rejeton créé par sa mère ; aucune invocation de Blood Mama par Blood Baby n’est attestée. Attaque propre à relever."
         }
       }
     },

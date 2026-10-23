@@ -39,8 +39,9 @@ after(()=>server?.kill('SIGTERM'));
 
 test('service worker separates versioned static and runtime caches with navigation-only offline fallback',async()=>{
   const worker=await read('service-worker.js');
-  assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}`/);
-  assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}`/);
+  assert.match(worker,/const BITMAP_REVISION = '[a-f0-9]{64}';/);
+  assert.match(worker,/STATIC_CACHE = `\$\{CACHE_PREFIX\}-static-v\$\{VERSION\}-\$\{CACHE_REVISION\}-\$\{BITMAP_REVISION\}`/);
+  assert.match(worker,/RUNTIME_CACHE = `\$\{CACHE_PREFIX\}-runtime-v\$\{VERSION\}-\$\{CACHE_REVISION\}-\$\{BITMAP_REVISION\}`/);
   assert.match(worker,/request\.mode\s*===\s*'navigate'/);
   assert.match(worker,/matchCached\(OFFLINE_URL\)/);
   assert.doesNotMatch(worker,/event\.request\.mode==='navigate'\?caches\.match\('\/index\.html'\)/);
@@ -53,6 +54,21 @@ test('service worker keeps the 8 MB moveset catalogue out of precache and includ
   assert.match(blocks,/\/404\.html/);
   assert.match(blocks,/\/src\/stage-director\.js/);
   assert.doesNotMatch(blocks,/\/data\/movesets\.json/);
+});
+
+test('the essential offline shell contains the full static JavaScript dependency graph',async()=>{
+  const worker=await read('service-worker.js');
+  const block=worker.match(/const ESSENTIAL_SHELL\s*=\s*\[([\s\S]*?)\];/)?.[1];
+  assert.ok(block);
+  const paths=new Set([...block.matchAll(/['"]([^'"]+)['"]/g)].map(match=>match[1]));
+  for(const path of paths){
+    if(!path.endsWith('.js'))continue;
+    const code=await read(path.slice(1));
+    for(const match of code.matchAll(/\b(?:from\s*|import\s*)['"](\.[^'"]+)['"]/g)){
+      const dependency=new URL(match[1],`https://halo.test${path}`).pathname;
+      assert.ok(paths.has(dependency),`${path} requires uncached ${dependency}`);
+    }
+  }
 });
 
 test('PWA manifest declares stable identity, scope, language and three Silent Hill shortcuts',async()=>{

@@ -131,7 +131,8 @@ async function runVerification() {
     for(const key of MOVESET_KEYS){
       const move=profile.moves[key];
       assert(move&&move.key===key,`Coup absent ou mal indexé: ${fighter.id}/${key}`);
-      assert(move.damage>0&&move.startup>=0&&move.active>0&&move.recovery>0&&move.reach>0,`Coup invalide: ${fighter.id}/${key}`);
+      const nonDamagingPound=fighter.id==='sh3_split_worm_046'&&fighter.source==='sh3'&&key==='downSpecial';
+      assert((nonDamagingPound?move.damage===0:move.damage>0)&&move.startup>=0&&move.active>0&&move.recovery>0&&move.reach>0,`Coup invalide: ${fighter.id}/${key}`);
       assert(typeof move.input==='string'&&move.input.length>0,`Commande absente: ${fighter.id}/${key}`);
       assert(typeof move.canonicalBasis==='string'&&move.canonicalBasis.length>=8,`Base canonique absente: ${fighter.id}/${key}`);
       assert(MOVE_FIDELITY[move.fidelity],`Statut de fidélité inconnu: ${fighter.id}/${key}/${move.fidelity}`);

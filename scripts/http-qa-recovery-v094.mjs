@@ -15,6 +15,12 @@ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
 ]};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
+async function selectStaticWorkshopSubject(page){
+ const id='film_red_pyramid_film_175';
+ await page.selectOption('#spriteSource','film');await page.fill('#spriteSearch',id);
+ await page.locator(`.sprite-card[data-id="${id}"]`).click();
+ await page.waitForFunction(id=>{const c=document.querySelector('#spriteDetail canvas');return c?.dataset.spriteId===id&&c.dataset.artStatus==='raster';},id);
+}
 try{
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4179','--dist'],{cwd:root,stdio:'ignore'});
  let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}check('static HTTP server ready',ready);
@@ -72,14 +78,14 @@ try{
  check('successful pause retry closes the dialog only after loading',await page.evaluate(()=>!document.querySelector('[aria-labelledby=pauseTitle]').open&&!__HALO_QA__.engine.paused));
  check('successful recovery clears the previous pause error',await page.locator('#pauseFeedback').textContent()==='');
  await page.click('#pauseBtn');check('reopening pause does not repeat a recovered error',await page.locator('#pauseFeedback').textContent()==='');await page.click('[data-pause=resume]');
- await page.goto(base+'/modules/sprite-workshop.html');await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');await page.locator('.clip-editor summary').click();
+ await page.goto(base+'/modules/sprite-workshop.html');await selectStaticWorkshopSubject(page);await page.locator('.clip-editor summary').click();
  await page.click('[data-clip=add]');await page.fill('[data-clip-ticks="0"]','4');await page.fill('[data-clip-ticks="1"]','7');await page.selectOption('[data-inspect=pose]','neutralHeavy');await page.selectOption('[data-inspect=pose]','idle');
  check('switching poses retains working edits even before Preview',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-ticks="0"]').inputValue()==='4'&&await page.locator('[data-clip-ticks="1"]').inputValue()==='7');
  await page.getByText('CALIBRER CETTE IMAGE',{exact:true}).click();await page.fill('[data-inspect=bodyHeight]','0');await page.locator('[data-inspect=bodyHeight]').dispatchEvent('change');
  let downloads=0;page.on('download',()=>downloads++);await page.click('[data-inspect=export]');await page.waitForTimeout(150);
  check('invalid visible calibration cannot silently export the previous valid values',downloads===0&&/invalides/.test(await page.locator('[data-inspect=error]').textContent()));
  await page.click('[data-inspect=reset]');await page.fill('[data-inspect=anchorX]','0.61');await page.locator('[data-inspect=anchorX]').dispatchEvent('change');const pending=page.waitForEvent('download');await page.click('[data-inspect=export]');const download=await pending;await download.saveAs(resolve(out,'calibration-v2.json'));const packet=JSON.parse(await readFile(resolve(out,'calibration-v2.json'),'utf8'));
- check('calibration export includes the previous exact anchors as a concurrency guard',packet.schema===2&&packet.previousFrames[0].anchor[0]!==.61&&packet.frames[0].anchor[0]===.61&&packet.previousFrames[0].sha256===packet.frames[0].sha256);await shot(page,'04-preserved-drafts');
+ check('calibration export includes the previous exact anchors as a concurrency guard',packet.schema===2&&packet.fighterId==='film_red_pyramid_film_175'&&packet.frames.length===1&&packet.previousFrames[0].anchor[0]!==.61&&packet.frames[0].anchor[0]===.61&&packet.previousFrames[0].sha256===packet.frames[0].sha256);await shot(page,'04-preserved-drafts');
  await page.setViewportSize({width:430,height:932});check('updated editor controls stay within mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'05-mobile-recovery');await context.close();
  const offlineContext=await browser.newContext(),off=await offlineContext.newPage();off.on('pageerror',e=>report.errors.push(e.message));await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
  await off.evaluate(async()=>{await Promise.all((await caches.keys()).map(k=>caches.delete(k)));});await offlineContext.setOffline(true);const response=await off.goto(base+'/definitely-uncached-v094');

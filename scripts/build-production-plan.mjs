@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
+import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
 
 export const PLAN_SCHEMA = 1;
@@ -159,6 +160,23 @@ function plannedPose(fighter, ref, pose) {
   return `${plans[pose]} ${base}`;
 }
 
+function runtimeReferenceNote(profile){
+  const stagger=nonDamagingStagger({id:profile.referencePolicy.id,source:profile.referencePolicy.source},profile.moves.downSpecial);
+  if(stagger)return `Coup de sol du Split Worm : 0 dégât de santé, déséquilibre local des cibles au sol ; pas de chip, riposte, vol de vie, jauge ni crédit de dégâts. ${stagger.frames} ticks de déséquilibre et garde accroupie adaptés au versus ; aucun timing source mesuré.`;
+  const field=profile.referencePolicy.proximityField;
+  if(field)return `Champ passif local d’Incubator : rayon ${field.radius} px, ${field.damage} dégât(s), chute ${field.knockdown} ticks, récupération ${field.cooldown} ticks ; aucune jauge ni combo gratuits. Portée, dégâts et durées adaptés au versus. Décharges bleues, RGB de travail sans palette source certifiée.`;
+  if(profile.referencePolicy.id==='sh1_incubus_019')return 'Décharges rouges propres à Incubus ; RGB de travail sans palette source certifiée. Aucun champ passif de proximité emprunté à Incubator.';
+  if(profile.referencePolicy.defense?.frontalVisibleBullets)return 'Défense du Missionary SH3 : balles visibles arrêtées de face en posture disponible ; dos, chute, attaque et tir silencieux restent vulnérables. Aucun contre ni gain de jauge automatique. États et fenêtres adaptés au versus, sans timings source mesurés.';
+  const phases=profile.moveset.weaponPhases;
+  if(phases?.length){
+    const art=SPRITES[profile.referencePolicy.id],missing=phases.filter(p=>!art?.clips[`idle@${profile.referencePolicy.id}:weapon:${p.id}`]);
+    return `Phases d’armes : ${phases.map(p=>p.name).join(' → ')}. Ordre séquentiel et récupération verrouillée ; budgets de vitalité, rafales et durées adaptés au versus, sans mesures officielles. Images fixes d’armes : ${phases.length-missing.length}/${phases.length} candidates ; ${missing.length?'à produire : '+missing.map(p=>p.name).join(', '):'comparaison visuelle encore ouverte'}. Aucun emprunt d’image entre armes, ni animation source certifiée.`;
+  }
+  const ammo=profile.moveset.ammoProfile;
+  if(ammo?.disarmBelowHealthRatio)return `Pistolet : ${ammo.capacity} tirs ; abandon après épuisement ou santé strictement sous ${ammo.disarmBelowHealthRatio*100} %. La balle renverse la cible ; dégâts et durée de chute restent ceux du versus. Phase désarmée persistante, balles non tirées conservées mais inutilisables ; raccord de versus sans animation source certifiée.`;
+  return '';
+}
+
 function applyRuntimeProgress(plan){
   const fighters=new Map(ROSTER.map(f=>[f.id,f])),stages=new Map(STAGES.map(s=>[s.id,s]));
   const profiles=new Map(ROSTER.map(f=>[f.id,createCombatProfile(f)]));
@@ -166,6 +184,8 @@ function applyRuntimeProgress(plan){
   for(const row of plan.fighters){
     const profile=profiles.get(row.id),p=profile.referencePolicy;
     row.runtimePolicy=p;
+    const weaponNote=runtimeReferenceNote(profile);
+    if(weaponNote)row.identityNote+='\n'+weaponNote;
     row.enabledMoves=Object.values(profile.moves).filter(m=>m.enabled!==false).length;
     row.identityNote+=`\nMoteur : ${p.combatEnabled?'combat versus autorisé':'combat désactivé'} ; déplacement ${p.canMove?'autorisé':'désactivé'}, saut ${p.canJump?'autorisé':'désactivé'}, esquive ${p.canDodge?'autorisée':'désactivée'}.`;
     if(p.adaptationMode==='versus-scripted')row.identityNote+=' Rencontre scénarisée transposée explicitement en versus.';
@@ -175,8 +195,16 @@ function applyRuntimeProgress(plan){
     const m=profiles.get(row.fighterId).moves[row.key];
     row.enabled=m.enabled!==false;row.disabledReason=m.disabledReason||'';
     row.canonicalVerification=(row.enabled?'Commande active ; règles de la fiche appliquées.':'Commande désactivée : '+row.disabledReason)+' Animation officielle non vérifiée.';
+    const profile=profiles.get(row.fighterId),weaponNote=runtimeReferenceNote(profile);
+    if(weaponNote)row.canonicalVerification+=' '+weaponNote;
     if(m.ammoCost)row.canonicalVerification+=` Consomme ${m.ammoCost} munition(s) ; réserve ${profiles.get(row.fighterId).moveset.ammoProfile?.capacity||0}.`;
     row.target=(row.enabled?'Règle active de versus : ':'Règle inactive : ')+(m.canonicalBasis||'')+'\n'+row.target;
+    if(profile.moveset.weaponPhases?.length){
+      row.target+='\nParamètres numériques : phase initiale. Variantes jouées : '+profile.moveset.weaponPhases.map(phase=>{
+        const move=phase.moves[row.key];
+        return `${phase.name} — ${move.name} (${move.projectile?'tir':'contact'}, ${move.startup}/${move.active}/${move.recovery} ticks, dégâts ${move.damage}, portée ${move.reach})`;
+      }).join(' ; ')+'. Ces chiffres sont ceux du versus, non des mesures de SH3.';
+    }
     if(row.productionStatus==='À produire')row.productionStatus='En cours';
   }
   for(const row of plan.finishers){
@@ -229,10 +257,19 @@ function applyRuntimeProgress(plan){
     return row;
   });
   for(const task of plan.tasks){
-    if(task.id.endsWith(':moves')){
+    if(task.id.endsWith(':art')){
+      const art=SPRITES[task.entityId];
+      if(art?.frames.length>1){
+        task.status='En cours';task.delivery=art.animatedClips>0?'reference-continuation-2026-10-23':'fidelity-source-pass-2026-10-23';
+        task.reason=`${art.frames.length} images indépendantes, ${art.animatedClips} montage(s) animé(s) candidat(s). Poses ${Object.keys(art.clips).join(', ')} uniquement ; autres gestes et comparaison temporelle source encore à réaliser. Aucune fidélité 1:1 certifiée.`;
+        if(task.entityId==='sh3_memory_of_alessa_049')task.reason+=' Couteau, pistolet et tuyau présents ; mitraillette manquante signalée par cartouche, sans image de remplacement.';
+      }
+    }else if(task.id.endsWith(':moves')){
       const p=profiles.get(task.entityId),enabled=Object.values(p.moves).filter(m=>m.enabled!==false).length;
       task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
       task.reason=`Politique de la fiche appliquée : ${enabled}/20 commandes actives. Projectiles, téléportation, effets et annulations limités aux recettes explicites. Captures, PNG et comparaison visuelle encore à réaliser.`;
+      const weaponNote=runtimeReferenceNote(p);
+      if(weaponNote){task.reason+=' '+weaponNote;task.delivery='reference-continuation-2026-10-23';}
     }else if(task.id.endsWith(':cinematics')&&plan.finishers.some(f=>f.entityId===task.entityId&&summaries.get(f.id).authored)){
       task.status='En cours';task.delivery=IMPLEMENTATION_REVISION;
       task.reason='Clés contextuelles, séquences de résultat, provocation, timelines de finisher, caméra et sons branchés. Poses bitmap dédiées et validation visuelle restantes.';
@@ -242,7 +279,8 @@ function applyRuntimeProgress(plan){
     }
   }
   const hooks=plan.tasks.find(t=>t.id==='global:cinematic-clips');
-  hooks.reason='Neuf hooks, contexte exact par finisher et par résultat, provocation annulable, timeline caméra/acteurs/son. Les PNG dédiés restent à produire.';
+  hooks.status='Validé';hooks.delivery='reference-continuation-2026-10-23';
+  hooks.reason='Neuf hooks, contexte exact par finisher et par résultat, provocation annulable, timeline caméra/acteurs/son. Chargement atomique acteurs et couches bitmap du lieu : panne, reprise et annulation vérifiées ; ancien combat et images conservés en cas d’échec. Raccord technique validé ; PNG dédiés et décors restent à produire dans leurs actions artistiques.';
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -258,7 +296,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    scope:'PR #4. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    updatedAt:'2026-10-23',
+    scope:'PR #4 et continuation du 23 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -302,9 +341,13 @@ export function buildProductionPlan(research) {
     }
     for(const pose of CORE_POSES){
       const clip=art?.clips?.[pose];
-      plan.poses.push({id:`${f.id}:pose:${pose}`,fighterId:f.id,name:f.name,source:f.source,edition:referenceEdition(f,ref),pose,label:poseNames[pose],description:plannedPose(f,ref,pose),referenceIds:rowRefs(ref.referenceIds),status:'Adaptation à valider sur références',existing:clip?'Image de repos candidate, aucune animation certifiée':'Aucun clip dédié',
+      const distinct=clip?new Set(clip.frames.map(index=>art.frames[index].pixelSHA256||art.frames[index].sha256)).size:0;
+      const ticks=clip?(clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame)).reduce((sum,n)=>sum+n,0):0;
+      const weaponPoses=pose==='idle'&&profile.moveset.weaponPhases?.length?runtimeReferenceNote(profile):'';
+      const existing=(distinct>1?`${distinct} images indépendantes, montage candidat de ${ticks} ticks du versus ; timing source et fidélité non certifiés.`:clip?'Image de repos candidate, aucune animation certifiée':'Aucun clip dédié')+(weaponPoses?' '+weaponPoses:'');
+      plan.poses.push({id:`${f.id}:pose:${pose}`,fighterId:f.id,name:f.name,source:f.source,edition:referenceEdition(f,ref),pose,label:poseNames[pose],description:plannedPose(f,ref,pose),referenceIds:rowRefs(ref.referenceIds),status:'Adaptation à valider sur références',existing,
         spriteFormat:'Une image PNG transparente indépendante par pose/image. Corps et accessoires entièrement visibles.',
-        qa:'Appuis, silhouette, proportions, membres, orientation, arme, contacts au sol. Pas de faux clip créé par duplication.',productionStatus:locked?'À référencer':noncombat?'Rôle à décider':'À produire'});
+        qa:'Appuis, silhouette, proportions, membres, orientation, arme, contacts au sol. Pas de faux clip créé par duplication.',productionStatus:locked?'À référencer':noncombat?'Rôle à décider':distinct>1||(weaponPoses&&art?.frames.length>1)?'En cours':'À produire'});
     }
     if(locked||noncombat)task(`${f.id}:role`,f.id,'Combattant','P0','Confirmer identité et rôle',ref.identityNote,'Œuvre, forme, statut de combat et comportement vérifiés avant réalisation des attaques.',ref.referenceIds);
     task(`${f.id}:art`,f.id,'Combattant','P1','Produire et vérifier les PNG',artState,'Images indépendantes, anatomie validée sur cette version et clips composés de poses distinctes.',ref.referenceIds);
@@ -342,7 +385,7 @@ export async function writePlan() {
   const payload=JSON.stringify(plan,null,2)+'\n';
   await fs.mkdir(planDir,{recursive:true});
   await fs.writeFile(path.join(planDir,'production-plan.json'),payload);
-  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,sha256:sha256(payload),metrics:plan.metrics},null,2)+'\n');
+  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,updatedAt:plan.updatedAt,baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,sha256:sha256(payload),metrics:plan.metrics},null,2)+'\n');
   console.log(JSON.stringify({output:'docs/production/production-plan.json',...plan.metrics},null,2));
   return plan;
 }

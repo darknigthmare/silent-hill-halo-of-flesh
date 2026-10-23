@@ -14,7 +14,7 @@ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.',
  'Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result/outro ticks produce each engine result; this is not a played campaign.',
  'Air Screamer performs the prepared decisive aerial finisher against the film candidate. The inverse film grip is incompatible with a flying target and is not substituted.',
- 'The two existing candidate PNGs are used. No new production image or animation is added.'
+ 'The two existing candidate profiles and their imported frames are used. The fixtures add no new production image or animation.'
 ]};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};

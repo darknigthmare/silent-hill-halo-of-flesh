@@ -6,63 +6,124 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "a_clean_high_detail_digital_illustration_on_a_tra.png",
-    "sourceSHA256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
+    "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
+    "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
     "sourceDimensions": [
-      1536,
-      1024
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Image détaillée récupérée de la conversation. Anatomie et proportions à confronter au modèle SH1; pas de certification 1:1.",
+    "notes": "Reconstruction candidate depuis les vues avant et arrière SH1 de Silent Hill Memories ; poses et temps de lecture originaux du projet, aucune certification 1:1. Ancien candidat conservé hors registre actif.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "path": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
-        "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
-        "bytes": 2142783,
-        "width": 1536,
-        "height": 1024,
+        "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+        "bytes": 627900,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          40,
+          234,
+          1747,
+          673
+        ],
+        "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
+        "transparentFraction": 0.84725,
+        "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
         "facing": 1,
         "anchor": [
-          0.52,
-          0.95
+          0.54,
+          0.77
         ],
         "bodyHeight": 0.58,
+        "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
+        "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+        "bytes": 707307,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          5,
-          6,
-          1530,
-          1015
+          86,
+          60,
+          1724,
+          786
         ],
-        "pixelSHA256": "9de947a9dea3ec95b2c3fcaa62f180f6d70ccdcc643355f0af0b0401427f4d9d",
-        "transparentFraction": 0.67734
+        "pixelSHA256": "893cb8cad4e52faf2ab9d15fa2e41817e7266eab534a619674f0d48d73a94e12",
+        "transparentFraction": 0.82684,
+        "path": "assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9
+        ],
+        "bodyHeight": 0.58,
+        "sourceFile": "exec-c077a414-e5ab-4b8a-bea2-e53663c8a88c.png",
+        "sourceSHA256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
+        "bytes": 716893,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          52,
+          222,
+          1736,
+          760
+        ],
+        "pixelSHA256": "43f59f945e95788c00b9e065f217dcf321b0d20eff7432e1dbd7830cb88c0848",
+        "transparentFraction": 0.82392,
+        "path": "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.705
+        ],
+        "bodyHeight": 0.58,
+        "sourceFile": "exec-8f429514-4016-414a-9594-f9abdb569045.png",
+        "sourceSHA256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
-      "path": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
-      "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5",
-      "bytes": 2142783,
-      "width": 1536,
-      "height": 1024,
+      "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+      "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+      "bytes": 627900,
+      "width": 1774,
+      "height": 887,
+      "facing": 1,
       "visibleBounds": [
-        5,
-        6,
-        1530,
-        1015
+        40,
+        234,
+        1747,
+        673
       ],
-      "pixelSHA256": "9de947a9dea3ec95b2c3fcaa62f180f6d70ccdcc643355f0af0b0401427f4d9d",
-      "transparentFraction": 0.67734
+      "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
+      "transparentFraction": 0.84725
     },
     "clips": {
       "idle": {
         "frames": [
-          0
+          0,
+          1,
+          0,
+          2
         ],
-        "ticksPerFrame": 1,
-        "loop": false
+        "ticksPerFrame": 6,
+        "frameTicks": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "loop": true
       }
     },
-    "animatedClips": 0
+    "animatedClips": 1
   },
   "film_red_pyramid_film_175": {
     "fighterId": "film_red_pyramid_film_175",
@@ -121,6 +182,146 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_memory_of_alessa_049": {
+    "fighterId": "sh3_memory_of_alessa_049",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png",
+    "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Memory of Alessa SH3 original : trois poses candidates avec armes distinctes, palette et surfaces mates revues d’après render officiel et capture visage. SMG visuel manquant. Prises et pixels restent non certifiés 1:1 ; anciennes candidates conservées dans art/archive.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+        "bytes": 1675645,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          92,
+          55,
+          981,
+          1500
+        ],
+        "pixelSHA256": "287f3a065672fd518e99e6efe7037fd2fb54bcd975e19380f06d33b9759dc2a3",
+        "transparentFraction": 0.73538,
+        "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+        "facing": 1,
+        "anchor": [
+          0.524,
+          0.974
+        ],
+        "bodyHeight": 0.943,
+        "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png",
+        "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617",
+        "bytes": 1704270,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          91,
+          57,
+          986,
+          1501
+        ],
+        "pixelSHA256": "ecbde16ddef45923d947a277ec269c3520e7f2d0c3bb20b92b53bc05b8ecef4c",
+        "transparentFraction": 0.73345,
+        "path": "assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+        "facing": 1,
+        "anchor": [
+          0.524,
+          0.974
+        ],
+        "bodyHeight": 0.943,
+        "sourceFile": "exec-5fad91f7-2351-4e41-802a-0bb768d80ca7.png",
+        "sourceSHA256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93",
+        "bytes": 1678454,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          90,
+          57,
+          988,
+          1502
+        ],
+        "pixelSHA256": "e9ba4355dc33a1a0ffc2163026270014b4659d1e69cd676e74a0b253ea5a6b15",
+        "transparentFraction": 0.73629,
+        "path": "assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+        "facing": 1,
+        "anchor": [
+          0.524,
+          0.974
+        ],
+        "bodyHeight": 0.943,
+        "sourceFile": "exec-f2873763-d166-42dc-af80-4621e0ce767e.png",
+        "sourceSHA256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "sha256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+      "bytes": 1675645,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        92,
+        55,
+        981,
+        1500
+      ],
+      "pixelSHA256": "287f3a065672fd518e99e6efe7037fd2fb54bcd975e19380f06d33b9759dc2a3",
+      "transparentFraction": 0.73538
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idle@sh3_memory_of_alessa_049:weapon:knife": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "frameTicks": [
+          1
+        ],
+        "loop": false
+      },
+      "idle@sh3_memory_of_alessa_049:weapon:handgun": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idle@sh3_memory_of_alessa_049:weapon:pipe": {
+        "frames": [
+          2
         ],
         "ticksPerFrame": 1,
         "loop": false
