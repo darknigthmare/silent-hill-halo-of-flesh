@@ -18,7 +18,7 @@ function harness({fail=false,hang=false,wrong=false,delay=0,...options}={}){
 function ctx(){const calls=[],gradient={addColorStop(){}};return new Proxy({calls,canvas:{width:720,height:500},createLinearGradient:()=>gradient},{get:(o,k)=>k in o?o[k]:(...a)=>calls.push([k,...a])});}
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('raster coverage counts real exact-ID assets, not roster entries or resized copies',()=>{
- const c=spriteCoverage(ROSTER);assert.equal(c.total,230);assert.equal(c.integrated,6);assert.equal(c.missing.length,224);assert.equal(c.certified,0);assert.equal(c.animatedClips,1);
+ const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,1);
 });
 test('film bitmap is not silently used for the SH2 original or spear',()=>{
  assert.ok(spriteFor(film));assert.equal(spriteFor('sh2_red_pyramid_thing_great_knife_029'),null);assert.equal(spriteFor('sh2_red_pyramid_thing_spear_030'),null);
@@ -29,7 +29,7 @@ test('unknown and inherited property names never resolve as images',()=>{
 });
 test('no ID case normalization or fuzzy aliases are used',()=>assert.equal(spriteFor(air.id.toUpperCase()),null));
 test('each runtime bitmap has its actual digest, PNG header and native dimensions',async()=>{
- const paths=new Set();for(const asset of Object.values(SPRITES))for(const frame of asset.frames){const b=await readFile(new URL('../'+frame.path,import.meta.url));assert.equal(createHash('sha256').update(b).digest('hex'),frame.sha256);assert.equal(b.length,frame.bytes);assert.equal(b.readUInt32BE(16),frame.width);assert.equal(b.readUInt32BE(20),frame.height);assert.equal(b[25],6);paths.add(frame.path);}assert.equal(paths.size,10);
+ const paths=new Set();for(const asset of Object.values(SPRITES))for(const frame of asset.frames){const b=await readFile(new URL('../'+frame.path,import.meta.url));assert.equal(createHash('sha256').update(b).digest('hex'),frame.sha256);assert.equal(b.length,frame.bytes);assert.equal(b.readUInt32BE(16),frame.width);assert.equal(b.readUInt32BE(20),frame.height);assert.equal(b[25],6);paths.add(frame.path);}assert.equal(paths.size,Object.values(SPRITES).reduce((sum,asset)=>sum+asset.frames.length,0));
 });
 test('mirrored presentation reuses an image but is not counted as generated animation',()=>{
  const single=spriteFor(film);

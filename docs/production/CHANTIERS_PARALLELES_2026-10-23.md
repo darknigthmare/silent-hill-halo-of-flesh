@@ -1,5 +1,8 @@
 # Chantiers parallèles du 23 octobre 2026
 
+Relevé historique de la troisième passe. Voir le
+[quatrième lot](CHANTIERS_PARALLELES_LOT4_2026-10-23.md) pour la livraison actuelle.
+
 Cette passe prolonge le commit `25fd0c9` sur la même branche de livraison.
 Elle fait avancer les propositions du classeur et la comparaison aux œuvres
 sans assimiler une adaptation jouable à une animation originale reproduite.

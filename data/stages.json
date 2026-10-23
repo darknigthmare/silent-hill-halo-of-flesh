@@ -227,6 +227,7 @@
         "implementedElement": "Battant entrouvert, appui fixe",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -536,6 +537,7 @@
         "implementedElement": "Ventilateur derrière sa protection",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -560,6 +562,7 @@
         "implementedElement": "Voyant après impact",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -839,6 +842,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -863,6 +867,7 @@
         "implementedElement": "Neige dans la profondeur",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -1159,6 +1164,7 @@
         "implementedElement": "Lumières successives vers la porte",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -1945,6 +1951,7 @@
         "implementedElement": "Ondes à niveau d’eau constant",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -2515,6 +2522,7 @@
         "implementedElement": "Une porte de cellule sur ses charnières",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -2791,6 +2799,7 @@
         "implementedElement": "Cube de commande, orientation de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -3106,6 +3115,7 @@
         "implementedElement": "Ondes à niveau d’eau constant",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -3130,6 +3140,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -3428,6 +3439,7 @@
         "implementedElement": "Rideau métallique partiellement relevé",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -3708,6 +3720,7 @@
         "implementedElement": "Ondes à niveau d’eau constant",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -3764,9 +3777,7 @@
     ],
     "weather": "dust",
     "props": [
-      "altar",
-      "fans",
-      "flesh"
+      "altar"
     ],
     "hazard": "emberFall",
     "animations": [],
@@ -3785,7 +3796,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer.",
+      "premise": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
       "canonicalBasis": "CL_SH3_14_CHURCH",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -3896,10 +3907,7 @@
     },
     "layers": [
       "altar",
-      "nave",
-      "symbols",
-      "fans",
-      "flesh"
+      "nave"
     ],
     "animationTracks": [],
     "interactions": [],
@@ -3911,7 +3919,7 @@
       "locationStatus": "lieu-documente",
       "catalogueName": "THE CHURCH",
       "correctedName": null,
-      "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer.",
+      "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
       "referenceIds": [
         "CL_SH3_14_CHURCH"
       ],
@@ -3959,7 +3967,33 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "church:reference:2",
+        "key": "chapelCandleLean",
+        "name": "Flammes des cierges de la chapelle",
+        "description": "Les flammes des cierges se couchent ensemble sans atteindre les combattants.",
+        "proposalIndex": 1,
+        "source": "sh3",
+        "evidence": [
+          "CL_SH3_14_CHURCH"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.71,
+          "y": 0.49
+        },
+        "trigger": "ambient",
+        "event": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Flammes des cierges de la chapelle",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Chapelle avec autel et vitraux ; hors passages mémoire et fosse finale",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cierges attestés ; inclinaison commune proposée pour le versus, sans invocation ni effet sur les combattants."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
@@ -4011,10 +4045,11 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "church:reference:2"
+      ],
       "pendingProposalIds": [
         "church:reference:1",
-        "church:reference:2",
         "church:reference:3",
         "church:reference:4"
       ]
@@ -4827,6 +4862,7 @@
         "implementedElement": "Chaîne suspendue à faible amplitude",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -4851,6 +4887,7 @@
         "implementedElement": "Lueur contenue du trou de la salle de bain",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -5618,6 +5655,7 @@
         "implementedElement": "Battant entrouvert, appui fixe",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -6477,6 +6515,7 @@
         "implementedElement": "Enseigne intermittente",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -6502,6 +6541,7 @@
         "implementedElement": "Bord de rideau dans un courant faible",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -6808,6 +6848,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -7105,6 +7146,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -8718,6 +8760,7 @@
         "implementedElement": "Papier retenu au décor",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -8992,6 +9035,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -9016,6 +9060,7 @@
         "implementedElement": "Fleurs rouges dans la bordure",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -9040,6 +9085,7 @@
         "implementedElement": "Papier retenu au décor",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -9318,6 +9364,7 @@
         "implementedElement": "Lueur contenue des lanternes",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -10607,6 +10654,7 @@
         "implementedElement": "Vrilles confinées à la bordure",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -11156,6 +11204,7 @@
         "implementedElement": "Ondes à niveau d’eau constant",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -11434,6 +11483,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -13037,6 +13087,7 @@
         "implementedElement": "Cendre dans la profondeur",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -14121,6 +14172,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -15498,6 +15550,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -15809,6 +15862,7 @@
         "implementedElement": "Ondes à niveau d’eau constant",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -16113,6 +16167,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -16418,6 +16473,7 @@
         "implementedElement": "Papier retenu au décor",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -16495,7 +16551,6 @@
     "weather": "dust",
     "props": [
       "portraits",
-      "stairs",
       "doors"
     ],
     "animations": [
@@ -16517,7 +16572,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Bâtiment et descente de la Historical Society de SH2 original.",
+      "premise": "Bâtiment et descente de la Historical Society de SH2 original. Vue retenue : salles d’exposition du musée ; reflet de vitrage en proposition versus, sans reproduire ni animer le contenu d’un tableau officiel, escalier/puits séparés.",
       "canonicalBasis": "CL_SH2_08_HISTORICAL_SOCIETY",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -16626,7 +16681,6 @@
       "road",
       "fog-bank",
       "portraits",
-      "stairs",
       "doors"
     ],
     "animationTracks": [
@@ -16647,7 +16701,7 @@
       "locationStatus": "lieu-documente",
       "catalogueName": "SILENT HILL HISTORICAL SOCIETY",
       "correctedName": null,
-      "locationNote": "Bâtiment et descente de la Historical Society de SH2 original.",
+      "locationNote": "Bâtiment et descente de la Historical Society de SH2 original. Vue retenue : salles d’exposition du musée ; reflet de vitrage en proposition versus, sans reproduire ni animer le contenu d’un tableau officiel, escalier/puits séparés.",
       "referenceIds": [
         "CL_SH2_08_HISTORICAL_SOCIETY"
       ],
@@ -16695,7 +16749,33 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "historical_society:reference:2",
+        "key": "paintingGlint",
+        "name": "Reflet sur le vitrage d’un cadre sombre",
+        "description": "Le reflet d’un tableau se déplace doucement malgré une source lumineuse presque fixe.",
+        "proposalIndex": 1,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_08_HISTORICAL_SOCIETY"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.29,
+          "y": 0.38
+        },
+        "trigger": "ambient",
+        "event": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Reflet sur le vitrage d’un cadre sombre",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Salles d’exposition du musée ; hors escalier et puits",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Vitrage et cadre abstraits ; aucun tableau officiel ni personnage reproduit ou animé."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
@@ -16742,10 +16822,11 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "historical_society:reference:2"
+      ],
       "pendingProposalIds": [
         "historical_society:reference:1",
-        "historical_society:reference:2",
         "historical_society:reference:3",
         "historical_society:reference:4"
       ]
@@ -17259,11 +17340,9 @@
     "weather": "dust",
     "props": [
       "portraits",
-      "stairs",
-      "fireplace"
+      "stairs"
     ],
     "animations": [
-      "firePulse",
       "floorCreak"
     ],
     "hazard": "fallingDebris",
@@ -17282,7 +17361,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Manoir de Born from a Wish, campagne Maria de SH2 original.",
+      "premise": "Manoir de Born from a Wish, campagne Maria de SH2 original. Vue retenue : palier devant la porte du Lounge d’Ernest, gardée fermée ; la bougie attestée au grenier ne doit pas être transportée ici. Réaction du battant = adaptation versus après impact local, sans corps.",
       "canonicalBasis": "CL_SH2_BFAW02_BALDWIN_MANSION",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -17326,9 +17405,13 @@
       "intensity": 1.07,
       "arenaInset": 118,
       "hazardDeck": [],
-      "events": [],
+      "events": [
+        "referenceClosedDoorReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceClosedDoorReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -17372,13 +17455,18 @@
           },
           {
             "kind": "animation",
+            "id": "firePulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           }
         ]
       },
       "safeMargin": 118,
-      "signature": "baldwin_mansion:decay:wood:fixed-normal::"
+      "signature": "baldwin_mansion:decay:wood:fixed-normal::referenceClosedDoorReply"
     },
     "gameplay": {
       "arenaInset": 118,
@@ -17391,17 +17479,9 @@
     "layers": [
       "rooms",
       "portraits",
-      "stairs",
-      "fireplace"
+      "stairs"
     ],
     "animationTracks": [
-      {
-        "id": "firePulse",
-        "phase": "otherworld",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "floorCreak",
         "phase": "both",
@@ -17410,7 +17490,27 @@
         "cadence": "continuous"
       }
     ],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "baldwin_mansion_referenceClosedDoorReply_1",
+        "event": "referenceClosedDoorReply",
+        "name": "Battant fermé du Lounge d’Ernest",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Le battant réagit par un petit craquement après un choc voisin ; ne pas montrer un corps d’Ernest inventé.",
+        "referenceIds": [
+          "CL_SH2_BFAW02_BALDWIN_MANSION"
+        ],
+        "proposalId": "baldwin_mansion:reference:3",
+        "zone": {
+          "x": 0.5,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "baldwin_mansion",
       "source": "sh2",
@@ -17419,7 +17519,7 @@
       "locationStatus": "lieu-documente",
       "catalogueName": "BALDWIN MANSION",
       "correctedName": null,
-      "locationNote": "Manoir de Born from a Wish, campagne Maria de SH2 original.",
+      "locationNote": "Manoir de Born from a Wish, campagne Maria de SH2 original. Vue retenue : palier devant la porte du Lounge d’Ernest, gardée fermée ; la bougie attestée au grenier ne doit pas être transportée ici. Réaction du battant = adaptation versus après impact local, sans corps.",
       "referenceIds": [
         "CL_SH2_BFAW02_BALDWIN_MANSION"
       ],
@@ -17467,10 +17567,38 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "baldwin_mansion:reference:3",
+        "key": "closedDoorReply",
+        "name": "Battant fermé du Lounge d’Ernest",
+        "description": "Le battant réagit par un petit craquement après un choc voisin ; ne pas montrer un corps d’Ernest inventé.",
+        "proposalIndex": 2,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_BFAW02_BALDWIN_MANSION"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceClosedDoorReply",
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Battant fermé du Lounge d’Ernest",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Palier devant le Lounge ; porte fermée de Born from a Wish",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La porte reste opaque et fermée ; aucun Ernest visible, aucune bougie du grenier déplacée ici."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceClosedDoorReply"
+      ],
       "allowedHazards": [],
       "automaticFinishers": true,
       "weather": "dust",
@@ -17509,16 +17637,22 @@
         },
         {
           "kind": "animation",
+          "id": "firePulse",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "shadowPass",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "baldwin_mansion:reference:3"
+      ],
       "pendingProposalIds": [
         "baldwin_mansion:reference:1",
         "baldwin_mansion:reference:2",
-        "baldwin_mansion:reference:3",
         "baldwin_mansion:reference:4"
       ]
     }
@@ -17794,6 +17928,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -18403,6 +18538,7 @@
         "implementedElement": "Ventilateur derrière sa protection",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -18427,6 +18563,7 @@
         "implementedElement": "Trois jets derrière la protection",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -18511,11 +18648,9 @@
     "weather": "flicker",
     "props": [
       "desks",
-      "elevator",
       "windows"
     ],
     "animations": [
-      "elevatorBlink",
       "lightFlicker"
     ],
     "hazard": "staticBurst",
@@ -18534,7 +18669,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail.",
+      "premise": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. Store attesté dans le bureau/réception de Monica’s Dance Studio, capture sh3_07_hilltop_center_map_location.jpg ; la vue retient cette pièce normale, sans atelier ni baignoire/Otherworld. Oscillation = proposition versus.",
       "canonicalBasis": "CL_SH3_07_HILLTOP_CENTER",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -18615,6 +18750,11 @@
           },
           {
             "kind": "animation",
+            "id": "elevatorBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "windowShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           }
@@ -18633,17 +18773,9 @@
     },
     "layers": [
       "desks",
-      "windows",
-      "elevator"
+      "windows"
     ],
     "animationTracks": [
-      {
-        "id": "elevatorBlink",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "lightFlicker",
         "phase": "both",
@@ -18661,7 +18793,7 @@
       "locationStatus": "lieu-documente",
       "catalogueName": "HILLTOP CENTER",
       "correctedName": null,
-      "locationNote": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail.",
+      "locationNote": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. Store attesté dans le bureau/réception de Monica’s Dance Studio, capture sh3_07_hilltop_center_map_location.jpg ; la vue retient cette pièce normale, sans atelier ni baignoire/Otherworld. Oscillation = proposition versus.",
       "referenceIds": [
         "CL_SH3_07_HILLTOP_CENTER"
       ],
@@ -18709,7 +18841,33 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "hilltop_center:reference:2",
+        "key": "officeBlindSway",
+        "name": "Store du bureau de Monica’s Dance Studio",
+        "description": "Le store d’un bureau oscille légèrement devant une vitre opaque.",
+        "proposalIndex": 1,
+        "source": "sh3",
+        "evidence": [
+          "CL_SH3_07_HILLTOP_CENTER"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.72,
+          "y": 0.32
+        },
+        "trigger": "ambient",
+        "event": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Store du bureau de Monica’s Dance Studio",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Bureau / réception de Monica’s Dance Studio, Hilltop Center normal",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Store attesté dans cette pièce ; oscillation proposée pour le versus, sans atelier ni seuil de baignoire."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
@@ -18746,15 +18904,21 @@
         },
         {
           "kind": "animation",
+          "id": "elevatorBlink",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "windowShadow",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "hilltop_center:reference:2"
+      ],
       "pendingProposalIds": [
         "hilltop_center:reference:1",
-        "hilltop_center:reference:2",
         "hilltop_center:reference:3",
         "hilltop_center:reference:4"
       ]
@@ -19297,6 +19461,7 @@
         "implementedElement": "Traînée sombre sur le miroir",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "storyboard-a-valider",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -21268,6 +21433,7 @@
         "implementedElement": "Bord de rideau dans un courant faible",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -21563,6 +21729,7 @@
         "implementedElement": "Bord de rideau dans un courant faible",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -22415,6 +22582,7 @@
         "implementedElement": "Voyant après impact",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -23823,6 +23991,7 @@
         "implementedElement": "Chaîne suspendue à faible amplitude",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -24098,6 +24267,7 @@
         "implementedElement": "Neige dans la profondeur",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -25501,6 +25671,7 @@
         "implementedElement": "Poussière dans un faisceau de fond",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -25525,6 +25696,7 @@
         "implementedElement": "Papier retenu au décor",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -25844,6 +26016,7 @@
         "implementedElement": "Bord de rideau dans un courant faible",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -26988,6 +27161,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -27013,6 +27187,7 @@
         "implementedElement": "Enseigne intermittente",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -27334,6 +27509,7 @@
         "implementedElement": "Bord de rideau dans un courant faible",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -28720,6 +28896,7 @@
         "implementedElement": "Houle basse au fond du lac",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       },
       {
@@ -28744,6 +28921,7 @@
         "implementedElement": "Nappes de brume à deux vitesses",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -31541,6 +31719,7 @@
         "implementedElement": "Vrilles confinées à la bordure",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],
@@ -31842,6 +32021,7 @@
         "implementedElement": "Cendre dans la profondeur",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
+        "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
       }
     ],

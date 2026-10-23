@@ -32,6 +32,33 @@ def column_name(number):
     return result
 
 
+def worksheet_cells(xml, name):
+    """Index only explicit, unique Excel coordinates in their declared row."""
+    cells, rows = {}, set()
+    for row in xml.findall('s:sheetData/s:row', NS):
+        row_id = row.get('r')
+        assert isinstance(row_id, str) and re.fullmatch(r'[1-9][0-9]*', row_id) and int(row_id) <= 1048576, f'Invalid row address: {name}'
+        assert row_id not in rows, f'Duplicate row address: {name}!{row_id}'
+        rows.add(row_id)
+        for cell in row.findall('s:c', NS):
+            address = cell.get('r')
+            match = re.fullmatch(r'([A-Z]{1,3})([1-9][0-9]*)', address or '')
+            assert match and match[2] == row_id, f'Cell address does not match row: {name}!{address}'
+            column = 0
+            for letter in match[1]:
+                column = column * 26 + ord(letter) - ord('A') + 1
+            assert column <= 16384, f'Cell column outside Excel bounds: {name}!{address}'
+            assert address not in cells, f'Duplicate cell address: {name}!{address}'
+            # ElementTree.find reads only the first child; never let a second
+            # value, inline string or formula hide from value/preservation checks.
+            payload = [child.tag.rsplit('}', 1)[-1] for child in cell
+                       if child.tag in {'{' + NS['s'] + '}' + tag for tag in ('f', 'v', 'is')}]
+            assert payload in ([], ['v'], ['f'], ['f', 'v'], ['is']), f'Ambiguous cell payload: {name}!{address}'
+            assert (payload == ['is']) if cell.get('t') == 'inlineStr' else ('is' not in payload), f'Invalid inline cell payload: {name}!{address}'
+            cells[address] = cell
+    return cells
+
+
 def verify(plan_path, workbook_path):
     plan_bytes = plan_path.read_bytes()
     plan = json.loads(plan_bytes)
@@ -75,7 +102,7 @@ def verify(plan_path, workbook_path):
             target = relations[sheet.get('{'+NS['r']+'}id')]
             location = target.lstrip('/') if target.startswith('/') else posixpath.normpath('xl/'+target)
             xml = ET.fromstring(z.read(location))
-            cells = {c.get('r'): c for c in xml.findall('.//s:sheetData/s:row/s:c', NS)}
+            cells = worksheet_cells(xml, name)
             errors = [(name, address, value(c)) for address, c in cells.items() if c.get('t') == 'e']
             report['errors'].extend(errors)
             assert not errors, f'Cached Excel errors: {errors[:3]}'
@@ -185,7 +212,7 @@ def compare_source(source_path, workbook_path, change_log_path, layout_change_lo
                 location = target.lstrip('/') if target.startswith('/') else posixpath.normpath('xl/'+target)
                 xml = ET.fromstring(z.read(location))
                 cells = {}
-                for cell in xml.findall('s:sheetData/s:row/s:c', NS):
+                for address, cell in worksheet_cells(xml, item.get('name')).items():
                     raw = cell.findtext('s:v', None, NS)
                     if cell.get('t') == 's':
                         value = strings[int(raw)]
@@ -199,7 +226,7 @@ def compare_source(source_path, workbook_path, change_log_path, layout_change_lo
                     native = (tuple(sorted((key,item) for key,item in cell.attrib.items() if key not in ('r','s','t'))),
                               tuple(canonical(child) for child in cell if child.tag not in ('{'+NS['s']+'}v','{'+NS['s']+'}is','{'+NS['s']+'}f')),
                               (tuple(sorted(formula_node.attrib.items())),tuple(canonical(child) for child in formula_node)) if formula_node is not None else None)
-                    cells[cell.get('r')] = {'value': value, 'formula': cell.findtext('s:f', None, NS), 'style': style(cell.get('s')), 'native': native}
+                    cells[address] = {'value': value, 'formula': cell.findtext('s:f', None, NS), 'style': style(cell.get('s')), 'native': native}
                 features = {tag: tuple(canonical(x) for x in xml.findall('s:'+tag, NS))
                             for tag in ['cols','sheetFormatPr','mergeCells','dataValidations','conditionalFormatting','sheetProtection','autoFilter','drawing','legacyDrawing','hyperlinks','pageMargins','pageSetup','printOptions']}
                 features['pane'] = canonical(xml.find('s:sheetViews/s:sheetView/s:pane', NS))

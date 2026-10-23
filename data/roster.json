@@ -2661,7 +2661,7 @@
     "variantOf": null,
     "archetype": "boss",
     "aiProfile": "boss",
-    "phaseStyle": "giant",
+    "phaseStyle": "quadruped",
     "stageId": "nowhere",
     "signature": "Mâchoire séparée",
     "trait": "nightmareArmor",
@@ -2673,45 +2673,45 @@
         "type": "signature",
         "name": "Rituel de clôture — Mâchoire séparée",
         "trigger": "decisive-special",
-        "pose": "crush",
-        "effect": "debris",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "raise",
-          "crush",
-          "dust"
+          "circle",
+          "pounce",
+          "drag",
+          "silence"
         ],
-        "canonicalBasis": "Immense gueule verticale, charge et saisie dévorante.",
+        "canonicalBasis": "Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       },
       {
         "id": "sh1_split_head_014_nightmare",
         "type": "nightmare",
-        "name": "NIGHTMARE — Écrasement du souvenir",
+        "name": "NIGHTMARE — Traque achevée",
         "trigger": "decisive-super",
-        "pose": "crush",
-        "effect": "debris",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "raise",
+          "circle",
+          "pounce",
           "otherworld",
-          "dust"
+          "silence"
         ],
-        "canonicalBasis": "Immense gueule verticale, charge et saisie dévorante.",
+        "canonicalBasis": "Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 4
       }
     ],
-    "canonicalBehavior": "Immense gueule verticale, charge et saisie dévorante.",
+    "canonicalBehavior": "Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL.",
     "catalogueStatus": "canon-combatant",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
-      "kind": "giant",
-      "body": "giant",
+      "kind": "quadruped",
+      "body": "beast",
       "scale": 1.42,
       "primary": "#6d6f61",
       "accent": "#b9b7a4",
@@ -2719,13 +2719,13 @@
       "motif": null,
       "weapon": null,
       "head": "split",
-      "limbs": null,
+      "limbs": 4,
       "aura": null
     },
     "tags": [
       "SH1",
       "boss",
-      "giant",
+      "quadruped",
       "nightmareArmor",
       "dread"
     ],
@@ -8980,7 +8980,7 @@
     "variantOf": null,
     "archetype": "flyer",
     "aiProfile": "flyer",
-    "phaseStyle": "insect",
+    "phaseStyle": "flyer",
     "stageId": "shopping_mall",
     "signature": "Lames oscillantes",
     "trait": "aerialInstinct",
@@ -8992,59 +8992,59 @@
         "type": "signature",
         "name": "Rituel de clôture — Lames oscillantes",
         "trigger": "decisive-special",
-        "pose": "swarm",
-        "effect": "static",
+        "pose": "dive",
+        "effect": "wind",
         "sequence": [
-          "scatter",
-          "surround",
-          "swarm",
-          "fade"
+          "lift",
+          "dive",
+          "impact",
+          "fall"
         ],
-        "canonicalBasis": "Créature aérienne métallique, trajectoires imprévisibles.",
+        "canonicalBasis": "Deux demi-torses reliés par une armature pivotante, volant et marchant sur leurs lames.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
       {
         "id": "sh3_pendulum_039_nightmare",
         "type": "nightmare",
-        "name": "NIGHTMARE — Dernière manifestation",
+        "name": "NIGHTMARE — Chute sans ciel",
         "trigger": "decisive-super",
-        "pose": "swarm",
-        "effect": "static",
+        "pose": "dive",
+        "effect": "wind",
         "sequence": [
-          "scatter",
-          "surround",
+          "lift",
+          "dive",
           "otherworld",
-          "fade"
+          "fall"
         ],
-        "canonicalBasis": "Créature aérienne métallique, trajectoires imprévisibles.",
+        "canonicalBasis": "Deux demi-torses reliés par une armature pivotante, volant et marchant sur leurs lames.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Créature aérienne métallique, trajectoires imprévisibles.",
+    "canonicalBehavior": "Deux demi-torses reliés par une armature pivotante, volant et marchant sur leurs lames.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 3.",
     "catalogueStatus": "canon-combatant",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
-      "kind": "insect",
-      "body": "insect",
-      "scale": 0.66,
+      "kind": "flyer",
+      "body": "winged",
+      "scale": 0.82,
       "primary": "#7b6a50",
       "accent": "#d1b777",
       "secondary": "#2d2b29",
       "motif": null,
       "weapon": null,
       "head": null,
-      "limbs": 6,
+      "limbs": 4,
       "aura": null
     },
     "tags": [
       "SH3",
       "flyer",
-      "insect",
+      "flyer",
       "aerialInstinct",
       "static"
     ],
@@ -9063,7 +9063,7 @@
       "observedMoves": [
         {
           "name": "Rotation",
-          "description": "Charge avec les lames.",
+          "description": "Charge avec les lames ; la rotation dévie les balles de Handgun à l’approche frontale selon le guide, sans invulnérabilité générale extrapolée.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -9480,7 +9480,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Frappe du bras.",
+          "description": "Frappe avec les bras ; la portée et les dégâts du versus restent des paramètres adaptés.",
           "evidence": [
             "CL_SH3_ENEMIES"
           ],
@@ -9490,7 +9490,7 @@
         },
         {
           "name": "Charge",
-          "description": "Course qui renverse.",
+          "description": "Charge en courant et renverse Heather ; aucun temps d’anticipation ou de récupération source encore mesuré.",
           "evidence": [
             "CL_SH3_ENEMIES"
           ],
@@ -9688,7 +9688,7 @@
       "observedMoves": [
         {
           "name": "Charge basse",
-          "description": "Renverse en rampant.",
+          "description": "Charge basse en rampant qui renverse Heather ; ne justifie pas un saut offensif.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -9699,7 +9699,7 @@
         },
         {
           "name": "Prise",
-          "description": "Mord la jambe.",
+          "description": "Saisit la jambe et la mâchonne, entravant Heather ; aucune projection avec échange de places n’est attestée par ce geste.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -13021,15 +13021,15 @@
     "aiProfile": "balanced",
     "phaseStyle": "humanoid",
     "stageId": "room_302",
-    "signature": "Clé volée",
+    "signature": "Poings du Gum Head",
     "trait": "echo",
     "affliction": "bleed",
-    "finisher": "Rituel de clôture — Clé volée",
+    "finisher": "Rituel de clôture — Poings du Gum Head",
     "fatalities": [
       {
         "id": "sh4_gum_head_old_type_057_signature",
         "type": "signature",
-        "name": "Rituel de clôture — Clé volée",
+        "name": "Rituel de clôture — Poings du Gum Head",
         "trigger": "decisive-special",
         "pose": "execution",
         "effect": "silhouette",
@@ -13039,7 +13039,7 @@
           "strike",
           "collapse"
         ],
-        "canonicalBasis": "Humanoïde simiesque capable de saisir et d’utiliser des objets.",
+        "canonicalBasis": "Type ancien se battant à mains nues ; l’usage et le vol d’armes appartiennent au type nouveau.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -13056,12 +13056,12 @@
           "otherworld",
           "collapse"
         ],
-        "canonicalBasis": "Humanoïde simiesque capable de saisir et d’utiliser des objets.",
+        "canonicalBasis": "Type ancien se battant à mains nues ; l’usage et le vol d’armes appartiennent au type nouveau.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Humanoïde simiesque capable de saisir et d’utiliser des objets.",
+    "canonicalBehavior": "Type ancien se battant à mains nues ; l’usage et le vol d’armes appartiennent au type nouveau.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 4: THE ROOM.",
     "catalogueStatus": "canon-combatant",
@@ -13075,7 +13075,7 @@
       "accent": "#beb6aa",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "club",
+      "weapon": null,
       "head": null,
       "limbs": null,
       "aura": null
@@ -13101,7 +13101,7 @@
       "observedMoves": [
         {
           "name": "Poings",
-          "description": "Frappe sans arme.",
+          "description": "Frappe à mains nues ; le guide distingue les New Types porteurs et voleurs de tuyaux, clubs ou Holy Candles, sans attribuer ce vol au Old Type.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -14880,7 +14880,7 @@
       "observedMoves": [
         {
           "name": "Aura",
-          "description": "Proximité dangereuse.",
+          "description": "Les Ghosts infligent de faibles dégâts simplement par proximité, indépendamment d’un coup ou d’une prise ; le Saint Medallion neutralise ce danger de proximité.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -15078,7 +15078,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -15277,7 +15277,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -15486,7 +15486,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -15685,7 +15685,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -15884,7 +15884,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -16083,7 +16083,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -16277,15 +16277,19 @@
       "identityNote": "Victime 15 non hostile ; ne doit pas recevoir automatiquement le kit des autres Ghosts.",
       "referenceIds": [
         "CL_JOSEPH",
-        "CL_SH4_VICTIMS"
+        "CL_SH4_VICTIMS",
+        "EXT_SH4_SCRIPT_20261023",
+        "CL_SH4_12_ROOM_302_OF_THE_PAST"
       ],
       "observedMoves": [
         {
           "name": "Transmission",
-          "description": "Parle depuis une ombre au plafond.",
+          "description": "Buste inversé dans Room 302 of the Past ; conseille Henry et Eileen sur Walter, la localisation de son corps et le Crimson Tome. Apparition narrative, sans gestes offensifs hérités des Ghosts.",
           "evidence": [
             "CL_JOSEPH",
-            "CL_SH4_VICTIMS"
+            "CL_SH4_VICTIMS",
+            "EXT_SH4_SCRIPT_20261023",
+            "CL_SH4_12_ROOM_302_OF_THE_PAST"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -16381,7 +16385,19 @@
         }
       },
       "combatRole": "noncombatant",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "sh4_joseph_schreiber_victim_15",
+        "decision": "noncombatant",
+        "edition": "SH4 original 2004",
+        "evidence": [
+          "EXT_SH4_SCRIPT_20261023",
+          "CL_SH4_12_ROOM_302_OF_THE_PAST"
+        ],
+        "rationale": "Dans la scène de Room 302 of the Past, le buste inversé de Joseph renseigne Henry et Eileen sur Walter et leur demande de suivre le Crimson Tome. La fonction retenue est une apparition de conseil, sans héritage du kit offensif des Ghosts ; le moteur bloque déjà ses commandes de combat.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -16474,14 +16490,16 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_CYNTHIA"
+        "CL_CYNTHIA",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
           "name": "Cheveux",
-          "description": "Entrave la cible.",
+          "description": "Entrave la cible avec les cheveux ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
           "evidence": [
-            "CL_CYNTHIA"
+            "CL_CYNTHIA",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -16698,7 +16716,7 @@
         },
         {
           "name": "Feu",
-          "description": "Aura brûlante de proximité.",
+          "description": "Aura brûlante de proximité qui retire de gros segments de santé, en plus des faibles dégâts passifs communs aux Ghosts ; les valeurs et délais du versus ne sont pas des mesures source.",
           "evidence": [
             "CL_SH4_09_FOREST_WORLD_2ND_TIME",
             "CL_SH4_ENEMIES"
@@ -16890,7 +16908,8 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_ANDREW"
+        "CL_ANDREW",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
@@ -16905,9 +16924,10 @@
         },
         {
           "name": "Aura",
-          "description": "Danger de proximité.",
+          "description": "Inflige de faibles dégâts simplement par proximité, indépendamment de sa charge en tonneau ou de ses prises.",
           "evidence": [
-            "CL_ANDREW"
+            "CL_ANDREW",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -17092,7 +17112,7 @@
       "observedMoves": [
         {
           "name": "Pied-de-biche",
-          "description": "Frappe de l’arme.",
+          "description": "Frappe du pied-de-biche ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -17690,14 +17710,16 @@
       "identityStatus": "non-combattant-canonique",
       "identityNote": "Créature inoffensive et indestructible ; ne pas reprendre le comportement d’une autre œuvre.",
       "referenceIds": [
-        "CL_GREEDY"
+        "CL_GREEDY",
+        "EXT_SH4_ODDITIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Transit",
-          "description": "Traverse lentement le décor.",
+          "description": "Créature tubulaire visible près des tourniquets du métro ; un segment apparaît aussi en mouvement vertical dans la zone de la roue à eau B2 au second passage de Water Prison.",
           "evidence": [
-            "CL_GREEDY"
+            "CL_GREEDY",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -17705,9 +17727,10 @@
         },
         {
           "name": "Réaction",
-          "description": "Se contracte sous un coup, sans mourir.",
+          "description": "Créature attaquable mais non tuable selon le relevé de curiosités ; la contraction à l’impact reste à confirmer par capture.",
           "evidence": [
-            "CL_GREEDY"
+            "CL_GREEDY",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -18111,7 +18134,7 @@
       "observedMoves": [
         {
           "name": "Rituel",
-          "description": "Cordon puis huit lances ouvrent la vulnérabilité.",
+          "description": "Le corps géant du Conjurer reçoit le cordon ombilical puis huit lances qui rendent vulnérable le Shadow Walter mobile ; ne pas lui attribuer les tirs et coups de tuyau de ce dernier.",
           "evidence": [
             "CL_SH4_13_OUTSIDE_ROOM_302"
           ],
@@ -18200,7 +18223,18 @@
         }
       },
       "combatRole": "scripted-encounter",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "sh4_sacrificed_walter_071",
+        "decision": "scripted-encounter",
+        "edition": "SH4 original 2004",
+        "evidence": [
+          "CL_SH4_13_OUTSIDE_ROOM_302"
+        ],
+        "rationale": "Le guide distingue le corps géant du Conjurer, cible du cordon ombilical puis de huit lances, du Shadow Walter qui se déplace et attaque au tuyau et au pistolet. Sacrificed Walter reste le nom de projet de ce composant rituel ancré, sans kit ni déplacement autonome.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -18514,14 +18548,16 @@
       "identityStatus": "apparition-immobile-identite-nuancee",
       "identityNote": "Surnom « Eileen Head » utilisé notamment sur marchandise ; identité de l’objet à présenter avec nuance.",
       "referenceIds": [
-        "CL_EILEEN_HEAD"
+        "CL_EILEEN_HEAD",
+        "EXT_SH4_ODDITIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Regard",
-          "description": "Les yeux suivent le visiteur.",
+          "description": "Tête géante dans une chambre du deuxième étage de Hospital World ; le regard suit le visiteur selon la fiche existante, et le guide de curiosités décrit un clignotement des yeux au Stun Gun. Identité de l’objet à conserver nuancée.",
           "evidence": [
-            "CL_EILEEN_HEAD"
+            "CL_EILEEN_HEAD",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -25814,7 +25850,7 @@
       "observedMoves": [
         {
           "name": "Invocation des Shadows",
-          "description": "Invocation des Shadows",
+          "description": "Mannequin stationnaire qui projette des Shadows offensives, distinctes de son corps ; les Shadows disparaissent à la destruction de la Doll.",
           "evidence": [
             "EXT10"
           ],
@@ -25908,7 +25944,19 @@
       "artDirectionFocus": "mannequin immobile",
       "existingCatalogueBehavior": "Projette des silhouettes et se cache derrière ses doubles.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_doll_106",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit explicitement un mannequin stationnaire qui projette des Shadows offensives. Le mannequin et ses projections sont des entités distinctes ; détruire la Doll dissipe les Shadows. Le rôle retenu est un ancrage environnemental invocateur, sans locomotion ni coups directs du mannequin.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -26775,7 +26823,7 @@
       "observedMoves": [
         {
           "name": "Présence passive en cage",
-          "description": "Présence passive en cage",
+          "description": "Créature passive captive d’une cage sur le trajet du Void ; Murphy renverse la cage pour la sacrifier au phénomène, sans attaque autonome de la créature.",
           "evidence": [
             "EXT10"
           ],
@@ -26788,7 +26836,8 @@
       "constraints": [
         "Retirer du roster versus canonique; statut décor/obstacle.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Créature passive en cage ; sa ressemblance avec Wall Corpse ne prouve ni jet toxique ni locomotion offensive."
       ],
       "proposals": {
         "super": {
@@ -26868,7 +26917,19 @@
       "artDirectionFocus": "cage et corps passif",
       "existingCatalogueBehavior": "Apparition liée aux séquences de l’Otherworld.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_tormented_soul_111",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit une créature passive dans une cage renversée par Murphy sur le trajet du Void. La cage sert d’obstacle sacrifié pendant la fuite ; ne pas lui transférer le jet offensif du Wall Corpse auquel elle ressemble.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -27154,14 +27215,16 @@
       "identityStatus": "phenomene-non-combattant",
       "identityNote": "Phénomène environnemental, pas boss bipède; combat seulement mode défi adapté.",
       "referenceIds": [
-        "EXT10"
+        "EXT10",
+        "EXT_DP_PITSTOP_20261023"
       ],
       "observedMoves": [
         {
           "name": "Poursuite lumineuse absorbante",
-          "description": "Poursuite lumineuse absorbante",
+          "description": "Lumière rouge qui poursuit Murphy dans l’Otherworld et absorbe ce qui se trouve sur son trajet ; le guide du Diner précise qu’on ne peut pas la blesser et qu’il faut fuir.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT_DP_PITSTOP_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -27172,7 +27235,8 @@
       "constraints": [
         "Phénomène environnemental, pas boss bipède; combat seulement mode défi adapté.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "La mobilité du phénomène appartient à une poursuite de parcours ; impossibilité de le blesser dans la scène du Diner, sans kit de duel autonome."
       ],
       "proposals": {
         "super": {
@@ -27252,7 +27316,20 @@
       "artDirectionFocus": "front rouge",
       "existingCatalogueBehavior": "Poursuite de l’Otherworld adaptée en mur avançant.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_void_113",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10",
+          "EXT_DP_PITSTOP_20261023"
+        ],
+        "rationale": "Le Void est une lumière rouge de poursuite ; le guide du Diner précise qu’on ne peut pas le blesser et que la seule solution est de courir en utilisant le parcours. Le rôle est un danger environnemental mobile, pas un combattant avec garde, saisies ou KO.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -27352,7 +27429,7 @@
       "observedMoves": [
         {
           "name": "Apparition passive",
-          "description": "Apparition passive",
+          "description": "Apparition passive qui terrorise psychologiquement Murphy dans la version commerciale ; aucun kit du boss prototype n’est repris.",
           "evidence": [
             "EXT10",
             "EXT12"
@@ -27455,7 +27532,19 @@
       "artDirectionFocus": "silhouette d’apparition",
       "existingCatalogueBehavior": "Apparition symbolique adaptée en combattant secret.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_monocle_man_114",
+        "decision": "noncombatant",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit une créature passive qui terrorise psychologiquement Murphy. La décision est limitée aux apparitions de la version commerciale et n’intègre aucun boss de prototype restauré ; aucune attaque ou identité symbolique supplémentaire n’est validée.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {
@@ -34649,7 +34738,7 @@
       "observedMoves": [
         {
           "name": "Portail de petites créatures",
-          "description": "Portail de petites créatures",
+          "description": "Masse féminine fixée au sol servant de portail à de petites créatures ; le bestiaire lui attribue « Weapon: None », sans attaque directe du corps.",
           "evidence": [
             "EXT20"
           ],
@@ -34662,7 +34751,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Masse fixée au sol, portail de petites créatures et aucune arme selon le bestiaire ; ne pas attribuer les attaques des créatures générées au corps de Mother."
       ],
       "proposals": {
         "super": {
@@ -34742,7 +34832,19 @@
       "artDirectionFocus": "corps ancré",
       "existingCatalogueBehavior": "Boss propre au Book of Memories, invocations et masse charnelle.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "bom_mother_135",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+        "evidence": [
+          "EXT20"
+        ],
+        "rationale": "Le bestiaire décrit une masse féminine fixée au sol qui sert de portail à de petites créatures et indique Weapon: None. Le rôle retenu est un point de génération ancré ; aucune marche, garde, saisie ou attaque directe n’est attribuée au corps de Mother.",
+        "reviewedAt": "2026-10-23"
+      }
     }
   },
   {

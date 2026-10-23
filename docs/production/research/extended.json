@@ -877,6 +877,33 @@
       "scope": "Attaques du Smog, poumons exposés et blocage frontal du Needler ; œuvre Homecoming uniquement.",
       "consultedAt": "2026-10-23",
       "caveat": "Descriptions textuelles consultées ; timings, multiplicateurs et fenêtres du versus ne sont pas des mesures du jeu original."
+    },
+    {
+      "id": "EXT_SH4_SCRIPT_20261023",
+      "url": "https://www.silenthillmemories.net/sh4/game_script_en.htm",
+      "title": "Silent Hill 4: The Room — Game Script",
+      "type": "transcription-specialisee-secondaire",
+      "scope": "Joseph dans Room 302 of the Past : buste inversé, avertissement et conseil sur le Crimson Tome ; œuvre SH4 originale uniquement.",
+      "consultedAt": "2026-10-23",
+      "caveat": "Transcription de fans consultée, sans capture du jeu ni minutage mesuré ; la décision porte sur la fonction narrative, pas sur une animation certifiée."
+    },
+    {
+      "id": "EXT_SH4_ODDITIES_20261023",
+      "url": "https://www.silenthillmemories.net/sh4/cool_and_scary_things_en.htm",
+      "title": "Silent Hill 4: The Room — Cool and Scary Things",
+      "type": "guide-specialise-secondaire",
+      "scope": "Greedy Worm attaquable mais non tuable ; tête géante de la chambre hospitalière et réaction des yeux au Stun Gun.",
+      "consultedAt": "2026-10-23",
+      "caveat": "Constats textuels de fans ; aucune conclusion de non-hostilité déduite de l’absence de description d’une attaque, et aucune identité ontologique imposée à la tête."
+    },
+    {
+      "id": "EXT_DP_PITSTOP_20261023",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_02_devils_pitstop_en.htm",
+      "title": "Silent Hill: Downpour — Walkthrough: Devil’s Pitstop",
+      "type": "guide-specialise-secondaire",
+      "scope": "Première poursuite du Void dans le Diner Otherworld : phénomène impossible à blesser, fuite et obstacles.",
+      "consultedAt": "2026-10-23",
+      "caveat": "Édition commerciale Downpour ; description du parcours, sans temps de course, dégâts ni distance certifiés."
     }
   ],
   "fighters": [
@@ -5094,7 +5121,7 @@
       "observedMoves": [
         {
           "name": "Invocation des Shadows",
-          "description": "Invocation des Shadows",
+          "description": "Mannequin stationnaire qui projette des Shadows offensives, distinctes de son corps ; les Shadows disparaissent à la destruction de la Doll.",
           "evidence": [
             "EXT10"
           ],
@@ -5188,7 +5215,19 @@
       "artDirectionFocus": "mannequin immobile",
       "existingCatalogueBehavior": "Projette des silhouettes et se cache derrière ses doubles.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_doll_106",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit explicitement un mannequin stationnaire qui projette des Shadows offensives. Le mannequin et ses projections sont des entités distinctes ; détruire la Doll dissipe les Shadows. Le rôle retenu est un ancrage environnemental invocateur, sans locomotion ni coups directs du mannequin.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "combatRole": "multi-body",
@@ -5640,7 +5679,7 @@
       "observedMoves": [
         {
           "name": "Présence passive en cage",
-          "description": "Présence passive en cage",
+          "description": "Créature passive captive d’une cage sur le trajet du Void ; Murphy renverse la cage pour la sacrifier au phénomène, sans attaque autonome de la créature.",
           "evidence": [
             "EXT10"
           ],
@@ -5653,7 +5692,8 @@
       "constraints": [
         "Retirer du roster versus canonique; statut décor/obstacle.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Créature passive en cage ; sa ressemblance avec Wall Corpse ne prouve ni jet toxique ni locomotion offensive."
       ],
       "proposals": {
         "super": {
@@ -5733,7 +5773,19 @@
       "artDirectionFocus": "cage et corps passif",
       "existingCatalogueBehavior": "Apparition liée aux séquences de l’Otherworld.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_tormented_soul_111",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit une créature passive dans une cage renversée par Murphy sur le trajet du Void. La cage sert d’obstacle sacrifié pendant la fuite ; ne pas lui transférer le jet offensif du Wall Corpse auquel elle ressemble.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "combatRole": "environmental-obstacle",
@@ -5853,14 +5905,16 @@
       "identityStatus": "phenomene-non-combattant",
       "identityNote": "Phénomène environnemental, pas boss bipède; combat seulement mode défi adapté.",
       "referenceIds": [
-        "EXT10"
+        "EXT10",
+        "EXT_DP_PITSTOP_20261023"
       ],
       "observedMoves": [
         {
           "name": "Poursuite lumineuse absorbante",
-          "description": "Poursuite lumineuse absorbante",
+          "description": "Lumière rouge qui poursuit Murphy dans l’Otherworld et absorbe ce qui se trouve sur son trajet ; le guide du Diner précise qu’on ne peut pas la blesser et qu’il faut fuir.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT_DP_PITSTOP_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -5871,7 +5925,8 @@
       "constraints": [
         "Phénomène environnemental, pas boss bipède; combat seulement mode défi adapté.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "La mobilité du phénomène appartient à une poursuite de parcours ; impossibilité de le blesser dans la scène du Diner, sans kit de duel autonome."
       ],
       "proposals": {
         "super": {
@@ -5951,7 +6006,20 @@
       "artDirectionFocus": "front rouge",
       "existingCatalogueBehavior": "Poursuite de l’Otherworld adaptée en mur avançant.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_void_113",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10",
+          "EXT_DP_PITSTOP_20261023"
+        ],
+        "rationale": "Le Void est une lumière rouge de poursuite ; le guide du Diner précise qu’on ne peut pas le blesser et que la seule solution est de courir en utilisant le parcours. Le rôle est un danger environnemental mobile, pas un combattant avec garde, saisies ou KO.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "combatRole": "noncombatant",
@@ -5968,7 +6036,7 @@
       "observedMoves": [
         {
           "name": "Apparition passive",
-          "description": "Apparition passive",
+          "description": "Apparition passive qui terrorise psychologiquement Murphy dans la version commerciale ; aucun kit du boss prototype n’est repris.",
           "evidence": [
             "EXT10",
             "EXT12"
@@ -6071,7 +6139,19 @@
       "artDirectionFocus": "silhouette d’apparition",
       "existingCatalogueBehavior": "Apparition symbolique adaptée en combattant secret.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "downpour_monocle_man_114",
+        "decision": "noncombatant",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "evidence": [
+          "EXT10"
+        ],
+        "rationale": "Le bestiaire décrit une créature passive qui terrorise psychologiquement Murphy. La décision est limitée aux apparitions de la version commerciale et n’intègre aucun boss de prototype restauré ; aucune attaque ou identité symbolique supplémentaire n’est validée.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "combatRole": "combatant",
@@ -10192,7 +10272,7 @@
       "observedMoves": [
         {
           "name": "Portail de petites créatures",
-          "description": "Portail de petites créatures",
+          "description": "Masse féminine fixée au sol servant de portail à de petites créatures ; le bestiaire lui attribue « Weapon: None », sans attaque directe du corps.",
           "evidence": [
             "EXT20"
           ],
@@ -10205,7 +10285,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Masse fixée au sol, portail de petites créatures et aucune arme selon le bestiaire ; ne pas attribuer les attaques des créatures générées au corps de Mother."
       ],
       "proposals": {
         "super": {
@@ -10285,7 +10366,19 @@
       "artDirectionFocus": "corps ancré",
       "existingCatalogueBehavior": "Boss propre au Book of Memories, invocations et masse charnelle.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "bom_mother_135",
+        "decision": "environmental-obstacle",
+        "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+        "evidence": [
+          "EXT20"
+        ],
+        "rationale": "Le bestiaire décrit une masse féminine fixée au sol qui sert de portail à de petites créatures et indique Weapon: None. Le rôle retenu est un point de génération ancré ; aucune marche, garde, saisie ou attaque directe n’est attribuée au corps de Mother.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "combatRole": "noncombatant",

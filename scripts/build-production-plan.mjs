@@ -10,7 +10,7 @@ import {validateStageBitmap} from '../src/stage-bitmaps.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
-import {SOURCE_TIMING_SCHEMA} from './source-timing.mjs';
+import {SOURCE_TIMING_SCHEMA,SOURCE_TIMING_BATCH_SCHEMA} from './source-timing.mjs';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
@@ -372,7 +372,7 @@ function applyRuntimeProgress(plan){
   hooks.reason='Neuf hooks, contexte exact par finisher et par résultat, provocation annulable, timeline caméra/acteurs/son. Chargement atomique acteurs et couches bitmap du lieu : panne, reprise et annulation vérifiées ; ancien combat et images conservés en cas d’échec. Raccord technique validé ; PNG dédiés et décors restent à produire dans leurs actions artistiques.';
   const capture=plan.tasks.find(t=>t.id==='global:reference-capture');
   capture.status='En cours';capture.delivery='source-timing-pipeline-2026-10-23';
-  capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet est candidat et ne certifie ni le geste ni la fidélité 1:1.`;
+  capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}, lot ${SOURCE_TIMING_BATCH_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Plusieurs slots d’une même capture peuvent être vérifiés en un seul décodage. La relecture facultative est liée par SHA256 aux annotations exactes ; son auteur reste déclaratif. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet et sa relecture restent candidats et ne certifient ni le geste ni la fidélité 1:1.`;
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -384,6 +384,7 @@ function applyRuntimeProgress(plan){
     stageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0),0),
     stageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
     sourceTimingSchema:SOURCE_TIMING_SCHEMA,
+    sourceTimingBatchSchema:SOURCE_TIMING_BATCH_SCHEMA,
     measuredSourceMoves:plan.moves.filter(m=>m.sourceFrameRate!==''&&m.sourceStart!==''&&m.sourceImpact!==''&&m.sourceEnd!=='').length,
     referenceStageTracks:STAGES.reduce((n,s)=>n+(s.referenceTracks?.length||0),0),retiredStageItems:plan.stageAnimations.filter(a=>a.retired).length,
     visibleReferenceStageTracks:plan.stageAnimations.filter(a=>a.runtimeTrack&&a.runtimeTrackVisible).length,

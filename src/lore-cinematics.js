@@ -5,6 +5,7 @@
  * Limbs, grips, weapons and poses still require independent contextual images.
  */
 import { FIGHTER_REFERENCES, STAGE_REFERENCES } from './production-reference.js';
+import { STAGE_BITMAPS } from './stage-bitmap-manifest.js';
 import { bodyProfile } from './combat-geometry.js';
 
 const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));
@@ -243,6 +244,76 @@ const RECIPES={
     beat('ABATTEMENT UNIQUE OCCULTE',25,frame('hammer-down',.72),frame('fall',.15,36,.22), 'blackout','heavy',.96),
     beat('MARTEAU CONSERVE',47,frame('hammer-low',.45),frame('held',.15,36,.22), 'vignette','silence',1)
   ]},
+  ankleShadow:{attackerKind:'insect',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('SIX PATTES AU RAS DU SOL',34,frame('six-leg-approach',.28),frame('watch'), 'dust','scrape',.98),
+    beat('MORSURE A LA CHEVILLE',26,frame('ankle-bite',.74),frame('unbalanced',.04,10), 'vignette','hit',.95),
+    beat('PERTE DES APPUIS',29,frame('six-leg-brace',.71),frame('fall',.17,34), 'dust','cloth',.94),
+    beat('OMBRE QUI TOMBE',39,frame('low-withdraw',.46),frame('occluded',.2,36,.18), 'vignette','silence',.98),
+    beat('RETOUR A LA FISSURE',46,frame('six-leg-retreat',.25),frame('held',.2,36,.18), 'fog','scrape',1)
+  ]},
+  ceilingHook:{attackerKind:'insect',unarmed:true,targets:STANDING,maxTargetHeight:310,needsCeiling:true,steps:[
+    beat('GRIFFES VERROUILLEES AU SUPPORT',42,frame('ceiling-claws-lock',.24,-120),frame('look-up'), 'vignette','scrape',.96),
+    beat('CROCHET DEPUIS LE PLAFOND',31,frame('ceiling-hook',.69,-68),frame('gripped',.04,-8), 'vignette','creak',.93),
+    beat('SAISIE SOUS LES GRIFFES',27,frame('ceiling-claws-held',.71,-76),frame('lifted',.05,-43), 'impact','hit',.94),
+    beat('BALANCEMENT OCCULTE',35,frame('ceiling-claws-sway',.65,-95),frame('occluded',.05,-45,.12), 'blackout','silence',.97),
+    beat('SUPPORT CONSERVE',47,frame('ceiling-claws-lock',.48,-120),frame('held',.05,-45,.12), 'vignette','scrape',1)
+  ]},
+  underGrateGrip:{attackerKind:'wall',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['grates'],steps:[
+    beat('MAINS SOUS LA GRILLE',43,frame('under-grate-hands'),frame('watch'), 'rail-shadow','metal',.97),
+    beat('PRISE SOUS LE PLANCHER',32,frame('under-grate-grip'),frame('gripped',-.16,7), 'rail-shadow','creak',.94),
+    beat('TRACTION SOUS LE SUPPORT',29,frame('under-grate-pull'),frame('fall',-.29,29), 'vignette','heavy',.93),
+    beat('ECRAN OBSCURCI',38,frame('under-grate-held'),frame('occluded',-.29,35,.12), 'blackout','silence',.97),
+    beat('CORPS TOUJOURS SUSPENDU',44,frame('under-grate-hands'),frame('held',-.29,35,.12), 'rail-shadow','metal',1)
+  ]},
+  cageFootLift:{attackerKind:'cage',unarmed:true,targets:STANDING,maxTargetHeight:310,needsCeiling:true,steps:[
+    beat('CAGE 2001 SUSPENDUE',42,frame('cage-2001-hold'),frame('look-up'), 'vignette','metal',.97),
+    beat('EMPRISE DES PIEDS',33,frame('cage-feet-grip'),frame('gripped',-.17,-8), 'vignette','creak',.94),
+    beat('SILHOUETTE RELEVEE',31,frame('cage-feet-lift'),frame('lifted',-.22,-66), 'vignette','cloth',.92),
+    beat('COUPE AVANT LE DETAIL',33,frame('cage-feet-hold'),frame('occluded',-.22,-66,0), 'blackout','silence',.97),
+    beat('CADRAGE DE LA CAGE SANS CIBLE',46,frame('cage-2001-hold'),frame('held',-.22,-66,0), 'vignette','metal',1)
+  ]},
+  organicFrameOcclusion:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('POIDS DU CADRE EXISTANT',41,frame('organic-frame-approach',.2),frame('brace'), 'vignette','step',.97),
+    beat('CADRE LEVE A PORTEE',34,frame('organic-frame-lift',.64),frame('backstep',.07), 'vignette','creak',.94),
+    beat('SILHOUETTE OCCULTEE PAR LE CADRE',29,frame('organic-frame-occlude',.79),frame('occluded',.1,11,.12), 'vignette','cloth',.93),
+    beat('IMPACT DANS LE NOIR',24,frame('organic-frame-held',.79),frame('occluded',.1,34,0), 'blackout','heavy',.97),
+    beat('UNE SEULE STRUCTURE AU REPOS',48,frame('organic-frame-stable',.59),frame('held',.1,34,0), 'vignette','silence',1)
+  ]},
+  rotatingShadow:{attackerKind:'flyer',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('DEUX TORSES SANS AILES',38,frame('two-torso-rotation',-.1,-85),frame('watch'), 'wind','metal',.97),
+    beat('CHANGEMENT D AXE',32,frame('two-torso-axis-change',.36,-54),frame('brace',.03), 'wind','scrape',.94),
+    beat('PASSAGE DEVANT LA CAMERA',27,frame('two-torso-camera-pass',.85,-23),frame('occluded',.1,8,.2), 'vignette','rush',.92),
+    beat('OMBRE IMMOBILE',35,frame('two-torso-points-held',1.07,-35),frame('fall',.16,35,.12), 'blackout','hit',.97),
+    beat('ROTATION HORS DU PLAN',47,frame('two-torso-rotating-exit',1.22,-112,0),frame('held',.16,35,.12), 'vignette','silence',1)
+  ]},
+  waterSurfaceGrip:{attackerKind:'giant',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['water','canal','pool','pools'],steps:[
+    beat('REMOUS A COURTE PORTEE',44,frame('water-emergence',.17,0,.7),frame('watch'), 'water','breath',.97),
+    beat('PRISE DES BRAS EXISTANTS',33,frame('water-close-grip',.69),frame('gripped',.03,8), 'water','creak',.94),
+    beat('RETRAIT SOUS LA SURFACE',31,frame('water-submerge',.6,18,.45),frame('pulled-under',-.05,35,.45), 'water','heavy',.93),
+    beat('EAU DEVANT LES SILHOUETTES',36,frame('water-submerged',.6,23,.12),frame('occluded',-.05,42,.08), 'water','silence',.97),
+    beat('SURFACE FERMEE',43,frame('water-surface-held',.6,23,.08),frame('held',-.05,42,.08), 'water','breath',1)
+  ]},
+  buzzingCameraPass:{attackerKind:'flyer',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('PETIT VOL INSTABLE',35,frame('small-wing-hover',-.11,-61),frame('track'), 'wind','wing',.98),
+    beat('PASSAGE MORDANT',28,frame('small-wing-bite-pass',.76,-25),frame('recoil',.08,8), 'wind','rush',.94),
+    beat('PRES DU PREMIER PLAN',24,frame('small-wing-camera-pass',1.1,-51),frame('occluded',.14,14,.22), 'vignette','wing',.93),
+    beat('OMBRE QUI S EFFONDRE',35,frame('small-wing-depart',1.28,-92),frame('fall',.19,35,.12), 'vignette','hit',.97),
+    beat('BOURDONNEMENT QUI S ELOIGNE',48,frame('small-wing-exit',1.4,-138,0),frame('held',.19,35,.12), 'vignette','silence',1)
+  ]},
+  wallSupportPull:{attackerKind:'wall',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['walls','wall','organic-wall'],steps:[
+    beat('TORSE FIXE AU MUR',44,frame('wall-torso-emerge'),frame('watch'), 'vignette','creak',.98),
+    beat('BRAS VERS LA CIBLE',33,frame('wall-arm-reach'),frame('gripped',-.18,3), 'vignette','cloth',.95),
+    beat('TRACTION CONTRE LE SUPPORT',29,frame('wall-arm-pull'),frame('recoil',-.38,16), 'impact','heavy',.93),
+    beat('COUPE AVANT LE DETAIL',31,frame('wall-arms-held'),frame('occluded',-.38,29,.12), 'blackout','silence',.97),
+    beat('RETRACTION DANS LE MEME MUR',47,frame('wall-torso-retract',0,0,.2),frame('held',-.38,29,.12), 'vignette','creak',1)
+  ]},
+  unarmedFurnitureStruggle:{attackerKind:'humanoid',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['desks','beds','gurneys','wheelchairs'],steps:[
+    beat('MAINS VIDES PRES DU SOL',37,frame('old-type-empty-hands',.17),frame('brace'), 'vignette','breath',.98),
+    beat('LUTTE RAPPROCHEE',32,frame('old-type-close-struggle',.68),frame('gripped',.04,8), 'vignette','cloth',.95),
+    beat('MOBILIER AU PREMIER PLAN',34,frame('old-type-body-occlude',.77),frame('occluded',.12,22,.22), 'shutter','creak',.94),
+    beat('COUP DE POING OCCULTE',25,frame('old-type-unarmed-strike',.77),frame('fall',.17,35,.12), 'blackout','hit',.97),
+    beat('AUCUNE ARME PRISE',45,frame('old-type-empty-hands',.47),frame('held',.17,35,.12), 'vignette','silence',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -272,7 +343,11 @@ const FIGHTER_RECIPES=Object.freeze({
   film_red_pyramid_film_175:'filmGrip',
   sh1_grey_child_005:'childThreshold',sh1_mumbler_006:'clawThreshold',sh1_romper_010:'fourPointPin',
   sh3_closer_036:'closingArmFrame',sh3_nurse_revolver_044:'revolverDoor',sh4_patient_060:'patientBedside',
-  downpour_screamer_104:'screamBackGrip',downpour_prisoner_juggernaut_110:'barredHeavyThrow',downpour_bogeyman_115:'hammerSentence'
+  downpour_screamer_104:'screamBackGrip',downpour_prisoner_juggernaut_110:'barredHeavyThrow',downpour_bogeyman_115:'hammerSentence',
+  sh1_creeper_009:'ankleShadow',sh1_hanged_scratcher_011:'ceilingHook',sh2_mandarin_026:'underGrateGrip',
+  sh2_flesh_lip_027:'cageFootLift',sh2_abstract_daddy_028:'organicFrameOcclusion',sh3_pendulum_039:'rotatingShadow',
+  sh3_leonard_wolf_048:'waterSurfaceGrip',sh4_hummer_055:'buzzingCameraPass',sh4_wall_man_056:'wallSupportPull',
+  sh4_gum_head_old_type_057:'unarmedFurnitureStruggle'
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -286,7 +361,17 @@ const PRESENTATION_STAGING=Object.freeze({
   sh4_patient_060:{id:'sh4-patient-club-weight',entry:20,retreat:29,recoil:10,poses:['patient-club-weighted-entry','patient-club-mute-threat','patient-club-stable-hold','patient-club-support-recovery','patient-club-final-watch','patient-club-final-hold','patient-club-weighted-retreat']},
   downpour_screamer_104:{id:'downpour-screamer-presence',entry:29,retreat:40,recoil:9,poses:['screamer-close-entry','screamer-mute-threat-without-wave','screamer-watch','screamer-regains-support','screamer-final-watch','screamer-final-hold','screamer-recedes']},
   downpour_prisoner_juggernaut_110:{id:'downpour-juggernaut-weight',entry:11,retreat:20,recoil:6,poses:['juggernaut-presence-awaiting-bar-pose','juggernaut-fist-threat','juggernaut-weight-stable','juggernaut-weight-recovery','juggernaut-final-watch','juggernaut-weight-final-hold','juggernaut-weight-retreat']},
-  downpour_bogeyman_115:{id:'downpour-hammer-weight',entry:15,retreat:26,recoil:7,poses:['hammer-raised-entry','hammer-mute-threat','hammer-weight-stable','hammer-retained-recovery','hammer-lowered-final-watch','hammer-retained-final-hold','hammer-weighted-exit']}
+  downpour_bogeyman_115:{id:'downpour-hammer-weight',entry:15,retreat:26,recoil:7,poses:['hammer-raised-entry','hammer-mute-threat','hammer-weight-stable','hammer-retained-recovery','hammer-lowered-final-watch','hammer-retained-final-hold','hammer-weighted-exit']},
+  sh1_creeper_009:{id:'sh1-creeper-six-legs',entry:41,retreat:70,recoil:4,poses:['six-leg-fissure-entry','six-leg-carapace-turn','six-leg-antennae-watch','six-leg-righting-recovery','six-leg-low-flightless-retreat','six-leg-final-stillness','six-leg-fissure-departure']},
+  sh1_hanged_scratcher_011:{id:'sh1-scratcher-ceiling-claws',entry:0,retreat:0,recoil:0,poses:['ceiling-claws-descent-awaiting-support','ceiling-claws-scratch-without-wave','ceiling-claws-locked','ceiling-claws-rehook-recovery','ceiling-pipe-retreat','ceiling-claws-final-drop','ceiling-claws-support-ascent']},
+  sh2_mandarin_026:{id:'sh2-mandarin-under-grate',entry:0,retreat:0,recoil:0,exitFade:true,poses:['under-grate-hands-entry','under-grate-three-muted-contacts','under-grate-suspended-watch','under-grate-hand-rehook','under-grate-hands-retract','under-grate-final-detachment','under-grate-departure']},
+  sh2_flesh_lip_027:{id:'sh2-flesh-lip-2001-cage',entry:0,retreat:0,recoil:0,exitFade:true,poses:['cage-2001-supported-descent','cage-2001-frame-tinkle','cage-2001-contracted-hold','cage-2001-support-recovery','cage-2001-supported-rise','cage-2001-final-stillness','cage-2001-support-ascent']},
+  sh2_abstract_daddy_028:{id:'sh2-organic-frame-weight',entry:16,retreat:24,recoil:6,poses:['organic-frame-doorway-entry','organic-frame-muted-inclination','organic-frame-stable-watch','organic-frame-regains-feet','organic-frame-doorway-retreat','organic-frame-final-stillness','organic-frame-whole-body-exit']},
+  sh3_pendulum_039:{id:'sh3-pendulum-two-torsos',entry:23,retreat:43,recoil:5,landing:63,roundDip:16,ascent:76,poses:['two-torso-rotation-descent','two-torso-rotation-noise-without-wave','two-torso-slow-rotation','two-torso-points-support-recovery','two-torso-final-rotation','two-torso-points-final-rest','two-torso-rotating-ascent']},
+  sh3_leonard_wolf_048:{id:'sh3-leonard-water-presence',entry:0,retreat:0,recoil:5,exitFade:true,poses:['water-ripple-emergence-awaiting-basin','water-shoulder-ripple-without-hit','water-torso-arms-watch','water-surface-recovery-awaiting-basin','water-basin-centre-watch','water-surface-final-stillness','water-back-submerge-awaiting-basin']},
+  sh4_hummer_055:{id:'sh4-hummer-small-flight',entry:48,retreat:61,recoil:8,landing:37,roundDip:14,ascent:83,poses:['small-wing-background-entry','small-wing-acceleration-without-wave','small-wing-unstable-hover','small-wing-short-drop-recovery','small-wing-final-circle','small-wing-final-ground-rest','small-wing-ceiling-departure']},
+  sh4_wall_man_056:{id:'sh4-wall-man-fixed-torso',entry:0,retreat:0,recoil:0,exitFade:true,poses:['wall-torso-emergence-awaiting-support','wall-single-arm-muted-threat','wall-torso-hands-held','wall-torso-partial-retraction-recovery','wall-torso-slow-retraction','wall-torso-final-retraction','wall-torso-support-retreat']},
+  sh4_gum_head_old_type_057:{id:'sh4-old-gum-head-empty-hands',entry:35,retreat:39,recoil:12,landing:34,ascent:27,poses:['old-type-cornice-empty-hand-landing','old-type-upper-body-sway','old-type-low-empty-hands-watch','old-type-seated-rise-recovery','old-type-cornice-retreat','old-type-flexed-final-rest','old-type-platform-ascent']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 
@@ -308,6 +393,16 @@ function compileRecipe(recipe,type) {
 
 const blocked=(reason,id=null)=>({allowed:false,reason,id,artStatus:'contextual-images-missing',fidelity:'original-versus-staging'});
 const motifs=stage=>new Set([...(stage?.props||[]),...(stage?.layers||[])]);
+const OPEN_SKY_BITMAP_SCENES=new Set(['normal-courtyard']);
+function hasCeiling(stage,set){
+  const bitmap=STAGE_BITMAPS[stage?.id];
+  const replaces=bitmap?.source===stage?.source&&bitmap?.mode==='replace';
+  // A reviewed outdoor replacement supersedes inherited corridor motifs. Keep
+  // this explicit scene set in step with future bitmap locations; the image's
+  // existence does not certify its geometry or original-game fidelity.
+  if(replaces&&OPEN_SKY_BITMAP_SCENES.has(bitmap.scene))return false;
+  return [...set,...(replaces?[bitmap.scene||'']:[])].some(p=>/ceiling|tunnel|corridor|hallway|ward|room|nave/.test(p));
+}
 
 /** Resolve only an authored exact ID. An unimplemented dossier is a normal KO,
  * never the same generic finisher under a different name. */
@@ -328,11 +423,13 @@ export function loreFinisher({attacker,target,stage,definition,stageBased=false,
   const body=bodyProfile(t);
   if(!recipe.targets.includes(body.kind))return blocked('Anatomie de la cible incompatible avec cette prise ou trajectoire.',definition.id);
   if(recipe.maxTargetHeight&&body.height*body.scale>recipe.maxTargetHeight)return blocked('La cible dépasse la portée corporelle de cette séquence.',definition.id);
+  if(recipe.attackerKind&&bodyProfile(a).kind!==recipe.attackerKind)return blocked('Anatomie du sujet incompatible avec sa séquence exacte.',definition.id);
+  if(recipe.unarmed&&a.visual?.weapon)return blocked('Cette variante exige ses membres sans arme ajoutée.',definition.id);
   if(recipe.weapon&&a.visual?.weapon!==recipe.weapon)return blocked('Arme exacte absente de cette variante.',definition.id);
   if((recipe.propsAny||recipe.needsCeiling)&&(!STAGE_REFERENCES[stage?.id]||STAGE_REFERENCES[stage.id].source!==stage.source||stage?.reference?.blocked))return blocked('Lieu non confirmé pour cet appui ou cet accessoire.',definition.id);
   const set=motifs(stage);
   if(recipe.propsAny&&!recipe.propsAny.some(prop=>set.has(prop)))return blocked('Premier plan requis absent du lieu.',definition.id);
-  if(recipe.needsCeiling&&![...set].some(p=>/ceiling|tunnel|corridor|ward|room|nave/.test(p)))return blocked('Appui de plafond absent du lieu.',definition.id);
+  if(recipe.needsCeiling&&!hasCeiling(stage,set))return blocked('Appui de plafond absent du lieu.',definition.id);
   const steps=compileRecipe(recipe,definition.type);
   return {allowed:true,id:definition.id,ownerId:a.id,source:a.source,type:definition.type,recipeId,steps,duration:steps.at(-1).to,
     description:ref.proposals.finisher.description,referenceIds:[...(ref.referenceIds||[])],
@@ -434,6 +531,7 @@ export function cinematicSummary(definitionId) {
     description:stageBased?recipe.description:ref.proposals.finisher.description,referenceIds:[...(ref.referenceIds||[])],
     adaptationStatus:'adaptation-versus-scripted',fidelity:'original-versus-staging',artStatus:'contextual-images-missing',
     requirements:{targets:[...recipe.targets],props:[...(recipe.props||[])],propsAny:[...(recipe.propsAny||[])],weapon:recipe.weapon||null,
+      attackerKind:recipe.attackerKind||null,unarmed:!!recipe.unarmed,
       needsCeiling:!!recipe.needsCeiling,zone:recipe.zone||'combat-space',decisiveMatchOnly:true},
     beats:steps.map(s=>({label:s.label,from:s.from,to:s.to,attackerPose:s.attacker.pose,targetPose:s.target.pose,effect:s.effect,sound:s.sound,
       attacker:{...s.attacker},target:{...s.target},camera:s.camera}))};
@@ -445,7 +543,7 @@ export function lorePresentation(actor,key) {
   const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=PRESENTATION_STAGING[data.id];
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon),
+    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&(!recipe.attackerKind||bodyProfile(data).kind===recipe.attackerKind),
     stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
     reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
 }
@@ -499,9 +597,11 @@ export function sampleLorePresentation(actor,presentation) {
     if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(p)):0,
       y:locomotion&&combatPolicy(actor).canJump!==false&&staging.landing?-staging.landing*(1-ease(p)):0,
       alpha:clamp(p*4),pose};
-    if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,y:0,alpha:1,
+    if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,
+      y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1,
       pose:p<.6?pose:pose+'-ready'};
-    if(key==='outro'&&locomotion)return {x:-facing*staging.retreat*ease(p),y:0,alpha:1-clamp((p-.6)/.4),pose};
+    if(key==='outro'&&(locomotion||staging.exitFade))return {x:locomotion?-facing*staging.retreat*ease(p):0,
+      y:locomotion&&combatPolicy(actor).canJump!==false?-(staging.ascent||0)*ease(p):0,alpha:1-clamp((p-.6)/.4),pose};
     return {...neutral(),pose:pose||'hold'};
   }
   if(key==='intro') {

@@ -25,12 +25,13 @@ const ENVIRONMENT = Object.freeze({
   blue_creek:{weather:'water',terrain:'wetConcrete'},
   hotel_otherworld:{weather:'water',terrain:'wetConcrete',removeProps:['fire','mirrors']},
   lakeview:{weather:'dust'}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
+  historical_society:{removeProps:['stairs']}, baldwin_mansion:{removeProps:['fireplace']},
   brookhaven_roof:{weather:'fog'}, apartment_roof:{weather:'fog'},
   room_302:{weather:'dust'}, apartment_world:{weather:'dust'}, forest_world:{weather:'fog'},
   cedar_grove:{weather:'dust'}, riverside_motel:{weather:'fog'}, grand_hotel:{weather:'dust'},
   nightmare_school:{weather:'cold'}, nightmare_hospital_sm:{weather:'cold'}, nightmare_mall_sm:{weather:'cold'},
   police_station_hc:{weather:'dust'}, centennial_building:{weather:'dust'}, st_marias:{weather:'dust'}, overlook:{weather:'water'},
-  church:{weather:'dust'}, underground_hc:{weather:'dust'},
+  church:{weather:'dust',removeProps:['fans','flesh','symbols']}, hilltop_center:{removeProps:['elevator']}, underground_hc:{weather:'dust'},
   nightmare_mall:{weather:'dust'}, nightmare_hilltop:{weather:'dust'}, nightmare_theater:{weather:'dust'},
   scarlet_chamber:{weather:'dust',removeProps:['mirrors']},
   villa:{weather:'dust'}, villa_rooftop:{weather:'fog'},
@@ -70,6 +71,10 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   cellDoorReply: {name:'Une porte de cellule sur ses charnières',layer:'background',replaces:[],stageId:'toluca_prison',source:'sh2'},
   cubeTurn: {name:'Cube de commande, orientation de fond',layer:'background',replaces:[],stageId:'labyrinth',source:'sh2'},
   washroomHoleReply: {name:'Lueur contenue du trou de la salle de bain',layer:'background',replaces:[],stageId:'room_302',source:'sh4'},
+  paintingGlint: {name:'Reflet sur le vitrage d’un cadre sombre',layer:'background',replaces:[],stageId:'historical_society',source:'sh2',locationScope:'Salles d’exposition du musée ; hors escalier et puits',limits:'Vitrage et cadre abstraits ; aucun tableau officiel ni personnage reproduit ou animé.'},
+  closedDoorReply: {name:'Battant fermé du Lounge d’Ernest',layer:'background',replaces:[],stageId:'baldwin_mansion',source:'sh2',locationScope:'Palier devant le Lounge ; porte fermée de Born from a Wish',limits:'La porte reste opaque et fermée ; aucun Ernest visible, aucune bougie du grenier déplacée ici.'},
+  chapelCandleLean: {name:'Flammes des cierges de la chapelle',layer:'background',replaces:[],stageId:'church',source:'sh3',locationScope:'Chapelle avec autel et vitraux ; hors passages mémoire et fosse finale',limits:'Cierges attestés ; inclinaison commune proposée pour le versus, sans invocation ni effet sur les combattants.'},
+  officeBlindSway: {name:'Store du bureau de Monica’s Dance Studio',layer:'background',replaces:[],stageId:'hilltop_center',source:'sh3',locationScope:'Bureau / réception de Monica’s Dance Studio, Hilltop Center normal',limits:'Store attesté dans cette pièce ; oscillation proposée pour le versus, sans atelier ni seuil de baignoire.'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -84,6 +89,8 @@ const BINDINGS = Object.freeze({
   blue_creek:[['waterRings',1,[.5,.72]]],
   toluca_prison:[['cellDoorReply',2,[.28,.61],'referenceCellReply']],
   labyrinth:[['cubeTurn',1,[.69,.49]]],
+  historical_society:[['paintingGlint',1,[.29,.38]]],
+  baldwin_mansion:[['closedDoorReply',2,[.5,.57],'referenceClosedDoorReply']],
   hotel_otherworld:[['waterRings',1,[.51,.72]],['dustDrift',2,[.73,.39],'referenceDustRelease']],
   south_vale:[['fogLayers',1,[.5,.55]]],
   brookhaven_roof:[['paperFlutter',1,[.73,.65]]],
@@ -92,6 +99,8 @@ const BINDINGS = Object.freeze({
   nightmare_mall:[['dustDrift',1,[.24,.53]]],
   underpass_sh3:[['fanEccentric',1,[.79,.27]],['pipePurge',2,[.2,.58],'referenceSteamPurge']],
   nightmare_hospital_sh3:[['mirrorContamination',1,[.73,.39]]],
+  church:[['chapelCandleLean',1,[.71,.49]]],
+  hilltop_center:[['officeBlindSway',1,[.72,.32]]],
   room_302:[['chainPendulum',1,[.52,.34]],['washroomHoleReply',2,[.78,.49],'referenceWashroomReply']],
   apartment_world:[['doorReply',1,[.5,.57]]],
   riverside_motel:[['signFlicker',0,[.72,.31]],['curtainBreathe',1,[.29,.38]]],
@@ -230,7 +239,8 @@ export function applyStageReferencePolicy(stage, reference) {
       trigger:event ? 'local-heavy-impact' : 'ambient',event:event || null,
       implementation:'canvas-prototype',coverage:'partial-visual-prototype',implementedElement:definition.name,
       fidelity:'adaptation-versus-proposee',captureStatus:proposal.captureStatus || 'capture-a-relever',
-      limits:'Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.'}];
+      locationScope:definition.locationScope || null,
+      limits:unique(['Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.',definition.limits]).join(' ')}];
   });
   const allowedHazards = blocked ? [] : [...(HAZARDS[stage.id] || [])];
   const candidateEvents = unique([...(stage.director?.events || []),...referenceTracks.map(track=>track.event)]);

@@ -252,6 +252,54 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
       glow(ctx,0,0,36,'176,183,153',response*.16);ctx.restore();
       break;
     }
+    case 'paintingGlint':{
+      // Only the glass changes. No official painting or figure is invented.
+      rect(ctx,x-61,y-46,122,92,'#51493a');rect(ctx,x-55,y-40,110,80,'#1d2522');
+      const drift=sway*16;
+      path(ctx,[[x-31+drift,y-36],[x-48+drift,y+35]],'rgba(169,178,157,.12)',6);
+      path(ctx,[[x-16+drift,y-36],[x-33+drift,y+35]],'rgba(169,178,157,.06)',2);
+      break;
+    }
+    case 'closedDoorReply':{
+      const p=progress===null?0:progress,shake=Math.sin(p*TAU*4)*Math.sin(p*Math.PI)*.8;
+      const width=w*.088,height=h*.25,left=x-width*.5,top=y-height;
+      // Fixed frame and opaque slab: moving inset details cannot reveal a gap.
+      rect(ctx,left-7,top-7,width+14,height+7,'#4e4b3e');rect(ctx,left,top,width,height,'#403b30');
+      for(const offset of [0,height*.43]){
+        ctx.strokeStyle='rgba(125,108,78,.4)';ctx.lineWidth=2;
+        ctx.strokeRect(left+12+shake,top+14+offset,width-24,height*.34);
+      }
+      rect(ctx,left+width-16+shake,top+height*.56,5,10,'#a09c7f');
+      break;
+    }
+    case 'chapelCandleLean':{
+      const lean=sway*3.2,floor=h*.57;
+      for(let i=0;i<3;i++){
+        const px=x+(i-1)*19,py=y+(i===1?-12:0);
+        // The source chapel uses candlesticks; their feet stay on the rear floor.
+        line(ctx,px,py+8,px,floor-3,2,'rgba(97,83,57,.65)');
+        rect(ctx,px-9,floor-3,18,3,'rgba(97,83,57,.65)');
+        rect(ctx,px-3,py-24,6,29,'rgba(157,143,110,.72)');
+        rect(ctx,px-7,py+5,14,3,'rgba(97,83,57,.65)');
+        ctx.fillStyle='rgba(211,175,94,.66)';ctx.beginPath();ctx.moveTo(px-3,py-24);
+        ctx.quadraticCurveTo(px-4+lean,py-30,px+lean,py-39);
+        ctx.quadraticCurveTo(px+5+lean,py-30,px+3,py-24);ctx.closePath();ctx.fill();
+        glow(ctx,px,py-27,23,'186,137,67',.035+pulse*.015);
+      }
+      break;
+    }
+    case 'officeBlindSway':{
+      const width=112,height=103,shift=sway*1.8;
+      rect(ctx,x-width*.5-4,y-4,width+8,height+8,'#4a4b40');
+      rect(ctx,x-width*.5,y,width,height,'#1b2825');
+      for(let i=0;i<11;i++){
+        const py=y+i*9+shift*i/11;
+        line(ctx,x-width*.5+2,py,x+width*.5-2,py+shift,4,'rgba(99,113,89,.62)');
+      }
+      line(ctx,x-30,y,x-30,y+height,1,'rgba(146,147,116,.35)');
+      line(ctx,x+30,y,x+30,y+height,1,'rgba(146,147,116,.35)');
+      break;
+    }
     default:break;
   }
   ctx.restore();

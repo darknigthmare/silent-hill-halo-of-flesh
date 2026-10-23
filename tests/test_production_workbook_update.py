@@ -3,6 +3,7 @@ from copy import deepcopy
 import hashlib
 import importlib.util
 import json
+import re
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import tempfile
@@ -264,6 +265,30 @@ class WorkbookUpdateTests(unittest.TestCase):
             (source_part, lambda raw: raw.replace(f'r="A{end - 1}" s="10"'.encode(), f'r="A{end - 1}" cm="1" s="10"'.encode(), 1)),
             ('xl/styles.xml', lambda raw: raw + b' ')
         ]
+        # Duplicate identical values must not disappear into an address-indexed
+        # dictionary; a cell moved under another row is also structurally invalid.
+        def duplicate_cell(raw):
+            match = re.search(rb'<(?:\w+:)?c\b[^>]*\br="A' + str(end).encode() + rb'"[^>]*>.*?</(?:\w+:)?c>', raw, re.S)
+            self.assertIsNotNone(match)
+            return raw.replace(match[0], match[0] + match[0], 1)
+        mutations.extend([
+            (source_part, duplicate_cell),
+            (source_part, lambda raw: raw.replace(f'r="A{end}"'.encode(), f'r="A{end + 1}"'.encode(), 1))
+        ])
+        # A unique cell address must not hide a second value or formula. Both
+        # semantic verification and the genuine append audit must reject it.
+        def append_payload(raw, address, payload):
+            match = re.search(rb'<(?P<prefix>\w+:)?c\b[^>]*\br="' + address.encode() + rb'"[^>]*>.*?</(?:\w+:)?c>', raw, re.S)
+            self.assertIsNotNone(match)
+            prefix = match['prefix'] or b''
+            closing = b'</' + prefix + b'c>'
+            return raw.replace(match[0], match[0].replace(closing, payload.replace(b'PREFIX', prefix) + closing), 1)
+        payload_mutations_start = len(mutations)
+        mutations.extend([
+            (source_part, lambda raw: append_payload(raw, f'A{end}', b'<PREFIXv>UNLOGGED SECOND SOURCE ID</PREFIXv>')),
+            (source_part, lambda raw: append_payload(raw, f'A{end}', b'<PREFIXis><PREFIXt>UNLOGGED INLINE VALUE</PREFIXt></PREFIXis>')),
+            (summary_part, lambda raw: append_payload(raw, 'B16', b'<PREFIXf>SUM(1)</PREFIXf>'))
+        ])
         for number, (part, mutate) in enumerate(mutations):
             changed = mutate(entries[part])
             self.assertTrue(changed != entries[part], 'Tamper fixture failed to alter ' + part)
@@ -273,6 +298,43 @@ class WorkbookUpdateTests(unittest.TestCase):
                     archive.writestr(name, changed if name == part else value)
             with self.assertRaises(AssertionError, msg=part):
                 validator.compare_source(fixture, tampered, *logs)
+            if number >= payload_mutations_start:
+                with self.assertRaisesRegex(AssertionError, 'cell payload'):
+                    validator.verify(plan_path, tampered)
+
+    def test_verifier_refuses_duplicate_rows_and_cells_and_mismatched_coordinates(self):
+        validator = UPDATE.load_validator()
+        def sheet(rows):
+            return ET.fromstring(f'<worksheet xmlns="{MAIN}"><sheetData>{rows}</sheetData></worksheet>')
+        good = sheet('<row r="6"><c r="A6"/><c r="XFD6"/></row>')
+        self.assertEqual(list(validator.worksheet_cells(good, 'Fixture')), ['A6', 'XFD6'])
+        for rows in [
+            '<row r="6"><c r="A6"/><c r="A6"/></row>',
+            '<row r="6"><c r="A6"/></row><row r="6"><c r="B6"/></row>',
+            '<row r="6"><c r="A7"/></row>',
+            '<row r="6"><c r="XFE6"/></row>',
+            '<row r="0"><c r="A0"/></row>',
+            '<row r="1048577"><c r="A1048577"/></row>',
+            '<row r="6"><c/></row>'
+        ]:
+            with self.subTest(rows=rows), self.assertRaises(AssertionError):
+                validator.worksheet_cells(sheet(rows), 'Fixture')
+
+    def test_verifier_allows_one_formula_with_cache_but_refuses_ambiguous_payloads(self):
+        validator = UPDATE.load_validator()
+        def sheet(body, kind='n'):
+            return ET.fromstring(f'<worksheet xmlns="{MAIN}"><sheetData><row r="6"><c r="A6" t="{kind}">{body}</c></row></sheetData></worksheet>')
+        for body, kind in [('', 'n'), ('<v>7</v>', 'n'), ('<f>SUM(1)</f><v>1</v>', 'n'),
+                           ('<f>SUM(1)</f>', 'n'), ('<is><t>Inline text</t></is>', 'inlineStr')]:
+            with self.subTest(body=body, kind=kind):
+                self.assertEqual(list(validator.worksheet_cells(sheet(body, kind), 'Fixture')), ['A6'])
+        for body, kind in [('<v>7</v><v>8</v>', 'n'), ('<f>SUM(1)</f><f>SUM(2)</f><v>1</v>', 'n'),
+                           ('<v>1</v><f>SUM(1)</f>', 'n'), ('<v>7</v><is><t>Other</t></is>', 'n'),
+                           ('<is><t>One</t></is><is><t>Two</t></is>', 'inlineStr'),
+                           ('<is><t>Inline</t></is>', 'str'), ('<v>7</v>', 'inlineStr'), ('', 'inlineStr'),
+                           ('<f>SUM(1)</f><is><t>Inline</t></is>', 'inlineStr')]:
+            with self.subTest(body=body, kind=kind), self.assertRaisesRegex(AssertionError, 'cell payload'):
+                validator.worksheet_cells(sheet(body, kind), 'Fixture')
 
     def test_source_append_refuses_reordering_insertion_deletion_and_other_table_expansion(self):
         fixture, report, previous = self.actual_baseline()

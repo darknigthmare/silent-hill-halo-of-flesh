@@ -544,32 +544,32 @@
           "type": "signature",
           "name": "Rituel de clôture — Mâchoire séparée",
           "trigger": "decisive-special",
-          "pose": "crush",
-          "effect": "debris",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "raise",
-            "crush",
-            "dust"
+            "circle",
+            "pounce",
+            "drag",
+            "silence"
           ],
-          "canonicalBasis": "Immense gueule verticale, charge et saisie dévorante.",
+          "canonicalBasis": "Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         },
         {
           "id": "sh1_split_head_014_nightmare",
           "type": "nightmare",
-          "name": "NIGHTMARE — Écrasement du souvenir",
+          "name": "NIGHTMARE — Traque achevée",
           "trigger": "decisive-super",
-          "pose": "crush",
-          "effect": "debris",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "raise",
+            "circle",
+            "pounce",
             "otherworld",
-            "dust"
+            "silence"
           ],
-          "canonicalBasis": "Immense gueule verticale, charge et saisie dévorante.",
+          "canonicalBasis": "Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 4
         }
@@ -1774,32 +1774,32 @@
           "type": "signature",
           "name": "Rituel de clôture — Lames oscillantes",
           "trigger": "decisive-special",
-          "pose": "swarm",
-          "effect": "static",
+          "pose": "dive",
+          "effect": "wind",
           "sequence": [
-            "scatter",
-            "surround",
-            "swarm",
-            "fade"
+            "lift",
+            "dive",
+            "impact",
+            "fall"
           ],
-          "canonicalBasis": "Créature aérienne métallique, trajectoires imprévisibles.",
+          "canonicalBasis": "Deux demi-torses reliés par une armature pivotante, volant et marchant sur leurs lames.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
         {
           "id": "sh3_pendulum_039_nightmare",
           "type": "nightmare",
-          "name": "NIGHTMARE — Dernière manifestation",
+          "name": "NIGHTMARE — Chute sans ciel",
           "trigger": "decisive-super",
-          "pose": "swarm",
-          "effect": "static",
+          "pose": "dive",
+          "effect": "wind",
           "sequence": [
-            "scatter",
-            "surround",
+            "lift",
+            "dive",
             "otherworld",
-            "fade"
+            "fall"
           ],
-          "canonicalBasis": "Créature aérienne métallique, trajectoires imprévisibles.",
+          "canonicalBasis": "Deux demi-torses reliés par une armature pivotante, volant et marchant sur leurs lames.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -2551,7 +2551,7 @@
         {
           "id": "sh4_gum_head_old_type_057_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Clé volée",
+          "name": "Rituel de clôture — Poings du Gum Head",
           "trigger": "decisive-special",
           "pose": "execution",
           "effect": "silhouette",
@@ -2561,7 +2561,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Humanoïde simiesque capable de saisir et d’utiliser des objets.",
+          "canonicalBasis": "Type ancien se battant à mains nues ; l’usage et le vol d’armes appartiennent au type nouveau.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -2578,7 +2578,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Humanoïde simiesque capable de saisir et d’utiliser des objets.",
+          "canonicalBasis": "Type ancien se battant à mains nues ; l’usage et le vol d’armes appartiennent au type nouveau.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -10698,7 +10698,6 @@
         "canonicalBasis": "Décor et dangers documentés de BALDWIN MANSION."
       },
       "animations": [
-        "firePulse",
         "floorCreak"
       ]
     },
@@ -10784,7 +10783,6 @@
         "canonicalBasis": "Décor et dangers documentés de HILLTOP CENTER."
       },
       "animations": [
-        "elevatorBlink",
         "lightFlicker"
       ]
     },

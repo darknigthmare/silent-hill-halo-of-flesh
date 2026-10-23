@@ -1,6 +1,31 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles du 23 octobre 2026
+## Chantiers parallèles — quatrième lot du 23 octobre 2026
+
+Les six chantiers avancent : quatre nouveaux sprites candidats, le couloir
+Wood Side, quatre pistes de lieu, vingt finishers, soixante-dix présentations
+et sept décisions de rôle supplémentaires. Pendulum, Slurper, Insane Cancer
+et les onze fantômes SH4 reçoivent leurs comportements documentés.
+
+Le suivi compte **855 actions ouvertes, dont 109 P0**, avec dix-huit rôles et
+deux actions techniques validés. La couverture atteint **10 profils illustrés,
+14 PNG acteurs et 2 PNG de décor** ; un seul montage animé est candidat,
+aucune fidélité 1:1 n’est certifiée. Le sol du premier plan de Wood Side est
+une adaptation au plan horizontal du versus, signalée dans la provenance.
+
+Le catalogue conserve **3 693 commandes actives et 907 désactivées**.
+L’outil de relevés accepte désormais des lots et une relecture candidate liée
+aux annotations ; les 4 600 relevés originaux restent vides. L’Excel conserve
+ses annotations et ses 80 formules, avec trois sources ajoutées en fin.
+
+**Validation : 692 tests Node, 100 tests Python, 546 contrôles navigateur dans
+quatorze suites ; 82 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT4_2026-10-23.md) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-23.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — 23 octobre 2026
 
 Les six chantiers ont avancé ensemble : trois nouveaux sprites SH2 candidats,
 un premier décor bitmap de la cour Midwich, 18 finishers et 63 présentations

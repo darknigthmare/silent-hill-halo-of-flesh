@@ -1,12 +1,12 @@
 /* Original perspective sets. These are not traced recreations of official maps. */
-const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth']);
+const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
   return stage?.id === 'brookhaven_roof' ? 'exterior' : INTERIORS.has(stage?.family) ? 'interior' : 'exterior';
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
 export function drawStageArchitecture(c,w,h,stage) {
   if (stageSpace(stage)!=='interior') return false;
-  const family=stage.family, medical=family==='hospital', domestic=['hotel','room','house','apartment'].includes(family);
+  const family=stage.family, medical=family==='hospital', domestic=['hotel','room','house','apartment'].includes(family),chapel=stage.id==='church'&&stage.source==='sh3';
   const vx=w*.5,vy=h*.57,left=w*.23,right=w*.77,top=h*.15;
   c.save();
   const wall=c.createLinearGradient(0,top,0,vy);
@@ -38,6 +38,18 @@ export function drawStageArchitecture(c,w,h,stage) {
     for(let i=0;i<7;i++)line(c,left+i*(right-left)/6,top+32,left+i*(right-left)/6,vy,'#26352f',12);
     c.fillStyle='#71694b';c.fillRect(left,vy-7,right-left,4);
     line(c,left,vy-34,right,vy-34,'#444a42',3);
+  } else if(chapel) {
+    // A muted abstract glass panel marks the chapel, without copying sacred art.
+    // No final-pit flesh/fans or memory-corridor door is borrowed for this view.
+    const glassY=h*.19,glassW=w*.16,glassH=h*.29;
+    c.fillStyle='#1b211d';c.fillRect(vx-glassW*.5-8,glassY-8,glassW+16,glassH+16);
+    for(let col=0;col<3;col++)for(let row=0;row<5;row++) {
+      c.fillStyle=['#5d5334','#454c37','#5a4533'][(col+row)%3];
+      c.fillRect(vx-glassW*.5+col*glassW/3+2,glassY+row*glassH/5+2,glassW/3-4,glassH/5-4);
+    }
+    for(const side of [-1,1])line(c,vx+side*w*.17,top,vx+side*w*.17,vy,'#3d4036',9);
+    c.fillStyle='#403729';c.fillRect(vx-w*.11,vy-22,w*.22,22);
+    c.fillStyle='#71614a';c.fillRect(vx-w*.12,vy-28,w*.24,8);
   } else {
     // Door is on the back wall, never floating on the fighter plane.
     const doorX=vx-w*.044,doorY=vy-h*.25,doorW=w*.088;

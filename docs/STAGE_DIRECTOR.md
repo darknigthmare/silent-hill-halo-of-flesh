@@ -1,6 +1,6 @@
 # Directeur d’arènes et gameplay environnemental — v0.9.6
 
-**123 arènes · 14 terrains · 15 bascules · 23 événements · 9 liens de danger · 23 interactions.**
+**123 arènes · 14 terrains · 15 bascules · 24 événements · 9 liens de danger · 24 interactions.**
 
 > Les lieux, accessoires, climats et motifs sont documentés à partir du catalogue du projet. Les timings, dégâts, zones de danger et déclencheurs restent des adaptations versus originales explicitement séparées du canon.
 
@@ -82,6 +82,7 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | `referenceDustRelease` | POUSSIÈRE DU PLÂTRE | 130 f | Aucun | Aucun | LE PLÂTRE FRÉMIT |
 | `referenceSteamPurge` | ROBINET DU PASSAGE | 108 f | Aucun | Aucun | TROIS PURGES AU FOND DU PASSAGE |
 | `referenceCellReply` | PORTE DE CELLULE | 96 f | Aucun | Aucun | UNE PORTE VIBRE AU FOND |
+| `referenceClosedDoorReply` | PORTE DU LOUNGE | 100 f | Aucun | Aucun | LE BATTANT RESTE FERMÉ |
 | `referenceWashroomReply` | TROU DE LA SALLE DE BAIN | 108 f | Aucun | Aucun | UNE LUEUR DANS LE PASSAGE |
 
 ## Doctrine par arène
@@ -101,7 +102,7 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | LAKEVIEW HOTEL — OTHERWORLD | BÉTON TREMPÉ | fixed-altered — aucune bascule | POUSSIÈRE DU PLÂTRE | IMPACT LOURD À PROXIMITÉ |  | 1 | État ruiné du Lakeview après la cassette, SH2 original. |
 | CENTRAL SQUARE MALL | BÉTON SEC | fixed-normal — aucune bascule | PANNE GÉNÉRALE | IMPACT LOURD / PREMIER TEMPS |  | 1 | Central Square Shopping Center de SH3 avant son état Nightmare. |
 | BROOKHAVEN — FLOODED ROOM | BÉTON SEC | fixed-altered — aucune bascule |  |  |  | 1 | Salle d’eau du boss Leonard sous Brookhaven Otherworld, SH3. |
-| THE CHURCH | PIERRE RITUELLE | fixed-normal — aucune bascule |  |  |  | 0 | Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. |
+| THE CHURCH | PIERRE RITUELLE | fixed-normal — aucune bascule |  |  |  | 0 | Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus. |
 | DAISY VILLA ROOFTOP | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 0 | Toit Daisy Villa du combat Missionary de SH3. |
 | SEWER CHANNEL | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 2 | Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. |
 | ROOM 302 | PLANCHER ANCIEN | fixed-normal — aucune bascule | TROU DE LA SALLE DE BAIN | IMPACT LOURD À PROXIMITÉ |  | 0 | Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive. |
@@ -147,14 +148,14 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | SEWERS TO THE RESORT | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 1 | Égouts qui conduisent à la zone touristique dans SH1. |
 | SOUTH VALE STREETS | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | South Vale Est de SH2 original ; préciser rue exacte et limites de parcours. |
 | BROOKHAVEN — ROOFTOP | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 2 | Toit de Brookhaven dans SH2 original ; évènement Pyramid Head lié au récit. |
-| SILENT HILL HISTORICAL SOCIETY | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Bâtiment et descente de la Historical Society de SH2 original. |
+| SILENT HILL HISTORICAL SOCIETY | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Bâtiment et descente de la Historical Society de SH2 original. Vue retenue : salles d’exposition du musée ; reflet de vitrage en proposition versus, sans reproduire ni animer le contenu d’un tableau officiel, escalier/puits séparés. |
 | LABYRINTH — MEAT LOCKER | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule |  |  |  | 3 | Libellé à corriger : la chambre froide du combat Eddie termine le Labyrinthe ; ne pas affirmer une salle ordinaire de Toluca Prison. |
 | LAKEVIEW HOTEL — FOG WORLD | BÉTON SEC | unresolved — aucune bascule |  |  |  | 0 | Apparence restaurée du Lakeview original avant la cassette ; « Fog World » ne suffit pas à expliquer cet état de mémoire. |
-| BALDWIN MANSION | PLANCHER ANCIEN | fixed-normal — aucune bascule |  |  |  | 2 | Manoir de Born from a Wish, campagne Maria de SH2 original. |
+| BALDWIN MANSION | PLANCHER ANCIEN | fixed-normal — aucune bascule | PORTE DU LOUNGE | IMPACT LOURD À PROXIMITÉ |  | 1 | Manoir de Born from a Wish, campagne Maria de SH2 original. Vue retenue : palier devant la porte du Lounge d’Ernest, gardée fermée ; la bougie attestée au grenier ne doit pas être transportée ici. Réaction du battant = adaptation versus après impact local, sans corps. |
 | CENTRAL SQUARE — NIGHTMARE MALL | BÉTON SEC | fixed-altered — aucune bascule | PANNE GÉNÉRALE | IMPACT LOURD / PREMIER TEMPS |  | 2 | Centre commercial Otherworld de SH3, comprenant l’arène souterraine de Split Worm. |
 | HAZEL STREET SUBWAY | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | RAME FANTÔME, PANNE GÉNÉRALE | IMPACT LOURD / PREMIER TEMPS, MI-CHEMIN OTHERWORLD | PASSAGE DE LA RAME | 1 | Station Hazel Street de SH3 ; danger des voies distinct du métro SH4. |
 | UNDERPASS | EAU STAGNANTE | fixed-normal — aucune bascule | ROBINET DU PASSAGE | IMPACT LOURD À PROXIMITÉ |  | 1 | Couloirs et locaux techniques avant le canal de SH3 ; sous-zone distincte du stage sewers. |
-| HILLTOP CENTER | MOQUETTE HUMIDE | fixed-normal — aucune bascule |  |  |  | 2 | Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. |
+| HILLTOP CENTER | MOQUETTE HUMIDE | fixed-normal — aucune bascule |  |  |  | 1 | Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. Store attesté dans le bureau/réception de Monica’s Dance Studio, capture sh3_07_hilltop_center_map_location.jpg ; la vue retient cette pièce normale, sans atelier ni baignoire/Otherworld. Oscillation = proposition versus. |
 | HILLTOP CENTER — OTHERWORLD | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule |  |  |  | 1 | Hilltop Otherworld de SH3, avec le Glutton comme obstacle de progression. |
 | BROOKHAVEN — NIGHTMARE HOSPITAL | BÉTON SEC | fixed-altered — aucune bascule |  |  |  | 1 | Brookhaven Otherworld de SH3 ; salle au miroir isolée du bassin Leonard. |
 | LAKESIDE AMUSEMENT PARK — SH3 | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. |
@@ -214,6 +215,6 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 
 ## Réactions issues des fiches
 
-Les 53 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
+Les 57 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
 
 Les états et listes de mécanismes de la fiche sont également vérifiés lors des appels directs du moteur, des transitions de boss et des rites. Une famille de décor ne suffit pas à autoriser un événement.

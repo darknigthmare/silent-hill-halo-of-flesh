@@ -11,7 +11,7 @@
     "build": "node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs",
     "test": "node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify",
     "qa": "npm test",
-    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs && node scripts/http-qa-boundaries-v095.mjs && node scripts/http-qa-presentations.mjs && node scripts/http-qa-reference-integration.mjs && node scripts/http-qa-chronicles.mjs && node scripts/http-qa-stage-bitmaps.mjs && node scripts/http-qa-alessa-weapons.mjs && node scripts/http-qa-source-expansion.mjs && node scripts/http-qa-cinematic-expansion.mjs",
+    "qa:browser": "node scripts/http-qa-v090.mjs && node scripts/http-qa-sprites.mjs && node scripts/http-qa-art-v092.mjs && node scripts/http-qa-clips-v093.mjs && node scripts/http-qa-recovery-v094.mjs && node scripts/http-qa-boundaries-v095.mjs && node scripts/http-qa-presentations.mjs && node scripts/http-qa-reference-integration.mjs && node scripts/http-qa-chronicles.mjs && node scripts/http-qa-stage-bitmaps.mjs && node scripts/http-qa-alessa-weapons.mjs && node scripts/http-qa-source-expansion.mjs && node scripts/http-qa-cinematic-expansion.mjs && node scripts/http-qa-art-batch4.mjs",
     "release:check": "node scripts/release-check.mjs",
     "qa:ui": "python scripts/ui-qa-v090.py",
     "sprites:check": "node scripts/build-sprites.mjs",

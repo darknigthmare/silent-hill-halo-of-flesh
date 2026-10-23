@@ -1,13 +1,16 @@
 /** Verify a source-capture timing packet. Never certifies a gesture or fills the workbook. */
-import {readFile,lstat,realpath,writeFile} from 'node:fs/promises';
+import {readFile,lstat,realpath,writeFile,open,mkdtemp,chmod,rm} from 'node:fs/promises';
+import {constants} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
-import {dirname,isAbsolute,relative,resolve} from 'node:path';
+import {dirname,isAbsolute,relative,resolve,join} from 'node:path';
+import {tmpdir} from 'node:os';
 import {fileURLToPath} from 'node:url';
 import {ROSTER,createCombatProfile} from '../src/data.js';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
 
 export const SOURCE_TIMING_SCHEMA=1;
+export const SOURCE_TIMING_BATCH_SCHEMA=1;
 const MAX_CAPTURE_BYTES=256*1024*1024,MAX_CAPTURE_FRAMES=18000;
 const fail=message=>{throw new Error('Source timing: '+message);};
 const own=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
@@ -68,38 +71,111 @@ function sameRate(text,expected){
   const [n,d]=text.split('/').map(Number);
   return n>0&&d>0&&n*expected.denominator===d*expected.numerator;
 }
-export async function verifySourceTiming(packet,{baseDirectory=process.cwd(),probe=probeSourceCapture,...catalogue}={}){
-  const normalized=validateSourceTiming(packet,catalogue),base=await realpath(baseDirectory),path=resolve(base,normalized.capture.path);
+async function verifyCapture(capture,{baseDirectory,probe}){
+  const base=await realpath(baseDirectory),path=resolve(base,capture.path);
   if(relative(base,path).startsWith('..')||isAbsolute(relative(base,path)))fail('capture outside packet directory');
   const info=await lstat(path);
   if(!info.isFile()||info.isSymbolicLink()||await realpath(path)!==path||info.size<12||info.size>MAX_CAPTURE_BYTES)fail('capture must be a regular, bounded video file');
-  const bytes=await readFile(path),sha=createHash('sha256').update(bytes).digest('hex');
-  if(sha!==normalized.capture.sha256)fail('capture SHA256 mismatch');
-  const mp4=bytes.subarray(4,8).toString('ascii')==='ftyp',matroska=bytes.subarray(0,4).equals(Buffer.from([0x1a,0x45,0xdf,0xa3]));
-  if(!mp4&&!matroska)fail('capture must be MP4/MOV or Matroska/WebM');
-  const metadata=await probe(path),streams=metadata?.streams,frames=metadata?.frames;
-  if(!Array.isArray(streams)||streams.length!==1||!Array.isArray(frames))fail('one decoded video stream and frame timestamps required');
-  const stream=streams[0],capture=normalized.capture;
-  if(stream.codec_type!=='video'||![stream.width,stream.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096)||
-    Number(stream.nb_read_frames)!==capture.totalFrames||frames.length!==capture.totalFrames||
-    !sameRate(stream.r_frame_rate,capture.frameRate)||!sameRate(stream.avg_frame_rate,capture.frameRate))fail('capture dimensions, FPS or frame count mismatch');
-  const step=capture.frameRate.denominator/capture.frameRate.numerator,tolerance=Math.max(0.000002,step*.005);
-  const timestamps=frames.map(frame=>typeof frame.best_effort_timestamp_time==='string'&&/^-?\d+(?:\.\d+)?$/.test(frame.best_effort_timestamp_time)?Number(frame.best_effort_timestamp_time):NaN);
-  if(timestamps.some((time,index)=>!Number.isFinite(time)||index>0&&Math.abs(time-timestamps[index-1]-step)>tolerance))fail('constant capture frame spacing required; variable or missing timestamps refused');
-  return {...normalized,status:'capture-verified-candidate',capture:{...capture,bytes:bytes.length,width:stream.width,height:stream.height},
+  // Hash and decode one private, read-only snapshot. Reopening the source path
+  // after hashing could otherwise decode a different concurrently replaced file.
+  const source=await open(path,constants.O_RDONLY|(constants.O_NOFOLLOW||0));let directory;
+  try{
+    const opened=await source.stat();
+    if(!opened.isFile()||opened.size<12||opened.size>MAX_CAPTURE_BYTES)fail('capture must be a regular, bounded video file');
+    directory=await mkdtemp(join(tmpdir(),'halo-source-timing-'));
+    const snapshot=join(directory,'capture'),output=await open(snapshot,'wx',0o600),hash=createHash('sha256');
+    const chunk=Buffer.alloc(64*1024),header=Buffer.alloc(12);let size=0,headerLength=0;
+    try{
+      while(true){
+        const {bytesRead}=await source.read(chunk,0,chunk.length,null);if(!bytesRead)break;
+        size+=bytesRead;if(size>MAX_CAPTURE_BYTES)fail('capture exceeds bounded video file size');
+        const bytes=chunk.subarray(0,bytesRead);hash.update(bytes);
+        if(headerLength<header.length)headerLength+=bytes.copy(header,headerLength,0,Math.min(bytesRead,header.length-headerLength));
+        await output.writeFile(bytes);
+      }
+    }finally{await output.close();}
+    if(size<12)fail('capture must be a regular, bounded video file');
+    if(hash.digest('hex')!==capture.sha256)fail('capture SHA256 mismatch');
+    const mp4=header.subarray(4,8).toString('ascii')==='ftyp',matroska=header.subarray(0,4).equals(Buffer.from([0x1a,0x45,0xdf,0xa3]));
+    if(!mp4&&!matroska)fail('capture must be MP4/MOV or Matroska/WebM');
+    await chmod(snapshot,0o400);
+    const metadata=await probe(snapshot),streams=metadata?.streams,frames=metadata?.frames;
+    if(!Array.isArray(streams)||streams.length!==1||!Array.isArray(frames))fail('one decoded video stream and frame timestamps required');
+    const stream=streams[0];
+    if(stream.codec_type!=='video'||![stream.width,stream.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096)||
+      Number(stream.nb_read_frames)!==capture.totalFrames||frames.length!==capture.totalFrames||
+      !sameRate(stream.r_frame_rate,capture.frameRate)||!sameRate(stream.avg_frame_rate,capture.frameRate))fail('capture dimensions, FPS or frame count mismatch');
+    const step=capture.frameRate.denominator/capture.frameRate.numerator,tolerance=Math.max(0.000002,step*.005);
+    const timestamps=frames.map(frame=>typeof frame.best_effort_timestamp_time==='string'&&/^-?\d+(?:\.\d+)?$/.test(frame.best_effort_timestamp_time)?Number(frame.best_effort_timestamp_time):NaN);
+    if(timestamps.some((time,index)=>!Number.isFinite(time)||index>0&&Math.abs(time-timestamps[index-1]-step)>tolerance))fail('constant capture frame spacing required; variable or missing timestamps refused');
+    return {...capture,bytes:size,width:stream.width,height:stream.height};
+  }finally{
+    try{await source.close();}finally{if(directory)await rm(directory,{recursive:true,force:true});}
+  }
+}
+export async function verifySourceTiming(packet,{baseDirectory=process.cwd(),probe=probeSourceCapture,...catalogue}={}){
+  const normalized=validateSourceTiming(packet,catalogue),capture=await verifyCapture(normalized.capture,{baseDirectory,probe});
+  return {...normalized,status:'capture-verified-candidate',capture,
     timingUnit:'recording frames, not inferred original-engine frames',certifiedOneToOne:false,
     limits:'Identity and capture metadata checked; the observer still must review the visible action and original edition. This packet does not fill or certify workbook timings.'};
 }
 
+/** A digest binds review to these exact annotations, not to the observer's identity. */
+export function sourceTimingAnnotationDigest(packet,catalogue={}){
+  return createHash('sha256').update(JSON.stringify(validateSourceTiming(packet,catalogue))).digest('hex');
+}
+export function validateSourceTimingBatch(batch,catalogue={}){
+  keys(batch,['schema','type','fighterId','source','edition','capture','entries'],'batch');
+  if(batch.schema!==SOURCE_TIMING_BATCH_SCHEMA||batch.type!=='source-timing-batch')fail('unsupported batch schema/type');
+  if(!Array.isArray(batch.entries)||batch.entries.length<1||batch.entries.length>20)fail('batch requires 1..20 move entries');
+  const seen=new Set(),entries=[];let subject,capture;
+  for(const entry of batch.entries){
+    keys(entry,['moveKey','observedAction','measurement','review'],'batch entry');
+    const packet=validateSourceTiming({schema:SOURCE_TIMING_SCHEMA,fighterId:batch.fighterId,source:batch.source,edition:batch.edition,
+      capture:batch.capture,moveKey:entry.moveKey,observedAction:entry.observedAction,measurement:entry.measurement},catalogue);
+    if(seen.has(packet.moveKey))fail('batch move slots must be unique');seen.add(packet.moveKey);
+    subject={fighterId:packet.fighterId,source:packet.source,edition:packet.edition};capture=packet.capture;
+    const normalized={moveKey:packet.moveKey,observedAction:packet.observedAction,measurement:packet.measurement};
+    if(entry.review!==undefined){
+      keys(entry.review,['status','reviewedBy','reviewedAt','notes','annotationSHA256'],'review');
+      const r=entry.review;
+      if(r.status!=='attested-candidate'||!nonempty(r.reviewedBy)||!nonempty(r.notes))fail('review requires named reviewer, notes and candidate status');
+      if(r.reviewedBy.trim().toLowerCase()===packet.measurement.measuredBy.toLowerCase())fail('review must name a separate observer');
+      const reviewedAt=date(r.reviewedAt);
+      if(reviewedAt<packet.measurement.measuredAt)fail('review date precedes measurement');
+      if(!/^[a-f0-9]{64}$/.test(r.annotationSHA256)||r.annotationSHA256!==sourceTimingAnnotationDigest(packet,catalogue))fail('review annotation SHA256 mismatch');
+      normalized.review={status:r.status,reviewedBy:r.reviewedBy.trim(),reviewedAt,notes:r.notes.trim(),annotationSHA256:r.annotationSHA256};
+    }
+    entries.push(normalized);
+  }
+  return {schema:SOURCE_TIMING_BATCH_SCHEMA,type:'source-timing-batch',...subject,capture,entries};
+}
+export async function verifySourceTimingBatch(batch,{baseDirectory=process.cwd(),probe=probeSourceCapture,...catalogue}={}){
+  const normalized=validateSourceTimingBatch(batch,catalogue),capture=await verifyCapture(normalized.capture,{baseDirectory,probe});
+  const entries=normalized.entries.map(entry=>({...entry,
+    annotationSHA256:sourceTimingAnnotationDigest({schema:SOURCE_TIMING_SCHEMA,fighterId:normalized.fighterId,source:normalized.source,
+      edition:normalized.edition,capture:normalized.capture,moveKey:entry.moveKey,observedAction:entry.observedAction,measurement:entry.measurement},catalogue),
+    reviewStatus:entry.review?'attested-candidate':'pending-review'}));
+  return {...normalized,status:'capture-verified-batch-candidate',capture,entries,
+    summary:{captureVerifiedEntries:entries.length,reviewAttestedCandidates:entries.filter(entry=>entry.review).length},
+    timingUnit:'recording frames, not inferred original-engine frames',certifiedOneToOne:false,
+    limits:'One capture checked for all entries. Named reviews are self-reported attestations bound to annotation digests, not authenticated identities or gesture certification. No workbook timing is filled or certified.'};
+}
+
 export async function sourceTimingCommand(args){
   if(args.length===1&&args[0]==='--help'){
-    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\nRequires ffprobe. Verifies a local capture digest, constant recording FPS and frame bounds; never certifies 1:1 or changes the workbook.');
+    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\nvalidate commands require ffprobe; annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
     return;
   }
-  if(args[0]!=='validate'||!args[1]||args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3]))fail('usage: validate PACKET.json [--output VERIFIED.json]');
+  if(!['validate','validate-batch','annotation-digest'].includes(args[0])||!args[1]||args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3]))fail('usage: validate|validate-batch|annotation-digest PACKET.json [--output RESULT.json]');
   const input=resolve(args[1]),info=await lstat(input);
-  if(!info.isFile()||info.isSymbolicLink()||info.size>64*1024)fail('packet must be a regular JSON file under 64 KiB');
-  const packet=JSON.parse(await readFile(input,'utf8')),verified=await verifySourceTiming(packet,{baseDirectory:dirname(input)}),payload=JSON.stringify(verified,null,2)+'\n';
+  const maxBytes=(args[0]==='validate-batch'?256:64)*1024;
+  if(!info.isFile()||info.isSymbolicLink()||info.size>maxBytes)fail('packet must be a regular bounded JSON file');
+  const packet=JSON.parse(await readFile(input,'utf8'));
+  const verified=args[0]==='validate'?await verifySourceTiming(packet,{baseDirectory:dirname(input)}):args[0]==='validate-batch'?
+    await verifySourceTimingBatch(packet,{baseDirectory:dirname(input)}):
+    {annotationSHA256:sourceTimingAnnotationDigest(packet),status:'annotation-only',captureVerified:false,certifiedOneToOne:false};
+  const payload=JSON.stringify(verified,null,2)+'\n';
   if(args[3])await writeFile(resolve(args[3]),payload,{flag:'wx'});
   else process.stdout.write(payload);
 }

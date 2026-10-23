@@ -31,6 +31,11 @@ const FIREARM_SHOT_SLOTS = Object.freeze({
   downpour_anne_cunningham:['neutralSpecial','super'],
   arcade_robbie_the_rabbit_shotgun:['neutralSpecial','super','desperation']
 });
+const HANDGUN_FIGHTERS = new Set([
+  'sh1_monster_cybil_017','sh2_eddie_dombrowski_032','sh3_nurse_revolver_044',
+  'sh3_memory_of_alessa_049','sh4_man_with_the_coat_067','sh4_walter_sullivan_072',
+  'downpour_anne_cunningham'
+]);
 
 const shot = (name, extra = {}) => ({ name, projectile:true, active:1, hits:1,
   reach:720, projectileCount:1, projectileArc:0, projectileGravity:0,
@@ -179,13 +184,38 @@ define('sh3_numb_body_small_037 sh3_numb_body_medium sh3_numb_body_large_038', {
   moves:{...weaponKit('Heurt de tête'), neutralSpecial:contact('Bond de tête', {travel:3.2}),
     super:contact('Approche puis heurt de tête', {hits:2, travel:3.2})}
 });
-define('sh3_pendulum_039', {moves:{
+// SH3 (2003), enemies_en.htm: frontal Handgun rounds are deflected; the
+// Shotgun and Submachine Gun remain effective. Mapping other works' handguns
+// to the same versus class and the idle defense window are local choices.
+define('sh3_pendulum_039', {defense:{frontalHandgunBullets:true},moves:{
   ...weaponKit('Lames tournantes'),
   neutralSpecial:contact('Rotation métallique', {hits:3, reach:165}),
   forwardSpecial:contact('Charge rotative visible', {hits:2, travel:4.1}),
   super:contact('Rotation puis pointe inférieure', {hits:3, travel:2.5}),
   desperation:contact('Dernière charge rotative', {hits:3, travel:3.1})
 }});
+// SH3 enemies_en.htm: arm swipes and a running charge that bowls Heather over.
+// Travel, damage and recovery are authored versus tuning, not source timings.
+define('sh3_insane_cancer_041', {moves:{
+  ...weaponKit('Bras de l’Insane Cancer'),
+  neutralSpecial:contact('Charge du corps',{travel:3.2,knockdown:true,hits:1}),
+  forwardSpecial:contact('Course puis collision',{travel:4,knockdown:true,hits:1}),
+  super:contact('Charge renversante prolongée',{travel:3.8,knockdown:true,hits:1}),
+  desperation:contact('Dernière charge du corps',{travel:4.2,knockdown:true,hits:1})
+}});
+// SH3 enemies_en.htm: the low rush knocks Heather down; at close range the
+// Slurper holds and chews her leg. Bind substitutes for the original escape
+// inputs. It does not establish a measured struggle duration or a rear throw.
+define('sh3_slurper_042', {
+  disabledSlots:{backThrow:'La morsure retient la jambe ; aucune projection arrière avec échange de places n’est documentée.'},
+  moves:{...weaponKit('Morsure rampante'),
+    neutralSpecial:contact('Prise de jambe puis morsure',{level:'throw',effectOverride:'bind',hits:1,reach:90}),
+    forwardSpecial:contact('Charge rampante renversante',{travel:4,knockdown:true,level:'low',hits:1}),
+    throw:contact('Jambe retenue par la mâchoire',{effectOverride:'bind',hits:1}),
+    super:contact('Emprise basse prolongée',{level:'throw',effectOverride:'bind',hits:1,reach:100}),
+    desperation:contact('Dernière emprise rampante',{level:'throw',effectOverride:'bind',hits:1,reach:110})
+  }
+});
 define('sh3_nurse_revolver_044', {moves:{...weaponKit('Crosse du revolver'),
   neutralSpecial:shot('Tir de revolver'), super:shot('Ligne de soin — tir'), desperation:shot('Dernier tir de la Nurse')
 }});
@@ -237,31 +267,37 @@ define('sh4_gum_head_old_type_057', {moves:weaponKit('Poing du Gum Head')});
 define('sh4_gum_head_new_type_058', {moves:weaponKit('Tube du Gum Head')});
 define('sh4_patient_060', {moves:weaponKit('Marteau du Patient')});
 const SH4_GHOSTS = 'sh4_ghost_victim_066 sh4_jimmy_stone_victim_1 sh4_steve_garland_victim_4 sh4_eric_walsh_victim_10 sh4_peter_walls_victim_12 sh4_sharon_blake_victim_13 sh4_toby_archbolt_victim_14';
-define(SH4_GHOSTS, {moves:{
+// SH4: The Room (2004), enemies_en.htm: all these ghosts drain nearby health
+// without attacking. Jasper adds larger fire damage. The local radius, pulse
+// interval and health conversion are versus choices; no source timing measured.
+const ghostProximity = (burning=false) => ({id:burning?'sh4-ghost-burning-proximity':'sh4-ghost-proximity',
+  kind:'drain',radius:115,cooldown:60,damage:1,bonusDamage:burning?5:0,
+  fidelity:'source-proximity-drain-versus-tuning',sourceTimingMeasured:false});
+define(SH4_GHOSTS, {proximityField:ghostProximity(),moves:{
   neutralSpecial:nearAura('Présence dangereuse rapprochée'), downSpecial:nearAura('Aura de proximité'),
   super:nearAura('Pression de proximité', {hits:2, active:14}),
   desperation:nearAura('Dernière pression spectrale', {hits:2, active:18}),
   backSpecial:contact('Recul en flottement'), dodgeAttack:contact('Glissement de riposte')
 }});
-define('sh4_cynthia_velasquez_victim_16', {moves:{
+define('sh4_cynthia_velasquez_victim_16', {proximityField:ghostProximity(),moves:{
   neutralSpecial:contact('Saisie par les cheveux', {level:'throw', effectOverride:'bind'}),
   downSpecial:nearAura('Présence rapprochée de Cynthia'),
   throw:contact('Cheveux enserrants', {effectOverride:'bind'}),
   super:contact('Cheveux puis emprise courte', {level:'throw', hits:1, effectOverride:'bind'})
 }});
-define('sh4_jasper_gein_victim_17', {moves:{
+define('sh4_jasper_gein_victim_17', {proximityField:ghostProximity(true),moves:{
   ...weaponKit('Chandelier'),
   neutralSpecial:nearAura('Proximité brûlante', {effectOverride:'burn'}),
   downSpecial:nearAura('Aura brûlante de Jasper', {effectOverride:'burn'}),
   super:nearAura('Cercle brûlant rapproché', {effectOverride:'burn', hits:2, active:14}),
   desperation:nearAura('Dernière présence brûlante', {effectOverride:'burn', hits:2, active:18})
 }});
-define('sh4_andrew_desalvo_victim_18', {moves:{
+define('sh4_andrew_desalvo_victim_18', {proximityField:ghostProximity(),moves:{
   neutralSpecial:contact('Charge tournoyante', {travel:3.8}),
   downSpecial:nearAura('Présence rapprochée d’Andrew'),
   super:contact('Rotation puis collision', {travel:4, hits:2})
 }});
-define('sh4_richard_braintree_victim_19', {moves:{
+define('sh4_richard_braintree_victim_19', {proximityField:ghostProximity(),moves:{
   ...weaponKit('Pied-de-biche'),
   forwardSpecial:contact('Téléportation puis pied-de-biche', {teleport:'behind', hits:1}),
   backSpecial:contact('Téléportation courte', {teleport:'cross'}),
@@ -508,6 +544,17 @@ export function isFirearmProjectile(fighter, move) {
 
 export function isVisibleFirearmProjectile(fighter, move) {
   return move?.silenced!==true&&isFirearmProjectile(fighter,move);
+}
+
+export function isHandgunProjectile(fighter,move) {
+  if(!isFirearmProjectile(fighter,move)||!HANDGUN_FIGHTERS.has(fighter.id))return false;
+  return fighter.id!=='sh3_memory_of_alessa_049'||move.weaponPhaseId==='handgun';
+}
+
+export function passiveProximityField(fighter) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES);
+  const field=ref&&RECIPES[ref.id]?.proximityField;
+  return field?{...field}:null;
 }
 
 export function firearmExposure(fighter, attack) {

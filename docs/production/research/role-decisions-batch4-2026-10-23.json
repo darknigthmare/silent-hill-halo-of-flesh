@@ -1,0 +1,205 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-23",
+  "baseCommit": "4239f9de0dfadcc8b2b048a6ffb0d0d30361a42f",
+  "scope": "Passe 4 : sept décisions P0 de rôle. Aucune certification des poses, de la géométrie ou des timings 1:1.",
+  "networkMethod": "HTTPS via proxy et validation TLS configurés ; pages HTTP 200 sauvegardées avec SHA-256 hors dépôt.",
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch4-roles-2026-10-23/",
+  "sources": [
+    {
+      "id": "EXT_SH4_SCRIPT_20261023",
+      "url": "https://www.silenthillmemories.net/sh4/game_script_en.htm",
+      "httpStatus": 200,
+      "bytes": 185783,
+      "sha256": "2ea7f4d8881993d9a9c9273796cf54ce7f5dfd62dda633252ca24a76430cdb98",
+      "localFile": "sh4-script.html"
+    },
+    {
+      "id": "CL_SH4_12_ROOM_302_OF_THE_PAST",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_12_room_302_of_the_past_en.htm",
+      "httpStatus": 200,
+      "bytes": 20253,
+      "sha256": "dc6fd30cbd12b071a9cb389504c6728b12b189e85ef8d1f9c715ce2d92a9b7e4",
+      "localFile": "sh4-roompast.html"
+    },
+    {
+      "id": "CL_SH4_13_OUTSIDE_ROOM_302",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+      "httpStatus": 200,
+      "bytes": 44427,
+      "sha256": "0b729cfbbd80fd7ec4bb8a1c0821d3779ccecb2b07ca7b4be8210f1d0d18c1fa",
+      "localFile": "sh4-outside302.html"
+    },
+    {
+      "id": "EXT10",
+      "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+      "httpStatus": 200,
+      "bytes": 16869,
+      "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+      "localFile": "downpour-monsters.html"
+    },
+    {
+      "id": "EXT20",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+      "httpStatus": 200,
+      "bytes": 34359,
+      "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+      "localFile": "bom-bestiary.html"
+    },
+    {
+      "id": "EXT_SH4_ODDITIES_20261023",
+      "url": "https://www.silenthillmemories.net/sh4/cool_and_scary_things_en.htm",
+      "httpStatus": 200,
+      "bytes": 34822,
+      "sha256": "b923f0a7caa125fd73f3f148bbcef2c4bad73043db1ac3bab06ae3ef9e0c94f4",
+      "localFile": "sh4-cool-scary.html"
+    },
+    {
+      "id": "EXT_DP_PITSTOP_20261023",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_02_devils_pitstop_en.htm",
+      "httpStatus": 200,
+      "bytes": 23865,
+      "sha256": "d4aeac69b558269228782de20675680cf830f8eb7b4a6c67d96bdef8d53f8947",
+      "localFile": "downpour-devilspitstop.html"
+    }
+  ],
+  "decisions": [
+    {
+      "status": "resolved",
+      "fighterId": "sh4_joseph_schreiber_victim_15",
+      "decision": "noncombatant",
+      "edition": "SH4 original 2004",
+      "evidence": [
+        "EXT_SH4_SCRIPT_20261023",
+        "CL_SH4_12_ROOM_302_OF_THE_PAST"
+      ],
+      "rationale": "Dans la scène de Room 302 of the Past, le buste inversé de Joseph renseigne Henry et Eileen sur Walter et leur demande de suivre le Crimson Tome. La fonction retenue est une apparition de conseil, sans héritage du kit offensif des Ghosts ; le moteur bloque déjà ses commandes de combat.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "Eileen (sees Joseph’s bust hangs upside down in the room). Joseph: Follow the...Crimson Tome... Stop him...",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "sh4_sacrificed_walter_071",
+      "decision": "scripted-encounter",
+      "edition": "SH4 original 2004",
+      "evidence": [
+        "CL_SH4_13_OUTSIDE_ROOM_302"
+      ],
+      "rationale": "Le guide distingue le corps géant du Conjurer, cible du cordon ombilical puis de huit lances, du Shadow Walter qui se déplace et attaque au tuyau et au pistolet. Sacrificed Walter reste le nom de projet de ce composant rituel ancré, sans kit ni déplacement autonome.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "The “true body of the Conjurer” is the huge creature in this arena (Walter’s true form).",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "downpour_doll_106",
+      "decision": "environmental-obstacle",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "evidence": [
+        "EXT10"
+      ],
+      "rationale": "Le bestiaire décrit explicitement un mannequin stationnaire qui projette des Shadows offensives. Le mannequin et ses projections sont des entités distinctes ; détruire la Doll dissipe les Shadows. Le rôle retenu est un ancrage environnemental invocateur, sans locomotion ni coups directs du mannequin.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "A stationary mannequin of an adult store. Casts Shadows that attack the protagonist.",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "downpour_tormented_soul_111",
+      "decision": "environmental-obstacle",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "evidence": [
+        "EXT10"
+      ],
+      "rationale": "Le bestiaire décrit une créature passive dans une cage renversée par Murphy sur le trajet du Void. La cage sert d’obstacle sacrifié pendant la fuite ; ne pas lui transférer le jet offensif du Wall Corpse auquel elle ressemble.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "A passive creature encountered on the hero’s path during the Void Chase.",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "downpour_void_113",
+      "decision": "environmental-obstacle",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "evidence": [
+        "EXT10",
+        "EXT_DP_PITSTOP_20261023"
+      ],
+      "rationale": "Le Void est une lumière rouge de poursuite ; le guide du Diner précise qu’on ne peut pas le blesser et que la seule solution est de courir en utilisant le parcours. Le rôle est un danger environnemental mobile, pas un combattant avec garde, saisies ou KO.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "You can’t harm the Void in any way, but it can hurt you. The only option you have is to run.",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "downpour_monocle_man_114",
+      "decision": "noncombatant",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "evidence": [
+        "EXT10"
+      ],
+      "rationale": "Le bestiaire décrit une créature passive qui terrorise psychologiquement Murphy. La décision est limitée aux apparitions de la version commerciale et n’intègre aucun boss de prototype restauré ; aucune attaque ou identité symbolique supplémentaire n’est validée.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "A passive creature that terrorizes the hero psychologically.",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    },
+    {
+      "status": "resolved",
+      "fighterId": "bom_mother_135",
+      "decision": "environmental-obstacle",
+      "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "evidence": [
+        "EXT20"
+      ],
+      "rationale": "Le bestiaire décrit une masse féminine fixée au sol qui sert de portail à de petites créatures et indique Weapon: None. Le rôle retenu est un point de génération ancré ; aucune marche, garde, saisie ou attaque directe n’est attribuée au corps de Mother.",
+      "reviewedAt": "2026-10-23",
+      "sourceExcerpt": "A female-shaped mass of flesh pinned to the floor, this creature acts as a portal to bring small creatures into the nightmare world. Weapon: None.",
+      "runtimeRequirement": "reviewed=true ; rôle/ID/source/édition identiques ; combat, déplacement, saut, dodge et super interdits ; toutes les commandes désactivées avant validation du plan."
+    }
+  ],
+  "remainingReviewed": [
+    {
+      "fighterId": "sh2_prisoner_035",
+      "status": "open",
+      "reason": "Lost Memories confirme la voix et l’existence invisible dans les cellules, mais ne documente pas explicitement la non-hostilité ; aucune clôture par absence d’attaque dans le texte."
+    },
+    {
+      "fighterId": "sh4_greedy_worm_069",
+      "status": "open",
+      "reason": "Le relevé confirme qu’il est attaquable mais non tuable et décrit ses emplacements ; pas de preuve explicite de non-hostilité ni capture mesurée de la réaction."
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "status": "open",
+      "reason": "La chambre et la réaction des yeux au Stun Gun sont documentées, sans preuve explicite que l’apparition ne peut infliger aucun dégât. L’identité exacte reste nuancée."
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "status": "open",
+      "reason": "Jet d’air empoisonné et version roulante tardive documentés ; pas de clôture tant que l’ancrage exact de la version murale et la séparation de variantes ne sont pas recoupés visuellement."
+    },
+    {
+      "fighterId": "shf_corruptor_155",
+      "status": "open",
+      "reason": "Vomissement documenté, sans preuve suffisante d’un rôle stationnaire de décor plutôt que combattant."
+    },
+    {
+      "fighterId": "shf_hatcher_156",
+      "status": "open",
+      "reason": "Génération de cocons documentée ; l’absence de locomotion autonome n’est pas démontrée."
+    },
+    {
+      "fighterId": "shf_dark_hatcher_160",
+      "status": "open",
+      "reason": "Génération de cocons documentée ; ne pas déduire un rôle environnemental de la seule morphologie."
+    }
+  ],
+  "workbookInvariants": {
+    "observations": 435,
+    "existingSourcePrefix": 136,
+    "sourcesAfterAppend": 139,
+    "newSourcesAppendedTo": "extended.sources",
+    "preserved": "IDs/profils/noms/ordre des observations et les onze décisions antérieures ; aucun ajout de ligne d’observation."
+  }
+}

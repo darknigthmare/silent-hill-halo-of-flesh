@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,writeFile,rm,symlink} from 'node:fs/promises';
+import {mkdtemp,writeFile,readFile,lstat,rm,symlink} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
-import {join} from 'node:path';
+import {join,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
-import {validateSourceTiming,verifySourceTiming,sourceTimingCommand} from '../scripts/source-timing.mjs';
+import {validateSourceTiming,verifySourceTiming,sourceTimingAnnotationDigest,validateSourceTimingBatch,verifySourceTimingBatch,sourceTimingCommand} from '../scripts/source-timing.mjs';
 
 // A container-header fixture and injected decoder output exercise validation;
 // these bytes and timestamps are not a source-game capture or measured action.
@@ -21,6 +21,17 @@ async function fixture(context){
  const directory=await mkdtemp(join(tmpdir(),'halo-source-timing-'));
  context.after(()=>rm(directory,{recursive:true,force:true}));
  await writeFile(join(directory,'capture.mp4'),bytes);return directory;
+}
+function batch(){
+ const p=packet();return {schema:1,type:'source-timing-batch',fighterId:p.fighterId,source:p.source,edition:p.edition,capture:p.capture,
+  entries:[{moveKey:p.moveKey,observedAction:p.observedAction,measurement:p.measurement},
+   {moveKey:'forwardLight',observedAction:'Fixture only: a second annotation',measurement:{...p.measurement}}]};
+}
+function entryPacket(b,entry=b.entries[0]){return {schema:1,fighterId:b.fighterId,source:b.source,edition:b.edition,capture:b.capture,
+ moveKey:entry.moveKey,observedAction:entry.observedAction,measurement:entry.measurement};}
+function review(b){
+ b.entries[0].review={status:'attested-candidate',reviewedBy:'Separate QA observer',reviewedAt:'2026-10-23',
+  notes:'Synthetic annotation review, no source-game observation.',annotationSHA256:sourceTimingAnnotationDigest(entryPacket(b))};return b;
 }
 
 test('timing packets retain exact identity and rational recording FPS without invented source-engine timing',()=>{
@@ -59,6 +70,36 @@ test('capture verification binds decoded metadata to the actual local file diges
  const changed=packet();changed.capture.sha256='0'.repeat(64);
  await assert.rejects(verifySourceTiming(changed,{baseDirectory:directory,probe:()=>{throw Error('must not decode a changed capture');}}),/SHA256 mismatch/);
 });
+test('single and batch probes read the hashed snapshot despite replacement of the source path',async context=>{
+ const directory=await fixture(context);
+ for(const input of [packet(),review(batch())]){
+  await writeFile(join(directory,'capture.mp4'),bytes);let snapshot;
+  const result=await (input.type?verifySourceTimingBatch:verifySourceTiming)(input,{baseDirectory:directory,probe:async path=>{
+   snapshot=path;assert.notEqual(path,join(directory,'capture.mp4'));
+   assert.equal((await lstat(path)).mode&0o222,0,'decoder snapshot is read-only');
+   await writeFile(join(directory,'capture.mp4'),'concurrently replaced original source file');
+   assert.deepEqual(await readFile(path),bytes,'decode the exact bytes hashed for review');return metadata();
+  }});
+  assert.equal(result.capture.sha256,sha256);assert.equal(result.capture.bytes,bytes.length);
+  if(input.type)assert.equal(result.entries[0].reviewStatus,'attested-candidate');
+  await assert.rejects(lstat(snapshot),error=>error.code==='ENOENT');
+  await assert.rejects(lstat(dirname(snapshot)),error=>error.code==='ENOENT');
+ }
+});
+test('decoder failure removes the temporary capture and private directory',async context=>{
+ const directory=await fixture(context);let snapshot;
+ await assert.rejects(verifySourceTimingBatch(batch(),{baseDirectory:directory,probe:async path=>{snapshot=path;throw new Error('fixture decoder failure');}}),/fixture decoder failure/);
+ await assert.rejects(lstat(snapshot),error=>error.code==='ENOENT');
+ await assert.rejects(lstat(dirname(snapshot)),error=>error.code==='ENOENT');
+});
+test('snapshot hashing and copying retains all bytes across bounded read chunks',async context=>{
+ const directory=await fixture(context),large=Buffer.concat([bytes,Buffer.alloc(160000,0x5a)]),p=packet();
+ await writeFile(join(directory,'capture.mp4'),large);p.capture.sha256=createHash('sha256').update(large).digest('hex');
+ const result=await verifySourceTiming(p,{baseDirectory:directory,probe:async path=>{
+  assert.deepEqual(await readFile(path),large);return metadata();
+ }});
+ assert.equal(result.capture.bytes,large.length);assert.equal(result.capture.sha256,p.capture.sha256);
+});
 test('decoder frame count, dimensions, rate and constant spacing must match the claim',async context=>{
  const directory=await fixture(context);
  for(const change of [m=>m.streams[0].nb_read_frames='4',m=>m.frames.pop(),m=>m.streams[0].width=8192,
@@ -83,4 +124,61 @@ test('CLI refuses malformed arguments and rejects an invalid packet before produ
  const directory=await fixture(context),input=join(directory,'packet.json');
  await writeFile(input,JSON.stringify({...packet(),certifiedOneToOne:true}));
  await assert.rejects(sourceTimingCommand(['validate',input,'--output',input]),/unsupported fields/);
+});
+test('a shared capture is decoded once for distinct slots with separately bound review status',async context=>{
+ const directory=await fixture(context),input=review(batch()),before=structuredClone(input);let decoded=0;
+ const result=await verifySourceTimingBatch(input,{baseDirectory:directory,probe:()=>{decoded++;return metadata();}});
+ assert.equal(decoded,1);assert.deepEqual(input,before);assert.equal(result.status,'capture-verified-batch-candidate');
+ assert.deepEqual(result.summary,{captureVerifiedEntries:2,reviewAttestedCandidates:1});
+ assert.equal(result.entries[0].reviewStatus,'attested-candidate');assert.equal(result.entries[1].reviewStatus,'pending-review');
+ assert.equal(result.entries[0].annotationSHA256,input.entries[0].review.annotationSHA256);
+ assert.equal(result.certifiedOneToOne,false);assert.match(result.limits,/self-reported.*not authenticated.*No workbook/);
+ assert.deepEqual(result.capture.frameRate,{numerator:30000,denominator:1001});
+});
+test('batch scope is one exact subject and recording with unique bounded move slots',()=>{
+ for(const change of [b=>b.entries=[],b=>b.entries=Array(21).fill(b.entries[0]),b=>b.entries[1].moveKey=b.entries[0].moveKey,
+  b=>b.type='certified-batch',b=>b.source='sh2',b=>b.edition='remake',b=>b.certifiedOneToOne=true,
+  b=>b.entries[1].source='sh2',b=>b.entries[1].capture={...b.capture},b=>b.entries[1].moveKey='constructor']){
+  const input=batch();change(input);assert.throws(()=>validateSourceTimingBatch(input),/Source timing/);
+ }
+});
+test('review attestations are invalidated by changed action, frames, observer or provenance',()=>{
+ for(const change of [b=>b.entries[0].measurement.impactFrame=0,b=>b.entries[0].observedAction+=' changed',
+  b=>b.capture.sourceUrl='https://example.invalid/other-recording',b=>b.capture.sha256='1'.repeat(64),
+  b=>b.entries[0].measurement.measuredBy='Another measurer',b=>b.entries[0].review.annotationSHA256='f'.repeat(64)]){
+  const input=review(batch());change(input);assert.throws(()=>validateSourceTimingBatch(input),/review annotation SHA256 mismatch/);
+ }
+});
+test('review remains a dated named candidate attestation and cannot self-certify',()=>{
+ for(const change of [b=>b.entries[0].review.reviewedBy=' QA fixture ',b=>b.entries[0].review.reviewedBy='',
+  b=>b.entries[0].review.reviewedAt='2026-10-22',b=>b.entries[0].review.reviewedAt='2026-02-30',
+  b=>b.entries[0].review.notes='',b=>b.entries[0].review.status='certified',b=>b.entries[0].review.certifiedOneToOne=true]){
+  const input=review(batch());change(input);assert.throws(()=>validateSourceTimingBatch(input),/Source timing/);
+ }
+});
+test('one invalid batch annotation refuses the complete result before any capture decode',async context=>{
+ const directory=await fixture(context),input=batch();input.entries[1].measurement.endFrame=3;let decoded=0;
+ await assert.rejects(verifySourceTimingBatch(input,{baseDirectory:directory,probe:()=>{decoded++;return metadata();}}),/within the file/);
+ assert.equal(decoded,0);
+});
+test('batch verification still checks actual capture bytes and refuses variable spacing',async context=>{
+ const directory=await fixture(context),input=batch();input.capture.sha256='0'.repeat(64);
+ await assert.rejects(verifySourceTimingBatch(input,{baseDirectory:directory,probe:()=>metadata()}),/SHA256 mismatch/);
+ const m=metadata();m.frames[1].best_effort_timestamp_time='0.05';
+ await assert.rejects(verifySourceTimingBatch(batch(),{baseDirectory:directory,probe:()=>m}),/constant capture frame spacing/);
+});
+test('annotation-only CLI writes a bound digest without pretending to verify capture or overwrite output',async context=>{
+ const directory=await fixture(context),input=join(directory,'packet.json'),output=join(directory,'annotation.json');
+ await writeFile(input,JSON.stringify(packet()));await sourceTimingCommand(['annotation-digest',input,'--output',output]);
+ const result=JSON.parse(await readFile(output,'utf8'));
+ assert.equal(result.annotationSHA256,sourceTimingAnnotationDigest(packet()));assert.equal(result.captureVerified,false);
+ assert.equal(result.certifiedOneToOne,false);assert.equal(result.status,'annotation-only');
+ await assert.rejects(sourceTimingCommand(['annotation-digest',input,'--output',output]),/EEXIST/);
+ assert.equal(JSON.parse(await readFile(input,'utf8')).fighterId,packet().fighterId);
+});
+test('batch CLI rejects extra certification fields before producing an output',async context=>{
+ const directory=await fixture(context),input=join(directory,'batch.json'),output=join(directory,'verified.json');
+ await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
+ await assert.rejects(sourceTimingCommand(['validate-batch',input,'--output',output]),/unsupported fields/);
+ await assert.rejects(readFile(output),/ENOENT/);
 });

@@ -1,0 +1,1324 @@
+{
+  "schema": "halo-batch4-visual-provenance-v1",
+  "reviewedAt": "2026-10-23",
+  "origin": "conversation-image-generation",
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "originalReferences": {
+    "schema": "halo-source-visual-references-batch4-v1",
+    "created_utc": "2026-10-23",
+    "downloaded_via": "Inherited cloud session HTTP proxy and TLS trust; no network bypass",
+    "repository_changes": "None by this research task",
+    "source_rights": "Reference only, downloaded outside repository; no claim of permission to redistribute source pixels",
+    "actors": [
+      {
+        "id": "sh1_groaner_003",
+        "name": "Groaner",
+        "edition": "Silent Hill (1999, PS1), original game model art; capture/render processing not established",
+        "refs": [
+          {
+            "file": "sh1_art_cre_04_groaner.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_04.jpg",
+            "httpStatus": 200,
+            "bytes": 223209,
+            "sha256": "25b3d0d9ae88fcee8001f208397ad3617ba2cc2f9157caded96d74b47285f8ef",
+            "width": 1600,
+            "height": 1200,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_art_cre_04_groaner.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "groaner-model-left",
+            "limits": "Four legs, long thin tail, left-facing dog-like head, folded muddy tan skin and visible teeth/tongue. Paw tips touch lower edge. Single final pose only; guide PNG duplicates this pose."
+          }
+        ]
+      },
+      {
+        "id": "sh1_floatstinger_016",
+        "name": "Floatstinger",
+        "edition": "Silent Hill (1999, PS1), original game; platform region/render settings of guide screenshot unestablished",
+        "refs": [
+          {
+            "file": "sh1_art_cre_12_floatstinger.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_12.jpg",
+            "httpStatus": 200,
+            "bytes": 176689,
+            "sha256": "5b7caad140e40294ab453d0a4fcf643363c0d91a364afe18758fb183a0390956",
+            "width": 1600,
+            "height": 1200,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_art_cre_12_floatstinger.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "floatstinger-model-front",
+            "limits": "Four moth wings, two feathery antennae, small central thorax legs, long tapered abdomen. Extreme wing tips near border. Static model pose, no timing."
+          },
+          {
+            "file": "sh1_floatstinger_game.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_boss_floatstinger_moth.jpg",
+            "httpStatus": 200,
+            "bytes": 102262,
+            "sha256": "ba4f7b2dee3f032716c9a4c30b695a974438a79f5a7ef2d3f6c59783f13aa407",
+            "width": 1048,
+            "height": 789,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_floatstinger_game.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+            "visually_inspected": true,
+            "role": "secondary_gameplay_context",
+            "independent_view_group": "floatstinger-game-rooftop",
+            "limits": "Genuine distinct in-game angle with hovering creature and Harry on rooftop. Some wings cropped, not a complete turntable; no animation duration."
+          }
+        ]
+      },
+      {
+        "id": "sh1_split_head_014",
+        "name": "Split Head",
+        "edition": "Silent Hill (1999, PS1), original game model art and Perfect Navigation Book concept illustration",
+        "refs": [
+          {
+            "file": "sh1_art_cre_06_split_head.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_06.jpg",
+            "httpStatus": 200,
+            "bytes": 124701,
+            "sha256": "855098e1777a1018b731bff5cfba27e72bf6dc0c53b967dd4784d26a12489e00",
+            "width": 1600,
+            "height": 1200,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_art_cre_06_split_head.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "splithead-model",
+            "limits": "Squat thick brown-grey lizard, bulky closed elongated head. Limb and tail ends touch/crop source boundaries; unseen extremes not established."
+          },
+          {
+            "file": "sh1_split_head_book_sketch.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_perfect_navigation_book_05_split_head_lizzard.jpg",
+            "httpStatus": 200,
+            "bytes": 2096671,
+            "sha256": "18de86f8d777fbcf71a280ebb4073e81699a3632b1033bbba46f6faed7b69bb7",
+            "width": 2560,
+            "height": 1360,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_split_head_book_sketch.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "supplemental_concept",
+            "independent_view_group": "splithead-book-concept",
+            "limits": "Distinct Perfect Navigation Book drawing shows long-tailed lizard curled around central fire. Concept/guide illustration, not second final game pose. Boss screenshot sh1_split_head_game.jpg contains empty arena only and is excluded as creature evidence."
+          }
+        ]
+      },
+      {
+        "id": "sh1_twinfeeler_015",
+        "name": "Twinfeeler",
+        "edition": "Silent Hill (1999, PS1), original game model art",
+        "refs": [
+          {
+            "file": "sh1_art_cre_15_twinfeeler.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_15.jpg",
+            "httpStatus": 200,
+            "bytes": 107191,
+            "sha256": "22d6b4996ac07fd1c6e4f43a09de4b23f8a721ed8ff61aa20892981363eec40a",
+            "width": 1600,
+            "height": 1200,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh1_art_cre_15_twinfeeler.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "twinfeeler-model",
+            "limits": "Long yellow-brown segmented larval body; small underside dark projections, left-end long split appendages, right-end paired appendages. Both ends touch/crop image borders. Only one final pose established."
+          }
+        ]
+      },
+      {
+        "id": "sh3_numb_body_small_037",
+        "name": "Numb Body",
+        "edition": "Silent Hill 3 (2003, PS2/PC original), creature model art; exact small/medium/large variant not independently established",
+        "applicability_warning": "Do not use one pose as proof of all three variant scales or silhouettes. Candidate may be catalogued as small only as an adaptation, with remaining scale unverified.",
+        "refs": [
+          {
+            "file": "sh3_numb_body_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg",
+            "httpStatus": 200,
+            "bytes": 360371,
+            "sha256": "83e5033122a0e314c5b8438dab20f1e24a6a51a942b0214795ea195b7d738166",
+            "width": 3200,
+            "height": 2712,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh3_numb_body_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "numbbody-model",
+            "limits": "Two thick legs, no arms, fused forward beak-like head to right, two rear upper projections to left, marbled pale skin. Guide PNG and DVD Lost Memories image04 repeat identical pose; not independent views."
+          }
+        ]
+      },
+      {
+        "id": "sh3_split_worm_046",
+        "name": "Split Worm",
+        "edition": "Silent Hill 3 (2003, PS2/PC original), model art and guide in-game closeup; capture settings unestablished",
+        "refs": [
+          {
+            "file": "sh3_split_worm_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_11_split_worm.jpg",
+            "httpStatus": 200,
+            "bytes": 745292,
+            "sha256": "843364cd78f75e2751f248c84bbc318340a1d9b4fa9e7f0e5ee3abc6ebb3f5ca",
+            "width": 3200,
+            "height": 2400,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh3_split_worm_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "splitworm-model",
+            "limits": "Purple-grey segmented worm with large open mouth and pink inner tissues/fine strands. Rear recedes from camera; full length not visible."
+          },
+          {
+            "file": "sh3_split_worm_game.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_split_worm.jpg",
+            "status": 200,
+            "bytes": 236024,
+            "sha256": "ab87dfade02ae967d3ff54c38639bd909b458187c19fcfe2b98433b291c215a9",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh3_split_worm_game.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+            "visually_inspected": true,
+            "role": "secondary_gameplay_closeup",
+            "independent_view_group": "splitworm-game-front",
+            "limits": "Distinct close-up of final head/mouth, segmented rim and connecting filaments. Does not establish full body length or animation. Early quadruped concept sketch is explicitly excluded from final anatomy."
+          }
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "id": "woodside",
+        "name": "Wood Side Apartments corridor",
+        "edition": "Silent Hill 2 original PC – Letter from Silent Heaven, gallery explicitly labels platform; region/build/patch unknown",
+        "refs": [
+          {
+            "file": "sh2_screenshot_pc_08.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_08.jpg",
+            "status": 200,
+            "bytes": 181497,
+            "sha256": "acdadb01a9070f9fb3677671fcbef6a36b2837bb94d41284327ac4c8bc336ecb",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh2_screenshot_pc_08.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/screens_en.htm",
+            "visually_inspected": true,
+            "role": "primary_architecture",
+            "independent_view_group": "woodside-hall-away",
+            "limits": "Narrow corridor, dirty off-white plaster, blue horizontal wall strip, worn blue/beige carpet, dim overhead light. Back of James occludes lower center. Exact sub-hall/floor inferred from Wood Side context, not explicitly captioned."
+          },
+          {
+            "file": "sh2_screenshot_pc_09.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_09.jpg",
+            "status": 200,
+            "bytes": 181650,
+            "sha256": "8da03c8207359ec95d5a33f82049d5abf4097ab0c689abfaed9e40ce2cd59482",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch4-2026-10-23/sh2_screenshot_pc_09.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/screens_en.htm",
+            "visually_inspected": true,
+            "role": "secondary_architecture",
+            "independent_view_group": "woodside-hall-facing",
+            "limits": "Distinct reverse/front camera angle of same architecture/palette, James facing camera and fallen creature. Preserve geometry/palette; remove figures for environment candidate. Not a full floorplan. No cross-scene textures from hospital/remake."
+          }
+        ],
+        "generated_candidate_history": [
+          {
+            "path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+            "sha256": "c40cb7e77d9f963e81b913ce6fd11501e4391803e60a2f7faa4b6c3b5444e63e",
+            "status": "superseded",
+            "limits": "Centered/widened first-person corridor caused paws to overlap side plinth in real versus capture."
+          },
+          {
+            "path": "/workspace/generated_images/exec-4a0ac22e-4668-427a-8916-e3ad7772a0a7.png",
+            "sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5",
+            "status": "selected_final_candidate",
+            "limits": "Foreground floor now spans full width from approximatelysourcey640(bottom32%), so expected actor baseline aroundsourcey765 is carpet at both positions. Dirty off-white plaster, blue trim, worn blue/beige carpet and ceiling lamp retained; no source figures, abrupt tiling or opaque overlay seam visible. Hall widens at foreground and wall angles/camera/cut are reconstructed specifically for versus grounding; not original scene geometry. Final desktop/mobile captures confirm feet on carpet; camera/cut remain adapted versus geometry."
+          }
+        ],
+        "final_geometry_status": "Explicit versus adaptation from original PC materials/scene; widened foreground floor and camera/cut do not claim canonical floorplan.",
+        "final_http_review": {
+          "path": "/workspace/shared/halo-of-flesh/validation-batch4-2026-10-23/visual-http-review.json",
+          "stage_pin": "assets/stages/woodside.corridor.c6ac083599d0.png",
+          "result": "Grounding reservation resolved in final desktop/mobile captures; geometry remains explicit versus adaptation."
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "files": [
+          "sh1-groaner-guide.png",
+          "sh3_numb_body_guide.png",
+          "dvd_sh3_cre_thumb_04.jpg",
+          "dvd_sh3_cre_thumb_05.jpg"
+        ],
+        "reason": "Same displayed final model poses as primary art, cannot count as independent source views."
+      },
+      {
+        "files": [
+          "sh1_split_head_game.jpg"
+        ],
+        "reason": "Only empty circular boss arena and Harry/fire; creature absent."
+      },
+      {
+        "files": [
+          "sh3_split_worm_sketch.jpg",
+          "dvd_sh3_cre_thumb_34.jpg"
+        ],
+        "reason": "Early quadruped concept differs from final worm; cannot establish final limbs/body."
+      },
+      {
+        "files": [
+          "sh1_screen_33.jpg",
+          "sh1_screen_34.jpg"
+        ],
+        "reason": "Scene identity not confirmed; not mixed into Alchemilla or Wood Side."
+      },
+      {
+        "files": [
+          "sh1_split_head_game_jaws.jpg"
+        ],
+        "reason": "Despite filename assigned during search, actual inspected image shows empty central fire/circular arena; creature absent. Never use as mouth view."
+      },
+      {
+        "files": [
+          "dvd_sh3_cre_18.jpg",
+          "dvd_sh3_cre_19.jpg",
+          "dvd_sh3_cre_20.jpg"
+        ],
+        "reason": "Slurper/scene stills rather than Numb Body; not suitable secondary views for actors selected in this pass."
+      },
+      {
+        "files": [
+          "sh3_screen_13_pendulum.jpg"
+        ],
+        "reason": "Full-image inspection identifies Pendulum. Thumbnail initially looked worm-like; explicitly excluded from Split Worm evidence."
+      }
+    ],
+    "video_search": {
+      "status": "no_direct_media_found",
+      "pages": [
+        "https://www.silenthillmemories.net/sh1/videos_en.htm",
+        "https://www.silenthillmemories.net/sh2/videos_en.htm",
+        "https://www.silenthillmemories.net/sh3/videos_en.htm",
+        "https://www.silenthillmemories.net/dvd_lm/videos_en.htm"
+      ],
+      "finding": "All accessible video pages embed YouTube, no direct mp4/mpg/mpeg/wmv/avi/mov/zip href/src. Download-page guesses returned404. No clip downloaded, measured or treated as animation evidence."
+    }
+  },
+  "candidateReview": {
+    "reviewer": "batch4_visual_refs",
+    "references": "provenance.json",
+    "reviews": [
+      {
+        "subject": "split_head",
+        "path": "/workspace/generated_images/exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Massive closed head, hunched back, low abdomen and front limbs fit model source. Missing cropped source extremes are reconstructed. No open-mouth or attack pose proven.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          27,
+          158,
+          1752,
+          861
+        ],
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "groaner_first",
+        "path": "/workspace/generated_images/exec-1507e4b1-7cee-4540-b4bd-1d78180d1852.png",
+        "sha256": "c699f461d1c5c0117638ae65126d234128aa4a807d6ab17169d227bbfbdea114",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "verdict": "needs_alpha_cleanup_underway",
+        "visual_notes": "Strong brown residual glow/halo; source has one far foreleg bent/lifted while generated four legs are more spread. Review replacement before import.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          18,
+          131,
+          1506,
+          991
+        ],
+        "selection_status": "superseded_not_selected"
+      },
+      {
+        "subject": "floatstinger",
+        "path": "/workspace/generated_images/exec-82688dd8-883a-4dff-9c4e-ba7c68d4a4a6.png",
+        "sha256": "8610a202df98acc3797af8aef8fcf1590ef1063bca3b932f23f50dae78877e58",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Four wings, feather antennae, central legs and abdomen match source. Silhouette taller/narrower than primary source: vertical extension of abdomen and lower wings. Added margins. Static pose only.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          7,
+          96,
+          1442,
+          969
+        ],
+        "selection_status": "superseded_not_selected"
+      },
+      {
+        "subject": "woodside",
+        "path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+        "sha256": "c40cb7e77d9f963e81b913ce6fd11501e4391803e60a2f7faa4b6c3b5444e63e",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Original PC corridor palette/architecture retained: dirty off-white walls, blue strip and worn carpet. Camera centered/widened to16:9; hidden floor reconstructed and texture/noise/light differ. No exact-frame fidelity claim.",
+        "certified_1_to_1": false,
+        "selection_status": "superseded_not_selected",
+        "superseded_reason": "Actual HTTP combat review found grounded actors overlapping corridor plinth/wall; replaced by explicitly adapted foreground floor."
+      },
+      {
+        "subject": "numb_body_small",
+        "catalog_id": "sh3_numb_body_small_037",
+        "path": "/workspace/generated_images/exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "dimensions": [
+          1362,
+          1155
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          218,
+          56,
+          1085,
+          1138
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Two legs, no arms or human face; fused right-facing beak/head and two rear projections fit source. Pale veined skin retained, no blocking grey halo. Far leg is lowered/more extended than bent source pose; feet slightly reshaped and skin detail enhanced. Small scale is a versus adaptation; source does not prove size class or animation. Do not assign Medium/Large/Arcade.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "floatstinger_final",
+        "path": "/workspace/generated_images/exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "dimensions": [
+          1810,
+          869
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          31,
+          103,
+          1777,
+          830
+        ],
+        "silhouette_aspect_ratio_128": 2.4016506189821185,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Revised wider/shorter silhouette retains four wings, feather antennae, central legs and abdomen. Alpha128 bbox1746x727=2.40165, vs initial1.64376 and primary source non-white bbox1599x761=2.10118 (source luma difference from white>50). Thus revision is about14.3% wider/shorter than source, not exact proportions. Upper/lower wing sweep and abdomen length remain reconstructed; static pose only.",
+        "certified_1_to_1": false,
+        "source_silhouette_bbox_luma_diff_gt50": [
+          1,
+          4,
+          1600,
+          765
+        ],
+        "source_silhouette_aspect_ratio": 2.1011826544021024,
+        "aspect_ratio_delta_percent": 14.299945030981377,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "groaner_final",
+        "path": "/workspace/generated_images/exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          18,
+          137,
+          1431,
+          1049
+        ],
+        "silhouette_aspect_ratio_128": 1.549342105263158,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Re-extraction restores source pose including bent/lifted far foreleg. Thin tail, open mouth/tongue and overall folded-skin dog silhouette match source; previous brown halo removed. Narrow18px left/17px right margins, bottom37px, but no tip visibly cropped. Skin is brighter/more contrasty and fine detail enhanced; only one final source pose, no gait/attack frames.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "woodside_ground_corrected_final",
+        "catalog_id": "woodside",
+        "path": "/workspace/generated_images/exec-4a0ac22e-4668-427a-8916-e3ad7772a0a7.png",
+        "sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Foreground floor now spans full width from approximatelysourcey640(bottom32%), so expected actor baseline aroundsourcey765 is carpet at both positions. Dirty off-white plaster, blue trim, worn blue/beige carpet and ceiling lamp retained; no source figures, abrupt tiling or opaque overlay seam visible. Hall widens at foreground and wall angles/camera/cut are reconstructed specifically for versus grounding; not original scene geometry. Actual final desktop/mobile HTTP captures now confirm both feet on carpet, with no wall/plinth overlap.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final",
+        "replaces_path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+        "source_reference_files": [
+          "sh2_screenshot_pc_08.jpg",
+          "sh2_screenshot_pc_09.jpg"
+        ],
+        "grounding_candidate_review": {
+          "full_width_floor_begins_y_approx": 640,
+          "expected_combat_feet_source_y_approx": 765,
+          "needs_final_http_capture_check": false,
+          "final_http_review": "/workspace/shared/halo-of-flesh/validation-batch4-2026-10-23/visual-http-review.json",
+          "result": "pass_both_actor_ground_contacts"
+        }
+      }
+    ],
+    "historical_reviews": [
+      {
+        "subject": "split_head",
+        "path": "/workspace/generated_images/exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Massive closed head, hunched back, low abdomen and front limbs fit model source. Missing cropped source extremes are reconstructed. No open-mouth or attack pose proven.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          27,
+          158,
+          1752,
+          861
+        ],
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "groaner_first",
+        "path": "/workspace/generated_images/exec-1507e4b1-7cee-4540-b4bd-1d78180d1852.png",
+        "sha256": "c699f461d1c5c0117638ae65126d234128aa4a807d6ab17169d227bbfbdea114",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "verdict": "needs_alpha_cleanup_underway",
+        "visual_notes": "Strong brown residual glow/halo; source has one far foreleg bent/lifted while generated four legs are more spread. Review replacement before import.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bbox_128": [
+          18,
+          131,
+          1506,
+          991
+        ],
+        "selection_status": "superseded_not_selected"
+      },
+      {
+        "subject": "floatstinger",
+        "path": "/workspace/generated_images/exec-82688dd8-883a-4dff-9c4e-ba7c68d4a4a6.png",
+        "sha256": "8610a202df98acc3797af8aef8fcf1590ef1063bca3b932f23f50dae78877e58",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Four wings, feather antennae, central legs and abdomen match source. Silhouette taller/narrower than primary source: vertical extension of abdomen and lower wings. Added margins. Static pose only.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          7,
+          96,
+          1442,
+          969
+        ],
+        "selection_status": "superseded_not_selected"
+      },
+      {
+        "subject": "woodside",
+        "path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+        "sha256": "c40cb7e77d9f963e81b913ce6fd11501e4391803e60a2f7faa4b6c3b5444e63e",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Original PC corridor palette/architecture retained: dirty off-white walls, blue strip and worn carpet. Camera centered/widened to16:9; hidden floor reconstructed and texture/noise/light differ. No exact-frame fidelity claim.",
+        "certified_1_to_1": false,
+        "selection_status": "superseded_not_selected",
+        "superseded_reason": "Actual HTTP combat review found grounded actors overlapping corridor plinth/wall; replaced by explicitly adapted foreground floor."
+      },
+      {
+        "subject": "numb_body_small",
+        "catalog_id": "sh3_numb_body_small_037",
+        "path": "/workspace/generated_images/exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "dimensions": [
+          1362,
+          1155
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          218,
+          56,
+          1085,
+          1138
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Two legs, no arms or human face; fused right-facing beak/head and two rear projections fit source. Pale veined skin retained, no blocking grey halo. Far leg is lowered/more extended than bent source pose; feet slightly reshaped and skin detail enhanced. Small scale is a versus adaptation; source does not prove size class or animation. Do not assign Medium/Large/Arcade.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "floatstinger_final",
+        "path": "/workspace/generated_images/exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "dimensions": [
+          1810,
+          869
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          31,
+          103,
+          1777,
+          830
+        ],
+        "silhouette_aspect_ratio_128": 2.4016506189821185,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Revised wider/shorter silhouette retains four wings, feather antennae, central legs and abdomen. Alpha128 bbox1746x727=2.40165, vs initial1.64376 and primary source non-white bbox1599x761=2.10118 (source luma difference from white>50). Thus revision is about14.3% wider/shorter than source, not exact proportions. Upper/lower wing sweep and abdomen length remain reconstructed; static pose only.",
+        "certified_1_to_1": false,
+        "source_silhouette_bbox_luma_diff_gt50": [
+          1,
+          4,
+          1600,
+          765
+        ],
+        "source_silhouette_aspect_ratio": 2.1011826544021024,
+        "aspect_ratio_delta_percent": 14.299945030981377,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "groaner_final",
+        "path": "/workspace/generated_images/exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          18,
+          137,
+          1431,
+          1049
+        ],
+        "silhouette_aspect_ratio_128": 1.549342105263158,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Re-extraction restores source pose including bent/lifted far foreleg. Thin tail, open mouth/tongue and overall folded-skin dog silhouette match source; previous brown halo removed. Narrow18px left/17px right margins, bottom37px, but no tip visibly cropped. Skin is brighter/more contrasty and fine detail enhanced; only one final source pose, no gait/attack frames.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final"
+      },
+      {
+        "subject": "woodside_ground_corrected_final",
+        "catalog_id": "woodside",
+        "path": "/workspace/generated_images/exec-4a0ac22e-4668-427a-8916-e3ad7772a0a7.png",
+        "sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Foreground floor now spans full width from approximatelysourcey640(bottom32%), so expected actor baseline aroundsourcey765 is carpet at both positions. Dirty off-white plaster, blue trim, worn blue/beige carpet and ceiling lamp retained; no source figures, abrupt tiling or opaque overlay seam visible. Hall widens at foreground and wall angles/camera/cut are reconstructed specifically for versus grounding; not original scene geometry. Actual final desktop/mobile HTTP captures now confirm both feet on carpet, with no wall/plinth overlap.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final",
+        "replaces_path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+        "source_reference_files": [
+          "sh2_screenshot_pc_08.jpg",
+          "sh2_screenshot_pc_09.jpg"
+        ],
+        "grounding_candidate_review": {
+          "full_width_floor_begins_y_approx": 640,
+          "expected_combat_feet_source_y_approx": 765,
+          "needs_final_http_capture_check": false,
+          "final_http_review": "/workspace/shared/halo-of-flesh/validation-batch4-2026-10-23/visual-http-review.json",
+          "result": "pass_both_actor_ground_contacts"
+        }
+      }
+    ],
+    "final_selection": {
+      "split_head": {
+        "subject": "split_head",
+        "path": "/workspace/generated_images/exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Massive closed head, hunched back, low abdomen and front limbs fit model source. Missing cropped source extremes are reconstructed. No open-mouth or attack pose proven.",
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          27,
+          158,
+          1752,
+          861
+        ],
+        "selection_status": "selected_final",
+        "catalog_id": "sh1_split_head_014"
+      },
+      "groaner": {
+        "subject": "groaner_final",
+        "path": "/workspace/generated_images/exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          18,
+          137,
+          1431,
+          1049
+        ],
+        "silhouette_aspect_ratio_128": 1.549342105263158,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Re-extraction restores source pose including bent/lifted far foreleg. Thin tail, open mouth/tongue and overall folded-skin dog silhouette match source; previous brown halo removed. Narrow18px left/17px right margins, bottom37px, but no tip visibly cropped. Skin is brighter/more contrasty and fine detail enhanced; only one final source pose, no gait/attack frames.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final",
+        "catalog_id": "sh1_groaner_003"
+      },
+      "floatstinger": {
+        "subject": "floatstinger_final",
+        "path": "/workspace/generated_images/exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "dimensions": [
+          1810,
+          869
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          31,
+          103,
+          1777,
+          830
+        ],
+        "silhouette_aspect_ratio_128": 2.4016506189821185,
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Revised wider/shorter silhouette retains four wings, feather antennae, central legs and abdomen. Alpha128 bbox1746x727=2.40165, vs initial1.64376 and primary source non-white bbox1599x761=2.10118 (source luma difference from white>50). Thus revision is about14.3% wider/shorter than source, not exact proportions. Upper/lower wing sweep and abdomen length remain reconstructed; static pose only.",
+        "certified_1_to_1": false,
+        "source_silhouette_bbox_luma_diff_gt50": [
+          1,
+          4,
+          1600,
+          765
+        ],
+        "source_silhouette_aspect_ratio": 2.1011826544021024,
+        "aspect_ratio_delta_percent": 14.299945030981377,
+        "selection_status": "selected_final",
+        "catalog_id": "sh1_floatstinger_016"
+      },
+      "numb_body_small": {
+        "subject": "numb_body_small",
+        "catalog_id": "sh3_numb_body_small_037",
+        "path": "/workspace/generated_images/exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "dimensions": [
+          1362,
+          1155
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          218,
+          56,
+          1085,
+          1138
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Two legs, no arms or human face; fused right-facing beak/head and two rear projections fit source. Pale veined skin retained, no blocking grey halo. Far leg is lowered/more extended than bent source pose; feet slightly reshaped and skin detail enhanced. Small scale is a versus adaptation; source does not prove size class or animation. Do not assign Medium/Large/Arcade.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final"
+      },
+      "woodside": {
+        "subject": "woodside_ground_corrected_final",
+        "catalog_id": "woodside",
+        "path": "/workspace/generated_images/exec-4a0ac22e-4668-427a-8916-e3ad7772a0a7.png",
+        "sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "visual_notes": "Foreground floor now spans full width from approximatelysourcey640(bottom32%), so expected actor baseline aroundsourcey765 is carpet at both positions. Dirty off-white plaster, blue trim, worn blue/beige carpet and ceiling lamp retained; no source figures, abrupt tiling or opaque overlay seam visible. Hall widens at foreground and wall angles/camera/cut are reconstructed specifically for versus grounding; not original scene geometry. Actual final desktop/mobile HTTP captures now confirm both feet on carpet, with no wall/plinth overlap.",
+        "certified_1_to_1": false,
+        "selection_status": "selected_final",
+        "replaces_path": "/workspace/generated_images/exec-d2ef6228-c580-4028-9e79-981bf3e62a53.png",
+        "source_reference_files": [
+          "sh2_screenshot_pc_08.jpg",
+          "sh2_screenshot_pc_09.jpg"
+        ],
+        "grounding_candidate_review": {
+          "full_width_floor_begins_y_approx": 640,
+          "expected_combat_feet_source_y_approx": 765,
+          "needs_final_http_capture_check": false,
+          "final_http_review": "/workspace/shared/halo-of-flesh/validation-batch4-2026-10-23/visual-http-review.json",
+          "result": "pass_both_actor_ground_contacts"
+        }
+      }
+    },
+    "reviews_field_note": "reviews and historical_reviews preserve all candidate reviews; final_selection is authoritative. Initial Wood Side view retained in history after actual combat grounding limitation. No certification1:1."
+  },
+  "delivery": [
+    {
+      "id": "sh1_groaner_003",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+      "inputSha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+      "frames": [
+        {
+          "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+          "bytes": 1287938,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            18,
+            136,
+            1432,
+            1050
+          ],
+          "pixelSHA256": "8ee16afdf8f63b0fbde6e5b751241efe5bb5f19b4c6822fe07d10f2c24aa4f00",
+          "transparentFraction": 0.6668,
+          "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+          "facing": -1,
+          "anchor": [
+            0.61,
+            0.97
+          ],
+          "bodyHeight": 0.85,
+          "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+          "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh1_split_head_014",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+      "inputSha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+      "frames": [
+        {
+          "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+          "bytes": 1001511,
+          "width": 1774,
+          "height": 887,
+          "visibleBounds": [
+            27,
+            158,
+            1753,
+            861
+          ],
+          "pixelSHA256": "edf228380b552db7705a281afda74e4e2ef96a8bfb78d62dff251662dc46547c",
+          "transparentFraction": 0.67668,
+          "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+          "facing": 1,
+          "anchor": [
+            0.56,
+            0.97
+          ],
+          "bodyHeight": 0.79,
+          "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+          "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+      "inputSha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+      "frames": [
+        {
+          "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+          "bytes": 1290226,
+          "width": 1810,
+          "height": 869,
+          "visibleBounds": [
+            31,
+            102,
+            1778,
+            832
+          ],
+          "pixelSHA256": "51b84eb91f45e4b14ba2d6e062ec85e453a44b7c8fd58c9d1c2f47cb258fbcf4",
+          "transparentFraction": 0.63605,
+          "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.93
+          ],
+          "bodyHeight": 0.79,
+          "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+          "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat frontal SH1 depuis modèle et capture boss ; proportions ailes/abdomen rapprochées du modèle après rejet du premier étirement vertical. Quatre ailes, deux antennes ; textures reconstruites et direction/ancrage/échelle versus. Aucun battement/FPS source mesuré, pas de certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+      "inputSha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+      "frames": [
+        {
+          "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+          "bytes": 953534,
+          "width": 1362,
+          "height": 1155,
+          "visibleBounds": [
+            218,
+            55,
+            1086,
+            1138
+          ],
+          "pixelSHA256": "a5a9475a23d0bbca8966b12b7af2795a7ed94a94b9f6c23f33791786eb42d906",
+          "transparentFraction": 0.76783,
+          "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+          "facing": 1,
+          "anchor": [
+            0.56,
+            0.98
+          ],
+          "bodyHeight": 0.93,
+          "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+          "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "woodside",
+      "source": "sh2",
+      "scene": "original-pc-corridor",
+      "inputFile": "exec-4a0ac22e-4668-427a-8916-e3ad7772a0a7.png",
+      "path": "assets/stages/woodside.corridor.c6ac083599d0.png",
+      "sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5",
+      "certifiedOneToOne": false,
+      "adaptation": "Caméra et coupe adaptées au versus : continuité du tapis au premier plan pour les appuis horizontaux. Matériaux du couloir PC original ; géométrie et cadrage non certifiés."
+    }
+  ],
+  "limits": [
+    "Static authored candidates; no original source frame timings or animation certification.",
+    "Groaner has narrower margins and amplified textures. Split Head closed mouth only; source extremes reconstructed.",
+    "Floatstinger final silhouette is approximately 14.3% wider than the model reference bounding ratio; the earlier vertically stretched image is excluded.",
+    "Numb Body model does not establish Small dimensions. Exact Small registry only, versus scale; Medium/Large/Arcade remain unillustrated.",
+    "Wood Side uses two distinct original PC corridor captures; wide camera and hidden floor are reconstructed, exact floor/room segment not proven.",
+    "Earlier Groaner halo images and first Floatstinger remain outside the active registry.",
+    "Prior Alessa SMG and Mannequin tool refusals respected; neither subject retried in this pass.",
+    "The initial Wood Side perspective put actors on the plinth. The final foreground carpet and wall termination are an authored versus cutaway for a horizontal fighting plane, not original room geometry."
+  ],
+  "browserVisualReview": {
+    "schema": "halo-visual-http-review-batch4-final-v1",
+    "reviewer": "batch4_visual_refs",
+    "review_date_utc": "2026-10-23",
+    "build_reviewed": "source",
+    "version": "0.9.6",
+    "scope": "Final read-only review: revised desktop/mobile combat and refreshed pause capture visually reinspected; remaining9 capture files byte-identical to the12-image initial review. Only report/provenance files outside repository were written by this reviewer.",
+    "status": "pass_with_mobile_readability_reservation",
+    "blocking_findings": [],
+    "captures": [
+      {
+        "file": "combat-new-pngs-woodside.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-woodside.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "55df37f54c43df6b1ec39199fd111a8a189ef4bbc6765d307517c3728184d7b4",
+        "visually_inspected": true,
+        "review_method": "final capture visually reinspected after ground correction"
+      },
+      {
+        "file": "inspector-sh1_floatstinger_016.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_floatstinger_016.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "0d4efcbde950f1352a509904d1081fc85b433e963c4eb4c2a0a01f238ccc0d7b",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "inspector-sh1_groaner_003.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_groaner_003.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "284749f019afdc4e1520d4647468df8f7c7d6972c878a3b0f15ea3ffbe2ca75a",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "inspector-sh1_split_head_014.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_split_head_014.png",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "sha256": "2098e2caf7132227a3f3f0b839dd18410206665a30ffc1958087c8cb035e810d",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "inspector-sh3_numb_body_small_037.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_numb_body_small_037.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "fc806713b3b428d8f8ee62bc9f70e1004acabe5ee907b991773f868d17fce266",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "missing-poses-sh1_floatstinger_016.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_floatstinger_016.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "90e366819d0df6ced3cce53dce612d5ce6d08375fb38cc8ced0e95230c73577c",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "missing-poses-sh1_groaner_003.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_groaner_003.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "0dc3dcaed2e74ca1e81bc9c2e5fe4376cadf4a7cc13467ee16161b61b31669f0",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "missing-poses-sh1_split_head_014.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_split_head_014.png",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "sha256": "1abb80baf332afc7322eadd97fefa67b780dc5670daf5423d1470e12b432754d",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "missing-poses-sh3_numb_body_small_037.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_numb_body_small_037.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "61afc13b551e0c5240102a32957993af62618cfa56b7fe65691ad138c32b732e",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "mobile-new-pngs-woodside.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-woodside.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "f7227e08830c5ddb98047393316ee764f02de4cc00039c7e7d3a77cf71138743",
+        "visually_inspected": true,
+        "review_method": "final capture visually reinspected after ground correction"
+      },
+      {
+        "file": "mobile-static-inspector.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-static-inspector.png",
+        "dimensions": [
+          430,
+          2612
+        ],
+        "sha256": "8dd8616762df6ccff007a14b1868f12956361ac3e280b1e5f61040305bac934d",
+        "visually_inspected": true,
+        "review_method": "byte-identical to previously visually inspected capture"
+      },
+      {
+        "file": "paused-new-art.png",
+        "absolute_path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "f5abd7f8ef5f8b5b4ff593bee9078c5cb1b3898239422e3aa438e434df8463ae",
+        "visually_inspected": true,
+        "review_method": "final capture visually reinspected after ground correction"
+      }
+    ],
+    "inspector_actor_reviews": [
+      {
+        "id": "sh1_groaner_003",
+        "capture": "inspector-sh1_groaner_003.png",
+        "result": "pass_with_limits",
+        "framing": "Entire muzzle, tail and visible paws remain inside grid and card; no opaque bitmap rectangle or brown glow visible.",
+        "grounding": "Lowest visible paw aligns with inspector ground line. Raised far foreleg retained.",
+        "limits": [
+          "Small versus display scale is an adaptation, not measured original-game scale.",
+          "Logical grid ground line does not resolve combat background perspective."
+        ]
+      },
+      {
+        "id": "sh1_split_head_014",
+        "capture": "inspector-sh1_split_head_014.png",
+        "result": "pass_with_limits",
+        "framing": "Large closed head, left extension and front feet all fit the grid; no clipping of wide silhouette or alpha rectangle.",
+        "grounding": "Lowest front toes align with inspector ground line; trailing extension correctly remains above that line.",
+        "limits": [
+          "Closed-mouth single pose only. Cropped-source extremes remain reconstructed.",
+          "Visible green collision rectangle covers a subset of silhouette; these captures do not establish correct gameplay or canonical hitboxes."
+        ]
+      },
+      {
+        "id": "sh1_floatstinger_016",
+        "capture": "inspector-sh1_floatstinger_016.png",
+        "result": "pass_with_limits",
+        "framing": "All four wings, both feather antennae and lower abdomen/sting fit card/grid with visible margins.",
+        "grounding": "Creature rests slightly above the inspector ground line, consistent with a hovering pose.",
+        "limits": [
+          "Front static pose and revised wide proportions remain adapted.",
+          "Wings extend outside central collision rectangle; outline is a versus collider, not proof of source anatomy or hitboxes."
+        ]
+      },
+      {
+        "id": "sh3_numb_body_small_037",
+        "capture": "inspector-sh3_numb_body_small_037.png",
+        "result": "pass_with_limits",
+        "framing": "Both rear projections, fused head and two feet fit the grid/card; no grey rectangle or added limbs.",
+        "grounding": "Lowest near foot touches inspector ground line; far foot remains raised.",
+        "limits": [
+          "Small size remains a versus adaptation without source scale measurement.",
+          "Far leg/feet reconstructed, one static source pose only; no Medium/Large/Arcade attribution."
+        ]
+      }
+    ],
+    "combat_review": {
+      "framing": "Complete Groaner and Split Head silhouettes visible with head, feet and trailing extensions inside canvas; no overlap with top HUD. Pronounced actor scale difference remains an explicit versus adaptation.",
+      "background": "Corrected1672x941 Wood Side candidate presents continuous foreground carpet under both actor positions. Dirty off-white plaster, blue trim, worn blue/beige carpet retained; no visible tiling seam, blank fallback or source figures.",
+      "alpha": "No opaque sprite rectangle or brown Groaner halo visible.",
+      "grounding": "Resolved: both grounded actors now place their visible feet on carpet below wall/plinth boundaries, on desktop1440x1004 and mobile430x932. No new actor anchor change was required.",
+      "geometry_limit": "Foreground hall width, wall angles/camera/cut explicitly adapted for versus. This review does not identify the revised composition as an original-game floorplan.",
+      "confirmed_stage_pin": "assets/stages/woodside.corridor.c6ac083599d0.png",
+      "confirmed_stage_sha256": "c6ac083599d0ee37add17b1682fd5f29a50d325547744021e5f721980ee706b5"
+    },
+    "mobile_inspector_review": {
+      "capture": "mobile-static-inspector.png",
+      "result": "pass",
+      "observations": [
+        "Single-column controls and complete card fit the430px viewport.",
+        "Sprite grid keeps complete Groaner and visible ground line.",
+        "Pose selector, disabled play button, scrubber, zoom and collision checkbox remain inside card.",
+        "Long card scrolls vertically; no observed horizontal clipping."
+      ]
+    },
+    "missing_pose_review": {
+      "captures": [
+        "missing-poses-sh1_groaner_003.png",
+        "missing-poses-sh1_split_head_014.png",
+        "missing-poses-sh1_floatstinger_016.png",
+        "missing-poses-sh3_numb_body_small_037.png"
+      ],
+      "result": "pass",
+      "observations": [
+        "Each absent finisher selection retains one idle image instead of drawing an invented sequence.",
+        "Visible SEQUENCE A PRODUIRE / apercu idle status and image1/1/tick0 remain explicit.",
+        "Play control appears disabled; counters still distinguish integrated images from certified1:1 content."
+      ]
+    },
+    "pause_review": {
+      "capture": "paused-new-art.png",
+      "result": "pass_visual_only",
+      "observation": "Final refreshed pause screenshot visually reinspected: centered complete dialog and buttons remain visible. Simulation freeze is reported by HTTP test, not measurable from one still."
+    },
+    "findings": [
+      {
+        "id": "mobile-combat-scale",
+        "severity": "medium",
+        "blocking": false,
+        "captures": [
+          "mobile-new-pngs-woodside.png"
+        ],
+        "observation": "At430x932 the whole landscape canvas is reduced to approximately430x242 around the vertical center with large black areas above and below. Both actors and complete background remain visible, but fighter labels/HUD details become very small.",
+        "impact": "No horizontal overflow or clipped actor is visible; technical viewport fit does not establish readable mobile combat HUD or touch usability.",
+        "recommendation": "Treat portrait combat readability as remaining responsive polish, separate from successful PNG loading and framing.",
+        "status": "remaining_nonblocking_outside_final_art_grounding_scope"
+      }
+    ],
+    "supporting_test_report": {
+      "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "sha256": "ac94147e772479fb30e34439c91c0af831f674b9f472be02f0d566535a87a5d5",
+      "reported_passed": true,
+      "reported_checks_total": 45,
+      "reported_failed_checks": 0,
+      "reported_stage_pins": [
+        "assets/stages/woodside.corridor.c6ac083599d0.png"
+      ],
+      "note": "Existing final source HTTP suite report consulted for asset identity context. Reviewer independently inspected screenshots, not network requests or dynamic collision assertions."
+    },
+    "limitations": [
+      "Only captured initial Groaner vs Split Head positions are visually checked; no full arena traversal, attack contact, edge collision or occlusion animation is certified.",
+      "Floatstinger/Numb Body workshop images are unchanged from first review; neither is shown in a new live combat pairing in these captures.",
+      "Corrected environment foreground geometry remains an explicitly labeled versus adaptation. Existing actor source/proportion/pose limits remain; no animation timing, canonical collision geometry or1:1 fidelity is certified.",
+      "Portrait HUD remains small in the reduced landscape canvas, with large vertical black bands. Responsive HUD redesign is outside this final art grounding correction."
+    ],
+    "history": {
+      "initial_review_report": "/workspace/shared/halo-of-flesh/validation-batch4-2026-10-23/history/visual-http-review-before-ground-correction.json",
+      "initial_review_sha256": "81a47cbd69e068f5227209bb2503111abb44ef452f792dae08b5e4d2d84caefa",
+      "initial_capture_paths_note": "Historical report preserves original capture SHA values. The test suite reused screenshot paths for final captures; historical paths now resolve to final images.",
+      "resolved_findings": [
+        "woodside-perspective-grounding"
+      ]
+    },
+    "resolved_findings": [
+      {
+        "id": "woodside-perspective-grounding",
+        "severity": "medium",
+        "blocking": false,
+        "captures": [
+          "combat-new-pngs-woodside.png",
+          "mobile-new-pngs-woodside.png"
+        ],
+        "observation": "The corridor image uses a front perspective with floor confined to a central trapezoid, while actors move on a horizontal versus baseline. At the captured left position Groaner paws are visibly superimposed on the lower left wall/plinth rather than carpet. Split Head occupies the right wall/floor edge.",
+        "evidence_coordinates_desktop_approx": {
+          "image_dimensions": [
+            1440,
+            1004
+          ],
+          "groaner_visible_feet_region": [
+            282,
+            750,
+            391,
+            801
+          ],
+          "floor_left_boundary_near_actor_baseline_x": 430
+        },
+        "impact": "Logical sprite anchors are consistent with grid checks, but the composite can look like the grounded creature is floating or attached to the wall. This is a source-frame/perspective limitation, not evidence of a physics or collision failure.",
+        "recommendation": "Retain explicit candidate status. For a later fidelity pass, use a source-supported environment composition that provides a transverse floor under the whole versus baseline, then recheck grounded actors at both edges.",
+        "status": "resolved_in_final_captures",
+        "resolution": "Image-generated replacement widens foreground with continuous horizontal carpet; desktop and mobile final screenshots show both actor feet on floor rather than plinth/wall.",
+        "final_captures": [
+          "combat-new-pngs-woodside.png",
+          "mobile-new-pngs-woodside.png"
+        ]
+      }
+    ]
+  }
+}

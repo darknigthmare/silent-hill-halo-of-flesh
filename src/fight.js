@@ -8,7 +8,7 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
-import { isVisibleFirearmProjectile, isFirearmProjectile, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
+import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -54,7 +54,9 @@ function bladeDefenseAvailable(target,direction) {
 }
 function deflectsFrontalBullet(attacker,target,move,direction) {
   const defense=referencePolicy(target).defense;
-  return defense?.frontalVisibleBullets===true&&bladeDefenseAvailable(target,direction)&&
+  if(!bladeDefenseAvailable(target,direction))return false;
+  if(defense?.frontalHandgunBullets===true)return isHandgunProjectile(attacker.data,move);
+  return defense?.frontalVisibleBullets===true&&
     (defense.silencedBullets===true?isFirearmProjectile(attacker.data,move):isVisibleFirearmProjectile(attacker.data,move));
 }
 function deflectsFrontalMelee(target,move,direction,ranged) {
@@ -909,9 +911,9 @@ export class FightEngine {
       return this.rng()<diff.attack?{special:true}:{guard:true};
     }
 
-    if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && this.rng() < .74) return { special: true };
-    if (actor.guardCounterWindow > 0 && this.rng() < .82) return { heavy: true };
-    if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && this.rng() < .68) return { light: true };
+    if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && actor.profile.moves.wakeupAttack?.enabled && this.rng() < .74) return { special: true };
+    if (actor.guardCounterWindow > 0 && actor.profile.moves.guardCounter?.enabled && this.rng() < .82) return { heavy: true };
+    if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && actor.profile.moves.dodgeAttack?.enabled && this.rng() < .68) return { light: true };
 
     actor.aiTimer--;
     if (actor.aiTimer <= 0) {
@@ -992,6 +994,14 @@ export class FightEngine {
     if ((result.left || result.right) && actor.aiTimer < diff.react * .35) {
       result.left = false;
       result.right = false;
+    }
+    // Source restrictions also apply to cached and adaptive AI intents. A
+    // disabled rear throw or directional attack must not consume every read.
+    for(const button of ATTACK_ACTIONS){
+      if(result[button]&&!actor.profile.moves[resolveMoveKey(actor,result,button)]?.enabled){
+        delete result[button];
+        result.guard=true;
+      }
     }
     if (actor.aiTimer <= 1) actor.aiIntent = {};
     return result;
@@ -1401,36 +1411,41 @@ export class FightEngine {
   updateProximityFields() {
     if(this.paused||this.destroyed||this.phase!=='fight'||this.hitstop>0)return;
     for(const source of this.actors){
-      const policy=referencePolicy(source),field=policy.proximityField;
-      // A copied policy or another ending form cannot inherit Incubator's field.
-      if(source.data.id!=='sh1_incubator_018'||source.data.source!=='sh1'||
-        policy.id!==source.data.id||policy.source!==source.data.source||
-        !field||!offensiveAllowed(source)||source.ko||source.health<=0||source.phaseLock>0||source.proximityCooldown>0)continue;
+      const policy=referencePolicy(source),field=passiveProximityField(source.data);
+      // Resolve exact authored recipes: copied policies cannot grant fields to
+      // another ending form, another work or a similarly named apparition.
+      if(policy.id!==source.data.id||policy.source!==source.data.source||
+        !field||policy.proximityField?.id!==field.id||!offensiveAllowed(source)||source.ko||
+        source.health<=0||source.phaseLock>0||source.proximityCooldown>0||
+        field.kind==='drain'&&source.knockdownTimer>0)continue;
       const target=this.actors[1-source.index];
-      if(!target||target.ko||target.health<=0||target.invuln>0||target.knockdownTimer>0||target.phaseLock>0)continue;
+      if(!target||target.ko||target.health<=0||target.invuln>0||target.phaseLock>0||
+        field.kind!=='drain'&&target.knockdownTimer>0)continue;
       const a=actorBox(source),b=actorBox(target),distance=Math.abs(target.x-source.x);
       if(!Number.isFinite(distance)||distance>=field.radius||a.y>=b.y+b.h||a.y+a.h<=b.y)continue;
       // Passive local contact bypasses attack rewards, guard counters and combos.
       // The normal damage wrapper still preserves Alessa's current phase budget.
-      const damage=takeDamage(target,field.damage);
+      const damage=takeDamage(target,field.damage+(field.bonusDamage||0));
       updateWeaponState(target);
-      this.cancelTaunt(target);
-      interruptAction(target,'knockdown');
-      target.hurtFrames=0;
-      target.knockdownTimer=field.knockdown;
-      target.wakeupWindow=0;
-      target.invuln=field.invuln;
       target.hitFlash=5;
-      const fixed=referencePolicy(target).canMove===false;
-      target.vx=fixed?0:(Math.sign(target.x-source.x)||source.facing||1)*field.knockback;
-      target.vy=fixed?0:-4.2;
-      target.grounded=fixed;
+      if(field.kind!=='drain'){
+        this.cancelTaunt(target);
+        interruptAction(target,'knockdown');
+        target.hurtFrames=0;
+        target.knockdownTimer=field.knockdown;
+        target.wakeupWindow=0;
+        target.invuln=field.invuln;
+        const fixed=referencePolicy(target).canMove===false;
+        target.vx=fixed?0:(Math.sign(target.x-source.x)||source.facing||1)*field.knockback;
+        target.vy=fixed?0:-4.2;
+        target.grounded=fixed;
+      }
       target.lastHitBy=source.index;
       target.lastHit={attackerIndex:source.index,moveKey:field.id,isSuper:false,environmental:false,frame:this.frame};
       source.stats.damageDealt+=damage;
       target.stats.damageTaken+=damage;
       source.proximityCooldown=field.cooldown;
-      this.spawnImpact(target.x,b.y+b.h*.55,'#80baff',false,9);
+      this.spawnImpact(target.x,b.y+b.h*.55,field.bonusDamage?'#ff9868':field.kind==='drain'?'#be8acb':'#80baff',false,9);
     }
   }
 

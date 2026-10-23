@@ -532,5 +532,277 @@ export const SPRITES = {
       }
     },
     "animatedClips": 0
+  },
+  "sh1_split_head_014": {
+    "fighterId": "sh1_split_head_014",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+    "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+    "sourceDimensions": [
+      1774,
+      887
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "bytes": 1001511,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          27,
+          158,
+          1753,
+          861
+        ],
+        "pixelSHA256": "edf228380b552db7705a281afda74e4e2ef96a8bfb78d62dff251662dc46547c",
+        "transparentFraction": 0.67668,
+        "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+        "facing": 1,
+        "anchor": [
+          0.56,
+          0.97
+        ],
+        "bodyHeight": 0.79,
+        "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
+        "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+      "bytes": 1001511,
+      "width": 1774,
+      "height": 887,
+      "facing": 1,
+      "visibleBounds": [
+        27,
+        158,
+        1753,
+        861
+      ],
+      "pixelSHA256": "edf228380b552db7705a281afda74e4e2ef96a8bfb78d62dff251662dc46547c",
+      "transparentFraction": 0.67668
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_floatstinger_016": {
+    "fighterId": "sh1_floatstinger_016",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+    "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+    "sourceDimensions": [
+      1810,
+      869
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat frontal SH1 depuis modèle et capture boss ; proportions ailes/abdomen rapprochées du modèle après rejet du premier étirement vertical. Quatre ailes, deux antennes ; textures reconstruites et direction/ancrage/échelle versus. Aucun battement/FPS source mesuré, pas de certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "bytes": 1290226,
+        "width": 1810,
+        "height": 869,
+        "visibleBounds": [
+          31,
+          102,
+          1778,
+          832
+        ],
+        "pixelSHA256": "51b84eb91f45e4b14ba2d6e062ec85e453a44b7c8fd58c9d1c2f47cb258fbcf4",
+        "transparentFraction": 0.63605,
+        "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.93
+        ],
+        "bodyHeight": 0.79,
+        "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
+        "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+      "bytes": 1290226,
+      "width": 1810,
+      "height": 869,
+      "facing": 1,
+      "visibleBounds": [
+        31,
+        102,
+        1778,
+        832
+      ],
+      "pixelSHA256": "51b84eb91f45e4b14ba2d6e062ec85e453a44b7c8fd58c9d1c2f47cb258fbcf4",
+      "transparentFraction": 0.63605
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_numb_body_small_037": {
+    "fighterId": "sh3_numb_body_small_037",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+    "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+    "sourceDimensions": [
+      1362,
+      1155
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "bytes": 953534,
+        "width": 1362,
+        "height": 1155,
+        "visibleBounds": [
+          218,
+          55,
+          1086,
+          1138
+        ],
+        "pixelSHA256": "a5a9475a23d0bbca8966b12b7af2795a7ed94a94b9f6c23f33791786eb42d906",
+        "transparentFraction": 0.76783,
+        "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+        "facing": 1,
+        "anchor": [
+          0.56,
+          0.98
+        ],
+        "bodyHeight": 0.93,
+        "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
+        "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+      "bytes": 953534,
+      "width": 1362,
+      "height": 1155,
+      "facing": 1,
+      "visibleBounds": [
+        218,
+        55,
+        1086,
+        1138
+      ],
+      "pixelSHA256": "a5a9475a23d0bbca8966b12b7af2795a7ed94a94b9f6c23f33791786eb42d906",
+      "transparentFraction": 0.76783
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_groaner_003": {
+    "fighterId": "sh1_groaner_003",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+    "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+    "sourceDimensions": [
+      1448,
+      1086
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "bytes": 1287938,
+        "width": 1448,
+        "height": 1086,
+        "visibleBounds": [
+          18,
+          136,
+          1432,
+          1050
+        ],
+        "pixelSHA256": "8ee16afdf8f63b0fbde6e5b751241efe5bb5f19b4c6822fe07d10f2c24aa4f00",
+        "transparentFraction": 0.6668,
+        "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+        "facing": -1,
+        "anchor": [
+          0.61,
+          0.97
+        ],
+        "bodyHeight": 0.85,
+        "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
+        "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+      "bytes": 1287938,
+      "width": 1448,
+      "height": 1086,
+      "facing": -1,
+      "visibleBounds": [
+        18,
+        136,
+        1432,
+        1050
+      ],
+      "pixelSHA256": "8ee16afdf8f63b0fbde6e5b751241efe5bb5f19b4c6822fe07d10f2c24aa4f00",
+      "transparentFraction": 0.6668
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
   }
 };

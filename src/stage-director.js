@@ -164,6 +164,7 @@ export const STAGE_EVENTS = Object.freeze({
   referenceDustRelease: { name: 'POUSSIÈRE DU PLÂTRE', duration: 130, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE PLÂTRE FRÉMIT' },
   referenceSteamPurge: { name: 'ROBINET DU PASSAGE', duration: 108, darkness: .03, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'TROIS PURGES AU FOND DU PASSAGE' },
   referenceCellReply: { name: 'PORTE DE CELLULE', duration: 96, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE PORTE VIBRE AU FOND' },
+  referenceClosedDoorReply: { name: 'PORTE DU LOUNGE', duration: 100, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE BATTANT RESTE FERMÉ' },
   referenceWashroomReply: { name: 'TROU DE LA SALLE DE BAIN', duration: 108, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE LUEUR DANS LE PASSAGE' },
 });
 

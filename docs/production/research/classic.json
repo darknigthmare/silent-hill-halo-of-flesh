@@ -6061,7 +6061,7 @@
       "observedMoves": [
         {
           "name": "Rotation",
-          "description": "Charge avec les lames.",
+          "description": "Charge avec les lames ; la rotation dévie les balles de Handgun à l’approche frontale selon le guide, sans invulnérabilité générale extrapolée.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -6312,7 +6312,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Frappe du bras.",
+          "description": "Frappe avec les bras ; la portée et les dégâts du versus restent des paramètres adaptés.",
           "evidence": [
             "CL_SH3_ENEMIES"
           ],
@@ -6322,7 +6322,7 @@
         },
         {
           "name": "Charge",
-          "description": "Course qui renverse.",
+          "description": "Charge en courant et renverse Heather ; aucun temps d’anticipation ou de récupération source encore mesuré.",
           "evidence": [
             "CL_SH3_ENEMIES"
           ],
@@ -6437,7 +6437,7 @@
       "observedMoves": [
         {
           "name": "Charge basse",
-          "description": "Renverse en rampant.",
+          "description": "Charge basse en rampant qui renverse Heather ; ne justifie pas un saut offensif.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -6448,7 +6448,7 @@
         },
         {
           "name": "Prise",
-          "description": "Mord la jambe.",
+          "description": "Saisit la jambe et la mâchonne, entravant Heather ; aucune projection avec échange de places n’est attestée par ce geste.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -8522,7 +8522,7 @@
       "observedMoves": [
         {
           "name": "Poings",
-          "description": "Frappe sans arme.",
+          "description": "Frappe à mains nues ; le guide distingue les New Types porteurs et voleurs de tuyaux, clubs ou Holy Candles, sans attribuer ce vol au Old Type.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -9554,7 +9554,7 @@
       "observedMoves": [
         {
           "name": "Aura",
-          "description": "Proximité dangereuse.",
+          "description": "Les Ghosts infligent de faibles dégâts simplement par proximité, indépendamment d’un coup ou d’une prise ; le Saint Medallion neutralise ce danger de proximité.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -9669,7 +9669,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -9785,7 +9785,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -9911,7 +9911,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -10027,7 +10027,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -10143,7 +10143,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -10259,7 +10259,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
           "evidence": [
             "CL_SH4_VICTIMS",
             "CL_SH4_ENEMIES"
@@ -10370,15 +10370,19 @@
       "identityNote": "Victime 15 non hostile ; ne doit pas recevoir automatiquement le kit des autres Ghosts.",
       "referenceIds": [
         "CL_JOSEPH",
-        "CL_SH4_VICTIMS"
+        "CL_SH4_VICTIMS",
+        "EXT_SH4_SCRIPT_20261023",
+        "CL_SH4_12_ROOM_302_OF_THE_PAST"
       ],
       "observedMoves": [
         {
           "name": "Transmission",
-          "description": "Parle depuis une ombre au plafond.",
+          "description": "Buste inversé dans Room 302 of the Past ; conseille Henry et Eileen sur Walter, la localisation de son corps et le Crimson Tome. Apparition narrative, sans gestes offensifs hérités des Ghosts.",
           "evidence": [
             "CL_JOSEPH",
-            "CL_SH4_VICTIMS"
+            "CL_SH4_VICTIMS",
+            "EXT_SH4_SCRIPT_20261023",
+            "CL_SH4_12_ROOM_302_OF_THE_PAST"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -10474,7 +10478,19 @@
         }
       },
       "combatRole": "noncombatant",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "sh4_joseph_schreiber_victim_15",
+        "decision": "noncombatant",
+        "edition": "SH4 original 2004",
+        "evidence": [
+          "EXT_SH4_SCRIPT_20261023",
+          "CL_SH4_12_ROOM_302_OF_THE_PAST"
+        ],
+        "rationale": "Dans la scène de Room 302 of the Past, le buste inversé de Joseph renseigne Henry et Eileen sur Walter et leur demande de suivre le Crimson Tome. La fonction retenue est une apparition de conseil, sans héritage du kit offensif des Ghosts ; le moteur bloque déjà ses commandes de combat.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "id": "sh4_cynthia_velasquez_victim_16",
@@ -10484,14 +10500,16 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_CYNTHIA"
+        "CL_CYNTHIA",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
           "name": "Cheveux",
-          "description": "Entrave la cible.",
+          "description": "Entrave la cible avec les cheveux ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
           "evidence": [
-            "CL_CYNTHIA"
+            "CL_CYNTHIA",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -10625,7 +10643,7 @@
         },
         {
           "name": "Feu",
-          "description": "Aura brûlante de proximité.",
+          "description": "Aura brûlante de proximité qui retire de gros segments de santé, en plus des faibles dégâts passifs communs aux Ghosts ; les valeurs et délais du versus ne sont pas des mesures source.",
           "evidence": [
             "CL_SH4_09_FOREST_WORLD_2ND_TIME",
             "CL_SH4_ENEMIES"
@@ -10734,7 +10752,8 @@
       "identityStatus": "combat-documente",
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
-        "CL_ANDREW"
+        "CL_ANDREW",
+        "CL_SH4_ENEMIES"
       ],
       "observedMoves": [
         {
@@ -10749,9 +10768,10 @@
         },
         {
           "name": "Aura",
-          "description": "Danger de proximité.",
+          "description": "Inflige de faibles dégâts simplement par proximité, indépendamment de sa charge en tonneau ou de ses prises.",
           "evidence": [
-            "CL_ANDREW"
+            "CL_ANDREW",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -10853,7 +10873,7 @@
       "observedMoves": [
         {
           "name": "Pied-de-biche",
-          "description": "Frappe de l’arme.",
+          "description": "Frappe du pied-de-biche ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -11202,14 +11222,16 @@
       "identityStatus": "non-combattant-canonique",
       "identityNote": "Créature inoffensive et indestructible ; ne pas reprendre le comportement d’une autre œuvre.",
       "referenceIds": [
-        "CL_GREEDY"
+        "CL_GREEDY",
+        "EXT_SH4_ODDITIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Transit",
-          "description": "Traverse lentement le décor.",
+          "description": "Créature tubulaire visible près des tourniquets du métro ; un segment apparaît aussi en mouvement vertical dans la zone de la roue à eau B2 au second passage de Water Prison.",
           "evidence": [
-            "CL_GREEDY"
+            "CL_GREEDY",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -11217,9 +11239,10 @@
         },
         {
           "name": "Réaction",
-          "description": "Se contracte sous un coup, sans mourir.",
+          "description": "Créature attaquable mais non tuable selon le relevé de curiosités ; la contraction à l’impact reste à confirmer par capture.",
           "evidence": [
-            "CL_GREEDY"
+            "CL_GREEDY",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -11457,7 +11480,7 @@
       "observedMoves": [
         {
           "name": "Rituel",
-          "description": "Cordon puis huit lances ouvrent la vulnérabilité.",
+          "description": "Le corps géant du Conjurer reçoit le cordon ombilical puis huit lances qui rendent vulnérable le Shadow Walter mobile ; ne pas lui attribuer les tirs et coups de tuyau de ce dernier.",
           "evidence": [
             "CL_SH4_13_OUTSIDE_ROOM_302"
           ],
@@ -11546,7 +11569,18 @@
         }
       },
       "combatRole": "scripted-encounter",
-      "referenceEdition": "SH4 original 2004"
+      "referenceEdition": "SH4 original 2004",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "sh4_sacrificed_walter_071",
+        "decision": "scripted-encounter",
+        "edition": "SH4 original 2004",
+        "evidence": [
+          "CL_SH4_13_OUTSIDE_ROOM_302"
+        ],
+        "rationale": "Le guide distingue le corps géant du Conjurer, cible du cordon ombilical puis de huit lances, du Shadow Walter qui se déplace et attaque au tuyau et au pistolet. Sacrificed Walter reste le nom de projet de ce composant rituel ancré, sans kit ni déplacement autonome.",
+        "reviewedAt": "2026-10-23"
+      }
     },
     {
       "id": "sh4_walter_sullivan_072",
@@ -11694,14 +11728,16 @@
       "identityStatus": "apparition-immobile-identite-nuancee",
       "identityNote": "Surnom « Eileen Head » utilisé notamment sur marchandise ; identité de l’objet à présenter avec nuance.",
       "referenceIds": [
-        "CL_EILEEN_HEAD"
+        "CL_EILEEN_HEAD",
+        "EXT_SH4_ODDITIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Regard",
-          "description": "Les yeux suivent le visiteur.",
+          "description": "Tête géante dans une chambre du deuxième étage de Hospital World ; le regard suit le visiteur selon la fiche existante, et le guide de curiosités décrit un clignotement des yeux au Stun Gun. Identité de l’objet à conserver nuancée.",
           "evidence": [
-            "CL_EILEEN_HEAD"
+            "CL_EILEEN_HEAD",
+            "EXT_SH4_ODDITIES_20261023"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -12684,7 +12720,7 @@
       "referenceIds": [
         "CL_SH2_08_HISTORICAL_SOCIETY"
       ],
-      "locationNote": "Bâtiment et descente de la Historical Society de SH2 original.",
+      "locationNote": "Bâtiment et descente de la Historical Society de SH2 original. Vue retenue : salles d’exposition du musée ; reflet de vitrage en proposition versus, sans reproduire ni animer le contenu d’un tableau officiel, escalier/puits séparés.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -12840,7 +12876,7 @@
       "referenceIds": [
         "CL_SH2_BFAW02_BALDWIN_MANSION"
       ],
-      "locationNote": "Manoir de Born from a Wish, campagne Maria de SH2 original.",
+      "locationNote": "Manoir de Born from a Wish, campagne Maria de SH2 original. Vue retenue : palier devant la porte du Lounge d’Ernest, gardée fermée ; la bougie attestée au grenier ne doit pas être transportée ici. Réaction du battant = adaptation versus après impact local, sans corps.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -12996,7 +13032,7 @@
       "referenceIds": [
         "CL_SH3_14_CHURCH"
       ],
-      "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer.",
+      "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13308,7 +13344,7 @@
       "referenceIds": [
         "CL_SH3_07_HILLTOP_CENTER"
       ],
-      "locationNote": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail.",
+      "locationNote": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. Store attesté dans le bureau/réception de Monica’s Dance Studio, capture sh3_07_hilltop_center_map_location.jpg ; la vue retient cette pièce normale, sans atelier ni baignoire/Otherworld. Oscillation = proposition versus.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",

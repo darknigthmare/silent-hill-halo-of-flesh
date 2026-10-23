@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261023-pass3';
+const CACHE_REVISION = 'parallel-20261023-pass4';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '29781b85127b0fd703445103743b1850505da4c3c53e72c7c1e12ab39e4cbc63';
+const BITMAP_REVISION = '377ee89f493f2b69c443cc12a24bfdddc61a63a0c68d56d59e5d38924f59c390';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -14,15 +14,20 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+  "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+  "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+  "/assets/sprites/sh1_split_head_014.483ae08e94aa.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
   "/assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+  "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
+  "/assets/stages/woodside.corridor.c6ac083599d0.png",
   // STAGE_BITMAP_ASSETS_END
   '/',
   '/index.html',
