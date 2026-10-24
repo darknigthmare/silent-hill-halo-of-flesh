@@ -8,7 +8,7 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
-import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
+import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, sourceMouthPhase, sourceHitResponse, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -37,7 +37,24 @@ const offensiveAllowed=actor=>referencePolicy(actor).combatEnabled!==false;
 function takeDamage(actor,requested) {
   const before=Number.isFinite(actor.health)?Math.max(0,actor.health):0;
   applyDamage(actor,requested);
-  return preserveWeaponPhaseBoundary(actor,before);
+  const damage=preserveWeaponPhaseBoundary(actor,before);
+  updateMouthState(actor);
+  return damage;
+}
+function updateMouthState(actor) {
+  const phase=sourceMouthPhase(actor.data);
+  if(phase&&actor.health>0&&actor.health<=actor.maxHealth*phase.healthRequirement)actor.mouthEnraged=true;
+}
+function availableMove(actor,key) {
+  const move=actor.profile.moves[key],phase=sourceMouthPhase(actor.data);
+  return Boolean(move?.enabled&&(!phase?.slots.includes(key)||actor.mouthEnraged)&&
+    (move.healthRequirement==null||healthRatio(actor)<=move.healthRequirement));
+}
+function actualExposure(actor) {
+  const attack=actor.attack;
+  if(!attack||attack.move.enabled===false||actor.profile.moves[attack.key]!==attack.move)return null;
+  if(sourceMouthPhase(actor.data)&&!actor.mouthEnraged)return null;
+  return firearmExposure(actor.data,attack);
 }
 function updateWeaponState(actor) {
   const resource=ammoProfile(actor);
@@ -150,6 +167,7 @@ function makeActor(data, index, ritual = {}) {
     weaponDiscarded: false,
     weaponPhaseIndex: profile.moveset?.weaponPhases?.length?0:null,
     weaponTransition: null,
+    mouthEnraged: false,
     grounded: true,
     crouching: false,
     blocking: false,
@@ -657,6 +675,7 @@ export class FightEngine {
       actor.trapCooldown = 0;
       actor.auraCooldown = 0;
       actor.proximityCooldown = 0;
+      actor.mouthEnraged = false;
     });
     if (this.round === 1) this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
     this.callbacks.onState(this.snapshot());
@@ -873,6 +892,7 @@ export class FightEngine {
 
   computeAI(actor, enemy) {
     if(!offensiveAllowed(actor))return {};
+    updateMouthState(actor);
     const distance = Math.abs(enemy.x - actor.x);
     const baseDiff = {
       story: { react: 24, block: .18, attack: .38, counter: .08 },
@@ -911,9 +931,9 @@ export class FightEngine {
       return this.rng()<diff.attack?{special:true}:{guard:true};
     }
 
-    if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && actor.profile.moves.wakeupAttack?.enabled && this.rng() < .74) return { special: true };
-    if (actor.guardCounterWindow > 0 && actor.profile.moves.guardCounter?.enabled && this.rng() < .82) return { heavy: true };
-    if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && actor.profile.moves.dodgeAttack?.enabled && this.rng() < .68) return { light: true };
+    if (actor.knockdownTimer > 0 && actor.grounded && actor.wakeupWindow > 0 && availableMove(actor,'wakeupAttack') && this.rng() < .74) return { special: true };
+    if (actor.guardCounterWindow > 0 && availableMove(actor,'guardCounter') && this.rng() < .82) return { heavy: true };
+    if (actor.dodgeFrames > 0 && actor.dodgeFollowupWindow > 0 && availableMove(actor,'dodgeAttack') && this.rng() < .68) return { light: true };
 
     actor.aiTimer--;
     if (actor.aiTimer <= 0) {
@@ -998,7 +1018,7 @@ export class FightEngine {
     // Source restrictions also apply to cached and adaptive AI intents. A
     // disabled rear throw or directional attack must not consume every read.
     for(const button of ATTACK_ACTIONS){
-      if(result[button]&&!actor.profile.moves[resolveMoveKey(actor,result,button)]?.enabled){
+      if(result[button]&&!availableMove(actor,resolveMoveKey(actor,result,button))){
         delete result[button];
         result.guard=true;
       }
@@ -1010,6 +1030,7 @@ export class FightEngine {
   updateActor(actor, index) {
     if (actor.ko || actor.health <= 0) return;
     updateWeaponState(actor);
+    updateMouthState(actor);
     const enemy = this.actors[1 - index];
     const controls = this.getControls(index);
     const profile = actor.profile;
@@ -1065,7 +1086,7 @@ export class FightEngine {
         return;
       }
       if (actor.wakeupWindow === 0) actor.wakeupWindow = Math.min(18, actor.knockdownTimer);
-      if (controls.special && actor.wakeupWindow > 0 && actor.profile.moves.wakeupAttack?.enabled!==false && offensiveAllowed(actor)) {
+      if (controls.special && actor.wakeupWindow > 0 && availableMove(actor,'wakeupAttack') && offensiveAllowed(actor)) {
         actor.knockdownTimer = 0;
         actor.wakeupWindow = 0;
         actor.hurtFrames = 0;
@@ -1100,7 +1121,7 @@ export class FightEngine {
     }
 
     if (actor.dodgeFrames > 0) {
-      if (controls.light && actor.dodgeFollowupWindow > 0 && actor.profile.moves.dodgeAttack?.enabled!==false && offensiveAllowed(actor)) {
+      if (controls.light && actor.dodgeFollowupWindow > 0 && availableMove(actor,'dodgeAttack') && offensiveAllowed(actor)) {
         actor.dodgeFrames = 0;
         actor.dodgeFollowupWindow = 0;
         this.addText('DODGE ATTACK', actor.x, actor.y - 205, 'chain');
@@ -1115,7 +1136,7 @@ export class FightEngine {
       return;
     }
 
-    if (controls.heavy && actor.guardCounterWindow > 0 && actor.profile.moves.guardCounter?.enabled!==false && offensiveAllowed(actor)) {
+    if (controls.heavy && actor.guardCounterWindow > 0 && availableMove(actor,'guardCounter') && offensiveAllowed(actor)) {
       actor.guardCounterWindow = 0;
       actor.parryWindow = 0;
       this.addText('GUARD COUNTER', actor.x, actor.y - 218, 'perfect');
@@ -1206,6 +1227,8 @@ export class FightEngine {
     updateWeaponState(actor);
     const listed=actor.profile.moves[key];
     if(!listed||listed.enabled===false)return false;
+    updateMouthState(actor);
+    if(sourceMouthPhase(actor.data)?.slots.includes(key)&&!actor.mouthEnraged)return false;
     const move=actor.weaponDiscarded&&listed.exhaustedMove?listed.exhaustedMove:listed;
     if(move.enabled===false)return false;
     if(move.ammoCost&&(!Number.isSafeInteger(actor.ammo)||actor.ammo<move.ammoCost))return false;
@@ -1569,9 +1592,8 @@ export class FightEngine {
     // Smog opens its lungs for the actual preparation/exhalation attack. The
     // configured multiplier is versus tuning; armor-break, status damage and
     // non-firearm projectiles do not inherit a free weak-point bonus.
-    const exposure=ranged&&isFirearmProjectile(attacker.data,move)&&
-      target.attack&&target.profile.moves[target.attack.key]===target.attack.move
-      ?firearmExposure(target.data,target.attack):null;
+    let exposure=ranged&&isFirearmProjectile(attacker.data,move)?actualExposure(target):null;
+    if(exposure?.frontalOnly&&hitDirection*target.facing>=0)exposure=null;
     let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker) * (exposure?.damageScale||1));
 
     if (blocked) {
@@ -1665,7 +1687,9 @@ export class FightEngine {
       const armorLabel = moveArmorActive ? 'MOVE ARMOR' : target.profile.trait.id === 'rustArmor' ? 'RUST ARMOR' : 'NIGHTMARE ARMOR';
       this.addText(armorLabel, target.x, target.y - 246, 'armor');
     }
-    const staggered = !armorActive || isThrow || move.armorBreak || move.launch || move.knockdown || move.hardKnockdown || move.groundBounce;
+    const sourceResponse=sourceHitResponse(target.data,move,ranged);
+    const knocksDown=move.knockdown||sourceResponse?.knockdown;
+    const staggered = !armorActive || isThrow || move.armorBreak || move.launch || knocksDown || move.hardKnockdown || move.groundBounce;
     if (staggered) interruptAction(target);
     target.hurtFrames = staggered ? hitstun : 0;
     target.invuln = 4;
@@ -1681,15 +1705,16 @@ export class FightEngine {
       target.vy = -Math.abs(move.launch);
       target.grounded = false;
     } else if (move.level === 'low') {
-      target.vy = move.knockdown ? -4.2 : -2.5;
-      if (move.knockdown) target.grounded = false;
+      target.vy = knocksDown ? -4.2 : -2.5;
+      if (knocksDown) target.grounded = false;
     }
+    if(sourceResponse?.knockdown){target.vy=Math.max(0,target.vy);target.grounded=false;}
     if (isThrow) {
       target.vy = -Math.max(6.5, Math.abs(move.launch || 0));
       target.grounded = false;
     }
     if (fixedTarget) { target.vy = 0; target.grounded = true; }
-    if (move.knockdown || isThrow || move.hardKnockdown || move.groundBounce) {
+    if (knocksDown || isThrow || move.hardKnockdown || move.groundBounce) {
       target.hurtFrames = 0;
       target.knockdownTimer = Math.max(target.knockdownTimer, move.hardKnockdown ? 56 : isThrow ? 42 : move.groundBounce ? 46 : 34);
       target.wakeupWindow = 0;
@@ -2725,6 +2750,11 @@ export class FightEngine {
     }
   }
 
+  sourceCombatCue(actor) {
+    return this.phase==='fight'&&!actor.ko&&actor.health>0&&offensiveAllowed(actor)&&sourceMouthPhase(actor.data)&&actualExposure(actor)
+      ?'GUEULE OUVERTE · VERSUS':null;
+  }
+
   renderHUD(context) {
     const [p1, p2] = this.actors;
     context.save();
@@ -2763,6 +2793,14 @@ export class FightEngine {
         context.textAlign=left?'right':'left';
         context.fillText(`ARME ${actor.weaponPhaseIndex+1}/4 · ${equipped.name}${next?' → '+next.name:''}`,
           left?barX+width:barX,119);
+        context.textAlign=left?'left':'right';
+      }
+      const mouthPhase=sourceMouthPhase(actor.data);
+      const sourceCue=this.sourceCombatCue(actor)||(mouthPhase?(actor.mouthEnraged?'MÂCHOIRE PRÊTE · VERSUS':'COUPS DE TÊTE · VERSUS'):null);
+      if(sourceCue){
+        context.font='900 9px ui-monospace';context.fillStyle='#ffd79b';
+        context.textAlign=left?'right':'left';
+        context.fillText(sourceCue,left?barX+width:barX,119);
         context.textAlign=left?'left':'right';
       }
       context.fillStyle = 'rgba(255,255,255,.1)';

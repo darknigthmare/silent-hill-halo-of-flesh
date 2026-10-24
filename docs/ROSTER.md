@@ -1,6 +1,6 @@
 # Roster complet — v0.9.6
 
-Catalogue synchronisé : **230 fiches**, dont **194 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3693 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **124 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
+Catalogue synchronisé : **230 fiches**, dont **188 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3570 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **144 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
 
 Les rôles non combattants et les identités non confirmées restent consultables. Les rencontres scénarisées autorisées sont explicitement des adaptations versus. Aucun clip animé ni fidélité 1:1 n’est certifié.
 
@@ -29,8 +29,8 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Twinfeeler | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
 | Floatstinger | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OLD SILENT HILL |
 | Monster Cybil | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
-| Incubator | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
-| Incubus | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
+| Incubator | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
+| Incubus | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
 | Bloodsucker | environmental-obstacle | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | ALCHEMILLA — NIGHTMARE WARD |
 
 ## SILENT HILL 2 (2001)
@@ -44,7 +44,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
 | Mannequin — Ambusher | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
 | Bubble Head Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
+| Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
 | Mandarin | stationary-boss | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Flesh Lip | stationary-boss | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — BASEMENT |
 | Abstract Daddy | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE LABYRINTH |
@@ -80,7 +80,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Missionary | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DAISY VILLA ROOFTOP |
 | Leonard Wolf | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — FLOODED ROOM |
 | Memory of Alessa | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
-| God | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
+| God | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
 | Valtiel | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | THE CHURCH |
 | Sewer Creature | scripted-encounter | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | SEWER CHANNEL |
 | Glutton | environmental-obstacle | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | HILLTOP CENTER — OTHERWORLD |
@@ -91,8 +91,8 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Sniffer Dog — Male | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Sniffer Dog — Female | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
+| Sniffer Dog — Male | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
+| Sniffer Dog — Female | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
 | Hummer | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
 | Wall Man | stationary-boss | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SUBWAY WORLD |
 | Gum Head — Old Type | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
@@ -130,16 +130,16 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Faceless Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Carrion | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Remnant | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Ariel | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Ariel | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Caliban | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Two-Back | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | The Butcher | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
-| Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Memory of Richard Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
+| Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Memory of Richard Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
 | Demon | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GREEN LION ANTIQUES |
 
 ## SILENT HILL: HOMECOMING (2008)
@@ -148,9 +148,9 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Lurker | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
+| Lurker | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Feral | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
-| Smog | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
+| Smog | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Needler | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Schism | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Siam | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
@@ -172,11 +172,11 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Raw Shock — Base | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Feminine | scripted-encounter | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Diseased | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Abstract | scripted-encounter | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Atrophied | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Base | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Feminine | scripted-encounter | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Diseased | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Abstract | scripted-encounter | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Atrophied | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
 
 ## SILENT HILL: DOWNPOUR (2012)
 
@@ -274,7 +274,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Sakura Head | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | KETTENSTADT VILLA |
+| Sakura Head | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | KETTENSTADT VILLA |
 
 ## SILENT HILL f (2025)
 

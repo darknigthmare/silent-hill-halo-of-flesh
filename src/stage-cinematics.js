@@ -300,6 +300,64 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
       line(ctx,x+30,y,x+30,y+height,1,'rgba(146,147,116,.35)');
       break;
     }
+    case 'subwayDoorCycle':{
+      const height=h*.24,phase=(t%10000)/10000,close=phase<.42?0:Math.sin((phase-.42)/.58*Math.PI)**2,gap=36*(1-close);
+      // The complete car stays still; only the panels move within their frame.
+      rect(ctx,x-186,y-height,372,height,'#47514a');rect(ctx,x-181,y-height+5,362,height-10,'#59615a');
+      for(const side of [-1,1]){
+        rect(ctx,x+side*123-32,y-height+25,64,49,'#151e1c');
+        line(ctx,x+side*123-32,y-height+76,x+side*123+32,y-height+76,2,'#767b6b');
+      }
+      rect(ctx,x-51,y-height+10,102,height-13,'#111b18');
+      for(const side of [-1,1]){
+        const left=side<0?x-48:x+gap*.5,width=48-gap*.5;
+        rect(ctx,left,y-height+13,width,height-19,'#6b7467');
+        rect(ctx,left+4,y-height+29,width-8,42,'#202c25');
+      }
+      line(ctx,x-186,y-2,x+186,y-2,4,'#323c34');
+      break;
+    }
+    case 'forestWindLayers':{
+      for(const side of [-1,1]){
+        const px=x+side*w*.4,base=y,tip=px-side*47;
+        line(ctx,px,base,px,base-158,8,'rgba(24,31,23,.68)');
+        path(ctx,[[px,base-109],[tip,base-142],[tip-side*32+sway*4,base-159]],'rgba(43,54,35,.65)',5);
+        for(let i=0;i<7;i++){
+          const foot=x+side*(w*.36+i*11),grass=Math.sin(t*.0015+i*.3)*3;
+          path(ctx,[[foot,h*.79],[foot+grass,h*.79-17],[foot+grass+side*6,h*.79-30-i%3*4]],'rgba(72,81,49,.53)',2);
+        }
+      }
+      break;
+    }
+    case 'waterwheelTurn':{
+      const angle=t*.00016,rx=97,ry=27,floor=h*.57;
+      ctx.fillStyle='#101916';ctx.beginPath();ctx.ellipse(x,y,112,37,0,0,TAU);ctx.fill();
+      ctx.strokeStyle='#616151';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,TAU);ctx.stroke();
+      for(let i=0;i<6;i++){
+        const a=angle+i*TAU/6;
+        line(ctx,x,y,x+Math.cos(a)*rx,y+Math.sin(a)*ry,5,'rgba(129,110,80,.68)');
+      }
+      line(ctx,x,y-115,x,y,9,'#59584a');
+      line(ctx,x-26,y-115,x+26,y-115,6,'#5a594b');
+      // Fixed foreground rim hides the lower rotor, on a dry rear walkway.
+      rect(ctx,x-113,y+18,226,floor-y-18,'#45493d');
+      line(ctx,x-113,y+18,x+113,y+18,5,'#777363');
+      break;
+    }
+    case 'wheelchairDrift':{
+      const phase=(t%16000)/16000,roll=phase<.35?ease(phase/.35):phase>.8?1-ease((phase-.8)/.2):1;
+      const turn=band(.35,.55,phase)*(1-band(.65,.8,phase));
+      ctx.translate(x+roll*36,y);ctx.scale(1-turn*.24,1);
+      // An empty frame from the workbook proposal, never an autonomous enemy.
+      ctx.strokeStyle='rgba(151,153,132,.62)';ctx.lineWidth=3;
+      ctx.beginPath();ctx.arc(-12,-20,20,0,TAU);ctx.stroke();
+      ctx.beginPath();ctx.arc(32,-5,5,0,TAU);ctx.stroke();
+      line(ctx,-12,-20,24,-20,3,'rgba(111,123,109,.7)');line(ctx,24,-20,32,-5,3,'rgba(111,123,109,.7)');
+      line(ctx,-18,-64,-12,-20,3,'rgba(111,123,109,.7)');line(ctx,-18,-64,-26,-64,3,'rgba(111,123,109,.7)');
+      rect(ctx,-15,-61,7,27,'#51594b');rect(ctx,-12,-38,33,6,'#51594b');
+      line(ctx,21,-35,24,-20,3,'rgba(111,123,109,.7)');line(ctx,30,-14,41,-14,3,'rgba(111,123,109,.7)');
+      break;
+    }
     default:break;
   }
   ctx.restore();

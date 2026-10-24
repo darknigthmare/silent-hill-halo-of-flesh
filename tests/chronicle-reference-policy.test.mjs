@@ -9,28 +9,63 @@ const fighter=id=>ROSTER.find(f=>f.id===id);
 const newRun=routeId=>createRun({mode:'chronicle',playerId,routeId,seed:1187});
 class Memory {constructor(){this.data=new Map();this.writes=0;}getItem(k){return this.data.get(k)??null;}setItem(k,v){this.writes++;this.data.set(k,v);}removeItem(k){this.data.delete(k);}}
 function legacyRun(routeId) {
-  const route=CHRONICLES.find(r=>r.id===routeId),run=newRun(routeId);
+  // A synthetic old checkpoint must remain constructible even when today's
+  // policy leaves its entire original route as reference dossiers.
+  const route=CHRONICLES.find(r=>r.id===routeId),run=newRun('room_21');run.routeId=routeId;
   delete run.chronicleFormat;delete run.chapterIndices;delete run.referenceDossiers;
   run.queue=[...route.fighters];run.stages=route.fighters.map((_,i)=>route.stages[i%route.stages.length]);
   return run;
 }
 
-test('new chronicles preserve chapter order and original stage pairing while every queued role can fight',()=>{
-  let dossiers=0;
+test('chronicle projections preserve every chapter while only routes with a compatible encounter create runs',()=>{
+  let dossiers=0;const archiveOnly=[];
   for(const route of CHRONICLES){
-    const before=structuredClone(route),run=newRun(route.id);
-    assert.ok(validateRun(run),route.id);assert.equal(run.chronicleFormat,CHRONICLE_ENCOUNTER_FORMAT);
+    const before=structuredClone(route),plan=chronicleEncounterPlan(route.id);
+    assert.equal(plan.chronicleFormat,CHRONICLE_ENCOUNTER_FORMAT);
     const chapters=route.fighters.map((id,i)=>({id,i,stage:route.stages[i%route.stages.length],policy:combatReferencePolicy(fighter(id))}));
     const active=chapters.filter(chapter=>chapter.policy.combatEnabled),inactive=chapters.filter(chapter=>!chapter.policy.combatEnabled);
-    assert.deepEqual(run.queue,active.map(chapter=>chapter.id),route.id);
-    assert.deepEqual(run.chapterIndices,active.map(chapter=>chapter.i),route.id);
-    assert.deepEqual(run.stages,active.map(chapter=>chapter.stage),route.id);
-    assert.deepEqual(run.referenceDossiers,inactive.map(chapter=>({chapterIndex:chapter.i,fighterId:chapter.id,stageId:chapter.stage,role:chapter.policy.role})),route.id);
-    assert.equal(run.queue.length+run.referenceDossiers.length,route.fighters.length);
-    assert.deepEqual(runCombatBlockers(run),[]);assert.deepEqual(route,before,'the archive route is not edited');
-    dossiers+=run.referenceDossiers.length;
+    assert.deepEqual(plan.queue,active.map(chapter=>chapter.id),route.id);
+    assert.deepEqual(plan.chapterIndices,active.map(chapter=>chapter.i),route.id);
+    assert.deepEqual(plan.stages,active.map(chapter=>chapter.stage),route.id);
+    assert.deepEqual(plan.referenceDossiers,inactive.map(chapter=>({chapterIndex:chapter.i,fighterId:chapter.id,stageId:chapter.stage,role:chapter.policy.role})),route.id);
+    assert.equal(plan.queue.length+plan.referenceDossiers.length,route.fighters.length);
+    if(active.length){
+      const run=newRun(route.id);assert.ok(validateRun(run),route.id);
+      for(const key of Object.keys(plan))assert.deepEqual(run[key],plan[key],route.id+'/'+key);
+      assert.deepEqual(runCombatBlockers(run),[]);
+    }else{
+      archiveOnly.push(route.id);assert.equal(plan.referenceDossiers.length,route.fighters.length);
+      assert.throws(()=>newRun(route.id),/ne possède pas encore de rencontre combattante compatible.*dossiers consultables/,route.id);
+    }
+    assert.deepEqual(route,before,'the archive route is not edited');dossiers+=plan.referenceDossiers.length;
   }
-  assert.equal(dossiers,7,'the seven existing noncombatant/reference-pending chapters remain explicit');
+  assert.deepEqual(archiveOnly,['harry_ice','maya_villa']);
+  assert.equal(dossiers,10,'the existing seven dossiers and three newly excluded pursuit chapters remain explicit');
+});
+
+test('archive-only projections cannot become empty runs or overwrite an existing checkpoint during save/import',()=>{
+  for(const routeId of ['harry_ice','maya_villa']){
+    const memory=new Memory(),saved=newRun('room_21');saveRun(saved,memory);
+    const before=new Map(memory.data),writes=memory.writes;
+    assert.throws(()=>newRun(routeId),/dossiers consultables/);
+    const empty={...saved,routeId,...chronicleEncounterPlan(routeId)};
+    assert.equal(validateRun(empty),false,'an archive projection is not a played or pending fight');
+    assert.equal(saveRun(empty,memory),null);
+    assert.throws(()=>importMemory({schema:MEMORY_SCHEMA,entries:{[KEYS.run]:empty}},memory,{[KEYS.run]:validateRun}));
+    assert.deepEqual(memory.data,before);assert.equal(memory.writes,writes);
+  }
+});
+
+test('old pursuit-route checkpoints remain readable and blocked without dropping chapters or fabricating wins',()=>{
+  for(const routeId of ['harry_ice','maya_villa']){
+    const memory=new Memory(),old=legacyRun(routeId);assert.equal(validateRun(old),true);saveRun(old,memory);
+    const before=memory.getItem(KEYS.run),writes=memory.writes,loaded=loadRun(memory);
+    assert.deepEqual(loaded,old);assert.equal(memory.writes,writes);assert.equal(memory.getItem(KEYS.run),before);
+    const expected=CHRONICLES.find(r=>r.id===routeId).fighters.map(fighterId=>({fighterId,role:'scripted-encounter'}));
+    assert.deepEqual(runCombatBlockers(loaded),expected);
+    const resumed=resumeRun(loaded);assert.deepEqual(resumed.queue,old.queue);assert.equal(resumed.index,0);assert.equal(resumed.wins,0);assert.deepEqual(resumed.results,[]);
+    assert.equal(memory.getItem(KEYS.run),before);assert.equal(memory.writes,writes);
+  }
 });
 
 test('the filtered chapter keeps its original arena instead of rotating the stage list again after a skipped dossier',()=>{

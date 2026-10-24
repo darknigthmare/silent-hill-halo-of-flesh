@@ -1,6 +1,6 @@
 # Directeur d’arènes et gameplay environnemental — v0.9.6
 
-**123 arènes · 14 terrains · 15 bascules · 24 événements · 9 liens de danger · 24 interactions.**
+**123 arènes · 14 terrains · 15 bascules · 22 événements · 9 liens de danger · 22 interactions.**
 
 > Les lieux, accessoires, climats et motifs sont documentés à partir du catalogue du projet. Les timings, dégâts, zones de danger et déclencheurs restent des adaptations versus originales explicitement séparées du canon.
 
@@ -90,7 +90,7 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | Arène | Terrain | Bascule | Événements | Déclencheurs | Dangers | Animations | Base lore |
 |---|---|---|---|---|---|---:|---|
 | MIDWICH ELEMENTARY | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 1 | École de SH1 avant la traversée de l’horloge ; séparer de Nightmare School. |
-| ALCHEMILLA HOSPITAL | BÉTON SEC | fixed-normal — aucune bascule | VOYANT DU PALIER | IMPACT LOURD À PROXIMITÉ |  | 1 | Alchemilla de SH1, état hospitalier initial ; ne pas employer les couloirs de Brookhaven. |
+| ALCHEMILLA HOSPITAL | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 1 | Alchemilla de SH1, état hospitalier initial ; ne pas employer les couloirs de Brookhaven. |
 | OLD SILENT HILL | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Rues du premier quartier de SH1 ; brouillard et neige distincts de la cendre du film. |
 | NOWHERE | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | APPEL DE LA SIRÈNE | IMPACT LOURD / PREMIER TEMPS |  | 1 | Espace composite sans carte de SH1 ; choisir les salles exactes avant assemblage. |
 | LAKESIDE AMUSEMENT PARK | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3. |
@@ -106,10 +106,10 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | DAISY VILLA ROOFTOP | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 0 | Toit Daisy Villa du combat Missionary de SH3. |
 | SEWER CHANNEL | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 2 | Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. |
 | ROOM 302 | PLANCHER ANCIEN | fixed-normal — aucune bascule | TROU DE LA SALLE DE BAIN | IMPACT LOURD À PROXIMITÉ |  | 0 | Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive. |
-| SUBWAY WORLD | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule |  |  |  | 1 | Subway World de SH4 ; trains traversables et escalator avec Wallmen. |
-| WATER PRISON WORLD | EAU STAGNANTE | fixed-normal — aucune bascule |  |  |  | 0 | Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. |
+| SUBWAY WORLD | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule |  |  |  | 1 | Subway World de SH4 ; trains traversables et escalator avec Wallmen. Vue retenue : premier passage, quai Lynch Street et voitures arrêtées aux portes commandées par bouton rouge ; ni escalator/Wallmen, ni arrivée du train de Hazel Street SH3. Le cycle visuel du panneau est une proposition versus, pas un automatisme du récit. |
+| WATER PRISON WORLD | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 0 | Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol. |
 | APARTMENT WORLD | MOQUETTE HUMIDE | fixed-normal — aucune bascule |  |  |  | 0 | South Ashfield Heights de SH4 vu depuis les couloirs et logements. |
-| HOSPITAL WORLD | BÉTON SEC | fixed-normal — aucune bascule | PANNE GÉNÉRALE | MI-CHEMIN OTHERWORLD |  | 1 | Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. |
+| HOSPITAL WORLD | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 1 | Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives. |
 | CEDAR GROVE SANITARIUM | BÉTON SEC | PASSAGE PAR LE MIROIR — transition versus autorisée |  |  |  | 1 | Cedar Grove Sanitarium; préciser pièce retenue, ne pas assimiler tout le bâtiment à la cellule d’Helen. |
 | RIVERSIDE MOTEL | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 0 | Riverside Motel; cuisine du Butcher et chambre500 de Richard sont des sous-lieux distincts. |
 | SHEPHERD’S GLEN | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Ville de Shepherd’s Glen; cadrage de rue à définir. |
@@ -159,7 +159,7 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 | HILLTOP CENTER — OTHERWORLD | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule |  |  |  | 1 | Hilltop Otherworld de SH3, avec le Glutton comme obstacle de progression. |
 | BROOKHAVEN — NIGHTMARE HOSPITAL | BÉTON SEC | fixed-altered — aucune bascule |  |  |  | 1 | Brookhaven Otherworld de SH3 ; salle au miroir isolée du bassin Leonard. |
 | LAKESIDE AMUSEMENT PARK — SH3 | BÉTON TREMPÉ | fixed-normal — aucune bascule |  |  |  | 1 | Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. |
-| FOREST WORLD | BOUE ET RACINES | fixed-normal — aucune bascule |  |  |  | 1 | Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. |
+| FOREST WORLD | BOUE ET RACINES | fixed-normal — aucune bascule |  |  |  | 0 | Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. Vue retenue : sentier/clairière arborée du premier passage, sans façade Wish House ni incendie du retour ; vent des herbes et branches proposé pour le versus. |
 | BUILDING WORLD | BÉTON SEC | fixed-normal — aucune bascule |  |  |  | 2 | Building World de SH4, assemblage de toits et commerces. |
 | OUTSIDE ROOM 302 | MOQUETTE HUMIDE | fixed-altered — aucune bascule |  |  |  | 0 | Dernier parcours autour de 302 dans SH4, altéré après les retours. |
 | WISH HOUSE | BÉTON SEC | unresolved — aucune bascule |  |  |  | 0 | Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement. |
@@ -215,6 +215,6 @@ Les événements conservent leur télégraphie et leur zone évitable ; le snaps
 
 ## Réactions issues des fiches
 
-Les 57 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
+Les 61 éléments visuels partiels sont déclarés par leur ID de proposition et leur élément réellement dessiné. Les réactions de lumière, poussière et vapeur utilisent exclusivement `local-heavy-impact` : un choc lourd dans la zone normalisée du lieu. Elles ne produisent aucun dégât, ne démarrent pas par simple cadence et respectent la phase autorisée.
 
 Les états et listes de mécanismes de la fiche sont également vérifiés lors des appels directs du moteur, des transitions de boss et des rites. Une famille de décor ne suffit pas à autoriser un événement.

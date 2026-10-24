@@ -2232,7 +2232,7 @@
       "observedMoves": [
         {
           "name": "Heurt",
-          "description": "Coup de tête.",
+          "description": "Commence par donner des coups de tête ; l’ouverture menaçante de la mâchoire intervient après aggravation de son état. Les seuils de santé du versus restent une adaptation.",
           "evidence": [
             "CL_SH1_BOSSES",
             "CL_SH1_CREATURES"
@@ -2243,7 +2243,7 @@
         },
         {
           "name": "Gueule",
-          "description": "Ouverture puis engloutissement létal.",
+          "description": "Dans la phase aggravée, ouvre la gueule puis tente d’engloutir Harry ; l’engloutissement est létal dans cette rencontre originale. Le prototype transpose le geste sans en déduire une mort instantanée ni un nombre canonique de tirs.",
           "evidence": [
             "CL_SH1_BOSSES",
             "CL_SH1_CREATURES"
@@ -2254,7 +2254,7 @@
         },
         {
           "name": "Vulnérabilité",
-          "description": "La gueule ouverte expose sa faiblesse.",
+          "description": "La gueule ouverte expose sa faiblesse aux tirs de face. Le seuil de phase, le multiplicateur de dégâts et la fenêtre en ticks du prototype sont des règles de versus, sans mesure source de startup ou de récupération.",
           "evidence": [
             "CL_SH1_BOSSES"
           ],
@@ -5226,15 +5226,19 @@
       "identityNote": "Entité invisible et inoffensive ; profil offensif actuel à requalifier.",
       "referenceIds": [
         "CL_PRISONER",
-        "CL_SH2_CREATURES"
+        "CL_SH2_CREATURES",
+        "EXT_SH2_FAQ_20261024",
+        "EXT_SH2_ODDITIES_20261024"
       ],
       "observedMoves": [
         {
           "name": "Présence",
-          "description": "Voix invisible, sans attaque.",
+          "description": "Deux présences invisibles se trouvent dans les blocs nord et sud de Toluca Prison ; James peut les viser, les blesser et les tuer, provoquant des cris humains. Les vocalisations sont perçues comme « ritual ». Ces pages ne prouvent pas explicitement leur non-hostilité.",
           "evidence": [
             "CL_PRISONER",
-            "CL_SH2_CREATURES"
+            "CL_SH2_CREATURES",
+            "EXT_SH2_FAQ_20261024",
+            "EXT_SH2_ODDITIES_20261024"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -5244,7 +5248,8 @@
       "constraints": [
         "Aucun modèle visible à déclarer 1:1.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "La possibilité de viser, blesser et tuer la présence invisible ne prouve pas qu’elle attaque James ou qu’elle est inoffensive ; le rôle reste à décider faute de preuve directe."
       ],
       "proposals": {
         "super": {
@@ -8095,7 +8100,7 @@
       "observedMoves": [
         {
           "name": "Bond",
-          "description": "Saut offensif.",
+          "description": "Bondit rapidement depuis une distance moyenne ou longue et heurte Henry ; le guide distingue ce bond de la morsure maintenue au contact.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8105,7 +8110,7 @@
         },
         {
           "name": "Prise",
-          "description": "Morsure maintenue.",
+          "description": "Agrippe Henry dans une morsure maintenue qui inflige davantage de dégâts ; le statut bind du versus adapte cette emprise, sans durée de lutte source mesurée.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8209,7 +8214,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_sniffer_dog_male_053 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh4_sniffer_dog_male_053 pour le bond rapide et la morsure retenante documentés pour les Sniffers ; seules les différences explicitement établies pour cette variante sont à produire.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8314,7 +8319,7 @@
       "observedMoves": [
         {
           "name": "Vol",
-          "description": "Passe rapidement et mord.",
+          "description": "Fonce en vol vers Henry et mord en passage rapide ou en vol stationnaire ; un seul coup de mêlée peut le faire tomber, avant le coup de pied qui le termine. La chute ne prouve pas une mort automatique.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8418,7 +8423,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Balayage qui renverse.",
+          "description": "Depuis son ancrage mural, griffe ou frappe de ses grands bras et renverse Henry ; le support ne devient pas une locomotion libre.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -13604,7 +13609,7 @@
       "referenceIds": [
         "CL_SH4_02_SUBWAY_WORLD"
       ],
-      "locationNote": "Subway World de SH4 ; trains traversables et escalator avec Wallmen.",
+      "locationNote": "Subway World de SH4 ; trains traversables et escalator avec Wallmen. Vue retenue : premier passage, quai Lynch Street et voitures arrêtées aux portes commandées par bouton rouge ; ni escalator/Wallmen, ni arrivée du train de Hazel Street SH3. Le cycle visuel du panneau est une proposition versus, pas un automatisme du récit.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13656,7 +13661,7 @@
       "referenceIds": [
         "CL_SH4_04_WATER_PRISON_WORLD"
       ],
-      "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques.",
+      "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13760,7 +13765,7 @@
       "referenceIds": [
         "CL_SH4_07_HOSPITAL_WORLD"
       ],
-      "locationNote": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven.",
+      "locationNote": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13812,7 +13817,7 @@
       "referenceIds": [
         "CL_SH4_03_FOREST_WORLD"
       ],
-      "locationNote": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour.",
+      "locationNote": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. Vue retenue : sentier/clairière arborée du premier passage, sans façade Wish House ni incendie du retour ; vent des herbes et branches proposé pour le versus.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",

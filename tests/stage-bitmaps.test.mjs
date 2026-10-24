@@ -45,6 +45,17 @@ test('duplicate paths with conflicting measured metadata fail before loading',as
   const h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),result=await h.cache.prepare([stage]);
   assert.equal(result.ok,false);assert.deepEqual(result.failed,['stage-descriptor']);assert.equal(h.images.length,0);
 });
+test('explicit scene ceiling metadata uses booleans and rejects ambiguous geometry',()=>{
+  for(const ceiling of [true,false]){
+    const art={...artFor(),geometry:{ceiling}};assert.equal(validateStageBitmap(stage,art),art);
+  }
+  for(const geometry of [null,[],{},'interior',{ceiling:1},{ceiling:'false'},{ceiling:true,unknown:true}]){
+    const art={...artFor(),geometry};assert.throws(()=>validateStageBitmap(stage,art),/scene geometry/);
+  }
+  assert.equal(STAGE_BITMAPS.midwich.geometry.ceiling,false);
+  assert.equal(STAGE_BITMAPS.woodside.geometry.ceiling,true);
+  assert.equal(STAGE_BITMAPS.alchemilla.geometry.ceiling,true);
+});
 test('joint preflight waits for every actor and stage image',async()=>{
   const art=artFor(stage,{frames:2}),h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),actor=harness(SpriteCache);
   const frame=art.layers[0].frames[1];h.held.add(frame.path);let settled=false;

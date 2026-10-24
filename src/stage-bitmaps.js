@@ -16,6 +16,8 @@ export function validateStageBitmap(stage,art){
   const fail=message=>{throw new Error('Stage bitmap: '+message);};
   if(!stage||typeof stage.id!=='string'||art?.stageId!==stage.id||art.source!==stage.source)fail('identity/source mismatch');
   if(art.status!=='integrated-candidate'||art.fidelity!=='unverified'||!['replace','overlay'].includes(art.mode))fail('unsupported provenance/mode');
+  if(art.geometry!==undefined&&(!art.geometry||typeof art.geometry!=='object'||Array.isArray(art.geometry)||
+    Object.keys(art.geometry).some(key=>key!=='ceiling')||typeof art.geometry.ceiling!=='boolean'))fail('invalid scene geometry');
   if(!Array.isArray(art.layers)||!art.layers.length||art.layers.length>8)fail('invalid layer count');
   const ids=new Set(),paths=new Map();
   for(const layer of art.layers){

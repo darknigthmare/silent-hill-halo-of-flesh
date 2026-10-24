@@ -125,7 +125,7 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,57);assert.equal(keys.size,27);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  assert.equal(tracks.length,61);assert.equal(keys.size,31);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];
@@ -140,6 +140,7 @@ test('a small explicit catalogue implements precise visual parts instead of labe
 
 test('all selected background motions animate normally and freeze in reduced motion without leaking paint state',()=>{
   for(const s of STAGES)for(const t of s.referenceTracks){
+    if(t.eventEnabled===false){assert.deepEqual(trackTrace(s,t,1400,{timer:96}),[],t.id+' must remain inactive in this room');continue;}
     assert.ok(!isDeepStrictEqual(trackTrace(s,t,1400,{timer:96}),trackTrace(s,t,5900,{timer:42})),t.id+' is not animated');
     assert.deepEqual(trackTrace(s,t,1400,{timer:96,reducedMotion:true}),trackTrace(s,t,5900,{timer:42,reducedMotion:true}),t.id+' still moves');
   }
@@ -158,7 +159,7 @@ test('fixed narrative states survive a caller supplying a different Otherworld a
 });
 
 test('reactive reference tracks require a local heavy impact and cannot run as an ambient loop',()=>{
-  for(const s of STAGES)for(const t of s.referenceTracks.filter(t=>t.event)){
+  for(const s of STAGES)for(const t of s.referenceTracks.filter(t=>t.event&&t.eventEnabled!==false)){
     const r=canvasTrace();assert.deepEqual(drawStageReferenceTracks(r.context,1280,720,{...s,referenceTracks:[t]},2400),[]);
     assert.equal(r.calls.length,0);assert.equal(t.trigger,'local-heavy-impact');assert.equal(STAGE_EVENTS[t.event].referenceOnly,true);
     assert.equal(STAGE_EVENTS[t.event].hazard,undefined);

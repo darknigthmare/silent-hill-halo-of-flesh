@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-24",
+  "baseCommit": "088960c9c948fdb43f6c442233e21347487badc0",
+  "scope": "Passe 5 : six décisions P0 de rôle pour des rencontres de poursuite. Les images, animations, commandes source et timings 1:1 restent à produire ou à mesurer.",
+  "networkMethod": "HTTPS via proxy/TLS configurés ; aucun contournement des réponses HTTP402/403. Pages réussies et SHA-256 archivés hors dépôt.",
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch5-roles-2026-10-24/",
+  "sources": [
+    {
+      "id": "EXT08",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/monsters_en.htm",
+      "httpStatus": 200,
+      "bytes": 18423,
+      "sha256": "571a56e69d80c93997634df062ce11cf120abbb2a27c8bf90e22fdb991d95edb",
+      "localFile": "shattered-monsters.html",
+      "excerpts": [
+        "Raw Shocks are invulnerable and cannot be killed as Harry doesn’t have any weapons, so the only thing you can do is to run from them while using the flares to scare them off temporarily.",
+        "They can adopt different traits based on the player’s Psych Profile and develop into one of the four distinctive types: abstract, atrophied, diseased and feminine."
+      ]
+    },
+    {
+      "id": "EXT_SHATTERED_INFO_20261024",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/info_en.htm",
+      "httpStatus": 200,
+      "bytes": 14358,
+      "sha256": "c76207d4ee0a1f6a7e905aedc8a5f4ea2570d0a2a0cf0dfdf59ba6e90d47b2e5",
+      "localFile": "shattered-info.html",
+      "excerpts": [
+        "New nightmare sequences focus on escape and evasion rather than direct confrontation.",
+        "Silent Hill’s debut on the Nintendo Wii makes the fear more real than ever before."
+      ]
+    },
+    {
+      "id": "EXT29",
+      "url": "https://www.silenthillmemories.net/sh_the_short_message/monster_en.htm",
+      "httpStatus": 200,
+      "bytes": 17662,
+      "sha256": "83174befbf7a697badac15a85716cb90d6d11421bb3f01ec17ba74ce882a5d05",
+      "localFile": "sakura-monster.html",
+      "excerpts": [
+        "Anita cannot fight it so she must run through the otherworld mazes to escape from it."
+      ]
+    },
+    {
+      "id": "EXT30",
+      "url": "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+      "httpStatus": 200,
+      "bytes": 38327,
+      "sha256": "3c3c360a415f0459f5099b4bac3231a0a329bcf5c25072b708acc56a92771ef6",
+      "localFile": "sakura-guide.html",
+      "excerpts": [
+        "Note that you must collect all pictures in one run as if the monster catches you, it resets to the start."
+      ]
+    },
+    {
+      "id": "EXT_SH2_FAQ_20261024",
+      "url": "https://www.silenthillmemories.net/sh2/faq_en.htm",
+      "httpStatus": 200,
+      "bytes": 42277,
+      "sha256": "4f105fa326ea49f1f38c04954c7aad3b490202682ffadba77f2668f6aca9fb13",
+      "localFile": "sh2-faq.html",
+      "excerpts": [
+        "But do go ahead and aim and shoot at the thing and it will take damage, scream and eventually die. You can even whack it with the Steel Pipe."
+      ]
+    },
+    {
+      "id": "EXT_SH2_ODDITIES_20261024",
+      "url": "https://www.silenthillmemories.net/sh2/cool_and_scary_things_en.htm",
+      "httpStatus": 200,
+      "bytes": 57399,
+      "sha256": "1f7526234b4baf61426db2eb8e31ecf71eff50c6f7dfdc0263684d12b324553f",
+      "localFile": "sh2-cool-scary.html",
+      "excerpts": [
+        "There are two invisible monsters in Toluca Prison: one in the northern cellblock and one in the southern cellblock – you can target and kill both, and they even let out human-like cries of pain."
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "status": "resolved",
+      "fighterId": "shattered_raw_shock_base_099",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "evidence": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre.",
+      "reviewedAt": "2026-10-24"
+    },
+    {
+      "status": "resolved",
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "evidence": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante feminine est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+      "reviewedAt": "2026-10-24"
+    },
+    {
+      "status": "resolved",
+      "fighterId": "shattered_raw_shock_diseased_101",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "evidence": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante diseased est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+      "reviewedAt": "2026-10-24"
+    },
+    {
+      "status": "resolved",
+      "fighterId": "shattered_raw_shock_abstract_102",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "evidence": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante abstract est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+      "reviewedAt": "2026-10-24"
+    },
+    {
+      "status": "resolved",
+      "fighterId": "shattered_raw_shock_atrophied_103",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "evidence": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante atrophied est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+      "reviewedAt": "2026-10-24"
+    },
+    {
+      "status": "resolved",
+      "fighterId": "shortmessage_sakura_head_150",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: The Short Message (2024, PS5)",
+      "evidence": [
+        "EXT29",
+        "EXT30"
+      ],
+      "rationale": "Le bestiaire indique explicitement qu’Anita ne peut pas combattre Sakura Head et doit traverser les labyrinthes pour lui échapper. Le guide décrit les détours, les obstacles et la remise au départ de la poursuite finale si le monstre la capture. Il s’agit d’une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne nie pas la mobilité du poursuivant dans l’œuvre. Aucune identité humaine définitive ni attaque de branches à distance n’est validée.",
+      "reviewedAt": "2026-10-24"
+    }
+  ],
+  "remainingReviewed": [
+    {
+      "fighterId": "sh2_prisoner_035",
+      "status": "open",
+      "reason": "Deux présences invisibles visables et tuables sont documentées ; pas de preuve explicite de non-hostilité. La vieille observation « sans attaque » a été remplacée par ces faits limités."
+    },
+    {
+      "fighterId": "sh4_greedy_worm_069",
+      "status": "open",
+      "reason": "La source de curiosités déjà intégrée prouve qu’il est attaquable mais non tuable ; elle ne prouve toujours pas explicitement la non-hostilité. La page Fandom n’a pas pu être relue (HTTP402)."
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "status": "open",
+      "reason": "Lieu et réaction des yeux au Stun Gun documentés dans la source existante, sans preuve explicite du rôle non hostile. La page Fandom n’a pas pu être relue (HTTP402)."
+    },
+    {
+      "fighterId": "pt_lisa_149",
+      "status": "open",
+      "reason": "Guide de boucle et entretien de Kojima accessibles : exploration/puzzles et absence de pouvoirs du protagoniste. Aucune preuve individuelle assez directe du pattern de Lisa n’a été ajoutée ; pas de blocage ou de clôture forcés."
+    },
+    {
+      "fighterId": "arcade_toadstool_arcade",
+      "status": "open",
+      "reason": "La galerie Arcade accessible ne décrit pas ce pattern. Le rôle du Toadstool de SH4 n’est pas transféré à la version Arcade."
+    },
+    {
+      "fighterId": "arcade_tuberculosis",
+      "status": "open",
+      "reason": "Le parcours Arcade ne fournit pas de comportement suffisamment précis du boss ; aucune identité ou capacité fermée depuis une liste d’espèces."
+    }
+  ],
+  "runtimeContract": {
+    "role": "scripted-encounter",
+    "required": "ID/source/édition identiques ; reviewed=true ; combatEnabled/canMove/canJump/canDodge/superEnabled=false ; toutes les commandes désactivées.",
+    "scope": "Blocage du duel autonome du prototype ; le poursuivant reste mobile et dangereux dans son œuvre.",
+    "synchronization": "Les éditions ajoutées aux JSON nécessitent la régénération de production-reference.js avant que le helper strict valide les six tâches de rôle."
+  },
+  "workbookInvariants": {
+    "observations": 435,
+    "existingSourcePrefix": 139,
+    "sourcesAfterAppend": 142,
+    "newSourcesAppendedTo": "extended.sources",
+    "priorResolvedRoleDecisionsPreserved": 18,
+    "resolvedRoleDecisionsAfterReview": 24,
+    "preserved": "Tous les profils, nombres/noms/ordres des observations et les lignes d’animation des arènes."
+  },
+  "integratedDeltas": {
+    "combat": [
+      "sh1_split_head_014",
+      "sh4_sniffer_dog_male_053",
+      "sh4_sniffer_dog_female_054",
+      "sh4_hummer_055",
+      "sh4_wall_man_056"
+    ],
+    "combatSourceArchive": "/workspace/shared/halo-of-flesh/references/batch5-combat-2026-10-24/provenance.json",
+    "stages": [
+      "subway_world",
+      "forest_world",
+      "water_prison",
+      "hospital_world"
+    ],
+    "stageSourceArchive": "/workspace/shared/halo-of-flesh/references/stages-batch5-2026-10-24/",
+    "cinematics": "Les dix recettes utilisent les propositions existantes ; aucun delta JSON demandé par leur auteur."
+  },
+  "failedRetrievals": [
+    {
+      "url": "https://silenthill.fandom.com/wiki/Prisoner",
+      "error": "HTTP Error 402: Payment Required"
+    },
+    {
+      "url": "https://silenthill.fandom.com/wiki/Greedy_Worm",
+      "error": "HTTP Error 402: Payment Required"
+    },
+    {
+      "url": "https://silenthill.fandom.com/wiki/Unidentified_head-shaped_object",
+      "error": "HTTP Error 402: Payment Required"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/P.T._(video_game)",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.ign.com/wikis/silent-hills/P.T._Demo_Walkthrough",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gamespot.com/articles/pt-video-shows-lisas-terrifying-hidden-movements/1100-6475012/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.silenthillpage.de/SilentHill4/Monster.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.pcgamer.com/pt-developer-confirms-that-lisa-is-always-behind-you/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.eurogamer.net/pt-lisa-is-always-behind-you",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}

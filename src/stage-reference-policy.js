@@ -20,14 +20,17 @@ const ENVIRONMENT = Object.freeze({
   church_hc: {name:'CHURCH OF THE HOLY WAY',weather:'dust'},
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
   prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER'},
-  alchemilla: {weather:'dust'}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
+  alchemilla: {weather:'dust',disabledEvents:{referenceLightReply:'Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu.'}}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
   lakeside_amusement:{weather:'fog'}, lakeside_sh3:{weather:'fog'},
   blue_creek:{weather:'water',terrain:'wetConcrete'},
   hotel_otherworld:{weather:'water',terrain:'wetConcrete',removeProps:['fire','mirrors']},
   lakeview:{weather:'dust'}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
   historical_society:{removeProps:['stairs']}, baldwin_mansion:{removeProps:['fireplace']},
   brookhaven_roof:{weather:'fog'}, apartment_roof:{weather:'fog'},
-  room_302:{weather:'dust'}, apartment_world:{weather:'dust'}, forest_world:{weather:'fog'},
+  room_302:{weather:'dust'}, apartment_world:{weather:'dust'}, forest_world:{weather:'fog',removeProps:['wish_house','wish house']},
+  subway_world:{weather:'dust',removeProps:['turnstile']},
+  water_prison:{weather:'dust',terrain:'concrete',removeProps:['tower','watchtower','cells','spotlight','chains']},
+  hospital_world:{removeProps:['beds','head','curtains','monitor']},
   cedar_grove:{weather:'dust'}, riverside_motel:{weather:'fog'}, grand_hotel:{weather:'dust'},
   nightmare_school:{weather:'cold'}, nightmare_hospital_sm:{weather:'cold'}, nightmare_mall_sm:{weather:'cold'},
   police_station_hc:{weather:'dust'}, centennial_building:{weather:'dust'}, st_marias:{weather:'dust'}, overlook:{weather:'water'},
@@ -75,6 +78,10 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   closedDoorReply: {name:'Battant fermé du Lounge d’Ernest',layer:'background',replaces:[],stageId:'baldwin_mansion',source:'sh2',locationScope:'Palier devant le Lounge ; porte fermée de Born from a Wish',limits:'La porte reste opaque et fermée ; aucun Ernest visible, aucune bougie du grenier déplacée ici.'},
   chapelCandleLean: {name:'Flammes des cierges de la chapelle',layer:'background',replaces:[],stageId:'church',source:'sh3',locationScope:'Chapelle avec autel et vitraux ; hors passages mémoire et fosse finale',limits:'Cierges attestés ; inclinaison commune proposée pour le versus, sans invocation ni effet sur les combattants.'},
   officeBlindSway: {name:'Store du bureau de Monica’s Dance Studio',layer:'background',replaces:[],stageId:'hilltop_center',source:'sh3',locationScope:'Bureau / réception de Monica’s Dance Studio, Hilltop Center normal',limits:'Store attesté dans cette pièce ; oscillation proposée pour le versus, sans atelier ni seuil de baignoire.'},
+  subwayDoorCycle: {name:'Panneaux d’une voiture arrêtée',layer:'background',replaces:[],stageId:'subway_world',source:'sh4',locationScope:'Premier passage, quai Lynch Street et voitures arrêtées',limits:'Commande rouge attestée ; cycle lent proposé pour le versus, sans Cynthia, Wallmen, départ du train ou danger Hazel Street SH3.'},
+  forestWindLayers: {name:'Vent distinct dans les branches et les herbes',layer:'background',replaces:['forestWind','windGust'],stageId:'forest_world',source:'sh4',locationScope:'Sentier et clairière arborée du premier passage ; hors enceinte Wish House',limits:'Deux fréquences de vent proposées pour le versus ; troncs et appuis fixes, aucune maison brûlée ni racine animée comme une main.'},
+  waterwheelTurn: {name:'Roue horizontale au fond de la salle B2',layer:'background',replaces:[],stageId:'water_prison',source:'sh4',locationScope:'B2 Waterwheel Room, mécanisme sous la coursive sèche',limits:'Roue dans le plan horizontal et axe vertical ; rotation lente proposée, sans cellule pivotante, vanne automatique, moulin vertical ou sol inondé.'},
+  wheelchairDrift: {name:'Fauteuil abstrait dans le couloir du deuxième étage',layer:'background',replaces:[],stageId:'hospital_world',source:'sh4',locationScope:'Couloir des chambres au deuxième étage ; hors chambre de la tête géante',limits:'Fauteuil vide abstrait proposé pour le versus ; les Wheelchairs du jeu sont des ennemis, cette piste ne produit ni leur apparence complète, ni leur IA, ni leurs dégâts.'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -102,6 +109,10 @@ const BINDINGS = Object.freeze({
   church:[['chapelCandleLean',1,[.71,.49]]],
   hilltop_center:[['officeBlindSway',1,[.72,.32]]],
   room_302:[['chainPendulum',1,[.52,.34]],['washroomHoleReply',2,[.78,.49],'referenceWashroomReply']],
+  subway_world:[['subwayDoorCycle',1,[.5,.57]]],
+  forest_world:[['forestWindLayers',1,[.5,.57]]],
+  water_prison:[['waterwheelTurn',1,[.71,.49]]],
+  hospital_world:[['wheelchairDrift',1,[.72,.57]]],
   apartment_world:[['doorReply',1,[.5,.57]]],
   riverside_motel:[['signFlicker',0,[.72,.31]],['curtainBreathe',1,[.29,.38]]],
   shepherds_glen:[['fogLayers',0,[.5,.55]]],
@@ -138,7 +149,7 @@ const EVENT_HAZARDS = Object.freeze({lockerSlam:'lockerSlam',gurneyRush:'gurneyR
 const AMBIENT_EVENTS = Object.freeze({
   nowhere:['powerFailure','sirenCall'], hospital_nightmare:['sirenCall'], midwich_nightmare:['sirenCall'],
   shopping_mall:['powerFailure'], nightmare_mall:['powerFailure'], hazel_subway:['powerFailure'],
-  hospital_world:['powerFailure'], building_world:['powerFailure'], outside_room_302:['powerFailure'],
+  building_world:['powerFailure'], outside_room_302:['powerFailure'],
   looping_hall:['powerFailure'], villa_stairwell:['powerFailure'],
   nightmare_hospital_hc:['powerFailure'], police_station_hc:['powerFailure'], prison_hc:['powerFailure'],
   film_midwich:['sirenCall'], film_church:['sirenCall'],
@@ -237,18 +248,20 @@ export function applyStageReferencePolicy(stage, reference) {
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
       evidence:[...(proposal.evidence || reference.referenceIds || [])],layer:definition.layer,anchor:{x:anchor[0],y:anchor[1]},
       trigger:event ? 'local-heavy-impact' : 'ambient',event:event || null,
+      eventEnabled:event ? !corrections.disabledEvents?.[event] : null,
       implementation:'canvas-prototype',coverage:'partial-visual-prototype',implementedElement:definition.name,
       fidelity:'adaptation-versus-proposee',captureStatus:proposal.captureStatus || 'capture-a-relever',
       locationScope:definition.locationScope || null,
-      limits:unique(['Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.',definition.limits]).join(' ')}];
+      limits:unique(['Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.',definition.limits,corrections.disabledEvents?.[event]]).join(' ')}];
   });
   const allowedHazards = blocked ? [] : [...(HAZARDS[stage.id] || [])];
   const candidateEvents = unique([...(stage.director?.events || []),...referenceTracks.map(track=>track.event)]);
-  const allowedEvents = blocked ? [] : candidateEvents.filter(id => referenceTracks.some(track=>track.event===id) ||
-    (EVENT_HAZARDS[id] ? allowedHazards.includes(EVENT_HAZARDS[id]) && id !== 'ashFall' : (AMBIENT_EVENTS[stage.id] || []).includes(id)));
+  const allowedEvents = blocked ? [] : candidateEvents.filter(id => !corrections.disabledEvents?.[id] && (referenceTracks.some(track=>track.event===id) ||
+    (EVENT_HAZARDS[id] ? allowedHazards.includes(EVENT_HAZARDS[id]) && id !== 'ashFall' : (AMBIENT_EVENTS[stage.id] || []).includes(id))));
   const replaced = new Set(referenceTracks.flatMap(track=>STAGE_REFERENCE_TRACKS[track.key].replaces));
   const animations = blocked ? [] : result.animations.filter(id=>!replaced.has(id) && animationAllowed(result,id,worldState));
   const suppression = [
+    ...referenceTracks.filter(track=>track.eventEnabled===false).map(track=>({kind:'event',id:track.event,reason:corrections.disabledEvents[track.event]})),
     ...(stage.director?.events || []).filter(id=>!allowedEvents.includes(id)).map(id=>({kind:'event',id,reason:'Occurrence locale ou danger non retenu par la fiche exacte.'})),
     ...(stage.director?.hazardDeck || []).filter(id=>!allowedHazards.includes(id)).map(id=>({kind:'hazard',id,reason:'Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts.'})),
     ...(stage.animations || []).filter(id=>!animations.includes(id)).map(id=>({kind:'animation',id,reason:replaced.has(id)?'Remplacé par une piste précise du classeur.':'Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire.'})),
@@ -258,7 +271,7 @@ export function applyStageReferencePolicy(stage, reference) {
   result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
     weather:result.weather,interior,baselineMotion:!blocked,suppression,
     hazardFidelity:'Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.',
-    renderedProposalIds:referenceTracks.map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id)),
+    renderedProposalIds:referenceTracks.filter(track=>track.eventEnabled!==false).map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id&&track.eventEnabled!==false)),
   };
   result.animations = animations;
   result.animationTracks = (stage.animationTracks || []).filter(track=>animations.includes(track.id));

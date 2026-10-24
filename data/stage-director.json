@@ -750,6 +750,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Battant entrouvert, appui fixe",
@@ -837,18 +838,7 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "referenceLightReply",
-          "name": "VOYANT DU PALIER",
-          "duration": 100,
-          "darkness": 0.04,
-          "radioBoost": 0.04,
-          "gameplayRole": "ambience",
-          "referenceOnly": true,
-          "message": "LE VOYANT RÉPOND"
-        }
-      ],
+      "events": [],
       "hazards": [],
       "animations": [
         {
@@ -859,46 +849,8 @@
           "cadence": "irregular"
         }
       ],
-      "interactions": [
-        {
-          "id": "alchemilla_referenceLightReply_1",
-          "event": "referenceLightReply",
-          "name": "Voyant après impact",
-          "trigger": "local-heavy-impact",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
-          "canonicalBasis": "Après choc proche de la cage, le voyant d’étage clignote une fois et l’ascenseur gronde.",
-          "referenceIds": [
-            "CL_SH1_06_ALCHEMILLA_HOSPITAL"
-          ],
-          "proposalId": "alchemilla:reference:3",
-          "zone": {
-            "x": 0.52,
-            "radius": 0.15
-          },
-          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
-          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
-        }
-      ],
-      "choreography": [
-        {
-          "event": "referenceLightReply",
-          "prop": "lampReply",
-          "description": "Après choc proche de la cage, le voyant d’étage clignote une fois et l’ascenseur gronde.",
-          "layer": "background",
-          "anchor": {
-            "x": 0.52,
-            "y": 0.3
-          },
-          "direction": 1,
-          "referenceTracks": [
-            "alchemilla:reference:3"
-          ],
-          "evidence": [
-            "CL_SH1_06_ALCHEMILLA_HOSPITAL"
-          ]
-        }
-      ],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "alchemilla",
         "source": "sh1",
@@ -957,15 +909,18 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "referenceLightReply"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
         "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
+          {
+            "kind": "event",
+            "id": "referenceLightReply",
+            "reason": "Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu."
+          },
           {
             "kind": "event",
             "id": "gurneyRush",
@@ -999,11 +954,11 @@
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "alchemilla:reference:2",
-          "alchemilla:reference:3"
+          "alchemilla:reference:2"
         ],
         "pendingProposalIds": [
           "alchemilla:reference:1",
+          "alchemilla:reference:3",
           "alchemilla:reference:4"
         ]
       },
@@ -1025,6 +980,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ventilateur derrière sa protection",
@@ -1050,19 +1006,18 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceLightReply",
+          "eventEnabled": false,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Voyant après impact",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
           "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu."
         }
       ],
       "motifPolicy": {
-        "events": [
-          "referenceLightReply"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -1074,6 +1029,11 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "event",
+            "id": "referenceLightReply",
+            "reason": "Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu."
+          },
           {
             "kind": "event",
             "id": "gurneyRush",
@@ -1274,6 +1234,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -1299,6 +1260,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Neige dans la profondeur",
@@ -1563,6 +1525,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Lumières successives vers la porte",
@@ -2178,6 +2141,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ondes à niveau d’eau constant",
@@ -2655,6 +2619,7 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceCellReply",
+          "eventEnabled": true,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Une porte de cellule sur ses charnières",
@@ -2882,6 +2847,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Cube de commande, orientation de fond",
@@ -3165,6 +3131,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ondes à niveau d’eau constant",
@@ -3190,6 +3157,7 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceDustRelease",
+          "eventEnabled": true,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -3457,6 +3425,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Rideau métallique partiellement relevé",
@@ -3673,6 +3642,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ondes à niveau d’eau constant",
@@ -3894,6 +3864,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Flammes des cierges de la chapelle",
@@ -4619,6 +4590,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Chaîne suspendue à faible amplitude",
@@ -4644,6 +4616,7 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceWashroomReply",
+          "eventEnabled": true,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Lueur contenue du trou de la salle de bain",
@@ -4710,7 +4683,7 @@
       "name": "SUBWAY WORLD",
       "source": "sh4",
       "lore": {
-        "premise": "Subway World de SH4 ; trains traversables et escalator avec Wallmen.",
+        "premise": "Subway World de SH4 ; trains traversables et escalator avec Wallmen. Vue retenue : premier passage, quai Lynch Street et voitures arrêtées aux portes commandées par bouton rouge ; ni escalator/Wallmen, ni arrivée du train de Hazel Street SH3. Le cycle visuel du panneau est une proposition versus, pas un automatisme du récit.",
         "canonicalBasis": "CL_SH4_02_SUBWAY_WORLD",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -4761,7 +4734,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "SUBWAY WORLD",
         "correctedName": null,
-        "locationNote": "Subway World de SH4 ; trains traversables et escalator avec Wallmen.",
+        "locationNote": "Subway World de SH4 ; trains traversables et escalator avec Wallmen. Vue retenue : premier passage, quai Lynch Street et voitures arrêtées aux portes commandées par bouton rouge ; ni escalator/Wallmen, ni arrivée du train de Hazel Street SH3. Le cycle visuel du panneau est une proposition versus, pas un automatisme du récit.",
         "referenceIds": [
           "CL_SH4_02_SUBWAY_WORLD"
         ],
@@ -4814,7 +4787,7 @@
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
-        "weather": "sparks",
+        "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -4837,18 +4810,51 @@
             "kind": "animation",
             "id": "trainPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "sparks",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "subway_world:reference:2"
+        ],
         "pendingProposalIds": [
           "subway_world:reference:1",
-          "subway_world:reference:2",
           "subway_world:reference:3",
           "subway_world:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "subway_world:reference:2",
+          "key": "subwayDoorCycle",
+          "name": "Panneaux d’une voiture arrêtée",
+          "description": "Un panneau de porte tente de se fermer puis se rouvre, avec délai long et régulier.",
+          "proposalIndex": 1,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_02_SUBWAY_WORLD"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Panneaux d’une voiture arrêtée",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Premier passage, quai Lynch Street et voitures arrêtées",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Commande rouge attestée ; cycle lent proposé pour le versus, sans Cynthia, Wallmen, départ du train ou danger Hazel Street SH3."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -4879,6 +4885,11 @@
             "kind": "animation",
             "id": "trainPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "sparks",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -4888,22 +4899,21 @@
       "name": "WATER PRISON WORLD",
       "source": "sh4",
       "lore": {
-        "premise": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques.",
+        "premise": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
         "canonicalBasis": "CL_SH4_04_WATER_PRISON_WORLD",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "flooded",
-        "name": "EAU STAGNANTE",
-        "moveScale": 0.87,
-        "jumpScale": 0.9,
-        "dodgeScale": 0.9,
-        "friction": 0.8,
-        "knockbackScale": 0.92,
-        "guardRegenScale": 0.92,
-        "splash": true,
-        "description": "L’eau freine les déplacements et les esquives sans rendre le combat illisible."
+        "id": "concrete",
+        "name": "BÉTON SEC",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Sol stable et neutre."
       },
       "shift": {
         "style": "haunting",
@@ -4932,7 +4942,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "WATER PRISON WORLD",
         "correctedName": null,
-        "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques.",
+        "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
         "referenceIds": [
           "CL_SH4_04_WATER_PRISON_WORLD"
         ],
@@ -4985,7 +4995,7 @@
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
-        "weather": "water",
+        "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -5018,18 +5028,51 @@
             "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "water",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "water_prison:reference:2"
+        ],
         "pendingProposalIds": [
           "water_prison:reference:1",
-          "water_prison:reference:2",
           "water_prison:reference:3",
           "water_prison:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "water_prison:reference:2",
+          "key": "waterwheelTurn",
+          "name": "Roue horizontale au fond de la salle B2",
+          "description": "La roue hydraulique tourne à vitesse lente visible dans une ouverture de fond.",
+          "proposalIndex": 1,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_04_WATER_PRISON_WORLD"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.71,
+            "y": 0.49
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Roue horizontale au fond de la salle B2",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "B2 Waterwheel Room, mécanisme sous la coursive sèche",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Roue dans le plan horizontal et axe vertical ; rotation lente proposée, sans cellule pivotante, vanne automatique, moulin vertical ou sol inondé."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -5069,6 +5112,11 @@
             "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "water",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -5237,6 +5285,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Battant entrouvert, appui fixe",
@@ -5297,7 +5346,7 @@
       "name": "HOSPITAL WORLD",
       "source": "sh4",
       "lore": {
-        "premise": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven.",
+        "premise": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives.",
         "canonicalBasis": "CL_SH4_07_HOSPITAL_WORLD",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -5327,17 +5376,7 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "duration": 150,
-          "darkness": 0.72,
-          "radioBoost": 0.22,
-          "message": "LES LUMIÈRES S’ÉTEIGNENT",
-          "animation": "lightFlicker"
-        }
-      ],
+      "events": [],
       "hazards": [],
       "animations": [
         {
@@ -5348,40 +5387,8 @@
           "cadence": "irregular"
         }
       ],
-      "interactions": [
-        {
-          "id": "hospital_world_powerFailure_2",
-          "event": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "trigger": "otherworld-halfway",
-          "triggerLabel": "MI-CHEMIN OTHERWORLD",
-          "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
-          "canonicalBasis": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven.",
-          "referenceIds": [
-            "CL_SH4_07_HOSPITAL_WORLD"
-          ],
-          "proposalId": null
-        }
-      ],
-      "choreography": [
-        {
-          "event": "powerFailure",
-          "prop": "light",
-          "description": "Les lampes du lieu décrochent",
-          "layer": "background",
-          "anchor": {
-            "x": 0.213,
-            "y": 0.59
-          },
-          "direction": -1,
-          "evidence": [
-            "CL_SH4_07_HOSPITAL_WORLD"
-          ],
-          "fidelity": "original-versus-adaptation"
-        }
-      ],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "hospital_world",
         "source": "sh4",
@@ -5390,7 +5397,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "HOSPITAL WORLD",
         "correctedName": null,
-        "locationNote": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven.",
+        "locationNote": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives.",
         "referenceIds": [
           "CL_SH4_07_HOSPITAL_WORLD"
         ],
@@ -5440,9 +5447,7 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "powerFailure"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
         "weather": "dust",
@@ -5452,6 +5457,11 @@
           {
             "kind": "event",
             "id": "gurneyRush",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
             "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
           },
           {
@@ -5476,19 +5486,45 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "hospital_world:reference:2"
+        ],
         "pendingProposalIds": [
           "hospital_world:reference:1",
-          "hospital_world:reference:2",
           "hospital_world:reference:3",
           "hospital_world:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "hospital_world:reference:2",
+          "key": "wheelchairDrift",
+          "name": "Fauteuil abstrait dans le couloir du deuxième étage",
+          "description": "Un fauteuil de fond roule jusqu’à une marque, pivote lentement puis s’immobilise.",
+          "proposalIndex": 1,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_07_HOSPITAL_WORLD"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.72,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Fauteuil abstrait dans le couloir du deuxième étage",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Couloir des chambres au deuxième étage ; hors chambre de la tête géante",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Fauteuil vide abstrait proposé pour le versus ; les Wheelchairs du jeu sont des ennemis, cette piste ne produit ni leur apparence complète, ni leur IA, ni leurs dégâts."
+        }
+      ],
       "motifPolicy": {
-        "events": [
-          "powerFailure"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -5504,6 +5540,11 @@
           {
             "kind": "event",
             "id": "gurneyRush",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
             "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
           },
           {
@@ -5946,6 +5987,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Enseigne intermittente",
@@ -5972,6 +6014,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Bord de rideau dans un courant faible",
@@ -6222,6 +6265,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -6456,6 +6500,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -7746,6 +7791,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Papier retenu au décor",
@@ -7963,6 +8009,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -7988,6 +8035,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Fleurs rouges dans la bordure",
@@ -8013,6 +8061,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Papier retenu au décor",
@@ -8236,6 +8285,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Lueur contenue des lanternes",
@@ -9237,6 +9287,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Vrilles confinées à la bordure",
@@ -9702,6 +9753,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ondes à niveau d’eau constant",
@@ -9918,6 +9970,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -11203,6 +11256,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Cendre dans la profondeur",
@@ -12077,6 +12131,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -13210,6 +13265,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -13463,6 +13519,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ondes à niveau d’eau constant",
@@ -13705,6 +13762,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -13953,6 +14011,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Papier retenu au décor",
@@ -14192,6 +14251,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Reflet sur le vitrage d’un cadre sombre",
@@ -14862,6 +14922,7 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceClosedDoorReply",
+          "eventEnabled": true,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Battant fermé du Lounge d’Ernest",
@@ -15167,6 +15228,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -15737,6 +15799,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Ventilateur derrière sa protection",
@@ -15762,6 +15825,7 @@
           },
           "trigger": "local-heavy-impact",
           "event": "referenceSteamPurge",
+          "eventEnabled": true,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Trois jets derrière la protection",
@@ -16006,6 +16070,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Store du bureau de Monica’s Dance Studio",
@@ -16482,6 +16547,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Traînée sombre sur le miroir",
@@ -16768,7 +16834,7 @@
       "name": "FOREST WORLD",
       "source": "sh4",
       "lore": {
-        "premise": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour.",
+        "premise": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. Vue retenue : sentier/clairière arborée du premier passage, sans façade Wish House ni incendie du retour ; vent des herbes et branches proposé pour le versus.",
         "canonicalBasis": "CL_SH4_03_FOREST_WORLD",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -16800,15 +16866,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "forestWind",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -16819,7 +16877,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "FOREST WORLD",
         "correctedName": null,
-        "locationNote": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour.",
+        "locationNote": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. Vue retenue : sentier/clairière arborée du premier passage, sans façade Wish House ni incendie du retour ; vent des herbes et branches proposé pour le versus.",
         "referenceIds": [
           "CL_SH4_03_FOREST_WORLD"
         ],
@@ -16908,6 +16966,11 @@
           },
           {
             "kind": "animation",
+            "id": "forestWind",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
             "id": "rootsCreep",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
@@ -16923,15 +16986,43 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "forest_world:reference:2"
+        ],
         "pendingProposalIds": [
           "forest_world:reference:1",
-          "forest_world:reference:2",
           "forest_world:reference:3",
           "forest_world:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "forest_world:reference:2",
+          "key": "forestWindLayers",
+          "name": "Vent distinct dans les branches et les herbes",
+          "description": "Branches lointaines et herbes proches bougent avec deux fréquences de vent.",
+          "proposalIndex": 1,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_03_FOREST_WORLD"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Vent distinct dans les branches et les herbes",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Sentier et clairière arborée du premier passage ; hors enceinte Wish House",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Deux fréquences de vent proposées pour le versus ; troncs et appuis fixes, aucune maison brûlée ni racine animée comme une main."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -16973,6 +17064,11 @@
             "kind": "hazard",
             "id": "fallingDebris",
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "forestWind",
+            "reason": "Remplacé par une piste précise du classeur."
           },
           {
             "kind": "animation",
@@ -18042,6 +18138,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Bord de rideau dans un courant faible",
@@ -18279,6 +18376,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Bord de rideau dans un courant faible",
@@ -19003,6 +19101,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Voyant après impact",
@@ -20144,6 +20243,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Chaîne suspendue à faible amplitude",
@@ -20362,6 +20462,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Neige dans la profondeur",
@@ -21472,6 +21573,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Poussière dans un faisceau de fond",
@@ -21497,6 +21599,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Papier retenu au décor",
@@ -21757,6 +21860,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Bord de rideau dans un courant faible",
@@ -22698,6 +22802,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -22724,6 +22829,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Enseigne intermittente",
@@ -22984,6 +23090,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Bord de rideau dans un courant faible",
@@ -24074,6 +24181,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Houle basse au fond du lac",
@@ -24099,6 +24207,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Nappes de brume à deux vitesses",
@@ -26339,6 +26448,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Vrilles confinées à la bordure",
@@ -26582,6 +26692,7 @@
           },
           "trigger": "ambient",
           "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
           "implementedElement": "Cendre dans la profondeur",

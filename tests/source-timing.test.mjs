@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os';
 import {join,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
-import {validateSourceTiming,verifySourceTiming,sourceTimingAnnotationDigest,validateSourceTimingBatch,verifySourceTimingBatch,sourceTimingCommand} from '../scripts/source-timing.mjs';
+import {validateSourceTiming,verifySourceTiming,sourceTimingAnnotationDigest,validateSourceTimingBatch,verifySourceTimingBatch,exportSourceTimingReview,sourceTimingCommand} from '../scripts/source-timing.mjs';
 
 // A container-header fixture and injected decoder output exercise validation;
 // these bytes and timestamps are not a source-game capture or measured action.
@@ -32,6 +32,10 @@ function entryPacket(b,entry=b.entries[0]){return {schema:1,fighterId:b.fighterI
 function review(b){
  b.entries[0].review={status:'attested-candidate',reviewedBy:'Separate QA observer',reviewedAt:'2026-10-23',
   notes:'Synthetic annotation review, no source-game observation.',annotationSHA256:sourceTimingAnnotationDigest(entryPacket(b))};return b;
+}
+const previewPNG=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=','base64');
+async function fixtureFrames(snapshot,indices,directory){
+ for(const [position] of indices.entries())await writeFile(join(directory,`frame-${String(position).padStart(5,'0')}.png`),previewPNG);
 }
 
 test('timing packets retain exact identity and rational recording FPS without invented source-engine timing',()=>{
@@ -181,4 +185,64 @@ test('batch CLI rejects extra certification fields before producing an output',a
  await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
  await assert.rejects(sourceTimingCommand(['validate-batch',input,'--output',output]),/unsupported fields/);
  await assert.rejects(readFile(output),/ENOENT/);
+});
+test('review previews bind shared start/impact/end stills to exact annotations and the hashed snapshot',async context=>{
+ const directory=await fixture(context),input=review(batch()),before=structuredClone(input),outputDirectory=join(directory,'review');let calls=0,snapshot;
+ const result=await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory,probe:()=>metadata(),extract:async(path,indices,output)=>{
+  snapshot=path;calls++;assert.deepEqual(indices,[0,1,2]);
+  await writeFile(join(directory,'capture.mp4'),'changed original after validation');
+  assert.deepEqual(await readFile(path),bytes);await fixtureFrames(path,indices,output);
+ }});
+ assert.deepEqual(input,before);assert.equal(calls,1);assert.equal(result.status,'source-timing-review-candidate');
+ assert.equal(result.certifiedOneToOne,false);assert.equal(result.frames.length,3);assert.equal(result.capture.sha256,sha256);
+ assert.deepEqual(result.frames[1].recordingTime,{numerator:1001,denominator:30000});
+ assert.equal(result.frames[0].sha256,createHash('sha256').update(previewPNG).digest('hex'));
+ assert.equal(result.entries[0].reviewStatus,'attested-candidate');assert.equal(result.entries[1].reviewStatus,'pending-review');
+ assert.equal(result.entries[0].annotationSHA256,input.entries[0].review.annotationSHA256);
+ assert.deepEqual(JSON.parse(await readFile(join(outputDirectory,'review-manifest.json'),'utf8')),result);
+ const page=await readFile(join(outputDirectory,'index.html'),'utf8');
+ for(const text of ['image 0','image 1','image 2','640 pixels','aucun timing Excel rempli','frames/frame-00001.png',input.edition])assert.ok(page.includes(text),text);
+ await assert.rejects(lstat(snapshot),error=>error.code==='ENOENT');
+});
+test('review HTML treats observer annotations and declared source provenance as text',async context=>{
+ const directory=await fixture(context),input=batch(),outputDirectory=join(directory,'review');
+ input.entries[0].observedAction='<script>alert("annotation")</script>';
+ input.entries[0].measurement.notes='<img src=x onerror=alert(1)>';
+ input.capture.sourceUrl='https://example.invalid/capture?a=1&b=2';
+ const result=await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory,probe:()=>metadata(),extract:fixtureFrames});
+ const page=await readFile(join(outputDirectory,'index.html'),'utf8');
+ assert.ok(page.includes('&lt;script&gt;alert(&quot;annotation&quot;)&lt;/script&gt;'));
+ assert.ok(page.includes('&lt;img src=x onerror=alert(1)&gt;'));assert.equal(page.includes('<script>'),false);
+ assert.ok(page.includes('capture?a=1&amp;b=2'));
+ assert.equal(result.entries[0].observedAction,input.entries[0].observedAction);
+});
+test('a review output directory is exclusive and invalid capture or review cannot create it',async context=>{
+ const directory=await fixture(context),outputDirectory=join(directory,'review');
+ await exportSourceTimingReview(batch(),{baseDirectory:directory,outputDirectory,probe:()=>metadata(),extract:fixtureFrames});
+ const before=await readFile(join(outputDirectory,'index.html'));
+ await assert.rejects(exportSourceTimingReview(batch(),{baseDirectory:directory,outputDirectory,probe:()=>metadata(),extract:()=>{throw Error('must not extract');}}),/EEXIST/);
+ assert.deepEqual(await readFile(join(outputDirectory,'index.html')),before);
+ for(const change of [b=>b.entries[0].measurement.endFrame=99,b=>b.capture.sha256='0'.repeat(64),b=>b.entries[0].review.annotationSHA256='f'.repeat(64)]){
+  const invalid=review(batch());change(invalid);const absent=join(directory,'must-not-exist');
+  await assert.rejects(exportSourceTimingReview(invalid,{baseDirectory:directory,outputDirectory:absent,probe:()=>metadata(),extract:()=>{throw Error('must not extract invalid batch');}}),/Source timing/);
+  await assert.rejects(lstat(absent),error=>error.code==='ENOENT');
+ }
+});
+test('failed, missing or malformed extracted stills leave no partial review or snapshot',async context=>{
+ const directory=await fixture(context);
+ for(const extract of [async()=>{throw Error('fixture extraction failure');},async()=>{},
+  async(path,indices,output)=>{await fixtureFrames(path,indices,output);await writeFile(join(output,'frame-00000.png'),'not png');},
+  async(path,indices,output)=>{await fixtureFrames(path,indices,output);const png=Buffer.from(previewPNG);png.writeUInt32BE(641,16);await writeFile(join(output,'frame-00000.png'),png);}]){
+  const outputDirectory=join(directory,'partial');let snapshot;
+  await assert.rejects(exportSourceTimingReview(batch(),{baseDirectory:directory,outputDirectory,probe:()=>metadata(),extract:async(...args)=>{snapshot=args[0];await extract(...args);}}),/fixture extraction failure|Source timing/);
+  await assert.rejects(lstat(outputDirectory),error=>error.code==='ENOENT');
+  await assert.rejects(lstat(dirname(snapshot)),error=>error.code==='ENOENT');
+ }
+});
+test('review CLI requires a new directory and rejects malformed input before any outputs',async context=>{
+ for(const args of [['review-preview','batch.json'],['review-preview','batch.json','--output','out'],['review-preview','batch.json','--output-dir']])await assert.rejects(sourceTimingCommand(args),/usage:/);
+ const directory=await fixture(context),input=join(directory,'batch.json'),outputDirectory=join(directory,'review');
+ await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
+ await assert.rejects(sourceTimingCommand(['review-preview',input,'--output-dir',outputDirectory]),/unsupported fields/);
+ await assert.rejects(lstat(outputDirectory),error=>error.code==='ENOENT');
 });

@@ -6,7 +6,7 @@ import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 
-const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-cinematic-expansion');
+const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(process.env.QA_OUTPUT_DIR||resolve(root,'tests/http-cinematic-expansion'));
 const source=process.env.QA_SOURCE_TREE==='1',base=process.env.QA_BASE_URL||'http://127.0.0.1:4197';
 const subjects=[
   ['sh1_grey_child_005','childThreshold','midwich'],['sh1_romper_010','fourPointPin','midwich'],['sh3_nurse_revolver_044','revolverDoor','midwich'],
@@ -14,14 +14,20 @@ const subjects=[
   ['sh2_mandarin_026','underGrateGrip','midwich_nightmare'],['sh2_flesh_lip_027','cageFootLift','sewer_resort'],
   ['sh2_abstract_daddy_028','organicFrameOcclusion','labyrinth'],['sh3_pendulum_039','rotatingShadow','shopping_mall'],
   ['sh3_leonard_wolf_048','waterSurfaceGrip','brookhaven_sh3'],['sh4_hummer_055','buzzingCameraPass','room_302'],
-  ['sh4_wall_man_056','wallSupportPull','labyrinth'],['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','alchemilla']
+  ['sh4_wall_man_056','wallSupportPull','labyrinth'],['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','alchemilla'],
+  ['sh1_incubator_018','blueTerminalExposure','nowhere'],['sh1_incubus_019','redSuspendedExposure','nowhere'],
+  ['sh2_creeper_025','sh2LowShadowBite','woodside'],['sh3_god_050','incompleteBodyFireline','church'],
+  ['origins_straight_jacket_074','closedTorsoLegRelease','alchemilla_origins'],['origins_ariel_078','tetheredDollKicks','cedar_grove'],
+  ['origins_memory_of_helen_grady_082','helenSuspendedWheel','cedar_grove'],['origins_memory_of_richard_grady_083','richardWallTentacles','labyrinth'],
+  ['homecoming_lurker_085','lurkerLowClawFold','blue_creek'],['homecoming_smog_087','smogExposedExhalation','nightmare_hospital_hc']
 ];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
   'The ?qa=1 bridge stops requestAnimationFrame and advances actual simulation ticks. Two prepared target KOs per match exercise ordinary round scoring and the real deciding-finisher gate; no prior win score or cinematic recipe is injected.',
   'Keyboard taunt, directional cancellation and the real pause/resume controls are used. Prepared local mirror-free pairings and state advancement are regression scenes, not played fights or a campaign.',
   'The missing contextual sprite check permits an existing candidate idle fallback or an explicit missing-profile cartouche. Neither is counted as a produced attack, KO or finisher pose.',
-  'The ten added subjects use explicit real-menu stage choices for ceiling, floor grate, water, wall and furniture support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Two additional menu matches test genuine dry/ceilingless-location rejection.',
+  'Explicit real-menu stage choices cover ceiling, floor grate, water, wall and furniture support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Four additional menu matches reject waterless, ceilingless or wall-less locations. Bitmap replacements use their structured geometry.ceiling contract, independently of their scene name.',
+  'The latest ten exact-subject edits include SH1 blue and red lightning branches, SH3 incomplete-body ground fire, SH2 low Creeper, Origins closed-torso leg capture and suspended dolls/cages/wall head, plus Homecoming Lurker claws and exposed-lung Smog exhalation. No other edition or boss anatomy is borrowed.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
@@ -94,7 +100,10 @@ try{
     check(id+': final choreography completes once with the real winning score',current.phase==='roundEnd'&&current.wins[0]===2&&current.actors[0].fatalities===1&&current.lastFatality===id+'_signature'&&current.health[1]===0,current);
     report.scenes[id]=current;await page.close();
   }
-  for(const [id,stageId,reason] of [['sh3_leonard_wolf_048','midwich','Premier plan requis'],['sh2_flesh_lip_027','midwich','Appui de plafond']]){
+  for(const [id,stageId,reason] of [
+    ['sh3_leonard_wolf_048','midwich','Premier plan requis'],['sh2_flesh_lip_027','midwich','Appui de plafond'],
+    ['origins_memory_of_helen_grady_082','midwich','Appui de plafond'],['origins_memory_of_richard_grady_083','old_silent_hill','Premier plan requis']
+  ]){
     const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
     let current=await start(page,id,stageId);
     check(id+': unsupported-place fixture uses the actual selected menu stage',current.phase==='intro'&&current.stage===stageId&&current.actors[0].id===id,current);

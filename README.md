@@ -1,6 +1,33 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — quatrième lot du 23 octobre 2026
+## Chantiers parallèles — cinquième lot du 24 octobre 2026
+
+Les six chantiers ont avancé ensemble : quatre nouveaux sprites candidats,
+la salle d’attente normale Alchemilla, quatre pistes SH4, vingt finishers et
+soixante-dix présentations supplémentaires. Split Head, Hummer, Wall Man et
+les deux Sniffers reçoivent leurs comportements documentés ; collision,
+placement bitmap et cadrage du Hummer rejoignent le même sol après sa chute.
+
+Sakura Head et les cinq Raw Shocks restent des dossiers de poursuite sans
+duel autonome. Leurs six rôles sont résolus ; les deux chroniques entièrement
+documentaires restent consultables sans fausse progression. Le suivi conserve
+**849 actions ouvertes, dont 103 P0**, avec **3 570 commandes actives et 1 030
+désactivées**.
+
+La couverture atteint **14 profils illustrés, 18 PNG acteurs et trois PNG de
+décor**. Le premier Closer est exclu pour anatomie incorrecte ; sa version
+frontale utilise deux captures du jeu. Aucun visuel n’est certifié 1:1.
+L’outil `review-preview` produit maintenant les frames annotées et une page
+locale de relecture ; les 4 600 relevés originaux restent vides.
+
+**Validation : 736 tests Node, 100 tests Python et 749 contrôles navigateur dans
+quatorze suites ; 113 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT5_2026-10-24.md) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-24.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — quatrième lot du 23 octobre 2026
 
 Les six chantiers avancent : quatre nouveaux sprites candidats, le couloir
 Wood Side, quatre pistes de lieu, vingt finishers, soixante-dix présentations

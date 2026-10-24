@@ -7,7 +7,11 @@ import { ALESSA_WEAPON_PHASES } from './weapon-phases.js';
 // even an explicit baseId does not transfer powers between works or editions.
 const RECIPES = Object.create(null);
 const NON_COMBAT_ROLES = new Set(['noncombatant', 'environmental-obstacle', 'unverified']);
-const NON_COMBAT_SCRIPTED = new Set(['sh3_sewer_creature_052', 'sh4_sacrificed_walter_071']);
+const NON_COMBAT_SCRIPTED = new Set([
+  'sh3_sewer_creature_052','sh4_sacrificed_walter_071','shortmessage_sakura_head_150',
+  'shattered_raw_shock_base_099','shattered_raw_shock_feminine_100','shattered_raw_shock_diseased_101',
+  'shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103'
+]);
 const GROUND_ONLY = new Set([
   'sh1_creeper_009', 'sh2_creeper_025', 'sh2_lying_figure_crawling_021',
   'sh3_slurper_042', 'sh4_one_truth_070', 'film_colin_the_janitor_174',
@@ -82,6 +86,26 @@ define('sh1_air_screamer_001 sh1_night_flutter_002', {
 define('sh1_mumbler_006', {moves:weaponKit('Griffes du Mumbler')});
 define('sh1_stalker_008 sh1_grey_child_005', {moves:weaponKit('Couteau')});
 define('sh1_puppet_nurse_012 sh1_puppet_doctor_013', {moves:weaponKit('Couteau du parasite')});
+// SH1 (1999), bosses_en.htm: headbutts precede the aggravated, open-jaw bite;
+// shots into the open mouth exploit its weakness. The 70% transition and 2x
+// versus multiplier are local tuning, not source HP, shell counts or timing.
+const SPLIT_HEAD_JAW_SLOTS=['forwardHeavy','neutralSpecial','throw','guardCounter','super','desperation'];
+define('sh1_split_head_014', {
+  mouthPhase:{slots:SPLIT_HEAD_JAW_SLOTS,healthRequirement:.7,sourceTimingMeasured:false},
+  firearmExposure:{slots:SPLIT_HEAD_JAW_SLOTS,damageScale:2,moveType:'contact',activeOnly:true,
+    frontalOnly:true,sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'La gueule se referme devant le corps ; aucune projection arrière avec échange de places n’est documentée.'},
+  moves:{...weaponKit('Heurt de tête'),
+    forwardHeavy:contact('Mâchoire béante — avancée',{hits:1}),
+    neutralSpecial:contact('Mâchoire béante — morsure',{hits:1,unblockable:true}),
+    throw:contact('Capture dans la gueule',{hits:1}),
+    guardCounter:contact('Morsure de riposte — mâchoire béante',{hits:1}),
+    dodgeAttack:contact('Heurt de tête après écart'),
+    wakeupAttack:contact('Heurt de tête au relèvement'),
+    super:contact('Gueule ouverte — approche puis morsure',{hits:1,travel:2.1}),
+    desperation:contact('Dernière morsure béante',{hits:1,travel:2.4})
+  }
+});
 define('sh1_twinfeeler_015', {moves:{
   neutralSpecial:shot('Crachat à l’émergence'),
   forwardSpecial:contact('Percussion en surface', {travel:3.5}),
@@ -260,9 +284,38 @@ define('sh3_god_050', {moves:{
   super:shot('Couronne de flammes', {effectOverride:'burn', projectileSpeed:9}),
   desperation:shot('Dernière vague de flammes', {effectOverride:'burn', projectileSpeed:9})
 }});
-define('sh4_wall_man_056 sh4_one_truth_070', {moves:{...weaponKit('Bras de la paroi'),
+define('sh4_one_truth_070', {moves:{...weaponKit('Bras de la paroi'),
   neutralSpecial:contact('Balayage depuis le support'), super:contact('Deux balayages localisés', {hits:2})
 }});
+// SH4 enemies_en.htm: the claw swing knocks Henry to the floor. This applies
+// to Wall Man only; sharing a visual support does not establish One Truth's kit.
+define('sh4_wall_man_056', {moves:{...weaponKit('Griffes de la paroi'),
+  neutralHeavy:contact('Balayage renversant des griffes',{knockdown:true}),
+  neutralSpecial:contact('Griffes depuis le support',{knockdown:true,hits:1}),
+  super:contact('Deux balayages depuis la paroi',{knockdown:true,hits:2})
+}});
+// SH4 enemies_en.htm: Sniffers lunge and may hold Henry in a biting grip.
+// Bind substitutes for that hold; it is not a measured source escape sequence.
+define('sh4_sniffer_dog_male_053 sh4_sniffer_dog_female_054', {moves:{...weaponKit('Morsure du Sniffer'),
+  forwardSpecial:contact('Bond puis morsure',{travel:4.5,hits:1}),
+  neutralSpecial:contact('Morsure retenue',{level:'throw',effectOverride:'bind',hits:1,reach:90}),
+  throw:contact('Prise entre les mâchoires',{effectOverride:'bind',hits:1}),
+  super:contact('Bond puis prise mordante',{level:'throw',effectOverride:'bind',travel:3.2,hits:1})
+}});
+// SH4 enemies_en.htm: a single melee hit bats Hummers down. Their health and
+// the knockdown recovery below retain versus rules; this does not force death.
+define('sh4_hummer_055', {hitResponse:{meleeKnockdown:true,sourceTimingMeasured:false},
+  disabledSlots:{throw:'Les attaques décrites sont des morsures en vol, pas un enlèvement de Henry.',
+    backThrow:'Aucune projection aérienne avec échange de places n’est documentée.'},
+  moves:{...weaponKit('Morsure du Hummer'),
+    neutralSpecial:contact('Morsure en vol stationnaire',{hits:1}),
+    forwardSpecial:contact('Morsure en passage rapide',{hits:1,travel:4.5}),
+    guardCounter:contact('Morsure de riposte'),
+    dodgeAttack:contact('Morsure après écart en vol'),
+    wakeupAttack:contact('Morsure à la reprise du vol'),
+    super:contact('Passage rapide puis morsure',{hits:1,travel:4.3})
+  }
+});
 define('sh4_gum_head_old_type_057', {moves:weaponKit('Poing du Gum Head')});
 define('sh4_gum_head_new_type_058', {moves:weaponKit('Tube du Gum Head')});
 define('sh4_patient_060', {moves:weaponKit('Marteau du Patient')});
@@ -510,6 +563,8 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     canJump: combatEnabled && !attached && role !== 'stationary-boss' && !GROUND_ONLY.has(ref?.id),
     canDodge: combatEnabled && !attached,
     ...(recipe.defense?{defense:{...recipe.defense}}:{}),
+    ...(recipe.mouthPhase?{mouthPhase:{...recipe.mouthPhase,slots:[...recipe.mouthPhase.slots]}}:{}),
+    ...(recipe.hitResponse?{hitResponse:{...recipe.hitResponse}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
     ...(recipe.aiSignatureOnly?{aiSignatureOnly:true}:{}),
     ...(combatEnabled&&recipe.proximityField?{proximityField:{...recipe.proximityField}}:{}),
@@ -557,12 +612,27 @@ export function passiveProximityField(fighter) {
   return field?{...field}:null;
 }
 
+export function sourceMouthPhase(fighter) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),phase=ref&&RECIPES[ref.id]?.mouthPhase;
+  return phase?{...phase,slots:[...phase.slots]}:null;
+}
+
+export function sourceHitResponse(fighter,move,ranged=false) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),response=ref&&RECIPES[ref.id]?.hitResponse;
+  return response?.meleeKnockdown&&move&&!ranged&&!move.projectile&&!move.trap&&!move.aura&&
+    move.level!=='throw'&&move.category!=='throw'?{knockdown:true,sourceTimingMeasured:false}:null;
+}
+
 export function firearmExposure(fighter, attack) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES);
   const exposure=ref&&RECIPES[ref.id]?.firearmExposure;
-  if(!exposure||!attack?.move?.aura||!exposure.slots.includes(attack.key)||
+  if(!exposure||!attack?.move||!exposure.slots.includes(attack.key)||
     attack.move.key!==attack.key||!Number.isFinite(attack.frame)||attack.frame<1||
     attack.frame>=attack.move.startup+attack.move.active)return null;
+  if(exposure.moveType==='contact'){
+    if(attack.move.projectile||attack.move.trap||attack.move.aura||
+      exposure.activeOnly&&attack.frame<attack.move.startup)return null;
+  }else if(!attack.move.aura)return null;
   return {...exposure,slots:[...exposure.slots]};
 }
 

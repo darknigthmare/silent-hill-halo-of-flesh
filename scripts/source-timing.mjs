@@ -1,5 +1,5 @@
 /** Verify a source-capture timing packet. Never certifies a gesture or fills the workbook. */
-import {readFile,lstat,realpath,writeFile,open,mkdtemp,chmod,rm} from 'node:fs/promises';
+import {readFile,lstat,realpath,writeFile,open,mkdtemp,chmod,rm,mkdir,readdir} from 'node:fs/promises';
 import {constants} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
@@ -11,6 +11,7 @@ import {FIGHTER_REFERENCES} from '../src/production-reference.js';
 
 export const SOURCE_TIMING_SCHEMA=1;
 export const SOURCE_TIMING_BATCH_SCHEMA=1;
+export const SOURCE_TIMING_REVIEW_SCHEMA=1;
 const MAX_CAPTURE_BYTES=256*1024*1024,MAX_CAPTURE_FRAMES=18000;
 const fail=message=>{throw new Error('Source timing: '+message);};
 const own=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
@@ -71,7 +72,7 @@ function sameRate(text,expected){
   const [n,d]=text.split('/').map(Number);
   return n>0&&d>0&&n*expected.denominator===d*expected.numerator;
 }
-async function verifyCapture(capture,{baseDirectory,probe}){
+async function verifyCapture(capture,{baseDirectory,probe,consume}){
   const base=await realpath(baseDirectory),path=resolve(base,capture.path);
   if(relative(base,path).startsWith('..')||isAbsolute(relative(base,path)))fail('capture outside packet directory');
   const info=await lstat(path);
@@ -108,7 +109,8 @@ async function verifyCapture(capture,{baseDirectory,probe}){
     const step=capture.frameRate.denominator/capture.frameRate.numerator,tolerance=Math.max(0.000002,step*.005);
     const timestamps=frames.map(frame=>typeof frame.best_effort_timestamp_time==='string'&&/^-?\d+(?:\.\d+)?$/.test(frame.best_effort_timestamp_time)?Number(frame.best_effort_timestamp_time):NaN);
     if(timestamps.some((time,index)=>!Number.isFinite(time)||index>0&&Math.abs(time-timestamps[index-1]-step)>tolerance))fail('constant capture frame spacing required; variable or missing timestamps refused');
-    return {...capture,bytes:size,width:stream.width,height:stream.height};
+    const verified={...capture,bytes:size,width:stream.width,height:stream.height};
+    return consume?await consume(verified,snapshot):verified;
   }finally{
     try{await source.close();}finally{if(directory)await rm(directory,{recursive:true,force:true});}
   }
@@ -152,6 +154,9 @@ export function validateSourceTimingBatch(batch,catalogue={}){
 }
 export async function verifySourceTimingBatch(batch,{baseDirectory=process.cwd(),probe=probeSourceCapture,...catalogue}={}){
   const normalized=validateSourceTimingBatch(batch,catalogue),capture=await verifyCapture(normalized.capture,{baseDirectory,probe});
+  return verifiedTimingBatch(normalized,capture,catalogue);
+}
+function verifiedTimingBatch(normalized,capture,catalogue){
   const entries=normalized.entries.map(entry=>({...entry,
     annotationSHA256:sourceTimingAnnotationDigest({schema:SOURCE_TIMING_SCHEMA,fighterId:normalized.fighterId,source:normalized.source,
       edition:normalized.edition,capture:normalized.capture,moveKey:entry.moveKey,observedAction:entry.observedAction,measurement:entry.measurement},catalogue),
@@ -162,16 +167,80 @@ export async function verifySourceTimingBatch(batch,{baseDirectory=process.cwd()
     limits:'One capture checked for all entries. Named reviews are self-reported attestations bound to annotation digests, not authenticated identities or gesture certification. No workbook timing is filled or certified.'};
 }
 
+export function extractSourceReviewFrames(snapshot,indices,directory){
+  const select=indices.map(index=>`eq(n\\,${index})`).join('+');
+  const filter=`select=${select},scale=w=min(640\\,iw):h=min(640\\,ih):force_original_aspect_ratio=decrease,setsar=1`;
+  const result=spawnSync('ffmpeg',['-nostdin','-v','error','-n','-i',snapshot,'-map','0:v:0','-vf',filter,
+    '-fps_mode','passthrough','-frames:v',String(indices.length),'-an','-sn','-dn','-start_number','0',join(directory,'frame-%05d.png')],
+    {encoding:'utf8',timeout:60000,maxBuffer:1024*1024,windowsHide:true});
+  if(result.error||result.status!==0)fail('ffmpeg could not extract review frames (ffmpeg is required)');
+}
+const html=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+function reviewHtml(manifest){
+  const frames=new Map(manifest.frames.map(frame=>[frame.index,frame]));
+  const sections=manifest.entries.map(entry=>`<section><h2>${html(entry.moveKey)} — ${html(entry.observedAction)}</h2>
+<p>Annotation : ${html(entry.measurement.measuredBy)} · ${html(entry.measurement.measuredAt)}</p><p>${html(entry.measurement.notes)}</p>
+<p>${entry.review?`Relecture candidate déclarée : ${html(entry.review.reviewedBy)} · ${html(entry.review.reviewedAt)} · ${html(entry.review.notes)}`:'Relecture à faire.'}</p>
+<div class="frames">${[['Début','startFrame'],['Impact','impactFrame'],['Fin','endFrame']].map(([label,key])=>{
+    const frame=frames.get(entry.measurement[key]);return `<figure><img src="${frame.path}" alt="${label} — image ${frame.index}"><figcaption>${label} · image ${frame.index} · ${frame.recordingTime.numerator}/${frame.recordingTime.denominator} s depuis la première image</figcaption></figure>`;
+  }).join('')}</div><p>SHA256 des annotations : <code>${entry.annotationSHA256}</code></p></section>`).join('\n');
+  return `<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Relecture candidate de capture</title>
+<style>body{font:16px system-ui;background:#17191b;color:#eee;margin:2rem auto;padding:0 1rem;max-width:1200px}a{color:#90c8ff}section{border-top:1px solid #777;margin-top:2rem}.frames{display:flex;flex-wrap:wrap;gap:1rem}figure{margin:0;flex:1 1 240px}img{display:block;max-width:100%;height:auto;image-rendering:auto}code{overflow-wrap:anywhere}p{line-height:1.5}</style>
+<h1>Relecture candidate de capture</h1><p>${html(manifest.fighterId)} · ${html(manifest.edition)}</p>
+<p>Images de consultation, réduites à 640 pixels au maximum par côté. Les indices désignent les images de cette capture, à partir de zéro ; ils ne sont pas des mesures du moteur d’origine. Comparer aussi la capture originale. Aucune fidélité 1:1 certifiée ; aucun timing Excel rempli.</p>
+<p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}</p>
+<p>Les relectures éventuelles sont déclaratives et liées aux annotations. Ces aperçus n’ajoutent aucune attestation. Métadonnées et empreintes des images : <a href="review-manifest.json">manifeste JSON</a>.</p>${sections}</html>\n`;
+}
+export async function exportSourceTimingReview(batch,{outputDirectory,baseDirectory=process.cwd(),probe=probeSourceCapture,extract=extractSourceReviewFrames,...catalogue}={}){
+  if(!nonempty(outputDirectory))fail('a new review output directory is required');
+  const normalized=validateSourceTimingBatch(batch,catalogue),destination=resolve(outputDirectory);
+  return verifyCapture(normalized.capture,{baseDirectory,probe,consume:async(capture,snapshot)=>{
+    const verified=verifiedTimingBatch(normalized,capture,catalogue);
+    const indices=[...new Set(verified.entries.flatMap(entry=>['startFrame','impactFrame','endFrame'].map(key=>entry.measurement[key])))].sort((a,b)=>a-b);
+    // mkdir is deliberately exclusive: never replace an existing review package.
+    await mkdir(destination);let complete=false;
+    try{
+      const frameDirectory=join(destination,'frames');await mkdir(frameDirectory);
+      await extract(snapshot,indices,frameDirectory);
+      const names=indices.map((index,position)=>`frame-${String(position).padStart(5,'0')}.png`);
+      if(JSON.stringify((await readdir(frameDirectory)).sort())!==JSON.stringify(names))fail('review frame output count or filenames mismatch');
+      const frames=[];
+      for(const [position,index] of indices.entries()){
+        const name=names[position],file=join(frameDirectory,name),info=await lstat(file);
+        if(!info.isFile()||info.isSymbolicLink()||info.size<24||info.size>4*1024*1024)fail('review frame must be a bounded PNG file');
+        const bytes=await readFile(file);
+        if(!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.subarray(12,16).toString('ascii')!=='IHDR')fail('review frame must be PNG');
+        const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
+        if(![width,height].every(value=>value>0&&value<=640))fail('review frame dimensions exceed preview bounds');
+        frames.push({index,path:'frames/'+name,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length,width,height,
+          recordingTime:{numerator:index*capture.frameRate.denominator,denominator:capture.frameRate.numerator}});
+      }
+      const manifest={...verified,schema:SOURCE_TIMING_REVIEW_SCHEMA,type:'source-timing-review',status:'source-timing-review-candidate',
+        preview:{maximumDimension:640,frameIndexBase:0,capturePathRelativeTo:'input-packet-directory'},frames,
+        limits:verified.limits+' Extracted still previews may be reduced; they add no measurements or review attestations.'};
+      await writeFile(join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
+      await writeFile(join(destination,'index.html'),reviewHtml(manifest),{flag:'wx'});
+      complete=true;return manifest;
+    }finally{if(!complete)await rm(destination,{recursive:true,force:true});}
+  }});
+}
+
 export async function sourceTimingCommand(args){
   if(args.length===1&&args[0]==='--help'){
-    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\nvalidate commands require ffprobe; annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
+    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\n       node scripts/source-timing.mjs review-preview BATCH.json --output-dir NEW_DIRECTORY\nvalidate commands require ffprobe; review-preview also requires ffmpeg. annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
     return;
   }
-  if(!['validate','validate-batch','annotation-digest'].includes(args[0])||!args[1]||args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3]))fail('usage: validate|validate-batch|annotation-digest PACKET.json [--output RESULT.json]');
+  const preview=args[0]==='review-preview';
+  if(!['validate','validate-batch','annotation-digest','review-preview'].includes(args[0])||!args[1]||
+    (preview?args.length!==4||args[2]!=='--output-dir'||!args[3]:args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3])))fail('usage: validate|validate-batch|annotation-digest PACKET.json [--output RESULT.json] or review-preview BATCH.json --output-dir NEW_DIRECTORY');
   const input=resolve(args[1]),info=await lstat(input);
-  const maxBytes=(args[0]==='validate-batch'?256:64)*1024;
+  const maxBytes=(args[0]==='validate-batch'||preview?256:64)*1024;
   if(!info.isFile()||info.isSymbolicLink()||info.size>maxBytes)fail('packet must be a regular bounded JSON file');
   const packet=JSON.parse(await readFile(input,'utf8'));
+  if(preview){
+    const result=await exportSourceTimingReview(packet,{baseDirectory:dirname(input),outputDirectory:args[3]});
+    process.stdout.write(JSON.stringify({status:result.status,frames:result.frames.length,entries:result.entries.length,certifiedOneToOne:false})+'\n');return;
+  }
   const verified=args[0]==='validate'?await verifySourceTiming(packet,{baseDirectory:dirname(input)}):args[0]==='validate-batch'?
     await verifySourceTimingBatch(packet,{baseDirectory:dirname(input)}):
     {annotationSHA256:sourceTimingAnnotationDigest(packet),status:'annotation-only',captureVerified:false,certifiedOneToOne:false};

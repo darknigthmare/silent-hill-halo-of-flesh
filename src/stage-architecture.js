@@ -5,6 +5,20 @@ export function stageSpace(stage) {
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
 export function drawStageArchitecture(c,w,h,stage) {
+  if(stage?.id==='forest_world'&&stage.source==='sh4') {
+    // This first-visit path is enclosed by woodland, not the generic mountains.
+    // It remains outside; the authored treeline changes no playable boundary.
+    const ground=h*.57,back=c.createLinearGradient(0,0,0,ground);
+    back.addColorStop(0,'#151e16');back.addColorStop(1,'#263024');
+    c.save();c.fillStyle=back;c.fillRect(0,0,w,ground);
+    for(let i=0;i<11;i++) {
+      const x=(i+.45)*w/11,top=h*(.12+i%3*.035);
+      line(c,x,ground,x,top,'#101910',11+i%3*3);
+      line(c,x,top+80,x-42,top+47,'#101910',5);line(c,x,top+105,x+48,top+59,'#101910',5);
+      c.fillStyle=i%2?'#1a2618':'#1d2a1b';c.beginPath();c.ellipse(x,top+25,w*.105,h*.15,0,0,Math.PI*2);c.fill();
+    }
+    c.restore();return true;
+  }
   if (stageSpace(stage)!=='interior') return false;
   const family=stage.family, medical=family==='hospital', domestic=['hotel','room','house','apartment'].includes(family),chapel=stage.id==='church'&&stage.source==='sh3';
   const vx=w*.5,vy=h*.57,left=w*.23,right=w*.77,top=h*.15;

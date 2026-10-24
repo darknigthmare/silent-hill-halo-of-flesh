@@ -314,6 +314,76 @@ const RECIPES={
     beat('COUP DE POING OCCULTE',25,frame('old-type-unarmed-strike',.77),frame('fall',.17,35,.12), 'blackout','hit',.97),
     beat('AUCUNE ARME PRISE',45,frame('old-type-empty-hands',.47),frame('held',.17,35,.12), 'vignette','silence',1)
   ]},
+  blueTerminalExposure:{attackerKind:'deity',unarmed:true,targets:PHYSICAL,steps:[
+    beat('FORME LUMINEUSE IMMOBILE',43,frame('incubator-standing-light'),frame('brace'), 'vignette','lowDrone',.97),
+    beat('DECHARGE BLEUE ANNONCEE',34,frame('incubator-blue-discharge'),frame('recoil',.04,8), 'blue-exposure','hiss',.94),
+    beat('SUREXPOSITION DE LA SILHOUETTE',32,frame('incubator-light-held'),frame('occluded',.08,21,.25), 'blue-exposure','lowDrone',.93),
+    beat('SILHOUETTE QUI S ETEINT',35,frame('incubator-standing-light'),frame('fall',.1,35,0), 'vignette','silence',.97),
+    beat('AUCUNE TRANSFORMATION AILEE',45,frame('incubator-standing-light'),frame('held',.1,35,0), 'vignette','silence',1)
+  ]},
+  redSuspendedExposure:{attackerKind:'deity',unarmed:true,targets:PHYSICAL,steps:[
+    beat('SILHOUETTE AILEE SUSPENDUE',45,frame('incubus-suspended-wings'),frame('watch'), 'vignette','lowDrone',.97),
+    beat('FOUDRE ROUGE DE CETTE BRANCHE',31,frame('incubus-red-discharge'),frame('recoil',.05,6), 'red-exposure','hiss',.94),
+    beat('SILHOUETTE DEVANT L ECLAT',34,frame('incubus-red-light-held'),frame('occluded',.1,19,.23), 'red-exposure','lowDrone',.92),
+    beat('EXTINCTION DU PLAN CIBLE',32,frame('incubus-wings-held'),frame('fall',.13,35,0), 'blackout','silence',.97),
+    beat('FORME AILEE CONSERVEE',47,frame('incubus-suspended-wings'),frame('held',.13,35,0), 'vignette','silence',1)
+  ]},
+  sh2LowShadowBite:{attackerKind:'insect',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('ECHELLE BASSE DE LA VERSION SH2',39,frame('sh2-six-leg-low-approach',.22),frame('watch'), 'dust','scrape',.98),
+    beat('MORSURE BASSE A PORTEE',28,frame('sh2-six-leg-bite',.71),frame('unbalanced',.03,9), 'vignette','hit',.95),
+    beat('APPUI ADVERSE QUI CEDE',31,frame('sh2-six-leg-retract',.6),frame('fall',.15,34), 'dust','cloth',.94),
+    beat('ARRET SUR L OMBRE',36,frame('sh2-six-leg-still',.49),frame('occluded',.15,36,.16), 'vignette','silence',.98),
+    beat('CORPS SH2 AU RAS DU SOL',44,frame('sh2-six-leg-retreat',.26),frame('held',.15,36,.16), 'fog','scrape',1)
+  ]},
+  incompleteBodyFireline:{attackerKind:'deity',unarmed:true,targets:PHYSICAL.filter(k=>k!=='flyer'),steps:[
+    beat('BUSTE MASSIF SANS MARCHE',46,frame('god-incomplete-body-high'),frame('brace'), 'vignette','breath',.97),
+    beat('FEU PROJETE SUR LE SOL',36,frame('god-ground-fire'),frame('backstep',.06), 'embers','hiss',.94),
+    beat('FEU AUTOUR DE LA SILHOUETTE',33,frame('god-incomplete-body-low'),frame('occluded',.09,15,.25), 'embers','lowDrone',.93),
+    beat('OBSCURITE FINALE',34,frame('god-low-held'),frame('fall',.12,35,.08), 'blackout','silence',.97),
+    beat('BUSTE ET FAIBLE BRAISE',46,frame('god-incomplete-body-high'),frame('held',.12,35,.08), 'embers','breath',1)
+  ]},
+  closedTorsoLegRelease:{attackerKind:'humanoid',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('TORSE TOUJOURS FERME',38,frame('closed-torso-approach',.27),frame('brace'), 'vignette','breath',.98),
+    beat('ENSERREMENT AVEC LES JAMBES',31,frame('closed-torso-leg-clamp',.7,-18),frame('leg-gripped',.04,7), 'vignette','cloth',.94),
+    beat('RELACHEMENT DES JAMBES',28,frame('closed-torso-leg-release',.58),frame('unbalanced',.12,16), 'dust','creak',.95),
+    beat('JET TERMINAL DE CETTE ENVELOPPE',32,frame('closed-torso-terminal-spray',.54),frame('occluded',.18,32,.23), 'spray','hiss',.94),
+    beat('RETOUR AU TORSE CLOS',47,frame('closed-torso-held',.4),frame('held',.18,36,.16), 'mist','silence',1)
+  ]},
+  tetheredDollKicks:{attackerKind:'doll',unarmed:true,targets:STANDING,maxTargetHeight:310,needsCeiling:true,steps:[
+    beat('ATTACHES AU DESSUS DU CADRE',43,frame('ariel-tethered-inverted',0,-94),frame('look-up'), 'vignette','creak',.97),
+    beat('DESCENTE SUR LES ATTACHES',32,frame('ariel-tethered-descent',0,-34),frame('brace',-.12), 'vignette','cloth',.94),
+    beat('COUPS DES JAMBES EXISTANTES',29,frame('ariel-tethered-leg-kicks'),frame('recoil',-.19,17), 'impact','hit',.93),
+    beat('CIBLE OCCULTEE SOUS LE SUPPORT',34,frame('ariel-tethered-retract',0,-38),frame('fall',-.19,35,.15), 'vignette','silence',.97),
+    beat('REMONTEE SANS VOL LIBRE',47,frame('ariel-tethered-ascent',0,-94),frame('held',-.19,35,.15), 'vignette','creak',1)
+  ]},
+  helenSuspendedWheel:{attackerKind:'cage',unarmed:true,targets:STANDING,maxTargetHeight:310,needsCeiling:true,steps:[
+    beat('CABLES PORTEURS CONSERVES',46,frame('helen-cage-cables-held'),frame('watch'), 'vignette','metal',.97),
+    beat('CAGE PIVOTANTE DANS SA PORTEE',33,frame('helen-cage-wheel-ready'),frame('brace',-.12), 'vignette','creak',.94),
+    beat('ROUE AU CONTACT PROCHE',29,frame('helen-cage-wheel-close'),frame('recoil',-.19,12), 'vignette','scrape',.93),
+    beat('NUAGE DEVANT LE CADRE',37,frame('helen-cage-near-cloud'),frame('occluded',-.19,31,.16), 'mist','hiss',.97),
+    beat('CAGE TOUJOURS SUSPENDUE',45,frame('helen-cage-cables-held'),frame('held',-.19,35,.16), 'mist','silence',1)
+  ]},
+  richardWallTentacles:{attackerKind:'giant',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['walls','wall','organic-wall'],steps:[
+    beat('MUR ET ATTACHES CORPORELLES',44,frame('richard-wall-head-held'),frame('watch'), 'vignette','breath',.98),
+    beat('TENTACULES DEPUIS L ANCRAGE',34,frame('richard-wall-tentacles-reach'),frame('tentacle-gripped',-.18,5), 'vignette','cloth',.95),
+    beat('CIBLE RAMENEE A PORTEE DE TETE',31,frame('richard-wall-neck-extended'),frame('pulled-close',-.38,13), 'vignette','creak',.93),
+    beat('FERMETURE DU CADRE',33,frame('richard-wall-head-close'),frame('occluded',-.38,31,.12), 'blackout','heavy',.97),
+    beat('AUCUN DETACHEMENT DU MUR',47,frame('richard-wall-head-held'),frame('held',-.38,35,.12), 'vignette','silence',1)
+  ]},
+  lurkerLowClawFold:{attackerKind:'humanoid',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('APPUI BAS DES MEMBRES EXISTANTS',37,frame('lurker-low-claw-support',-.08),frame('brace'), 'dust','scrape',.98),
+    beat('BOND COURT GRIFFES OUVERTES',29,frame('lurker-short-claw-leap',.7,-25),frame('recoil',.04,7), 'wind','rush',.95),
+    beat('RABATTEMENT DES GRIFFES',28,frame('lurker-claws-fold',.79),frame('fall',.15,34), 'slash','hit',.94),
+    beat('CORPS BAS EN PREMIER PLAN',33,frame('lurker-low-occlusion',.75),frame('occluded',.15,35,.19), 'vignette','cloth',.97),
+    beat('RETOUR AUX APPUIS BAS',46,frame('lurker-low-claw-support',.53),frame('held',.15,35,.19), 'vignette','breath',1)
+  ]},
+  smogExposedExhalation:{attackerKind:'humanoid',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('APPROCHE LENTE SANS CHARGE',43,frame('smog-closed-ribs-step',.24),frame('watch'), 'vignette','step',.98),
+    beat('COTES OUVERTES POUMONS EXPOSES',35,frame('smog-ribs-open-lungs-exposed',.24),frame('brace',.03), 'mist','breath',.95),
+    beat('EXHALATION RAPPROCHEE',36,frame('smog-lungs-exposed-exhale',.24),frame('stagger',.1,8), 'spray','hiss',.94),
+    beat('NUAGE QUI REMPLIT LE CADRE',37,frame('smog-lungs-exposed-cloud',.24),frame('occluded',.17,32,.16), 'mist','hiss',.97),
+    beat('FERMETURE DU THORAX AU REPOS',46,frame('smog-ribs-close-held',.24),frame('held',.17,35,.16), 'mist','silence',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -347,7 +417,11 @@ const FIGHTER_RECIPES=Object.freeze({
   sh1_creeper_009:'ankleShadow',sh1_hanged_scratcher_011:'ceilingHook',sh2_mandarin_026:'underGrateGrip',
   sh2_flesh_lip_027:'cageFootLift',sh2_abstract_daddy_028:'organicFrameOcclusion',sh3_pendulum_039:'rotatingShadow',
   sh3_leonard_wolf_048:'waterSurfaceGrip',sh4_hummer_055:'buzzingCameraPass',sh4_wall_man_056:'wallSupportPull',
-  sh4_gum_head_old_type_057:'unarmedFurnitureStruggle'
+  sh4_gum_head_old_type_057:'unarmedFurnitureStruggle',
+  sh1_incubator_018:'blueTerminalExposure',sh1_incubus_019:'redSuspendedExposure',sh2_creeper_025:'sh2LowShadowBite',
+  sh3_god_050:'incompleteBodyFireline',origins_straight_jacket_074:'closedTorsoLegRelease',origins_ariel_078:'tetheredDollKicks',
+  origins_memory_of_helen_grady_082:'helenSuspendedWheel',origins_memory_of_richard_grady_083:'richardWallTentacles',
+  homecoming_lurker_085:'lurkerLowClawFold',homecoming_smog_087:'smogExposedExhalation'
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -371,7 +445,17 @@ const PRESENTATION_STAGING=Object.freeze({
   sh3_leonard_wolf_048:{id:'sh3-leonard-water-presence',entry:0,retreat:0,recoil:5,exitFade:true,poses:['water-ripple-emergence-awaiting-basin','water-shoulder-ripple-without-hit','water-torso-arms-watch','water-surface-recovery-awaiting-basin','water-basin-centre-watch','water-surface-final-stillness','water-back-submerge-awaiting-basin']},
   sh4_hummer_055:{id:'sh4-hummer-small-flight',entry:48,retreat:61,recoil:8,landing:37,roundDip:14,ascent:83,poses:['small-wing-background-entry','small-wing-acceleration-without-wave','small-wing-unstable-hover','small-wing-short-drop-recovery','small-wing-final-circle','small-wing-final-ground-rest','small-wing-ceiling-departure']},
   sh4_wall_man_056:{id:'sh4-wall-man-fixed-torso',entry:0,retreat:0,recoil:0,exitFade:true,poses:['wall-torso-emergence-awaiting-support','wall-single-arm-muted-threat','wall-torso-hands-held','wall-torso-partial-retraction-recovery','wall-torso-slow-retraction','wall-torso-final-retraction','wall-torso-support-retreat']},
-  sh4_gum_head_old_type_057:{id:'sh4-old-gum-head-empty-hands',entry:35,retreat:39,recoil:12,landing:34,ascent:27,poses:['old-type-cornice-empty-hand-landing','old-type-upper-body-sway','old-type-low-empty-hands-watch','old-type-seated-rise-recovery','old-type-cornice-retreat','old-type-flexed-final-rest','old-type-platform-ascent']}
+  sh4_gum_head_old_type_057:{id:'sh4-old-gum-head-empty-hands',entry:35,retreat:39,recoil:12,landing:34,ascent:27,poses:['old-type-cornice-empty-hand-landing','old-type-upper-body-sway','old-type-low-empty-hands-watch','old-type-seated-rise-recovery','old-type-cornice-retreat','old-type-flexed-final-rest','old-type-platform-ascent']},
+  sh1_incubator_018:{id:'sh1-incubator-blue-standing-light',entry:0,retreat:0,recoil:0,exitFade:true,poses:['incubator-standing-light-appearance','incubator-muted-light-pulse','incubator-relaxed-arms-held','incubator-unstable-light-recovery','incubator-final-background-light','incubator-final-light-extinction','incubator-immobile-light-fade']},
+  sh1_incubus_019:{id:'sh1-incubus-red-suspended-wings',entry:0,retreat:0,recoil:0,exitFade:true,poses:['incubus-wings-emerge-suspended','incubus-muted-wing-discharge','incubus-wings-open-held','incubus-suspended-flight-recovery','incubus-final-suspended-circle','incubus-relaxed-wings-final-fall','incubus-wings-fold-in-darkness']},
+  sh2_creeper_025:{id:'sh2-creeper-six-leg-scale',entry:31,retreat:58,recoil:4,poses:['sh2-six-leg-fissure-entry','sh2-six-leg-carapace-turn','sh2-six-leg-antennae-watch','sh2-six-leg-righting-recovery','sh2-six-leg-low-retreat','sh2-six-leg-final-rest','sh2-six-leg-fissure-departure']},
+  sh3_god_050:{id:'sh3-god-incomplete-body-heights',entry:0,retreat:0,recoil:0,exitFade:true,poses:['god-incomplete-mass-appearance','god-muted-hand-embers','god-high-body-arm-held','god-low-to-high-body-recovery','god-final-body-background-embers','god-low-body-final-collapse','god-immobile-light-recedes']},
+  origins_straight_jacket_074:{id:'origins-closed-torso-legs',entry:19,retreat:0,recoil:8,outroHold:true,poses:['closed-torso-unsteady-entry','closed-torso-muted-threat','closed-torso-stable-support','closed-torso-lowered-recovery','closed-torso-relaxed-final-watch','closed-torso-final-side-rest','closed-torso-held-result']},
+  origins_ariel_078:{id:'origins-ariel-tethered-doll',entry:0,retreat:0,recoil:0,outroHold:true,poses:['ariel-tethered-inverted-entry','ariel-tethered-muted-tension','ariel-tethered-support-held','ariel-tethered-support-recovery','ariel-tethered-final-held','ariel-tethered-final-rest','ariel-tethered-result-held']},
+  origins_memory_of_helen_grady_082:{id:'origins-helen-cage-cables',entry:0,retreat:0,recoil:0,poses:['helen-cage-wheel-reveal','helen-cage-muted-wheel-threat','helen-cage-cables-stable','helen-cage-cables-recovery','helen-cage-wheel-final-stop','helen-cage-final-mechanism-stop','helen-cage-suspended-result-held']},
+  origins_memory_of_richard_grady_083:{id:'origins-richard-wall-neck',entry:0,retreat:0,recoil:0,poses:['richard-wall-neck-entry','richard-wall-muted-neck-threat','richard-wall-head-extended','richard-wall-neck-recovery','richard-wall-head-final-held','richard-wall-head-final-rest','richard-wall-attached-result-held']},
+  homecoming_lurker_085:{id:'homecoming-lurker-low-claws',entry:29,retreat:35,recoil:7,poses:['lurker-water-edge-crawl-awaiting-water','lurker-low-claw-muted-threat','lurker-low-claw-support-held','lurker-low-body-support-recovery','lurker-watchful-low-retreat','lurker-final-side-rest','lurker-watchful-low-departure']},
+  homecoming_smog_087:{id:'homecoming-smog-ribs-lungs',entry:12,retreat:0,recoil:7,outroHold:true,poses:['smog-lungs-lit-ribs-entry','smog-ribs-muted-threat','smog-stable-body-watch','smog-low-body-recovery','smog-relaxed-ribs-final-watch','smog-final-body-rest','smog-relaxed-ribs-result-held']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 
@@ -393,15 +477,16 @@ function compileRecipe(recipe,type) {
 
 const blocked=(reason,id=null)=>({allowed:false,reason,id,artStatus:'contextual-images-missing',fidelity:'original-versus-staging'});
 const motifs=stage=>new Set([...(stage?.props||[]),...(stage?.layers||[])]);
-const OPEN_SKY_BITMAP_SCENES=new Set(['normal-courtyard']);
 function hasCeiling(stage,set){
   const bitmap=STAGE_BITMAPS[stage?.id];
-  const replaces=bitmap?.source===stage?.source&&bitmap?.mode==='replace';
-  // A reviewed outdoor replacement supersedes inherited corridor motifs. Keep
-  // this explicit scene set in step with future bitmap locations; the image's
-  // existence does not certify its geometry or original-game fidelity.
-  if(replaces&&OPEN_SKY_BITMAP_SCENES.has(bitmap.scene))return false;
-  return [...set,...(replaces?[bitmap.scene||'']:[])].some(p=>/ceiling|tunnel|corridor|hallway|ward|room|nave/.test(p));
+  if(bitmap){
+    if(bitmap.stageId!==stage.id||bitmap.source!==stage.source)return false;
+    // A full replacement owns the visible geometry. Neither its scene name nor
+    // inherited procedural motifs may invent a support absent from its contract.
+    if(bitmap.mode==='replace')return bitmap.geometry?.ceiling===true;
+    if(bitmap.mode!=='overlay'||bitmap.geometry?.ceiling===false)return false;
+  }
+  return [...set].some(p=>/ceiling|tunnel|corridor|hallway|ward|room|nave/.test(p));
 }
 
 /** Resolve only an authored exact ID. An unimplemented dossier is a normal KO,
@@ -600,6 +685,7 @@ export function sampleLorePresentation(actor,presentation) {
     if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1,
       pose:p<.6?pose:pose+'-ready'};
+    if(key==='outro'&&staging.outroHold)return {...neutral(),pose};
     if(key==='outro'&&(locomotion||staging.exitFade))return {x:locomotion?-facing*staging.retreat*ease(p):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?-(staging.ascent||0)*ease(p):0,alpha:1-clamp((p-.6)/.4),pose};
     return {...neutral(),pose:pose||'hold'};
@@ -630,6 +716,15 @@ export function drawLoreCinematic(ctx,sample,{width=1280,height=720,reducedMotio
   const power=sample.effectPower,frame=sample.frame;
   ctx.save();
   switch(sample.effect) {
+    case 'blue-exposure':case 'red-exposure':{
+      const rgb=sample.effect==='blue-exposure'?'128,169,223':'207,102,85';
+      // One smooth exposure per authored beat, softened further by reduced
+      // motion. This is compositing light, never a new creature image or hitbox.
+      const exposure=(reducedMotion?.11:.23)*power;
+      const glow=ctx.createRadialGradient(focusX,focusY-90,15,focusX,focusY-90,width*.65);
+      glow.addColorStop(0,`rgba(${rgb},${exposure})`);glow.addColorStop(1,`rgba(${rgb},0)`);
+      ctx.fillStyle=glow;ctx.fillRect(0,82,width,height-174);break;
+    }
     case 'rail-light':{
       const glow=ctx.createRadialGradient(focusX,focusY-60,2,focusX,focusY-60,190);glow.addColorStop(0,`rgba(218,215,182,${.16+power*.3})`);glow.addColorStop(1,'rgba(180,190,170,0)');ctx.fillStyle=glow;ctx.fillRect(0,82,width,height-174);break;
     }

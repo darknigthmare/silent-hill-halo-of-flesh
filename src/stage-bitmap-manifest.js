@@ -8,6 +8,9 @@ export const STAGE_BITMAPS = {
     "origin": "conversation-image-generation",
     "mode": "replace",
     "scene": "normal-courtyard",
+    "geometry": {
+      "ceiling": false
+    },
     "referenceIds": [
       "CL_SH1_02_MIDWICH_ELEMENTARY_SCHOOL"
     ],
@@ -43,6 +46,9 @@ export const STAGE_BITMAPS = {
     "origin": "conversation-image-generation",
     "mode": "replace",
     "scene": "original-pc-corridor",
+    "geometry": {
+      "ceiling": true
+    },
     "referenceIds": [
       "CL_SH2_02_WOOD_SIDE_APTS"
     ],
@@ -70,5 +76,44 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Caméra et coupe adaptées au versus : continuité du tapis au premier plan pour les appuis horizontaux. Matériaux du couloir PC original ; géométrie et cadrage non certifiés."
+  },
+  "alchemilla": {
+    "stageId": "alchemilla",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-waiting-room",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH1_06_ALCHEMILLA_HOSPITAL"
+    ],
+    "notes": "Salle d’attente normale SH1 ; caméra, étendue du sol et mobilier repoussé au fond adaptés au versus. Réception adjacente non fusionnée avec cette vue ; aucune géométrie ni animation certifiée.",
+    "layers": [
+      {
+        "id": "waiting-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+            "sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+            "bytes": 1822324,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ]
   }
 };

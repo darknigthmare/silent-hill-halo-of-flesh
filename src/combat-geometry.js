@@ -31,15 +31,22 @@ const BODIES = Object.freeze({
   void: { width: 236, height: 234, push: 174, floating: true },
 });
 
-export function bodyProfile(fighter = {}) {
+export function bodyProfile(fighter = {}, state = fighter) {
   const visual = fighter.visual || fighter.data?.visual || {};
   const kind = BODIES[visual.kind] ? visual.kind : 'humanoid';
-  return { kind, ...BODIES[kind], scale: clamp(finite(visual.scale, 1), .2, 4),
+  const data=fighter.data||fighter;
+  // SH4 enemies_en.htm: melee bats this exact flying creature down. Removing
+  // its hover offset is a versus translation, not a new death or hit pose.
+  // Accept both simulation actors and the renderer's actorSpriteState flags.
+  const downedHummer=data.id==='sh4_hummer_055'&&data.source==='sh4'&&
+    (state?.ko===true||state?.knockdown===true||finite(state?.knockdownTimer,0)>0);
+  return { kind, ...BODIES[kind], ...(downedHummer?{bottom:0,floating:false}:{}),
+    scale: clamp(finite(visual.scale, 1), .2, 4),
     provenance: 'procedural-render-envelope / versus-collision-adaptation' };
 }
 
 export function bodyBox(actor) {
-  const p = bodyProfile(actor.data || actor);
+  const p = bodyProfile(actor);
   const scale = p.scale;
   const stance = actor.crouching && !['insect','quadruped','worm','serpentine','fungus','wall','cage','flyer','void'].includes(p.kind) ? .68 : 1;
   const width = p.width * scale;
@@ -49,12 +56,12 @@ export function bodyBox(actor) {
 }
 
 export function bodyPushRadius(actor) {
-  const p = bodyProfile(actor.data || actor);
+  const p = bodyProfile(actor);
   return p.push * p.scale / 2;
 }
 
 export function hasGroundContact(actor) {
-  return Boolean(actor.grounded) && !bodyProfile(actor.data || actor).floating;
+  return Boolean(actor.grounded) && !bodyProfile(actor).floating;
 }
 
 export function moveBox(actor, move) {

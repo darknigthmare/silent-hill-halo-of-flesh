@@ -24,8 +24,8 @@ export function spriteCoverage(fighters){
 }
 export const poseKey=poseFromState;
 export function frameFor(art,state={}){return sampleSpriteClip(art,state)?.frame||null;}
-export function rasterPlacement(fighter,frame,x,y,facing=1){
-  const body=bodyProfile(fighter),scale=body.height*body.scale/(frame.height*frame.bodyHeight);
+export function rasterPlacement(fighter,frame,x,y,facing=1,state){
+  const body=bodyProfile(fighter,state),scale=body.height*body.scale/(frame.height*frame.bodyHeight);
   const width=frame.width*scale,height=frame.height*scale,flip=(facing<0?-1:1)*frame.facing;
   const localX=-frame.anchor[0]*width,localY=-frame.anchor[1]*height-(body.bottom||0)*body.scale;
   return {x:flip>0?x+localX:x-localX-width,y:y+localY,width,height,flip,localX,localY,scale};
@@ -116,13 +116,13 @@ function drawMissing(ctx,x,y,width,height,text){
 export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache,registry=SPRITES}={}){
   if(!fighter)return {kind:'missing'};
   const art=spriteFor(fighter,registry),sample=sampleSpriteClip(art,state),frame=sample?.frame,image=frame&&cache.peek(frame.path);
-  if(!image){const p=bodyProfile(fighter),w=Math.max(156,p.width*p.scale),h=p.height*p.scale;
+  if(!image){const p=bodyProfile(fighter,state),w=Math.max(156,p.width*p.scale),h=p.height*p.scale;
     drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':!frame?state.weaponContext?'POSE D’ARME À PRODUIRE':'POSE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
     // Request only once. A failed file is retried by preflight, not every render frame.
     if(frame&&cache.status(frame.path)==='absent')void cache.load(frame);
     return {kind:!art||!frame?'missing':cache.status(frame.path)==='error'?'error':'loading'};
   }
-  const p=rasterPlacement(fighter,frame,x,y,facing);
+  const p=rasterPlacement(fighter,frame,x,y,facing,state);
   ctx.save();ctx.globalAlpha=clamp(alpha,0,1);
   if(shadow){ctx.fillStyle='rgba(0,0,0,.28)';ctx.beginPath();ctx.ellipse(x,y+3,bodyProfile(fighter).push*bodyProfile(fighter).scale*.55,8,0,0,Math.PI*2);ctx.fill();}
   ctx.translate(x,y);ctx.scale(p.flip,1);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';

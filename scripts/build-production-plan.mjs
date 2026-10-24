@@ -10,7 +10,7 @@ import {validateStageBitmap} from '../src/stage-bitmaps.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
-import {SOURCE_TIMING_SCHEMA,SOURCE_TIMING_BATCH_SCHEMA} from './source-timing.mjs';
+import {SOURCE_TIMING_SCHEMA,SOURCE_TIMING_BATCH_SCHEMA,SOURCE_TIMING_REVIEW_SCHEMA} from './source-timing.mjs';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
@@ -373,6 +373,7 @@ function applyRuntimeProgress(plan){
   const capture=plan.tasks.find(t=>t.id==='global:reference-capture');
   capture.status='En cours';capture.delivery='source-timing-pipeline-2026-10-23';
   capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}, lot ${SOURCE_TIMING_BATCH_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Plusieurs slots d’une même capture peuvent être vérifiés en un seul décodage. La relecture facultative est liée par SHA256 aux annotations exactes ; son auteur reste déclaratif. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet et sa relecture restent candidats et ne certifient ni le geste ni la fidélité 1:1.`;
+  capture.reason+=' La commande review-preview extrait les images début/impact/fin du même snapshot vérifié par ffmpeg : index HTML local et manifeste SHA256, aperçus réduits à 640 pixels maximum, sans nouvelle attestation ni import Excel.';
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -385,6 +386,7 @@ function applyRuntimeProgress(plan){
     stageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
     sourceTimingSchema:SOURCE_TIMING_SCHEMA,
     sourceTimingBatchSchema:SOURCE_TIMING_BATCH_SCHEMA,
+    sourceTimingReviewSchema:SOURCE_TIMING_REVIEW_SCHEMA,
     measuredSourceMoves:plan.moves.filter(m=>m.sourceFrameRate!==''&&m.sourceStart!==''&&m.sourceImpact!==''&&m.sourceEnd!=='').length,
     referenceStageTracks:STAGES.reduce((n,s)=>n+(s.referenceTracks?.length||0),0),retiredStageItems:plan.stageAnimations.filter(a=>a.retired).length,
     visibleReferenceStageTracks:plan.stageAnimations.filter(a=>a.runtimeTrack&&a.runtimeTrackVisible).length,
@@ -397,8 +399,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-10-23',
-    scope:'PR #4 et continuation du 23 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    updatedAt:'2026-10-24',
+    scope:'PR #4 et continuation des 23 et 24 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});

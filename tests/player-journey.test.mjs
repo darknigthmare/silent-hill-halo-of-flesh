@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { ROSTER, STAGES, CHRONICLES } from '../src/data.js';
 import { KEYS, MEMORY_SCHEMA, readState, writeState, importMemory, exportMemory, validateEntry } from '../src/save-store.js';
-import { createRun, validateRun, resumeRun, settleRun, saveRun, loadRun, stageForFighter, updateRecords, playerOutcome, runSummary, normalizeRules } from '../src/run-progress.js';
+import { createRun, validateRun, resumeRun, settleRun, saveRun, loadRun, stageForFighter, updateRecords, playerOutcome, runSummary, normalizeRules, chronicleEncounterPlan } from '../src/run-progress.js';
 import { defaultControls, validControls, rebindControl, GamepadSlots, loadControls } from '../src/player-input.js';
 
 class Memory {
@@ -100,7 +100,13 @@ test('results: duplicate callback is idempotent for all lifetime counters',()=>{
 test('results: route summary uses the whole route, not merely the final encounter',()=>{
   const r=make();r.results=[{stats:{healthRatio:.1,maxCombo:2}},{stats:{healthRatio:.9,maxCombo:8}}];assert.equal(runSummary(r).healthRatio,.5);assert.equal(runSummary(r).maxCombo,8);
 });
-for(const route of CHRONICLES)test(`chronicle state-machine: ${route.id} survives save/reload at every encounter`,()=>{
+for(const route of CHRONICLES)test(`chronicle state-machine: ${route.id} preserves compatible progress or refuses an archive-only run`,()=>{
+  const plan=chronicleEncounterPlan(route.id);
+  if(!plan.queue.length){
+    assert.equal(plan.referenceDossiers.length,route.fighters.length);
+    assert.throws(()=>make('chronicle',{routeId:route.id}),/dossiers consultables/);
+    return;
+  }
   const s=new Memory();let run=make('chronicle',{routeId:route.id});
   const encounters=run.queue.length;
   for(let i=0;i<encounters;i++){

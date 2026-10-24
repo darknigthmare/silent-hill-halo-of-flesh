@@ -556,7 +556,7 @@ export const ROSTER = [
   monster('sh1','Stalker',{kind:'child',archetype:'ghost',signature:'Traque invisible',behavior:'Silhouette enfantine qui frappe après une brève disparition.'}),
   monster('sh1','Creeper',{kind:'insect',archetype:'swarm',signature:'Essaim rampant',behavior:'Très bas au sol, rapide, difficile à toucher debout.'}),
   monster('sh1','Romper',{kind:'humanoid',archetype:'rushdown',signature:'Bond de contention',behavior:'Bondit, plaque la cible et frappe au sol.'}),
-  monster('sh1','Hanged Scratcher',{kind:'insect',archetype:'trickster',signature:'Griffe du plafond',behavior:'Se déplace sur les parois et tombe sur la cible.',limbs:6}),
+  monster('sh1','Hanged Scratcher',{kind:'insect',scale:1.55,archetype:'trickster',signature:'Griffe du plafond',behavior:'Grande créature insectoïde aux longues griffes, attaquant au sol ou suspendue au plafond.',limbs:6}),
   monster('sh1','Puppet Nurse',{kind:'nurse',archetype:'balanced',signature:'Scalpel parasité',behavior:'Marche irrégulière, attaque au couteau et sursaut du parasite.',weapon:'scalpel'}),
   monster('sh1','Puppet Doctor',{kind:'humanoid',archetype:'juggernaut',signature:'Impact parasité',behavior:'Plus robuste que les infirmières, coups lourds et lents.',weapon:'scalpel'}),
   monster('sh1','Split Head',{kind:'quadruped',scale:1.42,archetype:'boss',boss:true,signature:'Mâchoire séparée',behavior:'Grand reptile quadrupède à gueule verticale, charge et saisie dévorante.',stageId:'nowhere',head:'split',limbs:4}),
@@ -677,11 +677,11 @@ export const ROSTER = [
   monster('homecoming','Amnion — Exposed Form',{kind:'mass',archetype:'boss',boss:true,signature:'Noyau exposé',behavior:'Seconde phase vulnérable mais agressive.',variantOf:'Amnion',stageId:'underground_hc'}),
 
   // SHATTERED MEMORIES
-  monster('shattered','Raw Shock — Base',{kind:'humanoid',archetype:'rushdown',signature:'Étreinte glacée',behavior:'Poursuit et agrippe ; n’est pas affronté directement dans l’original.',adaptation:'Le gameplay original privilégie la fuite ; le versus transforme l’étreinte en projection.',affliction:'frost'}),
-  monster('shattered','Raw Shock — Feminine',{kind:'humanoid',archetype:'grappler',signature:'Étreinte féminine',behavior:'Variation morphologique déterminée par le profil psychologique.',variantOf:'Raw Shock',affliction:'frost'}),
-  monster('shattered','Raw Shock — Diseased',{kind:'humanoid',archetype:'ghost',signature:'Pulsation malade',behavior:'Variation couverte de lésions, aura affaiblissante.',variantOf:'Raw Shock',aura:'sick',affliction:'frost'}),
-  monster('shattered','Raw Shock — Abstract',{kind:'mass',archetype:'trickster',signature:'Forme abstraite',behavior:'Variation géométrique, hitbox changeante.',variantOf:'Raw Shock',affliction:'frost'}),
-  monster('shattered','Raw Shock — Atrophied',{kind:'child',archetype:'rushdown',signature:'Ruée atrophiée',behavior:'Variation plus petite et nerveuse.',variantOf:'Raw Shock',affliction:'frost'}),
+  monster('shattered','Raw Shock — Base',{kind:'humanoid',archetype:'rushdown',signature:'Étreinte glacée',behavior:'Poursuit et agrippe ; Harry fuit et ne peut pas le tuer.',adaptation:'Rencontre de poursuite conservée hors duel autonome ; gestes et captures de référence à produire.',catalogueStatus:'canon-scripted-encounter',affliction:'frost'}),
+  monster('shattered','Raw Shock — Feminine',{kind:'humanoid',archetype:'grappler',signature:'Étreinte féminine',behavior:'Variation morphologique déterminée par le profil psychologique ; poursuite sans duel autonome.',variantOf:'Raw Shock',catalogueStatus:'canon-scripted-encounter',affliction:'frost'}),
+  monster('shattered','Raw Shock — Diseased',{kind:'humanoid',archetype:'ghost',signature:'Silhouette malade',behavior:'Variation morphologique couverte de lésions ; aucun pouvoir affaiblissant propre attesté.',variantOf:'Raw Shock',catalogueStatus:'canon-scripted-encounter',affliction:'frost'}),
+  monster('shattered','Raw Shock — Abstract',{kind:'mass',archetype:'trickster',signature:'Forme abstraite',behavior:'Variation morphologique géométrique ; aucun changement de collision propre attesté.',variantOf:'Raw Shock',catalogueStatus:'canon-scripted-encounter',affliction:'frost'}),
+  monster('shattered','Raw Shock — Atrophied',{kind:'child',archetype:'rushdown',signature:'Silhouette atrophiée',behavior:'Variation morphologique atrophiée ; aucun bonus de vitesse propre attesté.',variantOf:'Raw Shock',catalogueStatus:'canon-scripted-encounter',affliction:'frost'}),
 
   // DOWNPOUR
   monster('downpour','Screamer',{kind:'humanoid',archetype:'zoner',signature:'Cri incapacitant',behavior:'Cri à distance puis griffes rapprochées.'}),
@@ -753,7 +753,7 @@ export const ROSTER = [
 
   // P.T. / THE SHORT MESSAGE
   monster('pt','Lisa',{kind:'ghost',archetype:'ghost',signature:'Apparition derrière soi',behavior:'Apparition et saisie soudaine dans la boucle du couloir.',stageId:'looping_hall',adaptation:'P.T. ne propose pas de combat ; Lisa devient un personnage secret de type apparition.',unlock:'archive'}),
-  monster('shortmessage','Sakura Head',{kind:'flowerhead',archetype:'rushdown',boss:true,signature:'Poursuite des pétales',behavior:'Traque rapide, frappes de branches et accélérations soudaines.',stageId:'villa',head:'flowers',aura:'petals',affliction:'bloom'}),
+  monster('shortmessage','Sakura Head',{kind:'flowerhead',archetype:'rushdown',boss:true,signature:'Poursuite des pétales',behavior:'Rencontre de poursuite dans les dédales de l’Otherworld : Anita fuit sans pouvoir le combattre.',adaptation:'Rencontre de poursuite conservée hors duel autonome ; gestes et captures de référence à produire.',catalogueStatus:'canon-scripted-encounter',stageId:'villa',head:'flowers',aura:'petals',affliction:'bloom'}),
 
   // SILENT HILL f
   monster('shf','Kashimashi',{kind:'humanoid',archetype:'balanced',signature:'Murmure double',behavior:'Créature humanoïde aux attaques coordonnées.',affliction:'bloom'}),

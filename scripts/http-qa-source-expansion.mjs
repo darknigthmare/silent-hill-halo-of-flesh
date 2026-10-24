@@ -20,6 +20,9 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Mary and Maria use their real moth projectile. The resulting bind restricts movement and dodge in the versus engine; original struggle inputs, stun animation and duration are not reproduced.',
   'SH3 Pendulum is represented by its source-scoped flying body, not the old tiny insect collider. Its handgun-class defense excludes the actual Arcade shotgun; these cross-work weapon mappings and defensive windows are versus choices.',
   'Insane Cancer and Slurper charges use real directional keyboard commands. Ghost proximity is checked with idle casters, and Jasper damage is compared with the common drain. Radii, pulse intervals, health conversion and bind are versus tuning, not measured source-game values.',
+  'Split Head is angered with real keyboard gunfire, not a replaced health field. Its 70% transition, 2x frontal active-mouth multiplier and readable HUD cue are versus rules. No original mouth animation or instant-kill swallow is claimed.',
+  'Hummer knockdown, Wall Man claws and both Sniffer holds use real keyboard attacks. Sakura Head and the five Raw Shock variants are checked through the normal refused launch and source dossiers; their pursuit encounters are not turned into invented duels.',
+  'Hummer height is measured from collision and the real PNG drawImage arguments/matrix before, during and after knockdown. The same bitmap is lowered without rotating or fabricating a pose; source knockdown/KO clips remain absent. Prepared guard-counter windows test the real Split Head heavy-key gate.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -30,20 +33,33 @@ async function launch(page,p1,p2='sh2_bubble_head_nurse_024'){
  await page.waitForFunction(()=>!!window.__HALO_QA__);await page.selectOption('#mode','local');
  for(const id of ['stageHazards','stageDirector','otherworldShift','stageFatalities','fatalities','stageTerrain'])await page.uncheck('#'+id);
  await page.check('#artDiagnostic');await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);
- return page.evaluate(()=>{
+ return page.evaluate(async()=>{
+  const {bodyBox,hasGroundContact}=await import('/src/combat-geometry.js');
+  const {spriteFor}=await import('/src/sprite-system.js');
   const e=__HALO_QA__.engine;e.running=false;e.togglePause(false);
   const intro=e.phase==='intro'?e.phaseTimer:0;for(let n=0;n<intro;n++)e.update();
   const q=window.__SOURCE_EXPANSION_QA__={emitted:0};
   const spawn=e.spawnProjectile;
   e.spawnProjectile=function(...args){const before=this.projectiles.length;const result=spawn.apply(this,args);q.emitted+=this.projectiles.length-before;return result;};
+  const drawImage=e.ctx.drawImage;
+  e.ctx.drawImage=function(image,...args){
+   const hummer=e.actors.find(a=>a.data.id==='sh4_hummer_055'&&a.data.source==='sh4'),frame=hummer&&spriteFor(hummer.data)?.frames[0];
+   if(frame&&String(image.currentSrc||image.src||'').includes('/'+frame.path)&&args.length===4){
+    const matrix=this.getTransform();q.hummerDraw={path:frame.path,localX:args[0],localY:args[1],width:args[2],height:args[3],
+     anchorOffsetY:args[1]+frame.anchor[1]*args[3],matrix:[matrix.a,matrix.b,matrix.c,matrix.d,matrix.e,matrix.f]};
+   }
+   return drawImage.call(this,image,...args);
+  };
   q.advance=count=>{for(let n=0;n<count;n++)e.update();e.render(performance.now());};
   q.position=(left=300,right=650)=>{e.actors.forEach((a,i)=>{a.x=i?right:left;a.y=594;a.vx=0;a.vy=0;a.grounded=true;
    a.facing=i?-1:1;a.attack=null;a.hurtFrames=0;a.knockdownTimer=0;a.phaseLock=0;a.invuln=0;a.state='idle';a.blocking=false;a.crouching=false;});e.hitstop=0;e.clearInputs();};
-  q.scene=()=>({phase:e.phase,frame:e.frame,paused:e.paused,emitted:q.emitted,projectiles:e.projectiles.length,
+  q.scene=()=>({phase:e.phase,frame:e.frame,paused:e.paused,emitted:q.emitted,projectiles:e.projectiles.length,hummerDraw:q.hummerDraw||null,
    actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,
     damage:a.stats.damageDealt,damageTaken:a.stats.damageTaken,status:a.status?{...a.status}:null,dodge:a.dodgeFrames,
     move:a.attack?.key||a.lastMoveKey,attackFrame:a.attack?.frame??null,hurt:a.hurtFrames,knockdown:a.knockdownTimer,
-    proximity:a.proximityCooldown,activeCommands:Object.values(a.profile.moves).filter(m=>m.enabled).map(m=>m.key)})),texts:e.texts.map(t=>t.text)});
+    proximity:a.proximityCooldown,mouthEnraged:a.mouthEnraged,sourceCue:e.sourceCombatCue(a),
+    bodyBottom:bodyBox(a).y+bodyBox(a).h,groundContact:hasGroundContact(a),
+    activeCommands:Object.values(a.profile.moves).filter(m=>m.enabled).map(m=>m.key)})),texts:e.texts.map(t=>t.text)});
   q.position();q.advance(0);return q.scene();
  });
 }
@@ -188,6 +204,88 @@ try{
   if(id==='sh4_jasper_gein_victim_17')check('Jasper passive fire adds damage beyond the common Ghost drain',lost>ordinaryDrain,{ordinaryDrain,jasperDrain:lost});
  }
  await capture(page,'07-jasper-idle-proximity');
+
+ scene=await launch(page,'sh1_split_head_014','sh3_nurse_revolver_044');
+ await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(2));
+ scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+ check('initial Split Head cannot open its locked jaw through the real special key',!scene.actors[0].mouthEnraged&&scene.actors[0].move==null&&scene.actors[0].sourceCue===null,scene);
+ await page.evaluate(()=>{__HALO_QA__.engine.actors[0].guardCounterWindow=8;});await page.keyboard.press('k');
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+ check('a real heavy input in the initial counter window keeps the closed-mouth headbutt instead of bypassing its jaw gate',scene.actors[0].move==='neutralHeavy'&&scene.actors[0].sourceCue===null&&!scene.actors[0].mouthEnraged,scene);
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(65));
+ for(let n=0;n<12&&!scene.actors[0].mouthEnraged;n++){
+  await page.keyboard.press('h');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(100));
+  scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+ }
+ report.scenes.splitHeadPhase=scene;
+ check('real repeated revolver hits activate the local jaw phase without fabricating ammunition or health',scene.actors[0].mouthEnraged&&scene.actors[0].health>0&&scene.actors[0].damageTaken>0&&scene.emitted>0,scene);
+ await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__;q.position();__HALO_QA__.engine.actors[0].guardCounterWindow=8;});
+ await page.keyboard.press('k');
+ const jawCounter=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;q.advance(1);
+  const key=e.actors[0].attack?.key;if(e.actors[0].attack)q.advance(e.actors[0].attack.move.startup-e.actors[0].attack.frame);return {key,scene:q.scene()};});
+ check('the same real heavy counter input exposes its active jaw only after the source phase is unlocked',jawCounter.key==='guardCounter'&&jawCounter.scene.actors[0].sourceCue==='GUEULE OUVERTE · VERSUS',jawCounter);
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(75));
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position());await page.keyboard.press('h');
+ const closedJaw=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],before=a.health;
+  for(let n=0;n<100&&a.health===before;n++)q.advance(1);const lost=before-a.health;q.advance(70);return {lost,scene:q.scene()};});
+ check('the activated but idle Split Head still receives ordinary real bullet damage',closedJaw.lost>0&&closedJaw.scene.actors[0].sourceCue===null,closedJaw);
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position());await page.keyboard.press('h');
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(7));await page.keyboard.press('i');
+ const mouth=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],before=a.health;
+  let exposed=false,exposureFrame=null;
+  for(let n=0;n<80&&a.health===before;n++){
+   exposed ||= e.sourceCombatCue(a)==='GUEULE OUVERTE · VERSUS';
+   if(e.sourceCombatCue(a))exposureFrame={frame:a.attack.frame,start:a.attack.move.startup,end:a.attack.move.startup+a.attack.move.active};
+   q.advance(1);
+  }
+  return {lost:before-a.health,exposed,exposureFrame,scene:q.scene()};});report.scenes.splitHeadMouth=mouth;
+ check('real Split Head special exposes the readable versus cue only during its active mouth window',mouth.exposed&&mouth.exposureFrame?.frame>=mouth.exposureFrame?.start&&mouth.exposureFrame?.frame<mouth.exposureFrame?.end,mouth);
+ check('a real frontal bullet into that active mouth causes extra damage',mouth.lost>closedJaw.lost*1.5,mouth);
+ await capture(page,'08-split-head-mouth-hit');
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(90));
+ check('the readable mouth cue disappears when the actual attack leaves its active window',await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene().actors[0].sourceCue===null));
+
+ scene=await launch(page,'sh2_bubble_head_nurse_024','sh4_hummer_055');
+ const hummerBefore=scene.actors[1].health;await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,580));
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(0));
+ const hover=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.hummerHover=hover;
+ check('the actual Hummer PNG starts at its normal hover offset without ground contact',hover.hummerDraw?.path.includes('sh4_hummer_055.')&&hover.hummerDraw.anchorOffsetY<0&&hover.actors[1].bodyBottom<594&&!hover.actors[1].groundContact,hover);
+ await capture(page,'09a-hummer-hover-before-hit');
+ await page.keyboard.press('j');
+ const hummer=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,a=__HALO_QA__.engine.actors[1],before=a.health;
+  for(let n=0;n<65&&a.health===before;n++)q.advance(1);return q.scene();});report.scenes.hummerFall=hummer;
+ check('one real ordinary melee hit downs the Hummer while leaving versus health and no invented abduction',hummer.actors[1].health<hummerBefore&&hummer.actors[1].health>0&&hummer.actors[1].knockdown>0&&hummer.emitted===0&&!hummer.actors[1].activeCommands.includes('throw')&&!hummer.actors[1].activeCommands.includes('backThrow'),hummer);
+ check('the actual downed Hummer collision and PNG anchor both reach the floor without rotation or bitmap scaling',hummer.actors[1].bodyBottom===594&&hummer.actors[1].groundContact&&Math.abs(hummer.hummerDraw?.anchorOffsetY)<1e-8&&hummer.hummerDraw.path===hover.hummerDraw.path&&hummer.hummerDraw.width===hover.hummerDraw.width&&hummer.hummerDraw.height===hover.hummerDraw.height&&Math.abs(hummer.hummerDraw.matrix[1])<1e-8&&Math.abs(hummer.hummerDraw.matrix[2])<1e-8,hummer);
+ await capture(page,'09-hummer-melee-knockdown');
+ const recovered=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;
+  for(let n=0;n<120&&e.actors[1].knockdownTimer;n++)q.advance(1);return q.scene();});report.scenes.hummerRecovered=recovered;
+ check('real Hummer recovery restores the same hover height without changing damage or fabricating a recovery clip',recovered.actors[1].knockdown===0&&!recovered.actors[1].groundContact&&Math.abs(recovered.actors[1].bodyBottom-hover.actors[1].bodyBottom)<1e-8&&Math.abs(recovered.hummerDraw?.anchorOffsetY-hover.hummerDraw.anchorOffsetY)<1e-8&&recovered.actors[1].health===hummer.actors[1].health&&recovered.actors[0].damage===hummer.actors[0].damage,recovered);
+
+ scene=await launch(page,'sh4_wall_man_056');const wallBefore=scene.actors[1].health;
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,620));await page.keyboard.press('i');
+ const claws=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,b=__HALO_QA__.engine.actors[1],before=b.health;
+  for(let n=0;n<65&&b.health===before;n++)q.advance(1);return q.scene();});report.scenes.wallClaws=claws;
+ check('Wall Man real claw command knocks down without leaving its fixed support',claws.actors[0].x===500&&claws.actors[0].move==='neutralSpecial'&&claws.actors[1].health<wallBefore&&claws.actors[1].knockdown>0&&claws.emitted===0,claws);
+
+ for(const id of ['sh4_sniffer_dog_male_053','sh4_sniffer_dog_female_054']){
+  await launch(page,id);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,580));await page.keyboard.press('i');
+  const sniffer=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,b=__HALO_QA__.engine.actors[1];
+   for(let n=0;n<65&&b.status?.id!=='bind';n++)q.advance(1);return q.scene();});report.scenes[id+'Hold']=sniffer;
+  check('real '+id+' biting hold catches and binds through local contact',sniffer.actors[0].move==='neutralSpecial'&&sniffer.actors[1].status?.id==='bind'&&sniffer.actors[1].damageTaken>0&&sniffer.emitted===0,sniffer);
+ }
+ await capture(page,'10-sniffer-biting-hold');
+
+ for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',
+  'shattered_raw_shock_diseased_101','shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103']){
+  await page.goto(base+`/modules/unified-versus.html?qa=1&debugArt=1&p1=${id}`);
+  await page.waitForFunction(()=>!!window.__HALO_QA__);await page.selectOption('#mode','local');await page.check('#artDiagnostic');
+  await page.click('#launch');await page.waitForSelector('#playStatus:not(.hidden)');
+  const denied=await page.evaluate(()=>({engine:!!__HALO_QA__.engine,message:document.querySelector('#playStatus').textContent}));
+  report.scenes[id+'Refusal']=denied;
+  check('normal '+id+' launch refuses to invent an autonomous duel',!denied.engine&&/rôle non combattant|identité à confirmer/.test(denied.message),denied);
+  await page.click('#fighterDossier');const dossier=page.locator('[data-reference-id="'+id+'"]');
+  check('refused '+id+' remains documented with all twenty duel commands disabled',await dossier.isVisible()&&/0\/20 commandes actives/.test(await dossier.textContent())&&await page.locator('.move-unavailable').count()===20);
+ }
  check('no unhandled JavaScript exceptions',report.errors.length===0,report.errors);
 }catch(error){report.failure=String(error);process.exitCode=1;}
 finally{

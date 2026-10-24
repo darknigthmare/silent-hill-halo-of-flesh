@@ -1,7 +1,8 @@
 import {bodyBox} from './combat-geometry.js';
 import {spriteFor,rasterPlacement} from './sprite-system.js';
-export function visibleSpriteBox(fighter,frame,x,y,facing=1){
- const p=rasterPlacement(fighter,frame,x,y,facing),b=frame.visibleBounds||[0,0,frame.width,frame.height];
+import {actorSpriteState} from './sprite-animation.js';
+export function visibleSpriteBox(fighter,frame,x,y,facing=1,state){
+ const p=rasterPlacement(fighter,frame,x,y,facing,state),b=frame.visibleBounds||[0,0,frame.width,frame.height];
  const local=p.localX+b[0]*p.scale,width=(b[2]-b[0])*p.scale;
  return {x:p.flip>0?x+local:x-local-width,y:p.y+b[1]*p.scale,w:width,h:(b[3]-b[1])*p.scale};
 }
@@ -13,7 +14,7 @@ export function combatFraming(actors,{width=1280,floor=594,top=132,bottom=694,ma
  let left=0,right=width,upper=top,lower=floor;
  for(const actor of actors){
   const art=spriteFor(actor.data||actor,registry),boxes=art?.frames?.length?
-   art.frames.map(f=>visibleSpriteBox(actor.data||actor,f,actor.x,actor.y,actor.facing)):[bodyBox(actor)];
+   art.frames.map(f=>visibleSpriteBox(actor.data||actor,f,actor.x,actor.y,actor.facing,actorSpriteState(actor))):[bodyBox(actor)];
   for(const b of boxes){if(![b.x,b.y,b.w,b.h].every(Number.isFinite))continue;
    left=Math.min(left,b.x-margin);right=Math.max(right,b.x+b.w+margin);
    upper=Math.min(upper,b.y-margin);lower=Math.max(lower,b.y+b.h+margin);

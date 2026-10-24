@@ -1,0 +1,1429 @@
+{
+  "schema": "halo-batch5-visual-provenance-v1",
+  "reviewedAt": "2026-10-24",
+  "origin": "conversation-image-generation",
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "references": {
+    "schema": "halo-source-visual-references-batch5-v1",
+    "created_utc": "2026-10-24",
+    "downloaded_via": "Inherited cloud session HTTP proxy and TLS trust, no CONNECT bypass",
+    "repository_changes": "None by this research task",
+    "actors": [
+      {
+        "id": "sh1_wormhead_004",
+        "name": "Wormhead",
+        "edition": "Silent Hill (1999, PS1), original game model art; render/capture processing and region unspecified",
+        "refs": [
+          {
+            "file": "sh1_wormhead_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_09.jpg",
+            "status": 200,
+            "bytes": 174277,
+            "sha256": "cc3d8e8a4c442e678d4475d10ecf2b195d6a16b701fb203fbfb85c1cd5d0dd04",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh1_wormhead_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "wormhead-model-left",
+            "limits": "Brown canine quadruped with very large worm-covered/folded head, left-facing. Feet reach lower border and some toe tips are cropped; far-side limbs/back/tail are not fully established. One final pose only. Do not substitute Groaner head or treat shared attack description as shared sprite evidence."
+          }
+        ],
+        "generated_candidate": {
+          "catalog_id": "sh1_wormhead_004",
+          "name": "Wormhead",
+          "path": "/workspace/generated_images/exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
+          "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            97,
+            13,
+            1360,
+            1068
+          ],
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "visual_notes": [
+            "Worm-covered/folded large left-facing canine head retained; no substituted Groaner face.",
+            "Visible limbs and hunched brown body correspond to source. Feet/toes are darkened and partly reconstructed beyond cropped source extremes.",
+            "Source does not establish far-side limbs/tail/back, gait or exact scale. Narrow top13px/bottom18px margins remain complete. Texture is brighter/sharper than source."
+          ],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate"
+        }
+      },
+      {
+        "id": "sh1_hanged_scratcher_011",
+        "name": "Hanged Scratcher",
+        "edition": "Silent Hill (1999, PS1), original game model art; render/capture processing and region unspecified",
+        "refs": [
+          {
+            "file": "sh1_hanged_scratcher_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_13.jpg",
+            "status": 200,
+            "bytes": 234778,
+            "sha256": "d955c6d99c29016aa43b0198f3caab1c2f0f46b55196323a21a5f73e090bd679",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh1_hanged_scratcher_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "hanged-scratcher-model-front",
+            "limits": "Green-grey hunched insect/frog-like creature, elongated hanging snout and fine forelimbs with long curved claws. Compressed frontal crouch overlaps limbs; rear extremities and dorsal appendages are partly occluded/near edges. Do not invent a canonical back view, limb topology or attack pose from this single view."
+          }
+        ],
+        "generated_candidate": {
+          "catalog_id": "sh1_hanged_scratcher_011",
+          "name": "Hanged Scratcher",
+          "path": "/workspace/generated_images/exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
+          "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            121,
+            19,
+            1367,
+            1064
+          ],
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "visual_notes": [
+            "Hunched green-grey body, elongated hanging snout, fine forelimbs and long curved claws retained; no obvious additional limb beyond source topology.",
+            "Source overlap still hides rear limb connections and dorsal appendage topology. This frontal crouch does not validate a back/side view or canonical limb articulation.",
+            "Source-like pose preserved, texture/contrast amplified and crop-border extremes reconstructed. Narrow top19px/bottom22px margins contain complete silhouette."
+          ],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate"
+        },
+        "presentation_scale_history": {
+          "previous_reported_versus_scale": 0.66,
+          "final_reported_versus_scale": 1.55,
+          "previous_reported_envelope_pixels_approx": 53,
+          "final_reported_envelope_pixels_approx": 124,
+          "units_note": "Envelope pixel figures supplied by root, not source-game measurements. Factor1.55 staging note visible in final inspector.",
+          "canonical_size_measured": false,
+          "source_basis": "CL_SH1_ENEMIES describes a large insect-like creature, huge praying mantis or giant thin frog."
+        },
+        "behavior_limit": "Source describes ground/approaching claws and clawing from roof. Root removed unsubstantiated falling-from-roof description; this static review does not validate suspended animation or attack timing."
+      },
+      {
+        "id": "sh3_closer_036",
+        "name": "Closer",
+        "edition": "Silent Hill3 (2003, original PS2/PC), final model art and gallery game screenshots; exact platform/region/processing of these final gallery captures unspecified",
+        "applicability_warning": "Regular Closer only. Does not establish separate Church Variant appearance, scale or behaviour.",
+        "refs": [
+          {
+            "file": "sh3_closer_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_01_closer.jpg",
+            "status": 200,
+            "bytes": 533936,
+            "sha256": "570f9cbc93f5c2dbe96783a85fa3600be21ae64297284126d961215e2267af73",
+            "dimensions": [
+              3200,
+              2400
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh3_closer_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+            "visually_inspected": true,
+            "role": "supplemental_surface_ambiguous_perspective",
+            "independent_view_group": "closer-model-perspective",
+            "limits": "Strongly foreshortened ambiguous model render. A long mass at image lower left is an arm column, not a flesh-coloured booted leg. Dark thin central limbs are partially hidden. Use gameplay captures for limb topology; model only for surface bands, texture and pose context."
+          },
+          {
+            "file": "sh3_closer_game_a.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_05.jpg",
+            "status": 200,
+            "bytes": 187357,
+            "sha256": "a745c5150d849a30967b302fa4793111a6c08ef27cddaf3e45ee1a52c8cd72ef",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh3_closer_game_a.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+            "visually_inspected": true,
+            "role": "secondary_gameplay_rear",
+            "independent_view_group": "closer-game-mall-rear",
+            "limits": "Genuine independent rear/three-quarter in-game pose beside Heather in normal mall. Lower arms/feet extend to or beyond frame bottom, so incomplete full-body silhouette and no measured scale."
+          },
+          {
+            "file": "sh3_closer_game_b.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_09.jpg",
+            "status": 200,
+            "bytes": 198762,
+            "sha256": "7101056bf624214ecc74c4fbb38ece85fd6d5764c13f62ab9d83033aa92daf2c",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh3_closer_game_b.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+            "visually_inspected": true,
+            "role": "primary_limb_topology_game_front",
+            "independent_view_group": "closer-game-otherworld-front",
+            "limits": "Genuine front game view clearly shows TWO massive lateral hanging arm columns, a small elongated head and TWO narrow dark central legs under apron. Heather/muzzle flash obscure feet and portions of legs. Do not turn an arm column into a flesh-coloured booted leg. Still image, no timing measurement."
+          }
+        ],
+        "generated_candidate_history": [
+          {
+            "catalog_id": "sh3_closer_036",
+            "name": "Closer",
+            "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+            "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+            "dimensions": [
+              1448,
+              1086
+            ],
+            "mode": "RGBA",
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "alpha_bbox_128": [
+              121,
+              23,
+              1416,
+              1059
+            ],
+            "verdict": "reject_anatomy",
+            "blocking_defects": [
+              "One source elongated arm/column has been misinterpreted as a flesh-coloured leg with foot; candidate lacks the pair of huge lateral hanging arm columns.",
+              "The two narrow dark central legs seen under apron in front game capture are replaced by spread flesh-coloured/boot-like limbs."
+            ],
+            "visual_notes": [
+              "Initial acceptance was incorrect: reviewer misassigned limb connections in the strongly foreshortened model art. Corrected by tracing anatomy from front game capture sh3_closer_game_b.jpg.",
+              "Use game captures as primary limb topology: two huge lateral arm columns plus two narrow dark central legs.",
+              "Model-perspective art is useful for texture and surface bands, not enough to infer limbs/feet. No accepted Closer candidate currently selected."
+            ],
+            "certified_1_to_1": false,
+            "selection_status": "excluded_anatomy",
+            "invalidated_initial_review": {
+              "catalog_id": "sh3_closer_036",
+              "name": "Closer",
+              "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+              "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+              "dimensions": [
+                1448,
+                1086
+              ],
+              "mode": "RGBA",
+              "alpha_extrema": [
+                0,
+                255
+              ],
+              "alpha_bbox_128": [
+                121,
+                23,
+                1416,
+                1059
+              ],
+              "verdict": "accept_candidate_with_limits",
+              "blocking_defects": [],
+              "visual_notes": [
+                "Two huge cylindrical arms with rounded masses, two narrow legs, obscure elongated head and dark apron retained; no additional arm or human face apparent.",
+                "Legs/feet are now more spread/extended and reconstructed; apron folds/skin texture sharpened. Primary model uses strong foreshortening, not orthographic measurement.",
+                "Only regular Closer, not Church Variant. Source/game stills do not establish exact foot shape, versus scale, collider, animation or FPS. Margins contain entire silhouette."
+              ],
+              "certified_1_to_1": false,
+              "selection_status": "selected_final_candidate"
+            },
+            "review_correction_reason": "Rechecked actual front game view independently after root flagged missing arm column."
+          },
+          {
+            "catalog_id": "sh3_closer_036",
+            "name": "Closer frontal corrected",
+            "path": "/workspace/generated_images/exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+            "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+            "dimensions": [
+              1192,
+              1320
+            ],
+            "mode": "RGBA",
+            "verdict": "accept_candidate_with_limits",
+            "blocking_defects": [],
+            "certified_1_to_1": false,
+            "selection_status": "selected_final_candidate",
+            "alpha_extrema": [
+              0,
+              255
+            ],
+            "alpha_bbox_128": [
+              165,
+              8,
+              1082,
+              1298
+            ],
+            "visual_notes": [
+              "Limb topology traced separately from game_b: left shoulder to slender upper arm to huge left hanging column; right shoulder to slender upper arm to huge right hanging column.",
+              "Two narrow dark central legs descend independently from below apron to separate terminal nubs; neither lateral arm column is a leg. Previous flesh/boot-leg error corrected.",
+              "Elongated featureless head, chest disc/wrap and apron correspond to front game source. No extra arm, human face or flesh-coloured shoe apparent.",
+              "Pose made upright/more symmetric, skin redder and higher contrast than game still; fine texture and terminal leg shape reconstructed where Heather occludes source. Top8px/bottom22px margins contain full silhouette.",
+              "Regular Closer only; no Church Variant, source scale, official collision or animation claim."
+            ],
+            "replaces_excluded_path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+            "primary_limb_reference": "sh3_closer_game_b.jpg"
+          }
+        ],
+        "replacement_candidate_pending": false,
+        "anatomy_priority": "Front/rear game captures establish limb topology; perspective model is ambiguous and used for surface/texture only.",
+        "generated_candidate": {
+          "catalog_id": "sh3_closer_036",
+          "name": "Closer frontal corrected",
+          "path": "/workspace/generated_images/exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+          "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+          "dimensions": [
+            1192,
+            1320
+          ],
+          "mode": "RGBA",
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            165,
+            8,
+            1082,
+            1298
+          ],
+          "visual_notes": [
+            "Limb topology traced separately from game_b: left shoulder to slender upper arm to huge left hanging column; right shoulder to slender upper arm to huge right hanging column.",
+            "Two narrow dark central legs descend independently from below apron to separate terminal nubs; neither lateral arm column is a leg. Previous flesh/boot-leg error corrected.",
+            "Elongated featureless head, chest disc/wrap and apron correspond to front game source. No extra arm, human face or flesh-coloured shoe apparent.",
+            "Pose made upright/more symmetric, skin redder and higher contrast than game still; fine texture and terminal leg shape reconstructed where Heather occludes source. Top8px/bottom22px margins contain full silhouette.",
+            "Regular Closer only; no Church Variant, source scale, official collision or animation claim."
+          ],
+          "replaces_excluded_path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+          "primary_limb_reference": "sh3_closer_game_b.jpg"
+        }
+      },
+      {
+        "id": "sh4_hummer_055",
+        "name": "Hummer",
+        "edition": "Silent Hill4: The Room (2004, original PS2/Xbox/PC), monster model art composite, precise platform/render processing unspecified",
+        "applicability_warning": "SH4 Hummer only, not Arcade Hummer. Very low source resolution.",
+        "refs": [
+          {
+            "file": "sh4_hummer_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_17_hummer.jpg",
+            "status": 200,
+            "bytes": 16745,
+            "sha256": "b52580dd14814ebf1dfca0199aa2b0d2843930c7f519b7afb819af7fc0e3faff",
+            "dimensions": [
+              404,
+              214
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh4_hummer_model.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+            "visually_inspected": true,
+            "role": "primary_anatomy",
+            "independent_view_group": "hummer-model-composite",
+            "limits": "404x214 composite contains a larger front/three-quarter bat-like winged creature and a small overlapping second instance. Dark membranous wings, pale furry torso and long needle-like downward beak. Fine toes/wing joints not resolved. Composite is one source image, not two independently sourced views. Guide PNG repeats large instance."
+          }
+        ],
+        "generated_candidate": {
+          "catalog_id": "sh4_hummer_055",
+          "name": "Hummer",
+          "path": "/workspace/generated_images/exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
+          "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+          "dimensions": [
+            1723,
+            913
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            110,
+            50,
+            1687,
+            880
+          ],
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "visual_notes": [
+            "Exactly one Hummer, not the two-subject source composite. Two dark membranous wings, pale furry torso and long downward needle beak retained.",
+            "Higher left wing and broader/lower right wing preserve source asymmetry. No extra legs or second creature apparent.",
+            "Fine membrane/fur/wing-edge detail strongly extrapolated from404x214 source; no claim that invented detail, rear anatomy, flutter timing or source scale is canonical. SH4 only, not Arcade."
+          ],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate"
+        }
+      }
+    ],
+    "stages": [
+      {
+        "id": "alchemilla",
+        "name": "Alchemilla Hospital normal waiting room/reception",
+        "edition": "Silent Hill (1999, PS1), original initial hospital; avoid Nightmare Hospital, Brookhaven and Origins",
+        "refs": [
+          {
+            "file": "sh1_alchemilla_waiting_room.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/screens/pics/sh1_screen_29.jpg",
+            "status": 200,
+            "bytes": 68635,
+            "sha256": "1922c8d4cc498298dcbfbc68876d012ce4380e894f6c4cb592a36eaeafb4d30a",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh1_alchemilla_waiting_room.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/screens_en.htm",
+            "visually_inspected": true,
+            "role": "primary_room_materials",
+            "independent_view_group": "alchemilla-waiting-room",
+            "limits": "Normal waiting room: dirty green-grey two-tone walls, medical posters, brown L-shaped upholstered bench, metal trolley/exam bench and dark floor tiles. Harry obscures center/foreground. Source screenshot alone does not establish whole room or exact playable floor."
+          },
+          {
+            "file": "sh1_alchemilla_reception_a.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/save_point_locations/pics/sh1_save_point_12a.jpg",
+            "status": 200,
+            "bytes": 179363,
+            "sha256": "aa6f7da4fb1e73028b66ba8a4e570ac85a1644809903eb57cf7ddb6bee7bebf2",
+            "dimensions": [
+              1440,
+              1080
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh1_alchemilla_reception_a.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/save_point_locations_en.htm",
+            "visually_inspected": true,
+            "role": "secondary_adjacent_room_view",
+            "independent_view_group": "alchemilla-reception-counter",
+            "limits": "Genuinely distinct view of normal1F reception desk, wooden counter, door and wall hospital map behind. Same waiting-room/reception ensemble, not a second angle of the sofa wall. Keep room connectivity from plan; do not merge desk/sofa into an invented corridor."
+          },
+          {
+            "file": "sh1_alchemilla_reception_map.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/save_point_locations/pics/sh1_save_point_12b.jpg",
+            "status": 200,
+            "bytes": 403696,
+            "sha256": "bfc0fc55d136fb73a5ce4d7e439581d7db256aace5a6f1416ec9ae7c6852119c",
+            "dimensions": [
+              1440,
+              1080
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh1_alchemilla_reception_map.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/save_point_locations_en.htm",
+            "visually_inspected": true,
+            "role": "floorplan_context",
+            "independent_view_group": "alchemilla-map-1f",
+            "limits": "Original1F map explicitly names Waiting Room north of Reception; marker places Harry at reception counter. Establishes room relationships, not dimensions or camera. Map is a different evidence type rather than another room photo."
+          }
+        ],
+        "generation_constraints": [
+          "Use initial normal Alchemilla materials and the waiting-room/reception source set coherently.",
+          "For versus, a continuous horizontal foreground floor under both actor positions is needed; moving furniture, expanding foreground or altering camera must be labeled as versus adaptation.",
+          "Source furniture/character occlusion must not be treated as proof of hidden architecture.",
+          "Do not borrow Wood Side blue corridor, Brookhaven hospital or Otherworld rust/grid textures."
+        ],
+        "generated_candidate": {
+          "catalog_id": "alchemilla",
+          "name": "Normal Alchemilla waiting room",
+          "path": "/workspace/generated_images/exec-0c649b12-0ab3-4b96-b424-36da8e59edb5.png",
+          "sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+          "dimensions": [
+            1672,
+            941
+          ],
+          "mode": "RGB",
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate",
+          "visual_notes": [
+            "Two-tone dirty green-grey walls, medical posters, brown L-shaped bench, metal trolley, padded metal table and partial left wooden counter match waiting-room source.",
+            "No new corridor, reception map/door montage, Brookhaven or Otherworld textures added.",
+            "At approximate83% source-height(y781/941), foreground tile floor is continuous/clear; table and sofa behind the contact row and left counter ends just above it. Final dist desktop/mobile captures confirm Wormhead and Closer grounded on clear tile floor; source camera and original floor geometry remain unmeasured.",
+            "Wide16:9 camera, room dimensions/furniture spacing, occluded floor and texture detail reconstructed for versus. Not a certified original-game floorplan."
+          ],
+          "geometry_review": {
+            "requested_footline_fraction": 0.83,
+            "expected_source_y_approx": 781,
+            "candidate_floor_clear_at_footline": true,
+            "needs_final_http_capture_check": true
+          },
+          "registered_art_path_reported_by_root": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png"
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "files": [
+          "sh1_wormhead_guide.png",
+          "sh1_hanged_scratcher_guide.png",
+          "sh3_closer_guide.png",
+          "sh3_closer_dvd_model.jpg",
+          "sh4_hummer_guide.png"
+        ],
+        "reason": "Guide/DVD images repeat displayed model poses; no independent reference view."
+      },
+      {
+        "files": [
+          "sh1_sewers_exit_key_room_a.jpg"
+        ],
+        "reason": "Inspected room/key screenshot does not show a clear Hanged Scratcher; excluded as creature anatomy."
+      },
+      {
+        "files": [
+          "sh1_alchemilla_map_1f.jpg"
+        ],
+        "reason": "Same1F map with a different item/marker context; supplemental only, not a second independent floorplan."
+      }
+    ],
+    "video_search": {
+      "bounded_search_seconds": 0.429,
+      "max_requested_size_bytes": 33554432,
+      "pages": [
+        {
+          "url": "https://www.silenthillmemories.net/sh1/videos_en.htm",
+          "status": 200,
+          "direct_media_links": [],
+          "youtube_embeds": 6
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/videos_en.htm",
+          "status": 200,
+          "direct_media_links": [],
+          "youtube_embeds": 10
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh4/videos_en.htm",
+          "status": 200,
+          "direct_media_links": [],
+          "youtube_embeds": 14
+        },
+        {
+          "url": "https://www.silenthillmemories.net/dvd_lm/videos_en.htm",
+          "status": 200,
+          "direct_media_links": [],
+          "youtube_embeds": 4
+        }
+      ],
+      "finding": "No direct media linked on inspected pages. No YouTube bypass, no clip downloaded or timing measurements."
+    },
+    "generation_review_pending": false,
+    "actor_candidate_review": {
+      "path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/candidate-review.json",
+      "status": "four_candidates_accepted_first_closer_excluded_and_replaced",
+      "certified_1_to_1": false
+    },
+    "http_capture_review_pending": false,
+    "http_source_review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/visual-http-review.json",
+      "result": "Six requested captures pass with nonblocking portrait HUD and small Hanged Scratcher preview reservations; source checks reported82/82."
+    },
+    "http_final_dist_review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/visual-http-review.json",
+      "result": "Six final dist captures accepted, Hanged small-preview reserve resolved by qualitative scale1.55. Only known portrait HUD readability remains. Dist HTTP report82/82,14 full browser suites reported exit0."
+    }
+  },
+  "candidateReview": {
+    "schema": "halo-candidate-review-batch5-v1",
+    "reviewer": "batch4_visual_refs",
+    "created_utc": "2026-10-24",
+    "source_references": "provenance.json",
+    "repository_changes": "None by reviewer; generated images supplied by root",
+    "historical_reviews": [
+      {
+        "catalog_id": "sh1_wormhead_004",
+        "name": "Wormhead",
+        "path": "/workspace/generated_images/exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
+        "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          97,
+          13,
+          1360,
+          1068
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Worm-covered/folded large left-facing canine head retained; no substituted Groaner face.",
+          "Visible limbs and hunched brown body correspond to source. Feet/toes are darkened and partly reconstructed beyond cropped source extremes.",
+          "Source does not establish far-side limbs/tail/back, gait or exact scale. Narrow top13px/bottom18px margins remain complete. Texture is brighter/sharper than source."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate"
+      },
+      {
+        "catalog_id": "sh1_hanged_scratcher_011",
+        "name": "Hanged Scratcher",
+        "path": "/workspace/generated_images/exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
+        "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          121,
+          19,
+          1367,
+          1064
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Hunched green-grey body, elongated hanging snout, fine forelimbs and long curved claws retained; no obvious additional limb beyond source topology.",
+          "Source overlap still hides rear limb connections and dorsal appendage topology. This frontal crouch does not validate a back/side view or canonical limb articulation.",
+          "Source-like pose preserved, texture/contrast amplified and crop-border extremes reconstructed. Narrow top19px/bottom22px margins contain complete silhouette."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "presentation_scale_history": {
+          "previous_reported_versus_scale": 0.66,
+          "final_reported_versus_scale": 1.55,
+          "previous_reported_envelope_pixels_approx": 53,
+          "final_reported_envelope_pixels_approx": 124,
+          "units_note": "Envelope pixel figures supplied by root, not source-game measurements. Factor1.55 staging note visible in final inspector.",
+          "canonical_size_measured": false,
+          "source_basis": "CL_SH1_ENEMIES describes a large insect-like creature, huge praying mantis or giant thin frog."
+        },
+        "final_dist_visual_review": "Complete enlarged silhouette fits grid and meets ground line; previous tiny-preview reserve resolved. Scale not measured canonical size."
+      },
+      {
+        "catalog_id": "sh4_hummer_055",
+        "name": "Hummer",
+        "path": "/workspace/generated_images/exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
+        "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "dimensions": [
+          1723,
+          913
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          110,
+          50,
+          1687,
+          880
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Exactly one Hummer, not the two-subject source composite. Two dark membranous wings, pale furry torso and long downward needle beak retained.",
+          "Higher left wing and broader/lower right wing preserve source asymmetry. No extra legs or second creature apparent.",
+          "Fine membrane/fur/wing-edge detail strongly extrapolated from404x214 source; no claim that invented detail, rear anatomy, flutter timing or source scale is canonical. SH4 only, not Arcade."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate"
+      },
+      {
+        "catalog_id": "sh3_closer_036",
+        "name": "Closer",
+        "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+        "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          121,
+          23,
+          1416,
+          1059
+        ],
+        "verdict": "reject_anatomy",
+        "blocking_defects": [
+          "One source elongated arm/column has been misinterpreted as a flesh-coloured leg with foot; candidate lacks the pair of huge lateral hanging arm columns.",
+          "The two narrow dark central legs seen under apron in front game capture are replaced by spread flesh-coloured/boot-like limbs."
+        ],
+        "visual_notes": [
+          "Initial acceptance was incorrect: reviewer misassigned limb connections in the strongly foreshortened model art. Corrected by tracing anatomy from front game capture sh3_closer_game_b.jpg.",
+          "Use game captures as primary limb topology: two huge lateral arm columns plus two narrow dark central legs.",
+          "Model-perspective art is useful for texture and surface bands, not enough to infer limbs/feet. No accepted Closer candidate currently selected."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "excluded_anatomy",
+        "invalidated_initial_review": {
+          "catalog_id": "sh3_closer_036",
+          "name": "Closer",
+          "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+          "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            121,
+            23,
+            1416,
+            1059
+          ],
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "visual_notes": [
+            "Two huge cylindrical arms with rounded masses, two narrow legs, obscure elongated head and dark apron retained; no additional arm or human face apparent.",
+            "Legs/feet are now more spread/extended and reconstructed; apron folds/skin texture sharpened. Primary model uses strong foreshortening, not orthographic measurement.",
+            "Only regular Closer, not Church Variant. Source/game stills do not establish exact foot shape, versus scale, collider, animation or FPS. Margins contain entire silhouette."
+          ],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate"
+        },
+        "review_correction_reason": "Rechecked actual front game view independently after root flagged missing arm column."
+      },
+      {
+        "catalog_id": "sh3_closer_036",
+        "name": "Closer frontal corrected",
+        "path": "/workspace/generated_images/exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+        "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "dimensions": [
+          1192,
+          1320
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          165,
+          8,
+          1082,
+          1298
+        ],
+        "visual_notes": [
+          "Limb topology traced separately from game_b: left shoulder to slender upper arm to huge left hanging column; right shoulder to slender upper arm to huge right hanging column.",
+          "Two narrow dark central legs descend independently from below apron to separate terminal nubs; neither lateral arm column is a leg. Previous flesh/boot-leg error corrected.",
+          "Elongated featureless head, chest disc/wrap and apron correspond to front game source. No extra arm, human face or flesh-coloured shoe apparent.",
+          "Pose made upright/more symmetric, skin redder and higher contrast than game still; fine texture and terminal leg shape reconstructed where Heather occludes source. Top8px/bottom22px margins contain full silhouette.",
+          "Regular Closer only; no Church Variant, source scale, official collision or animation claim."
+        ],
+        "replaces_excluded_path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+        "primary_limb_reference": "sh3_closer_game_b.jpg"
+      },
+      {
+        "catalog_id": "alchemilla",
+        "name": "Normal Alchemilla waiting room",
+        "path": "/workspace/generated_images/exec-0c649b12-0ab3-4b96-b424-36da8e59edb5.png",
+        "sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two-tone dirty green-grey walls, medical posters, brown L-shaped bench, metal trolley, padded metal table and partial left wooden counter match waiting-room source.",
+          "No new corridor, reception map/door montage, Brookhaven or Otherworld textures added.",
+          "At approximate83% source-height(y781/941), foreground tile floor is continuous/clear; table and sofa behind the contact row and left counter ends just above it. Final dist desktop/mobile captures confirm Wormhead and Closer grounded on clear tile floor; source camera and original floor geometry remain unmeasured.",
+          "Wide16:9 camera, room dimensions/furniture spacing, occluded floor and texture detail reconstructed for versus. Not a certified original-game floorplan."
+        ],
+        "geometry_review": {
+          "requested_footline_fraction": 0.83,
+          "expected_source_y_approx": 781,
+          "candidate_floor_clear_at_footline": true,
+          "needs_final_http_capture_check": false,
+          "source_http_result": "Both Wormhead and Closer grounded on clear tile floor in desktop/mobile captures."
+        },
+        "registered_art_path_reported_by_root": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png"
+      }
+    ],
+    "final_selection": {
+      "sh1_wormhead_004": {
+        "catalog_id": "sh1_wormhead_004",
+        "name": "Wormhead",
+        "path": "/workspace/generated_images/exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
+        "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          97,
+          13,
+          1360,
+          1068
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Worm-covered/folded large left-facing canine head retained; no substituted Groaner face.",
+          "Visible limbs and hunched brown body correspond to source. Feet/toes are darkened and partly reconstructed beyond cropped source extremes.",
+          "Source does not establish far-side limbs/tail/back, gait or exact scale. Narrow top13px/bottom18px margins remain complete. Texture is brighter/sharper than source."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate"
+      },
+      "sh1_hanged_scratcher_011": {
+        "catalog_id": "sh1_hanged_scratcher_011",
+        "name": "Hanged Scratcher",
+        "path": "/workspace/generated_images/exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
+        "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          121,
+          19,
+          1367,
+          1064
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Hunched green-grey body, elongated hanging snout, fine forelimbs and long curved claws retained; no obvious additional limb beyond source topology.",
+          "Source overlap still hides rear limb connections and dorsal appendage topology. This frontal crouch does not validate a back/side view or canonical limb articulation.",
+          "Source-like pose preserved, texture/contrast amplified and crop-border extremes reconstructed. Narrow top19px/bottom22px margins contain complete silhouette."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "presentation_scale_history": {
+          "previous_reported_versus_scale": 0.66,
+          "final_reported_versus_scale": 1.55,
+          "previous_reported_envelope_pixels_approx": 53,
+          "final_reported_envelope_pixels_approx": 124,
+          "units_note": "Envelope pixel figures supplied by root, not source-game measurements. Factor1.55 staging note visible in final inspector.",
+          "canonical_size_measured": false,
+          "source_basis": "CL_SH1_ENEMIES describes a large insect-like creature, huge praying mantis or giant thin frog."
+        },
+        "final_dist_visual_review": "Complete enlarged silhouette fits grid and meets ground line; previous tiny-preview reserve resolved. Scale not measured canonical size."
+      },
+      "sh4_hummer_055": {
+        "catalog_id": "sh4_hummer_055",
+        "name": "Hummer",
+        "path": "/workspace/generated_images/exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
+        "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "dimensions": [
+          1723,
+          913
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          110,
+          50,
+          1687,
+          880
+        ],
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "visual_notes": [
+          "Exactly one Hummer, not the two-subject source composite. Two dark membranous wings, pale furry torso and long downward needle beak retained.",
+          "Higher left wing and broader/lower right wing preserve source asymmetry. No extra legs or second creature apparent.",
+          "Fine membrane/fur/wing-edge detail strongly extrapolated from404x214 source; no claim that invented detail, rear anatomy, flutter timing or source scale is canonical. SH4 only, not Arcade."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate"
+      },
+      "sh3_closer_036": {
+        "catalog_id": "sh3_closer_036",
+        "name": "Closer frontal corrected",
+        "path": "/workspace/generated_images/exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+        "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "dimensions": [
+          1192,
+          1320
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          165,
+          8,
+          1082,
+          1298
+        ],
+        "visual_notes": [
+          "Limb topology traced separately from game_b: left shoulder to slender upper arm to huge left hanging column; right shoulder to slender upper arm to huge right hanging column.",
+          "Two narrow dark central legs descend independently from below apron to separate terminal nubs; neither lateral arm column is a leg. Previous flesh/boot-leg error corrected.",
+          "Elongated featureless head, chest disc/wrap and apron correspond to front game source. No extra arm, human face or flesh-coloured shoe apparent.",
+          "Pose made upright/more symmetric, skin redder and higher contrast than game still; fine texture and terminal leg shape reconstructed where Heather occludes source. Top8px/bottom22px margins contain full silhouette.",
+          "Regular Closer only; no Church Variant, source scale, official collision or animation claim."
+        ],
+        "replaces_excluded_path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+        "primary_limb_reference": "sh3_closer_game_b.jpg"
+      },
+      "alchemilla": {
+        "catalog_id": "alchemilla",
+        "name": "Normal Alchemilla waiting room",
+        "path": "/workspace/generated_images/exec-0c649b12-0ab3-4b96-b424-36da8e59edb5.png",
+        "sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "blocking_defects": [],
+        "certified_1_to_1": false,
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two-tone dirty green-grey walls, medical posters, brown L-shaped bench, metal trolley, padded metal table and partial left wooden counter match waiting-room source.",
+          "No new corridor, reception map/door montage, Brookhaven or Otherworld textures added.",
+          "At approximate83% source-height(y781/941), foreground tile floor is continuous/clear; table and sofa behind the contact row and left counter ends just above it. Final dist desktop/mobile captures confirm Wormhead and Closer grounded on clear tile floor; source camera and original floor geometry remain unmeasured.",
+          "Wide16:9 camera, room dimensions/furniture spacing, occluded floor and texture detail reconstructed for versus. Not a certified original-game floorplan."
+        ],
+        "geometry_review": {
+          "requested_footline_fraction": 0.83,
+          "expected_source_y_approx": 781,
+          "candidate_floor_clear_at_footline": true,
+          "needs_final_http_capture_check": false,
+          "source_http_result": "Both Wormhead and Closer grounded on clear tile floor in desktop/mobile captures."
+        },
+        "registered_art_path_reported_by_root": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png"
+      }
+    },
+    "stage_review_pending": false,
+    "overall": "Four actor candidates and normal Alchemilla stage accepted with documented limits. First Closer candidate remains excluded for limb topology error; corrected frontal replaces it. No certification1:1.",
+    "excluded_candidates": [
+      {
+        "catalog_id": "sh3_closer_036",
+        "name": "Closer",
+        "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+        "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          121,
+          23,
+          1416,
+          1059
+        ],
+        "verdict": "reject_anatomy",
+        "blocking_defects": [
+          "One source elongated arm/column has been misinterpreted as a flesh-coloured leg with foot; candidate lacks the pair of huge lateral hanging arm columns.",
+          "The two narrow dark central legs seen under apron in front game capture are replaced by spread flesh-coloured/boot-like limbs."
+        ],
+        "visual_notes": [
+          "Initial acceptance was incorrect: reviewer misassigned limb connections in the strongly foreshortened model art. Corrected by tracing anatomy from front game capture sh3_closer_game_b.jpg.",
+          "Use game captures as primary limb topology: two huge lateral arm columns plus two narrow dark central legs.",
+          "Model-perspective art is useful for texture and surface bands, not enough to infer limbs/feet. No accepted Closer candidate currently selected."
+        ],
+        "certified_1_to_1": false,
+        "selection_status": "excluded_anatomy",
+        "invalidated_initial_review": {
+          "catalog_id": "sh3_closer_036",
+          "name": "Closer",
+          "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+          "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+          "dimensions": [
+            1448,
+            1086
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_bbox_128": [
+            121,
+            23,
+            1416,
+            1059
+          ],
+          "verdict": "accept_candidate_with_limits",
+          "blocking_defects": [],
+          "visual_notes": [
+            "Two huge cylindrical arms with rounded masses, two narrow legs, obscure elongated head and dark apron retained; no additional arm or human face apparent.",
+            "Legs/feet are now more spread/extended and reconstructed; apron folds/skin texture sharpened. Primary model uses strong foreshortening, not orthographic measurement.",
+            "Only regular Closer, not Church Variant. Source/game stills do not establish exact foot shape, versus scale, collider, animation or FPS. Margins contain entire silhouette."
+          ],
+          "certified_1_to_1": false,
+          "selection_status": "selected_final_candidate"
+        },
+        "review_correction_reason": "Rechecked actual front game view independently after root flagged missing arm column."
+      }
+    ],
+    "http_capture_review_pending": false,
+    "http_source_review": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/visual-http-review.json",
+    "http_final_dist_review": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/visual-http-review.json"
+  },
+  "delivery": [
+    {
+      "id": "sh1_wormhead_004",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
+      "inputSha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+      "frames": [
+        {
+          "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+          "bytes": 1218735,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            97,
+            13,
+            1361,
+            1068
+          ],
+          "pixelSHA256": "f525ca031771e4ebad1c5d8c132136be25713b9ecd54f40946a0a66ca179c2a0",
+          "transparentFraction": 0.57779,
+          "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+          "facing": -1,
+          "anchor": [
+            0.65,
+            0.985
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
+          "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe SH1 original : tête recouverte de replis distincte de Groaner, pose source conservée. Pieds sombres recadrés reconstruits et marges haut/bas étroites ; côté opposé absent. Échelle/ancrage versus non mesurés ; aucun cycle ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh1_hanged_scratcher_011",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
+      "inputSha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+      "frames": [
+        {
+          "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+          "bytes": 1564590,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            121,
+            18,
+            1368,
+            1065
+          ],
+          "pixelSHA256": "f3ff012a17b70c02e939f8629fb66e4c58c6c704cd0b7e33677397306ca7092a",
+          "transparentFraction": 0.55874,
+          "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+          "facing": 1,
+          "anchor": [
+            0.52,
+            0.98
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
+          "sourceSHA256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe SH1 original : vue frontale tassée, museau pendant, griffes et appendices visibles conservés. Arrière masqué, texture accentuée ; support plafond et poses suspendues restent à produire. Direction de présentation et échelle versus non mesurées ; aucune certification 1:1. Enveloppe de versus agrandie pour la grande créature décrite par CL_SH1_ENEMIES ; facteur 1,55 de mise en scène, sans mesure de taille originale.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_closer_036",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+      "inputSha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+      "frames": [
+        {
+          "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+          "bytes": 1504645,
+          "width": 1192,
+          "height": 1320,
+          "visibleBounds": [
+            164,
+            7,
+            1083,
+            1298
+          ],
+          "pixelSHA256": "6f1cd7dcae231817f44954e9e411c4cb0dc0120cc9769fd9d198cec07630ad97",
+          "transparentFraction": 0.6252,
+          "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.985
+          ],
+          "bodyHeight": 0.97,
+          "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
+          "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat frontal SH3 original, anatomie contrôlée sur deux captures en jeu : deux bras colonnes latéraux, deux jambes sombres centrales et tête allongée. Premier candidat perspectif exclu pour confusion bras/jambe, jamais importé. Pose symétrisée, texture plus rouge et extrémités reconstruites ; direction de présentation et échelle versus, pas de certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh4_hummer_055",
+      "source": "sh4",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
+      "inputSha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+      "frames": [
+        {
+          "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+          "bytes": 893461,
+          "width": 1723,
+          "height": 913,
+          "visibleBounds": [
+            109,
+            49,
+            1688,
+            881
+          ],
+          "pixelSHA256": "666d46d2f9a0760f65e51e4ff7ac75643e2eff788cb47a75f62c27809a9a99f2",
+          "transparentFraction": 0.77321,
+          "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.95
+          ],
+          "bodyHeight": 0.88,
+          "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
+          "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "notes": "Candidat fixe SH4 original : un seul Hummer depuis le grand sujet de la planche à deux créatures. Deux ailes asymétriques et long bec ; membranes/fourrure extrapolées depuis 404×214, aucune vue indépendante nette. Direction/ancrage/échelle versus ; aucune attribution Arcade ni cycle ou certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "alchemilla",
+      "source": "sh1",
+      "scene": "normal-waiting-room",
+      "inputFile": "exec-0c649b12-0ab3-4b96-b424-36da8e59edb5.png",
+      "path": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+      "certifiedOneToOne": false
+    }
+  ],
+  "limits": [
+    "All delivered images are static candidates, not source-animation or anatomy certification.",
+    "Wormhead and Hanged Scratcher use one final model view each; cropped or hidden extremities and opposite sides remain unproven.",
+    "Hummer source is a two-subject image at404x214; output contains only the larger creature. Surface detail is extrapolated, not recovered original data.",
+    "First Closer excluded for arm/leg confusion. Replacement is frontal from two distinct actual game views; lower-leg extremities, pose and texture remain reconstructed.",
+    "Alchemilla camera, open foreground and furniture setback are authored versus adaptations. Reception is adjacent, not a merged corridor.",
+    "Midwich/Woodside/Alchemilla ceiling metadata is a qualitative scene support contract, not a geometric measurement.",
+    "Prior Mannequin and Alessa SMG image tool refusals respected; no retry of those subjects."
+  ],
+  "finalBrowserVisualReview": {
+    "schema": "halo-visual-http-review-batch5-final-dist-v1",
+    "reviewer": "batch4_visual_refs",
+    "review_date_utc": "2026-10-24",
+    "version": "0.9.6",
+    "build_reviewed": "dist",
+    "status": "pass_with_known_portrait_hud_reservation",
+    "blocking_findings": [],
+    "scope": "Final dist review after14 browser suites reported successful. Updated Hanged Scratcher inspector visually reinspected at qualitative versus scale1.55; other five requested capture PNGs are byte-identical to previously visually inspected source captures. No runtime or repository files edited by reviewer.",
+    "captures": [
+      {
+        "file": "inspector-sh1_wormhead_004.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_wormhead_004.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "5b4ae06df998d10009a9aff38a758a96222707e0333f9a27cecb7b0d770015a2",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist PNG byte-identical to previously visually inspected capture",
+        "byte_identical_to_prior_source_capture": true
+      },
+      {
+        "file": "inspector-sh1_hanged_scratcher_011.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_hanged_scratcher_011.png",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "sha256": "7b33dbdd6c8f6ce927ebba6c7982f8d959dde2c35781216dd32eb17c18658e6c",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist capture visually reinspected after qualitative scale correction",
+        "byte_identical_to_prior_source_capture": false
+      },
+      {
+        "file": "inspector-sh3_closer_036.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_closer_036.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "90f306b75b5049e3cf85d43704f0a0dd0838dd46344421909ffb61ce42515f6d",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist PNG byte-identical to previously visually inspected capture",
+        "byte_identical_to_prior_source_capture": true
+      },
+      {
+        "file": "inspector-sh4_hummer_055.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_hummer_055.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "963f7d955ee3bd7a1abc113e8704bac47a14f26ef29e403e4d4290011b23776b",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist PNG byte-identical to previously visually inspected capture",
+        "byte_identical_to_prior_source_capture": true
+      },
+      {
+        "file": "combat-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-alchemilla.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "7d781ee0ae0532e8f2d8cea4ee530a3d2ecb49ca9cdb92ed97f41ffae7c00c23",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist PNG byte-identical to previously visually inspected capture",
+        "byte_identical_to_prior_source_capture": true
+      },
+      {
+        "file": "mobile-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-alchemilla.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "b66aa2884c82fc41cf55b06408968701cbb9865701694838d41b2ab7eaf73dab",
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "final dist PNG byte-identical to previously visually inspected capture",
+        "byte_identical_to_prior_source_capture": true
+      }
+    ],
+    "actor_inspector_reviews": [
+      {
+        "id": "sh1_wormhead_004",
+        "capture": "inspector-sh1_wormhead_004.png",
+        "result": "pass_with_source_limits",
+        "observations": [
+          "Large folded/worm-covered head, hunched body and visible paws remain entirely inside grid and card.",
+          "Lowest visible paws meet logical ground line; lifted foreleg retained.",
+          "No opaque rectangle or halo. Opposite-side anatomy, dark reconstructed feet and versus scale remain unverified."
+        ]
+      },
+      {
+        "id": "sh1_hanged_scratcher_011",
+        "capture": "inspector-sh1_hanged_scratcher_011.png",
+        "result": "pass_after_qualitative_versus_scale_correction",
+        "observations": [
+          "Whole enlarged frontal silhouette, hanging snout, claws and dorsal appendages fit the grid/card without clipping.",
+          "Lowest claws meet logical ground line; no overflow or new crop after enlargement.",
+          "Previously tiny preview readability improved. Visible caption states factor1.55 for staging without original-size measurement.",
+          "Scale0.66 to1.55 is a qualitative versus-envelope calibration based on source descriptions large/huge/giant, not canonical height, anatomy measurements or source FPS.",
+          "PNG and its image calibration remain unchanged; pose remains one static frontal view. Rear topology, suspended poses and canonical collision geometry remain unestablished."
+        ],
+        "presentation_scale_history": {
+          "previous_reported_versus_scale": 0.66,
+          "final_reported_versus_scale": 1.55,
+          "previous_reported_envelope_pixels_approx": 53,
+          "final_reported_envelope_pixels_approx": 124,
+          "units_note": "Envelope pixel figures supplied by root, not source-game measurements. Factor1.55 staging note visible in final inspector.",
+          "canonical_size_measured": false,
+          "source_basis": "CL_SH1_ENEMIES describes a large insect-like creature, huge praying mantis or giant thin frog."
+        }
+      },
+      {
+        "id": "sh3_closer_036",
+        "capture": "inspector-sh3_closer_036.png",
+        "result": "pass_corrected_anatomy",
+        "observations": [
+          "Corrected frontal candidate is present. Both massive lateral arm columns traced from shoulders remain visible independently.",
+          "Both narrow dark central legs extend below apron and meet logical ground line; no flesh-coloured boot-leg substitution.",
+          "Elongated head and all column/leg ends fit grid. Arms end just above feet/line; no clipped head despite narrow source margin.",
+          "First perspective candidate was rejected for limb confusion and is not the selected bitmap; frontal pose/texture/terminal leg shape remain adapted."
+        ]
+      },
+      {
+        "id": "sh4_hummer_055",
+        "capture": "inspector-sh4_hummer_055.png",
+        "result": "pass_with_low_resolution_source_limits",
+        "observations": [
+          "Exactly one subject, both asymmetrical wing tips and full long needle-like beak are visible inside grid/card with margins.",
+          "Beak/body remain slightly above grid ground line, consistent with hovering presentation.",
+          "No duplicate from composite source, opaque rectangle or halo. Fine fur/membrane anatomy extrapolated from404x214 source; no animation or Arcade attribution."
+        ]
+      }
+    ],
+    "combat_review": {
+      "desktop_capture": "combat-new-pngs-alchemilla.png",
+      "mobile_capture": "mobile-new-pngs-alchemilla.png",
+      "result": "pass_ground_contacts_and_framing",
+      "observations": [
+        "Wormhead and corrected Closer are complete and face/present inside canvas without clipping or HUD intersection.",
+        "Both Wormhead paws and Closer narrow leg ends rest on the continuous foreground tile floor; no wall/plinth or table is under their feet.",
+        "Closer two arm columns and two central legs remain separately discernible in actual combat.",
+        "Padded table, sofa, trolley and counter remain behind playing contact line; no visible floor seam, fallback or source Harry.",
+        "Normal waiting-room materials and furniture retained. Wide camera, floor/furniture spacing and actor scales are versus adaptations, not canonical geometry.",
+        "No prior rejected Closer boot-legged perspective silhouette appears."
+      ],
+      "stage_path": "/workspace/silent-hill-halo-of-flesh/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "stage_sha256": "2ef1639ee034520921b0b369963e200f0afd92de973706451959d28c7f347baa",
+      "matches_selected_stage_candidate": true
+    },
+    "selected_asset_identity_checks": [
+      {
+        "id": "sh1_wormhead_004",
+        "path": "/workspace/silent-hill-halo-of-flesh/assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+        "sha256_on_disk": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+        "expected_selected_sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+        "matches_selected_candidate": true
+      },
+      {
+        "id": "sh1_hanged_scratcher_011",
+        "path": "/workspace/silent-hill-halo-of-flesh/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+        "sha256_on_disk": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+        "expected_selected_sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
+        "matches_selected_candidate": true
+      },
+      {
+        "id": "sh3_closer_036",
+        "path": "/workspace/silent-hill-halo-of-flesh/assets/sprites/sh3_closer_036.e00beefd711f.png",
+        "sha256_on_disk": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "expected_selected_sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "matches_selected_candidate": true
+      },
+      {
+        "id": "sh4_hummer_055",
+        "path": "/workspace/silent-hill-halo-of-flesh/assets/sprites/sh4_hummer_055.8561079c64dc.png",
+        "sha256_on_disk": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "expected_selected_sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "matches_selected_candidate": true
+      }
+    ],
+    "excluded_closer_history": {
+      "path": "/workspace/generated_images/exec-972e5f4b-833b-476b-b31d-ffb07e313469.png",
+      "sha256": "6554bf516720cd0160aac4893e36068047f68c27a4e27427f439fe6e436ef2eb",
+      "status": "excluded_anatomy_never_selected_in_final_registry",
+      "reason": "Mistook an arm column for flesh-coloured booted leg; previous review acceptance was corrected. History preserved in candidate-review.json."
+    },
+    "findings": [
+      {
+        "id": "portrait-hud-small",
+        "severity": "medium",
+        "blocking": false,
+        "known_before_this_pass": true,
+        "capture": "mobile-new-pngs-alchemilla.png",
+        "observation": "At430x932 the landscape combat remains entirely visible in approximately430x242 centered canvas, with large black areas above/below. HUD/names remain very small.",
+        "scope_note": "Known responsive readability limitation; no UI redesign requested in this final art review."
+      }
+    ],
+    "supporting_http_test_report": {
+      "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "sha256": "53cf62ba4d0429d94cb6f54c80dbd1d1c5a47962e2f04cfb25459f5909878cef",
+      "reported_build": "dist",
+      "reported_passed": true,
+      "reported_checks_total": 82,
+      "reported_failed_checks": 0,
+      "reported_errors": [],
+      "note": "Final dist HTTP report consulted:82/82 reported successful. Static visual review does not independently measure network requests, animation, pause clocks or dynamic collisions."
+    },
+    "references": {
+      "provenance": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/provenance.json",
+      "candidate_review": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/candidate-review.json"
+    },
+    "limitations": [
+      "Static screenshots do not prove full arena traversal, attack contacts, dynamic collisions, hitbox accuracy or source animation timing.",
+      "Hanged Scratcher/Hummer reviewed in production workshop here, not a new live combat pairing.",
+      "All actor/source crop, anatomy, texture and scale limitations remain explicitly documented. No1:1 certification.",
+      "Final Hanged Scratcher versus scale1.55 is qualitative staging only. Original-game size is not measured; no1:1 fidelity or collider certification."
+    ],
+    "resolved_findings": [
+      {
+        "id": "hanged-inspector-small-preview",
+        "severity": "low",
+        "blocking": false,
+        "capture": "inspector-sh1_hanged_scratcher_011.png",
+        "observation": "Hanged Scratcher is much smaller in100% grid preview than other large actor previews, reducing visibility of fine claw/limb detail; entire subject is present and zoom is available.",
+        "scope_note": "No canonical source scale established, so this is a readability reservation rather than proof of incorrect gameplay size.",
+        "status": "resolved_in_final_dist_capture",
+        "resolution": "Qualitative versus envelope enlarged0.66 to1.55. Final inspector is more readable and still contains complete silhouette with ground-line contact; no canonical-size claim."
+      }
+    ],
+    "history": {
+      "before_scale_correction_report": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/history/visual-http-review-before-hanged-scale-correction.json",
+      "before_scale_correction_report_sha256": "4254c0f5fe840f212e59371546bfb8f1922116e63a27f42a84132e719e36ce6e",
+      "before_scale_correction_capture": "/workspace/shared/halo-of-flesh/validation-batch5-2026-10-24/history/inspector-sh1_hanged_scratcher_011-before-scale-correction.png",
+      "note": "Previous small preview report/capture preserved; active report now covers final dist."
+    },
+    "supporting_full_browser_run": {
+      "log": "/workspace/.cloud-env/halo/logs/batch5-full-browser-tests.log",
+      "reported_by_root": "14 final browser suites on dist completed exit0; this reviewer did not rerun them."
+    }
+  },
+  "finalBrowserVisualReviewSha256": "5edd5bd4297d57f5303f0a56719c794e0484fe6e9ccd42d6d9052fa483ea42d4"
+}

@@ -904,6 +904,33 @@
       "scope": "Première poursuite du Void dans le Diner Otherworld : phénomène impossible à blesser, fuite et obstacles.",
       "consultedAt": "2026-10-23",
       "caveat": "Édition commerciale Downpour ; description du parcours, sans temps de course, dégâts ni distance certifiés."
+    },
+    {
+      "id": "EXT_SH2_FAQ_20261024",
+      "url": "https://www.silenthillmemories.net/sh2/faq_en.htm",
+      "title": "Silent Hill 2 original — Frequently Asked Questions",
+      "type": "guide-specialise-secondaire",
+      "scope": "Présence invisible de Toluca Prison : visée, dégâts, cris et possibilité de la tuer, sans preuve explicite de sa non-hostilité.",
+      "consultedAt": "2026-10-24",
+      "caveat": "FAQ du jeu original ; la possibilité pour James de blesser cette présence ne démontre pas son comportement offensif ni une animation visible."
+    },
+    {
+      "id": "EXT_SH2_ODDITIES_20261024",
+      "url": "https://www.silenthillmemories.net/sh2/cool_and_scary_things_en.htm",
+      "title": "Silent Hill 2 original — Cool and Scary Things",
+      "type": "guide-specialise-secondaire",
+      "scope": "Deux créatures invisibles dans les blocs nord et sud de Toluca Prison, visables et tuables, avec cris ; édition originale uniquement.",
+      "consultedAt": "2026-10-24",
+      "caveat": "Relevé de curiosités consulté ; aucune déduction de non-hostilité depuis une absence de description d’attaque, aucun emprunt au remake."
+    },
+    {
+      "id": "EXT_SHATTERED_INFO_20261024",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/info_en.htm",
+      "title": "Silent Hill: Shattered Memories — Information",
+      "type": "fiche-specialisee-secondaire",
+      "scope": "Sortie initiale Wii en 2009, plateforme et séquences cauchemardesques axées sur la fuite et l’évitement ; pas de confrontation directe.",
+      "consultedAt": "2026-10-24",
+      "caveat": "La décision retient l’édition Wii initiale pour ces dossiers ; commandes, captures et différences des portages PS2/PSP restent à relever séparément."
     }
   ],
   "fighters": [
@@ -4364,14 +4391,16 @@
       "identityStatus": "poursuivant-non-affrontable-documente",
       "identityNote": "Aucune arme ou attaque de projectile; original sans combat tuable.; Manches versus = adaptation, pas KO canonique.",
       "referenceIds": [
-        "EXT08"
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
       ],
       "observedMoves": [
         {
           "name": "Poursuite collective",
-          "description": "Poursuite collective",
+          "description": "Des groupes de Raw Shocks poursuivent Harry dans les séquences cauchemardesques du monde gelé. Ils sont invulnérables et impossibles à tuer ; Harry, sans armes, doit fuir.",
           "evidence": [
-            "EXT08"
+            "EXT08",
+            "EXT_SHATTERED_INFO_20261024"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -4391,7 +4420,7 @@
         },
         {
           "name": "Recul devant fusée",
-          "description": "Recul devant fusée",
+          "description": "Les fusées effraient temporairement les Raw Shocks pendant la fuite ; elles ne les blessent ni ne les tuent. Durée et commandes de l’édition Wii encore à mesurer.",
           "evidence": [
             "EXT08"
           ],
@@ -4405,7 +4434,8 @@
         "Aucune arme ou attaque de projectile; original sans combat tuable.",
         "Manches versus = adaptation, pas KO canonique.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -4485,7 +4515,20 @@
       "artDirectionFocus": "visage effacé",
       "existingCatalogueBehavior": "Poursuit et agrippe ; n’est pas affronté directement dans l’original.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shattered_raw_shock_base_099",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "evidence": [
+          "EXT08",
+          "EXT_SHATTERED_INFO_20261024"
+        ],
+        "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "scripted-encounter",
@@ -4496,14 +4539,16 @@
       "identityStatus": "variante-visuelle-documentee",
       "identityNote": "Variation morphologique; pas de pouvoir distinct établi.; Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
       "referenceIds": [
-        "EXT08"
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
       ],
       "observedMoves": [],
       "constraints": [
         "Variation morphologique; pas de pouvoir distinct établi.",
         "Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -4583,7 +4628,20 @@
       "artDirectionFocus": "silhouette féminine",
       "existingCatalogueBehavior": "Variation morphologique déterminée par le profil psychologique.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shattered_raw_shock_feminine_100",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "evidence": [
+          "EXT08",
+          "EXT_SHATTERED_INFO_20261024"
+        ],
+        "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante feminine est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "scripted-encounter",
@@ -4594,14 +4652,16 @@
       "identityStatus": "variante-visuelle-documentee",
       "identityNote": "Aucune aura toxique/affaiblissante prouvée.; Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
       "referenceIds": [
-        "EXT08"
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
       ],
       "observedMoves": [],
       "constraints": [
         "Aucune aura toxique/affaiblissante prouvée.",
         "Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -4681,7 +4741,20 @@
       "artDirectionFocus": "volumes cutanés bosselés",
       "existingCatalogueBehavior": "Variation couverte de lésions, aura affaiblissante.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shattered_raw_shock_diseased_101",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "evidence": [
+          "EXT08",
+          "EXT_SHATTERED_INFO_20261024"
+        ],
+        "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante diseased est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "scripted-encounter",
@@ -4692,14 +4765,16 @@
       "identityStatus": "variante-visuelle-documentee",
       "identityNote": "Aucune hitbox mutable/pouvoir géométrique prouvé.; Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
       "referenceIds": [
-        "EXT08"
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
       ],
       "observedMoves": [],
       "constraints": [
         "Aucune hitbox mutable/pouvoir géométrique prouvé.",
         "Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -4779,7 +4854,20 @@
       "artDirectionFocus": "corps segmenté et tête trouée",
       "existingCatalogueBehavior": "Variation géométrique, hitbox changeante.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shattered_raw_shock_abstract_102",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "evidence": [
+          "EXT08",
+          "EXT_SHATTERED_INFO_20261024"
+        ],
+        "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante abstract est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "scripted-encounter",
@@ -4790,14 +4878,16 @@
       "identityStatus": "variante-visuelle-documentee",
       "identityNote": "Aucun bonus de vitesse propre prouvé.; Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
       "referenceIds": [
-        "EXT08"
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
       ],
       "observedMoves": [],
       "constraints": [
         "Aucun bonus de vitesse propre prouvé.",
         "Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -4877,7 +4967,20 @@
       "artDirectionFocus": "corps émacié percé de cavités",
       "existingCatalogueBehavior": "Variation plus petite et nerveuse.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shattered_raw_shock_atrophied_103",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "evidence": [
+          "EXT08",
+          "EXT_SHATTERED_INFO_20261024"
+        ],
+        "rationale": "Le bestiaire décrit les Raw Shocks comme invulnérables et impossibles à tuer : Harry ne possède pas d’armes et doit fuir, les fusées ne les repoussant que temporairement. La fiche d’information confirme des séquences de fuite et d’évitement. Le dossier reste une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne prétend pas immobiliser le monstre dans l’œuvre. La variante atrophied est nommée dans ce même bestiaire ; sa morphologie ne prouve ni arme, ni capacité offensive distincte, ni altération magique de la géométrie.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "combatant",
@@ -12024,15 +12127,17 @@
       "identityNote": "Aucun combat direct dans l’original; branches-lames/projectiles non attestés.; Ne pas affirmer une identité humaine définitive depuis une lecture de fan.",
       "referenceIds": [
         "EXT29",
-        "EXT31"
+        "EXT31",
+        "EXT30"
       ],
       "observedMoves": [
         {
           "name": "Traque dans les labyrinthes",
-          "description": "Traque dans les labyrinthes",
+          "description": "Anita ne peut pas combattre Sakura Head et doit fuir par les labyrinthes ; le guide décrit les détours pour l’éviter et la remise au départ de la dernière poursuite si elle est capturée.",
           "evidence": [
             "EXT29",
-            "EXT31"
+            "EXT31",
+            "EXT30"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -12044,7 +12149,8 @@
         "Aucun combat direct dans l’original; branches-lames/projectiles non attestés.",
         "Ne pas affirmer une identité humaine définitive depuis une lecture de fan.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Anita ne peut pas combattre le monstre ; la fuite dans les labyrinthes et la capture appartiennent à cette rencontre, sans kit de duel autonome. Le blocage du prototype ne représente pas une immobilité canonique."
       ],
       "proposals": {
         "super": {
@@ -12133,7 +12239,20 @@
       "artDirectionFocus": "branches fleuries",
       "existingCatalogueBehavior": "Traque rapide, frappes de branches et accélérations soudaines.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: The Short Message (2024, PS5)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "shortmessage_sakura_head_150",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: The Short Message (2024, PS5)",
+        "evidence": [
+          "EXT29",
+          "EXT30"
+        ],
+        "rationale": "Le bestiaire indique explicitement qu’Anita ne peut pas combattre Sakura Head et doit traverser les labyrinthes pour lui échapper. Le guide décrit les détours, les obstacles et la remise au départ de la poursuite finale si le monstre la capture. Il s’agit d’une rencontre de poursuite sans duel autonome ; le blocage des commandes du prototype ne nie pas la mobilité du poursuivant dans l’œuvre. Aucune identité humaine définitive ni attaque de branches à distance n’est validée.",
+        "reviewedAt": "2026-10-24"
+      }
     },
     {
       "combatRole": "combatant",

@@ -142,7 +142,8 @@ test('engine timing remains distinct from unmeasured source frames and no artwor
   assert.equal(capture.status,'En cours');assert.match(capture.reason,/FPS rationnels.*ffprobe.*Zéro relevé original livré/);
   assert.match(capture.reason,/un seul décodage.*relecture facultative.*SHA256.*déclaratif/);
   assert.match(capture.reason,/restent candidats et ne certifient ni le geste ni la fidélité 1:1/);
-  assert.equal(plan.metrics.sourceTimingSchema,1);assert.equal(plan.metrics.sourceTimingBatchSchema,1);assert.equal(plan.metrics.measuredSourceMoves,0);
+  assert.match(capture.reason,/review-preview.*snapshot vérifié.*index HTML local et manifeste SHA256.*sans nouvelle attestation ni import Excel/);
+  assert.equal(plan.metrics.sourceTimingSchema,1);assert.equal(plan.metrics.sourceTimingBatchSchema,1);assert.equal(plan.metrics.sourceTimingReviewSchema,1);assert.equal(plan.metrics.measuredSourceMoves,0);
 });
 
 test('planning is deterministic and leaves both research and gameplay catalogues unchanged',()=>{

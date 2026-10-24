@@ -429,7 +429,7 @@
             "swarm",
             "fade"
           ],
-          "canonicalBasis": "Se déplace sur les parois et tombe sur la cible.",
+          "canonicalBasis": "Grande créature insectoïde aux longues griffes, attaquant au sol ou suspendue au plafond.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -446,7 +446,7 @@
             "otherworld",
             "fade"
           ],
-          "canonicalBasis": "Se déplace sur les parois et tombe sur la cible.",
+          "canonicalBasis": "Grande créature insectoïde aux longues griffes, attaquant au sol ou suspendue au plafond.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -4857,7 +4857,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Poursuit et agrippe ; n’est pas affronté directement dans l’original.",
+          "canonicalBasis": "Poursuit et agrippe ; Harry fuit et ne peut pas le tuer.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -4874,7 +4874,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Poursuit et agrippe ; n’est pas affronté directement dans l’original.",
+          "canonicalBasis": "Poursuit et agrippe ; Harry fuit et ne peut pas le tuer.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -4898,7 +4898,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Variation morphologique déterminée par le profil psychologique.",
+          "canonicalBasis": "Variation morphologique déterminée par le profil psychologique ; poursuite sans duel autonome.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -4915,7 +4915,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Variation morphologique déterminée par le profil psychologique.",
+          "canonicalBasis": "Variation morphologique déterminée par le profil psychologique ; poursuite sans duel autonome.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -4929,7 +4929,7 @@
         {
           "id": "shattered_raw_shock_diseased_101_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Pulsation malade",
+          "name": "Rituel de clôture — Silhouette malade",
           "trigger": "decisive-special",
           "pose": "execution",
           "effect": "silhouette",
@@ -4939,7 +4939,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Variation couverte de lésions, aura affaiblissante.",
+          "canonicalBasis": "Variation morphologique couverte de lésions ; aucun pouvoir affaiblissant propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -4956,7 +4956,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Variation couverte de lésions, aura affaiblissante.",
+          "canonicalBasis": "Variation morphologique couverte de lésions ; aucun pouvoir affaiblissant propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -4980,7 +4980,7 @@
             "absorb",
             "pulse"
           ],
-          "canonicalBasis": "Variation géométrique, hitbox changeante.",
+          "canonicalBasis": "Variation morphologique géométrique ; aucun changement de collision propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -4997,7 +4997,7 @@
             "otherworld",
             "pulse"
           ],
-          "canonicalBasis": "Variation géométrique, hitbox changeante.",
+          "canonicalBasis": "Variation morphologique géométrique ; aucun changement de collision propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -5011,7 +5011,7 @@
         {
           "id": "shattered_raw_shock_atrophied_103_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Ruée atrophiée",
+          "name": "Rituel de clôture — Silhouette atrophiée",
           "trigger": "decisive-special",
           "pose": "apparition",
           "effect": "static",
@@ -5021,7 +5021,7 @@
             "echo",
             "collapse"
           ],
-          "canonicalBasis": "Variation plus petite et nerveuse.",
+          "canonicalBasis": "Variation morphologique atrophiée ; aucun bonus de vitesse propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -5038,7 +5038,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Variation plus petite et nerveuse.",
+          "canonicalBasis": "Variation morphologique atrophiée ; aucun bonus de vitesse propre attesté.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -7604,7 +7604,7 @@
             "enclose",
             "petals"
           ],
-          "canonicalBasis": "Traque rapide, frappes de branches et accélérations soudaines.",
+          "canonicalBasis": "Rencontre de poursuite dans les dédales de l’Otherworld : Anita fuit sans pouvoir le combattre.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         },
@@ -7621,7 +7621,7 @@
             "otherworld",
             "petals"
           ],
-          "canonicalBasis": "Traque rapide, frappes de branches et accélérations soudaines.",
+          "canonicalBasis": "Rencontre de poursuite dans les dédales de l’Otherworld : Anita fuit sans pouvoir le combattre.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 4
         }
@@ -10866,9 +10866,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de FOREST WORLD."
       },
-      "animations": [
-        "forestWind"
-      ]
+      "animations": []
     },
     {
       "id": "building_world",
