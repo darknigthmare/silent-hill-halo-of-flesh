@@ -1,6 +1,31 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — sixième lot du 25 octobre 2026
+## Chantiers parallèles — septième lot du 25 octobre 2026
+
+Les six chantiers ont avancé : Romper, Double Head, Insane Cancer et Sniffer
+mâle illustrés, Helen’s Bakery normale, quatre pistes SH1/SH3, dix-huit
+timelines et soixante-trois présentations supplémentaires. Huit profils de
+combat reçoivent leurs comportements documentés et leurs limites propres.
+
+Six identités du film de 2006 sont confirmées avec leur adaptation jouable
+du versus explicitement déclarée. Leurs gestes, images et timings restent
+ouverts. Les vingt-cinq dossiers antérieurs gardent leur blocage autonome.
+Le suivi conserve **842 actions ouvertes, dont 96 P0**, avec **3 524 commandes
+actives et 1 076 désactivées**.
+
+La couverture atteint **22 profils illustrés, 27 PNG acteurs et cinq PNG de
+décor**, avec un montage animé candidat et aucune certification 1:1.
+L’outil de relevés sélectionne désormais une piste vidéo explicite, en gardant
+les anciens paquets compatibles ; les 4 600 relevés originaux restent vides.
+
+**Validation : 834 tests Node, 100 tests Python et 1 153 contrôles navigateur
+dans quatorze suites ; 180 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT7_2026-10-25.md) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-25-lot7.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — sixième lot du 25 octobre 2026
 
 Les six chantiers ont avancé ensemble : quatre nouveaux profils illustrés,
 une pose de pointage distincte pour Twin Victim, le lobby original Lakeview,

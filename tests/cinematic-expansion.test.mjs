@@ -73,10 +73,16 @@ test('door, bedside and barred edits require real reviewed props and cannot borr
   }
 });
 
-test('knife, revolver, club and hammer edits retain their exact equipment and subject edition',()=>{
+test('knife, revolver and hammer edits retain their exact equipment and subject edition',()=>{
   for(const id of ['sh1_grey_child_005','sh3_nurse_revolver_044','sh4_patient_060','downpour_bogeyman_115']){
     const a=actor(id),stage=STAGES.find(s=>loreFinisher({attacker:a,target:target(),stage:s,definition:definition(a)}).allowed);
     const options={attacker:a,target:target(),stage,definition:definition(a)};
+    if(id==='sh4_patient_060'){
+      assert.equal(a.data.visual.weapon,'hammer','the reviewed SH4 guide names a hammer');
+      const borrowed={...a,data:{...a.data,visual:{...a.data.visual,weapon:'club'}}};
+      assert.equal(loreFinisher({...options,attacker:borrowed}).allowed,false);
+      assert.equal(lorePresentation(borrowed,'intro').authored,false);
+    }
     a.data={...a.data,visual:{...a.data.visual,weapon:'spear'}};
     assert.equal(loreFinisher(options).allowed,false,id);
     assert.equal(lorePresentation(a,'intro').authored,false,id);

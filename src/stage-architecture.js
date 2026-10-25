@@ -2,10 +2,26 @@
 const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
   if(stage?.id==='devils_pit'&&stage.source==='downpour')return 'interior';
+  if(stage?.id==='sewers'&&stage.source==='sh3')return 'interior';
   return stage?.id === 'brookhaven_roof' ? 'exterior' : INTERIORS.has(stage?.family) ? 'interior' : 'exterior';
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
 export function drawStageArchitecture(c,w,h,stage) {
+  if((stage?.id==='lakeside_amusement'&&stage.source==='sh1')||(stage?.id==='lakeside_sh3'&&stage.source==='sh3')){
+    // Covered, open-sided rides: no distant ferris wheel or interior-room door.
+    const top=h*.22,ground=h*.57;
+    c.save();c.fillStyle='#101813';c.fillRect(0,0,w,ground);
+    c.fillStyle=stage.source==='sh1'?'#3d3529':'#4b3b2e';c.fillRect(w*.17,top,w*.66,22);
+    for(const x of[w*.19,w*.81])line(c,x,top,x,ground,'#514c3b',7);
+    c.strokeStyle='#5c5442';c.lineWidth=5;c.beginPath();c.ellipse(w*.5,ground-2,w*.32,h*.04,0,0,Math.PI*2);c.stroke();
+    c.restore();return true;
+  }
+  if(stage?.id==='midwich_nightmare'&&stage.source==='sh1'){
+    c.save();const ground=h*.57;c.fillStyle='#181a16';c.fillRect(0,0,w,ground);
+    for(let i=0;i<9;i++){const x=i*w/8;line(c,x,0,x,ground,'#37382e',4);}
+    for(let y=h*.19;y<ground;y+=33)line(c,0,y,w,y,'rgba(91,72,48,.28)',2);
+    c.restore();return true;
+  }
   if(stage?.id==='forest_world'&&stage.source==='sh4') {
     // This first-visit path is enclosed by woodland, not the generic mountains.
     // It remains outside; the authored treeline changes no playable boundary.
@@ -53,6 +69,11 @@ export function drawStageArchitecture(c,w,h,stage) {
     for(let i=0;i<7;i++)line(c,left+i*(right-left)/6,top+32,left+i*(right-left)/6,vy,'#26352f',12);
     c.fillStyle='#71694b';c.fillRect(left,vy-7,right-left,4);
     line(c,left,vy-34,right,vy-34,'#444a42',3);
+  } else if(stage.id==='sewers'&&stage.source==='sh3') {
+    // Service passage, with fixed wall conduits; no domestic rear doorway.
+    for(const y of[h*.25,h*.34])line(c,left,y,right,y,'#4d5b50',8);
+    c.fillStyle='#17251f';c.fillRect(w*.24,h*.39,w*.13,h*.15);
+    for(let i=0;i<6;i++)line(c,w*.25+i*23,h*.4,w*.25+i*23,h*.53,'#536255',2);
   } else if(chapel) {
     // A muted abstract glass panel marks the chapel, without copying sacred art.
     // No final-pit flesh/fans or memory-corridor door is borrowed for this view.

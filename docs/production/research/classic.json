@@ -8872,7 +8872,7 @@
       "observedMoves": [
         {
           "name": "Marteau",
-          "description": "Coups enchaînés.",
+          "description": "Le Patient balance son marteau d’un côté à l’autre en un enchaînement pouvant toucher plusieurs fois ; la source conseille de l’interrompre en attaquant. Aucun nombre de coups, frame, vitesse ou dégâts du prototype n’est une mesure de SH4.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8882,7 +8882,7 @@
         },
         {
           "name": "Pivot",
-          "description": "Frappe en se retournant.",
+          "description": "Lorsque Henry se trouve derrière lui, le Patient peut se retourner avec une attaque en pivot. Le guide atteste ce retournement, sans confirmer une hitbox permanente dans son dos.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -9458,7 +9458,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_twin_victim_059 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Le guide décrit directement les Bottoms : coups des grands bras souvent accompagnés d’un tour sur eux-mêmes, puis poursuite et plongeon vers Henry. Il les dit un peu plus forts que les Twin Victims, sans fournir de coefficient numérique ; le transfert des gestes reste limité à ces faits explicites de SH4.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -10514,7 +10514,7 @@
       "observedMoves": [
         {
           "name": "Cheveux",
-          "description": "Entrave la cible avec les cheveux ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
+          "description": "Ses cheveux enchevêtrent Henry et l’immobilisent en place, lui permettant d’attaquer ; courir ne suffit pas pour se libérer, mais frapper Cynthia ou lui tirer dessus peut rompre l’entrave. La proximité inflige aussi les faibles dégâts passifs communs aux Ghosts. Cela décrit une entrave debout, pas un plaquage ou une projection.",
           "evidence": [
             "CL_CYNTHIA",
             "CL_SH4_ENEMIES"
@@ -10525,9 +10525,10 @@
         },
         {
           "name": "Prise",
-          "description": "Agrippe au contact.",
+          "description": "Sans arme, Cynthia peut frapper du poing et agripper Henry au contact ; l’entrave par les cheveux reste distincte. Aucune durée de bind, invulnérabilité ou valeur de dégâts versus n’est canonisée.",
           "evidence": [
-            "CL_CYNTHIA"
+            "CL_CYNTHIA",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -11227,8 +11228,8 @@
       "name": "Greedy Worm",
       "source": "sh4",
       "baseId": null,
-      "identityStatus": "non-combattant-canonique",
-      "identityNote": "Créature inoffensive et indestructible ; ne pas reprendre le comportement d’une autre œuvre.",
+      "identityStatus": "presence-documentee-role-a-preciser",
+      "identityNote": "Créature tubulaire de SH4 visible au métro et à Water Prison ; le guide de curiosités la décrit attaquable mais non tuable. La non-hostilité et la cause d’une invulnérabilité ne sont pas établies directement par cette preuve. Le blocage de duel conservateur demeure sans décision de rôle validée ; aucun comportement d’une autre œuvre n’est transféré.",
       "referenceIds": [
         "CL_GREEDY",
         "EXT_SH4_ODDITIES_20261023"
@@ -12052,7 +12053,7 @@
       "referenceIds": [
         "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
       ],
-      "locationNote": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3.",
+      "locationNote": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3. Vue retenue : manège de Cybil SH1 original, distinct du Happy Carousel SH3. Rotation de fond lente et un cheval fixe sont une proposition versus ; pas Cybil, gaz/énigme 12 chevaux SH3, grande roue extérieure dans la même vue. Sculptures/caméra interprétées, matériau/humidité non déterminés.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -12156,7 +12157,7 @@
       "referenceIds": [
         "CL_SH1_03_NIGHTMARE_SCHOOL"
       ],
-      "locationNote": "École Otherworld de SH1 ; la chaufferie mène à Split Head.",
+      "locationNote": "École Otherworld de SH1 ; la chaufferie mène à Split Head. Vue retenue : arène de la chaufferie Otherworld, foyer ouvert central entouré de grilles, documenté dans captures sh1_boss_split_head_lizard/sh1_b01_01. Braises lumineuses contenues proposées pour le versus ; ni casiers/classes, sirène répétée, pluie de braises ou Split Head ajouté. Passage de duel devant le foyer et caméra adaptés, collisions non certifiées.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -12936,9 +12937,12 @@
       "source": "sh3",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH3_02_SHOPPING_CENTER"
+        "CL_SH3_02_SHOPPING_CENTER",
+        "EXT_SH3_MALL_BAKERY_20261025",
+        "EXT_SH3_MALL_TONGS_VIEW_20261025",
+        "EXT_SH3_MALL_TONGS_MAP_20261025"
       ],
-      "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare.",
+      "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13146,7 +13150,7 @@
       "referenceIds": [
         "CL_SH3_05_UNDERPASS"
       ],
-      "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau.",
+      "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -13510,7 +13514,7 @@
       "referenceIds": [
         "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
       ],
-      "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1.",
+      "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",

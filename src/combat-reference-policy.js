@@ -16,7 +16,7 @@ const NON_COMBAT_SCRIPTED = new Set([
 const GROUND_ONLY = new Set([
   'sh1_creeper_009', 'sh2_creeper_025', 'sh2_lying_figure_crawling_021',
   'sh3_slurper_042', 'sh4_one_truth_070', 'film_colin_the_janitor_174',
-  'bom_tremer_133'
+  'bom_tremer_133','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'
 ]);
 const ATTACHED_BODIES = new Set(['sh4_one_truth_070']);
 const MOBILE_STATIONARY = new Set(['sh1_twinfeeler_015']);
@@ -371,7 +371,19 @@ define('sh4_hummer_055', {hitResponse:{meleeKnockdown:true,sourceTimingMeasured:
 });
 define('sh4_gum_head_old_type_057', {moves:weaponKit('Poing du Gum Head')});
 define('sh4_gum_head_new_type_058', {moves:weaponKit('Tube du Gum Head')});
-define('sh4_patient_060', {moves:weaponKit('Marteau du Patient')});
+// SH4 enemies_en.htm: repeated hammer swings and a surprise spinning attack
+// when Henry is behind it. Three hits and the two-sided 2D arc are versus tuning.
+define('sh4_patient_060', {
+  contactSweeps:{slots:['backSpecial'],sourceTimingMeasured:false},
+  disabledSlots:{throw:'Le Patient frappe avec son marteau ; aucune saisie soulevant Henry n’est décrite.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Marteau du Patient'),
+    neutralSpecial:contact('Enchaînement du marteau',{hits:3,hitInterval:6,travel:0}),
+    backSpecial:contact('Pivot puis coup de marteau',{hits:1,travel:0,invulnFrames:0,armorFrames:0}),
+    super:contact('Marteau — série rapprochée',{hits:3,hitInterval:6}),
+    guardCounter:contact('Marteau de riposte'),dodgeAttack:contact('Marteau après écart'),wakeupAttack:contact('Reprise du marteau')
+  }
+});
 // SH4 enemies_en.htm: Twin Victim attacks with its supporting arms, spinning
 // around and diving after Henry. Pointing is not an offensive aura or a grab.
 define('sh4_twin_victim_059', {
@@ -387,6 +399,19 @@ define('sh4_twin_victim_059', {
   }
 });
 const SH4_GHOSTS = 'sh4_ghost_victim_066 sh4_jimmy_stone_victim_1 sh4_steve_garland_victim_4 sh4_eric_walsh_victim_10 sh4_peter_walls_victim_12 sh4_sharon_blake_victim_13 sh4_toby_archbolt_victim_14';
+// The guide explicitly compares Bottom to Twin Victim: arm rotations and
+// pursuit dives, slightly stronger. The 1.08 factor is a local versus choice.
+define('sh4_bottom_065', {
+  contactSweeps:{slots:['neutralSpecial','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{throw:'Les bras porteurs frappent ; aucune saisie soulevant Henry n’est décrite.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...Object.fromEntries(Object.entries(weaponKit('Bras porteurs du Bottom')).map(([key,move])=>[key,{...move,damageScale:1.08}])),
+    neutralSpecial:contact('Rotation des bras du Bottom',{reach:130,hits:2,travel:0,damageScale:1.08}),
+    forwardSpecial:contact('Poursuite puis plongeon du Bottom',{travel:4.6,verticalTravel:2.2,hits:1,damageScale:1.08}),
+    super:contact('Balayages des bras du Bottom',{reach:160,hits:2,travel:0,damageScale:1.08}),
+    guardCounter:contact('Bras porteur de riposte'),dodgeAttack:contact('Bras après écart'),wakeupAttack:contact('Reprise sur les bras')
+  }
+});
 // SH4: The Room (2004), enemies_en.htm: all these ghosts drain nearby health
 // without attacking. Jasper adds larger fire damage. The local radius, pulse
 // interval and health conversion are versus choices; no source timing measured.
@@ -399,7 +424,11 @@ define(SH4_GHOSTS, {proximityField:ghostProximity(),moves:{
   desperation:nearAura('Dernière pression spectrale', {hits:2, active:18}),
   backSpecial:contact('Recul en flottement'), dodgeAttack:contact('Glissement de riposte')
 }});
-define('sh4_cynthia_velasquez_victim_16', {proximityField:ghostProximity(),moves:{
+// Victim16: hair prevents running away; hitting/shooting Cynthia releases it.
+// Keep the victim standing and able to retaliate instead of launching a throw.
+define('sh4_cynthia_velasquez_victim_16', {proximityField:ghostProximity(),
+  standingBinds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'Les cheveux retiennent sur place ; aucune projection arrière avec échange de places n’est décrite.'},moves:{
   neutralSpecial:contact('Saisie par les cheveux', {level:'throw', effectOverride:'bind'}),
   downSpecial:nearAura('Présence rapprochée de Cynthia'),
   throw:contact('Cheveux enserrants', {effectOverride:'bind'}),
@@ -502,19 +531,65 @@ define('homecoming_needler_088', {
     forwardSpecial:contact('Assaut des membres-lames',{knockdown:true,travel:4.7,hits:3}),
     throw:contact('Prise des membres antérieurs',{level:'throw',reach:90,hits:1})}
 });
-define('homecoming_asphyxia_096', {moves:{
-  neutralSpecial:shot('Jet toxique'), forwardSpecial:contact('Balayage de la queue', {hits:2}),
-  super:shot('Pression par jet toxique')
-}});
-define('homecoming_amnion_hanging_form_097', {moves:{neutralSpecial:shot('Projectile toxique'),
-  super:contact('Frappes de la forme suspendue', {hits:2})}});
+// Homecoming walkthrough: Scarlet phase2 exposes her back after a missed leap;
+// Amnion phase2 gets its legs stuck after a missed two-leg smash. These exact
+// profiles use their real attack recovery, never an independent exposure timer.
+define('homecoming_scarlet_spider_form_095', {
+  whiffExposure:{slots:['forwardSpecial'],rearOnly:true,damageScale:2,sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'Aucune projection arrière avec échange de places n’est décrite dans cette forme.'},
+  moves:{...weaponKit('Membres de Scarlet après la mue'),
+    forwardSpecial:contact('Bond de la seconde forme',{travel:4.8,verticalTravel:3.2,hits:1,armorFrames:0}),
+    neutralSpecial:contact('Membres de la seconde forme — frappe',{hits:1}),
+    throw:contact('Emprise après le bond',{effectOverride:'bind',hits:1}),
+    super:contact('Plongeon puis frappe des membres',{travel:4.2,hits:2}),
+    guardCounter:contact('Membres de riposte'),dodgeAttack:contact('Membres après écart'),wakeupAttack:contact('Reprise des membres')
+  }
+});
+// Same guide: frontal attacks cause little damage; the tail is the weak spot.
+// .45 frontal damage is versus tuning, not source armor or an absolute immunity.
+define('homecoming_asphyxia_096', {
+  defense:{frontDamageScale:.45,sourceTimingMeasured:false},
+  contactSweeps:{slots:['backSpecial'],sourceTimingMeasured:false},
+  moves:{neutralSpecial:shot('Jet toxique'),
+    forwardSpecial:contact('Ruée du corps lié',{travel:4.7,hits:1}),
+    backSpecial:contact('Balayage de la queue',{hits:1,reach:160,travel:0,invulnFrames:0,armorFrames:0}),
+    super:shot('Pression par jet toxique')
+  }
+});
+define('homecoming_amnion_hanging_form_097', {
+  disabledSlots:{throw:'La première forme documentée balaie avec les pattes et projette le spray ; la prise relève de la seconde forme.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Patte avant de l’armature'),neutralSpecial:shot('Spray sombre de la première forme'),
+    forwardSpecial:contact('Balayage de la patte avant',{reach:210,travel:0,hits:1}),
+    super:contact('Frappes de la forme suspendue',{hits:2})
+  }
+});
+define('homecoming_amnion_exposed_form_098', {
+  whiffExposure:{slots:['forwardSpecial'],rearOnly:false,damageScale:2,sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'La prise de la seconde forme ne documente pas de projection arrière avec échange de places.'},
+  moves:{...weaponKit('Patte de l’armature exposée'),
+    neutralSpecial:shot('Spray depuis la partie supérieure'),
+    forwardSpecial:contact('Abattement des deux pattes avant',{reach:210,travel:0,hits:1,armorFrames:0}),
+    throw:contact('Prise de la seconde forme',{hits:1}),super:shot('Spray de l’armature exposée'),
+    guardCounter:contact('Patte de riposte'),dodgeAttack:contact('Patte après écart'),wakeupAttack:contact('Reprise de l’armature')
+  }
+});
 define('downpour_screamer_104', {moves:{
   neutralSpecial:nearAura('Cri paralysant proche', {effectOverride:'bind'}),
   forwardSpecial:contact('Bond sur la cible', {travel:3.6}),
   super:nearAura('Cri puis menace rapprochée', {effectOverride:'bind', active:14})
 }});
-define('downpour_bogeyman_115', {moves:{...weaponKit('Marteau'),
-  neutralSpecial:shot('Projection à distance'), super:contact('Approche au marteau', {hits:2, travel:2.3})}});
+// Downpour St Maria's walkthrough: distant shock waves and close hammer blows.
+// Resting the existing versus projectile on the floor makes its path readable;
+// altitude and the jump counter are versus choices, not source measurements.
+define('downpour_bogeyman_115', {
+  groundProjectiles:{slots:['neutralSpecial'],sourceTimingMeasured:false},
+  disabledSlots:{throw:'Les attaques décrites sont les coups de marteau et les ondes ; aucune saisie offensive n’est relevée.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Marteau'),neutralSpecial:shot('Onde à distance du Bogeyman',{level:'low',projectileSpeed:10}),
+    super:contact('Approche au marteau',{hits:2,travel:2.3})
+  }
+});
 define('downpour_wheelman_116', {moves:{...weaponKit('Poing depuis les tubes'),
   neutralSpecial:shot('Projection de débris'), super:contact('Frappes massives', {hits:2})}});
 define('downpour_anne_cunningham', {moves:{...weaponKit('Crosse'),
@@ -660,6 +735,9 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     ...(recipe.hitResponse?{hitResponse:{...recipe.hitResponse}}:{}),
     ...(recipe.contactSweeps?{contactSweeps:{...recipe.contactSweeps,slots:[...recipe.contactSweeps.slots]}}:{}),
     ...(recipe.groundHolds?{groundHolds:{...recipe.groundHolds,slots:[...recipe.groundHolds.slots]}}:{}),
+    ...(recipe.standingBinds?{standingBinds:{...recipe.standingBinds,slots:[...recipe.standingBinds.slots]}}:{}),
+    ...(recipe.whiffExposure?{whiffExposure:{...recipe.whiffExposure,slots:[...recipe.whiffExposure.slots]}}:{}),
+    ...(recipe.groundProjectiles?{groundProjectiles:{...recipe.groundProjectiles,slots:[...recipe.groundProjectiles.slots]}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
     ...(recipe.aiSignatureOnly?{aiSignatureOnly:true}:{}),
     ...(combatEnabled&&recipe.proximityField?{proximityField:{...recipe.proximityField}}:{}),
@@ -730,6 +808,33 @@ export function sourceGroundHold(fighter,move) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES),hold=ref&&RECIPES[ref.id]?.groundHolds;
   return Boolean(hold&&move?.enabled!==false&&hold.slots.includes(move?.key)&&
     !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw'));
+}
+
+export function sourceStandingBind(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),bind=ref&&RECIPES[ref.id]?.standingBinds;
+  return Boolean(bind&&move?.enabled!==false&&bind.slots.includes(move?.key)&&move.effect?.id==='bind'&&
+    !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw'));
+}
+
+export function sourceWhiffExposure(fighter,attack) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),exposure=ref&&RECIPES[ref.id]?.whiffExposure;
+  const move=attack?.move;
+  if(!exposure||!move||move.enabled===false||move.projectile||move.trap||move.aura||
+    !exposure.slots.includes(attack.key)||move.key!==attack.key||attack.hitCount!==0||attack.hit||
+    !Number.isFinite(attack.frame)||attack.frame<move.startup+move.active||
+    attack.frame>=move.startup+move.active+move.recovery)return null;
+  return {...exposure,slots:[...exposure.slots]};
+}
+
+export function sourceFrontalDamageScale(fighter,move,direction,facing) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),scale=ref&&RECIPES[ref.id]?.defense?.frontDamageScale;
+  return Number.isFinite(scale)&&move&&!move.aura&&!move.trap&&Number.isFinite(direction)&&Number.isFinite(facing)&&
+    direction*facing<0?scale:1;
+}
+
+export function sourceGroundProjectile(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),ground=ref&&RECIPES[ref.id]?.groundProjectiles;
+  return Boolean(ground&&move?.enabled!==false&&ground.slots.includes(move?.key)&&move.projectile&&!move.trap);
 }
 
 export function firearmExposure(fighter, attack) {

@@ -218,11 +218,11 @@ const RECIPES={
     beat('COUP DE CROSSE HORS CHAMP',24,frame('revolver-butt',.7),frame('fall',.14,35,.2), 'blackout','hit',.96),
     beat('ARME ABAISSEE SANS TIR AJOUTE',49,frame('revolver-lowered',.4),frame('held',.14,35,.2), 'vignette','silence',1)
   ]},
-  patientBedside:{targets:STANDING,weapon:'club',propsAny:['beds','gurneys'],steps:[
-    beat('CLUB DANS LE PASSAGE',39,frame('club-drag',.16),frame('brace'), 'vignette','scrape',.98),
-    beat('APPROCHE DU LIT',32,frame('club-ready',.51),frame('backstep',.09), 'vignette','step',.95),
-    beat('COUP DERRIERE LE MOBILIER',26,frame('club-down',.72),frame('fall',.2,33,.4), 'shutter','heavy',.94),
-    beat('BRAS AU REPOS',33,frame('club-low',.53),frame('occluded',.2,35,.18), 'vignette','breath',.98),
+  patientBedside:{targets:STANDING,weapon:'hammer',propsAny:['beds','gurneys'],steps:[
+    beat('MARTEAU DANS LE PASSAGE',39,frame('hammer-drag',.16),frame('brace'), 'vignette','scrape',.98),
+    beat('APPROCHE DU LIT',32,frame('hammer-ready',.51),frame('backstep',.09), 'vignette','step',.95),
+    beat('COUP DERRIERE LE MOBILIER',26,frame('hammer-down',.72),frame('fall',.2,33,.4), 'shutter','heavy',.94),
+    beat('BRAS AU REPOS',33,frame('hammer-low',.53),frame('occluded',.2,35,.18), 'vignette','breath',.98),
     beat('SILENCE HOSPITALIER',48,frame('hold',.46),frame('held',.2,35,.18), 'vignette','silence',1)
   ]},
   screamBackGrip:{targets:STANDING,maxTargetHeight:310,steps:[
@@ -457,6 +457,74 @@ const RECIPES={
     beat('CIBLE MASQUEE PAR LE JET',33,frame('bom-closed-torso-release',.29),frame('fall',.2,35,.2), 'mist','cloth',.97),
     beat('CORPS TOUJOURS CLOS',48,frame('bom-closed-torso-held',.24),frame('held',.2,35,.2), 'vignette','silence',1)
   ]},
+  originsJoinedTackle:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Tackle rapproché décrit par le guide Origins. Le maintien des deux corps et l’écrasement sont un montage versus ; projectile exclu faute de relevé.',steps:[
+    beat('DEUX CORPS TOUJOURS SOLIDAIRES',42,frame('origins-joined-bodies-approach',.19),frame('brace'), 'vignette','breath',.98),
+    beat('TACKLE RAPPROCHE ATTESTE',30,frame('origins-joined-bodies-tackle',.72),frame('recoil',.12,13), 'impact','heavy',.94),
+    beat('MAINTIEN PROPOSE DU CORPS ASSEMBLE',32,frame('origins-joined-bodies-press',.81),frame('fall',.19,34), 'vignette','creak',.93),
+    beat('RELACHEMENT SANS SEPARATION',34,frame('origins-joined-bodies-release',.63),frame('occluded',.19,35,.18), 'vignette','cloth',.97),
+    beat('MEME ASSEMBLAGE AU REPOS',47,frame('origins-joined-bodies-held',.48),frame('held',.19,35,.18), 'vignette','silence',1)
+  ]},
+  amnionSupportedFrontLegs:{attackerKind:'spider',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['machines'],
+    scopeNote:'Balayages des membres avant de première phase décrits par le guide Homecoming. Le choc rapproché du classeur utilise ce geste, sans smash ni prise de seconde phase ; nombre total des pattes non relevé.',steps:[
+    beat('TORSE SUSPENDU SUR LE DISPOSITIF',45,frame('hc-amnion-hanging-supported'),frame('watch'), 'vignette','metal',.98),
+    beat('FRAPPE DU MEMBRE AVANT',31,frame('hc-amnion-hanging-front-swing'),frame('recoil',-.14,8), 'impact','heavy',.95),
+    beat('AUTRE MEMBRE AVANT PROPOSE',32,frame('hc-amnion-hanging-front-alternate'),frame('backstep',-.2,13), 'impact','metal',.94),
+    beat('DERNIER BALAYAGE AVANT PROPOSE',29,frame('hc-amnion-hanging-close-swing'),frame('fall',-.24,35,.2), 'vignette','metal',.96),
+    beat('APPUIS DE PREMIERE FORME CONSERVES',49,frame('hc-amnion-hanging-supported'),frame('held',-.24,35,.2), 'vignette','silence',1)
+  ]},
+  amnionExposedCloseGrip:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['machines'],
+    scopeNote:'Prise de seconde phase décrite par le guide Homecoming. La forme exposée est conservée, sans retour à la première stance ni ouverture de ventre du vainqueur.',steps:[
+    beat('TORSE EXPOSE ENTRE LES APPUIS',43,frame('hc-amnion-exposed-supported'),frame('brace'), 'vignette','creak',.98),
+    beat('PRISE DE SECONDE PHASE',34,frame('hc-amnion-exposed-close-grip'),frame('gripped',-.18,6), 'vignette','cloth',.95),
+    beat('MEMBRES REFERMES A PORTEE DU TORSE',32,frame('hc-amnion-exposed-members-close'),frame('recoil',-.28,19), 'impact','heavy',.93),
+    beat('CIBLE OCCULTEE PAR LE CADRE',33,frame('hc-amnion-exposed-held'),frame('occluded',-.28,34,.15), 'vignette','breath',.97),
+    beat('MEME FORME EXPOSEE AU REPOS',48,frame('hc-amnion-exposed-supported'),frame('held',-.28,35,.15), 'vignette','silence',1)
+  ]},
+  bomPipePairStop:{attackerKind:'nurse',weapon:'pipe',targets:STANDING,maxTargetHeight:310,steps:[
+    beat('TUYAU METALLIQUE DE LA VERSION VITA',39,frame('bom-nurse-pipe-held',.21),frame('brace'), 'vignette','metal',.98),
+    beat('PREMIER COUP PROPOSE',28,frame('bom-nurse-pipe-first',.65),frame('recoil',.09,7), 'impact','hit',.95),
+    beat('SECOND COUP PROPOSE',30,frame('bom-nurse-pipe-second',.72),frame('fall',.19,34), 'impact','metal',.94),
+    beat('ARRET TREMBLANT DU TUYAU',34,frame('bom-nurse-pipe-trembling-stop',.59),frame('occluded',.19,35,.2), 'vignette','creak',.97),
+    beat('TUYAU RETENU SANS SCALPEL AJOUTE',46,frame('bom-nurse-pipe-held',.47),frame('held',.19,35,.2), 'vignette','silence',1)
+  ]},
+  bomTremerLowPressure:{attackerKind:'insect',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Poursuite rampante décrite par le bestiaire Vita. La poussée de contact est une proposition versus ; aucun membre, morsure ou projectile ajouté.',steps:[
+    beat('CORPS PULSATILE AU RAS DU SOL',41,frame('bom-tremer-low-approach',.17),frame('watch'), 'dust','scrape',.98),
+    beat('POURSUITE DANS LE MEME AXE',33,frame('bom-tremer-low-extension',.49),frame('brace'), 'dust','cloth',.96),
+    beat('POUSSEE DE CONTACT PROPOSEE',29,frame('bom-tremer-low-contact',.74),frame('unbalanced',.13,13), 'impact','hit',.94),
+    beat('RELACHEMENT DU CORPS BAS',35,frame('bom-tremer-low-release',.57),frame('fall',.19,35,.25), 'dust','scrape',.97),
+    beat('RETRAIT AU NIVEAU DU SOL',47,frame('bom-tremer-low-withdraw',.31),frame('held',.19,35,.25), 'vignette','silence',1)
+  ]},
+  bomFireHandsEmission:{attackerKind:'deity',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Flammes de bouche et de mains décrites par le bestiaire Vita. Bond et décharge corporelle du classeur restent à confirmer ; aucun des deux n’est rejoué ici.',steps:[
+    beat('MASSE ET MAINS DANS LE CADRE',43,frame('bom-fire-hands-ready'),frame('brace'), 'vignette','breath',.98),
+    beat('SOURCE DU FEU DANS LES MAINS',34,frame('bom-fire-hands-emit'),frame('backstep',.06), 'embers','hiss',.95),
+    beat('FEU DEVANT LA CIBLE',35,frame('bom-fire-hands-held'),frame('stagger',.12,11), 'embers','lowDrone',.94),
+    beat('OCCULTATION DU RESULTAT',34,frame('bom-fire-hands-release'),frame('occluded',.18,34,.15), 'blackout','silence',.97),
+    beat('CORPS INTACT SANS AUTO EXPLOSION',48,frame('bom-fire-hands-rest'),frame('held',.18,35,.15), 'embers','breath',1)
+  ]},
+  bomHeartMaceArm:{attackerKind:'deity',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('COEUR LUMINEUX ET BRAS ORGANIQUE',44,frame('bom-light-heart-arm-ready',.15),frame('watch'), 'vignette','lowDrone',.98),
+    beat('BRAS MASSE LEVE',35,frame('bom-light-mace-arm-raised',.48),frame('brace'), 'vignette','creak',.95),
+    beat('ABATTEMENT DU BRAS EXISTANT',29,frame('bom-light-mace-arm-down',.72),frame('fall',.19,34), 'impact','heavy',.93),
+    beat('PULSATION PROPOSEE DU COEUR',34,frame('bom-light-heart-held',.65),frame('occluded',.19,35,.16), 'vignette','lowDrone',.97),
+    beat('BRAS AU REPOS SANS ARME INVOQUEE',48,frame('bom-light-mace-arm-rest',.48),frame('held',.19,35,.16), 'vignette','silence',1)
+  ]},
+  bomAquaticMembers:{attackerKind:'deity',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['pools','water','pool','canal'],steps:[
+    beat('MASSE ET MEMBRES DANS LEUR EAU',45,frame('bom-water-members-surface'),frame('watch'), 'water','breath',.98),
+    beat('MEMBRES VERS LA CIBLE',34,frame('bom-water-members-reach'),frame('gripped',-.16,7), 'water','creak',.95),
+    beat('EAU RABATTUE A PORTEE',32,frame('bom-water-members-fold'),frame('pulled-under',-.25,30,.5), 'water','heavy',.94),
+    beat('MEMBRES QUI REPLONGENT',35,frame('bom-water-members-submerge'),frame('occluded',-.25,40,.12), 'water','silence',.97),
+    beat('SURFACE DU LIEU A NIVEAU FIXE',49,frame('bom-water-members-held'),frame('held',-.25,40,.12), 'water','breath',1)
+  ]},
+  bomDetachedMamaPounce:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('FORME DEJA DETACHEE DE SA BASE',42,frame('bom-mama-detached-ready',-.08),frame('brace'), 'dust','breath',.98),
+    beat('RUEE DE LA FORME AUTONOME',31,frame('bom-mama-detached-rush',.47),frame('backstep',.06), 'dust','rush',.95),
+    beat('BOND POURSUIVANT',29,frame('bom-mama-detached-pounce',.76,-29),frame('recoil',.13,12), 'wind','rush',.93),
+    beat('RECEPTION LOURDE PROPOSEE',31,frame('bom-mama-detached-land',.83),frame('fall',.22,35,.2), 'impact','heavy',.96),
+    beat('FORME DETACHEE TOUJOURS UNIQUE',48,frame('bom-mama-detached-held',.61),frame('held',.22,35,.2), 'vignette','silence',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -498,7 +566,10 @@ const FIGHTER_RECIPES=Object.freeze({
   bom_air_screamer_121:'bomTalonsCircle',bom_bogeyman_122:'bomHammerStop',bom_butcher_123:'bomCleaverPair',
   bom_double_head_124:'bomCirclingCharge',bom_ghost_125:'bomToxicPresencePass',bom_insane_cancer_126:'bomMassSpaceCrush',
   bom_needler_127:'bomBladeCrossRetreat',bom_pyramid_head_129:'bomGreatKnifeSweep',bom_schism_130:'bomHeadBladeLunge',
-  bom_straight_jacket_131:'bomClosedTorsoJet'
+  bom_straight_jacket_131:'bomClosedTorsoJet',origins_two_back_080:'originsJoinedTackle',
+  homecoming_amnion_hanging_form_097:'amnionSupportedFrontLegs',homecoming_amnion_exposed_form_098:'amnionExposedCloseGrip',
+  bom_nurse_128:'bomPipePairStop',bom_tremer_133:'bomTremerLowPressure',bom_fire_guardian_137:'bomFireHandsEmission',
+  bom_light_guardian_140:'bomHeartMaceArm',bom_water_guardian_141:'bomAquaticMembers',bom_blood_mama_145:'bomDetachedMamaPounce'
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -509,7 +580,7 @@ const PRESENTATION_STAGING=Object.freeze({
   sh1_romper_010:{id:'romper-four-supports',entry:57,retreat:61,recoil:11,landing:34,poses:['four-support-landing','torso-threat-on-four-supports','four-support-watch','shoulder-recovery-to-four-supports','four-support-final-watch','side-support-final-hold','four-support-departure']},
   sh3_closer_036:{id:'closer-arms-in-passage',entry:17,retreat:24,recoil:8,poses:['closer-arms-entry','closer-arm-extension-threat','closer-arms-held','closer-arms-regain-support','closer-passage-held','closer-arms-final-hold','closer-arms-withdraw']},
   sh3_nurse_revolver_044:{id:'sh3-revolver-held',entry:12,retreat:30,recoil:8,poses:['revolver-close-entry','revolver-mute-threat','revolver-held-at-side','revolver-visible-recovery','revolver-lowered-final-watch','revolver-visible-final-hold','revolver-retained-exit']},
-  sh4_patient_060:{id:'sh4-patient-club-weight',entry:20,retreat:29,recoil:10,poses:['patient-club-weighted-entry','patient-club-mute-threat','patient-club-stable-hold','patient-club-support-recovery','patient-club-final-watch','patient-club-final-hold','patient-club-weighted-retreat']},
+  sh4_patient_060:{id:'sh4-patient-hammer-weight',entry:20,retreat:29,recoil:10,poses:['patient-hammer-weighted-entry','patient-hammer-mute-threat','patient-hammer-stable-hold','patient-hammer-support-recovery','patient-hammer-final-watch','patient-hammer-final-hold','patient-hammer-weighted-retreat']},
   downpour_screamer_104:{id:'downpour-screamer-presence',entry:29,retreat:40,recoil:9,poses:['screamer-close-entry','screamer-mute-threat-without-wave','screamer-watch','screamer-regains-support','screamer-final-watch','screamer-final-hold','screamer-recedes']},
   downpour_prisoner_juggernaut_110:{id:'downpour-juggernaut-weight',entry:11,retreat:20,recoil:6,poses:['juggernaut-presence-awaiting-bar-pose','juggernaut-fist-threat','juggernaut-weight-stable','juggernaut-weight-recovery','juggernaut-final-watch','juggernaut-weight-final-hold','juggernaut-weight-retreat']},
   downpour_bogeyman_115:{id:'downpour-hammer-weight',entry:15,retreat:26,recoil:7,poses:['hammer-raised-entry','hammer-mute-threat','hammer-weight-stable','hammer-retained-recovery','hammer-lowered-final-watch','hammer-retained-final-hold','hammer-weighted-exit']},
@@ -542,7 +613,16 @@ const PRESENTATION_STAGING=Object.freeze({
   bom_needler_127:{id:'bom-four-blades-oblique-retreat',entry:26,retreat:38,recoil:8,poses:['bom-four-blades-door-entry','bom-four-blades-muted-threat','bom-four-blades-appuis-watch','bom-four-blades-low-recovery','bom-four-blades-watchful-retreat','bom-four-blades-final-side-rest','bom-four-blades-oblique-departure']},
   bom_pyramid_head_129:{id:'bom-great-knife-lateral-weight',entry:16,retreat:0,recoil:6,outroHold:true,poses:['bom-great-knife-first-entry','bom-great-knife-muted-threat','bom-great-knife-stable-watch','bom-great-knife-low-body-recovery','bom-great-knife-relaxed-final-watch','bom-great-knife-final-body-rest','bom-great-knife-held-result']},
   bom_schism_130:{id:'bom-head-blade-forward-axis',entry:22,retreat:0,recoil:8,outroHold:true,poses:['bom-head-blade-noise-entry','bom-head-blade-muted-threat','bom-head-blade-stable-watch','bom-head-blade-low-body-recovery','bom-head-blade-relaxed-final-watch','bom-head-blade-final-body-rest','bom-head-blade-held-result']},
-  bom_straight_jacket_131:{id:'bom-closed-torso-acid-jet',entry:12,retreat:0,recoil:7,outroHold:true,poses:['bom-closed-torso-contracted-entry','bom-closed-torso-muted-threat','bom-closed-torso-stable-watch','bom-closed-torso-low-body-recovery','bom-closed-torso-relaxed-final-watch','bom-closed-torso-final-body-rest','bom-closed-torso-held-result']}
+  bom_straight_jacket_131:{id:'bom-closed-torso-acid-jet',entry:12,retreat:0,recoil:7,outroHold:true,poses:['bom-closed-torso-contracted-entry','bom-closed-torso-muted-threat','bom-closed-torso-stable-watch','bom-closed-torso-low-body-recovery','bom-closed-torso-relaxed-final-watch','bom-closed-torso-final-body-rest','bom-closed-torso-held-result']},
+  origins_two_back_080:{id:'origins-two-back-joined-corporeal',entry:17,retreat:0,recoil:7,outroHold:true,poses:['origins-joined-bodies-tense-entry','origins-joined-bodies-muted-threat','origins-joined-bodies-stable-watch','origins-joined-bodies-low-recovery','origins-joined-bodies-relaxed-final-watch','origins-joined-bodies-final-rest','origins-joined-bodies-held-result']},
+  homecoming_amnion_hanging_form_097:{id:'hc-amnion-hanging-supported-members',entry:0,retreat:0,recoil:0,outroHold:true,poses:['hc-amnion-hanging-supports-entry','hc-amnion-hanging-muted-threat','hc-amnion-hanging-supports-held','hc-amnion-hanging-supports-recovery','hc-amnion-hanging-final-supports','hc-amnion-hanging-final-collapse','hc-amnion-hanging-held-result']},
+  homecoming_amnion_exposed_form_098:{id:'hc-amnion-exposed-supported-members',entry:0,retreat:0,recoil:0,outroHold:true,poses:['hc-amnion-exposed-supports-entry','hc-amnion-exposed-muted-threat','hc-amnion-exposed-supports-held','hc-amnion-exposed-supports-recovery','hc-amnion-exposed-final-supports','hc-amnion-exposed-final-collapse','hc-amnion-exposed-held-result']},
+  bom_nurse_128:{id:'bom-nurse-metal-pipe-stop',entry:14,retreat:0,recoil:8,outroHold:true,poses:['bom-nurse-pipe-floor-entry','bom-nurse-pipe-muted-threat','bom-nurse-pipe-stable-watch','bom-nurse-pipe-low-recovery','bom-nurse-pipe-relaxed-final-watch','bom-nurse-pipe-final-rest','bom-nurse-pipe-held-result']},
+  bom_tremer_133:{id:'bom-tremer-low-body',entry:24,retreat:36,recoil:3,poses:['bom-tremer-low-pulse-entry','bom-tremer-low-muted-threat','bom-tremer-low-held','bom-tremer-low-contraction-recovery','bom-tremer-low-final-retreat','bom-tremer-low-final-rest','bom-tremer-low-withdrawal']},
+  bom_fire_guardian_137:{id:'bom-fire-guardian-hand-origin',entry:0,retreat:0,recoil:5,outroHold:true,poses:['bom-fire-mass-rise-entry','bom-fire-hands-muted-threat','bom-fire-stable-appuis','bom-fire-low-appui-recovery','bom-fire-relaxed-final-watch','bom-fire-final-body-rest','bom-fire-held-result']},
+  bom_light_guardian_140:{id:'bom-light-guardian-heart-and-arm',entry:16,retreat:0,recoil:6,outroHold:true,poses:['bom-light-heart-arm-entry','bom-light-heart-muted-threat','bom-light-mace-arm-stable','bom-light-mace-arm-low-recovery','bom-light-heart-relaxed-final-watch','bom-light-final-body-rest','bom-light-held-result']},
+  bom_water_guardian_141:{id:'bom-water-guardian-aquatic-body',entry:0,retreat:0,recoil:0,outroHold:true,poses:['bom-water-members-emergence-awaiting-water','bom-water-members-muted-threat','bom-water-members-surface-held','bom-water-members-surface-recovery','bom-water-members-final-surface-held','bom-water-members-final-submerge','bom-water-members-held-result']},
+  bom_blood_mama_145:{id:'bom-blood-mama-detached-pounce',entry:21,retreat:0,recoil:7,outroHold:true,poses:['bom-mama-detached-entry','bom-mama-detached-muted-threat','bom-mama-detached-stable-watch','bom-mama-detached-low-recovery','bom-mama-detached-relaxed-final-watch','bom-mama-detached-final-rest','bom-mama-detached-held-result']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 

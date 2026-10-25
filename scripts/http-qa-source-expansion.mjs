@@ -26,6 +26,8 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Closer and Twin Victim arm rotations are bounded two-sided physical contacts at the normal strike height, not an aura. Prepared facing allows the real keyboard command to prove a rear hit and outward knockback. The original 3D arc, animations, frame timings and Church multipliers are not measured.',
   'Double Head, Romper, Twin Victim, Lurker and Feral pursuit inputs physically leave the floor. Close holds use the versus bind instead of original struggle inputs. Homecoming Bogeyman remains a documented cutscene figure and is refused as a duel, independently of its other works.',
   'The six source leg/bite holds keep their victim on the floor instead of inheriting the generic throw launch. A real second-player jump during their startup verifies refusal while airborne; gamepad bindings are separately exercised with the standard virtual-pad Node harness, not certified on physical hardware.',
+  'Lot7 adds real keyboard Patient multi-contact/pivot, Bottom rotation/dive, frontal Asphyxia resistance and native missed-attack recovery for Scarlet and exposed Amnion. Position/facing fixtures move a shooter or target, but never replace HP, move definitions, attack frames or hit counts.',
+  'Cynthia hair catches a standing victim: actual attempted movement/jump remains restricted, and only its real counter-projectile hit releases the source-owned binding. The Downpour Bogeyman wave is the existing projectile fixed to the floor; an actual timed second-player jump tests clearance.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -39,6 +41,7 @@ async function launch(page,p1,p2='sh2_bubble_head_nurse_024'){
  return page.evaluate(async()=>{
   const {bodyBox,hasGroundContact}=await import('/src/combat-geometry.js');
   const {spriteFor}=await import('/src/sprite-system.js');
+  const {isFirearmProjectile}=await import('/src/combat-reference-policy.js');
   const e=__HALO_QA__.engine;e.running=false;e.togglePause(false);
   const intro=e.phase==='intro'?e.phaseTimer:0;for(let n=0;n<intro;n++)e.update();
   const q=window.__SOURCE_EXPANSION_QA__={emitted:0};
@@ -56,10 +59,14 @@ async function launch(page,p1,p2='sh2_bubble_head_nurse_024'){
   q.advance=count=>{for(let n=0;n<count;n++)e.update();e.render(performance.now());};
   q.position=(left=300,right=650)=>{e.actors.forEach((a,i)=>{a.x=i?right:left;a.y=594;a.vx=0;a.vy=0;a.grounded=true;
    a.facing=i?-1:1;a.attack=null;a.hurtFrames=0;a.knockdownTimer=0;a.phaseLock=0;a.invuln=0;a.state='idle';a.blocking=false;a.crouching=false;});e.hitstop=0;e.clearInputs();};
+  q.positionActor=(index,x,facing)=>{const a=e.actors[index];a.x=x;if(facing!==undefined)a.facing=facing;};
   q.scene=()=>({phase:e.phase,frame:e.frame,paused:e.paused,emitted:q.emitted,projectiles:e.projectiles.length,hummerDraw:q.hummerDraw||null,
-   actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,y:a.y,vx:a.vx,grounded:a.grounded,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,
+   projectileStates:e.projectiles.map(p=>({ownerId:p.owner.data.id,ownerIndex:p.owner.index,key:p.move.key,x:p.x,y:p.y,radius:p.radius,groundY:p.groundY??null,vy:p.vy,gravity:p.gravity,firearm:isFirearmProjectile(p.owner.data,p.move)})),
+   actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,y:a.y,vx:a.vx,vy:a.vy,grounded:a.grounded,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,combo:a.combo,
     damage:a.stats.damageDealt,damageTaken:a.stats.damageTaken,status:a.status?{...a.status}:null,dodge:a.dodgeFrames,
-    move:a.attack?.key||a.lastMoveKey,attackFrame:a.attack?.frame??null,hurt:a.hurtFrames,knockdown:a.knockdownTimer,
+    move:a.attack?.key||a.lastMoveKey,attackFrame:a.attack?.frame??null,attackHits:a.attack?.hitCount??null,attackHit:a.attack?.hit??null,
+    attackTiming:a.attack?{startup:a.attack.move.startup,active:a.attack.move.active,recovery:a.attack.move.recovery}:null,
+    attackShape:a.attack?{aura:a.attack.move.aura,projectile:a.attack.move.projectile,invulnFrames:a.attack.move.invulnFrames}:null,hurt:a.hurtFrames,knockdown:a.knockdownTimer,
     proximity:a.proximityCooldown,mouthEnraged:a.mouthEnraged,sourceCue:e.sourceCombatCue(a),
     bodyBottom:bodyBox(a).y+bodyBox(a).h,groundContact:hasGroundContact(a),
     activeCommands:Object.values(a.profile.moves).filter(m=>m.enabled).map(m=>m.key)})),texts:e.texts.map(t=>t.text)});
@@ -325,6 +332,114 @@ try{
   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(70));const escaped=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
   report.scenes[id+'AirborneHoldRefusal']={jumping,escaped};
   check('real second-player jump prevents '+id+' ground hold without bind, damage or launch',jumping.actors[1].y<594&&!jumping.actors[1].grounded&&escaped.actors[0].move==='neutralSpecial'&&escaped.actors[1].health===before&&escaped.actors[1].status===null&&escaped.actors[0].damage===0&&escaped.emitted===0,{jumping,escaped});
+ }
+
+ scene=await launch(page,'sh4_patient_060','sh3_nurse_revolver_044');
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,600));await page.keyboard.press('i');
+ const patient=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;
+  for(let n=0;n<100&&a.attack?.hitCount!==3;n++)q.advance(1);return {before,lost:before-b.health,scene:q.scene()};});report.scenes.patientChain=patient;
+ check('Patient real special chains three actual club contacts without a projectile or replaced hit counter',patient.scene.actors[0].move==='neutralSpecial'&&patient.scene.actors[0].attackHits===3&&patient.scene.actors[0].combo===3&&patient.lost>0&&patient.scene.actors[0].damage===patient.lost&&patient.scene.emitted===0,patient);
+ await capture(page,'15-patient-three-contacts');
+ await launch(page,'sh4_patient_060','sh3_nurse_revolver_044');
+ await page.evaluate(()=>{__SOURCE_EXPANSION_QA__.position(500,355);__SOURCE_EXPANSION_QA__.positionActor(0,500,1);});
+ await page.keyboard.down('ArrowLeft');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowLeft');
+ const pivot=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1],before=b.health;
+  for(let n=0;n<70&&b.health===before;n++)q.advance(1);return {before,scene:q.scene()};});report.scenes.patientPivot=pivot;
+ check('Patient real back-special pivot reaches behind without turning or inventing an aura',pivot.scene.actors[0].move==='backSpecial'&&pivot.scene.actors[0].facing===1&&pivot.scene.actors[1].health<pivot.before&&pivot.scene.actors[1].vx<0&&pivot.scene.emitted===0&&pivot.scene.actors[0].attackShape?.aura===false&&pivot.scene.actors[0].attackShape?.projectile===false&&pivot.scene.actors[0].attackShape?.invulnFrames===0,pivot);
+ await capture(page,'16-patient-rear-pivot');
+
+ await launch(page,'sh4_bottom_065');await page.evaluate(()=>{__SOURCE_EXPANSION_QA__.position(500,355);__SOURCE_EXPANSION_QA__.positionActor(0,500,1);});await page.keyboard.press('i');
+ const bottomRotation=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1],before=b.health;
+  for(let n=0;n<70&&b.health===before;n++)q.advance(1);return {before,scene:q.scene()};});report.scenes.bottomRotation=bottomRotation;
+ check('Bottom real arm rotation strikes behind with physical outward knockback',bottomRotation.scene.actors[0].move==='neutralSpecial'&&bottomRotation.scene.actors[0].facing===1&&bottomRotation.scene.actors[1].health<bottomRotation.before&&bottomRotation.scene.actors[1].vx<0&&bottomRotation.scene.emitted===0&&bottomRotation.scene.actors[0].attackShape?.aura===false&&bottomRotation.scene.actors[0].attackShape?.projectile===false,bottomRotation);
+ await capture(page,'17-bottom-arm-rotation');
+ await launch(page,'sh4_bottom_065');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(400,650));
+ await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+ const bottomDive=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;let highest=a.y;
+  for(let n=0;n<85&&b.health===before;n++){q.advance(1);highest=Math.min(highest,a.y);}return {before,highest,scene:q.scene()};});report.scenes.bottomDive=bottomDive;
+ check('Bottom real pursuit dive leaves the floor and reaches the target without a summoned body',bottomDive.highest<594&&bottomDive.scene.actors[0].x>400&&bottomDive.scene.actors[0].move==='forwardSpecial'&&bottomDive.scene.actors[1].health<bottomDive.before&&bottomDive.scene.actors.length===2&&bottomDive.scene.emitted===0,bottomDive);
+ await capture(page,'18-bottom-pursuit-dive');
+
+ const asphyxiaDamage={};
+ for(const rear of [false,true]){
+  await launch(page,'sh3_nurse_revolver_044','homecoming_asphyxia_096');await page.keyboard.press('i');
+  const shot=await page.evaluate(rear=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;
+   q.advance(a.profile.moves.neutralSpecial.startup+1);const inFlight=e.projectiles.length;if(rear)q.positionActor(0,1100);
+   for(let n=0;n<100&&b.health===before;n++)q.advance(1);return {inFlight,lost:before-b.health,scene:q.scene()};},rear);
+  asphyxiaDamage[rear?'rear':'front']=shot;
+  check('Asphyxia '+(rear?'rear':'front')+' scene receives a real revolver projectile after normal startup',shot.inFlight===1&&shot.lost>0&&shot.scene.emitted===1&&shot.scene.actors[0].damage===shot.lost&&shot.scene.actors[1].damageTaken===shot.lost&&shot.scene.actors[1].facing===(rear?1:-1),shot);
+ }
+ report.scenes.asphyxiaResistance=asphyxiaDamage;
+ check('Asphyxia frontal armor reduces actual bullet health loss to the authored .45 scale without immunity',asphyxiaDamage.front.lost>0&&Math.abs(asphyxiaDamage.front.lost-asphyxiaDamage.rear.lost*.45)<=1,asphyxiaDamage);
+ await capture(page,'19-asphyxia-rear-bullet');
+
+ const recoveryDamage={};
+ for(const id of ['homecoming_scarlet_spider_form_095','homecoming_amnion_exposed_form_098']){
+  await launch(page,id,'sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
+  await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+  const missed=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;
+   for(let n=0;n<120&&!e.sourceCombatCue(a);n++)q.advance(1);return {before,scene:q.scene()};});report.scenes[id+'MissedRecovery']=missed;
+  const expectedCue=id==='homecoming_scarlet_spider_form_095'?'DOS EXPOSÉ · VERSUS':'CORPS EXPOSÉ · VERSUS';
+  check(id+': actual missed forward special exposes only its native recovery window',missed.scene.actors[0].move==='forwardSpecial'&&missed.scene.actors[0].attackHits===0&&missed.scene.actors[0].sourceCue===expectedCue&&missed.scene.actors[0].attackFrame>=missed.scene.actors[0].attackTiming.startup+missed.scene.actors[0].attackTiming.active&&missed.scene.actors[1].health===missed.before,missed);
+  await page.click('#pauseBtn');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(11));const frozen=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  check(id+': real pause freezes the actual missed-attack clock and its exposure cue',frozen.paused&&frozen.actors[0].attackFrame===missed.scene.actors[0].attackFrame&&frozen.actors[0].sourceCue===expectedCue,frozen);
+  await page.click('[data-pause=resume]');await capture(page,id==='homecoming_scarlet_spider_form_095'?'20-scarlet-real-miss-exposure':'21-amnion-real-miss-exposure');
+  const recovered=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];for(let n=0;n<120&&a.attack;n++)q.advance(1);return q.scene();});
+  check(id+': exposure closes with the actual attack instead of a detached timer',recovered.actors[0].attackFrame===null&&recovered.actors[0].sourceCue===null&&recovered.actors[1].health===missed.before,recovered);
+  for(const rear of [false,true]){
+   await launch(page,id,'sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
+   await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+   await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<120&&!e.sourceCombatCue(e.actors[0]);n++)q.advance(1);});
+   await page.evaluate(rear=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];q.positionActor(1,a.x+(rear?-170:170),rear?1:-1);},rear);
+   await page.keyboard.press('h');
+   const hit=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],before=a.health;let collision=null;
+    for(let n=0;n<80&&a.health===before;n++){collision={cue:e.sourceCombatCue(a),frame:a.attack?.frame,hits:a.attack?.hitCount};q.advance(1);}return {lost:before-a.health,collision,scene:q.scene()};});
+   recoveryDamage[id]??={};recoveryDamage[id][rear?'rear':'front']=hit;
+   check(id+': real '+(rear?'rear':'front')+' counter-shot reaches the body during the unmodified recovery',hit.lost>0&&hit.collision?.cue===expectedCue&&hit.collision?.hits===0&&hit.scene.emitted===1,hit);
+  }
+ }
+ report.scenes.recoveryDirectionalDamage=recoveryDamage;
+ check('Scarlet missed-pounce bonus applies to real rear hits while exposed Amnion also admits a direct body hit',recoveryDamage.homecoming_scarlet_spider_form_095.rear.lost>=recoveryDamage.homecoming_scarlet_spider_form_095.front.lost*1.8&&Math.abs(recoveryDamage.homecoming_amnion_exposed_form_098.rear.lost-recoveryDamage.homecoming_amnion_exposed_form_098.front.lost)<=1,recoveryDamage);
+
+ for(const id of ['homecoming_scarlet_spider_form_095','homecoming_amnion_exposed_form_098']){
+  await launch(page,id,'sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,650));
+  await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+  const landed=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;
+   for(let n=0;n<150&&a.attack&&a.attack.frame<a.attack.move.startup+a.attack.move.active;n++)q.advance(1);return {before,scene:q.scene()};});report.scenes[id+'LandedNoExposure']=landed;
+  check(id+': a successfully landed attack grants no free missed-attack exposure',landed.scene.actors[1].health<landed.before&&landed.scene.actors[0].attackHits>0&&landed.scene.actors[0].sourceCue===null,landed);
+ }
+ for(const id of ['homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098']){
+  await launch(page,id,'sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
+  await page.keyboard.down('ArrowUp');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowUp');
+  const groundedAmnion=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes[id+'JumpRefusal']=groundedAmnion;
+  check(id+': real combined jump-special stays grounded and uses only its own spray',groundedAmnion.actors[0].y===594&&groundedAmnion.actors[0].grounded&&groundedAmnion.actors[0].move==='neutralSpecial'&&!groundedAmnion.actors[0].activeCommands.includes('airSpecial')&&(id!=='homecoming_amnion_hanging_form_097'||!groundedAmnion.actors[0].activeCommands.includes('throw'))&&groundedAmnion.actors[0].sourceCue===null,groundedAmnion);
+ }
+ await launch(page,'homecoming_amnion_hanging_form_097','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
+ await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+ const hangingMiss=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];let cue=false,highest=a.y;for(let n=0;n<90;n++){q.advance(1);cue||=!!e.sourceCombatCue(a);highest=Math.min(highest,a.y);}return {cue,highest,scene:q.scene()};});report.scenes.amnionHangingNoExposure=hangingMiss;
+ check('first-form Amnion missed front swing never borrows second-form body exposure or a leap',!hangingMiss.cue&&hangingMiss.highest===594&&hangingMiss.scene.actors[0].move==='forwardSpecial',hangingMiss);
+ await capture(page,'22-amnion-first-form-grounded');
+
+ await launch(page,'sh4_cynthia_velasquez_victim_16','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,590));await page.keyboard.press('i');
+ const hair=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];for(let n=0;n<90&&b.status?.bindingOrigin?.id!=='sh4_cynthia_velasquez_victim_16';n++)q.advance(1);return q.scene();});report.scenes.cynthiaStandingHair=hair;
+ check('Cynthia real hair capture binds the victim standing without a generic throw or knockdown',hair.actors[1].status?.bindingOrigin?.id==='sh4_cynthia_velasquez_victim_16'&&hair.actors[1].y===594&&hair.actors[1].grounded&&hair.actors[1].knockdown===0&&hair.actors[1].vx===0&&hair.actors[1].vy===0&&hair.emitted===0,hair);
+ await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<80&&e.actors[1].hurtFrames;n++)q.advance(1);});
+ const bound=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.down('d');await page.keyboard.press('z');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('d');
+ const restrictedHair=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+ check('Cynthia actual held victim cannot run or jump out but retains a standing source-owned binding',restrictedHair.actors[1].x===bound.actors[1].x&&restrictedHair.actors[1].y===594&&restrictedHair.actors[1].grounded&&restrictedHair.actors[1].status?.bindingOrigin?.id==='sh4_cynthia_velasquez_victim_16',restrictedHair);
+ await capture(page,'23-cynthia-standing-hair-hold');await page.keyboard.press('h');
+ const hairCounter=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],before=a.health;for(let n=0;n<80&&a.health===before;n++)q.advance(1);return {before,scene:q.scene()};});report.scenes.cynthiaCounterRelease=hairCounter;
+ check('the actually held victim fires its own real revolver and breaks Cynthia hair only after dealing damage',hairCounter.scene.actors[1].move==='neutralSpecial'&&hairCounter.scene.actors[0].health<hairCounter.before&&hairCounter.scene.actors[1].damage>0&&hairCounter.scene.actors[1].status===null&&hairCounter.scene.texts.includes('CHEVEUX ROMPUS')&&hairCounter.scene.emitted===1,hairCounter);
+ await capture(page,'24-cynthia-real-counter-release');
+
+ for(const jump of [false,true]){
+  await launch(page,'downpour_bogeyman_115','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,650));await page.keyboard.press('i');
+  const wave=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1],before=b.health;for(let n=0;n<60&&!e.projectiles.length;n++)q.advance(1);return {before,scene:q.scene()};});
+  const p=wave.scene.projectileStates[0];check('Bogeyman '+(jump?'jump':'ground')+' scene emits its existing non-firearm wave exactly on the floor',wave.scene.emitted===1&&p?.ownerId==='downpour_bogeyman_115'&&p.y+p.radius===594&&p.y===p.groundY&&p.vy===0&&p.gravity===0&&p.firearm===false,wave);
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(12));if(jump){await page.keyboard.press('z');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await capture(page,'25-bogeyman-wave-real-jump');}else await capture(page,'26-bogeyman-ground-wave');
+  const crossed=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];let highest=b.y,stable=true;
+   for(let n=0;n<70;n++){q.advance(1);highest=Math.min(highest,b.y);stable&&=e.projectiles.every(p=>p.y===p.groundY&&p.vy===0&&p.gravity===0);}return {highest,stable,scene:q.scene()};});report.scenes[jump?'bogeymanWaveJump':'bogeymanWaveGround']={wave,crossed};
+  check('Bogeyman wave '+(jump?'is cleared by the actual timed jump without damage or rewards':'hits an actually grounded target with matching combat records'),crossed.stable&&(jump?crossed.highest<594&&crossed.scene.actors[1].health===wave.before&&crossed.scene.actors[0].damage===0:crossed.scene.actors[1].health<wave.before&&crossed.scene.actors[0].damage===wave.before-crossed.scene.actors[1].health),{wave,crossed});
  }
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',

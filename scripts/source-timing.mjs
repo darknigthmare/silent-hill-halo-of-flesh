@@ -37,6 +37,11 @@ function sourceUrl(value){
   if(url.protocol!=='https:'||url.username||url.password||!url.hostname)fail('capture source URL must be HTTPS without credentials');
   return url.href;
 }
+function selectedVideoStream(capture){
+  const ordinal=own(capture,'videoStreamOrdinal')?capture.videoStreamOrdinal:0;
+  if(!Number.isSafeInteger(ordinal)||ordinal<0||ordinal>15)fail('video stream ordinal must be an integer from 0 to 15');
+  return ordinal;
+}
 
 export function validateSourceTiming(packet,{roster=ROSTER,references=FIGHTER_REFERENCES}={}){
   keys(packet,['schema','fighterId','source','edition','moveKey','observedAction','capture','measurement'],'packet');
@@ -46,8 +51,9 @@ export function validateSourceTiming(packet,{roster=ROSTER,references=FIGHTER_RE
   if(!nonempty(ref.referenceEdition)||packet.edition!==ref.referenceEdition)fail('exact researched edition required');
   if(!createCombatProfile(fighter).moveset.order.includes(packet.moveKey))fail('unknown move slot');
   if(!nonempty(packet.observedAction))fail('observed action is required');
-  keys(packet.capture,['path','sha256','sourceUrl','frameRate','totalFrames'],'capture');
+  keys(packet.capture,['path','sha256','sourceUrl','frameRate','totalFrames','videoStreamOrdinal'],'capture');
   const capture=packet.capture;
+  const videoStreamOrdinal=selectedVideoStream(capture);
   if(!nonempty(capture.path)||isAbsolute(capture.path)||capture.path.includes('\\')||capture.path.split('/').some(part=>!part||part==='.'||part==='..'))fail('capture path must remain relative to the packet');
   if(!/^[a-f0-9]{64}$/.test(capture.sha256))fail('capture SHA256 required');
   const fps=frameRate(capture.frameRate);
@@ -57,12 +63,14 @@ export function validateSourceTiming(packet,{roster=ROSTER,references=FIGHTER_RE
   if(m.unit!=='capture-frames'||!frames.every(Number.isSafeInteger)||m.startFrame<0||m.startFrame>m.impactFrame||m.impactFrame>m.endFrame||m.endFrame>=capture.totalFrames)fail('start/impact/end must be ordered capture frames within the file');
   if(!nonempty(m.measuredBy)||!nonempty(m.notes))fail('measurer and observation notes required');
   return {schema:SOURCE_TIMING_SCHEMA,fighterId:fighter.id,source:fighter.source,edition:packet.edition,moveKey:packet.moveKey,
-    observedAction:packet.observedAction.trim(),capture:{path:capture.path,sha256:capture.sha256,sourceUrl:sourceUrl(capture.sourceUrl),frameRate:fps,totalFrames:capture.totalFrames},
+    observedAction:packet.observedAction.trim(),capture:{path:capture.path,sha256:capture.sha256,sourceUrl:sourceUrl(capture.sourceUrl),frameRate:fps,totalFrames:capture.totalFrames,
+      ...(own(capture,'videoStreamOrdinal')?{videoStreamOrdinal}:{})},
     measurement:{unit:m.unit,startFrame:m.startFrame,impactFrame:m.impactFrame,endFrame:m.endFrame,measuredBy:m.measuredBy.trim(),measuredAt:date(m.measuredAt),notes:m.notes.trim()}};
 }
 
-export function probeSourceCapture(path){
-  const result=spawnSync('ffprobe',['-v','error','-select_streams','v:0','-count_frames','-show_frames','-show_entries',
+export function probeSourceCapture(path,options={}){
+  const ordinal=selectedVideoStream(options);
+  const result=spawnSync('ffprobe',['-v','error','-select_streams',`v:${ordinal}`,'-count_frames','-show_frames','-show_entries',
     'stream=codec_type,width,height,r_frame_rate,avg_frame_rate,nb_read_frames:frame=best_effort_timestamp_time','-of','json',path],
     {encoding:'utf8',timeout:60000,maxBuffer:8*1024*1024,windowsHide:true});
   if(result.error||result.status!==0)fail('ffprobe could not verify the capture (ffprobe is required)');
@@ -101,7 +109,7 @@ async function verifyCapture(capture,{baseDirectory,probe,consume}){
     const mp4=header.subarray(4,8).toString('ascii')==='ftyp',matroska=header.subarray(0,4).equals(Buffer.from([0x1a,0x45,0xdf,0xa3]));
     if(!mp4&&!matroska)fail('capture must be MP4/MOV or Matroska/WebM');
     await chmod(snapshot,0o400);
-    const metadata=await probe(snapshot),streams=metadata?.streams,frames=metadata?.frames;
+    const metadata=await probe(snapshot,{videoStreamOrdinal:selectedVideoStream(capture)}),streams=metadata?.streams,frames=metadata?.frames;
     if(!Array.isArray(streams)||streams.length!==1||!Array.isArray(frames))fail('one decoded video stream and frame timestamps required');
     const stream=streams[0];
     if(stream.codec_type!=='video'||![stream.width,stream.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096)||
@@ -168,10 +176,11 @@ function verifiedTimingBatch(normalized,capture,catalogue){
     limits:'One capture checked for all entries. Named reviews are self-reported attestations bound to annotation digests, not authenticated identities or gesture certification. No workbook timing is filled or certified.'};
 }
 
-export function extractSourceReviewFrames(snapshot,indices,directory){
+export function extractSourceReviewFrames(snapshot,indices,directory,options={}){
+  const ordinal=selectedVideoStream(options);
   const select=indices.map(index=>`eq(n\\,${index})`).join('+');
   const filter=`select=${select},scale=w=min(640\\,iw):h=min(640\\,ih):force_original_aspect_ratio=decrease,setsar=1`;
-  const result=spawnSync('ffmpeg',['-nostdin','-v','error','-n','-i',snapshot,'-map','0:v:0','-vf',filter,
+  const result=spawnSync('ffmpeg',['-nostdin','-v','error','-n','-i',snapshot,'-map',`0:v:${ordinal}`,'-vf',filter,
     '-fps_mode','passthrough','-frames:v',String(indices.length),'-an','-sn','-dn','-start_number','0',join(directory,'frame-%05d.png')],
     {encoding:'utf8',timeout:60000,maxBuffer:1024*1024,windowsHide:true});
   if(result.error||result.status!==0)fail('ffmpeg could not extract review frames (ffmpeg is required)');
@@ -189,7 +198,7 @@ function reviewHtml(manifest){
 <style>body{font:16px system-ui;background:#17191b;color:#eee;margin:2rem auto;padding:0 1rem;max-width:1200px}a{color:#90c8ff}section{border-top:1px solid #777;margin-top:2rem}.frames{display:flex;flex-wrap:wrap;gap:1rem}figure{margin:0;flex:1 1 240px}img{display:block;max-width:100%;height:auto;image-rendering:auto}code{overflow-wrap:anywhere}p{line-height:1.5}</style>
 <h1>Relecture candidate de capture</h1><p>${html(manifest.fighterId)} · ${html(manifest.edition)}</p>
 <p>Images de consultation, réduites à 640 pixels au maximum par côté. Les indices désignent les images de cette capture, à partir de zéro ; ils ne sont pas des mesures du moteur d’origine. Comparer aussi la capture originale. Aucune fidélité 1:1 certifiée ; aucun timing Excel rempli.</p>
-<p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}</p>
+<p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}${own(manifest.capture,'videoStreamOrdinal')?'<br>Piste vidéo sélectionnée (numérotation à partir de zéro) : '+manifest.capture.videoStreamOrdinal:''}</p>
 <p>Les relectures éventuelles sont déclaratives et liées aux annotations. Ces aperçus n’ajoutent aucune attestation. Métadonnées et empreintes des images : <a href="review-manifest.json">manifeste JSON</a>.</p>${sections}</html>\n`;
 }
 function reviewFrameIndices(verified){
@@ -231,7 +240,7 @@ export async function exportSourceTimingReview(batch,{outputDirectory,baseDirect
     await mkdir(destination);let complete=false;
     try{
       const frameDirectory=join(destination,'frames');await mkdir(frameDirectory);
-      await extract(snapshot,indices,frameDirectory);
+      await extract(snapshot,indices,frameDirectory,{videoStreamOrdinal:selectedVideoStream(capture)});
       const manifest=sourceReviewManifest(verified,await readReviewFrames(frameDirectory,indices,capture));
       await writeFile(join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
       await writeFile(join(destination,'index.html'),reviewHtml(manifest),{flag:'wx'});
@@ -247,7 +256,7 @@ export async function verifySourceTimingReview(batch,{reviewDirectory,baseDirect
   return verifyCapture(normalized.capture,{baseDirectory,probe,consume:async(capture,snapshot)=>{
     const verified=verifiedTimingBatch(normalized,capture,catalogue),indices=reviewFrameIndices(verified);
     const freshDirectory=join(dirname(snapshot),'review-frames');await mkdir(freshDirectory,{mode:0o700});
-    await extract(snapshot,indices,freshDirectory);
+    await extract(snapshot,indices,freshDirectory,{videoStreamOrdinal:selectedVideoStream(capture)});
     const expected=sourceReviewManifest(verified,await readReviewFrames(freshDirectory,indices,capture));
     const manifest=JSON.parse((await readReviewFile(join(directory,'review-manifest.json'),2*1024*1024,'review manifest')).toString('utf8'));
     if(!isDeepStrictEqual(manifest,expected))fail('review manifest differs from exact annotations or freshly extracted capture frames; regenerate the preview');
@@ -262,7 +271,7 @@ export async function verifySourceTimingReview(batch,{reviewDirectory,baseDirect
 
 export async function sourceTimingCommand(args){
   if(args.length===1&&args[0]==='--help'){
-    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\n       node scripts/source-timing.mjs review-preview BATCH.json --output-dir NEW_DIRECTORY\n       node scripts/source-timing.mjs verify-review BATCH.json --review-dir REVIEW_DIRECTORY\nvalidate commands require ffprobe; preview commands also require ffmpeg. verify-review checks existing PNG/HTML/annotations against a fresh extraction with the current tool version. annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
+    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\n       node scripts/source-timing.mjs review-preview BATCH.json --output-dir NEW_DIRECTORY\n       node scripts/source-timing.mjs verify-review BATCH.json --review-dir REVIEW_DIRECTORY\nOptional capture.videoStreamOrdinal selects video track 0..15 (zero-based among video streams, default 0); the selection is bound to annotation/review digests. validate commands require ffprobe; preview commands also require ffmpeg. verify-review checks existing PNG/HTML/annotations against a fresh extraction with the current tool version. annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
     return;
   }
   const preview=args[0]==='review-preview',review=args[0]==='verify-review';

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
-import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS} from '../src/data.js';
+import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS, MOVESET_KEYS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
 import {validateStageBitmap} from '../src/stage-bitmaps.js';
@@ -30,7 +30,17 @@ const isBlocked = status => /bloqu|unverified|unconfirmed|non.vérif|non.verif|r
 const isNonCombat = status => /non.combat|non.applicable|non.hostil|passi[ fv]|set.piece|environment|obstacle|scenery/i.test(status || '');
 const productionState = (locked,noncombat,proposalStatus='') => locked||isBlocked(proposalStatus)?'À référencer':noncombat||isNonCombat(proposalStatus)?'Rôle à décider':'À produire';
 const RESOLVED_NONCOMBAT_ROLES = new Set(['noncombatant','environmental-obstacle','scripted-encounter']);
+const SCRIPTED_FILM_EDITION = 'Silent Hill (2006, film de Christophe Gans)';
+// These six film identities have a separately reviewed source-role decision.
+// Their playable versus adaptation is not an original interactive film combat.
+const SCRIPTED_FILM_ADAPTATIONS = new Set(['film_armless_man_170','film_dark_nurse_171',
+  'film_grey_child_film_172','film_creeper_swarm_film_173','film_colin_the_janitor_174','film_red_pyramid_film_175']);
+function playableRoleDecision(decision,fighter){
+  return decision?.adaptationScope==='versus-scripted'&&decision.decision==='scripted-encounter'&&
+    decision.edition===SCRIPTED_FILM_EDITION&&fighter?.source==='film'&&SCRIPTED_FILM_ADAPTATIONS.has(fighter.id);
+}
 const roleNames = {noncombatant:'non-combattant', 'environmental-obstacle':'obstacle du décor', 'scripted-encounter':'rencontre scénarisée sans combat autonome'};
+const roleDescription=decision=>decision.adaptationScope==='versus-scripted'?'figure de scène adaptée au versus':roleNames[decision.decision];
 const validReviewDate = value => typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value+'T00:00:00Z'))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;
 const poseNames = {idle:'Repos',walk:'Locomotion',crouch:'Posture basse',jump:'Déplacement aérien',guard:'Réaction défensive',dodge:'Évitement',hurt:'Réaction à un impact',knockdown:'Chute de manche',ko:'Défaite',phase:'Changement de phase'};
 const presentationNames = {intro:'Introduction',taunt:'Attitude / provocation',winRound1:'Victoire première manche',loseRound1:'Défaite première manche',winMatch:'Pose de victoire finale',loseMatch:'Pose de défaite finale',outro:'Sortie de combat'};
@@ -88,6 +98,7 @@ export function validateResearch(research, roster=ROSTER, stages=STAGES) {
     const decision=fighter.roleDecision;
     if(decision!==undefined){
       const label=`fighter ${fighter.id}: role decision`;
+      if(decision?.adaptationScope!==undefined&&!playableRoleDecision(decision,fighter))errors.push(`${label}: unsupported adaptation scope or exact film identity`);
       if(!decision||typeof decision!=='object'||Array.isArray(decision)||!['pending','resolved'].includes(decision.status))errors.push(`${label}: unsupported status`);
       else if(decision.status==='resolved'){
         if(decision.fighterId!==fighter.id||fighter.source!==rosterById.get(fighter.id)?.source)errors.push(`${label}: identity/source mismatch`);
@@ -149,15 +160,25 @@ function rowRefs(refs) {return unique(refs||[]).join(', ');}
 
 export function roleDecisionRuntimeCompatible(decision,fighter,profile){
   const policy=profile?.referencePolicy;
-  return Boolean(typeof fighter?.id==='string'&&decision?.status==='resolved'&&decision.fighterId===fighter.id&&
+  const nativeSlots=profile?.moves&&!Array.isArray(profile.moves)&&
+    Object.keys(profile.moves).length===MOVESET_KEYS.length&&
+    MOVESET_KEYS.every(key=>Object.hasOwn(profile.moves,key)&&profile.moves[key]?.key===key)&&
+    Array.isArray(profile.moveset?.order)&&profile.moveset.order.length===MOVESET_KEYS.length&&
+    profile.moveset.order.every((key,index)=>key===MOVESET_KEYS[index]);
+  const compatible=Boolean(typeof fighter?.id==='string'&&decision?.status==='resolved'&&decision.fighterId===fighter.id&&
     RESOLVED_NONCOMBAT_ROLES.has(decision.decision)&&policy?.id===fighter.id&&policy.source===fighter.source&&
     policy.edition===decision.edition&&policy.role===decision.decision&&policy.capabilities?.reviewed===true&&
-    policy.combatEnabled===false&&policy.canMove===false&&policy.canJump===false&&policy.canDodge===false&&policy.superEnabled===false&&
-    profile.moves&&!Array.isArray(profile.moves)&&Object.values(profile.moves).length>0&&Object.values(profile.moves).every(move=>move.enabled===false));
+    nativeSlots);
+  if(!compatible)return false;
+  if(decision.adaptationScope!==undefined)return Boolean(playableRoleDecision(decision,fighter)&&
+    policy.adaptationMode==='versus-scripted'&&policy.combatEnabled===true&&
+    Object.values(profile.moves).every(move=>typeof move?.enabled==='boolean')&&Object.values(profile.moves).some(move=>move.enabled===true));
+  return policy.combatEnabled===false&&policy.canMove===false&&policy.canJump===false&&policy.canDodge===false&&policy.superEnabled===false&&
+    Object.values(profile.moves).every(move=>move?.enabled===false);
 }
 
 function roleDecisionNote(decision){
-  return `Rôle confirmé le ${decision.reviewedAt} : ${roleNames[decision.decision]} (${decision.edition}). ${decision.rationale} Preuves : ${rowRefs(decision.evidence)}. Cette décision ne valide ni image, ni animation, ni mouvement offensif.`;
+  return `Rôle confirmé le ${decision.reviewedAt} : ${roleDescription(decision)} (${decision.edition}). ${decision.rationale} Preuves : ${rowRefs(decision.evidence)}. Cette décision ne valide ni image, ni animation, ni mouvement offensif.`;
 }
 
 function stageBitmapProgress(stage){
@@ -252,7 +273,9 @@ function applyRuntimeProgress(plan){
     if(resolvedRoles.has(row.fighterId)){
       const decision=resolvedRoles.get(row.fighterId);
       row.canonicalVerification+=' '+roleDecisionNote(decision);
-      row.target=`Rôle confirmé comme ${roleNames[decision.decision]}. Ne produire aucune attaque autonome ; vérifier que cette commande reste désactivée. Les chiffres du catalogue sont conservés comme paramètres inertes du versus.`;
+      row.target=decision.adaptationScope==='versus-scripted'?
+        'Rôle de scène confirmé dans le film exact ; cette commande appartient au prototype de versus. Gestes, dégâts, fenêtres et entrées restent des propositions à comparer à la source, sans combat interactif original revendiqué.':
+        `Rôle confirmé comme ${roleNames[decision.decision]}. Ne produire aucune attaque autonome ; vérifier que cette commande reste désactivée. Les chiffres du catalogue sont conservés comme paramètres inertes du versus.`;
       if(row.productionStatus==='Rôle à décider')row.productionStatus='À tester';
     }
     if(weaponNote)row.canonicalVerification+=' '+weaponNote;
@@ -303,7 +326,9 @@ function applyRuntimeProgress(plan){
   }
   for(const row of plan.poses)if(resolvedRoles.has(row.fighterId)){
     const decision=resolvedRoles.get(row.fighterId);
-    row.description=`Rôle confirmé comme ${roleNames[decision.decision]}. Ne pas forcer une posture de combattant ; relever seulement la présence ou interaction autorisée par la référence. `+roleDecisionNote(decision);
+    row.description=(decision.adaptationScope==='versus-scripted'?
+      `Pose ${poseNames[row.pose]} proposée pour adapter cette figure de scène au versus ; conserver son anatomie et ses accessoires de cette édition, sans prétendre à une posture de jeu originale. `:
+      `Rôle confirmé comme ${roleNames[decision.decision]}. Ne pas forcer une posture de combattant ; relever seulement la présence ou interaction autorisée par la référence. `)+roleDecisionNote(decision);
     if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
   }
   for(const row of plan.stages){
@@ -344,7 +369,10 @@ function applyRuntimeProgress(plan){
     if(task.id.endsWith(':role')&&resolvedRoles.has(task.entityId)){
       const decision=resolvedRoles.get(task.entityId);
       task.status='Validé';task.delivery='role-reference-review-'+decision.reviewedAt;
-      task.reason=roleDecisionNote(decision)+' Le moteur conserve toutes les commandes autonomes désactivées.';
+      task.reason=roleDecisionNote(decision)+(decision.adaptationScope==='versus-scripted'?
+        ' Le moteur conserve une adaptation de versus explicitement proposée, sans valider les commandes ni les images du prototype.':
+        ' Le moteur conserve toutes les commandes autonomes désactivées.');
+      if(decision.adaptationScope==='versus-scripted')task.acceptance='Version et rôle de scène du film exacts ; adaptation du versus déclarée, sans validation de commande, image, animation ou durée originale.';
       task.referenceIds=rowRefs(decision.evidence);
     }else if(task.id.endsWith(':art')){
       const art=SPRITES[task.entityId];
@@ -379,6 +407,7 @@ function applyRuntimeProgress(plan){
   capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}, lot ${SOURCE_TIMING_BATCH_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Plusieurs slots d’une même capture peuvent être vérifiés en un seul décodage. La relecture facultative est liée par SHA256 aux annotations exactes ; son auteur reste déclaratif. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet et sa relecture restent candidats et ne certifient ni le geste ni la fidélité 1:1.`;
   capture.reason+=' La commande review-preview extrait les images début/impact/fin du même snapshot vérifié par ffmpeg : index HTML local et manifeste SHA256, aperçus réduits à 640 pixels maximum, sans nouvelle attestation ni import Excel.';
   capture.reason+=' La commande verify-review compare en lecture seule les PNG, le manifeste et la page HTML à une extraction fraîche de cette capture avec la version actuelle de l’outil ; une image remplacée reste refusée même si son hash déclaré a été recalculé.';
+  capture.reason+=' Les captures à plusieurs pistes vidéo peuvent déclarer videoStreamOrdinal (numérotation vidéo à partir de zéro) : même piste pour ffprobe et ffmpeg, sélection liée aux annotations et à la relecture. Les anciens paquets gardent la première piste et leurs empreintes.';
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -419,7 +448,7 @@ export function buildProductionPlan(research) {
     const artState=art ? 'PNG candidat, fidélité à valider' : 'PNG à produire';
     plan.fighters.push({id:f.id,name:f.name,source:f.source,game:f.game,sourceYear:f.year,edition:referenceEdition(f,ref),variant:f.variant||'',currentVariantLabel:f.variantOf||'',baseId:ref.baseId||'',category:f.category,boss:f.boss,
       currentRole:f.catalogueStatus,targetRole:ref.combatRole||'',currentEvidence:f.evidenceTier,identityStatus:ref.identityStatus,identityNote:ref.identityNote,
-      roleDecision:ref.roleDecision?Object.fromEntries(['status','fighterId','decision','edition','evidence','rationale','reviewedAt'].filter(key=>ref.roleDecision[key]!==undefined).map(key=>[key,structuredClone(ref.roleDecision[key])])):null,
+      roleDecision:ref.roleDecision?Object.fromEntries(['status','fighterId','decision','edition','evidence','rationale','reviewedAt','adaptationScope'].filter(key=>ref.roleDecision[key]!==undefined).map(key=>[key,structuredClone(ref.roleDecision[key])])):null,
       constraints:ref.constraints.join('\n'),referenceIds:rowRefs(ref.referenceIds),observationIds:observationIds.join(', '),documentedActions:observations.filter(o=>!isBlocked(o.status)&&!isNonCombat(o.status)).length,
       currentMoves:profile.moveset.order.length,currentFinishers:f.fatalities.length,artState,animatedClips:art?.animatedClips||0,oneToOneValidated:false,productionStatus:locked?'À référencer':noncombat?'Rôle à décider':'À produire'});
 

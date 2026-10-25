@@ -15,9 +15,9 @@ test('v0.9.6 catalogue counts are synchronized',()=>{
   assert.equal(VERSION,'0.9.6');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:99,stageDirectorEvents:22,
-    stageInteractions:22,stageHazardLinks:9,terrainProfiles:14,shiftStyles:15,moves:4600,
-    directCanonicalMoves:0,behaviorCompositeMoves:2677,versusAdaptationMoves:1923,coverageComplete:true
+    fatalities:460,stageFatalities:123,stageAnimations:91,stageDirectorEvents:20,
+    stageInteractions:20,stageHazardLinks:8,terrainProfiles:14,shiftStyles:15,moves:4600,
+    directCanonicalMoves:0,behaviorCompositeMoves:2660,versusAdaptationMoves:1940,coverageComplete:true
   });
 });
 

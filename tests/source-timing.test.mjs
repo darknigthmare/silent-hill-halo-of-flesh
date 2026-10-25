@@ -44,6 +44,23 @@ test('timing packets retain exact identity and rational recording FPS without in
  assert.equal(result.edition,input.edition);assert.equal(result.measurement.unit,'capture-frames');
  assert.equal(result.measurement.impactFrame,1);assert.equal('sourceFrameRate' in result,false);
 });
+test('legacy packet normalization and review digests retain implicit first-video behavior',()=>{
+ const p=packet(),expected=structuredClone(p);expected.capture.frameRate={numerator:30000,denominator:1001};
+ assert.deepEqual(validateSourceTiming(p),expected);assert.equal('videoStreamOrdinal' in validateSourceTiming(p).capture,false);
+ assert.equal(sourceTimingAnnotationDigest(p),createHash('sha256').update(JSON.stringify(expected)).digest('hex'));
+ const selected=packet();selected.capture.videoStreamOrdinal=0;
+ assert.equal(validateSourceTiming(selected).capture.videoStreamOrdinal,0);
+ assert.notEqual(sourceTimingAnnotationDigest(selected),sourceTimingAnnotationDigest(p),'explicit track selection is part of the annotations');
+});
+test('video track selection is a bounded zero-based ordinal bound to candidate reviews',()=>{
+ for(const ordinal of [-1,16,0.5,'1',null,undefined]){
+  const p=packet();p.capture.videoStreamOrdinal=ordinal;assert.throws(()=>validateSourceTiming(p),/video stream ordinal/);
+ }
+ const selected=batch();selected.capture.videoStreamOrdinal=1;const input=review(selected);
+ assert.equal(validateSourceTimingBatch(input).capture.videoStreamOrdinal,1);
+ input.capture.videoStreamOrdinal=0;assert.throws(()=>validateSourceTimingBatch(input),/review annotation SHA256 mismatch/);
+ const legacy=review(batch());legacy.capture.videoStreamOrdinal=1;assert.throws(()=>validateSourceTimingBatch(legacy),/review annotation SHA256 mismatch/);
+});
 test('timing refuses unknown subjects, editions, slots and privileged certification fields',()=>{
  for(const change of [p=>p.fighterId='__proto__',p=>p.fighterId='SH1_AIR_SCREAMER_001',p=>p.source='bom',p=>p.edition='Silent Hill 2 remake 2024',
   p=>p.moveKey='constructor',p=>p.certifiedOneToOne=true,p=>p.capture.originalEngineFPS=30,p=>p.measurement.sourceStart='00:00:00']){
@@ -300,4 +317,16 @@ test('review integrity CLI requires exact flags and rejects an invalid packet wi
  for(const args of [['verify-review','batch.json'],['verify-review','batch.json','--output','out'],['verify-review','batch.json','--review-dir']])await assert.rejects(sourceTimingCommand(args),/usage:/);
  const directory=await fixture(context),input=join(directory,'batch.json');await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
  await assert.rejects(sourceTimingCommand(['verify-review',input,'--review-dir',join(directory,'none')]),/unsupported fields/);
+});
+test('single packets and both review passes use the same explicit video track and hashed snapshot',async context=>{
+ const directory=await fixture(context),p=packet();p.capture.videoStreamOrdinal=1;const probed=[],extracted=[];
+ const probe=(path,options)=>{probed.push(options.videoStreamOrdinal);return metadata();};
+ assert.equal((await verifySourceTiming(p,{baseDirectory:directory,probe})).capture.videoStreamOrdinal,1);
+ const b=batch();b.capture.videoStreamOrdinal=1;const input=review(b),reviewDirectory=join(directory,'review');
+ const extract=async(path,indices,output,options)=>{extracted.push(options.videoStreamOrdinal);assert.deepEqual(await readFile(path),bytes);await fixtureFrames(path,indices,output);};
+ const manifest=await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:reviewDirectory,probe,extract});
+ assert.equal(manifest.capture.videoStreamOrdinal,1);assert.equal(manifest.entries[0].annotationSHA256,input.entries[0].review.annotationSHA256);
+ assert.ok((await readFile(join(reviewDirectory,'index.html'),'utf8')).includes('Piste vidéo sélectionnée (numérotation à partir de zéro) : 1'));
+ assert.equal((await verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe,extract})).framesChecked,3);
+ assert.deepEqual(probed,[1,1,1]);assert.deepEqual(extracted,[1,1]);
 });

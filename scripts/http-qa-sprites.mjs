@@ -35,7 +35,16 @@ try{
  // A valid checkpoint fixture must survive a rejected new run unchanged.
  const saved=await page.evaluate(async()=>{const {createRun}=await import('/src/run-progress.js');const r=createRun({mode:'arcade',playerId:'film_red_pyramid_film_175',seed:19});const text=JSON.stringify(r);localStorage.setItem('sh-halo-of-flesh-run-v1',text);return text;});
  await page.goto(base+'/modules/unified-versus.html?qa=1&preset=boss');await page.click('#launch');await page.waitForFunction(()=>!document.querySelector('#launch').disabled);assert('whole-run art gate preserves existing checkpoint byte-for-byte',await page.evaluate(()=>localStorage.getItem('sh-halo-of-flesh-run-v1'))===saved);
- await page.goto(base+'/modules/sprite-workshop.html');assert('workshop reports the actual illustrated fraction',(await page.locator('#coverage').textContent()).includes(`${artCount} / 230`));assert('workshop has exactly the registered candidates',await page.locator('.sprite-card').count()===artCount);await shot(page,'03-workshop');await page.selectOption('#spriteFilter','missing');assert('unproduced queue is paginated',await page.locator('.sprite-card').count()===18);await page.click('#spriteNext');assert('missing-art paging advances',/2\//.test(await page.locator('#spritePage').textContent()));
+ await page.goto(base+'/modules/sprite-workshop.html');assert('workshop reports the actual illustrated fraction',(await page.locator('#coverage').textContent()).includes(`${artCount} / 230`));
+ const readyPages=[],registeredIds=[];
+ for(let n=0;n<Math.max(1,Math.ceil(artCount/18));n++){
+  const ids=await page.locator('.sprite-card').evaluateAll(cards=>cards.map(card=>card.dataset.id));readyPages.push(ids);registeredIds.push(...ids);
+  if(await page.locator('#spriteNext').isDisabled())break;
+  await page.click('#spriteNext');
+ }
+ assert('workshop has exactly the registered candidates across real pagination',registeredIds.length===artCount&&new Set(registeredIds).size===artCount&&JSON.stringify([...registeredIds].sort())===JSON.stringify(Object.keys(SPRITES).sort()));
+ assert('illustrated pages keep the eighteen-card limit and reach the final page',readyPages.every((ids,index)=>ids.length===Math.min(18,artCount-index*18))&&await page.locator('#spriteNext').isDisabled());
+ await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');await shot(page,'03-workshop');await page.selectOption('#spriteFilter','missing');assert('unproduced queue is paginated',await page.locator('.sprite-card').count()===18);await page.click('#spriteNext');assert('missing-art paging advances',/2\//.test(await page.locator('#spritePage').textContent()));
  assert('workshop missing filter selects a matching missing dossier',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('#spriteDetail a').count()===0);
  await page.fill('#spriteSearch','no-profile-matches-987654321');assert('workshop empty search clears the stale dossier',await page.locator('#spriteDetail canvas').count()===0&&await page.locator('#spriteDetail a').count()===0);
  await page.fill('#spriteSearch','');await page.selectOption('#spriteFilter','ready');assert('workshop ready filter restores a matching image dossier',await page.locator('#spriteDetail a').count()===2);

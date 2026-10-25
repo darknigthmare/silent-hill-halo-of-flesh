@@ -24,17 +24,23 @@ const subjects=[
   ['bom_butcher_123','bomCleaverPair','book_wood'],['bom_double_head_124','bomCirclingCharge','book_fire'],
   ['bom_ghost_125','bomToxicPresencePass','book_blood'],['bom_insane_cancer_126','bomMassSpaceCrush','book_water'],
   ['bom_needler_127','bomBladeCrossRetreat','book_steel'],['bom_pyramid_head_129','bomGreatKnifeSweep','book_light'],
-  ['bom_schism_130','bomHeadBladeLunge','book_earth'],['bom_straight_jacket_131','bomClosedTorsoJet','book_water']
+  ['bom_schism_130','bomHeadBladeLunge','book_earth'],['bom_straight_jacket_131','bomClosedTorsoJet','book_water'],
+  ['origins_two_back_080','originsJoinedTackle','riverside_motel'],
+  ['homecoming_amnion_hanging_form_097','amnionSupportedFrontLegs','underground_hc'],['homecoming_amnion_exposed_form_098','amnionExposedCloseGrip','underground_hc'],
+  ['bom_nurse_128','bomPipePairStop','book_light'],['bom_tremer_133','bomTremerLowPressure','book_earth'],
+  ['bom_fire_guardian_137','bomFireHandsEmission','book_fire'],['bom_light_guardian_140','bomHeartMaceArm','book_light'],
+  ['bom_water_guardian_141','bomAquaticMembers','book_water'],['bom_blood_mama_145','bomDetachedMamaPounce','book_blood']
 ];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
   'The ?qa=1 bridge stops requestAnimationFrame and advances actual simulation ticks. Two prepared target KOs per match exercise ordinary round scoring and the real deciding-finisher gate; no prior win score or cinematic recipe is injected.',
   'Keyboard taunt, directional cancellation and the real pause/resume controls are used. Prepared local mirror-free pairings and state advancement are regression scenes, not played fights or a campaign.',
   'The missing contextual sprite check permits an existing candidate idle fallback or an explicit missing-profile cartouche. Neither is counted as a produced attack, KO or finisher pose.',
-  'Explicit real-menu stage choices cover ceiling, floor grate, water, wall and furniture support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Four additional menu matches reject waterless, ceilingless or wall-less locations. Bitmap replacements use their structured geometry.ceiling contract, independently of their scene name.',
+  'Explicit real-menu stage choices cover ceiling, floor grate, water, wall, furniture and mechanical support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Six additional menu matches reject waterless, ceilingless, wall-less or mechanically unsupported locations. Bitmap replacements use their structured geometry.ceiling contract, independently of their scene name.',
   'The previous ten exact-subject edits include SH1 blue and red lightning branches, SH3 incomplete-body ground fire, SH2 low Creeper, Origins closed-torso leg capture and suspended dolls/cages/wall head, plus Homecoming Lurker claws and exposed-lung Smog exhalation.',
   'Ten additional Book of Memories Vita subjects use their own documented capacities and workbook proposals. The Double Head edit limits itself to the documented circling charge; the proposed bite is explicitly left unverified. Four-legged Needler and blade-headed Schism keep their own anatomy. No original-title animation or finisher is borrowed.',
   'A separate real-menu pairing prepares Insane Cancer as the loser: round-one recovery must not request its terminal explosion art, while the final ordinary KO requests only the missing final-loss image context. No explosion image, destructive body effect or extra gameplay damage is generated.',
+  'Nine further source-specific subjects retain joined Two-Back bodies, separate mechanically supported Amnion stances, the Vita Nurse Steel Pipe, low Tremer, anatomical mace-arm, aquatic members and detached Blood Mama. Fire Guardian is restricted to documented hand fire; unsupported jump/body discharge and the uncertain Demon dossier are not performed. No total Amnion limb count is certified.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
@@ -97,10 +103,12 @@ try{
     check(id+': ordinary next-round reset restores health and removes old result poses',current.phase==='fight'&&current.round===2&&current.health.every((h,index)=>h===current.maxHealth[index])&&current.tracks.every(t=>t===null),current);
     current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
     check(id+': second ordinary KO starts only its exact deciding finisher',current.phase==='fatality'&&current.fatality?.id===id+'_signature'&&current.fatality.recipe===recipe&&current.wins[0]===1&&current.tracks[0]?.key==='finisher'&&current.tracks[1]?.key==='finished'&&current.tracks[0].sequenceId===current.tracks[1].sequenceId&&current.tracks[0].frame===current.tracks[1].frame,current);
+    const finalStart=current;
     check(id+': contextual finisher images remain explicitly missing',current.actors.every(a=>!a.sprite||a.sprite.fallback),current);
     current=await advance(page,52);await page.click('#pauseBtn');const frozen=await scene(page);current=await advance(page,11);
     check(id+': pause freezes the shared final choreography and both sprite clocks',current.paused&&current.frame===frozen.frame&&current.fatality.frame===frozen.fatality.frame&&current.tracks.every((track,index)=>track.frame===frozen.tracks[index].frame),current);
     if(!movable)check(id+': attached attacker remains on its support during the actual final edit',current.actors[0].x===before.actors[0].x&&current.tracks[0].staging.x===0&&current.tracks[0].staging.y===0,current);
+    if(['homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098','bom_water_guardian_141'].includes(id))check(id+': the same body form keeps its actual mechanical or aquatic anchor',current.actors[0].id===finalStart.actors[0].id&&current.actors[0].x===finalStart.actors[0].x&&current.tracks[0].staging.x===0&&current.tracks[0].staging.y===0,current);
     if(id===subjects[0][0])await shot(page,'pause-shared-finisher');
     await page.click('[data-pause=resume]');current=await advance(page,1);await shot(page,'finisher-'+id);
     current=await advance(page,current.fatality.total-current.fatality.frame);
@@ -109,7 +117,8 @@ try{
   }
   for(const [id,stageId,reason] of [
     ['sh3_leonard_wolf_048','midwich','Premier plan requis'],['sh2_flesh_lip_027','midwich','Appui de plafond'],
-    ['origins_memory_of_helen_grady_082','midwich','Appui de plafond'],['origins_memory_of_richard_grady_083','old_silent_hill','Premier plan requis']
+    ['origins_memory_of_helen_grady_082','midwich','Appui de plafond'],['origins_memory_of_richard_grady_083','old_silent_hill','Premier plan requis'],
+    ['homecoming_amnion_hanging_form_097','alchemilla','Premier plan requis'],['bom_water_guardian_141','book_fire','Premier plan requis']
   ]){
     const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
     let current=await start(page,id,stageId);

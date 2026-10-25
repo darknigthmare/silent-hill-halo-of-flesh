@@ -13638,7 +13638,7 @@
           "strike",
           "collapse"
         ],
-        "canonicalBasis": "Frappe avec une arme lourde et produit des sons discordants.",
+        "canonicalBasis": "Très grande créature de patient, manie un marteau selon le guide et enchaîne ses frappes. Échelle du versus qualitative, sans mesure originale.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -13655,12 +13655,12 @@
           "otherworld",
           "collapse"
         ],
-        "canonicalBasis": "Frappe avec une arme lourde et produit des sons discordants.",
+        "canonicalBasis": "Très grande créature de patient, manie un marteau selon le guide et enchaîne ses frappes. Échelle du versus qualitative, sans mesure originale.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Frappe avec une arme lourde et produit des sons discordants.",
+    "canonicalBehavior": "Très grande créature de patient, manie un marteau selon le guide et enchaîne ses frappes. Échelle du versus qualitative, sans mesure originale.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 4: THE ROOM.",
     "catalogueStatus": "canon-combatant",
@@ -13669,12 +13669,12 @@
     "visual": {
       "kind": "humanoid",
       "body": "human",
-      "scale": 1,
+      "scale": 1.28,
       "primary": "#6e665f",
       "accent": "#beb6aa",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "club",
+      "weapon": "hammer",
       "head": null,
       "limbs": null,
       "aura": null
@@ -13700,7 +13700,7 @@
       "observedMoves": [
         {
           "name": "Marteau",
-          "description": "Coups enchaînés.",
+          "description": "Le Patient balance son marteau d’un côté à l’autre en un enchaînement pouvant toucher plusieurs fois ; la source conseille de l’interrompre en attaquant. Aucun nombre de coups, frame, vitesse ou dégâts du prototype n’est une mesure de SH4.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -13710,7 +13710,7 @@
         },
         {
           "name": "Pivot",
-          "description": "Frappe en se retournant.",
+          "description": "Lorsque Henry se trouve derrière lui, le Patient peut se retourner avec une attaque en pivot. Le guide atteste ce retournement, sans confirmer une hitbox permanente dans son dos.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -14619,7 +14619,7 @@
     "variantOf": "Twin Victim",
     "archetype": "juggernaut",
     "aiProfile": "juggernaut",
-    "phaseStyle": "mass",
+    "phaseStyle": "giant",
     "stageId": "room_302",
     "signature": "Masse inférieure",
     "trait": "rustArmor",
@@ -14631,59 +14631,59 @@
         "type": "signature",
         "name": "Rituel de clôture — Masse inférieure",
         "trigger": "decisive-special",
-        "pose": "absorb",
-        "effect": "blood",
+        "pose": "crush",
+        "effect": "debris",
         "sequence": [
-          "bind",
-          "envelop",
-          "absorb",
-          "pulse"
+          "stagger",
+          "raise",
+          "crush",
+          "dust"
         ],
-        "canonicalBasis": "Version renforcée du Twin Victim.",
+        "canonicalBasis": "Marche sur deux bras et mains ; deux têtes indistinctes en haut et une troisième inversée en bas, sans le manteau du Twin Victim. Morphologie distincte, âge non affirmé.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
       {
         "id": "sh4_bottom_065_nightmare",
         "type": "nightmare",
-        "name": "NIGHTMARE — Dernière manifestation",
+        "name": "NIGHTMARE — Écrasement du souvenir",
         "trigger": "decisive-super",
-        "pose": "absorb",
-        "effect": "blood",
+        "pose": "crush",
+        "effect": "debris",
         "sequence": [
-          "bind",
-          "envelop",
+          "stagger",
+          "raise",
           "otherworld",
-          "pulse"
+          "dust"
         ],
-        "canonicalBasis": "Version renforcée du Twin Victim.",
+        "canonicalBasis": "Marche sur deux bras et mains ; deux têtes indistinctes en haut et une troisième inversée en bas, sans le manteau du Twin Victim. Morphologie distincte, âge non affirmé.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Version renforcée du Twin Victim.",
+    "canonicalBehavior": "Marche sur deux bras et mains ; deux têtes indistinctes en haut et une troisième inversée en bas, sans le manteau du Twin Victim. Morphologie distincte, âge non affirmé.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 4: THE ROOM.",
     "catalogueStatus": "canon-combatant",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
-      "kind": "mass",
-      "body": "mass",
-      "scale": 1.28,
+      "kind": "giant",
+      "body": "giant",
+      "scale": 1.42,
       "primary": "#6e665f",
       "accent": "#beb6aa",
       "secondary": "#2d2b29",
       "motif": null,
       "weapon": null,
-      "head": "twin",
-      "limbs": null,
+      "head": "three",
+      "limbs": 2,
       "aura": null
     },
     "tags": [
       "SH4",
       "juggernaut",
-      "mass",
+      "giant",
       "rustArmor",
       "decay"
     ],
@@ -14701,7 +14701,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_twin_victim_059 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Le guide décrit directement les Bottoms : coups des grands bras souvent accompagnés d’un tour sur eux-mêmes, puis poursuite et plongeon vers Henry. Il les dit un peu plus forts que les Twin Victims, sans fournir de coefficient numérique ; le transfert des gestes reste limité à ces faits explicites de SH4.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -16504,7 +16504,7 @@
       "observedMoves": [
         {
           "name": "Cheveux",
-          "description": "Entrave la cible avec les cheveux ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
+          "description": "Ses cheveux enchevêtrent Henry et l’immobilisent en place, lui permettant d’attaquer ; courir ne suffit pas pour se libérer, mais frapper Cynthia ou lui tirer dessus peut rompre l’entrave. La proximité inflige aussi les faibles dégâts passifs communs aux Ghosts. Cela décrit une entrave debout, pas un plaquage ou une projection.",
           "evidence": [
             "CL_CYNTHIA",
             "CL_SH4_ENEMIES"
@@ -16515,9 +16515,10 @@
         },
         {
           "name": "Prise",
-          "description": "Agrippe au contact.",
+          "description": "Sans arme, Cynthia peut frapper du poing et agripper Henry au contact ; l’entrave par les cheveux reste distincte. Aucune durée de bind, invulnérabilité ou valeur de dégâts versus n’est canonisée.",
           "evidence": [
-            "CL_CYNTHIA"
+            "CL_CYNTHIA",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -17661,7 +17662,7 @@
           "devour",
           "sink"
         ],
-        "canonicalBasis": "Structure vivante habituellement passive, adaptée en contrôle du terrain.",
+        "canonicalBasis": "Structure vivante que Henry peut attaquer sans la tuer ; hostilité propre non confirmée, dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -17678,15 +17679,15 @@
           "otherworld",
           "sink"
         ],
-        "canonicalBasis": "Structure vivante habituellement passive, adaptée en contrôle du terrain.",
+        "canonicalBasis": "Structure vivante que Henry peut attaquer sans la tuer ; hostilité propre non confirmée, dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Structure vivante habituellement passive, adaptée en contrôle du terrain.",
+    "canonicalBehavior": "Structure vivante que Henry peut attaquer sans la tuer ; hostilité propre non confirmée, dossier hors duel.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 4: THE ROOM.",
-    "catalogueStatus": "canon-combatant",
+    "catalogueStatus": "reference-unverified",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
@@ -17715,8 +17716,8 @@
       "name": "Greedy Worm",
       "source": "sh4",
       "baseId": null,
-      "identityStatus": "non-combattant-canonique",
-      "identityNote": "Créature inoffensive et indestructible ; ne pas reprendre le comportement d’une autre œuvre.",
+      "identityStatus": "presence-documentee-role-a-preciser",
+      "identityNote": "Créature tubulaire de SH4 visible au métro et à Water Prison ; le guide de curiosités la décrit attaquable mais non tuable. La non-hostilité et la cause d’une invulnérabilité ne sont pas établies directement par cette preuve. Le blocage de duel conservateur demeure sans décision de rôle validée ; aucun comportement d’une autre œuvre n’est transféré.",
       "referenceIds": [
         "CL_GREEDY",
         "EXT_SH4_ODDITIES_20261023"
@@ -23713,7 +23714,7 @@
       "observedMoves": [
         {
           "name": "Plafond",
-          "description": "retrait dans la pénombre",
+          "description": "Dans sa seconde phase rapide et rampante, Scarlet se cache dans l’obscurité avant de bondir sur Alex ; l’appui exact au plafond et les poses doivent être relevés dans Homecoming.",
           "evidence": [
             "EXT06"
           ],
@@ -23724,7 +23725,7 @@
         },
         {
           "name": "Bond",
-          "description": "chute sur la cible",
+          "description": "Scarlet bondit sur Alex depuis l’obscurité pendant la seconde phase ; le guide conseille une esquive en posture de combat, sans donner de durée mesurée.",
           "evidence": [
             "EXT06"
           ],
@@ -23735,7 +23736,7 @@
         },
         {
           "name": "Echec du bond",
-          "description": "dos exposé",
+          "description": "Si Alex évite ce bond, il peut atteindre le dos de Scarlet et déclencher une attaque contextuelle infligeant de gros dégâts. Le bonus, la fenêtre d’exposition et l’entrée de commande du prototype sont une transposition versus, pas un QTE ou un timing copié du jeu.",
           "evidence": [
             "EXT06"
           ],
@@ -23922,7 +23923,8 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Queue et mains solidaires; aucune arme ajoutée.",
       "referenceIds": [
-        "EXT05"
+        "EXT05",
+        "EXT06"
       ],
       "observedMoves": [
         {
@@ -23938,9 +23940,10 @@
         },
         {
           "name": "Balayage de queue",
-          "description": "Balayage de queue",
+          "description": "Le guide décrit une façade résistante et une queue vulnérable à atteindre après une esquive de la ruée. Le balayage de queue déjà relevé reste distinct ; le prototype transpose cette faiblesse directionnelle sans convertir la queue en acteur autonome ni en arme. L’omission du jet toxique dans ce guide ne réfute pas EXT05.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -24125,14 +24128,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Respecter le nombre et les attaches des membres; pas de bond de géant générique.",
       "referenceIds": [
-        "EXT05"
+        "EXT05",
+        "EXT06"
       ],
       "observedMoves": [
         {
           "name": "Frappe lourde",
-          "description": "Frappe lourde",
+          "description": "En première phase, Amnion balance une patte avant vers Alex ; le guide recommande d’observer la levée d’une ou des deux pattes avant pour esquiver. La qualification lourde correspond au catalogue, sans poids, cadence ou dégâts source mesurés.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -24141,9 +24146,10 @@
         },
         {
           "name": "Frappe rapide",
-          "description": "Frappe rapide",
+          "description": "Même famille de coups des pattes avant documentée pour la première phase ; aucune différence de vitesse chiffrée entre cette variante rapide du catalogue et la frappe lourde n’est établie par EXT06.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -24152,9 +24158,10 @@
         },
         {
           "name": "Projectile toxique",
-          "description": "Projectile toxique",
+          "description": "En première phase, Amnion émet un jet noir depuis la bouche. Couleur exacte, trajectoire, statut toxique et durée du projectile versus restent à confronter aux plans ; le guide décrit le spray et son origine, sans frame-data.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -24163,9 +24170,10 @@
         },
         {
           "name": "Choc au sol",
-          "description": "Choc au sol",
+          "description": "Intitulé du catalogue conservé, sans validation d’un stomp en première phase : EXT06 documente explicitement l’écrasement à deux pattes, leur blocage dans le sol après une esquive et la fenêtre pour toucher le corps en seconde phase, réservée au profil 098. La présente ligne ne transfère pas ce comportement à097.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -24350,14 +24358,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "La vulnérabilité exposée doit rester lisible.",
       "referenceIds": [
-        "EXT05"
+        "EXT05",
+        "EXT06"
       ],
       "observedMoves": [
         {
           "name": "Saisie de seconde phase",
-          "description": "Saisie de seconde phase",
+          "description": "Seconde phase : Amnion tente de saisir Alex, balance ses pattes et émet un jet depuis le haut. Après l’écrasement à deux pattes esquivé, celles-ci peuvent rester coincées dans le sol, ouvrant une occasion de toucher le corps. Le guide distingue cette phase de la première ; aucune durée de blocage, de saisie ou de vulnérabilité du prototype n’est mesurée dans Homecoming.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -27749,7 +27759,7 @@
       "observedMoves": [
         {
           "name": "Marteau",
-          "description": "coups rapprochés",
+          "description": "Bogeyman emploie son marteau au contact pendant la rencontre de St Maria’s Monastery ; conserver cette version Downpour, sans emprunter au Bogeyman de Homecoming, au film ou à The Weight.",
           "evidence": [
             "EXT65"
           ],
@@ -27760,7 +27770,7 @@
         },
         {
           "name": "Onde",
-          "description": "projection à distance",
+          "description": "À distance, Bogeyman envoie une onde ; hauteur, largeur, vitesse, dégâts et possibilité de saut du projectile bas du prototype sont des choix versus, pas des propriétés originales mesurées par le guide.",
           "evidence": [
             "EXT65"
           ],
@@ -27771,7 +27781,7 @@
         },
         {
           "name": "Genoux",
-          "description": "affaissement puis onde de dégagement",
+          "description": "Quand Bogeyman s’affaisse sur les genoux, il devient vulnérable avant une onde de dégagement ; l’affaissement ouvre l’occasion décrite, sans fournir la durée ni les coefficients du prototype.",
           "evidence": [
             "EXT65"
           ],
@@ -33438,7 +33448,7 @@
           "incision",
           "blackout"
         ],
-        "canonicalBasis": "Version Book of Memories.",
+        "canonicalBasis": "Infirmière armée d’un tuyau dans Book of Memories.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -33455,12 +33465,12 @@
           "otherworld",
           "blackout"
         ],
-        "canonicalBasis": "Version Book of Memories.",
+        "canonicalBasis": "Infirmière armée d’un tuyau dans Book of Memories.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Version Book of Memories.",
+    "canonicalBehavior": "Infirmière armée d’un tuyau dans Book of Memories.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL: BOOK OF MEMORIES.",
     "catalogueStatus": "canon-combatant",
@@ -33474,7 +33484,7 @@
       "accent": "#bfa7bd",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": null,
+      "weapon": "pipe",
       "head": null,
       "limbs": null,
       "aura": null
@@ -37611,10 +37621,11 @@
       "source": "pt",
       "baseId": null,
       "identityStatus": "poursuivant-non-affrontable-documente",
-      "identityNote": "Pas de moveset de combat dans P.T.; ne pas assimiler à Lisa Garland.; Animations cachées déduites par caméra modifiée séparées des apparitions vécues.",
+      "identityNote": "Pas de moveset de combat dans P.T.; ne pas assimiler à Lisa Garland.; Animations cachées déduites par caméra modifiée séparées des apparitions vécues. Le billet Konami de 2014 documente la boucle du couloir et la progression par inspection/découverte ; il ne nomme pas Lisa et ne suffit pas à confirmer son rôle précis. Aucun rôle validé n’est déduit de l’absence d’une attaque dans ce billet.",
       "referenceIds": [
         "EXT27",
-        "EXT28"
+        "EXT28",
+        "EXT_PT_KONAMI_TIPS_20261025"
       ],
       "observedMoves": [
         {
@@ -37643,10 +37654,11 @@
         },
         {
           "name": "Retour de boucle",
-          "description": "Retour de boucle",
+          "description": "Le billet Konami du31 octobre 2014 sur P.T. PS4 décrit le retour dans un même couloir dont les détails changent, puis une progression obtenue en inspectant et en découvrant les indices. Il ne décrit pas une attaque ou une téléportation propre à Lisa.",
           "evidence": [
             "EXT27",
-            "EXT28"
+            "EXT28",
+            "EXT_PT_KONAMI_TIPS_20261025"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -42459,7 +42471,7 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Aucun bras libre; version2006, pas modèle2001/2024.",
+      "identityNote": "Version2006 nommée Armless Man aux crédits ; corps sans bras libres, pas de modèle repris du jeu2001 ou du remake 2024. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
         "EXT47",
         "EXT48"
@@ -42467,7 +42479,7 @@
       "observedMoves": [
         {
           "name": "Jet corrosif — détail à revoir",
-          "description": "Jet corrosif — détail à revoir",
+          "description": "Armless Man est nommé dans les crédits 2006 ; les notes de production décrivent le personnage sans bouche et les déformations du corps du danseur. Le jet corrosif et ses poses restent à relever sur le film exact.",
           "evidence": [
             "EXT47",
             "EXT48"
@@ -42570,7 +42582,21 @@
       "artDirectionFocus": "enveloppe et torse",
       "existingCatalogueBehavior": "Démarche contorsionnée, jet corrosif et pression lente.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_armless_man_170",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -42662,18 +42688,20 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Version2006 : relève instrument exact sur plan; éviter copier gestes Revelation déclenchés au son.",
+      "identityNote": "Dark Nurses du film 2006, nommées dans les notes de production et les crédits. Activation par la lumière documentée ; instrument exact et gestes de lames à relever sur plan, sans importer la réaction au son de Revelation. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
         "EXT47",
-        "EXT49"
+        "EXT49",
+        "EXT48"
       ],
       "observedMoves": [
         {
           "name": "Réveil à la lumière",
-          "description": "Réveil à la lumière",
+          "description": "Les notes de production décrivent les Nurses figées puis activées par la lumière dans l’obscurité de l’hôpital ; leur mouvement de marionnette est aussi retouché temporellement en postproduction. Cela ne mesure ni le délai d’activation ni la durée des gestes.",
           "evidence": [
             "EXT47",
-            "EXT49"
+            "EXT49",
+            "EXT48"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -42785,7 +42813,21 @@
       "artDirectionFocus": "instrument chirurgical",
       "existingCatalogueBehavior": "Reste immobile dans l’obscurité puis frappe en réaction à la lumière et au mouvement.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_dark_nurse_171",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -42877,7 +42919,7 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Créature surnaturelle du film; conserver sa matière, ne pas produire des enfants humains réalistes.",
+      "identityNote": "Grey Child et horde du film 2006 documentés par notes de production/crédits ; conserver la créature surnaturelle et sa matière, avec chorégraphie précise encore à relever. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
         "EXT47",
         "EXT48"
@@ -42885,7 +42927,7 @@
       "observedMoves": [
         {
           "name": "Encerclement — geste à revoir",
-          "description": "Encerclement — geste à revoir",
+          "description": "Grey Child est nommé aux crédits ; les notes de production décrivent une performance de danseuse multipliée en postproduction pour former une horde, avec peau translucide retravaillée. Elles ne mesurent pas l’encerclement ou la prise.",
           "evidence": [
             "EXT47",
             "EXT48"
@@ -42988,7 +43030,21 @@
       "artDirectionFocus": "silhouette de cendre",
       "existingCatalogueBehavior": "Se déplace en groupe et agrippe la cible dans les ruelles en flammes.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_grey_child_film_172",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -43080,18 +43136,20 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Référencer le modèle film, pas punaise générique.",
+      "identityNote": "Essaim du film 2006 nommé Cockroaches dans les notes de production ; Creeper Swarm reste le libellé du catalogue, sans transfert de modèle ou d’attaques des insectes des jeux. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
         "EXT47",
-        "EXT49"
+        "EXT49",
+        "EXT48"
       ],
       "observedMoves": [
         {
           "name": "Essaim autour de Red Pyramid",
-          "description": "Essaim autour de Red Pyramid",
+          "description": "Les notes de production nomment ces créatures Cockroaches et précisent qu’elles sont entièrement produites en images de synthèse ; les crédits comprennent les travaux de simulation Roach. Le nom de catalogue Creeper Swarm ne valide ni leur geste exact autour de Red Pyramid ni un pattern du Creeper des jeux.",
           "evidence": [
             "EXT47",
-            "EXT49"
+            "EXT49",
+            "EXT48"
           ],
           "status": "a-verifier",
           "animationMeasured": false,
@@ -43191,7 +43249,21 @@
       "artDirectionFocus": "insectes film",
       "existingCatalogueBehavior": "Attaque en essaim et contourne les défenses au sol.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_creeper_swarm_film_173",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -43283,16 +43355,20 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Aucun pouvoir autonome de corrosion attribué sans plan; transformation du décor n’est pas forcément son attaque.",
+      "identityNote": "Janitor/Colin du film 2006 nommé aux crédits et décrit dans les notes de production ; séparer état momifié et rampant vivant. Aucun pouvoir autonome de corrosion attribué sans plan. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
-        "EXT49"
+        "EXT49",
+        "EXT47",
+        "EXT48"
       ],
       "observedMoves": [
         {
           "name": "Rampement contorsionné",
-          "description": "Rampement contorsionné",
+          "description": "Les notes de production distinguent le Janitor momifié du monde de brume et la créature vivante, rampante et contorsionnée de l’obscurité ; les crédits associent Janitor/Colin. Ni une propagation autonome de corrosion ni son contrôle de la transformation du décor ne sont établis par ces notes.",
           "evidence": [
-            "EXT49"
+            "EXT49",
+            "EXT47",
+            "EXT48"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -43383,7 +43459,21 @@
       "artDirectionFocus": "attaches et bras",
       "existingCatalogueBehavior": "Rampe, agrippe et propage la corruption autour de lui.",
       "existingCatalogueBoss": false,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_colin_the_janitor_174",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -43475,18 +43565,20 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Séparer film2006, duel2012 et Return2026; ne pas unifier les casques.",
+      "identityNote": "Red Pyramid du film 2006 nommé aux crédits et décrit dans les notes de production avec grande lame et démarche asymétrique ; séparer les modèles/gestes des jeux, de Revelation 2012 et de Return 2026. Son rôle dans la fiction filmée est distingué de l’adaptation de combat versus-scripted proposée par ce projet.",
       "referenceIds": [
         "EXT47",
-        "EXT49"
+        "EXT49",
+        "EXT48"
       ],
       "observedMoves": [
         {
           "name": "Great Knife",
-          "description": "Great Knife",
+          "description": "Les notes de production présentent Red Pyramid comme porteur d’une épée et détaillent une démarche volontairement asymétrique du costume. L’attaque exacte de la grande lame, son appellation Great Knife et sa durée restent à relever ; aucune animation du jeu ni du duel 2012 n’est validée par ces notes.",
           "evidence": [
             "EXT47",
-            "EXT49"
+            "EXT49",
+            "EXT48"
           ],
           "status": "a-verifier",
           "animationMeasured": false,
@@ -43598,7 +43690,21 @@
       "artDirectionFocus": "casque et grande lame film",
       "existingCatalogueBehavior": "Exécuteur massif, balayages très larges et saisie punitive.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill (2006, film de Christophe Gans)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_red_pyramid_film_175",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill (2006, film de Christophe Gans)",
+        "evidence": [
+          "EXT47",
+          "EXT48"
+        ],
+        "rationale": "Les notes de production et les crédits identifient cette créature dans Silent Hill de Christophe Gans en 2006 et précisent sa réalisation ou son comportement de scène. Le rôle de rencontre scénarisée appartient à cette fiction non interactive ; il ne signifie ni absence d’hostilité ni interdiction des combats proposés dans le prototype. Le projet conserve une adaptation jouable explicitement versus-scripted ; cette décision ne certifie aucun art, geste, timing ou transfert depuis une autre œuvre.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -45107,9 +45213,10 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Aucun poing libre : silhouette sans bras selon source; attaques détaillées à revoir épisode canon.",
+      "identityNote": "Aucun poing libre : silhouette sans bras selon source; attaques détaillées à revoir épisode canon. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
-        "EXT58"
+        "EXT58",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -45299,9 +45406,10 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Scènes canoniques distinctes des variantes rejetées par vote et des Endure.",
+      "identityNote": "Scènes canoniques distinctes des variantes rejetées par vote et des Endure. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
-        "EXT58"
+        "EXT58",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -45491,9 +45599,10 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Ne pas ajouter des tirs ou statut mystique au simple canidé.",
+      "identityNote": "Ne pas ajouter des tirs ou statut mystique au simple canidé. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
-        "EXT59"
+        "EXT59",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -45683,10 +45792,11 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Pas de téléportation ni dard projectile attesté.",
+      "identityNote": "Pas de téléportation ni dard projectile attesté. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
         "EXT58",
-        "EXT59"
+        "EXT59",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -45898,9 +46008,10 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Le feu dépend de sa conception; ne pas le confondre avec Jasper SH4.",
+      "identityNote": "Le feu dépend de sa conception; ne pas le confondre avec Jasper SH4. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
-        "EXT58"
+        "EXT58",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -46090,10 +46201,11 @@
       "source": "ascension",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "La source indique aucune mise à mort active montrée; finisher de capture/transport seulement.; Chorégraphie de porte et collecte à prendre dans canon, pas variantes.",
+      "identityNote": "La source indique aucune mise à mort active montrée; finisher de capture/transport seulement.; Chorégraphie de porte et collecte à prendre dans canon, pas variantes. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
         "EXT58",
-        "EXT60"
+        "EXT60",
+        "EXT57"
       ],
       "observedMoves": [
         {
@@ -46306,9 +46418,10 @@
       "source": "ascension",
       "baseId": "ascension_stinger_181",
       "identityStatus": "variante-geographique-non-confirmee",
-      "identityNote": "Stinger à Stilledalen attesté, espèce/variante autonome de ce nom non attestée.; Ne pas compter comme nouvelle race1:1 ni donner attaque hors écran propre.",
+      "identityNote": "Stinger à Stilledalen attesté, espèce/variante autonome de ce nom non attestée.; Ne pas compter comme nouvelle race1:1 ni donner attaque hors écran propre. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
       "referenceIds": [
-        "EXT58"
+        "EXT58",
+        "EXT57"
       ],
       "observedMoves": [],
       "constraints": [

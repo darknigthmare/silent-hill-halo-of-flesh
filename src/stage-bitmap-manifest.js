@@ -154,5 +154,47 @@ export const STAGE_BITMAPS = {
         ]
       }
     ]
+  },
+  "shopping_mall": {
+    "stageId": "shopping_mall",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-helens-bakery",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_02_SHOPPING_CENTER",
+      "EXT_SH3_MALL_BAKERY_20261025",
+      "EXT_SH3_MALL_TONGS_VIEW_20261025",
+      "EXT_SH3_MALL_TONGS_MAP_20261025"
+    ],
+    "notes": "Helen’s Bakery normale SH3 avant basculement, comptoir des pinces et rayonnages de cette seule pièce. Caméra frontalisée, mobilier repoussé et carrelage étendu au premier plan adaptés au versus ; aucune boutique voisine, arme Extra ni géométrie ou animation 1:1 certifiée.",
+    "layers": [
+      {
+        "id": "bakery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+            "sha256": "0e26701007893594c037c681332c69a411c75cbea2c81436f55c1fa95a407b67",
+            "bytes": 2558681,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ]
   }
 };

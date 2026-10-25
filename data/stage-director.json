@@ -1585,21 +1585,21 @@
       "name": "LAKESIDE AMUSEMENT PARK",
       "source": "sh1",
       "lore": {
-        "premise": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3.",
+        "premise": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3. Vue retenue : manège de Cybil SH1 original, distinct du Happy Carousel SH3. Rotation de fond lente et un cheval fixe sont une proposition versus ; pas Cybil, gaz/énigme 12 chevaux SH3, grande roue extérieure dans la même vue. Sculptures/caméra interprétées, matériau/humidité non déterminés.",
         "canonicalBasis": "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "wetConcrete",
-        "name": "BÉTON TREMPÉ",
-        "moveScale": 0.96,
-        "jumpScale": 0.96,
-        "dodgeScale": 1.06,
-        "friction": 0.9,
-        "knockbackScale": 1.08,
-        "guardRegenScale": 0.96,
-        "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+        "name": "PLATEAU DU MANÈGE SH1",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Manège du parc SH1 ; humidité et matériau du plateau non déterminés. Rotation de fond proposée, règles matérielles désactivées et caméra non certifiée 1:1."
       },
       "shift": {
         "style": "rust",
@@ -1617,15 +1617,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "ferrisWheel",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -1636,7 +1628,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "LAKESIDE AMUSEMENT PARK",
         "correctedName": null,
-        "locationNote": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3.",
+        "locationNote": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3. Vue retenue : manège de Cybil SH1 original, distinct du Happy Carousel SH3. Rotation de fond lente et un cheval fixe sont une proposition versus ; pas Cybil, gaz/énigme 12 chevaux SH3, grande roue extérieure dans la même vue. Sculptures/caméra interprétées, matériau/humidité non déterminés.",
         "referenceIds": [
           "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
         ],
@@ -1688,8 +1680,14 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "fog",
+        "automaticFinishers": false,
+        "normalPhaseLabel": "MANÈGE DE CYBIL · SH1",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLATEAU DU MANÈGE SH1",
+          "description": "Manège du parc SH1 ; humidité et matériau du plateau non déterminés. Rotation de fond proposée, règles matérielles désactivées et caméra non certifiée 1:1."
+        },
+        "weather": "none",
         "interior": false,
         "baselineMotion": true,
         "suppression": [
@@ -1729,21 +1727,54 @@
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
+            "kind": "animation",
+            "id": "ferrisWheel",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "lakeside_amusement:reference:2"
+        ],
         "pendingProposalIds": [
           "lakeside_amusement:reference:1",
-          "lakeside_amusement:reference:2",
           "lakeside_amusement:reference:3",
           "lakeside_amusement:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "lakeside_amusement:reference:2",
+          "key": "sh1CarouselOrbit",
+          "name": "Rotation de fond du manège SH1",
+          "description": "Le manège vide avance lentement dans le fond, avec un cheval immobilisé pour repère visuel.",
+          "proposalIndex": 1,
+          "source": "sh1",
+          "evidence": [
+            "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.54
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Rotation de fond du manège SH1",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Manège de la rencontre Cybil dans le parc SH1 original",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rotation lente proposée avec un cheval fixe comme repère ; silhouettes de sculptures originales partielles, ni Cybil, ni gaz et énigme du Happy Carousel SH3."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -1788,9 +1819,14 @@
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
+            "kind": "animation",
+            "id": "ferrisWheel",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -3211,24 +3247,24 @@
     },
     {
       "id": "shopping_mall",
-      "name": "CENTRAL SQUARE MALL",
+      "name": "CENTRAL SQUARE — HELEN’S BAKERY",
       "source": "sh3",
       "lore": {
-        "premise": "Central Square Shopping Center de SH3 avant son état Nightmare.",
-        "canonicalBasis": "CL_SH3_02_SHOPPING_CENTER",
+        "premise": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
+        "canonicalBasis": "CL_SH3_02_SHOPPING_CENTER ; EXT_SH3_MALL_BAKERY_20261025 ; EXT_SH3_MALL_TONGS_VIEW_20261025 ; EXT_SH3_MALL_TONGS_MAP_20261025",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "concrete",
-        "name": "BÉTON SEC",
+        "name": "SOL DU CENTRE COMMERCIAL",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée."
       },
       "shift": {
         "style": "flesh",
@@ -3244,72 +3280,25 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "duration": 150,
-          "darkness": 0.72,
-          "radioBoost": 0.22,
-          "message": "LES LUMIÈRES S’ÉTEIGNENT",
-          "animation": "lightFlicker"
-        }
-      ],
+      "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "lightFlicker",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "irregular"
-        }
-      ],
-      "interactions": [
-        {
-          "id": "shopping_mall_powerFailure_1",
-          "event": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "trigger": "time-or-first-heavy-impact",
-          "triggerLabel": "IMPACT LOURD / PREMIER TEMPS",
-          "triggerDescription": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu.",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
-          "canonicalBasis": "Central Square Shopping Center de SH3 avant son état Nightmare.",
-          "referenceIds": [
-            "CL_SH3_02_SHOPPING_CENTER"
-          ],
-          "proposalId": null
-        }
-      ],
-      "choreography": [
-        {
-          "event": "powerFailure",
-          "prop": "light",
-          "description": "Les lampes du lieu décrochent",
-          "layer": "background",
-          "anchor": {
-            "x": 0.667,
-            "y": 0.59
-          },
-          "direction": -1,
-          "evidence": [
-            "CL_SH3_02_SHOPPING_CENTER"
-          ],
-          "fidelity": "original-versus-adaptation"
-        }
-      ],
+      "animations": [],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "shopping_mall",
         "source": "sh3",
         "identityMatched": true,
         "blocked": false,
         "locationStatus": "lieu-documente",
-        "catalogueName": "CENTRAL SQUARE MALL",
+        "catalogueName": "CENTRAL SQUARE — HELEN’S BAKERY",
         "correctedName": null,
-        "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare.",
+        "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
         "referenceIds": [
-          "CL_SH3_02_SHOPPING_CENTER"
+          "CL_SH3_02_SHOPPING_CENTER",
+          "EXT_SH3_MALL_BAKERY_20261025",
+          "EXT_SH3_MALL_TONGS_VIEW_20261025",
+          "EXT_SH3_MALL_TONGS_MAP_20261025"
         ],
         "constraints": [],
         "proposals": [
@@ -3357,15 +3346,24 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "powerFailure"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "normalPhaseLabel": "CENTRE COMMERCIAL NORMAL",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SOL DU CENTRE COMMERCIAL",
+          "description": "Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
           {
             "kind": "event",
             "id": "corridorCollapse",
@@ -3393,8 +3391,18 @@
           },
           {
             "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
@@ -3436,9 +3444,7 @@
         }
       ],
       "motifPolicy": {
-        "events": [
-          "powerFailure"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [],
@@ -3447,6 +3453,11 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
           {
             "kind": "event",
             "id": "corridorCollapse",
@@ -3474,8 +3485,18 @@
           },
           {
             "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -4161,22 +4182,21 @@
       "name": "SEWER CHANNEL",
       "source": "sh3",
       "lore": {
-        "premise": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau.",
+        "premise": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
         "canonicalBasis": "CL_SH3_05_UNDERPASS",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "flooded",
-        "name": "EAU STAGNANTE",
-        "moveScale": 0.87,
-        "jumpScale": 0.9,
-        "dodgeScale": 0.9,
-        "friction": 0.8,
-        "knockbackScale": 0.92,
-        "guardRegenScale": 0.92,
-        "splash": true,
-        "description": "L’eau freine les déplacements et les esquives sans rendre le combat illisible."
+        "id": "concrete",
+        "name": "PASSERELLE DU CANAL",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Passerelle après usage du sèche-cheveux ; eau confinée au canal, aucun courant électrique actif dans le versus. Physique et cadrage non certifiés 1:1."
       },
       "shift": {
         "style": "flesh",
@@ -4194,22 +4214,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "waterRipple",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "pipeSteam",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -4220,7 +4225,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "SEWER CHANNEL",
         "correctedName": null,
-        "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau.",
+        "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
         "referenceIds": [
           "CL_SH3_05_UNDERPASS"
         ],
@@ -4272,8 +4277,14 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "water",
+        "automaticFinishers": false,
+        "normalPhaseLabel": "APRÈS LE SÈCHE-CHEVEUX",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PASSERELLE DU CANAL",
+          "description": "Passerelle après usage du sèche-cheveux ; eau confinée au canal, aucun courant électrique actif dans le versus. Physique et cadrage non certifiés 1:1."
+        },
+        "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -4311,18 +4322,61 @@
             "kind": "hazard",
             "id": "bloodTide",
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "waterRipple",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "pipeSteam",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "water",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "sewers:reference:2"
+        ],
         "pendingProposalIds": [
           "sewers:reference:1",
-          "sewers:reference:2",
           "sewers:reference:3",
           "sewers:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "sewers:reference:2",
+          "key": "canalCableSway",
+          "name": "Câble sur la passerelle, eau à niveau fixe",
+          "description": "Remous sous la passerelle et petites vibrations du câble posé sur le sol.",
+          "proposalIndex": 1,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_05_UNDERPASS"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.62,
+            "y": 0.55
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Câble sur la passerelle, eau à niveau fixe",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Passerelle du canal après utilisation du sèche-cheveux",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Câble installé après le sèche-cheveux ; petites vibrations proposées pour le versus. Aucun corps vivant, électricité active, électrocution ou eau sur le plateau de duel."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -4365,6 +4419,21 @@
             "kind": "hazard",
             "id": "bloodTide",
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "waterRipple",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "pipeSteam",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "water",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -12869,21 +12938,21 @@
       "name": "MIDWICH — NIGHTMARE SCHOOL",
       "source": "sh1",
       "lore": {
-        "premise": "École Otherworld de SH1 ; la chaufferie mène à Split Head.",
+        "premise": "École Otherworld de SH1 ; la chaufferie mène à Split Head. Vue retenue : arène de la chaufferie Otherworld, foyer ouvert central entouré de grilles, documenté dans captures sh1_boss_split_head_lizard/sh1_b01_01. Braises lumineuses contenues proposées pour le versus ; ni casiers/classes, sirène répétée, pluie de braises ou Split Head ajouté. Passage de duel devant le foyer et caméra adaptés, collisions non certifiées.",
         "canonicalBasis": "CL_SH1_03_NIGHTMARE_SCHOOL",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "steel",
-        "name": "CAILLEBOTIS MÉTALLIQUE",
-        "moveScale": 0.98,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.98,
-        "friction": 0.86,
-        "knockbackScale": 1.04,
-        "guardRegenScale": 0.94,
-        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+        "name": "DALLE AUTOUR DU FOYER",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Chaufferie Otherworld de Midwich ; passage de duel devant le foyer, cadrage adapté. Règles matérielles désactivées ; caméra et collisions non certifiées 1:1."
       },
       "shift": {
         "style": "rust",
@@ -12899,78 +12968,11 @@
         "enabled": false,
         "referenceState": "fixed-altered"
       },
-      "events": [
-        {
-          "id": "sirenCall",
-          "name": "APPEL DE LA SIRÈNE",
-          "duration": 130,
-          "darkness": 0.18,
-          "radioBoost": 0.5,
-          "gameplayRole": "ambience",
-          "message": "LA SIRÈNE APPELLE",
-          "animation": "sirenPulse"
-        }
-      ],
-      "hazards": [
-        "emberFall"
-      ],
-      "animations": [
-        {
-          "id": "chainSway",
-          "phase": "both",
-          "layer": "foreground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "lockerRattle",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "lightFlicker",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "irregular"
-        }
-      ],
-      "interactions": [
-        {
-          "id": "midwich_nightmare_sirenCall_2",
-          "event": "sirenCall",
-          "name": "APPEL DE LA SIRÈNE",
-          "trigger": "otherworld-halfway",
-          "triggerLabel": "MI-CHEMIN OTHERWORLD",
-          "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
-          "canonicalBasis": "École Otherworld de SH1 ; la chaufferie mène à Split Head.",
-          "referenceIds": [
-            "CL_SH1_03_NIGHTMARE_SCHOOL"
-          ],
-          "proposalId": null
-        }
-      ],
-      "choreography": [
-        {
-          "event": "sirenCall",
-          "prop": "light",
-          "description": "L’avertissement traverse la brume",
-          "layer": "background",
-          "anchor": {
-            "x": 0.297,
-            "y": 0.59
-          },
-          "direction": -1,
-          "evidence": [
-            "CL_SH1_03_NIGHTMARE_SCHOOL"
-          ],
-          "fidelity": "original-versus-adaptation"
-        }
-      ],
+      "events": [],
+      "hazards": [],
+      "animations": [],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "midwich_nightmare",
         "source": "sh1",
@@ -12979,7 +12981,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "MIDWICH — NIGHTMARE SCHOOL",
         "correctedName": null,
-        "locationNote": "École Otherworld de SH1 ; la chaufferie mène à Split Head.",
+        "locationNote": "École Otherworld de SH1 ; la chaufferie mène à Split Head. Vue retenue : arène de la chaufferie Otherworld, foyer ouvert central entouré de grilles, documenté dans captures sh1_boss_split_head_lizard/sh1_b01_01. Braises lumineuses contenues proposées pour le versus ; ni casiers/classes, sirène répétée, pluie de braises ou Split Head ajouté. Passage de duel devant le foyer et caméra adaptés, collisions non certifiées.",
         "referenceIds": [
           "CL_SH1_03_NIGHTMARE_SCHOOL"
         ],
@@ -13029,20 +13031,26 @@
       },
       "referencePolicy": {
         "worldState": "fixed-altered",
-        "allowedEvents": [
-          "sirenCall"
-        ],
-        "allowedHazards": [
-          "emberFall"
-        ],
-        "automaticFinishers": true,
-        "weather": "embers",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "DALLE AUTOUR DU FOYER",
+          "description": "Chaufferie Otherworld de Midwich ; passage de duel devant le foyer, cadrage adapté. Règles matérielles désactivées ; caméra et collisions non certifiées 1:1."
+        },
+        "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
           {
             "kind": "event",
             "id": "lockerSlam",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
             "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
           },
           {
@@ -13056,29 +13064,78 @@
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
           },
           {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
             "kind": "animation",
             "id": "sirenPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "chainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lockerRattle",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "midwich_nightmare:reference:2"
+        ],
         "pendingProposalIds": [
           "midwich_nightmare:reference:1",
-          "midwich_nightmare:reference:2",
           "midwich_nightmare:reference:3",
           "midwich_nightmare:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "midwich_nightmare:reference:2",
+          "key": "boilerHearthGlow",
+          "name": "Braises contenues dans le foyer central",
+          "description": "Les braises respirent sous la grille ; luminosité contrainte pour garder les silhouettes lisibles.",
+          "proposalIndex": 1,
+          "source": "sh1",
+          "evidence": [
+            "CL_SH1_03_NIGHTMARE_SCHOOL"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.61
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Braises contenues dans le foyer central",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Arène de la chaufferie Otherworld de Midwich, foyer ouvert entouré de grilles",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Éclat des braises proposé sous le rebord ; aucun Split Head, pluie de braises, sirène répétée ou casier. Le passage de duel devant le foyer et la caméra sont adaptés, non certifiés 1:1."
+        }
+      ],
       "motifPolicy": {
-        "events": [
-          "sirenCall"
-        ],
-        "hazards": [
-          "emberFall"
-        ],
-        "ambienceOnly": false,
+        "events": [],
+        "hazards": [],
+        "ambienceOnly": true,
         "excludedEvents": [],
         "excludedHazards": [],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
@@ -13089,6 +13146,11 @@
             "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
           },
           {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
             "kind": "hazard",
             "id": "lockerSlam",
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
@@ -13099,9 +13161,34 @@
             "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
           },
           {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
             "kind": "animation",
             "id": "sirenPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "chainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lockerRattle",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -16643,21 +16730,21 @@
       "name": "LAKESIDE AMUSEMENT PARK — SH3",
       "source": "sh3",
       "lore": {
-        "premise": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1.",
+        "premise": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
         "canonicalBasis": "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "wetConcrete",
-        "name": "BÉTON TREMPÉ",
-        "moveScale": 0.96,
-        "jumpScale": 0.96,
-        "dodgeScale": 1.06,
-        "friction": 0.9,
-        "knockbackScale": 1.08,
-        "guardRegenScale": 0.96,
-        "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+        "name": "PLATEAU DU HAPPY CAROUSEL",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1."
       },
       "shift": {
         "style": "flesh",
@@ -16675,15 +16762,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "ferrisWheel",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -16694,7 +16773,7 @@
         "locationStatus": "lieu-documente",
         "catalogueName": "LAKESIDE AMUSEMENT PARK — SH3",
         "correctedName": null,
-        "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1.",
+        "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
         "referenceIds": [
           "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
         ],
@@ -16746,8 +16825,14 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "fog",
+        "automaticFinishers": false,
+        "normalPhaseLabel": "AVANT LA TRANSITION DU CARROUSEL",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLATEAU DU HAPPY CAROUSEL",
+          "description": "Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1."
+        },
+        "weather": "none",
         "interior": false,
         "baselineMotion": true,
         "suppression": [
@@ -16783,25 +16868,58 @@
           },
           {
             "kind": "animation",
+            "id": "ferrisWheel",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "rainSheets",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "lakeside_sh3:reference:2"
+        ],
         "pendingProposalIds": [
           "lakeside_sh3:reference:1",
-          "lakeside_sh3:reference:2",
           "lakeside_sh3:reference:3",
           "lakeside_sh3:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "lakeside_sh3:reference:2",
+          "key": "sh3HorseBob",
+          "name": "Chevaux du Happy Carousel sur mâts fixes",
+          "description": "Chevaux de fond montant et descendant avec un décalage fixe ; conserver leurs points d’ancrage.",
+          "proposalIndex": 1,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.54
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Chevaux du Happy Carousel sur mâts fixes",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Happy Carousel SH3 avant la transition et la rencontre Memory of Alessa",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Trois sculptures de fond interprètent une partie du manège ; va-et-vient proposé, ensemble des douze chevaux et puzzle non reproduits. Aucun poison, monstre ou scène Cybil SH1."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -16844,13 +16962,18 @@
           },
           {
             "kind": "animation",
+            "id": "ferrisWheel",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "rainSheets",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }

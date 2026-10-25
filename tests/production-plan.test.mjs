@@ -156,6 +156,7 @@ test('engine timing remains distinct from unmeasured source frames and no artwor
   assert.match(capture.reason,/restent candidats et ne certifient ni le geste ni la fidélité 1:1/);
   assert.match(capture.reason,/review-preview.*snapshot vérifié.*index HTML local et manifeste SHA256.*sans nouvelle attestation ni import Excel/);
   assert.match(capture.reason,/verify-review.*lecture seule.*extraction fraîche.*image remplacée.*hash déclaré.*recalculé/);
+  assert.match(capture.reason,/videoStreamOrdinal.*même piste pour ffprobe et ffmpeg.*sélection liée aux annotations/);
   assert.equal(plan.metrics.sourceTimingSchema,1);assert.equal(plan.metrics.sourceTimingBatchSchema,1);assert.equal(plan.metrics.sourceTimingReviewSchema,1);assert.equal(plan.metrics.measuredSourceMoves,0);
 });
 

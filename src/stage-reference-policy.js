@@ -21,7 +21,11 @@ const ENVIRONMENT = Object.freeze({
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
   prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER'},
   alchemilla: {weather:'dust',disabledEvents:{referenceLightReply:'Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu.'}}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
-  lakeside_amusement:{weather:'fog'}, lakeside_sh3:{weather:'fog'},
+  lakeside_amusement:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
+  lakeside_sh3:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
+  midwich_nightmare:{weather:'dust',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['lockers','chains','ceiling-lights']},
+  sewers:{weather:'dust',fog:0,terrain:'concrete',automaticFinishers:false,disableAnimations:true},
+  shopping_mall:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true},
   blue_creek:{weather:'water',terrain:'wetConcrete'},
   hotel_otherworld:{weather:'water',terrain:'wetConcrete',removeProps:['fire','mirrors']},
   lakeview:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['portraits','fire','firelight','crtv','screens','monitors','television']}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
@@ -47,6 +51,16 @@ const ENVIRONMENT = Object.freeze({
   ascension_otherworld:{weather:'flicker',removeProps:['altar']},
   st_amelia_residential:{weather:'fog',removeProps:['crtv']},
   alternate_facility:{weather:'flicker',style:'signal'},
+});
+
+// Scene wording and neutral versus footing do not assert a material's source physics.
+const SCENE_PRESENTATION = Object.freeze({
+  lakeview:{source:'sh2',policy:{normalPhaseLabel:'AVANT LA CASSETTE',terrainRules:false,terrainPresentation:{name:'TAPIS DU LOBBY',description:'Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1.'}}},
+  shopping_mall:{source:'sh3',policy:{normalPhaseLabel:'CENTRE COMMERCIAL NORMAL',terrainRules:false,terrainPresentation:{name:'SOL DU CENTRE COMMERCIAL',description:'Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée.'}}},
+  midwich_nightmare:{source:'sh1',policy:{terrainRules:false,terrainPresentation:{name:'DALLE AUTOUR DU FOYER',description:'Chaufferie Otherworld de Midwich ; passage de duel devant le foyer, cadrage adapté. Règles matérielles désactivées ; caméra et collisions non certifiées 1:1.'}}},
+  sewers:{source:'sh3',policy:{normalPhaseLabel:'APRÈS LE SÈCHE-CHEVEUX',terrainRules:false,terrainPresentation:{name:'PASSERELLE DU CANAL',description:'Passerelle après usage du sèche-cheveux ; eau confinée au canal, aucun courant électrique actif dans le versus. Physique et cadrage non certifiés 1:1.'}}},
+  lakeside_amusement:{source:'sh1',policy:{normalPhaseLabel:'MANÈGE DE CYBIL · SH1',terrainRules:false,terrainPresentation:{name:'PLATEAU DU MANÈGE SH1',description:'Manège du parc SH1 ; humidité et matériau du plateau non déterminés. Rotation de fond proposée, règles matérielles désactivées et caméra non certifiée 1:1.'}}},
+  lakeside_sh3:{source:'sh3',policy:{normalPhaseLabel:'AVANT LA TRANSITION DU CARROUSEL',terrainRules:false,terrainPresentation:{name:'PLATEAU DU HAPPY CAROUSEL',description:'Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1.'}}},
 });
 
 /** Small, executable vocabulary. A binding below is required; no keyword tagging. */
@@ -88,6 +102,10 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   atticDustFall: {name:'Poussière sous les chevrons du grenier normal',layer:'background',replaces:[],stageId:'shepherd_house_hc',source:'homecoming',locationScope:'Grenier Shepherd House normal avant la transformation',limits:'Charpente et poussière interprétées depuis la proposition versus ; aucun plan mesuré ni masque, médaille, horloge ou objet de l’état Otherworld importé.'},
   mineBeamDrips: {name:'Gouttes sous les traverses de la cavité',layer:'background',replaces:[],stageId:'devils_pit',source:'downpour',locationScope:'Cavité intérieure des roues hydrauliques, vue depuis la coursive sèche',limits:'Traverses et conduites documentées ; gouttes proposées pour le versus, sans pluie extérieure, cave inondée sur le plateau, démarrage de pompe ou train.'},
   cellBarShadows: {name:'Ombres des barreaux sur la coursive',layer:'background',replaces:[],stageId:'overlook',source:'downpour',locationScope:'Coursive Block A de la prison normale avant la vision du couloir inondé',limits:'Barreaux documentés ; déplacement de leur ombre proposé pour le versus, sans corps en cellule, tours, scène des douches, inondation ou prison Homecoming.'},
+  boilerHearthGlow:{name:'Braises contenues dans le foyer central',layer:'background',replaces:[],stageId:'midwich_nightmare',source:'sh1',locationScope:'Arène de la chaufferie Otherworld de Midwich, foyer ouvert entouré de grilles',limits:'Éclat des braises proposé sous le rebord ; aucun Split Head, pluie de braises, sirène répétée ou casier. Le passage de duel devant le foyer et la caméra sont adaptés, non certifiés 1:1.'},
+  canalCableSway:{name:'Câble sur la passerelle, eau à niveau fixe',layer:'background',replaces:[],stageId:'sewers',source:'sh3',locationScope:'Passerelle du canal après utilisation du sèche-cheveux',limits:'Câble installé après le sèche-cheveux ; petites vibrations proposées pour le versus. Aucun corps vivant, électricité active, électrocution ou eau sur le plateau de duel.'},
+  sh1CarouselOrbit:{name:'Rotation de fond du manège SH1',layer:'background',replaces:[],stageId:'lakeside_amusement',source:'sh1',locationScope:'Manège de la rencontre Cybil dans le parc SH1 original',limits:'Rotation lente proposée avec un cheval fixe comme repère ; silhouettes de sculptures originales partielles, ni Cybil, ni gaz et énigme du Happy Carousel SH3.'},
+  sh3HorseBob:{name:'Chevaux du Happy Carousel sur mâts fixes',layer:'background',replaces:[],stageId:'lakeside_sh3',source:'sh3',locationScope:'Happy Carousel SH3 avant la transition et la rencontre Memory of Alessa',limits:'Trois sculptures de fond interprètent une partie du manège ; va-et-vient proposé, ensemble des douze chevaux et puzzle non reproduits. Aucun poison, monstre ou scène Cybil SH1.'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -123,6 +141,10 @@ const BINDINGS = Object.freeze({
   shepherd_house_hc:[['atticDustFall',1,[.5,.17]]],
   devils_pit:[['mineBeamDrips',0,[.28,.24]]],
   overlook:[['cellBarShadows',0,[.72,.57]]],
+  midwich_nightmare:[['boilerHearthGlow',1,[.5,.61]]],
+  sewers:[['canalCableSway',1,[.62,.55]]],
+  lakeside_amusement:[['sh1CarouselOrbit',1,[.5,.54]]],
+  lakeside_sh3:[['sh3HorseBob',1,[.5,.54]]],
   apartment_world:[['doorReply',1,[.5,.57]]],
   riverside_motel:[['signFlicker',0,[.72,.31]],['curtainBreathe',1,[.29,.38]]],
   shepherds_glen:[['fogLayers',0,[.5,.55]]],
@@ -151,14 +173,14 @@ const BINDINGS = Object.freeze({
 
 // Material matches only. The actual versus attacks/timings remain adaptations.
 const HAZARDS = Object.freeze({
-  midwich_nightmare:['emberFall'], hazel_subway:['trainRush'], otherworld_void:['voidPull'],
+  hazel_subway:['trainRush'], otherworld_void:['voidPull'],
   book_fire:['emberFall'], book_water:['waterSurge'], book_wood:['rootSnare'],
   book_earth:['fallingDebris'], book_steel:['chainSweep'], book_blood:['bloodTide'],
 });
 const EVENT_HAZARDS = Object.freeze({lockerSlam:'lockerSlam',gurneyRush:'gurneyRush',corridorCollapse:'roadCollapse',carouselStart:'carouselSweep',trainRumble:'trainRush',steamRelease:'steamVent',waterRise:'waterSurge',mirrorTurn:'mirrorFracture',rootWake:'rootSnare',voidPull:'voidPull',ashFall:'emberFall',elevatorCall:'elevatorDrop',roomBreath:'roomPulse',stormSurge:'lightningStrike',iceLock:'iceFracture',ritualWake:'ritualSeal'});
 const AMBIENT_EVENTS = Object.freeze({
-  nowhere:['powerFailure','sirenCall'], hospital_nightmare:['sirenCall'], midwich_nightmare:['sirenCall'],
-  shopping_mall:['powerFailure'], nightmare_mall:['powerFailure'], hazel_subway:['powerFailure'],
+  nowhere:['powerFailure','sirenCall'], hospital_nightmare:['sirenCall'],
+  nightmare_mall:['powerFailure'], hazel_subway:['powerFailure'],
   building_world:['powerFailure'], outside_room_302:['powerFailure'],
   looping_hall:['powerFailure'], villa_stairwell:['powerFailure'],
   nightmare_hospital_hc:['powerFailure'], police_station_hc:['powerFailure'], prison_hc:['powerFailure'],
@@ -233,7 +255,7 @@ export function applyStageReferencePolicy(stage, reference) {
   const corrections = ENVIRONMENT[stage.id] || {};
   if(!blocked&&corrections.name)result.name=corrections.name;
   let worldState = blocked ? 'unresolved' : ALTERED.has(stage.id) || stage.source === 'bom' ? 'fixed-altered' : TRANSITIONS.has(stage.id) ? 'versus-transition' : 'fixed-normal';
-  const interior = INTERIOR.has(stage.family) || (stage.id==='devils_pit'&&stage.source==='downpour') || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id);
+  const interior = INTERIOR.has(stage.family) || (stage.id==='devils_pit'&&stage.source==='downpour') || (stage.id==='sewers'&&stage.source==='sh3') || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id);
   result.weather = blocked ? 'none' : corrections.weather || (interior && ['rain','snow','ash'].includes(stage.weather) ? 'dust' : stage.weather);
   // Do not perpetuate the movie's cinder language in unrelated game interiors.
   if (!blocked && result.weather === 'ash' && stage.source !== 'film') result.weather = 'dust';
@@ -279,11 +301,7 @@ export function applyStageReferencePolicy(stage, reference) {
   if (result.weather !== stage.weather) suppression.push({kind:'weather',id:stage.weather,reason:`Ambiance remplacée par ${result.weather} pour conserver le lieu et l’œuvre.`});
   result.referenceTracks = referenceTracks;
   result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&corrections.automaticFinishers!==false&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
-    ...(!blocked&&stage.id==='lakeview'&&stage.source==='sh2'?{
-      normalPhaseLabel:'AVANT LA CASSETTE',
-      terrainRules:false,
-      terrainPresentation:{name:'TAPIS DU LOBBY',description:'Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1.'},
-    }:{}),
+    ...(!blocked&&SCENE_PRESENTATION[stage.id]?.source===stage.source?copy(SCENE_PRESENTATION[stage.id].policy):{}),
     weather:result.weather,interior,baselineMotion:!blocked,suppression,
     hazardFidelity:'Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.',
     renderedProposalIds:referenceTracks.filter(track=>track.eventEnabled!==false).map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id&&track.eventEnabled!==false)),

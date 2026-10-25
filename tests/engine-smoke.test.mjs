@@ -113,10 +113,10 @@ test('blood debt ritual drains health at a deterministic one-second cadence',()=
 
 test('decisive super triggers and completes a stage fatality',()=>{
   const nurse=ROSTER.find(f=>f.id==='sh1_puppet_nurse_012');
-  const engine=makeEngine({p2:nurse,stage:stageById('midwich_nightmare'),fatalities:true,stageFatalities:true,roundsToWin:1});
+  const engine=makeEngine({p2:nurse,stage:stageById('hotel_otherworld'),fatalities:true,stageFatalities:true,roundsToWin:1});
   engine.phase='fight';
   const attacker=engine.actors[0],target=engine.actors[1];
-  target.x=640;target.grounded=true;target.health=10;
+  attacker.x=1030;target.x=1145;target.grounded=true;target.health=10;
   engine.applyHit(attacker,target,attacker.profile.moves.super,1);
   engine.resolveKnockouts();
   assert.equal(engine.phase,'fatality');

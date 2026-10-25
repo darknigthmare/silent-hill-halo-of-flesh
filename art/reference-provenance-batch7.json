@@ -1,0 +1,2551 @@
+{
+  "schema": "halo-batch7-visual-provenance-v1",
+  "reviewedAt": "2026-10-25",
+  "origin": "conversation-image-generation",
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "references": {
+    "schema": "halo-source-visual-references-batch7-v1",
+    "created_utc": "2026-10-25T07:45:34.376183+00:00",
+    "network": "Inherited session proxy/TLS preserved; no bypass. All archived responses HTTP200 unless explicitly logged otherwise.",
+    "repository_changes": "None by researcher",
+    "actors": [
+      {
+        "id": "sh1_romper_010",
+        "name": "Romper",
+        "edition": "Silent Hill original 1999 PS1 model render; region/render processing unestablished",
+        "refs": [
+          {
+            "file": "sh1_romper_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_11.jpg",
+            "status": 200,
+            "sha256": "57759bf6699bef1017c73fc355238ad5965d440a02591b64a3ef5172045a73d9",
+            "bytes": 180394,
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh1_romper_model.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "romper-model",
+            "limits": "One hunched pose: two long arms and broad hands, two bent legs, forward hanging strapped head. Far left foot reaches original image edge; small completion is extrapolated. No source scale/motion measurement.",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm"
+          },
+          {
+            "file": "sh1_romper_guide.png",
+            "url": "https://www.silenthillmemories.net/sh1/creatures/romper.png",
+            "sha256": "5914d1a7f573daef7bcc21fa6aa75db409f1b3ad592f8524c642934b9d881110",
+            "bytes": 72188,
+            "dimensions": [
+              300,
+              350
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh1_romper_guide.png",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "duplicate_model_in_guide",
+            "independent_view_group": "romper-model",
+            "limits": "Same pose as primary; not an independent angle.",
+            "source_page": "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+          }
+        ],
+        "suggested_prompt": "Single hunched Romper, preserve the two long support arms with broad hands and the two bent hind legs of the supplied original model. Keep straps and hanging loops at the forward head. Do not turn a large hand into a third leg. Complete margins only with explicit reconstruction limits.",
+        "source_motion_limit": "Only one directly inspected source model pose; guide describes jumping and pinning but supplies no measured cycle."
+      },
+      {
+        "id": "sh3_double_head_040",
+        "name": "Double Head",
+        "edition": "Silent Hill 3 original 2003 PS2/PC model render; region/render processing unestablished",
+        "refs": [
+          {
+            "file": "sh3_double_head_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_03_double_head.jpg",
+            "status": 200,
+            "sha256": "c73b760fb02bb99555a90edbc8638eaab474657326be518c021da9ea98c76bd6",
+            "bytes": 628312,
+            "dimensions": [
+              3200,
+              2400
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_double_head_model.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "doublehead-model",
+            "limits": "Canine quadruped, bandaged arched body, single cleft head/two jaw structures on one neck. Four limbs, far front paw lifted. Not two separately necked dog heads.",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm"
+          },
+          {
+            "file": "sh3_double_head_guide.png",
+            "url": "https://www.silenthillmemories.net/sh3/creatures/double_head.png",
+            "sha256": "5358d34f0d6e0286f5498a793e342cfb4298ae5b5d552ef7f746c98a1cc90c24",
+            "bytes": 75254,
+            "dimensions": [
+              300,
+              350
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_double_head_guide.png",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "duplicate_model_in_guide",
+            "independent_view_group": "doublehead-model",
+            "limits": "Same pose as primary; not an independent angle.",
+            "source_page": "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+          },
+          {
+            "file": "sh3_game_030515_08_candidate.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_030515_08.jpg",
+            "sha256": "803ce51b67fefdbd0b8d6914a24f5e9db4b83df76179ac9cc28b87365f73e33e",
+            "bytes": 338599,
+            "dimensions": [
+              1506,
+              1147
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_game_030515_08_candidate.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "independent_original_game_angle",
+            "independent_view_group": "doublehead-game-topdown",
+            "limits": "15 May2003 dated original promotional game screenshot. Live bandaged cleft-head dog approaches Heather from upper left, a genuine top-down view distinct from render. Closer in near foreground must not be merged. Dog body in partial darkness; no timing/scale measurement.",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm"
+          }
+        ],
+        "suggested_prompt": "Single original SH3 Double Head, four dog legs, hunched bandaged body, one cleft canine head with the source jaw arrangement and red tongue on one neck. Preserve the lifted far forepaw. No second neck, tail or invented appendage.",
+        "source_motion_limit": "Primary full model pose plus independent living game angle; no measured original cycle. Dead banquet dog remains excluded."
+      },
+      {
+        "id": "sh3_insane_cancer_041",
+        "name": "Insane Cancer",
+        "edition": "Silent Hill 3 original 2003 PS2/PC model render; region/render processing unestablished",
+        "refs": [
+          {
+            "file": "sh3_insane_cancer_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_05_insane_cancer.jpg",
+            "status": 200,
+            "sha256": "cae1d0ac944a71e9e863effb86b45df424b4fbd7338bd35c685cc52a42f42aa1",
+            "bytes": 723775,
+            "dimensions": [
+              2600,
+              2203
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_insane_cancer_model.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "cancer-standing-model",
+            "limits": "Standing obese torso, tiny slumped head, two heavy arms, two short bent legs. Feet close to original lower edge. No independent resting view confirmed.",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm"
+          },
+          {
+            "file": "sh3_insane_cancer_guide.png",
+            "url": "https://www.silenthillmemories.net/sh3/creatures/insane_cancer.png",
+            "sha256": "697d352fd345c3651abd45f593e7dd288ae0e1f48dffe0742df343e112512064",
+            "bytes": 127564,
+            "dimensions": [
+              300,
+              350
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_insane_cancer_guide.png",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "duplicate_model_in_guide",
+            "independent_view_group": "cancer-standing-model",
+            "limits": "Same standing pose as primary; not an independent angle.",
+            "source_page": "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+          },
+          {
+            "file": "sh3_insane_cancer_game_030515_15.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_030515_15.jpg",
+            "sha256": "da20461cc59bb3551ff064ccaa17b29d5a221f10ac62086848cf9bd2bd1262bd",
+            "bytes": 234195,
+            "dimensions": [
+              1506,
+              1147
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_insane_cancer_game_030515_15.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "independent_original_game_arms_raised",
+            "independent_view_group": "cancer-game-arms-raised",
+            "limits": "15 May2003 dated original promotional game screenshot. Insane Cancer raises two arms above its tiny head, matching mottled obese torso. Heather occludes right body and feet are cut by source frame. Genuine static attack-context view, not a complete second body or rest pose; no attack timing, collision or step order established.",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm"
+          }
+        ],
+        "suggested_prompt": "Single original SH3 Insane Cancer in the supplied standing pose: huge obese mottled torso with sores, tiny head folded toward shoulder, two heavy arms and two bent legs. Preserve complete feet. Do not infer a resting pose from textual behavior.",
+        "source_motion_limit": "Primary full standing model plus independent original game arms-raised still; initial lying-down behavior documented only textually. No usable resting image, continuous transition, cycle or measured attack timing."
+      },
+      {
+        "id": "sh4_sniffer_dog_male_053",
+        "name": "Sniffer Dog male",
+        "edition": "Silent Hill 4 The Room original 2004 model render; exact region/render processing unestablished",
+        "refs": [
+          {
+            "file": "sh4_sniffer_model_05.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_05_sniffer_dog.jpg",
+            "status": 200,
+            "sha256": "69e1ab675009a7c8c9f1a3b2b3396e264fdcd795125ea3f8bf96aab702d51e66",
+            "bytes": 473864,
+            "dimensions": [
+              2720,
+              2212
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh4_sniffer_model_05.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "primary_male_model_anatomy",
+            "independent_view_group": "sniffer-male-model",
+            "limits": "Male identified by visible ears, consistent yellow patchy fur and red long tongue. Four legs with near front paw lifted; no independent second male angle.",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          },
+          {
+            "file": "sh4_sniffer_model_08.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_08_sniffer_dog.jpg",
+            "status": 200,
+            "sha256": "6527aef5a55c31adef2257e432270133e38e87e141a2bf2b1017915bc22574fe",
+            "bytes": 82098,
+            "dimensions": [
+              400,
+              433
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh4_sniffer_model_08.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "duplicate_male_model_smaller",
+            "independent_view_group": "sniffer-male-model",
+            "limits": "Same male pose; smaller white-background/logo version, not independent.",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          },
+          {
+            "file": "sh4_sniffer_model_15.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_15_sniffer_dog.jpg",
+            "status": 200,
+            "sha256": "d0828802744a3d0dfa5862ddc08a0137f0b275deedfee09b431633bfcac3fccf",
+            "bytes": 33739,
+            "dimensions": [
+              342,
+              210
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh4_sniffer_model_15.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "variant_comparison",
+            "independent_view_group": "sniffer-male-model",
+            "limits": "Pair comparison: female left/male right. Male repeats primary angle, not second view.",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          },
+          {
+            "file": "sh4_sniffer_guide.png",
+            "url": "https://www.silenthillmemories.net/sh4/monsters/sniffer_dog.png",
+            "sha256": "5a1dca845be6cdaa3a87603007a72326a4a81376df67515bf599cb29adbcea17",
+            "bytes": 122394,
+            "dimensions": [
+              300,
+              350
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh4_sniffer_guide.png",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "duplicate_male_model_in_guide",
+            "independent_view_group": "sniffer-male-model",
+            "limits": "Same male pose, not independent. Guide text explicitly distinguishes male ears/yellow and female no ears/reddish/purple tongue.",
+            "source_page": "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+          },
+          {
+            "file": "sh4_sniffer_game_040330_11_candidate.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/screens/pics/sh4_screen_040330_11.jpg",
+            "sha256": "9928dc1861e4fbc766d6b95d1139ba4f09d5803e1a757ae3e1524ee79eb8f3e0",
+            "bytes": 173021,
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh4_sniffer_game_040330_11_candidate.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "supplement_species_grab_only_variant_unconfirmed",
+            "independent_view_group": "sniffer-grab-game",
+            "limits": "Dated 30 March 2004 pre-release original gameplay: dog grapples Henry, red tongue visible, much of body/ears occluded. Species grab evidence only; cannot certify exact male ear topology or use as full anatomical second view.",
+            "source_page": "https://www.silenthillmemories.net/sh4/screens_en.htm"
+          }
+        ],
+        "suggested_prompt": "Single original SH4 male Sniffer Dog only. Preserve yellow patchy fur, two visible ear structures, one very long red tongue, four dog legs with the source forepaw lifted. Do not borrow the female raw red skin, missing ears or purple tongue.",
+        "source_motion_limit": "One full male model view; supplemental occluded grapple still has unconfirmed variant. No measurable original animation."
+      }
+    ],
+    "stages": [
+      {
+        "id": "shopping_mall",
+        "scene": "normal-helens-bakery",
+        "source": "sh3",
+        "edition": "Silent Hill 3 original 2003 game imagery, not HD/remake claimed; screenshot platform/region and upscaling unestablished",
+        "refs": [
+          {
+            "file": "sh3_normal_mall_bakery_game.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_06.jpg",
+            "status": 200,
+            "sha256": "d6f09f1ff5e2b099e6d85653603009b89b6410db5dfa0e013cef41965b0e8204",
+            "bytes": 219605,
+            "dimensions": [
+              1024,
+              768
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_normal_mall_bakery_game.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "primary_exact_room_game_view",
+            "independent_view_group": "bakery-game-a",
+            "limits": "Heather in bakery: wood panel walls, green jars, pastry counter, wire rack, brown tiled floor. This is an actual game view, not an empty combat plane.",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm"
+          },
+          {
+            "file": "sh3_bakery_tongs_view.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_tongs_a.jpg",
+            "sha256": "831aed91f435cd9ba880a4ee0521fd75d6d3757323740a5fbe816ff3d7f166bf",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "bytes": 422849,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_bakery_tongs_view.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "independent_second_game_angle",
+            "independent_view_group": "bakery-game-b",
+            "limits": "Different camera at tongs counter: wood framed door, wall panels, green-lid jars, pastry shelves and foreground wire rack align with first room. Heather and foreground bread obstruct parts of source floor.",
+            "source_page": "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm"
+          },
+          {
+            "file": "sh3_bakery_tongs_map.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_tongs_b.jpg",
+            "sha256": "b7f933c356060e3ee9e42dc6ad00dc3261a6c96d832b043f9f15e0a09ea57f4a",
+            "dimensions": [
+              1920,
+              1080
+            ],
+            "bytes": 267244,
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3_bakery_tongs_map.jpg",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "room_position_map",
+            "independent_view_group": "bakery-map",
+            "limits": "Guide tongs map marker on second floor. Map supports contextual room position, no source camera or exact combat geometry measurement.",
+            "source_page": "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm"
+          },
+          {
+            "file": "sh3-normal-mall-guide.htm",
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+            "status": 200,
+            "sha256": "505776f47b3d3dce3842827a630c73d05956bdecb9b2833cc4a13deed4ad9a3e",
+            "bytes": 50040,
+            "images": [
+              "walkthrough/pics/sh3_02_shopping_center_01.jpg",
+              "walkthrough/thumbs/sh3_02_shopping_center_01.jpg",
+              "unlockables_secrets/pics/heather_beam.jpg",
+              "unlockables_secrets/thumbs/heather_beam.jpg",
+              "walkthrough/pics/sh3_extra_weapon_unlimited_submachine_gun.jpg",
+              "walkthrough/thumbs/sh3_extra_weapon_unlimited_submachine_gun.jpg",
+              "walkthrough/pics/sh3_02_shopping_center_02.jpg",
+              "walkthrough/thumbs/sh3_02_shopping_center_02.jpg",
+              "walkthrough/pics/sh3_02_shopping_center_map_location.jpg",
+              "walkthrough/thumbs/sh3_02_shopping_center_map_location.jpg",
+              "walkthrough/pics/sh3_02_key_taken_with_tongs_a.jpg",
+              "walkthrough/thumbs/sh3_02_key_taken_with_tongs_a.jpg",
+              "walkthrough/pics/sh3_02_key_taken_with_tongs_b.jpg",
+              "walkthrough/thumbs/sh3_02_key_taken_with_tongs_b.jpg",
+              "walkthrough/pics/sh3_extra_weapon_beam_saber.jpg",
+              "walkthrough/thumbs/sh3_extra_weapon_beam_saber.jpg",
+              "walkthrough/pics/sh3_02_tongs_a.jpg",
+              "walkthrough/thumbs/sh3_02_tongs_a.jpg",
+              "walkthrough/pics/sh3_02_tongs_b.jpg",
+              "walkthrough/thumbs/sh3_02_tongs_b.jpg",
+              "walkthrough/pics/sh3_extra_weapon_flamethrower.jpg",
+              "walkthrough/thumbs/sh3_extra_weapon_flamethrower.jpg",
+              "walkthrough/pics/sh3_extra_weapon_flamethrower_flyer.jpg",
+              "walkthrough/pics/sh3_02_shakespeare_anthology_a.jpg",
+              "walkthrough/thumbs/sh3_02_shakespeare_anthology_a.jpg",
+              "walkthrough/pics/sh3_02_shakespeare_anthology_b.jpg",
+              "walkthrough/thumbs/sh3_02_shakespeare_anthology_b.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_01.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_01.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_02.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_02.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_easy_01.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_easy_01.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_easy_02.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_easy_02.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_normal_01.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_normal_01.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_normal_02.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_normal_02.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_hard_01.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_hard_01.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_hard_02.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_hard_02.jpg",
+              "puzzles/pics/sh3_shakespeare_anthology_hard_03.jpg",
+              "puzzles/thumbs/sh3_shakespeare_anthology_hard_03.jpg",
+              "walkthrough/pics/sh3_02_shopping_center_03.jpg",
+              "walkthrough/thumbs/sh3_02_shopping_center_03.jpg"
+            ],
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/sh3-normal-mall-guide.htm",
+            "http_status": 200,
+            "visually_inspected": true,
+            "role": "exact_room_text_guide",
+            "independent_view_group": "bakery-guide",
+            "limits": "Guide places Helen’s Bakery in regular mall section and tongs near pastries. Flamethrower is Extra New Game bonus; excluded from initial normal room.",
+            "source_page": "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm"
+          }
+        ],
+        "identity_status": "documented exact normal Helen’s Bakery before mall shift; catalog shopping_mall, source sh3",
+        "source_geometry_certified": false,
+        "versus_adaptation_required": "Remove Heather, clear foreground floor and reframe/push counter/rack to back for two fighter supports. Any frontality, wider plane, textures, furniture spacing or ceiling geometry is an adaptation, not source-exact architecture.",
+        "suggested_prompt": "One coherent normal Helen’s Bakery room from original SH3 refs: wood panel walls, dark wood glass-panel door left, tongs/pastry counter and green-lidded jars at back, metal wire shelf right, brown tiled floor. Clear lower30% for versus by explicit camera/furniture adaptation; do not merge mall corridor, bookstore, nightmare shop or extra-mode Flamethrower."
+      }
+    ],
+    "excluded": [
+      {
+        "file": "sh4_sniffer_model_09.jpg",
+        "reason": "Female variant: no ears, reddish exposed skin and purple tongue; excluded from male actor.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_09_sniffer_dog.jpg",
+        "status": 200,
+        "sha256": "3c850b008aa17578620f8b92d12dc26cce5a0d2931bf18b43bc45b8af04f5aa9",
+        "bytes": 58634,
+        "dimensions": [
+          400,
+          317
+        ]
+      },
+      {
+        "file": "sh3_double_head_game_38_candidate.jpg",
+        "reason": "Actual full image shows Nurses, no Double Head; misleading candidate filename is historical search artifact only.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_38.jpg",
+        "status": 200,
+        "sha256": "f5101912c53824a9ac7f99d429ca12b38512d1578ecf8bacdd447961691c6bb1",
+        "bytes": 300503,
+        "dimensions": [
+          1024,
+          768
+        ]
+      },
+      {
+        "file": "sh3_insane_cancer_game_39.jpg",
+        "reason": "Covered body/chair arrangement in hospital room; identity not verified and does not establish Insane Cancer. Misleading search filename explicitly excluded.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_39.jpg",
+        "status": 200,
+        "sha256": "8dc7da098f281f9e6d3f795d9db61278441e2dfa376cd023c10cd260e482b740",
+        "bytes": 168678,
+        "dimensions": [
+          1024,
+          768
+        ]
+      },
+      {
+        "file": "sh3_insane_cancer_rest_game_10.jpg",
+        "reason": "Body under drape on wheeled cart near escalator, not verified Insane Cancer; no resting actor evidence.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_10.jpg",
+        "sha256": "c4014257843c27a1ca28ffed3fd3c377a4235ac3df61a163e8d22b4c38e27b5f",
+        "bytes": 190381,
+        "dimensions": [
+          1024,
+          768
+        ]
+      },
+      {
+        "file": "sh3_double_head_game_12.jpg",
+        "reason": "Dead ordinary dog on banquet platter; not verified living Double Head actor, cannot infer pose/anatomy from it.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_12.jpg",
+        "sha256": "9b56bd27499702aa60cc38c05249d3145dc46df92875f1155031b524506a55b3",
+        "bytes": 240834,
+        "dimensions": [
+          1024,
+          768
+        ]
+      },
+      {
+        "file": "sh4_sniffer_game_040330_17_candidate.jpg",
+        "reason": "Actual full image shows Twin Victim and ghost, not Sniffer Dog.",
+        "visually_inspected": true,
+        "url": "https://www.silenthillmemories.net/sh4/screens/pics/sh4_screen_040330_17.jpg",
+        "sha256": "b8e61004bf35c7f21b9f24cb39695e2eb61a4c9a134f0785b9c2e8e7c2fc8e60",
+        "bytes": 132853,
+        "dimensions": [
+          1024,
+          768
+        ]
+      },
+      {
+        "subjects": [
+          "Mannequin",
+          "Alessa SMG"
+        ],
+        "reason": "Prior tool refusals respected; no new request or attempt."
+      }
+    ],
+    "supplements": {
+      "metadata_archives": [
+        "eighth-download-metadata.json",
+        "eleventh-download-metadata.json",
+        "fifth-download-metadata.json",
+        "fourth-download-metadata.json",
+        "initial-download-metadata.json",
+        "ninth-download-metadata.json",
+        "second-download-metadata.json",
+        "seventh-download-metadata.json",
+        "sixth-download-metadata.json",
+        "tenth-download-metadata.json",
+        "third-download-metadata.json",
+        "twelfth-download-metadata.json"
+      ],
+      "inspection_scope": "Every selected full reference and excluded full candidate inspected directly. Search thumbnails inspected: SH3 020902_01..20,020923_01..16,030122_01..16, final01..56; SH4PC01..35,040330_01..18; SH1final01..60. Thumbnail search does not constitute usable full actor anatomy proof. Remaining unselected pages/files are archives only. SH3 dated030515_01..17 thumbnails and full030515_08/15 inspected subsequently; two confirmed independent actor game views added."
+    },
+    "video_search": {
+      "date": "2026-10-25",
+      "pages": [
+        {
+          "file": "sh1-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh1/videos_en.htm",
+          "sha256": "57c61d8054f4c2bf43a353f3e282613c9dca0873b121f5a9b5e78400ad9036fd",
+          "bytes": 13031
+        },
+        {
+          "file": "sh3-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh3/videos_en.htm",
+          "sha256": "4cf73b003116fb27f4ccd1f52b3783ef6ebadcc119c76e7163cfa377cfd5b516",
+          "bytes": 16417
+        },
+        {
+          "file": "sh4-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh4/videos_en.htm",
+          "sha256": "4628975f0d466757abb4cacc2b91c7cec318f1ad8dd409ea4b9007df7600189e",
+          "bytes": 17566
+        }
+      ],
+      "youtube_embed_count": 30,
+      "direct_media_links": [],
+      "usable_video": false,
+      "limit": "Bounded original SHM video-index search: 6+10+14 YouTube embeds, zero direct mp4/wmv/mpeg/mpg/avi/mov links. No bypass, capture, FPS, timing or cycle certification."
+    },
+    "candidate_review": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/candidate-review.json",
+    "technical_http_review_pending": false,
+    "source_fidelity_certified": false,
+    "final_review_frozen": true,
+    "technical_http_review": {
+      "build_reviewed": "dist",
+      "path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/visual-http-review.json",
+      "sha256": "1bbb3a54f3a7bf29f327292062957810b7d68a530336f908de1a782cef3a6d86",
+      "blocking_findings": [],
+      "passed": true,
+      "dist_review_pending": false,
+      "source_report": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/report.json",
+      "final_dist_report": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "final_dist_report_sha256": "1207e783fb3b27a5c799577c5f622c4424f72165fed01b9e45a203e68e530777"
+    },
+    "dist_review_pending": false
+  },
+  "candidateReview": {
+    "schema": "halo-candidate-review-batch7-v1",
+    "reviewer": "batch4_visual_refs",
+    "created_utc": "2026-10-25T07:45:34.530178+00:00",
+    "source_provenance": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/provenance.json",
+    "historical_reviews": [
+      {
+        "catalog_id": "sh1_romper_010",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Two long support arms/broad hands and two bent legs retained; no third leg or added arm.",
+          "Far left rear foot completed beyond source edge; dark toes/hand detail and contrast amplified. Full opaque silhouette inside margins 15/10/23/13px.",
+          "One static pose; source-facing 3D support depth and source scale unmeasured."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          15,
+          10,
+          1425,
+          1073
+        ],
+        "alpha_bbox_gt8": [
+          17,
+          12,
+          1423,
+          1071
+        ],
+        "alpha_bbox_gt128": [
+          18,
+          13,
+          1422,
+          1071
+        ]
+      },
+      {
+        "catalog_id": "sh3_double_head_040",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Four legs retained including far lifted forepaw, cleft jaw structures on a single neck; no second independently necked head.",
+          "Texture/bandage contrast amplified. Six left-edge pixels have alpha1, but silhouette alpha>8 is inside bbox[49,126,1408,972]; no real limb crop.",
+          "Generated static pose follows model. Independent original top-down game view confirms live cleft-head/bandaged dog, but provides no original cycle, source scale or hitbox measurement."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          23,
+          1432,
+          1064
+        ],
+        "alpha_bbox_gt8": [
+          49,
+          126,
+          1408,
+          972
+        ],
+        "alpha_bbox_gt128": [
+          50,
+          127,
+          1405,
+          971
+        ]
+      },
+      {
+        "catalog_id": "sh3_insane_cancer_041",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+        "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+        "dimensions": [
+          1363,
+          1154
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Two arms and two bent legs plus tiny slumped head retained, all extremities complete.",
+          "Strong red/yellow/white contrast and sore detail heightened versus model. Alpha>8 margins96/17/115/12px; tiny low-alpha dust reaches image edges, without real silhouette crop.",
+          "Generated candidate uses standing model pose. Separate original game still shows arms raised but body is partly occluded/cropped; no second generated pose, resting image, transition or measured cycle accepted."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          15,
+          1343,
+          1154
+        ],
+        "alpha_bbox_gt8": [
+          96,
+          17,
+          1248,
+          1142
+        ],
+        "alpha_bbox_gt128": [
+          97,
+          18,
+          1246,
+          1141
+        ]
+      },
+      {
+        "catalog_id": "sh4_sniffer_dog_male_053",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+        "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+        "dimensions": [
+          1391,
+          1131
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Male ear structures, yellow fur and long red tongue retained; female anatomy/purple tongue excluded. Four legs with source lifted forepaw remain.",
+          "Yellow saturation/fur microdetail amplified. Red tongue complete. Alpha>8 margins164/17/204/15px; low-alpha dust outside silhouette does not crop anatomy.",
+          "3D support depth means paws have differing source-image heights; versus ground anchor needs runtime inspection and remains an adaptation."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          15,
+          1375,
+          1131
+        ],
+        "alpha_bbox_gt8": [
+          164,
+          17,
+          1187,
+          1116
+        ],
+        "alpha_bbox_gt128": [
+          165,
+          22,
+          1185,
+          1116
+        ]
+      },
+      {
+        "catalog_id": "shopping_mall",
+        "clip_key": "normal-helens-bakery",
+        "path": "/workspace/generated_images/exec-42e1a07b-0a99-4091-bd32-f97fb479d155.png",
+        "sha256": "0e26701007893594c037c681332c69a411c75cbea2c81436f55c1fa95a407b67",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Same source room ensemble: wood paneled walls and glass-panel wooden door, green jars/pastry counter and wire shelf. No unrelated store/nightmare montage.",
+          "Camera frontality, counter/rack position and enlarged brown-tile foreground are explicit versus adaptations. Heather and foreground bread removed. Textures, small packages and prop spacing reconstructed.",
+          "Final DIST desktop/mobile captures match frozen source and confirm continuous tile floor at both actual fighter positions with complete actors. Camera/furniture/foreground are versus adaptations; no source architecture or geometry certification."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "geometry_review": {
+          "versus_floor_plane_visually_clear_at_83_percent": true,
+          "needs_final_http_capture_check": false,
+          "source_geometry_certified": false,
+          "camera_and_furniture_adapted": true,
+          "source_http_checked": true,
+          "dist_review_pending": false,
+          "final_dist_checked": true
+        }
+      }
+    ],
+    "final_selection": {
+      "romper": {
+        "catalog_id": "sh1_romper_010",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Two long support arms/broad hands and two bent legs retained; no third leg or added arm.",
+          "Far left rear foot completed beyond source edge; dark toes/hand detail and contrast amplified. Full opaque silhouette inside margins 15/10/23/13px.",
+          "One static pose; source-facing 3D support depth and source scale unmeasured."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          15,
+          10,
+          1425,
+          1073
+        ],
+        "alpha_bbox_gt8": [
+          17,
+          12,
+          1423,
+          1071
+        ],
+        "alpha_bbox_gt128": [
+          18,
+          13,
+          1422,
+          1071
+        ]
+      },
+      "double_head": {
+        "catalog_id": "sh3_double_head_040",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Four legs retained including far lifted forepaw, cleft jaw structures on a single neck; no second independently necked head.",
+          "Texture/bandage contrast amplified. Six left-edge pixels have alpha1, but silhouette alpha>8 is inside bbox[49,126,1408,972]; no real limb crop.",
+          "Generated static pose follows model. Independent original top-down game view confirms live cleft-head/bandaged dog, but provides no original cycle, source scale or hitbox measurement."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          23,
+          1432,
+          1064
+        ],
+        "alpha_bbox_gt8": [
+          49,
+          126,
+          1408,
+          972
+        ],
+        "alpha_bbox_gt128": [
+          50,
+          127,
+          1405,
+          971
+        ]
+      },
+      "insane_cancer": {
+        "catalog_id": "sh3_insane_cancer_041",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+        "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+        "dimensions": [
+          1363,
+          1154
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Two arms and two bent legs plus tiny slumped head retained, all extremities complete.",
+          "Strong red/yellow/white contrast and sore detail heightened versus model. Alpha>8 margins96/17/115/12px; tiny low-alpha dust reaches image edges, without real silhouette crop.",
+          "Generated candidate uses standing model pose. Separate original game still shows arms raised but body is partly occluded/cropped; no second generated pose, resting image, transition or measured cycle accepted."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          15,
+          1343,
+          1154
+        ],
+        "alpha_bbox_gt8": [
+          96,
+          17,
+          1248,
+          1142
+        ],
+        "alpha_bbox_gt128": [
+          97,
+          18,
+          1246,
+          1141
+        ]
+      },
+      "sniffer_male": {
+        "catalog_id": "sh4_sniffer_dog_male_053",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+        "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+        "dimensions": [
+          1391,
+          1131
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Male ear structures, yellow fur and long red tongue retained; female anatomy/purple tongue excluded. Four legs with source lifted forepaw remain.",
+          "Yellow saturation/fur microdetail amplified. Red tongue complete. Alpha>8 margins164/17/204/15px; low-alpha dust outside silhouette does not crop anatomy.",
+          "3D support depth means paws have differing source-image heights; versus ground anchor needs runtime inspection and remains an adaptation."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_gt0": [
+          0,
+          15,
+          1375,
+          1131
+        ],
+        "alpha_bbox_gt8": [
+          164,
+          17,
+          1187,
+          1116
+        ],
+        "alpha_bbox_gt128": [
+          165,
+          22,
+          1185,
+          1116
+        ]
+      },
+      "helens_bakery": {
+        "catalog_id": "shopping_mall",
+        "clip_key": "normal-helens-bakery",
+        "path": "/workspace/generated_images/exec-42e1a07b-0a99-4091-bd32-f97fb479d155.png",
+        "sha256": "0e26701007893594c037c681332c69a411c75cbea2c81436f55c1fa95a407b67",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_static_candidate_technical_dist_review_passed",
+        "visual_notes": [
+          "Same source room ensemble: wood paneled walls and glass-panel wooden door, green jars/pastry counter and wire shelf. No unrelated store/nightmare montage.",
+          "Camera frontality, counter/rack position and enlarged brown-tile foreground are explicit versus adaptations. Heather and foreground bread removed. Textures, small packages and prop spacing reconstructed.",
+          "Final DIST desktop/mobile captures match frozen source and confirm continuous tile floor at both actual fighter positions with complete actors. Camera/furniture/foreground are versus adaptations; no source architecture or geometry certification."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false,
+        "geometry_review": {
+          "versus_floor_plane_visually_clear_at_83_percent": true,
+          "needs_final_http_capture_check": false,
+          "source_geometry_certified": false,
+          "camera_and_furniture_adapted": true,
+          "source_http_checked": true,
+          "dist_review_pending": false,
+          "final_dist_checked": true
+        }
+      }
+    },
+    "overall": {
+      "verdict": "accept_all_five_static_candidates_with_explicit_limits",
+      "blocking_findings": [],
+      "source_fidelity_certified": false,
+      "certified_1_to_1": false
+    },
+    "technical_http_review_pending": false,
+    "final_review_frozen": true,
+    "technical_http_review": {
+      "build_reviewed": "dist",
+      "path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/visual-http-review.json",
+      "sha256": "1bbb3a54f3a7bf29f327292062957810b7d68a530336f908de1a782cef3a6d86",
+      "blocking_findings": [],
+      "passed": true,
+      "dist_review_pending": false,
+      "source_report": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/report.json",
+      "final_dist_report": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "final_dist_report_sha256": "1207e783fb3b27a5c799577c5f622c4424f72165fed01b9e45a203e68e530777"
+    },
+    "dist_review_pending": false,
+    "source_fidelity_certified": false
+  },
+  "delivery": [
+    {
+      "id": "sh1_romper_010",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+      "inputSha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+      "frames": [
+        {
+          "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+          "bytes": 1093300,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            17,
+            12,
+            1422,
+            1071
+          ],
+          "pixelSHA256": "c13c0c02eef68c571bd1a5000558b95d907cc04603a314ac8bdc8c06016faf8f",
+          "transparentFraction": 0.68422,
+          "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.98619
+          ],
+          "bodyHeight": 0.97,
+          "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+          "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_double_head_040",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+      "inputSha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+      "frames": [
+        {
+          "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+          "bytes": 1433387,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            50,
+            127,
+            1406,
+            972
+          ],
+          "pixelSHA256": "cbab4646b87969eba096de4a3595791248179ebfd023f8adc34bb56be54fba2e",
+          "transparentFraction": 0.64678,
+          "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+          "facing": -1,
+          "anchor": [
+            0.56,
+            0.89503
+          ],
+          "bodyHeight": 0.78,
+          "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+          "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_insane_cancer_041",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+      "inputSha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+      "frames": [
+        {
+          "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+          "bytes": 1763911,
+          "width": 1363,
+          "height": 1154,
+          "visibleBounds": [
+            97,
+            17,
+            1246,
+            1141
+          ],
+          "pixelSHA256": "4dfc4627242b60700561492e6abc0426be6181e4185fbeee18a56054ce7179ba",
+          "transparentFraction": 0.55492,
+          "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+          "facing": 1,
+          "anchor": [
+            0.52,
+            0.98873
+          ],
+          "bodyHeight": 0.97,
+          "sourceFile": "exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+          "sourceSHA256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe debout SH3 original : énorme tronc, petite tête rabattue, deux bras et deux jambes. Pieds complets ; rouge, texture et contraste amplifiés, faibles poussières alpha hors silhouette retenue. Aucune pose couchée ou transition inférée ; proportions et appuis de versus non mesurés, aucun cycle ni attribution BoM ou certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+      "inputSha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+      "frames": [
+        {
+          "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+          "bytes": 1525989,
+          "width": 1391,
+          "height": 1131,
+          "visibleBounds": [
+            164,
+            18,
+            1185,
+            1116
+          ],
+          "pixelSHA256": "62617d6bd7afdba38ba4d6f1bbca0be7435d7eaaab3b844a9c417e8627ff36ef",
+          "transparentFraction": 0.63092,
+          "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+          "facing": -1,
+          "anchor": [
+            0.57,
+            0.98674
+          ],
+          "bodyHeight": 0.97,
+          "sourceFile": "exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+          "sourceSHA256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe Sniffer mâle SH4 : oreilles, fourrure jaune et longue langue rouge distinctes de la femelle sans oreilles à langue violette. Quatre pattes dont une avant levée et langue complète ; queue non isolable avec certitude dans cette vue. Saturation accrue, membres à hauteurs différentes dans la perspective source. Doublon avec logo et variante femelle écartés ; calibration versus, aucun cycle ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "shopping_mall",
+      "source": "sh3",
+      "scene": "normal-helens-bakery",
+      "inputFile": "exec-42e1a07b-0a99-4091-bd32-f97fb479d155.png",
+      "path": "assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+      "sha256": "0e26701007893594c037c681332c69a411c75cbea2c81436f55c1fa95a407b67",
+      "bytes": 2558681,
+      "width": 1672,
+      "height": 941,
+      "notes": "Helen’s Bakery normale SH3 avant basculement, comptoir des pinces et rayonnages de cette seule pièce. Caméra frontalisée, mobilier repoussé et carrelage étendu au premier plan adaptés au versus ; aucune boutique voisine, arme Extra ni géométrie ou animation 1:1 certifiée.",
+      "geometry": {
+        "ceiling": true
+      },
+      "certifiedOneToOne": false
+    }
+  ],
+  "limits": [
+    "All five delivered images are static unverified candidates; no source timing, animation, collision or 1:1 certification is inferred.",
+    "Romper pose and four supports follow one full original model view. The cropped rear-foot edge is reconstructed, and scale, perspective and opposite side remain unmeasured.",
+    "Double Head is one canine neck with a split head/two jaws, not two separate dog heads. A separate actual game view corroborates identity but does not expose all hidden limb connections.",
+    "Insane Cancer standing model is corroborated by an original game view with arms raised and a partly occluded body. No full raised-arm or lying pose was inferred or delivered.",
+    "Sniffer male ears, yellow fur and red tongue are retained; female and Arcade art are excluded. A pre-release species capture does not certify the sex variant. Its tail is not independently isolable in the model view.",
+    "Generated contrast and saturated skin/fur details differ from source. Trace alpha at low opacity outside the accepted silhouette remains documented; visible bounds use the importer threshold.",
+    "Bakery is one normal SH3 room before the transition. Frontal camera, larger clear tile foreground and furniture setback are authored versus adaptations, without a certified original floorplan.",
+    "Prior Mannequin and Alessa SMG image-tool refusals remain respected; neither subject was retried in this pass."
+  ],
+  "finalBrowserVisualReview": {
+    "schema": "halo-visual-http-review-batch7-final-dist-v1",
+    "reviewer": "batch4_visual_refs",
+    "review_date_utc": "2026-10-25T08:30:57.345478+00:00",
+    "build_reviewed": "dist",
+    "status": "pass_final_dist_with_documented_nonblocking_reservations",
+    "blocking_findings": [],
+    "scope": "Final dist proof:50PNG digests compared with frozen source;47 byte-identical and3changed, all3changed images directly reinspected.7initial targeted source reviews carry forward via hash comparison, with2additional changed views:9unique reviewed screenshots. Four new actor inspectors and Bakery desktop/mobile/pause retained. No repository/runtime/texture/PNG modifications by reviewer.",
+    "captures": [
+      {
+        "file": "combat-new-pngs-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/combat-new-pngs-shopping_mall.png",
+        "sha256": "31284f37c092854cfe7ca4728df4b6d71f755dc8439e3ae74e781fa2415067e7",
+        "source_sha256": "31284f37c092854cfe7ca4728df4b6d71f755dc8439e3ae74e781fa2415067e7",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "inspector-sh1_romper_010.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_romper_010.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_romper_010.png",
+        "sha256": "c784ca5b6624d943f29ecd3e465a00d9b97ac5174e24ec034e13e793a5d4e0ec",
+        "source_sha256": "c784ca5b6624d943f29ecd3e465a00d9b97ac5174e24ec034e13e793a5d4e0ec",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "inspector-sh3_double_head_040.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_double_head_040.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_double_head_040.png",
+        "sha256": "5fa53f6dfa7257c6d7aa7ec4df5daeff532abeaa60843ef40ea833b762bed8c4",
+        "source_sha256": "5fa53f6dfa7257c6d7aa7ec4df5daeff532abeaa60843ef40ea833b762bed8c4",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "inspector-sh3_insane_cancer_041.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_insane_cancer_041.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_insane_cancer_041.png",
+        "sha256": "562dc5a0ea0c7806ed1a5227c3db6846b6041ce4a710a80d46b4b1bf51553c78",
+        "source_sha256": "562dc5a0ea0c7806ed1a5227c3db6846b6041ce4a710a80d46b4b1bf51553c78",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "inspector-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_sniffer_dog_male_053.png",
+        "sha256": "60ba96cf29a9eb9778ef195da989a540035023295b81038d892c8b972dc0e185",
+        "source_sha256": "89e22605f4a7562b9856661209a03c7b196e5574620e31071ace91f48b4f8616",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview.",
+        "build": "dist",
+        "review_method": "Changed final dist image directly reinspected"
+      },
+      {
+        "file": "missing-poses-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_sniffer_dog_male_053.png",
+        "sha256": "974d6fd16febceb4ff02be84e7e8ef3ae6ca2131b6285ffa1ab2ec41e8d0dc0d",
+        "source_sha256": "ba0b81ce3e924e7038e8dee3e8efd12577b35c27f118283e4c213775fb99f4bd",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview.",
+        "build": "dist",
+        "review_method": "Changed final dist image directly reinspected"
+      },
+      {
+        "file": "mobile-new-pngs-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-new-pngs-shopping_mall.png",
+        "sha256": "735ce8cf7164ac3948d08bd7cb180ef9909145743d3ef0cb54281fc71ae7839c",
+        "source_sha256": "735ce8cf7164ac3948d08bd7cb180ef9909145743d3ef0cb54281fc71ae7839c",
+        "dimensions": [
+          430,
+          932
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "paused-new-art-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/paused-new-art-shopping_mall.png",
+        "sha256": "f1a6a559319c18dddceaf5b3cd02773736bd55e63f243ff7e99d484885197fc1",
+        "source_sha256": "f1a6a559319c18dddceaf5b3cd02773736bd55e63f243ff7e99d484885197fc1",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true,
+        "build": "dist",
+        "review_method": "Frozen source directly inspected; final dist PNG is byte-identical"
+      },
+      {
+        "file": "touch-taunt-pointing-twin-victim.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+        "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+        "source_sha256": "d0f81abf3f89b7f794cd01dae992834ac8007a34f18230eb2ee3fa91b2eb7f34",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "changed_pixel_bbox": [
+          1228,
+          816,
+          1286,
+          982
+        ],
+        "changed_pixel_count": 3068,
+        "change_review": "Only right touch-control visual feedback differs, bbox[1228,816,1286,982]. Twin pointing silhouette, heads, support hand, Slurper, floor and HUD remain identical; no pause overlay and pointing still is visibly active.",
+        "build": "dist",
+        "review_method": "Changed final dist image directly reinspected"
+      }
+    ],
+    "all_capture_digest_inventory": [
+      {
+        "file": "combat-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/combat-new-pngs-alchemilla.png",
+        "sha256": "7d781ee0ae0532e8f2d8cea4ee530a3d2ecb49ca9cdb92ed97f41ffae7c00c23",
+        "source_sha256": "7d781ee0ae0532e8f2d8cea4ee530a3d2ecb49ca9cdb92ed97f41ffae7c00c23",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "combat-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/combat-new-pngs-lakeview.png",
+        "sha256": "ab4237fadcc670492f9edbec07c0c053b19f7713e77d664d3770954362efc8e1",
+        "source_sha256": "ab4237fadcc670492f9edbec07c0c053b19f7713e77d664d3770954362efc8e1",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "combat-new-pngs-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/combat-new-pngs-shopping_mall.png",
+        "sha256": "31284f37c092854cfe7ca4728df4b6d71f755dc8439e3ae74e781fa2415067e7",
+        "source_sha256": "31284f37c092854cfe7ca4728df4b6d71f755dc8439e3ae74e781fa2415067e7",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "combat-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/combat-new-pngs-woodside.png",
+        "sha256": "379e5d55f18caceea88e45250b2d4fd551cab3005edf23ae8291e6ad252c2c45",
+        "source_sha256": "379e5d55f18caceea88e45250b2d4fd551cab3005edf23ae8291e6ad252c2c45",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-pointing-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-pointing-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-pointing-sh4_twin_victim_059.png",
+        "sha256": "97a412530ccaf3bcf5f2dc4fdae90faa58f90dd36d300608cc87dc7d73effc4b",
+        "source_sha256": "97a412530ccaf3bcf5f2dc4fdae90faa58f90dd36d300608cc87dc7d73effc4b",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_floatstinger_016.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_floatstinger_016.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_floatstinger_016.png",
+        "sha256": "c2e069fe446c0b6ba8144d36543a853575b3e0deb12806d2bb4d635783d05a8a",
+        "source_sha256": "c2e069fe446c0b6ba8144d36543a853575b3e0deb12806d2bb4d635783d05a8a",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_groaner_003.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_groaner_003.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_groaner_003.png",
+        "sha256": "5154a496ee9353ad7f522d0d8eb51ad75b7b8b45617f6b2153b8c8873faf8c21",
+        "source_sha256": "5154a496ee9353ad7f522d0d8eb51ad75b7b8b45617f6b2153b8c8873faf8c21",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_hanged_scratcher_011.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_hanged_scratcher_011.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_hanged_scratcher_011.png",
+        "sha256": "18829c16b26a480f8aa58098c83af326b6f48a70bad0fa88bd8f65b1dc22466d",
+        "source_sha256": "18829c16b26a480f8aa58098c83af326b6f48a70bad0fa88bd8f65b1dc22466d",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_night_flutter_002.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_night_flutter_002.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_night_flutter_002.png",
+        "sha256": "b976dca21c55eb9c87704309dfcc23fc6c560fb863279bafcd8c975841afa5f2",
+        "source_sha256": "b976dca21c55eb9c87704309dfcc23fc6c560fb863279bafcd8c975841afa5f2",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_romper_010.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_romper_010.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_romper_010.png",
+        "sha256": "c784ca5b6624d943f29ecd3e465a00d9b97ac5174e24ec034e13e793a5d4e0ec",
+        "source_sha256": "c784ca5b6624d943f29ecd3e465a00d9b97ac5174e24ec034e13e793a5d4e0ec",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "inspector-sh1_split_head_014.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_split_head_014.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_split_head_014.png",
+        "sha256": "4727159f81944061ffef500f41a4d467bf8dabb349f6509a644042c22c4ad413",
+        "source_sha256": "4727159f81944061ffef500f41a4d467bf8dabb349f6509a644042c22c4ad413",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh1_wormhead_004.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_wormhead_004.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh1_wormhead_004.png",
+        "sha256": "baf00353c06886eb693034a908f56a12a31bc19c33496ba37ccaed097bed2ad3",
+        "source_sha256": "baf00353c06886eb693034a908f56a12a31bc19c33496ba37ccaed097bed2ad3",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh3_closer_036.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_closer_036.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_closer_036.png",
+        "sha256": "97c6ba9d46927ad494182490477464dc505b48cad2eca00eb92702ef5b9bac1a",
+        "source_sha256": "97c6ba9d46927ad494182490477464dc505b48cad2eca00eb92702ef5b9bac1a",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh3_double_head_040.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_double_head_040.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_double_head_040.png",
+        "sha256": "5fa53f6dfa7257c6d7aa7ec4df5daeff532abeaa60843ef40ea833b762bed8c4",
+        "source_sha256": "5fa53f6dfa7257c6d7aa7ec4df5daeff532abeaa60843ef40ea833b762bed8c4",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "inspector-sh3_insane_cancer_041.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_insane_cancer_041.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_insane_cancer_041.png",
+        "sha256": "562dc5a0ea0c7806ed1a5227c3db6846b6041ce4a710a80d46b4b1bf51553c78",
+        "source_sha256": "562dc5a0ea0c7806ed1a5227c3db6846b6041ce4a710a80d46b4b1bf51553c78",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "inspector-sh3_numb_body_small_037.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_numb_body_small_037.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_numb_body_small_037.png",
+        "sha256": "c65f1631314a74053b0626a9b0eeaa792b550fb7443a9328df3c64f49ef23a2c",
+        "source_sha256": "c65f1631314a74053b0626a9b0eeaa792b550fb7443a9328df3c64f49ef23a2c",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh3_pendulum_039.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_pendulum_039.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_pendulum_039.png",
+        "sha256": "cdf79b91b4fdaee783b08f8ca7a5229134ba46a454d22c209bc44b82fbcbb29a",
+        "source_sha256": "cdf79b91b4fdaee783b08f8ca7a5229134ba46a454d22c209bc44b82fbcbb29a",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh3_slurper_042.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_slurper_042.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh3_slurper_042.png",
+        "sha256": "90c165daffbf11a6f9dbe1ca70978f788c245a0ec2adcb4ab236abb4979d06cb",
+        "source_sha256": "90c165daffbf11a6f9dbe1ca70978f788c245a0ec2adcb4ab236abb4979d06cb",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh4_hummer_055.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_hummer_055.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_hummer_055.png",
+        "sha256": "45de2229cdb35a404b40275c4f61a3d0d06f2d8093a4cc43895ea2c79d17f4ea",
+        "source_sha256": "45de2229cdb35a404b40275c4f61a3d0d06f2d8093a4cc43895ea2c79d17f4ea",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "inspector-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_sniffer_dog_male_053.png",
+        "sha256": "60ba96cf29a9eb9778ef195da989a540035023295b81038d892c8b972dc0e185",
+        "source_sha256": "89e22605f4a7562b9856661209a03c7b196e5574620e31071ace91f48b4f8616",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+      },
+      {
+        "file": "inspector-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_twin_victim_059.png",
+        "sha256": "d635d53ecbc24f807593315be893b145349e28d58b69ec748c3d5159d0809b2b",
+        "source_sha256": "d635d53ecbc24f807593315be893b145349e28d58b69ec748c3d5159d0809b2b",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_floatstinger_016.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_floatstinger_016.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_floatstinger_016.png",
+        "sha256": "49c8d613ac290740a3d1229b27c85c599ef80d73ae90e0d8832f71182be62542",
+        "source_sha256": "49c8d613ac290740a3d1229b27c85c599ef80d73ae90e0d8832f71182be62542",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_groaner_003.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_groaner_003.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_groaner_003.png",
+        "sha256": "c710467819229ed66481d6df00702aec86c113e7d3a9cefbb982ef528b8600fa",
+        "source_sha256": "c710467819229ed66481d6df00702aec86c113e7d3a9cefbb982ef528b8600fa",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_hanged_scratcher_011.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_hanged_scratcher_011.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_hanged_scratcher_011.png",
+        "sha256": "181759d4b59c1233b69d4d4528961eae1091f7c9970c74b207586a0669dc57b7",
+        "source_sha256": "181759d4b59c1233b69d4d4528961eae1091f7c9970c74b207586a0669dc57b7",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_night_flutter_002.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_night_flutter_002.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_night_flutter_002.png",
+        "sha256": "d1dd4eda48330edd3a702ab0041e716f9f6e62381c8bbf6b7feff736d755c288",
+        "source_sha256": "d1dd4eda48330edd3a702ab0041e716f9f6e62381c8bbf6b7feff736d755c288",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_romper_010.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_romper_010.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_romper_010.png",
+        "sha256": "02f670522346717025d1de107894bcb14965b6847066edc1cf562e09406b1f96",
+        "source_sha256": "02f670522346717025d1de107894bcb14965b6847066edc1cf562e09406b1f96",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_split_head_014.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_split_head_014.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_split_head_014.png",
+        "sha256": "2a63ecdf5d39693b6cde7f13a34df077b9b2b0323876e64ba61960ce624c7aa4",
+        "source_sha256": "2a63ecdf5d39693b6cde7f13a34df077b9b2b0323876e64ba61960ce624c7aa4",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh1_wormhead_004.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_wormhead_004.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh1_wormhead_004.png",
+        "sha256": "b8b9132ca5cbf005bc5a93861d971f6c64d64faaaede76edd606e49ff6c641a6",
+        "source_sha256": "b8b9132ca5cbf005bc5a93861d971f6c64d64faaaede76edd606e49ff6c641a6",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_closer_036.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_closer_036.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_closer_036.png",
+        "sha256": "abd8fdbaeca784d4430c21dba8376f9f03aa5d63bcd420387607e356e72075ad",
+        "source_sha256": "abd8fdbaeca784d4430c21dba8376f9f03aa5d63bcd420387607e356e72075ad",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_double_head_040.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_double_head_040.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_double_head_040.png",
+        "sha256": "3ee9657b57bcd5cdc41af1262573393bc1063fb00483015eb0e686910bd36f1e",
+        "source_sha256": "3ee9657b57bcd5cdc41af1262573393bc1063fb00483015eb0e686910bd36f1e",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_insane_cancer_041.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_insane_cancer_041.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_insane_cancer_041.png",
+        "sha256": "a13d8eaedb865e125f405c2da4912ba6fed9dcd70706eca956577997224d5288",
+        "source_sha256": "a13d8eaedb865e125f405c2da4912ba6fed9dcd70706eca956577997224d5288",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_numb_body_small_037.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_numb_body_small_037.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_numb_body_small_037.png",
+        "sha256": "94548d8cf7e98c1706127947b70f48acfbee7ef73d694bb7b2360491c6b89262",
+        "source_sha256": "94548d8cf7e98c1706127947b70f48acfbee7ef73d694bb7b2360491c6b89262",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_pendulum_039.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_pendulum_039.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_pendulum_039.png",
+        "sha256": "3ef341378a5f92c4abca02a5655b5de71968c6ac44a4ce8de8c68f392ff3d608",
+        "source_sha256": "3ef341378a5f92c4abca02a5655b5de71968c6ac44a4ce8de8c68f392ff3d608",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh3_slurper_042.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_slurper_042.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh3_slurper_042.png",
+        "sha256": "0bbdfa224b084bfbeb56e9d1ddf4832ca939beef39503cd76747dc606feb13a0",
+        "source_sha256": "0bbdfa224b084bfbeb56e9d1ddf4832ca939beef39503cd76747dc606feb13a0",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh4_hummer_055.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_hummer_055.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_hummer_055.png",
+        "sha256": "a397c0c6b34b08a157b725ee8afe27f442ccc308dd2e62d1887bd53c00742726",
+        "source_sha256": "a397c0c6b34b08a157b725ee8afe27f442ccc308dd2e62d1887bd53c00742726",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "missing-poses-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_sniffer_dog_male_053.png",
+        "sha256": "974d6fd16febceb4ff02be84e7e8ef3ae6ca2131b6285ffa1ab2ec41e8d0dc0d",
+        "source_sha256": "ba0b81ce3e924e7038e8dee3e8efd12577b35c27f118283e4c213775fb99f4bd",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+      },
+      {
+        "file": "missing-poses-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_twin_victim_059.png",
+        "sha256": "679a7dbd67a66c8194d79373270a07c431802a2220abe87502667e20ca48feca",
+        "source_sha256": "679a7dbd67a66c8194d79373270a07c431802a2220abe87502667e20ca48feca",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "mobile-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-new-pngs-alchemilla.png",
+        "sha256": "b66aa2884c82fc41cf55b06408968701cbb9865701694838d41b2ab7eaf73dab",
+        "source_sha256": "b66aa2884c82fc41cf55b06408968701cbb9865701694838d41b2ab7eaf73dab",
+        "dimensions": [
+          430,
+          932
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "mobile-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-new-pngs-lakeview.png",
+        "sha256": "336384e611d19852dbd2a25e40395ed420551d9a00dc476806cfd59a23a826e9",
+        "source_sha256": "336384e611d19852dbd2a25e40395ed420551d9a00dc476806cfd59a23a826e9",
+        "dimensions": [
+          430,
+          932
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "mobile-new-pngs-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-new-pngs-shopping_mall.png",
+        "sha256": "735ce8cf7164ac3948d08bd7cb180ef9909145743d3ef0cb54281fc71ae7839c",
+        "source_sha256": "735ce8cf7164ac3948d08bd7cb180ef9909145743d3ef0cb54281fc71ae7839c",
+        "dimensions": [
+          430,
+          932
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "mobile-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-new-pngs-woodside.png",
+        "sha256": "644ae06c403c15b8bb16b7fd8e09b5bdd8def2c125acfb0e119fb21d4cb8a5af",
+        "source_sha256": "644ae06c403c15b8bb16b7fd8e09b5bdd8def2c125acfb0e119fb21d4cb8a5af",
+        "dimensions": [
+          430,
+          932
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "mobile-static-inspector.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-static-inspector.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/mobile-static-inspector.png",
+        "sha256": "ab67ab7530730ef29137a2b618816404c82533e0a6a9986a01340318e5fb7ffd",
+        "source_sha256": "ab67ab7530730ef29137a2b618816404c82533e0a6a9986a01340318e5fb7ffd",
+        "dimensions": [
+          430,
+          2639
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "paused-new-art-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/paused-new-art-alchemilla.png",
+        "sha256": "f663e0b16190b5c0740ac0a6bc93a2e5fcbe20ec2b83f71a0eee7f24c1c5f98e",
+        "source_sha256": "f663e0b16190b5c0740ac0a6bc93a2e5fcbe20ec2b83f71a0eee7f24c1c5f98e",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "paused-new-art-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/paused-new-art-lakeview.png",
+        "sha256": "866175b3e99dde00611d195ad505918fcb445aa0041e480155761fe9a8da9d40",
+        "source_sha256": "866175b3e99dde00611d195ad505918fcb445aa0041e480155761fe9a8da9d40",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "paused-new-art-shopping_mall.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-shopping_mall.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/paused-new-art-shopping_mall.png",
+        "sha256": "f1a6a559319c18dddceaf5b3cd02773736bd55e63f243ff7e99d484885197fc1",
+        "source_sha256": "f1a6a559319c18dddceaf5b3cd02773736bd55e63f243ff7e99d484885197fc1",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": true
+      },
+      {
+        "file": "paused-new-art-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/paused-new-art-woodside.png",
+        "sha256": "86ddfcea49ae059cbe6f7385dc1d5406a7e0903b789bafb7b54cd76abbec78c1",
+        "source_sha256": "86ddfcea49ae059cbe6f7385dc1d5406a7e0903b789bafb7b54cd76abbec78c1",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "sha256": "61a3c73a0242ab59aef7b02efa4322a9de4a08a12d65a757f31d09565f5848b7",
+        "source_sha256": "61a3c73a0242ab59aef7b02efa4322a9de4a08a12d65a757f31d09565f5848b7",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "sha256": "58148de968412818b61db2a5d03cd3aced9d2eecbe152d52bc1df44a652434b9",
+        "source_sha256": "58148de968412818b61db2a5d03cd3aced9d2eecbe152d52bc1df44a652434b9",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "touch-taunt-cancelled-twin-idle.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-cancelled-twin-idle.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/touch-taunt-cancelled-twin-idle.png",
+        "sha256": "ec07e80be48c95a8a3afcd8d36dd47b9baca05b96a5c8d28f26e2a2b25d28094",
+        "source_sha256": "ec07e80be48c95a8a3afcd8d36dd47b9baca05b96a5c8d28f26e2a2b25d28094",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": true,
+        "visually_inspected": false
+      },
+      {
+        "file": "touch-taunt-pointing-twin-victim.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+        "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+        "source_sha256": "d0f81abf3f89b7f794cd01dae992834ac8007a34f18230eb2ee3fa91b2eb7f34",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "changed_pixel_bbox": [
+          1228,
+          816,
+          1286,
+          982
+        ],
+        "changed_pixel_count": 3068,
+        "change_review": "Only right touch-control visual feedback differs, bbox[1228,816,1286,982]. Twin pointing silhouette, heads, support hand, Slurper, floor and HUD remain identical; no pause overlay and pointing still is visibly active."
+      }
+    ],
+    "actor_inspector_reviews": [
+      {
+        "id": "sh1_romper_010",
+        "capture": "inspector-sh1_romper_010.png",
+        "verdict": "pass_with_source_perspective_and_scale_reservation",
+        "notes": [
+          "Two long arms/broad hands and two bent legs visible; no extra third leg. Strapped forward head retained.",
+          "Whole static image inside inspector; lowest support on guide baseline. Small 3D source pose and versus scale are qualitative, not canonical measurements."
+        ]
+      },
+      {
+        "id": "sh3_double_head_040",
+        "capture": "inspector-sh3_double_head_040.png",
+        "verdict": "pass_with_source_perspective_and_scale_reservation",
+        "notes": [
+          "Four legs, hunched bandaged body and one split head/jaw structure retained; no two necks.",
+          "Image intact and lowest foot meets baseline. Model depth/lifted far foreleg preserved, not a source orthographic side sprite."
+        ]
+      },
+      {
+        "id": "sh3_insane_cancer_041",
+        "capture": "inspector-sh3_insane_cancer_041.png",
+        "verdict": "pass_with_texture_and_scale_reservation",
+        "notes": [
+          "Tiny slumped head, large torso, two arms and two legs retained; both feet complete.",
+          "Inspector image entirely framed and ground baseline coherent. Standing still only; no missing resting pose/cycle fabricated."
+        ]
+      },
+      {
+        "id": "sh4_sniffer_dog_male_053",
+        "capture": "inspector-sh4_sniffer_dog_male_053.png",
+        "verdict": "pass_with_source_perspective_and_scale_reservation",
+        "notes": [
+          "Yellow patchy fur, ears and long red tongue identify intended male variant; no female purple-tongue bitmap.",
+          "Four legs with source lifted forepaw intact; tongue complete and lowest support meets guide baseline. Other paws retain source depth offsets. Tail is not independently isolated from this view and is not certified here."
+        ]
+      }
+    ],
+    "combat_reviews": [
+      {
+        "stage": "shopping_mall",
+        "scene": "normal-helens-bakery",
+        "source": "sh3",
+        "captures": [
+          "combat-new-pngs-shopping_mall.png",
+          "mobile-new-pngs-shopping_mall.png",
+          "paused-new-art-shopping_mall.png"
+        ],
+        "verdict": "pass_with_explicit_versus_adaptation",
+        "notes": [
+          "Desktop actual canvas shows Double Head left and Insane Cancer right, intact, both lowest supports at continuous brown tile plane. Counter and wire rack are behind actor positions; no floating over furnishings or room cut at the support line.",
+          "Bakery wood door/panels, jars, pastry counter and wire shelf preserved as same room ensemble. Camera frontality, furniture position and widened floor are adapted for versus, with no source geometry certification.",
+          "Mobile keeps entire room and both actors inside landscape strip, though names/HUD are small. Actual pause modal is visible in separate capture.",
+          "HUD names CENTRAL SQUARE — HELEN’S BAKERY, CENTRE COMMERCIAL NORMAL and SOL DU CENTRE COMMERCIAL. Exact source menu/report agrees with room mapping; no Nightmare Mall artwork."
+        ],
+        "actual_anchors": [
+          {
+            "id": "sh3_double_head_040",
+            "source": "sh3",
+            "x": 310,
+            "y": 594
+          },
+          {
+            "id": "sh3_insane_cancer_041",
+            "source": "sh3",
+            "x": 970,
+            "y": 594
+          }
+        ],
+        "actual_image_placement": [
+          {
+            "id": "sh3_double_head_040",
+            "boundsKind": "registered visible envelope; faint alpha tails excluded",
+            "anchor": {
+              "x": 310,
+              "y": 594
+            },
+            "visibleCorners": [
+              {
+                "x": 402.06946215233506,
+                "y": 491.75137596212875
+              },
+              {
+                "x": 237.98814751853428,
+                "y": 491.75137596212875
+              },
+              {
+                "x": 402.06946215233506,
+                "y": 593.9996878098881
+              },
+              {
+                "x": 237.98814751853428,
+                "y": 593.9996878098881
+              }
+            ]
+          },
+          {
+            "id": "sh3_insane_cancer_041",
+            "boundsKind": "registered visible envelope; faint alpha tails excluded",
+            "anchor": {
+              "x": 970,
+              "y": 594
+            },
+            "visibleCorners": [
+              {
+                "x": 1104.3119741285354,
+                "y": 347.2269035902017
+              },
+              {
+                "x": 852.0488999267451,
+                "y": 347.2269035902017
+              },
+              {
+                "x": 1104.3119741285354,
+                "y": 594.0012250896032
+              },
+              {
+                "x": 852.0488999267451,
+                "y": 594.0012250896032
+              }
+            ]
+          }
+        ],
+        "actor_pngs": [
+          "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+          "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png"
+        ],
+        "stage_pngs": [
+          "assets/stages/shopping_mall.helens-bakery.0e2670100789.png"
+        ],
+        "build_reviewed": "dist",
+        "technical_floor_check": "Final dist desktop/mobile/pause captures byte-identical to directly reviewed source proof; both actual fighter supports remain over continuous bakery tile plane."
+      }
+    ],
+    "identity_report": {
+      "exact_new_ids": [
+        "sh1_romper_010",
+        "sh3_double_head_040",
+        "sh3_insane_cancer_041",
+        "sh4_sniffer_dog_male_053"
+      ],
+      "reported_exact_owners": [
+        {
+          "id": "sh1_romper_010",
+          "wrongSourceRejected": true,
+          "unknownVariantRejected": true,
+          "owners": [
+            "sh1_romper_010"
+          ]
+        },
+        {
+          "id": "sh3_double_head_040",
+          "wrongSourceRejected": true,
+          "unknownVariantRejected": true,
+          "owners": [
+            "sh3_double_head_040"
+          ]
+        },
+        {
+          "id": "sh3_insane_cancer_041",
+          "wrongSourceRejected": true,
+          "unknownVariantRejected": true,
+          "owners": [
+            "sh3_insane_cancer_041"
+          ]
+        },
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "wrongSourceRejected": true,
+          "unknownVariantRejected": true,
+          "owners": [
+            "sh4_sniffer_dog_male_053"
+          ]
+        }
+      ],
+      "excluded_variant_checks": [
+        {
+          "name": "sh4_sniffer_dog_female_054: real missing-variant dossier has no borrowed bitmap or duel link",
+          "passed": true
+        },
+        {
+          "name": "bom_double_head_124: real missing-variant dossier has no borrowed bitmap or duel link",
+          "passed": true
+        },
+        {
+          "name": "bom_insane_cancer_126: real missing-variant dossier has no borrowed bitmap or duel link",
+          "passed": true
+        }
+      ]
+    },
+    "findings": [
+      {
+        "id": "source_perspective_scale",
+        "severity": "nonblocking",
+        "finding": "Romper and canine poses are small in inspector. Three-dimensional source views place supports at different image heights; visible lowest support is calibrated to versus floor. Exact original scale, all-feet orthographic grounding, collision envelope and depth are unmeasured.",
+        "captures": [
+          "inspector-sh1_romper_010.png",
+          "inspector-sh3_double_head_040.png",
+          "inspector-sh3_insane_cancer_041.png",
+          "inspector-sh4_sniffer_dog_male_053.png"
+        ]
+      },
+      {
+        "id": "generated_texture_alpha",
+        "severity": "nonblocking",
+        "finding": "Generated contrast and red/yellow saturation exceed source models, especially male Sniffer. Faint alpha dust at or below8 outside the opaque silhouette is documented in candidate review; no visible crop or obtrusive halo observed at actual preview size.",
+        "captures": [
+          "inspector-sh1_romper_010.png",
+          "inspector-sh3_double_head_040.png",
+          "inspector-sh3_insane_cancer_041.png",
+          "inspector-sh4_sniffer_dog_male_053.png"
+        ]
+      },
+      {
+        "id": "portrait_hud",
+        "severity": "nonblocking",
+        "finding": "At430px portrait viewport, landscape combat strip, fighter names and central HUD are very small, with substantial empty vertical space. Actual room and two actors remain intact and inside viewport.",
+        "captures": [
+          "mobile-new-pngs-shopping_mall.png"
+        ]
+      }
+    ],
+    "supporting_http_report": {
+      "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "sha256": "1207e783fb3b27a5c799577c5f622c4424f72165fed01b9e45a203e68e530777",
+      "build": "dist",
+      "checks": 197,
+      "passed": 197,
+      "errors": [],
+      "captures": 50,
+      "report_passed": true
+    },
+    "capture_comparison_previous_batch": {
+      "previous_batch6_final_dist_capture_count": 39,
+      "shared_names": 39,
+      "unchanged_from_previous_batch6": [
+        "combat-new-pngs-alchemilla.png",
+        "combat-new-pngs-lakeview.png",
+        "combat-new-pngs-woodside.png",
+        "mobile-new-pngs-alchemilla.png",
+        "mobile-new-pngs-lakeview.png",
+        "mobile-new-pngs-woodside.png",
+        "paused-new-art-alchemilla.png",
+        "paused-new-art-lakeview.png",
+        "paused-new-art-woodside.png",
+        "touch-taunt-cancelled-twin-idle.png"
+      ],
+      "changed_from_previous_batch6": [
+        "inspector-pointing-sh4_twin_victim_059.png",
+        "inspector-sh1_floatstinger_016.png",
+        "inspector-sh1_groaner_003.png",
+        "inspector-sh1_hanged_scratcher_011.png",
+        "inspector-sh1_night_flutter_002.png",
+        "inspector-sh1_split_head_014.png",
+        "inspector-sh1_wormhead_004.png",
+        "inspector-sh3_closer_036.png",
+        "inspector-sh3_numb_body_small_037.png",
+        "inspector-sh3_pendulum_039.png",
+        "inspector-sh3_slurper_042.png",
+        "inspector-sh4_hummer_055.png",
+        "inspector-sh4_twin_victim_059.png",
+        "missing-poses-sh1_floatstinger_016.png",
+        "missing-poses-sh1_groaner_003.png",
+        "missing-poses-sh1_hanged_scratcher_011.png",
+        "missing-poses-sh1_night_flutter_002.png",
+        "missing-poses-sh1_split_head_014.png",
+        "missing-poses-sh1_wormhead_004.png",
+        "missing-poses-sh3_closer_036.png",
+        "missing-poses-sh3_numb_body_small_037.png",
+        "missing-poses-sh3_pendulum_039.png",
+        "missing-poses-sh3_slurper_042.png",
+        "missing-poses-sh4_hummer_055.png",
+        "missing-poses-sh4_twin_victim_059.png",
+        "mobile-static-inspector.png",
+        "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "touch-taunt-pointing-twin-victim.png"
+      ],
+      "new_in_batch7": [
+        "combat-new-pngs-shopping_mall.png",
+        "inspector-sh1_romper_010.png",
+        "inspector-sh3_double_head_040.png",
+        "inspector-sh3_insane_cancer_041.png",
+        "inspector-sh4_sniffer_dog_male_053.png",
+        "missing-poses-sh1_romper_010.png",
+        "missing-poses-sh3_double_head_040.png",
+        "missing-poses-sh3_insane_cancer_041.png",
+        "missing-poses-sh4_sniffer_dog_male_053.png",
+        "mobile-new-pngs-shopping_mall.png",
+        "paused-new-art-shopping_mall.png"
+      ],
+      "unchanged_from_previous_batch6_count": 10,
+      "changed_from_previous_batch6_count": 29,
+      "new_in_batch7_count": 11
+    },
+    "references": {
+      "provenance": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/provenance.json",
+      "candidate_review": "/workspace/shared/halo-of-flesh/references/batch7-2026-10-25/candidate-review.json"
+    },
+    "source_fidelity_certified": false,
+    "certified_1_to_1": false,
+    "dist_review_pending": false,
+    "limitations": [
+      "Technical source HTTP inspection establishes loading, framing, exact-ID ownership and an adapted versus floor, not original geometry, frame timing, hitboxes, source scale or1:1 fidelity.",
+      "Generated static poses are one frame, not original cycles or inferred missing presentations."
+    ],
+    "final_review_frozen": true,
+    "supporting_source_http_report": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/report.json",
+      "sha256": "8ab82351bf11b2a26514ec6e7c38cce6ad141b1e15a5df48b1cc2f64c59cf4b1",
+      "build": "source",
+      "checks": 197,
+      "passed": 197,
+      "errors": [],
+      "captures": 50,
+      "report_passed": true
+    },
+    "capture_comparison": {
+      "source_archive": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source",
+      "dist_directory": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4",
+      "total": 50,
+      "unchanged_count": 47,
+      "changed_count": 3,
+      "unchanged": [
+        "combat-new-pngs-alchemilla.png",
+        "combat-new-pngs-lakeview.png",
+        "combat-new-pngs-shopping_mall.png",
+        "combat-new-pngs-woodside.png",
+        "inspector-pointing-sh4_twin_victim_059.png",
+        "inspector-sh1_floatstinger_016.png",
+        "inspector-sh1_groaner_003.png",
+        "inspector-sh1_hanged_scratcher_011.png",
+        "inspector-sh1_night_flutter_002.png",
+        "inspector-sh1_romper_010.png",
+        "inspector-sh1_split_head_014.png",
+        "inspector-sh1_wormhead_004.png",
+        "inspector-sh3_closer_036.png",
+        "inspector-sh3_double_head_040.png",
+        "inspector-sh3_insane_cancer_041.png",
+        "inspector-sh3_numb_body_small_037.png",
+        "inspector-sh3_pendulum_039.png",
+        "inspector-sh3_slurper_042.png",
+        "inspector-sh4_hummer_055.png",
+        "inspector-sh4_twin_victim_059.png",
+        "missing-poses-sh1_floatstinger_016.png",
+        "missing-poses-sh1_groaner_003.png",
+        "missing-poses-sh1_hanged_scratcher_011.png",
+        "missing-poses-sh1_night_flutter_002.png",
+        "missing-poses-sh1_romper_010.png",
+        "missing-poses-sh1_split_head_014.png",
+        "missing-poses-sh1_wormhead_004.png",
+        "missing-poses-sh3_closer_036.png",
+        "missing-poses-sh3_double_head_040.png",
+        "missing-poses-sh3_insane_cancer_041.png",
+        "missing-poses-sh3_numb_body_small_037.png",
+        "missing-poses-sh3_pendulum_039.png",
+        "missing-poses-sh3_slurper_042.png",
+        "missing-poses-sh4_hummer_055.png",
+        "missing-poses-sh4_twin_victim_059.png",
+        "mobile-new-pngs-alchemilla.png",
+        "mobile-new-pngs-lakeview.png",
+        "mobile-new-pngs-shopping_mall.png",
+        "mobile-new-pngs-woodside.png",
+        "mobile-static-inspector.png",
+        "paused-new-art-alchemilla.png",
+        "paused-new-art-lakeview.png",
+        "paused-new-art-shopping_mall.png",
+        "paused-new-art-woodside.png",
+        "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "touch-taunt-cancelled-twin-idle.png"
+      ],
+      "changed": [
+        {
+          "file": "inspector-sh4_sniffer_dog_male_053.png",
+          "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_sniffer_dog_male_053.png",
+          "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_sniffer_dog_male_053.png",
+          "sha256": "60ba96cf29a9eb9778ef195da989a540035023295b81038d892c8b972dc0e185",
+          "source_sha256": "89e22605f4a7562b9856661209a03c7b196e5574620e31071ace91f48b4f8616",
+          "dimensions": [
+            1440,
+            2093
+          ],
+          "byte_identical_to_frozen_source": false,
+          "visually_inspected": true,
+          "reinspected_dist": true,
+          "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+        },
+        {
+          "file": "missing-poses-sh4_sniffer_dog_male_053.png",
+          "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_sniffer_dog_male_053.png",
+          "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_sniffer_dog_male_053.png",
+          "sha256": "974d6fd16febceb4ff02be84e7e8ef3ae6ca2131b6285ffa1ab2ec41e8d0dc0d",
+          "source_sha256": "ba0b81ce3e924e7038e8dee3e8efd12577b35c27f118283e4c213775fb99f4bd",
+          "dimensions": [
+            1440,
+            2093
+          ],
+          "byte_identical_to_frozen_source": false,
+          "visually_inspected": true,
+          "reinspected_dist": true,
+          "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+        },
+        {
+          "file": "touch-taunt-pointing-twin-victim.png",
+          "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+          "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+          "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+          "source_sha256": "d0f81abf3f89b7f794cd01dae992834ac8007a34f18230eb2ee3fa91b2eb7f34",
+          "dimensions": [
+            1440,
+            1004
+          ],
+          "byte_identical_to_frozen_source": false,
+          "visually_inspected": true,
+          "reinspected_dist": true,
+          "changed_pixel_bbox": [
+            1228,
+            816,
+            1286,
+            982
+          ],
+          "changed_pixel_count": 3068,
+          "change_review": "Only right touch-control visual feedback differs, bbox[1228,816,1286,982]. Twin pointing silhouette, heads, support hand, Slurper, floor and HUD remain identical; no pause overlay and pointing still is visibly active."
+        }
+      ],
+      "all_changed_images_visually_inspected": true
+    },
+    "history": {
+      "pre_final_dist_reports": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/history/pre-final-dist",
+      "source_review_sha256": "fe685eea9e427b8244ceeec8c13eeb0cacdd2b64b969b379417a3067745ae33a",
+      "source_provenance_sha256": "1a417f7ecb1bdef985008f8e679a217dfe1cac020a2a947926246b1d200bac62",
+      "source_candidate_review_sha256": "a1baafc75f8bf193cab53e7da95c1add67b9870b9c7fbf56529e56f81e991632"
+    },
+    "supporting_full_browser_run": {
+      "log_path": "/workspace/.cloud-env/halo/logs/batch7-full-browser-tests.log",
+      "sha256": "e7478aef1895bbddf253e84811f27f7219508488e7075b6589eeeadd5ba9298d",
+      "suite_count": 14,
+      "exit_code_reported_by_root": 0,
+      "other_checks_reported_by_root": {
+        "node_passed": 834,
+        "python_passed": 100,
+        "excel_passed": 33
+      }
+    },
+    "changed_capture_reviews": [
+      {
+        "file": "inspector-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/inspector-sh4_sniffer_dog_male_053.png",
+        "sha256": "60ba96cf29a9eb9778ef195da989a540035023295b81038d892c8b972dc0e185",
+        "source_sha256": "89e22605f4a7562b9856661209a03c7b196e5574620e31071ace91f48b4f8616",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+      },
+      {
+        "file": "missing-poses-sh4_sniffer_dog_male_053.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_sniffer_dog_male_053.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/missing-poses-sh4_sniffer_dog_male_053.png",
+        "sha256": "974d6fd16febceb4ff02be84e7e8ef3ae6ca2131b6285ffa1ab2ec41e8d0dc0d",
+        "source_sha256": "ba0b81ce3e924e7038e8dee3e8efd12577b35c27f118283e4c213775fb99f4bd",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "change_review": "Sniffer dossier now explicitly states tail cannot be isolated with certainty;27px extra page height reflects wrapped corrected text. Actor bitmap, palette, four legs, red tongue and preview framing unchanged. Missing finisher remains explicit idle preview."
+      },
+      {
+        "file": "touch-taunt-pointing-twin-victim.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch7-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+        "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+        "source_sha256": "d0f81abf3f89b7f794cd01dae992834ac8007a34f18230eb2ee3fa91b2eb7f34",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "byte_identical_to_frozen_source": false,
+        "visually_inspected": true,
+        "reinspected_dist": true,
+        "changed_pixel_bbox": [
+          1228,
+          816,
+          1286,
+          982
+        ],
+        "changed_pixel_count": 3068,
+        "change_review": "Only right touch-control visual feedback differs, bbox[1228,816,1286,982]. Twin pointing silhouette, heads, support hand, Slurper, floor and HUD remain identical; no pause overlay and pointing still is visibly active."
+      }
+    ],
+    "dist_asset_sha_match_to_candidates": [
+      {
+        "id": "sh1_romper_010",
+        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "matched": true
+      },
+      {
+        "id": "sh3_double_head_040",
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "matched": true
+      },
+      {
+        "id": "sh3_insane_cancer_041",
+        "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+        "matched": true
+      },
+      {
+        "id": "sh4_sniffer_dog_male_053",
+        "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+        "matched": true
+      },
+      {
+        "id": "shopping_mall",
+        "sha256": "0e26701007893594c037c681332c69a411c75cbea2c81436f55c1fa95a407b67",
+        "matched": true
+      }
+    ]
+  },
+  "finalBrowserVisualReviewSha256": "1bbb3a54f3a7bf29f327292062957810b7d68a530336f908de1a782cef3a6d86"
+}

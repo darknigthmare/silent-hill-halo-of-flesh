@@ -1,6 +1,6 @@
 # Roster complet — v0.9.6
 
-Catalogue synchronisé : **230 fiches**, dont **187 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3541 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **164 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
+Catalogue synchronisé : **230 fiches**, dont **187 profils compatibles avec un combat de prototype**. Les 4600 emplacements comprennent **3524 commandes activées**. 460 propositions de fatalité de combattant sont inventoriées ; **182 montages** sont écrits et déclenchables lorsque leurs conditions corporelles et matérielles sont réunies.
 
 Les rôles non combattants et les identités non confirmées restent consultables. Les rencontres scénarisées autorisées sont explicitement des adaptations versus. Aucun clip animé ni fidélité 1:1 n’est certifié.
 
@@ -26,7 +26,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Puppet Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Puppet Doctor | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Split Head | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
-| Twinfeeler | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
+| Twinfeeler | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
 | Floatstinger | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OLD SILENT HILL |
 | Monster Cybil | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
 | Incubator | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
@@ -64,19 +64,19 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
+| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
 | Closer — Church Variant | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
-| Numb Body — Small | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Numb Body — Medium | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Numb Body — Large | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Pendulum | combatant | `flyer` | INSTINCT AÉRIEN | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Double Head | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Slurper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Nurse — Pipe | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Scraper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
-| Split Worm | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE MALL |
+| Numb Body — Small | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Numb Body — Medium | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Numb Body — Large | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Pendulum | combatant | `flyer` | INSTINCT AÉRIEN | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Double Head | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Slurper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Nurse — Pipe | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Scraper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Split Worm | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
 | Missionary | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DAISY VILLA ROOFTOP |
 | Leonard Wolf | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — FLOODED ROOM |
 | Memory of Alessa | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
@@ -118,7 +118,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Richard Braintree — Victim 19 | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BUILDING WORLD |
 | Man with the Coat | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD |
 | Wheelchair | environmental-obstacle | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | HOSPITAL WORLD |
-| Greedy Worm | noncombatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
+| Greedy Worm | noncombatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · reference-unverified / official-or-established | ROOM 302 |
 | One Truth | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER PRISON WORLD |
 | Sacrificed Walter | scripted-encounter | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | APARTMENT WORLD |
 | Walter Sullivan | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD |
@@ -136,7 +136,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Remnant | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Ariel | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Caliban | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Two-Back | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Two-Back | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | The Butcher | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
 | Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Memory of Richard Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
@@ -161,10 +161,10 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Bogeyman | scripted-encounter | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | SHEPHERD’S GLEN |
 | Sepulcher | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Scarlet — Doll Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GRAND HOTEL |
-| Scarlet — Spider Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GRAND HOTEL |
+| Scarlet — Spider Form | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GRAND HOTEL |
 | Asphyxia | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CHURCH OF THE HOLY WAY |
-| Amnion — Hanging Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
-| Amnion — Exposed Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
+| Amnion — Hanging Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
+| Amnion — Exposed Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
 
 ## SILENT HILL: SHATTERED MEMORIES (2009)
 
@@ -238,24 +238,24 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Ghost | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Needler | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
-| Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
+| Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Pyramid Head | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Schism | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Swarm | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
-| Tremer | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
+| Tremer | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Flesh Lips | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Mother | environmental-obstacle | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Valtiel | noncombatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
-| Fire Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FIRE ZONE |
+| Fire Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FIRE ZONE |
 | Wood Guardian | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD ZONE |
 | Wood Sapling | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD ZONE |
-| Light Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LIGHT ZONE |
-| Water Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER ZONE |
+| Light Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LIGHT ZONE |
+| Water Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER ZONE |
 | Earth Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EARTH ZONE |
 | Blood Guardian | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLOOD ZONE |
 | Blood Baby | multi-body | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLOOD ZONE |
-| Blood Mama | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLOOD ZONE |
+| Blood Mama | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLOOD ZONE |
 | Steel Guardian | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | STEEL ZONE |
 | Gray Child | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |
 | Raw Shock | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BOOK OF MEMORIES — NEXUS |

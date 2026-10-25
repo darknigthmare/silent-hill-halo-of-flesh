@@ -105,7 +105,7 @@ test('every authored exact finisher has a viable real pairing and contiguous syn
       plans++;
     }
   }
-  assert.equal(plans, 164);
+  assert.equal(plans, 182);
   assert.equal(LORE_CINEMATIC_COVERAGE.animatedImagesCreated, 0);
 });
 
@@ -188,12 +188,17 @@ test('Canvas pause marks every disabled Wall Man command unavailable and keeps e
   assert.ok(calls.some(call => /ARCHIVES > MOVESETS/.test(call.text) && /INDISPONIBILITÉ/.test(call.text)));
 });
 
-test('seven location edits require the reviewed location, its existing props, grounded target and actual zone', () => {
+test('seven authored location edits obey current phase policy, props, grounded target and actual zone', () => {
   const attacker = actorFor('film_red_pyramid_film_175'), target = actorFor(NURSE, 1);
   for (const id of LORE_CINEMATIC_COVERAGE.stageIds) {
     const location = stage(id), summary = cinematicSummary(`${id}_fatality`);
     target.x = summary.requirements.zone === 'center' ? 640 : 150;
     const options = { attacker, target, stage: location, definition: location.fatality, stageBased: true };
+    if(location.referencePolicy.automaticFinishers===false){
+      assert.equal(summary.authored,true,'stored versus choreography does not override a selected source phase');
+      const blocked=loreFinisher(options);assert.equal(blocked.allowed,false,id);assert.match(blocked.reason,/Lieu ou phase non autorisé/);
+      continue;
+    }
     assert.equal(loreFinisher(options).allowed, true, id);
     assert.equal(loreFinisher({ ...options, target: { ...target, grounded: false } }).allowed, false, id);
     assert.equal(loreFinisher({ ...options, target: { ...target, x: target.x === 640 ? 150 : 640 } }).allowed, false, id);

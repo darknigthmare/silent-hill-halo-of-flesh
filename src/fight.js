@@ -8,7 +8,9 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
-import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, sourceMouthPhase, sourceHitResponse, sourceContactSweep, sourceGroundHold, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
+import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField,
+  sourceMouthPhase, sourceHitResponse, sourceContactSweep, sourceGroundHold, sourceStandingBind,
+  sourceWhiffExposure, sourceFrontalDamageScale, sourceGroundProjectile, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -56,6 +58,12 @@ function actualExposure(actor) {
   if(sourceMouthPhase(actor.data)&&!actor.mouthEnraged)return null;
   return firearmExposure(actor.data,attack);
 }
+function actualWhiffExposure(actor) {
+  const attack=actor.attack;
+  return attack&&actor.profile.moves[attack.key]===attack.move?sourceWhiffExposure(actor.data,attack):null;
+}
+const heldByHair=actor=>actor.status?.id==='bind'&&actor.status.bindingOrigin?.id==='sh4_cynthia_velasquez_victim_16'&&
+  actor.status.bindingOrigin.source==='sh4';
 function updateWeaponState(actor) {
   const resource=ammoProfile(actor);
   if(resource?.exhaustion!=='unarmed')return;
@@ -1043,6 +1051,7 @@ export class FightEngine {
     const policy=referencePolicy(actor);
     if(policy.canMove===false){controls.left=false;controls.right=false;actor.vx=0;}
     if(policy.canJump===false)controls.jump=false;
+    if(heldByHair(actor)){controls.left=false;controls.right=false;controls.jump=false;actor.vx=0;}
     if(policy.canDodge===false)controls.dodge=false;
     if(!offensiveAllowed(actor))for(const action of ATTACK_ACTIONS)controls[action]=false;
     if(actor.presentation?.key==='taunt') {
@@ -1273,14 +1282,14 @@ export class FightEngine {
     actor.blocking = false;
     actor.crouching = move.stance === 'crouching';
     if (move.button === 'throw') {
-      actor.vx = referencePolicy(actor).canMove === false ? 0 : actor.facing * 2.2;
+      actor.vx = referencePolicy(actor).canMove === false||heldByHair(actor) ? 0 : actor.facing * 2.2;
       actor.stats.throws++;
     }
     if (key === 'backThrow') actor.stats.backThrows++;
     if (key === 'dodgeAttack') actor.stats.dodgeAttacks++;
     if (key === 'guardCounter') actor.stats.guardCounters++;
     if (key === 'wakeupAttack') actor.stats.wakeupAttacks++;
-    if (move.verticalTravel && actor.grounded && !move.requiresAir && referencePolicy(actor).canJump!==false) {
+    if (move.verticalTravel && actor.grounded && !move.requiresAir && referencePolicy(actor).canJump!==false&&!heldByHair(actor)) {
       actor.vy = -Math.min(actor.profile.jump * .72, Math.abs(move.verticalTravel) * 2.2);
       actor.grounded = false;
     }
@@ -1328,7 +1337,7 @@ export class FightEngine {
 
     if (move.invulnFrames && attack.frame <= move.invulnFrames) actor.invuln = Math.max(actor.invuln, 2);
 
-    if (move.teleport && referencePolicy(actor).canMove!==false && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
+    if (move.teleport && referencePolicy(actor).canMove!==false&&!heldByHair(actor) && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
       attack.teleported = true;
       const inset = this.arenaInset(70);
       if (move.teleport === 'behind') {
@@ -1382,7 +1391,7 @@ export class FightEngine {
     }
 
     if (attack.frame < activeEnd) {
-      if (move.travel && referencePolicy(actor).canMove!==false) actor.vx = actor.facing * move.travel;
+      if (move.travel && referencePolicy(actor).canMove!==false&&!heldByHair(actor)) actor.vx = actor.facing * move.travel;
       if (!actor.grounded && move.verticalTravel && referencePolicy(actor).canJump!==false) actor.vy += Math.sign(move.verticalTravel) * Math.abs(move.verticalTravel) * .035;
     }
 
@@ -1413,20 +1422,23 @@ export class FightEngine {
     const isSuper = isNightmareMove(move);
     const count = Math.max(1, move.projectileCount || (actor.profile.trait.id === 'suppression' ? 2 : 1));
     const scale = move.projectileScale || 1;
+    const ground=actor.profile.moves[move.key]===move&&sourceGroundProjectile(actor.data,move);
     for (let index = 0; index < count; index++) {
       const spread = index - (count - 1) / 2;
       const trap = Boolean(move.trap);
+      const radius=(trap?32:isSuper?18:12)*scale,groundY=ground?FLOOR-radius:null;
       this.projectiles.push({
         owner: actor,
         attackId,
         move,
         x: trap ? clamp(actor.x + actor.facing * Math.min(move.reach * .72, 220), this.arenaInset(24), WIDTH - this.arenaInset(24)) : actor.x + actor.facing * (actorBox(actor).w * .45 + Math.abs(spread) * 18),
-        y: trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
+        y: ground?groundY:trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
         vx: trap ? 0 : actor.facing * (move.projectileSpeed || 13) * (1 - Math.abs(spread) * .045),
-        vy: trap ? 0 : spread * (move.projectileArc || .8),
-        gravity: move.projectileGravity || 0,
+        vy: trap||ground ? 0 : spread * (move.projectileArc || .8),
+        gravity: ground?0:move.projectileGravity || 0,
         homing: move.homing || 0,
-        radius: (trap ? 32 : isSuper ? 18 : 12) * scale,
+        radius,
+        ...(ground?{groundY}:{}),
         life: trap ? Math.max(90, move.projectileLife || 150) : move.projectileLife || (isSuper ? 96 : 78),
         maxLife: trap ? Math.max(90, move.projectileLife || 150) : move.projectileLife || (isSuper ? 96 : 78),
         super: isSuper,
@@ -1500,9 +1512,10 @@ export class FightEngine {
       const previous = { x: projectile.x, y: projectile.y };
       projectile.vy += projectile.gravity || 0;
       projectile.x += projectile.vx;
-      projectile.y += projectile.vy;
+      if(Number.isFinite(projectile.groundY)){projectile.y=projectile.groundY;projectile.vy=0;}
+      else projectile.y += projectile.vy;
       projectile.life--;
-      if (projectile.super && !projectile.trap) projectile.vy += Math.sin((projectile.maxLife - projectile.life) * .22) * .035;
+      if (projectile.super && !projectile.trap&&!Number.isFinite(projectile.groundY)) projectile.vy += Math.sin((projectile.maxLife - projectile.life) * .22) * .035;
       if (!projectile.hit && enemy.health > 0 && !enemy.ko && enemy.invuln === 0) {
         const contact = sweptProjectileContact(previous, projectile, projectile.radius, actorBox(enemy));
         if (contact) {
@@ -1519,7 +1532,9 @@ export class FightEngine {
   applyHit(attacker, target, move, attackId, scale = 1, contact = {}) {
     if (this.destroyed||this.phase !== 'fight' || !offensiveAllowed(attacker)||move.enabled===false||target.health <= 0 || target.invuln > 0 || target.ko) return false;
     const groundHold=attacker.profile.moves[move.key]===move&&sourceGroundHold(attacker.data,move);
-    if(groundHold&&(!hasGroundContact(target)||contact.ranged))return false;
+    const standingBind=attacker.profile.moves[move.key]===move&&sourceStandingBind(attacker.data,move);
+    if((groundHold||standingBind)&&(!hasGroundContact(target)||contact.ranged))return false;
+    if(standingBind&&target.knockdownTimer>0)return false; // Do not invent a lift from an already downed pose.
     const stagger=nonDamagingStagger(attacker.data,move);
     if(stagger&&attacker.profile.moves[move.key]===move&&!contact.ranged){
       if(target.knockdownTimer>0||target.phaseLock>0||stagger.groundedOnly&&!hasGroundContact(target))return false;
@@ -1575,6 +1590,7 @@ export class FightEngine {
       target.attack = null;
       target.state = 'idle';
       const retaliation = takeDamage(attacker, Math.max(14, Math.round(move.damage * .34)));
+      this.releaseSourceBinding(target,attacker,retaliation);
       updateWeaponState(attacker);
       interruptAction(attacker);
       attacker.hurtFrames = Math.max(attacker.hurtFrames, 19);
@@ -1604,7 +1620,11 @@ export class FightEngine {
     // non-firearm projectiles do not inherit a free weak-point bonus.
     let exposure=ranged&&isFirearmProjectile(attacker.data,move)?actualExposure(target):null;
     if(exposure?.frontalOnly&&hitDirection*target.facing>=0)exposure=null;
-    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker) * (exposure?.damageScale||1));
+    let whiff=!move.aura&&!move.trap?actualWhiffExposure(target):null;
+    if(whiff?.rearOnly&&hitDirection*target.facing<=0)whiff=null;
+    const frontalScale=sourceFrontalDamageScale(target.data,move,hitDirection,target.facing);
+    let damage = Math.round(move.damage * scale * (counter ? 1.18 : 1) * ritualDamage * actorPhasePower(attacker) *
+      (exposure?.damageScale||1)*(whiff?.damageScale||1)*frontalScale);
 
     if (blocked) {
       const perfect = target.parryWindow > 0;
@@ -1628,6 +1648,7 @@ export class FightEngine {
       } else {
         const chipScale = isNightmare ? .2 : isSpecial ? .17 : .14;
         const chip = takeDamage(target, damage * chipScale * (this.ritual.chipScale || 1));
+        this.releaseSourceBinding(attacker,target,chip);
         updateWeaponState(target);
         target.lastHit = { attackerIndex: attacker.index, moveKey: `${move.key || 'move'}-guard-chip`, isSuper: isNightmare, environmental: false, frame: this.frame };
         target.stats.damageTaken += chip;
@@ -1658,6 +1679,7 @@ export class FightEngine {
     const armorActive = armorWasActive && !move.armorBreak;
     const effectiveArmor = move.armorBreak ? 0 : clamp((target.profile.armor || 0) + (target.phaseArmor || 0) + (moveArmorActive ? .1 : 0), 0, .5);
     damage = takeDamage(target, damage * (1 - effectiveArmor));
+    this.releaseSourceBinding(attacker,target,damage);
     updateWeaponState(target);
     target.lastHit = {
       attackerIndex: attacker.index,
@@ -1719,12 +1741,13 @@ export class FightEngine {
       if (knocksDown) target.grounded = false;
     }
     if(sourceResponse?.knockdown){target.vy=Math.max(0,target.vy);target.grounded=false;}
-    if (isThrow) {
-      if(groundHold){target.vx=0;target.vy=0;target.grounded=true;}
+    const standingResponse=standingBind||heldByHair(target);
+    if (isThrow||standingResponse) {
+      if(groundHold||standingResponse){target.vx=0;target.vy=0;target.grounded=true;}
       else{target.vy = -Math.max(6.5, Math.abs(move.launch || 0));target.grounded = false;}
     }
     if (fixedTarget) { target.vy = 0; target.grounded = true; }
-    if (knocksDown || isThrow || move.hardKnockdown || move.groundBounce) {
+    if (!standingResponse&&(knocksDown || isThrow || move.hardKnockdown || move.groundBounce)) {
       target.hurtFrames = 0;
       target.knockdownTimer = Math.max(target.knockdownTimer, move.hardKnockdown ? 56 : isThrow ? 42 : move.groundBounce ? 46 : 34);
       target.wakeupWindow = 0;
@@ -1739,7 +1762,7 @@ export class FightEngine {
     attacker.stats.maxCombo = Math.max(attacker.stats.maxCombo, attacker.combo);
     target.lastHitBy = attacker.index;
 
-    if (move.effect) this.applyStatus(target, move.effect, attacker);
+    if (move.effect) this.applyStatus(target, move.effect, attacker,move);
 
     const impactPower = isNightmare ? 1.8 : isHeavy ? 1.25 : isSpecial ? 1.08 : .85;
     this.shake = Math.max(this.shake, isNightmare ? 18 : isHeavy ? 10 : isSpecial ? 8 : 6);
@@ -1751,7 +1774,16 @@ export class FightEngine {
     if (attacker.combo > 1) this.addText(`${attacker.combo} HITS`, attacker.x, actorBox(attacker).y - 22, 'combo');
   }
 
-  applyStatus(target, effect, source = null) {
+  releaseSourceBinding(victim,source,damage) {
+    const origin=victim.status?.bindingOrigin;
+    if(!(damage>0)||!origin||victim.status.source!==source.index||origin.id!==source.data.id||
+      origin.source!==source.data.source||!sourceStandingBind(source.data,source.profile.moves[origin.moveKey]))return false;
+    victim.status=null;
+    this.addText('CHEVEUX ROMPUS',victim.x,victim.y-210,'counter');
+    return true;
+  }
+
+  applyStatus(target, effect, source = null, move = null) {
     if(source&&!offensiveAllowed(source))return false;
     const definition = AFFLICTIONS[effect.id];
     if (!definition) return;
@@ -1764,6 +1796,10 @@ export class FightEngine {
       target.status = { id: effect.id, timer: duration, potency: effect.potency || 1, tick: 0, source: source?.index ?? null };
       this.addText(definition.name, target.x, target.y - 208, 'status');
     }
+    if(source&&move&&source.profile.moves[move.key]===move&&sourceStandingBind(source.data,move)){
+      target.status.bindingOrigin={id:source.data.id,source:source.data.source,moveKey:move.key};
+      this.addText('CHEVEUX : FRAPPEZ CYNTHIA',target.x,target.y-244,'status');
+    }else delete target.status.bindingOrigin;
     if (source) source.stats.statusesApplied++;
   }
 
@@ -2761,8 +2797,10 @@ export class FightEngine {
   }
 
   sourceCombatCue(actor) {
-    return this.phase==='fight'&&!actor.ko&&actor.health>0&&offensiveAllowed(actor)&&sourceMouthPhase(actor.data)&&actualExposure(actor)
-      ?'GUEULE OUVERTE · VERSUS':null;
+    if(this.phase!=='fight'||actor.ko||actor.health<=0||!offensiveAllowed(actor))return null;
+    if(sourceMouthPhase(actor.data)&&actualExposure(actor))return 'GUEULE OUVERTE · VERSUS';
+    const whiff=actualWhiffExposure(actor);
+    return whiff?(whiff.rearOnly?'DOS EXPOSÉ · VERSUS':'CORPS EXPOSÉ · VERSUS'):null;
   }
 
   renderHUD(context) {

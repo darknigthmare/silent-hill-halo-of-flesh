@@ -1,4 +1,4 @@
-/** Successive batch-4/batch-5/batch-6 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
+/** Successive batch-4/batch-5/batch-6/batch-7 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
 import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
@@ -12,13 +12,14 @@ const source=process.env.QA_SOURCE_TREE==='1',base=process.env.QA_BASE_URL||'htt
 const batch4=['sh1_groaner_003','sh1_split_head_014','sh1_floatstinger_016','sh3_numb_body_small_037'];
 const batch5=['sh1_wormhead_004','sh1_hanged_scratcher_011','sh3_closer_036','sh4_hummer_055'];
 const batch6=['sh1_night_flutter_002','sh3_pendulum_039','sh4_twin_victim_059','sh3_slurper_042'];
+const batch7=['sh1_romper_010','sh3_double_head_040','sh3_insane_cancer_041','sh4_sniffer_dog_male_053'];
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
-const required=[...batch4,...batch5,...batch6];
-const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'}};
+const required=[...batch4,...batch5,...batch6,...batch7];
+const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'}};
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],fixtures:[
-  'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5 and 6 are required and inspected through the actual workshop controls; a missing import fails the suite.',
+  'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7 are required and inspected through the actual workshop controls; a missing import fails the suite.',
   'The browser independently decodes the registered files on an offscreen canvas to measure alpha; these temporary canvases do not replace the real inspector or combat rendering.',
-  'Local matches retain Groaner/Split Head/Wood Side and Wormhead/Closer/Alchemilla coverage, then require Twin Victim/Slurper/Lakeview through the real roster and stage gallery. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.',
+  'Local matches retain Groaner/Split Head/Wood Side, Wormhead/Closer/Alchemilla and Twin Victim/Slurper/Lakeview coverage, then require Double Head/Insane Cancer/Central Square Mall through the real roster and stage gallery. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.',
   'Canvas drawImage calls are recorded without changing their arguments. The genuine pause/resume button and a 430-pixel viewport exercise the same loaded assets.',
   'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.'
 ]};
@@ -81,10 +82,10 @@ try{
     const {SPRITES}=await import('/src/sprite-manifest.js'),{STAGE_BITMAPS}=await import('/src/stage-bitmap-manifest.js');
     const {ROSTER,STAGES}=await import('/src/data.js');
     return {subjects:required.map(id=>({id,art:SPRITES[id]||null,fighter:ROSTER.find(f=>f.id===id)})),
-      scenes:['woodside','alchemilla','lakeview'].map(id=>({id,stage:STAGES.find(s=>s.id===id),stageIndex:STAGES.findIndex(s=>s.id===id),decor:STAGE_BITMAPS[id]}))};
+      scenes:['woodside','alchemilla','lakeview','shopping_mall'].map(id=>({id,stage:STAGES.find(s=>s.id===id),stageIndex:STAGES.findIndex(s=>s.id===id),decor:STAGE_BITMAPS[id]}))};
   },required);
-  report.candidateBatches={batch4,batch5,batch6};
-  check('all twelve required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
+  report.candidateBatches={batch4,batch5,batch6,batch7};
+  check('all sixteen required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
   for(const subject of registry.subjects){
     const {id,art,fighter}=subject;
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh3:2003,sh4:2004}[exactSource];
@@ -152,7 +153,7 @@ try{
   check('successive-batch images never leak through another source, invented variant or registered owner',identities.every(item=>item.wrongSourceRejected&&item.unknownVariantRejected&&item.owners.length===1&&item.owners[0]===item.id),identities);report.identities=identities;
   const related=await page.evaluate(async()=>{
     const {ROSTER}=await import('/src/data.js'),{spriteFor}=await import('/src/sprite-system.js');
-    return ['sh1_twinfeeler_015','sh3_numb_body_medium','sh3_numb_body_large_038',...ROSTER.filter(f=>f.source==='sh4'&&['Bottom','One Truth'].includes(f.name)).map(f=>f.id)].filter(id=>!spriteFor(ROSTER.find(f=>f.id===id)));
+    return ['sh1_twinfeeler_015','sh3_numb_body_medium','sh3_numb_body_large_038','sh4_sniffer_dog_female_054','bom_double_head_124','bom_insane_cancer_126',...ROSTER.filter(f=>f.source==='sh4'&&['Bottom','One Truth'].includes(f.name)).map(f=>f.id)].filter(id=>!spriteFor(ROSTER.find(f=>f.id===id)));
   });
   for(const id of related){
     await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.fill('#spriteSearch',id);
@@ -175,7 +176,8 @@ try{
   }
   const matches=[{scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:batch4.slice(0,2)},
     {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['sh1_wormhead_004','sh3_closer_036']},
-    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh4_twin_victim_059','sh3_slurper_042']}];
+    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh4_twin_victim_059','sh3_slurper_042']},
+    {scene:registry.scenes.find(scene=>scene.id==='shopping_mall'),ids:['sh3_double_head_040','sh3_insane_cancer_041']}];
   for(const {scene,ids} of matches){
     const {id:stageId,stageIndex,decor}=scene;
     await page.setViewportSize({width:1440,height:1000});
@@ -198,21 +200,30 @@ try{
     await page.waitForFunction(()=>__HALO_QA__.engine.phase==='fight'&&__HALO_QA__.engine.texts.every(text=>!['intro','round','fight'].includes(text.kind)));
     const combat=await page.evaluate(()=>({phase:__HALO_QA__.engine.phase,stage:__HALO_QA__.engine.stage.id,diagnostic:__HALO_QA__.engine.config.artDiagnostic,camera:__HALO_QA__.engine.presentationCamera,
       actors:__HALO_QA__.engine.actors.map(actor=>({id:actor.data.id,source:actor.data.source,x:actor.x,y:actor.y})),draws:__ART_BATCH4_DRAWS__.filter(draw=>draw.canvas==='game'),actorPins:[...__HALO_QA__.assetCache.pins],stagePins:[...__HALO_QA__.stageAssetCache.pins]}));
-    if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else report.combatBatch6=combat;
+    if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else if(stageId==='lakeview')report.combatBatch6=combat;else report.combatBatch7=combat;
+    if(['lakeview','shopping_mall'].includes(stageId)){
+      combat.terrain=await page.evaluate(async()=>{const {stageTerrainProfile}=await import('/src/stage-director.js');const stage=__HALO_QA__.engine.stage;return {rules:stage.referencePolicy.terrainRules,profile:stageTerrainProfile(stage)};});
+      check(stageId+': actual room terrain is physically neutral rather than inherited wet/slippery rules',combat.terrain.rules===false&&combat.terrain.profile.moveScale===1&&combat.terrain.profile.jumpScale===1&&combat.terrain.profile.dodgeScale===1&&combat.terrain.profile.friction===.84&&combat.terrain.profile.knockbackScale===1&&combat.terrain.profile.guardRegenScale===1&&!combat.terrain.profile.splash&&!combat.terrain.profile.slip,combat.terrain);
+    }
     if(stageId==='lakeview'){
       combat.hudTexts=await page.evaluate(()=>__ART_BATCH6_TEXTS__);
       check('Lakeview actual canvas HUD names the lobby carpet and pre-tape phase',combat.hudTexts.some(row=>row.text.includes('TAPIS DU LOBBY'))&&combat.hudTexts.some(row=>row.text.includes('AVANT LA CASSETTE')),combat.hudTexts);
       check('Lakeview actual canvas HUD omits inherited wet-carpet and Fog World labels',combat.hudTexts.every(row=>!row.text.includes('MOQUETTE HUMIDE')&&!row.text.includes('FOG WORLD')),combat.hudTexts);
+    }
+    if(stageId==='shopping_mall'){
+      combat.hudTexts=await page.evaluate(()=>__ART_BATCH6_TEXTS__);
+      check('Central Square Mall actual HUD names the normal shopping centre and its floor',combat.hudTexts.some(row=>row.text.includes('CENTRE COMMERCIAL NORMAL'))&&combat.hudTexts.some(row=>row.text.includes('SOL DU CENTRE COMMERCIAL')),combat.hudTexts);
+      check('Central Square Mall actual HUD does not invent humidity or Fog World ontology',combat.hudTexts.every(row=>!row.text.includes('MOQUETTE HUMIDE')&&!row.text.includes('BÉTON TREMPÉ')&&!row.text.includes('FOG WORLD')),combat.hudTexts);
     }
     check(stageId+': actual canvas paints both registered images and full cover scenery',!combat.diagnostic&&combat.stage===stageId&&expected.every(path=>combat.draws.some(draw=>draw.path==='/'+path&&draw.width>0&&draw.height>0))&&combat.draws.filter(draw=>draw.path.includes('/assets/stages/')).every(draw=>draw.args.length===8&&draw.args[6]===1280&&draw.args[7]===720),combat);
     const actorPaths=ids.flatMap(id=>registry.subjects.find(subject=>subject.id===id).art.frames.map(frame=>frame.path));
     check(stageId+': combat leases contain exactly all PNGs of the selected two actors and room',combat.actorPins.length===actorPaths.length&&combat.stagePins.length===1&&[...actorPaths,...expected].every(path=>[...combat.actorPins,...combat.stagePins].includes(path)),combat);
     combat.imagePlacement=ids.map(id=>{
       const frame=registry.subjects.find(subject=>subject.id===id).art.frames[0],alpha=report.assets.find(asset=>asset.id===id).alpha.bounds,draw=combat.draws.find(draw=>draw.path==='/'+frame.path);
-      const [x,y,w,h]=draw.args,[a,b,c,d,e,f]=draw.transform,project=(u,v)=>({x:a*u+c*v+e,y:b*u+d*v+f});
-      return {id,anchor:project(x+frame.anchor[0]*w,y+frame.anchor[1]*h),visibleCorners:[[alpha.minX,alpha.minY],[alpha.maxX+1,alpha.minY],[alpha.minX,alpha.maxY+1],[alpha.maxX+1,alpha.maxY+1]].map(([u,v])=>project(x+u/frame.width*w,y+v/frame.height*h))};
+      const [x,y,w,h]=draw.args,[a,b,c,d,e,f]=draw.transform,project=(u,v)=>({x:a*u+c*v+e,y:b*u+d*v+f}),bounds=frame.visibleBounds||[alpha.minX,alpha.minY,alpha.maxX+1,alpha.maxY+1];
+      return {id,boundsKind:frame.visibleBounds?'registered visible envelope; faint alpha tails excluded':'positive-alpha envelope',anchor:project(x+frame.anchor[0]*w,y+frame.anchor[1]*h),visibleCorners:[[bounds[0],bounds[1]],[bounds[2],bounds[1]],[bounds[0],bounds[3]],[bounds[2],bounds[3]]].map(([u,v])=>project(x+u/frame.width*w,y+v/frame.height*h))};
     });
-    check(stageId+': actual bitmap anchors and visible alpha bounds fit the live camera',Number.isFinite(combat.camera?.scale)&&combat.camera.scale>0&&combat.imagePlacement.every(image=>[image.anchor,...image.visibleCorners].every(point=>Number.isFinite(point.x)&&Number.isFinite(point.y)&&point.x>=-1&&point.x<=1281&&point.y>=-1&&point.y<=721)),combat.imagePlacement);
+    check(stageId+': actual bitmap anchors and registered visible envelopes fit the live camera',Number.isFinite(combat.camera?.scale)&&combat.camera.scale>0&&combat.imagePlacement.every(image=>[image.anchor,...image.visibleCorners].every(point=>Number.isFinite(point.x)&&Number.isFinite(point.y)&&point.x>=-1&&point.x<=1281&&point.y>=-1&&point.y<=721)),combat.imagePlacement);
     await shot(page,'combat-new-pngs-'+stageId);await page.click('#pauseBtn');
     const frozen=await page.evaluate(()=>({frame:__HALO_QA__.engine.frame,clocks:JSON.stringify(__HALO_QA__.engine.actors.map(actor=>actor.spriteClock))}));
     await page.waitForTimeout(180);
@@ -240,7 +251,7 @@ try{
     await page.click('#leaveFight');await page.waitForFunction(()=>!__HALO_QA__.engine);
   }
   await page.setViewportSize({width:430,height:932});
-  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,batch6[0],'sh1');
+  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,batch7[0],'sh1');
   check('mobile real inspector fits its controls and keeps the one-frame image static',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)&&await page.locator('[data-inspect=play]').isDisabled());await shot(page,'mobile-static-inspector');
   check('no browser, console or HTTP asset errors',report.errors.length===0,report.errors);await context.close();
 }catch(error){report.failure=String(error);process.exitCode=1;}

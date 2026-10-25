@@ -2684,7 +2684,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Frappe avec une arme lourde et produit des sons discordants.",
+          "canonicalBasis": "Très grande créature de patient, manie un marteau selon le guide et enchaîne ses frappes. Échelle du versus qualitative, sans mesure originale.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -2701,7 +2701,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Frappe avec une arme lourde et produit des sons discordants.",
+          "canonicalBasis": "Très grande créature de patient, manie un marteau selon le guide et enchaîne ses frappes. Échelle du versus qualitative, sans mesure originale.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -2881,32 +2881,32 @@
           "type": "signature",
           "name": "Rituel de clôture — Masse inférieure",
           "trigger": "decisive-special",
-          "pose": "absorb",
-          "effect": "blood",
+          "pose": "crush",
+          "effect": "debris",
           "sequence": [
-            "bind",
-            "envelop",
-            "absorb",
-            "pulse"
+            "stagger",
+            "raise",
+            "crush",
+            "dust"
           ],
-          "canonicalBasis": "Version renforcée du Twin Victim.",
+          "canonicalBasis": "Marche sur deux bras et mains ; deux têtes indistinctes en haut et une troisième inversée en bas, sans le manteau du Twin Victim. Morphologie distincte, âge non affirmé.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
         {
           "id": "sh4_bottom_065_nightmare",
           "type": "nightmare",
-          "name": "NIGHTMARE — Dernière manifestation",
+          "name": "NIGHTMARE — Écrasement du souvenir",
           "trigger": "decisive-super",
-          "pose": "absorb",
-          "effect": "blood",
+          "pose": "crush",
+          "effect": "debris",
           "sequence": [
-            "bind",
-            "envelop",
+            "stagger",
+            "raise",
             "otherworld",
-            "pulse"
+            "dust"
           ],
-          "canonicalBasis": "Version renforcée du Twin Victim.",
+          "canonicalBasis": "Marche sur deux bras et mains ; deux têtes indistinctes en haut et une troisième inversée en bas, sans le manteau du Twin Victim. Morphologie distincte, âge non affirmé.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -3504,7 +3504,7 @@
             "devour",
             "sink"
           ],
-          "canonicalBasis": "Structure vivante habituellement passive, adaptée en contrôle du terrain.",
+          "canonicalBasis": "Structure vivante que Henry peut attaquer sans la tuer ; hostilité propre non confirmée, dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -3521,7 +3521,7 @@
             "otherworld",
             "sink"
           ],
-          "canonicalBasis": "Structure vivante habituellement passive, adaptée en contrôle du terrain.",
+          "canonicalBasis": "Structure vivante que Henry peut attaquer sans la tuer ; hostilité propre non confirmée, dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -6702,7 +6702,7 @@
             "incision",
             "blackout"
           ],
-          "canonicalBasis": "Version Book of Memories.",
+          "canonicalBasis": "Infirmière armée d’un tuyau dans Book of Memories.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -6719,7 +6719,7 @@
             "otherworld",
             "blackout"
           ],
-          "canonicalBasis": "Version Book of Memories.",
+          "canonicalBasis": "Infirmière armée d’un tuyau dans Book of Memories.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -9534,9 +9534,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de LAKESIDE AMUSEMENT PARK."
       },
-      "animations": [
-        "ferrisWheel"
-      ]
+      "animations": []
     },
     {
       "id": "woodside",
@@ -9656,7 +9654,7 @@
     },
     {
       "id": "shopping_mall",
-      "name": "CENTRAL SQUARE MALL",
+      "name": "CENTRAL SQUARE — HELEN’S BAKERY",
       "source": "sh3",
       "fatality": {
         "id": "shopping_mall_fatality",
@@ -9669,11 +9667,9 @@
         ],
         "triggerZone": "either-edge",
         "fidelity": "environmental-adaptation",
-        "canonicalBasis": "Décor et dangers documentés de CENTRAL SQUARE MALL."
+        "canonicalBasis": "Décor et dangers documentés de CENTRAL SQUARE — HELEN’S BAKERY."
       },
-      "animations": [
-        "lightFlicker"
-      ]
+      "animations": []
     },
     {
       "id": "brookhaven_sh3",
@@ -9751,10 +9747,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de SEWER CHANNEL."
       },
-      "animations": [
-        "waterRipple",
-        "pipeSteam"
-      ]
+      "animations": []
     },
     {
       "id": "room_302",
@@ -10526,11 +10519,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de MIDWICH — NIGHTMARE SCHOOL."
       },
-      "animations": [
-        "chainSway",
-        "lockerRattle",
-        "lightFlicker"
-      ]
+      "animations": []
     },
     {
       "id": "central_nightmare",
@@ -10845,9 +10834,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de LAKESIDE AMUSEMENT PARK — SH3."
       },
-      "animations": [
-        "ferrisWheel"
-      ]
+      "animations": []
     },
     {
       "id": "forest_world",

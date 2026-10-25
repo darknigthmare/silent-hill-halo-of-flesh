@@ -64,6 +64,13 @@ function rect(ctx,x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(x,y,w,h);}
 function orb(ctx,x,y,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();}
 function path(ctx,pts,color,width=2){ctx.beginPath();ctx.moveTo(...pts[0]);for(const p of pts.slice(1))ctx.lineTo(...p);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();}
 function glow(ctx,x,y,r,tint,power=.3){const g=ctx.createRadialGradient(x,y,1,x,y,r);g.addColorStop(0,`rgba(${tint},${power})`);g.addColorStop(1,`rgba(${tint},0)`);ctx.fillStyle=g;ctx.fillRect(x-r,y-r,2*r,2*r);}
+function carouselSculpture(ctx,x,y,scale,color){
+  ctx.save();ctx.translate(x,y);ctx.scale(scale,scale);ctx.fillStyle=color;
+  ctx.beginPath();ctx.ellipse(0,0,29,12,0,0,TAU);ctx.fill();
+  ctx.beginPath();ctx.moveTo(15,-7);ctx.lineTo(26,-31);ctx.lineTo(37,-32);ctx.lineTo(45,-23);ctx.lineTo(35,-17);ctx.lineTo(27,7);ctx.closePath();ctx.fill();
+  for(const side of[-1,1]){line(ctx,side*18,5,side*25,26,5,color);line(ctx,side*25,26,side*15,26,4,color);}
+  path(ctx,[[-27,-5],[-39,-16],[-42,2]],color,4);ctx.restore();
+}
 
 /** Original, deliberately small scenery prototypes. Never draw an actor or a hitbox. */
 function referenceTrack(ctx,w,h,track,time,progress=null) {
@@ -398,6 +405,46 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
         line(ctx,px,y+2,px+skew,y+h*.15,3,'rgba(0,0,0,.22)');
       }
       line(ctx,x-64,y-height+3,x+64,y-height+3,4,'#555f50');line(ctx,x-64,y-2,x+64,y-2,4,'#555f50');
+      break;
+    }
+    case 'boilerHearthGlow':{
+      ctx.fillStyle='#151a13';ctx.beginPath();ctx.ellipse(x,y,108,35,0,0,TAU);ctx.fill();
+      glow(ctx,x,y-12,75,'191,83,29',.12+pulse*.08);
+      ctx.fillStyle=`rgba(189,89,30,${.25+pulse*.18})`;ctx.beginPath();ctx.ellipse(x,y-3,75,19,0,0,TAU);ctx.fill();
+      ctx.strokeStyle='#6c5133';ctx.lineWidth=5;ctx.beginPath();ctx.ellipse(x,y,103,31,0,0,TAU);ctx.stroke();
+      for(let i=0;i<9;i++){const a=i*TAU/9,px=x+Math.cos(a)*101,py=y+Math.sin(a)*30;line(ctx,px,py,px,py-18,3,'#514a33');}
+      break;
+    }
+    case 'canalCableSway':{
+      rect(ctx,x-138,y-4,276,38,'#142d29');
+      for(let i=0;i<3;i++){
+        const radius=10+(t*.006+i*16)%45;ctx.strokeStyle='rgba(116,154,144,.2)';ctx.lineWidth=1;
+        ctx.beginPath();ctx.ellipse(x+(i-1)*73,y+12,radius,radius*.1,0,0,TAU);ctx.stroke();
+      }
+      rect(ctx,x-148,y+32,296,10,'#586151');rect(ctx,x-148,y+43,296,6,'#333f32');
+      rect(ctx,x-167,y-39,15,20,'#626958');
+      ctx.strokeStyle='#101a14';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x-159,y-22);ctx.lineTo(x-159,y+28);
+      ctx.bezierCurveTo(x-105,y+30+sway*2,x-42,y+38-sway*2,x+42,y+34);ctx.stroke();
+      break;
+    }
+    case 'sh1CarouselOrbit':{
+      const rideTime=t*.00012;
+      // One fixed sculpture is the workbook's reference point, not a rider.
+      line(ctx,x-w*.21,h*.25,x-w*.21,y+16,2,'#5d5b45');
+      carouselSculpture(ctx,x-w*.21,y-45,.75,'#7a7157');
+      for(let i=0;i<3;i++){
+        const a=rideTime+i*TAU/3,px=x+Math.cos(a)*w*.18,py=y-49+Math.sin(a)*15;
+        line(ctx,px,h*.25,px,y+16,2,'#5d5b45');carouselSculpture(ctx,px,py,.65+Math.sin(a)*.09,'#887e60');
+      }
+      line(ctx,x-w*.29,y+28,x+w*.29,y+28,4,'#5a5540');
+      break;
+    }
+    case 'sh3HorseBob':{
+      for(let i=0;i<3;i++){
+        const px=x+(i-1)*w*.16,py=y-50+Math.sin(t*.0009+i*1.2)*7;
+        line(ctx,px,h*.25,px,y+18,3,'#82745a');carouselSculpture(ctx,px,py,.85,'#8a8270');
+      }
+      line(ctx,x-w*.29,y+28,x+w*.29,y+28,4,'#5a5540');
       break;
     }
     default:break;

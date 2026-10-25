@@ -1379,5 +1379,277 @@ export const SPRITES = {
       }
     },
     "animatedClips": 0
+  },
+  "sh1_romper_010": {
+    "fighterId": "sh1_romper_010",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+    "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+    "sourceDimensions": [
+      1448,
+      1086
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "bytes": 1093300,
+        "width": 1448,
+        "height": 1086,
+        "visibleBounds": [
+          17,
+          12,
+          1422,
+          1071
+        ],
+        "pixelSHA256": "c13c0c02eef68c571bd1a5000558b95d907cc04603a314ac8bdc8c06016faf8f",
+        "transparentFraction": 0.68422,
+        "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.98619
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
+        "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+      "bytes": 1093300,
+      "width": 1448,
+      "height": 1086,
+      "facing": 1,
+      "visibleBounds": [
+        17,
+        12,
+        1422,
+        1071
+      ],
+      "pixelSHA256": "c13c0c02eef68c571bd1a5000558b95d907cc04603a314ac8bdc8c06016faf8f",
+      "transparentFraction": 0.68422
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_double_head_040": {
+    "fighterId": "sh3_double_head_040",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+    "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+    "sourceDimensions": [
+      1448,
+      1086
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "bytes": 1433387,
+        "width": 1448,
+        "height": 1086,
+        "visibleBounds": [
+          50,
+          127,
+          1406,
+          972
+        ],
+        "pixelSHA256": "cbab4646b87969eba096de4a3595791248179ebfd023f8adc34bb56be54fba2e",
+        "transparentFraction": 0.64678,
+        "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+        "facing": -1,
+        "anchor": [
+          0.56,
+          0.89503
+        ],
+        "bodyHeight": 0.78,
+        "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
+        "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+      "bytes": 1433387,
+      "width": 1448,
+      "height": 1086,
+      "facing": -1,
+      "visibleBounds": [
+        50,
+        127,
+        1406,
+        972
+      ],
+      "pixelSHA256": "cbab4646b87969eba096de4a3595791248179ebfd023f8adc34bb56be54fba2e",
+      "transparentFraction": 0.64678
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_insane_cancer_041": {
+    "fighterId": "sh3_insane_cancer_041",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+    "sourceSHA256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+    "sourceDimensions": [
+      1363,
+      1154
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe debout SH3 original : énorme tronc, petite tête rabattue, deux bras et deux jambes. Pieds complets ; rouge, texture et contraste amplifiés, faibles poussières alpha hors silhouette retenue. Aucune pose couchée ou transition inférée ; proportions et appuis de versus non mesurés, aucun cycle ni attribution BoM ou certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+        "bytes": 1763911,
+        "width": 1363,
+        "height": 1154,
+        "visibleBounds": [
+          97,
+          17,
+          1246,
+          1141
+        ],
+        "pixelSHA256": "4dfc4627242b60700561492e6abc0426be6181e4185fbeee18a56054ce7179ba",
+        "transparentFraction": 0.55492,
+        "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+        "facing": 1,
+        "anchor": [
+          0.52,
+          0.98873
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-47e05011-615d-456c-b50d-553443b9e11a.png",
+        "sourceSHA256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
+      "bytes": 1763911,
+      "width": 1363,
+      "height": 1154,
+      "facing": 1,
+      "visibleBounds": [
+        97,
+        17,
+        1246,
+        1141
+      ],
+      "pixelSHA256": "4dfc4627242b60700561492e6abc0426be6181e4185fbeee18a56054ce7179ba",
+      "transparentFraction": 0.55492
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_sniffer_dog_male_053": {
+    "fighterId": "sh4_sniffer_dog_male_053",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+    "sourceSHA256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+    "sourceDimensions": [
+      1391,
+      1131
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat fixe Sniffer mâle SH4 : oreilles, fourrure jaune et longue langue rouge distinctes de la femelle sans oreilles à langue violette. Quatre pattes dont une avant levée et langue complète ; queue non isolable avec certitude dans cette vue. Saturation accrue, membres à hauteurs différentes dans la perspective source. Doublon avec logo et variante femelle écartés ; calibration versus, aucun cycle ni certification 1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+        "bytes": 1525989,
+        "width": 1391,
+        "height": 1131,
+        "visibleBounds": [
+          164,
+          18,
+          1185,
+          1116
+        ],
+        "pixelSHA256": "62617d6bd7afdba38ba4d6f1bbca0be7435d7eaaab3b844a9c417e8627ff36ef",
+        "transparentFraction": 0.63092,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+        "facing": -1,
+        "anchor": [
+          0.57,
+          0.98674
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
+        "sourceSHA256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
+      "bytes": 1525989,
+      "width": 1391,
+      "height": 1131,
+      "facing": -1,
+      "visibleBounds": [
+        164,
+        18,
+        1185,
+        1116
+      ],
+      "pixelSHA256": "62617d6bd7afdba38ba4d6f1bbca0be7435d7eaaab3b844a9c417e8627ff36ef",
+      "transparentFraction": 0.63092
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
   }
 };

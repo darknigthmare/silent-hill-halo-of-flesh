@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "b9ca68bf8d03d5d5423f389b9a0716e5748b60f5f56713de37a869d1d5fc206d",
+  "planSha256": "4de5c93a0e170b88f70eeafc7421fbcbda282057f19fc312a054d1fa864cb70e",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -216,9 +216,9 @@
       }
     },
     "Sources": {
-      "rows": 145,
+      "rows": 149,
       "columns": 7,
-      "range": "A5:G150",
+      "range": "A5:G154",
       "fields": {
         "id": "A",
         "title": "B",
@@ -241,34 +241,34 @@
     "poses": 2300,
     "stageAnimations": 1799,
     "observations": 435,
-    "sources": 145,
+    "sources": 149,
     "tasks": 875,
-    "pngCandidates": 18,
+    "pngCandidates": 22,
     "animatedClips": 1,
     "certifiedOneToOne": 0,
-    "newGameplaySequences": 171,
+    "newGameplaySequences": 189,
     "presentationHooks": 9,
-    "openActions": 848,
-    "openP0": 102,
+    "openActions": 842,
+    "openP0": 96,
     "playableFighters": 187,
     "reviewedCombatProfiles": 230,
-    "disabledMoves": 1059,
-    "authoredFinishers": 171,
-    "authoredFighterFinishers": 164,
+    "disabledMoves": 1076,
+    "authoredFinishers": 189,
+    "authoredFighterFinishers": 182,
     "authoredStageFinishers": 7,
-    "authoredPresentations": 574,
-    "resolvedRoleDecisions": 25,
-    "stageBitmapCandidates": 4,
-    "stageBitmapLayers": 4,
-    "stageBitmapFiles": 4,
+    "authoredPresentations": 637,
+    "resolvedRoleDecisions": 31,
+    "stageBitmapCandidates": 5,
+    "stageBitmapLayers": 5,
+    "stageBitmapFiles": 5,
     "sourceTimingSchema": 1,
     "sourceTimingBatchSchema": 1,
     "sourceTimingReviewSchema": 1,
     "measuredSourceMoves": 0,
-    "referenceStageTracks": 65,
-    "retiredStageItems": 1169,
-    "visibleReferenceStageTracks": 62,
-    "maskedReferenceStageTracks": 3,
+    "referenceStageTracks": 69,
+    "retiredStageItems": 1182,
+    "visibleReferenceStageTracks": 65,
+    "maskedReferenceStageTracks": 4,
     "additionalStageBindings": 11
   },
   "calculated": [
@@ -282,31 +282,31 @@
     2300,
     1799,
     435,
-    145,
-    18,
+    149,
+    22,
     1,
     0,
-    848,
-    102
+    842,
+    96
   ],
   "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "bb24551458224c9236b4d2694649597c4dc1168adb592c74b1156f7cec59b63e",
-  "changedCells": 1440,
+  "sourceSha256": "baafe2dab8262aa4505d9c07238dbad83d38c151365cb75275b631a10112a693",
+  "changedCells": 2315,
   "changesBySheet": {
-    "Combattants": 19,
-    "Mouvements": 638,
-    "Finishers": 101,
-    "Présentations": 408,
-    "Clips": 74,
-    "Arènes": 25,
-    "Animations arènes": 49,
-    "Actions": 76,
-    "Gestes référencés": 24,
-    "Sources": 21,
+    "Combattants": 49,
+    "Mouvements": 1098,
+    "Finishers": 141,
+    "Présentations": 357,
+    "Clips": 334,
+    "Arènes": 29,
+    "Animations arènes": 87,
+    "Actions": 143,
+    "Gestes référencés": 44,
+    "Sources": 28,
     "Synthèse": 5
   },
-  "enlargedRows": 323,
+  "enlargedRows": 484,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
@@ -611,8 +611,8 @@
     {
       "sheet": "Synthèse",
       "address": "B16",
-      "formula": "COUNTA('Sources'!$A$6:$A$150)",
-      "value": 145
+      "formula": "COUNTA('Sources'!$A$6:$A$154)",
+      "value": 149
     },
     {
       "sheet": "Synthèse",
@@ -642,7 +642,7 @@
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 18
+      "value": 22
     },
     {
       "sheet": "Synthèse",
@@ -732,7 +732,7 @@
       "sheet": "Synthèse",
       "address": "B20",
       "formula": "COUNTA('Actions'!$A$6:$A$880)-COUNTIFS('Actions'!$H$6:$H$880,\"Validé\")",
-      "value": 848
+      "value": 842
     },
     {
       "sheet": "Synthèse",
@@ -762,7 +762,7 @@
       "sheet": "Synthèse",
       "address": "B21",
       "formula": "COUNTIFS('Actions'!$D$6:$D$880,\"P0\",'Actions'!$H$6:$H$880,\"<>Validé\")",
-      "value": 102
+      "value": 96
     },
     {
       "sheet": "Synthèse",
@@ -789,21 +789,21 @@
       "value": 11
     }
   ],
-  "changeLogSha256": "6360bb02414dd2556cbd853b9b279d834501e1fd1ca6be9972ff5e81e9c8b054",
+  "changeLogSha256": "08844146d1a5d2825ee452f0677b9646b039170e78c09d67a314b19bb592e0b9",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
-  "structureChangeLogSha256": "b58b865e4bf64012e4643517568ada3526ca76487655bfc632f203b39f199e14",
-  "appendedSources": 3,
+  "structureChangeLogSha256": "091f2f77cc078bd1b7ffce0f81f95cec9f169f279138bc2571761f2785e811c8",
+  "appendedSources": 4,
   "verification": {
     "passed": true,
     "preservation": {
       "passed": true,
-      "comparedCells": 249605,
-      "authoredChanges": 1440,
-      "enlargedRows": 323,
-      "appendedSourceRows": 3,
-      "appendedSourceCells": 21,
+      "comparedCells": 249626,
+      "authoredChanges": 2315,
+      "enlargedRows": 484,
+      "appendedSourceRows": 4,
+      "appendedSourceCells": 28,
       "auditedFormulaExpansions": 1,
       "unchanged": [
         "worksheet order",
