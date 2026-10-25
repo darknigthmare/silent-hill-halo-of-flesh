@@ -40,7 +40,13 @@ export function bodyProfile(fighter = {}, state = fighter) {
   // Accept both simulation actors and the renderer's actorSpriteState flags.
   const downedHummer=data.id==='sh4_hummer_055'&&data.source==='sh4'&&
     (state?.ko===true||state?.knockdown===true||finite(state?.knockdownTimer,0)>0);
-  return { kind, ...BODIES[kind], ...(downedHummer?{bottom:0,floating:false}:{}),
+  // The exact SH1 Night Flutter candidate depicts its standing, folded-wing
+  // pose. Keep that support on the floor; an airborne actor still uses the
+  // flyer envelope. Static inspection has no airborne flag and shows standing.
+  // These offsets remain versus calibration, not source geometry measurements.
+  const standingNightFlutter=data.id==='sh1_night_flutter_002'&&data.source==='sh1'&&
+    state?.airborne!==true&&state?.grounded!==false;
+  return { kind, ...BODIES[kind], ...(downedHummer||standingNightFlutter?{bottom:0,floating:false}:{}),
     scale: clamp(finite(visual.scale, 1), .2, 4),
     provenance: 'procedural-render-envelope / versus-collision-adaptation' };
 }

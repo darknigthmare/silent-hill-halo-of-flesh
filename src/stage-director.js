@@ -396,7 +396,8 @@ export function enrichStage(stage, reference) {
     triggerLabel:STAGE_INTERACTION_TRIGGERS[interaction.trigger]?.name || interaction.trigger,
     triggerDescription:STAGE_INTERACTION_TRIGGERS[interaction.trigger]?.description || '',
   }));
-  projected.gameplay = {...projected.gameplay,environmentalDirector:!projected.reference.blocked,terrainRules:!projected.reference.blocked};
+  projected.gameplay = {...projected.gameplay,environmentalDirector:!projected.reference.blocked,
+    terrainRules:!projected.reference.blocked&&projected.referencePolicy.terrainRules!==false};
   projected.director.signature = `${stage.id}:${projected.shift.style}:${projected.terrain.id}:${projected.referencePolicy.worldState}:${projected.director.hazardDeck.join('+')}:${projected.director.events.join('+')}`;
   Object.assign(stage,projected);
   return stage;
@@ -417,7 +418,13 @@ export function stageHazardDeck(stage, phase = 'fog') {
 
 export function stageTerrainProfile(stage, overrideId = null) {
   const id = overrideId || stage?.terrain?.id || 'concrete';
-  return { id, ...(STAGE_TERRAINS[id] || STAGE_TERRAINS.concrete) };
+  const neutral = !overrideId && stage?.referencePolicy?.terrainRules === false;
+  const terrain = { id, ...(neutral ? STAGE_TERRAINS.concrete : STAGE_TERRAINS[id] || STAGE_TERRAINS.concrete) };
+  const presentation = !overrideId && stage?.referencePolicy?.terrainPresentation;
+  // Exact-room wording cannot change the shared material's physical rules.
+  if (typeof presentation?.name === 'string' && presentation.name.trim()) terrain.name = presentation.name;
+  if (typeof presentation?.description === 'string' && presentation.description.trim()) terrain.description = presentation.description;
+  return terrain;
 }
 
 export function stageShiftStyle(stage) {

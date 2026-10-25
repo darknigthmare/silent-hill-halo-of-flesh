@@ -1,0 +1,2164 @@
+{
+  "schema": "halo-batch6-visual-provenance-v1",
+  "reviewedAt": "2026-10-25",
+  "origin": "conversation-image-generation",
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "references": {
+    "schema": "halo-source-visual-references-batch6-v1",
+    "created_utc": "2026-10-25",
+    "network": "Inherited session proxy/TLS trust preserved; no bypass",
+    "repository_changes": "None by this researcher",
+    "actors": [
+      {
+        "id": "sh1_night_flutter_002",
+        "name": "Night Flutter",
+        "edition": "Silent Hill1999 PS1 original, model render; region and render processing unspecified",
+        "refs": [
+          {
+            "file": "sh1_night_flutter_model.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh1_night_flutter_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_10.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+            "http_status": 200,
+            "sha256": "c5874b16b766b6a378530575befd1b16c029cbc1775b7b8f21d4a26ac5eac852",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "bytes": 161189,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "nightflutter-standing-model",
+            "limits": "Worm-covered/replis head, two folded membranous wings, two legs and complete feet. Standing pose only; right foot close to lower source edge. No independent flight/wingbeat views found. Guide likeness to Air Screamer is not permission to reuse its image/frames."
+          }
+        ],
+        "suggested_prompt": "Single SH1 Night Flutter in the supplied standing pose: worm-covered head, dark brown skin, two folded membranous wings attached to upper body and two legs. Preserve visible source topology; complete margins and transparency. No Air Screamer substitution, no invented open-wing pose.",
+        "source_motion_limit": "One source model pose. Any versus hovering presentation is an adaptation, not proof of original idle flight or timing."
+      },
+      {
+        "id": "sh3_pendulum_039",
+        "name": "Pendulum",
+        "edition": "Silent Hill3 original2003 PS2/PC; model and original game screenshot, exact capture platform/region processing unestablished",
+        "refs": [
+          {
+            "file": "sh3_pendulum_model.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh3_pendulum_model.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_04_pendulum.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+            "http_status": 200,
+            "sha256": "da2c99135f69a5ef0d767ded721517f017e14a1d9bd118ded9cd3af42070ee3e",
+            "dimensions": [
+              1875,
+              2500
+            ],
+            "bytes": 305118,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "pendulum-model",
+            "limits": "Two half-torsos and heads connected centrally, strapped body and long blade structures. Four terminal metal/blade ends visible, some near edges. Do not reinterpret rods as human legs."
+          },
+          {
+            "file": "sh3_pendulum_game.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh3_pendulum_game.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_13.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+            "http_status": 200,
+            "sha256": "b896c1418219bc48f9a0a5d972c5b420e5e361cd0905822c2054be9f40159833",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "bytes": 181225,
+            "visually_inspected": true,
+            "role": "secondary_gameplay_angle",
+            "independent_view_group": "pendulum-game-overhead",
+            "limits": "Genuinely different game angle with Heather showing floating blade creature; some blades overlap scenery/body and far extremities are dark. No spin timing or full turntable."
+          }
+        ],
+        "suggested_prompt": "Single original SH3 Pendulum, source orientation: two connected half torsos and heads, central strapped mass, two long lateral blade-leg structures and separate blades by heads. Preserve all four terminal structures without adding human limbs; transparent margin around every sharp tip."
+      },
+      {
+        "id": "sh4_twin_victim_059",
+        "name": "Twin Victim",
+        "edition": "Silent Hill4: The Room original2004 PS2/Xbox/PC; final model, promotional artwork and2004-03-30 pre-release game screenshot",
+        "refs": [
+          {
+            "file": "sh4_twin_victim_model_a.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh4_twin_victim_model_a.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_03_twin_victim.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+            "http_status": 200,
+            "sha256": "a5e83c7356bced6eb7f1ca469f331795da70f0ea209d1fa231ee7d79c53f41f9",
+            "dimensions": [
+              2370,
+              3072
+            ],
+            "bytes": 527970,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "twinvictim-two-hand-model",
+            "limits": "Two adjacent sleeping heads under dark cloak; two long arms ending in large hands, no actual feet. Perspective projects hands at different image heights; not an orthographic ground-contact diagram."
+          },
+          {
+            "file": "sh4_twin_victim_model_b.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh4_twin_victim_model_b.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_04_twin_victim.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+            "http_status": 200,
+            "sha256": "90e79b03a822d18814ea75214214705b69f8c8bb7248f488e571f704e737b81f",
+            "dimensions": [
+              1024,
+              1437
+            ],
+            "bytes": 150519,
+            "visually_inspected": true,
+            "role": "secondary_promo_pointing_pose",
+            "independent_view_group": "twinvictim-pointing-promo",
+            "limits": "Distinct pointing pose, one supporting hand and one raised pointing hand, front view. Promotional model/art montage on background, not a gameplay capture or measurable animation."
+          },
+          {
+            "file": "sh4_twin_victim_promo_game_040330_17.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh4_twin_victim_promo_game_040330_17.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/screens/pics/sh4_screen_040330_17.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh4/screens_en.htm",
+            "http_status": 200,
+            "sha256": "b8e61004bf35c7f21b9f24cb39695e2eb61a4c9a134f0785b9c2e8e7c2fc8e60",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "bytes": 132853,
+            "visually_inspected": true,
+            "role": "supplemental_prerelease_game_context",
+            "independent_view_group": "twinvictim-prerelease-forest",
+            "limits": "Original-game promotional screenshot dated2004-03-30 shows cloaked Twin Victim approaching on two hands behind Henry/Eileen. Strong context/occlusion and pre-release date; not final-build pointing/run frames or exact size proof."
+          }
+        ],
+        "suggested_prompt": "One SH4 Twin Victim: two pale sleeping heads side-by-side, draped distressed dark overcoat, exactly two long pale arms with large hands supporting movement. No feet, no third head/Bottom variant. Idle from two-hand model; separate pointing pose from promotional reference.",
+        "pose_limit": "Pointing is source-supported gesture, mapped to versus presentation if needed; no source taunt event or loop animation established."
+      },
+      {
+        "id": "sh3_slurper_042",
+        "name": "Slurper",
+        "edition": "Silent Hill3 original2003 PS2/PC model plus Lost Memories DVD2003 scene stills, not remake",
+        "refs": [
+          {
+            "file": "sh3_slurper_model_a.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh3_slurper_model_a.jpg",
+            "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_06_slurper.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+            "http_status": 200,
+            "sha256": "5f954cb2a731e8f5eae2c6511430f040dbe02b3854735d8648f22e539e0a9b42",
+            "dimensions": [
+              2150,
+              1928
+            ],
+            "bytes": 600432,
+            "visually_inspected": true,
+            "role": "primary_model_anatomy",
+            "independent_view_group": "slurper-prone-model",
+            "limits": "Prone human-form leather-like body. Two arms terminate in bulbous glove-like masses at right; two dark rear legs extend left/down. Triangular long snout/head is center-right between glove ends, not the dark rear appendage on left. Strong foreshortening/occlusion remains."
+          },
+          {
+            "file": "sh3_slurper_dvd_18.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh3_slurper_dvd_18.jpg",
+            "url": "https://www.silenthillmemories.net/dvd_lm/sh3_creatures/pics/sh3_cre_18.jpg",
+            "source_page": "https://www.silenthillmemories.net/dvd_lm/sh3_creatures_en.htm",
+            "http_status": 200,
+            "sha256": "6b1dc441756362f57ac91cc31c48e8172c5a246c78d14bbedfc1f995a40424c3",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "bytes": 108198,
+            "visually_inspected": true,
+            "role": "secondary_scene_close_context",
+            "independent_view_group": "slurper-dvd-low-view",
+            "limits": "Different original scene angle with Slurper near Heather leg; heavily filtered DVD menu frame and strongly occluded body, useful context only."
+          },
+          {
+            "file": "sh3_slurper_dvd_19.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh3_slurper_dvd_19.jpg",
+            "url": "https://www.silenthillmemories.net/dvd_lm/sh3_creatures/pics/sh3_cre_19.jpg",
+            "source_page": "https://www.silenthillmemories.net/dvd_lm/sh3_creatures_en.htm",
+            "http_status": 200,
+            "sha256": "a735331849bec77422338895c0278fcd922812de15aaac38d268c62e1f56fc8b",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "bytes": 101620,
+            "visually_inspected": true,
+            "role": "secondary_scene_top_context",
+            "independent_view_group": "slurper-dvd-overhead",
+            "limits": "Another actual scene angle with Heather and prone Slurper; body/limbs overlap and frame is filtered. Independent image/angle, not extracted temporal sequence or animation timing."
+          }
+        ],
+        "suggested_prompt": "Single original SH3 Slurper preserving supplied prone pose: humanoid torso, two arms ending in bulbous leather glove hands at right, two darker rear legs at left/down, small head with elongated anteater-like snout at center-right. No canine quadruped, no extra head, no replacing glove hands with feet."
+      }
+    ],
+    "stages": [
+      {
+        "id": "lakeview",
+        "name": "Lakeview Hotel original lobby before video",
+        "scene": "normal-lobby-before-video",
+        "edition": "Silent Hill2 original2001 PS2 and original PC Letter from Silent Heaven gallery; no remake, no post-video Nightmare Hotel",
+        "refs": [
+          {
+            "file": "sh2_lakeview_lobby_pc_44.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh2_lakeview_lobby_pc_44.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_44.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/screens_en.htm",
+            "http_status": 200,
+            "sha256": "0db825a21d500a1495baa851b3d1b5f893030e9019405d6773bbdfd0db7afa3b",
+            "dimensions": [
+              1024,
+              768
+            ],
+            "bytes": 223688,
+            "visually_inspected": true,
+            "role": "primary_lobby_materials",
+            "independent_view_group": "lakeview-pc44",
+            "limits": "Original PC gallery: patterned red/brown carpet, wood wainscot/beams, pale patterned plaster, glazed double door and wood music-box player. James occludes foreground; exact whole room outside frame unknown."
+          },
+          {
+            "file": "sh2_lakeview_musicbox_context.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh2_lakeview_musicbox_context.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_music_box_player_puzzle_01.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+            "http_status": 200,
+            "sha256": "43662cb687e636683a25c7adc58c46322201e859624ad1935a1c926a77a0f8ba",
+            "dimensions": [
+              700,
+              394
+            ],
+            "bytes": 85003,
+            "visually_inspected": true,
+            "role": "secondary_lobby_angle",
+            "independent_view_group": "lakeview-musicbox-context",
+            "limits": "Different original-game camera of same lobby/music-box player beside glazed doors, showing stairs foreground edge. No reception montage; capture processing/build details unestablished."
+          },
+          {
+            "file": "sh2_lakeview_musicbox_guide.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh2_lakeview_musicbox_guide.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/walkthrough/pics/sh2_p09_01.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+            "http_status": 200,
+            "sha256": "c558935d86c98e7b995b57e0cf61e84ff16a0f65656640f402061b9ac2669c30",
+            "dimensions": [
+              800,
+              600
+            ],
+            "bytes": 68207,
+            "visually_inspected": true,
+            "role": "supplemental_object_close_view",
+            "independent_view_group": "lakeview-musicbox-close",
+            "limits": "Closer original music-box player view with doors/windows behind, supports furniture design. Letterbox bars and partial crop; not a full room view."
+          },
+          {
+            "file": "sh2_lakeview_map_1f.jpg",
+            "local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh2_lakeview_map_1f.jpg",
+            "url": "https://www.silenthillmemories.net/sh2/walkthrough/pics/sh2_map_12b_hotel.jpg",
+            "source_page": "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+            "http_status": 200,
+            "sha256": "6971c4878e8468c4e83454ac4d3a28939c5f623cba8060bf874c19b1f6744135",
+            "dimensions": [
+              2018,
+              1200
+            ],
+            "bytes": 631855,
+            "visually_inspected": true,
+            "role": "floorplan_context",
+            "independent_view_group": "lakeview-map1f",
+            "limits": "Original1F map explicitly labels Lobby, central staircase and separate Reception/Office. Supports room identity/relationships, not camera dimensions or global Fog/Memory ontology."
+          }
+        ],
+        "chronology_evidence": {
+          "guide_url": "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+          "guide_local_path": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/sh2-lake-view.htm",
+          "guide_sha256": "b14af6764a3938dfe7c5d22f05028f0a81f4a4c30520029c356176e3607fbb28",
+          "lobby_quote": "Here you can find a Save Point on a chair in the northwest corner. You may also notice a large music box player standing by the stairs",
+          "later_room312_quote": "While facing the VCR, open your inventory and insert the Videotape you found in the Office.",
+          "conclusion": "The described lobby/music-box puzzle appears before the Room312 video; next chapter is13 Nightmare Hotel. This establishes selected room/chronology only."
+        },
+        "generation_constraints": [
+          "Preserve source lobby materials and door/music-box-side framing; do not invent an entire grand staircase offscreen.",
+          "Keep Reception/Office separate per map, no montage of unrelated room.",
+          "Versus foreground floor must be clear at both actor positions; camera/symmetry/furniture layout changes explicitly adaptations, not canonical geometry.",
+          "Global Fog/Memory interpretation and post-video transition remain reserved/disabled by owning task."
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "files": [
+          "sh3_slurper_model_b.jpg"
+        ],
+        "reason": "Same pose/model image as_a, changed background/resolution only; not independent anatomy."
+      },
+      {
+        "files": [
+          "sh2_lakeview_map1.jpg"
+        ],
+        "reason": "This is B1F map, not lobby1F; filename was an initial guess."
+      },
+      {
+        "files": [
+          "sh4_wall_man_pc56.jpg"
+        ],
+        "reason": "Full image identifies wall-protruding Wall Man with single head, not Twin Victim."
+      },
+      {
+        "files": [
+          "sh1_lisa_cutscene.jpg",
+          "sh1_kneeling_cutscene.jpg"
+        ],
+        "reason": "Indoor Harry/Lisa cutscenes contain no Night Flutter; excluded as creature/flight evidence."
+      }
+    ],
+    "supplements": [
+      {
+        "file": "sh3_slurper_concept.jpg",
+        "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creaturesketch_09_slurper.jpg",
+        "sha256": "a4ec85bf4f9692601ea9002d7c602ee66e7d5216b830d2a1ece232c362318d19",
+        "role": "concept_only",
+        "limit": "Helps interpret intended humanoid nose/glove silhouette, not proof of final topology/details/pose."
+      }
+    ],
+    "video_search": {
+      "search_duration_seconds": 1.678,
+      "size_limit_bytes": 33554432,
+      "pages": [
+        {
+          "file": "sh1-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh1/videos_en.htm",
+          "status": 200,
+          "sha256": "57c61d8054f4c2bf43a353f3e282613c9dca0873b121f5a9b5e78400ad9036fd",
+          "bytes": 13031,
+          "direct_media_links": [],
+          "youtube_embeds": 6
+        },
+        {
+          "file": "sh3-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh3/videos_en.htm",
+          "status": 200,
+          "sha256": "4cf73b003116fb27f4ccd1f52b3783ef6ebadcc119c76e7163cfa377cfd5b516",
+          "bytes": 16417,
+          "direct_media_links": [],
+          "youtube_embeds": 10
+        },
+        {
+          "file": "sh4-videos.htm",
+          "url": "https://www.silenthillmemories.net/sh4/videos_en.htm",
+          "status": 200,
+          "sha256": "4628975f0d466757abb4cacc2b91c7cec318f1ad8dd409ea4b9007df7600189e",
+          "bytes": 17566,
+          "direct_media_links": [],
+          "youtube_embeds": 14
+        },
+        {
+          "file": "dvd-lm-videos.htm",
+          "url": "https://www.silenthillmemories.net/dvd_lm/videos_en.htm",
+          "status": 200,
+          "sha256": "a8d0f753913b7d99e75a3dec62f8f93e50af28c5281de586431c605c1838ac13",
+          "bytes": 10064,
+          "direct_media_links": [],
+          "youtube_embeds": 4
+        }
+      ],
+      "finding": "No direct original video media link found on four inspected indices; YouTube embeds are not downloaded captures. No proxy bypass or FPS measurements."
+    },
+    "candidate_review": "candidate-review.json",
+    "technical_http_review_pending": false,
+    "source_fidelity_certified": false,
+    "technical_http_review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/visual-http-review.json",
+      "build": "dist",
+      "status": "pass_final_dist_after_lobby_label_correction",
+      "reported_checks": 149,
+      "visually_reviewed_captures": 16,
+      "compared_captures": 39,
+      "unchanged_captures": 34,
+      "changed_captures_visually_reinspected": 5,
+      "dist_review_pending": false,
+      "source_fidelity_certified": false,
+      "certified_1_to_1": false,
+      "lobby_labels": [
+        "AVANT LA CASSETTE",
+        "TAPIS DU LOBBY"
+      ]
+    },
+    "final_review_frozen": true,
+    "dist_label_recheck_pending": false
+  },
+  "candidateReview": {
+    "schema": "halo-candidate-review-batch6-v1",
+    "reviewer": "batch4_visual_refs",
+    "created_utc": "2026-10-25",
+    "source_provenance": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/provenance.json",
+    "historical_reviews": [
+      {
+        "catalog_id": "sh1_night_flutter_002",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
+        "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Worm-covered head, two folded wings and two legs retained; no Air Screamer reuse.",
+          "Standing model pose only. Any versus hover is adaptation requiring calibration note, not source flight evidence.",
+          "Feet/surface texture reconstructed; stronger brown contrast; all extremes inside margins."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          346,
+          24,
+          1111,
+          1061
+        ],
+        "certified_1_to_1": false
+      },
+      {
+        "catalog_id": "sh3_pendulum_039",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-e7b75677-02c1-4348-891b-febba7ef231b.png",
+        "sha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
+        "dimensions": [
+          1086,
+          1449
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two connected half torsos/heads and four metal terminal structures retained; no human leg substitution.",
+          "Left/right margins16/14px narrow but all blade ends complete. Orange/red saturation and metal detail heightened.",
+          "No source spin cycle, orthographic collision or scale measurement."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          16,
+          47,
+          1072,
+          1431
+        ],
+        "certified_1_to_1": false
+      },
+      {
+        "catalog_id": "sh4_twin_victim_059",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-af4a2bdb-b971-45d5-97bc-55dc7c8da620.png",
+        "sha256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
+        "dimensions": [
+          1101,
+          1428
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two sleeping heads, draped cloak and exactly two long arms/hands retained; no feet/third head.",
+          "Both large hands complete. Perspective puts far hand above near hand in image; contact plane requires versus calibration, not source measurement.",
+          "Skin and cloak details enhanced; body/cloth extremes reconstructed."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          93,
+          55,
+          1039,
+          1398
+        ],
+        "certified_1_to_1": false
+      },
+      {
+        "catalog_id": "sh4_twin_victim_059",
+        "clip_key": "taunt@sh4_twin_victim_059:taunt",
+        "path": "/workspace/generated_images/exec-8fdcb1e3-3bdc-4f19-bbbb-f8b15cb399a7.png",
+        "sha256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
+        "dimensions": [
+          1101,
+          1428
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two heads, one supporting hand and one raised pointing hand retained. All fingers/cloak bounds complete; some fingers naturally occluded.",
+          "Front camera and cloth reconstructed from promotional art. Source supports gesture, not canonical taunt timing/event.",
+          "Exact clip syntax checked in src/sprite-poses.js; if imported, one-frame presentation, non-loop, no animation claim."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          193,
+          35,
+          909,
+          1368
+        ],
+        "certified_1_to_1": false
+      },
+      {
+        "catalog_id": "sh3_slurper_042",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
+        "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+        "dimensions": [
+          1324,
+          1188
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Both arms lead to glove masses at right; two dark legs extend left/down; triangular head/snout center-right distinct.",
+          "No extra/canine limbs. Source prone pose retained; skin more orange/contrast and occluded zones reconstructed.",
+          "All extremes complete; source angle is foreshortened, no canonical side-view scale/collision/timing."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          34,
+          21,
+          1298,
+          1149
+        ],
+        "certified_1_to_1": false
+      },
+      {
+        "catalog_id": "lakeview",
+        "clip_key": "normal-lobby-before-video",
+        "path": "/workspace/generated_images/exec-5b388c03-88f2-4c11-82da-c3fa80e32388.png",
+        "sha256": "7bc2120c786ca6ce13aa190b854bcf1de53b4f8d10b9d129ea55bb56a495d9e1",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Original lobby door/music-box/red-brown carpet/wood/plaster materials retained; no reception montage.",
+          "Foreground floor clear across83% source height; music-box furniture remains second plane.",
+          "More frontal/symmetric camera, wall sconces, left chair/coffer and room/furniture spacing reconstructed. Not canonical full-room geometry."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false
+      }
+    ],
+    "final_selection": {
+      "sh1_night_flutter_002": {
+        "catalog_id": "sh1_night_flutter_002",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
+        "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+        "dimensions": [
+          1448,
+          1086
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Worm-covered head, two folded wings and two legs retained; no Air Screamer reuse.",
+          "Standing model pose only. Any versus hover is adaptation requiring calibration note, not source flight evidence.",
+          "Feet/surface texture reconstructed; stronger brown contrast; all extremes inside margins."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          346,
+          24,
+          1111,
+          1061
+        ],
+        "certified_1_to_1": false
+      },
+      "sh3_pendulum_039": {
+        "catalog_id": "sh3_pendulum_039",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-e7b75677-02c1-4348-891b-febba7ef231b.png",
+        "sha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
+        "dimensions": [
+          1086,
+          1449
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two connected half torsos/heads and four metal terminal structures retained; no human leg substitution.",
+          "Left/right margins16/14px narrow but all blade ends complete. Orange/red saturation and metal detail heightened.",
+          "No source spin cycle, orthographic collision or scale measurement."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          16,
+          47,
+          1072,
+          1431
+        ],
+        "certified_1_to_1": false
+      },
+      "sh4_twin_victim_059": {
+        "catalog_id": "sh4_twin_victim_059",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-af4a2bdb-b971-45d5-97bc-55dc7c8da620.png",
+        "sha256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
+        "dimensions": [
+          1101,
+          1428
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two sleeping heads, draped cloak and exactly two long arms/hands retained; no feet/third head.",
+          "Both large hands complete. Perspective puts far hand above near hand in image; contact plane requires versus calibration, not source measurement.",
+          "Skin and cloak details enhanced; body/cloth extremes reconstructed."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          93,
+          55,
+          1039,
+          1398
+        ],
+        "certified_1_to_1": false
+      },
+      "taunt@sh4_twin_victim_059:taunt": {
+        "catalog_id": "sh4_twin_victim_059",
+        "clip_key": "taunt@sh4_twin_victim_059:taunt",
+        "path": "/workspace/generated_images/exec-8fdcb1e3-3bdc-4f19-bbbb-f8b15cb399a7.png",
+        "sha256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
+        "dimensions": [
+          1101,
+          1428
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Two heads, one supporting hand and one raised pointing hand retained. All fingers/cloak bounds complete; some fingers naturally occluded.",
+          "Front camera and cloth reconstructed from promotional art. Source supports gesture, not canonical taunt timing/event.",
+          "Exact clip syntax checked in src/sprite-poses.js; if imported, one-frame presentation, non-loop, no animation claim."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          193,
+          35,
+          909,
+          1368
+        ],
+        "certified_1_to_1": false
+      },
+      "sh3_slurper_042": {
+        "catalog_id": "sh3_slurper_042",
+        "clip_key": "idle",
+        "path": "/workspace/generated_images/exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
+        "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+        "dimensions": [
+          1324,
+          1188
+        ],
+        "mode": "RGBA",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Both arms lead to glove masses at right; two dark legs extend left/down; triangular head/snout center-right distinct.",
+          "No extra/canine limbs. Source prone pose retained; skin more orange/contrast and occluded zones reconstructed.",
+          "All extremes complete; source angle is foreshortened, no canonical side-view scale/collision/timing."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox_128": [
+          34,
+          21,
+          1298,
+          1149
+        ],
+        "certified_1_to_1": false
+      },
+      "lakeview": {
+        "catalog_id": "lakeview",
+        "clip_key": "normal-lobby-before-video",
+        "path": "/workspace/generated_images/exec-5b388c03-88f2-4c11-82da-c3fa80e32388.png",
+        "sha256": "7bc2120c786ca6ce13aa190b854bcf1de53b4f8d10b9d129ea55bb56a495d9e1",
+        "dimensions": [
+          1672,
+          941
+        ],
+        "mode": "RGB",
+        "verdict": "accept_candidate_with_limits",
+        "selection_status": "selected_final_candidate",
+        "visual_notes": [
+          "Original lobby door/music-box/red-brown carpet/wood/plaster materials retained; no reception montage.",
+          "Foreground floor clear across83% source height; music-box furniture remains second plane.",
+          "More frontal/symmetric camera, wall sconces, left chair/coffer and room/furniture spacing reconstructed. Not canonical full-room geometry."
+        ],
+        "blocking_defects": [],
+        "source_fidelity_certified": false,
+        "technical_http_review_pending": false,
+        "certified_1_to_1": false
+      }
+    },
+    "overall": "Four actor idle candidates, one Twin Victim pointing presentation and one Lakeview lobby candidate accepted with documented limits; no1:1 or animation certification.",
+    "technical_http_review_pending": false,
+    "technical_http_review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/visual-http-review.json",
+      "build": "dist",
+      "status": "pass_final_dist_after_lobby_label_correction",
+      "reported_checks": 149,
+      "visually_reviewed_captures": 16,
+      "compared_captures": 39,
+      "unchanged_captures": 34,
+      "changed_captures_visually_reinspected": 5,
+      "dist_review_pending": false,
+      "source_fidelity_certified": false,
+      "certified_1_to_1": false,
+      "lobby_labels": [
+        "AVANT LA CASSETTE",
+        "TAPIS DU LOBBY"
+      ]
+    },
+    "final_review_frozen": true,
+    "dist_label_recheck_pending": false
+  },
+  "delivery": [
+    {
+      "id": "sh1_night_flutter_002",
+      "source": "sh1",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
+      "inputSha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+      "frames": [
+        {
+          "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+          "bytes": 895527,
+          "width": 1448,
+          "height": 1086,
+          "visibleBounds": [
+            345,
+            23,
+            1111,
+            1061
+          ],
+          "pixelSHA256": "849ba15fc0377b53d101af6d18ee040dc43e3789d278d44bc09f41165584847f",
+          "transparentFraction": 0.75225,
+          "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+          "facing": -1,
+          "anchor": [
+            0.64,
+            0.97698
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
+          "sourceSHA256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe SH1 original : tête couverte de replis, deux ailes repliées et deux jambes, pose source debout uniquement. Pieds aux marges reconstruits, contraste accru ; aucun vol ni cycle établi. Échelle, appuis et miroir de présentation adaptés au versus ; aucune certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_pendulum_039",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-e7b75677-02c1-4348-891b-febba7ef231b.png",
+      "inputSha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
+      "frames": [
+        {
+          "sha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
+          "bytes": 950201,
+          "width": 1086,
+          "height": 1449,
+          "visibleBounds": [
+            15,
+            46,
+            1072,
+            1432
+          ],
+          "pixelSHA256": "1200af5432b2102f41c7ae3fce73edbd04357d968172f144a2bcbf8951bf6b84",
+          "transparentFraction": 0.75401,
+          "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+          "facing": 1,
+          "anchor": [
+            0.52,
+            0.98827
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-e7b75677-02c1-4348-891b-febba7ef231b.png",
+          "sourceSHA256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe SH3 original, modèle et vue en jeu distincte : deux demi-torses/têtes reliés au centre et quatre terminaisons métalliques, pas de jambes humaines. Saturation orange/rouge renforcée, détails extrapolés et marges latérales étroites mais complètes. Direction de présentation, géométrie et échelle versus non mesurées ; aucun cycle ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh4_twin_victim_059",
+      "source": "sh4",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-af4a2bdb-b971-45d5-97bc-55dc7c8da620.png",
+      "inputSha256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
+      "frames": [
+        {
+          "sha256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
+          "bytes": 1425912,
+          "width": 1101,
+          "height": 1428,
+          "visibleBounds": [
+            93,
+            55,
+            1040,
+            1398
+          ],
+          "pixelSHA256": "32db5372c62bc7d7169ffc5a85374c7631d82a3fabf67f1dfa0456b2e93f1534",
+          "transparentFraction": 0.62215,
+          "path": "assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
+          "facing": 1,
+          "anchor": [
+            0.59,
+            0.97899
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-af4a2bdb-b971-45d5-97bc-55dc7c8da620.png",
+          "sourceSHA256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
+          "origin": "conversation-image-generation"
+        },
+        {
+          "sha256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
+          "bytes": 1508997,
+          "width": 1101,
+          "height": 1428,
+          "visibleBounds": [
+            193,
+            34,
+            910,
+            1368
+          ],
+          "pixelSHA256": "f88df6f95e23d68454547fdfcc66c9979abcb46145f1303546463894e124dd9b",
+          "transparentFraction": 0.61658,
+          "path": "assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
+          "facing": 1,
+          "anchor": [
+            0.53,
+            0.95798
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-8fdcb1e3-3bdc-4f19-bbbb-f8b15cb399a7.png",
+          "sourceSHA256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "taunt@sh4_twin_victim_059:taunt": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Deux candidats fixes SH4 : pose basse sur les mains issue du modèle et pointage distinct depuis une seconde vue promotionnelle. Deux têtes, un manteau et deux bras, sans pieds ajoutés. Doigts occultés et tissu reconstitués ; échelle/ancrage versus non mesurés. Le pointage sert de provocation proposée, une seule image non bouclée, sans timing original ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "sh3_slurper_042",
+      "source": "sh3",
+      "origin": "conversation-image-generation",
+      "inputFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
+      "inputSha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+      "frames": [
+        {
+          "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+          "bytes": 1481436,
+          "width": 1324,
+          "height": 1188,
+          "visibleBounds": [
+            33,
+            21,
+            1298,
+            1150
+          ],
+          "pixelSHA256": "35627559f5f3d9d2b17fd5cab5e8af0f749ec47106963fea4662415f70879f9a",
+          "transparentFraction": 0.62058,
+          "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.96801
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
+          "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "notes": "Candidat fixe SH3 original : humanoïde rampant, deux bras gantés à droite, deux jambes sombres à gauche/bas et museau triangulaire central distinct. Le second rendu est un doublon écarté ; vues DVD séparées mais filtrées/occluses. Contraste orangé accru, arrière masqué et appuis reconstruits ; enveloppe quadrupède et échelle de versus, aucun cycle ni certification 1:1.",
+      "certifiedOneToOne": false
+    },
+    {
+      "id": "lakeview",
+      "source": "sh2",
+      "scene": "normal-lobby-before-video",
+      "inputFile": "exec-5b388c03-88f2-4c11-82da-c3fa80e32388.png",
+      "path": "assets/stages/lakeview.lobby.7bc2120c786c.png",
+      "certifiedOneToOne": false,
+      "sha256": "7bc2120c786ca6ce13aa190b854bcf1de53b4f8d10b9d129ea55bb56a495d9e1",
+      "bytes": 2712564,
+      "width": 1672,
+      "height": 941,
+      "notes": "Lobby SH2 original avant la cassette de la chambre 312, côté meuble musical et portes vitrées. Caméra frontale élargie, tapis continu et mobilier au fond adaptés au versus ; détails de chaise/coffre et symétrie reconstruits. Aucune réception, escalier, TV, phase brûlée ou géométrie certifiée.",
+      "geometry": {
+        "ceiling": true
+      }
+    }
+  ],
+  "limits": [
+    "All six images are candidates. No source animation, original collision, scale, camera or 1:1 visual certification is inferred.",
+    "Night Flutter has a standing folded-wing pose only. An absent flight image remains explicit; Air Screamer artwork is not reused.",
+    "Pendulum retains two opposed torso/head forms and four metal extremities. Saturation and fine detail differ, and blade margins remain narrow.",
+    "Twin Victim pointing is a single non-looping proposed taunt image from a distinct promotional pose. It is not a running cycle, a source-measured duration, or proof of every choreographic pose.",
+    "Slurper source duplicates are excluded; filtered DVD views corroborate a crawling humanoid without establishing hidden anatomy or original collision dimensions.",
+    "Lakeview depicts the original lobby before the videotape, not reception, room312 or the waterlogged/burnt hotel. Widened frontal camera, open carpet and furniture setback are authored versus adaptations.",
+    "No direct original video capture was obtained from the consulted video indexes. All 4600 original move timings remain blank.",
+    "Prior Mannequin and Alessa SMG image tool refusals remain respected; neither was retried in this pass."
+  ],
+  "finalBrowserVisualReview": {
+    "schema": "halo-visual-http-review-batch6-final-dist-labels-v1",
+    "reviewer": "batch4_visual_refs",
+    "review_date_utc": "2026-10-25",
+    "build_reviewed": "dist",
+    "status": "pass_final_dist_with_documented_nonblocking_reservations",
+    "blocking_findings": [],
+    "scope": "Final dist after lobby HUD-label correction.39 PNG digests compared to previous dist/frozen source:34 unchanged,5 changed Lakeview captures visually reinspected.16 targeted/supporting images visually reviewed in total. No runtime, repository, texture or PNG modifications by reviewer.",
+    "captures": [
+      {
+        "file": "combat-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-alchemilla.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "7d781ee0ae0532e8f2d8cea4ee530a3d2ecb49ca9cdb92ed97f41ffae7c00c23",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "combat-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-lakeview.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "ab4237fadcc670492f9edbec07c0c053b19f7713e77d664d3770954362efc8e1",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "combat-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-woodside.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "379e5d55f18caceea88e45250b2d4fd551cab3005edf23ae8291e6ad252c2c45",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-pointing-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-pointing-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-pointing-sh4_twin_victim_059.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "bb46815579449e732495641b775ba75eef2810b77230551d2ba620d33847472a",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh1_night_flutter_002.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_night_flutter_002.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_night_flutter_002.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "83bc3340adf06605302bcfd60dd57e5ab1ebb785122312213de32ff79bdbc4a6",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh3_pendulum_039.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_pendulum_039.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_pendulum_039.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "b4404ac9eb1d3847ebcd4d831a92ebf606946abfc8fbdc787f3ce734062d5b69",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh3_slurper_042.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_slurper_042.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_slurper_042.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "86ae8bff6132cc05cf67cf9b42687775cc5ab5146ee3190ecd36804a398ca556",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh4_twin_victim_059.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "bb97859ffd6990dfd1f4bbb5be419bb7f8f7552757d71e2cc7f789060961735f",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "mobile-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-alchemilla.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "b66aa2884c82fc41cf55b06408968701cbb9865701694838d41b2ab7eaf73dab",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "mobile-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-lakeview.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "336384e611d19852dbd2a25e40395ed420551d9a00dc476806cfd59a23a826e9",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "mobile-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-woodside.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "644ae06c403c15b8bb16b7fd8e09b5bdd8def2c125acfb0e119fb21d4cb8a5af",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "paused-new-art-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/paused-new-art-lakeview.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "866175b3e99dde00611d195ad505918fcb445aa0041e480155761fe9a8da9d40",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "4bba1e0483de9ae7b3bbb069541b2876b75463d3e91f73a45fb3f0509cf2c4fe",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "8ac8b750719944c8cb7e862f5b4f6d9af2978247646f9909fd42d0e8792f0092",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "touch-taunt-cancelled-twin-idle.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-cancelled-twin-idle.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/touch-taunt-cancelled-twin-idle.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "ec07e80be48c95a8a3afcd8d36dd47b9baca05b96a5c8d28f26e2a2b25d28094",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "touch-taunt-pointing-twin-victim.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      }
+    ],
+    "all_capture_digest_inventory": [
+      {
+        "file": "combat-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-alchemilla.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "7d781ee0ae0532e8f2d8cea4ee530a3d2ecb49ca9cdb92ed97f41ffae7c00c23",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "combat-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-lakeview.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "ab4237fadcc670492f9edbec07c0c053b19f7713e77d664d3770954362efc8e1",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "combat-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/combat-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/combat-new-pngs-woodside.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "379e5d55f18caceea88e45250b2d4fd551cab3005edf23ae8291e6ad252c2c45",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-pointing-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-pointing-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-pointing-sh4_twin_victim_059.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "bb46815579449e732495641b775ba75eef2810b77230551d2ba620d33847472a",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh1_floatstinger_016.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_floatstinger_016.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_floatstinger_016.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "37e8b0eb1dbd16762447a7b5191df963dc506670c358b9f17eca3be41be6eee9",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh1_groaner_003.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_groaner_003.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_groaner_003.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "40feca36643171590272b4a7e50f018f32de1251580c2215f00f6af20ffad06b",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh1_hanged_scratcher_011.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_hanged_scratcher_011.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_hanged_scratcher_011.png",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "sha256": "7c95644e63954c697c07c9ab2d6b1ddb50e2dbf6ee9a0262a84620c089c488e0",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh1_night_flutter_002.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_night_flutter_002.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_night_flutter_002.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "83bc3340adf06605302bcfd60dd57e5ab1ebb785122312213de32ff79bdbc4a6",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh1_split_head_014.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_split_head_014.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_split_head_014.png",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "sha256": "b480a22468a47a0a77d3e98de34d50bf01e52692678ce96da9ca63667f6c9846",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh1_wormhead_004.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh1_wormhead_004.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh1_wormhead_004.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "10cfd53f6225ab937dac42fc3d543eb5b4de316762de190e15eb42b2c39a1da0",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh3_closer_036.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_closer_036.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_closer_036.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "4b897305a2e1322ae15ac5f7eaa80d7b49451827b71bf35720c7f25c267f4c75",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh3_numb_body_small_037.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_numb_body_small_037.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_numb_body_small_037.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "7234c7452309a7eb8c2bf729af8caa0a29a55f5cfacb9a457da50c9de0f5dd80",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh3_pendulum_039.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_pendulum_039.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_pendulum_039.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "b4404ac9eb1d3847ebcd4d831a92ebf606946abfc8fbdc787f3ce734062d5b69",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh3_slurper_042.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh3_slurper_042.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh3_slurper_042.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "86ae8bff6132cc05cf67cf9b42687775cc5ab5146ee3190ecd36804a398ca556",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "inspector-sh4_hummer_055.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_hummer_055.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh4_hummer_055.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "423f2b717ccda6ef7a80b453bfcc7cc798abbf4fcb1a01aceae10d76cb005608",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "inspector-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/inspector-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/inspector-sh4_twin_victim_059.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "bb97859ffd6990dfd1f4bbb5be419bb7f8f7552757d71e2cc7f789060961735f",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "missing-poses-sh1_floatstinger_016.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_floatstinger_016.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_floatstinger_016.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "aac0bd5b171858706e501c511aa77555511dd053107b68aa2b757c04c3d03ab5",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh1_groaner_003.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_groaner_003.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_groaner_003.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "e2fea5541228152bf5e59aaf5e9b85ffe17e11cc610177a112f6126dcd0828a1",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh1_hanged_scratcher_011.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_hanged_scratcher_011.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_hanged_scratcher_011.png",
+        "dimensions": [
+          1440,
+          2093
+        ],
+        "sha256": "1336cd14951807bc48fc281f2764f80b1e93668a2b291caee9103aeef1df31eb",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh1_night_flutter_002.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_night_flutter_002.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_night_flutter_002.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "e5bb59eca1c1a1742427c0fdfc1502151874f60dc985dfd8eddb38d9a95afef9",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh1_split_head_014.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_split_head_014.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_split_head_014.png",
+        "dimensions": [
+          1440,
+          2013
+        ],
+        "sha256": "7a60988482f390561cf2a47924626f942629d8d2c0c41f6452a411bc751316b4",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh1_wormhead_004.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh1_wormhead_004.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh1_wormhead_004.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "683364708a3bc50de1a09a6a9d445995132d528b2226980b980d3a81db9f6f11",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh3_closer_036.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_closer_036.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh3_closer_036.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "b86720f688e8c7b322ceec7e36214f1d486722559fab6fc724f3378ba75a3e8a",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh3_numb_body_small_037.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_numb_body_small_037.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh3_numb_body_small_037.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "e7c6c4aeec746c657d053c4e20a0da7200e571fa0cd2bc97eeafd079409a8481",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh3_pendulum_039.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_pendulum_039.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh3_pendulum_039.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "e2ab3f04283b8cf5917791c81309485af12973d9c847acc30e3c8b44592ca050",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh3_slurper_042.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh3_slurper_042.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh3_slurper_042.png",
+        "dimensions": [
+          1440,
+          2066
+        ],
+        "sha256": "58bb2a75ae04dfdb3c16454345f0ed25fc247f711a0dabdbff8326e325edd630",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh4_hummer_055.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_hummer_055.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh4_hummer_055.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "b04c3e7692ae7d359d1382b27b62a6e10423d2e6b7d7f52a78630958e810e063",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "missing-poses-sh4_twin_victim_059.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/missing-poses-sh4_twin_victim_059.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/missing-poses-sh4_twin_victim_059.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "4ccf3de06bccf88f202c7f2dc14fd856b71f5e293e235d8900f52bb371bf8669",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "mobile-new-pngs-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-alchemilla.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "b66aa2884c82fc41cf55b06408968701cbb9865701694838d41b2ab7eaf73dab",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "mobile-new-pngs-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-lakeview.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "336384e611d19852dbd2a25e40395ed420551d9a00dc476806cfd59a23a826e9",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "mobile-new-pngs-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-new-pngs-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-new-pngs-woodside.png",
+        "dimensions": [
+          430,
+          932
+        ],
+        "sha256": "644ae06c403c15b8bb16b7fd8e09b5bdd8def2c125acfb0e119fb21d4cb8a5af",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "mobile-static-inspector.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/mobile-static-inspector.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/mobile-static-inspector.png",
+        "dimensions": [
+          430,
+          2612
+        ],
+        "sha256": "66bb45af1593f328082a20028aded60e5f087b3ccbd9e41fee09608077f571cd",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "paused-new-art-alchemilla.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-alchemilla.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/paused-new-art-alchemilla.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "f663e0b16190b5c0740ac0a6bc93a2e5fcbe20ec2b83f71a0eee7f24c1c5f98e",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "paused-new-art-lakeview.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-lakeview.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/paused-new-art-lakeview.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "866175b3e99dde00611d195ad505918fcb445aa0041e480155761fe9a8da9d40",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "paused-new-art-woodside.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/paused-new-art-woodside.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/paused-new-art-woodside.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "86ddfcea49ae059cbe6f7385dc1d5406a7e0903b789bafb7b54cd76abbec78c1",
+        "visually_inspected": false,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Digest inventory only; no visual-review claim."
+      },
+      {
+        "file": "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/stateful-inspector-sh1_night_flutter_002-jump.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "4bba1e0483de9ae7b3bbb069541b2876b75463d3e91f73a45fb3f0509cf2c4fe",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/stateful-inspector-sh4_hummer_055-knockdown.png",
+        "dimensions": [
+          1440,
+          2040
+        ],
+        "sha256": "8ac8b750719944c8cb7e862f5b4f6d9af2978247646f9909fd42d0e8792f0092",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": true,
+        "byte_identical_to_previous_dist": true,
+        "review_method": "Visually inspected frozen source image; latest dist PNG remains byte-identical."
+      },
+      {
+        "file": "touch-taunt-cancelled-twin-idle.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-cancelled-twin-idle.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/touch-taunt-cancelled-twin-idle.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "ec07e80be48c95a8a3afcd8d36dd47b9baca05b96a5c8d28f26e2a2b25d28094",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      },
+      {
+        "file": "touch-taunt-pointing-twin-victim.png",
+        "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/touch-taunt-pointing-twin-victim.png",
+        "source_archive_path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/touch-taunt-pointing-twin-victim.png",
+        "dimensions": [
+          1440,
+          1004
+        ],
+        "sha256": "40aabba8b07240a862fd82a6d0adc8c2c1bf5c460f163fa50902b2ac21b8abc9",
+        "visually_inspected": true,
+        "build": "dist",
+        "byte_identical_to_frozen_source": false,
+        "byte_identical_to_previous_dist": false,
+        "review_method": "Final dist changed capture visually reinspected after lobby HUD-label correction."
+      }
+    ],
+    "actor_inspector_reviews": [
+      {
+        "id": "sh1_night_flutter_002",
+        "capture": "inspector-sh1_night_flutter_002.png",
+        "result": "pass_static_candidate",
+        "observations": [
+          "Worm-covered head, two folded wings, both legs and feet entirely inside grid/card.",
+          "Idle lowest foot meets logical ground line. Standing source pose retained. No opaque rectangle/halo.",
+          "No original flight frame or wingbeat cycle established; airborne state fallback is separate from source pose fidelity."
+        ]
+      },
+      {
+        "id": "sh3_pendulum_039",
+        "capture": "inspector-sh3_pendulum_039.png",
+        "result": "pass_static_candidate",
+        "observations": [
+          "Two connected body/head masses and all four terminal blade/rod structures fit grid/card.",
+          "Lowest blade remains above line in hovering presentation; all long tips complete despite narrow original PNG margins.",
+          "Orange saturation, exact collider, spin timing and scale remain adapted/unmeasured."
+        ]
+      },
+      {
+        "id": "sh4_twin_victim_059",
+        "capture": "inspector-sh4_twin_victim_059.png",
+        "result": "pass_static_candidate",
+        "observations": [
+          "Two sleeping heads, cloak and two arms/hands visible, no feet or third head.",
+          "Near support hand meets ground line; far hand projects higher due preserved perspective. Complete fingers/cloak edges.",
+          "Two imported static poses and one presentation reported, zero animated clips; no official run cycle/size established."
+        ]
+      },
+      {
+        "id": "sh3_slurper_042",
+        "capture": "inspector-sh3_slurper_042.png",
+        "result": "pass_with_perspective_limit",
+        "observations": [
+          "Both gloved arms, two dark rear legs and distinct center-right snout fit grid/card.",
+          "Lowest rear extremity meets ground line; other limbs project at different heights in source top-down/foreshortened pose.",
+          "Small static silhouette remains legible as candidate with zoom; does not prove correct orthographic crawl contacts, limb cycle or canonical scale."
+        ]
+      }
+    ],
+    "combat_reviews": [
+      {
+        "stage": "woodside",
+        "desktop_capture": "combat-new-pngs-woodside.png",
+        "mobile_capture": "mobile-new-pngs-woodside.png",
+        "result": "pass_framing_and_clear_floor",
+        "observations": [
+          "Both selected actor silhouettes remain complete and clear of HUD/scene edges.",
+          "Continuous foreground playing floor visible under anchor positions; no furniture/plinth replaces ground at contacts.",
+          "No opaque actor rectangle, previous glow or stage tiling seam visible."
+        ],
+        "source_fidelity_limit": "Camera/floor/furniture layout and versus scale remain adaptations, not a canonical room reconstruction."
+      },
+      {
+        "stage": "alchemilla",
+        "desktop_capture": "combat-new-pngs-alchemilla.png",
+        "mobile_capture": "mobile-new-pngs-alchemilla.png",
+        "result": "pass_framing_and_clear_floor",
+        "observations": [
+          "Both selected actor silhouettes remain complete and clear of HUD/scene edges.",
+          "Continuous foreground playing floor visible under anchor positions; no furniture/plinth replaces ground at contacts.",
+          "No opaque actor rectangle, previous glow or stage tiling seam visible.",
+          "Corrected Closer two lateral arm columns and two dark central legs remain distinct; rejected boot-legged variant absent."
+        ],
+        "source_fidelity_limit": "Camera/floor/furniture layout and versus scale remain adaptations, not a canonical room reconstruction."
+      },
+      {
+        "stage": "lakeview",
+        "desktop_capture": "combat-new-pngs-lakeview.png",
+        "mobile_capture": "mobile-new-pngs-lakeview.png",
+        "result": "pass_framing_and_clear_floor",
+        "observations": [
+          "Both selected actor silhouettes remain complete and clear of HUD/scene edges.",
+          "Continuous foreground playing floor visible under anchor positions; no furniture/plinth replaces ground at contacts.",
+          "No opaque actor rectangle, previous glow or stage tiling seam visible.",
+          "Lakeview music-box/door-side lobby remains coherent; chairs/coffer and music-box behind floor contact band. Twin near hand and Slurper lowest extremity lie on carpet; perspective contact limits remain."
+        ],
+        "source_fidelity_limit": "Camera/floor/furniture layout and versus scale remain adaptations, not a canonical room reconstruction."
+      }
+    ],
+    "twin_pointing_review": {
+      "inspector_capture": "inspector-pointing-sh4_twin_victim_059.png",
+      "combat_capture": "touch-taunt-pointing-twin-victim.png",
+      "cancelled_capture": "touch-taunt-cancelled-twin-idle.png",
+      "result": "pass_effective_static_presentation",
+      "observations": [
+        "Selected inspector pose visibly switches to frontal pointing artwork with one hand supporting at line and raised pointing hand. Both heads/full cloak and hand tips fit grid.",
+        "Live combat screenshot shows the actual pointing image, no pause overlay; supporting hand rests on carpet.",
+        "Cancellation screenshot visibly returns original two-hand idle silhouette.",
+        "Inspector states image1/1,tick0/0,Lecture unique; this is one static non-looped versus presentation, not source animation or measured source taunt duration."
+      ],
+      "reported_clip_key": "taunt@sh4_twin_victim_059:taunt",
+      "source_semantics_limit": "Original gesture supported by promotional pose; gameplay taunt mapping/ticks are proposed versus behaviour."
+    },
+    "stateful_inspector_reviews": [
+      {
+        "id": "sh1_night_flutter_002",
+        "pose": "jump",
+        "capture": "stateful-inspector-sh1_night_flutter_002-jump.png",
+        "result": "pass_technical_idle_fallback",
+        "observations": [
+          "Complete standing/folded-wing bitmap moves above ground line in airborne inspector state.",
+          "Selector states jump A PRODUIRE and label POSE A PRODUIRE/apercu idle with image1/1. No fabricated jump artwork or wingbeat shown."
+        ],
+        "source_fidelity_limit": "This does not validate an original airborne pose, jump motion, wingbeat timing or source collider."
+      },
+      {
+        "id": "sh4_hummer_055",
+        "pose": "knockdown",
+        "capture": "stateful-inspector-sh4_hummer_055-knockdown.png",
+        "result": "pass_technical_idle_fallback",
+        "observations": [
+          "Complete wings and long beak remain inside grid near ground line in knockdown geometry state.",
+          "Selector states knockdown A PRODUIRE and idle-preview status; flight bitmap remains a placeholder rather than a claimed knockdown drawing."
+        ],
+        "source_fidelity_limit": "No source knockdown artwork, fall/stomp animation or official hitbox validated."
+      }
+    ],
+    "findings": [
+      {
+        "id": "portrait-hud-small",
+        "severity": "medium",
+        "blocking": false,
+        "known_before_this_pass": true,
+        "captures": [
+          "mobile-new-pngs-woodside.png",
+          "mobile-new-pngs-alchemilla.png",
+          "mobile-new-pngs-lakeview.png"
+        ],
+        "observation": "Portrait430x932 retains full landscape canvas around430x242 with large vertical black areas; HUD/names small. Lakeview touch controls remain visible in lower area.",
+        "scope_note": "Known responsive readability reservation, no UI redesign in this art pass."
+      },
+      {
+        "id": "source-perspective-contact-limit",
+        "severity": "low",
+        "blocking": false,
+        "captures": [
+          "inspector-sh3_slurper_042.png",
+          "combat-new-pngs-lakeview.png",
+          "inspector-sh4_twin_victim_059.png"
+        ],
+        "observation": "Slurper source is a top-down/foreshortened prone pose and Twin idle projects hands at different heights. Lowest extremity meets logical floor but other limb contacts cannot be inferred as a single orthographic floor plane.",
+        "scope_note": "Documented candidate/source-angle limit; no cropped extremity or proven physics failure. Canonical locomotion/contact reconstruction remains unvalidated."
+      }
+    ],
+    "supporting_http_report": {
+      "path": "/workspace/silent-hill-halo-of-flesh/tests/http-art-batch4/report.json",
+      "sha256": "b43dba8ed4c72d319bb9e0dcfe90795d27d90cd57cb20ba7db3d7fa094b3b236",
+      "reported_build": "dist",
+      "reported_passed": true,
+      "reported_checks_total": 149,
+      "reported_failed_checks": 0,
+      "reported_errors": [],
+      "note": "Final dist149/149 report consulted. Visual and digest review does not certify original FPS, dimensions, animation or canonical hitboxes."
+    },
+    "state_geometry_report": [
+      {
+        "id": "sh1_night_flutter_002",
+        "pose": "jump",
+        "state": {
+          "airborne": true,
+          "frame": 0
+        },
+        "boundsKind": "registered visible envelope; faint alpha tails excluded",
+        "actualVisible": {
+          "left": 334.95421060823827,
+          "top": 263.83172325278497,
+          "right": 439.06249514312816,
+          "bottom": 404.9079626094634
+        },
+        "expectedVisible": {
+          "left": 334.95421060823827,
+          "top": 263.83172325278497,
+          "right": 439.06249514312816,
+          "bottom": 404.9079626094634
+        },
+        "actualCollision": {
+          "left": 300.9600015640259,
+          "top": 264.68800437927246,
+          "right": 419.0399984359741,
+          "bottom": 404.908000664711
+        },
+        "expectedCollision": {
+          "left": 300.9600015640259,
+          "top": 264.68800437927246,
+          "right": 419.0399984359741,
+          "bottom": 404.908000664711
+        },
+        "visibleMatches": true,
+        "collisionMatches": true
+      },
+      {
+        "id": "sh4_hummer_055",
+        "pose": "knockdown",
+        "state": {
+          "knockdown": true,
+          "frame": 0
+        },
+        "boundsKind": "registered visible envelope; faint alpha tails excluded",
+        "actualVisible": {
+          "left": 228.67028377378213,
+          "top": 287.1778428256141,
+          "right": 504.2445321740453,
+          "bottom": 432.3822599687547
+        },
+        "expectedVisible": {
+          "left": 228.67028377378213,
+          "top": 287.1778428256141,
+          "right": 504.2445321740453,
+          "bottom": 432.3822599687547
+        },
+        "actualCollision": {
+          "left": 300.9600015640259,
+          "top": 289.7800037145615,
+          "right": 419.0399984359741,
+          "bottom": 430
+        },
+        "expectedCollision": {
+          "left": 300.9600015640259,
+          "top": 289.7800037145615,
+          "right": 419.0399984359741,
+          "bottom": 430
+        },
+        "visibleMatches": true,
+        "collisionMatches": true
+      }
+    ],
+    "references": {
+      "provenance": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/provenance.json",
+      "candidate_review": "/workspace/shared/halo-of-flesh/references/batch6-2026-10-25/candidate-review.json"
+    },
+    "source_fidelity_certified": false,
+    "certified_1_to_1": false,
+    "dist_review_pending": false,
+    "limitations": [
+      "No source FPS, original animation cycle, canonical collider or exact size measured. All candidate texture/pose/source crop limits remain.",
+      "No full arena traversal or moving attack contact verified from still captures.",
+      "15 images visually inspected; digest inventory of39 exists for later dist comparison but does not imply visual review of unlisted images.",
+      "Final dist verification:34 unchanged PNGs and5 visually reinspected HUD-label changes. All source fidelity1:1, original animation/collision and size limitations remain; no source certification."
+    ],
+    "supporting_source_http_report": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source/report.json",
+      "sha256": "9d2b7206426ea79a785d7dc0b8da7fd2f9ac5c7ff050fe7c07d4104163f478dc",
+      "reported_build": "source",
+      "reported_passed": true,
+      "reported_checks_total": 147,
+      "reported_failed_checks": 0,
+      "reported_errors": [],
+      "note": "147-check source report consulted; reviewer did not rerun browser suite. State envelope/collision match is technical consistency, not canonical geometry."
+    },
+    "capture_comparison": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/source-dist-capture-comparison-final-labels.json",
+      "sha256": "b13d06db1b341bcc1846ecea5746525b6f21b191b72fa6e4c4e48f16968abbbd",
+      "compared_images": 39,
+      "identical_to_previous_dist": 34,
+      "changed_and_visually_reinspected": 5,
+      "changed_files": [
+        "combat-new-pngs-lakeview.png",
+        "mobile-new-pngs-lakeview.png",
+        "paused-new-art-lakeview.png",
+        "touch-taunt-cancelled-twin-idle.png",
+        "touch-taunt-pointing-twin-victim.png"
+      ]
+    },
+    "history": {
+      "source_review": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/history/visual-http-review-source.json",
+      "source_review_sha256": "fccd7478a9d0e0662a492d0867347397d39bfed57b76248790a2aff110360892",
+      "source_proof_dir": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/art-source"
+    },
+    "supporting_full_browser_run": {
+      "log": "/workspace/.cloud-env/halo/logs/batch6-full-browser-tests.log",
+      "log_sha256": "99ca4e893bf072f169789513a187e67ae2c6b92a66d11e89d55992b513b0ebac",
+      "reported_by_root": "Final dist exit0,792 Node tests,100 Python tests and all14 browser suites; reviewer did not rerun these suites."
+    },
+    "final_review_frozen": true,
+    "lobby_label_recheck": {
+      "pending": false,
+      "status": "pass_final_dist",
+      "changed_captures_visually_reinspected": [
+        "combat-new-pngs-lakeview.png",
+        "mobile-new-pngs-lakeview.png",
+        "paused-new-art-lakeview.png",
+        "touch-taunt-cancelled-twin-idle.png",
+        "touch-taunt-pointing-twin-victim.png"
+      ],
+      "visible_labels": [
+        "AVANT LA CASSETTE",
+        "TAPIS DU LOBBY"
+      ],
+      "observations": [
+        "Desktop live/pointing/cancelled views use exact new lobby chronology/carpet labels; no Fog World or humid-carpet text remains in those visible Lakeview HUD fields.",
+        "Mobile keeps the complete frame, with pre-existing small-HUD readability reservation.",
+        "Pause dialog remains centered/complete; no clipped buttons.",
+        "Body/floor/pointing/idle anatomy and appuis unchanged. No PNG texture modified."
+      ],
+      "preceding_dist_review": "/workspace/shared/halo-of-flesh/validation-batch6-2026-10-25/history/visual-http-review-dist-before-lobby-label-correction.json",
+      "asset_pngs_unchanged": true
+    }
+  },
+  "finalBrowserVisualReviewSha256": "a69033cfedf36d70a37b37a7cc71b87740706deab6bde2449655787573846d16"
+}

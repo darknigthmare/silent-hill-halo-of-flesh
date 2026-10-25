@@ -1,6 +1,32 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — cinquième lot du 24 octobre 2026
+## Chantiers parallèles — sixième lot du 25 octobre 2026
+
+Les six chantiers ont avancé ensemble : quatre nouveaux profils illustrés,
+une pose de pointage distincte pour Twin Victim, le lobby original Lakeview,
+quatre pistes de lieu, vingt finishers et soixante-dix présentations supplémentaires.
+Les balayages de Closer/Twin Victim frappent des deux côtés ; six emprises
+au sol ne projettent plus leur cible en l’air.
+
+Bogeyman Homecoming reste un dossier de cinématiques sans duel autonome.
+Prisoner et Floor Form sont clarifiés et restent ouverts. Le suivi conserve
+**848 actions ouvertes, dont 102 P0**, avec **3 541 commandes actives et 1 059
+désactivées**. Les 25 décisions de rôle ne valident aucune image par inférence.
+
+La couverture atteint **18 profils illustrés, 23 PNG acteurs et quatre PNG de
+décor**, avec un seul montage animé candidat. Le pointage est une image non
+bouclée de provocation proposée. Aucun visuel n’est certifié 1:1 ; les 4 600
+relevés originaux restent vides. `verify-review` contrôle désormais les PNG,
+le manifeste et le HTML d’un aperçu contre une nouvelle extraction de la capture.
+
+**Validation : 792 tests Node, 100 tests Python et 962 contrôles navigateur dans
+quatorze suites ; 146 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT6_2026-10-25.md) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-25.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — cinquième lot du 24 octobre 2026
 
 Les six chantiers ont avancé ensemble : quatre nouveaux sprites candidats,
 la salle d’attente normale Alchemilla, quatre pistes SH4, vingt finishers et

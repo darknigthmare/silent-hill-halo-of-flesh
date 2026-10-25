@@ -23,6 +23,8 @@ const sourceOf=actor=>FIGHTER_REFERENCES[dataOf(actor).id];
 const proposalKey=key=>({winRound:'winRound1',loseRound:'loseRound1'}[key]||key);
 const proposalFor=(actor,key)=>sourceOf(actor)?.proposals?.[proposalKey(key)];
 const approvedProposal=proposal=>proposal?.status==='adaptation-versus-proposee';
+const anatomyMatches=(recipe,data)=>(!recipe.attackerKind||bodyProfile(data).kind===recipe.attackerKind)&&
+  (!recipe.attackerLimbs||data.visual?.limbs===recipe.attackerLimbs)&&(!recipe.attackerHead||data.visual?.head===recipe.attackerHead);
 
 /* Each recipe is a deliberate action grammar. Variants share only actions
  * documented for their own IDs; the contextual artwork never crosses editions. */
@@ -384,6 +386,77 @@ const RECIPES={
     beat('NUAGE QUI REMPLIT LE CADRE',37,frame('smog-lungs-exposed-cloud',.24),frame('occluded',.17,32,.16), 'mist','hiss',.97),
     beat('FERMETURE DU THORAX AU REPOS',46,frame('smog-ribs-close-held',.24),frame('held',.17,35,.16), 'mist','silence',1)
   ]},
+  bomTalonsCircle:{attackerKind:'flyer',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('CERCLE DE LA VERSION VITA',41,frame('bom-wing-room-circle',-.12,-74),frame('track'), 'wind','wing',.97),
+    beat('PIQUE DES SERRES PROPOSE',29,frame('bom-talon-descent',.68,-22),frame('brace',.03), 'wind','rush',.94),
+    beat('PASSAGE DES SERRES',24,frame('bom-hover-talon-slash',.78,-17),frame('recoil',.16,16), 'slash','hit',.93),
+    beat('CIBLE SOUS LA TRAJECTOIRE',34,frame('bom-wing-circle-recover',.56,-59),frame('fall',.21,35,.22), 'vignette','wing',.97),
+    beat('REPRISE DU VOL CIRCULAIRE',48,frame('bom-wing-room-circle',.23,-74),frame('held',.21,35,.22), 'wind','silence',1)
+  ]},
+  bomHammerStop:{attackerKind:'humanoid',weapon:'hammer',targets:STANDING,maxTargetHeight:310,steps:[
+    beat('CIBLE CHOISIE SANS DETOUR',42,frame('bom-hammer-target-approach',.24),frame('brace'), 'vignette','step',.98),
+    beat('ARMEMENT DU MARTEAU VITA',35,frame('bom-hammer-windup',.57),frame('backstep',.05), 'vignette','metal',.94),
+    beat('ABATTEMENT PROPOSE SANS SAISIE',27,frame('bom-hammer-down',.72),frame('fall',.18,35), 'impact','heavy',.93),
+    beat('POIDS IMMOBILISE',35,frame('bom-hammer-weight-stop',.69),frame('occluded',.18,36,.18), 'vignette','silence',.97),
+    beat('REGARD ET MARTEAU CONSERVES',48,frame('bom-hammer-final-hold',.54),frame('held',.18,36,.18), 'vignette','breath',1)
+  ]},
+  bomCleaverPair:{attackerKind:'humanoid',weapon:'cleaver',targets:STANDING,maxTargetHeight:310,steps:[
+    beat('GREAT CLEAVER DE CETTE VERSION',38,frame('bom-cleaver-close-ready',.22),frame('brace'), 'vignette','metal',.98),
+    beat('PREMIER COUP COURT PROPOSE',27,frame('bom-cleaver-first-cut',.65),frame('recoil',.09,5), 'slash','hit',.94),
+    beat('SECOND COUP COURT PROPOSE',29,frame('bom-cleaver-second-cut',.7),frame('fall',.18,34), 'slash','metal',.93),
+    beat('RECUL DU BUSTE',33,frame('bom-cleaver-torso-recoil',.45),frame('occluded',.18,35,.18), 'vignette','cloth',.97),
+    beat('LAME AU REPOS SANS PRISE AJOUTEE',47,frame('bom-cleaver-held',.4),frame('held',.18,35,.18), 'vignette','silence',1)
+  ]},
+  bomCirclingCharge:{attackerKind:'quadruped',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Encerclement et charge décrits par le bestiaire Vita. La morsure proposée dans le classeur reste à capturer ; elle n’est pas rejouée ici.',steps:[
+    beat('ENCERCLEMENT DOCUMENTE VITA',39,frame('bom-dog-circle-appui',-.13),frame('track'), 'dust','growl',.98),
+    beat('RESSERRER LES APPUIS',31,frame('bom-dog-circle-close',.2),frame('brace'), 'dust','step',.95),
+    beat('CHARGE DE LA TETE FENDUE',27,frame('bom-dog-charge',.76),frame('recoil',.16,17), 'impact','hit',.93),
+    beat('CIBLE DESEQUILIBREE',34,frame('bom-dog-charge-recover',.63),frame('fall',.24,35,.25), 'dust','cloth',.97),
+    beat('POURSUITE CIRCULAIRE PROPOSEE',47,frame('bom-dog-circle-resume',.32),frame('held',.24,35,.25), 'vignette','growl',1)
+  ]},
+  bomToxicPresencePass:{attackerKind:'ghost',unarmed:true,targets:PHYSICAL,steps:[
+    beat('DERIVE DE LA PRESENCE TOXIQUE',44,frame('bom-toxic-presence-approach',.2),frame('watch'), 'fog','lowDrone',.98),
+    beat('PRESENCE AUTOUR DE LA CIBLE',36,frame('bom-toxic-presence-envelop',.68,-5,.85),frame('stagger',.04,7), 'mist','hiss',.95),
+    beat('GLISSEMENT AU DELA',34,frame('bom-toxic-presence-pass',1.08,-5,.85),frame('occluded',.1,22,.22), 'mist','lowDrone',.94),
+    beat('ESPACE ADVERSE QUI SE VIDE',33,frame('bom-toxic-presence-beyond',1.14),frame('fall',.13,35,.1), 'fog','silence',.97),
+    beat('PRESENCE AU FOND CONSERVEE',48,frame('bom-toxic-presence-held',1.14),frame('held',.13,35,.1), 'vignette','lowDrone',1)
+  ]},
+  bomMassSpaceCrush:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('MASSE QUI OCCUPE L ESPACE',43,frame('bom-mass-space-advance',.21),frame('brace'), 'dust','breath',.98),
+    beat('FERMETURE DES APPUIS ADVERSES',34,frame('bom-mass-space-close',.61),frame('backstep',.08), 'vignette','creak',.95),
+    beat('ECRASEMENT PAR LE POIDS',31,frame('bom-mass-weight-press',.82),frame('fall',.23,35), 'impact','heavy',.93),
+    beat('MASSE EN PREMIER PLAN',33,frame('bom-mass-occlude',.86),frame('occluded',.23,36,.15), 'vignette','breath',.97),
+    beat('VAINQUEUR INTACT SANS EXPLOSION',47,frame('bom-mass-weight-held',.7),frame('held',.23,36,.15), 'vignette','silence',1)
+  ]},
+  bomBladeCrossRetreat:{attackerKind:'spider',attackerLimbs:4,unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('QUATRE MEMBRES LAMES VITA',39,frame('bom-four-blades-support',.17),frame('brace'), 'vignette','metal',.98),
+    beat('MEMBRES DEVANT LA TRAJECTOIRE',31,frame('bom-four-blades-open',.51),frame('backstep',.03), 'vignette','creak',.95),
+    beat('CROISEMENT PROPOSE',27,frame('bom-four-blades-cross',.73),frame('recoil',.17,15), 'slash','hit',.93),
+    beat('RECUL OBLIQUE',32,frame('bom-four-blades-oblique-retreat',.47),frame('fall',.22,35,.22), 'dust','scrape',.97),
+    beat('APPUI SUR LES MEMBRES EXISTANTS',48,frame('bom-four-blades-support',.36),frame('held',.22,35,.22), 'vignette','silence',1)
+  ]},
+  bomGreatKnifeSweep:{attackerKind:'pyramid',weapon:'great_knife',targets:STANDING,maxTargetHeight:310,steps:[
+    beat('LAME MASSIVE DE LA VERSION VITA',43,frame('bom-great-knife-drag',.18),frame('brace'), 'sparks','scrape',.98),
+    beat('TRAJECTOIRE LATERALE PREPAREE',36,frame('bom-great-knife-sweep-ready',.49),frame('backstep',.05), 'vignette','metal',.94),
+    beat('BALAYAGE PROPOSE',28,frame('bom-great-knife-sweep',.72),frame('fall',.2,35), 'slash','heavy',.93),
+    beat('POIDS DE LA LAME MAINTENU',34,frame('bom-great-knife-weight-stop',.69),frame('occluded',.2,36,.15), 'vignette','scrape',.97),
+    beat('LAME TENUE SANS ESTOC AJOUTE',49,frame('bom-great-knife-held',.54),frame('held',.2,36,.15), 'vignette','silence',1)
+  ]},
+  bomHeadBladeLunge:{attackerKind:'humanoid',attackerHead:'blade',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('OSCILLATION AVEUGLE',38,frame('bom-head-blade-sway',-.08),frame('watch'), 'vignette','breath',.98),
+    beat('AXE FRONTAL VERS LE BRUIT',32,frame('bom-head-blade-align',.23),frame('brace'), 'vignette','creak',.95),
+    beat('ELAN DE LA TETE LAME',27,frame('bom-head-blade-lunge',.76),frame('recoil',.17,13), 'slash','hit',.93),
+    beat('REPLI SANS SAISIE AJOUTEE',34,frame('bom-head-blade-retract',.48),frame('fall',.23,35,.21), 'vignette','cloth',.97),
+    beat('RETOUR A L OSCILLATION',47,frame('bom-head-blade-sway',.37),frame('held',.23,35,.21), 'vignette','breath',1)
+  ]},
+  bomClosedTorsoJet:{attackerKind:'humanoid',unarmed:true,targets:STANDING,maxTargetHeight:310,steps:[
+    beat('ENVELOPPE SANS BRAS LIBRES',41,frame('bom-closed-torso-contraction',.12),frame('brace'), 'vignette','breath',.98),
+    beat('PREPARATION DU VOMISSEMENT ACIDE',34,frame('bom-closed-torso-jet-ready',.34),frame('backstep',.05), 'mist','breath',.95),
+    beat('JET TERMINAL PROPOSE',35,frame('bom-closed-torso-acid-jet',.34),frame('stagger',.13,11), 'spray','hiss',.94),
+    beat('CIBLE MASQUEE PAR LE JET',33,frame('bom-closed-torso-release',.29),frame('fall',.2,35,.2), 'mist','cloth',.97),
+    beat('CORPS TOUJOURS CLOS',48,frame('bom-closed-torso-held',.24),frame('held',.2,35,.2), 'vignette','silence',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -421,7 +494,11 @@ const FIGHTER_RECIPES=Object.freeze({
   sh1_incubator_018:'blueTerminalExposure',sh1_incubus_019:'redSuspendedExposure',sh2_creeper_025:'sh2LowShadowBite',
   sh3_god_050:'incompleteBodyFireline',origins_straight_jacket_074:'closedTorsoLegRelease',origins_ariel_078:'tetheredDollKicks',
   origins_memory_of_helen_grady_082:'helenSuspendedWheel',origins_memory_of_richard_grady_083:'richardWallTentacles',
-  homecoming_lurker_085:'lurkerLowClawFold',homecoming_smog_087:'smogExposedExhalation'
+  homecoming_lurker_085:'lurkerLowClawFold',homecoming_smog_087:'smogExposedExhalation',
+  bom_air_screamer_121:'bomTalonsCircle',bom_bogeyman_122:'bomHammerStop',bom_butcher_123:'bomCleaverPair',
+  bom_double_head_124:'bomCirclingCharge',bom_ghost_125:'bomToxicPresencePass',bom_insane_cancer_126:'bomMassSpaceCrush',
+  bom_needler_127:'bomBladeCrossRetreat',bom_pyramid_head_129:'bomGreatKnifeSweep',bom_schism_130:'bomHeadBladeLunge',
+  bom_straight_jacket_131:'bomClosedTorsoJet'
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -455,7 +532,17 @@ const PRESENTATION_STAGING=Object.freeze({
   origins_memory_of_helen_grady_082:{id:'origins-helen-cage-cables',entry:0,retreat:0,recoil:0,poses:['helen-cage-wheel-reveal','helen-cage-muted-wheel-threat','helen-cage-cables-stable','helen-cage-cables-recovery','helen-cage-wheel-final-stop','helen-cage-final-mechanism-stop','helen-cage-suspended-result-held']},
   origins_memory_of_richard_grady_083:{id:'origins-richard-wall-neck',entry:0,retreat:0,recoil:0,poses:['richard-wall-neck-entry','richard-wall-muted-neck-threat','richard-wall-head-extended','richard-wall-neck-recovery','richard-wall-head-final-held','richard-wall-head-final-rest','richard-wall-attached-result-held']},
   homecoming_lurker_085:{id:'homecoming-lurker-low-claws',entry:29,retreat:35,recoil:7,poses:['lurker-water-edge-crawl-awaiting-water','lurker-low-claw-muted-threat','lurker-low-claw-support-held','lurker-low-body-support-recovery','lurker-watchful-low-retreat','lurker-final-side-rest','lurker-watchful-low-departure']},
-  homecoming_smog_087:{id:'homecoming-smog-ribs-lungs',entry:12,retreat:0,recoil:7,outroHold:true,poses:['smog-lungs-lit-ribs-entry','smog-ribs-muted-threat','smog-stable-body-watch','smog-low-body-recovery','smog-relaxed-ribs-final-watch','smog-final-body-rest','smog-relaxed-ribs-result-held']}
+  homecoming_smog_087:{id:'homecoming-smog-ribs-lungs',entry:12,retreat:0,recoil:7,outroHold:true,poses:['smog-lungs-lit-ribs-entry','smog-ribs-muted-threat','smog-stable-body-watch','smog-low-body-recovery','smog-relaxed-ribs-final-watch','smog-final-body-rest','smog-relaxed-ribs-result-held']},
+  bom_air_screamer_121:{id:'bom-air-room-circle-talons',entry:39,retreat:34,recoil:7,landing:46,roundDip:14,ascent:64,poses:['bom-wing-room-circle-entry','bom-hover-talons-muted-threat','bom-wing-stable-hover','bom-wing-height-recovery','bom-wing-high-final-circle','bom-wing-final-support-rest','bom-wing-high-departure']},
+  bom_bogeyman_122:{id:'bom-hammer-target-weight',entry:24,retreat:0,recoil:7,outroHold:true,poses:['bom-hammer-target-entry','bom-hammer-muted-threat','bom-hammer-stable-watch','bom-hammer-weight-recovery','bom-hammer-relaxed-final-watch','bom-hammer-final-body-rest','bom-hammer-held-result']},
+  bom_butcher_123:{id:'bom-great-cleaver-close-cuts',entry:17,retreat:0,recoil:8,outroHold:true,poses:['bom-cleaver-hand-reposition-entry','bom-cleaver-muted-threat','bom-cleaver-stable-watch','bom-cleaver-low-body-recovery','bom-cleaver-relaxed-final-watch','bom-cleaver-final-body-rest','bom-cleaver-held-result']},
+  bom_double_head_124:{id:'bom-dog-circling-appuis',entry:37,retreat:43,recoil:9,poses:['bom-dog-circle-entry','bom-dog-split-head-muted-threat','bom-dog-appuis-watch','bom-dog-low-appuis-recovery','bom-dog-watchful-final-retreat','bom-dog-final-side-rest','bom-dog-watchful-departure']},
+  bom_ghost_125:{id:'bom-toxic-presence-drift',entry:18,retreat:0,recoil:0,roundDim:.4,finalFade:true,outroHold:true,poses:['bom-toxic-presence-opening-entry','bom-toxic-presence-muted-threat','bom-toxic-presence-suspended-watch','bom-toxic-presence-partial-return','bom-toxic-presence-final-background','bom-toxic-presence-final-dissipation','bom-toxic-presence-background-held']},
+  bom_insane_cancer_126:{id:'bom-mass-with-final-defeat-only-explosion',entry:13,retreat:0,recoil:6,outroHold:true,poses:['bom-mass-room-entry','bom-mass-muted-threat','bom-mass-stable-watch','bom-mass-lowered-support-recovery','bom-mass-relaxed-final-watch','bom-mass-final-collapse-explosion-awaiting-frames','bom-mass-held-result']},
+  bom_needler_127:{id:'bom-four-blades-oblique-retreat',entry:26,retreat:38,recoil:8,poses:['bom-four-blades-door-entry','bom-four-blades-muted-threat','bom-four-blades-appuis-watch','bom-four-blades-low-recovery','bom-four-blades-watchful-retreat','bom-four-blades-final-side-rest','bom-four-blades-oblique-departure']},
+  bom_pyramid_head_129:{id:'bom-great-knife-lateral-weight',entry:16,retreat:0,recoil:6,outroHold:true,poses:['bom-great-knife-first-entry','bom-great-knife-muted-threat','bom-great-knife-stable-watch','bom-great-knife-low-body-recovery','bom-great-knife-relaxed-final-watch','bom-great-knife-final-body-rest','bom-great-knife-held-result']},
+  bom_schism_130:{id:'bom-head-blade-forward-axis',entry:22,retreat:0,recoil:8,outroHold:true,poses:['bom-head-blade-noise-entry','bom-head-blade-muted-threat','bom-head-blade-stable-watch','bom-head-blade-low-body-recovery','bom-head-blade-relaxed-final-watch','bom-head-blade-final-body-rest','bom-head-blade-held-result']},
+  bom_straight_jacket_131:{id:'bom-closed-torso-acid-jet',entry:12,retreat:0,recoil:7,outroHold:true,poses:['bom-closed-torso-contracted-entry','bom-closed-torso-muted-threat','bom-closed-torso-stable-watch','bom-closed-torso-low-body-recovery','bom-closed-torso-relaxed-final-watch','bom-closed-torso-final-body-rest','bom-closed-torso-held-result']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 
@@ -508,7 +595,7 @@ export function loreFinisher({attacker,target,stage,definition,stageBased=false,
   const body=bodyProfile(t);
   if(!recipe.targets.includes(body.kind))return blocked('Anatomie de la cible incompatible avec cette prise ou trajectoire.',definition.id);
   if(recipe.maxTargetHeight&&body.height*body.scale>recipe.maxTargetHeight)return blocked('La cible dépasse la portée corporelle de cette séquence.',definition.id);
-  if(recipe.attackerKind&&bodyProfile(a).kind!==recipe.attackerKind)return blocked('Anatomie du sujet incompatible avec sa séquence exacte.',definition.id);
+  if(!anatomyMatches(recipe,a))return blocked('Anatomie du sujet incompatible avec sa séquence exacte.',definition.id);
   if(recipe.unarmed&&a.visual?.weapon)return blocked('Cette variante exige ses membres sans arme ajoutée.',definition.id);
   if(recipe.weapon&&a.visual?.weapon!==recipe.weapon)return blocked('Arme exacte absente de cette variante.',definition.id);
   if((recipe.propsAny||recipe.needsCeiling)&&(!STAGE_REFERENCES[stage?.id]||STAGE_REFERENCES[stage.id].source!==stage.source||stage?.reference?.blocked))return blocked('Lieu non confirmé pour cet appui ou cet accessoire.',definition.id);
@@ -517,7 +604,7 @@ export function loreFinisher({attacker,target,stage,definition,stageBased=false,
   if(recipe.needsCeiling&&!hasCeiling(stage,set))return blocked('Appui de plafond absent du lieu.',definition.id);
   const steps=compileRecipe(recipe,definition.type);
   return {allowed:true,id:definition.id,ownerId:a.id,source:a.source,type:definition.type,recipeId,steps,duration:steps.at(-1).to,
-    description:ref.proposals.finisher.description,referenceIds:[...(ref.referenceIds||[])],
+    description:ref.proposals.finisher.description,scopeNote:recipe.scopeNote||null,referenceIds:[...(ref.referenceIds||[])],
     artStatus:'contextual-images-missing',fidelity:'original-versus-staging',irreversible:true,stageBased:false,
     visualNotice:'MISE EN SCENE LORE · IMAGES DE POSES A PRODUIRE'};
 }
@@ -613,10 +700,10 @@ export function cinematicSummary(definitionId) {
     description:ref?.proposals?.finisher?.description||'',referenceIds:[...(ref?.referenceIds||[])],beats:[],fidelity:'original-versus-staging',artStatus:'contextual-images-missing'};
   const steps=compileRecipe(recipe,stageBased?'stage':suffix);
   return {id:definitionId,ownerId,source:ref.source,type:stageBased?'stage':suffix,authored:true,recipeId,duration:steps.at(-1).to,
-    description:stageBased?recipe.description:ref.proposals.finisher.description,referenceIds:[...(ref.referenceIds||[])],
+    description:stageBased?recipe.description:ref.proposals.finisher.description,scopeNote:recipe.scopeNote||null,referenceIds:[...(ref.referenceIds||[])],
     adaptationStatus:'adaptation-versus-scripted',fidelity:'original-versus-staging',artStatus:'contextual-images-missing',
     requirements:{targets:[...recipe.targets],props:[...(recipe.props||[])],propsAny:[...(recipe.propsAny||[])],weapon:recipe.weapon||null,
-      attackerKind:recipe.attackerKind||null,unarmed:!!recipe.unarmed,
+      attackerKind:recipe.attackerKind||null,attackerLimbs:recipe.attackerLimbs||null,attackerHead:recipe.attackerHead||null,unarmed:!!recipe.unarmed,
       needsCeiling:!!recipe.needsCeiling,zone:recipe.zone||'combat-space',decisiveMatchOnly:true},
     beats:steps.map(s=>({label:s.label,from:s.from,to:s.to,attackerPose:s.attacker.pose,targetPose:s.target.pose,effect:s.effect,sound:s.sound,
       attacker:{...s.attacker},target:{...s.target},camera:s.camera}))};
@@ -628,7 +715,7 @@ export function lorePresentation(actor,key) {
   const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=PRESENTATION_STAGING[data.id];
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&(!recipe.attackerKind||bodyProfile(data).kind===recipe.attackerKind),
+    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data),
     stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
     reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
 }
@@ -683,8 +770,9 @@ export function sampleLorePresentation(actor,presentation) {
       y:locomotion&&combatPolicy(actor).canJump!==false&&staging.landing?-staging.landing*(1-ease(p)):0,
       alpha:clamp(p*4),pose};
     if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,
-      y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1,
+      y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1-(staging.roundDim||0)*Math.sin(p*Math.PI),
       pose:p<.6?pose:pose+'-ready'};
+    if(key==='loseMatch'&&staging.finalFade)return {x:0,y:0,alpha:1-ease(p),pose};
     if(key==='outro'&&staging.outroHold)return {...neutral(),pose};
     if(key==='outro'&&(locomotion||staging.exitFade))return {x:locomotion?-facing*staging.retreat*ease(p):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?-(staging.ascent||0)*ease(p):0,alpha:1-clamp((p-.6)/.4),pose};

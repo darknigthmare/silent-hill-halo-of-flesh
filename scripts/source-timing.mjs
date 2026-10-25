@@ -6,6 +6,7 @@ import {spawnSync} from 'node:child_process';
 import {dirname,isAbsolute,relative,resolve,join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {fileURLToPath} from 'node:url';
+import {isDeepStrictEqual} from 'node:util';
 import {ROSTER,createCombatProfile} from '../src/data.js';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
 
@@ -191,52 +192,90 @@ function reviewHtml(manifest){
 <p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}</p>
 <p>Les relectures éventuelles sont déclaratives et liées aux annotations. Ces aperçus n’ajoutent aucune attestation. Métadonnées et empreintes des images : <a href="review-manifest.json">manifeste JSON</a>.</p>${sections}</html>\n`;
 }
+function reviewFrameIndices(verified){
+  return [...new Set(verified.entries.flatMap(entry=>['startFrame','impactFrame','endFrame'].map(key=>entry.measurement[key])))].sort((a,b)=>a-b);
+}
+async function readReviewFile(file,maximumBytes,label){
+  const info=await lstat(file);
+  if(!info.isFile()||info.isSymbolicLink()||info.size<1||info.size>maximumBytes)fail(label+' must be a regular bounded file');
+  return readFile(file);
+}
+async function readReviewFrames(directory,indices,capture){
+  const info=await lstat(directory);
+  if(!info.isDirectory()||info.isSymbolicLink())fail('review frames must be a regular directory');
+  const names=indices.map((index,position)=>`frame-${String(position).padStart(5,'0')}.png`);
+  if(JSON.stringify((await readdir(directory)).sort())!==JSON.stringify(names))fail('review frame output count or filenames mismatch');
+  const frames=[];
+  for(const [position,index] of indices.entries()){
+    const name=names[position],bytes=await readReviewFile(join(directory,name),4*1024*1024,'review PNG');
+    if(bytes.length<24||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.subarray(12,16).toString('ascii')!=='IHDR')fail('review frame must be PNG');
+    const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
+    if(![width,height].every(value=>value>0&&value<=640))fail('review frame dimensions exceed preview bounds');
+    frames.push({index,path:'frames/'+name,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length,width,height,
+      recordingTime:{numerator:index*capture.frameRate.denominator,denominator:capture.frameRate.numerator}});
+  }
+  return frames;
+}
+function sourceReviewManifest(verified,frames){
+  return {...verified,schema:SOURCE_TIMING_REVIEW_SCHEMA,type:'source-timing-review',status:'source-timing-review-candidate',
+    preview:{maximumDimension:640,frameIndexBase:0,capturePathRelativeTo:'input-packet-directory'},frames,
+    limits:verified.limits+' Extracted still previews may be reduced; they add no measurements or review attestations.'};
+}
 export async function exportSourceTimingReview(batch,{outputDirectory,baseDirectory=process.cwd(),probe=probeSourceCapture,extract=extractSourceReviewFrames,...catalogue}={}){
   if(!nonempty(outputDirectory))fail('a new review output directory is required');
   const normalized=validateSourceTimingBatch(batch,catalogue),destination=resolve(outputDirectory);
   return verifyCapture(normalized.capture,{baseDirectory,probe,consume:async(capture,snapshot)=>{
     const verified=verifiedTimingBatch(normalized,capture,catalogue);
-    const indices=[...new Set(verified.entries.flatMap(entry=>['startFrame','impactFrame','endFrame'].map(key=>entry.measurement[key])))].sort((a,b)=>a-b);
+    const indices=reviewFrameIndices(verified);
     // mkdir is deliberately exclusive: never replace an existing review package.
     await mkdir(destination);let complete=false;
     try{
       const frameDirectory=join(destination,'frames');await mkdir(frameDirectory);
       await extract(snapshot,indices,frameDirectory);
-      const names=indices.map((index,position)=>`frame-${String(position).padStart(5,'0')}.png`);
-      if(JSON.stringify((await readdir(frameDirectory)).sort())!==JSON.stringify(names))fail('review frame output count or filenames mismatch');
-      const frames=[];
-      for(const [position,index] of indices.entries()){
-        const name=names[position],file=join(frameDirectory,name),info=await lstat(file);
-        if(!info.isFile()||info.isSymbolicLink()||info.size<24||info.size>4*1024*1024)fail('review frame must be a bounded PNG file');
-        const bytes=await readFile(file);
-        if(!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||bytes.subarray(12,16).toString('ascii')!=='IHDR')fail('review frame must be PNG');
-        const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
-        if(![width,height].every(value=>value>0&&value<=640))fail('review frame dimensions exceed preview bounds');
-        frames.push({index,path:'frames/'+name,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length,width,height,
-          recordingTime:{numerator:index*capture.frameRate.denominator,denominator:capture.frameRate.numerator}});
-      }
-      const manifest={...verified,schema:SOURCE_TIMING_REVIEW_SCHEMA,type:'source-timing-review',status:'source-timing-review-candidate',
-        preview:{maximumDimension:640,frameIndexBase:0,capturePathRelativeTo:'input-packet-directory'},frames,
-        limits:verified.limits+' Extracted still previews may be reduced; they add no measurements or review attestations.'};
+      const manifest=sourceReviewManifest(verified,await readReviewFrames(frameDirectory,indices,capture));
       await writeFile(join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
       await writeFile(join(destination,'index.html'),reviewHtml(manifest),{flag:'wx'});
       complete=true;return manifest;
     }finally{if(!complete)await rm(destination,{recursive:true,force:true});}
   }});
 }
+/** Re-extract from the source instead of trusting a possibly edited PNG/hash pair. */
+export async function verifySourceTimingReview(batch,{reviewDirectory,baseDirectory=process.cwd(),probe=probeSourceCapture,extract=extractSourceReviewFrames,...catalogue}={}){
+  if(!nonempty(reviewDirectory))fail('a review directory is required');
+  const normalized=validateSourceTimingBatch(batch,catalogue),directory=resolve(reviewDirectory),info=await lstat(directory);
+  if(!info.isDirectory()||info.isSymbolicLink())fail('review must be a regular directory');
+  return verifyCapture(normalized.capture,{baseDirectory,probe,consume:async(capture,snapshot)=>{
+    const verified=verifiedTimingBatch(normalized,capture,catalogue),indices=reviewFrameIndices(verified);
+    const freshDirectory=join(dirname(snapshot),'review-frames');await mkdir(freshDirectory,{mode:0o700});
+    await extract(snapshot,indices,freshDirectory);
+    const expected=sourceReviewManifest(verified,await readReviewFrames(freshDirectory,indices,capture));
+    const manifest=JSON.parse((await readReviewFile(join(directory,'review-manifest.json'),2*1024*1024,'review manifest')).toString('utf8'));
+    if(!isDeepStrictEqual(manifest,expected))fail('review manifest differs from exact annotations or freshly extracted capture frames; regenerate the preview');
+    if(!isDeepStrictEqual(await readReviewFrames(join(directory,'frames'),indices,capture),expected.frames))fail('review PNG bytes differ from freshly extracted capture frames');
+    const page=await readReviewFile(join(directory,'index.html'),2*1024*1024,'review HTML');
+    if(page.toString('utf8')!==reviewHtml(expected))fail('review HTML differs from the candidate manifest; regenerate the preview');
+    return {schema:1,status:'source-timing-review-integrity-checked',captureSHA256:capture.sha256,
+      framesChecked:indices.length,entriesChecked:verified.entries.length,certifiedOneToOne:false,
+      limits:'Read-only comparison with freshly extracted PNG bytes using the current ffmpeg/tool version. No observer identity or gesture certification, new review attestation or workbook timing is added.'};
+  }});
+}
 
 export async function sourceTimingCommand(args){
   if(args.length===1&&args[0]==='--help'){
-    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\n       node scripts/source-timing.mjs review-preview BATCH.json --output-dir NEW_DIRECTORY\nvalidate commands require ffprobe; review-preview also requires ffmpeg. annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
+    console.log('Usage: node scripts/source-timing.mjs validate PACKET.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs validate-batch BATCH.json [--output VERIFIED.json]\n       node scripts/source-timing.mjs annotation-digest PACKET.json [--output DIGEST.json]\n       node scripts/source-timing.mjs review-preview BATCH.json --output-dir NEW_DIRECTORY\n       node scripts/source-timing.mjs verify-review BATCH.json --review-dir REVIEW_DIRECTORY\nvalidate commands require ffprobe; preview commands also require ffmpeg. verify-review checks existing PNG/HTML/annotations against a fresh extraction with the current tool version. annotation-digest checks annotations only. Named batch reviews remain candidate attestations, never 1:1 certification or workbook edits.');
     return;
   }
-  const preview=args[0]==='review-preview';
-  if(!['validate','validate-batch','annotation-digest','review-preview'].includes(args[0])||!args[1]||
-    (preview?args.length!==4||args[2]!=='--output-dir'||!args[3]:args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3])))fail('usage: validate|validate-batch|annotation-digest PACKET.json [--output RESULT.json] or review-preview BATCH.json --output-dir NEW_DIRECTORY');
+  const preview=args[0]==='review-preview',review=args[0]==='verify-review';
+  if(!['validate','validate-batch','annotation-digest','review-preview','verify-review'].includes(args[0])||!args[1]||
+    (preview||review?args.length!==4||args[2]!== (preview?'--output-dir':'--review-dir')||!args[3]:args.length!==2&&(args.length!==4||args[2]!=='--output'||!args[3])))fail('usage: validate|validate-batch|annotation-digest PACKET.json [--output RESULT.json], review-preview BATCH.json --output-dir NEW_DIRECTORY or verify-review BATCH.json --review-dir REVIEW_DIRECTORY');
   const input=resolve(args[1]),info=await lstat(input);
-  const maxBytes=(args[0]==='validate-batch'||preview?256:64)*1024;
+  const maxBytes=(args[0]==='validate-batch'||preview||review?256:64)*1024;
   if(!info.isFile()||info.isSymbolicLink()||info.size>maxBytes)fail('packet must be a regular bounded JSON file');
   const packet=JSON.parse(await readFile(input,'utf8'));
+  if(review){
+    const result=await verifySourceTimingReview(packet,{baseDirectory:dirname(input),reviewDirectory:args[3]});
+    process.stdout.write(JSON.stringify(result)+'\n');return;
+  }
   if(preview){
     const result=await exportSourceTimingReview(packet,{baseDirectory:dirname(input),outputDirectory:args[3]});
     process.stdout.write(JSON.stringify({status:result.status,frames:result.frames.length,entries:result.entries.length,certifiedOneToOne:false})+'\n');return;

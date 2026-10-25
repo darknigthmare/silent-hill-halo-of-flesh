@@ -9,6 +9,7 @@ const RECIPES = Object.create(null);
 const NON_COMBAT_ROLES = new Set(['noncombatant', 'environmental-obstacle', 'unverified']);
 const NON_COMBAT_SCRIPTED = new Set([
   'sh3_sewer_creature_052','sh4_sacrificed_walter_071','shortmessage_sakura_head_150',
+  'homecoming_bogeyman_092',
   'shattered_raw_shock_base_099','shattered_raw_shock_feminine_100','shattered_raw_shock_diseased_101',
   'shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103'
 ]);
@@ -85,6 +86,21 @@ define('sh1_air_screamer_001 sh1_night_flutter_002', {
 });
 define('sh1_mumbler_006', {moves:weaponKit('Griffes du Mumbler')});
 define('sh1_stalker_008 sh1_grey_child_005', {moves:weaponKit('Couteau')});
+// SH1 enemies_en.htm: Romper leaps onto Harry, bowls him over and may hold
+// him down. Bind substitutes for the original escape inputs. Travel, jump,
+// knockdown and bind duration remain authored versus tuning.
+define('sh1_romper_010', {
+  groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'Le Romper plaque sa cible ; aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Heurt du corps'),
+    neutralSpecial:contact('Bond puis maintien au sol',{level:'throw',effectOverride:'bind',hits:1,reach:90}),
+    forwardSpecial:contact('Grand bond renversant',{travel:4.8,verticalTravel:2.8,knockdown:true,hits:1}),
+    throw:contact('Plaquage du corps',{effectOverride:'bind',hits:1}),
+    super:contact('Bond puis emprise au sol',{level:'throw',effectOverride:'bind',travel:3.2,hits:1}),
+    dodgeAttack:contact('Heurt après écart'),guardCounter:contact('Plaquage de riposte'),
+    wakeupAttack:contact('Reprise par le corps')
+  }
+});
 define('sh1_puppet_nurse_012 sh1_puppet_doctor_013', {moves:weaponKit('Couteau du parasite')});
 // SH1 (1999), bosses_en.htm: headbutts precede the aggravated, open-jaw bite;
 // shots into the open mouth exploit its weakness. The 70% transition and 2x
@@ -203,6 +219,41 @@ define('sh2_mandarin_026', {moves:{...weaponKit('Appendice sous la grille'),
   neutralSpecial:contact('Frappe à travers la grille'), super:contact('Sous les pieds', {hits:2})}});
 define('sh2_flesh_lip_027', {moves:{...weaponKit('Pieds de la cage'),
   neutralSpecial:contact('Poussée des pieds'), super:contact('Lit suspendu — prise courte', {level:'throw', hits:1})}});
+// SH3 enemies_en.htm: padded-arm thrusts, an extending blade and arms swung
+// around the body. Church Closers are faster/stronger. The circular 2D contact
+// envelope and the Church's .85 startup / 1.12 damage factors are versus choices.
+function closerRecipe(church=false){
+  const moves={...weaponKit('Bras du Closer'),
+    neutralSpecial:contact('Lame extraite du bras',{reach:210,startupAdd:7,damageScale:1.16,hits:1}),
+    forwardHeavy:contact('Estoc de la lame du bras',{reach:210,startupAdd:5,hits:1}),
+    forwardSpecial:contact('Poussée du bras matelassé',{reach:170,travel:1.6,startupAdd:6,hits:1}),
+    downSpecial:contact('Balayage circulaire des bras',{reach:125,travel:0,level:'mid',hits:1}),
+    super:contact('Rotation des bras puis lame',{reach:180,travel:0,level:'mid',hits:2}),
+    dodgeAttack:contact('Bras après écart'),guardCounter:contact('Bras de riposte'),
+    wakeupAttack:contact('Reprise des bras')};
+  if(church)for(const move of Object.values(moves)){
+    move.startupScale=(move.startupScale||1)*.85;move.damageScale=(move.damageScale||1)*1.12;
+  }
+  return {contactSweeps:{slots:['downSpecial','super','desperation'],sourceTimingMeasured:false},
+    disabledSlots:{throw:'Les attaques relevées sont des poussées, lames et balayages ; aucune saisie n’est décrite.',
+      backThrow:'Aucune projection arrière avec échange de places n’est décrite pour ce Closer.'},moves};
+}
+define('sh3_closer_036',closerRecipe());
+define('sh3_closer_church_variant',closerRecipe(true));
+// SH3 enemies_en.htm: a jumping bite is lighter than the grounded leg hold.
+// Bind is the limited versus restriction, not the source's struggle sequence.
+define('sh3_double_head_040', {
+  groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'Le Double Head retient la jambe avec la gueule ; aucune projection arrière n’est décrite.'},
+  moves:{...weaponKit('Morsure du Double Head'),
+    neutralSpecial:contact('Prise de jambe au sol',{level:'throw',effectOverride:'bind',reach:84,damageScale:1.15,hits:1}),
+    forwardSpecial:contact('Bond puis morsure brève',{travel:4.3,verticalTravel:2.3,damageScale:.72,hits:1}),
+    throw:contact('Jambe retenue entre les mâchoires',{effectOverride:'bind',hits:1}),
+    super:contact('Bond puis jambe retenue',{level:'throw',effectOverride:'bind',travel:2.6,hits:1}),
+    dodgeAttack:contact('Morsure après écart'),guardCounter:contact('Morsure de riposte'),
+    wakeupAttack:contact('Reprise de la mâchoire')
+  }
+});
 define('sh3_numb_body_small_037 sh3_numb_body_medium sh3_numb_body_large_038', {
   disabledSlots:{throw:'Ce corps sans bras n’a pas de saisie documentée.',backThrow:'Ce corps sans bras n’a pas de projection documentée.'},
   moves:{...weaponKit('Heurt de tête'), neutralSpecial:contact('Bond de tête', {travel:3.2}),
@@ -231,6 +282,7 @@ define('sh3_insane_cancer_041', {moves:{
 // Slurper holds and chews her leg. Bind substitutes for the original escape
 // inputs. It does not establish a measured struggle duration or a rear throw.
 define('sh3_slurper_042', {
+  groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
   disabledSlots:{backThrow:'La morsure retient la jambe ; aucune projection arrière avec échange de places n’est documentée.'},
   moves:{...weaponKit('Morsure rampante'),
     neutralSpecial:contact('Prise de jambe puis morsure',{level:'throw',effectOverride:'bind',hits:1,reach:90}),
@@ -296,7 +348,8 @@ define('sh4_wall_man_056', {moves:{...weaponKit('Griffes de la paroi'),
 }});
 // SH4 enemies_en.htm: Sniffers lunge and may hold Henry in a biting grip.
 // Bind substitutes for that hold; it is not a measured source escape sequence.
-define('sh4_sniffer_dog_male_053 sh4_sniffer_dog_female_054', {moves:{...weaponKit('Morsure du Sniffer'),
+define('sh4_sniffer_dog_male_053 sh4_sniffer_dog_female_054', {
+  groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},moves:{...weaponKit('Morsure du Sniffer'),
   forwardSpecial:contact('Bond puis morsure',{travel:4.5,hits:1}),
   neutralSpecial:contact('Morsure retenue',{level:'throw',effectOverride:'bind',hits:1,reach:90}),
   throw:contact('Prise entre les mâchoires',{effectOverride:'bind',hits:1}),
@@ -319,6 +372,20 @@ define('sh4_hummer_055', {hitResponse:{meleeKnockdown:true,sourceTimingMeasured:
 define('sh4_gum_head_old_type_057', {moves:weaponKit('Poing du Gum Head')});
 define('sh4_gum_head_new_type_058', {moves:weaponKit('Tube du Gum Head')});
 define('sh4_patient_060', {moves:weaponKit('Marteau du Patient')});
+// SH4 enemies_en.htm: Twin Victim attacks with its supporting arms, spinning
+// around and diving after Henry. Pointing is not an offensive aura or a grab.
+define('sh4_twin_victim_059', {
+  contactSweeps:{slots:['neutralSpecial','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{throw:'Les bras servent à marcher et frapper ; aucune saisie soulevant Henry n’est décrite.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Bras porteurs du Twin Victim'),
+    neutralSpecial:contact('Rotation des bras porteurs',{reach:130,hits:2,travel:0}),
+    forwardSpecial:contact('Poursuite puis plongeon',{travel:4.6,verticalTravel:2.2,hits:1}),
+    super:contact('Balayages tournants des deux bras',{reach:160,hits:2,travel:0}),
+    dodgeAttack:contact('Bras après écart'),guardCounter:contact('Bras porteur de riposte'),
+    wakeupAttack:contact('Reprise sur les bras')
+  }
+});
 const SH4_GHOSTS = 'sh4_ghost_victim_066 sh4_jimmy_stone_victim_1 sh4_steve_garland_victim_4 sh4_eric_walsh_victim_10 sh4_peter_walls_victim_12 sh4_sharon_blake_victim_13 sh4_toby_archbolt_victim_14';
 // SH4: The Room (2004), enemies_en.htm: all these ghosts drain nearby health
 // without attacking. Jasper adds larger fire damage. The local radius, pulse
@@ -379,6 +446,32 @@ define('origins_demon_084', {moves:{
   super:shot('Pression d’énergie'), desperation:shot('Dernière décharge')
 }});
 define('homecoming_nurse', {moves:weaponKit('Scalpel')});
+// Homecoming creatures_en.htm: Lurker uses claws and a jumping collision that
+// knocks Alex down. Feral also pounces and holds him while biting his throat.
+// These body motions, inputs and bind durations are versus transpositions.
+define('homecoming_lurker_085', {
+  disabledSlots:{throw:'La source décrit griffes et saut renversant, pas une saisie soulevant Alex.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Griffes du Lurker'),
+    neutralSpecial:contact('Entaille des griffes',{hits:2}),
+    forwardSpecial:contact('Saut renversant du Lurker',{travel:4.3,verticalTravel:2.6,knockdown:true,hits:1}),
+    super:contact('Bond puis percussion des griffes',{travel:3.8,knockdown:true,hits:1}),
+    dodgeAttack:contact('Griffes après écart'),guardCounter:contact('Griffes de riposte'),
+    wakeupAttack:contact('Reprise des griffes')
+  }
+});
+define('homecoming_feral_086', {
+  groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'Le Feral plaque et mord de face ; aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit('Morsure du Feral'),
+    neutralSpecial:contact('Gorge retenue entre les mâchoires',{level:'throw',effectOverride:'bind',reach:90,hits:1}),
+    forwardSpecial:contact('Bond renversant du Feral',{travel:5.1,verticalTravel:3,knockdown:true,hits:1}),
+    throw:contact('Plaquage puis morsure de gorge',{effectOverride:'bind',hits:1}),
+    super:contact('Bond puis gorge retenue',{level:'throw',effectOverride:'bind',travel:3,hits:1}),
+    dodgeAttack:contact('Morsure après écart'),guardCounter:contact('Morsure de riposte'),
+    wakeupAttack:contact('Reprise de la mâchoire')
+  }
+});
 define('homecoming_order_soldier_091', {moves:weaponKit('Tube — variante de contact')});
 define('homecoming_smog_087', {
   aiSignatureOnly:true,
@@ -565,6 +658,8 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     ...(recipe.defense?{defense:{...recipe.defense}}:{}),
     ...(recipe.mouthPhase?{mouthPhase:{...recipe.mouthPhase,slots:[...recipe.mouthPhase.slots]}}:{}),
     ...(recipe.hitResponse?{hitResponse:{...recipe.hitResponse}}:{}),
+    ...(recipe.contactSweeps?{contactSweeps:{...recipe.contactSweeps,slots:[...recipe.contactSweeps.slots]}}:{}),
+    ...(recipe.groundHolds?{groundHolds:{...recipe.groundHolds,slots:[...recipe.groundHolds.slots]}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
     ...(recipe.aiSignatureOnly?{aiSignatureOnly:true}:{}),
     ...(combatEnabled&&recipe.proximityField?{proximityField:{...recipe.proximityField}}:{}),
@@ -621,6 +716,20 @@ export function sourceHitResponse(fighter,move,ranged=false) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES),response=ref&&RECIPES[ref.id]?.hitResponse;
   return response?.meleeKnockdown&&move&&!ranged&&!move.projectile&&!move.trap&&!move.aura&&
     move.level!=='throw'&&move.category!=='throw'?{knockdown:true,sourceTimingMeasured:false}:null;
+}
+
+export function sourceContactSweep(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),sweep=ref&&RECIPES[ref.id]?.contactSweeps;
+  return Boolean(sweep&&move?.enabled!==false&&sweep.slots.includes(move?.key)&&
+    !move.projectile&&!move.trap&&!move.aura&&move.level!=='throw'&&move.category!=='throw');
+}
+
+// These observed leg/bite holds and pins stay on the floor. They must not
+// inherit the generic versus throw's lift, launch or horizontal ejection.
+export function sourceGroundHold(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),hold=ref&&RECIPES[ref.id]?.groundHolds;
+  return Boolean(hold&&move?.enabled!==false&&hold.slots.includes(move?.key)&&
+    !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw'));
 }
 
 export function firearmExposure(fighter, attack) {

@@ -8,7 +8,7 @@ import { drawHazardObjects } from './stage-hazard-renderer.js';
 import { audio, clamp, loadSettings, seededRandom, vibrate } from './shared.js';
 import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProjectileContact } from './combat-resolution.js';
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
-import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, sourceMouthPhase, sourceHitResponse, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
+import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField, sourceMouthPhase, sourceHitResponse, sourceContactSweep, sourceGroundHold, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -219,7 +219,13 @@ function makeActor(data, index, ritual = {}) {
 }
 
 function actorBox(actor) { return bodyBox(actor); }
-function attackBox(actor, move) { return moveBox(actor, move); }
+function attackBox(actor, move) {
+  const box=moveBox(actor,move);
+  if(actor.profile?.moves[move.key]===move&&sourceContactSweep(actor.data,move)){
+    box.x=actor.x-move.reach;box.w=move.reach*2;
+  }
+  return box;
+}
 function intersects(a, b) { return overlaps(a, b); }
 
 function healthRatio(actor) { return clamp(actor.health / actor.maxHealth, 0, 1); }
@@ -1349,6 +1355,7 @@ export class FightEngine {
     const active = attack.frame >= activeStart && attack.frame < activeEnd;
     if (!move.projectile && !move.trap && active && attack.hitCount < (move.hits || 1) && attack.frame >= attack.nextHitFrame) {
       const box = attackBox(actor, move);
+      const contactSweep=actor.profile.moves[move.key]===move&&sourceContactSweep(actor.data,move);
       if (move.aura) {
         box.x = actor.x - move.reach;
         box.w = move.reach * 2;
@@ -1356,7 +1363,8 @@ export class FightEngine {
         box.h = 245;
       }
       if (intersects(box, actorBox(enemy))) {
-        const result = this.applyHit(actor, enemy, move, attack.id, attack.hitCount > 0 ? .72 : 1);
+        const result = this.applyHit(actor, enemy, move, attack.id, attack.hitCount > 0 ? .72 : 1,
+          contactSweep?{direction:Math.sign(enemy.x-actor.x)||actor.facing}:{});
         if (result !== false) {
           attack.hit = true;
           attack.hitCount++;
@@ -1510,6 +1518,8 @@ export class FightEngine {
 
   applyHit(attacker, target, move, attackId, scale = 1, contact = {}) {
     if (this.destroyed||this.phase !== 'fight' || !offensiveAllowed(attacker)||move.enabled===false||target.health <= 0 || target.invuln > 0 || target.ko) return false;
+    const groundHold=attacker.profile.moves[move.key]===move&&sourceGroundHold(attacker.data,move);
+    if(groundHold&&(!hasGroundContact(target)||contact.ranged))return false;
     const stagger=nonDamagingStagger(attacker.data,move);
     if(stagger&&attacker.profile.moves[move.key]===move&&!contact.ranged){
       if(target.knockdownTimer>0||target.phaseLock>0||stagger.groundedOnly&&!hasGroundContact(target))return false;
@@ -1710,8 +1720,8 @@ export class FightEngine {
     }
     if(sourceResponse?.knockdown){target.vy=Math.max(0,target.vy);target.grounded=false;}
     if (isThrow) {
-      target.vy = -Math.max(6.5, Math.abs(move.launch || 0));
-      target.grounded = false;
+      if(groundHold){target.vx=0;target.vy=0;target.grounded=true;}
+      else{target.vy = -Math.max(6.5, Math.abs(move.launch || 0));target.grounded = false;}
     }
     if (fixedTarget) { target.vy = 0; target.grounded = true; }
     if (knocksDown || isThrow || move.hardKnockdown || move.groundBounce) {
@@ -2846,7 +2856,7 @@ export class FightEngine {
     context.fillText(Number.isFinite(this.matchTime) ? String(Math.ceil(this.matchTime)).padStart(2, '0') : '∞', WIDTH / 2, 47);
     context.fillStyle = this.world.phase === 'fog' ? '#8d9690' : '#b73942';
     context.font = '900 10px ui-monospace';
-    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : 'OTHERWORLD'}`, WIDTH / 2, 68);
+    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? this.stage.referencePolicy?.normalPhaseLabel || 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : 'OTHERWORLD'}`, WIDTH / 2, 68);
     context.fillStyle = '#7f877f';
     context.font = '700 9px ui-monospace';
     context.fillText(this.stage.name, WIDTH / 2, 84);

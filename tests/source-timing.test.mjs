@@ -1,11 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,writeFile,readFile,lstat,rm,symlink} from 'node:fs/promises';
+import {mkdtemp,writeFile,readFile,lstat,rm,symlink,cp} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join,dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
-import {validateSourceTiming,verifySourceTiming,sourceTimingAnnotationDigest,validateSourceTimingBatch,verifySourceTimingBatch,exportSourceTimingReview,sourceTimingCommand} from '../scripts/source-timing.mjs';
+import {validateSourceTiming,verifySourceTiming,sourceTimingAnnotationDigest,validateSourceTimingBatch,verifySourceTimingBatch,exportSourceTimingReview,verifySourceTimingReview,sourceTimingCommand} from '../scripts/source-timing.mjs';
 
 // A container-header fixture and injected decoder output exercise validation;
 // these bytes and timestamps are not a source-game capture or measured action.
@@ -245,4 +245,59 @@ test('review CLI requires a new directory and rejects malformed input before any
  await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
  await assert.rejects(sourceTimingCommand(['review-preview',input,'--output-dir',outputDirectory]),/unsupported fields/);
  await assert.rejects(lstat(outputDirectory),error=>error.code==='ENOENT');
+});
+test('a relocated review is checked against freshly extracted source frames without modifying the package',async context=>{
+ const directory=await fixture(context),input=review(batch()),original=join(directory,'original'),reviewDirectory=join(directory,'relocated');
+ await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:original,probe:()=>metadata(),extract:fixtureFrames});await cp(original,reviewDirectory,{recursive:true});
+ const before=await readFile(join(reviewDirectory,'review-manifest.json'));let snapshot;
+ const result=await verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe:()=>metadata(),extract:async(path,indices,output)=>{
+  snapshot=path;await writeFile(join(directory,'capture.mp4'),'input replaced after hashing');
+  assert.deepEqual(await readFile(path),bytes);await fixtureFrames(path,indices,output);
+ }});
+ assert.equal(result.status,'source-timing-review-integrity-checked');assert.equal(result.framesChecked,3);assert.equal(result.entriesChecked,2);
+ assert.equal(result.captureSHA256,sha256);assert.equal(result.certifiedOneToOne,false);assert.match(result.limits,/current ffmpeg.*No observer identity.*new review attestation/);
+ assert.deepEqual(await readFile(join(reviewDirectory,'review-manifest.json')),before);
+ await assert.rejects(lstat(dirname(snapshot)),error=>error.code==='ENOENT');
+});
+test('review integrity rejects edited annotations, provenance, candidate status, HTML and PNG files',async context=>{
+ const directory=await fixture(context),original=join(directory,'original'),input=batch();
+ await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:original,probe:()=>metadata(),extract:fixtureFrames});
+ const mutations=[
+  async path=>{const file=join(path,'review-manifest.json'),m=JSON.parse(await readFile(file));m.entries[0].measurement.impactFrame=0;await writeFile(file,JSON.stringify(m));},
+  async path=>{const file=join(path,'review-manifest.json'),m=JSON.parse(await readFile(file));m.capture.sourceUrl='https://example.invalid/other-edition';await writeFile(file,JSON.stringify(m));},
+  async path=>{const file=join(path,'review-manifest.json'),m=JSON.parse(await readFile(file));m.certifiedOneToOne=true;await writeFile(file,JSON.stringify(m));},
+  async path=>{const file=join(path,'review-manifest.json'),m=JSON.parse(await readFile(file));m.frames[0].index=2;await writeFile(file,JSON.stringify(m));},
+  async path=>{await writeFile(join(path,'index.html'),'<img src="https://example.invalid/remote.png">');},
+  async path=>{await writeFile(join(path,'frames/frame-00000.png'),Buffer.concat([previewPNG,Buffer.from('changed fixture')]));},
+  async path=>{await rm(join(path,'frames/frame-00001.png'));},
+  async path=>{await writeFile(join(path,'frames/unexpected.png'),previewPNG);}
+ ];
+ for(const [index,mutate] of mutations.entries()){
+  const reviewDirectory=join(directory,'tampered-'+index);await cp(original,reviewDirectory,{recursive:true});await mutate(reviewDirectory);let snapshot;
+  await assert.rejects(verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe:()=>metadata(),extract:async(...args)=>{snapshot=args[0];await fixtureFrames(...args);}}),/Source timing/);
+  await assert.rejects(lstat(dirname(snapshot)),error=>error.code==='ENOENT');
+ }
+});
+test('recomputed manifest hashes cannot disguise a replaced PNG as a true source frame',async context=>{
+ const directory=await fixture(context),input=batch(),reviewDirectory=join(directory,'review');
+ await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:reviewDirectory,probe:()=>metadata(),extract:fixtureFrames});
+ const file=join(reviewDirectory,'review-manifest.json'),manifest=JSON.parse(await readFile(file));
+ const changed=Buffer.concat([previewPNG,Buffer.from('replacement frame fixture')]);await writeFile(join(reviewDirectory,manifest.frames[0].path),changed);
+ manifest.frames[0].bytes=changed.length;manifest.frames[0].sha256=createHash('sha256').update(changed).digest('hex');await writeFile(file,JSON.stringify(manifest));
+ await assert.rejects(verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe:()=>metadata(),extract:fixtureFrames}),/manifest differs.*freshly extracted/);
+});
+test('integrity checking refuses a different source packet and symlinked review files',async context=>{
+ const directory=await fixture(context),input=batch(),reviewDirectory=join(directory,'review');
+ await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:reviewDirectory,probe:()=>metadata(),extract:fixtureFrames});
+ const other=batch();other.entries[0].observedAction+=' unrelated action';
+ await assert.rejects(verifySourceTimingReview(other,{baseDirectory:directory,reviewDirectory,probe:()=>metadata(),extract:fixtureFrames}),/manifest differs/);
+ const page=join(reviewDirectory,'index.html'),original=join(directory,'outside.html');await writeFile(original,await readFile(page));await rm(page);await symlink(original,page);
+ await assert.rejects(verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe:()=>metadata(),extract:fixtureFrames}),/regular bounded file/);
+ const linked=join(directory,'linked-review');await symlink(reviewDirectory,linked);
+ await assert.rejects(verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory:linked,probe:()=>metadata(),extract:fixtureFrames}),/regular directory/);
+});
+test('review integrity CLI requires exact flags and rejects an invalid packet without writing output',async context=>{
+ for(const args of [['verify-review','batch.json'],['verify-review','batch.json','--output','out'],['verify-review','batch.json','--review-dir']])await assert.rejects(sourceTimingCommand(args),/usage:/);
+ const directory=await fixture(context),input=join(directory,'batch.json');await writeFile(input,JSON.stringify({...batch(),certifiedOneToOne:true}));
+ await assert.rejects(sourceTimingCommand(['verify-review',input,'--review-dir',join(directory,'none')]),/unsupported fields/);
 });

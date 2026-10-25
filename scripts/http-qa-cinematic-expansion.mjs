@@ -19,7 +19,12 @@ const subjects=[
   ['sh2_creeper_025','sh2LowShadowBite','woodside'],['sh3_god_050','incompleteBodyFireline','church'],
   ['origins_straight_jacket_074','closedTorsoLegRelease','alchemilla_origins'],['origins_ariel_078','tetheredDollKicks','cedar_grove'],
   ['origins_memory_of_helen_grady_082','helenSuspendedWheel','cedar_grove'],['origins_memory_of_richard_grady_083','richardWallTentacles','labyrinth'],
-  ['homecoming_lurker_085','lurkerLowClawFold','blue_creek'],['homecoming_smog_087','smogExposedExhalation','nightmare_hospital_hc']
+  ['homecoming_lurker_085','lurkerLowClawFold','blue_creek'],['homecoming_smog_087','smogExposedExhalation','nightmare_hospital_hc'],
+  ['bom_air_screamer_121','bomTalonsCircle','book_wood'],['bom_bogeyman_122','bomHammerStop','book_earth'],
+  ['bom_butcher_123','bomCleaverPair','book_wood'],['bom_double_head_124','bomCirclingCharge','book_fire'],
+  ['bom_ghost_125','bomToxicPresencePass','book_blood'],['bom_insane_cancer_126','bomMassSpaceCrush','book_water'],
+  ['bom_needler_127','bomBladeCrossRetreat','book_steel'],['bom_pyramid_head_129','bomGreatKnifeSweep','book_light'],
+  ['bom_schism_130','bomHeadBladeLunge','book_earth'],['bom_straight_jacket_131','bomClosedTorsoJet','book_water']
 ];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
@@ -27,14 +32,16 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'Keyboard taunt, directional cancellation and the real pause/resume controls are used. Prepared local mirror-free pairings and state advancement are regression scenes, not played fights or a campaign.',
   'The missing contextual sprite check permits an existing candidate idle fallback or an explicit missing-profile cartouche. Neither is counted as a produced attack, KO or finisher pose.',
   'Explicit real-menu stage choices cover ceiling, floor grate, water, wall and furniture support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Four additional menu matches reject waterless, ceilingless or wall-less locations. Bitmap replacements use their structured geometry.ceiling contract, independently of their scene name.',
-  'The latest ten exact-subject edits include SH1 blue and red lightning branches, SH3 incomplete-body ground fire, SH2 low Creeper, Origins closed-torso leg capture and suspended dolls/cages/wall head, plus Homecoming Lurker claws and exposed-lung Smog exhalation. No other edition or boss anatomy is borrowed.',
+  'The previous ten exact-subject edits include SH1 blue and red lightning branches, SH3 incomplete-body ground fire, SH2 low Creeper, Origins closed-torso leg capture and suspended dolls/cages/wall head, plus Homecoming Lurker claws and exposed-lung Smog exhalation.',
+  'Ten additional Book of Memories Vita subjects use their own documented capacities and workbook proposals. The Double Head edit limits itself to the documented circling charge; the proposed bite is explicitly left unverified. Four-legged Needler and blade-headed Schism keep their own anatomy. No original-title animation or finisher is borrowed.',
+  'A separate real-menu pairing prepares Insane Cancer as the loser: round-one recovery must not request its terminal explosion art, while the final ordinary KO requests only the missing final-loss image context. No explosion image, destructive body effect or extra gameplay damage is generated.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
 async function shot(page,name){await page.screenshot({path:resolve(out,name+'.png'),fullPage:false});report.captures.push(name+'.png');}
-async function start(page,id,stageId){
-  await page.goto(base+`/modules/unified-versus.html?qa=1&p1=${id}&p2=sh2_bubble_head_nurse_024&stage=${stageId}`);
+async function start(page,id,stageId,targetId='sh2_bubble_head_nurse_024'){
+  await page.goto(base+`/modules/unified-versus.html?qa=1&p1=${id}&p2=${targetId}&stage=${stageId}`);
   await page.waitForFunction(()=>!!window.__HALO_QA__);
   await page.selectOption('#mode','local');await page.selectOption('#rounds','2');
   for(const name of ['stageHazards','stageDirector','otherworldShift','stageFatalities','stageTerrain'])await page.uncheck('#'+name);
@@ -50,7 +57,7 @@ async function start(page,id,stageId){
       projectiles:e.projectiles.length,health:e.actors.map(a=>a.health),maxHealth:e.actors.map(a=>a.maxHealth),wins:e.actors.map(a=>a.roundWins),
       resources:e.actors.map(a=>[a.health,a.meter,a.ammo,a.guard,a.stats.damageDealt]),
       lastFatality:e.lastFatality?.id||null,cinematicBlock:e.lastCinematicBlock||null,fatality:e.fatality?{id:e.fatality.definition.id,recipe:e.fatality.choreography.recipeId,frame:e.fatality.sample.frame,total:e.fatality.total}:null,
-      tracks:e.actors.map(a=>a.presentation?{key:a.presentation.key,frame:a.presentation.frame,sequenceId:a.presentation.sequenceId,duration:a.presentation.duration,reversible:a.presentation.reversible,
+      tracks:e.actors.map(a=>a.presentation?{key:a.presentation.key,frame:a.presentation.frame,sequenceId:a.presentation.sequenceId,duration:a.presentation.duration,reversible:a.presentation.reversible,poseIntent:a.presentation.lore?.poseIntent||null,
         clipKey:a.presentation.clipKey,authored:a.presentation.lore?.authored,ownerId:a.presentation.lore?.ownerId,staging:a.presentation.staging||sampleLorePresentation(a,a.presentation)}:null),
       actors:e.actors.map(a=>{const s=sampleSpriteClip(SPRITES[a.data.id],actorSpriteState(a));return {id:a.data.id,source:a.data.source,x:a.x,health:a.health,weapon:a.data.visual.weapon,lastMove:a.lastMoveKey,
         canMove:a.profile.referencePolicy?.canMove!==false,fatalities:a.stats.fatalities,sprite:s?{pose:s.pose,fallback:s.fallback,reason:s.fallbackReason,requested:s.requested}:null};})});
@@ -112,6 +119,21 @@ try{
     current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
     check(id+': missing physical support yields the ordinary deciding KO with an explicit reason',current.phase==='roundEnd'&&current.wins[0]===2&&!current.fatality&&current.actors[0].fatalities===0&&current.cinematicBlock?.reason.includes(reason),current);
     report.scenes[id+'@unsupported-'+stageId]=current;await shot(page,'unsupported-'+id);await page.close();
+  }
+  {
+    const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
+    let current=await start(page,'bom_bogeyman_122','book_earth','bom_insane_cancer_126');
+    check('BoM Cancer loss: actual menu starts the exact Vita pair and its own intro',current.phase==='intro'&&current.actors[1].id==='bom_insane_cancer_126'&&current.actors.every(a=>a.source==='bom')&&current.tracks[1].poseIntent==='bom-mass-room-entry',current);
+    current=await advance(page,current.phaseTimer);current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
+    check('BoM Cancer loss: first-round defeat stays recoverable without terminal destruction intent',current.phase==='roundEnd'&&!current.fatality&&current.wins[0]===1&&current.tracks[1].key==='loseRound'&&current.tracks[1].reversible&&!/explosion/.test(current.tracks[1].poseIntent),current);
+    await shot(page,'bom-cancer-round-recovery');
+    current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);
+    check('BoM Cancer loss: normal next-round reset restores its complete health without a win or explosion',current.phase==='fight'&&current.round===2&&current.health[1]===current.maxHealth[1]&&current.wins[0]===1&&current.actors[1].fatalities===0,current);
+    current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
+    check('BoM Cancer loss: only final ordinary defeat requests its own explicitly missing explosion pose',current.phase==='roundEnd'&&!current.fatality&&current.wins[0]===2&&current.health[1]===0&&current.actors[0].fatalities===0&&current.tracks[1].key==='loseMatch'&&!current.tracks[1].reversible&&/final-collapse-explosion-awaiting-frames/.test(current.tracks[1].poseIntent)&&(!current.actors[1].sprite||current.actors[1].sprite.fallback),current);
+    current=await advance(page,12);
+    check('BoM Cancer loss: final victim stays defeated and the result does not award another victory',current.health[1]===0&&current.wins[0]===2&&current.actors[0].fatalities===0&&current.tracks[1].key==='loseMatch',current);
+    report.scenes['bom_insane_cancer_126@final-loss']=current;await shot(page,'bom-cancer-final-loss-context');await page.close();
   }
   check('no unhandled browser exceptions',report.errors.length===0);await context.close();
 }catch(error){report.failure=String(error);process.exitCode=1;}

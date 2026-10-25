@@ -115,5 +115,44 @@ export const STAGE_BITMAPS = {
         ]
       }
     ]
+  },
+  "lakeview": {
+    "stageId": "lakeview",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-lobby-before-video",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_12_LAKE_VIEW_HOTEL"
+    ],
+    "notes": "Lobby SH2 original avant la cassette de la chambre 312, côté meuble musical et portes vitrées. Caméra frontale élargie, tapis continu et mobilier au fond adaptés au versus ; détails de chaise/coffre et symétrie reconstruits. Aucune réception, escalier, TV, phase brûlée ou géométrie certifiée.",
+    "layers": [
+      {
+        "id": "lobby",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/lakeview.lobby.7bc2120c786c.png",
+            "sha256": "7bc2120c786ca6ce13aa190b854bcf1de53b4f8d10b9d129ea55bb56a495d9e1",
+            "bytes": 2712564,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ]
   }
 };

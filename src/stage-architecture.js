@@ -1,6 +1,7 @@
 /* Original perspective sets. These are not traced recreations of official maps. */
 const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
+  if(stage?.id==='devils_pit'&&stage.source==='downpour')return 'interior';
   return stage?.id === 'brookhaven_roof' ? 'exterior' : INTERIORS.has(stage?.family) ? 'interior' : 'exterior';
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
@@ -64,6 +65,12 @@ export function drawStageArchitecture(c,w,h,stage) {
     for(const side of [-1,1])line(c,vx+side*w*.17,top,vx+side*w*.17,vy,'#3d4036',9);
     c.fillStyle='#403729';c.fillRect(vx-w*.11,vy-22,w*.22,22);
     c.fillStyle='#71614a';c.fillRect(vx-w*.12,vy-28,w*.24,8);
+  } else if(stage.id==='town_hall_hc'&&stage.source==='homecoming') {
+    // The first public room has a bookstand behind its podium, not a hall door.
+    line(c,vx,vy-h*.2,vx,vy,'#554833',5);
+    c.fillStyle='#63513a';c.fillRect(vx-41,vy-h*.2,82,7);
+    c.fillStyle='#938770';c.fillRect(vx-27,vy-h*.2-18,54,17);
+    line(c,vx,vy-h*.2-18,vx,vy-h*.2-1,'#615743',1);
   } else {
     // Door is on the back wall, never floating on the fighter plane.
     const doorX=vx-w*.044,doorY=vy-h*.25,doorW=w*.088;

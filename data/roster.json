@@ -1846,7 +1846,7 @@
     "variantOf": null,
     "archetype": "rushdown",
     "aiProfile": "rushdown",
-    "phaseStyle": "humanoid",
+    "phaseStyle": "quadruped",
     "stageId": "midwich",
     "signature": "Bond de contention",
     "trait": "relentless",
@@ -1858,46 +1858,46 @@
         "type": "signature",
         "name": "Rituel de clôture — Bond de contention",
         "trigger": "decisive-special",
-        "pose": "execution",
-        "effect": "silhouette",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "close",
-          "strike",
-          "collapse"
+          "circle",
+          "pounce",
+          "drag",
+          "silence"
         ],
-        "canonicalBasis": "Bondit, plaque la cible et frappe au sol.",
+        "canonicalBasis": "Se déplace à quatre pattes, bondit et plaque sa cible au sol.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
       {
         "id": "sh1_romper_010_nightmare",
         "type": "nightmare",
-        "name": "NIGHTMARE — Dernière manifestation",
+        "name": "NIGHTMARE — Traque achevée",
         "trigger": "decisive-super",
-        "pose": "execution",
-        "effect": "silhouette",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "close",
+          "circle",
+          "pounce",
           "otherworld",
-          "collapse"
+          "silence"
         ],
-        "canonicalBasis": "Bondit, plaque la cible et frappe au sol.",
+        "canonicalBasis": "Se déplace à quatre pattes, bondit et plaque sa cible au sol.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Bondit, plaque la cible et frappe au sol.",
+    "canonicalBehavior": "Se déplace à quatre pattes, bondit et plaque sa cible au sol.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL.",
     "catalogueStatus": "canon-combatant",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
-      "kind": "humanoid",
-      "body": "human",
-      "scale": 1,
+      "kind": "quadruped",
+      "body": "beast",
+      "scale": 0.82,
       "primary": "#6d6f61",
       "accent": "#b9b7a4",
       "secondary": "#2d2b29",
@@ -1910,7 +1910,7 @@
     "tags": [
       "SH1",
       "rushdown",
-      "humanoid",
+      "quadruped",
       "relentless",
       "bleed"
     ],
@@ -1929,7 +1929,7 @@
       "observedMoves": [
         {
           "name": "Plaquage",
-          "description": "Bond qui met au sol.",
+          "description": "Bondit sur Harry et le renverse ; ce plaquage reste un contact du corps, sans projectile ni téléportation.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -1940,7 +1940,7 @@
         },
         {
           "name": "Immobilisation",
-          "description": "Maintient la cible couchée.",
+          "description": "Maintient Harry au sol et l’étouffe après le bond. Le bind du prototype adapte cette immobilisation sans reproduire ni mesurer les commandes de lutte originales.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -7372,15 +7372,15 @@
     "aiProfile": "ghost",
     "phaseStyle": "ghost",
     "stageId": "toluca_prison",
-    "signature": "Rituel derrière les barreaux",
+    "signature": "Présence derrière les barreaux",
     "trait": "phaseWalk",
     "affliction": "dread",
-    "finisher": "Rituel de clôture — Rituel derrière les barreaux",
+    "finisher": "Rituel de clôture — Présence derrière les barreaux",
     "fatalities": [
       {
         "id": "sh2_prisoner_035_signature",
         "type": "signature",
-        "name": "Rituel de clôture — Rituel derrière les barreaux",
+        "name": "Rituel de clôture — Présence derrière les barreaux",
         "trigger": "decisive-special",
         "pose": "haunt",
         "effect": "dread",
@@ -7390,7 +7390,7 @@
           "possession",
           "fade"
         ],
-        "canonicalBasis": "Présence invisible adaptée en ondes sonores et frappes hors champ.",
+        "canonicalBasis": "Présences invisibles documentées, que James peut viser et tuer ; hostilité propre non confirmée, dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -7407,15 +7407,15 @@
           "otherworld",
           "fade"
         ],
-        "canonicalBasis": "Présence invisible adaptée en ondes sonores et frappes hors champ.",
+        "canonicalBasis": "Présences invisibles documentées, que James peut viser et tuer ; hostilité propre non confirmée, dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Présence invisible adaptée en ondes sonores et frappes hors champ.",
+    "canonicalBehavior": "Présences invisibles documentées, que James peut viser et tuer ; hostilité propre non confirmée, dossier hors duel.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 2.",
-    "catalogueStatus": "canon-combatant",
+    "catalogueStatus": "reference-unverified",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
@@ -7444,8 +7444,8 @@
       "name": "Prisoner",
       "source": "sh2",
       "baseId": null,
-      "identityStatus": "non-combattant-canonique",
-      "identityNote": "Entité invisible et inoffensive ; profil offensif actuel à requalifier.",
+      "identityStatus": "presence-invisible-documentee-role-a-preciser",
+      "identityNote": "Deux présences invisibles de Toluca Prison sont visables, vulnérables et tuables. Leur existence est documentée ; les pages relues ne prouvent pas directement leur non-hostilité. Le blocage du duel reste conservateur, sans décision de rôle validée.",
       "referenceIds": [
         "CL_PRISONER",
         "CL_SH2_CREATURES",
@@ -7784,15 +7784,15 @@
     "aiProfile": "zoner",
     "phaseStyle": "wall",
     "stageId": "hotel_otherworld",
-    "signature": "Langue du plancher",
+    "signature": "Langue du plancher proposée",
     "trait": "staticField",
     "affliction": "static",
-    "finisher": "Rituel de clôture — Langue du plancher",
+    "finisher": "Rituel de clôture — Langue du plancher proposée",
     "fatalities": [
       {
         "id": "sh2_mandarin_floor_form_signature",
         "type": "signature",
-        "name": "Rituel de clôture — Langue du plancher",
+        "name": "Rituel de clôture — Langue du plancher proposée",
         "trigger": "decisive-special",
         "pose": "entomb",
         "effect": "rust",
@@ -7802,7 +7802,7 @@
           "entomb",
           "seal"
         ],
-        "canonicalBasis": "Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.",
+        "canonicalBasis": "Forme au sol proposée pour le versus, sans identité canonique établie ; le Mandarin original reste suspendu sous les grilles. Dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -7819,15 +7819,15 @@
           "otherworld",
           "seal"
         ],
-        "canonicalBasis": "Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.",
+        "canonicalBasis": "Forme au sol proposée pour le versus, sans identité canonique établie ; le Mandarin original reste suspendu sous les grilles. Dossier hors duel.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.",
+    "canonicalBehavior": "Forme au sol proposée pour le versus, sans identité canonique établie ; le Mandarin original reste suspendu sous les grilles. Dossier hors duel.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 2.",
-    "catalogueStatus": "canon-variant-adapted",
+    "catalogueStatus": "unverified-project-adaptation",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
@@ -7857,7 +7857,7 @@
       "source": "sh2",
       "baseId": "sh2_mandarin_026",
       "identityStatus": "adaptation-non-canonique",
-      "identityNote": "« Floor Form » est une adaptation du projet, pas une variante 1:1 établie.",
+      "identityNote": "« Floor Form » est une adaptation déclarée du projet, pas une variante canonique établie. Le commentaire de création du Mandarin original l’exclut de la surface ; il ne donne pas pour autant un rôle canonique à ce dossier inventé.",
       "referenceIds": [
         "CL_SH2_ENEMIES",
         "CL_SH2_CREATURES"
@@ -7865,7 +7865,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Gestes du Mandarin suspendu disponibles en référence ; locomotion au sol non attestée.",
+          "description": "Renvoi documentaire seulement au Mandarin original suspendu sous la grille : le commentaire de création dit qu’il ne lui est pas permis de se tenir au-dessus du sol. La locomotion d’une « Floor Form » et son rôle canonique ne sont pas établis.",
           "evidence": [
             "CL_SH2_ENEMIES",
             "CL_SH2_CREATURES"
@@ -7879,7 +7879,8 @@
         "Aucun déplacement libre debout à certifier ; soit arène à grille, soit branche adaptation clairement nommée.",
         "Suspendu sous un grillage ; support obligatoire.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "La source interdit au Mandarin original de se tenir au-dessus du sol ; ce constat ne prouve ni l’existence d’une variante Floor Form ni son rôle. Conserver la question P0 ouverte et le duel bloqué."
       ],
       "proposals": {
         "super": {
@@ -8064,7 +8065,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Estoc ou balayage.",
+          "description": "Frappe avec ses grands bras ; peut les faire tourner autour de son corps pour frapper à proximité des deux côtés. Cette rotation physique n’est pas une aura à distance.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -8075,7 +8076,7 @@
         },
         {
           "name": "Lame",
-          "description": "Extension au bout du bras.",
+          "description": "Une lame extensible peut sortir du bout d’un bras pour atteindre Heather. Portée et fenêtres du prototype restent non mesurées dans la source.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -8273,7 +8274,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh3_closer_036 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh3_closer_036 pour les coups de bras, la lame et les bras tournants ; le guide décrit les Closer de l’église comme plus forts et plus rapides, sans coefficients officiels.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -8287,7 +8288,8 @@
         "Modèle verdâtre ; vitesse à mesurer.",
         "Grands bras ; proportions à capturer.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "Les multiplicateurs .85 de startup et1.12 de dégâts du prototype sont un équilibrage local ; la source ne chiffre pas l’écart de la variante Church."
       ],
       "proposals": {
         "super": {
@@ -9277,7 +9279,7 @@
       "observedMoves": [
         {
           "name": "Bond",
-          "description": "Morsure sautée.",
+          "description": "Saute et mord Heather ; le guide distingue cette attaque relativement légère de la prise de jambe au sol.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -9288,7 +9290,7 @@
         },
         {
           "name": "Prise",
-          "description": "Mâchoires sur la jambe.",
+          "description": "Au sol, retient et mâchonne la jambe de Heather ; le joueur peut lutter pour se dégager. Le bind et sa durée restent une transposition de versus.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -9301,7 +9303,8 @@
       "constraints": [
         "Chien à tête fendue ; pas deux corps.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "Les coefficients de dégâts du prototype (.72 pour le bond,1.15 pour la prise) sont des choix de versus, pas des chiffres de dégâts mesurés dans SH3."
       ],
       "proposals": {
         "super": {
@@ -9610,7 +9613,7 @@
     "variantOf": null,
     "archetype": "rushdown",
     "aiProfile": "rushdown",
-    "phaseStyle": "humanoid",
+    "phaseStyle": "quadruped",
     "stageId": "shopping_mall",
     "signature": "Rapt au sol",
     "trait": "relentless",
@@ -9622,13 +9625,13 @@
         "type": "signature",
         "name": "Rituel de clôture — Rapt au sol",
         "trigger": "decisive-special",
-        "pose": "execution",
-        "effect": "silhouette",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "close",
-          "strike",
-          "collapse"
+          "circle",
+          "pounce",
+          "drag",
+          "silence"
         ],
         "canonicalBasis": "Rampe rapidement et tente de renverser la cible.",
         "fidelity": "adapted-from-canonical-behavior",
@@ -9637,15 +9640,15 @@
       {
         "id": "sh3_slurper_042_nightmare",
         "type": "nightmare",
-        "name": "NIGHTMARE — Dernière manifestation",
+        "name": "NIGHTMARE — Traque achevée",
         "trigger": "decisive-super",
-        "pose": "execution",
-        "effect": "silhouette",
+        "pose": "pounce",
+        "effect": "scratch",
         "sequence": [
-          "stagger",
-          "close",
+          "circle",
+          "pounce",
           "otherworld",
-          "collapse"
+          "silence"
         ],
         "canonicalBasis": "Rampe rapidement et tente de renverser la cible.",
         "fidelity": "adapted-from-canonical-behavior",
@@ -9659,8 +9662,8 @@
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
-      "kind": "humanoid",
-      "body": "human",
+      "kind": "quadruped",
+      "body": "beast",
       "scale": 0.78,
       "primary": "#7b6a50",
       "accent": "#d1b777",
@@ -9674,7 +9677,7 @@
     "tags": [
       "SH3",
       "rushdown",
-      "humanoid",
+      "quadruped",
       "relentless",
       "bleed"
     ],
@@ -13490,7 +13493,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Balayage et rotation.",
+          "description": "Balance ses grands bras, souvent en tournant autour de son corps ; cette portée de contact reste locale, sans champ magique.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -13500,7 +13503,7 @@
         },
         {
           "name": "Charge",
-          "description": "Course puis plongeon.",
+          "description": "Poursuit Henry en courant sur ses mains puis plonge vers lui ; aucune saisie avec échange de places n’est déduite de ce plongeon.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -21004,14 +21007,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Griffure",
-          "description": "Griffure",
+          "description": "Attaque Alex avec ses griffes, souvent depuis l’eau ou une ouverture sombre ; ne pas attribuer une étreinte humaine à ses membres.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -21020,9 +21025,10 @@
         },
         {
           "name": "Bond griffes ouvertes",
-          "description": "Bond griffes ouvertes",
+          "description": "Saute sur Alex et le renverse ; le guide permet d’esquiver ou de le frapper au tuyau pendant le saut. Durées et trajectoire du versus restent adaptées.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -21206,14 +21212,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Morsure",
-          "description": "Morsure",
+          "description": "Après avoir renversé Alex, essaie de lui arracher la gorge. Le bind du prototype représente le maintien, sans annoncer une séquence QTE originale reproduite.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -21222,9 +21230,10 @@
         },
         {
           "name": "Bond",
-          "description": "Bond",
+          "description": "Bondit rapidement sur Alex et le projette au sol ; ce renversement reste une attaque corporelle, sans projectile ou téléportation.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -21596,7 +21605,7 @@
       "motif": null,
       "weapon": null,
       "head": null,
-      "limbs": 6,
+      "limbs": 4,
       "aura": null
     },
     "tags": [
@@ -22986,15 +22995,15 @@
     "aiProfile": "juggernaut",
     "phaseStyle": "pyramid",
     "stageId": "shepherds_glen",
-    "signature": "Grande lame du Bogeyman",
+    "signature": "Apparitions du Bogeyman",
     "trait": "rustArmor",
     "affliction": "decay",
-    "finisher": "Rituel de clôture — Grande lame du Bogeyman",
+    "finisher": "Rituel de clôture — Apparitions du Bogeyman",
     "fatalities": [
       {
         "id": "homecoming_bogeyman_092_signature",
         "type": "signature",
-        "name": "Rituel de clôture — Grande lame du Bogeyman",
+        "name": "Rituel de clôture — Apparitions du Bogeyman",
         "trigger": "decisive-special",
         "pose": "sentence",
         "effect": "rust",
@@ -23004,7 +23013,7 @@
           "sentence",
           "siren"
         ],
-        "canonicalBasis": "Exécuteur massif de Homecoming.",
+        "canonicalBasis": "Trois apparitions en cinématiques dans Homecoming, sans duel autonome.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       },
@@ -23021,15 +23030,15 @@
           "otherworld",
           "siren"
         ],
-        "canonicalBasis": "Exécuteur massif de Homecoming.",
+        "canonicalBasis": "Trois apparitions en cinématiques dans Homecoming, sans duel autonome.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 4
       }
     ],
-    "canonicalBehavior": "Exécuteur massif de Homecoming.",
-    "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
+    "canonicalBehavior": "Trois apparitions en cinématiques dans Homecoming, sans duel autonome.",
+    "adaptation": "Dossier de rencontre scénarisée ; ne reprend pas les combats de SH2, Downpour ou des films.",
     "lore": "Manifestation associée à SILENT HILL: HOMECOMING.",
-    "catalogueStatus": "canon-combatant",
+    "catalogueStatus": "canon-scripted-encounter",
     "nameStatus": "official-or-established",
     "evidenceTier": "verified-secondary",
     "visual": {
@@ -23060,18 +23069,20 @@
       "source": "homecoming",
       "baseId": null,
       "identityStatus": "apparition-cinematique-documentee",
-      "identityNote": "Pas de moveset boss affrontable dans Homecoming; actions versus nouvelles.",
+      "identityNote": "Exécuteur des apparitions scénarisées d’Alchemilla, du Grand Hotel et de l’église ; ses violences sont documentées dans les cutscènes, sans duel autonome jouable retenu.",
       "referenceIds": [
         "EXT05",
-        "EXT06"
+        "EXT06",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Exécuteur scénarisé, pas de duel jouable",
-          "description": "Exécuteur scénarisé, pas de duel jouable",
+          "description": "Trois apparitions de cutscènes : une grande lame frappe Alex à l’ascenseur d’Alchemilla, Bogeyman apparaît puis repart près de408 au Grand Hotel, et tranche Adam dans l’église avant la reprise de l’exploration. Aucun duel autonome de cette version n’est retenu.",
           "evidence": [
             "EXT05",
-            "EXT06"
+            "EXT06",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -23082,7 +23093,8 @@
       "constraints": [
         "Pas de moveset boss affrontable dans Homecoming; actions versus nouvelles.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre cinématique de Homecoming, dangereuse dans ses scènes mais sans duel autonome. Les propositions de versus restent des brouillons distincts ; aucun geste de SH2, des films, d’Arcade ou de Downpour n’est transféré."
       ],
       "proposals": {
         "super": {
@@ -23171,7 +23183,20 @@
       "artDirectionFocus": "Great Knife",
       "existingCatalogueBehavior": "Exécuteur massif de Homecoming.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "homecoming_bogeyman_092",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Homecoming (2008, version commerciale)",
+        "evidence": [
+          "EXT06",
+          "HC_ENEMIES_20261023"
+        ],
+        "rationale": "Le bestiaire situe Bogeyman à Alchemilla, au Grand Hotel et à l’église. Le guide décrit individuellement ces trois apparitions comme des cutscènes : attaque à l’ascenseur du cauchemar initial, passage près de408 puis départ, et exécution d’Adam suivie du retour au contrôle d’Alex. La fiche est retenue comme rencontre cinématique sans duel autonome ; cela ne signifie pas que l’exécuteur est inoffensif. Les commandes du prototype sont bloquées sans transférer les capacités des versions SH2, film, Arcade ou Downpour.",
+        "reviewedAt": "2026-10-25"
+      }
     }
   },
   {
@@ -33220,7 +33245,7 @@
           "cocoon",
           "drop"
         ],
-        "canonicalBasis": "Version Book of Memories.",
+        "canonicalBasis": "Créature à quatre membres prolongés en lames dans Book of Memories.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -33237,12 +33262,12 @@
           "otherworld",
           "drop"
         ],
-        "canonicalBasis": "Version Book of Memories.",
+        "canonicalBasis": "Créature à quatre membres prolongés en lames dans Book of Memories.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Version Book of Memories.",
+    "canonicalBehavior": "Créature à quatre membres prolongés en lames dans Book of Memories.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL: BOOK OF MEMORIES.",
     "catalogueStatus": "canon-combatant",
@@ -33258,7 +33283,7 @@
       "motif": null,
       "weapon": null,
       "head": null,
-      "limbs": 6,
+      "limbs": 4,
       "aura": null
     },
     "tags": [
@@ -33283,7 +33308,7 @@
       "observedMoves": [
         {
           "name": "Lames; esquives rapides",
-          "description": "Lames; esquives rapides",
+          "description": "Créature à quatre membres terminés en lames, rapide, agressive et capable d’esquiver les attaques selon le bestiaire propre à Book of Memories.",
           "evidence": [
             "EXT20"
           ],
@@ -33296,7 +33321,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Quatre membres-lames selon le bestiaire Book of Memories ; aucune anatomie à six membres ni animation de la version Homecoming importée."
       ],
       "proposals": {
         "super": {
@@ -39040,14 +39066,18 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Pas de saisie par ouverture de torse établie; nom descriptif de guide.",
       "referenceIds": [
-        "EXT40"
+        "EXT40",
+        "EXT33",
+        "EXT_SHF_EBISUGAOKA5_20261025"
       ],
       "observedMoves": [
         {
           "name": "Cocons engendrant Kashimashi",
-          "description": "Cocons engendrant Kashimashi",
+          "description": "Le bestiaire décrit un géniteur à cocons ; le guide d’Ebisugaoka partie5 nomme les Hatcher et demande de vaincre ces géniteurs pour débloquer le chemin. Ces pages ne prouvent pas l’absence de locomotion autonome.",
           "evidence": [
-            "EXT40"
+            "EXT40",
+            "EXT33",
+            "EXT_SHF_EBISUGAOKA5_20261025"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,

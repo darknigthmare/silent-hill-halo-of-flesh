@@ -5,16 +5,19 @@ import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {SPRITES} from '../src/sprite-manifest.js';
-import {VERSION} from '../src/data.js';
+import {VERSION,ROSTER,createCombatProfile} from '../src/data.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-sprites');await mkdir(out,{recursive:true});
 const report={version:VERSION,kind:'real HTTP raster and offline checks',checks:[],errors:[],captures:[],fixtures:['saved arcade checkpoint for non-mutation assertion; no completed campaign simulated as play']};
 const artCount=Object.keys(SPRITES).length;
+const missingArtFighter=ROSTER.find(f=>!SPRITES[f.id]&&createCombatProfile(f).referencePolicy.combatEnabled);
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser;
 const assert=(name,ok)=>{report.checks.push({name,passed:!!ok});if(!ok)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
 const ready=page=>page.waitForFunction(()=>document.querySelector('#p1Portrait')?.dataset.artStatus==='raster'&&document.querySelector('#p2Portrait')?.dataset.artStatus==='raster');
 const pageIn=async context=>{const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));page.on('dialog',d=>d.accept());return page;};
 try{
+ assert('an active unillustrated profile is available for the art-gate regressions',!!missingArtFighter);
+ report.fixtures.push('Real unillustrated combat profile selected for art-gate checks: '+missingArtFighter.id);
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4175','--dist'],{cwd:root,stdio:'ignore'});
  let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}assert('static build HTTP server starts',available);
  for(const art of Object.values(SPRITES)){const frame=art.frames[0],response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());assert('HTTP exact PNG digest: '+art.fighterId,response.ok&&response.headers.get('content-type').includes('image/png')&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);}
@@ -27,7 +30,7 @@ try{
  await page.selectOption('#mode','local');await page.click('#launch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
  assert('normal battle loads without diagnostic mode',await page.evaluate(()=>!__HALO_QA__.engine.config.artDiagnostic));await shot(page,'02-battle');
  await page.click('#pauseBtn');const frame=await page.evaluate(()=>__HALO_QA__.engine.frame);await page.waitForTimeout(150);assert('pause freezes the actual simulation',await page.evaluate(n=>__HALO_QA__.engine.frame===n,frame));await page.keyboard.press('Escape');await page.click('#leaveFight');
- await page.uncheck('#artReadyOnly');await page.fill('#search','Night Flutter');await page.locator('#roster > *').first().click();await page.click('#launch');assert('missing art blocks normal launch instead of fake monster geometry',await page.evaluate(()=>!__HALO_QA__.engine)&&/produire/.test(await page.locator('#spriteLaunchStatus').textContent()));
+ await page.uncheck('#artReadyOnly');await page.fill('#search',missingArtFighter.name);await page.locator(`#roster [data-id="${missingArtFighter.id}"]`).click();await page.click('#launch');assert('missing art blocks normal launch instead of fake monster geometry',await page.evaluate(()=>!__HALO_QA__.engine)&&/produire/.test(await page.locator('#spriteLaunchStatus').textContent()));
  await page.check('#artDiagnostic');await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);assert('engine diagnostic is an explicit opt-in',await page.evaluate(()=>__HALO_QA__.engine.config.artDiagnostic));
  // A valid checkpoint fixture must survive a rejected new run unchanged.
  const saved=await page.evaluate(async()=>{const {createRun}=await import('/src/run-progress.js');const r=createRun({mode:'arcade',playerId:'film_red_pyramid_film_175',seed:19});const text=JSON.stringify(r);localStorage.setItem('sh-halo-of-flesh-run-v1',text);return text;});
@@ -48,7 +51,7 @@ try{
  const faults=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1000}}),bad=await pageIn(faults);await faults.route('**/assets/sprites/**',route=>route.abort());
  await bad.goto(base+'/modules/unified-versus.html?qa=1');await bad.click('#launch');await bad.waitForFunction(()=>!document.querySelector('#launch').disabled);assert('image failure never starts an invisible normal fight',await bad.evaluate(()=>!__HALO_QA__.engine));await faults.unroute('**/assets/sprites/**');await bad.click('#launch');await bad.waitForFunction(()=>!!__HALO_QA__.engine);assert('explicit retry recovers from an image load error',true);await faults.close();
  const delayed=await browser.newContext({serviceWorkers:'block'}),slow=await pageIn(delayed);await delayed.route('**/assets/sprites/**',async route=>{await new Promise(r=>setTimeout(r,600));await route.continue();});
- await slow.goto(base+'/modules/unified-versus.html?qa=1',{waitUntil:'domcontentloaded'});await slow.waitForFunction(()=>!!window.__HALO_QA__);await slow.click('#launch');await slow.fill('#search','Night Flutter');await slow.locator('#roster > *').first().click();await slow.waitForTimeout(900);assert('stale preflight cannot launch a newly changed selection',await slow.evaluate(()=>!__HALO_QA__.engine));await delayed.close();
+ await slow.goto(base+'/modules/unified-versus.html?qa=1',{waitUntil:'domcontentloaded'});await slow.waitForFunction(()=>!!window.__HALO_QA__);await slow.click('#launch');await slow.fill('#search',missingArtFighter.name);await slow.locator(`#roster [data-id="${missingArtFighter.id}"]`).click();await slow.waitForTimeout(900);assert('stale preflight cannot launch a newly changed selection',await slow.evaluate(()=>!__HALO_QA__.engine));await delayed.close();
  assert('no uncaught JavaScript exceptions',report.errors.length===0);
 }catch(error){report.failure=String(error);process.exitCode=1;}
 finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}

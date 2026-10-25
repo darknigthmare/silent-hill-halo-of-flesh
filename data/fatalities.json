@@ -380,32 +380,32 @@
           "type": "signature",
           "name": "Rituel de clôture — Bond de contention",
           "trigger": "decisive-special",
-          "pose": "execution",
-          "effect": "silhouette",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "close",
-            "strike",
-            "collapse"
+            "circle",
+            "pounce",
+            "drag",
+            "silence"
           ],
-          "canonicalBasis": "Bondit, plaque la cible et frappe au sol.",
+          "canonicalBasis": "Se déplace à quatre pattes, bondit et plaque sa cible au sol.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
         {
           "id": "sh1_romper_010_nightmare",
           "type": "nightmare",
-          "name": "NIGHTMARE — Dernière manifestation",
+          "name": "NIGHTMARE — Traque achevée",
           "trigger": "decisive-super",
-          "pose": "execution",
-          "effect": "silhouette",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "close",
+            "circle",
+            "pounce",
             "otherworld",
-            "collapse"
+            "silence"
           ],
-          "canonicalBasis": "Bondit, plaque la cible et frappe au sol.",
+          "canonicalBasis": "Se déplace à quatre pattes, bondit et plaque sa cible au sol.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -1444,7 +1444,7 @@
         {
           "id": "sh2_prisoner_035_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Rituel derrière les barreaux",
+          "name": "Rituel de clôture — Présence derrière les barreaux",
           "trigger": "decisive-special",
           "pose": "haunt",
           "effect": "dread",
@@ -1454,7 +1454,7 @@
             "possession",
             "fade"
           ],
-          "canonicalBasis": "Présence invisible adaptée en ondes sonores et frappes hors champ.",
+          "canonicalBasis": "Présences invisibles documentées, que James peut viser et tuer ; hostilité propre non confirmée, dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -1471,7 +1471,7 @@
             "otherworld",
             "fade"
           ],
-          "canonicalBasis": "Présence invisible adaptée en ondes sonores et frappes hors champ.",
+          "canonicalBasis": "Présences invisibles documentées, que James peut viser et tuer ; hostilité propre non confirmée, dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -1526,7 +1526,7 @@
         {
           "id": "sh2_mandarin_floor_form_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Langue du plancher",
+          "name": "Rituel de clôture — Langue du plancher proposée",
           "trigger": "decisive-special",
           "pose": "entomb",
           "effect": "rust",
@@ -1536,7 +1536,7 @@
             "entomb",
             "seal"
           ],
-          "canonicalBasis": "Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.",
+          "canonicalBasis": "Forme au sol proposée pour le versus, sans identité canonique établie ; le Mandarin original reste suspendu sous les grilles. Dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -1553,7 +1553,7 @@
             "otherworld",
             "seal"
           ],
-          "canonicalBasis": "Adaptation au sol de la manifestation suspendue sous les grilles, conservant sa langue pendulaire.",
+          "canonicalBasis": "Forme au sol proposée pour le versus, sans identité canonique établie ; le Mandarin original reste suspendu sous les grilles. Dossier hors duel.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -1897,13 +1897,13 @@
           "type": "signature",
           "name": "Rituel de clôture — Rapt au sol",
           "trigger": "decisive-special",
-          "pose": "execution",
-          "effect": "silhouette",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "close",
-            "strike",
-            "collapse"
+            "circle",
+            "pounce",
+            "drag",
+            "silence"
           ],
           "canonicalBasis": "Rampe rapidement et tente de renverser la cible.",
           "fidelity": "adapted-from-canonical-behavior",
@@ -1912,15 +1912,15 @@
         {
           "id": "sh3_slurper_042_nightmare",
           "type": "nightmare",
-          "name": "NIGHTMARE — Dernière manifestation",
+          "name": "NIGHTMARE — Traque achevée",
           "trigger": "decisive-super",
-          "pose": "execution",
-          "effect": "silhouette",
+          "pose": "pounce",
+          "effect": "scratch",
           "sequence": [
-            "stagger",
-            "close",
+            "circle",
+            "pounce",
             "otherworld",
-            "collapse"
+            "silence"
           ],
           "canonicalBasis": "Rampe rapidement et tente de renverser la cible.",
           "fidelity": "adapted-from-canonical-behavior",
@@ -4560,7 +4560,7 @@
         {
           "id": "homecoming_bogeyman_092_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Grande lame du Bogeyman",
+          "name": "Rituel de clôture — Apparitions du Bogeyman",
           "trigger": "decisive-special",
           "pose": "sentence",
           "effect": "rust",
@@ -4570,7 +4570,7 @@
             "sentence",
             "siren"
           ],
-          "canonicalBasis": "Exécuteur massif de Homecoming.",
+          "canonicalBasis": "Trois apparitions en cinématiques dans Homecoming, sans duel autonome.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         },
@@ -4587,7 +4587,7 @@
             "otherworld",
             "siren"
           ],
-          "canonicalBasis": "Exécuteur massif de Homecoming.",
+          "canonicalBasis": "Trois apparitions en cinématiques dans Homecoming, sans duel autonome.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 4
         }
@@ -6661,7 +6661,7 @@
             "cocoon",
             "drop"
           ],
-          "canonicalBasis": "Version Book of Memories.",
+          "canonicalBasis": "Créature à quatre membres prolongés en lames dans Book of Memories.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -6678,7 +6678,7 @@
             "otherworld",
             "drop"
           ],
-          "canonicalBasis": "Version Book of Memories.",
+          "canonicalBasis": "Créature à quatre membres prolongés en lames dans Book of Memories.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -10663,7 +10663,7 @@
     },
     {
       "id": "lakeview",
-      "name": "LAKEVIEW HOTEL — FOG WORLD",
+      "name": "LAKEVIEW HOTEL — LOBBY",
       "source": "sh2",
       "fatality": {
         "id": "lakeview_fatality",
@@ -10676,7 +10676,7 @@
         ],
         "triggerZone": "either-edge",
         "fidelity": "environmental-adaptation",
-        "canonicalBasis": "Décor et dangers documentés de LAKEVIEW HOTEL — FOG WORLD."
+        "canonicalBasis": "Décor et dangers documentés de LAKEVIEW HOTEL — LOBBY."
       },
       "animations": []
     },
@@ -11072,7 +11072,6 @@
         "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN TOWN HALL."
       },
       "animations": [
-        "flagSway",
         "lightFlicker"
       ]
     },
@@ -11255,10 +11254,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de DEVIL’S PIT."
       },
-      "animations": [
-        "rainSheets",
-        "waterRipple"
-      ]
+      "animations": []
     },
     {
       "id": "centennial_building",

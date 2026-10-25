@@ -2,8 +2,8 @@
   "schema": 1,
   "version": "0.9.6",
   "total": 230,
-  "integrated": 14,
-  "missing": 216,
+  "integrated": 18,
+  "missing": 212,
   "certified": 0,
   "animatedClips": 1,
   "presentationKeys": [
@@ -17,7 +17,7 @@
     "finished",
     "taunt"
   ],
-  "presentationClips": 0,
+  "presentationClips": 1,
   "animatedPresentationClips": 0,
   "entries": [
     {
@@ -50,10 +50,10 @@
       "name": "Night Flutter",
       "source": "sh1",
       "game": "SILENT HILL",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
       "presentations": {
         "present": [],
         "missing": [
@@ -1100,10 +1100,10 @@
       "name": "Pendulum",
       "source": "sh3",
       "game": "SILENT HILL 3",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
       "presentations": {
         "present": [],
         "missing": [
@@ -1175,10 +1175,10 @@
       "name": "Slurper",
       "source": "sh3",
       "game": "SILENT HILL 3",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
       "presentations": {
         "present": [],
         "missing": [
@@ -1625,12 +1625,14 @@
       "name": "Twin Victim",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 2,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
       "presentations": {
-        "present": [],
+        "present": [
+          "taunt@sh4_twin_victim_059:taunt"
+        ],
         "missing": [
           "intro",
           "winRound",
@@ -1639,8 +1641,7 @@
           "loseMatch",
           "outro",
           "finisher",
-          "finished",
-          "taunt"
+          "finished"
         ],
         "animated": 0
       }

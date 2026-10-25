@@ -931,6 +931,33 @@
       "scope": "Sortie initiale Wii en 2009, plateforme et séquences cauchemardesques axées sur la fuite et l’évitement ; pas de confrontation directe.",
       "consultedAt": "2026-10-24",
       "caveat": "La décision retient l’édition Wii initiale pour ces dossiers ; commandes, captures et différences des portages PS2/PSP restent à relever séparément."
+    },
+    {
+      "id": "EXT_SH2_LAKEVIEW_PC44_20261025",
+      "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_44.jpg",
+      "title": "Silent Hill 2 original — PC screenshot 44: Lake View lobby",
+      "type": "capture-du-jeu-republiee",
+      "scope": "Vue du lobby intact avec boiseries, portes vitrées, tapis rouge et meuble musical ; à lire avec le parcours avant la cassette de312.",
+      "consultedAt": "2026-10-25",
+      "caveat": "Galerie PC du jeu original ; région, traitement de capture et éventuelles corrections graphiques non établis. Capture fixe, dimensions de pièce, échelle et timings non mesurés."
+    },
+    {
+      "id": "EXT_SH2_LAKEVIEW_MUSICBOX_20261025",
+      "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_music_box_player_puzzle_01.jpg",
+      "title": "Silent Hill 2 original — Lake View music-box player context",
+      "type": "capture-du-jeu-republiee",
+      "scope": "Seconde vue du lobby depuis le voisinage de l’escalier : même meuble musical, portes vitrées et tapis ; contexte du puzzle avant312.",
+      "consultedAt": "2026-10-25",
+      "caveat": "Image de guide spécialisée ; angle et cadrage ne prouvent ni dimensions, ni état ontologique global Fog/Memory. Ne pas importer la TV de312 ou le piano d’une autre pièce."
+    },
+    {
+      "id": "EXT_SHF_EBISUGAOKA5_20261025",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_10_ebisugaoka_part_5_en.htm",
+      "title": "Silent Hill f — Ebisugaoka part5: monster-spawning encounters",
+      "type": "guide-specialise-secondaire",
+      "scope": "Rencontres de Hatcher et créatures à cocons qu’il faut vaincre pour débloquer le chemin ; ne confirme pas une absence de locomotion.",
+      "consultedAt": "2026-10-25",
+      "caveat": "Guide de progression textuel, sans relevé de geste ou de temps. Ne pas identifier automatiquement tous les géniteurs anonymes au Dark Hatcher ni en déduire l’immobilité."
     }
   ],
   "fighters": [
@@ -2289,14 +2316,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Griffure",
-          "description": "Griffure",
+          "description": "Attaque Alex avec ses griffes, souvent depuis l’eau ou une ouverture sombre ; ne pas attribuer une étreinte humaine à ses membres.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -2305,9 +2334,10 @@
         },
         {
           "name": "Bond griffes ouvertes",
-          "description": "Bond griffes ouvertes",
+          "description": "Saute sur Alex et le renverse ; le guide permet d’esquiver ou de le frapper au tuyau pendant le saut. Durées et trajectoire du versus restent adaptées.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -2408,14 +2438,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Morsure",
-          "description": "Morsure",
+          "description": "Après avoir renversé Alex, essaie de lui arracher la gorge. Le bind du prototype représente le maintien, sans annoncer une séquence QTE originale reproduite.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -2424,9 +2456,10 @@
         },
         {
           "name": "Bond",
-          "description": "Bond",
+          "description": "Bondit rapidement sur Alex et le projette au sol ; ce renversement reste une attaque corporelle, sans projectile ou téléportation.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -3515,18 +3548,20 @@
       "source": "homecoming",
       "baseId": null,
       "identityStatus": "apparition-cinematique-documentee",
-      "identityNote": "Pas de moveset boss affrontable dans Homecoming; actions versus nouvelles.",
+      "identityNote": "Exécuteur des apparitions scénarisées d’Alchemilla, du Grand Hotel et de l’église ; ses violences sont documentées dans les cutscènes, sans duel autonome jouable retenu.",
       "referenceIds": [
         "EXT05",
-        "EXT06"
+        "EXT06",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Exécuteur scénarisé, pas de duel jouable",
-          "description": "Exécuteur scénarisé, pas de duel jouable",
+          "description": "Trois apparitions de cutscènes : une grande lame frappe Alex à l’ascenseur d’Alchemilla, Bogeyman apparaît puis repart près de408 au Grand Hotel, et tranche Adam dans l’église avant la reprise de l’exploration. Aucun duel autonome de cette version n’est retenu.",
           "evidence": [
             "EXT05",
-            "EXT06"
+            "EXT06",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -3537,7 +3572,8 @@
       "constraints": [
         "Pas de moveset boss affrontable dans Homecoming; actions versus nouvelles.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre cinématique de Homecoming, dangereuse dans ses scènes mais sans duel autonome. Les propositions de versus restent des brouillons distincts ; aucun geste de SH2, des films, d’Arcade ou de Downpour n’est transféré."
       ],
       "proposals": {
         "super": {
@@ -3626,7 +3662,20 @@
       "artDirectionFocus": "Great Knife",
       "existingCatalogueBehavior": "Exécuteur massif de Homecoming.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Homecoming (2008, version commerciale)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "homecoming_bogeyman_092",
+        "decision": "scripted-encounter",
+        "edition": "Silent Hill: Homecoming (2008, version commerciale)",
+        "evidence": [
+          "EXT06",
+          "HC_ENEMIES_20261023"
+        ],
+        "rationale": "Le bestiaire situe Bogeyman à Alchemilla, au Grand Hotel et à l’église. Le guide décrit individuellement ces trois apparitions comme des cutscènes : attaque à l’ascenseur du cauchemar initial, passage près de408 puis départ, et exécution d’Adam suivie du retour au contrôle d’Alex. La fiche est retenue comme rencontre cinématique sans duel autonome ; cela ne signifie pas que l’exécuteur est inoffensif. Les commandes du prototype sont bloquées sans transférer les capacités des versions SH2, film, Arcade ou Downpour.",
+        "reviewedAt": "2026-10-25"
+      }
     },
     {
       "combatRole": "stationary-boss",
@@ -9503,7 +9552,7 @@
       "observedMoves": [
         {
           "name": "Lames; esquives rapides",
-          "description": "Lames; esquives rapides",
+          "description": "Créature à quatre membres terminés en lames, rapide, agressive et capable d’esquiver les attaques selon le bestiaire propre à Book of Memories.",
           "evidence": [
             "EXT20"
           ],
@@ -9516,7 +9565,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Quatre membres-lames selon le bestiaire Book of Memories ; aucune anatomie à six membres ni animation de la version Homecoming importée."
       ],
       "proposals": {
         "super": {
@@ -12853,14 +12903,18 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Pas de saisie par ouverture de torse établie; nom descriptif de guide.",
       "referenceIds": [
-        "EXT40"
+        "EXT40",
+        "EXT33",
+        "EXT_SHF_EBISUGAOKA5_20261025"
       ],
       "observedMoves": [
         {
           "name": "Cocons engendrant Kashimashi",
-          "description": "Cocons engendrant Kashimashi",
+          "description": "Le bestiaire décrit un géniteur à cocons ; le guide d’Ebisugaoka partie5 nomme les Hatcher et demande de vaincre ces géniteurs pour débloquer le chemin. Ces pages ne prouvent pas l’absence de locomotion autonome.",
           "evidence": [
-            "EXT40"
+            "EXT40",
+            "EXT33",
+            "EXT_SHF_EBISUGAOKA5_20261025"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -18386,7 +18440,7 @@
       "source": "downpour",
       "baseId": null,
       "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming.",
+      "locationNote": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming. Vue retenue : coursive BlockA de la prison normale Downpour, avant la cellule transformée en couloir inondé. Ombres des barreaux proposées pour le versus ; tours extérieures, showers/crime scene, workshop flooding et PrisonHC séparés.",
       "referenceIds": [
         "EXT11"
       ],
@@ -20287,7 +20341,7 @@
       "source": "homecoming",
       "baseId": null,
       "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts.",
+      "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
       "referenceIds": [
         "EXT06"
       ],
@@ -20408,7 +20462,7 @@
       "source": "homecoming",
       "baseId": null,
       "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape.",
+      "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
       "referenceIds": [
         "EXT06"
       ],
@@ -20819,7 +20873,7 @@
       "source": "downpour",
       "baseId": null,
       "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire.",
+      "locationNote": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire. Vue retenue : cavité intérieure des roues hydrauliques/lift, depuis la coursive sèche ; poutres et conduites de l’illustration du puzzle Water Wheels. Gouttes de traverse proposées pour le versus ; attraction extérieure, cave inondée adjacente et trajet de train hors cadre, aucun puzzle ou pompe automatique.",
       "referenceIds": [
         "EXT11"
       ],

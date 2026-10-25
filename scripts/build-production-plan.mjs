@@ -288,9 +288,13 @@ function applyRuntimeProgress(plan){
   }
   for(const row of plan.presentations){
     const key=PRESENTATION_CLIPS[row.id.slice(row.fighterId.length+1)],s=lorePresentation(fighters.get(row.fighterId),key),p=profiles.get(row.fighterId).referencePolicy;
+    const art=SPRITES[row.fighterId],clip=art?.fighterId===row.fighterId&&art.source===fighters.get(row.fighterId).source?art.clips?.[s.clipKey]:null;
+    const exactFrames=clip?.loop===false&&clip.frames?.length&&clip.frames.every(index=>Number.isSafeInteger(index)&&art.frames[index])?clip.frames.map(index=>art.frames[index]):[];
+    const contextualImages=new Set(exactFrames.map(frame=>frame.pixelSHA256||frame.sha256||frame.path)).size;
+    const imageNotice=contextualImages?`Clip exact non bouclé : ${contextualImages} image${contextualImages>1?'s':''} candidate${contextualImages>1?'s':''} déclarée${contextualImages>1?'s':''}. ${contextualImages===1?'Pose fixe, pas une animation produite. ':''}Chorégraphie artistique complète et comparaison source restent à produire ; aucune durée d’origine mesurée.`:'Images contextuelles à produire.';
     row.runtimePresentation=s;
-    row.engineState=`Clé exacte ${s.clipKey}. ${s.authored?'Mise en scène du sujet branchée.':'Hook disponible ; mise en scène propre à produire.'} ${p.combatEnabled?'':'Combat désactivé pour ce rôle. '}Images contextuelles à produire.`;
-    if(key==='taunt')row.engineState=`${s.clipKey}. ${s.authored?'Attitude jouée':'Hook disponible'}, 66 ticks ; annulable et sensible à la pause. PNG dédiés à produire.`;
+    row.engineState=`Clé exacte ${s.clipKey}. ${s.authored?'Mise en scène du sujet branchée.':'Hook disponible ; mise en scène propre à produire.'} ${p.combatEnabled?'':'Combat désactivé pour ce rôle. '}${imageNotice}`;
+    if(key==='taunt')row.engineState=`${s.clipKey}. ${s.authored?'Attitude jouée':'Hook disponible'}, 66 ticks de maintien versus ; annulable et sensible à la pause. ${imageNotice}`;
     if(resolvedRoles.has(row.fighterId)){
       row.engineState+=' '+roleDecisionNote(resolvedRoles.get(row.fighterId));
       if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
@@ -374,6 +378,7 @@ function applyRuntimeProgress(plan){
   capture.status='En cours';capture.delivery='source-timing-pipeline-2026-10-23';
   capture.reason=`Outil scripts/source-timing.mjs disponible (format ${SOURCE_TIMING_SCHEMA}, lot ${SOURCE_TIMING_BATCH_SCHEMA}) : identité/édition exactes, URL source HTTPS, empreinte de capture, FPS rationnels, bornes début/impact/fin et timestamps vidéo vérifiés par ffprobe. Plusieurs slots d’une même capture peuvent être vérifiés en un seul décodage. La relecture facultative est liée par SHA256 aux annotations exactes ; son auteur reste déclaratif. Zéro relevé original livré ; les ${plan.moves.length} mouvements conservent leurs FPS/timecodes vides. Le paquet et sa relecture restent candidats et ne certifient ni le geste ni la fidélité 1:1.`;
   capture.reason+=' La commande review-preview extrait les images début/impact/fin du même snapshot vérifié par ffmpeg : index HTML local et manifeste SHA256, aperçus réduits à 640 pixels maximum, sans nouvelle attestation ni import Excel.';
+  capture.reason+=' La commande verify-review compare en lecture seule les PNG, le manifeste et la page HTML à une extraction fraîche de cette capture avec la version actuelle de l’outil ; une image remplacée reste refusée même si son hash déclaré a été recalculé.';
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -399,8 +404,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-10-24',
-    scope:'PR #4 et continuation des 23 et 24 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    updatedAt:'2026-10-25',
+    scope:'PR #4 et continuation des 23, 24 et 25 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});

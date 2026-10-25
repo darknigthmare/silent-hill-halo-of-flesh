@@ -23,6 +23,9 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Split Head is angered with real keyboard gunfire, not a replaced health field. Its 70% transition, 2x frontal active-mouth multiplier and readable HUD cue are versus rules. No original mouth animation or instant-kill swallow is claimed.',
   'Hummer knockdown, Wall Man claws and both Sniffer holds use real keyboard attacks. Sakura Head and the five Raw Shock variants are checked through the normal refused launch and source dossiers; their pursuit encounters are not turned into invented duels.',
   'Hummer height is measured from collision and the real PNG drawImage arguments/matrix before, during and after knockdown. The same bitmap is lowered without rotating or fabricating a pose; source knockdown/KO clips remain absent. Prepared guard-counter windows test the real Split Head heavy-key gate.',
+  'Closer and Twin Victim arm rotations are bounded two-sided physical contacts at the normal strike height, not an aura. Prepared facing allows the real keyboard command to prove a rear hit and outward knockback. The original 3D arc, animations, frame timings and Church multipliers are not measured.',
+  'Double Head, Romper, Twin Victim, Lurker and Feral pursuit inputs physically leave the floor. Close holds use the versus bind instead of original struggle inputs. Homecoming Bogeyman remains a documented cutscene figure and is refused as a duel, independently of its other works.',
+  'The six source leg/bite holds keep their victim on the floor instead of inheriting the generic throw launch. A real second-player jump during their startup verifies refusal while airborne; gamepad bindings are separately exercised with the standard virtual-pad Node harness, not certified on physical hardware.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -54,7 +57,7 @@ async function launch(page,p1,p2='sh2_bubble_head_nurse_024'){
   q.position=(left=300,right=650)=>{e.actors.forEach((a,i)=>{a.x=i?right:left;a.y=594;a.vx=0;a.vy=0;a.grounded=true;
    a.facing=i?-1:1;a.attack=null;a.hurtFrames=0;a.knockdownTimer=0;a.phaseLock=0;a.invuln=0;a.state='idle';a.blocking=false;a.crouching=false;});e.hitstop=0;e.clearInputs();};
   q.scene=()=>({phase:e.phase,frame:e.frame,paused:e.paused,emitted:q.emitted,projectiles:e.projectiles.length,hummerDraw:q.hummerDraw||null,
-   actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,
+   actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,y:a.y,vx:a.vx,grounded:a.grounded,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,
     damage:a.stats.damageDealt,damageTaken:a.stats.damageTaken,status:a.status?{...a.status}:null,dodge:a.dodgeFrames,
     move:a.attack?.key||a.lastMoveKey,attackFrame:a.attack?.frame??null,hurt:a.hurtFrames,knockdown:a.knockdownTimer,
     proximity:a.proximityCooldown,mouthEnraged:a.mouthEnraged,sourceCue:e.sourceCombatCue(a),
@@ -189,7 +192,7 @@ try{
  await page.keyboard.press('i');
  const leg=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine;
   for(let n=0;n<60&&e.actors[1].status?.id!=='bind';n++)q.advance(1);return q.scene();});report.scenes.slurperLeg=leg;
- check('Slurper actual close leg hold binds through contact and keeps the unattested rear throw disabled',leg.actors[0].move==='neutralSpecial'&&leg.actors[1].status?.id==='bind'&&leg.actors[1].damageTaken>0&&leg.emitted===0&&!leg.actors[0].activeCommands.includes('backThrow'),leg);
+ check('Slurper actual close leg hold binds on the floor and keeps the unattested rear throw disabled',leg.actors[0].move==='neutralSpecial'&&leg.actors[1].status?.id==='bind'&&leg.actors[1].damageTaken>0&&leg.actors[1].y===594&&leg.actors[1].grounded&&leg.actors[1].vx===0&&leg.emitted===0&&!leg.actors[0].activeCommands.includes('backThrow'),leg);
  await capture(page,'06-slurper-leg-hold');
 
  let ordinaryDrain=0;
@@ -271,12 +274,61 @@ try{
   await launch(page,id);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,580));await page.keyboard.press('i');
   const sniffer=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,b=__HALO_QA__.engine.actors[1];
    for(let n=0;n<65&&b.status?.id!=='bind';n++)q.advance(1);return q.scene();});report.scenes[id+'Hold']=sniffer;
-  check('real '+id+' biting hold catches and binds through local contact',sniffer.actors[0].move==='neutralSpecial'&&sniffer.actors[1].status?.id==='bind'&&sniffer.actors[1].damageTaken>0&&sniffer.emitted===0,sniffer);
+  check('real '+id+' biting hold catches and binds through local ground contact',sniffer.actors[0].move==='neutralSpecial'&&sniffer.actors[1].status?.id==='bind'&&sniffer.actors[1].damageTaken>0&&sniffer.actors[1].y===594&&sniffer.actors[1].grounded&&sniffer.actors[1].vx===0&&sniffer.emitted===0,sniffer);
  }
  await capture(page,'10-sniffer-biting-hold');
 
+ for(const id of ['sh3_closer_036','sh3_closer_church_variant','sh4_twin_victim_059']){
+  for(const side of [-1,1]){
+   scene=await launch(page,id);const before=scene.actors[1].health;
+   await page.evaluate(side=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine;q.position(600,600+side*145);
+    e.actors[0].facing=1;e.actors[1].facing=-side;},side);
+   if(id!=='sh4_twin_victim_059')await page.keyboard.down('ArrowDown');
+   await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));
+   if(id!=='sh4_twin_victim_059')await page.keyboard.up('ArrowDown');
+   const sweep=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine,b=e.actors[1],before=b.health;
+    for(let n=0;n<75&&b.health===before;n++)q.advance(1);
+    return {scene:q.scene(),aura:e.actors[0].attack?.move.aura,projectile:e.actors[0].attack?.move.projectile};});
+   report.scenes[id+'Sweep'+side]=sweep;
+   check('real '+id+' arm rotation strikes '+(side<0?'behind':'ahead')+' without turning or creating an aura',sweep.scene.actors[0].move===(id==='sh4_twin_victim_059'?'neutralSpecial':'downSpecial')&&sweep.scene.actors[0].facing===1&&sweep.scene.actors[1].health<before&&Math.sign(sweep.scene.actors[1].vx)===side&&sweep.scene.emitted===0&&sweep.aura===false&&sweep.projectile===false,sweep);
+   if(side<0&&id==='sh3_closer_036')await capture(page,'11-closer-rear-arm-contact');
+   if(side<0&&id==='sh4_twin_victim_059')await capture(page,'12-twin-victim-rear-arm-contact');
+  }
+ }
+
+ for(const id of ['sh3_double_head_040','sh1_romper_010','homecoming_lurker_085','homecoming_feral_086','sh4_twin_victim_059']){
+  scene=await launch(page,id);const before=scene.actors[1].health;
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(400,650));
+  await page.keyboard.down('ArrowRight');await page.keyboard.press('i');
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+  const leap=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,[a,b]=e.actors,before=b.health;let highest=a.y;
+   for(let n=0;n<85&&b.health===before;n++){q.advance(1);highest=Math.min(highest,a.y);}return {highest,scene:q.scene()};});
+  report.scenes[id+'Leap']=leap;
+  check('real '+id+' pursuit command leaps and reaches its opponent by physical contact',leap.highest<594&&leap.scene.actors[0].x>400&&leap.scene.actors[0].move==='forwardSpecial'&&leap.scene.actors[1].health<before&&leap.scene.emitted===0&&(!['sh1_romper_010','homecoming_lurker_085','homecoming_feral_086'].includes(id)||leap.scene.actors[1].knockdown>0),leap);
+  if(id==='homecoming_feral_086')await capture(page,'13-feral-pounce-knockdown');
+ }
+
+ for(const id of ['sh3_double_head_040','sh1_romper_010','homecoming_feral_086']){
+  await launch(page,id);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,590));await page.keyboard.press('i');
+  const hold=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];
+   for(let n=0;n<65&&b.status?.id!=='bind';n++)q.advance(1);return q.scene();});report.scenes[id+'SourceHold']=hold;
+  check('real '+id+' source hold stays on the floor while its unattested rear throw remains blocked',hold.actors[0].move==='neutralSpecial'&&hold.actors[1].status?.id==='bind'&&hold.actors[1].damageTaken>0&&hold.actors[1].y===594&&hold.actors[1].grounded&&hold.actors[1].vx===0&&hold.emitted===0&&!hold.actors[0].activeCommands.includes('backThrow'),hold);
+  if(id==='sh3_double_head_040')await capture(page,'14-double-head-leg-hold');
+ }
+
+ for(const id of ['sh3_double_head_040','sh1_romper_010','homecoming_feral_086','sh3_slurper_042','sh4_sniffer_dog_male_053','sh4_sniffer_dog_female_054']){
+  scene=await launch(page,id);const before=scene.actors[1].health;
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,590));await page.keyboard.press('i');
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(6));await page.keyboard.press('z');
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));
+  const jumping=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(70));const escaped=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  report.scenes[id+'AirborneHoldRefusal']={jumping,escaped};
+  check('real second-player jump prevents '+id+' ground hold without bind, damage or launch',jumping.actors[1].y<594&&!jumping.actors[1].grounded&&escaped.actors[0].move==='neutralSpecial'&&escaped.actors[1].health===before&&escaped.actors[1].status===null&&escaped.actors[0].damage===0&&escaped.emitted===0,{jumping,escaped});
+ }
+
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',
-  'shattered_raw_shock_diseased_101','shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103']){
+  'shattered_raw_shock_diseased_101','shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103','homecoming_bogeyman_092']){
   await page.goto(base+`/modules/unified-versus.html?qa=1&debugArt=1&p1=${id}`);
   await page.waitForFunction(()=>!!window.__HALO_QA__);await page.selectOption('#mode','local');await page.check('#artDiagnostic');
   await page.click('#launch');await page.waitForSelector('#playStatus:not(.hidden)');

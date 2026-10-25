@@ -24,16 +24,18 @@ const ENVIRONMENT = Object.freeze({
   lakeside_amusement:{weather:'fog'}, lakeside_sh3:{weather:'fog'},
   blue_creek:{weather:'water',terrain:'wetConcrete'},
   hotel_otherworld:{weather:'water',terrain:'wetConcrete',removeProps:['fire','mirrors']},
-  lakeview:{weather:'dust'}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
+  lakeview:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['portraits','fire','firelight','crtv','screens','monitors','television']}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
   historical_society:{removeProps:['stairs']}, baldwin_mansion:{removeProps:['fireplace']},
   brookhaven_roof:{weather:'fog'}, apartment_roof:{weather:'fog'},
   room_302:{weather:'dust'}, apartment_world:{weather:'dust'}, forest_world:{weather:'fog',removeProps:['wish_house','wish house']},
   subway_world:{weather:'dust',removeProps:['turnstile']},
   water_prison:{weather:'dust',terrain:'concrete',removeProps:['tower','watchtower','cells','spotlight','chains']},
   hospital_world:{removeProps:['beds','head','curtains','monitor']},
+  town_hall_hc:{removeProps:['stairs','flags']}, shepherd_house_hc:{removeProps:['portraits','stairs','mirrors']},
+  devils_pit:{weather:'dust',terrain:'concrete',removeProps:['water','rails','cart']},
   cedar_grove:{weather:'dust'}, riverside_motel:{weather:'fog'}, grand_hotel:{weather:'dust'},
   nightmare_school:{weather:'cold'}, nightmare_hospital_sm:{weather:'cold'}, nightmare_mall_sm:{weather:'cold'},
-  police_station_hc:{weather:'dust'}, centennial_building:{weather:'dust'}, st_marias:{weather:'dust'}, overlook:{weather:'water'},
+  police_station_hc:{weather:'dust'}, centennial_building:{weather:'dust'}, st_marias:{weather:'dust'}, overlook:{weather:'dust',removeProps:['towers','watchtower','flood','chains']},
   church:{weather:'dust',removeProps:['fans','flesh','symbols']}, hilltop_center:{removeProps:['elevator']}, underground_hc:{weather:'dust'},
   nightmare_mall:{weather:'dust'}, nightmare_hilltop:{weather:'dust'}, nightmare_theater:{weather:'dust'},
   scarlet_chamber:{weather:'dust',removeProps:['mirrors']},
@@ -82,6 +84,10 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   forestWindLayers: {name:'Vent distinct dans les branches et les herbes',layer:'background',replaces:['forestWind','windGust'],stageId:'forest_world',source:'sh4',locationScope:'Sentier et clairière arborée du premier passage ; hors enceinte Wish House',limits:'Deux fréquences de vent proposées pour le versus ; troncs et appuis fixes, aucune maison brûlée ni racine animée comme une main.'},
   waterwheelTurn: {name:'Roue horizontale au fond de la salle B2',layer:'background',replaces:[],stageId:'water_prison',source:'sh4',locationScope:'B2 Waterwheel Room, mécanisme sous la coursive sèche',limits:'Roue dans le plan horizontal et axe vertical ; rotation lente proposée, sans cellule pivotante, vanne automatique, moulin vertical ou sol inondé.'},
   wheelchairDrift: {name:'Fauteuil abstrait dans le couloir du deuxième étage',layer:'background',replaces:[],stageId:'hospital_world',source:'sh4',locationScope:'Couloir des chambres au deuxième étage ; hors chambre de la tête géante',limits:'Fauteuil vide abstrait proposé pour le versus ; les Wheelchairs du jeu sont des ennemis, cette piste ne produit ni leur apparence complète, ni leur IA, ni leurs dégâts.'},
+  lecternGlint: {name:'Lueur sur le pupitre de la salle publique',layer:'background',replaces:[],stageId:'town_hall_hc',source:'homecoming',locationScope:'Premier passage normal, salle centrale du Town Hall',limits:'Podium attesté par le guide ; reflet proposé pour le versus, sans texte ajouté, cérémonie de retour, clé ou ouverture du sous-sol.'},
+  atticDustFall: {name:'Poussière sous les chevrons du grenier normal',layer:'background',replaces:[],stageId:'shepherd_house_hc',source:'homecoming',locationScope:'Grenier Shepherd House normal avant la transformation',limits:'Charpente et poussière interprétées depuis la proposition versus ; aucun plan mesuré ni masque, médaille, horloge ou objet de l’état Otherworld importé.'},
+  mineBeamDrips: {name:'Gouttes sous les traverses de la cavité',layer:'background',replaces:[],stageId:'devils_pit',source:'downpour',locationScope:'Cavité intérieure des roues hydrauliques, vue depuis la coursive sèche',limits:'Traverses et conduites documentées ; gouttes proposées pour le versus, sans pluie extérieure, cave inondée sur le plateau, démarrage de pompe ou train.'},
+  cellBarShadows: {name:'Ombres des barreaux sur la coursive',layer:'background',replaces:[],stageId:'overlook',source:'downpour',locationScope:'Coursive Block A de la prison normale avant la vision du couloir inondé',limits:'Barreaux documentés ; déplacement de leur ombre proposé pour le versus, sans corps en cellule, tours, scène des douches, inondation ou prison Homecoming.'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -113,6 +119,10 @@ const BINDINGS = Object.freeze({
   forest_world:[['forestWindLayers',1,[.5,.57]]],
   water_prison:[['waterwheelTurn',1,[.71,.49]]],
   hospital_world:[['wheelchairDrift',1,[.72,.57]]],
+  town_hall_hc:[['lecternGlint',1,[.5,.57]]],
+  shepherd_house_hc:[['atticDustFall',1,[.5,.17]]],
+  devils_pit:[['mineBeamDrips',0,[.28,.24]]],
+  overlook:[['cellBarShadows',0,[.72,.57]]],
   apartment_world:[['doorReply',1,[.5,.57]]],
   riverside_motel:[['signFlicker',0,[.72,.31]],['curtainBreathe',1,[.29,.38]]],
   shepherds_glen:[['fogLayers',0,[.5,.55]]],
@@ -223,7 +233,7 @@ export function applyStageReferencePolicy(stage, reference) {
   const corrections = ENVIRONMENT[stage.id] || {};
   if(!blocked&&corrections.name)result.name=corrections.name;
   let worldState = blocked ? 'unresolved' : ALTERED.has(stage.id) || stage.source === 'bom' ? 'fixed-altered' : TRANSITIONS.has(stage.id) ? 'versus-transition' : 'fixed-normal';
-  const interior = INTERIOR.has(stage.family) || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id);
+  const interior = INTERIOR.has(stage.family) || (stage.id==='devils_pit'&&stage.source==='downpour') || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id);
   result.weather = blocked ? 'none' : corrections.weather || (interior && ['rain','snow','ash'].includes(stage.weather) ? 'dust' : stage.weather);
   // Do not perpetuate the movie's cinder language in unrelated game interiors.
   if (!blocked && result.weather === 'ash' && stage.source !== 'film') result.weather = 'dust';
@@ -231,7 +241,7 @@ export function applyStageReferencePolicy(stage, reference) {
   result.layers = result.layers.filter(prop => !(corrections.removeProps || []).includes(prop));
   const style = corrections.style || STYLE[stage.source] || stage.shift?.style || 'rust';
   result.shift = {...stage.shift,style,enabled:worldState === 'versus-transition',startOtherworld:worldState === 'fixed-altered',referenceState:worldState};
-  result.visibility = {...stage.visibility,fog:blocked ? 0 : interior ? Math.min(stage.visibility?.fog || .15,.2) : stage.visibility?.fog || .4};
+  result.visibility = {...stage.visibility,fog:blocked ? 0 : corrections.fog ?? (interior ? Math.min(stage.visibility?.fog || .15,.2) : stage.visibility?.fog || .4)};
   if (corrections.terrain) result.terrain = {...stage.terrain,id:corrections.terrain};
   if (blocked) result.terrain = {...stage.terrain,id:'concrete'};
   result.reference = {
@@ -259,7 +269,7 @@ export function applyStageReferencePolicy(stage, reference) {
   const allowedEvents = blocked ? [] : candidateEvents.filter(id => !corrections.disabledEvents?.[id] && (referenceTracks.some(track=>track.event===id) ||
     (EVENT_HAZARDS[id] ? allowedHazards.includes(EVENT_HAZARDS[id]) && id !== 'ashFall' : (AMBIENT_EVENTS[stage.id] || []).includes(id))));
   const replaced = new Set(referenceTracks.flatMap(track=>STAGE_REFERENCE_TRACKS[track.key].replaces));
-  const animations = blocked ? [] : result.animations.filter(id=>!replaced.has(id) && animationAllowed(result,id,worldState));
+  const animations = blocked || corrections.disableAnimations ? [] : result.animations.filter(id=>!replaced.has(id) && animationAllowed(result,id,worldState));
   const suppression = [
     ...referenceTracks.filter(track=>track.eventEnabled===false).map(track=>({kind:'event',id:track.event,reason:corrections.disabledEvents[track.event]})),
     ...(stage.director?.events || []).filter(id=>!allowedEvents.includes(id)).map(id=>({kind:'event',id,reason:'Occurrence locale ou danger non retenu par la fiche exacte.'})),
@@ -268,7 +278,12 @@ export function applyStageReferencePolicy(stage, reference) {
   ];
   if (result.weather !== stage.weather) suppression.push({kind:'weather',id:stage.weather,reason:`Ambiance remplacée par ${result.weather} pour conserver le lieu et l’œuvre.`});
   result.referenceTracks = referenceTracks;
-  result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
+  result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&corrections.automaticFinishers!==false&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
+    ...(!blocked&&stage.id==='lakeview'&&stage.source==='sh2'?{
+      normalPhaseLabel:'AVANT LA CASSETTE',
+      terrainRules:false,
+      terrainPresentation:{name:'TAPIS DU LOBBY',description:'Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1.'},
+    }:{}),
     weather:result.weather,interior,baselineMotion:!blocked,suppression,
     hazardFidelity:'Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.',
     renderedProposalIds:referenceTracks.filter(track=>track.eventEnabled!==false).map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id&&track.eventEnabled!==false)),

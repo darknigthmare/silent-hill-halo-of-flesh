@@ -247,12 +247,13 @@ test('state-aware Hummer clip bounds and camera frame the same lowered raster in
   }
 });
 
-test('a forged Hummer source and every other flyer preserve their original hover offsets when downed',()=>{
+test('a forged Hummer source and every other flyer preserve their own posture offsets when downed',()=>{
   const data=fighter(HUMMER),frame=spriteFor(data).frames[0];
   const others=[{...data,source:'sh1'},{...data,id:'another-hummer',baseId:HUMMER},
     ...ROSTER.filter(f=>f.visual.kind==='flyer'&&f.id!==HUMMER)];
-  for(const other of others){const a={data:other,x:640,y:594,grounded:true,knockdownTimer:20};
-    assert.equal(bodyProfile(a).bottom,34,other.id);assert.equal(hasGroundContact(a),false,other.id);
+  for(const other of others){const idle={data:other,x:640,y:594,grounded:true,knockdownTimer:0},a={...idle,knockdownTimer:20};
+    assert.equal(bodyProfile(a).bottom,bodyProfile(idle).bottom,other.id);
+    assert.equal(hasGroundContact(a),hasGroundContact(idle),other.id);
     assert.deepEqual(rasterPlacement(other,frame,640,594,1,{knockdown:true}),rasterPlacement(other,frame,640,594),other.id);
   }
 });

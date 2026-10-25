@@ -7,6 +7,7 @@ import {previewSpriteState} from '../src/sprite-inspector.js';
 import {sampleSpriteClip} from '../src/sprite-animation.js';
 import {getFighter,MOVESET_KEYS,createCombatProfile} from '../src/data.js';
 import {spriteFor} from '../src/sprite-system.js';
+import {SPRITES} from '../src/sprite-manifest.js';
 const fighter=getFighter('sh1_air_screamer_001');
 const art=()=>({fighterId:fighter.id,source:fighter.source,frames:[{path:'a.png',sha256:'a',pixelSHA256:'1'},{path:'b.png',sha256:'b',pixelSHA256:'2'}],clips:{idle:{frames:[0],ticksPerFrame:1,loop:false}}});
 const clip=(patch={})=>({frames:[0,1,0],ticksPerFrame:1,frameTicks:[3,5,2],loop:true,...patch});
@@ -86,4 +87,20 @@ test('presentation coverage separates imported static scenes, animation and abse
  const a=art();a.clips.intro={frames:[1,1],ticksPerFrame:1,loop:false};a.clips.finisher=clip({loop:false});
  const c=presentationClipCoverage(a);assert.deepEqual(c.present,['intro','finisher']);assert.equal(c.animated,1);assert.equal(c.missing.length,PRESENTATION_KEYS.length-2);
  assert.deepEqual(presentationClipCoverage(null),{present:[],missing:[...PRESENTATION_KEYS],animated:0});
+});
+test('actual Twin Victim exact static taunt covers its own slot without claiming animation or unrelated presentations',()=>{
+ const a=SPRITES.sh4_twin_victim_059,c=presentationClipCoverage(a);
+ assert.deepEqual(c.present,['taunt@sh4_twin_victim_059:taunt']);assert.equal(c.missing.includes('taunt'),false);
+ assert.equal(c.missing.length,PRESENTATION_KEYS.length-1);assert.equal(c.animated,0);
+ for(const key of ['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished'])assert.ok(c.missing.includes(key));
+ const forged={...a,fighterId:'sh1_air_screamer_001',source:'sh1'};assert.ok(presentationClipCoverage(forged).missing.includes('taunt'));
+ assert.ok(presentationClipCoverage({...a,source:'sh1'}).missing.includes('taunt'));
+});
+test('owned round contexts map workbook round-one names and an individual finisher never covers the whole finisher slot',()=>{
+ const a=art();a.clips['winRound@'+fighter.id+':winRound1']={frames:[1],ticksPerFrame:1,loop:false};
+ a.clips['loseRound@'+fighter.id+':loseRound1']={frames:[1],ticksPerFrame:1,loop:false};
+ a.clips['finisher@'+fighter.id+'_signature']={frames:[1],ticksPerFrame:1,loop:false};
+ const c=presentationClipCoverage(a);assert.ok(!c.missing.includes('winRound')&&!c.missing.includes('loseRound'));
+ assert.ok(c.missing.includes('finisher')&&c.missing.includes('finished'));
+ a.clips['taunt@'+fighter.id+':taunt']={frames:[1],ticksPerFrame:1,loop:true};assert.ok(presentationClipCoverage(a).missing.includes('taunt'),'invalid looping contextual presentations are not available');
 });

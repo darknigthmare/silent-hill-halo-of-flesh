@@ -6769,7 +6769,7 @@
       "name": "OVERLOOK PENITENTIARY",
       "source": "downpour",
       "lore": {
-        "premise": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming.",
+        "premise": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming. Vue retenue : coursive BlockA de la prison normale Downpour, avant la cellule transformée en couloir inondé. Ombres des barreaux proposées pour le versus ; tours extérieures, showers/crime scene, workshop flooding et PrisonHC séparés.",
         "canonicalBasis": "EXT11",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -6812,7 +6812,7 @@
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "OVERLOOK PENITENTIARY",
         "correctedName": null,
-        "locationNote": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming.",
+        "locationNote": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming. Vue retenue : coursive BlockA de la prison normale Downpour, avant la cellule transformée en couloir inondé. Ombres des barreaux proposées pour le versus ; tours extérieures, showers/crime scene, workshop flooding et PrisonHC séparés.",
         "referenceIds": [
           "EXT11"
         ],
@@ -6869,7 +6869,7 @@
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
-        "weather": "water",
+        "weather": "dust",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -6896,19 +6896,47 @@
           {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par water pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "overlook:reference:1"
+        ],
         "pendingProposalIds": [
-          "overlook:reference:1",
           "overlook:reference:2",
           "overlook:reference:3",
           "overlook:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "overlook:reference:1",
+          "key": "cellBarShadows",
+          "name": "Ombres des barreaux sur la coursive",
+          "description": "Ombres de barreaux sur béton humide",
+          "proposalIndex": 0,
+          "source": "downpour",
+          "evidence": [
+            "EXT11"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.72,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Ombres des barreaux sur la coursive",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Coursive Block A de la prison normale avant la vision du couloir inondé",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux documentés ; déplacement de leur ombre proposé pour le versus, sans corps en cellule, tours, scène des douches, inondation ou prison Homecoming."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -6946,7 +6974,7 @@
           {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par water pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -14500,24 +14528,24 @@
     },
     {
       "id": "lakeview",
-      "name": "LAKEVIEW HOTEL — FOG WORLD",
+      "name": "LAKEVIEW HOTEL — LOBBY",
       "source": "sh2",
       "lore": {
-        "premise": "Apparence restaurée du Lakeview original avant la cassette ; « Fog World » ne suffit pas à expliquer cet état de mémoire.",
-        "canonicalBasis": "CL_SH2_12_LAKE_VIEW_HOTEL",
-        "fidelity": "reference-bloquee",
+        "premise": "Vue retenue : lobby intact du Lake View original, avant le visionnage de la cassette en312 (normal-lobby-before-video). Le guide situe le meuble musical près de l’escalier ; deux vues montrent portes vitrées, boiseries et tapis rouge. Ce cadrage de pièce est documenté, sans trancher l’interprétation globale Fog/Memory de l’hôtel. Dimensions, échelle, caméra et sol masqué restent à comparer ; leur adaptation au versus ne vaut pas mesure du jeu. Réception adjacente, piano du restaurant, TV/cassette de312 et transformation Nightmare restent hors cadre. Les anciennes propositions de transition/cassette sont conservées au dossier et inactives dans cette scène ; aucune transition automatique n’est validée. Aucune clôture artistique ni certification1:1.",
+        "canonicalBasis": "CL_SH2_12_LAKE_VIEW_HOTEL ; EXT_SH2_LAKEVIEW_PC44_20261025 ; EXT_SH2_LAKEVIEW_MUSICBOX_20261025",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "concrete",
-        "name": "BÉTON SEC",
+        "id": "carpet",
+        "name": "TAPIS DU LOBBY",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "decay",
@@ -14531,7 +14559,7 @@
         "description": "La surface familière se dégrade, noircit et révèle un espace gorgé d’eau ou de moisissure.",
         "startOtherworld": false,
         "enabled": false,
-        "referenceState": "unresolved"
+        "referenceState": "fixed-normal"
       },
       "events": [],
       "hazards": [],
@@ -14542,13 +14570,15 @@
         "id": "lakeview",
         "source": "sh2",
         "identityMatched": true,
-        "blocked": true,
-        "locationStatus": "etat-narratif-a-preciser",
-        "catalogueName": "LAKEVIEW HOTEL — FOG WORLD",
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "LAKEVIEW HOTEL — LOBBY",
         "correctedName": null,
-        "locationNote": "Apparence restaurée du Lakeview original avant la cassette ; « Fog World » ne suffit pas à expliquer cet état de mémoire.",
+        "locationNote": "Vue retenue : lobby intact du Lake View original, avant le visionnage de la cassette en312 (normal-lobby-before-video). Le guide situe le meuble musical près de l’escalier ; deux vues montrent portes vitrées, boiseries et tapis rouge. Ce cadrage de pièce est documenté, sans trancher l’interprétation globale Fog/Memory de l’hôtel. Dimensions, échelle, caméra et sol masqué restent à comparer ; leur adaptation au versus ne vaut pas mesure du jeu. Réception adjacente, piano du restaurant, TV/cassette de312 et transformation Nightmare restent hors cadre. Les anciennes propositions de transition/cassette sont conservées au dossier et inactives dans cette scène ; aucune transition automatique n’est validée. Aucune clôture artistique ni certification1:1.",
         "referenceIds": [
-          "CL_SH2_12_LAKE_VIEW_HOTEL"
+          "CL_SH2_12_LAKE_VIEW_HOTEL",
+          "EXT_SH2_LAKEVIEW_PC44_20261025",
+          "EXT_SH2_LAKEVIEW_MUSICBOX_20261025"
         ],
         "constraints": [],
         "proposals": [
@@ -14595,13 +14625,19 @@
         ]
       },
       "referencePolicy": {
-        "worldState": "unresolved",
+        "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": false,
+        "normalPhaseLabel": "AVANT LA CASSETTE",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "TAPIS DU LOBBY",
+          "description": "Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1."
+        },
         "weather": "none",
         "interior": true,
-        "baselineMotion": false,
+        "baselineMotion": true,
         "suppression": [
           {
             "kind": "event",
@@ -14627,11 +14663,6 @@
             "kind": "animation",
             "id": "lampFlicker",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
-          },
-          {
-            "kind": "weather",
-            "id": "fog",
-            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
@@ -14679,11 +14710,6 @@
             "kind": "animation",
             "id": "lampFlicker",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
-          },
-          {
-            "kind": "weather",
-            "id": "fog",
-            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -19159,7 +19185,7 @@
       "name": "SHEPHERD’S GLEN TOWN HALL",
       "source": "homecoming",
       "lore": {
-        "premise": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts.",
+        "premise": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
         "canonicalBasis": "EXT06",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -19193,13 +19219,6 @@
       "hazards": [],
       "animations": [
         {
-          "id": "flagSway",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
           "id": "lightFlicker",
           "phase": "both",
           "layer": "midground",
@@ -19217,7 +19236,7 @@
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "SHEPHERD’S GLEN TOWN HALL",
         "correctedName": null,
-        "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts.",
+        "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
         "referenceIds": [
           "EXT06"
         ],
@@ -19305,6 +19324,11 @@
           },
           {
             "kind": "animation",
+            "id": "flagSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
@@ -19315,15 +19339,43 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "town_hall_hc:reference:2"
+        ],
         "pendingProposalIds": [
           "town_hall_hc:reference:1",
-          "town_hall_hc:reference:2",
           "town_hall_hc:reference:3",
           "town_hall_hc:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "town_hall_hc:reference:2",
+          "key": "lecternGlint",
+          "name": "Lueur sur le pupitre de la salle publique",
+          "description": "Lueur changeante sur pupitre",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lueur sur le pupitre de la salle publique",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Premier passage normal, salle centrale du Town Hall",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Podium attesté par le guide ; reflet proposé pour le versus, sans texte ajouté, cérémonie de retour, clé ou ouverture du sous-sol."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -19360,6 +19412,11 @@
           {
             "kind": "animation",
             "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "flagSway",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
@@ -19616,7 +19673,7 @@
       "name": "SHEPHERD HOUSE — ATTIC",
       "source": "homecoming",
       "lore": {
-        "premise": "Grenier Shepherd House; état Otherworld dépend de l’étape.",
+        "premise": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
         "canonicalBasis": "EXT06",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -19668,7 +19725,7 @@
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "SHEPHERD HOUSE — ATTIC",
         "correctedName": null,
-        "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape.",
+        "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
         "referenceIds": [
           "EXT06"
         ],
@@ -19781,15 +19838,43 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "shepherd_house_hc:reference:2"
+        ],
         "pendingProposalIds": [
           "shepherd_house_hc:reference:1",
-          "shepherd_house_hc:reference:2",
           "shepherd_house_hc:reference:3",
           "shepherd_house_hc:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "shepherd_house_hc:reference:2",
+          "key": "atticDustFall",
+          "name": "Poussière sous les chevrons du grenier normal",
+          "description": "Poussière sous la charpente",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.17
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière sous les chevrons du grenier normal",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Grenier Shepherd House normal avant la transformation",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Charpente et poussière interprétées depuis la proposition versus ; aucun plan mesuré ni masque, médaille, horloge ou objet de l’état Otherworld importé."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -21169,21 +21254,21 @@
       "name": "DEVIL’S PIT",
       "source": "downpour",
       "lore": {
-        "premise": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire.",
+        "premise": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire. Vue retenue : cavité intérieure des roues hydrauliques/lift, depuis la coursive sèche ; poutres et conduites de l’illustration du puzzle Water Wheels. Gouttes de traverse proposées pour le versus ; attraction extérieure, cave inondée adjacente et trajet de train hors cadre, aucun puzzle ou pompe automatique.",
         "canonicalBasis": "EXT11",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "unstable",
-        "name": "STRUCTURE INSTABLE",
-        "moveScale": 0.95,
-        "jumpScale": 0.94,
-        "dodgeScale": 0.98,
-        "friction": 0.87,
-        "knockbackScale": 1.14,
-        "guardRegenScale": 0.9,
-        "description": "Le décor cède sous les impacts lourds et augmente le recul."
+        "id": "concrete",
+        "name": "BÉTON SEC",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Sol stable et neutre."
       },
       "shift": {
         "style": "storm",
@@ -21201,22 +21286,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "rainSheets",
-          "phase": "fog",
-          "layer": "foreground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "waterRipple",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -21227,7 +21297,7 @@
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "DEVIL’S PIT",
         "correctedName": null,
-        "locationNote": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire.",
+        "locationNote": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire. Vue retenue : cavité intérieure des roues hydrauliques/lift, depuis la coursive sèche ; poutres et conduites de l’illustration du puzzle Water Wheels. Gouttes de traverse proposées pour le versus ; attraction extérieure, cave inondée adjacente et trajet de train hors cadre, aucun puzzle ou pompe automatique.",
         "referenceIds": [
           "EXT11"
         ],
@@ -21284,8 +21354,8 @@
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": true,
-        "weather": "rain",
-        "interior": false,
+        "weather": "dust",
+        "interior": true,
         "baselineMotion": true,
         "suppression": [
           {
@@ -21322,18 +21392,61 @@
             "kind": "animation",
             "id": "mineCart",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "waterRipple",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "devils_pit:reference:1"
+        ],
         "pendingProposalIds": [
-          "devils_pit:reference:1",
           "devils_pit:reference:2",
           "devils_pit:reference:3",
           "devils_pit:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "devils_pit:reference:1",
+          "key": "mineBeamDrips",
+          "name": "Gouttes sous les traverses de la cavité",
+          "description": "Gouttes tombant des traverses",
+          "proposalIndex": 0,
+          "source": "downpour",
+          "evidence": [
+            "EXT11"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.28,
+            "y": 0.24
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Gouttes sous les traverses de la cavité",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Cavité intérieure des roues hydrauliques, vue depuis la coursive sèche",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Traverses et conduites documentées ; gouttes proposées pour le versus, sans pluie extérieure, cave inondée sur le plateau, démarrage de pompe ou train."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -21376,6 +21489,21 @@
             "kind": "animation",
             "id": "mineCart",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "waterRipple",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       }

@@ -12,6 +12,7 @@ const archiveRoutes=[['harry_ice',['shattered_raw_shock_base_099','shattered_raw
 const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
  'Isolated browser storage and synthetic old checkpoints prepared for regression verification. No campaign is claimed as played and no combat result is injected into the engine.',
  'The ordinary room_21 route really launches through its menu. Two archive-only pursuit routes are inspected through their real dossier buttons, then their launch and legacy-resume refusals must preserve checkpoints, backups, records and attempts byte-for-byte.',
+ 'A separate isolated Alex Home context launches its real first encounter and inspects the five-entry queue with original chapter/arena pairing. Homecoming Bogeyman remains the dossier at index 3, displayed chapter 4; the remaining campaign is not played or marked complete.',
  'The room_21 checkpoint explicitly contains one historical synthetic win to check preservation. Old pursuit-route fixtures contain zero wins and all original chapters; no archive dossier is turned into a victory or removed from a saved route.'
 ]};
 let browser,server;
@@ -40,6 +41,22 @@ try{
  check('real launch uses the marked compatible queue and original first chapter arena',launched.format==='reference-encounters-v1'&&launched.dossiers.length===1&&!launched.queue.includes('sh4_sacrificed_walter_071')&&!launched.roleBlocked&&launched.stage===launched.expectedStage,launched);
  check('fight view retains the chapter dossier notice without interactive archive controls',await page.locator('#fightReferenceDossiers').isVisible()&&await page.locator('#fightReferenceDossiers button').count()===0);
  await page.click('[data-pause=select]');await page.waitForFunction(()=>!__HALO_QA__.engine);
+ {
+  const isolated=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1050}}),alex=await isolated.newPage();
+  alex.on('pageerror',e=>report.errors.push(e.message));alex.on('dialog',d=>d.accept());
+  await alex.goto(base+'/modules/unified-versus.html?qa=1&debugArt=1&preset=chronicle&route=alex_home&p1=sh1_air_screamer_001');
+  await alex.waitForFunction(()=>!!window.__HALO_QA__);
+  const panel=alex.locator('#chronicleReferenceDossiers'),text=await panel.textContent();
+  check('Alex Home: the scripted Bogeyman remains displayed chapter four with five compatible encounters',await panel.isVisible()&&/5 rencontres combattantes/.test(text)&&await panel.locator('[data-run-dossier=homecoming_bogeyman_092]').count()===1&&await panel.locator('li[value="4"]').count()===1,text);
+  await alex.click('[data-run-dossier=homecoming_bogeyman_092]');
+  check('Alex Home: the cutscene chapter opens its actual Homecoming dossier',await alex.locator('[data-reference-id=homecoming_bogeyman_092]').isVisible());
+  await alex.click('#closeDossier');await alex.screenshot({path:resolve(out,'alex-home-scripted-chapter.png'),fullPage:true});report.captures.push('alex-home-scripted-chapter.png');
+  await alex.check('#artDiagnostic');await alex.click('#launch');await alex.waitForFunction(()=>!!__HALO_QA__.engine);
+  const actual=await alex.evaluate(()=>{const q=__HALO_QA__,e=q.engine;e.running=false;e.togglePause(true);const r=q.run;return {queue:r.queue,stages:r.stages,chapterIndices:r.chapterIndices,dossiers:r.referenceDossiers,stage:e.stage.id,wins:r.wins,results:r.results,status:r.status,opponent:e.actors[1].data.id};});
+  check('Alex Home: actual first launch retains all five queue entries with their original chapter arenas',JSON.stringify(actual.queue)===JSON.stringify(['homecoming_lurker_085','homecoming_feral_086','homecoming_curtis_ackers','homecoming_sepulcher_093','homecoming_scarlet_doll_form_094'])&&JSON.stringify(actual.chapterIndices)==='[0,1,2,4,5]'&&JSON.stringify(actual.stages)===JSON.stringify(['shepherds_glen','grand_hotel','underground_hc','grand_hotel','underground_hc'])&&actual.stage==='shepherds_glen'&&actual.opponent==='homecoming_lurker_085',actual);
+  check('Alex Home: the archived cutscene earns no victory and preserves its source chapter arena',actual.wins===0&&actual.results.length===0&&actual.status==='ready'&&actual.dossiers.length===1&&actual.dossiers[0].chapterIndex===3&&actual.dossiers[0].fighterId==='homecoming_bogeyman_092'&&actual.dossiers[0].stageId==='shepherds_glen'&&actual.dossiers[0].role==='scripted-encounter',actual);
+  report.scenes.alexHome=actual;await isolated.close();
+ }
  const preserved=await page.evaluate(async()=>{
   const {CHRONICLES}=await import('/src/data.js');const {createRun,validateRun}=await import('/src/run-progress.js');const {KEYS}=await import('/src/save-store.js');
   const route=CHRONICLES.find(r=>r.id==='room_21'),r=createRun({mode:'chronicle',routeId:route.id,playerId:'sh1_air_screamer_001',seed:1187});

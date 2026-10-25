@@ -358,6 +358,48 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
       line(ctx,21,-35,24,-20,3,'rgba(111,123,109,.7)');line(ctx,30,-14,41,-14,3,'rgba(111,123,109,.7)');
       break;
     }
+    case 'lecternGlint':{
+      rect(ctx,x-35,y-104,70,98,'#493e2d');rect(ctx,x-49,y-7,98,7,'#5a4b35');
+      ctx.fillStyle='#716047';ctx.beginPath();ctx.moveTo(x-56,y-102);ctx.lineTo(x+56,y-102);ctx.lineTo(x+48,y-124);ctx.lineTo(x-48,y-124);ctx.closePath();ctx.fill();
+      line(ctx,x-25,y-91,x-25,y-16,2,'rgba(122,102,71,.4)');line(ctx,x+25,y-91,x+25,y-16,2,'rgba(122,102,71,.4)');
+      line(ctx,x-33+sway*8,y-112,x-5+sway*8,y-112,2,`rgba(203,187,140,${.12+pulse*.12})`);
+      break;
+    }
+    case 'atticDustFall':{
+      // Authored rafters stay attached to the ceiling; no hanging puzzle prop.
+      for(const side of [-1,1]){
+        line(ctx,x,y-25,x+side*w*.32,y+90,9,'rgba(87,68,43,.65)');
+        line(ctx,x+side*w*.32,y+90,x+side*w*.32,h*.57,6,'rgba(87,68,43,.65)');
+      }
+      line(ctx,x-w*.32,y+90,x+w*.32,y+90,7,'rgba(87,68,43,.65)');
+      for(let i=0;i<27;i++){
+        const px=x-w*.24+(i*47)%(w*.48)+Math.sin(t*.0005+i)*2,py=y+94+(i*37+t*.011*(1+i%2))%116;
+        rect(ctx,px,py,1+i%2,1,'rgba(170,153,113,.24)');
+      }
+      break;
+    }
+    case 'mineBeamDrips':{
+      const floor=h*.57;
+      for(const side of [-1,1])line(ctx,x+side*83,0,x+side*83,y+7,5,'#3b4640');
+      rect(ctx,x-90,y,180,11,'#586052');line(ctx,x-90,y+12,x+90,y+12,2,'#85856b');
+      for(let i=0;i<3;i++){
+        const phase=((t+i*1030)%3700)/3700,px=x+(i-1)*54,py=y+15+phase*(floor-y-18);
+        line(ctx,px,py,px,py+5,1,'rgba(151,181,178,.48)');
+        orb(ctx,px,py+6,1.5,'rgba(151,181,178,.4)');
+      }
+      break;
+    }
+    case 'cellBarShadows':{
+      const height=h*.23,skew=28+sway*18;
+      rect(ctx,x-66,y-height,132,height,'#15201c');
+      for(let i=0;i<6;i++){
+        const px=x-56+i*22;
+        line(ctx,px,y-height+5,px,y-3,3,'#697062');
+        line(ctx,px,y+2,px+skew,y+h*.15,3,'rgba(0,0,0,.22)');
+      }
+      line(ctx,x-64,y-height+3,x+64,y-height+3,4,'#555f50');line(ctx,x-64,y-2,x+64,y-2,4,'#555f50');
+      break;
+    }
     default:break;
   }
   ctx.restore();

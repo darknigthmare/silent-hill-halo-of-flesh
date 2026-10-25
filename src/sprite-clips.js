@@ -3,6 +3,7 @@
  */
 import {MOVESET_KEYS,createCombatProfile} from './data.js';
 import {POSE_KEYS,PRESENTATION_KEYS,isOneShotPose,isPresentationPose,validSpriteClipKey,weaponIdleClipKeys} from './sprite-poses.js';
+import {FIGHTER_REFERENCES} from './production-reference.js';
 export {POSE_KEYS} from './sprite-poses.js';
 export const MAX_CLIP_STEPS=256;
 export const MAX_CLIP_TICKS=36000;
@@ -30,7 +31,15 @@ export function clipSummary(art,clip){
 }
 export function presentationClipCoverage(art){
  const present=Object.keys(art?.clips||{}).filter(isPresentationPose);
- return {present,missing:PRESENTATION_KEYS.filter(key=>!present.includes(key)),animated:present.filter(key=>clipSummary(art,art.clips[key]).animated).length};
+ const ownedContext=key=>{
+  // The seven subject presentations have one exact owner/proposal context.
+  // One finisher context never stands for every attacker or victim sequence.
+  if(!art?.fighterId||['finisher','finished'].includes(key)||FIGHTER_REFERENCES[art.fighterId]?.source!==art.source)return false;
+  const proposal=({winRound:'winRound1',loseRound:'loseRound1'}[key]||key),exact=`${key}@${art.fighterId}:${proposal}`;
+  if(!present.includes(exact)||!validSpriteClipKey(exact,art))return false;
+  try{validateClip(art,exact,art.clips[exact]);return true;}catch{return false;}
+ };
+ return {present,missing:PRESENTATION_KEYS.filter(key=>!present.includes(key)&&!ownedContext(key)),animated:present.filter(key=>clipSummary(art,art.clips[key]).animated).length};
 }
 export function validateClip(art,pose,clip){
  if(!validSpriteClipKey(pose,art))throw new Error('Pose ou contexte inconnu du moteur pour ce sujet.');

@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-25",
+  "baseCommit": "5a1b656471c82596324f4044be643e9c81dca3e1",
+  "scope": "LOT6 : une décision de rôle de cutscène, clarifications de deux dossiers non tranchés, faits combat et lieux documentés. Aucun art ni timing1:1 clôturé.",
+  "networkMethod": "HTTPS via proxy/TLS configurés ; aucune solution de contournement des réponses HTTP402/403.",
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch6-roles-2026-10-25/",
+  "sources": [
+    {
+      "id": "CL_SH2_CREATURES",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/048-049_en.htm",
+      "httpStatus": 200,
+      "bytes": 25906,
+      "sha256": "ef3673b044ab3d4bf726365f3305748fa28c6ec1f278bc5768cbf83de09fead8",
+      "localFile": "sh2-creatures.html"
+    },
+    {
+      "id": "EXT06",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+      "httpStatus": 200,
+      "bytes": 111444,
+      "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+      "localFile": "homecoming-guide.html"
+    },
+    {
+      "id": "HC_ENEMIES_20261023",
+      "url": "https://www.silenthillmemories.net/sh5/creatures_en.htm",
+      "httpStatus": 200,
+      "bytes": 22010,
+      "sha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb",
+      "localFile": "homecoming-creatures.html"
+    },
+    {
+      "id": "EXT20",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+      "httpStatus": 200,
+      "bytes": 34359,
+      "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+      "localFile": "bom-bestiary.html"
+    },
+    {
+      "id": "EXT33",
+      "url": "https://www.silenthillmemories.net/shf/monsters_en.htm",
+      "httpStatus": 200,
+      "bytes": 43967,
+      "sha256": "29b1df39b79b1c114af692781ea5689cfd1f8f1fe0b84dc59a96df48536b67bd",
+      "localFile": "shf-monsters.html"
+    },
+    {
+      "id": "EXT_SHF_EBISUGAOKA5_20261025",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_10_ebisugaoka_part_5_en.htm",
+      "httpStatus": 200,
+      "bytes": 49959,
+      "sha256": "702c96b8f7517db06754282257c3e6922ef10a770bb9fe7a825abb9419454a32",
+      "localFile": "walkthrough_10_ebisugaoka_part_5.html"
+    },
+    {
+      "id": "CL_SH2_12_LAKE_VIEW_HOTEL",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+      "httpStatus": 200,
+      "bytes": 54283,
+      "sha256": "b14af6764a3938dfe7c5d22f05028f0a81f4a4c30520029c356176e3607fbb28",
+      "localFile": "lakeview-lobby-guide.html"
+    },
+    {
+      "id": "EXT_SH2_LAKEVIEW_PC44_20261025",
+      "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_44.jpg",
+      "httpStatus": 200,
+      "bytes": 223688,
+      "sha256": "0db825a21d500a1495baa851b3d1b5f893030e9019405d6773bbdfd0db7afa3b",
+      "localFile": "lakeview-pc44.html"
+    },
+    {
+      "id": "EXT_SH2_LAKEVIEW_MUSICBOX_20261025",
+      "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_music_box_player_puzzle_01.jpg",
+      "httpStatus": 200,
+      "bytes": 85003,
+      "sha256": "43662cb687e636683a25c7adc58c46322201e859624ad1935a1c926a77a0f8ba",
+      "localFile": "lakeview-musicbox.html"
+    }
+  ],
+  "decisions": [
+    {
+      "status": "resolved",
+      "fighterId": "homecoming_bogeyman_092",
+      "decision": "scripted-encounter",
+      "edition": "Silent Hill: Homecoming (2008, version commerciale)",
+      "evidence": [
+        "EXT06",
+        "HC_ENEMIES_20261023"
+      ],
+      "rationale": "Le bestiaire situe Bogeyman à Alchemilla, au Grand Hotel et à l’église. Le guide décrit individuellement ces trois apparitions comme des cutscènes : attaque à l’ascenseur du cauchemar initial, passage près de408 puis départ, et exécution d’Adam suivie du retour au contrôle d’Alex. La fiche est retenue comme rencontre cinématique sans duel autonome ; cela ne signifie pas que l’exécuteur est inoffensif. Les commandes du prototype sont bloquées sans transférer les capacités des versions SH2, film, Arcade ou Downpour.",
+      "reviewedAt": "2026-10-25"
+    }
+  ],
+  "runtimeContract": {
+    "required": "ID/source/édition exacts ; reviewed=true ; combatEnabled/canMove/canJump/canDodge/superEnabled=false ; les20commandes désactivées.",
+    "synchronization": "La nouvelle édition exige la régénération de production-reference.js avant validation du helper strict ; les autres variantes de Bogeyman restent distinctes."
+  },
+  "workbookInvariants": {
+    "observations": 435,
+    "oldSourcePrefix": 142,
+    "sourcesAfterAppend": 145,
+    "previousResolvedRoleDecisionsPreserved": 24,
+    "resolvedRoleDecisionsAfterReview": 25,
+    "preserved": "Profils, identifiants/noms/ordre et nombre des observations ; lignes et statuts des animations. Seule la localisation de lakeview devient une pièce documentée, sans validation artistique."
+  },
+  "placeDecision": {
+    "stageId": "lakeview",
+    "locationStatus": "lieu-documente",
+    "scene": "normal-lobby-before-video",
+    "evidence": [
+      "CL_SH2_12_LAKE_VIEW_HOTEL",
+      "EXT_SH2_LAKEVIEW_PC44_20261025",
+      "EXT_SH2_LAKEVIEW_MUSICBOX_20261025"
+    ],
+    "reason": "Le guide présente le lobby et son meuble musical avant de mener à312 pour la cassette. Deux vues de la pièce ont été inspectées, avec mobilier et matériaux concordants. Le statut documente cette pièce, pas une ontologie Fog/Memory ou une géométrie1:1.",
+    "limits": "TV312, piano du restaurant et transition Nightmare hors cadre ; transition automatique désactivée ; mesures et art encore ouverts."
+  },
+  "integratedDeltas": {
+    "combat": [
+      "sh1_romper_010",
+      "sh3_double_head_040",
+      "sh3_closer_036",
+      "sh3_closer_church_variant",
+      "sh4_twin_victim_059",
+      "homecoming_lurker_085",
+      "homecoming_feral_086"
+    ],
+    "combatArchive": "/workspace/shared/halo-of-flesh/references/batch6-combat-2026-10-25/provenance.json",
+    "cinematicFact": "BoM Needler à4membres-lames, attesté par EXT20 ; donnée runtime laissée à root. Les10recettes utilisent leurs propositions existantes.",
+    "stages": [
+      "town_hall_hc",
+      "shepherd_house_hc",
+      "devils_pit",
+      "overlook"
+    ],
+    "stageArchive": "/workspace/shared/halo-of-flesh/references/batch6-stages-2026-10-25/"
+  },
+  "remainingReviewed": [
+    {
+      "fighterId": "sh2_mandarin_floor_form",
+      "status": "open",
+      "reason": "Le commentaire interdit au Mandarin original de se tenir à la surface ; il ne valide pas le rôle d’une figure explicitement créée par le projet. Identité d’adaptation et rôle non tranché préservés."
+    },
+    {
+      "fighterId": "sh2_prisoner_035",
+      "status": "open",
+      "reason": "Vieux libellés « non-combattant-canonique » et « inoffensive » retirés. Les deux présences sont visables et tuables, sans preuve directe de non-hostilité ; blocage de duel conservateur, aucune roleDecision."
+    },
+    {
+      "fighterId": "sh4_greedy_worm_069",
+      "status": "open",
+      "reason": "Attaquable/non tuable est documenté, pas une preuve directe de non-hostilité ; page Fandom HTTP402."
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "status": "open",
+      "reason": "Pièce et réaction oculaire connues, rôle non hostile non démontré ; Fandom HTTP402 et sources de figurine proposées inaccessibles via proxy403."
+    },
+    {
+      "fighterId": "pt_lisa_149",
+      "status": "open",
+      "reason": "Les guides accessibles décrivent boucle et exploration, sans nouvelle preuve individuelle directe justifiant la clôture de ce rôle. Aucun transfert depuis Metal Gear Solid V ou Silent Hills non sorti."
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "status": "open",
+      "reason": "Version murale et version roulante à distinguer ; les nouvelles pages relues ne résolvent pas précisément leur ancrage ni le périmètre de ce profil."
+    },
+    {
+      "fighterId": "shf_corruptor_155",
+      "status": "open",
+      "reason": "Vomissement connu, immobilité non prouvée ; guide Game8 inaccessible via proxy403."
+    },
+    {
+      "fighterId": "shf_hatcher_156",
+      "status": "open",
+      "reason": "Les guides confirment génération de monstres et obstruction de chemin, pas l’absence de locomotion ; rôle laissé ouvert et preuve de progression ajoutée."
+    },
+    {
+      "fighterId": "shf_dark_hatcher_160",
+      "status": "open",
+      "reason": "Ne pas identifier tous les géniteurs anonymes des guides au Dark Hatcher ni en déduire son immobilité."
+    }
+  ],
+  "sourceExcerpts": {
+    "CL_SH2_CREATURES": [
+      "Hangs from a mesh grating by the tips of its arms and reaches out to attack with its tentacles.",
+      "For this reason, it is not permitted to stand above ground."
+    ],
+    "EXT06": [
+      "A cutscene will start. Alex hears metal scarping. He approaches the elevator doors and is stabbed by a huge blade.",
+      "A cutscene will trigger, introducing a Bogeyman. After Bogeyman is gone, Swarms will break into the hall from Room 405.",
+      "Adam gives Alex the Shepherd Family Ring and is being eventually sliced by the Bogeyman. After the cutscene go through what is left of Adam Shepherd."
+    ],
+    "EXT20": [
+      "A tortured, four-legged creature whose limbs extend into sharp blades."
+    ],
+    "CL_SH2_12_LAKE_VIEW_HOTEL": [
+      "You may also notice a large music box player standing by the stairs.",
+      "While facing the VCR, open your inventory and insert the Videotape you found in the Office."
+    ],
+    "EXT_SHF_EBISUGAOKA5_20261025": [
+      "Fight another hatcher to clear the path, and head up the stairs."
+    ]
+  },
+  "failedRetrievals": [
+    {
+      "url": "https://gecco.co.jp/en/product/eileen-head/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sideshow.com/collectibles/silent-hill-eileen-head-gecco-co-913648",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://game8.co/games/Silent-Hill-f/archives/553138",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://game8.co/games/Silent-Hill-f/archives/553135",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://silenthill.fandom.com/wiki/Prisoner",
+      "error": "HTTP Error 402: Payment Required"
+    },
+    {
+      "url": "https://silenthill.fandom.com/wiki/Greedy_Worm",
+      "error": "HTTP Error 402: Payment Required"
+    },
+    {
+      "url": "https://silenthill.fandom.com/wiki/Unidentified_head-shaped_object",
+      "error": "HTTP Error 402: Payment Required"
+    }
+  ]
+}

@@ -53,6 +53,18 @@ test('the plan inventories every current move, finisher, presentation and core p
   }
 });
 
+test('the exact Twin Victim pointing candidate is reported as one static context image without closing its choreography',()=>{
+  const id='sh4_twin_victim_059',taunt=plan.presentations.find(row=>row.id===id+':taunt'),intro=plan.presentations.find(row=>row.id===id+':intro');
+  assert.match(taunt.engineState,/taunt@sh4_twin_victim_059:taunt/);
+  assert.match(taunt.engineState,/Clip exact non bouclé : 1 image candidate déclarée/);
+  assert.match(taunt.engineState,/Pose fixe, pas une animation produite/);
+  assert.match(taunt.engineState,/66 ticks de maintien versus.*aucune durée d’origine mesurée/);
+  assert.match(taunt.engineState,/Chorégraphie artistique complète.*restent à produire/);
+  assert.doesNotMatch(taunt.engineState,/PNG dédiés à produire/);assert.notEqual(taunt.productionStatus,'Validé');
+  assert.match(intro.engineState,/Images contextuelles à produire/,'a contextual taunt cannot become an intro image');
+  assert.equal(plan.metrics.certifiedOneToOne,0);
+});
+
 test('stage inventory retains retired ideas and maps each live binding to its exact production row',()=>{
   const refs=new Map(research.stages.map(s=>[s.id,s]));
   for(const stage of STAGES){
@@ -143,6 +155,7 @@ test('engine timing remains distinct from unmeasured source frames and no artwor
   assert.match(capture.reason,/un seul décodage.*relecture facultative.*SHA256.*déclaratif/);
   assert.match(capture.reason,/restent candidats et ne certifient ni le geste ni la fidélité 1:1/);
   assert.match(capture.reason,/review-preview.*snapshot vérifié.*index HTML local et manifeste SHA256.*sans nouvelle attestation ni import Excel/);
+  assert.match(capture.reason,/verify-review.*lecture seule.*extraction fraîche.*image remplacée.*hash déclaré.*recalculé/);
   assert.equal(plan.metrics.sourceTimingSchema,1);assert.equal(plan.metrics.sourceTimingBatchSchema,1);assert.equal(plan.metrics.sourceTimingReviewSchema,1);assert.equal(plan.metrics.measuredSourceMoves,0);
 });
 

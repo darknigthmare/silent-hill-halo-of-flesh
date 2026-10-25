@@ -1749,7 +1749,7 @@
       "observedMoves": [
         {
           "name": "Plaquage",
-          "description": "Bond qui met au sol.",
+          "description": "Bondit sur Harry et le renverse ; ce plaquage reste un contact du corps, sans projectile ni téléportation.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -1760,7 +1760,7 @@
         },
         {
           "name": "Immobilisation",
-          "description": "Maintient la cible couchée.",
+          "description": "Maintient Harry au sol et l’étouffe après le bond. Le bind du prototype adapte cette immobilisation sans reproduire ni mesurer les commandes de lutte originales.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -4029,7 +4029,7 @@
       "source": "sh2",
       "baseId": "sh2_mandarin_026",
       "identityStatus": "adaptation-non-canonique",
-      "identityNote": "« Floor Form » est une adaptation du projet, pas une variante 1:1 établie.",
+      "identityNote": "« Floor Form » est une adaptation déclarée du projet, pas une variante canonique établie. Le commentaire de création du Mandarin original l’exclut de la surface ; il ne donne pas pour autant un rôle canonique à ce dossier inventé.",
       "referenceIds": [
         "CL_SH2_ENEMIES",
         "CL_SH2_CREATURES"
@@ -4037,7 +4037,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Gestes du Mandarin suspendu disponibles en référence ; locomotion au sol non attestée.",
+          "description": "Renvoi documentaire seulement au Mandarin original suspendu sous la grille : le commentaire de création dit qu’il ne lui est pas permis de se tenir au-dessus du sol. La locomotion d’une « Floor Form » et son rôle canonique ne sont pas établis.",
           "evidence": [
             "CL_SH2_ENEMIES",
             "CL_SH2_CREATURES"
@@ -4051,7 +4051,8 @@
         "Aucun déplacement libre debout à certifier ; soit arène à grille, soit branche adaptation clairement nommée.",
         "Suspendu sous un grillage ; support obligatoire.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "La source interdit au Mandarin original de se tenir au-dessus du sol ; ce constat ne prouve ni l’existence d’une variante Floor Form ni son rôle. Conserver la question P0 ouverte et le duel bloqué."
       ],
       "proposals": {
         "super": {
@@ -5222,8 +5223,8 @@
       "name": "Prisoner",
       "source": "sh2",
       "baseId": null,
-      "identityStatus": "non-combattant-canonique",
-      "identityNote": "Entité invisible et inoffensive ; profil offensif actuel à requalifier.",
+      "identityStatus": "presence-invisible-documentee-role-a-preciser",
+      "identityNote": "Deux présences invisibles de Toluca Prison sont visables, vulnérables et tuables. Leur existence est documentée ; les pages relues ne prouvent pas directement leur non-hostilité. Le blocage du duel reste conservateur, sans décision de rôle validée.",
       "referenceIds": [
         "CL_PRISONER",
         "CL_SH2_CREATURES",
@@ -5477,7 +5478,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Estoc ou balayage.",
+          "description": "Frappe avec ses grands bras ; peut les faire tourner autour de son corps pour frapper à proximité des deux côtés. Cette rotation physique n’est pas une aura à distance.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -5488,7 +5489,7 @@
         },
         {
           "name": "Lame",
-          "description": "Extension au bout du bras.",
+          "description": "Une lame extensible peut sortir du bout d’un bras pour atteindre Heather. Portée et fenêtres du prototype restent non mesurées dans la source.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -5603,7 +5604,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh3_closer_036 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Consulter sh3_closer_036 pour les coups de bras, la lame et les bras tournants ; le guide décrit les Closer de l’église comme plus forts et plus rapides, sans coefficients officiels.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -5617,7 +5618,8 @@
         "Modèle verdâtre ; vitesse à mesurer.",
         "Grands bras ; proportions à capturer.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "Les multiplicateurs .85 de startup et1.12 de dégâts du prototype sont un équilibrage local ; la source ne chiffre pas l’écart de la variante Church."
       ],
       "proposals": {
         "super": {
@@ -6192,7 +6194,7 @@
       "observedMoves": [
         {
           "name": "Bond",
-          "description": "Morsure sautée.",
+          "description": "Saute et mord Heather ; le guide distingue cette attaque relativement légère de la prise de jambe au sol.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -6203,7 +6205,7 @@
         },
         {
           "name": "Prise",
-          "description": "Mâchoires sur la jambe.",
+          "description": "Au sol, retient et mâchonne la jambe de Heather ; le joueur peut lutter pour se dégager. Le bind et sa durée restent une transposition de versus.",
           "evidence": [
             "CL_SH3_ENEMIES",
             "CL_SH3_CREATURES"
@@ -6216,7 +6218,8 @@
       "constraints": [
         "Chien à tête fendue ; pas deux corps.",
         "Aucune valeur de frame data, dégâts, jauge ou invincibilité n’est canonisée par ce cahier.",
-        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication."
+        "Les 9 propositions sont des créations de mise en scène du projet ; validation visuelle séparée avant publication.",
+        "Les coefficients de dégâts du prototype (.72 pour le bond,1.15 pour la prise) sont des choix de versus, pas des chiffres de dégâts mesurés dans SH3."
       ],
       "proposals": {
         "super": {
@@ -8745,7 +8748,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Balayage et rotation.",
+          "description": "Balance ses grands bras, souvent en tournant autour de son corps ; cette portée de contact reste locale, sans champ magique.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -8755,7 +8758,7 @@
         },
         {
           "name": "Charge",
-          "description": "Course puis plongeon.",
+          "description": "Poursuit Henry en courant sur ses mains puis plonge vers lui ; aucune saisie avec échange de places n’est déduite de ce plongeon.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -12823,13 +12826,15 @@
     },
     {
       "id": "lakeview",
-      "name": "LAKEVIEW HOTEL — FOG WORLD",
+      "name": "LAKEVIEW HOTEL — LOBBY",
       "source": "sh2",
-      "locationStatus": "etat-narratif-a-preciser",
+      "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH2_12_LAKE_VIEW_HOTEL"
+        "CL_SH2_12_LAKE_VIEW_HOTEL",
+        "EXT_SH2_LAKEVIEW_PC44_20261025",
+        "EXT_SH2_LAKEVIEW_MUSICBOX_20261025"
       ],
-      "locationNote": "Apparence restaurée du Lakeview original avant la cassette ; « Fog World » ne suffit pas à expliquer cet état de mémoire.",
+      "locationNote": "Vue retenue : lobby intact du Lake View original, avant le visionnage de la cassette en312 (normal-lobby-before-video). Le guide situe le meuble musical près de l’escalier ; deux vues montrent portes vitrées, boiseries et tapis rouge. Ce cadrage de pièce est documenté, sans trancher l’interprétation globale Fog/Memory de l’hôtel. Dimensions, échelle, caméra et sol masqué restent à comparer ; leur adaptation au versus ne vaut pas mesure du jeu. Réception adjacente, piano du restaurant, TV/cassette de312 et transformation Nightmare restent hors cadre. Les anciennes propositions de transition/cassette sont conservées au dossier et inactives dans cette scène ; aucune transition automatique n’est validée. Aucune clôture artistique ni certification1:1.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",

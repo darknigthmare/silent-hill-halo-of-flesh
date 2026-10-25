@@ -78,10 +78,11 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
    for(let i=x%36;i<w;i+=36){ctx.moveTo(i,0);ctx.lineTo(i,h);}for(let i=y%36;i<h;i+=36){ctx.moveTo(0,i);ctx.lineTo(w,i);}ctx.stroke();
    ctx.strokeStyle='#a4ad83';ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
   ctx.save();ctx.translate(x,y);ctx.scale(zoom,zoom);
-  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state:previewState(),facing:presentation,shadow:false});
+  const state=previewState();
+  const rendered=drawRasterMonster(ctx,fighter,0,0,{registry,state,facing:presentation,shadow:false});
   if(rendered.kind==='loading'&&!waiting.has(frame.path)){waiting.add(frame.path);void spriteCache.load(frame).then(()=>{waiting.delete(frame.path);if(!disposed)draw();});}
-  const visible=visibleSpriteBox(fighter,frame,0,0,presentation);
-  if($('boxes').checked){const collision=bodyBox({data:fighter,x:0,y:0,crouching:$('pose').value==='crouch'});
+  const visible=visibleSpriteBox(fighter,frame,0,0,presentation,state);
+  if($('boxes').checked){const collision=bodyBox({...state,data:fighter,x:0,y:0});
    ctx.lineWidth=1/zoom;ctx.strokeStyle='#77d694';ctx.strokeRect(collision.x,collision.y,collision.w,collision.h);
    ctx.setLineDash([5/zoom,4/zoom]);ctx.strokeStyle='#d9bd83';ctx.strokeRect(visible.x,visible.y,visible.w,visible.h);ctx.setLineDash([]);
    ctx.strokeStyle='#e8c775';ctx.beginPath();ctx.moveTo(-9,0);ctx.lineTo(9,0);ctx.moveTo(0,-9);ctx.lineTo(0,9);ctx.stroke();}

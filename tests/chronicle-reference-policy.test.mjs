@@ -40,7 +40,21 @@ test('chronicle projections preserve every chapter while only routes with a comp
     assert.deepEqual(route,before,'the archive route is not edited');dossiers+=plan.referenceDossiers.length;
   }
   assert.deepEqual(archiveOnly,['harry_ice','maya_villa']);
-  assert.equal(dossiers,10,'the existing seven dossiers and three newly excluded pursuit chapters remain explicit');
+  assert.equal(dossiers,11,'the existing seven dossiers, three pursuit chapters and Homecoming scripted Bogeyman remain explicit');
+});
+
+test('Alex Home preserves the scripted chapter at original index three and five encounters at their original arenas',()=>{
+  const route=CHRONICLES.find(r=>r.id==='alex_home'),before=structuredClone(route),run=newRun(route.id);
+  assert.equal(route.fighters[3],'homecoming_bogeyman_092');
+  assert.deepEqual(run.chapterIndices,[0,1,2,4,5]);
+  assert.deepEqual(run.queue,['homecoming_lurker_085','homecoming_feral_086','homecoming_curtis_ackers','homecoming_sepulcher_093','homecoming_scarlet_doll_form_094']);
+  assert.deepEqual(run.stages,['shepherds_glen','grand_hotel','underground_hc','grand_hotel','underground_hc']);
+  assert.deepEqual(run.referenceDossiers,[{chapterIndex:3,fighterId:'homecoming_bogeyman_092',stageId:'shepherds_glen',role:'scripted-encounter'}]);
+  assert.equal(run.wins,0);assert.deepEqual(run.results,[]);assert.deepEqual(runCombatBlockers(run),[]);assert.deepEqual(route,before);
+  const old=legacyRun(route.id),memory=new Memory();saveRun(old,memory);const serialized=memory.getItem(KEYS.run),writes=memory.writes;
+  assert.deepEqual(runCombatBlockers(loadRun(memory)),[{fighterId:'homecoming_bogeyman_092',role:'scripted-encounter'}]);
+  assert.deepEqual(resumeRun(loadRun(memory)).queue,route.fighters,'an old checkpoint is not silently filtered into the new queue');
+  assert.equal(memory.getItem(KEYS.run),serialized);assert.equal(memory.writes,writes);
 });
 
 test('archive-only projections cannot become empty runs or overwrite an existing checkpoint during save/import',()=>{
