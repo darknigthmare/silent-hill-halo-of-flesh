@@ -30,6 +30,10 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Cynthia hair catches a standing victim: actual attempted movement/jump remains restricted, and only its real counter-projectile hit releases the source-owned binding. The Downpour Bogeyman wave is the existing projectile fixed to the floor; an actual timed second-player jump tests clearance.',
   'Lot8 uses the three original SH1 leg holds and the SH2 Labyrinth Abstract Daddy grip: the victim remains standing, and six alternating left/right controls release it. This escape count, control mapping and duration are versus choices, not original escape timing or animation. Held or contradictory directions do not generate extra progress. Prepared knockdown tests only this boss against actual firearm projectiles.',
   'Lot8 Hanged Scratcher uses its ground claws: a free jump never substitutes for attachment to a ceiling. Scraper independently reacts to visible handgun-class rounds; its shotgun and SMG exceptions differ from Missionary. Silenced-shot metadata is covered in Node without inventing an authored silenced weapon.',
+  'Lot9 exercises exactly thirty native command rows across six source profiles. Health and meter fixtures make supers/desperations reachable; existing boss buffs complete through real ticks before input. Attack frames, hit counts, move definitions and source identity are never replaced. All curves, bindings and collision dimensions remain versus choices.',
+  'Flesh Lip is one supported cage with a temporary authored lift, not the original three-cage fight. Directional escape, fall and terminal cleanup do not create original pose frames. God fire stays floor-bound without claiming its original three-dimensional branching or upright/lowered posture cycle. Andrew rolls move physically without generating an original rotation clip.',
+  'Screamer cries create source-owned temporary action paralysis at bounded distance. Their HP damage and timer are versus choices; neither damage-free original audio nor a rear teleport is inferred. Original held/falling, leap, recoil and scream animations remain unmeasured.',
+  'Lot9 terminal fixtures prepare one HP, one near-expired match clock or an ordinary airborne target. Native attacks still cause the KO and the round transition. A second-player cage grip followed by a real directional foot kick uses the naturally expiring bind timer; it checks that expiry never strands a grounded flag above the floor.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -491,6 +495,123 @@ try{
  await launch(page,'arcade_robbie_the_rabbit_shotgun','sh3_scraper_045');const scraperShotgunBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(80));scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.scraperShotgunException=scene;
  check('Scraper handgun-only defense leaves a real shotgun projectile effective',scene.emitted>=1&&scene.actors[1].health<scraperShotgunBefore.actors[1].health&&scene.actors[0].damage>0,scene);
  await capture(page,'30-scraper-shotgun-exception');
+
+
+ // Lot9: each scene key is one of the thirty move rows in the tracked ledger.
+ {
+  const lot9Scopes={
+   sh1_groaner_003:['neutralSpecial','forwardSpecial','airSpecial','super','desperation'],
+   sh1_wormhead_004:['neutralSpecial','forwardSpecial','airSpecial','super','desperation'],
+   sh2_flesh_lip_027:['forwardHeavy','neutralSpecial','throw','super','desperation'],
+   sh3_god_050:['neutralSpecial','downSpecial','forwardHeavy','super','desperation'],
+   sh4_andrew_desalvo_victim_18:['neutralSpecial','forwardSpecial','airSpecial','super','desperation'],
+   downpour_screamer_104:['neutralSpecial','downSpecial','forwardSpecial','super','desperation']
+  };
+  let lot9Rows=0;
+  for(const [id,keys] of Object.entries(lot9Scopes))for(const key of keys){
+   const label=id+':'+key,isLip=id==='sh2_flesh_lip_027',isGod=id==='sh3_god_050',isScream=id==='downpour_screamer_104';
+   await launch(page,id,'sh3_nurse_revolver_044');
+   await page.evaluate(({id,key})=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];
+    q.position(id==='sh3_god_050'&&key!=='forwardHeavy'?300:500,id==='sh2_flesh_lip_027'?610:id==='sh3_god_050'&&key==='forwardHeavy'?680:id==='downpour_screamer_104'?690:650);
+    if(['super','desperation'].includes(key))a.meter=100;
+    if(key==='desperation'){
+     a.health=Math.floor(a.maxHealth*.3);
+     for(let n=0;n<220;n++){
+      const next=a.bossPhases[a.bossPhaseIndex+1];
+      if(!a.phaseLock&&(!a.data.boss||!next||a.health/a.maxHealth>next.threshold))break;
+      q.advance(1);
+     }
+    }
+   },{id,key});
+   const before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   if(key==='airSpecial'){await page.keyboard.press('ArrowUp');await page.keyboard.press('z');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));}
+   if(['forwardSpecial','forwardHeavy'].includes(key))await page.keyboard.down('ArrowRight');
+   if(key==='downSpecial')await page.keyboard.down('ArrowDown');
+   await page.keyboard.press(key==='forwardHeavy'?'k':key==='throw'?'u':['super','desperation'].includes(key)?'o':'i');
+   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));
+   if(['forwardSpecial','forwardHeavy'].includes(key))await page.keyboard.up('ArrowRight');
+   if(key==='downSpecial')await page.keyboard.up('ArrowDown');
+   if(isLip&&key!=='forwardHeavy'){
+    const lifted=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];
+     for(let n=0;n<100&&!b.status?.struggleOrigin;n++)q.advance(1);while(e.hitstop>0)q.advance(1);return q.scene();});
+    check(label+' actual keyboard foot grip lifts its grounded victim below one fixed cage',lifted.actors[0].move===key&&lifted.actors[1].status?.struggleOrigin?.posture==='suspended'&&lifted.actors[1].y===522&&!lifted.actors[1].grounded&&lifted.actors[1].vy===0&&lifted.actors[1].knockdown===0&&lifted.actors[1].health<before.actors[1].health&&lifted.emitted===0,lifted);
+    if(key==='super')await capture(page,'31-lot9-flesh-lip-suspended-native-grip');
+    for(const arrow of ['q','d','q','d','q','d']){await page.keyboard.down(arrow);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up(arrow);}
+    await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(24));const released=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+    check(label+' six actual arrow controls release into a fall and grounded recovery',released.actors[1].status===null&&released.actors[1].grounded&&released.actors[1].y===594&&released.actors[1].knockdown===0,released);
+    report.scenes['lot9-'+label]={before,lifted,released};
+   }else if(isGod&&key!=='forwardHeavy'){
+    const fire=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;
+     for(let n=0;n<100&&!e.projectiles.length;n++)q.advance(1);return q.scene();});
+    const projectile=fire.projectileStates[0];
+    check(label+' actual native flame is emitted on the floor without becoming firearm ammunition',fire.actors[0].move===key&&fire.emitted===1&&projectile?.y===projectile?.groundY&&projectile?.y+projectile?.radius===594&&projectile?.vy===0&&projectile?.gravity===0&&projectile?.firearm===false,fire);
+    await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(3));const traveled=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+    check(label+' real flame travel retains the same floor height and fixed caster',traveled.projectileStates.length===1&&traveled.projectileStates[0].y===projectile.y&&traveled.projectileStates[0].x!==projectile.x&&traveled.actors[0].x===before.actors[0].x,traveled);
+    if(key==='super')await capture(page,'32-lot9-god-floor-bound-fire');
+    report.scenes['lot9-'+label]={before,fire,traveled};
+   }else if(isScream&&key!=='forwardSpecial'){
+    const caught=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];
+     for(let n=0;n<100&&!b.status?.paralysisOrigin;n++)q.advance(1);while(e.hitstop>0)q.advance(1);
+     for(let n=0;n<70&&b.hurtFrames>0;n++)q.advance(1);return q.scene();});
+    check(label+' actual bounded scream creates source-owned temporary paralysis',caught.actors[0].move===key&&caught.actors[1].status?.paralysisOrigin?.id===id&&caught.actors[1].health<before.actors[1].health&&caught.emitted===0,caught);
+    await page.keyboard.down('d');await page.keyboard.down('a');await page.keyboard.press('z');await page.keyboard.press('h');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('d');await page.keyboard.up('a');
+    const restricted=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+    check(label+' actually paralyzed target cannot run jump guard dodge or fire a counter-shot',restricted.actors[1].status?.paralysisOrigin?.id===id&&restricted.actors[1].x===caught.actors[1].x&&restricted.actors[1].grounded&&restricted.actors[1].dodge===0&&restricted.actors[1].attackFrame===null&&restricted.emitted===0&&restricted.actors[1].sourceCue==='PARALYSIE DU CRI · VERSUS',restricted);
+    if(key==='super')await capture(page,'33-lot9-screamer-action-paralysis');
+    report.scenes['lot9-'+label]={before,caught,restricted};
+   }else{
+    if(key==='super'&&!isLip&&!isGod&&!isScream){await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(3));await capture(page,'34-lot9-'+id+'-single-airborne-pass');}
+    const physical=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];let highest=a.y,mostHits=0;
+     for(let n=0;n<125;n++){q.advance(1);highest=Math.min(highest,a.y);mostHits=Math.max(mostHits,a.attack?.hitCount||0);}return {highest,mostHits,scene:q.scene()};});
+    const pass=!isLip&&!isGod;
+    check(label+' actual physical command deals contact damage with one hit and no emission',physical.scene.actors[0].move===key&&physical.scene.actors[1].health<before.actors[1].health&&physical.mostHits===1&&physical.scene.emitted===0,physical);
+    check(label+(pass?' really leaves the floor and advances through space':' uses its supported foot or arm band without free locomotion'),pass?physical.highest<594&&physical.scene.actors[0].x>before.actors[0].x:physical.scene.actors[0].x===before.actors[0].x&&physical.scene.actors[0].y===594,physical);
+    if(isLip)await capture(page,'35-lot9-flesh-lip-foot-contact');
+    if(isGod)await capture(page,'36-lot9-god-close-arm-contact');
+    if(isScream)await capture(page,'37-lot9-screamer-physical-pounce');
+    report.scenes['lot9-'+label]={before,physical};
+   }
+   lot9Rows++;
+  }
+  check('lot9 covers exactly thirty unique native movement rows rather than counting tests or references',lot9Rows===30&&Object.keys(report.scenes).filter(k=>k.startsWith('lot9-')).length===30,lot9Rows);
+ }
+
+
+ // Round-boundary regressions do not substitute fabricated attack hits.
+ {
+  await launch(page,'sh2_flesh_lip_027','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,610));await page.keyboard.press('i');
+  const heldAtTimeout=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<100&&!e.actors[1].status?.struggleOrigin;n++)q.advance(1);while(e.hitstop>0)q.advance(1);return q.scene();});
+  check('native cage timeout fixture begins with an actual suspended grip',heldAtTimeout.actors[1].status?.struggleOrigin?.posture==='suspended'&&heldAtTimeout.actors[1].y===522,heldAtTimeout);
+  await page.evaluate(()=>{__HALO_QA__.engine.matchTime=.001;__SOURCE_EXPANSION_QA__.advance(1);});
+  const timedOut=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.lot9CageTimeoutCleanup={heldAtTimeout,timedOut};
+  check('actual timeout clears only the temporary source lift before result presentation',timedOut.phase==='roundEnd'&&timedOut.actors[1].status===null&&timedOut.actors[1].grounded&&timedOut.actors[1].y===594&&timedOut.actors[1].vx===0&&timedOut.actors[1].vy===0,timedOut);
+  await capture(page,'38-lot9-cage-timeout-floor-result');
+
+  await launch(page,'sh2_flesh_lip_027','sh3_nurse_revolver_044');await page.evaluate(()=>{__SOURCE_EXPANSION_QA__.position(500,610);__HALO_QA__.engine.actors[1].health=1;});await page.keyboard.press('i');
+  const lethalGrip=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<100&&e.phase==='fight';n++)q.advance(1);return q.scene();});report.scenes.lot9CageNativeLethalGrip=lethalGrip;
+  check('native one-HP lethal foot grip cannot strand the losing body aloft',lethalGrip.phase==='roundEnd'&&lethalGrip.actors[0].move==='neutralSpecial'&&lethalGrip.actors[1].health===0&&lethalGrip.actors[1].status===null&&lethalGrip.actors[1].grounded&&lethalGrip.actors[1].y===594,lethalGrip);
+  await capture(page,'39-lot9-cage-lethal-grip-floor-result');
+
+  await launch(page,'sh3_nurse_revolver_044','sh3_nurse_revolver_044');await page.evaluate(()=>{const e=__HALO_QA__.engine;__SOURCE_EXPANSION_QA__.position(500,650);Object.assign(e.actors[1],{y:350,grounded:false,vy:-2,health:1});});await page.keyboard.press('i');
+  const genericAirKO=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<100&&e.phase==='fight';n++)q.advance(1);return q.scene();});report.scenes.lot9OrdinaryAirborneKO=genericAirKO;
+  check('ordinary real projectile airborne KO retains its own height and is not snapped by cage-only cleanup',genericAirKO.phase==='roundEnd'&&genericAirKO.actors[0].move==='neutralSpecial'&&genericAirKO.emitted===1&&genericAirKO.actors[1].health===0&&genericAirKO.actors[1].status===null&&!genericAirKO.actors[1].grounded&&genericAirKO.actors[1].y<594,genericAirKO);
+  await capture(page,'40-lot9-ordinary-air-ko-posture-preserved');
+
+  await launch(page,'sh3_nurse_revolver_044','sh2_flesh_lip_027');await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__;q.position(610,500);q.positionActor(0,610,-1);q.positionActor(1,500,1);});await page.keyboard.press('h');
+  const beforeLateKick=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,source=e.actors[1],victim=e.actors[0];
+   for(let n=0;n<100&&!victim.status?.struggleOrigin;n++)q.advance(1);
+   for(let n=0;n<100&&(source.attack||e.hitstop>0);n++)q.advance(1);
+   const next=source.profile.moves.forwardHeavy.startup+2;
+   for(let n=0;n<160&&victim.status?.timer>next;n++)q.advance(1);
+   return {next,scene:q.scene()};});
+  check('second-player cage late-kick fixture waits for the naturally expiring native hold',beforeLateKick.scene.actors[0].status?.struggleOrigin?.posture==='suspended'&&beforeLateKick.scene.actors[0].status.timer===beforeLateKick.next,beforeLateKick);
+  await page.keyboard.down('d');await page.keyboard.press('g');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('d');
+  const actualLateKick=await page.evaluate(before=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,victim=e.actors[0];for(let n=0;n<70&&victim.health===before;n++)q.advance(1);return q.scene();},beforeLateKick.scene.actors[0].health);
+  check('actual directional foot kick keeps its nearly expired captured victim airborne',actualLateKick.actors[1].move==='forwardHeavy'&&actualLateKick.actors[0].health<beforeLateKick.scene.actors[0].health&&actualLateKick.actors[0].status?.struggleOrigin?.posture==='suspended'&&actualLateKick.actors[0].y===522&&!actualLateKick.actors[0].grounded,actualLateKick);
+  await capture(page,'41-lot9-cage-native-late-kick-before-expiry');
+  await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(100));const afterLateKick=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.lot9CagePlayerTwoLateKickExpiry={beforeLateKick,actualLateKick,afterLateKick};
+  check('natural bind expiry after the actual late foot kick falls back to the floor without an airborne walking state',afterLateKick.phase==='fight'&&afterLateKick.actors[0].status===null&&afterLateKick.actors[0].grounded&&afterLateKick.actors[0].y===594&&afterLateKick.actors[0].knockdown===0,afterLateKick);
+ }
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',
   'shattered_raw_shock_diseased_101','shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103','homecoming_bogeyman_092']){

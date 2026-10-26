@@ -649,6 +649,22 @@ const FIGHTER_RECIPES=Object.freeze({
   sh4_gum_head_new_type_058:'gumNewEquippedClub',sh4_bottom_065:'bottomThreeHeadDive',sh4_cynthia_velasquez_victim_16:'cynthiaStandingHairClosure'
 });
 
+// These thirty workbook rows are presentation edits only. Their native bodily
+// capacities never grant an unauthored taunt or either missing finisher.
+const PRESENTATION_ONLY_KEYS=Object.freeze(['intro','winRound','loseRound','winMatch','loseMatch','outro']);
+const PRESENTATION_ONLY_RECIPES=Object.freeze({
+  sh3_closer_church_variant:{source:'sh3',sourceYear:2003,edition:'SH3 original 2003',attackerKind:'giant',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Closer de l’église SH3 original 2003 : bras et silhouette propres à cette variante. Attentes et reprises sont composées pour le versus ; aucun coefficient source, encadrement, nouvelle lame ou image du Closer antérieur n’est créé.'},
+  sh4_jasper_gein_victim_17:{source:'sh4',sourceYear:2004,edition:'SH4 original 2004',attackerKind:'ghost',weapon:'club',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Jasper Victim 17 SH4 : corps brûlé et chandelier métallique, rangé dans la catégorie club du catalogue. Présence et extinction de la menace sont des intentions d’image ; ni club de bois, mort définitive, nouvelle brûlure de gameplay ou accessoire ne sont produits.'},
+  sh4_andrew_desalvo_victim_18:{source:'sh4',sourceYear:2004,edition:'SH4 original 2004',attackerKind:'ghost',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Andrew Victim 18 SH4 : corps gonflé autonome et roulade en tonneau documentés. Les poses d’orientation, d’appui et de suppression restent à illustrer. Pas d’eau, de fosse ou d’épée invoquée ; le résultat de versus ne tue pas définitivement ce Ghost.'},
+  sh4_richard_braintree_victim_19:{source:'sh4',sourceYear:2004,edition:'SH4 original 2004',attackerKind:'ghost',weapon:'club',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Richard Victim 19 SH4 : marche sur ses pieds, tressaillements, pied-de-biche métallique et téléportation courte. Le catalogue range le pied-de-biche sous club ; les six contextes ne créent pas de bâton de bois. Le saut d’offset de sortie est un montage versus, sans interpolation de locomotion ni mesure source.'},
+  homecoming_swarm:{source:'homecoming',sourceYear:2008,attackerKind:'insect',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Swarm Homecoming PS3/Xbox360/PC : petits corps qui s’accrochent et drainent Alex. Ces six présentations regroupent ou dispersent le groupe déjà présent, sans nouvelle créature, trou de mur, contact sur l’adversaire ou copie de l’essaim Vita. Les offsets au sol ne déclarent pas l’espèce incapable de vol.'}
+});
+
 /* Presentation intent belongs to the exact subject. These world-space edits
  * stage its workbook proposal; they do not draw the absent limb/weapon poses. */
 const PRESENTATION_STAGING=Object.freeze({
@@ -709,7 +725,17 @@ const PRESENTATION_STAGING=Object.freeze({
   sh2_mary_final_manifestation_034:{id:'sh2-mary-final-cage-identity',entry:0,retreat:0,recoil:0,outroHold:true,poses:['sh2-mary-final-cage-reveal-already-formed','sh2-mary-final-cage-muted-threat','sh2-mary-final-cage-hover-held','sh2-mary-final-cage-support-recovery','sh2-mary-final-cage-final-watch','sh2-mary-final-cage-terminal-fall-awaiting-frames','sh2-mary-final-cage-held-result']},
   sh4_gum_head_new_type_058:{id:'sh4-gum-new-already-equipped-club',entry:21,retreat:0,recoil:8,outroHold:true,poses:['sh4-gum-new-club-entry','sh4-gum-new-club-muted-threat','sh4-gum-new-club-stable-watch','sh4-gum-new-club-support-recovery','sh4-gum-new-club-final-watch','sh4-gum-new-club-final-body-rest','sh4-gum-new-club-held-result']},
   sh4_bottom_065:{id:'sh4-bottom-three-head-two-hands',entry:19,retreat:0,recoil:8,outroHold:true,poses:['sh4-bottom-three-head-hand-entry','sh4-bottom-three-head-muted-threat','sh4-bottom-three-head-support-watch','sh4-bottom-three-head-hand-recovery','sh4-bottom-three-head-final-watch','sh4-bottom-three-head-final-body-rest','sh4-bottom-three-head-held-result']},
-  sh4_cynthia_velasquez_victim_16:{id:'sh4-cynthia-hair-standing-axis',entry:17,retreat:0,recoil:0,roundDim:.2,outroHold:true,poses:['sh4-cynthia-standing-hair-entry','sh4-cynthia-standing-hair-muted-threat','sh4-cynthia-standing-hair-watch','sh4-cynthia-standing-hair-low-recovery','sh4-cynthia-standing-hair-final-watch','sh4-cynthia-standing-hair-final-contained-awaiting-frames','sh4-cynthia-standing-hair-held-result']}
+  sh4_cynthia_velasquez_victim_16:{id:'sh4-cynthia-hair-standing-axis',entry:17,retreat:0,recoil:0,roundDim:.2,outroHold:true,poses:['sh4-cynthia-standing-hair-entry','sh4-cynthia-standing-hair-muted-threat','sh4-cynthia-standing-hair-watch','sh4-cynthia-standing-hair-low-recovery','sh4-cynthia-standing-hair-final-watch','sh4-cynthia-standing-hair-final-contained-awaiting-frames','sh4-cynthia-standing-hair-held-result']},
+  sh3_closer_church_variant:{id:'sh3-church-closer-own-arm-weight',entry:17,entryDelay:.22,retreat:0,recoil:6,outroHold:true,
+    poses:['sh3-church-closer-arms-drawn-entry',null,'sh3-church-closer-arms-ready-round-watch','sh3-church-closer-heavy-arm-support-recovery','sh3-church-closer-arms-relaxed-final-watch','sh3-church-closer-final-arm-weight-at-rest','sh3-church-closer-held-church-variant-result']},
+  sh4_jasper_gein_victim_17:{id:'sh4-jasper-burned-body-and-metal-candlestick',entry:14,entryDelay:.1,retreat:0,recoil:0,roundDim:.12,finalDim:.28,outroHold:true,
+    poses:['sh4-jasper-burned-body-candlestick-entry',null,'sh4-jasper-candlestick-low-burning-watch','sh4-jasper-candlestick-held-recoverable-suppression','sh4-jasper-candlestick-relaxed-burning-presence','sh4-jasper-flames-suppressed-ghost-body-retained','sh4-jasper-candlestick-held-no-final-death']},
+  sh4_andrew_desalvo_victim_18:{id:'sh4-andrew-bloated-body-roll-axis',entry:23,retreat:0,recoil:10,roundDim:.08,finalDim:.32,outroHold:true,
+    poses:['sh4-andrew-bloated-ghost-approach',null,'sh4-andrew-barrel-axis-reoriented-watch','sh4-andrew-bloated-body-low-support-recovery','sh4-andrew-barrel-roll-released-final-watch','sh4-andrew-bloated-ghost-suppressed-without-sword','sh4-andrew-body-held-no-pit-or-final-death']},
+  sh4_richard_braintree_victim_19:{id:'sh4-richard-feet-crowbar-and-short-shift',entry:19,retreat:0,recoil:7,roundDim:.09,finalDim:.24,exitJump:43,exitJumpAt:.64,
+    poses:['sh4-richard-feet-walk-crowbar-entry',null,'sh4-richard-stuttering-crowbar-round-watch','sh4-richard-crowbar-foot-support-recovery','sh4-richard-crowbar-relaxed-final-watch','sh4-richard-crowbar-suppressed-body-retained','sh4-richard-short-position-shift']},
+  homecoming_swarm:{id:'homecoming-swarm-existing-group-redistribution',entry:29,retreat:38,recoil:0,roundDim:.16,
+    poses:['hc-swarm-existing-group-entry',null,'hc-swarm-separated-individuals-regroup-watch','hc-swarm-existing-group-recoverable-dispersal','hc-swarm-detached-group-collects-after-result','hc-swarm-final-group-dispersal-awaiting-individual-frames','hc-swarm-existing-individuals-leave-frame']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 function presentationStaging(actor) {
@@ -889,11 +915,16 @@ export function cinematicSummary(definitionId) {
 export function lorePresentation(actor,key) {
   const data=dataOf(actor),ref=sourceOf(actor),proposal=proposalFor(actor,key);
   const contextId=`${data.id}:${proposalKey(key)}`;
-  const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=presentationStaging(actor);
+  const recipe=RECIPES[FIGHTER_RECIPES[data.id]]||PRESENTATION_ONLY_RECIPES[data.id],staging=presentationStaging(actor);
+  const specific=PRESENTATION_ONLY_RECIPES[data.id],policy=combatPolicy(actor);
+  const ownEdition=!specific||(data.year===specific.sourceYear&&(!specific.edition||ref?.referenceEdition===specific.edition)&&
+    (!Object.keys(policy).length||(policy.id===data.id&&policy.source===data.source&&policy.edition===(specific.edition||specific.source))));
+  const authored=ref?.source===data.source&&ownEdition&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.source||recipe.source===data.source)&&(!recipe.presentationKeys||recipe.presentationKeys.includes(key))&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data);
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data),
+    authored,hasComposedOutro:authored&&key==='outro'&&Object.hasOwn(PRESENTATION_ONLY_RECIPES,data.id)&&combatPolicy(actor).canMove!==false&&Boolean(staging?.exitJump||staging?.retreat),
     stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
+    scopeNote:recipe?.scopeNote||null,
     reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
 }
 
@@ -943,14 +974,20 @@ export function sampleLorePresentation(actor,presentation) {
   const staging=presentationStaging(actor);
   if(staging&&ref.stagingId===staging.id){
     const pose=staging.poses[PRESENTATION_POSE_INDEX[key]];
-    if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(p)):0,
+    if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(clamp((p-(staging.entryDelay||0))/(1-(staging.entryDelay||0))))):0,
       y:locomotion&&combatPolicy(actor).canJump!==false&&staging.landing?-staging.landing*(1-ease(p)):0,
       alpha:clamp(p*4),pose};
     if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1-(staging.roundDim||0)*Math.sin(p*Math.PI),
       pose:p<.6?pose:pose+'-ready'};
     if(key==='loseMatch'&&staging.finalFade)return {x:0,y:0,alpha:1-ease(p),pose};
+    if(key==='loseMatch'&&staging.finalDim)return {x:0,y:0,alpha:1-staging.finalDim*ease(p),pose};
     if(key==='outro'&&staging.outroHold)return {...neutral(),pose};
+    if(key==='outro'&&locomotion&&staging.exitJump){
+      const at=staging.exitJumpAt,shifted=p>=at;
+      return {x:shifted?-facing*staging.exitJump:0,y:0,
+        alpha:shifted?ease(clamp((p-at)/.18)):1-ease(clamp((p-at+.18)/.18)),pose:pose+(shifted?'-after-shift':'-before-shift')};
+    }
     if(key==='outro'&&(locomotion||staging.exitFade))return {x:locomotion?-facing*staging.retreat*ease(p):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?-(staging.ascent||0)*ease(p):0,alpha:1-clamp((p-.6)/.4),pose};
     return {...neutral(),pose:pose||'hold'};
@@ -971,6 +1008,7 @@ export function sampleLorePresentation(actor,presentation) {
 }
 
 export const LORE_CINEMATIC_COVERAGE=Object.freeze({fighterIds:Object.freeze(Object.keys(FIGHTER_RECIPES)),recipes:Object.freeze(Object.keys(RECIPES)),
+  presentationOnlyIds:Object.freeze(Object.keys(PRESENTATION_ONLY_RECIPES)),
   presentationStagingIds:Object.freeze(Object.keys(PRESENTATION_STAGING)),
   stageIds:Object.freeze(Object.keys(STAGE_RECIPES)),fidelity:'original-versus-staging',animatedImagesCreated:0});
 

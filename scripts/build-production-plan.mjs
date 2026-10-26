@@ -11,6 +11,7 @@ import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
 import {SOURCE_TIMING_SCHEMA,SOURCE_TIMING_BATCH_SCHEMA,SOURCE_TIMING_REVIEW_SCHEMA} from './source-timing.mjs';
+import {sourcePoseSpecification} from './source-pose-specifications.mjs';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
@@ -22,6 +23,14 @@ export const COMBAT_ROLES = ['combatant','stationary-boss','multi-body','scripte
 const root = fileURLToPath(new URL('../', import.meta.url));
 const planDir = path.join(root, 'docs/production');
 const stageAnimationBaseline=JSON.parse(await fs.readFile(path.join(planDir,'research/stage-animation-baseline.json'),'utf8')).rows;
+// Keep unresolved delivery limits visible in the exported Excel rows and tasks.
+// These are production notes only; they do not change the game's capabilities.
+const recordedBlocks=(await Promise.all(['art','stages'].map(async workstream=>{
+  try{
+    const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/lot9-${workstream}.json`),'utf8'));
+    return (ledger.items||[]).filter(item=>item.status==='blocked').map(item=>({...item,workstream}));
+  }catch(error){if(error.code==='ENOENT')return [];throw error;}
+}))).flat();
 const text = value => typeof value === 'string' ? value : value == null ? '' : Array.isArray(value) ? value.map(text).join(' / ') : JSON.stringify(value);
 const genitiveName = name => /^[aeiouyàâéèêëîïôûùüœ]/i.test(name)?`d’${name}`:`de ${name}`;
 const unique = values => [...new Set(values.filter(Boolean))];
@@ -197,6 +206,8 @@ function stageBitmapProgress(stage){
 function plannedPose(fighter, ref, pose) {
   const base=`Conserver les contraintes de la fiche ${fighter.id}.`;
   if(isBlocked(ref.identityStatus)||ref.combatRole==='unverified')return 'Attendre une référence de cette version avant de dessiner cette pose.';
+  const sourcePose=sourcePoseSpecification(fighter,ref,pose);
+  if(sourcePose)return sourcePose.description;
   if(isNonCombat(ref.identityStatus)||['scripted-encounter','environmental-obstacle','noncombatant'].includes(ref.combatRole))return 'Vérifier le rôle dans la fiche : ne pas forcer une posture de combattant sur une apparition, un obstacle ou un élément de décor.';
   if(ref.combatRole==='stationary-boss'){
     const fixed={
@@ -237,7 +248,8 @@ function runtimeReferenceNote(profile){
   const stagger=nonDamagingStagger({id:profile.referencePolicy.id,source:profile.referencePolicy.source},profile.moves.downSpecial);
   if(stagger)return `Coup de sol du Split Worm : 0 dégât de santé, déséquilibre local des cibles au sol ; pas de chip, riposte, vol de vie, jauge ni crédit de dégâts. ${stagger.frames} ticks de déséquilibre et garde accroupie adaptés au versus ; aucun timing source mesuré.`;
   const field=profile.referencePolicy.proximityField;
-  if(field)return `Champ passif local d’Incubator : rayon ${field.radius} px, ${field.damage} dégât(s), chute ${field.knockdown} ticks, récupération ${field.cooldown} ticks ; aucune jauge ni combo gratuits. Portée, dégâts et durées adaptés au versus. Décharges bleues, RGB de travail sans palette source certifiée.`;
+  if(field?.id==='incubator-proximity'&&policy.id==='sh1_incubator_018')return `Champ passif local d’Incubator : rayon ${field.radius} px, ${field.damage} dégât(s), chute ${field.knockdown} ticks, récupération ${field.cooldown} ticks ; aucune jauge ni combo gratuits. Portée, dégâts et durées adaptés au versus. Décharges bleues, RGB de travail sans palette source certifiée.`;
+  if(field?.kind==='drain'&&policy.source==='sh4')return `Présence passive locale du fantôme SH4 : rayon ${field.radius} px, ${field.damage} dégât(s), récupération ${field.cooldown} ticks${field.bonusDamage?`, complément brûlant de ${field.bonusDamage} dégâts`:''}. Rayon, dégâts et durées sont des réglages du versus ; aucune mesure originale ni image d’animation validée.`;
   if(profile.referencePolicy.id==='sh1_incubus_019')return 'Décharges rouges propres à Incubus ; RGB de travail sans palette source certifiée. Aucun champ passif de proximité emprunté à Incubator.';
   if(profile.referencePolicy.id==='sh3_missionary_047'&&profile.referencePolicy.defense?.frontalVisibleBullets)return 'Défense du Missionary SH3 : balles visibles arrêtées de face en posture disponible ; dos, chute, attaque et tir silencieux restent vulnérables. Aucun contre ni gain de jauge automatique. États et fenêtres adaptés au versus, sans timings source mesurés.';
   const phases=profile.moveset.weaponPhases;
@@ -247,6 +259,21 @@ function runtimeReferenceNote(profile){
   }
   const ammo=profile.moveset.ammoProfile;
   if(ammo?.disarmBelowHealthRatio)return `Pistolet : ${ammo.capacity} tirs ; abandon après épuisement ou santé strictement sous ${ammo.disarmBelowHealthRatio*100} %. La balle renverse la cible ; dégâts et durée de chute restent ceux du versus. Phase désarmée persistante, balles non tirées conservées mais inutilisables ; raccord de versus sans animation source certifiée.`;
+  return '';
+}
+
+function runtimeMoveReferenceNote(profile,move){
+  const policy=profile.referencePolicy,keys=['neutralSpecial','forwardSpecial','airSpecial','super','desperation'];
+  if(policy.id==='sh3_god_050'&&policy.groundProjectiles?.slots.includes(move.key))
+    return 'Feu porté par le sol : trajet bas au lieu d’un tir à hauteur du torse. Hauteur, vitesse et collisions adaptées au versus ; aucune trajectoire ou image originale mesurée.';
+  if(policy.suspendedStruggles?.slots.includes(move.key))
+    return `Prise suspendue par les pieds : levée locale et dégagement par ${policy.suspendedStruggles.escapeTransitions} alternances gauche/droite du versus. Libération et fin de manche nettoient la suspension ; aucune animation de lutte originale produite.`;
+  if(policy.contactBands?.[move.key])
+    return 'Zone de contact propre au membre documenté, distincte de la grande hauteur du corps fixe. Bande de collision réglée pour le versus, sans géométrie source mesurée.';
+  if(policy.sensoryParalysis?.slots.includes(move.key))
+    return 'Cri avec paralysie sensorielle locale : déplacement, attaque, garde et esquive bloqués jusqu’à libération. Durée, portée et dégâts sont des réglages du versus, sans timing original mesuré.';
+  if((['sh1_groaner_003','sh1_wormhead_004','sh4_andrew_desalvo_victim_18'].includes(policy.id)&&keys.includes(move.key))||(policy.id==='downpour_screamer_104'&&move.key==='forwardSpecial'))
+    return 'Passage aérien physique avec continuité du corps et contact rapproché ; aucune téléportation. Arc, vitesse, hauteur et dégâts du versus ne constituent pas un cycle animé ou des mesures de la source.';
   return '';
 }
 
@@ -284,6 +311,8 @@ function applyRuntimeProgress(plan){
       if(row.productionStatus==='Rôle à décider')row.productionStatus='À tester';
     }
     if(weaponNote)row.canonicalVerification+=' '+weaponNote;
+    const movementNote=runtimeMoveReferenceNote(profile,m);
+    if(movementNote)row.canonicalVerification+=' '+movementNote;
     if(m.ammoCost)row.canonicalVerification+=` Consomme ${m.ammoCost} munition(s) ; réserve ${profiles.get(row.fighterId).moveset.ammoProfile?.capacity||0}.`;
     row.target=(row.enabled?'Règle active de versus : ':'Règle inactive : ')+(m.canonicalBasis||'')+'\n'+row.target;
     if(profile.moveset.weaponPhases?.length){
@@ -440,7 +469,7 @@ export function buildProductionPlan(research) {
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
     updatedAt:'2026-10-26',
-    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes au neuvième lot. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -519,6 +548,17 @@ export function buildProductionPlan(research) {
   Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
   const runtimeProgress=applyRuntimeProgress(plan);
+  for(const block of recordedBlocks){
+    const collection=block.workstream==='art'?'poses':'stageAnimations';
+    const row=plan[collection].find(row=>row.id===block.rowId);
+    if(block.collection!==collection||!row||(row.fighterId||row.stageId)!==block.entityId||!block.reason?.trim())
+      throw Error('Invalid recorded production block: '+block.rowId);
+    if(block.workstream==='art'&&SPRITES[block.entityId])continue;
+    const note=`Blocage de production du lot 9 (${block.rowId}) : ${block.reason} ${block.limits}`;
+    row.existing+=' '+note;
+    const task=plan.tasks.find(task=>task.id===block.entityId+(block.workstream==='art'?':art':':stage'));
+    if(task)task.reason+=' '+note;
+  }
   plan.metrics={fighters:plan.fighters.length,stages:plan.stages.length,moves:plan.moves.length,supers:plan.moves.filter(m=>['super','desperation'].includes(m.key)).length,fighterFinishers:plan.finishers.filter(f=>f.entityType==='Combattant').length,stageFinishers:plan.finishers.filter(f=>f.entityType==='Arène').length,presentations:plan.presentations.length,poses:plan.poses.length,stageAnimations:plan.stageAnimations.length,observations:plan.observations.length,sources:plan.sources.length,tasks:plan.tasks.length,pngCandidates:plan.fighters.filter(f=>SPRITES[f.id]).length,animatedClips:plan.fighters.reduce((n,f)=>n+f.animatedClips,0),certifiedOneToOne:0,newGameplaySequences:runtimeProgress.authoredFinishers,presentationHooks:PRESENTATION_KEYS.length,openActions:plan.tasks.filter(t=>t.status!=='Validé').length,openP0:plan.tasks.filter(t=>t.status!=='Validé'&&t.priority==='P0').length,...runtimeProgress};
   return plan;
 }

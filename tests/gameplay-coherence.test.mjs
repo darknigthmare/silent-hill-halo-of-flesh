@@ -6,7 +6,7 @@ import { localEventAllowed,localHazardAllowed,localAnimationAllowed } from '../s
 import { stageSpace } from '../src/stage-architecture.js';
 import { drawStage,drawMonster } from '../src/renderers.js';
 import { drawStageCinematics } from '../src/stage-cinematics.js';
-import { rasterPlacement } from '../src/sprite-system.js';
+import { rasterPlacement,spriteFor } from '../src/sprite-system.js';
 import { FightEngine } from '../src/fight.js';
 
 const fighter = kind=>ROSTER.find(f=>f.visual.kind===kind);
@@ -42,7 +42,7 @@ test('child and giant raster calibration applies the existing body scale exactly
   for(const kind of ['child','giant']){const f=fighter(kind),p=bodyProfile(f),image=rasterPlacement(f,frame,640,594);assert.equal(image.height*frame.bodyHeight,p.height*p.scale);assert.ok(Math.abs(image.width/image.height-frame.width/frame.height)<1e-12);}
 });
 test('crouching collision stays at .68 while unavailable art is not falsely squash-animated',()=>{
-  const f=fighter('nurse'),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});
+  const f=ROSTER.find(f=>f.visual.kind==='nurse'&&!spriteFor(f)),a={data:f,x:640,y:594};const r=recorder();drawMonster(r.context,f,640,594,{state:{crouching:true}});
   assert.ok(Math.abs(bodyBox({...a,crouching:true}).h/bodyBox(a).h-.68)<1e-12);
   assert.ok(!r.calls.some(c=>c[0]==='scale'),'No geometric fallback or squashed standing pose is synthesized.');
   assert.ok(r.calls.some(c=>c[0]==='fillText'&&c[1]==='VISUEL À PRODUIRE'));

@@ -1784,14 +1784,14 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "PALIER DE L’ESCALIER",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -1820,9 +1820,13 @@
       "intensity": 1.07,
       "arenaInset": 108,
       "hazardDeck": [],
-      "events": [],
+      "events": [
+        "referenceRailingReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceRailingReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [],
@@ -1872,11 +1876,11 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "blue_creek:decay:wetConcrete:fixed-normal::"
+      "signature": "blue_creek:decay:wetConcrete:fixed-normal::referenceRailingReply"
     },
     "gameplay": {
       "arenaInset": 108,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -1884,14 +1888,32 @@
     },
     "layers": [
       "hallway",
-      "doors",
-      "windows",
       "stairs",
       "bars",
       "water"
     ],
     "animationTracks": [],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "blue_creek_referenceRailingReply_1",
+        "event": "referenceRailingReply",
+        "name": "Rampe fixée au-dessus de l’escalier noyé",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Un choc contre la rampe produit une vibration métallique et une goutte dans l’eau.",
+        "referenceIds": [
+          "CL_SH2_03_BLUE_CREEK_APTS"
+        ],
+        "proposalId": "blue_creek:reference:3",
+        "zone": {
+          "x": 0.55,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "blue_creek",
       "source": "sh2",
@@ -1974,13 +1996,47 @@
         "captureStatus": "storyboard-a-valider",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "blue_creek:reference:3",
+        "key": "blueStairRailReply",
+        "name": "Rampe fixée au-dessus de l’escalier noyé",
+        "description": "Un choc contre la rampe produit une vibration métallique et une goutte dans l’eau.",
+        "proposalIndex": 2,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_03_BLUE_CREEK_APTS"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.55,
+          "y": 0.56
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceRailingReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Rampe fixée au-dessus de l’escalier noyé",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Palier nord Blue Creek, duel SH2 original avant drainage",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceRailingReply"
+      ],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PALIER DE L’ESCALIER",
+        "description": "Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "AVANT LE DRAINAGE",
       "weather": "water",
       "interior": true,
       "baselineMotion": true,
@@ -2028,11 +2084,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "blue_creek:reference:2"
+        "blue_creek:reference:2",
+        "blue_creek:reference:3"
       ],
       "pendingProposalIds": [
         "blue_creek:reference:1",
-        "blue_creek:reference:3",
         "blue_creek:reference:4"
       ]
     }
@@ -6807,14 +6863,10 @@
     ],
     "weather": "fog",
     "props": [
-      "townhall",
-      "road",
-      "trees"
+      "road"
     ],
     "hazard": "staticBurst",
-    "animations": [
-      "streetLightFlicker"
-    ],
+    "animations": [],
     "fatality": {
       "id": "shepherds_glen_fatality",
       "name": "CHUTE DANS LA BRUME",
@@ -6837,14 +6889,14 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "TROTTOIR DU PANNEAU",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.62,
@@ -6918,6 +6970,11 @@
             "kind": "animation",
             "id": "fogDrift",
             "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "streetLightFlicker",
+            "reason": "Remplacé par une piste précise du classeur."
           }
         ]
       },
@@ -6926,7 +6983,7 @@
     },
     "gameplay": {
       "arenaInset": 74,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": true,
       "verticalPressure": false,
@@ -6935,19 +6992,9 @@
     "layers": [
       "facades",
       "road",
-      "fog-bank",
-      "townhall",
-      "trees"
+      "fog-bank"
     ],
-    "animationTracks": [
-      {
-        "id": "streetLightFlicker",
-        "phase": "fog",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "shepherds_glen",
@@ -7035,13 +7082,71 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "shepherds_glen:reference:2",
+        "key": "shepherdMissingNotices",
+        "name": "Affiches sur le panneau de disparus",
+        "description": "Affiches de disparus agitées sur panneau",
+        "proposalIndex": 1,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Affiches sur le panneau de disparus",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Panneau extérieur de la première rencontre Elle, Homecoming",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Panneau et papiers de la capture ; frémissement authored de quelques coins. Aucun visage, nom de disparu lisible, Elle ou plan de Town Hall importé."
+      },
+      {
+        "id": "shepherds_glen:reference:3",
+        "key": "shepherdNoticeLampFog",
+        "name": "Lampe au-dessus du panneau de disparus",
+        "description": "Faisceau de lampadaire affaibli par le brouillard",
+        "proposalIndex": 2,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.25
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Lampe au-dessus du panneau de disparus",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Même panneau extérieur Shepherd’s Glen sous la brume",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Lampe réelle du panneau ; atténuation de faisceau par la brume proposée. Sans extinction narrative, choc électrique, éclair ou lampadaire déplacé depuis un autre quartier."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "TROTTOIR DU PANNEAU",
+        "description": "Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "PANNEAU DE LA RENCONTRE ELLE",
       "weather": "fog",
       "interior": false,
       "baselineMotion": true,
@@ -7080,15 +7185,20 @@
           "kind": "animation",
           "id": "fogDrift",
           "reason": "Remplacé par une piste précise du classeur."
+        },
+        {
+          "kind": "animation",
+          "id": "streetLightFlicker",
+          "reason": "Remplacé par une piste précise du classeur."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "shepherds_glen:reference:1"
+        "shepherds_glen:reference:1",
+        "shepherds_glen:reference:2",
+        "shepherds_glen:reference:3"
       ],
       "pendingProposalIds": [
-        "shepherds_glen:reference:2",
-        "shepherds_glen:reference:3",
         "shepherds_glen:reference:4"
       ]
     }
@@ -7104,11 +7214,7 @@
       "#030202"
     ],
     "weather": "dust",
-    "props": [
-      "elevator",
-      "dolls",
-      "boiler"
-    ],
+    "props": [],
     "hazard": "emberFall",
     "animations": [
       "lampFlicker"
@@ -7135,14 +7241,14 @@
     },
     "terrain": {
       "id": "carpet",
-      "name": "MOQUETTE HUMIDE",
-      "moveScale": 0.92,
-      "jumpScale": 0.96,
-      "dodgeScale": 0.9,
-      "friction": 0.76,
-      "knockbackScale": 0.88,
-      "guardRegenScale": 1.04,
-      "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+      "name": "SOL DE L’ATRIUM",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -7171,9 +7277,13 @@
       "intensity": 1.13,
       "arenaInset": 104,
       "hazardDeck": [],
-      "events": [],
+      "events": [
+        "referenceSupportReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceSupportReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -7214,23 +7324,18 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "grand_hotel:rust:carpet:fixed-normal::"
+      "signature": "grand_hotel:rust:carpet:fixed-normal::referenceSupportReply"
     },
     "gameplay": {
       "arenaInset": 104,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
     "layers": [
-      "lobby",
-      "portraits",
-      "firelight",
-      "elevator",
-      "dolls",
-      "boiler"
+      "lobby"
     ],
     "animationTracks": [
       {
@@ -7241,7 +7346,28 @@
         "cadence": "continuous"
       }
     ],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "grand_hotel_referenceSupportReply_1",
+        "event": "referenceSupportReply",
+        "name": "Support suspendu de l’atrium Sepulcher",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Support du boss vibrant après impact",
+        "referenceIds": [
+          "EXT06",
+          "EXT05"
+        ],
+        "proposalId": "grand_hotel:reference:3",
+        "zone": {
+          "x": 0.73,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "grand_hotel",
       "source": "homecoming",
@@ -7334,13 +7460,48 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "grand_hotel:reference:3",
+        "key": "atriumSupportReply",
+        "name": "Support suspendu de l’atrium Sepulcher",
+        "description": "Support du boss vibrant après impact",
+        "proposalIndex": 2,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06",
+          "EXT05"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.73,
+          "y": 0.28
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceSupportReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Support suspendu de l’atrium Sepulcher",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide décrit les quatre sacs suspendus. Seul leur support abstrait réagit dans le versus ; aucun sac destructible, arbre vivant, Sepulcher, vibration canonique ou lustre inventé."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceSupportReply"
+      ],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SOL DE L’ATRIUM",
+        "description": "Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "ATRIUM SANS SEPULCHER",
       "weather": "dust",
       "interior": true,
       "baselineMotion": true,
@@ -7373,11 +7534,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "grand_hotel:reference:2"
+        "grand_hotel:reference:2",
+        "grand_hotel:reference:3"
       ],
       "pendingProposalIds": [
         "grand_hotel:reference:1",
-        "grand_hotel:reference:3",
         "grand_hotel:reference:4"
       ]
     }
@@ -7690,14 +7851,14 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "COURSIVE BLOCK A",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Coursive Block A de Downpour ; pas de puits, douches ou workshop inondé. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -7726,9 +7887,13 @@
       "intensity": 1.065,
       "arenaInset": 92,
       "hazardDeck": [],
-      "events": [],
+      "events": [
+        "referenceGateReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceGateReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -7769,11 +7934,11 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "overlook:storm:wetConcrete:fixed-normal::"
+      "signature": "overlook:storm:wetConcrete:fixed-normal::referenceGateReply"
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -7783,7 +7948,27 @@
       "cells"
     ],
     "animationTracks": [],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "overlook_referenceGateReply_1",
+        "event": "referenceGateReply",
+        "name": "Battant de fond du Block A Downpour",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Portes vibrant à distance",
+        "referenceIds": [
+          "EXT11"
+        ],
+        "proposalId": "overlook:reference:2",
+        "zone": {
+          "x": 0.72,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "overlook",
       "source": "downpour",
@@ -7870,13 +8055,47 @@
         "captureStatus": "capture-a-relever",
         "locationScope": "Coursive Block A de la prison normale avant la vision du couloir inondé",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux documentés ; déplacement de leur ombre proposé pour le versus, sans corps en cellule, tours, scène des douches, inondation ou prison Homecoming."
+      },
+      {
+        "id": "overlook:reference:2",
+        "key": "overlookDPDoorReply",
+        "name": "Battant de fond du Block A Downpour",
+        "description": "Portes vibrant à distance",
+        "proposalIndex": 1,
+        "source": "downpour",
+        "evidence": [
+          "EXT11"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.72,
+          "y": 0.57
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceGateReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Battant de fond du Block A Downpour",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Coursive Block A normale avant toute chambre inondée, Downpour",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte de coursive retenue fermée ; vibration proposée, sans crime des douches, flooding du workshop, tours ou plan de Homecoming."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceGateReply"
+      ],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "COURSIVE BLOCK A",
+        "description": "Coursive Block A de Downpour ; pas de puits, douches ou workshop inondé. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "BLOCK A AVANT INONDATION",
       "weather": "dust",
       "interior": true,
       "baselineMotion": true,
@@ -7909,10 +8128,10 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "overlook:reference:1"
+        "overlook:reference:1",
+        "overlook:reference:2"
       ],
       "pendingProposalIds": [
-        "overlook:reference:2",
         "overlook:reference:3",
         "overlook:reference:4"
       ]
@@ -10393,11 +10612,7 @@
       "#030101"
     ],
     "weather": "embers",
-    "props": [
-      "lava",
-      "runes",
-      "pillars"
-    ],
+    "props": [],
     "hazard": "emberFall",
     "animations": [],
     "fatality": {
@@ -10415,24 +10630,24 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Zone Fire attestée dans Book of Memories; salle procédurale précise à choisir.",
-      "canonicalBasis": "EXT21",
+      "premise": "Zone Fire attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : deux vues de la galerie datée16octobre2012 montrent des sols et parois industriels, grilles et lueurs chaudes. Elles guident un cadre de salle adapté au versus sans identifier toute la géométrie procédurale ; personnages, HUD, attaques et dangers des captures sont exclus.",
+      "canonicalBasis": "EXT21 ; EXT9_BOM_FIRE_VIEW_01_20261026 ; EXT9_BOM_FIRE_VIEW_02_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "ash",
-      "name": "CENDRES ET GRILLE",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 0.96,
-      "friction": 0.83,
-      "knockbackScale": 1.02,
-      "guardRegenScale": 0.92,
-      "description": "La cendre masque les appuis et accompagne les transformations industrielles."
+      "name": "PASSAGE DEVANT LES GRILLES FIRE",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Salle industrielle de la vue Vita du16octobre2012 ; feu sous les grilles, pas lave extérieure. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
-      "fog": 0.28,
+      "fog": 0.2,
       "darkness": 0.26,
       "radioScale": 0.7392,
       "silhouetteRange": 576,
@@ -10508,20 +10723,13 @@
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
-    "layers": [
-      "elemental-field",
-      "glyphs",
-      "void",
-      "lava",
-      "runes",
-      "pillars"
-    ],
+    "layers": [],
     "animationTracks": [],
     "interactions": [],
     "reference": {
@@ -10532,9 +10740,11 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "FIRE ZONE",
       "correctedName": null,
-      "locationNote": "Zone Fire attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "locationNote": "Zone Fire attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : deux vues de la galerie datée16octobre2012 montrent des sols et parois industriels, grilles et lueurs chaudes. Elles guident un cadre de salle adapté au versus sans identifier toute la géométrie procédurale ; personnages, HUD, attaques et dangers des captures sont exclus.",
       "referenceIds": [
-        "EXT21"
+        "EXT21",
+        "EXT9_BOM_FIRE_VIEW_01_20261026",
+        "EXT9_BOM_FIRE_VIEW_02_20261026"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -10584,16 +10794,74 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "book_fire:reference:1",
+        "key": "bomFireGrateGlow",
+        "name": "Feu visible sous une grille industrielle",
+        "description": "Langues de flamme entre dalles",
+        "proposalIndex": 0,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.55
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Feu visible sous une grille industrielle",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Salle Fire illustrée le 16 octobre 2012, grilles industrielles, Vita",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Grilles et lueurs de feu documentées, langues lumineuses proposées sous le plan de fond ; aucun obstacle ou dégâts passifs, Guardian ou lave de volcan importée."
+      },
+      {
+        "id": "book_fire:reference:2",
+        "key": "bomFireEmberDepth",
+        "name": "Braises derrière la grille Fire",
+        "description": "Braises ascendantes",
+        "proposalIndex": 1,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Braises derrière la grille Fire",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Même salle industrielle Fire Vita, sans entrée du Guardian",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Braises ascendantes authored depuis le motif de feu ; cette photo ne mesure ni leur existence animée exacte, ni cadence ou trajectoire. Elles restent confinées au fond."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-altered",
       "allowedEvents": [],
       "allowedHazards": [
         "emberFall"
       ],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PASSAGE DEVANT LES GRILLES FIRE",
+        "description": "Salle industrielle de la vue Vita du16octobre2012 ; feu sous les grilles, pas lave extérieure. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
       "weather": "embers",
-      "interior": false,
+      "interior": true,
       "baselineMotion": true,
       "suppression": [
         {
@@ -10628,10 +10896,11 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
-      "pendingProposalIds": [
+      "renderedProposalIds": [
         "book_fire:reference:1",
-        "book_fire:reference:2",
+        "book_fire:reference:2"
+      ],
+      "pendingProposalIds": [
         "book_fire:reference:3",
         "book_fire:reference:4"
       ]
@@ -10650,8 +10919,7 @@
     "weather": "spores",
     "props": [
       "roots",
-      "moss",
-      "runes"
+      "moss"
     ],
     "hazard": "petalBloom",
     "animations": [],
@@ -10670,21 +10938,21 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Zone Wood attestée dans Book of Memories; salle procédurale précise à choisir.",
-      "canonicalBasis": "EXT21",
+      "premise": "Zone Wood attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée16octobre2012 montre une arène terreuse avec branches nues et pierres près du Wood Guardian. Le prototype peut reprendre les matériaux visibles sans importer le boss, ses rejetons, leur zone de contact ou une disposition procédurale prétendue fixe.",
+      "canonicalBasis": "EXT21 ; EXT9_BOM_WOOD_VIEW_06_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "ritualStone",
-      "name": "PIERRE RITUELLE",
-      "moveScale": 0.97,
-      "jumpScale": 0.94,
-      "dodgeScale": 0.94,
-      "friction": 0.83,
-      "knockbackScale": 1.02,
-      "guardRegenScale": 0.88,
-      "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+      "name": "CLAIRIÈRE WOOD",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Lisière de l’arène Wood de la vue Vita du16octobre2012 ; aucun Guardian de fond. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.28,
@@ -10715,9 +10983,13 @@
       "hazardDeck": [
         "rootSnare"
       ],
-      "events": [],
+      "events": [
+        "referenceBarkReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceBarkReply"
+        ],
         "hazards": [
           "rootSnare"
         ],
@@ -10764,11 +11036,11 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "book_wood:elemental:ritualStone:fixed-altered:rootSnare:"
+      "signature": "book_wood:elemental:ritualStone:fixed-altered:rootSnare:referenceBarkReply"
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -10776,14 +11048,31 @@
     },
     "layers": [
       "elemental-field",
-      "glyphs",
-      "void",
       "roots",
-      "moss",
-      "runes"
+      "moss"
     ],
     "animationTracks": [],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "book_wood_referenceBarkReply_1",
+        "event": "referenceBarkReply",
+        "name": "Écorce de l’arbre de lisière",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Poussière d’écorce après impact",
+        "referenceIds": [
+          "EXT21"
+        ],
+        "proposalId": "book_wood:reference:3",
+        "zone": {
+          "x": 0.22,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "book_wood",
       "source": "bom",
@@ -10792,9 +11081,10 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "WOOD ZONE",
       "correctedName": null,
-      "locationNote": "Zone Wood attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "locationNote": "Zone Wood attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée16octobre2012 montre une arène terreuse avec branches nues et pierres près du Wood Guardian. Le prototype peut reprendre les matériaux visibles sans importer le boss, ses rejetons, leur zone de contact ou une disposition procédurale prétendue fixe.",
       "referenceIds": [
-        "EXT21"
+        "EXT21",
+        "EXT9_BOM_WOOD_VIEW_06_20261026"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -10870,15 +11160,74 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "book_wood:reference:1",
+        "key": "bomWoodBareBranches",
+        "name": "Branches nues au bord de l’arène Wood",
+        "description": "Branches frémissantes",
+        "proposalIndex": 0,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Branches nues au bord de l’arène Wood",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Clairière du Wood Guardian illustrée le 16 octobre 2012, Guardian exclu",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Arbres et branches de la lisière seulement, sans corps du Guardian ; petit frémissement proposé. Pas une chambre intérieure de planches empruntée à une autre capture."
+      },
+      {
+        "id": "book_wood:reference:3",
+        "key": "bomWoodBarkReply",
+        "name": "Écorce de l’arbre de lisière",
+        "description": "Poussière d’écorce après impact",
+        "proposalIndex": 2,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.22,
+          "y": 0.5
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceBarkReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Écorce de l’arbre de lisière",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Même lisière Wood Vita, impact près du tronc abstrait gauche",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Courte poussière authored après impact local ; arbre fixe, pas de débris offensifs, déracinement, membre du Guardian ou silhouette ennemie."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-altered",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceBarkReply"
+      ],
       "allowedHazards": [
         "rootSnare"
       ],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "CLAIRIÈRE WOOD",
+        "description": "Lisière de l’arène Wood de la vue Vita du16octobre2012 ; aucun Guardian de fond. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
       "weather": "spores",
       "interior": false,
       "baselineMotion": true,
@@ -10916,11 +11265,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "book_wood:reference:2"
+        "book_wood:reference:2",
+        "book_wood:reference:1",
+        "book_wood:reference:3"
       ],
       "pendingProposalIds": [
-        "book_wood:reference:1",
-        "book_wood:reference:3",
         "book_wood:reference:4"
       ]
     }
@@ -11486,7 +11835,6 @@
     "weather": "dust",
     "props": [
       "rocks",
-      "runes",
       "cracks"
     ],
     "hazard": "fallingDebris",
@@ -11506,24 +11854,24 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Zone Earth attestée dans Book of Memories; salle procédurale précise à choisir.",
-      "canonicalBasis": "EXT21",
+      "premise": "Zone Earth attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée6juin2012 montre une pièce sombre avec matériaux terreux, bois et récipients. Il s’agit d’une préversion ; ni pièce finale, ni disposition, mouvement ou physique de la version commerciale ne sont confirmés. Aucun personnage, arme, HUD ou danger ne doit être importé.",
+      "canonicalBasis": "EXT21 ; EXT9_BOM_EARTH_VIEW_37_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "ritualStone",
-      "name": "PIERRE RITUELLE",
-      "moveScale": 0.97,
-      "jumpScale": 0.94,
-      "dodgeScale": 0.94,
-      "friction": 0.83,
-      "knockbackScale": 1.02,
-      "guardRegenScale": 0.88,
-      "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+      "name": "PASSAGE DE LA GALERIE EARTH",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Galerie de la préversion du6juin2012 ; pas d’état final commercial ou de plan certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
-      "fog": 0.28,
+      "fog": 0.2,
       "darkness": 0.26,
       "radioScale": 0.7392,
       "silhouetteRange": 576,
@@ -11551,9 +11899,13 @@
       "hazardDeck": [
         "fallingDebris"
       ],
-      "events": [],
+      "events": [
+        "referenceEarthBlockReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceEarthBlockReply"
+        ],
         "hazards": [
           "fallingDebris"
         ],
@@ -11595,11 +11947,11 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "book_earth:elemental:ritualStone:fixed-altered:fallingDebris:"
+      "signature": "book_earth:elemental:ritualStone:fixed-altered:fallingDebris:referenceEarthBlockReply"
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -11607,14 +11959,31 @@
     },
     "layers": [
       "elemental-field",
-      "glyphs",
-      "void",
       "rocks",
-      "runes",
       "cracks"
     ],
     "animationTracks": [],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "book_earth_referenceEarthBlockReply_1",
+        "event": "referenceEarthBlockReply",
+        "name": "Bloc retenu dans la paroi minière",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Tremblement d’un bloc après impact",
+        "referenceIds": [
+          "EXT21"
+        ],
+        "proposalId": "book_earth:reference:3",
+        "zone": {
+          "x": 0.74,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "book_earth",
       "source": "bom",
@@ -11623,9 +11992,10 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "EARTH ZONE",
       "correctedName": null,
-      "locationNote": "Zone Earth attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "locationNote": "Zone Earth attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée6juin2012 montre une pièce sombre avec matériaux terreux, bois et récipients. Il s’agit d’une préversion ; ni pièce finale, ni disposition, mouvement ou physique de la version commerciale ne sont confirmés. Aucun personnage, arme, HUD ou danger ne doit être importé.",
       "referenceIds": [
-        "EXT21"
+        "EXT21",
+        "EXT9_BOM_EARTH_VIEW_37_20261026"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -11701,17 +12071,76 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "book_earth:reference:1",
+        "key": "bomEarthGravelRoll",
+        "name": "Petites pierres dans la galerie minière Earth",
+        "description": "Graviers qui roulent",
+        "proposalIndex": 0,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.6
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Petites pierres dans la galerie minière Earth",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Galerie Earth de la capture du 6 juin 2012, préversion datée",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Roches et galerie attestées pour cette préversion ; roulement authored de trois pierres de fond, sans pente jouable ni état final de la version commerciale certifié."
+      },
+      {
+        "id": "book_earth:reference:3",
+        "key": "bomEarthBlockReply",
+        "name": "Bloc retenu dans la paroi minière",
+        "description": "Tremblement d’un bloc après impact",
+        "proposalIndex": 2,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.74,
+          "y": 0.48
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceEarthBlockReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Bloc retenu dans la paroi minière",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Même galerie Earth préversion juin 2012, hors trajet de duel",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Bloc mural abstrait et secousse proposés, sans détachement, chute, Earth Guardian ou emprunt au dispositif Steel. Dimensions, mouvement et état final non confirmés."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-altered",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceEarthBlockReply"
+      ],
       "allowedHazards": [
         "fallingDebris"
       ],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PASSAGE DE LA GALERIE EARTH",
+        "description": "Galerie de la préversion du6juin2012 ; pas d’état final commercial ou de plan certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
       "weather": "dust",
-      "interior": false,
+      "interior": true,
       "baselineMotion": true,
       "suppression": [
         {
@@ -11742,11 +12171,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "book_earth:reference:2"
+        "book_earth:reference:2",
+        "book_earth:reference:1",
+        "book_earth:reference:3"
       ],
       "pendingProposalIds": [
-        "book_earth:reference:1",
-        "book_earth:reference:3",
         "book_earth:reference:4"
       ]
     }
@@ -11762,11 +12191,7 @@
       "#030101"
     ],
     "weather": "blood",
-    "props": [
-      "veins",
-      "runes",
-      "pools"
-    ],
+    "props": [],
     "hazard": "bloodTide",
     "animations": [],
     "fatality": {
@@ -11791,14 +12216,14 @@
     },
     "terrain": {
       "id": "ritualStone",
-      "name": "PIERRE RITUELLE",
-      "moveScale": 0.97,
-      "jumpScale": 0.94,
-      "dodgeScale": 0.94,
-      "friction": 0.83,
-      "knockbackScale": 1.02,
-      "guardRegenScale": 0.88,
-      "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+      "name": "BORD DES PLATEFORMES BLOOD",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Surface rouge de la préversion du6juin2012 ; liquidité et écoulement non confirmés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.28,
@@ -11877,19 +12302,14 @@
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
     "layers": [
-      "elemental-field",
-      "glyphs",
-      "void",
-      "veins",
-      "runes",
-      "pools"
+      "elemental-field"
     ],
     "animationTracks": [],
     "interactions": [],
@@ -11953,14 +12373,46 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "book_blood:reference:1",
+        "key": "bomBloodSurfacePulse",
+        "name": "Lueur sur les surfaces rouges de Blood",
+        "description": "Surface liquide pulsante",
+        "proposalIndex": 0,
+        "source": "bom",
+        "evidence": [
+          "EXT21"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.59
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Lueur sur les surfaces rouges de Blood",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Plateformes rouges de l’arène Blood illustrée le 6 juin 2012, préversion",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Pulsation de lueur uniquement sur la surface rouge observée ; liquidité, volume et écoulement non confirmés. Pas de marée, Blood Guardian, adversaire ou géométrie finale revendiquée."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-altered",
       "allowedEvents": [],
       "allowedHazards": [
         "bloodTide"
       ],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "BORD DES PLATEFORMES BLOOD",
+        "description": "Surface rouge de la préversion du6juin2012 ; liquidité et écoulement non confirmés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
       "weather": "blood",
       "interior": false,
       "baselineMotion": true,
@@ -11997,9 +12449,10 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "book_blood:reference:1"
+      ],
       "pendingProposalIds": [
-        "book_blood:reference:1",
         "book_blood:reference:2",
         "book_blood:reference:3",
         "book_blood:reference:4"
@@ -13363,7 +13816,7 @@
   },
   {
     "id": "film_hospital",
-    "name": "BROOKHAVEN — DARK WARD",
+    "name": "HÔPITAL DU FILM — CHAMBRE D’ALESSA",
     "source": "film",
     "family": "hospital",
     "sky": [
@@ -13372,11 +13825,7 @@
       "#020202"
     ],
     "weather": "none",
-    "props": [
-      "beds",
-      "gurneys",
-      "chains"
-    ],
+    "props": [],
     "hazard": "staticBurst",
     "animations": [],
     "fatality": {
@@ -13392,23 +13841,23 @@
       "fidelity": "environmental-adaptation",
       "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — DARK WARD."
     },
-    "catalogueStatus": "reference-blocked",
+    "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Hôpital du film2006; appellation Brookhaven du catalogue à valider, ne pas importer nom SH2 automatiquement.",
-      "canonicalBasis": "EXT49",
-      "fidelity": "reference-bloquee",
+      "premise": "Film Silent Hill de Christophe Gans2006 : chambre hospitalière d’Alessa, lit sous voile de tente médicale, parois carrelées abîmées et grille de sol visibles dans deux photos concordantes. Aucune preuve n’attribue le nom Brookhaven à cette pièce ; le catalogue conserve cet ancien libellé historique sans le transférer à la scène choisie. Pièce distincte du couloir des Dark Nurses ; aucune personne, apparition, attaque ou séquence de soin importée. Mouvement du voile, caméra et géométrie restent des adaptations à comparer, sans fidélité1:1 certifiée.",
+      "canonicalBasis": "EXT49 ; EXT9_FILM2006_ALESSA_ROOM_46_20261026 ; EXT9_FILM2006_ALESSA_ROOM_81_20261026",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "concrete",
-      "name": "BÉTON SEC",
+      "name": "SOL DE LA CHAMBRE D’ALESSA",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Chambre d’Alessa du film2006 ; appellation Brookhaven non attestée, pas couloir des nurses ou scène2012. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0,
@@ -13429,7 +13878,7 @@
       "description": "La cendre tombe pendant que les couches de surface se détachent vers le métal brûlé.",
       "startOtherworld": false,
       "enabled": false,
-      "referenceState": "unresolved"
+      "referenceState": "fixed-normal"
     },
     "director": {
       "cadence": 289,
@@ -13499,23 +13948,18 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "film_hospital:ash:concrete:unresolved::"
+      "signature": "film_hospital:ash:concrete:fixed-normal::"
     },
     "gameplay": {
       "arenaInset": 92,
       "terrainRules": false,
-      "environmentalDirector": false,
+      "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": true
     },
     "layers": [
-      "ward",
-      "curtains",
-      "monitor",
-      "beds",
-      "gurneys",
-      "chains"
+      "curtains"
     ],
     "animationTracks": [],
     "interactions": [],
@@ -13523,13 +13967,15 @@
       "id": "film_hospital",
       "source": "film",
       "identityMatched": true,
-      "blocked": true,
-      "locationStatus": "nom-a-verifier",
+      "blocked": false,
+      "locationStatus": "lieu-documente",
       "catalogueName": "BROOKHAVEN — DARK WARD",
-      "correctedName": null,
-      "locationNote": "Hôpital du film2006; appellation Brookhaven du catalogue à valider, ne pas importer nom SH2 automatiquement.",
+      "correctedName": "HÔPITAL DU FILM — CHAMBRE D’ALESSA",
+      "locationNote": "Film Silent Hill de Christophe Gans2006 : chambre hospitalière d’Alessa, lit sous voile de tente médicale, parois carrelées abîmées et grille de sol visibles dans deux photos concordantes. Aucune preuve n’attribue le nom Brookhaven à cette pièce ; le catalogue conserve cet ancien libellé historique sans le transférer à la scène choisie. Pièce distincte du couloir des Dark Nurses ; aucune personne, apparition, attaque ou séquence de soin importée. Mouvement du voile, caméra et géométrie restent des adaptations à comparer, sans fidélité1:1 certifiée.",
       "referenceIds": [
-        "EXT49"
+        "EXT49",
+        "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+        "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -13579,15 +14025,48 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "film_hospital:reference:1",
+        "key": "gansAlessaTentCloth",
+        "name": "Voile de la chambre d’Alessa 2006",
+        "description": "Voile de tente médicale qui respire",
+        "proposalIndex": 0,
+        "source": "film",
+        "evidence": [
+          "EXT49"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.68,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Voile de la chambre d’Alessa 2006",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Chambre d’Alessa dans le film 2006 ; nom Brookhaven non attribué",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Voile opaque/plastifié et cadre documentés par deux vues ; respiration du tissu authored. Aucun lit occupé, Alessa, Lisa, Rose, nurse de couloir ou adaptation 2012 ajouté."
+      }
+    ],
     "referencePolicy": {
-      "worldState": "unresolved",
+      "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SOL DE LA CHAMBRE D’ALESSA",
+        "description": "Chambre d’Alessa du film2006 ; appellation Brookhaven non attestée, pas couloir des nurses ou scène2012. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "CHAMBRE D’ALESSA · FILM 2006",
       "weather": "none",
       "interior": true,
-      "baselineMotion": false,
+      "baselineMotion": true,
       "suppression": [
         {
           "kind": "event",
@@ -13636,9 +14115,10 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "film_hospital:reference:1"
+      ],
       "pendingProposalIds": [
-        "film_hospital:reference:1",
         "film_hospital:reference:2",
         "film_hospital:reference:3",
         "film_hospital:reference:4"
@@ -13657,9 +14137,7 @@
     ],
     "weather": "dust",
     "props": [
-      "altar",
-      "chains",
-      "flesh"
+      "altar"
     ],
     "hazard": "chainSweep",
     "animations": [],
@@ -13685,14 +14163,14 @@
     },
     "terrain": {
       "id": "ritualStone",
-      "name": "PIERRE RITUELLE",
-      "moveScale": 0.97,
-      "jumpScale": 0.94,
-      "dodgeScale": 0.94,
-      "friction": 0.83,
-      "knockbackScale": 1.02,
-      "guardRegenScale": 0.88,
-      "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+      "name": "ALLÉE DES CIERGES",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Nef du film2006 avant l’intrusion finale ; aucun barbelé ni communauté ou décor2012 ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -13712,8 +14190,8 @@
       "overlay": "ash",
       "description": "La cendre tombe pendant que les couches de surface se détachent vers le métal brûlé.",
       "startOtherworld": false,
-      "enabled": true,
-      "referenceState": "versus-transition"
+      "enabled": false,
+      "referenceState": "fixed-normal"
     },
     "director": {
       "cadence": 289,
@@ -13761,11 +14239,11 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "film_church:ash:ritualStone:versus-transition::sirenCall"
+      "signature": "film_church:ash:ritualStone:fixed-normal::sirenCall"
     },
     "gameplay": {
       "arenaInset": 98,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -13773,10 +14251,7 @@
     },
     "layers": [
       "altar",
-      "nave",
-      "symbols",
-      "chains",
-      "flesh"
+      "nave"
     ],
     "animationTracks": [],
     "interactions": [
@@ -13856,14 +14331,47 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "film_church:reference:1",
+        "key": "gansNaveCandles",
+        "name": "Cierges alignés de la nef de 2006",
+        "description": "Cierges vacillants",
+        "proposalIndex": 0,
+        "source": "film",
+        "evidence": [
+          "EXT49"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Cierges alignés de la nef de 2006",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Église du film Christophe Gans 2006, nef avant intrusion finale",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cierges bas alignés et cierges latéraux documentés dans deux vues ; vacillement authored. Ni chandelles Revelation, barbelés, communauté, symboles lisibles ou transformation ajoutés."
+      }
+    ],
     "referencePolicy": {
-      "worldState": "versus-transition",
+      "worldState": "fixed-normal",
       "allowedEvents": [
         "sirenCall"
       ],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "ALLÉE DES CIERGES",
+        "description": "Nef du film2006 avant l’intrusion finale ; aucun barbelé ni communauté ou décor2012 ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "NEF AVANT L’INTRUSION",
       "weather": "dust",
       "interior": true,
       "baselineMotion": true,
@@ -13890,9 +14398,10 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "film_church:reference:1"
+      ],
       "pendingProposalIds": [
-        "film_church:reference:1",
         "film_church:reference:2",
         "film_church:reference:3",
         "film_church:reference:4"
@@ -17194,9 +17703,13 @@
       "intensity": 1.07,
       "arenaInset": 92,
       "hazardDeck": [],
-      "events": [],
+      "events": [
+        "referenceHookReply"
+      ],
       "motifPolicy": {
-        "events": [],
+        "events": [
+          "referenceHookReply"
+        ],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -17249,7 +17762,7 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "prison_meat_locker:decay:steel:fixed-normal::"
+      "signature": "prison_meat_locker:decay:steel:fixed-normal::referenceHookReply"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -17264,7 +17777,27 @@
       "freezer"
     ],
     "animationTracks": [],
-    "interactions": [],
+    "interactions": [
+      {
+        "id": "prison_meat_locker_referenceHookReply_1",
+        "event": "referenceHookReply",
+        "name": "Crochet et courte buée de fond",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Une frappe proche transmet une secousse à un crochet et une courte volute de froid.",
+        "referenceIds": [
+          "CL_SH2_10_THE_LABYRINTH"
+        ],
+        "proposalId": "prison_meat_locker:reference:3",
+        "zone": {
+          "x": 0.18,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+      }
+    ],
     "reference": {
       "id": "prison_meat_locker",
       "source": "sh2",
@@ -17347,11 +17880,39 @@
         "captureStatus": "storyboard-a-valider",
         "locationScope": "Seconde salle principale de la chambre froide du combat Eddie, SH2 original 2001",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rail et crochet restent fixes ; une masse abstraite suspendue oscille lentement comme proposition versus. Aucun Eddie, corps humain, obstacle de collision, jet de vapeur du remake ou transport de carcasse. Aspect, nombre de crochets, angle et cadence source non mesurés."
+      },
+      {
+        "id": "prison_meat_locker:reference:3",
+        "key": "freezerHookColdReply",
+        "name": "Crochet et courte buée de fond",
+        "description": "Une frappe proche transmet une secousse à un crochet et une courte volute de froid.",
+        "proposalIndex": 2,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_10_THE_LABYRINTH"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.18,
+          "y": 0.32
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceHookReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Crochet et courte buée de fond",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Seconde chambre froide Eddie de SH2 original 2001",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Crochet retenu au rail et faible volute authored ; aucun transport de carcasses, tir ou mécanique de vapeur du remake. Son et température non mesurés."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
-      "allowedEvents": [],
+      "allowedEvents": [
+        "referenceHookReply"
+      ],
       "allowedHazards": [],
       "automaticFinishers": false,
       "normalPhaseLabel": "CHAMBRE FROIDE · SECONDE SALLE",
@@ -17402,11 +17963,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "prison_meat_locker:reference:2"
+        "prison_meat_locker:reference:2",
+        "prison_meat_locker:reference:3"
       ],
       "pendingProposalIds": [
         "prison_meat_locker:reference:1",
-        "prison_meat_locker:reference:3",
         "prison_meat_locker:reference:4"
       ]
     }
@@ -17996,12 +18557,9 @@
     ],
     "weather": "dust",
     "props": [
-      "shops",
-      "grates",
-      "fans"
+      "grates"
     ],
     "animations": [
-      "fanSpin",
       "lightFlicker"
     ],
     "hazard": "emberFall",
@@ -18027,14 +18585,14 @@
     },
     "terrain": {
       "id": "concrete",
-      "name": "BÉTON SEC",
+      "name": "PALIER DES SIX TUNNELS",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Arène souterraine Split Worm ; treillis de bord et sol de duel adaptés, sans ver ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -18064,11 +18622,13 @@
       "arenaInset": 82,
       "hazardDeck": [],
       "events": [
-        "powerFailure"
+        "powerFailure",
+        "referenceMallGrateReply"
       ],
       "motifPolicy": {
         "events": [
-          "powerFailure"
+          "powerFailure",
+          "referenceMallGrateReply"
         ],
         "hazards": [],
         "ambienceOnly": true,
@@ -18110,6 +18670,11 @@
           },
           {
             "kind": "animation",
+            "id": "fanSpin",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "storeShutters",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
@@ -18126,31 +18691,20 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "nightmare_mall:flesh:concrete:fixed-altered::powerFailure"
+      "signature": "nightmare_mall:flesh:concrete:fixed-altered::powerFailure+referenceMallGrateReply"
     },
     "gameplay": {
       "arenaInset": 82,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
     "layers": [
-      "shops",
-      "shutters",
-      "signage",
-      "grates",
-      "fans"
+      "grates"
     ],
     "animationTracks": [
-      {
-        "id": "fanSpin",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "lightFlicker",
         "phase": "both",
@@ -18174,6 +18728,25 @@
           "CL_SH3_03_NIGHTMARE_MALL"
         ],
         "proposalId": null
+      },
+      {
+        "id": "nightmare_mall_referenceMallGrateReply_2",
+        "event": "referenceMallGrateReply",
+        "name": "Treillis de bord de l’arène souterraine",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "La grille près du bord se déforme visuellement après une frappe lourde puis reprend lentement sa forme.",
+        "referenceIds": [
+          "CL_SH3_03_NIGHTMARE_MALL"
+        ],
+        "proposalId": "nightmare_mall:reference:3",
+        "zone": {
+          "x": 0.24,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
       }
     ],
     "reference": {
@@ -18258,15 +18831,47 @@
         "captureStatus": "storyboard-a-valider",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "nightmare_mall:reference:3",
+        "key": "splitWormGrateReply",
+        "name": "Treillis de bord de l’arène souterraine",
+        "description": "La grille près du bord se déforme visuellement après une frappe lourde puis reprend lentement sa forme.",
+        "proposalIndex": 2,
+        "source": "sh3",
+        "evidence": [
+          "CL_SH3_03_NIGHTMARE_MALL"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.24,
+          "y": 0.56
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceMallGrateReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Treillis de bord de l’arène souterraine",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Palier de l’arène Split Worm SH3, six ouvertures conservées",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Treillis abstrait près du bord ; déformation élastique proposée sans nouveau passage, collision, Split Worm ou ouverture d’un septième tunnel."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-altered",
       "allowedEvents": [
-        "powerFailure"
+        "powerFailure",
+        "referenceMallGrateReply"
       ],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PALIER DES SIX TUNNELS",
+        "description": "Arène souterraine Split Worm ; treillis de bord et sol de duel adaptés, sans ver ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
       "weather": "dust",
       "interior": true,
       "baselineMotion": true,
@@ -18303,6 +18908,11 @@
         },
         {
           "kind": "animation",
+          "id": "fanSpin",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "storeShutters",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
         },
@@ -18319,11 +18929,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "nightmare_mall:reference:2"
+        "nightmare_mall:reference:2",
+        "nightmare_mall:reference:3"
       ],
       "pendingProposalIds": [
         "nightmare_mall:reference:1",
-        "nightmare_mall:reference:3",
         "nightmare_mall:reference:4"
       ]
     }
@@ -22532,14 +23142,9 @@
       "#100706",
       "#020202"
     ],
-    "weather": "flicker",
-    "props": [
-      "beds",
-      "fans",
-      "chains"
-    ],
+    "weather": "dust",
+    "props": [],
     "animations": [
-      "fanSpin",
       "lightFlicker"
     ],
     "hazard": "staticBurst",
@@ -22565,14 +23170,14 @@
     },
     "terrain": {
       "id": "concrete",
-      "name": "BÉTON SEC",
+      "name": "COULOIR DU RÊVE INITIAL",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Couloir clinique du rêve initial avant sa transformation ; ascenseur final et état Otherworld séparés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -22591,9 +23196,9 @@
       "radioScale": 1.12,
       "overlay": "rust",
       "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
-      "startOtherworld": true,
+      "startOtherworld": false,
       "enabled": false,
-      "referenceState": "fixed-altered"
+      "referenceState": "fixed-normal"
     },
     "director": {
       "cadence": 301,
@@ -22641,17 +23246,27 @@
           },
           {
             "kind": "animation",
+            "id": "fanSpin",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "hospitalMonitor",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       },
       "safeMargin": 118,
-      "signature": "nightmare_hospital_hc:rust:concrete:fixed-altered::powerFailure"
+      "signature": "nightmare_hospital_hc:rust:concrete:fixed-normal::powerFailure"
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -22659,20 +23274,9 @@
     },
     "layers": [
       "ward",
-      "curtains",
-      "monitor",
-      "beds",
-      "fans",
-      "chains"
+      "curtains"
     ],
     "animationTracks": [
-      {
-        "id": "fanSpin",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "lightFlicker",
         "phase": "both",
@@ -22758,15 +23362,48 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "nightmare_hospital_hc:reference:3",
+        "key": "hcDreamCurtainGurney",
+        "name": "Rideau et brancard du couloir initial",
+        "description": "Rideaux et sangles d’un brancard qui remuent",
+        "proposalIndex": 2,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.76,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Rideau et brancard du couloir initial",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rideau sur cadre roulant et brancard vides attestés ; frémissement du tissu proposé. Sangles non confirmées et non produites ; aucun patient ou corps, pas état rouillé après le miroir."
+      }
+    ],
     "referencePolicy": {
-      "worldState": "fixed-altered",
+      "worldState": "fixed-normal",
       "allowedEvents": [
         "powerFailure"
       ],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "flicker",
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "COULOIR DU RÊVE INITIAL",
+        "description": "Couloir clinique du rêve initial avant sa transformation ; ascenseur final et état Otherworld séparés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "RÊVE CLINIQUE AVANT LE MIROIR",
+      "weather": "dust",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -22792,16 +23429,27 @@
         },
         {
           "kind": "animation",
+          "id": "fanSpin",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "hospitalMonitor",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "flicker",
+          "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "nightmare_hospital_hc:reference:3"
+      ],
       "pendingProposalIds": [
         "nightmare_hospital_hc:reference:1",
         "nightmare_hospital_hc:reference:2",
-        "nightmare_hospital_hc:reference:3",
         "nightmare_hospital_hc:reference:4"
       ]
     }
@@ -22818,7 +23466,6 @@
     ],
     "weather": "dust",
     "props": [
-      "desks",
       "bars",
       "lights"
     ],
@@ -22848,14 +23495,14 @@
     },
     "terrain": {
       "id": "carpet",
-      "name": "MOQUETTE HUMIDE",
-      "moveScale": 0.92,
-      "jumpScale": 0.96,
-      "dodgeScale": 0.9,
-      "friction": 0.76,
-      "knockbackScale": 0.88,
-      "guardRegenScale": 1.04,
-      "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+      "name": "SOL DE LA CELLULE",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Cellule de la première rencontre Wheeler ; pas le bureau du chef, le garage ou la prison Overlook. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -22885,11 +23532,13 @@
       "arenaInset": 96,
       "hazardDeck": [],
       "events": [
-        "powerFailure"
+        "powerFailure",
+        "referencePoliceBarsReply"
       ],
       "motifPolicy": {
         "events": [
-          "powerFailure"
+          "powerFailure",
+          "referencePoliceBarsReply"
         ],
         "hazards": [],
         "ambienceOnly": true,
@@ -22930,20 +23579,17 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "police_station_hc:rust:carpet:fixed-normal::powerFailure"
+      "signature": "police_station_hc:rust:carpet:fixed-normal::powerFailure+referencePoliceBarsReply"
     },
     "gameplay": {
       "arenaInset": 96,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
     "layers": [
-      "desks",
-      "windows",
-      "elevator",
       "bars",
       "lights"
     ],
@@ -22971,6 +23617,25 @@
           "EXT06"
         ],
         "proposalId": null
+      },
+      {
+        "id": "police_station_hc_referencePoliceBarsReply_2",
+        "event": "referencePoliceBarsReply",
+        "name": "Barreaux fermés de la cellule du commissariat",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Réaction des grilles à un impact voisin",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "proposalId": "police_station_hc:reference:3",
+        "zone": {
+          "x": 0.35,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
       }
     ],
     "reference": {
@@ -23059,15 +23724,74 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "police_station_hc:reference:2",
+        "key": "policeCellLightDust",
+        "name": "Poussière dans la lumière de la cellule",
+        "description": "Fumée poussiéreuse dans le faisceau",
+        "proposalIndex": 1,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.35,
+          "y": 0.35
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Poussière dans la lumière de la cellule",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Cellule du réveil d’Alex, commissariat Homecoming, avant libération par Wheeler",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux et cellule attestés ; faisceau et poussière sont proposés pour le versus, sans Wheeler, phare mobile attribué à son arme, fumée d’incendie ou effet sur la précision."
+      },
+      {
+        "id": "police_station_hc:reference:3",
+        "key": "policeCellBarsReply",
+        "name": "Barreaux fermés de la cellule du commissariat",
+        "description": "Réaction des grilles à un impact voisin",
+        "proposalIndex": 2,
+        "source": "homecoming",
+        "evidence": [
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.35,
+          "y": 0.57
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referencePoliceBarsReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Barreaux fermés de la cellule du commissariat",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Cellule du premier réveil, distincte de la prison Homecoming",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Une résonance visuelle proposée après impact local ; serrure intacte, aucun passage ouvert, Schism, Wheeler ou empreinte de main."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [
-        "powerFailure"
+        "powerFailure",
+        "referencePoliceBarsReply"
       ],
       "allowedHazards": [],
-      "automaticFinishers": true,
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SOL DE LA CELLULE",
+        "description": "Cellule de la première rencontre Wheeler ; pas le bureau du chef, le garage ou la prison Overlook. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "CELLULE AVANT LIBÉRATION",
       "weather": "dust",
       "interior": true,
       "baselineMotion": true,
@@ -23100,11 +23824,11 @@
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "police_station_hc:reference:1"
+        "police_station_hc:reference:1",
+        "police_station_hc:reference:2",
+        "police_station_hc:reference:3"
       ],
       "pendingProposalIds": [
-        "police_station_hc:reference:2",
-        "police_station_hc:reference:3",
         "police_station_hc:reference:4"
       ]
     }
@@ -23427,14 +24151,12 @@
       "#0f100d",
       "#030303"
     ],
-    "weather": "flicker",
+    "weather": "dust",
     "props": [
       "bars",
-      "chains",
       "lights"
     ],
     "animations": [
-      "chainSway",
       "lightFlicker"
     ],
     "hazard": "staticBurst",
@@ -23460,14 +24182,14 @@
     },
     "terrain": {
       "id": "steel",
-      "name": "CAILLEBOTIS MÉTALLIQUE",
-      "moveScale": 0.98,
-      "jumpScale": 0.96,
-      "dodgeScale": 0.98,
-      "friction": 0.86,
-      "knockbackScale": 1.04,
-      "guardRegenScale": 0.94,
-      "description": "Le métal résonne, accentue la radio et transmet les chocs."
+      "name": "COURSIVE CELL BLOCK B",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Coursive de la prison Homecoming avant la séquence des cages ; lampe et ombres de versus, sans projecteur source certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.2,
@@ -23497,11 +24219,13 @@
       "arenaInset": 92,
       "hazardDeck": [],
       "events": [
-        "powerFailure"
+        "powerFailure",
+        "referenceGateReply"
       ],
       "motifPolicy": {
         "events": [
-          "powerFailure"
+          "powerFailure",
+          "referenceGateReply"
         ],
         "hazards": [],
         "ambienceOnly": true,
@@ -23528,17 +24252,27 @@
           },
           {
             "kind": "animation",
+            "id": "chainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
           }
         ]
       },
       "safeMargin": 118,
-      "signature": "prison_hc:rust:steel:fixed-normal::powerFailure"
+      "signature": "prison_hc:rust:steel:fixed-normal::powerFailure+referenceGateReply"
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -23546,19 +24280,10 @@
     },
     "layers": [
       "cells",
-      "chains",
-      "watchtower",
       "bars",
       "lights"
     ],
     "animationTracks": [
-      {
-        "id": "chainSway",
-        "phase": "both",
-        "layer": "foreground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "lightFlicker",
         "phase": "both",
@@ -23583,6 +24308,26 @@
           "EXT06"
         ],
         "proposalId": null
+      },
+      {
+        "id": "prison_hc_referenceGateReply_2",
+        "event": "referenceGateReply",
+        "name": "Porte de cellule Overlook Homecoming",
+        "trigger": "local-heavy-impact",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+        "canonicalBasis": "Porte de cellule vibrant",
+        "referenceIds": [
+          "EXT04",
+          "EXT06"
+        ],
+        "proposalId": "prison_hc:reference:1",
+        "zone": {
+          "x": 0.68,
+          "radius": 0.15
+        },
+        "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+        "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
       }
     ],
     "reference": {
@@ -23650,15 +24395,77 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "prison_hc:reference:1",
+        "key": "overlookHCCellReply",
+        "name": "Porte de cellule Overlook Homecoming",
+        "description": "Porte de cellule vibrant",
+        "proposalIndex": 0,
+        "source": "homecoming",
+        "evidence": [
+          "EXT04",
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.68,
+          "y": 0.57
+        },
+        "trigger": "local-heavy-impact",
+        "event": "referenceGateReply",
+        "eventEnabled": true,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Porte de cellule Overlook Homecoming",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Coursive normale Cell Block B avant le puzzle des cages Otherworld",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte grillagée interprétée, oscillation très faible proposée ; sans prison Downpour, cage du puzzle, levier automatique, ouverture ou chute."
+      },
+      {
+        "id": "prison_hc:reference:2",
+        "key": "overlookHCBarLight",
+        "name": "Ombres des barreaux du Cell Block B",
+        "description": "Ombres de barreaux déplacées par la lampe",
+        "proposalIndex": 1,
+        "source": "homecoming",
+        "evidence": [
+          "EXT04",
+          "EXT06"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.68,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Ombres des barreaux du Cell Block B",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Coursive normale de la prison Overlook Homecoming",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux attestés ; mouvement de l’éclairage du versus proposé, sans projecteur de surveillance source revendiqué ni passage d’un gardien."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [
-        "powerFailure"
+        "powerFailure",
+        "referenceGateReply"
       ],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "flicker",
+      "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "COURSIVE CELL BLOCK B",
+        "description": "Coursive de la prison Homecoming avant la séquence des cages ; lampe et ombres de versus, sans projecteur source certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "CELL BLOCK B NORMAL",
+      "weather": "dust",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -23674,15 +24481,26 @@
         },
         {
           "kind": "animation",
+          "id": "chainSway",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "cellShadow",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "flicker",
+          "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
-      "pendingProposalIds": [
+      "renderedProposalIds": [
         "prison_hc:reference:1",
-        "prison_hc:reference:2",
+        "prison_hc:reference:2"
+      ],
+      "pendingProposalIds": [
         "prison_hc:reference:3",
         "prison_hc:reference:4"
       ]
@@ -26670,7 +27488,6 @@
       "cars"
     ],
     "animations": [
-      "rainSheets",
       "streetLightFlicker",
       "fogDrift"
     ],
@@ -26697,14 +27514,14 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "CHAUSSÉE DE PEARL CREEK",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Condition pluvieuse du versus sur une rue Pearl Creek ; disposition des flaques et moment météorologique non certifiés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
     },
     "visibility": {
       "fog": 0.58,
@@ -26771,6 +27588,11 @@
           },
           {
             "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
             "id": "waterRipple",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           }
@@ -26781,7 +27603,7 @@
     },
     "gameplay": {
       "arenaInset": 74,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": true,
       "verticalPressure": false,
@@ -26795,13 +27617,6 @@
       "cars"
     ],
     "animationTracks": [
-      {
-        "id": "rainSheets",
-        "phase": "fog",
-        "layer": "foreground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
       {
         "id": "streetLightFlicker",
         "phase": "fog",
@@ -26878,12 +27693,71 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "downpour_streets:reference:1",
+        "key": "pearlCreekRainDepth",
+        "name": "Pluie de fond sur Pearl Creek",
+        "description": "Pluie oblique variable",
+        "proposalIndex": 0,
+        "source": "downpour",
+        "evidence": [
+          "EXT11"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.4
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Pluie de fond sur Pearl Creek",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Rue de Pearl Creek vers Laymond Avenue et Brite Street, condition pluvieuse du versus",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Déclinaison de la pluie du prototype en profondeur ; angle et cadence authored, rue et état météorologique non mesurés. Aucun pouvoir de monstre ou orage offensif ajouté."
+      },
+      {
+        "id": "downpour_streets:reference:2",
+        "key": "pearlCreekPuddles",
+        "name": "Ondes des petites flaques de bordure",
+        "description": "Ondes de flaques",
+        "proposalIndex": 1,
+        "source": "downpour",
+        "evidence": [
+          "EXT11"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.66
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Ondes des petites flaques de bordure",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Même rue Pearl Creek sous la pluie, chaussée de duel dégagée",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Petites flaques abstraites proposées en bordure, sans géographie de flaque source certifiée, inondation de chaussée, sol mobile ou coefficient de glisse attesté."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "CHAUSSÉE DE PEARL CREEK",
+        "description": "Condition pluvieuse du versus sur une rue Pearl Creek ; disposition des flaques et moment météorologique non certifiés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "normalPhaseLabel": "PEARL CREEK SOUS LA PLUIE",
       "weather": "rain",
       "interior": false,
       "baselineMotion": true,
@@ -26915,15 +27789,21 @@
         },
         {
           "kind": "animation",
+          "id": "rainSheets",
+          "reason": "Remplacé par une piste précise du classeur."
+        },
+        {
+          "kind": "animation",
           "id": "waterRipple",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
-      "pendingProposalIds": [
+      "renderedProposalIds": [
         "downpour_streets:reference:1",
-        "downpour_streets:reference:2",
+        "downpour_streets:reference:2"
+      ],
+      "pendingProposalIds": [
         "downpour_streets:reference:3",
         "downpour_streets:reference:4"
       ]

@@ -7,6 +7,7 @@ import {bodyProfile} from '../src/combat-geometry.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {spriteFor,spriteCoverage,poseKey,frameFor,rasterPlacement,SpriteCache,drawRasterMonster,paintRasterPortrait} from '../src/sprite-system.js';
 const air=getFighter('sh1_air_screamer_001'),film=getFighter('film_red_pyramid_film_175'),art=spriteFor(air),f=art.frames[0];
+const missing=ROSTER.find(fighter=>!spriteFor(fighter));
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 function harness({fail=false,hang=false,wrong=false,delay=0,...options}={}){
  const images=[];let pending=0,peak=0;
@@ -21,7 +22,12 @@ test('raster coverage counts real exact-ID assets, not roster entries or resized
  const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,1);
 });
 test('film bitmap is not silently used for the SH2 original or spear',()=>{
- assert.ok(spriteFor(film));assert.equal(spriteFor('sh2_red_pyramid_thing_great_knife_029'),null);assert.equal(spriteFor('sh2_red_pyramid_thing_spear_030'),null);
+ const filmArt=spriteFor(film),knife=spriteFor('sh2_red_pyramid_thing_great_knife_029'),spear=spriteFor('sh2_red_pyramid_thing_spear_030');
+ assert.ok(filmArt);assert.ok(knife);assert.ok(spear);
+ assert.equal(knife.source,'sh2');assert.equal(spear.source,'sh2');
+ assert.notEqual(knife.frames[0].path,filmArt.frames[0].path);assert.notEqual(spear.frames[0].path,filmArt.frames[0].path);
+ assert.notEqual(knife.frames[0].path,spear.frames[0].path);
+ assert.equal(spriteFor({...getFighter(knife.fighterId),source:'film'}),null);
 });
 test('an explicit source mismatch rejects otherwise valid ID',()=>assert.equal(spriteFor({...air,source:'film'}),null));
 test('unknown and inherited property names never resolve as images',()=>{
@@ -84,23 +90,23 @@ test('current combat images survive LRU eviction',async()=>{
  const bytes=f.width*f.height*4,h=harness({maxBytes:bytes+1});h.cache.pin([{...f,path:'a'}]);await h.cache.load({...f,path:'a'});await h.cache.load({...f,path:'b'});assert.equal(h.cache.status('a'),'ready');assert.equal(h.cache.status('b'),'error');assert.equal(h.cache.entries.get('b').error,'memory-budget');
 });
 test('preflight refuses missing art before issuing any network load',async()=>{
- const h=harness(),result=await h.cache.prepare([film,getFighter('sh2_red_pyramid_thing_great_knife_029')]);assert.equal(result.ok,false);assert.equal(result.missing.length,1);assert.equal(h.images.length,0);
+ const h=harness(),result=await h.cache.prepare([film,missing]);assert.equal(result.ok,false);assert.equal(result.missing.length,1);assert.equal(h.images.length,0);
 });
 test('preflight reports successful decode even when long-run unpinned frames were evicted',async()=>{
  const h=harness({maxBytes:f.width*f.height*4+1});const result=await h.cache.prepare([air,film]);assert.equal(result.ok,true);assert.ok(h.cache.bytes<=h.cache.maxBytes);assert.equal(h.cache.entries.size,1);
 });
 test('diagnostic mode is explicit and lists all missing IDs',async()=>{
- const h=harness();const result=await h.cache.prepare([getFighter('sh2_red_pyramid_thing_great_knife_029')],{diagnostic:true});assert.equal(result.ok,true);assert.equal(result.missing.length,1);
+ const h=harness();const result=await h.cache.prepare([missing],{diagnostic:true});assert.equal(result.ok,true);assert.equal(result.missing.length,1);
 });
 test('battle rendering issues a raster draw, not skeletal geometry',async()=>{
  const h=harness();await h.cache.load(f);const c=ctx(),draw=drawRasterMonster(c,air,640,594,{cache:h.cache,shadow:false});assert.equal(draw.kind,'raster');assert.equal(c.calls.filter(x=>x[0]==='drawImage').length,1);assert.ok(!c.calls.some(x=>['moveTo','lineTo','arc','bezierCurveTo'].includes(x[0])));
 });
 test('missing art uses a labeled card instead of fabricated anatomy',()=>{
- const c=ctx(),h=harness();const result=drawRasterMonster(c,getFighter('sh2_red_pyramid_thing_great_knife_029'),640,594,{cache:h.cache});assert.equal(result.kind,'missing');assert.ok(c.calls.some(x=>x[0]==='fillText'&&x[1]==='VISUEL À PRODUIRE'));assert.ok(!c.calls.some(x=>x[0]==='drawImage'));
+ const c=ctx(),h=harness();const result=drawRasterMonster(c,missing,640,594,{cache:h.cache});assert.equal(result.kind,'missing');assert.ok(c.calls.some(x=>x[0]==='fillText'&&x[1]==='VISUEL À PRODUIRE'));assert.ok(!c.calls.some(x=>x[0]==='drawImage'));
 });
 test('asynchronous portrait completion cannot paint the previous selected ID',async()=>{
  const h=harness({delay:10}),c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};
- paintRasterPortrait(canvas,air,{cache:h.cache});paintRasterPortrait(canvas,getFighter('sh2_red_pyramid_thing_great_knife_029'),{cache:h.cache});await sleep(25);assert.equal(canvas.dataset.artStatus,'missing');assert.ok(!c.calls.some(x=>x[0]==='drawImage'));
+ paintRasterPortrait(canvas,air,{cache:h.cache});paintRasterPortrait(canvas,missing,{cache:h.cache});await sleep(25);assert.equal(canvas.dataset.artStatus,'missing');assert.ok(!c.calls.some(x=>x[0]==='drawImage'));
 });
 test('single loaded bitmap paints both left-facing and right-facing portraits',async()=>{
  const h=harness(),c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};await h.cache.load(art.portrait);paintRasterPortrait(canvas,air,{cache:h.cache,facing:-1});assert.equal(canvas.dataset.artStatus,'raster');assert.ok(c.calls.some(x=>x[0]==='scale'&&x[1]===-1));
@@ -120,6 +126,17 @@ test('portrait orientation combines presentation side with a left-facing native 
   paintRasterPortrait(canvas,air,{cache:h.cache,facing,registry:{[air.id]:left}});
   assert.ok(c.calls.some(x=>x[0]==='scale'&&x[1]===-facing));
  }
+});
+test('a portrait paints its successful decode even when the next queued image evicts it before the callback',async()=>{
+ const cost=f.width*f.height*4,h=harness({maxBytes:cost+1,concurrency:1}),c=ctx();
+ const canvas={width:300,height:200,dataset:{},getContext:()=>c,setAttribute(){}};
+ paintRasterPortrait(canvas,air,{cache:h.cache});
+ const first=h.cache.load(f),second=h.cache.load({...f,path:'portrait-next-in-queue'});
+ assert.ok((await Promise.all([first,second])).every(Boolean));
+ assert.equal(h.cache.status(f.path),'absent','the full-size first frame really was evicted');
+ assert.equal(canvas.dataset.artStatus,'raster','painted pixels remain in the card');
+ assert.ok(c.calls.some(call=>call[0]==='drawImage'&&call[1]===h.images[0]));
+ assert.ok(h.cache.bytes<=h.cache.maxBytes);assert.equal(h.cache.reservedBytes,0);
 });
 test('over-budget pinned animation sets are rejected before changing the previous lease',()=>{
  const cost=f.width*f.height*4,h=harness({maxBytes:cost+1});h.cache.pin([{...f,path:'old'}]);

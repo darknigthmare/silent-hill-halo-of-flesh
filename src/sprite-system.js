@@ -137,15 +137,18 @@ export function paintRasterPortrait(canvas,fighter,{background=true,facing=1,cac
   if(!fighter||!canvas)return;
   const token={},art=spriteFor(fighter,registry),frame=art?.portrait||frameFor(art),ctx=canvas.getContext('2d');
   portraitRequests.set(canvas,token);
-  const paint=()=>{if(portraitRequests.get(canvas)!==token)return;
+  const paint=(decodedImage=null)=>{if(portraitRequests.get(canvas)!==token)return;
     const w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);
     if(background){const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,'#272b25');g.addColorStop(1,'#080b09');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);}
-    const image=frame&&cache.peek(frame.path);
+    // Other portraits can evict this frame before the promise callback runs.
+    // Paint the successful decode into the small canvas while it is available;
+    // the canvas keeps its pixels without pinning the full-size source image.
+    const image=decodedImage||(frame&&cache.peek(frame.path));
     if(image){const b=frame.visibleBounds||[0,0,frame.width,frame.height],sw=b[2]-b[0],sh=b[3]-b[1],scale=Math.max(.01,Math.min((w-12)/sw,(h-12)/sh)),dw=sw*scale,dh=sh*scale;
       ctx.save();ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.translate(w/2,h/2);ctx.scale((facing<0?-1:1)*(frame.facing??art.frames.find(f=>f.path===frame.path)?.facing??1),1);ctx.drawImage(image,b[0],b[1],sw,sh,-dw/2,-dh/2,dw,dh);ctx.restore();
     }else drawMissing(ctx,5,5,Math.max(20,w-10),Math.max(20,h-10),!art?'SPRITE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT');
     if(canvas.dataset){canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=!art?'missing':image?'raster':cache.status(frame.path);}
     canvas.setAttribute?.('role','img');canvas.setAttribute?.('aria-label',fighter.name+' — '+spriteStatus(fighter).label);
   };
-  paint();if(frame&&cache.status(frame.path)!=='ready')void cache.load(frame).then(paint);
+  paint();if(frame&&cache.status(frame.path)!=='ready')void cache.load(frame).then(image=>paint(image));
 }

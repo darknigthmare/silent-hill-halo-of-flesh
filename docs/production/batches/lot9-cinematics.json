@@ -1,0 +1,645 @@
+{
+  "schema": 1,
+  "batch": "lot9",
+  "workstream": "cinematics",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "requestedItems": 30,
+  "items": [
+    {
+      "rowId": "sh3_closer_church_variant:intro",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "intro",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Entrée propre avec appuis, corps et équipement conservés ; translation ou temps d’arrêt composés pour le versus.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh3_closer_church_variant:winRound1",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winRound",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Pause de manche réversible : silhouette propre réorientée, aucun nouveau contact offensif.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh3_closer_church_variant:loseRound1",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseRound",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Reprise réversible, sans effacement du corps ou perte d’équipement avant la manche suivante.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh3_closer_church_variant:winMatch",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winMatch",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Maintien final propre au sujet, distinct de la victoire de manche sans transition narrative empruntée.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh3_closer_church_variant:loseMatch",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseMatch",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Défaite finale du versus : pose propre à produire, sans transformation ni mort définitive canonisée pour les Ghosts.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh3_closer_church_variant:outro",
+      "collection": "presentations",
+      "entityId": "sh3_closer_church_variant",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH3_ENEMIES",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "outro",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "sourceFact": "Les Closer de l’église sont plus forts et rapides ; le guide leur attribue le jeu de bras des Closer, sans coefficients source ni nouvelle créature.",
+      "implementation": "Sortie propre à cette variante ; Richard utilise un saut de position et les autres leurs appuis ou dispersions dédiés.",
+      "baselineAuthored": false,
+      "sourceSha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:intro",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "intro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Entrée propre avec appuis, corps et équipement conservés ; translation ou temps d’arrêt composés pour le versus.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:winRound1",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Pause de manche réversible : silhouette propre réorientée, aucun nouveau contact offensif.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:loseRound1",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Reprise réversible, sans effacement du corps ou perte d’équipement avant la manche suivante.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:winMatch",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Maintien final propre au sujet, distinct de la victoire de manche sans transition narrative empruntée.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:loseMatch",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Défaite finale du versus : pose propre à produire, sans transformation ni mort définitive canonisée pour les Ghosts.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_jasper_gein_victim_17:outro",
+      "collection": "presentations",
+      "entityId": "sh4_jasper_gein_victim_17",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "outro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 17 reste brûlé, tient un chandelier métallique et peut être neutralisé temporairement ; aucune mort physique définitive du Ghost n’est attestée.",
+      "implementation": "Sortie propre à cette variante ; Richard utilise un saut de position et les autres leurs appuis ou dispersions dédiés.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:intro",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "intro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Entrée propre avec appuis, corps et équipement conservés ; translation ou temps d’arrêt composés pour le versus.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:winRound1",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Pause de manche réversible : silhouette propre réorientée, aucun nouveau contact offensif.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:loseRound1",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Reprise réversible, sans effacement du corps ou perte d’équipement avant la manche suivante.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:winMatch",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Maintien final propre au sujet, distinct de la victoire de manche sans transition narrative empruntée.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:loseMatch",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Défaite finale du versus : pose propre à produire, sans transformation ni mort définitive canonisée pour les Ghosts.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:outro",
+      "collection": "presentations",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "outro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 18 est gonflé, flotte et attaque en tonneau ; on peut le mettre à terre et le contenir avec une épée, sans lui créer une épée dans ces présentations.",
+      "implementation": "Sortie propre à cette variante ; Richard utilise un saut de position et les autres leurs appuis ou dispersions dédiés.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:intro",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "intro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Entrée propre avec appuis, corps et équipement conservés ; translation ou temps d’arrêt composés pour le versus.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:winRound1",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Pause de manche réversible : silhouette propre réorientée, aucun nouveau contact offensif.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:loseRound1",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseRound",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Reprise réversible, sans effacement du corps ou perte d’équipement avant la manche suivante.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:winMatch",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Maintien final propre au sujet, distinct de la victoire de manche sans transition narrative empruntée.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:loseMatch",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseMatch",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Défaite finale du versus : pose propre à produire, sans transformation ni mort définitive canonisée pour les Ghosts.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "sh4_richard_braintree_victim_19:outro",
+      "collection": "presentations",
+      "entityId": "sh4_richard_braintree_victim_19",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js",
+        "src/fight.js"
+      ],
+      "evidence": [
+        "CL_SH4_ENEMIES",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "outro",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "sourceFact": "Victim 19 marche sur ses pieds, tressaille avec son pied-de-biche et se téléporte à courte distance ; il reste un Ghost, non un tireur ou un mort humain définitif.",
+      "implementation": "Sortie propre à cette variante ; Richard utilise un saut de position et les autres leurs appuis ou dispersions dédiés.",
+      "baselineAuthored": false,
+      "sourceSha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+    },
+    {
+      "rowId": "homecoming_swarm:intro",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "intro",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Entrée propre avec appuis, corps et équipement conservés ; translation ou temps d’arrêt composés pour le versus.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    },
+    {
+      "rowId": "homecoming_swarm:winRound1",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winRound",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Pause de manche réversible : silhouette propre réorientée, aucun nouveau contact offensif.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    },
+    {
+      "rowId": "homecoming_swarm:loseRound1",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseRound",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Reprise réversible, sans effacement du corps ou perte d’équipement avant la manche suivante.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    },
+    {
+      "rowId": "homecoming_swarm:winMatch",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "winMatch",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Maintien final propre au sujet, distinct de la victoire de manche sans transition narrative empruntée.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    },
+    {
+      "rowId": "homecoming_swarm:loseMatch",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "loseMatch",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Défaite finale du versus : pose propre à produire, sans transformation ni mort définitive canonisée pour les Ghosts.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    },
+    {
+      "rowId": "homecoming_swarm:outro",
+      "collection": "presentations",
+      "entityId": "homecoming_swarm",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/lore-cinematics.js",
+        "src/fight.js"
+      ],
+      "evidence": [
+        "EXT04",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Composition versus originale, sans FPS, durée ou géométrie source mesurés ; images contextuelles non produites et fidélité 1:1 non certifiée. Taunt et finishers restent hors de ce lot.",
+      "contextKey": "outro",
+      "source": "homecoming",
+      "edition": "SILENT HILL: HOMECOMING (2008)",
+      "sourceFact": "Le guide décrit de grands insectes qui s’accrochent et drainent Alex ; la dispersion et le regroupement des présentations sont composés pour le versus et ne produisent aucun individu supplémentaire.",
+      "implementation": "Sortie propre à cette variante ; Richard utilise un saut de position et les autres leurs appuis ou dispersions dédiés.",
+      "baselineAuthored": false,
+      "sourceSha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb"
+    }
+  ],
+  "scope": "Cinq identités exactes et six présentations chacune ; aucune activation de taunt ou finisher par l’ajout des présentations.",
+  "sourceEvidenceRoot": "/workspace/shared/halo-of-flesh/batch9-cinematics-2026-10-26",
+  "sourceTimingMeasured": false,
+  "certifiedOneToOne": 0
+}

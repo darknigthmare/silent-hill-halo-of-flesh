@@ -85,6 +85,22 @@ define('sh1_air_screamer_001 sh1_night_flutter_002', {
     desperation:contact('Plongée brisée — dernière attaque', {travel:4.1, hits:2, reach:235})
   }
 });
+// SH1 enemies_en.htm explicitly gives both dogs the jumping bite and says that
+// shots during airtime can knock them down. Wormhead's own paragraph confirms
+// identical attacks with greater strength. The deterministic airborne response,
+// jump arcs, input variants and 1.12 damage factor are authored versus tuning.
+function sh1DogPounces(wormhead=false){
+  const damageScale=wormhead?1.12:1,tag=wormhead?'Wormhead':'Groaner';
+  return {hitResponse:{airborneFirearmKnockdown:true,sourceTimingMeasured:false},moves:{
+    neutralSpecial:contact(`${tag} — bond mordu court`,{travel:3.2,verticalTravel:1.7,hits:1,reach:110,damageScale}),
+    forwardSpecial:contact(`${tag} — bond mordu en poursuite`,{travel:4.6,verticalTravel:2.6,hits:1,reach:130,damageScale}),
+    airSpecial:contact(`${tag} — morsure pendant le passage aérien`,{travel:4.4,verticalTravel:0,hits:1,reach:115,damageScale}),
+    super:contact(`${tag} — poursuite puis bond mordu`,{travel:4,verticalTravel:2.8,hits:1,reach:170,damageScale}),
+    desperation:contact(`${tag} — dernier bond mordu`,{travel:4.5,verticalTravel:3,hits:1,reach:180,damageScale})
+  }};
+}
+define('sh1_groaner_003',sh1DogPounces());
+define('sh1_wormhead_004',sh1DogPounces(true));
 // SH1 (1999), enemies_en.htm: all three dive at Harry's legs and hold while
 // slashing. Direction/shoulder buttons speed the original escape. Six alternating
 // left/right inputs below are this versus game's escape rule, not source QTEs,
@@ -249,8 +265,23 @@ define('sh2_maria_final_manifestation_033 sh2_mary_final_manifestation_034', {mo
 }});
 define('sh2_mandarin_026', {moves:{...weaponKit('Appendice sous la grille'),
   neutralSpecial:contact('Frappe à travers la grille'), super:contact('Sous les pieds', {hits:2})}});
-define('sh2_flesh_lip_027', {moves:{...weaponKit('Pieds de la cage'),
-  neutralSpecial:contact('Poussée des pieds'), super:contact('Lit suspendu — prise courte', {level:'throw', hits:1})}});
+// SH2 original boss guide: a forward thrusting kick and a foot grip which lifts
+// James and strangles him; movement/shoulder inputs speed release. The single
+// suspended cage, 72px lift, foot-contact band and six directional transitions
+// below are versus adaptations, not a recreated three-cage encounter or source
+// pose, floor plan, animation frame, controller mapping or measured geometry.
+define('sh2_flesh_lip_027', {
+  suspendedStruggles:{slots:['neutralSpecial','throw','super','desperation'],liftHeight:72,
+    escapeTransitions:6,sourceTimingMeasured:false},
+  contactBands:{forwardHeavy:{footOffset:80,height:90,sourceTimingMeasured:false}},
+  moves:{...weaponKit('Pieds de la cage'),
+    forwardHeavy:contact('Poussée des pieds vers l’avant',{reach:205,level:'mid',hits:1,travel:0}),
+    neutralSpecial:contact('Pieds — levée puis étranglement',{level:'throw',effectOverride:'bind',reach:115,hits:1}),
+    throw:contact('Étranglement suspendu par les pieds',{effectOverride:'bind',hits:1}),
+    super:contact('Pieds — emprise suspendue prolongée',{level:'throw',effectOverride:'bind',reach:130,hits:1}),
+    desperation:contact('Pieds — dernière emprise suspendue',{level:'throw',effectOverride:'bind',reach:140,hits:1})
+  }
+});
 // SH2 original (2001), enemies_en.htm + bosses_en.htm: the Labyrinth boss's
 // only attack lifts its bed frame over James and pulls him under it. The guide
 // says shooting it while down does no damage. Cross-work firearm classes,
@@ -395,8 +426,11 @@ const alessaWeaponPhases=ALESSA_WEAPON_PHASES.map((phase,index)=>{
   return {...phase,index,moves};
 });
 define('sh3_memory_of_alessa_049', {moves:alessaWeaponPhases[0].moves,weaponPhases:alessaWeaponPhases});
-define('sh3_god_050', {moves:{
+define('sh3_god_050', {
+  groundProjectiles:{slots:['neutralSpecial','downSpecial','super','desperation'],sourceTimingMeasured:false},
+  contactBands:{forwardHeavy:{footOffset:120,height:130,sourceTimingMeasured:false}},moves:{
   ...weaponKit('Bras de la forme incomplète'),
+  forwardHeavy:contact('Bras — coup proche devant la forme incomplète',{reach:230,level:'mid',hits:1,travel:0}),
   neutralSpecial:shot('Flammes projetées au sol', {effectOverride:'burn', projectileSpeed:8}),
   downSpecial:shot('Vague de flammes basse', {effectOverride:'burn', level:'low', projectileSpeed:8}),
   super:shot('Couronne de flammes', {effectOverride:'burn', projectileSpeed:9}),
@@ -508,9 +542,14 @@ define('sh4_jasper_gein_victim_17', {proximityField:ghostProximity(true),moves:{
   desperation:nearAura('Dernière présence brûlante', {effectOverride:'burn', hits:2, active:18})
 }});
 define('sh4_andrew_desalvo_victim_18', {proximityField:ghostProximity(),moves:{
-  neutralSpecial:contact('Charge tournoyante', {travel:3.8}),
+  // His own SH4 entry describes a barrel roll as he lunges. These are five
+  // bounded physical passes, not teleports, aura attacks or new sprite poses.
+  neutralSpecial:contact('Tonneau aérien — approche courte',{travel:3.8,verticalTravel:1.6,reach:125,hits:1}),
+  forwardSpecial:contact('Tonneau aérien — grande approche',{travel:4.6,verticalTravel:2.1,reach:145,hits:1}),
+  airSpecial:contact('Tonneau — traversée en flottement',{travel:4.3,verticalTravel:0,reach:135,hits:1}),
   downSpecial:nearAura('Présence rapprochée d’Andrew'),
-  super:contact('Rotation puis collision', {travel:4, hits:2})
+  super:contact('Tonneau aérien — poursuite prolongée',{travel:4.2,verticalTravel:2.3,reach:165,hits:1}),
+  desperation:contact('Tonneau aérien — dernier passage',{travel:4.7,verticalTravel:2.5,reach:180,hits:1})
 }});
 define('sh4_richard_braintree_victim_19', {proximityField:ghostProximity(),moves:{
   ...weaponKit('Pied-de-biche'),
@@ -640,10 +679,16 @@ define('homecoming_amnion_exposed_form_098', {
     guardCounter:contact('Patte de riposte'),dodgeAttack:contact('Patte après écart'),wakeupAttack:contact('Reprise de l’armature')
   }
 });
-define('downpour_screamer_104', {moves:{
-  neutralSpecial:nearAura('Cri paralysant proche', {effectOverride:'bind'}),
-  forwardSpecial:contact('Bond sur la cible', {travel:3.6}),
-  super:nearAura('Cri puis menace rapprochée', {effectOverride:'bind', active:14})
+define('downpour_screamer_104', {
+  sensoryParalysis:{slots:['neutralSpecial','downSpecial','super','desperation'],sourceTimingMeasured:false},moves:{
+  // Downpour monsters_en.htm describes paralysis at distance and jumping on
+  // Murphy's back. Radius, bind duration, health damage, jump arc and inputs
+  // remain versus rules; no damage-free original scream or forced rear warp.
+  neutralSpecial:nearAura('Cri paralysant à distance bornée',{effectOverride:'bind',reach:270}),
+  downSpecial:nearAura('Cri paralysant depuis la posture basse',{effectOverride:'bind',reach:240,level:'mid'}),
+  forwardSpecial:contact('Bond physique sur la cible',{travel:3.6,verticalTravel:3.2,hits:1,reach:135}),
+  super:nearAura('Cri puis menace rapprochée',{effectOverride:'bind',reach:300,active:14}),
+  desperation:nearAura('Dernier cri paralysant',{effectOverride:'bind',reach:315,active:14})
 }});
 // Downpour St Maria's walkthrough: distant shock waves and close hammer blows.
 // Resting the existing versus projectile on the floor makes its path readable;
@@ -803,6 +848,9 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     ...(recipe.groundHolds?{groundHolds:{...recipe.groundHolds,slots:[...recipe.groundHolds.slots]}}:{}),
     ...(recipe.standingBinds?{standingBinds:{...recipe.standingBinds,slots:[...recipe.standingBinds.slots]}}:{}),
     ...(recipe.standingStruggles?{standingStruggles:{...recipe.standingStruggles,slots:[...recipe.standingStruggles.slots]}}:{}),
+    ...(recipe.suspendedStruggles?{suspendedStruggles:{...recipe.suspendedStruggles,slots:[...recipe.suspendedStruggles.slots]}}:{}),
+    ...(recipe.sensoryParalysis?{sensoryParalysis:{...recipe.sensoryParalysis,slots:[...recipe.sensoryParalysis.slots]}}:{}),
+    ...(recipe.contactBands?{contactBands:structuredClone(recipe.contactBands)}:{}),
     ...(recipe.whiffExposure?{whiffExposure:{...recipe.whiffExposure,slots:[...recipe.whiffExposure.slots]}}:{}),
     ...(recipe.groundProjectiles?{groundProjectiles:{...recipe.groundProjectiles,slots:[...recipe.groundProjectiles.slots]}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
@@ -857,8 +905,10 @@ export function sourceMouthPhase(fighter) {
   return phase?{...phase,slots:[...phase.slots]}:null;
 }
 
-export function sourceHitResponse(fighter,move,ranged=false) {
+export function sourceHitResponse(fighter,move,ranged=false,attacker=null) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES),response=ref&&RECIPES[ref.id]?.hitResponse;
+  if(response?.airborneFirearmKnockdown&&attacker&&isFirearmProjectile(attacker,move))
+    return {knockdown:true,airborneOnly:true,sourceTimingMeasured:false};
   return response?.meleeKnockdown&&move&&!ranged&&!move.projectile&&!move.trap&&!move.aura&&
     move.level!=='throw'&&move.category!=='throw'?{knockdown:true,sourceTimingMeasured:false}:null;
 }
@@ -888,6 +938,25 @@ export function sourceStandingStruggle(fighter,move) {
   return grip&&move?.enabled!==false&&grip.slots.includes(move?.key)&&move.effect?.id==='bind'&&
     !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw')
     ?{...grip,slots:[...grip.slots]}:null;
+}
+
+export function sourceSuspendedStruggle(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),grip=ref&&RECIPES[ref.id]?.suspendedStruggles;
+  return grip&&move?.enabled!==false&&grip.slots.includes(move?.key)&&move.effect?.id==='bind'&&
+    !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw')
+    ?{...grip,slots:[...grip.slots],posture:'suspended'}:null;
+}
+
+export function sourceSensoryParalysis(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),paralysis=ref&&RECIPES[ref.id]?.sensoryParalysis;
+  return Boolean(paralysis&&move?.enabled!==false&&paralysis.slots.includes(move?.key)&&move.effect?.id==='bind'&&
+    move.aura&&!move.projectile&&!move.trap);
+}
+
+export function sourceContactBand(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),band=ref&&RECIPES[ref.id]?.contactBands?.[move?.key];
+  return band&&move?.enabled!==false&&!move.projectile&&!move.trap&&!move.aura&&move.level!=='throw'
+    ?{...band}:null;
 }
 
 export function sourceDownedFirearmProtection(fighter) {

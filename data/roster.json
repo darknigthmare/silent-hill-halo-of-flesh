@@ -503,7 +503,7 @@
       "observedMoves": [
         {
           "name": "Bond",
-          "description": "Saut suivi de morsure.",
+          "description": "Le Groaner de SH1 saute et se jette sur Harry en mordant ; le guide précise qu’un tir pendant son bond peut le faire chuter. Cette réaction ne démontre ni pin au sol, ni maintien de morsure ou projection arrière. Forces, fenêtres et distances du versus restent non mesurées.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -701,7 +701,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh1_groaner_003 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Le guide décrit directement le Wormhead : même famille de sauts et morsures que le Groaner, plus fort et plus dommageable, et susceptible d’être renversé par un tir pendant le bond. La tête infestée appartient au Wormhead ; aucun multiplicateur numérique, prise au sol ou transfert d’image Groaner n’est validé.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -5713,15 +5713,17 @@
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
         "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-        "CL_SH2_CREATURES"
+        "CL_SH2_CREATURES",
+        "CL_SH2_BOSSES"
       ],
       "observedMoves": [
         {
           "name": "Pieds",
-          "description": "Soulève et étrangle.",
+          "description": "Dans le duel original2001 de Brookhaven, les pieds du Flesh Lip saisissent James, le soulèvent et l’étranglent lorsqu’il approche. Le guide conseille les commandes directionnelles et d’épaule pour se libérer plus vite. Ce maintien aérien reste distinct d’un plaquage au sol ou des pattes du remake.",
           "evidence": [
             "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-            "CL_SH2_CREATURES"
+            "CL_SH2_CREATURES",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -5729,10 +5731,11 @@
         },
         {
           "name": "Coup",
-          "description": "Pousse avec les pieds.",
+          "description": "Le guide distingue une poussée ou un coup des pieds vers l’avant de la prise étrangleuse. Ne pas remplacer ces pieds par une arme, des bras offensifs ou une patte articulée de la version2024 ; contact, portée et recul restent à relever dans le jeu original.",
           "evidence": [
             "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-            "CL_SH2_CREATURES"
+            "CL_SH2_CREATURES",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -5740,9 +5743,10 @@
         },
         {
           "name": "Suspension 2001",
-          "description": "Cage fixée au plafond, corps suspendu.",
+          "description": "La rencontre2001 montre des créatures suspendues dans leurs cages au plafond ; le guide fait viser les armes vers le haut pour les atteindre. Cette hauteur propre ne prouve pas une marche, un saut libre, une chute récurrente ou l’ouverture d’une forme arachnéenne.",
           "evidence": [
-            "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+            "CL_SH2_05_BROOKHAVEN_HOSPITAL",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "kind": "etat",
@@ -5751,9 +5755,10 @@
         },
         {
           "name": "Rencontre multiple",
-          "description": "Deux cages puis une troisième.",
+          "description": "Le guide du jeu original décrit deux Flesh Lips au début puis une troisième créature qui tombe du plafond après les premières destructions, ou parfois plus tôt si le combat dure. Cette progression multi-adversaire ne crée pas un second corps à partir du combattant unique du versus.",
           "evidence": [
-            "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+            "CL_SH2_05_BROOKHAVEN_HOSPITAL",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "kind": "transition",
@@ -11486,7 +11491,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Balayage rapproché.",
+          "description": "Le guideSH3 distingue un balayage du bras dans la posture haute puis un balayage dangereux lorsque le God est sur mains et genoux. La marque en demi-cercle au sol borne l’approche physique ; elle ne constitue pas une mesure de portée pour l’arène2D et n’annule pas le feu à distance.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -11497,7 +11502,7 @@
         },
         {
           "name": "Tête",
-          "description": "Heurt au contact.",
+          "description": "Lorsque le God est abaissé sur mains et genoux, le guide décrit un heurt de tête si Heather reste devant son visage. Approcher la tête par le côté évite ce contact ; ne pas attribuer automatiquement ce heurt à la posture haute.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -11508,7 +11513,7 @@
         },
         {
           "name": "Flammes",
-          "description": "Projette du feu sur le sol.",
+          "description": "Depuis la posture basse, le God peut lancer du feu sur le sol au-delà de la zone de contact. Le guide décrit une augmentation du volume, de la dispersion et de la vitesse au fil de la rencontre ; ces variations de l’arène3D ne sont pas une mesure d’onde, de boule aérienne ou de cadence2D.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -11519,7 +11524,7 @@
         },
         {
           "name": "Changement de hauteur",
-          "description": "S’abaisse ; la tête devient accessible.",
+          "description": "Le God débute droit avec le visage voilé, puis s’abaisse sur mains et genoux et expose sa tête aux coups. Le guide indique que sa défaite survient dans cette posture basse. Aucun pourcentage de phase ou invulnérabilité de la posture haute n’est déduit de cette seule progression.",
           "evidence": [
             "CL_SH3_BOSSES"
           ],
@@ -16735,7 +16740,7 @@
       "observedMoves": [
         {
           "name": "Chandelier",
-          "description": "Frappe avec l’objet métallique.",
+          "description": "Victim17 porte un chandelier métallique et peut l’utiliser pour frapper Henry ; ce n’est pas un club en bois ou un club de golf. La catégorie technique club du catalogue sert à son comportement de mêlée et ne valide pas un modèle d’arme différent. L’aura brûlante de proximité reste une observation séparée.",
           "evidence": [
             "CL_SH4_09_FOREST_WORLD_2ND_TIME",
             "CL_SH4_ENEMIES"
@@ -16944,9 +16949,10 @@
       "observedMoves": [
         {
           "name": "Roulade",
-          "description": "Charge aérienne en tonneau.",
+          "description": "Victim18 peut se lancer vers Henry en roulant en tonneau tout en lévitant, distinct des prises standard et des faibles dégâts de proximité communs aux Ghosts. Son chant accompagne sa présence mais le guide ne l’identifie pas comme un projectile ou un cri offensif. Direction, hauteur et contrôle du versus restent adaptés.",
           "evidence": [
-            "CL_ANDREW"
+            "CL_ANDREW",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -17142,7 +17148,7 @@
       "observedMoves": [
         {
           "name": "Pied-de-biche",
-          "description": "Frappe du pied-de-biche ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
+          "description": "Richard tient un pied-de-biche et frappe avec cet objet, tout en infligeant les faibles dégâts de proximité communs aux Ghosts. La catégorie technique club du moteur ne lui donne ni batte en bois ni club de golf. Le déplacement à pied et les courts sauts de position restent séparés des coups.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -17152,7 +17158,7 @@
         },
         {
           "name": "Téléportation",
-          "description": "Court saut de position.",
+          "description": "Le guide décrit Richard marchant sur deux pieds et se téléportant en courts allers-retours, souvent pour frapper depuis les côtés. Cette capacité n’est pas un nouveau corps, une sortie par porte ou une disparition définitive du fantôme ; distance et fenêtre du versus restent des compositions originales.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -18769,15 +18775,17 @@
       "identityNote": "Aucun bras libre ni coup de poing.",
       "referenceIds": [
         "EXT01",
-        "EXT02"
+        "EXT02",
+        "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026"
       ],
       "observedMoves": [
         {
           "name": "Projection corrosive",
-          "description": "Projection corrosive",
+          "description": "Le bestiaire Origins décrit une créature au torse entravé qui peut cracher de l’acide en approchant Travis. L’illustration montre les bras pris dans le torse ; elle ne fournit ni trajectoire, cadence, portée ni animation du jet. Ne pas lui emprunter un coup de poing de la Lying Figure ou une arme libre.",
           "evidence": [
             "EXT01",
-            "EXT02"
+            "EXT02",
+            "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -18786,10 +18794,11 @@
         },
         {
           "name": "Agrippement avec les jambes",
-          "description": "Agrippement avec les jambes",
+          "description": "En proximité, le Straight-Jacket peut entourer Travis avec ses jambes pour l’étouffer selon le bestiaire Origins. Cette prise se distingue du jet acide ; sa libération, ses appuis et ses poses restent à relever. Aucun bras libre, plaquage de Romper ou durée de bind versus n’est canonisé.",
           "evidence": [
             "EXT01",
-            "EXT02"
+            "EXT02",
+            "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -18985,14 +18994,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Corriger le scalpel du catalogue : la source Origins indique une seringue.; Ne pas reprendre pipe SH2 ni pose Homecoming.",
       "referenceIds": [
-        "EXT01"
+        "EXT01",
+        "EXT9_REF_ORIGINS_NURSE_20261026"
       ],
       "observedMoves": [
         {
           "name": "Attaque à la seringue",
-          "description": "Attaque à la seringue",
+          "description": "La Nurse du bestiaire Origins attaque avec une seringue ; la vue associée montre une silhouette en uniforme et un bras armé levé. Le texte et l’image ne constituent pas une boucle d’attaque complète. Conserver la seringue propre à cette œuvre, sans scalpel Homecoming, pipe BoM, revolver SH3 ou arme nouvelle.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_NURSE_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19178,14 +19189,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT01"
+        "EXT01",
+        "EXT9_REF_ORIGINS_CARRION_20261026"
       ],
       "observedMoves": [
         {
           "name": "Poursuite au sol",
-          "description": "Poursuite au sol",
+          "description": "Le Carrion suit Travis avec insistance avant de se jeter vers lui ; le bestiaire le situe notamment dans les rues, au Sanitarium, au théâtre et au motel. Le modèle publié confirme une masse basse contorsionnée, sans prouver une locomotion canine ou un cycle de pas normal.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_CARRION_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19194,9 +19207,10 @@
         },
         {
           "name": "Ruée de contact",
-          "description": "Ruée de contact",
+          "description": "La ruée du Carrion est un mouvement de contact du corps lancé vers Travis, décrit comme dangereux dans le bestiaire. La vue statique n’établit pas de morsure, de prise ni d’échange de places ; vitesse, distance, choc et récupération restent des adaptations ou des relevés à effectuer.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_CARRION_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19380,14 +19394,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Aucune apparition spécifique dans un miroir documentée ici.; Offensive exacte à relever; intro observée seulement au niveau silhouette.",
       "referenceIds": [
-        "EXT01"
+        "EXT01",
+        "EXT9_REF_ORIGINS_REMNANT_20261026"
       ],
       "observedMoves": [
         {
           "name": "Flottement de la cage et ombre humaine",
-          "description": "Flottement de la cage et ombre humaine",
+          "description": "Le Remnant de Cedar Grove est décrit comme une cage métallique flottante sans corps visible, projetant une ombre humanoïde dans la lumière. La capture associée documente sa présence dans une pièce, pas une anatomie charnelle. Cage, ombre et illumination doivent rester cohérentes ; aucune téléportation, prise ou aura offensive n’est déduite de cette seule vue.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_REMNANT_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19573,14 +19589,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Conserver les supports du plafond; ne pas simuler un vol libre.",
       "referenceIds": [
-        "EXT01"
+        "EXT01",
+        "EXT9_REF_ORIGINS_ARIEL_20261026"
       ],
       "observedMoves": [
         {
           "name": "Attaque depuis plafond",
-          "description": "Attaque depuis plafond",
+          "description": "Le bestiaire situe Ariel dans le théâtre Artaud et décrit des attaques depuis le plafond. L’illustration associée montre la marionnette inversée et suspendue ; elle ne fixe ni la longueur du support, ni un détachement ou une retombée. Une attaque suspendue exige son support et ses poses, sans saut libre présenté comme équivalent.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_ARIEL_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19589,9 +19607,10 @@
         },
         {
           "name": "Attaque depuis sol",
-          "description": "Attaque depuis sol",
+          "description": "Le même bestiaire décrit aussi Ariel attaquant depuis le sol, distinct de sa position au plafond. L’image inversée ne remplit pas cette seconde pose : appuis, orientation et geste au sol restent à capturer dans Origins. Aucun partenaire, fil offensif ou pouvoir de poupée ajouté.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_ARIEL_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19777,15 +19796,17 @@
       "identityNote": "Profil commun et première rencontre boss existent; les différencier sans changer d’espèce.",
       "referenceIds": [
         "EXT01",
-        "EXT02"
+        "EXT02",
+        "EXT9_REF_ORIGINS_CALIBAN_20261026"
       ],
       "observedMoves": [
         {
           "name": "Piétinement",
-          "description": "Piétinement",
+          "description": "Les membres contorsionnés du Caliban peuvent piétiner Travis ; le bestiaire le situe au théâtre, dans les rues et au motel. Le rendu publié montre la masse voûtée mais ne mesure ni nombre précis d’appuis actifs, ni cadence ou aire de frappe. Ne pas assimiler ce piétinement à une onde ou explosion.",
           "evidence": [
             "EXT01",
-            "EXT02"
+            "EXT02",
+            "EXT9_REF_ORIGINS_CALIBAN_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -19991,14 +20012,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Forme du projectile à vérifier sur séquence jouée.",
       "referenceIds": [
-        "EXT01"
+        "EXT01",
+        "EXT9_REF_ORIGINS_TWOBACK_20261026"
       ],
       "observedMoves": [
         {
           "name": "Saisie rapprochée",
-          "description": "Saisie rapprochée",
+          "description": "Le Two-Back du Riverside Motel peut percuter ou saisir Travis de près ; le bestiaire distingue cette action de son attaque à longue portée. Le rendu associé montre sa structure composite, sans démontrer le déroulé d’une projection, une fusion en cours ou l’apparition d’un second acteur.",
           "evidence": [
-            "EXT01"
+            "EXT01",
+            "EXT9_REF_ORIGINS_TWOBACK_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -22270,7 +22293,10 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Créer sous-variantes tuyau/fusil; aucune apparition magique d’arme.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "EXT06",
+        "HC_ENEMIES_20261023",
+        "EXT9_REF_HOMECOMING_ORDER_20261026"
       ],
       "observedMoves": [
         {
@@ -22286,9 +22312,12 @@
         },
         {
           "name": "Tir fusil",
-          "description": "Tir fusil",
+          "description": "Dans l’Underground, le guide distingue deux membres de l’Ordre dont un équipé d’un rifle, et recommande de viser celui-ci en premier. Le tir de fusil appartient à cette variante armée ; il ne signifie pas que tous les soldats tiennent simultanément tuyau et fusil. Le portrait tronqué ne certifie ni modèle, calibre, munition, crosse ou esquive.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "EXT06",
+            "HC_ENEMIES_20261023",
+            "EXT9_REF_HOMECOMING_ORDER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -22321,7 +22350,8 @@
       "constraints": [
         "Créer sous-variantes tuyau/fusil; aucune apparition magique d’arme.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Équipements des membres de l’Ordre à distinguer par apparition : la preuve de rifle dans l’Underground ne valide pas toutes les commandes de toutes les variantes."
       ],
       "proposals": {
         "super": {
@@ -22709,14 +22739,18 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Ne pas limiter arbitrairement au sol : le guide décrit aussi des individus en suspension.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023",
+        "EXT9_REF_HOMECOMING_SWARM_20261026"
       ],
       "observedMoves": [
         {
           "name": "Accrochage en groupe",
-          "description": "Accrochage en groupe",
+          "description": "Le bestiaire Homecoming décrit de gros insectes émergeant des ouvertures du sol ou des murs. Leur attaque consiste à s’accrocher à Alex et lui retirer de la vie ; le bouton affiché permet de les faire tomber. Le prototype doit distinguer émergence, accrochage et libération, sans étendre ce comportement aux Swarms du film2006 ou de BoM.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023",
+            "EXT9_REF_HOMECOMING_SWARM_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -25588,14 +25622,20 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Identité retrouvée dans les sources indiquées; contrôle visuel 1:1 encore requis.",
       "referenceIds": [
-        "EXT10"
+        "EXT10",
+        "EXT_DP_PITSTOP_20261023",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT9_REF_DOWNPOUR_SCREAMER_20261026"
       ],
       "observedMoves": [
         {
           "name": "Cri paralysant",
-          "description": "Cri paralysant",
+          "description": "Le bestiaire décrit un cri paralysant utilisé à distance. Le guide situe notamment des rencontres de Screamers à Devil’s Pitstop et au Centennial Building ; le rendu publié n’est pas une pose du cri. Rayon, délai, durée de paralysie, dégâts et commandes de résistance du versus ne sont pas des mesures du jeu original.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT_DP_PITSTOP_20261023",
+            "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+            "EXT9_REF_DOWNPOUR_SCREAMER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -25604,9 +25644,10 @@
         },
         {
           "name": "Saut sur le dos",
-          "description": "Saut sur le dos",
+          "description": "Le Screamer peut approcher par derrière et sauter sur le dos du protagoniste, selon le bestiaire Downpour. Cette attaque de contact reste distincte du cri à distance ; ni contrôle mental permanent, tête détachée, éjection ou projection arrière n’est déduit du portrait statique.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT9_REF_DOWNPOUR_SCREAMER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -25790,14 +25831,18 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Morsures et séquences complètes restent à relever.",
       "referenceIds": [
-        "EXT10"
+        "EXT10",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT9_REF_DOWNPOUR_WEEPING_BAT_20261026"
       ],
       "observedMoves": [
         {
           "name": "Accrochage mur/plafond",
-          "description": "Accrochage mur/plafond",
+          "description": "Le bestiaire décrit le Weeping Bat au repos sur murs ou plafond, qu’il utilise aussi pour se retirer de la mêlée. Le guide confirme des rencontres dans le garage puis une alcôve du Centennial Building. Le rendu debout ne prouve pas un cycle suspendu, un vol de chauve-souris ou un saut libre reproduisant l’accrochage.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+            "EXT9_REF_DOWNPOUR_WEEPING_BAT_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -27160,14 +27205,20 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version murale et version roulante à distinguer; aucun dash libre.",
       "referenceIds": [
-        "EXT10"
+        "EXT10",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_WALL_CORPSE_20261026"
       ],
       "observedMoves": [
         {
           "name": "Jet d’air toxique",
-          "description": "Jet d’air toxique",
+          "description": "Le Wall Corpse attaque à distance avec un jet d’air empoisonné ; le guide le situe dans les couloirs de l’Otherworld du Centennial Building et près des passerelles finales. Le bestiaire distingue une variante roulante en fin de jeu : la vue de la forme murale ne permet pas de rendre toutes les variantes fixes ni de lui copier la passivité du Tormented Soul.",
           "evidence": [
-            "EXT10"
+            "EXT10",
+            "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_WALL_CORPSE_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -27990,14 +28041,18 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Apparition en fauteuil et boss géant sont distincts.; Boss à mécanisme: quatre tubes vitaux à retirer sous projecteurs; pas duel mobile.; La foudre éteint les projecteurs; conserver leur rôle spatial.",
       "referenceIds": [
-        "EXT66"
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_11_20261026",
+        "EXT9_REF_DOWNPOUR_END_12_20261026"
       ],
       "observedMoves": [
         {
           "name": "Poings",
-          "description": "frappes massives",
+          "description": "Dans la salle finale d’Overlook, le Wheelman peut frapper Murphy avec son poing, notamment s’il approche le système de soutien sans l’avoir neutralisé. Le boss central et les passerelles de matériel médical sont visibles dans les deux captures associées ; aucun déplacement libre de Wheel Chair SH4 n’en découle.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_11_20261026",
+            "EXT9_REF_DOWNPOUR_END_12_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28006,9 +28061,11 @@
         },
         {
           "name": "Débris",
-          "description": "projections",
+          "description": "Le guide du boss Wheelman atteste une projection de débris dans la salle médicale d’Overlook. Les vues fixes ne montrent pas une salve complète et ne déterminent ni objet, nombre, trajectoire, cadence ou récupération ; ne pas remplacer ce matériau par une télékinésie générique ou un nouveau projectile magique.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_11_20261026",
+            "EXT9_REF_DOWNPOUR_END_12_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28017,9 +28074,11 @@
         },
         {
           "name": "Foudre",
-          "description": "zones lumineuses puis impact",
+          "description": "Un petit point lumineux au sol annonce l’endroit où la foudre de Wheelman va frapper ; le guide précise que ces attaques peuvent aussi désactiver les projecteurs. Le signal, l’impact et le matériel de la salle sont des phases distinctes. Leur rayon, retard et durée restent à mesurer, sans éclair instantané partout dans l’arène.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_11_20261026",
+            "EXT9_REF_DOWNPOUR_END_12_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28028,9 +28087,11 @@
         },
         {
           "name": "Projecteurs",
-          "description": "étourdissement ouvrant accès aux tubes",
+          "description": "La confrontation originale exige d’utiliser un projecteur depuis chaque plateforme de soufflet, puis de redescendre pour arracher un tube de survie ; le guide compte quatre tubes et indique que les coups directs ne blessent pas le boss. Le projecteur est un appareil du lieu utilisé par Murphy, pas un pouvoir lancé par Wheelman.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_11_20261026",
+            "EXT9_REF_DOWNPOUR_END_12_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28043,7 +28104,8 @@
         "Boss à mécanisme: quatre tubes vitaux à retirer sous projecteurs; pas duel mobile.",
         "La foudre éteint les projecteurs; conserver leur rôle spatial.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Le boss original ne prend pas de dégâts directs : Murphy utilise les projecteurs et détache quatre tubes. Une barre de vie et un duel direct dans le versus restent une transposition du projet, sans reproduction de cet objectif complet."
       ],
       "proposals": {
         "super": {
@@ -28217,14 +28279,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Ne pas donner à Anne les pouvoirs de Bogeyman; distinguer point de vue de Murphy et Anne.; Libération depuis des cellules, pas invocation magique; contexte final Murphy/Bogeyman à conserver.",
       "referenceIds": [
-        "EXT66"
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_13_20261026"
       ],
       "observedMoves": [
         {
           "name": "Pistolet",
-          "description": "tirs sur le protagoniste",
+          "description": "Après la salle Wheelman, le protagoniste contrôlé apparaît comme le Boogeyman et affronte Anne Cunningham. Le guide et la capture distinguent son pistolet de l’attaque à distance du protagoniste et de son marteau. Cette séquence ne donne pas à Anne de marteau, d’onde ou de munitions originales mesurées.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_13_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28233,9 +28297,10 @@
         },
         {
           "name": "Cellules",
-          "description": "libération de Juggernauts",
+          "description": "Pendant cette confrontation finale, Anne libère des Juggernauts des cellules. Le guide traite ces adversaires et les portes du lieu séparément de ses tirs ; aucune invocation magique, création d’un autre personnage ou transfert des Juggernauts vers n’importe quelle arène n’est déduit de cette scène.",
           "evidence": [
-            "EXT66"
+            "EXT66",
+            "EXT9_REF_DOWNPOUR_END_13_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -28247,7 +28312,8 @@
         "Ne pas donner à Anne les pouvoirs de Bogeyman; distinguer point de vue de Murphy et Anne.",
         "Libération depuis des cellules, pas invocation magique; contexte final Murphy/Bogeyman à conserver.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Les Juggernauts viennent des cellules de la rencontre finale ; ne pas les générer hors de ce lieu par une commande d’invocation non documentée."
       ],
       "proposals": {
         "super": {
@@ -32182,14 +32248,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_AIR_SCREAMER_20261026"
       ],
       "observedMoves": [
         {
           "name": "Vol circulaire; serres",
-          "description": "Vol circulaire; serres",
+          "description": "Dans le bestiaire Book of Memories, l’Air Screamer attaque en décrivant des cercles dans la pièce ou frappe des serres pendant le vol stationnaire. Aucune arme équipée n’est indiquée. Le petit portrait coupe les ailes : il ne livre ni envergure, piqué SH1, morsure de base transférée ou cycle de vol Vita mesuré.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_AIR_SCREAMER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -32374,14 +32442,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_BOGEYMAN_20261026"
       ],
       "observedMoves": [
         {
           "name": "Poursuite ciblée au marteau",
-          "description": "Poursuite ciblée au marteau",
+          "description": "Le Bogeyman de Book of Memories choisit une cible et la poursuit avec son grand marteau ; le bestiaire nomme explicitement Bogeyman’s Hammer. Le portrait à masque respiratoire reste propre à cette entrée et ne démontre aucune onde Downpour, fonction d’exécuteur Homecoming ou identité Pyramid Head.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_BOGEYMAN_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -32392,7 +32462,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Bogeyman’s Hammer de la ficheVita ; pas d’onde Downpour, de casque Pyramid Head ou d’exécution de Homecoming transférés par le nom."
       ],
       "proposals": {
         "super": {
@@ -32566,14 +32637,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_BUTCHER_20261026"
       ],
       "observedMoves": [
         {
           "name": "Couperet agressif",
-          "description": "Couperet agressif",
+          "description": "Le Butcher Vita est décrit comme agressif et armé d’un couperet surdimensionné nommé Great Cleaver. Le portrait tronqué ne constitue pas une pose du couperet et ne donne pas l’ordre de ses frappes. Ne pas emprunter les étranglements, la lame ou la mise en scène du Butcher Origins sans preuve BoM distincte.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_BUTCHER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -32584,7 +32657,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Great Cleaver attesté pour cette entréeVita ; le portrait coupe l’arme et ne certifie pas ses dimensions ou son modèle."
       ],
       "proposals": {
         "super": {
@@ -32758,14 +32832,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_DOUBLE_HEAD_20261026"
       ],
       "observedMoves": [
         {
           "name": "Encerclement puis charge",
-          "description": "Encerclement puis charge",
+          "description": "Le Double Head Vita est une créature canine dont la tête se fend en deux ; elle tourne autour de ses cibles avant de charger, selon son propre bestiaire. Le portrait n’autorise ni deux chiens ou deux cous indépendants, ni une prise SH3 copiée. La trajectoire circulaire en arène et le choc restent à relever dans cette œuvre.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_DOUBLE_HEAD_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -33142,14 +33218,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_INSANE_CANCER_20261026"
       ],
       "observedMoves": [
         {
           "name": "Masse; explosion finale",
-          "description": "Masse; explosion finale",
+          "description": "Le bestiaire Vita attribue à Insane Cancer des attaques par le poids de son corps et une explosion finale en fragments. Aucune arme tenue n’est indiquée. Cette issue ne prouve pas une explosion déclenchable à volonté, un projectile à distance ou une reconstruction après explosion ; le portrait du buste ne remplit pas les poses manquantes.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_INSANE_CANCER_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -33527,14 +33605,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_NURSE_20261026"
       ],
       "observedMoves": [
         {
           "name": "Tuyau métallique",
-          "description": "Tuyau métallique",
+          "description": "La Nurse Vita poursuit ses victimes à pas tremblants avec un long tuyau métallique ; la rubrique Weapon précise Steel Pipe. Le petit portrait ne montre pas tout le tuyau ni ses contacts. La seringue Origins, le scalpel Homecoming et le revolver SH3 restent des équipements d’autres fiches.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_NURSE_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -33911,14 +33991,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_SCHISM_20261026"
       ],
       "observedMoves": [
         {
           "name": "Ruée tête-lame",
-          "description": "Ruée tête-lame",
+          "description": "Le Schism Vita est décrit avec une tête en forme de lame ; il erre à l’aveugle et se jette sur les cibles proches. La rubrique Weapon n’attribue aucune arme indépendante. Le portrait confirme une silhouette de cette entrée, sans valider les combos des bras ou prises de la version Homecoming.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_SCHISM_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -33929,7 +34011,8 @@
       "constraints": [
         "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "La ruée à l’aveugle est décrite pour la versionVita ; les balayages de tête et prises Homecoming restent à relever séparément."
       ],
       "proposals": {
         "super": {
@@ -34103,14 +34186,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT20"
+        "EXT20",
+        "EXT9_REF_BOM_STRAIGHT_JACKET_20261026"
       ],
       "observedMoves": [
         {
           "name": "Projectiles corrosifs",
-          "description": "Projectiles corrosifs",
+          "description": "Le Straight-Jacket Vita est entravé et projette de l’acide en vomissant ; aucune arme n’est équipée dans le bestiaire. La silhouette ne lui donne pas de bras libres. Ne pas transférer la prise avec les jambes de la version Origins ni un jet toxique de Smog Homecoming à partir du seul nom.",
           "evidence": [
-            "EXT20"
+            "EXT20",
+            "EXT9_REF_BOM_STRAIGHT_JACKET_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,

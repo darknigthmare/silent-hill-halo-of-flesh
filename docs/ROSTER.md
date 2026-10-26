@@ -46,7 +46,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Bubble Head Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
 | Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
 | Mandarin | stationary-boss | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
-| Flesh Lip | stationary-boss | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — BASEMENT |
+| Flesh Lip | stationary-boss | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — BASEMENT |
 | Abstract Daddy | combatant | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE LABYRINTH |
 | Red Pyramid Thing — Great Knife | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
 | Red Pyramid Thing — Spear | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
@@ -309,7 +309,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
 | Armless Man | scripted-encounter | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | MIDWICH — FILM OTHERWORLD |
-| Dark Nurse | scripted-encounter | `puppet` | CONVULSION | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | BROOKHAVEN — DARK WARD |
+| Dark Nurse | scripted-encounter | `puppet` | CONVULSION | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | HÔPITAL DU FILM — CHAMBRE D’ALESSA |
 | Grey Child — Film | scripted-encounter | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | MIDWICH — FILM OTHERWORLD |
 | Creeper Swarm — Film | scripted-encounter | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | MIDWICH — FILM OTHERWORLD |
 | Colin the Janitor | scripted-encounter | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | MIDWICH — FILM OTHERWORLD |

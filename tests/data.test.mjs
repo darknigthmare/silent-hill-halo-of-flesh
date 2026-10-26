@@ -15,8 +15,8 @@ test('v0.9.6 catalogue counts are synchronized',()=>{
   assert.equal(VERSION,'0.9.6');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:83,stageDirectorEvents:20,
-    stageInteractions:20,stageHazardLinks:8,terrainProfiles:14,shiftStyles:15,moves:4600,
+    fatalities:460,stageFatalities:123,stageAnimations:78,stageDirectorEvents:29,
+    stageInteractions:29,stageHazardLinks:8,terrainProfiles:14,shiftStyles:15,moves:4600,
     directCanonicalMoves:0,behaviorCompositeMoves:2635,versusAdaptationMoves:1965,coverageComplete:true
   });
 });
@@ -50,7 +50,7 @@ test('every stage source and hazard resolves',()=>{
 test('every arena exposes a complete lore-first stage doctrine',()=>{
   assert.equal(Object.keys(STAGE_TERRAINS).length,14);
   assert.equal(Object.keys(STAGE_SHIFT_STYLES).length,15);
-  assert.equal(Object.keys(STAGE_EVENTS).length,28);
+  assert.equal(Object.keys(STAGE_EVENTS).length,36);
   const signatures=new Set();
   for(const stage of STAGES){
     const summary=stageDirectorSummary(stage);

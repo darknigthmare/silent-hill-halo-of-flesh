@@ -166,6 +166,14 @@ export const STAGE_EVENTS = Object.freeze({
   referenceCellReply: { name: 'PORTE DE CELLULE', duration: 96, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE PORTE VIBRE AU FOND' },
   referenceClosedDoorReply: { name: 'PORTE DU LOUNGE', duration: 100, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE BATTANT RESTE FERMÉ' },
   referenceWashroomReply: { name: 'TROU DE LA SALLE DE BAIN', duration: 108, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE LUEUR DANS LE PASSAGE' },
+  referenceRailingReply: { name: 'RAMPE DE L’ESCALIER', duration: 104, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE VIBRATION DANS LA RAMPE' },
+  referenceMallGrateReply: { name: 'GRILLE DU CENTRE COMMERCIAL', duration: 112, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE TREILLIS REPREND SA FORME' },
+  referenceSupportReply: { name: 'SUPPORT DE L’ATRIUM', duration: 116, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UN SUPPORT FRÉMIT AU FOND' },
+  referencePoliceBarsReply: { name: 'BARREAUX DU COMMISSARIAT', duration: 100, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LES BARREAUX RESTENT FERMÉS' },
+  referenceGateReply: { name: 'PORTE DE COURSIVE', duration: 108, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LA PORTE VIBRE SUR SES GONDS' },
+  referenceBarkReply: { name: 'ÉCORCE DE FOND', duration: 116, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'UNE POUSSIÈRE D’ÉCORCE TOMBE' },
+  referenceEarthBlockReply: { name: 'BLOC DE LA GALERIE', duration: 106, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE BLOC RESTE EN PLACE' },
+  referenceHookReply: { name: 'CROCHET DE LA CHAMBRE FROIDE', duration: 110, darkness: 0, radioBoost: 0, gameplayRole: 'ambience', referenceOnly: true, message: 'LE CROCHET OSCILLE SUR SON RAIL' },
 });
 
 const SOURCE_DIRECTIVES = Object.freeze({

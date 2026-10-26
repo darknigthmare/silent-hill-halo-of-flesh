@@ -38,7 +38,7 @@ test('public hall, normal attic and Block A keep their selected phase and exclud
  const hall=stage('town_hall_hc');assert.ok(!hall.props.includes('stairs'));assert.ok(!hall.props.includes('flags'));assert.ok(!hall.animations.includes('flagSway'));assert.equal(hall.shift.enabled,false);
  const attic=stage('shepherd_house_hc');for(const prop of ['portraits','stairs','mirrors'])assert.ok(!attic.props.includes(prop));assert.equal(attic.referencePolicy.worldState,'fixed-normal');assert.equal(attic.shift.enabled,false);assert.match(attic.referenceTracks[0].limits,/Otherworld/);
  const prison=stage('overlook');assert.equal(prison.weather,'dust');for(const prop of ['towers','watchtower','flood','chains']){assert.ok(!prison.props.includes(prop));assert.ok(!prison.layers.includes(prop));}assert.match(prison.referenceTracks[0].locationScope,/Block A/);assert.equal(prison.referencePolicy.worldState,'fixed-normal');
- for(const [id]of additions){const location=stage(id);assert.deepEqual(location.director.events,[]);assert.deepEqual(location.director.hazardDeck,[]);assert.deepEqual(location.interactions,[]);}
+ for(const [id]of additions){const location=stage(id),events=id==='overlook'?['referenceGateReply']:[];assert.deepEqual(location.director.events,events);assert.deepEqual(location.director.hazardDeck,[]);assert.deepEqual(location.interactions.map(i=>i.event),events);}
 });
 
 test('four distinct authored motions freeze under reduced motion without leaking canvas state',()=>{
@@ -73,5 +73,5 @@ test('only the documented original Lakeview lobby gets neutral presentation labe
   const projected=applyStageReferencePolicy(other,{...reference,id:other.id,source:other.source});assert.equal(projected.referencePolicy.normalPhaseLabel,undefined);assert.equal(projected.referencePolicy.terrainPresentation,undefined);
  }
  const unresolved=applyStageReferencePolicy(lake,{...reference,locationStatus:'etat-narratif-a-preciser'});assert.equal(unresolved.referencePolicy.normalPhaseLabel,undefined);assert.equal(unresolved.referencePolicy.terrainPresentation,undefined);
- for(const location of STAGES.filter(s=>!['lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3','prison_meat_locker','brookhaven_sh2','brookhaven_roof','building_world','artaud_theater'].includes(s.id))){assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);}
+ for(const location of STAGES.filter(s=>!['lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3','prison_meat_locker','brookhaven_sh2','brookhaven_roof','building_world','artaud_theater','blue_creek','nightmare_mall','grand_hotel','police_station_hc','prison_hc','overlook','downpour_streets','book_fire','book_wood','book_earth','book_blood','film_church','nightmare_hospital_hc','film_hospital','shepherds_glen'].includes(s.id))){assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);}
 });

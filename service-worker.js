@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261026-pass8';
+const CACHE_REVISION = 'parallel-20261026-pass9';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '78a2d0f70cf7b76fa56d3221b782dbc300af5ebe91db39101157d04f52f14a15';
+const BITMAP_REVISION = '13990dfde8acf64e0b63d7604d645e3bb514860b5bd31cde173af0afc7b52e63';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -14,32 +14,56 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+  "/assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
   "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+  "/assets/sprites/sh1_mumbler_006.38861850b609.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+  "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+  "/assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
   "/assets/sprites/sh1_romper_010.6ceba51e9d28.png",
   "/assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+  "/assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
   "/assets/sprites/sh1_wormhead_004.339fd5045d59.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
+  "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+  "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+  "/assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
   "/assets/sprites/sh3_closer_036.e00beefd711f.png",
   "/assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
   "/assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+  "/assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
   "/assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+  "/assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+  "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+  "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+  "/assets/sprites/sh3_scraper_045.2bfdc425582b.png",
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
+  "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+  "/assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
+  "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
+  "/assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+  "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+  "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+  "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+  "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
+  "/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+  "/assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+  "/assets/sprites/sh4_whitestool_062.bcbd83497241.png",
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",

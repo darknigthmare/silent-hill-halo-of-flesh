@@ -1,0 +1,3027 @@
+{
+  "schema": "halo-batch9-visual-provenance-v1",
+  "reviewedAt": "2026-10-26",
+  "origin": "conversation-image-generation",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "requestedItems": 30,
+  "deliveredPngCandidates": 24,
+  "blockedItems": 6,
+  "blockedByImageTool": 5,
+  "blockedByPartialSourceAnatomy": 1,
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "newAnimatedClips": 0,
+  "priorRefusalsRespected": [
+    "Mannequin SH2",
+    "Alessa SMG"
+  ],
+  "noRefusalRetryOrWorkaround": true,
+  "network": "Inherited proxy and CA trust preserved; HTTP200 selected references archived. Failed404 exploratory URLs were not used as source evidence. No policy denial bypass, no original footage or source timing capture.",
+  "documentaryPages": [
+    {
+      "file": "sh1-arts_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-arts_en.htm",
+      "url": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+      "httpStatus": 200,
+      "sha256": "24d3a57aca1711d9f6d8c0b9629d1e6018864b764d156bfa8eca633826a0a0b8",
+      "bytes": 36658,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh1-bosses_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-bosses_en.htm",
+      "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+      "httpStatus": 200,
+      "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+      "bytes": 32370,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh1-enemies_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-enemies_en.htm",
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "httpStatus": 200,
+      "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+      "bytes": 35155,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh2-arts_characters_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-arts_characters_en.htm",
+      "url": "https://www.silenthillmemories.net/sh2/arts_characters_en.htm",
+      "httpStatus": 200,
+      "sha256": "3477304bc47595320458d8240360eec3e0acee77cb2beb95e90083b3b3ba22fe",
+      "bytes": 31583,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh2-arts_creatures_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-arts_creatures_en.htm",
+      "url": "https://www.silenthillmemories.net/sh2/arts_creatures_en.htm",
+      "httpStatus": 200,
+      "sha256": "645291cc6ac6b21c519a891db24d4114d975fb0a88cd907c44cdff4e6b5f1df6",
+      "bytes": 39316,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh2-bosses_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-bosses_en.htm",
+      "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+      "httpStatus": 200,
+      "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+      "bytes": 44252,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh2-enemies_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-enemies_en.htm",
+      "url": "https://www.silenthillmemories.net/sh2/enemies_en.htm",
+      "httpStatus": 200,
+      "sha256": "4849e62a41c32f1c3463ed791770990cac10a7096349520a67fb517c6d0a297c",
+      "bytes": 34443,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh2-mosh2_art_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-mosh2_art_en.htm",
+      "url": "https://www.silenthillmemories.net/sh2/mosh2_art_en.htm",
+      "httpStatus": 200,
+      "sha256": "90694a773a5a7f52e4a9af80bbf62427357dd4806e34addb1ae5ea95ecc0e8eb",
+      "bytes": 20515,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh3-arts_characters_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-arts_characters_en.htm",
+      "url": "https://www.silenthillmemories.net/sh3/arts_characters_en.htm",
+      "httpStatus": 200,
+      "sha256": "01b4b04dcaf7a7b822858c42d435f3b1484f6a781beffc6de391aa52fa8ae5bd",
+      "bytes": 36102,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh3-arts_creatures_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-arts_creatures_en.htm",
+      "url": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+      "httpStatus": 200,
+      "sha256": "40ecb0f51056cf92ad747b54b10fc1a1ce54dd0ff10a52892b2837873864e295",
+      "bytes": 29745,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh3-bosses_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-bosses_en.htm",
+      "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+      "httpStatus": 200,
+      "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+      "bytes": 36420,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh3-enemies_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-enemies_en.htm",
+      "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+      "httpStatus": 200,
+      "sha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22",
+      "bytes": 31503,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh4-arts_monsters_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-arts_monsters_en.htm",
+      "url": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+      "httpStatus": 200,
+      "sha256": "3f87e050e7ef8ec67d00a96184b78c50dfa58a0da2ebea8997e69810a7c3f50e",
+      "bytes": 28910,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh4-bosses_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-bosses_en.htm",
+      "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+      "httpStatus": 200,
+      "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+      "bytes": 31918,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh4-characters_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-characters_en.htm",
+      "url": "https://www.silenthillmemories.net/sh4/characters_en.htm",
+      "httpStatus": 200,
+      "sha256": "2a1bf57aa3b01f447074084070673c3d8c2f08ff8aecdf151e3d4513bf0fabbf",
+      "bytes": 22626,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh4-enemies_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-enemies_en.htm",
+      "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+      "httpStatus": 200,
+      "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+      "bytes": 55413,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    },
+    {
+      "file": "sh4-walkthrough_13_outside_room_302_en.htm",
+      "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-walkthrough_13_outside_room_302_en.htm",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+      "httpStatus": 200,
+      "sha256": "0b729cfbbd80fd7ec4bb8a1c0821d3779ccecb2b07ca7b4be8210f1d0d18c1fa",
+      "bytes": 44427,
+      "role": "Documentary/gallery index; the model images, descriptions and game-image provenance are distinguished."
+    }
+  ],
+  "items": [
+    {
+      "id": "sh1_mumbler_006",
+      "rowId": "sh1_mumbler_006:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_02.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_02.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_02.jpg",
+          "httpStatus": 200,
+          "sha256": "47c52816c9963a78f5d946c58cc2c1525aa1aa0423907baca14496df545a4f60",
+          "bytes": 118626,
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh1_mumbler_006",
+        "generatedPath": "/workspace/generated_images/exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          102,
+          14,
+          1026,
+          1417
+        ],
+        "calibration": {
+          "anchor": [
+            0.54,
+            0.9916
+          ],
+          "bodyHeight": 0.97,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh1_mumbler_006",
+          "source": "sh1",
+          "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
+            "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+            "bytes": 1089509,
+            "width": 1102,
+            "height": 1428,
+            "extension": "png",
+            "visibleBounds": [
+              102,
+              14,
+              1026,
+              1417
+            ],
+            "transparentFraction": 0.62002
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Corps trapu brun, deux bras à longues griffes et deux jambes ; pied levé du modèle, bords de doigts reconstruits. Angle unique. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "bytes": 1089509,
+        "width": 1102,
+        "height": 1428,
+        "visibleBounds": [
+          102,
+          14,
+          1026,
+          1417
+        ],
+        "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
+        "transparentFraction": 0.62002,
+        "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9916
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
+        "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh1_creeper_009",
+      "rowId": "sh1_creeper_009:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_05.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_05.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_05.jpg",
+          "httpStatus": 200,
+          "sha256": "b630035e827e5bd203677b2ae35ae9ada3dc4748956ed5b894c1e2e97b59cf11",
+          "bytes": 105335,
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh1_creeper_009",
+        "generatedPath": "/workspace/generated_images/exec-7940cc9e-dbde-4f28-b7a1-1abb1f09b61c.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          216,
+          30,
+          804,
+          1520
+        ],
+        "calibration": {
+          "anchor": [
+            0.5,
+            0.98893
+          ],
+          "bodyHeight": 0.97,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh1_creeper_009",
+          "source": "sh1",
+          "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "0da4b86776ba636ed2c7d5cf6c30a055693efdd3cd0adfa7d0d3011237f1421c",
+            "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+            "bytes": 1359829,
+            "width": 1024,
+            "height": 1536,
+            "extension": "png",
+            "visibleBounds": [
+              216,
+              30,
+              804,
+              1519
+            ],
+            "transparentFraction": 0.82096
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Vue dorsale du Creeper SH1, six pattes et antennes/filaments ; pas de transfert SH2/film. Vue en hauteur adaptée au duel, aucun cycle ni hauteur source mesurée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+        "bytes": 1359829,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          216,
+          30,
+          804,
+          1519
+        ],
+        "pixelSHA256": "0da4b86776ba636ed2c7d5cf6c30a055693efdd3cd0adfa7d0d3011237f1421c",
+        "transparentFraction": 0.82096,
+        "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.98893
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-7940cc9e-dbde-4f28-b7a1-1abb1f09b61c.png",
+        "sourceSHA256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh1_puppet_nurse_012",
+      "rowId": "sh1_puppet_nurse_012:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_07.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_07.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_07.jpg",
+          "httpStatus": 200,
+          "sha256": "16028676eb01897fdbf177bacf53ae7911c67b664b0f8eb7f6d7c0be54d27c0d",
+          "bytes": 135156,
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh1_puppet_nurse_012",
+        "generatedPath": "/workspace/generated_images/exec-1d1dccbe-cad9-4754-acb6-5f76c6bc73d4.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          422,
+          5,
+          1048,
+          1080
+        ],
+        "calibration": {
+          "anchor": [
+            0.56,
+            0.99355
+          ],
+          "bodyHeight": 0.98,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh1_puppet_nurse_012",
+          "source": "sh1",
+          "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "069882d4ce5aa1f326d25f0273c4b9402135294b3725fbebc1f2dc3f8dc726d2",
+            "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+            "bytes": 700743,
+            "width": 1448,
+            "height": 1086,
+            "extension": "png",
+            "visibleBounds": [
+              422,
+              5,
+              1048,
+              1080
+            ],
+            "transparentFraction": 0.79369
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH1 voûtée, coiffe/blouse, parasite dorsal et petit couteau ; ne reprend pas Nurses SH2/SH3/film. Hump et appuis en profondeur non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+        "bytes": 700743,
+        "width": 1448,
+        "height": 1086,
+        "visibleBounds": [
+          422,
+          5,
+          1048,
+          1080
+        ],
+        "pixelSHA256": "069882d4ce5aa1f326d25f0273c4b9402135294b3725fbebc1f2dc3f8dc726d2",
+        "transparentFraction": 0.79369,
+        "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+        "facing": -1,
+        "anchor": [
+          0.56,
+          0.99355
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-1d1dccbe-cad9-4754-acb6-5f76c6bc73d4.png",
+        "sourceSHA256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh1_puppet_doctor_013",
+      "rowId": "sh1_puppet_doctor_013:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_17.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_17.png",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_17.png",
+          "httpStatus": 200,
+          "sha256": "bc7e4e24deb53ceaa2aebd2a5d02878abb87ea5b905d172359aca016bfa6fdbf",
+          "bytes": 171953,
+          "dimensions": [
+            415,
+            926
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh1_puppet_doctor_013",
+        "generatedPath": "/workspace/generated_images/exec-e91725ea-7cb0-4488-939a-7fafeea2ec1e.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          164,
+          17,
+          862,
+          1518
+        ],
+        "calibration": {
+          "anchor": [
+            0.58,
+            0.98763
+          ],
+          "bodyHeight": 0.72,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh1_puppet_doctor_013",
+          "source": "sh1",
+          "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "a270d2482fc9311b897a555ba32907ff38974c5af0f86173e5744c2f697e0b94",
+            "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+            "bytes": 1629947,
+            "width": 1024,
+            "height": 1536,
+            "extension": "png",
+            "visibleBounds": [
+              164,
+              17,
+              862,
+              1518
+            ],
+            "transparentFraction": 0.71704
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Doctor SH1, manteau sombre, bosse dorsale, couteau levé du modèle. Le classement idle du moteur ne prétend pas que cette pose armée est le repos source. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+        "bytes": 1629947,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          164,
+          17,
+          862,
+          1518
+        ],
+        "pixelSHA256": "a270d2482fc9311b897a555ba32907ff38974c5af0f86173e5744c2f697e0b94",
+        "transparentFraction": 0.71704,
+        "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+        "facing": -1,
+        "anchor": [
+          0.58,
+          0.98763
+        ],
+        "bodyHeight": 0.72,
+        "sourceFile": "exec-e91725ea-7cb0-4488-939a-7fafeea2ec1e.png",
+        "sourceSHA256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh1_incubus_019",
+      "rowId": "sh1_incubus_019:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_14.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_14.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_14.jpg",
+          "httpStatus": 200,
+          "sha256": "7b9d5baab20161dcdb1d1a3b2ff05e0029c8fdac47e1a948bd9bb3b2259049fe",
+          "bytes": 224519,
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Image generation was refused by the tool; no retry, alternate wording, replacement PNG or borrowed variant was used.",
+      "imageGenerationAttempted": true,
+      "toolRefusalRaw": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 83451570-6bf4-4c3f-b03d-c522229603b4. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "toolRequestId": "83451570-6bf4-4c3f-b03d-c522229603b4",
+      "retryAttempted": false
+    },
+    {
+      "id": "sh1_twinfeeler_015",
+      "rowId": "sh1_twinfeeler_015:pose:idle",
+      "source": "sh1",
+      "edition": "Silent Hill original 1999",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh1-sh1_art_cre_15.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh1-sh1_art_cre_15.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_15.jpg",
+          "httpStatus": 200,
+          "sha256": "22d6b4996ac07fd1c6e4f43a09de4b23f8a721ed8ff61aa20892981363eec40a",
+          "bytes": 107191,
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh1_twinfeeler_015",
+        "generatedPath": "/workspace/generated_images/exec-986c42df-eaaf-490d-9025-6e21a6118112.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          6,
+          170,
+          2177,
+          637
+        ],
+        "calibration": {
+          "anchor": [
+            0.52,
+            0.88456
+          ],
+          "bodyHeight": 0.65,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh1_twinfeeler_015",
+          "source": "sh1",
+          "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "47b593c5df2fcb8350ddb5cd4b9642344773b96c9f0c8aea85c1c8ca02d690b5",
+            "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+            "bytes": 1107324,
+            "width": 2186,
+            "height": 719,
+            "extension": "png",
+            "visibleBounds": [
+              6,
+              171,
+              2177,
+              637
+            ],
+            "transparentFraction": 0.67641
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Larve horizontale SH1, segments clairs, petits appendices ventraux et extrémités bifides ; pas la forme moth. Marges du modèle initialement proches du bord reconstruites. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+        "bytes": 1107324,
+        "width": 2186,
+        "height": 719,
+        "visibleBounds": [
+          6,
+          171,
+          2177,
+          637
+        ],
+        "pixelSHA256": "47b593c5df2fcb8350ddb5cd4b9642344773b96c9f0c8aea85c1c8ca02d690b5",
+        "transparentFraction": 0.67641,
+        "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+        "facing": -1,
+        "anchor": [
+          0.52,
+          0.88456
+        ],
+        "bodyHeight": 0.65,
+        "sourceFile": "exec-986c42df-eaaf-490d-9025-6e21a6118112.png",
+        "sourceSHA256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "rowId": "sh4_sniffer_dog_female_054:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_09_sniffer_dog.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_09_sniffer_dog.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_09_sniffer_dog.jpg",
+          "httpStatus": 200,
+          "sha256": "3c850b008aa17578620f8b92d12dc26cce5a0d2931bf18b43bc45b8af04f5aa9",
+          "bytes": 58634,
+          "dimensions": [
+            400,
+            317
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_sniffer_dog_female_054",
+        "generatedPath": "/workspace/generated_images/exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          36,
+          34,
+          1526,
+          992
+        ],
+        "calibration": {
+          "anchor": [
+            0.57,
+            0.96777
+          ],
+          "bodyHeight": 0.94,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh4_sniffer_dog_female_054",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
+            "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+            "bytes": 2224873,
+            "width": 1536,
+            "height": 1024,
+            "extension": "png",
+            "visibleBounds": [
+              36,
+              34,
+              1526,
+              992
+            ],
+            "transparentFraction": 0.58355
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+        "bytes": 2224873,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          36,
+          34,
+          1526,
+          992
+        ],
+        "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
+        "transparentFraction": 0.58355,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+        "facing": -1,
+        "anchor": [
+          0.57,
+          0.96777
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
+        "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_gum_head_old_type_057",
+      "rowId": "sh4_gum_head_old_type_057:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_18_gum_head.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_18_gum_head.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_18_gum_head.jpg",
+          "httpStatus": 200,
+          "sha256": "4ecc98fb547e437e1d0519fe3ab7c3febe82e553184dfe4e8118601423a6a980",
+          "bytes": 12958,
+          "dimensions": [
+            146,
+            293
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_gum_head_old_type_057",
+        "generatedPath": "/workspace/generated_images/exec-cb6e1fcd-1b3f-402e-9174-b5be610326f3.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          61,
+          18,
+          824,
+          1732
+        ],
+        "calibration": {
+          "anchor": [
+            0.55,
+            0.97411
+          ],
+          "bodyHeight": 0.96,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh4_gum_head_old_type_057",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "7159d40aeb020ccd97142e7894a7012e8e5bf36ecbf4f71da708b83ba668b3d2",
+            "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+            "bytes": 1619677,
+            "width": 885,
+            "height": 1777,
+            "extension": "png",
+            "visibleBounds": [
+              61,
+              18,
+              824,
+              1732
+            ],
+            "transparentFraction": 0.585
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Old Type SH4 gris/rosé, bosse pectorale et mains vides ; ni gorge orange ni arme du New Type. Genou levé et face étirée issus du modèle. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+        "bytes": 1619677,
+        "width": 885,
+        "height": 1777,
+        "visibleBounds": [
+          61,
+          18,
+          824,
+          1732
+        ],
+        "pixelSHA256": "7159d40aeb020ccd97142e7894a7012e8e5bf36ecbf4f71da708b83ba668b3d2",
+        "transparentFraction": 0.585,
+        "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+        "facing": -1,
+        "anchor": [
+          0.55,
+          0.97411
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-cb6e1fcd-1b3f-402e-9174-b5be610326f3.png",
+        "sourceSHA256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "rowId": "sh4_toadstool_061:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_14_toadstool.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_14_toadstool.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_14_toadstool.jpg",
+          "httpStatus": 200,
+          "sha256": "85d38c62f9929b6262c9ec7e84405db92853672c59a3857bb2c5a7d21832a733",
+          "bytes": 16435,
+          "dimensions": [
+            169,
+            250
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_toadstool_061",
+        "generatedPath": "/workspace/generated_images/exec-e119938c-db55-4d1d-ada3-f5b2ae11bcc9.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          66,
+          19,
+          1000,
+          1487
+        ],
+        "calibration": {
+          "anchor": [
+            0.54,
+            0.97443
+          ],
+          "bodyHeight": 0.96,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_toadstool_061",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "4f7ecd22d8a9cae6f2accef3f83a91f387a35e5cfdd7b7c9133756c3bd78efc6",
+            "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+            "bytes": 1806980,
+            "width": 1031,
+            "height": 1525,
+            "extension": "png",
+            "visibleBounds": [
+              66,
+              19,
+              1000,
+              1487
+            ],
+            "transparentFraction": 0.51683
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Une colonie Toadstool SH4 à bouts renflés, image individuelle de touffe ; nombre/position fins des tiges et attache au sol à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+        "bytes": 1806980,
+        "width": 1031,
+        "height": 1525,
+        "visibleBounds": [
+          66,
+          19,
+          1000,
+          1487
+        ],
+        "pixelSHA256": "4f7ecd22d8a9cae6f2accef3f83a91f387a35e5cfdd7b7c9133756c3bd78efc6",
+        "transparentFraction": 0.51683,
+        "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.97443
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-e119938c-db55-4d1d-ada3-f5b2ae11bcc9.png",
+        "sourceSHA256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "rowId": "sh4_whitestool_062:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_13_whitestool.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_13_whitestool.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_13_whitestool.jpg",
+          "httpStatus": 200,
+          "sha256": "25ba356a7b11ffab92047ca421b8c6c6a848918381778af9f7da64443e59537c",
+          "bytes": 20451,
+          "dimensions": [
+            165,
+            240
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_whitestool_062",
+        "generatedPath": "/workspace/generated_images/exec-304a1eb4-203c-4839-99c1-aa24fe4bc96a.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          37,
+          71,
+          1009,
+          1456
+        ],
+        "calibration": {
+          "anchor": [
+            0.54,
+            0.9623
+          ],
+          "bodyHeight": 0.92,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_whitestool_062",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "81a58c247998c6a718324fe10aa7ed6b2be09c67bcad3b85b061b52c5240e4ae",
+            "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+            "bytes": 2296027,
+            "width": 1040,
+            "height": 1512,
+            "extension": "png",
+            "visibleBounds": [
+              37,
+              71,
+              1009,
+              1456
+            ],
+            "transparentFraction": 0.53126
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Une colonie Whitestool SH4 aux fines tiges pâles, distincte des bouts ronds Toadstool. Densité, pointes et racines reconstruits, non animés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+        "bytes": 2296027,
+        "width": 1040,
+        "height": 1512,
+        "visibleBounds": [
+          37,
+          71,
+          1009,
+          1456
+        ],
+        "pixelSHA256": "81a58c247998c6a718324fe10aa7ed6b2be09c67bcad3b85b061b52c5240e4ae",
+        "transparentFraction": 0.53126,
+        "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9623
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-304a1eb4-203c-4839-99c1-aa24fe4bc96a.png",
+        "sourceSHA256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_tremer_blue_063",
+      "rowId": "sh4_tremer_blue_063:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_11_tremer.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_11_tremer.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_11_tremer.jpg",
+          "httpStatus": 200,
+          "sha256": "0507da787ff8dcbba58490065d23a49be2a537904b77dae5404921985f9b44e0",
+          "bytes": 8419,
+          "dimensions": [
+            195,
+            182
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_tremer_blue_063",
+        "generatedPath": "/workspace/generated_images/exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          26,
+          15,
+          1271,
+          1180
+        ],
+        "calibration": {
+          "anchor": [
+            0.51,
+            0.97277
+          ],
+          "bodyHeight": 0.96,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_tremer_blue_063",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
+            "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+            "bytes": 1554591,
+            "width": 1298,
+            "height": 1212,
+            "extension": "png",
+            "visibleBounds": [
+              26,
+              15,
+              1271,
+              1180
+            ],
+            "transparentFraction": 0.58268
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Blue Tremer SH4 bleu-gris, deux lobes séparés par constriction médiane ; pas le Red Tremer continu. Brillance renforcée, pas de traînée ni explosion produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "bytes": 1554591,
+        "width": 1298,
+        "height": 1212,
+        "visibleBounds": [
+          26,
+          15,
+          1271,
+          1180
+        ],
+        "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
+        "transparentFraction": 0.58268,
+        "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.97277
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
+        "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_tremer_red_064",
+      "rowId": "sh4_tremer_red_064:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_12_tremer.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_12_tremer.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_12_tremer.jpg",
+          "httpStatus": 200,
+          "sha256": "ed5a0a84ba42718f1081aeb076e92c05af32aa59b99d2e9cf9ffe4281669ca1c",
+          "bytes": 23537,
+          "dimensions": [
+            288,
+            226
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_tremer_red_064",
+        "generatedPath": "/workspace/generated_images/exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          14,
+          18,
+          1405,
+          1092
+        ],
+        "calibration": {
+          "anchor": [
+            0.51,
+            0.982
+          ],
+          "bodyHeight": 0.96,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_tremer_red_064",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
+            "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+            "bytes": 2031661,
+            "width": 1416,
+            "height": 1111,
+            "extension": "png",
+            "visibleBounds": [
+              14,
+              18,
+              1405,
+              1092
+            ],
+            "transparentFraction": 0.5229
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Tremer SH4 rosé/brun en forme continue incurvée, sans constriction du Blue. Brillance/contraste renforcés ; rampement et explosion absents. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "bytes": 2031661,
+        "width": 1416,
+        "height": 1111,
+        "visibleBounds": [
+          14,
+          18,
+          1405,
+          1092
+        ],
+        "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
+        "transparentFraction": 0.5229,
+        "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.982
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
+        "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_wheelchair_068",
+      "rowId": "sh4_wheelchair_068:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_21_wheel_chair.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_21_wheel_chair.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_21_wheel_chair.jpg",
+          "httpStatus": 200,
+          "sha256": "7384b769b172d4df81f052f9236516671bbbe94256aa1f08a2520a412564ed77",
+          "bytes": 16992,
+          "dimensions": [
+            196,
+            219
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_wheelchair_068",
+        "generatedPath": "/workspace/generated_images/exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          16,
+          8,
+          1174,
+          1289
+        ],
+        "calibration": {
+          "anchor": [
+            0.54,
+            0.97134
+          ],
+          "bodyHeight": 0.96,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh4_wheelchair_068",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
+            "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+            "bytes": 2211751,
+            "width": 1187,
+            "height": 1326,
+            "extension": "png",
+            "visibleBounds": [
+              16,
+              8,
+              1174,
+              1288
+            ],
+            "transparentFraction": 0.46625
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Fauteuil SH4 vide, deux grandes roues arrière, roulettes avant et repose-pieds ; tissu brun/rouge quadrillé. Perspective des appuis non aplatie ni certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+        "bytes": 2211751,
+        "width": 1187,
+        "height": 1326,
+        "visibleBounds": [
+          16,
+          8,
+          1174,
+          1288
+        ],
+        "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
+        "transparentFraction": 0.46625,
+        "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+        "facing": -1,
+        "anchor": [
+          0.54,
+          0.97134
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
+        "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "rowId": "sh3_numb_body_large_038:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_02_numb_body.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_02_numb_body.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg",
+          "httpStatus": 200,
+          "sha256": "83e5033122a0e314c5b8438dab20f1e24a6a51a942b0214795ea195b7d738166",
+          "bytes": 360371,
+          "dimensions": [
+            3200,
+            2712
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh3_numb_body_large_038",
+        "generatedPath": "/workspace/generated_images/exec-0221b030-82d1-43ea-a80d-def14cb06b99.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          253,
+          22,
+          1075,
+          1151
+        ],
+        "calibration": {
+          "anchor": [
+            0.58,
+            0.99567
+          ],
+          "bodyHeight": 0.98,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh3_numb_body_large_038",
+          "source": "sh3",
+          "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "e9050f92c487fcfb5c132cedf9dc6904c9b9f107d12602b61999e5d1ad927d5c",
+            "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+            "bytes": 901797,
+            "width": 1362,
+            "height": 1155,
+            "extension": "png",
+            "visibleBounds": [
+              253,
+              22,
+              1075,
+              1151
+            ],
+            "transparentFraction": 0.77414
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Numb Body Large SH3, tronc pâle et deux seules jambes. Anatomie du modèle familial ; taille Large retenue qualitativement par la fiche, aucune vue ou échelle propre à cette variante certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+        "bytes": 901797,
+        "width": 1362,
+        "height": 1155,
+        "visibleBounds": [
+          253,
+          22,
+          1075,
+          1151
+        ],
+        "pixelSHA256": "e9050f92c487fcfb5c132cedf9dc6904c9b9f107d12602b61999e5d1ad927d5c",
+        "transparentFraction": 0.77414,
+        "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+        "facing": 1,
+        "anchor": [
+          0.58,
+          0.99567
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-0221b030-82d1-43ea-a80d-def14cb06b99.png",
+        "sourceSHA256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry.",
+      "variantSpecificSourceAngles": 0,
+      "sourceAngleScope": "One family model view, not labelled as the Large variant. The SH3 enemy guide explicitly distinguishes small/medium/large; no Large-specific image, source scale or new anatomy is claimed.",
+      "variantSizeDocumentaryEvidence": {
+        "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+        "file": "sh3-enemies_en.htm",
+        "sha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22",
+        "httpStatus": 200,
+        "quote": "comes in sizes small, medium and large",
+        "scope": "Qualitative existence only; no dimensions or multiplier."
+      }
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "rowId": "sh3_nurse_pipe_043:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh3-pipe-nurses-game-38.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-pipe-nurses-game-38.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_38.jpg",
+          "httpStatus": 200,
+          "sha256": "f5101912c53824a9ac7f99d429ca12b38512d1578ecf8bacdd447961691c6bb1",
+          "bytes": 300503,
+          "dimensions": [
+            1024,
+            768
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh3-sh3_art_creature_07_nurse.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_07_nurse.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_07_nurse.jpg",
+          "httpStatus": 200,
+          "sha256": "6a3472d20135b11e5e8b0d50b62b89aa290bcb8bc5507dc74087acbc018a21ea",
+          "bytes": 383796,
+          "dimensions": [
+            1277,
+            2300
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Image generation was refused by the tool; no retry, alternate wording, replacement PNG or borrowed variant was used.",
+      "imageGenerationAttempted": true,
+      "toolRefusalRaw": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 9783e657-bd80-40fc-86c3-1f5ff3c03dae. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "toolRequestId": "9783e657-bd80-40fc-86c3-1f5ff3c03dae",
+      "retryAttempted": false
+    },
+    {
+      "id": "sh3_nurse_revolver_044",
+      "rowId": "sh3_nurse_revolver_044:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_07_nurse.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_07_nurse.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_07_nurse.jpg",
+          "httpStatus": 200,
+          "sha256": "6a3472d20135b11e5e8b0d50b62b89aa290bcb8bc5507dc74087acbc018a21ea",
+          "bytes": 383796,
+          "dimensions": [
+            1277,
+            2300
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh3_nurse_revolver_044",
+        "generatedPath": "/workspace/generated_images/exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          93,
+          11,
+          886,
+          1666
+        ],
+        "calibration": {
+          "anchor": [
+            0.53,
+            0.9893
+          ],
+          "bodyHeight": 0.98,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh3_nurse_revolver_044",
+          "source": "sh3",
+          "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
+            "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+            "bytes": 1177577,
+            "width": 934,
+            "height": 1683,
+            "extension": "png",
+            "visibleBounds": [
+              93,
+              11,
+              886,
+              1666
+            ],
+            "transparentFraction": 0.67812
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH3 au revolver long abaissé, cheveux sombres et uniforme coiffé ; pas de tuyau ou arme du film. Une pose modèle, aucune cadence ou phase de tir produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+        "bytes": 1177577,
+        "width": 934,
+        "height": 1683,
+        "visibleBounds": [
+          93,
+          11,
+          886,
+          1666
+        ],
+        "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
+        "transparentFraction": 0.67812,
+        "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.9893
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
+        "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_scraper_045",
+      "rowId": "sh3_scraper_045:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_08_scraper.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_08_scraper.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_08_scraper.jpg",
+          "httpStatus": 200,
+          "sha256": "763253355114c9e427630c30652455df27471433c75d76764eef17e63fdb63de",
+          "bytes": 103761,
+          "dimensions": [
+            709,
+            542
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh3_scraper_045",
+        "generatedPath": "/workspace/generated_images/exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          379,
+          22,
+          1046,
+          1078
+        ],
+        "calibration": {
+          "anchor": [
+            0.5,
+            0.98266
+          ],
+          "bodyHeight": 0.96,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh3_scraper_045",
+          "source": "sh3",
+          "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
+            "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+            "bytes": 762624,
+            "width": 1435,
+            "height": 1096,
+            "extension": "png",
+            "visibleBounds": [
+              380,
+              22,
+              1046,
+              1078
+            ],
+            "transparentFraction": 0.76568
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Scraper SH3 bas, avant-bras rouges et deux lames courtes croisées indépendantes ; pas Missionary. Couronne/tête, rouge et contraste à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+        "bytes": 762624,
+        "width": 1435,
+        "height": 1096,
+        "visibleBounds": [
+          380,
+          22,
+          1046,
+          1078
+        ],
+        "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
+        "transparentFraction": 0.76568,
+        "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.98266
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
+        "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_missionary_047",
+      "rowId": "sh3_missionary_047:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_12_missionary.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_12_missionary.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_12_missionary.jpg",
+          "httpStatus": 200,
+          "sha256": "55cd08992aa845f3c56e09c755bfdc36aee176353847182cd539e6a0581fb3f4",
+          "bytes": 43469,
+          "dimensions": [
+            464,
+            354
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh3_missionary_047",
+        "generatedPath": "/workspace/generated_images/exec-3f2a4958-7498-4c53-8866-42f438acdde9.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          71,
+          36,
+          1377,
+          1068
+        ],
+        "calibration": {
+          "anchor": [
+            0.62,
+            0.97354
+          ],
+          "bodyHeight": 0.93,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh3_missionary_047",
+          "source": "sh3",
+          "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "98cde8a19f0dc215e9b324d0b1ec105302812430bad2293410f7e12e297c24c6",
+            "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+            "bytes": 925845,
+            "width": 1436,
+            "height": 1096,
+            "extension": "png",
+            "visibleBounds": [
+              71,
+              36,
+              1376,
+              1068
+            ],
+            "transparentFraction": 0.75175
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Missionary SH3 avec deux longues lames et sa propre tête couverte ; posture du modèle conservée. Proportions du masque, teinte rouge et profondeur des pieds non certifiées. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+        "bytes": 925845,
+        "width": 1436,
+        "height": 1096,
+        "visibleBounds": [
+          71,
+          36,
+          1376,
+          1068
+        ],
+        "pixelSHA256": "98cde8a19f0dc215e9b324d0b1ec105302812430bad2293410f7e12e297c24c6",
+        "transparentFraction": 0.75175,
+        "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+        "facing": -1,
+        "anchor": [
+          0.62,
+          0.97354
+        ],
+        "bodyHeight": 0.93,
+        "sourceFile": "exec-3f2a4958-7498-4c53-8866-42f438acdde9.png",
+        "sourceSHA256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_leonard_wolf_048",
+      "rowId": "sh3_leonard_wolf_048:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_13_leonard.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_13_leonard.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_13_leonard.jpg",
+          "httpStatus": 200,
+          "sha256": "e26df5ed20f61ec3c56559a58caaf74a4379b0764539d14ace2e461994dab1a8",
+          "bytes": 68554,
+          "dimensions": [
+            464,
+            351
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh3_leonard_wolf_048",
+        "generatedPath": "/workspace/generated_images/exec-7ddfb808-9ec9-4150-89a2-78b07ed3c485.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          132,
+          34,
+          1399,
+          1074
+        ],
+        "calibration": {
+          "anchor": [
+            0.49,
+            0.9835
+          ],
+          "bodyHeight": 0.95,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh3_leonard_wolf_048",
+          "source": "sh3",
+          "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "c4cc70446db294ee64ccaacfee231d2a2fac4467fb8067b0b283deb744c6134d",
+            "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+            "bytes": 956088,
+            "width": 1442,
+            "height": 1091,
+            "extension": "png",
+            "visibleBounds": [
+              132,
+              34,
+              1399,
+              1074
+            ],
+            "transparentFraction": 0.78347
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Leonard SH3 aquatique, tête réduite, deux bras pointus et deux jambes ; pas Leonard humain/film. Texture plus claire, appuis et silhouette à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+        "bytes": 956088,
+        "width": 1442,
+        "height": 1091,
+        "visibleBounds": [
+          132,
+          34,
+          1399,
+          1074
+        ],
+        "pixelSHA256": "c4cc70446db294ee64ccaacfee231d2a2fac4467fb8067b0b283deb744c6134d",
+        "transparentFraction": 0.78347,
+        "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+        "facing": -1,
+        "anchor": [
+          0.49,
+          0.9835
+        ],
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-7ddfb808-9ec9-4150-89a2-78b07ed3c485.png",
+        "sourceSHA256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "rowId": "sh3_valtiel_051:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_09_valtiel.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_09_valtiel.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_09_valtiel.jpg",
+          "httpStatus": 200,
+          "sha256": "a95b2f6885dd844460722f3a72ef8df39be52ea06fdf401ad354de09d96ba41a",
+          "bytes": 258162,
+          "dimensions": [
+            2300,
+            1682
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Image generation was refused by the tool; no retry, alternate wording, replacement PNG or borrowed variant was used.",
+      "imageGenerationAttempted": true,
+      "toolRefusalRaw": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 65318a55-ad22-476d-adb7-32f8d7d405c7. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "toolRequestId": "65318a55-ad22-476d-adb7-32f8d7d405c7",
+      "retryAttempted": false
+    },
+    {
+      "id": "sh4_jimmy_stone_victim_1",
+      "rowId": "sh4_jimmy_stone_victim_1:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_25_victim_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_25_victim_01.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_25_victim_01.jpg",
+          "httpStatus": 200,
+          "sha256": "618947bfc63f2b22dcdf02f179eef24a2052e68fcf2866a17acc61f0dba22882",
+          "bytes": 14799,
+          "dimensions": [
+            176,
+            285
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-victim_01.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-victim_01.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_01.png",
+          "httpStatus": 200,
+          "sha256": "df309f0818dd41bf76b85f615bf7a547d341f01a350f38bfcc26cc845d0fc0fa",
+          "bytes": 97074,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_jimmy_stone_victim_1",
+        "generatedPath": "/workspace/generated_images/exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          171,
+          72,
+          999,
+          1307
+        ],
+        "calibration": {
+          "anchor": [
+            0.52,
+            1.0
+          ],
+          "bodyHeight": 0.92,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh4_jimmy_stone_victim_1",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
+            "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+            "bytes": 1103151,
+            "width": 1161,
+            "height": 1355,
+            "extension": "png",
+            "visibleBounds": [
+              171,
+              72,
+              999,
+              1307
+            ],
+            "transparentFraction": 0.72292
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Jimmy Stone Victim 1 SH4 en posture flottante penchée, visage incliné, vêtement sombre et pieds nus. Contraste/rouge accentués ; ni fantôme générique ni cycle de lévitation original. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "bytes": 1103151,
+        "width": 1161,
+        "height": 1355,
+        "visibleBounds": [
+          171,
+          72,
+          999,
+          1307
+        ],
+        "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
+        "transparentFraction": 0.72292,
+        "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+        "facing": -1,
+        "anchor": [
+          0.52,
+          1.0
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
+        "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_cynthia_velasquez_victim_16",
+      "rowId": "sh4_cynthia_velasquez_victim_16:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_32_victim_16.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_32_victim_16.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_32_victim_16.jpg",
+          "httpStatus": 200,
+          "sha256": "9a88879da15aa562e704d015168e6797e0fd0576f2184de0baa76e2ca1856069",
+          "bytes": 17036,
+          "dimensions": [
+            383,
+            216
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-victim_16.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-victim_16.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_16.png",
+          "httpStatus": 200,
+          "sha256": "8c71c6c3c7fdf3c1797b10735577d66387441729ebd3b2fd5cc93c7dd3a13c43",
+          "bytes": 56181,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_cynthia_velasquez_victim_16",
+        "generatedPath": "/workspace/generated_images/exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          19,
+          19,
+          1650,
+          923
+        ],
+        "calibration": {
+          "anchor": [
+            0.58,
+            1.0
+          ],
+          "bodyHeight": 1.0,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_cynthia_velasquez_victim_16",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
+            "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+            "bytes": 1303720,
+            "width": 1670,
+            "height": 942,
+            "extension": "png",
+            "visibleBounds": [
+              19,
+              19,
+              1650,
+              923
+            ],
+            "transparentFraction": 0.66923
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Cynthia Victim 16 SH4 dans sa posture horizontale voûtée, cheveux longs pendants, haut rayé et jambes pliées ; ni pose debout ni prise animée inférée. Cheveux/appuis, rouge et échelle en projection à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+        "bytes": 1303720,
+        "width": 1670,
+        "height": 942,
+        "visibleBounds": [
+          19,
+          19,
+          1650,
+          923
+        ],
+        "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
+        "transparentFraction": 0.66923,
+        "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+        "facing": 1,
+        "anchor": [
+          0.58,
+          1.0
+        ],
+        "bodyHeight": 1.0,
+        "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
+        "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "rowId": "sh4_jasper_gein_victim_17:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_33_victim_17.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_33_victim_17.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_33_victim_17.jpg",
+          "httpStatus": 200,
+          "sha256": "2d041ecc5da9c7470d94c0361d23bcf999bda0062aeecf4f733c441361ad2c11",
+          "bytes": 25144,
+          "dimensions": [
+            155,
+            289
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-victim_17.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-victim_17.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_17.png",
+          "httpStatus": 200,
+          "sha256": "e409884b40d688f0c2aa55f30c9b3056ffd115469909f0d22418ef6b5df972ea",
+          "bytes": 94539,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Image generation was refused by the tool; no retry, alternate wording, replacement PNG or borrowed variant was used.",
+      "imageGenerationAttempted": true,
+      "toolRefusalRaw": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 6d3da620-70ad-4250-b19f-9b24d20fe171. safety_violations=[violence, self-harm].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"self-harm\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "toolRequestId": "6d3da620-70ad-4250-b19f-9b24d20fe171",
+      "retryAttempted": false
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "rowId": "sh4_andrew_desalvo_victim_18:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_34_victim_18.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_34_victim_18.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_34_victim_18.jpg",
+          "httpStatus": 200,
+          "sha256": "37f7c19c94df2c8e86aa44e0db6bd3c20a6617ba261e78815f2aafe666788b80",
+          "bytes": 12332,
+          "dimensions": [
+            200,
+            275
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-victim_18.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-victim_18.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_18.png",
+          "httpStatus": 200,
+          "sha256": "436173dab1d1e28f73dd4a6dcbcd75c8d715a5eefa0f843db2e0d4bd3af85d7d",
+          "bytes": 82752,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Image generation was refused by the tool; no retry, alternate wording, replacement PNG or borrowed variant was used.",
+      "imageGenerationAttempted": true,
+      "toolRefusalRaw": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a99794bd-87aa-4a88-9be0-c047448de09e. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "toolRequestId": "a99794bd-87aa-4a88-9be0-c047448de09e",
+      "retryAttempted": false
+    },
+    {
+      "id": "sh4_richard_braintree_victim_19",
+      "rowId": "sh4_richard_braintree_victim_19:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-sh4_art_cre_35_victim_19.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_cre_35_victim_19.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_35_victim_19.jpg",
+          "httpStatus": 200,
+          "sha256": "7137dfaa917f683e3ca120a5b1c508ed5bfb38a11ec5f4e4a89e397115564b8f",
+          "bytes": 9607,
+          "dimensions": [
+            152,
+            293
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-victim_19.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-victim_19.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_19.png",
+          "httpStatus": 200,
+          "sha256": "3148cd077fb03976e7dd0e7a8dd7506890152dd943472e66fb088362ed71d53b",
+          "bytes": 77126,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_richard_braintree_victim_19",
+        "generatedPath": "/workspace/generated_images/exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          208,
+          40,
+          879,
+          1315
+        ],
+        "calibration": {
+          "anchor": [
+            0.56,
+            1.0
+          ],
+          "bodyHeight": 0.94,
+          "facing": -1
+        },
+        "import": {
+          "fighterId": "sh4_richard_braintree_victim_19",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
+            "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+            "bytes": 826091,
+            "width": 1161,
+            "height": 1355,
+            "extension": "png",
+            "visibleBounds": [
+              208,
+              40,
+              879,
+              1315
+            ],
+            "transparentFraction": 0.77828
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Richard Victim 19 SH4, chemise à carreaux, genou levé, tuyau courbé propre ; pas de pistolet ou identité Jimmy empruntée. Flottement, contact et temporalité non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+        "bytes": 826091,
+        "width": 1161,
+        "height": 1355,
+        "visibleBounds": [
+          208,
+          40,
+          879,
+          1315
+        ],
+        "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
+        "transparentFraction": 0.77828,
+        "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+        "facing": -1,
+        "anchor": [
+          0.56,
+          1.0
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
+        "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "rowId": "sh4_walter_sullivan_072:pose:idle",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room original 2004",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh4-man_with_the_coat.png",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-man_with_the_coat.png",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/man_with_the_coat.png",
+          "httpStatus": 200,
+          "sha256": "2bace98594eecef8aec9cd5d9727468069aa581329c57b11d0ded26d6050e441",
+          "bytes": 72321,
+          "dimensions": [
+            300,
+            350
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh4-sh4_art_char_16_walter_sullivan.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh4-sh4_art_char_16_walter_sullivan.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_char_16_walter_sullivan.jpg",
+          "httpStatus": 200,
+          "sha256": "55e82877dae742029421aab5327d6e664803bff77bee60545daa049a0a10631a",
+          "bytes": 798265,
+          "dimensions": [
+            3072,
+            3072
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 2,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh4_walter_sullivan_072",
+        "generatedPath": "/workspace/generated_images/exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          208,
+          45,
+          853,
+          1505
+        ],
+        "calibration": {
+          "anchor": [
+            0.53,
+            0.97917
+          ],
+          "bodyHeight": 0.95,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh4_walter_sullivan_072",
+          "source": "sh4",
+          "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
+            "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+            "bytes": 1769377,
+            "width": 1024,
+            "height": 1536,
+            "extension": "png",
+            "visibleBounds": [
+              208,
+              45,
+              853,
+              1505
+            ],
+            "transparentFraction": 0.70186
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Walter adulte final SH4, manteau bleu, cheveux longs et deux pistolets abaissés. Modèle entier du guide et portrait corroborent tenue/visage ; pas corps sacrifié ni enfant, détails du manteau/armes reconstruits. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+        "bytes": 1769377,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          208,
+          45,
+          853,
+          1505
+        ],
+        "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
+        "transparentFraction": 0.70186,
+        "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.97917
+        ],
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
+        "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "rowId": "sh2_red_pyramid_thing_great_knife_029:pose:idle",
+      "source": "sh2",
+      "edition": "Silent Hill 2 original 2001",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh2-sh2_art_monster_08_red_pyramid_thing.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_art_monster_08_red_pyramid_thing.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_08_red_pyramid_thing.jpg",
+          "httpStatus": 200,
+          "sha256": "ff978d20a95c34d76f5b757c7a2a2d06ef77a9640e188c3e02f4dbea93ca0858",
+          "bytes": 240974,
+          "dimensions": [
+            577,
+            783
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh2_red_pyramid_thing_great_knife_029",
+        "generatedPath": "/workspace/generated_images/exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          23,
+          12,
+          1033,
+          1445
+        ],
+        "calibration": {
+          "anchor": [
+            0.51,
+            0.94
+          ],
+          "bodyHeight": 0.94,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+          "source": "sh2",
+          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
+            "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+            "bytes": 1186750,
+            "width": 1076,
+            "height": 1462,
+            "extension": "png",
+            "visibleBounds": [
+              23,
+              12,
+              1032,
+              1445
+            ],
+            "transparentFraction": 0.69194
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Great Knife SH2 original, casque triangulaire étroit, tablier et grande lame. Mobilier source exclu ; pose de présence adaptée, pieds/lame en profondeur non certifiés. Pas de film ni spear. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "bytes": 1186750,
+        "width": 1076,
+        "height": 1462,
+        "visibleBounds": [
+          23,
+          12,
+          1032,
+          1445
+        ],
+        "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
+        "transparentFraction": 0.69194,
+        "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.94
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+        "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "rowId": "sh2_red_pyramid_thing_spear_030:pose:idle",
+      "source": "sh2",
+      "edition": "Silent Hill 2 original 2001",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh2-sh2_w13_boss_5a_pyramid_head_duo.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_w13_boss_5a_pyramid_head_duo.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_5a_pyramid_head_duo.jpg",
+          "httpStatus": 200,
+          "sha256": "843b30572e0047481f658466fa5c30c3e26f07e7eb690c3feb4f7f90b71b50ff",
+          "bytes": 64176,
+          "dimensions": [
+            700,
+            394
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh2-sh2_w13_boss_5b_pyramid_head_duo.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_w13_boss_5b_pyramid_head_duo.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_5b_pyramid_head_duo.jpg",
+          "httpStatus": 200,
+          "sha256": "be18ccc8eaeb8170c2eff08f1f38b54c369857d614b9fc15a35c33980fdbd7c4",
+          "bytes": 61241,
+          "dimensions": [
+            700,
+            394
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh2-sh2_art_monster_08_red_pyramid_thing.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_art_monster_08_red_pyramid_thing.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_08_red_pyramid_thing.jpg",
+          "httpStatus": 200,
+          "sha256": "ff978d20a95c34d76f5b757c7a2a2d06ef77a9640e188c3e02f4dbea93ca0858",
+          "bytes": 240974,
+          "dimensions": [
+            577,
+            783
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 2,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh2_red_pyramid_thing_spear_030",
+        "generatedPath": "/workspace/generated_images/exec-d2856c8a-862b-4239-911d-57a4f8846f07.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          230,
+          28,
+          798,
+          1507
+        ],
+        "calibration": {
+          "anchor": [
+            0.52,
+            0.98047
+          ],
+          "bodyHeight": 0.88,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh2_red_pyramid_thing_spear_030",
+          "source": "sh2",
+          "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "78e08ae09d0960cdfdb9e621807a6a189e166aa898a6547c266018bf16f7fa3b",
+            "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+            "bytes": 1785759,
+            "width": 1024,
+            "height": 1536,
+            "extension": "png",
+            "visibleBounds": [
+              230,
+              28,
+              797,
+              1507
+            ],
+            "transparentFraction": 0.76936
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Spear SH2 original, un sujet seul avec longue lance ; deux vues du duel final corroborent arme/tenue. Posture frontalisée adaptée, dimensions de lance et casque non mesurées ; ni couteau, jumeau supplémentaire ni victime. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+        "bytes": 1785759,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          230,
+          28,
+          797,
+          1507
+        ],
+        "pixelSHA256": "78e08ae09d0960cdfdb9e621807a6a189e166aa898a6547c266018bf16f7fa3b",
+        "transparentFraction": 0.76936,
+        "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+        "facing": 1,
+        "anchor": [
+          0.52,
+          0.98047
+        ],
+        "bodyHeight": 0.88,
+        "sourceFile": "exec-d2856c8a-862b-4239-911d-57a4f8846f07.png",
+        "sourceSHA256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "rowId": "sh2_eddie_dombrowski_032:pose:idle",
+      "source": "sh2",
+      "edition": "Silent Hill 2 original 2001",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "implemented-candidate",
+      "references": [
+        {
+          "file": "sh2-sh2_art_character_06_eddie.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_art_character_06_eddie.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_character_06_eddie.jpg",
+          "httpStatus": 200,
+          "sha256": "b52b88be484bdc9e2f01a3ea2790fea9b2eeb07f84cfb8850271ecbe4f8468f5",
+          "bytes": 35414,
+          "dimensions": [
+            730,
+            679
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh2-sh2_w10_boss_4a_eddie.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_w10_boss_4a_eddie.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w10_boss_4a_eddie.jpg",
+          "httpStatus": 200,
+          "sha256": "4c2761c5bba4a8bdc7ad78a4317b1bb94c7fb2e2dcfd4e7d6e2cb98a957afd1c",
+          "bytes": 71149,
+          "dimensions": [
+            700,
+            394
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh2-sh2_w10_boss_4b_eddie.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-sh2_w10_boss_4b_eddie.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w10_boss_4b_eddie.jpg",
+          "httpStatus": 200,
+          "sha256": "b38ddfa4427f77145041b87c60e671bb787e0358930d6deff87a1b71e624e23c",
+          "bytes": 78032,
+          "dimensions": [
+            700,
+            394
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 3,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "candidateReview": {
+        "id": "sh2_eddie_dombrowski_032",
+        "generatedPath": "/workspace/generated_images/exec-bf240cb5-8d9a-4b41-8296-4ac86e495fb9.png",
+        "visuallyInspected": true,
+        "alphaBounds24": [
+          213,
+          19,
+          861,
+          1515
+        ],
+        "calibration": {
+          "anchor": [
+            0.53,
+            0.98568
+          ],
+          "bodyHeight": 0.96,
+          "facing": 1
+        },
+        "import": {
+          "fighterId": "sh2_eddie_dombrowski_032",
+          "source": "sh2",
+          "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+          "pose": "idle",
+          "frames": 1,
+          "animatedClips": 0,
+          "fidelity": "unverified",
+          "technical": {
+            "pixelSHA256": "55d02e37186901811104e1acb027e1eb82065ae94e6ae6629769ed7fbe9ee29f",
+            "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+            "bytes": 1849328,
+            "width": 1024,
+            "height": 1536,
+            "extension": "png",
+            "visibleBounds": [
+              213,
+              19,
+              860,
+              1515
+            ],
+            "transparentFraction": 0.66704
+          },
+          "dryRun": false,
+          "nextStep": "npm run sprites:check && npm test && npm run build"
+        },
+        "limits": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Eddie SH2 original adulte, casquette inversée, polo rayé, short, chaussettes/baskets et revolver abaissé. Portrait et deux vues du combat ; pose frontale de présence adaptée, visage/détails modernisés et appuis non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés."
+      },
+      "registeredFrame": {
+        "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+        "bytes": 1849328,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          213,
+          19,
+          860,
+          1515
+        ],
+        "pixelSHA256": "55d02e37186901811104e1acb027e1eb82065ae94e6ae6629769ed7fbe9ee29f",
+        "transparentFraction": 0.66704,
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.98568
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-bf240cb5-8d9a-4b41-8296-4ac86e495fb9.png",
+        "sourceSHA256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+        "origin": "conversation-image-generation"
+      },
+      "sourcePostureBinding": "Static original model/reference pose assigned to the versus idle preview; the source game idle state and timing are not established.",
+      "sourcePoseOrFootageMeasured": false,
+      "independentSourceAnglesNote": "A guide reuse of the same model is a duplicate angle and does not establish another pose or animation. Composite portrait/material and family-model references do not independently validate variant scale or full phase geometry."
+    },
+    {
+      "id": "sh3_split_worm_046",
+      "rowId": "sh3_split_worm_046:pose:idle",
+      "source": "sh3",
+      "edition": "Silent Hill 3 original 2003",
+      "platformRegion": "Exact platform, region, patch and render processing unestablished unless the supplied game image itself establishes them.",
+      "status": "blocked",
+      "references": [
+        {
+          "file": "sh3-sh3_art_creature_11_split_worm.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_art_creature_11_split_worm.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_11_split_worm.jpg",
+          "httpStatus": 200,
+          "sha256": "843364cd78f75e2751f248c84bbc318340a1d9b4fa9e7f0e5ee3abc6ebb3f5ca",
+          "bytes": 745292,
+          "dimensions": [
+            3200,
+            2400
+          ],
+          "visuallyInspected": true
+        },
+        {
+          "file": "sh3-sh3_boss_split_worm.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh3-sh3_boss_split_worm.jpg",
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_split_worm.jpg",
+          "httpStatus": 200,
+          "sha256": "ab87dfade02ae967d3ff54c38639bd909b458187c19fcfe2b98433b291c215a9",
+          "bytes": 236024,
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "visuallyInspected": true
+        }
+      ],
+      "independentSourceAngles": 1,
+      "originalSourcePixelsDelivered": false,
+      "certifiedOneToOne": false,
+      "reason": "Primary model is cropped head/neck; original boss view leaves the body hidden in wall. No whole-body reference, so no hidden anatomy generated and no image-generation request issued.",
+      "imageGenerationAttempted": false,
+      "toolRefusalRaw": null,
+      "evidenceGap": "Only cropped head/neck model and head emerging through wall were available. Full hidden anatomy was not invented."
+    }
+  ],
+  "deliveryLimits": "24 distinct one-frame actor candidates. Source posture is not source idle certification; hidden anatomy, viewpoint, scale and source temporal sequence remain unmeasured. Same-pose copies are not independent references or animated frames.",
+  "pendingSourceHttpReview": false,
+  "pendingFinalDistVisualReview": false,
+  "sourceHttpReview": {
+    "reportPath": "/workspace/shared/halo-of-flesh/validation-batch9-2026-10-26/art-source/report.json",
+    "reportSHA256": "d50d297262d1e3edaf8408779c8e41f4418e36122c877e79448e6fe8527332fa",
+    "build": "source",
+    "checks": 586,
+    "captures": 125,
+    "javascriptErrors": 0,
+    "visualReview": {
+      "schema": "halo-batch9-source-http-visual-review-v1",
+      "reviewedAt": "2026-10-26T09:51:59.898675+00:00",
+      "build": "source",
+      "checks": 586,
+      "captures": 125,
+      "imagesInspectedAutomatically": 44,
+      "javascriptErrors": 0,
+      "passed": true,
+      "technicalIssues": [],
+      "visualIssuesBlocking": [],
+      "visuallyInspectedCaptures": [
+        {
+          "file": "candidate-gallery-page-1.png",
+          "sha256": "0abc557f56a5c84c7eec65e6db21f2a2253c2f780c2cb6020f716ad37ae3884b"
+        },
+        {
+          "file": "candidate-gallery-page-2.png",
+          "sha256": "e16b8acd446be9f387c2b95bc4f3e1e6a74350d0f06333816a6a5769cbb85ca7"
+        },
+        {
+          "file": "candidate-gallery-page-3.png",
+          "sha256": "ac91620d4972e4cda6b2df3ab0c25f010743d73dc7ac6fb83bf4e50e1f5d41a6"
+        },
+        {
+          "file": "combat-new-pngs-batch9-knife-spear-woodside.png",
+          "sha256": "5a81d8169205a1c9f5ea439d1499fd1a0abea562eaaa459499cad03852f484b4"
+        },
+        {
+          "file": "combat-new-pngs-batch9-walter-eddie-roof.png",
+          "sha256": "942c03f6310665aac4b8915d91de00c653975de3dc4179523db6c7a60dde610c"
+        },
+        {
+          "file": "combat-new-pngs-batch9-large-numb-female-sniffer.png",
+          "sha256": "d7d6fdc150df08c38522cf0dbe6bc3296445d4b293b33f011375620f1ddefe83"
+        },
+        {
+          "file": "combat-new-pngs-batch9-cynthia-richard-lakeview.png",
+          "sha256": "134090bc37539ddd8df3aaf47ffb7be840263b5f1266c8bcdb679c49ab3d7f6b"
+        },
+        {
+          "file": "inspector-sh1_puppet_doctor_013.png",
+          "sha256": "bc8cc6ebc673b81b3bda7ce84b532f1f8b364125ca82dde12e418bb5c945c454"
+        },
+        {
+          "file": "inspector-sh1_twinfeeler_015.png",
+          "sha256": "e9e9961a785fbf873f2d4c1e1637b8e02b3a1bb036dc3827e4a833b1f36eb6f7"
+        },
+        {
+          "file": "inspector-sh4_wheelchair_068.png",
+          "sha256": "88154fc44be370af515c16ef204eccb38136a296cdf63c316891568aa6fa5ff6"
+        },
+        {
+          "file": "inspector-sh4_tremer_blue_063.png",
+          "sha256": "62dce38f2ca6c658caaf6a3f9cd216e84e45224dea105ef53840a6a1c3e6be2f"
+        },
+        {
+          "file": "mobile-new-pngs-batch9-cynthia-richard-lakeview.png",
+          "sha256": "5835e159afada80c6324d530632a84a4cb00a3d95fbf49e43c940fa049a76c8d"
+        },
+        {
+          "file": "mobile-new-pngs-batch9-walter-eddie-roof.png",
+          "sha256": "e70028cdaff207abdde58e32252af7c06f25f11e62f3e13cf061587438f74f21"
+        }
+      ],
+      "findings": [
+        "All49 registered candidates appear once across real pagination pages18/18/13, with each thumbnail decoded and painted; no blank loading cards remain after root portrait-cache eviction correction.",
+        "All24 delivered subjects remain distinct one-frame idle-preview candidates.43 exact subjects and44 source-owned PNGs are automatically inspected; older airborne/pointing regressions remain.",
+        "Four new matches through normal controls preserve original SH2 GreatKnife versus Spear, Walter versus Eddie, NumbLarge versus female Sniffer, Cynthia versus Richard. All weapons/extremities and registered anchors/bounds fit the live camera.",
+        "Actual fixed-phase scene labels/neutral terrain remain intact in Bakery, Lakeview and roof tests; no scene image, source footage or stage geometry has been added in this art batch.",
+        "Six blocked IDs have no asset, inspector or duel link; rejected subjects do not receive an allowed variant bitmap.",
+        "Raised-knife Doctor, horizontal larva, wheelchair and BlueTremer inspector crops show complete registered body/props; static original model postures are not source-game idle or locomotion certification."
+      ],
+      "limitations": [
+        "Original-source scale, timing, opposite side and support depth are unmeasured. Texture, saturation, hair/hand details and faint low-alpha fringe remain to compare.",
+        "NumbLarge uses family model anatomy and textually documented Large existence: zero Large-specific source views or measured size.",
+        "Five image-tool refusals and one partial-body reference gap remain blocked. No refusal was retried, no hidden worm anatomy invented.",
+        "Some original model postures are raised-weapon or floating/foreshortened views; their assignment to idle preview remains an authored versus convention.",
+        "Mobile combat remains a small16:9 letterboxed arena with very small HUD and actor details; no physical-device usability certification."
+      ],
+      "certifiedOneToOne": false,
+      "sourceMotionMeasured": false,
+      "pendingFinalDistVisualReview": false,
+      "finalDistReviewCompletedAt": "2026-10-26T10:12:30.998559+00:00"
+    }
+  },
+  "finalHttpVisualReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch9-2026-10-26/visual-http-review.json",
+    "sha256": "b7d0f4f164000cd92f5d149665917e11e92a0a696d47ee90c26f97d2322c1e11",
+    "build_reviewed": "dist",
+    "passed": true,
+    "checks": 586,
+    "captures": 125,
+    "javascriptErrors": 0,
+    "directlyViewedDistCaptures": 11,
+    "digestComparisonSummary": {
+      "total": 125,
+      "byte_identical": 125,
+      "changed": 0,
+      "all_changed_directly_reinspected": true,
+      "directly_viewed_dist": 11
+    },
+    "blockingFindings": [],
+    "limitations": [
+      "All24 delivered images remain unverified static candidates. Source posture assigned to the versus idle preview does not establish the original-game idle state, attack, locomotion, timing or animation.",
+      "Source scale, perspective, support depth, opposite side, hidden surface detail and faint low-alpha fringe remain unmeasured. Textures/contrast and red saturation are strengthened, with source margins/details sometimes reconstructed.",
+      "NumbLarge has zero Large-specific visual references: family anatomy plus a guide distinguishing small/medium/large establish a qualitative candidate, not original dimensions or a certified unique model view.",
+      "Five image-tool refusals (Incubus, NursePipe, Valtiel, Jasper, Andrew) and one incomplete body reference (SplitWorm) stay blocked. No rejected request was retried and no alternate allowed image was lent to those exact IDs.",
+      "The four new duels use adapted versus cameras/scale and existing candidate rooms. Their PNG presence and menu flow do not certify original source staging or hidden body anatomy.",
+      "430px portrait combat retains a small16:9 letterboxed arena and very small HUD/actor details. No physical-device usability or played campaign is claimed."
+    ],
+    "certifiedOneToOne": false
+  }
+}

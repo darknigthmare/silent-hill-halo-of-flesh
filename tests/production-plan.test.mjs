@@ -37,6 +37,17 @@ test('phase-one research covers exactly the live fighters and stages with all ni
   }
 });
 
+test('ghost proximity documentation keeps its own source and the thirty new mechanics reach their Excel rows',()=>{
+  const ghosts=plan.moves.filter(row=>ROSTER.find(f=>f.id===row.fighterId)?.source==='sh4'&&createCombatProfile(ROSTER.find(f=>f.id===row.fighterId)).referencePolicy.proximityField);
+  assert.ok(ghosts.length>0);
+  for(const row of ghosts){assert.match(row.canonicalVerification,/Présence passive locale du fantôme SH4/);assert.doesNotMatch(row.canonicalVerification,/Incubator|undefined/);}
+  const incubator=plan.moves.find(row=>row.fighterId==='sh1_incubator_018');
+  assert.match(incubator.canonicalVerification,/Champ passif local d’Incubator/);
+  const mechanics=plan.moves.filter(row=>/Feu porté par le sol|Prise suspendue par les pieds|Zone de contact propre|Cri avec paralysie sensorielle|Passage aérien physique/.test(row.canonicalVerification));
+  assert.equal(mechanics.length,30);
+  for(const row of mechanics){assert.match(row.canonicalVerification,/versus/);assert.notEqual(row.productionStatus,'Validé');}
+});
+
 test('the plan inventories every current move, finisher, presentation and core pose exactly once',()=>{
   assert.deepEqual(sorted(plan.fighters.map(f=>f.id)),sorted(fighterIds));
   assert.deepEqual(sorted(plan.stages.map(s=>s.id)),sorted(stageIds));

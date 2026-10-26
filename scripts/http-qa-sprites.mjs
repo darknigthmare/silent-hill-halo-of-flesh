@@ -25,7 +25,16 @@ try{
  const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await pageIn(context);
  await page.goto(base+'/modules/unified-versus.html?qa=1');await ready(page);assert('both exact-ID candidate portraits decode from HTTP',true);
  assert('catalogue remains 30 per page',await page.locator('#roster > *').count()===30);await shot(page,'01-selection');
- await page.check('#artReadyOnly');assert('available-only filter matches exact registered profiles',await page.locator('#roster > *').count()===artCount);
+ await page.check('#artReadyOnly');
+ const rosterPages=[],availableIds=[];
+ for(let n=0;n<Math.max(1,Math.ceil(artCount/30));n++){
+  const ids=await page.locator('#roster > *').evaluateAll(cards=>cards.map(card=>card.dataset.id));rosterPages.push(ids);availableIds.push(...ids);
+  if(await page.locator('#nextPage').isDisabled())break;
+  await page.click('#nextPage');
+ }
+ assert('available-only filter matches exact registered profiles across real roster pages',availableIds.length===artCount&&new Set(availableIds).size===artCount&&JSON.stringify([...availableIds].sort())===JSON.stringify(Object.keys(SPRITES).sort()));
+ assert('available roster pages keep the thirty-card limit and end at the final page',rosterPages.every((ids,index)=>ids.length===Math.min(30,artCount-index*30))&&await page.locator('#nextPage').isDisabled());
+ while(!await page.locator('#prevPage').isDisabled())await page.click('#prevPage');
  await page.click('#randomAll');assert('random chooses only available art',await page.evaluate(()=>[__HALO_QA__.selection.p1,__HALO_QA__.selection.p2].every(f=>__HALO_QA__.spriteStatus(f).kind==='candidate')));
  await page.selectOption('#mode','local');await page.click('#launch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
  assert('normal battle loads without diagnostic mode',await page.evaluate(()=>!__HALO_QA__.engine.config.artDiagnostic));await shot(page,'02-battle');

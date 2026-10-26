@@ -1,0 +1,758 @@
+{
+  "schema": 1,
+  "batch": "lot9",
+  "workstream": "combat",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "requestedItems": 30,
+  "items": [
+    {
+      "rowId": "sh1_groaner_003:neutralSpecial",
+      "collection": "moves",
+      "entityId": "sh1_groaner_003",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_groaner_003:forwardSpecial",
+      "collection": "moves",
+      "entityId": "sh1_groaner_003",
+      "moveKey": "forwardSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_groaner_003:airSpecial",
+      "collection": "moves",
+      "entityId": "sh1_groaner_003",
+      "moveKey": "airSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_groaner_003:super",
+      "collection": "moves",
+      "entityId": "sh1_groaner_003",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_groaner_003:desperation",
+      "collection": "moves",
+      "entityId": "sh1_groaner_003",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_wormhead_004:neutralSpecial",
+      "collection": "moves",
+      "entityId": "sh1_wormhead_004",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_wormhead_004:forwardSpecial",
+      "collection": "moves",
+      "entityId": "sh1_wormhead_004",
+      "moveKey": "forwardSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_wormhead_004:airSpecial",
+      "collection": "moves",
+      "entityId": "sh1_wormhead_004",
+      "moveKey": "airSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_wormhead_004:super",
+      "collection": "moves",
+      "entityId": "sh1_wormhead_004",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh1_wormhead_004:desperation",
+      "collection": "moves",
+      "entityId": "sh1_wormhead_004",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7"
+      },
+      "mechanism": "physical-airborne-bite",
+      "implementation": "A real single bite pass advances through space, with a physical jump for ground commands and horizontal travel from an actual airborne state for AIR+S. Real firearm hits can knock the exact dog down during airtime.",
+      "limits": "Jump curve, reach, deterministic airborne knockdown and Wormhead 1.12 damage factor are authored versus choices. Original jumping, bite, recoil and falling artwork remain missing; no transferred Groaner sprite.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh2_flesh_lip_027:forwardHeavy",
+      "collection": "moves",
+      "entityId": "sh2_flesh_lip_027",
+      "moveKey": "forwardHeavy",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9"
+      },
+      "mechanism": "suspended-foot-thrust",
+      "implementation": "Forward foot thrust has a bounded foot-contact band and longer physical reach below one suspended cage; no free ceiling walk or generic arm swing.",
+      "limits": "One cage is the versus actor; the original two-then-third encounter is not recreated. Lift height, contact band, six arrow transitions and terminal cleanup are authored versus rules. No original feet-grip, lift, struggle or fall pose/frame is certified.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh2_flesh_lip_027:neutralSpecial",
+      "collection": "moves",
+      "entityId": "sh2_flesh_lip_027",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9"
+      },
+      "mechanism": "suspended-foot-strangulation",
+      "implementation": "Native foot grip lifts a grounded mobile victim below one fixed cage, keeps it suspended without launch or knockdown, blocks independent attack movement and releases after real alternating directional controls.",
+      "limits": "One cage is the versus actor; the original two-then-third encounter is not recreated. Lift height, contact band, six arrow transitions and terminal cleanup are authored versus rules. No original feet-grip, lift, struggle or fall pose/frame is certified.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh2_flesh_lip_027:throw",
+      "collection": "moves",
+      "entityId": "sh2_flesh_lip_027",
+      "moveKey": "throw",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9"
+      },
+      "mechanism": "suspended-foot-strangulation",
+      "implementation": "Native foot grip lifts a grounded mobile victim below one fixed cage, keeps it suspended without launch or knockdown, blocks independent attack movement and releases after real alternating directional controls.",
+      "limits": "One cage is the versus actor; the original two-then-third encounter is not recreated. Lift height, contact band, six arrow transitions and terminal cleanup are authored versus rules. No original feet-grip, lift, struggle or fall pose/frame is certified.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh2_flesh_lip_027:super",
+      "collection": "moves",
+      "entityId": "sh2_flesh_lip_027",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9"
+      },
+      "mechanism": "suspended-foot-strangulation",
+      "implementation": "Native foot grip lifts a grounded mobile victim below one fixed cage, keeps it suspended without launch or knockdown, blocks independent attack movement and releases after real alternating directional controls.",
+      "limits": "One cage is the versus actor; the original two-then-third encounter is not recreated. Lift height, contact band, six arrow transitions and terminal cleanup are authored versus rules. No original feet-grip, lift, struggle or fall pose/frame is certified.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh2_flesh_lip_027:desperation",
+      "collection": "moves",
+      "entityId": "sh2_flesh_lip_027",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9"
+      },
+      "mechanism": "suspended-foot-strangulation",
+      "implementation": "Native foot grip lifts a grounded mobile victim below one fixed cage, keeps it suspended without launch or knockdown, blocks independent attack movement and releases after real alternating directional controls.",
+      "limits": "One cage is the versus actor; the original two-then-third encounter is not recreated. Lift height, contact band, six arrow transitions and terminal cleanup are authored versus rules. No original feet-grip, lift, struggle or fall pose/frame is certified.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh3_god_050:neutralSpecial",
+      "collection": "moves",
+      "entityId": "sh3_god_050",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e"
+      },
+      "mechanism": "floor-bound-native-fire",
+      "implementation": "The existing burning projectile is emitted exactly on the floor and stays at its floor height throughout actual travel, including super motion.",
+      "limits": "Floor placement, projectile dimensions and collision are authored versus choices. Original 3D spreading, late branching, alternating upright/lowered God posture, PS2/PC safe-zone differences and source flame animation are not recreated.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh3_god_050:downSpecial",
+      "collection": "moves",
+      "entityId": "sh3_god_050",
+      "moveKey": "downSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e"
+      },
+      "mechanism": "floor-bound-native-fire",
+      "implementation": "The existing burning projectile is emitted exactly on the floor and stays at its floor height throughout actual travel, including super motion.",
+      "limits": "Floor placement, projectile dimensions and collision are authored versus choices. Original 3D spreading, late branching, alternating upright/lowered God posture, PS2/PC safe-zone differences and source flame animation are not recreated.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh3_god_050:forwardHeavy",
+      "collection": "moves",
+      "entityId": "sh3_god_050",
+      "moveKey": "forwardHeavy",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e"
+      },
+      "mechanism": "bounded-close-arm-contact",
+      "implementation": "The nearby arm strike uses a bounded lower contact band in front of the fixed actor instead of its generated high strike.",
+      "limits": "Floor placement, projectile dimensions and collision are authored versus choices. Original 3D spreading, late branching, alternating upright/lowered God posture, PS2/PC safe-zone differences and source flame animation are not recreated.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh3_god_050:super",
+      "collection": "moves",
+      "entityId": "sh3_god_050",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e"
+      },
+      "mechanism": "floor-bound-native-fire",
+      "implementation": "The existing burning projectile is emitted exactly on the floor and stays at its floor height throughout actual travel, including super motion.",
+      "limits": "Floor placement, projectile dimensions and collision are authored versus choices. Original 3D spreading, late branching, alternating upright/lowered God posture, PS2/PC safe-zone differences and source flame animation are not recreated.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh3_god_050:desperation",
+      "collection": "moves",
+      "entityId": "sh3_god_050",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh3/bosses_en.htm": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e"
+      },
+      "mechanism": "floor-bound-native-fire",
+      "implementation": "The existing burning projectile is emitted exactly on the floor and stays at its floor height throughout actual travel, including super motion.",
+      "limits": "Floor placement, projectile dimensions and collision are authored versus choices. Original 3D spreading, late branching, alternating upright/lowered God posture, PS2/PC safe-zone differences and source flame animation are not recreated.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:neutralSpecial",
+      "collection": "moves",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+      },
+      "mechanism": "physical-airborne-barrel-pass",
+      "implementation": "A bounded single-contact physical barrel pass advances with an actual airborne trajectory, distinct from the separately retained passive ghost drain and down-special aura.",
+      "limits": "Arc, damage, single-contact mapping and input variants are authored versus choices. No original roll cycle, body rotation clip, Ghost death, invulnerability, teleport or cross-victim inheritance is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:forwardSpecial",
+      "collection": "moves",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "moveKey": "forwardSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+      },
+      "mechanism": "physical-airborne-barrel-pass",
+      "implementation": "A bounded single-contact physical barrel pass advances with an actual airborne trajectory, distinct from the separately retained passive ghost drain and down-special aura.",
+      "limits": "Arc, damage, single-contact mapping and input variants are authored versus choices. No original roll cycle, body rotation clip, Ghost death, invulnerability, teleport or cross-victim inheritance is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:airSpecial",
+      "collection": "moves",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "moveKey": "airSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+      },
+      "mechanism": "physical-airborne-barrel-pass",
+      "implementation": "A bounded single-contact physical barrel pass advances with an actual airborne trajectory, distinct from the separately retained passive ghost drain and down-special aura.",
+      "limits": "Arc, damage, single-contact mapping and input variants are authored versus choices. No original roll cycle, body rotation clip, Ghost death, invulnerability, teleport or cross-victim inheritance is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:super",
+      "collection": "moves",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+      },
+      "mechanism": "physical-airborne-barrel-pass",
+      "implementation": "A bounded single-contact physical barrel pass advances with an actual airborne trajectory, distinct from the separately retained passive ghost drain and down-special aura.",
+      "limits": "Arc, damage, single-contact mapping and input variants are authored versus choices. No original roll cycle, body rotation clip, Ghost death, invulnerability, teleport or cross-victim inheritance is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "sh4_andrew_desalvo_victim_18:desperation",
+      "collection": "moves",
+      "entityId": "sh4_andrew_desalvo_victim_18",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588"
+      },
+      "mechanism": "physical-airborne-barrel-pass",
+      "implementation": "A bounded single-contact physical barrel pass advances with an actual airborne trajectory, distinct from the separately retained passive ghost drain and down-special aura.",
+      "limits": "Arc, damage, single-contact mapping and input variants are authored versus choices. No original roll cycle, body rotation clip, Ghost death, invulnerability, teleport or cross-victim inheritance is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "downpour_screamer_104:neutralSpecial",
+      "collection": "moves",
+      "entityId": "downpour_screamer_104",
+      "moveKey": "neutralSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774"
+      },
+      "mechanism": "bounded-source-sensory-paralysis",
+      "implementation": "A bounded scream applies source-owned temporary paralysis which actually prevents movement, guard, jump, dodge, attacks and taunts; refresh, source loss, pause and expiry preserve ownership.",
+      "limits": "Radius, health damage, duration, controls and pounce arc are authored versus choices. No original scream audio/pose/timing, damage-free scream, forced rear warp or measured escape sequence is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "downpour_screamer_104:downSpecial",
+      "collection": "moves",
+      "entityId": "downpour_screamer_104",
+      "moveKey": "downSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774"
+      },
+      "mechanism": "bounded-source-sensory-paralysis",
+      "implementation": "A bounded scream applies source-owned temporary paralysis which actually prevents movement, guard, jump, dodge, attacks and taunts; refresh, source loss, pause and expiry preserve ownership.",
+      "limits": "Radius, health damage, duration, controls and pounce arc are authored versus choices. No original scream audio/pose/timing, damage-free scream, forced rear warp or measured escape sequence is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "downpour_screamer_104:forwardSpecial",
+      "collection": "moves",
+      "entityId": "downpour_screamer_104",
+      "moveKey": "forwardSpecial",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774"
+      },
+      "mechanism": "physical-screamer-pounce",
+      "implementation": "The physical pounce really leaves the floor and advances to contact without teleporting or inheriting scream paralysis.",
+      "limits": "Radius, health damage, duration, controls and pounce arc are authored versus choices. No original scream audio/pose/timing, damage-free scream, forced rear warp or measured escape sequence is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "downpour_screamer_104:super",
+      "collection": "moves",
+      "entityId": "downpour_screamer_104",
+      "moveKey": "super",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774"
+      },
+      "mechanism": "bounded-source-sensory-paralysis",
+      "implementation": "A bounded scream applies source-owned temporary paralysis which actually prevents movement, guard, jump, dodge, attacks and taunts; refresh, source loss, pause and expiry preserve ownership.",
+      "limits": "Radius, health damage, duration, controls and pounce arc are authored versus choices. No original scream audio/pose/timing, damage-free scream, forced rear warp or measured escape sequence is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    },
+    {
+      "rowId": "downpour_screamer_104:desperation",
+      "collection": "moves",
+      "entityId": "downpour_screamer_104",
+      "moveKey": "desperation",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/combat-reference-policy.js",
+        "src/fight.js",
+        "tests/source-combat-lot9.test.mjs",
+        "scripts/http-qa-source-expansion.mjs"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "evidenceSha256": {
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774"
+      },
+      "mechanism": "bounded-source-sensory-paralysis",
+      "implementation": "A bounded scream applies source-owned temporary paralysis which actually prevents movement, guard, jump, dodge, attacks and taunts; refresh, source loss, pause and expiry preserve ownership.",
+      "limits": "Radius, health damage, duration, controls and pounce arc are authored versus choices. No original scream audio/pose/timing, damage-free scream, forced rear warp or measured escape sequence is claimed.",
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false
+    }
+  ],
+  "validation": {
+    "runtimeStatus": "implemented-and-validated-candidate",
+    "newNodeTests": 47,
+    "targetedNodeTests": 128,
+    "targetedNodePassed": 128,
+    "nodeLog": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/combat-node.log",
+    "nodeLogSha256": "374e5b051559273a882369bf0a52b9f6479b413d7dfa65fae8df615a69a09b8f",
+    "sourceBrowserStatus": "passed",
+    "sourceBrowserChecks": 201,
+    "sourceBrowserCaptures": 47,
+    "sourceBrowserScenes": 115,
+    "nativeMovementRowsExercised": 30,
+    "sourceBrowserErrors": [],
+    "sourceBrowserReport": "/workspace/shared/halo-of-flesh/validation-batch9-2026-10-26/combat-source/report.json",
+    "sourceBrowserReportSha256": "a6853a5e4fa417bab29d0246420a687a1ef5874a66964fae8245718f67eed0c4",
+    "movementDeltaReview": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/movement-delta-review.json",
+    "movementDeltaReviewSha256": "a9077a7d28098bc82fe7c987bb5555832c2b4ee6fcfd52a02ca26d3429cc4ccd",
+    "independentReview": "/workspace/shared/halo-of-flesh/validation-batch9-2026-10-26/independent-combat-and-outro-checks.json"
+  },
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26",
+  "certifiedOneToOne": 0,
+  "measuredSourceMoves": 0,
+  "countingRule": "Each item is one existing fighterId:moveKey production move row with a real native runtime behavior change. Tests, labels and references are supporting evidence, not additional delivered work items.",
+  "regressionFixes": [
+    "End-of-round cleanup clears only the exact cage-owned temporary lift on native lethal grip or timeout; unrelated airborne KOs retain their own height.",
+    "A later physical hit cannot mark an already suspended victim grounded above the floor; escape, refresh and expiry release the lift through one posture cleanup.",
+    "Fixed bodies preserve directional attack commands while their locomotion and walk meter stay disabled.",
+    "The cinematic workstream requested one shared outro-staging condition for its two exact authored non-flyer outros; the flag does not affect combat moves."
+  ]
+}

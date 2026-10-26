@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "0a893808b4c4119240826f185d5b96b5f2e75b25b2eca0250f095b51b3804247",
+  "planSha256": "6e12a9cbe09b49e0c98bccb8b3db5b2510fe29ce6298baafa1875582a1d13ec0",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -216,9 +216,9 @@
       }
     },
     "Sources": {
-      "rows": 154,
+      "rows": 184,
       "columns": 7,
-      "range": "A5:G159",
+      "range": "A5:G189",
       "fields": {
         "id": "A",
         "title": "B",
@@ -241,22 +241,22 @@
     "poses": 2300,
     "stageAnimations": 1799,
     "observations": 435,
-    "sources": 154,
+    "sources": 184,
     "tasks": 875,
-    "pngCandidates": 25,
+    "pngCandidates": 49,
     "animatedClips": 1,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 205,
     "presentationHooks": 9,
     "openActions": 840,
-    "openP0": 94,
+    "openP0": 93,
     "playableFighters": 187,
     "reviewedCombatProfiles": 230,
     "disabledMoves": 1101,
     "authoredFinishers": 205,
     "authoredFighterFinishers": 198,
     "authoredStageFinishers": 7,
-    "authoredPresentations": 686,
+    "authoredPresentations": 716,
     "resolvedRoleDecisions": 33,
     "stageBitmapCandidates": 6,
     "stageBitmapLayers": 6,
@@ -265,11 +265,11 @@
     "sourceTimingBatchSchema": 1,
     "sourceTimingReviewSchema": 1,
     "measuredSourceMoves": 0,
-    "referenceStageTracks": 74,
-    "retiredStageItems": 1190,
-    "visibleReferenceStageTracks": 68,
+    "referenceStageTracks": 97,
+    "retiredStageItems": 1196,
+    "visibleReferenceStageTracks": 91,
     "maskedReferenceStageTracks": 6,
-    "additionalStageBindings": 11
+    "additionalStageBindings": 29
   },
   "calculated": [
     230,
@@ -282,31 +282,31 @@
     2300,
     1799,
     435,
-    154,
-    25,
+    184,
+    49,
     1,
     0,
     840,
-    94
+    93
   ],
   "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "60b019fbaf0624ee51fda1a1c96cbffd28f037c0887c7dbc48179012e76038e0",
-  "changedCells": 1273,
+  "sourceSha256": "70a73b37a849facd7fd64ecac1f0a1d83f756b711724f1bc91ce95602ff4f3d9",
+  "changedCells": 2706,
   "changesBySheet": {
-    "Combattants": 23,
-    "Mouvements": 655,
-    "Finishers": 85,
-    "Présentations": 168,
-    "Clips": 93,
-    "Arènes": 25,
-    "Animations arènes": 66,
-    "Actions": 65,
-    "Gestes référencés": 53,
-    "Sources": 35,
-    "Synthèse": 5
+    "Combattants": 64,
+    "Mouvements": 1352,
+    "Finishers": 52,
+    "Présentations": 221,
+    "Clips": 290,
+    "Arènes": 76,
+    "Animations arènes": 160,
+    "Actions": 198,
+    "Gestes référencés": 79,
+    "Sources": 210,
+    "Synthèse": 4
   },
-  "enlargedRows": 427,
+  "enlargedRows": 736,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
@@ -611,8 +611,8 @@
     {
       "sheet": "Synthèse",
       "address": "B16",
-      "formula": "COUNTA('Sources'!$A$6:$A$159)",
-      "value": 154
+      "formula": "COUNTA('Sources'!$A$6:$A$189)",
+      "value": 184
     },
     {
       "sheet": "Synthèse",
@@ -642,7 +642,7 @@
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 25
+      "value": 49
     },
     {
       "sheet": "Synthèse",
@@ -762,7 +762,7 @@
       "sheet": "Synthèse",
       "address": "B21",
       "formula": "COUNTIFS('Actions'!$D$6:$D$880,\"P0\",'Actions'!$H$6:$H$880,\"<>Validé\")",
-      "value": 94
+      "value": 93
     },
     {
       "sheet": "Synthèse",
@@ -789,21 +789,21 @@
       "value": 11
     }
   ],
-  "changeLogSha256": "18bb6369b7e9709b71fd13b3e1a993780503258d93fa1064501add9c3ec07a4c",
+  "changeLogSha256": "14e719988918da9b4da0985f980ebcf67ee0e3987cc5a712573bd8254ec0aec9",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
-  "structureChangeLogSha256": "270957145c80438b817260cd2fd04942ea1ffc22ab6d5521b4f9780a335e1036",
-  "appendedSources": 5,
+  "structureChangeLogSha256": "35dea0dc00b1d6d9434e5eeaf472c9a1d2e28351e2f4a90e879006d83f79caa8",
+  "appendedSources": 30,
   "verification": {
     "passed": true,
     "preservation": {
       "passed": true,
-      "comparedCells": 249654,
-      "authoredChanges": 1273,
-      "enlargedRows": 427,
-      "appendedSourceRows": 5,
-      "appendedSourceCells": 35,
+      "comparedCells": 249689,
+      "authoredChanges": 2706,
+      "enlargedRows": 736,
+      "appendedSourceRows": 30,
+      "appendedSourceCells": 210,
       "auditedFormulaExpansions": 1,
       "unchanged": [
         "worksheet order",

@@ -1,0 +1,1493 @@
+{
+  "schema": 1,
+  "batch": "lot9",
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "scope": "Trente observations précisées, chacune reliée à des pièces nouvelles archivées et inspectées. Intégrations de combat/cinématiques/lieux listées séparément hors30. Aucun rôle antérieur, statut artistique ou timing original clôturé.",
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch9-roles-2026-10-26",
+  "sources": [
+    {
+      "id": "origins-creatures",
+      "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+      "httpStatus": 200,
+      "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+      "localFile": "origins-creatures.html",
+      "bytes": 15982
+    },
+    {
+      "id": "homecoming-creatures",
+      "url": "https://www.silenthillmemories.net/sh5/creatures_en.htm",
+      "httpStatus": 200,
+      "sha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb",
+      "localFile": "homecoming-creatures.html",
+      "bytes": 22010
+    },
+    {
+      "id": "downpour-monsters",
+      "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+      "httpStatus": 200,
+      "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+      "localFile": "downpour-monsters.html",
+      "bytes": 16869
+    },
+    {
+      "id": "origins-walkthrough",
+      "url": "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+      "httpStatus": 200,
+      "sha256": "3aa8bad9114902f0eb6a79dc25c29cbc750b7673750eba2ab572ac3e5be05b93",
+      "localFile": "origins-walkthrough.html",
+      "bytes": 37701
+    },
+    {
+      "id": "downpour-walkthrough",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_en.htm",
+      "httpStatus": 200,
+      "sha256": "b112463436a69ef3d0f1093191146bce0391f1d1638e153b976cb11f7ac8f5d1",
+      "localFile": "downpour-walkthrough.html",
+      "bytes": 12458
+    },
+    {
+      "id": "homecoming-walkthrough",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+      "httpStatus": 200,
+      "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+      "localFile": "homecoming-walkthrough.html",
+      "bytes": 111444
+    },
+    {
+      "id": "downpour-penitentiary",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+      "httpStatus": 200,
+      "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+      "localFile": "downpour-penitentiary.html",
+      "bytes": 35138
+    },
+    {
+      "id": "downpour-devils-pitstop",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_02_devils_pitstop_en.htm",
+      "httpStatus": 200,
+      "sha256": "d4aeac69b558269228782de20675680cf830f8eb7b4a6c67d96bdef8d53f8947",
+      "localFile": "downpour-devils-pitstop.html",
+      "bytes": 23865
+    },
+    {
+      "id": "downpour-monastery",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_08_st_marias_monastery_en.htm",
+      "httpStatus": 200,
+      "sha256": "f23f7362fd08a82836f931e698f891267e679a4b2865637c0ce28f0307ed5db8",
+      "localFile": "downpour-monastery.html",
+      "bytes": 28379
+    },
+    {
+      "id": "downpour-centennial",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_06_centennial_building_en.htm",
+      "httpStatus": 200,
+      "sha256": "48791314112250b29688c1abb8fac72d7ffbed0d8fde23a200967184e5bf8dfe",
+      "localFile": "downpour-centennial.html",
+      "bytes": 23889
+    },
+    {
+      "id": "origins-photos",
+      "url": "https://www.silenthillmemories.net/sh0/screenshots_en.htm",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "homecoming-photos",
+      "url": "https://www.silenthillmemories.net/sh5/screenshots_en.htm",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "bom-monsters",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+      "httpStatus": 200,
+      "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+      "localFile": "bom-monsters.html",
+      "bytes": 34359
+    },
+    {
+      "id": "origins-nurse",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/nurse.jpg",
+      "httpStatus": 200,
+      "sha256": "4afbdeb8849c30514aa0629309aefb3b439ae4cf04266ee0149c800e709e3cbe",
+      "localFile": "origins-nurse.jpg",
+      "bytes": 6242
+    },
+    {
+      "id": "origins-straight-jacket",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/straight-jacket.jpg",
+      "httpStatus": 200,
+      "sha256": "89edb75ee53c353e41532d515d789327976f5bd042bf403d026433c1615642bd",
+      "localFile": "origins-straight-jacket.jpg",
+      "bytes": 4165
+    },
+    {
+      "id": "origins-carrion",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/carrion.jpg",
+      "httpStatus": 200,
+      "sha256": "023829fe3b2e062cc98770071392fc52fe50912cb23d65c21fec5f9f59874a25",
+      "localFile": "origins-carrion.jpg",
+      "bytes": 5404
+    },
+    {
+      "id": "origins-remnant",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/remnant.jpg",
+      "httpStatus": 200,
+      "sha256": "d645302f2244a9b88cf3a38e40ed9f89110810d1943abfb9515b6dc7af907231",
+      "localFile": "origins-remnant.jpg",
+      "bytes": 27394
+    },
+    {
+      "id": "origins-ariel",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/ariel.jpg",
+      "httpStatus": 200,
+      "sha256": "977a0a7e8f46fca9a86b9a39ff8a0bcbfae9a1196eb4e9bec4eab9d0ecfb411a",
+      "localFile": "origins-ariel.jpg",
+      "bytes": 4937
+    },
+    {
+      "id": "origins-caliban",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/caliban.jpg",
+      "httpStatus": 200,
+      "sha256": "aa1eb55fcf73b0b1850003052d146f8107256d765ebb57974efc8f9800c0d01c",
+      "localFile": "origins-caliban.jpg",
+      "bytes": 6198
+    },
+    {
+      "id": "origins-twoback",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/twoback.jpg",
+      "httpStatus": 200,
+      "sha256": "9814fa97098a00661508afcab2a6e85b855670029c4e6668e8696c4cd71cd115",
+      "localFile": "origins-twoback.jpg",
+      "bytes": 8804
+    },
+    {
+      "id": "bom-air_screamer",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/air_screamer.jpg",
+      "httpStatus": 200,
+      "sha256": "6b0fd29405689b59c7f0c7a2f3c076b1412c45fc08449933148b14d4dc25dcf2",
+      "localFile": "bom-air_screamer.jpg",
+      "bytes": 11907
+    },
+    {
+      "id": "bom-bogeyman",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/bogeyman.jpg",
+      "httpStatus": 200,
+      "sha256": "34601d6f3174dbf256b9735eb5ee747541161e91eb543bda971fe9d329d254ea",
+      "localFile": "bom-bogeyman.jpg",
+      "bytes": 11870
+    },
+    {
+      "id": "bom-butcher",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/butcher.jpg",
+      "httpStatus": 200,
+      "sha256": "197308c4264632d0c762e0d2cb8979e1cc737a83b60a7d8242512547742853b3",
+      "localFile": "bom-butcher.jpg",
+      "bytes": 12775
+    },
+    {
+      "id": "bom-double_head",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/double_head.jpg",
+      "httpStatus": 200,
+      "sha256": "def7024521eb441d1ceb34c7b0fb71ded500213a41bcf7994166955b4fbbaf28",
+      "localFile": "bom-double_head.jpg",
+      "bytes": 12361
+    },
+    {
+      "id": "bom-insane_cancer",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/insane_cancer.jpg",
+      "httpStatus": 200,
+      "sha256": "dfdc14669b3d9ef35252f1fee74d5920e11d9040cd7c471f88f942e00f352233",
+      "localFile": "bom-insane_cancer.jpg",
+      "bytes": 13665
+    },
+    {
+      "id": "bom-nurse",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/nurse.jpg",
+      "httpStatus": 200,
+      "sha256": "2661177d249d6849b3bfaaeb0dea2d5cd259a338d86590335d9ba7e1cd8cdf3b",
+      "localFile": "bom-nurse.jpg",
+      "bytes": 11104
+    },
+    {
+      "id": "bom-schism",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/schism.jpg",
+      "httpStatus": 200,
+      "sha256": "6ebaf2342c44a7b3083518ca5c548a5a150350a11ed7eff782588040c67785e6",
+      "localFile": "bom-schism.jpg",
+      "bytes": 10944
+    },
+    {
+      "id": "bom-straight-jacket",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/straight-jacket.jpg",
+      "httpStatus": 200,
+      "sha256": "0525fbcc97ea026b4776897876d5061a7990be9534cbcfc91f1c60d5bf968e6b",
+      "localFile": "bom-straight-jacket.jpg",
+      "bytes": 11960
+    },
+    {
+      "id": "homecoming-swarm",
+      "url": "https://www.silenthillmemories.net/sh5/creatures/swarm.jpg",
+      "httpStatus": 200,
+      "sha256": "670b56b1b43383f95c988b4b6b3046b446faaadf8396bcce81c0aa5ae6d54880",
+      "localFile": "homecoming-swarm.jpg",
+      "bytes": 19806
+    },
+    {
+      "id": "homecoming-order",
+      "url": "https://www.silenthillmemories.net/sh5/creatures/order_member.jpg",
+      "httpStatus": 200,
+      "sha256": "d78634e486330d393f30a65f8c7503d9b3f9e9a1e3bd64ede22d278b23617b4a",
+      "localFile": "homecoming-order.jpg",
+      "bytes": 6254
+    },
+    {
+      "id": "downpour-end-11",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.11.jpg",
+      "httpStatus": 200,
+      "sha256": "679c45f596124ee7e6c471d8700407926481b742cd8134bf23cbe25641c70faf",
+      "localFile": "downpour-end-11.jpg",
+      "bytes": 9465
+    },
+    {
+      "id": "downpour-end-12",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.12.jpg",
+      "httpStatus": 200,
+      "sha256": "f06b551dc5ba4f4bfe12ccd42f0c12f4a6cdef0246c7747b5e6998888852f2f0",
+      "localFile": "downpour-end-12.jpg",
+      "bytes": 9852
+    },
+    {
+      "id": "downpour-end-13",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.13.jpg",
+      "httpStatus": 200,
+      "sha256": "581c6b24b0f5d53a8f5c197849279fa156cb25ce16ea372fdb6a90c067417c84",
+      "localFile": "downpour-end-13.jpg",
+      "bytes": 8875
+    },
+    {
+      "id": "downpour-screamer",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/screamer.png",
+      "httpStatus": 200,
+      "sha256": "5a47abdefcfde77898a1302019d931b9d7bbcd830e8192b825800073870e2e33",
+      "localFile": "downpour-screamer.png",
+      "bytes": 90148
+    },
+    {
+      "id": "downpour-weeping_bat",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/weeping_bat.png",
+      "httpStatus": 200,
+      "sha256": "8da3b9fa695bb8d105f2d1918207d1d55900b2152fb86427ccf05988eba551a3",
+      "localFile": "downpour-weeping_bat.png",
+      "bytes": 96981
+    },
+    {
+      "id": "downpour-wall_corpse",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/wall_corpse.png",
+      "httpStatus": 200,
+      "sha256": "1d2eaef070ca05658c39b233b897c4e5fe9ec7f48443c0eaa03b1c70b30059c6",
+      "localFile": "downpour-wall_corpse.png",
+      "bytes": 80119
+    },
+    {
+      "id": "film2006-hospital-46",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_46.jpg",
+      "httpStatus": 200,
+      "sha256": "a1515183bf63e9a1d8b245bbc1784951897d390e36d9aaccaa02ce84fe69e620",
+      "localFile": "film2006-hospital-46.jpg",
+      "bytes": 252547
+    },
+    {
+      "id": "film2006-hospital-81",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_81.jpg",
+      "httpStatus": 200,
+      "sha256": "c4696333b4ddf5f804ef6580b3a6a2643cafcd32a0c628633b9a8cd61eacd04b",
+      "localFile": "film2006-hospital-81.jpg",
+      "bytes": 73582
+    }
+  ],
+  "newSources": [
+    {
+      "id": "EXT9_REF_ORIGINS_NURSE_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/nurse.jpg",
+      "title": "Référence visuelle spécialisée — origins-nurse",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-nurse dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/straight-jacket.jpg",
+      "title": "Référence visuelle spécialisée — origins-straight-jacket",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-straight-jacket dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_CARRION_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/carrion.jpg",
+      "title": "Référence visuelle spécialisée — origins-carrion",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-carrion dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_REMNANT_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/remnant.jpg",
+      "title": "Référence visuelle spécialisée — origins-remnant",
+      "type": "capture-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-remnant dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture de guide petite et fixe ; caméra, build, contacts et temporalité non mesurés."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_ARIEL_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/ariel.jpg",
+      "title": "Référence visuelle spécialisée — origins-ariel",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-ariel dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_CALIBAN_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/caliban.jpg",
+      "title": "Référence visuelle spécialisée — origins-caliban",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-caliban dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_ORIGINS_TWOBACK_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/creatures/twoback.jpg",
+      "title": "Référence visuelle spécialisée — origins-twoback",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche origins-twoback dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_AIR_SCREAMER_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/air_screamer.jpg",
+      "title": "Référence visuelle spécialisée — bom-air_screamer",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-air_screamer dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_BOGEYMAN_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/bogeyman.jpg",
+      "title": "Référence visuelle spécialisée — bom-bogeyman",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-bogeyman dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_BUTCHER_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/butcher.jpg",
+      "title": "Référence visuelle spécialisée — bom-butcher",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-butcher dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_DOUBLE_HEAD_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/double_head.jpg",
+      "title": "Référence visuelle spécialisée — bom-double_head",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-double_head dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_INSANE_CANCER_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/insane_cancer.jpg",
+      "title": "Référence visuelle spécialisée — bom-insane_cancer",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-insane_cancer dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_NURSE_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/nurse.jpg",
+      "title": "Référence visuelle spécialisée — bom-nurse",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-nurse dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_SCHISM_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/schism.jpg",
+      "title": "Référence visuelle spécialisée — bom-schism",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-schism dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_BOM_STRAIGHT_JACKET_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/straight-jacket.jpg",
+      "title": "Référence visuelle spécialisée — bom-straight-jacket",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche bom-straight-jacket dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_HOMECOMING_SWARM_20261026",
+      "url": "https://www.silenthillmemories.net/sh5/creatures/swarm.jpg",
+      "title": "Référence visuelle spécialisée — homecoming-swarm",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche homecoming-swarm dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_HOMECOMING_ORDER_20261026",
+      "url": "https://www.silenthillmemories.net/sh5/creatures/order_member.jpg",
+      "title": "Référence visuelle spécialisée — homecoming-order",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche homecoming-order dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_END_11_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.11.jpg",
+      "title": "Référence visuelle spécialisée — downpour-end-11",
+      "type": "capture-republiee-par-guide",
+      "scope": "Deux vues du boss Wheelman dans sa salle médicale et ses passerelles.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture de guide petite et fixe ; caméra, build, contacts et temporalité non mesurés."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_END_12_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.12.jpg",
+      "title": "Référence visuelle spécialisée — downpour-end-12",
+      "type": "capture-republiee-par-guide",
+      "scope": "Deux vues du boss Wheelman dans sa salle médicale et ses passerelles.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture de guide petite et fixe ; caméra, build, contacts et temporalité non mesurés."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_END_13_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.13.jpg",
+      "title": "Référence visuelle spécialisée — downpour-end-13",
+      "type": "capture-republiee-par-guide",
+      "scope": "Vue Anne face au protagoniste dans la confrontation finale, distincte de la salle Wheelman.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture de guide petite et fixe ; caméra, build, contacts et temporalité non mesurés."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_SCREAMER_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/screamer.png",
+      "title": "Référence visuelle spécialisée — downpour-screamer",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche downpour-screamer dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_WEEPING_BAT_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/weeping_bat.png",
+      "title": "Référence visuelle spécialisée — downpour-weeping_bat",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche downpour-weeping_bat dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_REF_DOWNPOUR_WALL_CORPSE_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/creatures/wall_corpse.png",
+      "title": "Référence visuelle spécialisée — downpour-wall_corpse",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration classée sous la fiche downpour-wall_corpse dans le bestiaire de son œuvre ; comparaison d’identité et de silhouette uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration de guide inspectée, souvent tronquée ; origine du rendu et build non établis. Elle ne prouve ni une animation, ni une pose entière, ni les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_06_centennial_building_en.htm",
+      "title": "Silent Hill: Downpour — Centennial Building walkthrough",
+      "type": "guide-specialise-secondaire",
+      "scope": "Rencontres Screamer/Weeping Bat dans le garage et passages Wall Corpses dans l’Otherworld du Centennial Building.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Parcours textuel archivé ; n’établit pas de combo, cadence, géométrie ou caractère exclusivement immobile de toutes les variantes Wall Corpse.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT9_BOM_FIRE_VIEW_01_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+      "title": "Book of Memories — bom_release_01",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Fire : sol et parois industriels, grilles et lumière chaude visibles sur une vue de la galerie datée16octobre2012.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Galerie datée, build et version commerciale non établis ; capture fixe ne démontrant ni mouvement, ni physique, ni dimensions. Ne pas importer personnages, boss, HUD ou danger.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT9_BOM_FIRE_VIEW_02_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg",
+      "title": "Book of Memories — bom_release_02",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Fire : seconde vue des grilles industrielles et lueurs chaudes ; personnages et attaques exclus du prototype de décor.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Galerie datée, build et version commerciale non établis ; capture fixe ne démontrant ni mouvement, ni physique, ni dimensions. Ne pas importer personnages, boss, HUD ou danger.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT9_BOM_WOOD_VIEW_06_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg",
+      "title": "Book of Memories — bom_release_06",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Wood : arène terreuse, pierres et branches nues autour du Guardian ; le boss n’est pas un accessoire du lieu.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Galerie datée, build et version commerciale non établis ; capture fixe ne démontrant ni mouvement, ni physique, ni dimensions. Ne pas importer personnages, boss, HUD ou danger.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT9_BOM_EARTH_VIEW_37_20261026",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "title": "Book of Memories — bom_earth37",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Earth : illustration de galerie datée6juin2012, matériaux sombres, éléments de bois et récipients ; préversion, pièce finale non confirmée.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Galerie datée, build et version commerciale non établis ; capture fixe ne démontrant ni mouvement, ni physique, ni dimensions. Ne pas importer personnages, boss, HUD ou danger.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_46.jpg",
+      "title": "Silent Hill2006 — photo de la chambre d’Alessa46",
+      "type": "photo-film-republiee-par-guide",
+      "scope": "Lit sous voile de tente médicale dans la chambre hospitalière d’Alessa du film2006 ; pièce distincte du couloir des Dark Nurses.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Photo de galerie inspectée et archivée ; ne permet pas d’attribuer le nom Brookhaven, ni de certifier une caméra, des dimensions ou une animation de voile. Les personnes et le lit occupé ne sont pas des sprites de décor livrés."
+    },
+    {
+      "id": "EXT9_FILM2006_ALESSA_ROOM_81_20261026",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_81.jpg",
+      "title": "Silent Hill2006 — photo de la chambre d’Alessa81",
+      "type": "photo-film-republiee-par-guide",
+      "scope": "Lit sous voile de tente médicale dans la chambre hospitalière d’Alessa du film2006 ; pièce distincte du couloir des Dark Nurses.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Photo de galerie inspectée et archivée ; ne permet pas d’attribuer le nom Brookhaven, ni de certifier une caméra, des dimensions ou une animation de voile. Les personnes et le lit occupé ne sont pas des sprites de décor livrés."
+    }
+  ],
+  "stageSourceArchive": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+  "stageNewEvidence": [
+    {
+      "id": "bom_release_01",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+      "status": 200,
+      "bytes": 173779,
+      "sha256": "39441bb698a9f311de162264ba47c3b8e5284abaf9609e5f74a6b8f5cda8e0f3",
+      "referenceId": "EXT9_BOM_FIRE_VIEW_01_20261026",
+      "archive": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+      "inspected": true
+    },
+    {
+      "id": "bom_release_02",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg",
+      "status": 200,
+      "bytes": 239307,
+      "sha256": "626219e788febaffe8a6c93462d64815c25e67a3d18ccbbbc6ebc94c4bef793b",
+      "referenceId": "EXT9_BOM_FIRE_VIEW_02_20261026",
+      "archive": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+      "inspected": true
+    },
+    {
+      "id": "bom_release_06",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg",
+      "status": 200,
+      "bytes": 173518,
+      "sha256": "8edacecaeebcb7d61934ef47097f77857a623dc3d030657dd50e05ad94f69650",
+      "referenceId": "EXT9_BOM_WOOD_VIEW_06_20261026",
+      "archive": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+      "inspected": true
+    },
+    {
+      "id": "bom_earth37",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "status": 200,
+      "bytes": 179692,
+      "sha256": "f21e7b14146affb5330ad1e51713b808012a77cefb0606aa5182219d2b663273",
+      "referenceId": "EXT9_BOM_EARTH_VIEW_37_20261026",
+      "archive": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+      "inspected": true
+    }
+  ],
+  "workbookInvariants": {
+    "observations": 435,
+    "oldSourcePrefix": 154,
+    "sourcesAfterAppend": 184,
+    "newSources": 30,
+    "roleDecisionsPreserved": 33,
+    "newRoleDecisions": 0,
+    "preserved": "IDs, noms, profils, œuvres, ordre, statuts, éditions et timecodes des435observations ;33décisions historiques ; toutes propositions et animations de lieux."
+  },
+  "requestedRows": [
+    {
+      "rowId": "origins_straight_jacket_074:ref:01",
+      "fighterId": "origins_straight_jacket_074",
+      "name": "Projection corrosive",
+      "before": "Projection corrosive",
+      "after": "Le bestiaire Origins décrit une créature au torse entravé qui peut cracher de l’acide en approchant Travis. L’illustration montre les bras pris dans le torse ; elle ne fournit ni trajectoire, cadence, portée ni animation du jet. Ne pas lui emprunter un coup de poing de la Lying Figure ou une arme libre.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "this creature can spew acid without warning."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_straight_jacket_074:ref:02",
+      "fighterId": "origins_straight_jacket_074",
+      "name": "Agrippement avec les jambes",
+      "before": "Agrippement avec les jambes",
+      "after": "En proximité, le Straight-Jacket peut entourer Travis avec ses jambes pour l’étouffer selon le bestiaire Origins. Cette prise se distingue du jet acide ; sa libération, ses appuis et ses poses restent à relever. Aucun bras libre, plaquage de Romper ou durée de bind versus n’est canonisé.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_STRAIGHT_JACKET_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "wrap its legs around him"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_faceless_nurse:ref:01",
+      "fighterId": "origins_faceless_nurse",
+      "name": "Attaque à la seringue",
+      "before": "Attaque à la seringue",
+      "after": "La Nurse du bestiaire Origins attaque avec une seringue ; la vue associée montre une silhouette en uniforme et un bras armé levé. Le texte et l’image ne constituent pas une boucle d’attaque complète. Conserver la seringue propre à cette œuvre, sans scalpel Homecoming, pipe BoM, revolver SH3 ou arme nouvelle.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_NURSE_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "attacking with syringes."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_carrion_076:ref:01",
+      "fighterId": "origins_carrion_076",
+      "name": "Poursuite au sol",
+      "before": "Poursuite au sol",
+      "after": "Le Carrion suit Travis avec insistance avant de se jeter vers lui ; le bestiaire le situe notamment dans les rues, au Sanitarium, au théâtre et au motel. Le modèle publié confirme une masse basse contorsionnée, sans prouver une locomotion canine ou un cycle de pas normal.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_CARRION_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "will track Travis relentlessly, lunging to attack"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_carrion_076:ref:02",
+      "fighterId": "origins_carrion_076",
+      "name": "Ruée de contact",
+      "before": "Ruée de contact",
+      "after": "La ruée du Carrion est un mouvement de contact du corps lancé vers Travis, décrit comme dangereux dans le bestiaire. La vue statique n’établit pas de morsure, de prise ni d’échange de places ; vitesse, distance, choc et récupération restent des adaptations ou des relevés à effectuer.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_CARRION_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "lunging to attack and dealing serious damage."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_remnant_077:ref:01",
+      "fighterId": "origins_remnant_077",
+      "name": "Flottement de la cage et ombre humaine",
+      "before": "Flottement de la cage et ombre humaine",
+      "after": "Le Remnant de Cedar Grove est décrit comme une cage métallique flottante sans corps visible, projetant une ombre humanoïde dans la lumière. La capture associée documente sa présence dans une pièce, pas une anatomie charnelle. Cage, ombre et illumination doivent rester cohérentes ; aucune téléportation, prise ou aura offensive n’est déduite de cette seule vue.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_REMNANT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "casting a humanlike shadow in the light."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_ariel_078:ref:01",
+      "fighterId": "origins_ariel_078",
+      "name": "Attaque depuis plafond",
+      "before": "Attaque depuis plafond",
+      "after": "Le bestiaire situe Ariel dans le théâtre Artaud et décrit des attaques depuis le plafond. L’illustration associée montre la marionnette inversée et suspendue ; elle ne fixe ni la longueur du support, ni un détachement ou une retombée. Une attaque suspendue exige son support et ses poses, sans saut libre présenté comme équivalent.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_ARIEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "Attacking from both the ceiling and the floor"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_ariel_078:ref:02",
+      "fighterId": "origins_ariel_078",
+      "name": "Attaque depuis sol",
+      "before": "Attaque depuis sol",
+      "after": "Le même bestiaire décrit aussi Ariel attaquant depuis le sol, distinct de sa position au plafond. L’image inversée ne remplit pas cette seconde pose : appuis, orientation et geste au sol restent à capturer dans Origins. Aucun partenaire, fil offensif ou pouvoir de poupée ajouté.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_ARIEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "Attacking from both the ceiling and the floor"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_caliban_079:ref:01",
+      "fighterId": "origins_caliban_079",
+      "name": "Piétinement",
+      "before": "Piétinement",
+      "after": "Les membres contorsionnés du Caliban peuvent piétiner Travis ; le bestiaire le situe au théâtre, dans les rues et au motel. Le rendu publié montre la masse voûtée mais ne mesure ni nombre précis d’appuis actifs, ni cadence ou aire de frappe. Ne pas assimiler ce piétinement à une onde ou explosion.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_CALIBAN_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "his contorted limbs stomping across the stage toward Travis."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "origins_two_back_080:ref:01",
+      "fighterId": "origins_two_back_080",
+      "name": "Saisie rapprochée",
+      "before": "Saisie rapprochée",
+      "after": "Le Two-Back du Riverside Motel peut percuter ou saisir Travis de près ; le bestiaire distingue cette action de son attaque à longue portée. Le rendu associé montre sa structure composite, sans démontrer le déroulé d’une projection, une fusion en cours ou l’apparition d’un second acteur.",
+      "evidence": [
+        "EXT01",
+        "EXT9_REF_ORIGINS_TWOBACK_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+        "localFile": "origins-creatures.html",
+        "quote": "It can tackle Travis up close and attack from long range"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_air_screamer_121:ref:01",
+      "fighterId": "bom_air_screamer_121",
+      "name": "Vol circulaire; serres",
+      "before": "Vol circulaire; serres",
+      "after": "Dans le bestiaire Book of Memories, l’Air Screamer attaque en décrivant des cercles dans la pièce ou frappe des serres pendant le vol stationnaire. Aucune arme équipée n’est indiquée. Le petit portrait coupe les ailes : il ne livre ni envergure, piqué SH1, morsure de base transférée ou cycle de vol Vita mesuré.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_AIR_SCREAMER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "slashes with its talons while hovering."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_bogeyman_122:ref:01",
+      "fighterId": "bom_bogeyman_122",
+      "name": "Poursuite ciblée au marteau",
+      "before": "Poursuite ciblée au marteau",
+      "after": "Le Bogeyman de Book of Memories choisit une cible et la poursuit avec son grand marteau ; le bestiaire nomme explicitement Bogeyman’s Hammer. Le portrait à masque respiratoire reste propre à cette entrée et ne démontre aucune onde Downpour, fonction d’exécuteur Homecoming ou identité Pyramid Head.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_BOGEYMAN_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "He selects a target and will hunt it relentlessly"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_butcher_123:ref:01",
+      "fighterId": "bom_butcher_123",
+      "name": "Couperet agressif",
+      "before": "Couperet agressif",
+      "after": "Le Butcher Vita est décrit comme agressif et armé d’un couperet surdimensionné nommé Great Cleaver. Le portrait tronqué ne constitue pas une pose du couperet et ne donne pas l’ordre de ses frappes. Ne pas emprunter les étranglements, la lame ou la mise en scène du Butcher Origins sans preuve BoM distincte.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_BUTCHER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "Weapon: Great Cleaver"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_double_head_124:ref:01",
+      "fighterId": "bom_double_head_124",
+      "name": "Encerclement puis charge",
+      "before": "Encerclement puis charge",
+      "after": "Le Double Head Vita est une créature canine dont la tête se fend en deux ; elle tourne autour de ses cibles avant de charger, selon son propre bestiaire. Le portrait n’autorise ni deux chiens ou deux cous indépendants, ni une prise SH3 copiée. La trajectoire circulaire en arène et le choc restent à relever dans cette œuvre.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_DOUBLE_HEAD_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "It circles its victims before charging at them."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_insane_cancer_126:ref:01",
+      "fighterId": "bom_insane_cancer_126",
+      "name": "Masse; explosion finale",
+      "before": "Masse; explosion finale",
+      "after": "Le bestiaire Vita attribue à Insane Cancer des attaques par le poids de son corps et une explosion finale en fragments. Aucune arme tenue n’est indiquée. Cette issue ne prouve pas une explosion déclenchable à volonté, un projectile à distance ou une reconstruction après explosion ; le portrait du buste ne remplit pas les poses manquantes.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_INSANE_CANCER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "ultimately exploding into messy chunks."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_nurse_128:ref:01",
+      "fighterId": "bom_nurse_128",
+      "name": "Tuyau métallique",
+      "before": "Tuyau métallique",
+      "after": "La Nurse Vita poursuit ses victimes à pas tremblants avec un long tuyau métallique ; la rubrique Weapon précise Steel Pipe. Le petit portrait ne montre pas tout le tuyau ni ses contacts. La seringue Origins, le scalpel Homecoming et le revolver SH3 restent des équipements d’autres fiches.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_NURSE_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "pursues its victims with shaky steps and a long, metal pipe."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_schism_130:ref:01",
+      "fighterId": "bom_schism_130",
+      "name": "Ruée tête-lame",
+      "before": "Ruée tête-lame",
+      "after": "Le Schism Vita est décrit avec une tête en forme de lame ; il erre à l’aveugle et se jette sur les cibles proches. La rubrique Weapon n’attribue aucune arme indépendante. Le portrait confirme une silhouette de cette entrée, sans valider les combos des bras ou prises de la version Homecoming.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_SCHISM_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "it wanders blindly and lunges at anyone nearby."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "bom_straight_jacket_131:ref:01",
+      "fighterId": "bom_straight_jacket_131",
+      "name": "Projectiles corrosifs",
+      "before": "Projectiles corrosifs",
+      "after": "Le Straight-Jacket Vita est entravé et projette de l’acide en vomissant ; aucune arme n’est équipée dans le bestiaire. La silhouette ne lui donne pas de bras libres. Ne pas transférer la prise avec les jambes de la version Origins ni un jet toxique de Smog Homecoming à partir du seul nom.",
+      "evidence": [
+        "EXT20",
+        "EXT9_REF_BOM_STRAIGHT_JACKET_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+        "localFile": "bom-monsters.html",
+        "quote": "vomits acidic projectiles at its victims."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "homecoming_order_soldier_091:ref:02",
+      "fighterId": "homecoming_order_soldier_091",
+      "name": "Tir fusil",
+      "before": "Tir fusil",
+      "after": "Dans l’Underground, le guide distingue deux membres de l’Ordre dont un équipé d’un rifle, et recommande de viser celui-ci en premier. Le tir de fusil appartient à cette variante armée ; il ne signifie pas que tous les soldats tiennent simultanément tuyau et fusil. Le portrait tronqué ne certifie ni modèle, calibre, munition, crosse ou esquive.",
+      "evidence": [
+        "EXT06",
+        "HC_ENEMIES_20261023",
+        "EXT9_REF_HOMECOMING_ORDER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+        "localFile": "homecoming-walkthrough.html",
+        "quote": "one of which has a rifle."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "homecoming_swarm:ref:01",
+      "fighterId": "homecoming_swarm",
+      "name": "Accrochage en groupe",
+      "before": "Accrochage en groupe",
+      "after": "Le bestiaire Homecoming décrit de gros insectes émergeant des ouvertures du sol ou des murs. Leur attaque consiste à s’accrocher à Alex et lui retirer de la vie ; le bouton affiché permet de les faire tomber. Le prototype doit distinguer émergence, accrochage et libération, sans étendre ce comportement aux Swarms du film2006 ou de BoM.",
+      "evidence": [
+        "HC_ENEMIES_20261023",
+        "EXT9_REF_HOMECOMING_SWARM_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh5/creatures_en.htm",
+        "sha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb",
+        "localFile": "homecoming-creatures.html",
+        "quote": "The only attack Swarms have is to latch onto Alex and drain his life."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_screamer_104:ref:01",
+      "fighterId": "downpour_screamer_104",
+      "name": "Cri paralysant",
+      "before": "Cri paralysant",
+      "after": "Le bestiaire décrit un cri paralysant utilisé à distance. Le guide situe notamment des rencontres de Screamers à Devil’s Pitstop et au Centennial Building ; le rendu publié n’est pas une pose du cri. Rayon, délai, durée de paralysie, dégâts et commandes de résistance du versus ne sont pas des mesures du jeu original.",
+      "evidence": [
+        "EXT10",
+        "EXT_DP_PITSTOP_20261023",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT9_REF_DOWNPOUR_SCREAMER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+        "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+        "localFile": "downpour-monsters.html",
+        "quote": "At a distance, it uses a paralyzing scream."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_screamer_104:ref:02",
+      "fighterId": "downpour_screamer_104",
+      "name": "Saut sur le dos",
+      "before": "Saut sur le dos",
+      "after": "Le Screamer peut approcher par derrière et sauter sur le dos du protagoniste, selon le bestiaire Downpour. Cette attaque de contact reste distincte du cri à distance ; ni contrôle mental permanent, tête détachée, éjection ou projection arrière n’est déduit du portrait statique.",
+      "evidence": [
+        "EXT10",
+        "EXT9_REF_DOWNPOUR_SCREAMER_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+        "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+        "localFile": "downpour-monsters.html",
+        "quote": "Sneaks up from behind and attacks by jumping on the hero's back."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_weeping_bat_105:ref:01",
+      "fighterId": "downpour_weeping_bat_105",
+      "name": "Accrochage mur/plafond",
+      "before": "Accrochage mur/plafond",
+      "after": "Le bestiaire décrit le Weeping Bat au repos sur murs ou plafond, qu’il utilise aussi pour se retirer de la mêlée. Le guide confirme des rencontres dans le garage puis une alcôve du Centennial Building. Le rendu debout ne prouve pas un cycle suspendu, un vol de chauve-souris ou un saut libre reproduisant l’accrochage.",
+      "evidence": [
+        "EXT10",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT9_REF_DOWNPOUR_WEEPING_BAT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+        "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+        "localFile": "downpour-monsters.html",
+        "quote": "Hanging from the ceiling and walls in the sleeping state"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_wall_corpse_112:ref:01",
+      "fighterId": "downpour_wall_corpse_112",
+      "name": "Jet d’air toxique",
+      "before": "Jet d’air toxique",
+      "after": "Le Wall Corpse attaque à distance avec un jet d’air empoisonné ; le guide le situe dans les couloirs de l’Otherworld du Centennial Building et près des passerelles finales. Le bestiaire distingue une variante roulante en fin de jeu : la vue de la forme murale ne permet pas de rendre toutes les variantes fixes ni de lui copier la passivité du Tormented Soul.",
+      "evidence": [
+        "EXT10",
+        "EXT9_DP_CENTENNIAL_GUIDE_20261026",
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_WALL_CORPSE_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+        "sha256": "95da567fec0664c1c1a2d5fccecd59b9497fcac651568aee2572770973c90774",
+        "localFile": "downpour-monsters.html",
+        "quote": "Attacks from a distance with a jet of poisoned air."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_wheelman_116:ref:01",
+      "fighterId": "downpour_wheelman_116",
+      "name": "Poings",
+      "before": "frappes massives",
+      "after": "Dans la salle finale d’Overlook, le Wheelman peut frapper Murphy avec son poing, notamment s’il approche le système de soutien sans l’avoir neutralisé. Le boss central et les passerelles de matériel médical sont visibles dans les deux captures associées ; aucun déplacement libre de Wheel Chair SH4 n’en découle.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_11_20261026",
+        "EXT9_REF_DOWNPOUR_END_12_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "It can smash Murphy with his fist, throw debris at him"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_wheelman_116:ref:02",
+      "fighterId": "downpour_wheelman_116",
+      "name": "Débris",
+      "before": "projections",
+      "after": "Le guide du boss Wheelman atteste une projection de débris dans la salle médicale d’Overlook. Les vues fixes ne montrent pas une salve complète et ne déterminent ni objet, nombre, trajectoire, cadence ou récupération ; ne pas remplacer ce matériau par une télékinésie générique ou un nouveau projectile magique.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_11_20261026",
+        "EXT9_REF_DOWNPOUR_END_12_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "throw debris at him"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_wheelman_116:ref:03",
+      "fighterId": "downpour_wheelman_116",
+      "name": "Foudre",
+      "before": "zones lumineuses puis impact",
+      "after": "Un petit point lumineux au sol annonce l’endroit où la foudre de Wheelman va frapper ; le guide précise que ces attaques peuvent aussi désactiver les projecteurs. Le signal, l’impact et le matériel de la salle sont des phases distinctes. Leur rayon, retard et durée restent à mesurer, sans éclair instantané partout dans l’arène.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_11_20261026",
+        "EXT9_REF_DOWNPOUR_END_12_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "a small glowing spot appears on the ground"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_wheelman_116:ref:04",
+      "fighterId": "downpour_wheelman_116",
+      "name": "Projecteurs",
+      "before": "étourdissement ouvrant accès aux tubes",
+      "after": "La confrontation originale exige d’utiliser un projecteur depuis chaque plateforme de soufflet, puis de redescendre pour arracher un tube de survie ; le guide compte quatre tubes et indique que les coups directs ne blessent pas le boss. Le projecteur est un appareil du lieu utilisé par Murphy, pas un pouvoir lancé par Wheelman.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_11_20261026",
+        "EXT9_REF_DOWNPOUR_END_12_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "There are four giant respiratory bellows around the room."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_anne_cunningham:ref:01",
+      "fighterId": "downpour_anne_cunningham",
+      "name": "Pistolet",
+      "before": "tirs sur le protagoniste",
+      "after": "Après la salle Wheelman, le protagoniste contrôlé apparaît comme le Boogeyman et affronte Anne Cunningham. Le guide et la capture distinguent son pistolet de l’attaque à distance du protagoniste et de son marteau. Cette séquence ne donne pas à Anne de marteau, d’onde ou de munitions originales mesurées.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_13_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "Anna attacks you with her pistol"
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    },
+    {
+      "rowId": "downpour_anne_cunningham:ref:02",
+      "fighterId": "downpour_anne_cunningham",
+      "name": "Cellules",
+      "before": "libération de Juggernauts",
+      "after": "Pendant cette confrontation finale, Anne libère des Juggernauts des cellules. Le guide traite ces adversaires et les portes du lieu séparément de ses tirs ; aucune invocation magique, création d’un autre personnage ou transfert des Juggernauts vers n’importe quelle arène n’est déduit de cette scène.",
+      "evidence": [
+        "EXT66",
+        "EXT9_REF_DOWNPOUR_END_13_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm",
+        "sha256": "d6823554e6ee739d47e557d205f53283b637f4848147171438c1b23e7269d698",
+        "localFile": "downpour-penitentiary.html",
+        "quote": "also releases Juggernauts from the cells."
+      },
+      "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+    }
+  ],
+  "extraIntegrations": {
+    "observations": [
+      {
+        "rowId": "sh1_groaner_003:ref:01",
+        "fighterId": "sh1_groaner_003",
+        "name": "Bond",
+        "before": "Saut suivi de morsure.",
+        "after": "Le Groaner de SH1 saute et se jette sur Harry en mordant ; le guide précise qu’un tir pendant son bond peut le faire chuter. Cette réaction ne démontre ni pin au sol, ni maintien de morsure ou projection arrière. Forces, fenêtres et distances du versus restent non mesurées.",
+        "evidence": [
+          "CL_SH1_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+          "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh1-enemies_en.htm",
+          "quote": "Groaners will regularly jump and lunge at you, biting in the process."
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh1_wormhead_004:ref:01",
+        "fighterId": "sh1_wormhead_004",
+        "name": "Renvoi au jeu de gestes de base",
+        "before": "Consulter sh1_groaner_003 ; seules les différences explicites de cette fiche sont à produire.",
+        "after": "Le guide décrit directement le Wormhead : même famille de sauts et morsures que le Groaner, plus fort et plus dommageable, et susceptible d’être renversé par un tir pendant le bond. La tête infestée appartient au Wormhead ; aucun multiplicateur numérique, prise au sol ou transfert d’image Groaner n’est validé.",
+        "evidence": [
+          "CL_SH1_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+          "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh1-enemies_en.htm",
+          "quote": "Wormheads have identical attacks to Groaners, but they do more damage and are stronger."
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh2_flesh_lip_027:ref:01",
+        "fighterId": "sh2_flesh_lip_027",
+        "name": "Pieds",
+        "before": "Soulève et étrangle.",
+        "after": "Dans le duel original2001 de Brookhaven, les pieds du Flesh Lip saisissent James, le soulèvent et l’étranglent lorsqu’il approche. Le guide conseille les commandes directionnelles et d’épaule pour se libérer plus vite. Ce maintien aérien reste distinct d’un plaquage au sol ou des pattes du remake.",
+        "evidence": [
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "will grab and lift you with its feet"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh2_flesh_lip_027:ref:02",
+        "fighterId": "sh2_flesh_lip_027",
+        "name": "Coup",
+        "before": "Pousse avec les pieds.",
+        "after": "Le guide distingue une poussée ou un coup des pieds vers l’avant de la prise étrangleuse. Ne pas remplacer ces pieds par une arme, des bras offensifs ou une patte articulée de la version2024 ; contact, portée et recul restent à relever dans le jeu original.",
+        "evidence": [
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "The other attack is a forward thrusting kick"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh2_flesh_lip_027:ref:03",
+        "fighterId": "sh2_flesh_lip_027",
+        "name": "Suspension 2001",
+        "before": "Cage fixée au plafond, corps suspendu.",
+        "after": "La rencontre2001 montre des créatures suspendues dans leurs cages au plafond ; le guide fait viser les armes vers le haut pour les atteindre. Cette hauteur propre ne prouve pas une marche, un saut libre, une chute récurrente ou l’ouverture d’une forme arachnéenne.",
+        "evidence": [
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "James needs to aim the gun up at the creatures first"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh2_flesh_lip_027:ref:04",
+        "fighterId": "sh2_flesh_lip_027",
+        "name": "Rencontre multiple",
+        "before": "Deux cages puis une troisième.",
+        "after": "Le guide du jeu original décrit deux Flesh Lips au début puis une troisième créature qui tombe du plafond après les premières destructions, ou parfois plus tôt si le combat dure. Cette progression multi-adversaire ne crée pas un second corps à partir du combattant unique du versus.",
+        "evidence": [
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "a third one will drop from the roof"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh3_god_050:ref:01",
+        "fighterId": "sh3_god_050",
+        "name": "Bras",
+        "before": "Balayage rapproché.",
+        "after": "Le guideSH3 distingue un balayage du bras dans la posture haute puis un balayage dangereux lorsque le God est sur mains et genoux. La marque en demi-cercle au sol borne l’approche physique ; elle ne constitue pas une mesure de portée pour l’arène2D et n’annule pas le feu à distance.",
+        "evidence": [
+          "CL_SH3_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+          "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh3-bosses_en.htm",
+          "quote": "A swing of her arm while standing"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh3_god_050:ref:02",
+        "fighterId": "sh3_god_050",
+        "name": "Tête",
+        "before": "Heurt au contact.",
+        "after": "Lorsque le God est abaissé sur mains et genoux, le guide décrit un heurt de tête si Heather reste devant son visage. Approcher la tête par le côté évite ce contact ; ne pas attribuer automatiquement ce heurt à la posture haute.",
+        "evidence": [
+          "CL_SH3_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+          "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh3-bosses_en.htm",
+          "quote": "a headbutt if right by her face"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh3_god_050:ref:03",
+        "fighterId": "sh3_god_050",
+        "name": "Flammes",
+        "before": "Projette du feu sur le sol.",
+        "after": "Depuis la posture basse, le God peut lancer du feu sur le sol au-delà de la zone de contact. Le guide décrit une augmentation du volume, de la dispersion et de la vitesse au fil de la rencontre ; ces variations de l’arène3D ne sont pas une mesure d’onde, de boule aérienne ou de cadence2D.",
+        "evidence": [
+          "CL_SH3_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+          "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh3-bosses_en.htm",
+          "quote": "throw fire across the arena"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh3_god_050:ref:04",
+        "fighterId": "sh3_god_050",
+        "name": "Changement de hauteur",
+        "before": "S’abaisse ; la tête devient accessible.",
+        "after": "Le God débute droit avec le visage voilé, puis s’abaisse sur mains et genoux et expose sa tête aux coups. Le guide indique que sa défaite survient dans cette posture basse. Aucun pourcentage de phase ou invulnérabilité de la posture haute n’est déduit de cette seule progression.",
+        "evidence": [
+          "CL_SH3_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+          "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh3-bosses_en.htm",
+          "quote": "she lowers to her hands and knees"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh4_andrew_desalvo_victim_18:ref:01",
+        "fighterId": "sh4_andrew_desalvo_victim_18",
+        "name": "Roulade",
+        "before": "Charge aérienne en tonneau.",
+        "after": "Victim18 peut se lancer vers Henry en roulant en tonneau tout en lévitant, distinct des prises standard et des faibles dégâts de proximité communs aux Ghosts. Son chant accompagne sa présence mais le guide ne l’identifie pas comme un projectile ou un cri offensif. Direction, hauteur et contrôle du versus restent adaptés.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+          "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh4-enemies_en.htm",
+          "quote": "perform a lethal barrel roll as he lunges towards you."
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh4_jasper_gein_victim_17:ref:01",
+        "fighterId": "sh4_jasper_gein_victim_17",
+        "name": "Chandelier",
+        "before": "Frappe avec l’objet métallique.",
+        "after": "Victim17 porte un chandelier métallique et peut l’utiliser pour frapper Henry ; ce n’est pas un club en bois ou un club de golf. La catégorie technique club du catalogue sert à son comportement de mêlée et ne valide pas un modèle d’arme différent. L’aura brûlante de proximité reste une observation séparée.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+          "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh4-enemies_en.htm",
+          "quote": "He will also smack you with his metallic candlestick"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh4_richard_braintree_victim_19:ref:01",
+        "fighterId": "sh4_richard_braintree_victim_19",
+        "name": "Pied-de-biche",
+        "before": "Frappe du pied-de-biche ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
+        "after": "Richard tient un pied-de-biche et frappe avec cet objet, tout en infligeant les faibles dégâts de proximité communs aux Ghosts. La catégorie technique club du moteur ne lui donne ni batte en bois ni club de golf. Le déplacement à pied et les courts sauts de position restent séparés des coups.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+          "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh4-enemies_en.htm",
+          "quote": "Holds a crowbar as a weapon"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      },
+      {
+        "rowId": "sh4_richard_braintree_victim_19:ref:02",
+        "fighterId": "sh4_richard_braintree_victim_19",
+        "name": "Téléportation",
+        "before": "Court saut de position.",
+        "after": "Le guide décrit Richard marchant sur deux pieds et se téléportant en courts allers-retours, souvent pour frapper depuis les côtés. Cette capacité n’est pas un nouveau corps, une sortie par porte ou une disparition définitive du fantôme ; distance et fenêtre du versus restent des compositions originales.",
+        "evidence": [
+          "CL_SH4_ENEMIES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+          "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch9-combat-2026-10-26/sh4-enemies_en.htm",
+          "quote": "teleports back and forth"
+        },
+        "limits": "Description source spécifiée ; poses, temporalité, régions/builds, dégâts et commandes versus restent à comparer. Aucune animation mesurée ou art1:1 certifié."
+      }
+    ],
+    "stages": [
+      {
+        "stageId": "book_fire",
+        "references": [
+          "EXT9_BOM_FIRE_VIEW_01_20261026",
+          "EXT9_BOM_FIRE_VIEW_02_20261026"
+        ],
+        "noteAppended": "Lot9 : deux vues de la galerie datée16octobre2012 montrent des sols et parois industriels, grilles et lueurs chaudes. Elles guident un cadre de salle adapté au versus sans identifier toute la géométrie procédurale ; personnages, HUD, attaques et dangers des captures sont exclus.",
+        "statusUnchanged": true
+      },
+      {
+        "stageId": "book_wood",
+        "references": [
+          "EXT9_BOM_WOOD_VIEW_06_20261026"
+        ],
+        "noteAppended": "Lot9 : la vue de galerie datée16octobre2012 montre une arène terreuse avec branches nues et pierres près du Wood Guardian. Le prototype peut reprendre les matériaux visibles sans importer le boss, ses rejetons, leur zone de contact ou une disposition procédurale prétendue fixe.",
+        "statusUnchanged": true
+      },
+      {
+        "stageId": "book_earth",
+        "references": [
+          "EXT9_BOM_EARTH_VIEW_37_20261026"
+        ],
+        "noteAppended": "Lot9 : la vue de galerie datée6juin2012 montre une pièce sombre avec matériaux terreux, bois et récipients. Il s’agit d’une préversion ; ni pièce finale, ni disposition, mouvement ou physique de la version commerciale ne sont confirmés. Aucun personnage, arme, HUD ou danger ne doit être importé.",
+        "statusUnchanged": true
+      },
+      {
+        "stageId": "film_hospital",
+        "references": [
+          "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+          "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
+        ],
+        "locationStatusBefore": "nom-a-verifier",
+        "locationStatusAfter": "lieu-documente",
+        "note": "Film Silent Hill de Christophe Gans2006 : chambre hospitalière d’Alessa, lit sous voile de tente médicale, parois carrelées abîmées et grille de sol visibles dans deux photos concordantes. Aucune preuve n’attribue le nom Brookhaven à cette pièce ; le catalogue conserve cet ancien libellé historique sans le transférer à la scène choisie. Pièce distincte du couloir des Dark Nurses ; aucune personne, apparition, attaque ou séquence de soin importée. Mouvement du voile, caméra et géométrie restent des adaptations à comparer, sans fidélité1:1 certifiée.",
+        "authorization": "Exception coordonnée par root après gel : deux photos2006 et chambreAlessa ; aucun profil ou rôle modifié."
+      }
+    ],
+    "notCountedInRequestedThirty": true
+  },
+  "visualReview": {
+    "newIndividualImagesInspected": 23,
+    "stageImagesInspected": 4,
+    "originalPixelAssetsDelivered": false,
+    "limitations": "Petits portraits et modèles de guide ne garantissent pas l’origine du rendu ou le build commercial. CapturesWheelman/Anne confirment contexte et accessoires visibles, sans timing. PhotosBoMdatées ne prouvent pas géométrie finale ou mouvement ; juin2012 explicitement préversion.",
+    "additionalFilmRoomPhotosInspected": 2
+  },
+  "remainingUnverified": "Les anciens rôles incertains P.T., Prisoner, Floor Form, Greedy Worm restent ouverts. Les huit adaptations filmiques restent jouables et les25dossiers précédents bloqués ; aucune nouvelle décision de rôle ajoutée. Les435observations conservent leurs statuts et les4600mesures originales restent non relevées.",
+  "validation": {
+    "sourceValidation": "validateResearch(combineResearch([classic,extended])) === true après l’exception film_hospital et184sources ; aucun générateur global exécuté par cet agent.",
+    "requestedRows": 30,
+    "newObservationDescriptions": 44,
+    "extraObservationDescriptions": 14,
+    "newSourcePrefixPreserved": true,
+    "sourceEvidenceFilesVerifiedSha256": 40,
+    "observationIdentityOrderStatusEditionPreserved": true,
+    "source154PrefixDeepEqual": true,
+    "previousRoleDecisionsDeepEqual": 33,
+    "allProposalsAndStageAnimationsDeepEqual": true,
+    "changedFighters": 29,
+    "changedDescriptions": 44,
+    "requestedRowsWithNewImageEvidence": 30
+  }
+}

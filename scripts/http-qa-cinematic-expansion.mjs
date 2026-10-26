@@ -36,6 +36,11 @@ const subjects=[
   ['sh4_gum_head_new_type_058','gumNewEquippedClub','building_world'],['sh4_bottom_065','bottomThreeHeadDive','outside_room_302'],
   ['sh4_cynthia_velasquez_victim_16','cynthiaStandingHairClosure','subway_world']
 ];
+const presentationSubjects=[
+  ['sh3_closer_church_variant','church'],['sh4_jasper_gein_victim_17','forest_world'],
+  ['sh4_andrew_desalvo_victim_18','water_prison'],['sh4_richard_braintree_victim_19','building_world'],
+  ['homecoming_swarm','nightmare_hospital_hc']
+];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
   'The ?qa=1 bridge stops requestAnimationFrame and advances actual simulation ticks. Two prepared target KOs per match exercise ordinary round scoring and the real deciding-finisher gate; no prior win score or cinematic recipe is injected.',
@@ -48,17 +53,19 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'Nine further source-specific subjects retain joined Two-Back bodies, separate mechanically supported Amnion stances, the Vita Nurse Steel Pipe, low Tremer, anatomical mace-arm, aquatic members and detached Blood Mama. Fire Guardian is restricted to documented hand fire; unsupported jump/body discharge and the uncertain Demon dossier are not performed. No total Amnion limb count is certified.',
   'Eight further subjects keep Floatstinger abdomen contact without an invented rooftop, Cybil pistol-butt only while actually armed, Eddie in the original second freezer, separate Mary/Maria cage identities, the New Type equipped club, Bottom three heads/two hands and Cynthia standing hair hold. Contextual poses remain missing. The source-only Split Worm tunnel is not fabricated in the current mall room.',
   'An additional Cybil fixture prepares widely separated actors, then spends all ten bullets through actual keyboard special inputs. No ammunition or discarded-weapon state is injected. Both results must retain unarmed presentation intents and the deciding match must reject an armed finisher. A separate Eddie pairing rejects a borrowed place despite existing prison meat props.',
+  'Lot9 owns exactly thirty additional presentation rows: the church Closer, Jasper 17, Andrew 18, Richard 19 and Homecoming Swarm, each with intro, reversible win/loss round, final win/loss and outro. Real menu matches exercise both scoring directions with finishers explicitly disabled. No taunt or finisher is added to these five dossiers.',
+  'The two moving exits, Richard short position shift and Homecoming Swarm group dispersal, use the real 90-tick presentation clock. Pausing through the UI must keep the result hidden; authored offsets never change either actor physical coordinates. Ghosts keep their bodies and equipment on final loss without an invented sword or permanent source death.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
 async function shot(page,name){await page.screenshot({path:resolve(out,name+'.png'),fullPage:false});report.captures.push(name+'.png');}
-async function start(page,id,stageId,targetId='sh2_bubble_head_nurse_024'){
+async function start(page,id,stageId,targetId='sh2_bubble_head_nurse_024',fatalities=true){
   await page.goto(base+`/modules/unified-versus.html?qa=1&p1=${id}&p2=${targetId}&stage=${stageId}`);
   await page.waitForFunction(()=>!!window.__HALO_QA__);
   await page.selectOption('#mode','local');await page.selectOption('#rounds','2');
   for(const name of ['stageHazards','stageDirector','otherworldShift','stageFatalities','stageTerrain'])await page.uncheck('#'+name);
-  await page.check('#fatalities');await page.check('#artDiagnostic');await page.click('#launch');
+  await page.setChecked('#fatalities',fatalities);await page.check('#artDiagnostic');await page.click('#launch');
   await page.waitForFunction(()=>!!__HALO_QA__.engine);
   return page.evaluate(async()=>{
     const e=__HALO_QA__.engine;e.running=false;
@@ -67,15 +74,15 @@ async function start(page,id,stageId,targetId='sh2_bubble_head_nurse_024'){
     const {SPRITES}=await import('/src/sprite-manifest.js');
     const q=window.__CINEMATIC_EXPANSION_QA__={};
     q.snapshot=()=>({phase:e.phase,paused:e.paused,frame:e.frame,round:e.round,phaseTimer:e.phaseTimer,diagnostic:e.config.artDiagnostic,stage:e.stage.id,
-      projectiles:e.projectiles.length,health:e.actors.map(a=>a.health),maxHealth:e.actors.map(a=>a.maxHealth),wins:e.actors.map(a=>a.roundWins),
+      projectiles:e.projectiles.length,health:e.actors.map(a=>a.health),maxHealth:e.actors.map(a=>a.maxHealth),wins:e.actors.map(a=>a.roundWins),outroPlaying:e.isPresentingOutro(),resultHidden:document.querySelector('#result').classList.contains('hidden'),
       resources:e.actors.map(a=>[a.health,a.meter,a.ammo,a.guard,a.stats.damageDealt]),
       lastFatality:e.lastFatality?.id||null,cinematicBlock:e.lastCinematicBlock||null,fatality:e.fatality?{id:e.fatality.definition.id,recipe:e.fatality.choreography.recipeId,frame:e.fatality.sample.frame,total:e.fatality.total}:null,
       tracks:e.actors.map(a=>a.presentation?{key:a.presentation.key,frame:a.presentation.frame,sequenceId:a.presentation.sequenceId,duration:a.presentation.duration,reversible:a.presentation.reversible,poseIntent:a.presentation.lore?.poseIntent||null,
-        clipKey:a.presentation.clipKey,authored:a.presentation.lore?.authored,ownerId:a.presentation.lore?.ownerId,staging:a.presentation.staging||sampleLorePresentation(a,a.presentation)}:null),
+        clipKey:a.presentation.clipKey,authored:a.presentation.lore?.authored,ownerId:a.presentation.lore?.ownerId,composedOutro:a.presentation.lore?.hasComposedOutro===true,stagingDuration:a.presentation.stagingDuration,scopeNote:a.presentation.lore?.scopeNote||null,staging:a.presentation.staging||sampleLorePresentation(a,a.presentation)}:null),
       actors:e.actors.map(a=>{const s=sampleSpriteClip(SPRITES[a.data.id],actorSpriteState(a));return {id:a.data.id,source:a.data.source,x:a.x,health:a.health,weapon:a.data.visual.weapon,lastMove:a.lastMoveKey,
         ammo:a.ammo,weaponDiscarded:a.weaponDiscarded,canMove:a.profile.referencePolicy?.canMove!==false,fatalities:a.stats.fatalities,sprite:s?{pose:s.pose,fallback:s.fallback,reason:s.fallbackReason,requested:s.requested}:null};})});
     q.advance=n=>{for(let tick=0;tick<n;tick++)e.update();e.render(performance.now());return q.snapshot();};
-    q.knockout=()=>{const target=e.actors[1];target.health=0;target.lastHit={attackerIndex:0,isSuper:false,environmental:false};e.resolveKnockouts();e.render(performance.now());return q.snapshot();};
+    q.knockout=(winner=0)=>{const target=e.actors[1-winner];target.health=0;target.lastHit={attackerIndex:winner,isSuper:false,environmental:false};e.resolveKnockouts();e.render(performance.now());return q.snapshot();};
     return q.snapshot();
   });
 }
@@ -178,6 +185,42 @@ try{
     check('BoM Cancer loss: final victim stays defeated and the result does not award another victory',current.health[1]===0&&current.wins[0]===2&&current.actors[0].fatalities===0&&current.tracks[1].key==='loseMatch',current);
     report.scenes['bom_insane_cancer_126@final-loss']=current;await shot(page,'bom-cancer-final-loss-context');await page.close();
   }
+  const ownedContexts=new Set();
+  for(const [id,stageId] of presentationSubjects)for(const winner of [0,1]){
+    const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
+    let current=await start(page,id,stageId,'sh2_bubble_head_nurse_024',false);
+    check(id+': lot9 real menu owns its exact presentation-only intro',current.phase==='intro'&&current.actors[0].id===id&&current.tracks[0]?.authored&&current.tracks[0].ownerId===id&&current.tracks[0].scopeNote&&current.tracks[0].key==='intro',current);
+    ownedContexts.add(id+':intro');current=await advance(page,25);if(winner===0)await shot(page,'lot9-'+id+'-intro');
+    current=await advance(page,current.phaseTimer);current=await advance(page,80);
+    check(id+': lot9 live idle has no injected action, projectile or fatality',current.phase==='fight'&&current.projectiles===0&&current.actors.every(a=>a.lastMove===null&&a.fatalities===0),current);
+    current=await page.evaluate(w=>__CINEMATIC_EXPANSION_QA__.knockout(w),winner);
+    const roundKey=winner===0?'winRound':'loseRound',roundSuffix=winner===0?'winRound1':'loseRound1';
+    check(id+': lot9 '+roundSuffix+' is authored, exact and reversible',current.phase==='roundEnd'&&!current.fatality&&current.wins[winner]===1&&current.tracks[0]?.key===roundKey&&current.tracks[0].authored&&current.tracks[0].ownerId===id&&current.tracks[0].reversible,current);
+    ownedContexts.add(id+':'+roundSuffix);current=await advance(page,40);await shot(page,'lot9-'+id+'-'+roundSuffix);
+    current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);current=await advance(page,80);
+    check(id+': lot9 next round restores health and clears the recoverable track',current.phase==='fight'&&current.tracks.every(t=>t===null)&&current.health.every((h,i)=>h===current.maxHealth[i]),current);
+    current=await page.evaluate(w=>__CINEMATIC_EXPANSION_QA__.knockout(w),winner);
+    const finalKey=winner===0?'winMatch':'loseMatch';
+    check(id+': lot9 '+finalKey+' has its own final pose without enabling a finisher',current.phase==='roundEnd'&&!current.fatality&&current.wins[winner]===2&&current.tracks[0]?.key===finalKey&&current.tracks[0].authored&&current.tracks[0].ownerId===id&&!current.tracks[0].reversible&&current.actors.every(a=>a.fatalities===0),current);
+    ownedContexts.add(id+':'+finalKey);current=await advance(page,55);
+    if(winner===1&&id.startsWith('sh4_'))check(id+': lot9 final Ghost suppression retains the body rather than fading it away',current.tracks[0].staging.alpha>.5&&current.tracks[0].staging.y===0&&/suppressed|retained/.test(current.tracks[0].poseIntent),current);
+    await shot(page,'lot9-'+id+'-'+finalKey);current=await advance(page,current.phaseTimer);
+    if(winner===0){
+      check(id+': lot9 winner alone owns the exact outro',current.phase==='matchEnd'&&current.tracks[0]?.key==='outro'&&current.tracks[0].authored&&current.tracks[0].ownerId===id&&current.tracks[1]?.key==='loseMatch',current);
+      ownedContexts.add(id+':outro');const physical=current.actors.map(a=>a.x);
+      if(['sh4_richard_braintree_victim_19','homecoming_swarm'].includes(id)){
+        check(id+': lot9 moving outro owns the full authored clock and keeps the result pending',current.outroPlaying&&current.resultHidden&&current.tracks[0].composedOutro&&current.tracks[0].stagingDuration===90,current);
+        current=await advance(page,30);await page.click('#pauseBtn');const frozen=await scene(page);current=await advance(page,12);await page.waitForTimeout(650);
+        check(id+': lot9 real pause freezes the moving exit and keeps result hidden beyond its reveal timer',current.paused&&current.frame===frozen.frame&&current.tracks[0].frame===frozen.tracks[0].frame&&current.outroPlaying&&await page.locator('#result').isHidden(),current);
+        await page.click('[data-pause=resume]');current=await advance(page,32);await shot(page,'lot9-'+id+'-outro');
+        if(id==='sh4_richard_braintree_victim_19')check(id+': lot9 actual Richard outro samples the short shift while physical coordinates stay unchanged',/after-shift/.test(current.tracks[0].staging.pose)&&Math.abs(current.tracks[0].staging.x)===43&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
+        current=await advance(page,90-current.tracks[0].frame+1);await page.waitForSelector('#result:not(.hidden)');
+        check(id+': lot9 result appears only after the moving outro completes',!current.outroPlaying&&current.tracks[0].frame===89&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
+      }else{current=await advance(page,30);await shot(page,'lot9-'+id+'-outro');}
+    }else check(id+': lot9 loser holds its own final context while only the other actor exits',current.phase==='matchEnd'&&current.tracks[0]?.key==='loseMatch'&&current.tracks[1]?.key==='outro',current);
+    report.scenes[id+'@lot9-'+(winner===0?'win':'loss')]=current;await page.close();
+  }
+  report.lot9OwnedPresentationRows=[...ownedContexts];check('lot9 exercises exactly thirty unique owned workbook presentation contexts',ownedContexts.size===30,[...ownedContexts]);
   check('no unhandled browser exceptions',report.errors.length===0);await context.close();
 }catch(error){report.failure=String(error);process.exitCode=1;}
 finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}

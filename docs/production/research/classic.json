@@ -904,7 +904,7 @@
       "observedMoves": [
         {
           "name": "Bond",
-          "description": "Saut suivi de morsure.",
+          "description": "Le Groaner de SH1 saute et se jette sur Harry en mordant ; le guide précise qu’un tir pendant son bond peut le faire chuter. Cette réaction ne démontre ni pin au sol, ni maintien de morsure ou projection arrière. Forces, fenêtres et distances du versus restent non mesurées.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -1019,7 +1019,7 @@
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh1_groaner_003 ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Le guide décrit directement le Wormhead : même famille de sauts et morsures que le Groaner, plus fort et plus dommageable, et susceptible d’être renversé par un tir pendant le bond. La tête infestée appartient au Wormhead ; aucun multiplicateur numérique, prise au sol ou transfert d’image Groaner n’est validé.",
           "evidence": [
             "CL_SH1_ENEMIES",
             "CL_SH1_CREATURES"
@@ -4156,15 +4156,17 @@
       "identityNote": "Identité présente dans la source de l’œuvre ; profil versus à produire.",
       "referenceIds": [
         "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-        "CL_SH2_CREATURES"
+        "CL_SH2_CREATURES",
+        "CL_SH2_BOSSES"
       ],
       "observedMoves": [
         {
           "name": "Pieds",
-          "description": "Soulève et étrangle.",
+          "description": "Dans le duel original2001 de Brookhaven, les pieds du Flesh Lip saisissent James, le soulèvent et l’étranglent lorsqu’il approche. Le guide conseille les commandes directionnelles et d’épaule pour se libérer plus vite. Ce maintien aérien reste distinct d’un plaquage au sol ou des pattes du remake.",
           "evidence": [
             "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-            "CL_SH2_CREATURES"
+            "CL_SH2_CREATURES",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -4172,10 +4174,11 @@
         },
         {
           "name": "Coup",
-          "description": "Pousse avec les pieds.",
+          "description": "Le guide distingue une poussée ou un coup des pieds vers l’avant de la prise étrangleuse. Ne pas remplacer ces pieds par une arme, des bras offensifs ou une patte articulée de la version2024 ; contact, portée et recul restent à relever dans le jeu original.",
           "evidence": [
             "CL_SH2_05_BROOKHAVEN_HOSPITAL",
-            "CL_SH2_CREATURES"
+            "CL_SH2_CREATURES",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -4183,9 +4186,10 @@
         },
         {
           "name": "Suspension 2001",
-          "description": "Cage fixée au plafond, corps suspendu.",
+          "description": "La rencontre2001 montre des créatures suspendues dans leurs cages au plafond ; le guide fait viser les armes vers le haut pour les atteindre. Cette hauteur propre ne prouve pas une marche, un saut libre, une chute récurrente ou l’ouverture d’une forme arachnéenne.",
           "evidence": [
-            "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+            "CL_SH2_05_BROOKHAVEN_HOSPITAL",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "kind": "etat",
@@ -4194,9 +4198,10 @@
         },
         {
           "name": "Rencontre multiple",
-          "description": "Deux cages puis une troisième.",
+          "description": "Le guide du jeu original décrit deux Flesh Lips au début puis une troisième créature qui tombe du plafond après les premières destructions, ou parfois plus tôt si le combat dure. Cette progression multi-adversaire ne crée pas un second corps à partir du combattant unique du versus.",
           "evidence": [
-            "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+            "CL_SH2_05_BROOKHAVEN_HOSPITAL",
+            "CL_SH2_BOSSES"
           ],
           "status": "documente-secondaire",
           "kind": "transition",
@@ -7571,7 +7576,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Balayage rapproché.",
+          "description": "Le guideSH3 distingue un balayage du bras dans la posture haute puis un balayage dangereux lorsque le God est sur mains et genoux. La marque en demi-cercle au sol borne l’approche physique ; elle ne constitue pas une mesure de portée pour l’arène2D et n’annule pas le feu à distance.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -7582,7 +7587,7 @@
         },
         {
           "name": "Tête",
-          "description": "Heurt au contact.",
+          "description": "Lorsque le God est abaissé sur mains et genoux, le guide décrit un heurt de tête si Heather reste devant son visage. Approcher la tête par le côté évite ce contact ; ne pas attribuer automatiquement ce heurt à la posture haute.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -7593,7 +7598,7 @@
         },
         {
           "name": "Flammes",
-          "description": "Projette du feu sur le sol.",
+          "description": "Depuis la posture basse, le God peut lancer du feu sur le sol au-delà de la zone de contact. Le guide décrit une augmentation du volume, de la dispersion et de la vitesse au fil de la rencontre ; ces variations de l’arène3D ne sont pas une mesure d’onde, de boule aérienne ou de cadence2D.",
           "evidence": [
             "CL_SH3_BOSSES",
             "CL_SH3_CREATURES"
@@ -7604,7 +7609,7 @@
         },
         {
           "name": "Changement de hauteur",
-          "description": "S’abaisse ; la tête devient accessible.",
+          "description": "Le God débute droit avec le visage voilé, puis s’abaisse sur mains et genoux et expose sa tête aux coups. Le guide indique que sa défaite survient dans cette posture basse. Aucun pourcentage de phase ou invulnérabilité de la posture haute n’est déduit de cette seule progression.",
           "evidence": [
             "CL_SH3_BOSSES"
           ],
@@ -10662,7 +10667,7 @@
       "observedMoves": [
         {
           "name": "Chandelier",
-          "description": "Frappe avec l’objet métallique.",
+          "description": "Victim17 porte un chandelier métallique et peut l’utiliser pour frapper Henry ; ce n’est pas un club en bois ou un club de golf. La catégorie technique club du catalogue sert à son comportement de mêlée et ne valide pas un modèle d’arme différent. L’aura brûlante de proximité reste une observation séparée.",
           "evidence": [
             "CL_SH4_09_FOREST_WORLD_2ND_TIME",
             "CL_SH4_ENEMIES"
@@ -10788,9 +10793,10 @@
       "observedMoves": [
         {
           "name": "Roulade",
-          "description": "Charge aérienne en tonneau.",
+          "description": "Victim18 peut se lancer vers Henry en roulant en tonneau tout en lévitant, distinct des prises standard et des faibles dégâts de proximité communs aux Ghosts. Son chant accompagne sa présence mais le guide ne l’identifie pas comme un projectile ou un cri offensif. Direction, hauteur et contrôle du versus restent adaptés.",
           "evidence": [
-            "CL_ANDREW"
+            "CL_ANDREW",
+            "CL_SH4_ENEMIES"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -10903,7 +10909,7 @@
       "observedMoves": [
         {
           "name": "Pied-de-biche",
-          "description": "Frappe du pied-de-biche ; sa proximité inflige aussi les faibles dégâts passifs communs aux Ghosts.",
+          "description": "Richard tient un pied-de-biche et frappe avec cet objet, tout en infligeant les faibles dégâts de proximité communs aux Ghosts. La catégorie technique club du moteur ne lui donne ni batte en bois ni club de golf. Le déplacement à pied et les courts sauts de position restent séparés des coups.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -10913,7 +10919,7 @@
         },
         {
           "name": "Téléportation",
-          "description": "Court saut de position.",
+          "description": "Le guide décrit Richard marchant sur deux pieds et se téléportant en courts allers-retours, souvent pour frapper depuis les côtés. Cette capacité n’est pas un nouveau corps, une sortie par porte ou une disparition définitive du fantôme ; distance et fenêtre du versus restent des compositions originales.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],

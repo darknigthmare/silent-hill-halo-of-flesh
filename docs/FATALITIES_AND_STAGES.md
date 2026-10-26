@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 83 boucles et jouent 74 éléments visuels partiels issus des fiches, 20 événements et 20 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 78 boucles et jouent 97 éléments visuels partiels issus des fiches, 29 événements et 29 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -249,7 +249,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | NOWHERE | SH1 | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
 | LAKESIDE AMUSEMENT PARK | SH1 | PLATEAU DU MANÈGE SH1 | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | DERNIER TOUR DE MANÈGE — à produire |
 | WOOD SIDE APARTMENTS | SH2 | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
-| BLUE CREEK — STAIRWELL | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PORTE SANS RETOUR — montage écrit, conditions requises |
+| BLUE CREEK — STAIRWELL | SH2 | PALIER DE L’ESCALIER | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 0 boucles | PORTE SANS RETOUR — montage écrit, conditions requises |
 | BROOKHAVEN — BASEMENT | SH2 | SEUIL DE L’ASCENSEUR B1 | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | TOLUCA PRISON | SH2 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | THE LABYRINTH | SH2 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -266,10 +266,10 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | HOSPITAL WORLD | SH4 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
 | CEDAR GROVE SANITARIUM | 0RIGINS | BÉTON SEC | PASSAGE PAR LE MIROIR — transition versus autorisée | 0 | 0 | 0 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
 | RIVERSIDE MOTEL | 0RIGINS | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| SHEPHERD’S GLEN | HC | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
-| GRAND HOTEL | HC | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHAMBRE DU SOUVENIR — à produire |
+| SHEPHERD’S GLEN | HC | TROTTOIR DU PANNEAU | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | CHUTE DANS LA BRUME — à produire |
+| GRAND HOTEL | HC | SOL DE L’ATRIUM | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 1 boucles | CHAMBRE DU SOUVENIR — à produire |
 | FROZEN SCHOOL | SM | GLACE DU CAUCHEMAR | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
-| OVERLOOK PENITENTIARY | DP | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
+| OVERLOOK PENITENTIARY | DP | COURSIVE BLOCK A | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | LITTLE BARONESS | ARCADE | EAU STAGNANTE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | FOND DU LAC — à produire |
 | BOOK OF MEMORIES — NEXUS | BOM | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | 204863 — LOOPING HALL | P.T. | COULOIR ÉTROIT | fixed-normal — aucune bascule | 1 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -279,19 +279,19 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | EBISUGAOKA MIDDLE SCHOOL | SH f | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | SONNERIE DE MINUIT — à produire |
 | HINAKO’S HOME | SH f | PLANCHER ANCIEN | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | FESTIVAL SQUARE | SH f | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PROCESSION FINALE — à produire |
-| FIRE ZONE | BOM | CENDRES ET GRILLE | fixed-altered — aucune bascule | 0 | 1 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| WOOD ZONE | BOM | PIERRE RITUELLE | fixed-altered — aucune bascule | 0 | 1 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| FIRE ZONE | BOM | PASSAGE DEVANT LES GRILLES FIRE | fixed-altered — aucune bascule | 0 | 1 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| WOOD ZONE | BOM | CLAIRIÈRE WOOD | fixed-altered — aucune bascule | 1 | 1 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | LIGHT ZONE | BOM | PIERRE RITUELLE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | WATER ZONE | BOM | EAU STAGNANTE | fixed-altered — aucune bascule | 1 | 1 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| EARTH ZONE | BOM | PIERRE RITUELLE | fixed-altered — aucune bascule | 0 | 1 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| BLOOD ZONE | BOM | PIERRE RITUELLE | fixed-altered — aucune bascule | 0 | 1 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| EARTH ZONE | BOM | PASSAGE DE LA GALERIE EARTH | fixed-altered — aucune bascule | 1 | 1 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| BLOOD ZONE | BOM | BORD DES PLATEFORMES BLOOD | fixed-altered — aucune bascule | 0 | 1 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | STEEL ZONE | BOM | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 1 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | GREEN LION ANTIQUES | 0RIGINS | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | GRILLE DE ROUILLE — à produire |
 | CHURCH OF THE HOLY WAY | HC | PIERRE RITUELLE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
 | UNDERGROUND LAIR | HC | BOUE ET RACINES | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | MIDWICH — FILM OTHERWORLD | FILMS | CENDRES ET GRILLE | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 2 boucles | SONNERIE DE MINUIT — à produire |
-| BROOKHAVEN — DARK WARD | FILMS | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
-| CHURCH OF THE ORDER | FILMS | PIERRE RITUELLE | CENDRES ET DÉCOLLEMENT — transition versus autorisée | 1 | 0 | 0 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
+| HÔPITAL DU FILM — CHAMBRE D’ALESSA | FILMS | SOL DE LA CHAMBRE D’ALESSA | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
+| CHURCH OF THE ORDER | FILMS | ALLÉE DES CIERGES | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
 | SANCTUARY — REVELATION | FILMS | BOUE ET RACINES | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | HOPE’S JUNCTION | ASC | BÉTON TREMPÉ | PORTE DU TRAUMA — transition versus autorisée | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
 | STILLEDALEN WOODS | ASC | BÉTON TREMPÉ | PORTE DU TRAUMA — transition versus autorisée | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -303,10 +303,10 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | SOUTH VALE STREETS | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
 | BROOKHAVEN — ROOFTOP | SH2 | PLATEAU DU TOIT BROOKHAVEN | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | SILENT HILL HISTORICAL SOCIETY | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| LABYRINTH — MEAT LOCKER | SH2 | SOL DE LA CHAMBRE FROIDE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
+| LABYRINTH — MEAT LOCKER | SH2 | SOL DE LA CHAMBRE FROIDE | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | LAKEVIEW HOTEL — LOBBY | SH2 | TAPIS DU LOBBY | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | CHAMBRE DU SOUVENIR — à produire |
 | BALDWIN MANSION | SH2 | PLANCHER ANCIEN | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| CENTRAL SQUARE — NIGHTMARE MALL | SH3 | BÉTON SEC | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| CENTRAL SQUARE — NIGHTMARE MALL | SH3 | PALIER DES SIX TUNNELS | fixed-altered — aucune bascule | 2 | 0 | 2 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | HAZEL STREET SUBWAY | SH3 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 2 | 1 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — montage écrit, conditions requises |
 | UNDERPASS | SH3 | EAU STAGNANTE | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | HILLTOP CENTER | SH3 | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -321,10 +321,10 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | ALCHEMILLA HOSPITAL — ORIGINS | 0RIGINS | BÉTON SEC | PASSAGE PAR LE MIROIR — transition versus autorisée | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | ARTAUD THEATER | 0RIGINS | PLATEAU DE LA SCÈNE ARTAUD | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ARTAUD THEATER — NIGHTMARE | 0RIGINS | PLANCHER ANCIEN | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| ALCHEMILLA — HOMECOMING NIGHTMARE | HC | BÉTON SEC | fixed-altered — aucune bascule | 1 | 0 | 0 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
-| SHEPHERD’S GLEN POLICE STATION | HC | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| ALCHEMILLA — HOMECOMING NIGHTMARE | HC | COULOIR DU RÊVE INITIAL | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
+| SHEPHERD’S GLEN POLICE STATION | HC | SOL DE LA CELLULE | fixed-normal — aucune bascule | 2 | 0 | 3 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | SHEPHERD’S GLEN TOWN HALL | HC | COULOIR ÉTROIT | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| OVERLOOK PENITENTIARY | HC | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 1 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
+| OVERLOOK PENITENTIARY | HC | COURSIVE CELL BLOCK B | fixed-normal — aucune bascule | 2 | 0 | 2 éléments de fiche / 1 boucles | CELLULE DU JUGEMENT — à produire |
 | SHEPHERD HOUSE — ATTIC | HC | PLANCHER ANCIEN | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | SCARLET’S CHAMBER | HC | BOUE ET RACINES | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | CURTIS’S JUNKYARD WORKSHOP | HC | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -335,7 +335,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | DEVIL’S PIT | DP | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | CENTENNIAL BUILDING | DP | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ST. MARIA’S MONASTERY | DP | PIERRE RITUELLE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | AUTEL DU SACRIFICE — à produire |
-| SILENT HILL — DOWNPOUR STREETS | DP | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 3 boucles | CHUTE DANS LA BRUME — à produire |
+| SILENT HILL — DOWNPOUR STREETS | DP | CHAUSSÉE DE PEARL CREEK | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 2 boucles | CHUTE DANS LA BRUME — à produire |
 | DOWNPOUR — VOID CHASE | DP | ESPACE IMPOSSIBLE | fixed-altered — aucune bascule | 1 | 1 | 0 éléments de fiche / 0 boucles | EFFACEMENT DU COULOIR — à produire |
 | FULL CIRCLE — ANNE’S CONFRONTATION | DP | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | THE ARCADE — CITY / JACK’S INN | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | CHUTE DANS LA BRUME — à produire |

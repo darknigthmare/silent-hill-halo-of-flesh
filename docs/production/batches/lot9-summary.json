@@ -1,0 +1,279 @@
+{
+  "schema": 1,
+  "batch": "lot9",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "itemsPerAgent": 30,
+  "agents": 6,
+  "rowWorkItems": 180,
+  "workstreams": [
+    {
+      "workstream": "art",
+      "collection": "poses",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "implemented-candidate": 24,
+        "blocked": 6
+      }
+    },
+    {
+      "workstream": "combat",
+      "collection": "moves",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "implemented-candidate": 30
+      }
+    },
+    {
+      "workstream": "cinematics",
+      "collection": "presentations",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "implemented-candidate": 30
+      }
+    },
+    {
+      "workstream": "stages",
+      "collection": "stageAnimations",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "implemented-candidate": 23,
+        "blocked": 7
+      }
+    },
+    {
+      "workstream": "references",
+      "collection": "observations",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "specified": 30
+      }
+    },
+    {
+      "workstream": "poses",
+      "collection": "poses",
+      "requested": 30,
+      "rows": 30,
+      "declaredStatuses": {
+        "specified": 30
+      }
+    }
+  ],
+  "passed": true,
+  "certifiedOneToOne": false,
+  "limits": "Counts and traceability only. Declared implementations and specifications are not certified gestures, artwork or completed Excel tasks. Blocked rows stay explicitly blocked.",
+  "planSha256": "6e12a9cbe09b49e0c98bccb8b3db5b2510fe29ce6298baafa1875582a1d13ec0",
+  "baselinePlanSha256": "0a893808b4c4119240826f185d5b96b5f2e75b25b2eca0250f095b51b3804247",
+  "ledgers": [
+    {
+      "path": "docs/production/batches/lot9-art.json",
+      "sha256": "22a1e7ea6847f7d88aaef9b88fb731cc0debdc87d4c228a4529f04bf1421bbc1"
+    },
+    {
+      "path": "docs/production/batches/lot9-combat.json",
+      "sha256": "527fb011127c8f234f3c50ba128933997b24f6ce716919303d30ec329a6c26b4"
+    },
+    {
+      "path": "docs/production/batches/lot9-cinematics.json",
+      "sha256": "ed731ccc838896ccc4091744e52c320662070f43d9816611a6e5a9c50b309f89"
+    },
+    {
+      "path": "docs/production/batches/lot9-stages.json",
+      "sha256": "1673d47eb25ef29ec613f59444b4b8cfab41789ac2306fc2efd6f158289241e8"
+    },
+    {
+      "path": "docs/production/batches/lot9-references.json",
+      "sha256": "27d8428da842be0cdcd2452da7acc75e112cd5e64bd3ea9264a6c11b0f9dcd00"
+    },
+    {
+      "path": "docs/production/batches/lot9-poses.json",
+      "sha256": "19b8acbae187d049e618bb1120b1ccafb21aa7d64cfad3c13139dae44a5a7430"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+      "bytes": 1359829
+    },
+    {
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+      "bytes": 1089509
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+      "bytes": 1629947
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+      "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+      "bytes": 700743
+    },
+    {
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+      "bytes": 1107324
+    },
+    {
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+      "bytes": 1849328
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+      "bytes": 1186750
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+      "bytes": 1785759
+    },
+    {
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+      "bytes": 956088
+    },
+    {
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+      "bytes": 925845
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+      "bytes": 901797
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+      "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+      "bytes": 1177577
+    },
+    {
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+      "bytes": 762624
+    },
+    {
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+      "bytes": 1303720
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+      "bytes": 1619677
+    },
+    {
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+      "bytes": 1103151
+    },
+    {
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+      "bytes": 826091
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+      "bytes": 2224873
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+      "bytes": 1806980
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+      "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+      "bytes": 1554591
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+      "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+      "bytes": 2031661
+    },
+    {
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+      "bytes": 1769377
+    },
+    {
+      "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+      "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+      "bytes": 2211751
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+      "bytes": 2296027
+    },
+    {
+      "path": "docs/production/research/extended.json",
+      "sha256": "d791fe47d2ed87a5f40d4d228d2648e368dd2ad8a39c5047c1fa0101124042a9",
+      "bytes": 970586
+    },
+    {
+      "path": "docs/production/research/role-decisions-batch9-2026-10-26.json",
+      "sha256": "f9113d0f3e993a97ceaf40cfd792155d78c23db650edbbafe60a79821cafc598",
+      "bytes": 87380
+    },
+    {
+      "path": "scripts/build-production-plan.mjs",
+      "sha256": "62afbb0693fdbca1c698b71b2ffa31ceb95c1ff5acbafb62961f65cb95a95cf9",
+      "bytes": 62912
+    },
+    {
+      "path": "scripts/http-qa-source-expansion.mjs",
+      "sha256": "d23468471dda51b19665b1ed996d4472bae0c65069dc6a6ee4e574540d50289b",
+      "bytes": 74833
+    },
+    {
+      "path": "scripts/source-pose-specifications.mjs",
+      "sha256": "3f949c56a83005f79d593f1a1c43b6b6439fddfe4dab7dc8b5e113b7aa72f563",
+      "bytes": 23616
+    },
+    {
+      "path": "src/combat-reference-policy.js",
+      "sha256": "0d08b4c904562c29736226cdc31f1d36c88a4a45e5fdbd5bce720ee0b6de223a",
+      "bytes": 66216
+    },
+    {
+      "path": "src/fight.js",
+      "sha256": "d797efd4b7dc0a91d414abe91fa9351a3553ee46728eeecd9454ea70c7318b5d",
+      "bytes": 161739
+    },
+    {
+      "path": "src/lore-cinematics.js",
+      "sha256": "3628dd1be04030481d05042537ef499663b3d2d4655ba9e5c02519ef52045d4e",
+      "bytes": 117626
+    },
+    {
+      "path": "src/stage-cinematics.js",
+      "sha256": "403acd6717edf45430346cb943f9b8a579d234f5e0748c5d44d1e636ad52861d",
+      "bytes": 46747
+    },
+    {
+      "path": "src/stage-director.js",
+      "sha256": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
+      "bytes": 51956
+    },
+    {
+      "path": "src/stage-reference-policy.js",
+      "sha256": "e5cc402cf96c3dc4a5e1715f7c55ce8b2583f3b9a48d757e52be679d8977c6c7",
+      "bytes": 58738
+    },
+    {
+      "path": "tests/source-combat-lot9.test.mjs",
+      "sha256": "674ce022b733ba3b141516735811d13e2d81c653bfde4bf8de70c9ec6ae52aaf",
+      "bytes": 18118
+    }
+  ]
+}

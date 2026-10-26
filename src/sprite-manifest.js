@@ -1855,5 +1855,1637 @@ export const SPRITES = {
       }
     },
     "animatedClips": 0
+  },
+  "sh1_mumbler_006": {
+    "fighterId": "sh1_mumbler_006",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
+    "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+    "sourceDimensions": [
+      1102,
+      1428
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Corps trapu brun, deux bras à longues griffes et deux jambes ; pied levé du modèle, bords de doigts reconstruits. Angle unique. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "bytes": 1089509,
+        "width": 1102,
+        "height": 1428,
+        "visibleBounds": [
+          102,
+          14,
+          1026,
+          1417
+        ],
+        "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
+        "transparentFraction": 0.62002,
+        "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9916
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
+        "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+      "bytes": 1089509,
+      "width": 1102,
+      "height": 1428,
+      "facing": 1,
+      "visibleBounds": [
+        102,
+        14,
+        1026,
+        1417
+      ],
+      "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
+      "transparentFraction": 0.62002
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_creeper_009": {
+    "fighterId": "sh1_creeper_009",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-7940cc9e-dbde-4f28-b7a1-1abb1f09b61c.png",
+    "sourceSHA256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Vue dorsale du Creeper SH1, six pattes et antennes/filaments ; pas de transfert SH2/film. Vue en hauteur adaptée au duel, aucun cycle ni hauteur source mesurée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+        "bytes": 1359829,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          216,
+          30,
+          804,
+          1519
+        ],
+        "pixelSHA256": "0da4b86776ba636ed2c7d5cf6c30a055693efdd3cd0adfa7d0d3011237f1421c",
+        "transparentFraction": 0.82096,
+        "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.98893
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-7940cc9e-dbde-4f28-b7a1-1abb1f09b61c.png",
+        "sourceSHA256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
+      "bytes": 1359829,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        216,
+        30,
+        804,
+        1519
+      ],
+      "pixelSHA256": "0da4b86776ba636ed2c7d5cf6c30a055693efdd3cd0adfa7d0d3011237f1421c",
+      "transparentFraction": 0.82096
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_puppet_nurse_012": {
+    "fighterId": "sh1_puppet_nurse_012",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-1d1dccbe-cad9-4754-acb6-5f76c6bc73d4.png",
+    "sourceSHA256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+    "sourceDimensions": [
+      1448,
+      1086
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH1 voûtée, coiffe/blouse, parasite dorsal et petit couteau ; ne reprend pas Nurses SH2/SH3/film. Hump et appuis en profondeur non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+        "bytes": 700743,
+        "width": 1448,
+        "height": 1086,
+        "visibleBounds": [
+          422,
+          5,
+          1048,
+          1080
+        ],
+        "pixelSHA256": "069882d4ce5aa1f326d25f0273c4b9402135294b3725fbebc1f2dc3f8dc726d2",
+        "transparentFraction": 0.79369,
+        "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+        "facing": -1,
+        "anchor": [
+          0.56,
+          0.99355
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-1d1dccbe-cad9-4754-acb6-5f76c6bc73d4.png",
+        "sourceSHA256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+      "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+      "bytes": 700743,
+      "width": 1448,
+      "height": 1086,
+      "facing": -1,
+      "visibleBounds": [
+        422,
+        5,
+        1048,
+        1080
+      ],
+      "pixelSHA256": "069882d4ce5aa1f326d25f0273c4b9402135294b3725fbebc1f2dc3f8dc726d2",
+      "transparentFraction": 0.79369
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_puppet_doctor_013": {
+    "fighterId": "sh1_puppet_doctor_013",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e91725ea-7cb0-4488-939a-7fafeea2ec1e.png",
+    "sourceSHA256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Doctor SH1, manteau sombre, bosse dorsale, couteau levé du modèle. Le classement idle du moteur ne prétend pas que cette pose armée est le repos source. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+        "bytes": 1629947,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          164,
+          17,
+          862,
+          1518
+        ],
+        "pixelSHA256": "a270d2482fc9311b897a555ba32907ff38974c5af0f86173e5744c2f697e0b94",
+        "transparentFraction": 0.71704,
+        "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+        "facing": -1,
+        "anchor": [
+          0.58,
+          0.98763
+        ],
+        "bodyHeight": 0.72,
+        "sourceFile": "exec-e91725ea-7cb0-4488-939a-7fafeea2ec1e.png",
+        "sourceSHA256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
+      "bytes": 1629947,
+      "width": 1024,
+      "height": 1536,
+      "facing": -1,
+      "visibleBounds": [
+        164,
+        17,
+        862,
+        1518
+      ],
+      "pixelSHA256": "a270d2482fc9311b897a555ba32907ff38974c5af0f86173e5744c2f697e0b94",
+      "transparentFraction": 0.71704
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_twinfeeler_015": {
+    "fighterId": "sh1_twinfeeler_015",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-986c42df-eaaf-490d-9025-6e21a6118112.png",
+    "sourceSHA256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+    "sourceDimensions": [
+      2186,
+      719
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Larve horizontale SH1, segments clairs, petits appendices ventraux et extrémités bifides ; pas la forme moth. Marges du modèle initialement proches du bord reconstruites. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+        "bytes": 1107324,
+        "width": 2186,
+        "height": 719,
+        "visibleBounds": [
+          6,
+          171,
+          2177,
+          637
+        ],
+        "pixelSHA256": "47b593c5df2fcb8350ddb5cd4b9642344773b96c9f0c8aea85c1c8ca02d690b5",
+        "transparentFraction": 0.67641,
+        "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+        "facing": -1,
+        "anchor": [
+          0.52,
+          0.88456
+        ],
+        "bodyHeight": 0.65,
+        "sourceFile": "exec-986c42df-eaaf-490d-9025-6e21a6118112.png",
+        "sourceSHA256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
+      "bytes": 1107324,
+      "width": 2186,
+      "height": 719,
+      "facing": -1,
+      "visibleBounds": [
+        6,
+        171,
+        2177,
+        637
+      ],
+      "pixelSHA256": "47b593c5df2fcb8350ddb5cd4b9642344773b96c9f0c8aea85c1c8ca02d690b5",
+      "transparentFraction": 0.67641
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_sniffer_dog_female_054": {
+    "fighterId": "sh4_sniffer_dog_female_054",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
+    "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+        "bytes": 2224873,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          36,
+          34,
+          1526,
+          992
+        ],
+        "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
+        "transparentFraction": 0.58355,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+        "facing": -1,
+        "anchor": [
+          0.57,
+          0.96777
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
+        "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+      "bytes": 2224873,
+      "width": 1536,
+      "height": 1024,
+      "facing": -1,
+      "visibleBounds": [
+        36,
+        34,
+        1526,
+        992
+      ],
+      "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
+      "transparentFraction": 0.58355
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_gum_head_old_type_057": {
+    "fighterId": "sh4_gum_head_old_type_057",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-cb6e1fcd-1b3f-402e-9174-b5be610326f3.png",
+    "sourceSHA256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+    "sourceDimensions": [
+      885,
+      1777
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Old Type SH4 gris/rosé, bosse pectorale et mains vides ; ni gorge orange ni arme du New Type. Genou levé et face étirée issus du modèle. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+        "bytes": 1619677,
+        "width": 885,
+        "height": 1777,
+        "visibleBounds": [
+          61,
+          18,
+          824,
+          1732
+        ],
+        "pixelSHA256": "7159d40aeb020ccd97142e7894a7012e8e5bf36ecbf4f71da708b83ba668b3d2",
+        "transparentFraction": 0.585,
+        "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+        "facing": -1,
+        "anchor": [
+          0.55,
+          0.97411
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-cb6e1fcd-1b3f-402e-9174-b5be610326f3.png",
+        "sourceSHA256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
+      "bytes": 1619677,
+      "width": 885,
+      "height": 1777,
+      "facing": -1,
+      "visibleBounds": [
+        61,
+        18,
+        824,
+        1732
+      ],
+      "pixelSHA256": "7159d40aeb020ccd97142e7894a7012e8e5bf36ecbf4f71da708b83ba668b3d2",
+      "transparentFraction": 0.585
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_toadstool_061": {
+    "fighterId": "sh4_toadstool_061",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e119938c-db55-4d1d-ada3-f5b2ae11bcc9.png",
+    "sourceSHA256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+    "sourceDimensions": [
+      1031,
+      1525
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Une colonie Toadstool SH4 à bouts renflés, image individuelle de touffe ; nombre/position fins des tiges et attache au sol à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+        "bytes": 1806980,
+        "width": 1031,
+        "height": 1525,
+        "visibleBounds": [
+          66,
+          19,
+          1000,
+          1487
+        ],
+        "pixelSHA256": "4f7ecd22d8a9cae6f2accef3f83a91f387a35e5cfdd7b7c9133756c3bd78efc6",
+        "transparentFraction": 0.51683,
+        "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.97443
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-e119938c-db55-4d1d-ada3-f5b2ae11bcc9.png",
+        "sourceSHA256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+      "bytes": 1806980,
+      "width": 1031,
+      "height": 1525,
+      "facing": 1,
+      "visibleBounds": [
+        66,
+        19,
+        1000,
+        1487
+      ],
+      "pixelSHA256": "4f7ecd22d8a9cae6f2accef3f83a91f387a35e5cfdd7b7c9133756c3bd78efc6",
+      "transparentFraction": 0.51683
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_whitestool_062": {
+    "fighterId": "sh4_whitestool_062",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-304a1eb4-203c-4839-99c1-aa24fe4bc96a.png",
+    "sourceSHA256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+    "sourceDimensions": [
+      1040,
+      1512
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Une colonie Whitestool SH4 aux fines tiges pâles, distincte des bouts ronds Toadstool. Densité, pointes et racines reconstruits, non animés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+        "bytes": 2296027,
+        "width": 1040,
+        "height": 1512,
+        "visibleBounds": [
+          37,
+          71,
+          1009,
+          1456
+        ],
+        "pixelSHA256": "81a58c247998c6a718324fe10aa7ed6b2be09c67bcad3b85b061b52c5240e4ae",
+        "transparentFraction": 0.53126,
+        "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9623
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-304a1eb4-203c-4839-99c1-aa24fe4bc96a.png",
+        "sourceSHA256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+      "bytes": 2296027,
+      "width": 1040,
+      "height": 1512,
+      "facing": 1,
+      "visibleBounds": [
+        37,
+        71,
+        1009,
+        1456
+      ],
+      "pixelSHA256": "81a58c247998c6a718324fe10aa7ed6b2be09c67bcad3b85b061b52c5240e4ae",
+      "transparentFraction": 0.53126
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_tremer_blue_063": {
+    "fighterId": "sh4_tremer_blue_063",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
+    "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+    "sourceDimensions": [
+      1298,
+      1212
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Blue Tremer SH4 bleu-gris, deux lobes séparés par constriction médiane ; pas le Red Tremer continu. Brillance renforcée, pas de traînée ni explosion produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "bytes": 1554591,
+        "width": 1298,
+        "height": 1212,
+        "visibleBounds": [
+          26,
+          15,
+          1271,
+          1180
+        ],
+        "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
+        "transparentFraction": 0.58268,
+        "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.97277
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
+        "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+      "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+      "bytes": 1554591,
+      "width": 1298,
+      "height": 1212,
+      "facing": 1,
+      "visibleBounds": [
+        26,
+        15,
+        1271,
+        1180
+      ],
+      "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
+      "transparentFraction": 0.58268
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_tremer_red_064": {
+    "fighterId": "sh4_tremer_red_064",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
+    "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+    "sourceDimensions": [
+      1416,
+      1111
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Tremer SH4 rosé/brun en forme continue incurvée, sans constriction du Blue. Brillance/contraste renforcés ; rampement et explosion absents. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "bytes": 2031661,
+        "width": 1416,
+        "height": 1111,
+        "visibleBounds": [
+          14,
+          18,
+          1405,
+          1092
+        ],
+        "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
+        "transparentFraction": 0.5229,
+        "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.982
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
+        "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+      "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+      "bytes": 2031661,
+      "width": 1416,
+      "height": 1111,
+      "facing": 1,
+      "visibleBounds": [
+        14,
+        18,
+        1405,
+        1092
+      ],
+      "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
+      "transparentFraction": 0.5229
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_wheelchair_068": {
+    "fighterId": "sh4_wheelchair_068",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
+    "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+    "sourceDimensions": [
+      1187,
+      1326
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Fauteuil SH4 vide, deux grandes roues arrière, roulettes avant et repose-pieds ; tissu brun/rouge quadrillé. Perspective des appuis non aplatie ni certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+        "bytes": 2211751,
+        "width": 1187,
+        "height": 1326,
+        "visibleBounds": [
+          16,
+          8,
+          1174,
+          1288
+        ],
+        "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
+        "transparentFraction": 0.46625,
+        "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+        "facing": -1,
+        "anchor": [
+          0.54,
+          0.97134
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
+        "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+      "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+      "bytes": 2211751,
+      "width": 1187,
+      "height": 1326,
+      "facing": -1,
+      "visibleBounds": [
+        16,
+        8,
+        1174,
+        1288
+      ],
+      "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
+      "transparentFraction": 0.46625
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_numb_body_large_038": {
+    "fighterId": "sh3_numb_body_large_038",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0221b030-82d1-43ea-a80d-def14cb06b99.png",
+    "sourceSHA256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+    "sourceDimensions": [
+      1362,
+      1155
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Numb Body Large SH3, tronc pâle et deux seules jambes. Anatomie du modèle familial ; taille Large retenue qualitativement par la fiche, aucune vue ou échelle propre à cette variante certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+        "bytes": 901797,
+        "width": 1362,
+        "height": 1155,
+        "visibleBounds": [
+          253,
+          22,
+          1075,
+          1151
+        ],
+        "pixelSHA256": "e9050f92c487fcfb5c132cedf9dc6904c9b9f107d12602b61999e5d1ad927d5c",
+        "transparentFraction": 0.77414,
+        "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+        "facing": 1,
+        "anchor": [
+          0.58,
+          0.99567
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-0221b030-82d1-43ea-a80d-def14cb06b99.png",
+        "sourceSHA256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
+      "bytes": 901797,
+      "width": 1362,
+      "height": 1155,
+      "facing": 1,
+      "visibleBounds": [
+        253,
+        22,
+        1075,
+        1151
+      ],
+      "pixelSHA256": "e9050f92c487fcfb5c132cedf9dc6904c9b9f107d12602b61999e5d1ad927d5c",
+      "transparentFraction": 0.77414
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_nurse_revolver_044": {
+    "fighterId": "sh3_nurse_revolver_044",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
+    "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+    "sourceDimensions": [
+      934,
+      1683
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH3 au revolver long abaissé, cheveux sombres et uniforme coiffé ; pas de tuyau ou arme du film. Une pose modèle, aucune cadence ou phase de tir produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+        "bytes": 1177577,
+        "width": 934,
+        "height": 1683,
+        "visibleBounds": [
+          93,
+          11,
+          886,
+          1666
+        ],
+        "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
+        "transparentFraction": 0.67812,
+        "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.9893
+        ],
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
+        "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+      "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+      "bytes": 1177577,
+      "width": 934,
+      "height": 1683,
+      "facing": 1,
+      "visibleBounds": [
+        93,
+        11,
+        886,
+        1666
+      ],
+      "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
+      "transparentFraction": 0.67812
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_scraper_045": {
+    "fighterId": "sh3_scraper_045",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
+    "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+    "sourceDimensions": [
+      1435,
+      1096
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Scraper SH3 bas, avant-bras rouges et deux lames courtes croisées indépendantes ; pas Missionary. Couronne/tête, rouge et contraste à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+        "bytes": 762624,
+        "width": 1435,
+        "height": 1096,
+        "visibleBounds": [
+          380,
+          22,
+          1046,
+          1078
+        ],
+        "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
+        "transparentFraction": 0.76568,
+        "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.98266
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
+        "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+      "bytes": 762624,
+      "width": 1435,
+      "height": 1096,
+      "facing": 1,
+      "visibleBounds": [
+        380,
+        22,
+        1046,
+        1078
+      ],
+      "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
+      "transparentFraction": 0.76568
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_missionary_047": {
+    "fighterId": "sh3_missionary_047",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-3f2a4958-7498-4c53-8866-42f438acdde9.png",
+    "sourceSHA256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+    "sourceDimensions": [
+      1436,
+      1096
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Missionary SH3 avec deux longues lames et sa propre tête couverte ; posture du modèle conservée. Proportions du masque, teinte rouge et profondeur des pieds non certifiées. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+        "bytes": 925845,
+        "width": 1436,
+        "height": 1096,
+        "visibleBounds": [
+          71,
+          36,
+          1376,
+          1068
+        ],
+        "pixelSHA256": "98cde8a19f0dc215e9b324d0b1ec105302812430bad2293410f7e12e297c24c6",
+        "transparentFraction": 0.75175,
+        "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+        "facing": -1,
+        "anchor": [
+          0.62,
+          0.97354
+        ],
+        "bodyHeight": 0.93,
+        "sourceFile": "exec-3f2a4958-7498-4c53-8866-42f438acdde9.png",
+        "sourceSHA256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
+      "bytes": 925845,
+      "width": 1436,
+      "height": 1096,
+      "facing": -1,
+      "visibleBounds": [
+        71,
+        36,
+        1376,
+        1068
+      ],
+      "pixelSHA256": "98cde8a19f0dc215e9b324d0b1ec105302812430bad2293410f7e12e297c24c6",
+      "transparentFraction": 0.75175
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_leonard_wolf_048": {
+    "fighterId": "sh3_leonard_wolf_048",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-7ddfb808-9ec9-4150-89a2-78b07ed3c485.png",
+    "sourceSHA256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+    "sourceDimensions": [
+      1442,
+      1091
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Leonard SH3 aquatique, tête réduite, deux bras pointus et deux jambes ; pas Leonard humain/film. Texture plus claire, appuis et silhouette à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+        "bytes": 956088,
+        "width": 1442,
+        "height": 1091,
+        "visibleBounds": [
+          132,
+          34,
+          1399,
+          1074
+        ],
+        "pixelSHA256": "c4cc70446db294ee64ccaacfee231d2a2fac4467fb8067b0b283deb744c6134d",
+        "transparentFraction": 0.78347,
+        "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+        "facing": -1,
+        "anchor": [
+          0.49,
+          0.9835
+        ],
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-7ddfb808-9ec9-4150-89a2-78b07ed3c485.png",
+        "sourceSHA256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
+      "bytes": 956088,
+      "width": 1442,
+      "height": 1091,
+      "facing": -1,
+      "visibleBounds": [
+        132,
+        34,
+        1399,
+        1074
+      ],
+      "pixelSHA256": "c4cc70446db294ee64ccaacfee231d2a2fac4467fb8067b0b283deb744c6134d",
+      "transparentFraction": 0.78347
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_jimmy_stone_victim_1": {
+    "fighterId": "sh4_jimmy_stone_victim_1",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
+    "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+    "sourceDimensions": [
+      1161,
+      1355
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Jimmy Stone Victim 1 SH4 en posture flottante penchée, visage incliné, vêtement sombre et pieds nus. Contraste/rouge accentués ; ni fantôme générique ni cycle de lévitation original. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "bytes": 1103151,
+        "width": 1161,
+        "height": 1355,
+        "visibleBounds": [
+          171,
+          72,
+          999,
+          1307
+        ],
+        "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
+        "transparentFraction": 0.72292,
+        "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+        "facing": -1,
+        "anchor": [
+          0.52,
+          1
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
+        "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+      "bytes": 1103151,
+      "width": 1161,
+      "height": 1355,
+      "facing": -1,
+      "visibleBounds": [
+        171,
+        72,
+        999,
+        1307
+      ],
+      "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
+      "transparentFraction": 0.72292
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_cynthia_velasquez_victim_16": {
+    "fighterId": "sh4_cynthia_velasquez_victim_16",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
+    "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+    "sourceDimensions": [
+      1670,
+      942
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Cynthia Victim 16 SH4 dans sa posture horizontale voûtée, cheveux longs pendants, haut rayé et jambes pliées ; ni pose debout ni prise animée inférée. Cheveux/appuis, rouge et échelle en projection à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+        "bytes": 1303720,
+        "width": 1670,
+        "height": 942,
+        "visibleBounds": [
+          19,
+          19,
+          1650,
+          923
+        ],
+        "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
+        "transparentFraction": 0.66923,
+        "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+        "facing": 1,
+        "anchor": [
+          0.58,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
+        "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+      "bytes": 1303720,
+      "width": 1670,
+      "height": 942,
+      "facing": 1,
+      "visibleBounds": [
+        19,
+        19,
+        1650,
+        923
+      ],
+      "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
+      "transparentFraction": 0.66923
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_richard_braintree_victim_19": {
+    "fighterId": "sh4_richard_braintree_victim_19",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
+    "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+    "sourceDimensions": [
+      1161,
+      1355
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Richard Victim 19 SH4, chemise à carreaux, genou levé, tuyau courbé propre ; pas de pistolet ou identité Jimmy empruntée. Flottement, contact et temporalité non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+        "bytes": 826091,
+        "width": 1161,
+        "height": 1355,
+        "visibleBounds": [
+          208,
+          40,
+          879,
+          1315
+        ],
+        "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
+        "transparentFraction": 0.77828,
+        "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+        "facing": -1,
+        "anchor": [
+          0.56,
+          1
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
+        "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+      "bytes": 826091,
+      "width": 1161,
+      "height": 1355,
+      "facing": -1,
+      "visibleBounds": [
+        208,
+        40,
+        879,
+        1315
+      ],
+      "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
+      "transparentFraction": 0.77828
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_walter_sullivan_072": {
+    "fighterId": "sh4_walter_sullivan_072",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
+    "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Walter adulte final SH4, manteau bleu, cheveux longs et deux pistolets abaissés. Modèle entier du guide et portrait corroborent tenue/visage ; pas corps sacrifié ni enfant, détails du manteau/armes reconstruits. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+        "bytes": 1769377,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          208,
+          45,
+          853,
+          1505
+        ],
+        "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
+        "transparentFraction": 0.70186,
+        "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.97917
+        ],
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
+        "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+      "bytes": 1769377,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        208,
+        45,
+        853,
+        1505
+      ],
+      "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
+      "transparentFraction": 0.70186
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh2_red_pyramid_thing_great_knife_029": {
+    "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+    "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+    "sourceDimensions": [
+      1076,
+      1462
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Great Knife SH2 original, casque triangulaire étroit, tablier et grande lame. Mobilier source exclu ; pose de présence adaptée, pieds/lame en profondeur non certifiés. Pas de film ni spear. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "bytes": 1186750,
+        "width": 1076,
+        "height": 1462,
+        "visibleBounds": [
+          23,
+          12,
+          1032,
+          1445
+        ],
+        "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
+        "transparentFraction": 0.69194,
+        "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.94
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+        "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+      "bytes": 1186750,
+      "width": 1076,
+      "height": 1462,
+      "facing": 1,
+      "visibleBounds": [
+        23,
+        12,
+        1032,
+        1445
+      ],
+      "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
+      "transparentFraction": 0.69194
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh2_red_pyramid_thing_spear_030": {
+    "fighterId": "sh2_red_pyramid_thing_spear_030",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-d2856c8a-862b-4239-911d-57a4f8846f07.png",
+    "sourceSHA256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Spear SH2 original, un sujet seul avec longue lance ; deux vues du duel final corroborent arme/tenue. Posture frontalisée adaptée, dimensions de lance et casque non mesurées ; ni couteau, jumeau supplémentaire ni victime. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+        "bytes": 1785759,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          230,
+          28,
+          797,
+          1507
+        ],
+        "pixelSHA256": "78e08ae09d0960cdfdb9e621807a6a189e166aa898a6547c266018bf16f7fa3b",
+        "transparentFraction": 0.76936,
+        "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+        "facing": 1,
+        "anchor": [
+          0.52,
+          0.98047
+        ],
+        "bodyHeight": 0.88,
+        "sourceFile": "exec-d2856c8a-862b-4239-911d-57a4f8846f07.png",
+        "sourceSHA256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
+      "bytes": 1785759,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        230,
+        28,
+        797,
+        1507
+      ],
+      "pixelSHA256": "78e08ae09d0960cdfdb9e621807a6a189e166aa898a6547c266018bf16f7fa3b",
+      "transparentFraction": 0.76936
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh2_eddie_dombrowski_032": {
+    "fighterId": "sh2_eddie_dombrowski_032",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-bf240cb5-8d9a-4b41-8296-4ac86e495fb9.png",
+    "sourceSHA256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Eddie SH2 original adulte, casquette inversée, polo rayé, short, chaussettes/baskets et revolver abaissé. Portrait et deux vues du combat ; pose frontale de présence adaptée, visage/détails modernisés et appuis non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+        "bytes": 1849328,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          213,
+          19,
+          860,
+          1515
+        ],
+        "pixelSHA256": "55d02e37186901811104e1acb027e1eb82065ae94e6ae6629769ed7fbe9ee29f",
+        "transparentFraction": 0.66704,
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+        "facing": 1,
+        "anchor": [
+          0.53,
+          0.98568
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-bf240cb5-8d9a-4b41-8296-4ac86e495fb9.png",
+        "sourceSHA256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
+      "bytes": 1849328,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        213,
+        19,
+        860,
+        1515
+      ],
+      "pixelSHA256": "55d02e37186901811104e1acb027e1eb82065ae94e6ae6629769ed7fbe9ee29f",
+      "transparentFraction": 0.66704
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
   }
 };

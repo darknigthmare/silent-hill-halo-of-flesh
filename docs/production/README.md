@@ -37,8 +37,21 @@ de relevés vérifie des paquets de capture ; aucun timing original n'est encore
 
 ## État du 26 octobre 2026
 
+Le [neuvième lot](CHANTIERS_PARALLELES_LOT9_2026-10-26.md) est l’état courant :
+**six lots de trente lignes, 107 réalisations candidates, 60 spécifications
+et 13 blocages conservés dans l’Excel**. Il compte 49 profils illustrés,
+184 sources, 97 pistes de lieux et 716 présentations sans état d’acteur,
+plus les sept contextes Cybil conditionnels. Les 840 actions encore ouvertes
+comprennent 93 P0 ; 33 décisions de rôle restent validées sans changement.
+Les [relevés des lots](batches/lot9-summary.json) et le
+[rapport de validation](../INTEGRATION_QA_2026-10-26-lot9.json) conservent leurs
+preuves et limites. Aucune image ou animation 1:1 n’est certifiée ; les
+18 400 cellules de timings originaux restent vides.
+
+## État précédent — huitième lot
+
 Le [huitième lot](CHANTIERS_PARALLELES_LOT8_2026-10-26.md) et son
-[rapport de validation](../INTEGRATION_QA_2026-10-26.json) décrivent l’état courant :
+[rapport de validation](../INTEGRATION_QA_2026-10-26.json) décrivent la livraison précédente :
 **840 actions ouvertes, 94 P0, 25 profils illustrés et six décors bitmap**.
 Les 33 décisions de rôle incluent huit adaptations filmiques jouables ;
 les 25 dossiers sans duel autonome restent bloqués. Le catalogue conserve

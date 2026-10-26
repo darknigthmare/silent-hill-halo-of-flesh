@@ -1,0 +1,539 @@
+{
+  "schema": 1,
+  "batch": "lot9",
+  "workstream": "stages",
+  "baseCommit": "98ccc47a4c26bd05fd90b2751705730783ef8eaa",
+  "requestedItems": 30,
+  "items": [
+    {
+      "rowId": "blue_creek:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "blue_creek",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm"
+      ],
+      "limits": "Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré.",
+      "runtimeKey": "blueStairRailReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Palier nord Blue Creek, duel SH2 original avant drainage"
+    },
+    {
+      "rowId": "nightmare_mall:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_mall",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_03_nightmare_mall_en.htm"
+      ],
+      "limits": "Treillis abstrait près du bord ; déformation élastique proposée sans nouveau passage, collision, Split Worm ou ouverture d’un septième tunnel.",
+      "runtimeKey": "splitWormGrateReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Palier de l’arène Split Worm SH3, six ouvertures conservées"
+    },
+    {
+      "rowId": "grand_hotel:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "grand_hotel",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "limits": "Le guide décrit les quatre sacs suspendus. Seul leur support abstrait réagit dans le versus ; aucun sac destructible, arbre vivant, Sepulcher, vibration canonique ou lustre inventé.",
+      "runtimeKey": "atriumSupportReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté"
+    },
+    {
+      "rowId": "police_station_hc:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "police_station_hc",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_060.jpg"
+      ],
+      "limits": "Barreaux et cellule attestés ; faisceau et poussière sont proposés pour le versus, sans Wheeler, phare mobile attribué à son arme, fumée d’incendie ou effet sur la précision.",
+      "runtimeKey": "policeCellLightDust",
+      "trigger": "ambient",
+      "sourceScope": "Cellule du réveil d’Alex, commissariat Homecoming, avant libération par Wheeler"
+    },
+    {
+      "rowId": "police_station_hc:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "police_station_hc",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "limits": "Une résonance visuelle proposée après impact local ; serrure intacte, aucun passage ouvert, Schism, Wheeler ou empreinte de main.",
+      "runtimeKey": "policeCellBarsReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Cellule du premier réveil, distincte de la prison Homecoming"
+    },
+    {
+      "rowId": "prison_hc:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "prison_hc",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "limits": "Porte grillagée interprétée, oscillation très faible proposée ; sans prison Downpour, cage du puzzle, levier automatique, ouverture ou chute.",
+      "runtimeKey": "overlookHCCellReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Coursive normale Cell Block B avant le puzzle des cages Otherworld"
+    },
+    {
+      "rowId": "prison_hc:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "prison_hc",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "limits": "Barreaux attestés ; mouvement de l’éclairage du versus proposé, sans projecteur de surveillance source revendiqué ni passage d’un gardien.",
+      "runtimeKey": "overlookHCBarLight",
+      "trigger": "ambient",
+      "sourceScope": "Coursive normale de la prison Overlook Homecoming"
+    },
+    {
+      "rowId": "overlook:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "overlook",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_10_overlook_penitentiary_en.htm"
+      ],
+      "limits": "Porte de coursive retenue fermée ; vibration proposée, sans crime des douches, flooding du workshop, tours ou plan de Homecoming.",
+      "runtimeKey": "overlookDPDoorReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Coursive Block A normale avant toute chambre inondée, Downpour"
+    },
+    {
+      "rowId": "downpour_streets:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "downpour_streets",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_05_pearl_creek_en.htm"
+      ],
+      "limits": "Déclinaison de la pluie du prototype en profondeur ; angle et cadence authored, rue et état météorologique non mesurés. Aucun pouvoir de monstre ou orage offensif ajouté.",
+      "runtimeKey": "pearlCreekRainDepth",
+      "trigger": "ambient",
+      "sourceScope": "Rue de Pearl Creek vers Laymond Avenue et Brite Street, condition pluvieuse du versus"
+    },
+    {
+      "rowId": "downpour_streets:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "downpour_streets",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_05_pearl_creek_en.htm"
+      ],
+      "limits": "Petites flaques abstraites proposées en bordure, sans géographie de flaque source certifiée, inondation de chaussée, sol mobile ou coefficient de glisse attesté.",
+      "runtimeKey": "pearlCreekPuddles",
+      "trigger": "ambient",
+      "sourceScope": "Même rue Pearl Creek sous la pluie, chaussée de duel dégagée"
+    },
+    {
+      "rowId": "book_fire:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "book_fire",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg"
+      ],
+      "limits": "Grilles et lueurs de feu documentées, langues lumineuses proposées sous le plan de fond ; aucun obstacle ou dégâts passifs, Guardian ou lave de volcan importée.",
+      "runtimeKey": "bomFireGrateGlow",
+      "trigger": "ambient",
+      "sourceScope": "Salle Fire illustrée le 16 octobre 2012, grilles industrielles, Vita"
+    },
+    {
+      "rowId": "book_fire:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "book_fire",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg"
+      ],
+      "limits": "Braises ascendantes authored depuis le motif de feu ; cette photo ne mesure ni leur existence animée exacte, ni cadence ou trajectoire. Elles restent confinées au fond.",
+      "runtimeKey": "bomFireEmberDepth",
+      "trigger": "ambient",
+      "sourceScope": "Même salle industrielle Fire Vita, sans entrée du Guardian"
+    },
+    {
+      "rowId": "book_wood:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "book_wood",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg"
+      ],
+      "limits": "Arbres et branches de la lisière seulement, sans corps du Guardian ; petit frémissement proposé. Pas une chambre intérieure de planches empruntée à une autre capture.",
+      "runtimeKey": "bomWoodBareBranches",
+      "trigger": "ambient",
+      "sourceScope": "Clairière du Wood Guardian illustrée le 16 octobre 2012, Guardian exclu"
+    },
+    {
+      "rowId": "book_wood:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "book_wood",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg"
+      ],
+      "limits": "Courte poussière authored après impact local ; arbre fixe, pas de débris offensifs, déracinement, membre du Guardian ou silhouette ennemie.",
+      "runtimeKey": "bomWoodBarkReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Même lisière Wood Vita, impact près du tronc abstrait gauche"
+    },
+    {
+      "rowId": "book_earth:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "book_earth",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+      ],
+      "limits": "Roches et galerie attestées pour cette préversion ; roulement authored de trois pierres de fond, sans pente jouable ni état final de la version commerciale certifié.",
+      "runtimeKey": "bomEarthGravelRoll",
+      "trigger": "ambient",
+      "sourceScope": "Galerie Earth de la capture du 6 juin 2012, préversion datée"
+    },
+    {
+      "rowId": "book_earth:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "book_earth",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+      ],
+      "limits": "Bloc mural abstrait et secousse proposés, sans détachement, chute, Earth Guardian ou emprunt au dispositif Steel. Dimensions, mouvement et état final non confirmés.",
+      "runtimeKey": "bomEarthBlockReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Même galerie Earth préversion juin 2012, hors trajet de duel"
+    },
+    {
+      "rowId": "film_church:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "film_church",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_71.jpg"
+      ],
+      "limits": "Cierges bas alignés et cierges latéraux documentés dans deux vues ; vacillement authored. Ni chandelles Revelation, barbelés, communauté, symboles lisibles ou transformation ajoutés.",
+      "runtimeKey": "gansNaveCandles",
+      "trigger": "ambient",
+      "sourceScope": "Église du film Christophe Gans 2006, nef avant intrusion finale"
+    },
+    {
+      "rowId": "nightmare_hospital_hc:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_hospital_hc",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_003.jpg"
+      ],
+      "limits": "Rideau sur cadre roulant et brancard vides attestés ; frémissement du tissu proposé. Sangles non confirmées et non produites ; aucun patient ou corps, pas état rouillé après le miroir.",
+      "runtimeKey": "hcDreamCurtainGurney",
+      "trigger": "ambient",
+      "sourceScope": "Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld"
+    },
+    {
+      "rowId": "prison_meat_locker:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "prison_meat_locker",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js",
+        "src/stage-director.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w10_boss_4c_eddie.jpg"
+      ],
+      "limits": "Crochet retenu au rail et faible volute authored ; aucun transport de carcasses, tir ou mécanique de vapeur du remake. Son et température non mesurés.",
+      "runtimeKey": "freezerHookColdReply",
+      "trigger": "local-heavy-impact",
+      "sourceScope": "Seconde chambre froide Eddie de SH2 original 2001"
+    },
+    {
+      "rowId": "book_blood:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "book_blood",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_31_blood_boss.jpg"
+      ],
+      "limits": "Pulsation de lueur uniquement sur la surface rouge observée ; liquidité, volume et écoulement non confirmés. Pas de marée, Blood Guardian, adversaire ou géométrie finale revendiquée.",
+      "runtimeKey": "bomBloodSurfacePulse",
+      "trigger": "ambient",
+      "sourceScope": "Plateformes rouges de l’arène Blood illustrée le 6 juin 2012, préversion"
+    },
+    {
+      "rowId": "film_hospital:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "film_hospital",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_46.jpg"
+      ],
+      "limits": "Voile opaque/plastifié et cadre documentés par deux vues ; respiration du tissu authored. Aucun lit occupé, Alessa, Lisa, Rose, nurse de couloir ou adaptation 2012 ajouté.",
+      "runtimeKey": "gansAlessaTentCloth",
+      "trigger": "ambient",
+      "sourceScope": "Chambre d’Alessa dans le film 2006 ; nom Brookhaven non attribué"
+    },
+    {
+      "rowId": "shepherds_glen:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "shepherds_glen",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_078.jpg"
+      ],
+      "limits": "Panneau et papiers de la capture ; frémissement authored de quelques coins. Aucun visage, nom de disparu lisible, Elle ou plan de Town Hall importé.",
+      "runtimeKey": "shepherdMissingNotices",
+      "trigger": "ambient",
+      "sourceScope": "Panneau extérieur de la première rencontre Elle, Homecoming"
+    },
+    {
+      "rowId": "shepherds_glen:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "shepherds_glen",
+      "status": "implemented-candidate",
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-cinematics.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_078.jpg"
+      ],
+      "limits": "Lampe réelle du panneau ; atténuation de faisceau par la brume proposée. Sans extinction narrative, choc électrique, éclair ou lampadaire déplacé depuis un autre quartier.",
+      "runtimeKey": "shepherdNoticeLampFog",
+      "trigger": "ambient",
+      "sourceScope": "Même panneau extérieur Shepherd’s Glen sous la brume"
+    },
+    {
+      "rowId": "book_water:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "book_water",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+      ],
+      "limits": "La capture Water Guardian montre bassin et carrelage mais ne confirme pas un ruissellement mural ; ne pas déduire le débit de la présence d’eau.",
+      "reason": "La capture Water Guardian montre bassin et carrelage mais ne confirme pas un ruissellement mural ; ne pas déduire le débit de la présence d’eau."
+    },
+    {
+      "rowId": "book_steel:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "book_steel",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm"
+      ],
+      "limits": "Aucune salle Steel exacte avec ses plaques n’est identifiée dans les vues retenues ; les grilles orangées Fire ne sont pas transférées à Steel.",
+      "reason": "Aucune salle Steel exacte avec ses plaques n’est identifiée dans les vues retenues ; les grilles orangées Fire ne sont pas transférées à Steel."
+    },
+    {
+      "rowId": "book_steel:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "book_steel",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/traps_en.htm"
+      ],
+      "limits": "Aucune lame de décor Steel corroborée ; une arme de Pyramid Head ou un piège d’une autre salle ne prouve pas ce fixture.",
+      "reason": "Aucune lame de décor Steel corroborée ; une arme de Pyramid Head ou un piège d’une autre salle ne prouve pas ce fixture."
+    },
+    {
+      "rowId": "book_steel:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "book_steel",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "limits": "Sans support métallique Steel précis ni point de contact observé, aucun effet d’étincelles fabriqué pour clore la ligne.",
+      "reason": "Sans support métallique Steel précis ni point de contact observé, aucun effet d’étincelles fabriqué pour clore la ligne."
+    },
+    {
+      "rowId": "grand_hotel:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "grand_hotel",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_137.jpg"
+      ],
+      "limits": "Lustre suspendu non confirmé dans l’atrium Sepulcher ; les quatre sacs et leurs supports ne sont pas un lustre.",
+      "reason": "Lustre suspendu non confirmé dans l’atrium Sepulcher ; les quatre sacs et leurs supports ne sont pas un lustre."
+    },
+    {
+      "rowId": "scarlet_chamber:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "scarlet_chamber",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_137.jpg"
+      ],
+      "limits": "Les grandes vues137/138 montrent Sepulcher et non Scarlet ; elles ne peuvent pas prouver des câbles au plafond de sa chambre.",
+      "reason": "Les grandes vues137/138 montrent Sepulcher et non Scarlet ; elles ne peuvent pas prouver des câbles au plafond de sa chambre."
+    },
+    {
+      "rowId": "nightmare_hospital_hc:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_hospital_hc",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "limits": "Ascenseur final du rêve après le miroir : phase distincte du couloir clinique retenu pour les rideaux. Témoin conservé à produire, sans fusion des deux états.",
+      "reason": "Ascenseur final du rêve après le miroir : phase distincte du couloir clinique retenu pour les rideaux. Témoin conservé à produire, sans fusion des deux états."
+    }
+  ],
+  "rejectedBeforeFinalSelection": [
+    {
+      "rowId": "old_silent_hill:reference:3",
+      "reason": "Aucune enseigne extérieure du café inspectée ; photo du point de sauvegarde est intérieure."
+    },
+    {
+      "rowId": "church:reference:3",
+      "reason": "Livre attesté dans bibliothèque/chambre ; pas sur pupitre de la chapelle retenue."
+    },
+    {
+      "rowId": "hazel_subway:reference:2",
+      "reason": "Journal du hall des billets distinct du quai ; papiers au quai non corroborés."
+    },
+    {
+      "rowId": "hazel_subway:reference:3",
+      "reason": "Panneau d’information documenté, panneau d’arrivée lumineux après impact non corroboré."
+    },
+    {
+      "rowId": "apartment_world:reference:3",
+      "reason": "Chaîne de porte voisine non confirmée, ne pas emprunter celles de Room302."
+    },
+    {
+      "rowId": "nightmare_theater:reference:1",
+      "reason": "Toiles de scène Otherworld non isolées dans une vue originale ; scène normale non transférée."
+    },
+    {
+      "rowId": "nightmare_theater:reference:3",
+      "reason": "Configuration lumineuse Otherworld non confirmée par le panneau de scène normal."
+    },
+    {
+      "rowId": "overlook:reference:3",
+      "reason": "Un flooding narratif ailleurs ne prouve pas le ruissellement des cellules BlockA."
+    },
+    {
+      "rowId": "downpour_streets:reference:3",
+      "reason": "Aucune gouttière débordante confirmée dans la rue retenue."
+    },
+    {
+      "rowId": "film_sanctuary:reference:1",
+      "reason": "Photo20120920_26 ne montre pas de chandelles du duel final ; pas de transfert depuis2006."
+    },
+    {
+      "rowId": "curtis_shop:reference:2",
+      "reason": "Vue095 de l’établi montre outils et montre, sans ampoule d’établi identifiable."
+    }
+  ]
+}

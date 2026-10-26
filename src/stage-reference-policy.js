@@ -54,10 +54,171 @@ const ENVIRONMENT = Object.freeze({
   ascension_otherworld:{weather:'flicker',removeProps:['altar']},
   st_amelia_residential:{weather:'fog',removeProps:['crtv']},
   alternate_facility:{weather:'flicker',style:'signal'},
+  ...{
+    "blue_creek": {
+      "source": "sh2",
+      "weather": "water",
+      "terrain": "wetConcrete",
+      "automaticFinishers": false,
+      "removeProps": [
+        "doors",
+        "windows"
+      ]
+    },
+    "nightmare_mall": {
+      "source": "sh3",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "removeProps": [
+        "shops",
+        "shutters",
+        "signage",
+        "fans"
+      ]
+    },
+    "grand_hotel": {
+      "source": "homecoming",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "removeProps": [
+        "elevator",
+        "dolls",
+        "boiler",
+        "portraits",
+        "firelight"
+      ]
+    },
+    "police_station_hc": {
+      "source": "homecoming",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "removeProps": [
+        "desks",
+        "windows",
+        "elevator"
+      ]
+    },
+    "prison_hc": {
+      "source": "homecoming",
+      "name": "OVERLOOK PENITENTIARY",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "removeProps": [
+        "chains",
+        "watchtower"
+      ]
+    },
+    "shepherds_glen": {
+      "source": "homecoming",
+      "automaticFinishers": false,
+      "removeProps": [
+        "townhall",
+        "trees"
+      ]
+    },
+    "film_church": {
+      "source": "film",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "worldState": "fixed-normal",
+      "removeProps": [
+        "chains",
+        "flesh",
+        "symbols"
+      ]
+    },
+    "nightmare_hospital_hc": {
+      "source": "homecoming",
+      "weather": "dust",
+      "automaticFinishers": false,
+      "worldState": "fixed-normal",
+      "removeProps": [
+        "beds",
+        "fans",
+        "chains",
+        "monitor"
+      ]
+    },
+    "film_hospital": {
+      "source": "film",
+      "name": "HÔPITAL DU FILM — CHAMBRE D’ALESSA",
+      "weather": "none",
+      "fog": 0,
+      "automaticFinishers": false,
+      "disableAnimations": true,
+      "removeProps": [
+        "ward",
+        "monitor",
+        "beds",
+        "gurneys",
+        "chains"
+      ]
+    },
+    "book_fire": {
+      "source": "bom",
+      "interior": true,
+      "automaticFinishers": false,
+      "removeProps": [
+        "lava",
+        "runes",
+        "pillars",
+        "glyphs",
+        "void",
+        "elemental-field"
+      ]
+    },
+    "book_wood": {
+      "source": "bom",
+      "automaticFinishers": false,
+      "removeProps": [
+        "runes",
+        "glyphs",
+        "void"
+      ]
+    },
+    "book_earth": {
+      "source": "bom",
+      "interior": true,
+      "automaticFinishers": false,
+      "removeProps": [
+        "runes",
+        "glyphs",
+        "void"
+      ]
+    },
+    "book_blood": {
+      "source": "bom",
+      "automaticFinishers": false,
+      "removeProps": [
+        "runes",
+        "glyphs",
+        "void",
+        "veins",
+        "pools"
+      ]
+    }
+  },
+
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
 const SCENE_PRESENTATION = Object.freeze({
+  blue_creek:{"source":"sh2","policy":{"terrainRules":false,"terrainPresentation":{"name":"PALIER DE L’ESCALIER","description":"Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"AVANT LE DRAINAGE"}},
+  nightmare_mall:{"source":"sh3","policy":{"terrainRules":false,"terrainPresentation":{"name":"PALIER DES SIX TUNNELS","description":"Arène souterraine Split Worm ; treillis de bord et sol de duel adaptés, sans ver ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
+  grand_hotel:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"SOL DE L’ATRIUM","description":"Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"ATRIUM SANS SEPULCHER"}},
+  police_station_hc:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"SOL DE LA CELLULE","description":"Cellule de la première rencontre Wheeler ; pas le bureau du chef, le garage ou la prison Overlook. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"CELLULE AVANT LIBÉRATION"}},
+  prison_hc:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"COURSIVE CELL BLOCK B","description":"Coursive de la prison Homecoming avant la séquence des cages ; lampe et ombres de versus, sans projecteur source certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"CELL BLOCK B NORMAL"}},
+  overlook:{"source":"downpour","policy":{"terrainRules":false,"terrainPresentation":{"name":"COURSIVE BLOCK A","description":"Coursive Block A de Downpour ; pas de puits, douches ou workshop inondé. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"BLOCK A AVANT INONDATION"}},
+  downpour_streets:{"source":"downpour","policy":{"terrainRules":false,"terrainPresentation":{"name":"CHAUSSÉE DE PEARL CREEK","description":"Condition pluvieuse du versus sur une rue Pearl Creek ; disposition des flaques et moment météorologique non certifiés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"PEARL CREEK SOUS LA PLUIE"}},
+  book_fire:{"source":"bom","policy":{"terrainRules":false,"terrainPresentation":{"name":"PASSAGE DEVANT LES GRILLES FIRE","description":"Salle industrielle de la vue Vita du16octobre2012 ; feu sous les grilles, pas lave extérieure. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
+  book_wood:{"source":"bom","policy":{"terrainRules":false,"terrainPresentation":{"name":"CLAIRIÈRE WOOD","description":"Lisière de l’arène Wood de la vue Vita du16octobre2012 ; aucun Guardian de fond. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
+  book_earth:{"source":"bom","policy":{"terrainRules":false,"terrainPresentation":{"name":"PASSAGE DE LA GALERIE EARTH","description":"Galerie de la préversion du6juin2012 ; pas d’état final commercial ou de plan certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
+  book_blood:{"source":"bom","policy":{"terrainRules":false,"terrainPresentation":{"name":"BORD DES PLATEFORMES BLOOD","description":"Surface rouge de la préversion du6juin2012 ; liquidité et écoulement non confirmés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
+  film_church:{"source":"film","policy":{"terrainRules":false,"terrainPresentation":{"name":"ALLÉE DES CIERGES","description":"Nef du film2006 avant l’intrusion finale ; aucun barbelé ni communauté ou décor2012 ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"NEF AVANT L’INTRUSION"}},
+  nightmare_hospital_hc:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"COULOIR DU RÊVE INITIAL","description":"Couloir clinique du rêve initial avant sa transformation ; ascenseur final et état Otherworld séparés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"RÊVE CLINIQUE AVANT LE MIROIR"}},
+  film_hospital:{"source":"film","policy":{"terrainRules":false,"terrainPresentation":{"name":"SOL DE LA CHAMBRE D’ALESSA","description":"Chambre d’Alessa du film2006 ; appellation Brookhaven non attestée, pas couloir des nurses ou scène2012. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"CHAMBRE D’ALESSA · FILM 2006"}},
+  shepherds_glen:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"TROTTOIR DU PANNEAU","description":"Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"PANNEAU DE LA RENCONTRE ELLE"}},
+
   prison_meat_locker:{source:'sh2',policy:{normalPhaseLabel:'CHAMBRE FROIDE · SECONDE SALLE',terrainRules:false,terrainPresentation:{name:'SOL DE LA CHAMBRE FROIDE',description:'Seconde salle du combat Eddie de SH2 original ; carcasses et rails de fond distincts du plateau versus. Matériau, humidité et physique non mesurés ; cadrage non certifié 1:1.'}}},
   brookhaven_sh2:{source:'sh2',policy:{terrainRules:false,terrainPresentation:{name:'SEUIL DE L’ASCENSEUR B1',description:'Couloir Otherworld B1 de Brookhaven SH2 original, devant l’ascenseur de la poursuite. Plateau versus adapté sans reproduire le sort de Maria ; physique et géométrie non certifiées 1:1.'}}},
   brookhaven_roof:{source:'sh2',policy:{normalPhaseLabel:'TOIT AVANT LA CHUTE',terrainRules:false,terrainPresentation:{name:'PLATEAU DU TOIT BROOKHAVEN',description:'Toit de Brookhaven SH2 original avant la chute, grille encore intacte. Matériau et humidité non déterminés ; règles matérielles désactivées, cadrage et collisions non certifiés 1:1.'}}},
@@ -71,8 +232,36 @@ const SCENE_PRESENTATION = Object.freeze({
   lakeside_sh3:{source:'sh3',policy:{normalPhaseLabel:'AVANT LA TRANSITION DU CARROUSEL',terrainRules:false,terrainPresentation:{name:'PLATEAU DU HAPPY CAROUSEL',description:'Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1.'}}},
 });
 
+const LOT9_REFERENCE_TRACKS = Object.freeze({
+  blueStairRailReply:{"name":"Rampe fixée au-dessus de l’escalier noyé","layer":"background","replaces":[],"stageId":"blue_creek","source":"sh2","locationScope":"Palier nord Blue Creek, duel SH2 original avant drainage","limits":"Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré."},
+  splitWormGrateReply:{"name":"Treillis de bord de l’arène souterraine","layer":"background","replaces":[],"stageId":"nightmare_mall","source":"sh3","locationScope":"Palier de l’arène Split Worm SH3, six ouvertures conservées","limits":"Treillis abstrait près du bord ; déformation élastique proposée sans nouveau passage, collision, Split Worm ou ouverture d’un septième tunnel."},
+  atriumSupportReply:{"name":"Support suspendu de l’atrium Sepulcher","layer":"background","replaces":[],"stageId":"grand_hotel","source":"homecoming","locationScope":"Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté","limits":"Le guide décrit les quatre sacs suspendus. Seul leur support abstrait réagit dans le versus ; aucun sac destructible, arbre vivant, Sepulcher, vibration canonique ou lustre inventé."},
+  policeCellLightDust:{"name":"Poussière dans la lumière de la cellule","layer":"background","replaces":[],"stageId":"police_station_hc","source":"homecoming","locationScope":"Cellule du réveil d’Alex, commissariat Homecoming, avant libération par Wheeler","limits":"Barreaux et cellule attestés ; faisceau et poussière sont proposés pour le versus, sans Wheeler, phare mobile attribué à son arme, fumée d’incendie ou effet sur la précision."},
+  policeCellBarsReply:{"name":"Barreaux fermés de la cellule du commissariat","layer":"background","replaces":[],"stageId":"police_station_hc","source":"homecoming","locationScope":"Cellule du premier réveil, distincte de la prison Homecoming","limits":"Une résonance visuelle proposée après impact local ; serrure intacte, aucun passage ouvert, Schism, Wheeler ou empreinte de main."},
+  overlookHCCellReply:{"name":"Porte de cellule Overlook Homecoming","layer":"background","replaces":[],"stageId":"prison_hc","source":"homecoming","locationScope":"Coursive normale Cell Block B avant le puzzle des cages Otherworld","limits":"Porte grillagée interprétée, oscillation très faible proposée ; sans prison Downpour, cage du puzzle, levier automatique, ouverture ou chute."},
+  overlookHCBarLight:{"name":"Ombres des barreaux du Cell Block B","layer":"background","replaces":[],"stageId":"prison_hc","source":"homecoming","locationScope":"Coursive normale de la prison Overlook Homecoming","limits":"Barreaux attestés ; mouvement de l’éclairage du versus proposé, sans projecteur de surveillance source revendiqué ni passage d’un gardien."},
+  overlookDPDoorReply:{"name":"Battant de fond du Block A Downpour","layer":"background","replaces":[],"stageId":"overlook","source":"downpour","locationScope":"Coursive Block A normale avant toute chambre inondée, Downpour","limits":"Porte de coursive retenue fermée ; vibration proposée, sans crime des douches, flooding du workshop, tours ou plan de Homecoming."},
+  pearlCreekRainDepth:{"name":"Pluie de fond sur Pearl Creek","layer":"background","replaces":["rainSheets"],"stageId":"downpour_streets","source":"downpour","locationScope":"Rue de Pearl Creek vers Laymond Avenue et Brite Street, condition pluvieuse du versus","limits":"Déclinaison de la pluie du prototype en profondeur ; angle et cadence authored, rue et état météorologique non mesurés. Aucun pouvoir de monstre ou orage offensif ajouté."},
+  pearlCreekPuddles:{"name":"Ondes des petites flaques de bordure","layer":"background","replaces":[],"stageId":"downpour_streets","source":"downpour","locationScope":"Même rue Pearl Creek sous la pluie, chaussée de duel dégagée","limits":"Petites flaques abstraites proposées en bordure, sans géographie de flaque source certifiée, inondation de chaussée, sol mobile ou coefficient de glisse attesté."},
+  bomFireGrateGlow:{"name":"Feu visible sous une grille industrielle","layer":"background","replaces":[],"stageId":"book_fire","source":"bom","locationScope":"Salle Fire illustrée le 16 octobre 2012, grilles industrielles, Vita","limits":"Grilles et lueurs de feu documentées, langues lumineuses proposées sous le plan de fond ; aucun obstacle ou dégâts passifs, Guardian ou lave de volcan importée."},
+  bomFireEmberDepth:{"name":"Braises derrière la grille Fire","layer":"background","replaces":[],"stageId":"book_fire","source":"bom","locationScope":"Même salle industrielle Fire Vita, sans entrée du Guardian","limits":"Braises ascendantes authored depuis le motif de feu ; cette photo ne mesure ni leur existence animée exacte, ni cadence ou trajectoire. Elles restent confinées au fond."},
+  bomWoodBareBranches:{"name":"Branches nues au bord de l’arène Wood","layer":"background","replaces":["forestWind"],"stageId":"book_wood","source":"bom","locationScope":"Clairière du Wood Guardian illustrée le 16 octobre 2012, Guardian exclu","limits":"Arbres et branches de la lisière seulement, sans corps du Guardian ; petit frémissement proposé. Pas une chambre intérieure de planches empruntée à une autre capture."},
+  bomWoodBarkReply:{"name":"Écorce de l’arbre de lisière","layer":"background","replaces":[],"stageId":"book_wood","source":"bom","locationScope":"Même lisière Wood Vita, impact près du tronc abstrait gauche","limits":"Courte poussière authored après impact local ; arbre fixe, pas de débris offensifs, déracinement, membre du Guardian ou silhouette ennemie."},
+  bomEarthGravelRoll:{"name":"Petites pierres dans la galerie minière Earth","layer":"background","replaces":[],"stageId":"book_earth","source":"bom","locationScope":"Galerie Earth de la capture du 6 juin 2012, préversion datée","limits":"Roches et galerie attestées pour cette préversion ; roulement authored de trois pierres de fond, sans pente jouable ni état final de la version commerciale certifié."},
+  bomEarthBlockReply:{"name":"Bloc retenu dans la paroi minière","layer":"background","replaces":[],"stageId":"book_earth","source":"bom","locationScope":"Même galerie Earth préversion juin 2012, hors trajet de duel","limits":"Bloc mural abstrait et secousse proposés, sans détachement, chute, Earth Guardian ou emprunt au dispositif Steel. Dimensions, mouvement et état final non confirmés."},
+  gansNaveCandles:{"name":"Cierges alignés de la nef de 2006","layer":"background","replaces":[],"stageId":"film_church","source":"film","locationScope":"Église du film Christophe Gans 2006, nef avant intrusion finale","limits":"Cierges bas alignés et cierges latéraux documentés dans deux vues ; vacillement authored. Ni chandelles Revelation, barbelés, communauté, symboles lisibles ou transformation ajoutés."},
+  hcDreamCurtainGurney:{"name":"Rideau et brancard du couloir initial","layer":"background","replaces":[],"stageId":"nightmare_hospital_hc","source":"homecoming","locationScope":"Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld","limits":"Rideau sur cadre roulant et brancard vides attestés ; frémissement du tissu proposé. Sangles non confirmées et non produites ; aucun patient ou corps, pas état rouillé après le miroir."},
+  freezerHookColdReply:{"name":"Crochet et courte buée de fond","layer":"background","replaces":[],"stageId":"prison_meat_locker","source":"sh2","locationScope":"Seconde chambre froide Eddie de SH2 original 2001","limits":"Crochet retenu au rail et faible volute authored ; aucun transport de carcasses, tir ou mécanique de vapeur du remake. Son et température non mesurés."},
+  bomBloodSurfacePulse:{"name":"Lueur sur les surfaces rouges de Blood","layer":"background","replaces":[],"stageId":"book_blood","source":"bom","locationScope":"Plateformes rouges de l’arène Blood illustrée le 6 juin 2012, préversion","limits":"Pulsation de lueur uniquement sur la surface rouge observée ; liquidité, volume et écoulement non confirmés. Pas de marée, Blood Guardian, adversaire ou géométrie finale revendiquée."},
+  gansAlessaTentCloth:{"name":"Voile de la chambre d’Alessa 2006","layer":"background","replaces":[],"stageId":"film_hospital","source":"film","locationScope":"Chambre d’Alessa dans le film 2006 ; nom Brookhaven non attribué","limits":"Voile opaque/plastifié et cadre documentés par deux vues ; respiration du tissu authored. Aucun lit occupé, Alessa, Lisa, Rose, nurse de couloir ou adaptation 2012 ajouté."},
+  shepherdMissingNotices:{"name":"Affiches sur le panneau de disparus","layer":"background","replaces":[],"stageId":"shepherds_glen","source":"homecoming","locationScope":"Panneau extérieur de la première rencontre Elle, Homecoming","limits":"Panneau et papiers de la capture ; frémissement authored de quelques coins. Aucun visage, nom de disparu lisible, Elle ou plan de Town Hall importé."},
+  shepherdNoticeLampFog:{"name":"Lampe au-dessus du panneau de disparus","layer":"background","replaces":["streetLightFlicker"],"stageId":"shepherds_glen","source":"homecoming","locationScope":"Même panneau extérieur Shepherd’s Glen sous la brume","limits":"Lampe réelle du panneau ; atténuation de faisceau par la brume proposée. Sans extinction narrative, choc électrique, éclair ou lampadaire déplacé depuis un autre quartier."},
+});
+const LOT9_BINDINGS = Object.freeze({"blue_creek":[["blueStairRailReply",2,[0.55,0.56],"referenceRailingReply"]],"nightmare_mall":[["splitWormGrateReply",2,[0.24,0.56],"referenceMallGrateReply"]],"grand_hotel":[["atriumSupportReply",2,[0.73,0.28],"referenceSupportReply"]],"police_station_hc":[["policeCellLightDust",1,[0.35,0.35]],["policeCellBarsReply",2,[0.35,0.57],"referencePoliceBarsReply"]],"prison_hc":[["overlookHCCellReply",0,[0.68,0.57],"referenceGateReply"],["overlookHCBarLight",1,[0.68,0.57]]],"overlook":[["overlookDPDoorReply",1,[0.72,0.57],"referenceGateReply"]],"downpour_streets":[["pearlCreekRainDepth",0,[0.5,0.4]],["pearlCreekPuddles",1,[0.5,0.66]]],"book_fire":[["bomFireGrateGlow",0,[0.5,0.55]],["bomFireEmberDepth",1,[0.5,0.5]]],"book_wood":[["bomWoodBareBranches",0,[0.5,0.57]],["bomWoodBarkReply",2,[0.22,0.5],"referenceBarkReply"]],"book_earth":[["bomEarthGravelRoll",0,[0.5,0.6]],["bomEarthBlockReply",2,[0.74,0.48],"referenceEarthBlockReply"]],"film_church":[["gansNaveCandles",0,[0.5,0.57]]],"nightmare_hospital_hc":[["hcDreamCurtainGurney",2,[0.76,0.57]]],"prison_meat_locker":[["freezerHookColdReply",2,[0.18,0.32],"referenceHookReply"]],"book_blood":[["bomBloodSurfacePulse",0,[0.5,0.59]]],"film_hospital":[["gansAlessaTentCloth",0,[0.68,0.57]]],"shepherds_glen":[["shepherdMissingNotices",1,[0.5,0.57]],["shepherdNoticeLampFog",2,[0.5,0.25]]]});
+
 /** Small, executable vocabulary. A binding below is required; no keyword tagging. */
 export const STAGE_REFERENCE_TRACKS = Object.freeze({
+  ...LOT9_REFERENCE_TRACKS,
   fogLayers: {name:'Nappes de brume à deux vitesses',layer:'background',replaces:['fogDrift']},
   snowDepth: {name:'Neige dans la profondeur',layer:'air',replaces:['snowGust']},
   ashDepth: {name:'Cendre dans la profondeur',layer:'air',replaces:['ashFall']},
@@ -221,7 +410,7 @@ export function stageReferenceTrackAllowed(stage, track) {
   if(!definition.stageId)return true;
   return stage?.id===definition.stageId&&stage?.source===definition.source&&track.source===definition.source&&
     track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`&&
-    (BINDINGS[stage.id]||[]).some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
+    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;
@@ -269,10 +458,11 @@ export function applyStageReferencePolicy(stage, reference) {
   const identityMatched = Boolean(reference && reference.id === stage.id && reference.source === stage.source);
   const status = identityMatched ? reference.locationStatus : 'reference-identite-absente-ou-incompatible';
   const blocked = !identityMatched || typeof status!=='string' || !status.trim() || unresolved.test(status);
-  const corrections = ENVIRONMENT[stage.id] || {};
+  const selectedCorrections = ENVIRONMENT[stage.id] || {};
+  const corrections = !selectedCorrections.source || selectedCorrections.source === stage.source ? selectedCorrections : {};
   if(!blocked&&corrections.name)result.name=corrections.name;
-  let worldState = blocked ? 'unresolved' : ALTERED.has(stage.id) || stage.source === 'bom' ? 'fixed-altered' : TRANSITIONS.has(stage.id) ? 'versus-transition' : 'fixed-normal';
-  const interior = INTERIOR.has(stage.family) || (stage.id==='devils_pit'&&stage.source==='downpour') || (stage.id==='sewers'&&stage.source==='sh3') || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id);
+  let worldState = blocked ? 'unresolved' : corrections.worldState || (ALTERED.has(stage.id) || stage.source === 'bom' ? 'fixed-altered' : TRANSITIONS.has(stage.id) ? 'versus-transition' : 'fixed-normal');
+  const interior = corrections.interior ?? (INTERIOR.has(stage.family) || (stage.id==='devils_pit'&&stage.source==='downpour') || (stage.id==='sewers'&&stage.source==='sh3') || ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id));
   result.weather = blocked ? 'none' : corrections.weather || (interior && ['rain','snow','ash'].includes(stage.weather) ? 'dust' : stage.weather);
   // Do not perpetuate the movie's cinder language in unrelated game interiors.
   if (!blocked && result.weather === 'ash' && stage.source !== 'film') result.weather = 'dust';
@@ -291,7 +481,7 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : (BINDINGS[stage.id] || []).flatMap(([key,index,anchor,event]) => {
+  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
