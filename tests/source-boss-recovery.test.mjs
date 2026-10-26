@@ -137,7 +137,7 @@ test('Amnion profiles retain distinct phase attacks and reject free jumps throug
   assert.equal(hanging.whiffExposure,undefined);assert.equal(hanging.moves.forwardSpecial.travel,0);
 });
 
-test('Cynthia hair holds the victim standing and still while allowing a real counter-shot to break the binding',()=>{
+test('Cynthia hair holds the victim standing and still while allowing a real counter-strike to break the binding',()=>{
   const {e,source,victim}=caught();assert.equal(victim.y,594);assert.equal(victim.grounded,true);
   assert.equal(victim.knockdownTimer,0);assert.equal(victim.vx,0);assert.equal(victim.vy,0);
   for(let n=0;n<80&&victim.hurtFrames>0;n++)e.update();
@@ -156,7 +156,7 @@ test('Cynthia binding does not break on a victim miss, and zero damage cannot cl
   assert.equal(source.health,health);assert.equal(victim.status?.id,'bind');assert.ok(victim.status.bindingOrigin);
 });
 
-test('a standard virtual gamepad cannot move, jump or dodge out of the hair, but a real shot releases it',()=>{
+test('a standard virtual gamepad cannot move, jump or dodge out of the hair, but a real strike releases it',()=>{
   const {e,source,victim}=caught();for(let n=0;n<80&&victim.hurtFrames>0;n++)e.update();
   const pads=[0,1].map(index=>({index,id:'hair-pad-'+index,mapping:'standard',connected:true,axes:[0,0],
     buttons:Array.from({length:17},()=>({pressed:false}))}));

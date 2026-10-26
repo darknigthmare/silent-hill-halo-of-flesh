@@ -1,0 +1,1691 @@
+{
+  "schema": 1,
+  "batch": "lot10",
+  "reviewedAt": "2026-10-26",
+  "baseCommit": "79c64fe91590567253eb35630018e877d590d7a0",
+  "scope": "Trente nouvelles observations documentées, différentes du lot9 ; preuves de rencontre et variantes propres, sans réécriture du rôle ou validation d’image1:1. Dix intégrations supplémentaires pour combat/cinématique sont distinguées du quota.",
+  "sourceArchive": "/workspace/shared/halo-of-flesh/references/batch10-roles-2026-10-26",
+  "sources": [
+    {
+      "id": "sh1-enemies",
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "status": 200,
+      "bytes": 35155,
+      "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+      "localFile": "sh1-enemies.html"
+    },
+    {
+      "id": "sh1-bosses",
+      "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+      "status": 200,
+      "bytes": 32370,
+      "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+      "localFile": "sh1-bosses.html"
+    },
+    {
+      "id": "sh3-bosses",
+      "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+      "status": 200,
+      "bytes": 36420,
+      "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+      "localFile": "sh3-bosses.html"
+    },
+    {
+      "id": "sh4-bosses",
+      "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+      "status": 200,
+      "bytes": 31918,
+      "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+      "localFile": "sh4-bosses.html"
+    },
+    {
+      "id": "sh3-guide-index",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_en.htm",
+      "status": 200,
+      "bytes": 15562,
+      "sha256": "03ff7fad14b4f2b8c254f3c1c439e821a169a9f6c1007d2f8e974136fb99da44",
+      "localFile": "sh3-guide-index.html"
+    },
+    {
+      "id": "sh4-guide-index",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_en.htm",
+      "status": 200,
+      "bytes": 15373,
+      "sha256": "ca7c06b4de7c37799e4a35529ee375e0d0830cf89d4de98077e46b788de406c3",
+      "localFile": "sh4-guide-index.html"
+    },
+    {
+      "id": "sh1-central-nightmare",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_09_nightmare_central_silent_hill_en.htm",
+      "status": 200,
+      "bytes": 31713,
+      "sha256": "715b76c62ec683b42723b2f365b8e0ebf68a24c1bb86423579bd8bf52681ec6d",
+      "localFile": "sh1-central-nightmare.html"
+    },
+    {
+      "id": "sh3-daisy",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_09_daisy_villa_apartments_en.htm",
+      "status": 200,
+      "bytes": 22664,
+      "sha256": "49564c2b82a3f2b427cbb27922dd29ac698bfb71b524485f384ed66a443ac3c0",
+      "localFile": "sh3-daisy.html"
+    },
+    {
+      "id": "sh3-nightmare-hospital",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_12_nightmare_hospital_en.htm",
+      "status": 200,
+      "bytes": 61938,
+      "sha256": "ca981d4c64aac3b579a759058c8179ab5f72f76971303e500dbedcdfaafd7be5",
+      "localFile": "sh3-nightmare-hospital.html"
+    },
+    {
+      "id": "sh3-lakeside",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_13_lakeside_amusement_park_en.htm",
+      "status": 200,
+      "bytes": 39808,
+      "sha256": "879772046b7a2c557e58a1cdc77b7c7a5ee9b08e6e06c6876a41db3d92f8fc4e",
+      "localFile": "sh3-lakeside.html"
+    },
+    {
+      "id": "sh4-second-building",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_11_building_world_2nd_time_en.htm",
+      "status": 200,
+      "bytes": 43357,
+      "sha256": "e1be034e44d45a89b66fa76788ad3cfb60dc1804f9c96734cf5da43af777c060",
+      "localFile": "sh4-second-building.html"
+    },
+    {
+      "id": "sh4-outside-room302",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+      "status": 200,
+      "bytes": 44427,
+      "sha256": "0b729cfbbd80fd7ec4bb8a1c0821d3779ccecb2b07ca7b4be8210f1d0d18c1fa",
+      "localFile": "sh4-outside-room302.html"
+    },
+    {
+      "id": "shf-monsters",
+      "url": "https://www.silenthillmemories.net/shf/monsters_en.htm",
+      "status": 200,
+      "bytes": 43967,
+      "sha256": "29b1df39b79b1c114af692781ea5689cfd1f8f1fe0b84dc59a96df48536b67bd",
+      "localFile": "shf-monsters.html"
+    },
+    {
+      "id": "lost-memories-sh1",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm",
+      "status": 200,
+      "bytes": 26677,
+      "sha256": "b3c234bbb57d844f68a3e6c586d9555b184336a3704ab6b680ba79b126d1f979",
+      "localFile": "lost-memories-sh1.html"
+    },
+    {
+      "id": "lost-memories-sh3",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/068-069_en.htm",
+      "status": 200,
+      "bytes": 26845,
+      "sha256": "661eb2f7e95c80c2392438bde9000cd87332b76ae1a4f50d31f4e025c4515e82",
+      "localFile": "lost-memories-sh3.html"
+    },
+    {
+      "id": "harai-model",
+      "url": "https://www.silenthillmemories.net/shf/monsters/harai_katashiro.jpg",
+      "status": 200,
+      "bytes": 23809,
+      "sha256": "e176dfed196aa4b3602160868da9dd437b0bb5d59f9f4368f57971a7cbf20998",
+      "localFile": "harai-model.jpg"
+    },
+    {
+      "id": "harai-journal",
+      "url": "https://www.silenthillmemories.net/shf/journal/monsters/Basic_Dark.png",
+      "status": 200,
+      "bytes": 427787,
+      "sha256": "47585e17a1ce712ec610cd52a288745368b605ed2c31d5a44f6fe09dfde7837c",
+      "localFile": "harai-journal.png"
+    },
+    {
+      "id": "one-truth-game",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/sh4_11_building_world_03.jpg",
+      "status": 200,
+      "bytes": 9995,
+      "sha256": "be3a367e7be7c65a016a97c7d9e96dbc56c89955eebc7375af904ff4efbfcfc0",
+      "localFile": "one-truth-game.jpg"
+    },
+    {
+      "id": "walter-game",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/sh4_13_outside_room_302_02.jpg",
+      "status": 200,
+      "bytes": 8360,
+      "sha256": "fd574cb91744bc58a123113ef0390684f203b5572ad2259afaf4d975ad14ab83",
+      "localFile": "walter-game.jpg"
+    },
+    {
+      "id": "walter-room",
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_01.jpg",
+      "status": 200,
+      "bytes": 416391,
+      "sha256": "98ec8749878b1efad01ec5ab7c9961450e9c52279b5509ed4d054fbaf630b699",
+      "localFile": "walter-room.jpg"
+    },
+    {
+      "id": "alessa-game",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_memory_of_alessa.jpg",
+      "status": 200,
+      "bytes": 356126,
+      "sha256": "209b1bf0402a0632d140494d689d323ee6f54f7c18adac215c4ae2c941020834",
+      "localFile": "alessa-game.jpg"
+    },
+    {
+      "id": "leonard-game",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_leonard.jpg",
+      "status": 200,
+      "bytes": 288824,
+      "sha256": "dfd5d76f5140fea994589b074dc9de33e216350cc013991384d5449c93b2f21c",
+      "localFile": "leonard-game.jpg"
+    },
+    {
+      "id": "missionary-game",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_missionary.jpg",
+      "status": 200,
+      "bytes": 109689,
+      "sha256": "f5bf9422a0c1811efb9ab42af7d3662045aa907b9f0c9975382ef10c98d05190",
+      "localFile": "missionary-game.jpg"
+    },
+    {
+      "id": "puppet-nurse-model",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_nurse.png",
+      "status": 200,
+      "bytes": 71853,
+      "sha256": "d8c4b98a3030d1eba0615d48570b10cef68122a26073534a89d765e440a4e563",
+      "localFile": "puppet-nurse-model.png"
+    },
+    {
+      "id": "puppet-doctor-model",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_doctor.png",
+      "status": 200,
+      "bytes": 56402,
+      "sha256": "7e59b3028957aa3cc646c333931a102347ca8288ab05024f7ac75e2ed791a0b9",
+      "localFile": "puppet-doctor-model.png"
+    },
+    {
+      "id": "night-flutter-model",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/night_flutter.png",
+      "status": 200,
+      "bytes": 110809,
+      "sha256": "82871b44a08e7b198ef79e939f780ac960e02a95fd75051eba1105b4a9a08102",
+      "localFile": "night-flutter-model.png"
+    },
+    {
+      "id": "creeper-model",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/creeper.png",
+      "status": 200,
+      "bytes": 53777,
+      "sha256": "a87604cdd30206eda035e5197eec8c206eea2b1d8f28dcdd6804df8af5f7c022",
+      "localFile": "creeper-model.png"
+    },
+    {
+      "id": "twinfeeler-pit",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/sh1_09_hunting_rifle.jpg",
+      "status": 200,
+      "bytes": 60068,
+      "sha256": "760804737cfe1dd17d38cd13016e3dff7faa48f50ede30c882025763feb3fe6a",
+      "localFile": "twinfeeler-pit.jpg"
+    },
+    {
+      "id": "twinfeeler-commentary-model",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/027f.jpg",
+      "status": 200,
+      "bytes": 5219,
+      "sha256": "5752712de1b6cb92a1d1943680fbcd9d60c2f6320852a336ced0e49149df0ae0",
+      "localFile": "twinfeeler-commentary-model.jpg"
+    },
+    {
+      "id": "leonard-commentary-model",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069f.jpg",
+      "status": 200,
+      "bytes": 10497,
+      "sha256": "0068f67af5b4d67b953ddac4111f8c77fbd652b4ca148fa7883d39a3054b845a",
+      "localFile": "leonard-commentary-model.jpg"
+    },
+    {
+      "id": "missionary-commentary-model",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069b.jpg",
+      "status": 200,
+      "bytes": 6555,
+      "sha256": "c463a4785cda3b6dd2cd3de6a1ddf80fd43f640bf7ea20076f096878ad789bb3",
+      "localFile": "missionary-commentary-model.jpg"
+    },
+    {
+      "id": "alessa-commentary-model",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069e.jpg",
+      "status": 200,
+      "bytes": 8733,
+      "sha256": "70a7b77758f90556f31b07bb6b8ff820659351b7a6ade8f2ff39a1c1f995a426",
+      "localFile": "alessa-commentary-model.jpg"
+    }
+  ],
+  "newSources": [
+    {
+      "id": "EXT10_SH4_BOSSES_20261026",
+      "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+      "title": "Silent Hill4: The Room — Bosses, One Truth and Final Sacraments",
+      "type": "guide-specialise-secondaire",
+      "scope": "Douze Giant Wall Men et réaction de la cible réelle ; rituel du cordon/huit lances et attaques propres du Walter final.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Guide textuel consulté et archivé ; nombres du puzzle et événements source ne mesurent pas les délais, distances ou fenêtres du versus. La forme géante et Walter mobile restent deux sujets distincts.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT10_SH4_BUILDING_SECOND_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_11_building_world_2nd_time_en.htm",
+      "title": "Silent Hill4 — Building World, second visit walkthrough",
+      "type": "guide-specialise-secondaire",
+      "scope": "Localisation de la salle des Giant Wall Men et progression au deuxième passage de Building World.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Parcours secondaire ; ne certifie ni un plan de combat, ni un mécanisme de rail mesuré ou les animations des douze corps.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT10_REF_HARAI_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/shf/monsters/harai_katashiro.jpg",
+      "title": "Référence visuelle spécialisée — harai-model",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Vue publiée sous la fiche harai-model du guide de son œuvre ; comparaison de silhouette et d’équipement visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Origine du rendu et build non établis. Image statique, parfois sombre ou sur fond préparé ; ne certifie pas une animation, une phase entière ou les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT10_REF_HARAI_JOURNAL_20261026",
+      "url": "https://www.silenthillmemories.net/shf/journal/monsters/Basic_Dark.png",
+      "title": "Référence visuelle spécialisée — harai-journal",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Illustration Harai classée dans la rubrique journal du guide, tronquée ; image du corps et des jambes-lames, sans texte du journal affiché.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Ce PNG est une illustration, pas une capture du texte du journal. Le descriptif secondaire nomme le couteau ; aucun geste ou rotation mesurés ici."
+    },
+    {
+      "id": "EXT10_REF_ONE_TRUTH_GAME_20261026",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/sh4_11_building_world_03.jpg",
+      "title": "Référence visuelle spécialisée — one-truth-game",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Vue partielle des Wall Men et des parois de leur salle, deuxième Building World. Le nombre douze est documenté par le texte du guide, pas compté dans cette photo.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; build, géométrie, caméra et temporalité non mesurés. Personnages ou accessoires de la capture ne deviennent pas des assets de décor livrés."
+    },
+    {
+      "id": "EXT10_REF_WALTER_GAME_20261026",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/sh4_13_outside_room_302_02.jpg",
+      "title": "Référence visuelle spécialisée — walter-game",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Vue d’introduction avec Henry et Eileen près de la fosse finale ; ne constitue pas une pose du Walter mobile.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; build, géométrie, caméra et temporalité non mesurés. Personnages ou accessoires de la capture ne deviennent pas des assets de décor livrés."
+    },
+    {
+      "id": "EXT10_REF_WALTER_ROOM_20261026",
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_01.jpg",
+      "title": "Référence visuelle spécialisée — walter-room",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Contexte du rituel final : forme géante, Henry et lances ; ne doit pas être confondu avec le corps mobile de Walter.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; build, géométrie, caméra et temporalité non mesurés. Personnages ou accessoires de la capture ne deviennent pas des assets de décor livrés."
+    },
+    {
+      "id": "EXT10_REF_ALESSA_GAME_20261026",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_memory_of_alessa.jpg",
+      "title": "Référence visuelle spécialisée — alessa-game",
+      "type": "capture-apparition-republiee-par-guide",
+      "scope": "Gros plan d’apparition du boss dans le chapitre SH3 exact ; visage et contexte, sans corps entier ou geste offensif.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Le fichier intitulé boss montre un gros plan d’apparition : ni arme hors champ, ni pose de combat, ni timing ne sont attestés par cette seule image."
+    },
+    {
+      "id": "EXT10_REF_LEONARD_GAME_20261026",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_leonard.jpg",
+      "title": "Référence visuelle spécialisée — leonard-game",
+      "type": "capture-apparition-republiee-par-guide",
+      "scope": "Gros plan d’apparition du boss dans le chapitre SH3 exact ; visage et contexte, sans corps entier ou geste offensif.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Le fichier intitulé boss montre un gros plan d’apparition : ni arme hors champ, ni pose de combat, ni timing ne sont attestés par cette seule image."
+    },
+    {
+      "id": "EXT10_REF_MISSIONARY_GAME_20261026",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_missionary.jpg",
+      "title": "Référence visuelle spécialisée — missionary-game",
+      "type": "capture-apparition-republiee-par-guide",
+      "scope": "Gros plan d’apparition du boss dans le chapitre SH3 exact ; visage et contexte, sans corps entier ou geste offensif.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Le fichier intitulé boss montre un gros plan d’apparition : ni arme hors champ, ni pose de combat, ni timing ne sont attestés par cette seule image."
+    },
+    {
+      "id": "EXT10_REF_PUPPET_NURSE_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_nurse.png",
+      "title": "Référence visuelle spécialisée — puppet-nurse-model",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Vue publiée sous la fiche puppet-nurse-model du guide de son œuvre ; comparaison de silhouette et d’équipement visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Origine du rendu et build non établis. Image statique, parfois sombre ou sur fond préparé ; ne certifie pas une animation, une phase entière ou les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_doctor.png",
+      "title": "Référence visuelle spécialisée — puppet-doctor-model",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Vue publiée sous la fiche puppet-doctor-model du guide de son œuvre ; comparaison de silhouette et d’équipement visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Origine du rendu et build non établis. Image statique, parfois sombre ou sur fond préparé ; ne certifie pas une animation, une phase entière ou les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/night_flutter.png",
+      "title": "Référence visuelle spécialisée — night-flutter-model",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Vue publiée sous la fiche night-flutter-model du guide de son œuvre ; comparaison de silhouette et d’équipement visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Origine du rendu et build non établis. Image statique, parfois sombre ou sur fond préparé ; ne certifie pas une animation, une phase entière ou les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT10_REF_CREEPER_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/sh1/creatures/creeper.png",
+      "title": "Référence visuelle spécialisée — creeper-model",
+      "type": "illustration-republiee-par-guide",
+      "scope": "Vue publiée sous la fiche creeper-model du guide de son œuvre ; comparaison de silhouette et d’équipement visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Origine du rendu et build non établis. Image statique, parfois sombre ou sur fond préparé ; ne certifie pas une animation, une phase entière ou les pixels de la version commerciale."
+    },
+    {
+      "id": "EXT10_REF_TWINFEELER_PIT_20261026",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/sh1_09_hunting_rifle.jpg",
+      "title": "Référence visuelle spécialisée — twinfeeler-pit",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Vue de Harry et du fusil dans la fosse du centre commercial ; décor et contexte uniquement, Twinfeeler absent de l’image.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; build, géométrie, caméra et temporalité non mesurés. Personnages ou accessoires de la capture ne deviennent pas des assets de décor livrés."
+    },
+    {
+      "id": "EXT10_REF_TWINFEELER_COMMENTARY_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/027f.jpg",
+      "title": "Référence visuelle spécialisée — twinfeeler-commentary-model",
+      "type": "illustration-commentaire-republiee",
+      "scope": "Illustration isolée de Book of Lost Memories, liée à son commentaire de créature et à sa traduction non officielle ; silhouette statique uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration petite et fond uni, pas capture de gameplay ni animation. Contexte éditorial connu, traitement et cadrage à recouper avec le livre japonais ; ne prouve pas les autres armes ou les gestes."
+    },
+    {
+      "id": "EXT10_REF_LEONARD_COMMENTARY_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069f.jpg",
+      "title": "Référence visuelle spécialisée — leonard-commentary-model",
+      "type": "illustration-commentaire-republiee",
+      "scope": "Illustration isolée de Book of Lost Memories, liée à son commentaire de créature et à sa traduction non officielle ; silhouette statique uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration petite et fond uni, pas capture de gameplay ni animation. Contexte éditorial connu, traitement et cadrage à recouper avec le livre japonais ; ne prouve pas les autres armes ou les gestes."
+    },
+    {
+      "id": "EXT10_REF_MISSIONARY_COMMENTARY_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069b.jpg",
+      "title": "Référence visuelle spécialisée — missionary-commentary-model",
+      "type": "illustration-commentaire-republiee",
+      "scope": "Illustration isolée de Book of Lost Memories, liée à son commentaire de créature et à sa traduction non officielle ; silhouette statique uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration petite et fond uni, pas capture de gameplay ni animation. Contexte éditorial connu, traitement et cadrage à recouper avec le livre japonais ; ne prouve pas les autres armes ou les gestes."
+    },
+    {
+      "id": "EXT10_REF_ALESSA_COMMENTARY_MODEL_20261026",
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/images/069e.jpg",
+      "title": "Référence visuelle spécialisée — alessa-commentary-model",
+      "type": "illustration-commentaire-republiee",
+      "scope": "Illustration isolée de Book of Lost Memories, liée à son commentaire de créature et à sa traduction non officielle ; silhouette statique uniquement.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Illustration petite et fond uni, pas capture de gameplay ni animation. Contexte éditorial connu, traitement et cadrage à recouper avec le livre japonais ; ne prouve pas les autres armes ou les gestes."
+    },
+    {
+      "id": "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+      "title": "Silent Hillf — Dark Shrine Path walkthrough",
+      "type": "guide-specialise-secondaire",
+      "scope": "Parvis, Hokora et accès au Shrine Vault au début de Dark Shrine Path ; contexte de pièce, pas mouvement attesté.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Parcours textuel secondaire archivé ; build, caméra, géométrie et durée non mesurés. Les configurations ultérieures ou de boss ne sont pas transférées sans preuve.",
+      "wordLimit": 150
+    },
+    {
+      "id": "EXT10_SHF_SCHOOL_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+      "title": "Silent Hillf — Ebisugaoka Middle School walkthrough",
+      "type": "guide-specialise-secondaire",
+      "scope": "Bureau du personnel et coffret de la Key to the Back Mountains ; distinction avec salles de classe et couloirs.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Parcours textuel secondaire archivé ; build, caméra, géométrie et durée non mesurés. Les configurations ultérieures ou de boss ne sont pas transférées sans preuve.",
+      "wordLimit": 150
+    },
+    {
+      "id": "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+      "title": "Silent Hillf — Shimizu Residence walkthrough",
+      "type": "guide-specialise-secondaire",
+      "scope": "Parcours ResidenceI, salle à manger du calendrier et corridor de sortie ; deux pièces de la même résidence, pas deux adresses.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Parcours textuel secondaire archivé ; build, caméra, géométrie et durée non mesurés. Les configurations ultérieures ou de boss ne sont pas transférées sans preuve.",
+      "wordLimit": 150
+    },
+    {
+      "id": "EXT10_SHF_SHRINE_HOKORA_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+      "title": "Silent Hillf — shf_shrine_vault",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Parvis du Shrine Vault : petit Hokora à gauche avec corde et papiers shide, lanternes et porte fermée devant Hinako.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; aucune animation, collision, physique, texture autonome ou caméra1:1 livrée. Hinako, son équipement, le HUD et les actions du parcours sont exclus du prototype de décor."
+    },
+    {
+      "id": "EXT10_SHF_STAFF_ROOM_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+      "title": "Silent Hillf — shf_school_exit",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Bureau du personnel : coffret à clés et tableau mural de service à sa droite, distinct d’un tableau de classe.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; aucune animation, collision, physique, texture autonome ou caméra1:1 livrée. Hinako, son équipement, le HUD et les actions du parcours sont exclus du prototype de décor."
+    },
+    {
+      "id": "EXT10_SHF_RESIDENCE_DINING_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg",
+      "title": "Silent Hillf — shf_home_dining",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "ResidenceI, salle à manger du calendrier : tatamis, table basse ronde, coussins et vaisselle visibles.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; aucune animation, collision, physique, texture autonome ou caméra1:1 livrée. Hinako, son équipement, le HUD et les actions du parcours sont exclus du prototype de décor."
+    },
+    {
+      "id": "EXT10_SHF_RESIDENCE_ENTRY_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+      "title": "Silent Hillf — shf_home_exit",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "ResidenceI, corridor de sortie : plancher de bois et huisserie coulissante quadrillée à panneaux translucides.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; aucune animation, collision, physique, texture autonome ou caméra1:1 livrée. Hinako, son équipement, le HUD et les actions du parcours sont exclus du prototype de décor."
+    },
+    {
+      "id": "EXT10_SHF_RESIDENCE_FORECOURT_20261026",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg",
+      "title": "Silent Hillf — shf_flora_home",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Parvis extérieur devant Shimizu Residence à la fin d’Ebisugaoka partie5 : flore rouge et brouillard, sans transfert vers toute la ville.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée ; aucune animation, collision, physique, texture autonome ou caméra1:1 livrée. Hinako, son équipement, le HUD et les actions du parcours sont exclus du prototype de décor."
+    },
+    {
+      "id": "EXT10_SM_SCHOOL_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_06_nightmare_3_school_en.htm",
+      "title": "Shattered Memories — Nightmare3 School",
+      "type": "guide-specialise-secondaire",
+      "scope": "Sous-lieu et phase de nightmare_school ; parcours textuel, aucune animation mesurée.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Guide de Whitney Chavis republié par Silent Hill Memories ; édition/build exacts non établis par cette page. Aucun mouvement, durée ou géométrie1:1 ne découle du texte.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT10_SM_SCHOOL_WINDOW_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_3b.jpg",
+      "title": "Shattered Memories — Nightmare3 School — sm_school_window",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Téléphone cadrant une fenêtre quadrillée du premier point Paparazzi ; capture basse définition, pas relevé complet de la cour.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée, basse définition ; build et plate-forme non établis ici. Aucun personnage, HUD, téléphone, texture autonome ou séquence interactive n’est livré. Aucun mouvement1:1 certifié."
+    },
+    {
+      "id": "EXT10_SM_HOSPITAL_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_08_nightmare_4_hospital_en.htm",
+      "title": "Shattered Memories — Nightmare4 Hospital",
+      "type": "guide-specialise-secondaire",
+      "scope": "Sous-lieu et phase de nightmare_hospital_sm ; parcours textuel, aucune animation mesurée.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Guide de Whitney Chavis republié par Silent Hill Memories ; édition/build exacts non établis par cette page. Aucun mouvement, durée ou géométrie1:1 ne découle du texte.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT10_SM_HOSPITAL_ROOM_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_5a.jpg",
+      "title": "Shattered Memories — Nightmare4 Hospital — sm_hospital_exit",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Chambre sombre avec lits et porte recouverte de glace ; contexte ER et puzzle radio établi par le guide, pas par une légende visible.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée, basse définition ; build et plate-forme non établis ici. Aucun personnage, HUD, téléphone, texture autonome ou séquence interactive n’est livré. Aucun mouvement1:1 certifié."
+    },
+    {
+      "id": "EXT10_SM_MALL_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_10_nightmare_5_toluca_mall_en.htm",
+      "title": "Shattered Memories — Nightmare5 Toluca Mall",
+      "type": "guide-specialise-secondaire",
+      "scope": "Sous-lieu et phase de nightmare_mall_sm ; parcours textuel, aucune animation mesurée.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Guide de Whitney Chavis republié par Silent Hill Memories ; édition/build exacts non établis par cette page. Aucun mouvement, durée ou géométrie1:1 ne découle du texte.",
+      "wordLimit": 100
+    },
+    {
+      "id": "EXT10_SM_MALL_GUMBALL_HALL_20261026",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_6a.jpg",
+      "title": "Shattered Memories — Nightmare5 Toluca Mall — sm_mall_gumball",
+      "type": "capture-jeu-republiee-par-guide",
+      "scope": "Hall glacé devant le Gumball Shake Up ; capture avec Harry exclu du prototype et sans transfert du jeu de distributeur.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Capture fixe inspectée, basse définition ; build et plate-forme non établis ici. Aucun personnage, HUD, téléphone, texture autonome ou séquence interactive n’est livré. Aucun mouvement1:1 certifié."
+    }
+  ],
+  "requestedRows": [
+    {
+      "rowId": "sh4_one_truth_070:ref:01",
+      "fighterId": "sh4_one_truth_070",
+      "name": "Bras",
+      "before": "Balayage depuis le cadre.",
+      "after": "Le guide des boss distingue un balayage des bras qui peut renverser Henry et un heurt de tête rapproché, souvent après la descente d’un Wall Man. Ces contacts partent de son emplacement mural ; aucune poursuite libre, téléportation ou bras indépendant n’est déduit de la vue partielle.",
+      "evidence": [
+        "CL_ONE_TRUTH",
+        "EXT10_SH4_BOSSES_20261026",
+        "EXT10_SH4_BUILDING_SECOND_GUIDE_20261026",
+        "EXT10_REF_ONE_TRUTH_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "The Giant Wall Men have two different types of attacks."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_one_truth_070:ref:02",
+      "fighterId": "sh4_one_truth_070",
+      "name": "Leurres",
+      "before": "Les copies réagissent au vrai corps.",
+      "after": "Le guide décrit douze grands Wall Men dans la salle : onze réagissent normalement à leur propre impact, tandis que frapper le vrai corps fait sursauter tous les Wall Men. La photo n’en cadre qu’une partie. Réaction collective ne signifie pas douze acteurs jouables, douze vies partagées ou duplication spontanée d’un corps du versus.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "EXT10_SH4_BUILDING_SECOND_GUIDE_20261026",
+        "EXT10_REF_ONE_TRUTH_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "there are 12 large Wall Men in this room."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_one_truth_070:ref:03",
+      "fighterId": "sh4_one_truth_070",
+      "name": "Rail",
+      "before": "Les cadres coulissent verticalement.",
+      "after": "Les Wall Men montent et redescendent dans leurs emplacements, ce qui peut soustraire leur corps aux coups puis le remettre à portée. Le mot Rail du catalogue désigne cette contrainte verticale ; la vue partielle et le guide ne mesurent pas une mécanique de rail, sa course ou sa vitesse. Aucun déplacement horizontal libre ne leur est attribué.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "EXT10_SH4_BUILDING_SECOND_GUIDE_20261026",
+        "EXT10_REF_ONE_TRUTH_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "the Wall Men may take that time to slide back up."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_one_truth_070:ref:04",
+      "fighterId": "sh4_one_truth_070",
+      "name": "Cible réelle",
+      "before": "Frapper la vraie cible affecte l’ensemble.",
+      "after": "Pour repérer la cible réelle, Henry teste les corps un à un : le vrai Wall Man provoque le sursaut de l’ensemble quand il est frappé. Le guide décrit ensuite tous les corps immobiles et la porte déverrouillée à la fin. Cette progression de puzzle reste distincte d’un simple seuil de santé ou d’une animation de victoire du combattant unique.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "EXT10_SH4_BUILDING_SECOND_GUIDE_20261026",
+        "EXT10_REF_ONE_TRUTH_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "causes them all to flinch when hit."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_walter_sullivan_072:ref:01",
+      "fighterId": "sh4_walter_sullivan_072",
+      "name": "Vulnérabilité",
+      "before": "Devient attaquable après huit lances.",
+      "after": "Dans Final Sacraments, Henry utilise le cordon sur la grande forme du Conjurer pour libérer les lances, puis en enfonce huit dans cette forme ; le Walter mobile perd alors son apparence d’ombre et devient attaquable. Ces actes et ces deux corps restent distincts. Aucun nombre de coups ou seuil de santé du versus n’est tiré du rituel.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "CL_SH4_13_OUTSIDE_ROOM_302",
+        "EXT10_REF_WALTER_ROOM_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "After stabbing in all eight spears"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_walter_sullivan_072:ref:02",
+      "fighterId": "sh4_walter_sullivan_072",
+      "name": "Pistolet",
+      "before": "Tire pendant la rencontre finale.",
+      "after": "Le Walter de la rencontre finale peut tirer au pistolet à plusieurs distances, souvent après un pas de recul quand Henry le touche. Le guide distingue ce tir de ses attaques de tuyau. Le gros plan de la salle ne démontre ni modèle exact du pistolet, calibre, chargeur, cadence ou double arme des apparitions antérieures.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "CL_SH4_13_OUTSIDE_ROOM_302",
+        "EXT10_REF_WALTER_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "Walter's most basic attack is a shot from his pistol"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_walter_sullivan_072:ref:03",
+      "fighterId": "sh4_walter_sullivan_072",
+      "name": "Tube",
+      "before": "Frappe à portée rapprochée.",
+      "after": "Au contact, le guide décrit une frappe simple et une frappe armée plus longuement avec le tuyau de Walter. Il peut aussi tourner brusquement tout le corps pour renverser Henry si celui-ci reste trop près. Ne pas lui attribuer ici la tronçonneuse d’une autre apparition ; vitesses, dégâts et fenêtres du versus restent adaptés.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "CL_SH4_13_OUTSIDE_ROOM_302",
+        "EXT10_REF_WALTER_ROOM_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "With his pipe, Walter has a simple swing and a charge up swing"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh4_walter_sullivan_072:ref:04",
+      "fighterId": "sh4_walter_sullivan_072",
+      "name": "Avant le rituel",
+      "before": "Déplacement d’ombre rapide et protection.",
+      "after": "Avant la fin du rituel, Walter se présente comme une ombre impossible à blesser, tout en attaquant Henry ; le guide décrit aussi un glissement rapide à travers l’arène après plusieurs lances. Cette protection appartient à cet état narratif. Elle ne certifie ni une invincibilité générale du versus, ni une téléportation ou la mobilité du corps géant.",
+      "evidence": [
+        "EXT10_SH4_BOSSES_20261026",
+        "CL_SH4_13_OUTSIDE_ROOM_302",
+        "EXT10_REF_WALTER_GAME_20261026",
+        "EXT10_REF_WALTER_ROOM_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+        "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+        "localFile": "sh4-bosses.html",
+        "quote": "he begins the battle as a dark shadow and cannot be harmed"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:01",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Défense",
+      "before": "Peut bloquer les coups.",
+      "after": "Le guide décrit une posture de blocage de Memory of Alessa, accompagnée d’un son d’impact distinct au lieu du cri de douleur. Il conseille de passer sur son flanc ou de provoquer une attaque avant de répondre. Ce blocage ne prouve pas une garde parfaite, une contre-attaque automatique ou une immunité de toutes les phases.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+        "EXT10_REF_ALESSA_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_ALESSA_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "Alessa can also block your attacks"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:02",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Phase 1 — couteau",
+      "before": "Combat au couteau.",
+      "after": "La première forme tient un couteau et utilise une taille simple selon le guide. L’illustration du commentaire montre une forme au couteau, tandis que le gros plan du chapitre ne montre pas l’arme. Ces images ne fournissent pas les contacts ou l’ensemble des poses ; aucun tuyau ou tir n’appartient à cette phase.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_ALESSA_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_ALESSA_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "Alessa only has a standard knife swing attack in this form"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:03",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Phase 2 — pistolet",
+      "before": "Tirs au pistolet.",
+      "after": "La deuxième forme revient avec un Handgun : elle peut tirer et frapper de la crosse si Heather se tient près d’elle. Les chevaux du carrousel peuvent servir d’abris dans le duel original. Le texte ne donne pas ici de cadence mesurée ni de tir en rafale ; le modèle au couteau ne sert pas d’image de cette phase armée.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+        "EXT10_REF_ALESSA_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "Alessa can either shoot you with the Handgun"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:04",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Phase 3 — tuyau",
+      "before": "Coups de tuyau.",
+      "after": "Dans la troisième forme, le guide nomme Steel Pipe et décrit un swing régulier de portée plus grande que le couteau. Elle peut reculer ou courir pour se replacer. Le Handgun et la mitraillette ne sont pas équipés dans cette phase ; le nombre de coups, leur fenêtre et le changement de phase du prototype restent des adaptations.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+        "EXT10_REF_ALESSA_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "Her only attack is a regular pipe swing"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:05",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Phase 4 — mitraillette",
+      "before": "Tirs en rafales.",
+      "after": "La quatrième forme tient une Submachine Gun et peut tirer une rafale ou frapper Heather avec l’arme à courte portée. Le guide décrit une occasion d’attaque pendant son rechargement, sans mesurer le chargeur, la durée ou la cadence. Aucune nouvelle image de cette phase n’est livrée : le gros plan d’apparition et le modèle au couteau ne la remplacent pas.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+        "EXT10_REF_ALESSA_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "Alessa can fire a burst of bullets at you"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_memory_of_alessa_049:ref:06",
+      "fighterId": "sh3_memory_of_alessa_049",
+      "name": "Transition",
+      "before": "S’effondre puis revient avec une autre arme.",
+      "after": "Les quatre formes se succèdent après effondrement et réapparition : couteau, Handgun, Steel Pipe puis Submachine Gun. Le guide décrit la disparition définitive à la fin de la dernière forme. Cette progression ne donne pas de pourcentages de phase, de soin automatique ou d’équipement simultané des quatre armes au versus.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+        "EXT10_REF_ALESSA_GAME_20261026",
+        "EXT10_REF_ALESSA_COMMENTARY_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "four separate forms where Alessa will die and reappear"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_leonard_wolf_048:ref:01",
+      "fighterId": "sh3_leonard_wolf_048",
+      "name": "Bras",
+      "before": "Frappe à gauche ou droite.",
+      "after": "Leonard peut frapper avec la main gauche ou droite quand il se tient debout ; le guide distingue ces coups de sa remontée de l’eau. L’illustration du commentaire montre ses deux grands bras terminés par des pointes, sans arme indépendante. Ne pas déduire une saisie, un projectile ou une seconde créature de cette morphologie.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_LEONARD_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_LEONARD_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "He'll either swing with his left or right hand"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_leonard_wolf_048:ref:02",
+      "fighterId": "sh3_leonard_wolf_048",
+      "name": "Émergence",
+      "before": "Se relève de l’eau en frappant.",
+      "after": "Leonard peut frapper en se relevant hors de l’eau ; le guide recommande de rester à distance ou derrière lui avant cette émergence. La traduction du commentaire confirme qu’il se cache dans l’eau et remonte pour attaquer. Le gros plan de son visage ne mesure ni hauteur d’eau, ni trajectoire ou anticipation.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_LEONARD_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_LEONARD_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "while rising from the water."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_leonard_wolf_048:ref:03",
+      "fighterId": "sh3_leonard_wolf_048",
+      "name": "Plongée",
+      "before": "Disparaît sous l’eau entre les approches.",
+      "after": "Le guide distingue Leonard à terre dans l’eau, encore attaquable, de son déplacement à la nage, pendant lequel les coups ne le blessent pas. Il faut attendre sa prochaine émergence. Ce contraste ne certifie pas une invulnérabilité générale du personnage, une disparition définitive ou une téléportation à travers un autre lieu.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_12_NIGHTMARE_HOSPITAL",
+        "EXT10_REF_LEONARD_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_LEONARD_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "he'll try to swim away, at which point you can't damage him"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_missionary_047:ref:01",
+      "fighterId": "sh3_missionary_047",
+      "name": "Relevé",
+      "before": "Agite les deux armes.",
+      "after": "Après avoir été renversé, le Missionary peut agiter ses deux bras armés en se relevant. Le guide décrit ce danger du relèvement, pas une troisième lame ou une riposte depuis n’importe quel état. L’illustration statique permet de distinguer ses deux armes ; le gros plan d’apparition n’en montre pas les mouvements.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_MISSIONARY_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_MISSIONARY_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "flail both blade arms while standing up after being downed"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_missionary_047:ref:03",
+      "fighterId": "sh3_missionary_047",
+      "name": "Estoc",
+      "before": "Pointe une lame vers la cible.",
+      "after": "Le thrust du Missionary est un estoc de ses armes vers Heather, listé séparément du swing normal et de la frappe courue. Portée, bras engagé et contact doivent être relevés dans SH3 original. Aucun estoc de lance Pyramid Head ou de Missionary Revelation n’est emprunté à cette entrée.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_MISSIONARY_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_MISSIONARY_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "including a thrust, standard swing and running swing."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_missionary_047:ref:04",
+      "fighterId": "sh3_missionary_047",
+      "name": "Balayage",
+      "before": "Coupe latéralement au contact.",
+      "after": "Le guide distingue le swing normal au contact de la poussée en estoc et du swing lancé en course. Les deux armes sont des objets tenus par ce Missionary de SH3 ; le portrait ne suffit pas à mesurer un arc de coupe, un combo ou une prise. Les lames corporelles de la version Revelation restent séparées.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_CREATURES",
+        "EXT10_REF_MISSIONARY_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_MISSIONARY_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "including a thrust, standard swing and running swing."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh3_missionary_047:ref:05",
+      "fighterId": "sh3_missionary_047",
+      "name": "Frappe courue",
+      "before": "Court puis balaie avec une lame.",
+      "after": "La course suivie d’un swing est une attaque distincte dans le guide, qui conseille de le laisser passer puis d’attaquer son dos exposé. Cette approche physique ne justifie ni téléportation, ni rayon, ni suivi parfait de la cible. Accélération, trajectoire et récupération du versus restent des réglages à comparer.",
+      "evidence": [
+        "CL_SH3_BOSSES",
+        "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+        "EXT10_REF_MISSIONARY_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_MISSIONARY_GAME_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh3/bosses_en.htm",
+        "sha256": "f1a1132d0267dfafc74d3f852f1dae211e5a3ed8efa5fd3661ee7c4fef69181e",
+        "localFile": "sh3-bosses.html",
+        "quote": "runs past and is exposed."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_twinfeeler_015:ref:01",
+      "fighterId": "sh1_twinfeeler_015",
+      "name": "Projection",
+      "before": "Crache lors de l’émergence.",
+      "after": "Le guide décrit un jet acide chaque fois que le Twinfeeler émerge ; la traduction du commentaire parle plutôt d’une attaque de gaz toxique. Ces libellés sont conservés comme descriptions de sources distinctes, sans prétendre mesurer sa chimie, sa couleur ou une trajectoire. La vue de fosse ne montre pas le jet ; aucun projectile original animé n’est livré.",
+      "evidence": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_TWINFEELER_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_TWINFEELER_PIT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+        "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+        "localFile": "sh1-bosses.html",
+        "quote": "spitting acid at you every time it climbs above the surface"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_twinfeeler_015:ref:02",
+      "fighterId": "sh1_twinfeeler_015",
+      "name": "Charge",
+      "before": "Percute en surface.",
+      "after": "Le Twinfeeler peut percuter Harry en rampant à la surface ou au moment de l’émergence, distinct du jet décrit par le guide. La plaque métallique centrale réduit le risque de collision et garde la larve exposée jusqu’à sa sortie de la plaque. Ce déplacement de fosse n’est pas une marche libre ou une projection avec échange de places.",
+      "evidence": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_TWINFEELER_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_TWINFEELER_PIT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+        "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+        "localFile": "sh1-bosses.html",
+        "quote": "physically ramming into you when slithering above"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_twinfeeler_015:ref:03",
+      "fighterId": "sh1_twinfeeler_015",
+      "name": "Enfouissement",
+      "before": "Se déplace sous la surface.",
+      "after": "La larve se déplace sous le sol puis remonte pour attaquer, avant de replonger peu après ; le guide distingue les zones de terre et la plaque métallique où elle ne peut pas immédiatement s’enfouir. L’illustration du corps ne prouve ni tunnel visible, ni rayon de sortie, ni vitesse ou cycle souterrain mesurés.",
+      "evidence": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_TWINFEELER_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_TWINFEELER_PIT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+        "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+        "localFile": "sh1-bosses.html",
+        "quote": "shortly diving back into it"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_twinfeeler_015:ref:04",
+      "fighterId": "sh1_twinfeeler_015",
+      "name": "Retrait vivant",
+      "before": "Se replie puis quitte la fosse.",
+      "after": "La fin de cette rencontre ne tue pas la larve : le guide la décrit se repliant en boule puis brisant les portes pour quitter la fosse, ce qui ouvre aussi la sortie de Harry. Cette issue narrative ne constitue pas un KO mortel ou une transformation instantanée en Floatstinger pendant le même duel versus.",
+      "evidence": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_09_NIGHTMARE_CENTRAL_SILENT_HILL",
+        "EXT10_REF_TWINFEELER_COMMENTARY_MODEL_20261026",
+        "EXT10_REF_TWINFEELER_PIT_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+        "sha256": "faf973c7a9a73b725ae5a8e9e1d563cc2c18841dccaf151386256224520f4fd1",
+        "localFile": "sh1-bosses.html",
+        "quote": "It doesn't die however and instead smashes through the closed doors"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:ref:01",
+      "fighterId": "sh1_puppet_nurse_012",
+      "name": "Couteau",
+      "before": "Taillade à courte portée.",
+      "after": "La Puppet Nurse de Nightmare Hospital et Nowhere porte un petit couteau ; elle peut entailler Harry pendant qu’une autre Nurse le retient. Le modèle montre l’arme et le parasite dorsal, sans certifier une cadence, un scalpel d’une autre œuvre ou une chaîne de coups originale complète.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "localFile": "sh1-enemies.html",
+        "quote": "carrying a small knife similar to Harry"
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:ref:02",
+      "fighterId": "sh1_puppet_nurse_012",
+      "name": "Prise",
+      "before": "Agrippe la cible.",
+      "after": "Le guide décrit une Nurse agrippant Harry et le tailladant, tandis que d’autres peuvent le rejoindre. Les commandes directionnelles et d’épaule accélèrent la libération dans SH1. Ce maintien ne crée pas un second acteur dans le duel du prototype ; commandes de dégagement et durées du versus restent séparées des contrôles originaux.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "localFile": "sh1-enemies.html",
+        "quote": "Push the directional and shoulder buttons to escape grapples more quickly."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:ref:01",
+      "fighterId": "sh1_puppet_doctor_013",
+      "name": "Renvoi au jeu de gestes de base",
+      "before": "Consulter sh1_puppet_nurse_012 ; seules les différences explicites de cette fiche sont à produire.",
+      "after": "Le guide attribue directement au Puppet Doctor de Nightmare Hospital le couteau, les saisies et les entailles, avec libération plus rapide par commandes directionnelles et d’épaule. Il le décrit légèrement plus fort et agressif que la Nurse, sans coefficient numérique. Son modèle et son uniforme restent propres ; l’image de Nurse ne remplace pas cette variante.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "localFile": "sh1-enemies.html",
+        "quote": "Just like Nurses, Doctors will grab and also slash Harry."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_night_flutter_002:ref:01",
+      "fighterId": "sh1_night_flutter_002",
+      "name": "Renvoi au jeu de gestes de base",
+      "before": "Consulter sh1_air_screamer_001 ; seules les différences explicites de cette fiche sont à produire.",
+      "after": "Le guide décrit le Night Flutter des zones Nightmare avec une tête couverte de vers, des attaques depuis le vol et un contact au sol, en le disant plus rapide et fort que l’Air Screamer. Le modèle montre ses appuis et ailes, pas leur cycle. Le guide appelle le contact au sol un heurt de tête ; la nomenclature de morsure du contrôleur partagé reste à recouper, sans multiplier les pouvoirs par changement de nom.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "localFile": "sh1-enemies.html",
+        "quote": "They can also headbutt you when encountered walking on the ground."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "sh1_creeper_009:ref:01",
+      "fighterId": "sh1_creeper_009",
+      "name": "Morsure",
+      "before": "Attaque les jambes.",
+      "after": "Le Creeper SH1 court vers Harry et mord ses jambes ; le guide peut en situer plusieurs ensemble sans lui attribuer de prise, de saut ou d’attaque à distance. L’illustration de cette fiche montre un insecte bas, distinct du Creeper SH2 ou de l’essaim du film. Les pattes, le contact de bouche et les phases de déplacement restent à capturer.",
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "EXT10_REF_CREEPER_MODEL_20261026"
+      ],
+      "proof": {
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "localFile": "sh1-enemies.html",
+        "quote": "Creepers will run up and bite Harry's legs."
+      },
+      "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+    }
+  ],
+  "extraIntegrations": {
+    "observations": [
+      {
+        "rowId": "sh2_mandarin_026:ref:01",
+        "fighterId": "sh2_mandarin_026",
+        "name": "Tendril",
+        "before": "Frappe au travers du grillage.",
+        "after": "Sous le grillage, le Mandarin rejoint la position de James puis projette des appendices depuis ses bras à travers les mailles, causant un bref déséquilibre et des dégâts légers selon le guide. Le verbe shoot ne prouve pas des membres détachés ou des missiles libres. Les hauteurs de contact et les restrictions sol/air du versus restent adaptées.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/enemies_en.htm",
+          "sha256": "4849e62a41c32f1c3463ed791770990cac10a7096349520a67fb517c6d0a297c",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-enemies_en.htm",
+          "quote": "they'll shoot tendrils from their arms"
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh2_mandarin_026:ref:02",
+        "fighterId": "sh2_mandarin_026",
+        "name": "Suspension",
+        "before": "Mains attachées sous les grilles.",
+        "after": "Le Mandarin du jeu original reste accroché sous les sols de fil ou de treillis, avec de grands bras terminés par des lèvres ; le guide ne le place pas marchant sur le dessus. Déplacer un point d’ancrage dans une scène adaptée ne valide pas Floor Form ou le Mandarin du remake, ni un nouveau support absent du décor.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/enemies_en.htm",
+          "sha256": "4849e62a41c32f1c3463ed791770990cac10a7096349520a67fb517c6d0a297c",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-enemies_en.htm",
+          "quote": "hangs from beneath wire or mesh floors."
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh2_red_pyramid_thing_great_knife_029:ref:01",
+        "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+        "name": "Grande lame",
+        "before": "Balayage horizontal.",
+        "after": "Le guide distingue un balayage normal de la Great Knife de son abattement vertical. Cette grande lame est tenue pendant la première rencontre ; les attaques de lance des rencontres suivantes restent sur leurs propres fiches. Portée, bande de contact, dégâts et cadence du versus ne sont pas des mesures de SH2.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "a standard swipe, which inflicts moderate damage."
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh2_red_pyramid_thing_great_knife_029:ref:02",
+        "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+        "name": "Exécution",
+        "before": "Abattement vertical létal.",
+        "after": "L’abattement de bourreau peut tuer James en un coup dans la rencontre originale, y compris lorsque la lame remonte du sol, selon le guide. Cette gravité narrative ne rend pas automatiquement létale toute commande du versus ; anticipation, dégâts et fenêtre doivent rester explicitement adaptés.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "an overhead executioner swing"
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh2_red_pyramid_thing_great_knife_029:ref:03",
+        "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+        "name": "Main libre",
+        "before": "Coup ou prise au cou.",
+        "after": "À portée rapprochée, Pyramid Head peut donner un coup de sa main libre ou saisir James au cou tout en le soulevant pour l’étrangler. Le guide recommande les commandes d’épaule et directionnelles pour se libérer. Cette levée reste distincte des prises debout aux jambes ; sa hauteur et le dégagement à six alternances du prototype sont des choix versus.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "a strangling grapple while lifting James with his hand"
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh2_red_pyramid_thing_great_knife_029:ref:05",
+        "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+        "name": "Retrait de la rencontre",
+        "before": "À la sirène, rejoint l’escalier noyé.",
+        "after": "La sirène termine la première rencontre : Pyramid Head rejoint l’escalier rempli d’eau puis la porte de sortie, sans être tué par James. Le guide décrit son invulnérabilité et la possibilité de le ralentir en attaquant. La barre de vie, le KO et les résultats du versus restent une transposition, pas la reproduction de cette fin chronométrée.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_BOSSES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh2/bosses_en.htm",
+          "sha256": "aa11524ee6d0d54d865e71159fd6090e293006f7ced002c4134180de88b86fa9",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh2-bosses_en.htm",
+          "quote": "moving down the water-filled staircase"
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh3_nurse_revolver_044:ref:01",
+        "fighterId": "sh3_nurse_revolver_044",
+        "name": "Revolver",
+        "before": "Tir à distance.",
+        "after": "La Nurse au revolver tire à distance moyenne et peut poursuivre Heather pour se remettre à portée selon le guide. Cette fiche se distingue de la Nurse au tuyau et des versions d’autres œuvres. Les bornes exactes de distance, la cadence et l’éventuelle limite de munitions restent à relever ; un seuil du prototype n’est pas une mesure source.",
+        "evidence": [
+          "CL_SH3_ENEMIES",
+          "CL_SH3_CREATURES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+          "sha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh3-enemies_en.htm",
+          "quote": "Revolver nurses will shoot from moderate distances"
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "sh3_nurse_revolver_044:ref:02",
+        "fighterId": "sh3_nurse_revolver_044",
+        "name": "Crosse",
+        "before": "Frappe rapprochée.",
+        "after": "À proximité, la Nurse au revolver peut frapper avec la crosse ; elle ne change pas pour autant son arme en tuyau. Le guide distingue ce contact du tir à distance moyenne. Une sélection automatique tir/crosse dans le versus peut suivre cette différence, mais son seuil et ses poses restent des adaptations à comparer.",
+        "evidence": [
+          "CL_SH3_ENEMIES",
+          "CL_SH3_CREATURES"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+          "sha256": "9a15354b92f76484efaca60049815e70edcb9d0307c4935b082e83d39ff9cb22",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh3-enemies_en.htm",
+          "quote": "they can pistol-whip from up close."
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "origins_caliban_079:ref:02",
+        "fighterId": "origins_caliban_079",
+        "name": "Charge avec écrasement",
+        "before": "Charge avec écrasement",
+        "after": "Le bestiaire documente la progression vers Travis sur des membres contorsionnés et le piétinement. Il ne précise pas un sprint, une prise ou une projection propres sous l’intitulé Charge avec écrasement du catalogue. Les commandes d’approche corporelle du versus restent des compositions autour de ces appuis, sans vitesse ou choc original mesuré.",
+        "evidence": [
+          "EXT01"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+          "sha256": "764c04f5c3aebae62776d53a7f1c6a1d58b4498abb6b6be7e5fb800d7ec05adb",
+          "localFile": "/workspace/shared/halo-of-flesh/references/batch10-combat-2026-10-26/sh0-creatures_en.htm",
+          "quote": "his contorted limbs stomping across the stage toward Travis."
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      },
+      {
+        "rowId": "shf_harai_katashiro_158:ref:01",
+        "fighterId": "shf_harai_katashiro_158",
+        "name": "Rotation avec jambe-lame",
+        "before": "Rotation avec jambe-lame",
+        "after": "La rubrique journal transcrite par le guide décrit des jambes remplacées par des lames. Son descriptif secondaire ajoute un couteau en main, corroboré seulement partiellement par le modèle sombre ; l’illustration de journal est tronquée et sans texte affiché. Ces nouvelles pièces ne mesurent pas la rotation historique de cette ligne ni un geste de couteau ; bras, jambes et armes restent distincts.",
+        "evidence": [
+          "EXT33",
+          "EXT10_REF_HARAI_MODEL_20261026",
+          "EXT10_REF_HARAI_JOURNAL_20261026"
+        ],
+        "proof": {
+          "url": "https://www.silenthillmemories.net/shf/monsters_en.htm",
+          "sha256": "29b1df39b79b1c114af692781ea5689cfd1f8f1fe0b84dc59a96df48536b67bd",
+          "localFile": "shf-monsters.html",
+          "quote": "In its hand, it carries a knife."
+        },
+        "limits": "Description et capacité de source précisées ; geste complet, poses contextuelles, build/région, timings et géométrie restent à relever. Les valeurs et entrées du versus ne sont pas des mesures originales ; fidélité1:1 non certifiée."
+      }
+    ],
+    "notCountedInRequestedThirty": true,
+    "constraintProfiles": [
+      "shf_harai_katashiro_158",
+      "origins_carrion_076",
+      "origins_straight_jacket_074",
+      "sh4_one_truth_070"
+    ],
+    "stages": [
+      {
+        "stageId": "dark_shrine",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Dark Shrine attesté; une seule arène ne résume pas corridors, hall et final path.",
+        "noteAfter": "Dark Shrine Path : parvis extérieur devant la porte encore fermée du Shrine Vault. Le petit Hokora à gauche porte une corde et des papiers shide, près des lanternes et des marches. Ce cadrage ne fusionne pas les corridors, Main Hall ou Treasure Hall ; oscillation et éclairage du versus restent adaptés, sans vent ou mouvement original mesuré.",
+        "referenceIds": [
+          "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+          "EXT10_SHF_SHRINE_HOKORA_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "school_shf",
+        "locationStatusBefore": "sous-lieu-a-documenter",
+        "locationStatusAfter": "lieu-documente",
+        "noteBefore": "Ecole d’Ebisugaoka : nom/cadrage précis à recouper sur plan de chapitre.",
+        "noteAfter": "Ebisugaoka Middle School : bureau du personnel au coffret de la Key to the Back Mountains. La capture montre un tableau mural de service à droite du coffret, une armoire et du bois au sol ; il ne s’agit pas d’une salle de classe ou d’un couloir à rideaux. Ne pas importer Hinako, la clé, sa prise, son arme ou des ennemis. Animation, caméra et dimensions restent à produire ou comparer.",
+        "referenceIds": [
+          "EXT10_SHF_SCHOOL_GUIDE_20261026",
+          "EXT10_SHF_STAFF_ROOM_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "hinako_home",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Maison Shimizu; doublon de lieu avec shimizu_residence, cadrage distinct seulement.",
+        "noteAfter": "Shimizu ResidenceI : corridor d’entrée/sortie avec plancher de bois et porte coulissante à panneaux translucides, cadré par la vue de fin de cette visite. Il s’agit de la même résidence que shimizu_residence, ici dans une pièce différente ; aucune seconde maison n’est inventée. Ni passage de porte, ouverture ou transition vers ResidenceII ne sont automatiquement rejoués.",
+        "referenceIds": [
+          "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+          "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "shimizu_residence",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Shimizu Residence, rencontre des parents; ne pas confondre avec autre demeure.",
+        "noteAfter": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+        "referenceIds": [
+          "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+          "EXT10_SHF_RESIDENCE_DINING_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "corrupted_ebisugaoka",
+        "locationStatusBefore": "variante-originale-lieu-documente",
+        "locationStatusAfter": "variante-originale-lieu-documente",
+        "noteBefore": "Ebisugaoka recouvert de flore; Corrupted Procession est intitulé éditorial.",
+        "noteAfter": "Ebisugaoka partie5 : parvis immédiatement devant Shimizu Residence, avec flore rouge, brouillard, façade, pots et bicyclette visibles. Corrupted Procession reste un libellé éditorial ; la capture ne prouve ni procession, ni croissance instantanée des fleurs, vent, terrain ralentissant ou état uniforme de toute Ebisugaoka. Le mouvement d’ambiance du versus reste une adaptation locale.",
+        "referenceIds": [
+          "EXT_SHF_EBISUGAOKA5_20261025",
+          "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "nightmare_school",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Midwich dans Shattered Memories; cauchemar glacé, pas école Otherworld rouillée1999.",
+        "noteAfter": "Midwich High School, Nightmare3 : cour du premier point de photographie Paparazzi. Le guide situe une grande fenêtre éclairée en rouge ; la petite capture 3b montre surtout le téléphone cadrant cette fenêtre et ne relève pas toute la cour. Le versus retient le bâti et une ambiance glacée locale ; il ne rejoue ni couple, quête photo, poursuite ou ouverture finale. Aucun mouvement de givre original ni géométrie complète ne sont mesurés.",
+        "referenceIds": [
+          "EXT10_SM_SCHOOL_GUIDE_20261026",
+          "EXT10_SM_SCHOOL_WINDOW_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "nightmare_hospital_sm",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Hôpital de SM; sélectionner une séquence précise dans la route, sans copier Brookhaven2001.",
+        "noteAfter": "Alchemilla, Nightmare4 : chambre accessible après l’entrée aux urgences, pendant le puzzle radio et avant la libération de la porte glacée. La capture 5a montre la pièce sombre, des lits et la porte obstruée ; la localisation et le puzzle sont établis par le guide. Le versus ne rejoue ni père/enfant gelés, radio, chanson ou bris de glace. La lumière froide adaptée n’atteste pas une séparation vitrée ou un rideau animé.",
+        "referenceIds": [
+          "EXT10_SM_HOSPITAL_GUIDE_20261026",
+          "EXT10_SM_HOSPITAL_ROOM_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      },
+      {
+        "stageId": "nightmare_mall_sm",
+        "locationStatusBefore": "lieu-documente-secondaire",
+        "locationStatusAfter": "lieu-documente-secondaire",
+        "noteBefore": "Centre commercial de Shattered Memories; sous-lieu et phase à relever.",
+        "noteAfter": "Toluca Mall, Nightmare5 : hall du Gumball Shake Up après Garage Access South, avant la résolution du puzzle. La capture 6a montre le hall glacé et l’enseigne de la machine ; le guide distingue cette pièce de la statue de Tookie rencontrée auparavant. Le versus retient le bâti et un panneau abstrait givré ; ni machine interactive, personnages gelés, couleurs du puzzle, Tookie ou portes libérées ne sont produits. Aucun rythme de givre n’est mesuré.",
+        "referenceIds": [
+          "EXT10_SM_MALL_GUIDE_20261026",
+          "EXT10_SM_MALL_GUMBALL_HALL_20261026"
+        ],
+        "animationsPreserved": true,
+        "notCountedInRequestedThirty": true
+      }
+    ]
+  },
+  "visualReview": {
+    "imagesInspected": 17,
+    "newPixelAssetsDelivered": false,
+    "exactSourceFootageMeasured": false,
+    "limitations": [
+      "Gros plans SH3 de Leonard, Missionary etAlessa : apparitions uniquement, pas gestes, corps entiers ou armes horschamp.",
+      "Illustrations LostMemories : petites vues statiques à recouper avec le livre japonais ; la traduction du commentaire est non officielle. Alessa y porte le couteau, pas les trois autres armes.",
+      "Vue OneTruth : seulement une partie de la salle. Le guide documente douze corps et leur réaction ; la photo ne les compte pas et ne mesure pas les rails.",
+      "Vues FinalSacraments : contexte du Conjurer et du rituel, distinct du Walter mobile. La vue de fosse SH1 ne montre pas Twinfeeler.",
+      "Harai : modèle sombre avec objet tenu, illustration journal tronquée sans texte ; qualification secondaire du couteau, aucune rotation certifiée."
+    ],
+    "stageImagesInspected": 8,
+    "stageAdditionalImagesExaminedButNotCited": [
+      "sm_hospital_radio.jpg"
+    ]
+  },
+  "workbookInvariants": {
+    "observations": 435,
+    "oldSourcePrefix": 184,
+    "newSources": 33,
+    "sourcesAfterAppend": 217,
+    "previousRoleDecisionsPreserved": 33,
+    "newRoleDecisions": 0,
+    "observationEditionChanges": 0,
+    "preserved": "IDs, noms, profils, œuvres, ordre, éditions, statuts, timecodes ;33décisions historiques ; toutes propositions et animations de lieux."
+  },
+  "remainingUnverified": "P.T., Prisoner, GreedyWorm et FloorForm restent ouverts ; aucune clôture par silence d’une source. Huit adaptations filmiques jouables et25dossiers bloqués préservés. Toutes les mesures originales restent à effectuer.",
+  "validation": {
+    "requestedRows": 30,
+    "extraObservationDescriptions": 10,
+    "changedDescriptions": 40,
+    "lot9RequestedRowsReused": 0,
+    "sourceValidation": true,
+    "baselineInvariantChecks": true,
+    "oldSourcePrefixPreserved": 184,
+    "totalSources": 217,
+    "newSourceObjects": 33,
+    "observationsPreserved": 435,
+    "roleDecisionsPreserved": 33,
+    "sourceArtifactHashesChecked": 46,
+    "requestedExactQuotesChecked": 30,
+    "extraStageNotes": 8,
+    "onlyStageLocationStatusChange": "school_shf: sous-lieu-a-documenter → lieu-documente",
+    "changedObservationIds": [
+      "sh1_night_flutter_002:ref:01",
+      "sh1_creeper_009:ref:01",
+      "sh1_puppet_nurse_012:ref:01",
+      "sh1_puppet_nurse_012:ref:02",
+      "sh1_puppet_doctor_013:ref:01",
+      "sh1_twinfeeler_015:ref:01",
+      "sh1_twinfeeler_015:ref:02",
+      "sh1_twinfeeler_015:ref:03",
+      "sh1_twinfeeler_015:ref:04",
+      "sh2_mandarin_026:ref:01",
+      "sh2_mandarin_026:ref:02",
+      "sh2_red_pyramid_thing_great_knife_029:ref:01",
+      "sh2_red_pyramid_thing_great_knife_029:ref:02",
+      "sh2_red_pyramid_thing_great_knife_029:ref:03",
+      "sh2_red_pyramid_thing_great_knife_029:ref:05",
+      "sh3_nurse_revolver_044:ref:01",
+      "sh3_nurse_revolver_044:ref:02",
+      "sh3_missionary_047:ref:01",
+      "sh3_missionary_047:ref:03",
+      "sh3_missionary_047:ref:04",
+      "sh3_missionary_047:ref:05",
+      "sh3_leonard_wolf_048:ref:01",
+      "sh3_leonard_wolf_048:ref:02",
+      "sh3_leonard_wolf_048:ref:03",
+      "sh3_memory_of_alessa_049:ref:01",
+      "sh3_memory_of_alessa_049:ref:02",
+      "sh3_memory_of_alessa_049:ref:03",
+      "sh3_memory_of_alessa_049:ref:04",
+      "sh3_memory_of_alessa_049:ref:05",
+      "sh3_memory_of_alessa_049:ref:06",
+      "sh4_one_truth_070:ref:01",
+      "sh4_one_truth_070:ref:02",
+      "sh4_one_truth_070:ref:03",
+      "sh4_one_truth_070:ref:04",
+      "sh4_walter_sullivan_072:ref:01",
+      "sh4_walter_sullivan_072:ref:02",
+      "sh4_walter_sullivan_072:ref:03",
+      "sh4_walter_sullivan_072:ref:04",
+      "origins_caliban_079:ref:02",
+      "shf_harai_katashiro_158:ref:01"
+    ],
+    "changedStageIds": [
+      "nightmare_school",
+      "dark_shrine",
+      "school_shf",
+      "hinako_home",
+      "nightmare_hospital_sm",
+      "nightmare_mall_sm",
+      "shimizu_residence",
+      "corrupted_ebisugaoka"
+    ],
+    "globalGeneratorRun": false
+  },
+  "stageSourceArchive": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26",
+  "stageEvidence": [
+    {
+      "id": "shf_path",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+      "status": 200,
+      "bytes": 56912,
+      "sha256": "0908e9d97ed34e8aa2094ffe98e383d67f65fada5db0ddac67bffa3cf5338301",
+      "referenceId": "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_path.html"
+    },
+    {
+      "id": "shf_school",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+      "status": 200,
+      "bytes": 75919,
+      "sha256": "3097b73b49f81ef2f267c6acae686a745633d58c1294decb2a4c7a1989207ef8",
+      "referenceId": "EXT10_SHF_SCHOOL_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_school.html"
+    },
+    {
+      "id": "shf_home",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+      "status": 200,
+      "bytes": 83984,
+      "sha256": "8c594b66c9882404d56745c17a84fba9dbbe7a261442793b7eb03917bef6dd06",
+      "referenceId": "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_home.html"
+    },
+    {
+      "id": "shf_shrine_vault",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+      "status": 200,
+      "bytes": 425488,
+      "sha256": "eaff09b5f8c7581a6810a01d54fd7ae1866f1c01475a1d1e57487f23ae7f9895",
+      "referenceId": "EXT10_SHF_SHRINE_HOKORA_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_shrine_vault.jpg"
+    },
+    {
+      "id": "shf_school_exit",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+      "status": 200,
+      "bytes": 382563,
+      "sha256": "cecee3b322a84efc0a195755767ad66e54da8a9fbf170f5ac78006707a37d586",
+      "referenceId": "EXT10_SHF_STAFF_ROOM_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_school_exit.jpg"
+    },
+    {
+      "id": "shf_home_dining",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg",
+      "status": 200,
+      "bytes": 547548,
+      "sha256": "a987b1ee81a5b9ace9795ee61326ba968e9b4eff3b23854d9eb94d68331a3db9",
+      "referenceId": "EXT10_SHF_RESIDENCE_DINING_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_home_dining.jpg"
+    },
+    {
+      "id": "shf_home_exit",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+      "status": 200,
+      "bytes": 451154,
+      "sha256": "fe5e9212573d016596b090859079fcc0dd0a32692540b0f3fcb0e3928ac37eb3",
+      "referenceId": "EXT10_SHF_RESIDENCE_ENTRY_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_home_exit.jpg"
+    },
+    {
+      "id": "shf_flora_home",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg",
+      "status": 200,
+      "bytes": 422842,
+      "sha256": "f766e34bb2fd1882f4f4fae03926af53ded1d71f7b177f8abb053e6b77c72c94",
+      "referenceId": "EXT10_SHF_RESIDENCE_FORECOURT_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/shf_flora_home.jpg"
+    },
+    {
+      "id": "sm_school_guide",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_06_nightmare_3_school_en.htm",
+      "status": 200,
+      "bytes": 20459,
+      "sha256": "0ba7a2818a3194a5d268672c3e817fbf65daa61511aaf5ab531261aa6dd4bb0c",
+      "referenceId": "EXT10_SM_SCHOOL_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_school_guide.html",
+      "exactQuote": "Ahead will be a large window glowing red. Our first paparazzi spot!"
+    },
+    {
+      "name": "sm_school_window",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_3b.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_school_window.jpg",
+      "status": 200,
+      "sha256": "2bb818a5425f0da246f266999a2196a945f528a548ea67359277933e8f02ccca",
+      "bytes": 7866,
+      "referenceId": "EXT10_SM_SCHOOL_WINDOW_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_school_window.jpg",
+      "visualScope": "Téléphone cadrant une fenêtre quadrillée du premier point Paparazzi ; capture basse définition, pas relevé complet de la cour."
+    },
+    {
+      "id": "sm_hospital_guide",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_08_nightmare_4_hospital_en.htm",
+      "status": 200,
+      "bytes": 17192,
+      "sha256": "17762e5200fc0e005899dfc01440e4c72e3b57425bdf65a2557c03ea1816b597",
+      "referenceId": "EXT10_SM_HOSPITAL_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_hospital_guide.html",
+      "exactQuote": "On the other side ignore the door straight ahead and make a run straight up the stairs into the hospital ER."
+    },
+    {
+      "name": "sm_hospital_exit",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_5a.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_hospital_exit.jpg",
+      "status": 200,
+      "sha256": "4d2601d238035ea52390916da3222c74f4145bc4e0744016f3eb3c53c0e9e973",
+      "bytes": 5551,
+      "referenceId": "EXT10_SM_HOSPITAL_ROOM_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_hospital_exit.jpg",
+      "visualScope": "Chambre sombre avec lits et porte recouverte de glace ; contexte ER et puzzle radio établi par le guide, pas par une légende visible."
+    },
+    {
+      "id": "sm_mall_guide",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_10_nightmare_5_toluca_mall_en.htm",
+      "status": 200,
+      "bytes": 19090,
+      "sha256": "ddd67b66bbf58786025ba820f740a49eaa386f51fe6388e5bee598de98332e5a",
+      "referenceId": "EXT10_SM_MALL_GUIDE_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_mall_guide.html",
+      "exactQuote": "Enter the “Garage Access South” entrance and run down the stairs."
+    },
+    {
+      "name": "sm_mall_gumball",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_6a.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_mall_gumball.jpg",
+      "status": 200,
+      "sha256": "17dd833f287a7319cd8cdcf7bec1b8b700e8237d23e9ec0505e87643bf3ad2a7",
+      "bytes": 8937,
+      "referenceId": "EXT10_SM_MALL_GUMBALL_HALL_20261026",
+      "localFile": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26/sm_mall_gumball.jpg",
+      "visualScope": "Hall glacé devant le Gumball Shake Up ; capture avec Harry exclu du prototype et sans transfert du jeu de distributeur."
+    }
+  ]
+}

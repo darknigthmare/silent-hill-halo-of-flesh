@@ -12,6 +12,7 @@ const parts=await Promise.all(['classic','extended'].map(async name=>
   JSON.parse(await readFile(new URL(`../docs/production/research/${name}.json`,import.meta.url),'utf8'))));
 const research=combineResearch(parts);
 const plan=buildProductionPlan(research);
+const lot9CombatRows=new Set(JSON.parse(await readFile(new URL('../docs/production/batches/lot9-combat.json',import.meta.url),'utf8')).items.map(item=>item.rowId));
 const fighterIds=new Set(ROSTER.map(f=>f.id)),stageIds=new Set(STAGES.map(s=>s.id));
 const expectedProposals=['intro','taunt','winRound1','loseRound1','winMatch','loseMatch','outro','super','finisher'];
 const csv=value=>value?value.split(/\s*,\s*/):[];
@@ -43,9 +44,22 @@ test('ghost proximity documentation keeps its own source and the thirty new mech
   for(const row of ghosts){assert.match(row.canonicalVerification,/Présence passive locale du fantôme SH4/);assert.doesNotMatch(row.canonicalVerification,/Incubator|undefined/);}
   const incubator=plan.moves.find(row=>row.fighterId==='sh1_incubator_018');
   assert.match(incubator.canonicalVerification,/Champ passif local d’Incubator/);
-  const mechanics=plan.moves.filter(row=>/Feu porté par le sol|Prise suspendue par les pieds|Zone de contact propre|Cri avec paralysie sensorielle|Passage aérien physique/.test(row.canonicalVerification));
+  const mechanics=plan.moves.filter(row=>lot9CombatRows.has(row.id)&&/Feu porté par le sol|Prise suspendue par les pieds|Zone de contact propre|Cri avec paralysie sensorielle|Passage aérien physique/.test(row.canonicalVerification));
   assert.equal(mechanics.length,30);
   for(const row of mechanics){assert.match(row.canonicalVerification,/versus/);assert.notEqual(row.productionStatus,'Validé');}
+});
+
+test('new shared mechanics keep the documented limb and distance-specific weapon in their Excel notes',()=>{
+  for(const key of ['neutralSpecial','throw']){
+    const ph=plan.moves.find(row=>row.id===`sh2_red_pyramid_thing_great_knife_029:${key}`);
+    assert.match(ph.canonicalVerification,/main libre/);assert.doesNotMatch(ph.canonicalVerification,/par les pieds/);
+    const lip=plan.moves.find(row=>row.id===`sh2_flesh_lip_027:${key}`);
+    assert.match(lip.canonicalVerification,/par les pieds/);
+  }
+  const nurse=plan.moves.filter(row=>row.fighterId==='sh3_nurse_revolver_044'&&['neutralSpecial','forwardSpecial','backSpecial','super','desperation'].includes(row.key));
+  assert.equal(nurse.length,5);assert.ok(nurse.every(row=>row.canonicalVerification.includes('Choix crosse/tir fixé au début')));
+  const mandarin=plan.moves.find(row=>row.id==='sh2_mandarin_026:neutralSpecial');
+  assert.match(mandarin.canonicalVerification,/cible au sol uniquement/);
 });
 
 test('the plan inventories every current move, finisher, presentation and core pose exactly once',()=>{

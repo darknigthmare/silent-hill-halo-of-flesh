@@ -46,7 +46,7 @@ test('thirty exact authored contexts have separate pose intents, reversible roun
 });
 
 test('adding these presentations does not activate their missing taunts or either finisher',()=>{
-  assert.deepEqual(LORE_CINEMATIC_COVERAGE.presentationOnlyIds,IDS);
+  assert.deepEqual(LORE_CINEMATIC_COVERAGE.presentationOnlyIds.slice(0,IDS.length),IDS,'later batches preserve the exact first five presentation-only identities');
   for(const id of IDS){assert.equal(lorePresentation(actor(id),'taunt').authored,false);for(const type of ['signature','nightmare'])assert.equal(cinematicSummary(`${id}_${type}`).authored,false);}
   assert.equal(LORE_CINEMATIC_COVERAGE.fighterIds.length,99);assert.equal(LORE_CINEMATIC_COVERAGE.recipes.length,79);
 });

@@ -4,7 +4,7 @@
  * declared event deck, not inferred as an additional canonical occurrence.
  * Visual animation NEVER advances or samples gameplay RNG.
  */
-import { stageReferenceEventAllowed, stageReferenceTrackAllowed } from './stage-reference-policy.js';
+import { stageReferenceEventAllowed, stageReferenceTrackAllowed, STAGE_REFERENCE_TRACKS } from './stage-reference-policy.js';
 const TAU = Math.PI * 2;
 const limit = (v,a=0,b=1) => Math.max(a,Math.min(b,v));
 const ease = t => t*t*(3-2*t);
@@ -687,18 +687,170 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
       for(let i=0;i<2;i++){const px=x+Math.sin(t*(i?.00023:.00016)+i)*67,py=y+49+i*37;ctx.fillStyle='rgba(139,155,136,.025)';ctx.beginPath();ctx.ellipse(px,py,105,13,0,0,TAU);ctx.fill();}
       break;
     }
+    case 'hokoraRopeSway':{
+      const bend=Math.sin(t*.00071)*2.1;
+      path(ctx,[[x-66,y-23],[x-31,y-12+bend],[x,y-9+bend],[x+35,y-13+bend],[x+66,y-24]],'#a49872',5);
+      for(let i=0;i<13;i++)line(ctx,x-60+i*10,y-24+Math.sin(i*Math.PI/12)*14+bend,x-57+i*10,y-18+Math.sin(i*Math.PI/12)*14+bend,1,'#5d5941');
+      break;
+    }
+    case 'hokoraShideFlutter':{
+      for(let i=0;i<3;i++){
+        const px=x-41+i*41,py=y-13+(i===1?5:0),a=Math.sin(t*.0011+i)*2;
+        ctx.fillStyle='#bdb9a1';ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px+8,py+2);ctx.lineTo(px+3+a,py+12);ctx.lineTo(px+10+a,py+16);ctx.lineTo(px+1+a,py+28);ctx.lineTo(px-7+a,py+24);ctx.lineTo(px-1+a,py+15);ctx.lineTo(px-6,py+11);ctx.closePath();ctx.fill();
+      }break;
+    }
+    case 'residenceEntryPanel':{
+      const width=w*.19,height=h*.34,top=y-height,a=Math.sin(t*.00093)*.7;
+      rect(ctx,x-width*.5-7,top-7,width+14,height+7,'#4e4736');rect(ctx,x-width*.5,top,width,height,'#777963');
+      for(const side of[-1,1]){
+        const px=x+side*width*.25+a*side;rect(ctx,px-width*.25+4,top+4,width*.5-8,height-8,'rgba(168,166,132,.26)');
+        for(let i=0;i<4;i++)line(ctx,px-width*.25+3,top+height*(i+1)/5,px+width*.25-3,top+height*(i+1)/5,2,'#585441');
+        line(ctx,px,top,px,y,2,'#55503c');
+      }
+      line(ctx,x+a,top,x+a,y,4,'#4e4736');break;
+    }
+    case 'residenceThresholdLight':{
+      const level=.045+pulse*.025;glow(ctx,x,y-63,132,'200,192,140',level);
+      ctx.fillStyle=`rgba(189,179,124,${level*.6})`;ctx.beginPath();ctx.moveTo(x-99,y);ctx.lineTo(x+99,y);ctx.lineTo(x+132,y+41);ctx.lineTo(x-133,y+41);ctx.closePath();ctx.fill();break;
+    }
+    case 'residenceDiningDishes':{
+      const shift=Math.sin(t*.00127)*.65;
+      ctx.fillStyle='#5b5036';ctx.beginPath();ctx.ellipse(x,y-19,124,29,0,0,TAU);ctx.fill();
+      for(const side of[-1,1])line(ctx,x+side*83,y-10,x+side*90,y+21,7,'#3e3a2b');
+      for(const [dx,dy,r]of[[-54,-25,18],[17,-32,15],[66,-14,10]]){
+        ctx.fillStyle='#aaa48b';ctx.beginPath();ctx.ellipse(x+dx+shift,y+dy,r,r*.37,0,0,TAU);ctx.fill();
+        ctx.strokeStyle='#636650';ctx.lineWidth=2;ctx.stroke();
+      }
+      rect(ctx,x-18+shift,y-50,11,25,'#4a5340');ctx.strokeStyle='#9a9e84';ctx.lineWidth=2;ctx.strokeRect(x+43+shift,y-45,17,16);break;
+    }
+    case 'schoolStaffChalkDust':{
+      rect(ctx,x-98,y-79,196,129,'#625d41');rect(ctx,x-91,y-72,182,115,'#24352b');
+      for(let row=0;row<4;row++)line(ctx,x-77,y-53+row*22,x+74,y-53+row*22,1,'rgba(160,169,139,.25)');
+      for(let col=0;col<5;col++)line(ctx,x-77+col*38,y-57,x-77+col*38,y+28,1,'rgba(160,169,139,.2)');
+      rect(ctx,x-98,y+48,196,6,'#938667');
+      for(let i=0;i<17;i++){const px=x-85+(i*41)%170+Math.sin(t*.0008+i)*2,py=y+35+((i*13+t*.005)%39);rect(ctx,px,py,1,1,'rgba(201,207,176,.38)');}break;
+    }
+    case 'residenceForecourtPetals':{
+      for(let i=0;i<24;i++){
+        const px=((i*173+t*.008*(1+i%2))%(w+30))-15,py=h*.12+((i*71+t*.012)% (h*.45));
+        ctx.save();ctx.translate(px,py);ctx.rotate(Math.sin(t*.0006+i)*.7);ctx.fillStyle=i%3?'rgba(141,49,49,.52)':'rgba(170,73,63,.5)';ctx.beginPath();ctx.ellipse(0,0,2+i%3,1.1,0,0,TAU);ctx.fill();ctx.restore();
+      }break;
+    }
+    case 'residenceForecourtFog':{
+      for(let i=0;i<3;i++){const px=x+Math.sin(t*(.00011+i*.000025)+i)*w*.12,py=y+i*h*.075;ctx.fillStyle=`rgba(174,180,164,${.037+i*.012})`;ctx.beginPath();ctx.ellipse(px,py,w*(.43+i*.05),h*(.045+i*.013),0,0,TAU);ctx.fill();}break;
+    }
+    case 'midwichCourtyardIcePane':{
+      const width=w*.19,height=h*.26,top=y-height;rect(ctx,x-width*.5-7,top-7,width+14,height+14,'#4a6361');rect(ctx,x-width*.5,top,width,height,'#1b3035');
+      for(let i=0;i<4;i++)line(ctx,x-width*.5+i*width/3,top,x-width*.5+i*width/3,y,3,'#728b86');line(ctx,x-width*.5,top+height*.5,x+width*.5,top+height*.5,3,'#728b86');
+      const extent=.35+.16*Math.sin(t*.0003);
+      for(let i=0;i<12;i++){const px=x-width*.49+i*width/11,side=i%2?1:-1,py=side===1?top:y,len=13+(i%4)*9+extent*17;path(ctx,[[px,py],[px+5,py+side*len*.6],[px-4,py+side*len]],'rgba(171,208,210,.54)',2);line(ctx,px+4,py+side*len*.6,px+13,py+side*len*.52,1,'rgba(171,208,210,.42)');}break;
+    }
+    case 'midwichCourtyardColdBeam':{
+      const g=ctx.createRadialGradient(x,y-43,3,x,y-43,153);g.addColorStop(0,'rgba(165,196,194,.055)');g.addColorStop(1,'rgba(165,196,194,0)');ctx.fillStyle=g;ctx.fillRect(x-153,y-196,306,306);
+      for(let i=0;i<4;i++){const px=x-73+i*43+Math.sin(t*.0005+i)*7,py=y-66+i*12;ctx.fillStyle='rgba(164,196,193,.045)';ctx.beginPath();ctx.ellipse(px,py,26,7,0,0,TAU);ctx.fill();}break;
+    }
+    case 'alchemillaERColdWall':{
+      const level=.035+pulse*.028;glow(ctx,x,y-27,156,'119,171,191',level);
+      for(let i=0;i<5;i++)line(ctx,x-83+i*39,y-83,x-74+i*39,y+39,1,`rgba(133,180,188,${level*1.7})`);break;
+    }
+    case 'tolucaGumballFrostSign':{
+      rect(ctx,x-84,y-30,168,60,'#314951');ctx.strokeStyle='#839a96';ctx.lineWidth=3;ctx.strokeRect(x-84,y-30,168,60);
+      // Abstract blocks stand for the observed panel: no logo or readable text.
+      for(let i=0;i<4;i++)rect(ctx,x-65+i*36,y-8,23,11,'#9cae9e');
+      const advance=.5+.5*Math.sin(t*.00031);for(let i=0;i<13;i++){const px=x-80+i*13,len=6+(i%4)*3+advance*14;path(ctx,[[px,y-29],[px+4,y-29+len*.6],[px-2,y-29+len]],'rgba(171,207,209,.64)',2);}break;
+    }
     default:break;
   }
   ctx.restore();
 }
 
-/** Returns the exact rendered proposal IDs; unbound proposals remain unproduced. */
-export function drawStageReferenceTracks(ctx,w,h,stage,time,{reducedMotion=false}={}) {
+/**
+ * Pure projection of actual match phases. Sources have no versus rounds: the
+ * settle and restart are explicitly authored compositions, never source events.
+ * During a result, integrate a decaying visual speed, then hold a constant
+ * frame. The next intro holds its upcoming fight frame; that deliberate loop
+ * raccord is local to the versus reset. No mutable render clock is retained.
+ */
+export function stageReferencePresentation(stage,time,matchState=null,{reducedMotion=false,animationsEnabled=true}={}) {
+  const normalTime=animationsEnabled&&!reducedMotion&&Number.isFinite(time)?Math.max(0,time):0;
+  const ordinary={time:normalTime,track:null,strength:0,phase:null};
+  if(!animationsEnabled||!matchState||stage?.reference?.blocked)return ordinary;
+  const track=(stage?.referenceTracks||[]).find(t=>t.trigger==='match-phase'&&stageReferenceTrackAllowed(stage,t));
+  const recipe=STAGE_REFERENCE_TRACKS[track?.key]?.matchRecipe;
+  if(!track||!recipe||!Number.isFinite(matchState.frame)||!Number.isFinite(matchState.phaseTimer))return ordinary;
+  const frame=Math.max(0,matchState.frame),duration=Math.max(1,Number.isFinite(matchState.phaseDuration)?matchState.phaseDuration:145);
+  const timer=limit(matchState.phaseTimer,0,duration),settle=recipe.settleFrames,step=1000/60;
+  let clock=normalTime,strength=0;
+  if(matchState.phase==='roundEnd'){
+    const elapsed=duration-timer,part=Math.min(settle,elapsed);
+    const advance=part-part*part/settle+part*part*part/(3*settle*settle);
+    clock=(Math.max(0,frame-elapsed)+advance)*step;
+    strength=ease(limit(elapsed/settle));
+  }else if(matchState.phase==='matchEnd'&&Number.isFinite(matchState.resultTimer)){
+    clock=(Math.max(0,frame-Math.max(0,matchState.resultTimer)-duration)+settle/3)*step;
+    strength=1;
+  }else if(matchState.phase==='intro'&&matchState.round>1){
+    clock=(frame+timer)*step;strength=band(0,60,timer);
+  }else return ordinary;
+  return {time:reducedMotion?0:clock,track,strength,phase:matchState.phase};
+}
+
+function drawRoundComposition(ctx,w,h,track,strength){
+  if(strength<=0)return;
+  const x=track.anchor.x*w,y=track.anchor.y*h;
+  ctx.save();ctx.globalAlpha*=strength;
+  switch(track.key){
+    case 'hokoraRoundRest':
+      glow(ctx,x,y+12,75,'178,161,104',.14);line(ctx,x-58,y-22,x+58,y-22,2,'rgba(204,198,156,.4)');break;
+    case 'entryRoundRest':
+      rect(ctx,x-98,y-7,196,7,'rgba(190,181,132,.26)');glow(ctx,x,y-27,83,'186,183,130',.1);break;
+    case 'diningRoundRest':
+      for(const[dx,dy,r]of[[-54,-25,18],[17,-32,15]]){ctx.strokeStyle='rgba(200,201,164,.4)';ctx.lineWidth=1.5;ctx.beginPath();ctx.ellipse(x+dx,y+dy,r,r*.37,0,0,TAU);ctx.stroke();}break;
+    case 'staffRoomRoundRest':
+      rect(ctx,x-91,y-72,182,115,'rgba(6,15,10,.24)');line(ctx,x-97,y+49,x+97,y+49,3,'rgba(193,192,155,.45)');break;
+    case 'forecourtRoundRest':
+      ctx.fillStyle='rgba(174,179,159,.1)';ctx.beginPath();ctx.ellipse(x,y-22,w*.43,h*.095,0,0,TAU);ctx.fill();
+      for(let i=0;i<9;i++)rect(ctx,w*(.22+i*.064),h*.57+(i%2)*4,3,1,'rgba(158,68,55,.55)');break;
+    case 'courtyardRoundRest':
+      glow(ctx,x,y-65,129,'134,177,182',.09);for(const side of[-1,1])line(ctx,x+side*w*.095,y-h*.26,x+side*w*.095,y,2,'rgba(181,212,207,.37)');break;
+    case 'erRoundRest':
+      rect(ctx,x-72,y-91,144,8,'rgba(148,183,192,.14)');glow(ctx,x,y-20,90,'98,155,179',.08);break;
+    case 'gumballRoundRest':
+      for(let i=0;i<4;i++)rect(ctx,x-65+i*36,y-8,23,11,`rgba(13,33,42,${limit(strength*4-i)*.72})`);line(ctx,x-84,y+29,x+84,y+29,2,'rgba(169,200,201,.35)');break;
+    case 'fireGrateRoundRest':
+      for(let i=0;i<7;i++)rect(ctx,x-117+i*36,y+30,22,3,'rgba(164,66,35,.3)');glow(ctx,x,y+33,110,'154,59,29',.09);break;
+    case 'woodClearingRoundRest':
+      for(const side of[-1,1]){const px=x+side*w*.31;line(ctx,px,y-94,px+side*41,y-127,5,'rgba(8,17,10,.55)');line(ctx,px,y-97,px-side*27,y-122,3,'rgba(10,21,11,.5)');}break;
+    case 'earthGalleryRoundRest':
+      glow(ctx,x,y+14,126,'137,122,83',.09);for(let i=0;i<3;i++)line(ctx,x-51+i*51,y+23+(i%2)*7,x-39+i*51,y+23+(i%2)*7,2,'rgba(167,151,107,.35)');break;
+    case 'bloodPlatformRoundRest':
+      rect(ctx,x-w*.22,y-4,w*.44,8,'rgba(108,34,42,.21)');line(ctx,x-w*.22,y+3,x+w*.22,y+3,1,'rgba(163,65,68,.27)');break;
+    case 'naveRoundRest':
+      for(let i=0;i<9;i++)glow(ctx,w*(.25+i*.0625),y-15+(i%2)*4,17,'199,156,83',.14);break;
+    case 'alessaRoomRoundRest':
+      line(ctx,x+27,y-151,x+30,y-14,2,'rgba(169,177,146,.23)');rect(ctx,x-66,y-163,132,163,'rgba(9,18,11,.075)');break;
+    case 'clinicalDreamRoundRest':
+      line(ctx,x-75,y-143,x-75,y+2,2,'rgba(165,185,164,.28)');line(ctx,x-75,y+2,x+69,y+2,2,'rgba(165,185,164,.28)');break;
+    case 'policeCellRoundRest':
+      glow(ctx,x,y-84,69,'171,179,124',.13);for(let i=0;i<7;i++)line(ctx,x-69+i*23,y-144,x-69+i*23,y-17,2,'rgba(13,23,12,.2)');break;
+    case 'cellBlockBRoundRest':
+      for(let i=0;i<8;i++)line(ctx,x-72+i*20,y-14,x-39+i*20,y+23,3,'rgba(8,18,12,.35)');break;
+    case 'atriumRoundRest':
+      line(ctx,w*.73,h*.28-17,w*.73,h*.28+22,2,'rgba(177,159,111,.35)');glow(ctx,w*.73,h*.28+18,47,'166,145,92',.07);break;
+    default:break;
+  }
+  ctx.restore();
+}
+
+/** Conditional result rows are counted only when an explicit match phase draws them. */
+export function drawStageReferenceTracks(ctx,w,h,stage,time,{reducedMotion=false,animationsEnabled=true,matchState=null}={}) {
   if(stage?.reference?.blocked)return [];
-  const tracks=(stage?.referenceTracks || []).filter(track=>!track.event&&stageReferenceTrackAllowed(stage,track));
-  const visualTime=reducedMotion?0:time;
-  for(const track of tracks)referenceTrack(ctx,w,h,track,visualTime);
-  return tracks.map(track=>track.id);
+  const tracks=(stage?.referenceTracks || []).filter(track=>!track.event&&track.trigger!=='match-phase'&&stageReferenceTrackAllowed(stage,track));
+  const presentation=stageReferencePresentation(stage,time,matchState,{reducedMotion,animationsEnabled});
+  for(const track of tracks)referenceTrack(ctx,w,h,track,presentation.time);
+  const ids=tracks.map(track=>track.id);
+  if(presentation.track&&presentation.strength>0){drawRoundComposition(ctx,w,h,presentation.track,presentation.strength);ids.push(presentation.track.id);}
+  return ids;
 }
 
 function setpiece(ctx,w,h,cue,elapsed,progress,reduced){

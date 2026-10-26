@@ -25,12 +25,14 @@ const planDir = path.join(root, 'docs/production');
 const stageAnimationBaseline=JSON.parse(await fs.readFile(path.join(planDir,'research/stage-animation-baseline.json'),'utf8')).rows;
 // Keep unresolved delivery limits visible in the exported Excel rows and tasks.
 // These are production notes only; they do not change the game's capabilities.
-const recordedBlocks=(await Promise.all(['art','stages'].map(async workstream=>{
+const recordedDeliveries=(await Promise.all(['lot9','lot10'].flatMap(batch=>['art','stages'].map(async workstream=>{
   try{
-    const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/lot9-${workstream}.json`),'utf8'));
-    return (ledger.items||[]).filter(item=>item.status==='blocked').map(item=>({...item,workstream}));
+    const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/${batch}-${workstream}.json`),'utf8'));
+    return (ledger.items||[]).map(item=>({...item,workstream,batch}));
   }catch(error){if(error.code==='ENOENT')return [];throw error;}
-}))).flat();
+})))).flat();
+const latestDelivery=new Map(recordedDeliveries.map(item=>[`${item.collection}:${item.rowId}`,item]));
+const recordedBlocks=[...latestDelivery.values()].filter(item=>item.status==='blocked');
 const text = value => typeof value === 'string' ? value : value == null ? '' : Array.isArray(value) ? value.map(text).join(' / ') : JSON.stringify(value);
 const genitiveName = name => /^[aeiouyàâéèêëîïôûùüœ]/i.test(name)?`d’${name}`:`de ${name}`;
 const unique = values => [...new Set(values.filter(Boolean))];
@@ -267,9 +269,17 @@ function runtimeMoveReferenceNote(profile,move){
   if(policy.id==='sh3_god_050'&&policy.groundProjectiles?.slots.includes(move.key))
     return 'Feu porté par le sol : trajet bas au lieu d’un tir à hauteur du torse. Hauteur, vitesse et collisions adaptées au versus ; aucune trajectoire ou image originale mesurée.';
   if(policy.suspendedStruggles?.slots.includes(move.key))
-    return `Prise suspendue par les pieds : levée locale et dégagement par ${policy.suspendedStruggles.escapeTransitions} alternances gauche/droite du versus. Libération et fin de manche nettoient la suspension ; aucune animation de lutte originale produite.`;
+    return `Prise suspendue ${policy.id==='sh2_flesh_lip_027'?'par les pieds':policy.id==='sh2_red_pyramid_thing_great_knife_029'?'de la main libre':'du geste documenté'} : levée locale et dégagement par ${policy.suspendedStruggles.escapeTransitions} alternances gauche/droite du versus. ${policy.suspendedStruggles.lockOwner?'Propriétaire immobilisé, rupture sur blessure ou perte de portée. ':''}Libération et fin de manche nettoient la suspension ; aucune animation de lutte originale produite.`;
+  if(policy.groundContacts?.slots.includes(move.key))
+    return 'Contact de tendril depuis le dessous du support : cible au sol uniquement, sans projectile ni attaque aérienne. Bande, portée et dégâts adaptés au plateau du versus ; aucune grille originale ni géométrie mesurée reproduite.';
+  if(policy.distanceWeapon?.slots.includes(move.key))
+    return 'Choix crosse/tir fixé au début du geste depuis la distance entre les corps. La crosse de proximité ne devient pas une balle ; le projectile distant garde sa trajectoire. Seuil, dégâts et durées du versus, sans cadence originale mesurée.';
+  if(policy.id==='origins_straight_jacket_074'&&policy.standingStruggles?.slots.includes(move.key))
+    return 'Emprise des jambes sur le torse, sans bras libres ajoutés. Verrou local du propriétaire et dégagement du versus ; une riposte réelle peut rompre le contact. Aucun plaquage ou étranglement de main emprunté à un autre monstre.';
+  if(policy.id==='origins_straight_jacket_074'&&move.projectile&&['neutralSpecial','super','desperation'].includes(move.key))
+    return 'Projection acide simple à portée et durée bornées dans le versus ; aucun nuage persistant ou effet de corrosion ajouté. Les chiffres du moteur ne mesurent pas ceux d’Origins.';
   if(policy.contactBands?.[move.key])
-    return 'Zone de contact propre au membre documenté, distincte de la grande hauteur du corps fixe. Bande de collision réglée pour le versus, sans géométrie source mesurée.';
+    return 'Zone de contact propre au geste documenté, distincte de la grande hauteur du corps. Bande de collision réglée pour le versus, sans géométrie source mesurée.';
   if(policy.sensoryParalysis?.slots.includes(move.key))
     return 'Cri avec paralysie sensorielle locale : déplacement, attaque, garde et esquive bloqués jusqu’à libération. Durée, portée et dégâts sont des réglages du versus, sans timing original mesuré.';
   if((['sh1_groaner_003','sh1_wormhead_004','sh4_andrew_desalvo_victim_18'].includes(policy.id)&&keys.includes(move.key))||(policy.id==='downpour_screamer_104'&&move.key==='forwardSpecial'))
@@ -363,7 +373,7 @@ function applyRuntimeProgress(plan){
     row.description=(decision.adaptationScope==='versus-scripted'?
       `Pose ${poseNames[row.pose]} proposée pour adapter cette figure de scène au versus ; conserver son anatomie et ses accessoires de cette édition, sans prétendre à une posture de jeu originale. `:
       `Rôle confirmé comme ${roleNames[decision.decision]}. Ne pas forcer une posture de combattant ; relever seulement la présence ou interaction autorisée par la référence. `)+roleDecisionNote(decision);
-    if(row.productionStatus==='Rôle à décider')row.productionStatus='À produire';
+    if(row.productionStatus==='Rôle à décider')row.productionStatus=SPRITES[row.fighterId]?.clips?.[row.pose]?.frames?.length?'En cours':'À produire';
   }
   for(const row of plan.stages){
     const s=stages.get(row.id);row.runtimePolicy=s.referencePolicy;row.referenceTracks=s.referenceTracks;
@@ -469,7 +479,7 @@ export function buildProductionPlan(research) {
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
     updatedAt:'2026-10-26',
-    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes au neuvième lot. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes aux neuvième et dixième lots. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -517,10 +527,10 @@ export function buildProductionPlan(research) {
       const distinct=clip?new Set(clip.frames.map(index=>art.frames[index].pixelSHA256||art.frames[index].sha256)).size:0;
       const ticks=clip?(clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame)).reduce((sum,n)=>sum+n,0):0;
       const weaponPoses=pose==='idle'&&profile.moveset.weaponPhases?.length?runtimeReferenceNote(profile):'';
-      const existing=(distinct>1?`${distinct} images indépendantes, montage candidat de ${ticks} ticks du versus ; timing source et fidélité non certifiés.`:clip?'Image de repos candidate, aucune animation certifiée':'Aucun clip dédié')+(weaponPoses?' '+weaponPoses:'');
+      const existing=(distinct>1?`${distinct} images indépendantes, montage candidat de ${ticks} ticks du versus ; timing source et fidélité non certifiés.`:clip?`${pose==='idle'?'Image de repos':`Pose ${poseNames[pose]} fixe`} candidate, une image indépendante ; aucune animation certifiée`:'Aucun clip dédié')+(weaponPoses?' '+weaponPoses:'');
       plan.poses.push({id:`${f.id}:pose:${pose}`,fighterId:f.id,name:f.name,source:f.source,edition:referenceEdition(f,ref),pose,label:poseNames[pose],description:plannedPose(f,ref,pose),referenceIds:rowRefs(ref.referenceIds),status:'Adaptation à valider sur références',existing,
         spriteFormat:'Une image PNG transparente indépendante par pose/image. Corps et accessoires entièrement visibles.',
-        qa:'Appuis, silhouette, proportions, membres, orientation, arme, contacts au sol. Pas de faux clip créé par duplication.',productionStatus:locked?'À référencer':noncombat?'Rôle à décider':distinct>1||(weaponPoses&&art?.frames.length>1)?'En cours':'À produire'});
+        qa:'Appuis, silhouette, proportions, membres, orientation, arme, contacts au sol. Pas de faux clip créé par duplication.',productionStatus:locked?'À référencer':noncombat?'Rôle à décider':distinct>0||(weaponPoses&&art?.frames.length>1)?'En cours':'À produire'});
     }
     if(locked||noncombat)task(`${f.id}:role`,f.id,'Combattant','P0','Confirmer identité et rôle',ref.identityNote,'Œuvre, forme, statut de combat et comportement vérifiés avant réalisation des attaques.',ref.referenceIds);
     task(`${f.id}:art`,f.id,'Combattant','P1','Produire et vérifier les PNG',artState,'Images indépendantes, anatomie validée sur cette version et clips composés de poses distinctes.',ref.referenceIds);
@@ -553,8 +563,8 @@ export function buildProductionPlan(research) {
     const row=plan[collection].find(row=>row.id===block.rowId);
     if(block.collection!==collection||!row||(row.fighterId||row.stageId)!==block.entityId||!block.reason?.trim())
       throw Error('Invalid recorded production block: '+block.rowId);
-    if(block.workstream==='art'&&SPRITES[block.entityId])continue;
-    const note=`Blocage de production du lot 9 (${block.rowId}) : ${block.reason} ${block.limits}`;
+    if(block.workstream==='art'&&SPRITES[block.entityId]?.clips?.[row.pose])continue;
+    const note=`Blocage de production du lot ${block.batch.slice(3)} (${block.rowId}) : ${block.reason} ${block.limits}`;
     row.existing+=' '+note;
     const task=plan.tasks.find(task=>task.id===block.entityId+(block.workstream==='art'?':art':':stage'));
     if(task)task.reason+=' '+note;

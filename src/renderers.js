@@ -1,6 +1,6 @@
 import { hashCode, seededRandom, clamp } from './shared.js';
 import { drawStageArchitecture, stageSpace } from './stage-architecture.js';
-import { drawStageCinematics, drawStageReferenceTracks } from './stage-cinematics.js';
+import { drawStageCinematics, drawStageReferenceTracks, stageReferencePresentation } from './stage-cinematics.js';
 import { stageReferenceEventAllowed, stageAnimationConflictsWithHazard } from './stage-reference-policy.js';
 import {drawStageBitmaps} from './stage-bitmaps.js';
 
@@ -262,8 +262,10 @@ function drawStageAnimations(ctx,w,h,stage,time,otherworld=0,director=null,hazar
   ctx.restore();
 }
 
-export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=false,otherworld=0,radio=0,animationsEnabled=true,director=null,terrain=null,shift=null,reducedMotion=false,hazards=[]}={}){
-  time = animationsEnabled && !reducedMotion ? time : 0;
+export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=false,otherworld=0,radio=0,animationsEnabled=true,director=null,terrain=null,shift=null,reducedMotion=false,hazards=[],matchState=null}={}){
+  // Read only engine frames: repeated renders, pause and gallery wall clocks
+  // cannot advance a result composition or consume gameplay randomness.
+  time = stageReferencePresentation(stage,time,matchState,{reducedMotion,animationsEnabled}).time;
   const policy=stage?.referencePolicy;
   if(policy?.worldState==='fixed-normal'||policy?.worldState==='unresolved')otherworld=0;
   else if(policy?.worldState==='fixed-altered')otherworld=1;
@@ -290,7 +292,7 @@ export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=fals
   const tint=terrainTints[activeTerrain.id]||'67,68,58';const floor=ctx.createLinearGradient(0,horizon,0,h);floor.addColorStop(0,`rgba(${tint},.28)`);floor.addColorStop(1,'rgba(4,5,4,.98)');ctx.fillStyle=floor;ctx.fillRect(0,horizon,w,h-horizon);
   ctx.strokeStyle='rgba(160,156,134,.08)';ctx.lineWidth=2;for(let y=horizon;y<h;y+=26+(y-horizon)*.05){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}for(let x=0;x<=w;x+=80){ctx.beginPath();ctx.moveTo(w*.5,horizon);ctx.lineTo(x,h);ctx.stroke();}
   drawProps(ctx,w,h,stage||{},time);
-  drawStageReferenceTracks(ctx,w,h,stage||{},time,{reducedMotion});
+  drawStageReferenceTracks(ctx,w,h,stage||{},time,{reducedMotion,animationsEnabled,matchState});
   if(animationsEnabled){
     drawStageAnimations(ctx,w,h,stage||{},time,otherworld,director,hazards);
     drawStageCinematics(ctx,w,h,stage||{},director,{reducedMotion,hazards});

@@ -88,6 +88,9 @@ test('idle simulation and heavy-impact flags cannot turn decorative SH4 props in
 
 test('normal Alchemilla waiting room retains two masked prototypes but cannot fire the separate elevator light',()=>{
  const waiting=stage('alchemilla'),light=waiting.referenceTracks.find(t=>t.key==='lampReply');
+ // A waiting-room transport bench is not a ward bed; its naked walls cannot
+ // authorize a curtain-dependent actor finisher through inherited family props.
+ for(const prop of['ward','curtains','monitor','beds']){assert.ok(!waiting.props.includes(prop));assert.ok(!waiting.layers.includes(prop));}
  assert.equal(waiting.referenceTracks.length,2);assert.ok(light);assert.equal(light.event,'referenceLightReply');assert.equal(light.eventEnabled,false);
  assert.match(light.limits,/autre sous-lieu/);assert.ok(!waiting.director.events.includes('referenceLightReply'));assert.ok(!waiting.interactions.some(i=>i.event==='referenceLightReply'));
  assert.ok(!waiting.referencePolicy.renderedProposalIds.includes(light.id));assert.ok(waiting.referencePolicy.pendingProposalIds.includes(light.id));

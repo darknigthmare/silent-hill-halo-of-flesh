@@ -48,7 +48,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Mandarin | stationary-boss | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Flesh Lip | stationary-boss | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — BASEMENT |
 | Abstract Daddy | combatant | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE LABYRINTH |
-| Red Pyramid Thing — Great Knife | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
+| Red Pyramid Thing — Great Knife | combatant | `juggernaut` | ARMURE DE ROUILLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
 | Red Pyramid Thing — Spear | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Twin Pyramid Heads | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Eddie Dombrowski | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | TOLUCA PRISON |
@@ -130,7 +130,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Faceless Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Carrion | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
 | Remnant | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
@@ -172,11 +172,11 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Raw Shock — Base | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Feminine | scripted-encounter | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Diseased | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Abstract | scripted-encounter | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
-| Raw Shock — Atrophied | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | FROZEN SCHOOL |
+| Raw Shock — Base | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | MIDWICH GELÉ — COUR PAPARAZZI |
+| Raw Shock — Feminine | scripted-encounter | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | MIDWICH GELÉ — COUR PAPARAZZI |
+| Raw Shock — Diseased | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | MIDWICH GELÉ — COUR PAPARAZZI |
+| Raw Shock — Abstract | scripted-encounter | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | MIDWICH GELÉ — COUR PAPARAZZI |
+| Raw Shock — Atrophied | scripted-encounter | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | MIDWICH GELÉ — COUR PAPARAZZI |
 
 ## SILENT HILL: DOWNPOUR (2012)
 
@@ -288,19 +288,19 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Irohihi | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA — MAIN STREET |
 | Corruptor | environmental-obstacle | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | EBISUGAOKA — MAIN STREET |
 | Hatcher | environmental-obstacle | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | EBISUGAOKA — MAIN STREET |
-| Kamugara | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
-| Harai Katashiro | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
+| Kamugara | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
+| Harai Katashiro | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
 | Oi-omoi | multi-body | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA — MAIN STREET |
-| Dark Hatcher | environmental-obstacle | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | DARK SHRINE |
+| Dark Hatcher | environmental-obstacle | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
 | Drum Monster | combatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FESTIVAL SQUARE |
-| Sakuko-Like Entity | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA MIDDLE SCHOOL |
-| Rinko-Like Entity | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA MIDDLE SCHOOL |
-| Hinako’s Father | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | HINAKO’S HOME |
-| Hinako’s Mother | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | HINAKO’S HOME |
-| Shiromuku | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
-| Tsukumogami | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
-| Shichibi | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
-| Kyubi | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE |
+| Sakuko-Like Entity | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL |
+| Rinko-Like Entity | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL |
+| Hinako’s Father | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE |
+| Hinako’s Mother | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE |
+| Shiromuku | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
+| Tsukumogami | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
+| Shichibi | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
+| Kyubi | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DARK SHRINE — PARVIS DE SHRINE VAULT |
 
 ## SILENT HILL — FILM UNIVERSE (2006)
 

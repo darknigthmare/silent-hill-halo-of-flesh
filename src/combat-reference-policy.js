@@ -30,7 +30,7 @@ const PHASE_SUPER_LIMITS = Object.freeze({
 const FIREARM_SHOT_SLOTS = Object.freeze({
   sh1_monster_cybil_017:['neutralSpecial'],
   sh2_eddie_dombrowski_032:['neutralSpecial','downSpecial','super','desperation'],
-  sh3_nurse_revolver_044:['neutralSpecial','super','desperation'],
+  sh3_nurse_revolver_044:['neutralSpecial','forwardSpecial','backSpecial','super','desperation'],
   sh3_memory_of_alessa_049:['neutralSpecial','super','desperation'],
   sh4_man_with_the_coat_067:['neutralSpecial','super','desperation'],
   sh4_walter_sullivan_072:['neutralSpecial','super','desperation'],
@@ -263,8 +263,42 @@ define('sh2_maria_final_manifestation_033 sh2_mary_final_manifestation_034', {mo
   super:shot('Dernier appel — essaim', {projectileScale:1.4, projectileSpeed:8,effectOverride:'bind'}),
   desperation:shot('Ultime essaim', {projectileScale:1.4, projectileSpeed:8,effectOverride:'bind'})
 }});
-define('sh2_mandarin_026', {moves:{...weaponKit('Appendice sous la grille'),
-  neutralSpecial:contact('Frappe à travers la grille'), super:contact('Sous les pieds', {hits:2})}});
+const FLOOR_TENDRIL_SLOTS=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+// SH2 original enemies guide: arm tendrils emerge through the mesh after the
+// Mandarin climbs under James. This fixed versus actor uses a bounded floor
+// contact, not a free projectile. Height, light damage, jump counterplay and
+// five inputs are authored; no original tendril animation or geometry measured.
+define('sh2_mandarin_026', {
+  groundContacts:{slots:FLOOR_TENDRIL_SLOTS,sourceTimingMeasured:false},
+  contactBands:Object.fromEntries(FLOOR_TENDRIL_SLOTS.map(key=>[key,{footOffset:18,height:70,sourceTimingMeasured:false}])),
+  moves:{...weaponKit('Appendice sous la grille'),
+    neutralSpecial:contact('Tendril — poussée sous les pieds',{reach:130,level:'low',hits:1,damageScale:.45,knockdown:false,launch:0}),
+    forwardSpecial:contact('Tendril — allonge sous la grille',{reach:155,level:'low',hits:1,damageScale:.45,travel:0,knockdown:false,launch:0}),
+    downSpecial:contact('Tendril — contact bas localisé',{reach:140,level:'low',hits:1,damageScale:.45,knockdown:false,launch:0}),
+    super:contact('Tendril — pression sous le support',{reach:175,level:'low',hits:1,damageScale:.6,travel:0,knockdown:false,launch:0}),
+    desperation:contact('Tendril — dernier contact du support',{reach:190,level:'low',hits:1,damageScale:.6,travel:0,knockdown:false,launch:0,unblockable:false})
+  }
+});
+// The Great Knife encounter documents horizontal cuts, an overhead execution
+// and a free-hand grapple which lifts and strangles James. The lift, six arrow
+// transitions and the owner's voluntary lock/range/interruption rules below
+// are versus constraints; the original unkillable/timed boss is not recreated.
+define('sh2_red_pyramid_thing_great_knife_029', {
+  suspendedStruggles:{slots:['neutralSpecial','throw'],liftHeight:60,escapeTransitions:6,
+    lockOwner:true,breakOnOwnerHit:true,maxOwnerDistance:180,ownerCue:'EMPRISE DE LA MAIN LIBRE · VERSUS',sourceTimingMeasured:false},
+  contactBands:{forwardHeavy:{footOffset:120,height:90,sourceTimingMeasured:false},
+    super:{footOffset:120,height:180,sourceTimingMeasured:false},
+    desperation:{footOffset:120,height:180,sourceTimingMeasured:false}},
+  moves:{
+    forwardHeavy:contact('Grand Couteau — taille horizontale bornée',{reach:190,level:'mid',hits:1,travel:1.6,armorFrames:0}),
+    neutralSpecial:contact('Main libre — levée puis étranglement',{level:'throw',effectOverride:'bind',reach:90,hits:1,
+      travel:0,armorFrames:0,invulnFrames:0,unblockable:false,launch:0,knockdown:false,hardKnockdown:false}),
+    throw:contact('Main libre — emprise soulevée',{effectOverride:'bind',hits:1,launch:0,knockdown:false,hardKnockdown:false}),
+    super:contact('Grand Couteau — abattement rapproché',{reach:155,level:'overhead',hits:1,travel:0,hardKnockdown:true,armorFrames:0}),
+    desperation:contact('Grand Couteau — dernier abattement rapproché',{reach:170,level:'overhead',hits:1,travel:0,
+      hardKnockdown:true,armorFrames:0,unblockable:false})
+  }
+});
 // SH2 original boss guide: a forward thrusting kick and a foot grip which lifts
 // James and strangles him; movement/shoulder inputs speed release. The single
 // suspended cage, 72px lift, foot-contact band and six directional transitions
@@ -376,8 +410,17 @@ define('sh3_slurper_042', {
     desperation:contact('Dernière emprise rampante',{level:'throw',effectOverride:'bind',hits:1,reach:110})
   }
 });
-define('sh3_nurse_revolver_044', {moves:{...weaponKit('Crosse du revolver'),
-  neutralSpecial:shot('Tir de revolver'), super:shot('Ligne de soin — tir'), desperation:shot('Dernier tir de la Nurse')
+// SH3's own revolver Nurses fire at moderate distance and pistol-whip nearby.
+// The 45px body-gap boundary and close strike are authored versus tuning. The
+// choice is latched once per attack; an in-flight bullet never becomes a club.
+define('sh3_nurse_revolver_044', {
+  distanceWeapon:{slots:['neutralSpecial','forwardSpecial','backSpecial','super','desperation'],
+    closeBodyGap:45,closeReach:100,closeActive:6,closeDamageScale:.72,sourceTimingMeasured:false},
+  moves:{...weaponKit('Crosse du revolver'),
+  neutralSpecial:shot('Revolver — tir ou crosse au contact'),
+  forwardSpecial:shot('Revolver — pression ou crosse',{travel:0,invulnFrames:0}),
+  backSpecial:shot('Revolver — réponse ou crosse',{travel:0,invulnFrames:0}),
+  super:shot('Ligne de soin — tir ou crosse'),desperation:shot('Dernière réponse — tir ou crosse')
 }});
 // SH3 boss guide (Andrew Haffenden): the ground pound "does no damage but
 // staggers Heather". https://www.silenthillmemories.net/sh3/bosses_en.htm
@@ -565,9 +608,38 @@ define('sh4_man_with_the_coat_067 sh4_walter_sullivan_072', {moves:{
 define('origins_faceless_nurse', {moves:weaponKit('Seringue')});
 define('origins_straight_jacket_074', {moves:{
   ...weaponKit('Heurt du corps entravé'),
-  throw:contact('Saisie des jambes'), neutralSpecial:shot('Projection corrosive'),
-  super:shot('Pression corrosive'), desperation:shot('Dernière projection corrosive')
-}});
+  throw:contact('Jambes — emprise autour du torse',{effectOverride:'bind',hits:1,launch:0,knockdown:false}),
+  forwardSpecial:contact('Approche puis emprise des jambes',{level:'throw',effectOverride:'bind',reach:90,travel:1.8,hits:1}),
+  neutralSpecial:shot('Projection acide à portée bornée',{reach:340,projectileSpeed:8,projectileLife:24}),
+  super:shot('Pression acide à portée bornée',{reach:380,projectileSpeed:8,projectileLife:28}),
+  desperation:shot('Dernière projection acide bornée',{reach:400,projectileSpeed:8.4,projectileLife:30})
+},standingStruggles:{slots:['forwardSpecial','throw'],escapeTransitions:6,lockOwner:true,breakOnOwnerHit:true,
+  maxOwnerDistance:170,ownerCue:'EMPRISE DES JAMBES · VERSUS',sourceTimingMeasured:false}});
+// Origins describes Carrion's pursuit and bodily lunge, not a canine bite or
+// a projectile. These five low body passes have authored reach/knockdown/steps.
+const ORIGINS_LOW_SLOTS=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+define('origins_carrion_076',{
+  contactBands:Object.fromEntries(ORIGINS_LOW_SLOTS.map(key=>[key,{footOffset:55,height:110,sourceTimingMeasured:false}])),
+  moves:{
+    neutralSpecial:contact('Carrion — ruée du corps',{reach:110,travel:3,verticalTravel:0,level:'low',hits:1,knockdown:true}),
+    forwardSpecial:contact('Carrion — poursuite puis percussion',{reach:130,travel:4.3,verticalTravel:0,level:'low',hits:1,knockdown:true}),
+    downSpecial:contact('Carrion — percussion basse',{reach:125,travel:2.2,verticalTravel:0,level:'low',hits:1,knockdown:true}),
+    super:contact('Carrion — longue percussion du corps',{reach:145,travel:3.9,verticalTravel:0,level:'low',hits:1,knockdown:true}),
+    desperation:contact('Carrion — dernier assaut corporel',{reach:155,travel:4.6,verticalTravel:0,level:'low',hits:1,knockdown:true,unblockable:false})
+  }
+});
+// Caliban's contorted limbs stomp toward Travis in its own Origins entry.
+// Bounded foot bands and physical steps do not infer a shock wave or blast.
+define('origins_caliban_079',{
+  contactBands:Object.fromEntries(ORIGINS_LOW_SLOTS.map(key=>[key,{footOffset:30,height:84,sourceTimingMeasured:false}])),
+  moves:{
+    neutralSpecial:contact('Caliban — appui piétinant',{reach:140,travel:0,level:'low',hits:1,knockdown:true}),
+    forwardSpecial:contact('Caliban — pas puis piétinement',{reach:160,travel:2.4,level:'low',hits:1,knockdown:true}),
+    downSpecial:contact('Caliban — écrasement localisé',{reach:150,travel:0,level:'low',hits:1,knockdown:true}),
+    super:contact('Caliban — deux appuis piétinants',{reach:175,travel:1.2,level:'low',hits:2,hitInterval:8,knockdown:true}),
+    desperation:contact('Caliban — derniers appuis piétinants',{reach:185,travel:1.5,level:'low',hits:2,hitInterval:8,knockdown:true,unblockable:false})
+  }
+});
 define('origins_two_back_080', {moves:{neutralSpecial:shot('Projection à distance'),
   super:contact('Saisie des deux corps solidaires', {level:'throw', hits:1})}});
 define('origins_memory_of_helen_grady_082', {moves:{...weaponKit('Roue dentée'),
@@ -851,6 +923,8 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     ...(recipe.suspendedStruggles?{suspendedStruggles:{...recipe.suspendedStruggles,slots:[...recipe.suspendedStruggles.slots]}}:{}),
     ...(recipe.sensoryParalysis?{sensoryParalysis:{...recipe.sensoryParalysis,slots:[...recipe.sensoryParalysis.slots]}}:{}),
     ...(recipe.contactBands?{contactBands:structuredClone(recipe.contactBands)}:{}),
+    ...(recipe.groundContacts?{groundContacts:{...recipe.groundContacts,slots:[...recipe.groundContacts.slots]}}:{}),
+    ...(recipe.distanceWeapon?{distanceWeapon:{...recipe.distanceWeapon,slots:[...recipe.distanceWeapon.slots]}}:{}),
     ...(recipe.whiffExposure?{whiffExposure:{...recipe.whiffExposure,slots:[...recipe.whiffExposure.slots]}}:{}),
     ...(recipe.groundProjectiles?{groundProjectiles:{...recipe.groundProjectiles,slots:[...recipe.groundProjectiles.slots]}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
@@ -957,6 +1031,18 @@ export function sourceContactBand(fighter,move) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES),band=ref&&RECIPES[ref.id]?.contactBands?.[move?.key];
   return band&&move?.enabled!==false&&!move.projectile&&!move.trap&&!move.aura&&move.level!=='throw'
     ?{...band}:null;
+}
+
+export function sourceGroundContact(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),ground=ref&&RECIPES[ref.id]?.groundContacts;
+  return Boolean(ground&&move?.enabled!==false&&ground.slots.includes(move?.key)&&
+    !move.projectile&&!move.trap&&!move.aura&&move.level!=='throw'&&move.category!=='throw');
+}
+
+export function sourceDistanceWeapon(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),rule=ref&&RECIPES[ref.id]?.distanceWeapon;
+  return rule&&move?.enabled!==false&&rule.slots.includes(move?.key)&&move.projectile&&!move.trap&&!move.aura
+    ?{...rule,slots:[...rule.slots]}:null;
 }
 
 export function sourceDownedFirearmProtection(fighter) {

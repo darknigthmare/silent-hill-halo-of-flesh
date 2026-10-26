@@ -42,9 +42,14 @@ export function sampleSpriteClip(art,state={}){
  if(state.weaponContext!==undefined&&(!validSpriteClipKey(idle,art)||!Object.prototype.hasOwnProperty.call(art.clips||{},idle)||!art.clips[idle]?.frames?.length))return null;
  const validContext=!requested.includes('@')||validSpriteClipKey(requested,art);
  const strictContext=Boolean(presentation?.contextId||requested.includes('@'))&&['finisher','finished'].includes(requestedPose);
+ // A genuine final KO may show its dedicated core image while its composed
+ // loss presentation is still missing. TIME, reversible rounds and finishers
+ // retain their own image contracts and never acquire a death pose this way.
+ const finalKo=state.ko===true&&state.airborne===false&&presentation?.key==='loseMatch'&&validContext&&
+  (!presentation.contextId||presentation.contextId===`${art.fighterId}:loseMatch`)&&has('ko');
  // This SH3 contract currently provides four weapon idles only. Generic attack,
  // KO or presentation art has no weapon identity and cannot dress another phase.
- const pose=state.weaponContext!==undefined?idle:validContext&&has(requested)?requested:!strictContext&&requestedPose!=='idle'&&has(requestedPose)?requestedPose:idle;
+ const pose=state.weaponContext!==undefined?idle:validContext&&has(requested)?requested:!strictContext&&requestedPose!=='idle'&&has(requestedPose)?requestedPose:finalKo?'ko':idle;
  const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
  if(!clip?.frames?.length)return null;
  const durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame||1);
@@ -61,6 +66,6 @@ export function sampleSpriteClip(art,state={}){
  let index=0,elapsed=0;while(index<durations.length-1&&tick>=elapsed+durations[index])elapsed+=durations[index++];
  const frameIndex=clip.frames[index],frame=art.frames[frameIndex];
  return frame?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
-  fallbackReason:pose===requested?null:state.weaponContext!==undefined&&pose===idle?'missing-weapon-pose':strictContext?'missing-contextual-finisher':pose===requestedPose?'generic-presentation':'missing-presentation',
+  fallbackReason:pose===requested?null:state.weaponContext!==undefined&&pose===idle?'missing-weapon-pose':strictContext?'missing-contextual-finisher':pose==='ko'&&finalKo?'core-ko-final-defeat':pose===requestedPose?'generic-presentation':'missing-presentation',
   frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
 }

@@ -146,23 +146,23 @@ test('unknown, blocked, fixed-body, airborne and missing-prop pairings do not ac
 });
 
 test('the nurse curtain edit requires an actual curtain in both signature and nightmare versions', () => {
-  const noCurtain = stage('nightmare_hospital_sm'), withCurtain = stage('alchemilla');
-  assert.equal(noCurtain.reference.blocked, false);
-  assert.ok(noCurtain.props.includes('beds'));
-  assert.ok(![...noCurtain.props, ...noCurtain.layers].includes('curtains'));
-  assert.ok(withCurtain.props.includes('curtains'));
+  const waitingRoom = stage('alchemilla'), emergencyRoom = stage('nightmare_hospital_sm');
+  // Prepared ward fixtures exercise the prop contract. Neither delivered room
+  // supplies this curtain; the SH1 bitmap depicts a waiting room, not a ward.
+  const withCurtain = { ...waitingRoom, props: ['beds', 'curtains'], layers: ['ward', 'curtains'] };
+  const wardOnly = { ...withCurtain, props: ['beds'], layers: ['ward'] };
   for (const type of ['signature', 'nightmare']) {
-    const refused = planFor(NURSE, type, { stage: noCurtain });
-    assert.equal(refused.allowed, false, `${type}: a bed is not a curtain`);
-    assert.match(refused.reason, /absent du lieu/);
+    for (const noCurtain of [waitingRoom, emergencyRoom, wardOnly]) {
+      assert.equal(noCurtain.reference.blocked, false);
+      assert.ok(![...noCurtain.props, ...noCurtain.layers].includes('curtains'));
+      const refused = planFor(NURSE, type, { stage: noCurtain });
+      assert.equal(refused.allowed, false, `${type}: a room or bed is not a curtain`);
+      assert.match(refused.reason, /absent du lieu/);
+    }
     const allowed = planFor(NURSE, type, { stage: withCurtain });
-    assert.equal(allowed.allowed, true, `${type}: Alchemilla retains its real curtain`);
+    assert.equal(allowed.allowed, true, `${type}: explicitly prepared curtain fixture`);
     assert.equal(allowed.recipeId, 'pipeCurtain');
     assert.ok(allowed.steps.some(beat => beat.label === 'RIDEAU FERME'));
-    // Removing just the prop retains Alchemilla's ward and beds. Neither can
-    // stand in for the missing foreground curtain.
-    const wardOnly = { ...withCurtain, props: withCurtain.props.filter(p => p !== 'curtains'), layers: withCurtain.layers.filter(p => p !== 'curtains') };
-    assert.equal(planFor(NURSE, type, { stage: wardOnly }).allowed, false);
   }
 });
 

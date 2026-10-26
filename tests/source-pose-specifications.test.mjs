@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {ROSTER} from '../src/data.js';
 import {combineResearch,buildProductionPlan,CORE_POSES} from '../scripts/build-production-plan.mjs';
-import {SOURCE_POSE_SPECIFICATIONS,sourcePoseSpecification} from '../scripts/source-pose-specifications.mjs';
+import {LOT9_SOURCE_POSE_SPECIFICATIONS as SOURCE_POSE_SPECIFICATIONS,sourcePoseSpecification} from '../scripts/source-pose-specifications.mjs';
 
 const research=combineResearch(await Promise.all(['classic','extended'].map(async name=>
   JSON.parse(await readFile(new URL(`../docs/production/research/${name}.json`,import.meta.url))))));

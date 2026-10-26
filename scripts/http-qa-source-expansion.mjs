@@ -7,8 +7,8 @@ import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
-const out=resolve(root,'tests/http-source-expansion');
-const source=process.env.QA_SOURCE_TREE==='1',port='4193';
+const out=resolve(process.env.QA_SOURCE_OUTPUT||resolve(root,'tests/http-source-expansion'));
+const source=process.env.QA_SOURCE_TREE==='1',port=process.env.QA_SOURCE_PORT||'4193';
 const base=process.env.QA_BASE_URL||`http://127.0.0.1:${port}`;
 const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',
  checks:[],errors:[],captures:[],scenes:{},fixtures:[
@@ -22,7 +22,7 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Insane Cancer and Slurper charges use real directional keyboard commands. Ghost proximity is checked with idle casters, and Jasper damage is compared with the common drain. Radii, pulse intervals, health conversion and bind are versus tuning, not measured source-game values.',
   'Split Head is angered with real keyboard gunfire, not a replaced health field. Its 70% transition, 2x frontal active-mouth multiplier and readable HUD cue are versus rules. No original mouth animation or instant-kill swallow is claimed.',
   'Hummer knockdown, Wall Man claws and both Sniffer holds use real keyboard attacks. Sakura Head and the five Raw Shock variants are checked through the normal refused launch and source dossiers; their pursuit encounters are not turned into invented duels.',
-  'Hummer height is measured from collision and the real PNG drawImage arguments/matrix before, during and after knockdown. The same bitmap is lowered without rotating or fabricating a pose; source knockdown/KO clips remain absent. Prepared guard-counter windows test the real Split Head heavy-key gate.',
+  'Hummer height is measured from collision and the real PNG drawImage arguments/matrix before, during and after knockdown. The same bitmap is lowered without rotating or fabricating a pose; source knockdown remains absent; the new single-image KO candidate is separately reviewed without certification. Prepared guard-counter windows test the real Split Head heavy-key gate.',
   'Closer and Twin Victim arm rotations are bounded two-sided physical contacts at the normal strike height, not an aura. Prepared facing allows the real keyboard command to prove a rear hit and outward knockback. The original 3D arc, animations, frame timings and Church multipliers are not measured.',
   'Double Head, Romper, Twin Victim, Lurker and Feral pursuit inputs physically leave the floor. Close holds use the versus bind instead of original struggle inputs. Homecoming Bogeyman remains a documented cutscene figure and is refused as a duel, independently of its other works.',
   'The six source leg/bite holds keep their victim on the floor instead of inheriting the generic throw launch. A real second-player jump during their startup verifies refusal while airborne; gamepad bindings are separately exercised with the standard virtual-pad Node harness, not certified on physical hardware.',
@@ -34,6 +34,9 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Flesh Lip is one supported cage with a temporary authored lift, not the original three-cage fight. Directional escape, fall and terminal cleanup do not create original pose frames. God fire stays floor-bound without claiming its original three-dimensional branching or upright/lowered posture cycle. Andrew rolls move physically without generating an original rotation clip.',
   'Screamer cries create source-owned temporary action paralysis at bounded distance. Their HP damage and timer are versus choices; neither damage-free original audio nor a rear teleport is inferred. Original held/falling, leap, recoil and scream animations remain unmeasured.',
   'Lot9 terminal fixtures prepare one HP, one near-expired match clock or an ordinary airborne target. Native attacks still cause the KO and the round transition. A second-player cage grip followed by a real directional foot kick uses the naturally expiring bind timer; it checks that expiry never strands a grounded flag above the floor.',
+  'Lot10 adds thirty distinct native command rows. Origins body charges and stomps use bounded low contact, Mandarin attacks through its fixed local support, and Great Knife free-hand grips lift with an exact-owner movement lock and bounded release rules. These are versus mechanics and collider choices, not original pose frames or measured source timing.',
+  'Origins acid lifetime is bounded rather than full-arena. The SH3 revolver Nurse chooses a close pistol-whip or a distant shot once at attack start. Earlier genuine counter-projectile scenes now use Eddie where the new close Nurse would correctly choose her crosse; source-owned hair and whiff exposure rules are unchanged.',
+  'The optional output directory and local server port isolate supplemental source validation from the final dist suite; normal CI defaults are unchanged.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -69,7 +72,8 @@ async function launch(page,p1,p2='sh2_bubble_head_nurse_024'){
   q.scene=()=>({phase:e.phase,frame:e.frame,paused:e.paused,emitted:q.emitted,projectiles:e.projectiles.length,hummerDraw:q.hummerDraw||null,
    projectileStates:e.projectiles.map(p=>({ownerId:p.owner.data.id,ownerIndex:p.owner.index,key:p.move.key,x:p.x,y:p.y,radius:p.radius,groundY:p.groundY??null,vy:p.vy,gravity:p.gravity,firearm:isFirearmProjectile(p.owner.data,p.move)})),
    actors:e.actors.map(a=>({id:a.data.id,source:a.data.source,kind:a.data.visual.kind,x:a.x,y:a.y,vx:a.vx,vy:a.vy,grounded:a.grounded,facing:a.facing,health:a.health,guard:a.guard,meter:a.meter,combo:a.combo,
-    damage:a.stats.damageDealt,damageTaken:a.stats.damageTaken,status:a.status?{...a.status}:null,dodge:a.dodgeFrames,
+    damage:a.stats.damageDealt,damageTaken:a.stats.damageTaken,status:a.status?{...a.status}:null,dodge:a.dodgeFrames,blocking:a.blocking,
+    weaponContext:a.attack?.weaponContext||null,ownsGrip:!!e.ownedSourceGrip(a),
     move:a.attack?.key||a.lastMoveKey,attackFrame:a.attack?.frame??null,attackHits:a.attack?.hitCount??null,attackHit:a.attack?.hit??null,
     attackTiming:a.attack?{startup:a.attack.move.startup,active:a.attack.move.active,recovery:a.attack.move.recovery}:null,
     attackShape:a.attack?{aura:a.attack.move.aura,projectile:a.attack.move.projectile,invulnFrames:a.attack.move.invulnFrames}:null,hurt:a.hurtFrames,knockdown:a.knockdownTimer,
@@ -393,7 +397,7 @@ try{
   const recovered=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];for(let n=0;n<120&&a.attack;n++)q.advance(1);return q.scene();});
   check(id+': exposure closes with the actual attack instead of a detached timer',recovered.actors[0].attackFrame===null&&recovered.actors[0].sourceCue===null&&recovered.actors[1].health===missed.before,recovered);
   for(const rear of [false,true]){
-   await launch(page,id,'sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
+   await launch(page,id,'sh2_eddie_dombrowski_032');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(300,1100));
    await page.keyboard.down('ArrowRight');await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
    await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<120&&!e.sourceCombatCue(e.actors[0]);n++)q.advance(1);});
    await page.evaluate(rear=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];q.positionActor(1,a.x+(rear?-170:170),rear?1:-1);},rear);
@@ -426,7 +430,7 @@ try{
  check('first-form Amnion missed front swing never borrows second-form body exposure or a leap',!hangingMiss.cue&&hangingMiss.highest===594&&hangingMiss.scene.actors[0].move==='forwardSpecial',hangingMiss);
  await capture(page,'22-amnion-first-form-grounded');
 
- await launch(page,'sh4_cynthia_velasquez_victim_16','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,590));await page.keyboard.press('i');
+ await launch(page,'sh4_cynthia_velasquez_victim_16','sh2_eddie_dombrowski_032');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,590));await page.keyboard.press('i');
  const hair=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,b=e.actors[1];for(let n=0;n<90&&b.status?.bindingOrigin?.id!=='sh4_cynthia_velasquez_victim_16';n++)q.advance(1);return q.scene();});report.scenes.cynthiaStandingHair=hair;
  check('Cynthia real hair capture binds the victim standing without a generic throw or knockdown',hair.actors[1].status?.bindingOrigin?.id==='sh4_cynthia_velasquez_victim_16'&&hair.actors[1].y===594&&hair.actors[1].grounded&&hair.actors[1].knockdown===0&&hair.actors[1].vx===0&&hair.actors[1].vy===0&&hair.emitted===0,hair);
  await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<80&&e.actors[1].hurtFrames;n++)q.advance(1);});
@@ -611,6 +615,79 @@ try{
   await capture(page,'41-lot9-cage-native-late-kick-before-expiry');
   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(100));const afterLateKick=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.lot9CagePlayerTwoLateKickExpiry={beforeLateKick,actualLateKick,afterLateKick};
   check('natural bind expiry after the actual late foot kick falls back to the floor without an airborne walking state',afterLateKick.phase==='fight'&&afterLateKick.actors[0].status===null&&afterLateKick.actors[0].grounded&&afterLateKick.actors[0].y===594&&afterLateKick.actors[0].knockdown===0,afterLateKick);
+ }
+
+
+ // Lot10: thirty new movement rows, each exercised with real keyboard input.
+ {
+  const lot10Scopes={
+   origins_carrion_076:['neutralSpecial','forwardSpecial','downSpecial','super','desperation'],
+   origins_caliban_079:['neutralSpecial','forwardSpecial','downSpecial','super','desperation'],
+   sh2_mandarin_026:['neutralSpecial','forwardSpecial','downSpecial','super','desperation'],
+   sh2_red_pyramid_thing_great_knife_029:['forwardHeavy','neutralSpecial','throw','super','desperation'],
+   origins_straight_jacket_074:['neutralSpecial','forwardSpecial','throw','super','desperation'],
+   sh3_nurse_revolver_044:['neutralSpecial','forwardSpecial','backSpecial','super','desperation']
+  };
+  let lot10Executions=0;
+  for(const[id,keys]of Object.entries(lot10Scopes))for(const key of keys){
+   const label=id+':'+key,isHand=id==='sh2_red_pyramid_thing_great_knife_029'&&['neutralSpecial','throw'].includes(key),
+    isLeg=id==='origins_straight_jacket_074'&&['forwardSpecial','throw'].includes(key),isAcid=id==='origins_straight_jacket_074'&&!isLeg,isNurse=id==='sh3_nurse_revolver_044';
+   const cases=isAcid||isNurse?['near','far']:['native'];const row={};
+   for(const range of cases){
+    await launch(page,id,'sh3_nurse_revolver_044');
+    await page.evaluate(({id,key,range,isHand,isLeg,isAcid,isNurse})=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];
+     q.position(isAcid||isNurse?(range==='near'?500:300):500,
+      isAcid?(range==='near'?650:1100):isNurse?(range==='near'?610:650):isHand||isLeg?610:id==='sh2_mandarin_026'||id==='sh2_red_pyramid_thing_great_knife_029'?640:690);
+     if(['super','desperation'].includes(key))a.meter=100;
+     if(key==='desperation'){
+      a.health=Math.floor(a.maxHealth*.3);
+      for(let n=0;n<220;n++){const next=a.bossPhases[a.bossPhaseIndex+1];if(!a.phaseLock&&(!a.data.boss||!next||a.health/a.maxHealth>next.threshold))break;q.advance(1);}
+     }
+    },{id,key,range,isHand,isLeg,isAcid,isNurse});
+    const before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+    const direction=['forwardSpecial','forwardHeavy'].includes(key)?'ArrowRight':key==='backSpecial'?'ArrowLeft':key==='downSpecial'?'ArrowDown':null;
+    if(direction)await page.keyboard.down(direction);
+    await page.keyboard.press(key==='forwardHeavy'?'k':key==='throw'?'u':['super','desperation'].includes(key)?'o':'i');
+    await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));if(direction)await page.keyboard.up(direction);
+    if(isHand||isLeg){
+     const held=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,victim=e.actors[1];
+      for(let n=0;n<110&&!victim.status?.struggleOrigin;n++)q.advance(1);while(e.hitstop>0)q.advance(1);return q.scene();});
+     check(label+' native exact-owner grip uses the documented hand or legs without a generic launching throw',held.actors[0].move===key&&held.actors[1].status?.struggleOrigin?.id===id&&held.actors[0].ownsGrip&&held.actors[1].health<before.actors[1].health&&held.emitted===0&&held.actors[1].knockdown===0&&(isHand?held.actors[1].y===534&&!held.actors[1].grounded:held.actors[1].y===594&&held.actors[1].grounded),held);
+     await page.keyboard.down('ArrowRight');await page.keyboard.press('ArrowUp');await page.keyboard.press('l');await page.keyboard.press('k');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up('ArrowRight');
+     const locked=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+     check(label+' actual owner movement jump dodge and relaunch inputs cannot stretch the live grip',locked.actors[0].x===held.actors[0].x&&locked.actors[0].y===594&&locked.actors[0].grounded&&locked.actors[0].dodge===0&&locked.actors[0].move===key&&locked.actors[0].ownsGrip&&locked.actors[1].status?.struggleOrigin?.id===id,locked);
+     if(isHand&&key==='neutralSpecial')await capture(page,'42-lot10-great-knife-hand-lift-and-owner-lock');
+     if(isLeg&&key==='forwardSpecial')await capture(page,'43-lot10-straight-jacket-leg-clamp-and-owner-lock');
+     for(const arrow of ['q','d','q','d','q','d']){await page.keyboard.down(arrow);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up(arrow);}
+     await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(26));const released=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+     check(label+' actual alternating controls release the source-owned hold and restore floor contact',released.actors[1].status===null&&released.actors[1].y===594&&released.actors[1].grounded&&!released.actors[0].ownsGrip,released);
+     row[range]={before,held,locked,released};
+    }else if(isAcid){
+     const fired=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__;for(let n=0;n<100&&!e.projectiles.length;n++)q.advance(1);return q.scene();});
+     check(label+' '+range+' scene emits exactly one real non-firearm acid projectile',fired.actors[0].move===key&&fired.emitted===1&&fired.projectileStates.length===1&&fired.projectileStates[0].firearm===false,fired);
+     if(key==='neutralSpecial'&&range==='near')await capture(page,'44-lot10-bounded-origins-acid-projectile');
+     await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(120));const ended=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+     check(label+' '+range+' respects authored projectile lifetime without invented lingering corrosion',ended.emitted===1&&ended.projectiles===0&&ended.actors[1].status===null&&(range==='near'?ended.actors[1].health<before.actors[1].health:ended.actors[1].health===before.actors[1].health),ended);
+     row[range]={before,fired,ended};
+    }else if(isNurse){
+     const chosen=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+     check(label+' '+range+' actual input latches the documented revolver or close-crosse branch',chosen.actors[0].move===key&&chosen.actors[0].weaponContext===(range==='near'?'close-contact':'ranged-shot'),chosen);
+     await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(110));const ended=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+     check(label+' '+range+' deals real damage with exactly the selected emission behavior',ended.actors[1].health<before.actors[1].health&&ended.emitted===(range==='near'?0:1)&&ended.actors[0].damage>0,ended);
+     if(key==='neutralSpecial')await capture(page,range==='near'?'45-lot10-nurse-close-crosse':'46-lot10-nurse-distant-revolver');
+     row[range]={before,chosen,ended};
+    }else{
+     const physical=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];let highest=a.y,hits=0;for(let n=0;n<130;n++){q.advance(1);highest=Math.min(highest,a.y);hits=Math.max(hits,a.attack?.hitCount||0);}return {highest,hits,scene:q.scene()};});
+     check(label+' actual native contact damages without a projectile trap or invented aura',physical.scene.actors[0].move===key&&physical.scene.actors[1].health<before.actors[1].health&&physical.hits>0&&physical.scene.emitted===0,physical);
+     check(label+' uses a grounded bounded body limb or support contact',physical.highest===594&&(id==='sh2_mandarin_026'?physical.scene.actors[0].x===before.actors[0].x:id==='origins_carrion_076'?physical.scene.actors[0].x>before.actors[0].x:true),physical);
+     if(key==='super')await capture(page,'47-lot10-'+id+'-bounded-native-contact');
+     row[range]={before,physical};
+    }
+    lot10Executions++;
+   }
+   report.scenes['lot10-'+label]=row;
+  }
+  check('lot10 covers exactly thirty new movement rows and thirty-eight real near-far executions',Object.keys(report.scenes).filter(k=>k.startsWith('lot10-')).length===30&&lot10Executions===38,lot10Executions);
  }
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',

@@ -649,7 +649,7 @@ const FIGHTER_RECIPES=Object.freeze({
   sh4_gum_head_new_type_058:'gumNewEquippedClub',sh4_bottom_065:'bottomThreeHeadDive',sh4_cynthia_velasquez_victim_16:'cynthiaStandingHairClosure'
 });
 
-// These thirty workbook rows are presentation edits only. Their native bodily
+// These workbook rows are presentation edits only. Their native bodily
 // capacities never grant an unauthored taunt or either missing finisher.
 const PRESENTATION_ONLY_KEYS=Object.freeze(['intro','winRound','loseRound','winMatch','loseMatch','outro']);
 const PRESENTATION_ONLY_RECIPES=Object.freeze({
@@ -662,7 +662,17 @@ const PRESENTATION_ONLY_RECIPES=Object.freeze({
   sh4_richard_braintree_victim_19:{source:'sh4',sourceYear:2004,edition:'SH4 original 2004',attackerKind:'ghost',weapon:'club',presentationKeys:PRESENTATION_ONLY_KEYS,
     scopeNote:'Richard Victim 19 SH4 : marche sur ses pieds, tressaillements, pied-de-biche métallique et téléportation courte. Le catalogue range le pied-de-biche sous club ; les six contextes ne créent pas de bâton de bois. Le saut d’offset de sortie est un montage versus, sans interpolation de locomotion ni mesure source.'},
   homecoming_swarm:{source:'homecoming',sourceYear:2008,attackerKind:'insect',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
-    scopeNote:'Swarm Homecoming PS3/Xbox360/PC : petits corps qui s’accrochent et drainent Alex. Ces six présentations regroupent ou dispersent le groupe déjà présent, sans nouvelle créature, trou de mur, contact sur l’adversaire ou copie de l’essaim Vita. Les offsets au sol ne déclarent pas l’espèce incapable de vol.'}
+    scopeNote:'Swarm Homecoming PS3/Xbox360/PC : petits corps qui s’accrochent et drainent Alex. Ces six présentations regroupent ou dispersent le groupe déjà présent, sans nouvelle créature, trou de mur, contact sur l’adversaire ou copie de l’essaim Vita. Les offsets au sol ne déclarent pas l’espèce incapable de vol.'},
+  homecoming_order_soldier_091:{source:'homecoming',sourceYear:2008,attackerKind:'humanoid',weapon:'baton',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Membre de l’Ordre Homecoming : cette fiche versus garde son arme de mêlée déjà équipée, catégorie baton. Le tuyau proposé et ses prises restent à comparer sur plans ; le portrait tronqué et la preuve d’un autre soldat au rifle ne certifient pas ce modèle. Aucun fusil, changement d’arme, tir, nouvelle esquive ou geste offensif n’est créé.'},
+  bom_gray_child_147:{source:'bom',sourceYear:2012,attackerKind:'child',weapon:'knife',requiredConstraint:'Contenu Expansion Pack; conserver la variante monstrueuse de cette œuvre.',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Gray Child de l’Expansion Pack Book of Memories Vita ; 2012 est l’année du titre dans le catalogue, pas une date de sortie du DLC affirmée. Une seule créature déjà munie de son couteau est cadrée. Ni groupe engendré, couteau expectoré, tir, mort humaine ou image de SH1 n’est ajouté par ces présentations.'},
+  bom_wood_sapling_139:{source:'bom',sourceYear:2012,attackerKind:'fungus',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Wood Sapling Book of Memories : rejeton déjà autonome du Wood Guardian, petit et agressif, pouvant être abattu et fragmenté selon le bestiaire. La catégorie fungus est un gabarit du moteur, pas une identification fongique. Les six contextes gardent sa propre silhouette ; aucune naissance, racine nouvelle, destruction en particules ou attaque supposée n’est produite.'},
+  shf_harai_katashiro_158:{source:'shf',sourceYear:2025,attackerKind:'doll',weapon:'knife',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Harai Katashiro Silent Hill f 2025 : jambes-lames du journal transcrit et couteau tenu décrit par SHM, encore à recouper visuellement en détail. Retrait en trois appuis composé pour le versus ; aucune rotation offensive, téléportation, leurre, nouveau couteau ou animation source mesurée. Les changements d’appui ne déforment ni ne tournent un PNG pour fabriquer une pose.'},
+  film_dark_nurse_171:{source:'film',sourceYear:2006,edition:'Silent Hill (2006, film de Christophe Gans)',scripted:true,attackerKind:'nurse',weapon:'knife',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Dark Nurse du film de Christophe Gans 2006, conservée comme adaptation versus-scripted. Arrêt et reprise de marionnette sont composés après son réveil ; aucun déclencheur réel de lumière, son de Revelation ou groupe de Nurses n’est simulé. knife reste l’instrument choisi par le catalogue, sans modèle de lame ni retiming de postproduction original certifiés.'}
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -735,7 +745,18 @@ const PRESENTATION_STAGING=Object.freeze({
   sh4_richard_braintree_victim_19:{id:'sh4-richard-feet-crowbar-and-short-shift',entry:19,retreat:0,recoil:7,roundDim:.09,finalDim:.24,exitJump:43,exitJumpAt:.64,
     poses:['sh4-richard-feet-walk-crowbar-entry',null,'sh4-richard-stuttering-crowbar-round-watch','sh4-richard-crowbar-foot-support-recovery','sh4-richard-crowbar-relaxed-final-watch','sh4-richard-crowbar-suppressed-body-retained','sh4-richard-short-position-shift']},
   homecoming_swarm:{id:'homecoming-swarm-existing-group-redistribution',entry:29,retreat:38,recoil:0,roundDim:.16,
-    poses:['hc-swarm-existing-group-entry',null,'hc-swarm-separated-individuals-regroup-watch','hc-swarm-existing-group-recoverable-dispersal','hc-swarm-detached-group-collects-after-result','hc-swarm-final-group-dispersal-awaiting-individual-frames','hc-swarm-existing-individuals-leave-frame']}
+    poses:['hc-swarm-existing-group-entry',null,'hc-swarm-separated-individuals-regroup-watch','hc-swarm-existing-group-recoverable-dispersal','hc-swarm-detached-group-collects-after-result','hc-swarm-final-group-dispersal-awaiting-individual-frames','hc-swarm-existing-individuals-leave-frame']},
+  homecoming_order_soldier_091:{id:'homecoming-order-equipped-melee-presence',entry:18,entryDelay:.12,retreat:0,recoil:8,outroHold:true,
+    poses:['hc-order-equipped-melee-grip-entry',null,'hc-order-equipped-melee-guard-round-watch','hc-order-equipped-melee-knee-support-recovery','hc-order-equipped-melee-lowered-final-watch','hc-order-equipped-melee-human-final-collapse','hc-order-equipped-melee-held-no-rifle-created']},
+  bom_gray_child_147:{id:'bom-expansion-child-existing-knife-appuis',entry:25,retreat:0,recoil:10,outroHold:true,
+    poses:['bom-expansion-child-knife-close-entry',null,'bom-expansion-child-knife-retained-round-watch','bom-expansion-child-low-knife-support-recovery','bom-expansion-child-knife-lowered-final-watch','bom-expansion-child-own-monster-final-rest','bom-expansion-child-knife-held-single-body-result']},
+  bom_wood_sapling_139:{id:'bom-sapling-already-autonomous-wooden-body',entry:12,entryDelay:.3,retreat:0,recoil:5,outroHold:true,
+    poses:['bom-sapling-existing-wood-body-entry',null,'bom-sapling-wooden-appuis-round-watch','bom-sapling-wooden-body-recoverable-lean','bom-sapling-branches-relaxed-final-watch','bom-sapling-own-body-final-rest-awaiting-splinter-frames','bom-sapling-existing-body-held-no-parent-spawn']},
+  shf_harai_katashiro_158:{id:'shf-harai-blade-appuis-and-existing-hand-knife',entry:15,entryDelay:.16,retreat:0,recoil:4,
+    outroFootwork:[{from:0,to:.22,distance:8,pose:'left-blade-support'},{from:.38,to:.64,distance:12,pose:'right-blade-support'},{from:.78,to:1,distance:8,pose:'both-blades-support'}],
+    poses:['shf-harai-blade-legs-hand-knife-entry',null,'shf-harai-blade-appuis-knife-round-watch','shf-harai-blade-appuis-recover-with-knife','shf-harai-hand-knife-low-final-watch','shf-harai-blade-legs-and-hand-knife-final-rest','shf-harai-authored-blade-support-withdrawal']},
+  film_dark_nurse_171:{id:'film2006-dark-nurse-awakened-puppet-hold',entry:11,entryDelay:.34,retreat:0,recoil:3,outroHold:true,
+    poses:['film2006-nurse-awakened-puppet-held-entry',null,'film2006-nurse-awakened-rigid-instrument-round-watch','film2006-nurse-awakened-instrument-retained-recovery','film2006-nurse-awakened-puppet-final-stop','film2006-nurse-own-body-final-stillness','film2006-nurse-awakened-held-no-light-trigger']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 function presentationStaging(actor) {
@@ -918,11 +939,14 @@ export function lorePresentation(actor,key) {
   const recipe=RECIPES[FIGHTER_RECIPES[data.id]]||PRESENTATION_ONLY_RECIPES[data.id],staging=presentationStaging(actor);
   const specific=PRESENTATION_ONLY_RECIPES[data.id],policy=combatPolicy(actor);
   const ownEdition=!specific||(data.year===specific.sourceYear&&(!specific.edition||ref?.referenceEdition===specific.edition)&&
+    (!specific.requiredConstraint||ref?.constraints?.includes(specific.requiredConstraint))&&
     (!Object.keys(policy).length||(policy.id===data.id&&policy.source===data.source&&policy.edition===(specific.edition||specific.source))));
-  const authored=ref?.source===data.source&&ownEdition&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.source||recipe.source===data.source)&&(!recipe.presentationKeys||recipe.presentationKeys.includes(key))&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data);
+  const ownRole=!specific?.scripted||(ref?.combatRole==='scripted-encounter'&&ref?.roleDecision?.adaptationScope==='versus-scripted'&&
+    (!Object.keys(policy).length||(policy.role==='scripted-encounter'&&scriptedAllowed(actor))));
+  const authored=ref?.source===data.source&&ownEdition&&ownRole&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.source||recipe.source===data.source)&&(!recipe.presentationKeys||recipe.presentationKeys.includes(key))&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data);
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored,hasComposedOutro:authored&&key==='outro'&&Object.hasOwn(PRESENTATION_ONLY_RECIPES,data.id)&&combatPolicy(actor).canMove!==false&&Boolean(staging?.exitJump||staging?.retreat),
+    authored,hasComposedOutro:authored&&key==='outro'&&Object.hasOwn(PRESENTATION_ONLY_RECIPES,data.id)&&combatPolicy(actor).canMove!==false&&Boolean(staging?.exitJump||staging?.retreat||staging?.outroFootwork),
     stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
     scopeNote:recipe?.scopeNote||null,
     reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
@@ -987,6 +1011,11 @@ export function sampleLorePresentation(actor,presentation) {
       const at=staging.exitJumpAt,shifted=p>=at;
       return {x:shifted?-facing*staging.exitJump:0,y:0,
         alpha:shifted?ease(clamp((p-at)/.18)):1-ease(clamp((p-at+.18)/.18)),pose:pose+(shifted?'-after-shift':'-before-shift')};
+    }
+    if(key==='outro'&&locomotion&&staging.outroFootwork){
+      let travel=0,support=staging.outroFootwork[0].pose;
+      for(const step of staging.outroFootwork){travel+=step.distance*ease(clamp((p-step.from)/(step.to-step.from)));if(p>=step.from)support=step.pose;}
+      return {x:-facing*travel,y:0,alpha:1,pose:pose+'-'+support};
     }
     if(key==='outro'&&(locomotion||staging.exitFade))return {x:locomotion?-facing*staging.retreat*ease(p):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?-(staging.ascent||0)*ease(p):0,alpha:1-clamp((p-.6)/.4),pose};

@@ -15,7 +15,7 @@ test('v0.9.6 catalogue counts are synchronized',()=>{
   assert.equal(VERSION,'0.9.6');
   assert.deepEqual(CONTENT_STATS,{
     fighters:230,bosses:75,sources:16,stages:123,chronicles:15,rituals:9,bossPhases:150,
-    fatalities:460,stageFatalities:123,stageAnimations:78,stageDirectorEvents:29,
+    fatalities:460,stageFatalities:123,stageAnimations:71,stageDirectorEvents:29,
     stageInteractions:29,stageHazardLinks:8,terrainProfiles:14,shiftStyles:15,moves:4600,
     directCanonicalMoves:0,behaviorCompositeMoves:2635,versusAdaptationMoves:1965,coverageComplete:true
   });

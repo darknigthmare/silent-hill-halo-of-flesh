@@ -1,4 +1,4 @@
-/** Successive batch-4/batch-5/batch-6/batch-7/batch-8/batch-9 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
+/** Successive batch-4 through batch-10 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
 import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
@@ -16,6 +16,8 @@ const batch7=['sh1_romper_010','sh3_double_head_040','sh3_insane_cancer_041','sh
 const batch8=['sh4_patient_060','sh4_bottom_065','sh4_gum_head_new_type_058'];
 const batch9=["sh1_mumbler_006","sh1_creeper_009","sh1_puppet_nurse_012","sh1_puppet_doctor_013","sh1_twinfeeler_015","sh4_sniffer_dog_female_054","sh4_gum_head_old_type_057","sh4_toadstool_061","sh4_whitestool_062","sh4_tremer_blue_063","sh4_tremer_red_064","sh4_wheelchair_068","sh3_numb_body_large_038","sh3_nurse_revolver_044","sh3_scraper_045","sh3_missionary_047","sh3_leonard_wolf_048","sh4_jimmy_stone_victim_1","sh4_cynthia_velasquez_victim_16","sh4_richard_braintree_victim_19","sh4_walter_sullivan_072","sh2_red_pyramid_thing_great_knife_029","sh2_red_pyramid_thing_spear_030","sh2_eddie_dombrowski_032"];
 const blocked9=["sh1_incubus_019","sh3_nurse_pipe_043","sh3_valtiel_051","sh4_jasper_gein_victim_17","sh4_andrew_desalvo_victim_18","sh3_split_worm_046"];
+const batch10=['sh1_groaner_003','sh1_wormhead_004','sh4_hummer_055','sh3_double_head_040','sh3_numb_body_small_037','sh4_sniffer_dog_female_054','sh1_romper_010','sh1_split_head_014','sh3_closer_036','sh3_slurper_042'];
+const batch10Poses=['walk','hurt','ko'];
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
 const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9];
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
@@ -24,7 +26,8 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'The browser independently decodes the registered files on an offscreen canvas to measure alpha; these temporary canvases do not replace the real inspector or combat rendering.',
   'Local matches retain Groaner/Split Head/Wood Side, Wormhead/Closer/Alchemilla and Twin Victim/Slurper/Lakeview coverage, then require Double Head/Insane Cancer/Central Square Mall through the real roster and stage gallery. Two further real matches cover Patient/Gum Head New Type and Bottom/Patient on the original Brookhaven roof before the fall; the wide facade camera is a bounded reconstruction rather than source geometry. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.',
   'Canvas drawImage calls are recorded without changing their arguments. The genuine pause/resume button and a 430-pixel viewport exercise the same loaded assets.',
-  'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.'
+  'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.',
+  'Batch10 adds thirty independent one-image walk/hurt/ko clips to ten existing exact profiles, preserving their idle files. All thirty files are decoded, painted with the actual inspector, and checked for alpha support and standing-equivalent scale. Three additional ordinary matches cover Hummer/Small Numb Body, Romper/Slurper and Groaner/Split Head; genuine movement controls select the new walk PNGs. The last match uses repeated real player2 neutralLight inputs to reach a grounded final KO. These played-versus input observations are separate from the static workshop pose previews and prove no original-game motion/timing.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
@@ -87,7 +90,7 @@ try{
     return {registeredIds:Object.keys(SPRITES),subjects:required.map(id=>({id,art:SPRITES[id]||null,fighter:ROSTER.find(f=>f.id===id)})),
       scenes:['woodside','alchemilla','lakeview','shopping_mall','brookhaven_roof'].map(id=>({id,stage:STAGES.find(s=>s.id===id),stageIndex:STAGES.findIndex(s=>s.id===id),decor:STAGE_BITMAPS[id]}))};
   },required);
-  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9};
+  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9,batch10,batch10Poses};
   check('all forty-three required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
   await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.selectOption('#spriteFilter','ready');
   report.readyPages=[];
@@ -102,18 +105,29 @@ try{
   check('real gallery pages contain every registered exact ID once and finish at a disabled next button',paged.length===registry.registeredIds.length&&new Set(paged).size===paged.length&&JSON.stringify([...paged].sort())===JSON.stringify([...registry.registeredIds].sort())&&await page.locator('#spriteNext').isDisabled());
   for(const subject of registry.subjects){
     const {id,art,fighter}=subject;
-    const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id);
+    const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id);
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004}[exactSource];
     const isTwin=id===twinId;
-    check(id+': exact source owns its static idle and only the declared additional pointing still',art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===(isTwin?2:1)&&Object.keys(art.clips).length===(isTwin?2:1)&&art.clips.idle?.frames.length===1&&art.clips.idle.frames[0]===0&&art.animatedClips===0&&(!isTwin||art.clips[twinTaunt]?.frames.length===1&&art.clips[twinTaunt].frames[0]===1&&art.clips[twinTaunt].loop===false&&art.frames[0].path!==art.frames[1].path),art);
+    check(id+': exact source owns its static idle and only its declared additional stills',art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===(isBatch10?4:isTwin?2:1)&&Object.keys(art.clips).length===(isBatch10?4:isTwin?2:1)&&art.clips.idle?.frames.length===1&&art.clips.idle.frames[0]===0&&art.animatedClips===0&&(!isTwin||art.clips[twinTaunt]?.frames.length===1&&art.clips[twinTaunt].frames[0]===1&&art.clips[twinTaunt].loop===false&&art.frames[0].path!==art.frames[1].path)&&(!isBatch10||batch10Poses.every((pose,i)=>art.clips[pose]?.frames.length===1&&art.clips[pose].frames[0]===i+1&&art.clips[pose].loop===false)&&new Set(art.frames.map(frame=>frame.pixelSHA256)).size===4),art);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){
     await verifyFile(frame,id+'/image-'+frameIndex);
-    if(frameIndex===1){
+    if(isTwin&&frameIndex===1){
       await page.selectOption('[data-inspect=pose]',twinTaunt);
       check(id+': exact pointing context uses its distinct static image and no playback animation',await page.locator('#spriteDetail canvas').getAttribute('data-pose')===twinTaunt&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='1'&&await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
       await shot(page,'inspector-pointing-'+id);
+    }
+    if(isBatch10&&frameIndex>0){
+      const pose=batch10Poses[frameIndex-1];
+      await page.selectOption('[data-inspect=pose]',pose);
+      await page.waitForFunction(({id,pose,index,path})=>{const canvas=document.querySelector('#spriteDetail canvas');return canvas?.dataset.spriteId===id&&canvas.dataset.artStatus==='raster'&&canvas.dataset.pose===pose&&canvas.dataset.frameIndex===String(index)&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path);},{id,pose,index:frameIndex,path:frame.path});
+      check(id+': '+pose+' is its own non-looping one-image still, playback stays disabled',await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
+      const geometry=await page.evaluate(async({id,pose,frame})=>{const {ROSTER}=await import('/src/data.js'),{rasterPlacement}=await import('/src/sprite-system.js'),{bodyProfile}=await import('/src/combat-geometry.js'),{previewSpriteState}=await import('/src/sprite-inspector.js');const fighter=ROSTER.find(f=>f.id===id),state=previewSpriteState(pose,0),p=rasterPlacement(fighter,frame,0,0,1,state),body=bodyProfile(fighter,state);return {id,pose,anchor:[...frame.anchor],bodyHeight:frame.bodyHeight,standingEquivalentHeight:body.height*body.scale,visibleHeight:(frame.visibleBounds[3]-frame.visibleBounds[1])*p.height/frame.height,visibleBottom:p.y+frame.visibleBounds[3]*p.height/frame.height,expectedBottom:-(body.bottom||0)*body.scale,finite:Object.values(p).filter(v=>typeof v==='number').every(Number.isFinite)};},{id,pose,frame});
+      (report.poseGeometryBatch10??=[]).push(geometry);
+      check(id+': '+pose+' keeps its own finite standing-equivalent scale and actual alpha contact',geometry.finite&&Math.abs(geometry.visibleBottom-geometry.expectedBottom)<.02&&frame.bodyHeight>0&&frame.bodyHeight<=1,geometry);
+      if(pose==='ko')check(id+': collapsed KO was not normalized to full standing silhouette height',geometry.visibleHeight<geometry.standingEquivalentHeight&&frame.bodyHeight>(frame.visibleBounds[3]-frame.visibleBounds[1])/frame.height,geometry);
+      await shot(page,'batch10-inspector-'+pose+'-'+id);
     }
     const decoded=await page.evaluate(async frame=>{
       const image=new Image();image.src='/'+frame.path;await image.decode();
@@ -127,7 +141,7 @@ try{
     report.assets.push({id,frameIndex,source:art.source,path:frame.path,sha256:frame.sha256,bytes:frame.bytes,alpha:decoded});
     check(id+': inspector drawImage used that registered image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path&&draw.width>0),frame.path));
     }
-    for(const pose of ['walk','crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
+    for(const pose of [...(isBatch10?['guard','dodge']:['walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
       await page.selectOption('[data-inspect=pose]',pose);
       check(id+': absent '+pose+' stays an explicit static idle preview',/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent())&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')===pose);
     }
@@ -206,7 +220,10 @@ try{
     {scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:['sh2_red_pyramid_thing_great_knife_029','sh2_red_pyramid_thing_spear_030'],captureId:'batch9-knife-spear-woodside'},
     {scene:registry.scenes.find(scene=>scene.id==='brookhaven_roof'),ids:['sh4_walter_sullivan_072','sh2_eddie_dombrowski_032'],captureId:'batch9-walter-eddie-roof'},
     {scene:registry.scenes.find(scene=>scene.id==='shopping_mall'),ids:['sh3_numb_body_large_038','sh4_sniffer_dog_female_054'],captureId:'batch9-large-numb-female-sniffer'},
-    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh4_cynthia_velasquez_victim_16','sh4_richard_braintree_victim_19'],captureId:'batch9-cynthia-richard-lakeview'}];
+    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh4_cynthia_velasquez_victim_16','sh4_richard_braintree_victim_19'],captureId:'batch9-cynthia-richard-lakeview'},
+    {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['sh4_hummer_055','sh3_numb_body_small_037'],captureId:'batch10-hummer-small-numb'},
+    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh1_romper_010','sh3_slurper_042'],captureId:'batch10-romper-slurper'},
+    {scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:['sh1_groaner_003','sh1_split_head_014'],captureId:'batch10-grounded-ko-groaner-split-head'}];
   for(const {scene,ids,captureId=scene.id} of matches){
     const {id:stageId,stageIndex,decor}=scene;
     await page.setViewportSize({width:1440,height:1000});
@@ -217,6 +234,7 @@ try{
     }
     await page.click('#openGallery');await page.locator('.stage-entry').nth(stageIndex).click();await page.waitForFunction(()=>document.querySelector('#stageGallery').classList.contains('hidden'));
     await page.selectOption('#mode','local');await page.selectOption('#timer','0');
+    if(captureId==='batch10-grounded-ko-groaner-split-head')await page.selectOption('#rounds','1');
     for(const name of ['stageHazards','stageDirector','otherworldShift','fatalities','stageFatalities'])await page.uncheck('#'+name);
     await page.uncheck('#artDiagnostic');
     const touchEnabled=(await page.locator('#mobileP1').textContent()).includes('ACTIF');
@@ -229,7 +247,7 @@ try{
     await page.waitForFunction(()=>__HALO_QA__.engine.phase==='fight'&&__HALO_QA__.engine.texts.every(text=>!['intro','round','fight'].includes(text.kind)));
     const combat=await page.evaluate(()=>({phase:__HALO_QA__.engine.phase,stage:__HALO_QA__.engine.stage.id,diagnostic:__HALO_QA__.engine.config.artDiagnostic,camera:__HALO_QA__.engine.presentationCamera,
       actors:__HALO_QA__.engine.actors.map(actor=>({id:actor.data.id,source:actor.data.source,x:actor.x,y:actor.y})),draws:__ART_BATCH4_DRAWS__.filter(draw=>draw.canvas==='game'),actorPins:[...__HALO_QA__.assetCache.pins],stagePins:[...__HALO_QA__.stageAssetCache.pins]}));
-    if(captureId.startsWith('batch9-'))(report.combatBatch9??=[]).push(combat);else if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else if(stageId==='lakeview')report.combatBatch6=combat;else if(stageId==='shopping_mall')report.combatBatch7=combat;else (report.combatBatch8??=[]).push(combat);
+    if(captureId.startsWith('batch10-'))(report.combatBatch10??=[]).push(combat);else if(captureId.startsWith('batch9-'))(report.combatBatch9??=[]).push(combat);else if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else if(stageId==='lakeview')report.combatBatch6=combat;else if(stageId==='shopping_mall')report.combatBatch7=combat;else (report.combatBatch8??=[]).push(combat);
     if(['lakeview','shopping_mall','brookhaven_roof'].includes(stageId)){
       combat.terrain=await page.evaluate(async()=>{const {stageTerrainProfile}=await import('/src/stage-director.js');const stage=__HALO_QA__.engine.stage;return {rules:stage.referencePolicy.terrainRules,profile:stageTerrainProfile(stage)};});
       check(stageId+': actual room terrain is physically neutral rather than inherited wet/slippery rules',combat.terrain.rules===false&&combat.terrain.profile.moveScale===1&&combat.terrain.profile.jumpScale===1&&combat.terrain.profile.dodgeScale===1&&combat.terrain.profile.friction===.84&&combat.terrain.profile.knockbackScale===1&&combat.terrain.profile.guardRegenScale===1&&!combat.terrain.profile.splash&&!combat.terrain.profile.slip,combat.terrain);
@@ -283,6 +301,34 @@ try{
       await page.waitForFunction(()=>!__HALO_QA__.engine.actors[0].attack&&__HALO_QA__.engine.actors[0].state==='idle');
       await shot(page,'touch-taunt-cancelled-twin-idle');
     }
+    if(captureId.startsWith('batch10-')){
+      await page.setViewportSize({width:1440,height:1000});
+      const art=registry.subjects.find(subject=>subject.id===ids[0]).art,walk=art.frames[art.clips.walk.frames[0]].path;
+      const prior=await page.evaluate(path=>__ART_BATCH4_DRAWS__.find(draw=>draw.canvas==='game'&&draw.path==='/'+path)?.calls||0,walk);
+      await page.keyboard.down('ArrowRight');
+      await page.waitForFunction(({path,prior})=>__HALO_QA__.engine.actors[0].state==='walk'&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+path&&draw.calls>prior),{path:walk,prior});
+      await shot(page,captureId+'-real-input-walk');await page.keyboard.up('ArrowRight');
+      check(captureId+': genuine movement input selects the dedicated one-frame walk image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+path&&draw.calls>0),walk));
+      if(captureId==='batch10-grounded-ko-groaner-split-head'){
+        const contactDistance=await page.evaluate(async()=>{const {bodyPushRadius}=await import('/src/combat-geometry.js');return __HALO_QA__.engine.actors.reduce((n,actor)=>n+bodyPushRadius(actor),0)+4;});
+        await page.keyboard.down('ArrowRight');
+        await page.waitForFunction(distance=>Math.abs(__HALO_QA__.engine.actors[0].x-__HALO_QA__.engine.actors[1].x)<distance,contactDistance);
+        const hurt=art.frames[art.clips.hurt.frames[0]].path,ko=art.frames[art.clips.ko.frames[0]].path;
+        report.groundKoBatch10={method:'Actual local match: player1 holds ArrowRight to approach and reengage after hit recoil, player2 repeats F neutralLight; one winning round, no state/health/position injection.',healthTrace:[]};
+        for(let attempt=0;attempt<35;attempt++){
+          const before=await page.evaluate(()=>({health:__HALO_QA__.engine.actors[0].health,ko:__HALO_QA__.engine.actors[0].ko,grounded:__HALO_QA__.engine.actors[0].grounded,x:__HALO_QA__.engine.actors.map(actor=>actor.x),phase:__HALO_QA__.engine.phase}));report.groundKoBatch10.healthTrace.push(before);
+          if(before.ko||before.health<=0)break;
+          await page.keyboard.press('f');await page.waitForTimeout(480);
+        }
+        await page.keyboard.up('ArrowRight');
+        await page.waitForFunction(path=>__HALO_QA__.engine.phase==='roundEnd'&&__HALO_QA__.engine.actors[0].ko&&__HALO_QA__.engine.actors[0].grounded&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+path),ko);
+        report.groundKoBatch10.result=await page.evaluate(async({hurt,ko})=>{const {actorSpriteState,sampleSpriteClip}=await import('/src/sprite-animation.js'),{SPRITES}=await import('/src/sprite-manifest.js');const actor=__HALO_QA__.engine.actors[0],sample=sampleSpriteClip(SPRITES[actor.data.id],actorSpriteState(actor));return {id:actor.data.id,health:actor.health,ko:actor.ko,grounded:actor.grounded,state:actor.state,presentation:actor.presentation,requested:sample.requested,pose:sample.pose,fallback:sample.fallback,fallbackReason:sample.fallbackReason,path:sample.frame.path,paintedHurt:__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+hurt),paintedKo:__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+ko),sourceTimingMeasured:false};},{hurt,ko});
+        const result=report.groundKoBatch10.result;
+        check('batch10 real grounded final KO paints its dedicated core still after genuine non-launching hits',result.health===0&&result.ko&&result.grounded&&result.pose==='ko'&&result.path===ko&&result.paintedHurt&&result.paintedKo&&result.presentation?.key==='loseMatch'&&result.requested===`loseMatch@${ids[0]}:loseMatch`&&result.fallbackReason==='core-ko-final-defeat',result);
+        await shot(page,'batch10-real-grounded-final-ko-desktop');await page.setViewportSize({width:430,height:932});await shot(page,'batch10-real-grounded-final-ko-mobile');await page.click('#pauseBtn');
+      }
+    }
+    if(await page.locator('dialog.play-dialog[open] [data-pause=resume]').count())await page.click('[data-pause=resume]');
     await page.click('#leaveFight');await page.waitForFunction(()=>!__HALO_QA__.engine);
   }
   await page.setViewportSize({width:430,height:932});

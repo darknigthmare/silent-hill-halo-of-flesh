@@ -763,7 +763,7 @@ export const ROSTER = [
   monster('shf','Corruptor',{kind:'fungus',archetype:'artillery',signature:'Floraison corruptrice',behavior:'Propage des zones de corruption au sol.',aura:'rot'}),
   monster('shf','Hatcher',{kind:'mass',archetype:'grappler',signature:'Éclosion charnelle',behavior:'Ouvre son corps pour saisir et libérer des rejetons.'}),
   monster('shf','Kamugara',{kind:'deity',archetype:'boss',boss:true,signature:'Sentence du sanctuaire',behavior:'Grande entité rituelle, balayages et sceaux.',stageId:'dark_shrine'}),
-  monster('shf','Harai Katashiro',{kind:'doll',archetype:'trickster',signature:'Purification inversée',behavior:'Effigie rituelle, leurres et déplacements secs.',stageId:'dark_shrine'}),
+  monster('shf','Harai Katashiro',{kind:'doll',weapon:'knife',archetype:'trickster',signature:'Purification inversée',behavior:'Effigie rituelle munie d’un couteau ; déplacements sur ses jambes-lames, gestes détaillés à relever.',stageId:'dark_shrine'}),
   monster('shf','Oi-omoi',{kind:'mass',archetype:'juggernaut',signature:'Poids du regret',behavior:'Masse lourde qui ralentit l’espace proche.'}),
   monster('shf','Dark Hatcher',{kind:'mass',archetype:'boss',boss:true,signature:'Éclosion obscure',behavior:'Variante renforcée du Hatcher.',variantOf:'Hatcher',stageId:'dark_shrine',aura:'dark'}),
   monster('shf','Drum Monster',{kind:'giant',archetype:'artillery',signature:'Battement du tambour',behavior:'Ondes rythmiques et impacts à distance.',stageId:'festival_square',motif:'drum'}),

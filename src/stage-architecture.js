@@ -1,6 +1,8 @@
 /* Original perspective sets. These are not traced recreations of official maps. */
 const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
+  if(stage?.source==='shf'&&['dark_shrine','corrupted_ebisugaoka'].includes(stage.id))return 'exterior';
+  if(stage?.source==='shattered'&&stage.id==='nightmare_school')return 'exterior';
   if(stage?.source==='bom'&&['book_fire','book_earth'].includes(stage.id))return 'interior';
   if(stage?.id==='devils_pit'&&stage.source==='downpour')return 'interior';
   if(stage?.id==='sewers'&&stage.source==='sh3')return 'interior';
@@ -8,6 +10,62 @@ export function stageSpace(stage) {
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
 export function drawStageArchitecture(c,w,h,stage) {
+  if(stage?.source==='shf'&&['dark_shrine','hinako_home','shimizu_residence','school_shf','corrupted_ebisugaoka'].includes(stage.id)){
+    // Separate photographed rooms. Original frontal sets, never traced plans.
+    const id=stage.id,ground=h*.57;c.save();
+    c.fillStyle=id==='corrupted_ebisugaoka'?'#494b3d':id==='dark_shrine'?'#282d22':'#424735';c.fillRect(0,0,w,ground);
+    if(id==='dark_shrine'){
+      const vx=w*.61;c.fillStyle='#393b2a';c.fillRect(vx-195,h*.16,390,ground-h*.16);
+      for(let i=0;i<13;i++)line(c,vx-185+i*31,h*.16,vx-185+i*31,ground,'#4b4c34',3);
+      c.fillStyle='#242b20';c.fillRect(vx-80,h*.29,160,ground-h*.29);line(c,vx,h*.29,vx,ground,'#6e6b47',4);
+      for(const side of[-1,1])line(c,vx+side*195,h*.16,vx+side*228,h*.22,'#1d261c',13);
+      const x=w*.27,y=h*.46;c.fillStyle='#524c35';c.fillRect(x-65,y-15,130,70);c.fillStyle='#252d20';c.fillRect(x-43,y+3,86,44);
+      c.beginPath();c.moveTo(x-85,y-30);c.lineTo(x,y-68);c.lineTo(x+85,y-30);c.closePath();c.fillStyle='#474331';c.fill();
+      line(c,x-80,y-29,x+80,y-29,'#746c49',6);
+    }else if(id==='hinako_home'){
+      for(let i=0;i<12;i++)line(c,0,h*(.12+i*.041),w,h*(.12+i*.041),'rgba(105,111,77,.17)',1);
+      for(const x of[w*.19,w*.42,w*.82])line(c,x,h*.1,x,ground,'#4b4932',12);
+      c.fillStyle='#77765a';c.fillRect(w*.24,h*.27,35,61);line(c,w*.24,h*.29,w*.268,h*.29,'#5b5f41',2);
+      for(let i=0;i<9;i++)line(c,w*.07+i*w*.095,ground,w*.07+i*w*.095,ground-21,'#575b3c',1);
+    }else if(id==='shimizu_residence'){
+      c.fillStyle='#53533b';c.fillRect(0,h*.17,w,ground-h*.17);
+      for(let i=0;i<10;i++)line(c,i*w/9,h*.17,i*w/9,ground,'#3a402b',4);
+      const tvx=w*.72;c.fillStyle='#343e2c';c.fillRect(tvx-63,h*.3,126,ground-h*.3);c.fillStyle='#182820';c.fillRect(tvx-47,h*.32,94,70);line(c,tvx-48,h*.44,tvx+48,h*.44,'#747451',3);
+      // Tatami only in this dining room, never in the entry corridor.
+      for(let i=0;i<5;i++)line(c,w*.25+i*w*.11,ground-39,w*.25+i*w*.11,ground,'#74744f',3);
+    }else if(id==='school_shf'){
+      c.fillStyle='#566049';c.fillRect(w*.1,h*.16,w*.77,ground-h*.16);
+      for(let i=0;i<4;i++){const x=w*(.16+i*.052);c.fillStyle='#3a4c35';c.fillRect(x,h*.24,53,h*.32);for(let y=h*.27;y<ground;y+=43)line(c,x,y,x+53,y,'#829073',3);}
+      c.fillStyle='#797d5b';c.fillRect(w*.48,h*.24,81,111);c.fillStyle='#3e5039';c.fillRect(w*.48+7,h*.24+7,67,97);
+      for(let i=0;i<4;i++)line(c,w*.48+16,h*.27+i*20,w*.48+66,h*.27+i*20,'#a0a483',2);
+      // No portable fan, keys, school writing or actors are reconstructed.
+    }else{
+      c.fillStyle='#4c5141';c.fillRect(w*.12,h*.24,w*.77,ground-h*.24);
+      for(let i=0;i<10;i++)line(c,w*.12+i*w*.085,h*.25,w*.12+i*w*.085,ground,'#656851',3);
+      c.fillStyle='#3c4336';c.beginPath();c.moveTo(w*.065,h*.25);c.lineTo(w*.19,h*.12);c.lineTo(w*.84,h*.12);c.lineTo(w*.94,h*.25);c.closePath();c.fill();
+      for(let i=0;i<24;i++)line(c,w*(.1+i*.035),h*.245,w*(.19+i*.027),h*.125,'#65664e',2);
+      c.fillStyle='#75765b';c.fillRect(w*.45,h*.29,w*.19,h*.28);for(let i=0;i<5;i++)line(c,w*.46+i*w*.043,h*.29,w*.46+i*w*.043,ground,'#4b573d',3);
+    }
+    c.restore();return true;
+  }
+  if(stage?.source==='shattered'&&['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'].includes(stage.id)){
+    const id=stage.id;c.save();c.fillStyle='#202f35';c.fillRect(0,0,w,h*.57);
+    for(let i=0;i<9;i++)line(c,0,h*(.16+i*.046),w,h*(.16+i*.046),'rgba(113,145,149,.16)',2);
+    if(id==='nightmare_school'){
+      for(let i=0;i<15;i++)line(c,w*(.07+i*.062),h*.12,w*(.07+i*.062),h*.57,'rgba(97,132,135,.16)',1);
+      line(c,w*.18,h*.17,w*.88,h*.17,'#536a6c',7);line(c,w*.18,h*.53,w*.88,h*.53,'#41595b',5);
+    }else if(id==='nightmare_hospital_sm'){
+      const x=w*.67;c.fillStyle='#243b43';c.fillRect(x-76,h*.28,152,h*.29);
+      for(let i=0;i<8;i++){const px=x-75+i*21;line(c,px,h*.28,px+10,h*.34+(i%3)*19,'#7b9f9f',3);}
+      for(const x of[w*.18,w*.84])line(c,x,h*.19,x,h*.57,'#3d565b',5);
+      // Bed/figures/radio are deliberately omitted from this room prototype.
+    }else{
+      // Frozen wall mass of the Gumball hall, not its preceding shop gallery.
+      for(let i=0;i<9;i++){const x=w*(.53+i*.047),y=h*(.2+(i%3)*.045);c.fillStyle=i%2?'#344d55':'#3b555c';c.beginPath();c.moveTo(x,y);c.lineTo(x+37,y+37);c.lineTo(x+24,h*.57);c.lineTo(x-19,h*.57);c.closePath();c.fill();}
+      line(c,0,h*.56,w,h*.56,'#597071',4);
+    }
+    c.restore();return true;
+  }
   if(stage?.id==='blue_creek'&&stage.source==='sh2'){
     c.save();c.fillStyle='#27372e';c.fillRect(0,0,w,h*.57);
     for(const side of[-1,1]){const x=w*(.5+side*.21);line(c,x,h*.18,x,h*.57,'#566553',4);for(let i=0;i<5;i++)line(c,x,h*(.35+i*.036),w*.5,h*(.44+i*.023),'#52624e',2);}

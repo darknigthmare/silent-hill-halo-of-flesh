@@ -7,6 +7,8 @@ import {loreFinisher,lorePresentation,sampleLorePresentation,sampleLoreCinematic
 
 // These are authored versus edits of workbook proposals, never source footage
 // or produced bitmap poses. Explicit pairings exercise real approved supports.
+// Gum Head / Monica's office is a synthetic cross-work versus pairing using
+// the room's documented desk, not an encounter from SH4 or Alchemilla furniture.
 const SUBJECTS=[
   ['sh1_creeper_009','ankleShadow','midwich'],
   ['sh1_hanged_scratcher_011','ceilingHook','sewer_resort'],
@@ -17,7 +19,7 @@ const SUBJECTS=[
   ['sh3_leonard_wolf_048','waterSurfaceGrip','brookhaven_sh3'],
   ['sh4_hummer_055','buzzingCameraPass','room_302'],
   ['sh4_wall_man_056','wallSupportPull','labyrinth'],
-  ['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','alchemilla']
+  ['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','hilltop_center']
 ];
 const FIXED=['sh2_mandarin_026','sh2_flesh_lip_027','sh4_wall_man_056'];
 const KEYS=['intro','taunt','winRound','loseRound','winMatch','loseMatch','outro'];
@@ -67,6 +69,7 @@ test('ceiling, floor grate, water, wall and furniture are real requirements, inc
   assert.equal(plan('sh3_leonard_wolf_048','signature',{stage:stage('midwich')}).allowed,false,'no dry-water teleport');
   assert.equal(plan('sh2_mandarin_026','signature',{stage:stage('alchemilla')}).allowed,false,'a ceiling does not substitute for a floor grate');
   assert.equal(plan('sh4_wall_man_056','signature',{stage:stage('old_silent_hill')}).allowed,false,'open street does not supply the fixed wall');
+  assert.equal(plan('sh4_gum_head_old_type_057','signature',{stage:stage('alchemilla')}).allowed,false,'the reviewed SH1 waiting room does not supply a desk, bed, gurney or wheelchair');
 });
 
 test('the fixed Mandarin, 2001 cage and Wall Man keep their support throughout both edits',()=>{

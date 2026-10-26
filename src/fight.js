@@ -12,6 +12,7 @@ import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, p
   sourceMouthPhase, sourceHitResponse, sourceContactSweep, sourceGroundHold, sourceStandingBind,
   sourceWhiffExposure, sourceFrontalDamageScale, sourceGroundProjectile, sourceStandingStruggle,
   sourceSuspendedStruggle, sourceSensoryParalysis, sourceContactBand,
+  sourceGroundContact, sourceDistanceWeapon,
   sourceDownedFirearmProtection, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
@@ -70,6 +71,11 @@ const heldByStruggle=actor=>actor.status?.id==='bind'&&Boolean(actor.status.stru
 const heldBySuspension=actor=>heldByStruggle(actor)&&actor.status.struggleOrigin.posture==='suspended';
 const sourceParalyzed=actor=>actor.status?.id==='bind'&&Boolean(actor.status.paralysisOrigin);
 const heldStanding=actor=>heldByHair(actor)||heldByStruggle(actor);
+const gripOwnerInterrupted=(source,origin,rule)=>rule?.lockOwner&&(!source.grounded||source.hurtFrames>0||
+  source.knockdownTimer>0||source.phaseLock>0||source.dodgeFrames>0||
+  rule.breakOnOwnerHit&&(!Number.isFinite(origin.ownerDamageTaken)||source.stats.damageTaken>origin.ownerDamageTaken));
+const gripOutOfRange=(source,victim,rule)=>Number.isFinite(rule?.maxOwnerDistance)&&
+  Math.abs(source.x-victim.x)>rule.maxOwnerDistance;
 function updateWeaponState(actor) {
   const resource=ammoProfile(actor);
   if(resource?.exhaustion!=='unarmed')return;
@@ -1074,6 +1080,10 @@ export class FightEngine {
       for(const action of [...ATTACK_ACTIONS,'left','right','jump','dodge','taunt','guard','down','guardPressed','guardReleased'])controls[action]=false;
       actor.vx=0;
     }
+    if(this.ownedSourceGrip(actor)){
+      for(const action of [...ATTACK_ACTIONS,'left','right','jump','dodge','taunt','guard','down','guardPressed','guardReleased'])controls[action]=false;
+      actor.vx=0;
+    }
     if(policy.canDodge===false)controls.dodge=false;
     if(!offensiveAllowed(actor))for(const action of ATTACK_ACTIONS)controls[action]=false;
     if(actor.presentation?.key==='taunt') {
@@ -1237,6 +1247,7 @@ export class FightEngine {
   }
 
   physics(actor) {
+    if(heldBySuspension(actor))this.updateSourceStruggle(actor,{});
     if(heldBySuspension(actor)){
       const origin=actor.status.struggleOrigin,source=this.actors[actor.status.source];
       const rule=source&&sourceSuspendedStruggle(source.data,source.profile.moves[origin.moveKey]);
@@ -1246,6 +1257,7 @@ export class FightEngine {
         actor.y=source.y-rule.liftHeight;actor.vx=0;actor.vy=0;actor.grounded=false;return;
       }
     }
+    if(this.ownedSourceGrip(actor)){actor.vx=0;actor.vy=0;actor.grounded=true;actor.y=FLOOR;}
     if(referencePolicy(actor).canMove===false){actor.vx=0;actor.vy=0;actor.y=FLOOR;actor.grounded=true;}
     if (!actor.grounded) {
       actor.vy += .65;
@@ -1270,13 +1282,24 @@ export class FightEngine {
 
   beginAttack(actor, key, { cancelled = false, context = false } = {}) {
     if (this.destroyed||this.paused||this.phase!=='fight'||actor.ko || actor.health <= 0 || actor.phaseLock > 0||!offensiveAllowed(actor)) return false;
-    if(sourceParalyzed(actor)||heldBySuspension(actor))return false;
+    if(sourceParalyzed(actor)||heldBySuspension(actor)||this.ownedSourceGrip(actor))return false;
     updateWeaponState(actor);
     const listed=actor.profile.moves[key];
     if(!listed||listed.enabled===false)return false;
     updateMouthState(actor);
     if(sourceMouthPhase(actor.data)?.slots.includes(key)&&!actor.mouthEnraged)return false;
-    const move=actor.weaponDiscarded&&listed.exhaustedMove?listed.exhaustedMove:listed;
+    let move=actor.weaponDiscarded&&listed.exhaustedMove?listed.exhaustedMove:listed;
+    let weaponContext=null;
+    const distanceWeapon=sourceDistanceWeapon(actor.data,listed),enemy=this.actors[1-actor.index];
+    if(distanceWeapon&&enemy){
+      const a=actorBox(actor),b=actorBox(enemy),gap=Math.max(0,a.x-b.x-b.w,b.x-a.x-a.w);
+      weaponContext=gap<=distanceWeapon.closeBodyGap?'close-contact':'ranged-shot';
+      if(weaponContext==='close-contact')move={...move,name:'Crosse du revolver — frappe au contact',
+        projectile:false,projectileCount:1,projectileBurstCount:undefined,projectileBurstInterval:undefined,
+        active:distanceWeapon.closeActive,reach:distanceWeapon.closeReach,hits:1,level:'mid',unblockable:false,
+        damage:Math.max(1,Math.round(move.damage*distanceWeapon.closeDamageScale)),effect:null,
+        travel:0,verticalTravel:0,invulnFrames:0,armorFrames:0,launch:0,knockdown:false,hardKnockdown:false,groundBounce:false};
+    }
     if(move.enabled===false)return false;
     if(move.ammoCost&&(!Number.isSafeInteger(actor.ammo)||actor.ammo<move.ammoCost))return false;
     if (move.requiresAir && actor.grounded) return false;
@@ -1308,6 +1331,7 @@ export class FightEngine {
       teleported: false,
       counterReady: false,
       id: ++actor.attackId,
+      ...(weaponContext?{weaponContext}:{}),
       cancelled
     };
     actor.state = 'attack';
@@ -1340,7 +1364,7 @@ export class FightEngine {
   }
 
   beginTaunt(actor) {
-    if(sourceParalyzed(actor)||heldBySuspension(actor))return false;
+    if(sourceParalyzed(actor)||heldBySuspension(actor)||this.ownedSourceGrip(actor))return false;
     if(this.destroyed||this.paused||this.phase!=='fight'||actor.ko||actor.health<=0||actor.attack||actor.hurtFrames>0||actor.knockdownTimer>0||actor.guardBreak>0||actor.phaseLock>0||actor.dodgeFrames>0||actor.counterStance>0||!actor.grounded||actor.presentation?.key==='taunt')return false;
     const lore=lorePresentation(actor,'taunt');
     if(lore.adaptationStatus!=='adaptation-versus-proposee')return false;
@@ -1569,9 +1593,13 @@ export class FightEngine {
     const standingStruggle=attacker.profile.moves[move.key]===move&&sourceStandingStruggle(attacker.data,move);
     const suspendedStruggle=attacker.profile.moves[move.key]===move&&sourceSuspendedStruggle(attacker.data,move);
     const alreadySuspended=heldBySuspension(target);
+    if(attacker.profile.moves[move.key]===move&&sourceGroundContact(attacker.data,move)&&
+      (!hasGroundContact(target)||contact.ranged))return false;
     if((groundHold||standingBind||standingStruggle||suspendedStruggle)&&(!hasGroundContact(target)||contact.ranged))return false;
     if((standingBind||standingStruggle||suspendedStruggle)&&target.knockdownTimer>0)return false; // Do not invent a lift from an already downed pose.
     if(suspendedStruggle&&referencePolicy(target).canMove===false)return false;
+    if(suspendedStruggle&&gripOutOfRange(attacker,target,suspendedStruggle))return false;
+    if(standingStruggle&&gripOutOfRange(attacker,target,standingStruggle))return false;
     if(sourceDownedFirearmProtection(target.data)&&target.grounded&&target.knockdownTimer>0&&
       isFirearmProjectile(attacker.data,move)){
       // The source describes no damage from shots while this exact boss is
@@ -1841,13 +1869,26 @@ export class FightEngine {
     if(suspended)this.releaseLiftPosture(actor,terminal);
   }
 
+  ownedSourceGrip(source) {
+    for(const victim of this.actors){
+      const origin=victim.status?.struggleOrigin;
+      if(victim===source||!heldByStruggle(victim)||victim.status.source!==source.index||
+        origin.id!==source.data.id||origin.source!==source.data.source)continue;
+      const rule=origin.posture==='suspended'?sourceSuspendedStruggle(source.data,source.profile.moves[origin.moveKey])
+        :sourceStandingStruggle(source.data,source.profile.moves[origin.moveKey]);
+      if(rule?.lockOwner&&!gripOwnerInterrupted(source,origin,rule)&&!gripOutOfRange(source,victim,rule))return {victim,rule};
+    }
+    return null;
+  }
+
   updateSourceStruggle(actor,controls) {
     if(!heldByStruggle(actor))return;
     const origin=actor.status.struggleOrigin,source=this.actors[actor.status.source];
     const move=source?.profile?.moves[origin.moveKey];
     const rule=source&&source.data.id===origin.id&&source.data.source===origin.source&&
       (origin.posture==='suspended'?sourceSuspendedStruggle(source.data,move):sourceStandingStruggle(source.data,move));
-    if(!rule||!offensiveAllowed(source)||source.health<=0||source.ko||actor.health<=0||actor.ko){
+    if(!rule||!offensiveAllowed(source)||source.health<=0||source.ko||actor.health<=0||actor.ko||
+      gripOwnerInterrupted(source,origin,rule)||gripOutOfRange(source,actor,rule)){
       // A terminal round returns before actor physics. Clear the temporary
       // authored lift so the result presentation cannot strand a body aloft.
       this.releaseSourceStruggle(actor,Boolean(source?.health<=0||source?.ko||actor.health<=0||actor.ko));
@@ -1889,7 +1930,8 @@ export class FightEngine {
       const previous=target.status.struggleOrigin;
       target.status.struggleOrigin=previous?.id===source.data.id&&previous.source===source.data.source&&previous.moveKey===move.key
         ?previous:{id:source.data.id,source:source.data.source,moveKey:move.key,progress:0,lastDirection:0,
-          ...(struggle.posture==='suspended'?{posture:'suspended'}:{})};
+          ...(struggle.posture==='suspended'?{posture:'suspended'}:{}),
+          ...(struggle.breakOnOwnerHit?{ownerDamageTaken:source.stats.damageTaken}:{})};
       this.addText('PRISE : ALTERNEZ ← →',target.x,target.y-244,'status');
     }else delete target.status.struggleOrigin;
     if(previouslySuspended&&struggle?.posture!=='suspended')this.releaseLiftPosture(target);
@@ -2558,7 +2600,7 @@ export class FightEngine {
   endRound(winner, label) {
     if (this.destroyed || this.phase !== 'fight') return;
     // Timeout precedes updateStatus; a lethal native grip reaches this path in
-    // its hit tick. Clear only the exact cage-owned temporary lift before any
+    // its hit tick. Clear only the exact source-owned temporary lift before any
     // result presentation. Ordinary airborne KOs keep their existing posture.
     for(const actor of this.actors)if(heldBySuspension(actor)){
       const origin=actor.status.struggleOrigin,source=this.actors[actor.status.source];
@@ -2773,6 +2815,8 @@ export class FightEngine {
     context.translate(camera.x + shakeX, camera.y + shakeY);
     context.scale(camera.scale, camera.scale);
     drawStage(context, this.stage, time, {
+      matchState:{phase:this.phase,frame:this.frame,phaseTimer:this.phaseTimer,round:this.round,
+        phaseDuration:this.presentationSequence?.duration||145,resultTimer:this.resultTimer||0},
       width: WIDTH,
       height: HEIGHT,
       cinematic: Boolean(this.superOverlay),
@@ -2922,6 +2966,9 @@ export class FightEngine {
       if(rule)return `DÉGAGEMENT ←→ ${origin.progress}/${rule.escapeTransitions} · VERSUS`;
     }
     if(sourceParalyzed(actor))return 'PARALYSIE DU CRI · VERSUS';
+    const ownedGrip=this.ownedSourceGrip(actor);
+    if(ownedGrip)return ownedGrip.rule.ownerCue||'EMPRISE EN COURS · VERSUS';
+    if(actor.attack?.weaponContext)return actor.attack.weaponContext==='close-contact'?'CROSSE AU CONTACT · VERSUS':'TIR À DISTANCE · VERSUS';
     if(sourceDownedFirearmProtection(actor.data)&&actor.grounded&&actor.knockdownTimer>0)return 'TIRS SANS EFFET À TERRE';
     if(sourceMouthPhase(actor.data)&&actualExposure(actor))return 'GUEULE OUVERTE · VERSUS';
     const whiff=actualWhiffExposure(actor);
@@ -3019,7 +3066,7 @@ export class FightEngine {
     context.fillText(Number.isFinite(this.matchTime) ? String(Math.ceil(this.matchTime)).padStart(2, '0') : '∞', WIDTH / 2, 47);
     context.fillStyle = this.world.phase === 'fog' ? '#8d9690' : '#b73942';
     context.font = '900 10px ui-monospace';
-    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? this.stage.referencePolicy?.normalPhaseLabel || 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : 'OTHERWORLD'}`, WIDTH / 2, 68);
+    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? this.stage.referencePolicy?.normalPhaseLabel || 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : this.stage.referencePolicy?.alteredPhaseLabel || 'OTHERWORLD'}`, WIDTH / 2, 68);
     context.fillStyle = '#7f877f';
     context.font = '700 9px ui-monospace';
     context.fillText(this.stage.name, WIDTH / 2, 84);

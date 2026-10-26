@@ -286,8 +286,8 @@ test('counter stances become active during their attested defensive technique',(
 
 
 test('terrain profiles alter movement, dodge and friction without replacing the fighter doctrine',()=>{
-  const ice=STAGES.find(stage=>stage.terrain?.id==='ice');
-  const flooded=STAGES.find(stage=>stage.terrain?.id==='flooded');
+  const ice=STAGES.find(stage=>stage.terrain?.id==='ice'&&stage.referencePolicy.terrainRules!==false);
+  const flooded=STAGES.find(stage=>stage.terrain?.id==='flooded'&&stage.referencePolicy.terrainRules!==false);
   assert.ok(ice&&flooded);
   const iceEngine=makeEngine({stage:ice,stageTerrain:true,p1:ROSTER.find(f=>f.visual.kind==='nurse')});
   iceEngine.phase='fight';

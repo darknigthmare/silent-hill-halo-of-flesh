@@ -14,6 +14,125 @@ const TRANSITIONS = new Set(['cedar_grove','alchemilla_origins','film_church','e
 const NARRATIVE_ONLY = new Set(['looping_hall','villa','villa_rooftop','villa_stairwell','final_sacrament','otherworld_void','anne_fight','arcade_1918','arcade_1993']);
 const STYLE = Object.freeze({sh1:'rust',sh2:'decay',sh3:'flesh',sh4:'haunting',origins:'mirror',homecoming:'rust',shattered:'ice',downpour:'storm',arcade:'rust',bom:'elemental',pt:'loop',shortmessage:'floral',shf:'shrine',film:'ash',ascension:'ritual',townfall:'signal'});
 
+const LOT10_ENVIRONMENT = Object.freeze({
+  "dark_shrine": {
+    "weather": "none",
+    "fog": 0,
+    "interior": false,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "torii",
+      "roots"
+    ],
+    "name": "DARK SHRINE — PARVIS DE SHRINE VAULT",
+    "source": "shf",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "hinako_home": {
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "removeProps": [
+      "tatami",
+      "doors",
+      "roots"
+    ],
+    "name": "SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE",
+    "source": "shf",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "shimizu_residence": {
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "removeProps": [
+      "screens",
+      "lanterns",
+      "portraits"
+    ],
+    "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+    "source": "shf",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "school_shf": {
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "desks",
+      "corridor"
+    ],
+    "name": "EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL",
+    "source": "shf",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "corrupted_ebisugaoka": {
+    "weather": "none",
+    "fog": 0,
+    "interior": false,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "lanterns",
+      "booths",
+      "roots"
+    ],
+    "name": "EBISUGAOKA — PARVIS SHIMIZU",
+    "source": "shf",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "nightmare_school": {
+    "weather": "none",
+    "fog": 0,
+    "interior": false,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "ice",
+      "lockers",
+      "maze"
+    ],
+    "name": "MIDWICH GELÉ — COUR PAPARAZZI",
+    "source": "shattered",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "nightmare_hospital_sm": {
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "beds",
+      "ice",
+      "lights"
+    ],
+    "name": "ALCHEMILLA GELÉ — CHAMBRE ER",
+    "source": "shattered",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "nightmare_mall_sm": {
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "shops",
+      "ice",
+      "escalator"
+    ],
+    "name": "TOLUCA MALL GELÉ — HALL GUMBALL",
+    "source": "shattered",
+    "automaticFinishers": false,
+    "disableAnimations": true
+  }
+});
+
 // Corrections refer to the exact ID/media. Similar names never transfer a rule.
 const ENVIRONMENT = Object.freeze({
   old_silent_hill: {weather:'snow'},
@@ -21,7 +140,7 @@ const ENVIRONMENT = Object.freeze({
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
   prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER',weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['cells','watchtower','chains']},
   brookhaven_sh2:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['ward','curtains','monitor','beds','cages']},
-  alchemilla: {weather:'dust',disabledEvents:{referenceLightReply:'Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu.'}}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
+  alchemilla: {source:'sh1',weather:'dust',removeProps:['ward','curtains','monitor','beds'],disabledEvents:{referenceLightReply:'Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu.'}}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
   lakeside_amusement:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
   lakeside_sh3:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
   midwich_nightmare:{weather:'dust',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['lockers','chains','ceiling-lights']},
@@ -199,10 +318,109 @@ const ENVIRONMENT = Object.freeze({
     }
   },
 
+  ...LOT10_ENVIRONMENT,
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
 const SCENE_PRESENTATION = Object.freeze({
+  ...{
+  "dark_shrine": {
+    "source": "shf",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "PARVIS AVANT SHRINE VAULT",
+      "alteredPhaseLabel": "PARVIS AVANT SHRINE VAULT",
+      "terrainPresentation": {
+        "name": "PARVIS DU HOKORA",
+        "description": "Parvis devant Shrine Vault fermé et son petit Hokora latéral ; pas couloirs, salle de boss ou coffre ouvert. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "hinako_home": {
+    "source": "shf",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "RESIDENCE I · ENTRÉE",
+      "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
+      "terrainPresentation": {
+        "name": "PLANCHER DU CORRIDOR",
+        "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "shimizu_residence": {
+    "source": "shf",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "alteredPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "terrainPresentation": {
+        "name": "TATAMI DE LA SALLE À MANGER",
+        "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "school_shf": {
+    "source": "shf",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "BUREAU AU COFFRET DE CLÉS",
+      "alteredPhaseLabel": "BUREAU AU COFFRET DE CLÉS",
+      "terrainPresentation": {
+        "name": "SOL DU BUREAU DU PERSONNEL",
+        "description": "Bureau du personnel avec coffret de clés et tableau de planning ; pas classe générique ou rideau non observé. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "corrupted_ebisugaoka": {
+    "source": "shf",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "PARTIE 5 · DEVANT LA RÉSIDENCE",
+      "alteredPhaseLabel": "PARTIE 5 · DEVANT LA RÉSIDENCE",
+      "terrainPresentation": {
+        "name": "PARVIS DEVANT SHIMIZU",
+        "description": "Parvis de la vue Part5 devant Shimizu ; pétales et brouillard, sans procession ajoutée ou feu de fin de récit. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "nightmare_school": {
+    "source": "shattered",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "COUR GELÉE · PUZZLE PAPARAZZI",
+      "alteredPhaseLabel": "COUR GELÉE · PUZZLE PAPARAZZI",
+      "terrainPresentation": {
+        "name": "COUR DEVANT LA FENÊTRE",
+        "description": "Cour de Midwich HighSchool gelée devant la première fenêtre Paparazzi ; puzzle et personnes gelées exclus. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "nightmare_hospital_sm": {
+    "source": "shattered",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "CHAMBRE ER · AVANT DÉGEL",
+      "alteredPhaseLabel": "CHAMBRE ER · AVANT DÉGEL",
+      "terrainPresentation": {
+        "name": "SOL DE LA CHAMBRE ER",
+        "description": "Chambre ER Alchemilla au puzzle radio avant le dégel ; pas quai ferroviaire, couloir Homecoming ou séparation vitrée inventée. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  },
+  "nightmare_mall_sm": {
+    "source": "shattered",
+    "policy": {
+      "terrainRules": false,
+      "normalPhaseLabel": "HALL GUMBALL · AVANT DÉGEL",
+      "alteredPhaseLabel": "HALL GUMBALL · AVANT DÉGEL",
+      "terrainPresentation": {
+        "name": "SOL DU HALL GUMBALL",
+        "description": "Hall Gumball gelé après Garage AccessSouth ; pas toit, galerie précédente, personnages gelés ou puzzle jouable. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      }
+    }
+  }
+},
   blue_creek:{"source":"sh2","policy":{"terrainRules":false,"terrainPresentation":{"name":"PALIER DE L’ESCALIER","description":"Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"AVANT LE DRAINAGE"}},
   nightmare_mall:{"source":"sh3","policy":{"terrainRules":false,"terrainPresentation":{"name":"PALIER DES SIX TUNNELS","description":"Arène souterraine Split Worm ; treillis de bord et sol de duel adaptés, sans ver ajouté. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."}}},
   grand_hotel:{"source":"homecoming","policy":{"terrainRules":false,"terrainPresentation":{"name":"SOL DE L’ATRIUM","description":"Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."},"normalPhaseLabel":"ATRIUM SANS SEPULCHER"}},
@@ -260,7 +478,437 @@ const LOT9_REFERENCE_TRACKS = Object.freeze({
 const LOT9_BINDINGS = Object.freeze({"blue_creek":[["blueStairRailReply",2,[0.55,0.56],"referenceRailingReply"]],"nightmare_mall":[["splitWormGrateReply",2,[0.24,0.56],"referenceMallGrateReply"]],"grand_hotel":[["atriumSupportReply",2,[0.73,0.28],"referenceSupportReply"]],"police_station_hc":[["policeCellLightDust",1,[0.35,0.35]],["policeCellBarsReply",2,[0.35,0.57],"referencePoliceBarsReply"]],"prison_hc":[["overlookHCCellReply",0,[0.68,0.57],"referenceGateReply"],["overlookHCBarLight",1,[0.68,0.57]]],"overlook":[["overlookDPDoorReply",1,[0.72,0.57],"referenceGateReply"]],"downpour_streets":[["pearlCreekRainDepth",0,[0.5,0.4]],["pearlCreekPuddles",1,[0.5,0.66]]],"book_fire":[["bomFireGrateGlow",0,[0.5,0.55]],["bomFireEmberDepth",1,[0.5,0.5]]],"book_wood":[["bomWoodBareBranches",0,[0.5,0.57]],["bomWoodBarkReply",2,[0.22,0.5],"referenceBarkReply"]],"book_earth":[["bomEarthGravelRoll",0,[0.5,0.6]],["bomEarthBlockReply",2,[0.74,0.48],"referenceEarthBlockReply"]],"film_church":[["gansNaveCandles",0,[0.5,0.57]]],"nightmare_hospital_hc":[["hcDreamCurtainGurney",2,[0.76,0.57]]],"prison_meat_locker":[["freezerHookColdReply",2,[0.18,0.32],"referenceHookReply"]],"book_blood":[["bomBloodSurfacePulse",0,[0.5,0.59]]],"film_hospital":[["gansAlessaTentCloth",0,[0.68,0.57]]],"shepherds_glen":[["shepherdMissingNotices",1,[0.5,0.57]],["shepherdNoticeLampFog",2,[0.5,0.25]]]});
 
 /** Small, executable vocabulary. A binding below is required; no keyword tagging. */
+// Lot10: exact room parts and explicit versus result/restart compositions.
+const LOT10_REFERENCE_TRACKS = Object.freeze({
+  "hokoraRopeSway": {
+    "name": "Corde du Hokora devant Shrine Vault",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine",
+    "source": "shf",
+    "locationScope": "Parvis extérieur Dark Shrine, petit Hokora à gauche de Shrine Vault fermé, SHf2025",
+    "limits": "Corde et shide visibles ensemble ; faible flexion authored, sans ouverture du coffre, Hinako, énigme ou motif rituel reproduit."
+  },
+  "hokoraShideFlutter": {
+    "name": "Papier plié retenu au Hokora",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine",
+    "source": "shf",
+    "locationScope": "Même petit Hokora du parvis avant Shrine Vault fermé",
+    "limits": "Papier zigzag observé, frémissement versus proposé ; sans papier de collectible déplacé, texte sacré copié ou cadence source mesurée."
+  },
+  "residenceEntryPanel": {
+    "name": "Porte translucide du corridor d’entrée",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "hinako_home",
+    "source": "shf",
+    "locationScope": "Shimizu ResidenceI, corridor d’entrée à plancher bois, SHf2025",
+    "limits": "Panneaux fermés observés ; vibration minime versus. Ce corridor reste distinct de la salle à manger à tatami, sans déplacer cloison ou collision."
+  },
+  "residenceThresholdLight": {
+    "name": "Lumière au seuil du corridor familial",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "hinako_home",
+    "source": "shf",
+    "locationScope": "Même corridor d’entrée ResidenceI, porte translucide et plancher bois",
+    "limits": "Variation douce proposée depuis la lumière de la vue ; pas d’ombre familiale, apparition, scène de retour ou branche projetée sur un tatami absent."
+  },
+  "residenceDiningDishes": {
+    "name": "Vaisselle sur la table ronde de la salle à manger",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "shimizu_residence",
+    "source": "shf",
+    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "limits": "Table ronde basse et vaisselle observées ; léger frémissement versus. Aucun objet de cuisine, calendrier lisible, boss ou confrontation importé."
+  },
+  "schoolStaffChalkDust": {
+    "name": "Poussière du tableau du bureau du personnel",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "school_shf",
+    "source": "shf",
+    "locationScope": "Ebisugaoka Middle School, bureau du personnel au coffret de clés, SHf2025",
+    "limits": "Tableau noir de planning visible à droite ; poussière proposée au-dessus de sa réglette, sans classe, rideau, écriture copiée ou scène d’enseignement."
+  },
+  "residenceForecourtPetals": {
+    "name": "Pétales rouges devant la résidence",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "corrupted_ebisugaoka",
+    "source": "shf",
+    "locationScope": "Parvis extérieur de la résidence Shimizu, Ebisugaoka Part5 SHf2025",
+    "limits": "Pétales et bordure rouge de la vue observés ; chute lente versus proposée, sans croissance sur les combattants, foule ou propagation canonique mesurée."
+  },
+  "residenceForecourtFog": {
+    "name": "Brume devant les tuiles de la résidence",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "corrupted_ebisugaoka",
+    "source": "shf",
+    "locationScope": "Même parvis Shimizu Part5, façade et ciel embrumés",
+    "limits": "Deux plans de brume authored depuis la vue ; pas de changement de météo, procession, passage d’acteur ou physique de glisse source revendiqué."
+  },
+  "midwichCourtyardIcePane": {
+    "name": "Givre autour de la fenêtre de la cour",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_school",
+    "source": "shattered",
+    "locationScope": "Midwich High School gelée, cour du premier cliché Paparazzi, ShatteredMemories Wii2009",
+    "limits": "Fenêtre contextualisée par le guide et son petit cadrage de téléphone ; dessin de givre versus proposé. Ni couple gelé, photos, glace brisée ni restitution complète du bâtiment."
+  },
+  "midwichCourtyardColdBeam": {
+    "name": "Buée dans le faisceau de la cour",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_school",
+    "source": "shattered",
+    "locationScope": "Même fenêtre de la cour Midwich au puzzle Paparazzi, Wii2009",
+    "limits": "Flashlight et contexte glacé documentés ; faisceau fixe et buée versus proposés sans Harry, main, téléphone ou lumière de quête portable."
+  },
+  "alchemillaERColdWall": {
+    "name": "Lueur froide dans le mur de la chambre ER",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_hospital_sm",
+    "source": "shattered",
+    "locationScope": "Chambre ER Alchemilla, puzzle radio avant dégel de la porte, ShatteredMemories Wii2009",
+    "limits": "Vue de chambre et guide précis ; pulsation bleue authored sur le mur, sans figures père/enfant, radio jouable, fréquence sonore, rideau ou vitrage non corroboré."
+  },
+  "tolucaGumballFrostSign": {
+    "name": "Panneau de la salle Gumball sous le givre",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_mall_sm",
+    "source": "shattered",
+    "locationScope": "TolucaMall gelé, hall Gumball après Garage Access South, ShatteredMemories Wii2009",
+    "limits": "Panneau mural et glace visibles dans la petite vue ; givre authored sur un panneau abstrait, sans logo copié, Tookie, silhouettes gelées, distributeur ou puzzle jouable."
+  },
+  "hokoraRoundRest": {
+    "name": "Corde et shide s’immobilisent, la lueur du Hokora se resserre",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine",
+    "source": "shf",
+    "locationScope": "Parvis extérieur Dark Shrine, petit Hokora à gauche de Shrine Vault fermé, SHf2025",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Corde et shide s’immobilisent, la lueur du Hokora se resserre. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "hokoraRopeSway",
+        "hokoraShideFlutter",
+        "lanternGlow"
+      ],
+      "settleFrames": 30,
+      "kind": "hokoraRoundRest"
+    }
+  },
+  "entryRoundRest": {
+    "name": "Le panneau s’apaise et le seuil garde un rectangle de lumière",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "hinako_home",
+    "source": "shf",
+    "locationScope": "Shimizu ResidenceI, corridor d’entrée à plancher bois, SHf2025",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le panneau s’apaise et le seuil garde un rectangle de lumière. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "residenceEntryPanel",
+        "residenceThresholdLight"
+      ],
+      "settleFrames": 22,
+      "kind": "entryRoundRest"
+    }
+  },
+  "diningRoundRest": {
+    "name": "Les deux reflets de vaisselle se rapprochent des rebords immobiles",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "shimizu_residence",
+    "source": "shf",
+    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les deux reflets de vaisselle se rapprochent des rebords immobiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "residenceDiningDishes"
+      ],
+      "settleFrames": 26,
+      "kind": "diningRoundRest"
+    }
+  },
+  "staffRoomRoundRest": {
+    "name": "La craie cesse de dériver, la réglette reste le repère éclairé",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "school_shf",
+    "source": "shf",
+    "locationScope": "Ebisugaoka Middle School, bureau du personnel au coffret de clés, SHf2025",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La craie cesse de dériver, la réglette reste le repère éclairé. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "schoolStaffChalkDust"
+      ],
+      "settleFrames": 36,
+      "kind": "staffRoomRoundRest"
+    }
+  },
+  "forecourtRoundRest": {
+    "name": "Les pétales se posent visuellement et la brume voile les tuiles",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "corrupted_ebisugaoka",
+    "source": "shf",
+    "locationScope": "Parvis extérieur de la résidence Shimizu, Ebisugaoka Part5 SHf2025",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les pétales se posent visuellement et la brume voile les tuiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "rootBorder",
+        "residenceForecourtPetals",
+        "residenceForecourtFog"
+      ],
+      "settleFrames": 42,
+      "kind": "forecourtRoundRest"
+    }
+  },
+  "courtyardRoundRest": {
+    "name": "La bordure givrée se stabilise, le faisceau froid s’adoucit",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_school",
+    "source": "shattered",
+    "locationScope": "Midwich High School gelée, cour du premier cliché Paparazzi, ShatteredMemories Wii2009",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La bordure givrée se stabilise, le faisceau froid s’adoucit. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "midwichCourtyardIcePane",
+        "midwichCourtyardColdBeam"
+      ],
+      "settleFrames": 32,
+      "kind": "courtyardRoundRest"
+    }
+  },
+  "erRoundRest": {
+    "name": "La pulsation du mur ER se réduit autour de la porte gelée",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_hospital_sm",
+    "source": "shattered",
+    "locationScope": "Chambre ER Alchemilla, puzzle radio avant dégel de la porte, ShatteredMemories Wii2009",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La pulsation du mur ER se réduit autour de la porte gelée. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "alchemillaERColdWall"
+      ],
+      "settleFrames": 20,
+      "kind": "erRoundRest"
+    }
+  },
+  "gumballRoundRest": {
+    "name": "Le panneau froid s’éteint en quatre plages derrière le givre",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_mall_sm",
+    "source": "shattered",
+    "locationScope": "TolucaMall gelé, hall Gumball après Garage Access South, ShatteredMemories Wii2009",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le panneau froid s’éteint en quatre plages derrière le givre. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "tolucaGumballFrostSign"
+      ],
+      "settleFrames": 28,
+      "kind": "gumballRoundRest"
+    }
+  },
+  "fireGrateRoundRest": {
+    "name": "Les braises s’arrêtent et la grille garde une rougeur basse",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "book_fire",
+    "source": "bom",
+    "locationScope": "Même salle industrielle Fire Vita, sans entrée du Guardian",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les braises s’arrêtent et la grille garde une rougeur basse. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "bomFireGrateGlow",
+        "bomFireEmberDepth"
+      ],
+      "settleFrames": 24,
+      "kind": "fireGrateRoundRest"
+    }
+  },
+  "woodClearingRoundRest": {
+    "name": "Les branches se reposent et les extrémités de la lisière s’assombrissent",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "book_wood",
+    "source": "bom",
+    "locationScope": "Même lisière Wood Vita, impact près du tronc abstrait gauche",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les branches se reposent et les extrémités de la lisière s’assombrissent. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "rootBorder",
+        "bomWoodBareBranches"
+      ],
+      "settleFrames": 38,
+      "kind": "woodClearingRoundRest"
+    }
+  },
+  "earthGalleryRoundRest": {
+    "name": "Les petites pierres s’arrêtent et la poussière disparaît au pied de la galerie",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "book_earth",
+    "source": "bom",
+    "locationScope": "Même galerie Earth préversion juin 2012, hors trajet de duel",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les petites pierres s’arrêtent et la poussière disparaît au pied de la galerie. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "dustDrift",
+        "bomEarthGravelRoll"
+      ],
+      "settleFrames": 18,
+      "kind": "earthGalleryRoundRest"
+    }
+  },
+  "bloodPlatformRoundRest": {
+    "name": "La lueur rouge des surfaces reste en une bande fixe et basse",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "book_blood",
+    "source": "bom",
+    "locationScope": "Plateformes rouges de l’arène Blood illustrée le 6 juin 2012, préversion",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La lueur rouge des surfaces reste en une bande fixe et basse. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "bomBloodSurfacePulse"
+      ],
+      "settleFrames": 34,
+      "kind": "bloodPlatformRoundRest"
+    }
+  },
+  "naveRoundRest": {
+    "name": "Les cierges cessent leur inclinaison, les flammes de fond gardent leur point chaud",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "film_church",
+    "source": "film",
+    "locationScope": "Église du film Christophe Gans 2006, nef avant intrusion finale",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les cierges cessent leur inclinaison, les flammes de fond gardent leur point chaud. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "gansNaveCandles"
+      ],
+      "settleFrames": 25,
+      "kind": "naveRoundRest"
+    }
+  },
+  "alessaRoomRoundRest": {
+    "name": "Le voile opaque se repose sur son cadre, un pli garde la lumière",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "film_hospital",
+    "source": "film",
+    "locationScope": "Chambre d’Alessa dans le film 2006 ; nom Brookhaven non attribué",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le voile opaque se repose sur son cadre, un pli garde la lumière. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "gansAlessaTentCloth"
+      ],
+      "settleFrames": 40,
+      "kind": "alessaRoomRoundRest"
+    }
+  },
+  "clinicalDreamRoundRest": {
+    "name": "Le tissu cesse de flotter, le cadre du brancard reste un repère clair",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "nightmare_hospital_hc",
+    "source": "homecoming",
+    "locationScope": "Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le tissu cesse de flotter, le cadre du brancard reste un repère clair. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "hcDreamCurtainGurney"
+      ],
+      "settleFrames": 27,
+      "kind": "clinicalDreamRoundRest"
+    }
+  },
+  "policeCellRoundRest": {
+    "name": "Le faisceau se resserre sur la cellule sans ouvrir ses barreaux",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "police_station_hc",
+    "source": "homecoming",
+    "locationScope": "Cellule du premier réveil, distincte de la prison Homecoming",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le faisceau se resserre sur la cellule sans ouvrir ses barreaux. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "lampReply",
+        "policeCellLightDust"
+      ],
+      "settleFrames": 21,
+      "kind": "policeCellRoundRest"
+    }
+  },
+  "cellBlockBRoundRest": {
+    "name": "Les ombres des barreaux cessent leur dérive et gardent une ligne fixe",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "prison_hc",
+    "source": "homecoming",
+    "locationScope": "Coursive normale de la prison Overlook Homecoming",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les ombres des barreaux cessent leur dérive et gardent une ligne fixe. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "overlookHCBarLight"
+      ],
+      "settleFrames": 33,
+      "kind": "cellBlockBRoundRest"
+    }
+  },
+  "atriumRoundRest": {
+    "name": "La poussière cesse de tomber et le support d’atrium garde un faible éclat",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "grand_hotel",
+    "source": "homecoming",
+    "locationScope": "Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté",
+    "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La poussière cesse de tomber et le support d’atrium garde un faible éclat. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
+    "trigger": "match-phase",
+    "matchRecipe": {
+      "targets": [
+        "dustDrift"
+      ],
+      "settleFrames": 31,
+      "kind": "atriumRoundRest"
+    }
+  }
+});
+const LOT10_BINDINGS = Object.freeze({"dark_shrine":[["hokoraRopeSway",1,[0.27,0.46]],["hokoraShideFlutter",2,[0.27,0.46]],["hokoraRoundRest",3,[0.27,0.46]]],"hinako_home":[["residenceEntryPanel",0,[0.67,0.57]],["residenceThresholdLight",2,[0.67,0.57]],["entryRoundRest",3,[0.67,0.57]]],"shimizu_residence":[["residenceDiningDishes",0,[0.5,0.57]],["diningRoundRest",3,[0.5,0.57]]],"school_shf":[["schoolStaffChalkDust",1,[0.73,0.39]],["staffRoomRoundRest",3,[0.73,0.39]]],"corrupted_ebisugaoka":[["residenceForecourtPetals",1,[0.5,0.32]],["residenceForecourtFog",2,[0.5,0.48]],["forecourtRoundRest",3,[0.5,0.48]]],"nightmare_school":[["midwichCourtyardIcePane",0,[0.64,0.49]],["midwichCourtyardColdBeam",1,[0.64,0.49]],["courtyardRoundRest",3,[0.64,0.49]]],"nightmare_hospital_sm":[["alchemillaERColdWall",2,[0.67,0.45]],["erRoundRest",3,[0.67,0.45]]],"nightmare_mall_sm":[["tolucaGumballFrostSign",0,[0.3,0.34]],["gumballRoundRest",3,[0.3,0.34]]],"book_fire":[["fireGrateRoundRest",3,[0.5,0.55]]],"book_wood":[["woodClearingRoundRest",3,[0.5,0.57]]],"book_earth":[["earthGalleryRoundRest",3,[0.5,0.6]]],"book_blood":[["bloodPlatformRoundRest",3,[0.5,0.59]]],"film_church":[["naveRoundRest",3,[0.5,0.57]]],"film_hospital":[["alessaRoomRoundRest",3,[0.68,0.57]]],"nightmare_hospital_hc":[["clinicalDreamRoundRest",3,[0.76,0.57]]],"police_station_hc":[["policeCellRoundRest",3,[0.35,0.57]]],"prison_hc":[["cellBlockBRoundRest",3,[0.68,0.57]]],"grand_hotel":[["atriumRoundRest",3,[0.69,0.45]]]});
+
 export const STAGE_REFERENCE_TRACKS = Object.freeze({
+  ...LOT10_REFERENCE_TRACKS,
   ...LOT9_REFERENCE_TRACKS,
   fogLayers: {name:'Nappes de brume à deux vitesses',layer:'background',replaces:['fogDrift']},
   snowDepth: {name:'Neige dans la profondeur',layer:'air',replaces:['snowGust']},
@@ -409,8 +1057,9 @@ export function stageReferenceTrackAllowed(stage, track) {
   if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
   if(!definition.stageId)return true;
   return stage?.id===definition.stageId&&stage?.source===definition.source&&track.source===definition.source&&
+    (!definition.trigger||track.trigger===definition.trigger)&&
     track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`&&
-    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
+    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;
@@ -481,12 +1130,13 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
+  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || []),...(LOT10_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
       evidence:[...(proposal.evidence || reference.referenceIds || [])],layer:definition.layer,anchor:{x:anchor[0],y:anchor[1]},
-      trigger:event ? 'local-heavy-impact' : 'ambient',event:event || null,
+      trigger:definition.trigger || (event ? 'local-heavy-impact' : 'ambient'),event:event || null,
+      ...(definition.matchRecipe?{matchRecipe:copy(definition.matchRecipe),requiresExplicitMatchPhase:true}:{}),
       eventEnabled:event ? !corrections.disabledEvents?.[event] : null,
       implementation:'canvas-prototype',coverage:'partial-visual-prototype',implementedElement:definition.name,
       fidelity:'adaptation-versus-proposee',captureStatus:proposal.captureStatus || 'capture-a-relever',

@@ -68,7 +68,7 @@ test('new scenery moves normally and freezes geometry with reduced motion withou
 
 test('the film room never claims Brookhaven or a nurse corridor and the clinical dream cannot replay its later elevator scene',()=>{
  const alessa=stage('film_hospital');assert.equal(alessa.name,'HÔPITAL DU FILM — CHAMBRE D’ALESSA');assert.equal(alessa.reference.blocked,false);assert.equal(alessa.referencePolicy.normalPhaseLabel,'CHAMBRE D’ALESSA · FILM 2006');assert.equal(alessa.referencePolicy.worldState,'fixed-normal');
- for(const prop of['beds','gurneys','chains','monitor'])assert.ok(!alessa.props.includes(prop));assert.equal(alessa.referenceTracks.length,1);assert.equal(alessa.referenceTracks[0].key,'gansAlessaTentCloth');
+ for(const prop of['beds','gurneys','chains','monitor'])assert.ok(!alessa.props.includes(prop));assert.equal(alessa.referenceTracks.filter(t=>t.trigger!=='match-phase').length,1);assert.equal(alessa.referenceTracks[0].key,'gansAlessaTentCloth');
  const clinical=stage('nightmare_hospital_hc');assert.equal(clinical.referencePolicy.worldState,'fixed-normal');assert.equal(clinical.shift.startOtherworld,false);assert.equal(clinical.shift.enabled,false);assert.match(clinical.referencePolicy.normalPhaseLabel,/AVANT LE MIROIR/);assert.ok(!clinical.referenceTracks.some(t=>t.proposalIndex===1));
  const nave=stage('film_church');assert.equal(nave.referencePolicy.worldState,'fixed-normal');assert.equal(nave.shift.enabled,false);for(const prop of['flesh','chains'])assert.ok(!nave.props.includes(prop));
  for(const s of[alessa,clinical,nave]){const e=engineFor(s),world=e.world.amount;for(let n=0;n<90;n++)e.update();assert.equal(e.world.amount,world);assert.equal(s.referencePolicy.automaticFinishers,false);}

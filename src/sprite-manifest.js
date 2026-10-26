@@ -546,7 +546,7 @@ export const SPRITES = {
       887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1.",
+    "notes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -572,6 +572,78 @@ export const SPRITES = {
         "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
         "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
         "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375",
+        "bytes": 744380,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          46,
+          480,
+          1240,
+          1023
+        ],
+        "pixelSHA256": "931bd818117db7988bfc7be0c1c43dd41d8d20347a1af18a9cb36c57681d5abe",
+        "transparentFraction": 0.81114,
+        "path": "assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+        "facing": 1,
+        "anchor": [
+          0.6,
+          0.81579
+        ],
+        "bodyHeight": 0.386,
+        "sourceFile": "exec-ea84aa48-3f8f-4c79-8332-7899511c887b.png",
+        "sourceSHA256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495",
+        "bytes": 726218,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          40,
+          520,
+          1222,
+          1181
+        ],
+        "pixelSHA256": "da6a645274b81cb612717605aa7b8d471fb709dcb9aebc666566bf6c723f6c3f",
+        "transparentFraction": 0.80839,
+        "path": "assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+        "facing": 1,
+        "anchor": [
+          0.6,
+          0.94179
+        ],
+        "bodyHeight": 0.384,
+        "sourceFile": "exec-8f7a0382-0560-4044-b35e-368f287e4732.png",
+        "sourceSHA256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee",
+        "bytes": 673410,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          29,
+          729,
+          1226,
+          1109
+        ],
+        "pixelSHA256": "27b3f38ccbefe017dc26a35ab7073e06d5135ef460479cbcfe846e9be92242e9",
+        "transparentFraction": 0.82956,
+        "path": "assets/sprites/sh1_split_head_014.e48107f497d7.png",
+        "facing": 1,
+        "anchor": [
+          0.6,
+          0.88437
+        ],
+        "bodyHeight": 0.389,
+        "sourceFile": "exec-afb0840d-f12f-4c2c-9e61-2b3e0974fb08.png",
+        "sourceSHA256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
@@ -594,6 +666,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -682,7 +775,7 @@ export const SPRITES = {
       1155
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1.",
+    "notes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -707,6 +800,78 @@ export const SPRITES = {
         "bodyHeight": 0.93,
         "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
         "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a",
+        "bytes": 926873,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          209,
+          219,
+          1058,
+          1184
+        ],
+        "pixelSHA256": "88e086addf8f573e805070244c13129615deca0c38ae13abaca2a06b2acf11a9",
+        "transparentFraction": 0.78559,
+        "path": "assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+        "facing": 1,
+        "anchor": [
+          0.6,
+          0.94418
+        ],
+        "bodyHeight": 0.84,
+        "sourceFile": "exec-a8c525aa-faa2-4541-b1d9-f4611024cfe3.png",
+        "sourceSHA256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f",
+        "bytes": 913584,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          226,
+          147,
+          1044,
+          1189
+        ],
+        "pixelSHA256": "026a12bb5d0ab9f0d1f7a9f974d46307b6366a48d59e6e8f2d98b3e448d3da10",
+        "transparentFraction": 0.78416,
+        "path": "assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+        "facing": 1,
+        "anchor": [
+          0.59,
+          0.94817
+        ],
+        "bodyHeight": 0.83,
+        "sourceFile": "exec-45734f2d-6cf1-416b-a904-7ef68977ea7a.png",
+        "sourceSHA256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae",
+        "bytes": 996619,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          84,
+          527,
+          1234,
+          1199
+        ],
+        "pixelSHA256": "370b0b565467df7f2242ac9ba48b355a3c8aec545d2dba210f72b242cbc7ef77",
+        "transparentFraction": 0.7704,
+        "path": "assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+        "facing": 1,
+        "anchor": [
+          0.57,
+          0.95614
+        ],
+        "bodyHeight": 0.84,
+        "sourceFile": "exec-7c73d1bc-422b-487f-a4ad-9924a795cac5.png",
+        "sourceSHA256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae",
         "origin": "conversation-image-generation"
       }
     ],
@@ -733,6 +898,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0
@@ -750,7 +936,7 @@ export const SPRITES = {
       1086
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1.",
+    "notes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -775,6 +961,78 @@ export const SPRITES = {
         "bodyHeight": 0.85,
         "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
         "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db",
+        "bytes": 1091589,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          11,
+          295,
+          1251,
+          1058
+        ],
+        "pixelSHA256": "39d4978cd2031a80d880b2d86f30075a440ca2d8cb2a1b5009da0b596587e521",
+        "transparentFraction": 0.74814,
+        "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+        "facing": -1,
+        "anchor": [
+          0.6,
+          0.8437
+        ],
+        "bodyHeight": 0.65,
+        "sourceFile": "exec-e53aec0d-d645-4cca-a4b3-395de38ec09c.png",
+        "sourceSHA256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f",
+        "bytes": 1321541,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          31,
+          130,
+          1237,
+          1202
+        ],
+        "pixelSHA256": "6678bc7991e37df0d9a6c7a1f3841de6a1724995979b766e0e3bec373e8f88fd",
+        "transparentFraction": 0.68621,
+        "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+        "facing": -1,
+        "anchor": [
+          0.62,
+          0.95853
+        ],
+        "bodyHeight": 0.7,
+        "sourceFile": "exec-ce8d9c93-2018-4f72-8680-abf207e3112f.png",
+        "sourceSHA256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce",
+        "bytes": 835841,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          59,
+          689,
+          1229,
+          1112
+        ],
+        "pixelSHA256": "aef1c9c28d41a5271adfef5e021fbebd119e5dee7e8d7ab18af38ed8bd1b3913",
+        "transparentFraction": 0.80345,
+        "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+        "facing": -1,
+        "anchor": [
+          0.6,
+          0.88676
+        ],
+        "bodyHeight": 0.62,
+        "sourceFile": "exec-992584c9-1435-490e-9387-fc7eeef5bc66.png",
+        "sourceSHA256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce",
         "origin": "conversation-image-generation"
       }
     ],
@@ -801,6 +1059,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0
@@ -818,7 +1097,7 @@ export const SPRITES = {
       1086
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original : tête recouverte de replis distincte de Groaner, pose source conservée. Pieds sombres recadrés reconstruits et marges haut/bas étroites ; côté opposé absent. Échelle/ancrage versus non mesurés ; aucun cycle ni certification 1:1.",
+    "notes": "Candidat fixe SH1 original : tête recouverte de replis distincte de Groaner, pose source conservée. Pieds sombres recadrés reconstruits et marges haut/bas étroites ; côté opposé absent. Échelle/ancrage versus non mesurés ; aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -844,6 +1123,78 @@ export const SPRITES = {
         "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
         "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
         "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578",
+        "bytes": 1309263,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          61,
+          165,
+          1242,
+          1134
+        ],
+        "pixelSHA256": "0a74be905e6475499d14a6e9592d49b50953b4e987f9be7ad467d76168f1bc47",
+        "transparentFraction": 0.63671,
+        "path": "assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+        "facing": -1,
+        "anchor": [
+          0.59,
+          0.90431
+        ],
+        "bodyHeight": 0.76,
+        "sourceFile": "exec-e66d6b67-b1a4-4746-9fba-5bc95584d6c0.png",
+        "sourceSHA256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730",
+        "bytes": 1185443,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          80,
+          110,
+          1182,
+          1160
+        ],
+        "pixelSHA256": "b5099f587fd8a68eaf7069f4227685005c3c950c2547e1315472a28dd47b4c52",
+        "transparentFraction": 0.67537,
+        "path": "assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+        "facing": -1,
+        "anchor": [
+          0.59,
+          0.92504
+        ],
+        "bodyHeight": 0.77,
+        "sourceFile": "exec-f624a4c5-9b03-4ae1-ad21-f6c3b2230b64.png",
+        "sourceSHA256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8",
+        "bytes": 1026533,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          23,
+          541,
+          1232,
+          1121
+        ],
+        "pixelSHA256": "f39dfb4e491e0343d942ec0fef6c1d2d1b77448b6ae0e6e596a6ab14362b794a",
+        "transparentFraction": 0.70916,
+        "path": "assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+        "facing": -1,
+        "anchor": [
+          0.58,
+          0.89394
+        ],
+        "bodyHeight": 0.787,
+        "sourceFile": "exec-bd5e1350-b08c-40e8-ba07-d883a734d0d3.png",
+        "sourceSHA256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
@@ -866,6 +1217,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -954,7 +1326,7 @@ export const SPRITES = {
       913
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH4 original : un seul Hummer depuis le grand sujet de la planche à deux créatures. Deux ailes asymétriques et long bec ; membranes/fourrure extrapolées depuis 404×214, aucune vue indépendante nette. Direction/ancrage/échelle versus ; aucune attribution Arcade ni cycle ou certification 1:1.",
+    "notes": "Candidat fixe SH4 original : un seul Hummer depuis le grand sujet de la planche à deux créatures. Deux ailes asymétriques et long bec ; membranes/fourrure extrapolées depuis 404×214, aucune vue indépendante nette. Direction/ancrage/échelle versus ; aucune attribution Arcade ni cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -979,6 +1351,78 @@ export const SPRITES = {
         "bodyHeight": 0.88,
         "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
         "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54",
+        "bytes": 662108,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          75,
+          304,
+          1180,
+          1110
+        ],
+        "pixelSHA256": "6cb045ede8b787ec1a7a3fafcc5194adabde0c8d2d3e7e3068924c36b77a07a9",
+        "transparentFraction": 0.86217,
+        "path": "assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+        "facing": 1,
+        "anchor": [
+          0.65,
+          0.88517
+        ],
+        "bodyHeight": 0.55,
+        "sourceFile": "exec-5fe9ef5f-36e6-4b11-a6f8-35b3c5e292a1.png",
+        "sourceSHA256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58",
+        "bytes": 770156,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          144,
+          132,
+          1206,
+          1040
+        ],
+        "pixelSHA256": "0a99feb0b756bdac7d8cf802084ff27b6b901e30a3ad9fb626a621f0b062b35d",
+        "transparentFraction": 0.82462,
+        "path": "assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.82935
+        ],
+        "bodyHeight": 0.53,
+        "sourceFile": "exec-7cd60508-403c-4c27-b3ed-f94f174c54c9.png",
+        "sourceSHA256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755",
+        "bytes": 663909,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          155,
+          548,
+          1132,
+          1028
+        ],
+        "pixelSHA256": "50ed34bf2028a42874f60d7fe6f77f37574d594126d2070bcf2a9f70e01215fe",
+        "transparentFraction": 0.86725,
+        "path": "assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+        "facing": 1,
+        "anchor": [
+          0.62,
+          0.81978
+        ],
+        "bodyHeight": 0.61,
+        "sourceFile": "exec-046255fb-f065-46a1-9f49-8dbb49af8536.png",
+        "sourceSHA256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755",
         "origin": "conversation-image-generation"
       }
     ],
@@ -1005,6 +1449,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0
@@ -1022,7 +1487,7 @@ export const SPRITES = {
       1320
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat frontal SH3 original, anatomie contrôlée sur deux captures en jeu : deux bras colonnes latéraux, deux jambes sombres centrales et tête allongée. Premier candidat perspectif exclu pour confusion bras/jambe, jamais importé. Pose symétrisée, texture plus rouge et extrémités reconstruites ; direction de présentation et échelle versus, pas de certification 1:1.",
+    "notes": "Candidat frontal SH3 original, anatomie contrôlée sur deux captures en jeu : deux bras colonnes latéraux, deux jambes sombres centrales et tête allongée. Premier candidat perspectif exclu pour confusion bras/jambe, jamais importé. Pose symétrisée, texture plus rouge et extrémités reconstruites ; direction de présentation et échelle versus, pas de certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -1048,6 +1513,78 @@ export const SPRITES = {
         "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
         "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
         "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5",
+        "bytes": 968738,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          206,
+          200,
+          1077,
+          1164
+        ],
+        "pixelSHA256": "4dc435aadcd9079d0ebea6107b4e22b33586bc0fa30856804809527906113348",
+        "transparentFraction": 0.7771,
+        "path": "assets/sprites/sh3_closer_036.83102a051acb.png",
+        "facing": 1,
+        "anchor": [
+          0.55,
+          0.92823
+        ],
+        "bodyHeight": 0.764,
+        "sourceFile": "exec-7daf9e74-e110-4c5a-98c2-b661d33adef2.png",
+        "sourceSHA256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715",
+        "bytes": 1292476,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          92,
+          52,
+          1236,
+          1183
+        ],
+        "pixelSHA256": "f2b1b5b00a4d39809454b46d4b2a05eaf2831d77c0eedec83765c2365a044606",
+        "transparentFraction": 0.71377,
+        "path": "assets/sprites/sh3_closer_036.f18918ff7e87.png",
+        "facing": 1,
+        "anchor": [
+          0.55,
+          0.94338
+        ],
+        "bodyHeight": 0.893,
+        "sourceFile": "exec-6432a110-0e3b-4955-85dd-2946c5156144.png",
+        "sourceSHA256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910",
+        "bytes": 987634,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          74,
+          619,
+          1165,
+          1178
+        ],
+        "pixelSHA256": "65602519af802d07ae61f67a51c7e5e0bbe402cf7e28fd007349a167d30ee5b0",
+        "transparentFraction": 0.77919,
+        "path": "assets/sprites/sh3_closer_036.a571dd362666.png",
+        "facing": 1,
+        "anchor": [
+          0.55,
+          0.93939
+        ],
+        "bodyHeight": 0.83,
+        "sourceFile": "exec-e7a88306-6955-4093-9f23-8be407094be1.png",
+        "sourceSHA256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
@@ -1070,6 +1607,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -1325,7 +1883,7 @@ export const SPRITES = {
       1188
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH3 original : humanoïde rampant, deux bras gantés à droite, deux jambes sombres à gauche/bas et museau triangulaire central distinct. Le second rendu est un doublon écarté ; vues DVD séparées mais filtrées/occluses. Contraste orangé accru, arrière masqué et appuis reconstruits ; enveloppe quadrupède et échelle de versus, aucun cycle ni certification 1:1.",
+    "notes": "Candidat fixe SH3 original : humanoïde rampant, deux bras gantés à droite, deux jambes sombres à gauche/bas et museau triangulaire central distinct. Le second rendu est un doublon écarté ; vues DVD séparées mais filtrées/occluses. Contraste orangé accru, arrière masqué et appuis reconstruits ; enveloppe quadrupède et échelle de versus, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -1350,6 +1908,78 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
         "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88",
+        "bytes": 975908,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          23,
+          404,
+          1237,
+          1084
+        ],
+        "pixelSHA256": "01ea6cfe157d24be620508f18dc56383e6a89e2f047f5a9a47bdf3857050e2e8",
+        "transparentFraction": 0.78842,
+        "path": "assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.86443
+        ],
+        "bodyHeight": 0.864,
+        "sourceFile": "exec-4500b15d-2461-4c53-9adc-0db948903409.png",
+        "sourceSHA256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae",
+        "bytes": 1187787,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          66,
+          151,
+          1212,
+          1107
+        ],
+        "pixelSHA256": "1b82c142f8b922a3f77fcea2847080c958a4ee335542857a4681a302e2cdb06e",
+        "transparentFraction": 0.74478,
+        "path": "assets/sprites/sh3_slurper_042.5cda350161d4.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.88278
+        ],
+        "bodyHeight": 0.815,
+        "sourceFile": "exec-3cb603be-1a41-4e65-8a4b-7f6bf9a192bb.png",
+        "sourceSHA256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de",
+        "bytes": 963944,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          20,
+          519,
+          1239,
+          1003
+        ],
+        "pixelSHA256": "a98903c93d340b50688c4c63f15bd0f1eee5521949d7d0c658a809b45cac26e4",
+        "transparentFraction": 0.79402,
+        "path": "assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.79984
+        ],
+        "bodyHeight": 0.867,
+        "sourceFile": "exec-cb826583-fe5d-40f6-a4ec-b3398b7bf777.png",
+        "sourceSHA256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de",
         "origin": "conversation-image-generation"
       }
     ],
@@ -1376,6 +2006,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0
@@ -1393,7 +2044,7 @@ export const SPRITES = {
       1086
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1.",
+    "notes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -1418,6 +2069,78 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
         "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946",
+        "bytes": 1097459,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          76,
+          269,
+          1201,
+          1120
+        ],
+        "pixelSHA256": "cd365179fc35b1e3cdf5b825ce9dac76077f28b23c830eb35062650d39703690",
+        "transparentFraction": 0.73908,
+        "path": "assets/sprites/sh1_romper_010.fa62c070efdd.png",
+        "facing": 1,
+        "anchor": [
+          0.55,
+          0.89314
+        ],
+        "bodyHeight": 0.72,
+        "sourceFile": "exec-b6c9998c-35e0-42ef-8dfc-7f42e5d8209e.png",
+        "sourceSHA256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91",
+        "bytes": 1043216,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          191,
+          176,
+          1175,
+          1185
+        ],
+        "pixelSHA256": "7d67540373a63bbe82865358b8e473b6088fbf18895827c0bca90e872fe525b6",
+        "transparentFraction": 0.74215,
+        "path": "assets/sprites/sh1_romper_010.09a1f60ce398.png",
+        "facing": 1,
+        "anchor": [
+          0.52,
+          0.94498
+        ],
+        "bodyHeight": 0.82,
+        "sourceFile": "exec-2753eb94-48bc-46ce-97bd-58ec67e13c0e.png",
+        "sourceSHA256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45",
+        "bytes": 872861,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          33,
+          601,
+          1222,
+          1119
+        ],
+        "pixelSHA256": "8225583e7e08e35c1115a855ba0b0603cb8b95af278f74923353363732069961",
+        "transparentFraction": 0.78487,
+        "path": "assets/sprites/sh1_romper_010.f5be63471b21.png",
+        "facing": 1,
+        "anchor": [
+          0.56,
+          0.89234
+        ],
+        "bodyHeight": 0.78,
+        "sourceFile": "exec-5c31180c-e39d-4bc2-a32f-df31c388c344.png",
+        "sourceSHA256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45",
         "origin": "conversation-image-generation"
       }
     ],
@@ -1444,6 +2167,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0
@@ -1461,7 +2205,7 @@ export const SPRITES = {
       1086
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1.",
+    "notes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -1487,6 +2231,78 @@ export const SPRITES = {
         "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
         "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
         "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90",
+        "bytes": 1238987,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          80,
+          339,
+          1227,
+          1145
+        ],
+        "pixelSHA256": "eef22727cd86c62efe677abc1c86f3d739f02ab6ce6cfd7894e46082f3c43135",
+        "transparentFraction": 0.72766,
+        "path": "assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+        "facing": -1,
+        "anchor": [
+          0.6,
+          0.91308
+        ],
+        "bodyHeight": 0.57,
+        "sourceFile": "exec-76daef10-47de-4400-9981-1143767c9f5b.png",
+        "sourceSHA256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd",
+        "bytes": 1138573,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          182,
+          331,
+          1183,
+          1125
+        ],
+        "pixelSHA256": "2cb58ad92bef00c86ab2de34f56c096acf87ea7d64c3777783895bf4349291b2",
+        "transparentFraction": 0.74296,
+        "path": "assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+        "facing": -1,
+        "anchor": [
+          0.57,
+          0.89713
+        ],
+        "bodyHeight": 0.59,
+        "sourceFile": "exec-5a926ab6-2011-413d-ac0b-b87d96e2a76b.png",
+        "sourceSHA256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683",
+        "bytes": 1109240,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          74,
+          471,
+          1197,
+          981
+        ],
+        "pixelSHA256": "5fd184e1b6621f52ebaafa8f142a6d6255f181a75f9edfa9723acf759715ed7d",
+        "transparentFraction": 0.75443,
+        "path": "assets/sprites/sh3_double_head_040.0ef012666f82.png",
+        "facing": -1,
+        "anchor": [
+          0.6,
+          0.7823
+        ],
+        "bodyHeight": 0.56,
+        "sourceFile": "exec-89c34b6c-4c96-4b78-9bf0-ca7a27ed0d1e.png",
+        "sourceSHA256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
@@ -1509,6 +2325,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -2209,7 +3046,7 @@ export const SPRITES = {
       1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -2235,6 +3072,78 @@ export const SPRITES = {
         "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
         "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
         "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d",
+        "bytes": 1232423,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          45,
+          357,
+          1238,
+          1155
+        ],
+        "pixelSHA256": "0599be7de5e1b4f4b70dac301991e6bae3e21fdeeec57926b48afcdcb0e462c7",
+        "transparentFraction": 0.72525,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+        "facing": -1,
+        "anchor": [
+          0.61,
+          0.92105
+        ],
+        "bodyHeight": 0.66,
+        "sourceFile": "exec-40fe3a8c-ca4e-46f4-bb88-fb2ecef7764b.png",
+        "sourceSHA256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0",
+        "bytes": 1399372,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          49,
+          103,
+          1238,
+          1204
+        ],
+        "pixelSHA256": "23bb6dd3bb46bcdf68c294558959656e8924ebf031344a4c4f48779add3ce9b8",
+        "transparentFraction": 0.68211,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+        "facing": -1,
+        "anchor": [
+          0.61,
+          0.96013
+        ],
+        "bodyHeight": 0.68,
+        "sourceFile": "exec-c712b199-0d16-4834-b68c-bddef108e879.png",
+        "sourceSHA256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5",
+        "bytes": 1078028,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          57,
+          547,
+          1230,
+          1130
+        ],
+        "pixelSHA256": "0598b0b2bda68c48b82fa0342a7df386c5313e0b2fc6cd0aac9d1c1c1dc1eb53",
+        "transparentFraction": 0.75077,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+        "facing": -1,
+        "anchor": [
+          0.6,
+          0.90112
+        ],
+        "bodyHeight": 0.68,
+        "sourceFile": "exec-56b27d6c-9148-42bc-8244-b44e69cd394c.png",
+        "sourceSHA256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5",
+        "origin": "conversation-image-generation"
       }
     ],
     "portrait": {
@@ -2257,6 +3166,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "ko": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false

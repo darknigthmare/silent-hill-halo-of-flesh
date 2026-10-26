@@ -222,13 +222,15 @@ test('Hummer state-aware raster lowers the identical bitmap without rotation, sc
   }
 });
 
-test('Hummer KO uses the ground anchor while preserving explicit absent KO artwork',()=>{
-  const data=fighter(HUMMER),frame=spriteFor(data).frames[0],actor={data,x:640,y:594,grounded:true,ko:true};
+test('Hummer KO uses its dedicated fixed candidate at the ground anchor without manufacturing an animation',()=>{
+  const data=fighter(HUMMER),art=spriteFor(data),clip=art.clips.ko,frame=art.frames[clip.frames[0]],actor={data,x:640,y:594,grounded:true,ko:true};
+  assert.equal(clip.frames.length,1);assert.equal(clip.loop,false);assert.equal(art.fidelity,'unverified');
   assert.equal(bodyBox(actor).y+bodyBox(actor).h,594);assert.equal(hasGroundContact(actor),true);
   const calls=[],ctx=new Proxy({},{get:(_t,k)=>(...args)=>calls.push([k,...args])});
   const draw=drawRasterMonster(ctx,data,640,594,{state:actorSpriteState(actor),cache:{peek:()=>({}),status:()=> 'ready'},diagnostic:true,shadow:false});
-  assert.equal(draw.path,frame.path);assert.equal(draw.pose,'idle');assert.equal(draw.requestedClipKey,'ko');assert.equal(draw.fallback,true);
-  assert.ok(calls.some(c=>c[0]==='fillText'&&c[1]==='POSE KO À PRODUIRE'));assert.ok(!calls.some(c=>c[0]==='rotate'));
+  assert.equal(draw.path,frame.path);assert.equal(draw.pose,'ko');assert.equal(draw.requestedClipKey,'ko');assert.equal(draw.fallback,false);
+  assert.ok(Math.abs(draw.y+frame.anchor[1]*draw.height-594)<1e-9);
+  assert.ok(!calls.some(c=>c[0]==='fillText'&&c[1]==='POSE KO À PRODUIRE'));assert.ok(!calls.some(c=>c[0]==='rotate'));
 });
 
 test('state-aware Hummer clip bounds and camera frame the same lowered raster in both directions',()=>{

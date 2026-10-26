@@ -71,7 +71,7 @@ test('snow belongs to SH1 streets; film ash cannot propagate to unrelated games 
   assert.equal(stage('return_streets').weather,'ash');assert.equal(stage('alchemilla').weather,'dust');
   assert.ok(stage('old_silent_hill').referenceTracks.some(t=>t.key==='snowDepth'));
   for(const s of STAGES){if(s.weather==='ash')assert.equal(s.source,'film',s.id);if(s.referencePolicy.interior)assert.notEqual(s.weather,'rain',s.id);}
-  for(const id of ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'])assert.equal(stage(id).weather,'cold',id);
+  for(const id of ['nightmare_school','nightmare_hospital_sm','nightmare_mall_sm'])assert.equal(stage(id).weather,'none',id);
 });
 
 test('the ruined SH2 hotel keeps wet tiles and burnt plaster without a new fire or mirror',()=>{
@@ -125,7 +125,7 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,97);assert.equal(keys.size,67);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  assert.equal(tracks.length,127);assert.equal(keys.size,97);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];
@@ -140,6 +140,7 @@ test('a small explicit catalogue implements precise visual parts instead of labe
 
 test('all selected background motions animate normally and freeze in reduced motion without leaking paint state',()=>{
   for(const s of STAGES)for(const t of s.referenceTracks){
+    if(t.trigger==='match-phase'){assert.deepEqual(trackTrace(s,t,1400),[],t.id+' requires an explicit engine phase');continue;}
     if(t.eventEnabled===false){assert.deepEqual(trackTrace(s,t,1400,{timer:96}),[],t.id+' must remain inactive in this room');continue;}
     assert.ok(!isDeepStrictEqual(trackTrace(s,t,1400,{timer:96}),trackTrace(s,t,5900,{timer:42})),t.id+' is not animated');
     assert.deepEqual(trackTrace(s,t,1400,{timer:96,reducedMotion:true}),trackTrace(s,t,5900,{timer:42,reducedMotion:true}),t.id+' still moves');

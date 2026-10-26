@@ -37,16 +37,20 @@ de relevés vérifie des paquets de capture ; aucun timing original n'est encore
 
 ## État du 26 octobre 2026
 
-Le [neuvième lot](CHANTIERS_PARALLELES_LOT9_2026-10-26.md) est l’état courant :
-**six lots de trente lignes, 107 réalisations candidates, 60 spécifications
-et 13 blocages conservés dans l’Excel**. Il compte 49 profils illustrés,
-184 sources, 97 pistes de lieux et 716 présentations sans état d’acteur,
+Le [dixième lot](CHANTIERS_PARALLELES_LOT10_2026-10-26.md) est l’état courant :
+**six lots de trente lignes, 120 réalisations candidates et 60 spécifications**.
+Les 180 lignes ont changé ; les 13 blocages du lot précédent restent visibles.
+Il compte 49 profils illustrés, 84 PNG actifs, 217 sources,
+127 pistes de lieux et 746 présentations sans état d’acteur,
 plus les sept contextes Cybil conditionnels. Les 840 actions encore ouvertes
 comprennent 93 P0 ; 33 décisions de rôle restent validées sans changement.
-Les [relevés des lots](batches/lot9-summary.json) et le
-[rapport de validation](../INTEGRATION_QA_2026-10-26-lot9.json) conservent leurs
+Les [relevés des lots](batches/lot10-summary.json) et le
+[rapport de validation](../INTEGRATION_QA_2026-10-26-lot10.json) conservent leurs
 preuves et limites. Aucune image ou animation 1:1 n’est certifiée ; les
-18 400 cellules de timings originaux restent vides.
+18 400 cellules de timings originaux restent vides. Les trente nouvelles images
+sont des poses fixes de marche, impact et KO sur dix profils ; elles ne
+constituent pas des cycles animés. Le [neuvième lot](CHANTIERS_PARALLELES_LOT9_2026-10-26.md)
+et ses preuves restent conservés comme état précédent.
 
 ## État précédent — huitième lot
 

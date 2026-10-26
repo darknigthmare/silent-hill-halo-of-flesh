@@ -21,6 +21,21 @@ test('repeating a static image is not an animation',()=>assert.equal(clipSummary
 test('re-encoded identical pixels do not count as different animation images',()=>{const a=art();a.frames[1].pixelSHA256='1';assert.equal(clipSummary(a,clip()).distinct,1);});
 test('authored variable durations run with the exact live sampler',()=>{const a=art();a.clips.idle=validateClip(a,'idle',clip());assert.deepEqual([0,2,3,7,8,9,10].map(frame=>sampleSpriteClip(a,{frame}).frameIndex),[0,0,1,1,0,0,0]);});
 test('non-looping clips hold their last frame after all steps',()=>{const a=art();a.clips.walk=validateClip(a,'walk',clip({loop:false}));assert.equal(sampleSpriteClip(a,{moving:true,frame:100}).frameIndex,0);});
+test('a dedicated core KO is used only for an actual final KO of its owner',()=>{
+ const a=art();a.clips.ko={frames:[1],ticksPerFrame:1,loop:false};
+ const state={ko:true,airborne:false,presentation:{key:'loseMatch',contextId:`${fighter.id}:loseMatch`,frame:25}};
+ const sample=sampleSpriteClip(a,state);
+ assert.equal(sample.pose,'ko');assert.equal(sample.frameIndex,1);assert.equal(sample.fallback,true);
+ assert.equal(sample.fallbackReason,'core-ko-final-defeat');
+ assert.equal(sample.requested,`loseMatch@${fighter.id}:loseMatch`);
+ for(const changed of [{...state,ko:false},{...state,airborne:true},{...state,airborne:undefined},{...state,presentation:{key:'loseRound',contextId:`${fighter.id}:loseRound1`}},
+  {...state,presentation:{key:'loseMatch',contextId:'another-owner:loseMatch'}}])
+  assert.equal(sampleSpriteClip(a,changed).frameIndex,0);
+ const finished=sampleSpriteClip(a,{...state,presentation:{key:'finished',finisherId:'sh1_air_screamer_001_signature',contextId:'sh1_air_screamer_001_signature'}});
+ assert.equal(finished.frameIndex,0);assert.equal(finished.fallbackReason,'missing-contextual-finisher');
+ a.clips[`loseMatch@${fighter.id}:loseMatch`]={frames:[0,1],ticksPerFrame:1,loop:false};
+ assert.equal(sampleSpriteClip(a,{...state,presentation:{...state.presentation,frame:0}}).pose,`loseMatch@${fighter.id}:loseMatch`);
+});
 test('attack clips cannot loop independently of collision timing',()=>assert.throws(()=>validateClip(art(),'neutralLight',clip()),/attaque/));
 test('move timing displayed to authors comes from the actual combat profile',()=>{const m=createCombatProfile(fighter).moves.neutralHeavy,s=moveTiming(fighter,'neutralHeavy');assert.equal(s.total,m.startup+m.active+m.recovery);assert.equal(s.name,m.name);assert.equal(moveTiming(fighter,'walk'),null);});
 for(const [name,patch] of [

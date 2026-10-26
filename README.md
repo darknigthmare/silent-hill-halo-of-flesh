@@ -1,6 +1,31 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — neuvième lot du 26 octobre 2026
+## Chantiers parallèles — dixième lot du 26 octobre 2026
+
+**Six agents, trente lignes Excel chacun : 180 éléments supplémentaires**,
+avec 120 réalisations candidates et 60 spécifications documentaires.
+Les 180 lignes diffèrent du plan précédent. Les treize blocages du lot neuf
+restent visibles ; ce lot ne les compte pas comme réalisations.
+
+Le lot ajoute **30 images de poses fixes**, 30 commandes, 30 présentations,
+12 éléments de lieux et 18 compositions de résultat/reprise. Les prises
+de Pyramid Head et de Straight-Jacket contraignent aussi leur propriétaire ;
+la Nurse SH3 choisit tir ou crosse à la distance de départ de son attaque.
+
+Le registre compte **49 profils illustrés, 84 PNG actifs et 217 sources**.
+Les images de marche, impact et KO sont des poses individuelles candidates,
+sans nouveau cycle animé. Les **840 actions ouvertes, dont 93 P0**, restent
+suivies ; aucune fidélité 1:1 ni mesure originale n’est certifiée.
+
+**Validation : 1 017 tests Node, 100 tests Python et 2 213 contrôles navigateur
+réussis dans quatorze suites ; 399 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT10_2026-10-26.md) ·
+[Six lots vérifiés](docs/production/batches/lot10-summary.json) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-26-lot10.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — neuvième lot du 26 octobre 2026
 
 **Six lots de trente lignes Excel : 180 éléments traités**, avec 107
 réalisations candidates, 60 spécifications documentaires et 13 blocages
