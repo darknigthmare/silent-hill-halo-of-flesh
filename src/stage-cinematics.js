@@ -447,6 +447,66 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
       line(ctx,x-w*.29,y+28,x+w*.29,y+28,4,'#5a5540');
       break;
     }
+    case 'freezerCarcassSway':{
+      // The rail and the hook hold their position; only this one abstract rack moves.
+      line(ctx,x,y,x,y+31,2,'#737764');
+      ctx.strokeStyle='#737764';ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y+39,8,-Math.PI*.5,Math.PI);ctx.stroke();
+      ctx.translate(x,y+47);ctx.rotate(Math.sin(t*.00045)*.024);
+      ctx.fillStyle='#484737';ctx.beginPath();ctx.moveTo(-13,0);ctx.lineTo(12,1);
+      ctx.quadraticCurveTo(32,33,23,76);ctx.lineTo(8,137);ctx.lineTo(-14,132);
+      ctx.quadraticCurveTo(-30,84,-25,42);ctx.closePath();ctx.fill();
+      path(ctx,[[2,8],[7,47],[-1,92],[-4,128]],'rgba(106,100,73,.32)',3);
+      break;
+    }
+    case 'rooftopFenceFlex':{
+      const left=x-w*.22,right=x+w*.22,top=y-h*.2,flex=Math.sin(t*.0011)*1.5;
+      for(let i=0;i<5;i++){const px=left+(right-left)*i/4;line(ctx,px,top-7,px,y,4,'#4c564b');}
+      line(ctx,left,top,right,top,3,'#60695b');line(ctx,left,y,right,y,3,'#60695b');
+      for(let i=0;i<17;i++){
+        const px=left+(right-left)*i/16,spread=(right-left)/16;
+        // Each mesh end remains on the fixed frame, with a tiny authored bow.
+        ctx.strokeStyle='rgba(119,131,110,.42)';ctx.lineWidth=1;
+        ctx.beginPath();ctx.moveTo(px,top);ctx.quadraticCurveTo(px+spread*.6+flex,top+(y-top)*.5,Math.min(right,px+spread),y);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(px,y);ctx.quadraticCurveTo(px+spread*.6-flex,top+(y-top)*.5,Math.min(right,px+spread),top);ctx.stroke();
+      }
+      break;
+    }
+    case 'stairwellFanTurn':{
+      const rx=110,ry=31,angle=t*.00065;
+      ctx.fillStyle='#0b1511';ctx.beginPath();ctx.ellipse(x,y,rx+8,ry+7,0,0,TAU);ctx.fill();
+      ctx.strokeStyle='#6a705d';ctx.lineWidth=5;ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,TAU);ctx.stroke();
+      for(let i=0;i<4;i++){
+        const a=angle+i*TAU/4,b=a+.45;
+        ctx.fillStyle='rgba(116,120,94,.63)';ctx.beginPath();ctx.moveTo(x,y);
+        ctx.lineTo(x+Math.cos(a)*101,y+Math.sin(a)*27);ctx.lineTo(x+Math.cos(b)*91,y+Math.sin(b)*24);ctx.closePath();ctx.fill();
+      }
+      // The fixture stays on its cross-bracing; no sway or falling rotor.
+      line(ctx,x-rx-11,y,x+rx+11,y,2,'rgba(126,132,110,.4)');line(ctx,x,y-ry-4,x,y+ry+4,2,'rgba(126,132,110,.4)');
+      orb(ctx,x,y,5,'#9c9c7c');
+      break;
+    }
+    case 'artaudSpotlightGlide':{
+      for(const side of[-1,1]){
+        const lampX=w*(.5+side*.14),lampY=h*.2,intensity=.035+pulse*.025;
+        ctx.fillStyle=`rgba(199,182,126,${intensity})`;ctx.beginPath();ctx.moveTo(lampX-8,lampY);
+        ctx.lineTo(lampX+8,lampY);ctx.lineTo(x+side*w*.055+w*.15,h*.55);ctx.lineTo(x+side*w*.055-w*.15,h*.55);ctx.closePath();ctx.fill();
+        glow(ctx,x+side*w*.055,y,95,'184,166,114',.025+pulse*.025);
+      }
+      break;
+    }
+    case 'pursuitElevatorGap':{
+      const width=139,height=h*.34,gap=12+sway*2,top=y-height;
+      rect(ctx,x-width*.5-10,top-8,width+20,height+8,'#515447');
+      rect(ctx,x-width*.5,top,width,height,'#101a14');
+      for(const side of[-1,1]){
+        const left=side<0?x-width*.5:x+gap*.5,panelWidth=width*.5-gap*.5;
+        rect(ctx,left,top+3,panelWidth,height-3,'#41483b');
+        line(ctx,left+panelWidth*.4,top+6,left+panelWidth*.4,y-4,1,'rgba(116,121,94,.25)');
+      }
+      line(ctx,x-width*.5-6,y,x+width*.5+6,y,4,'#6a6b56');
+      // No button lights, human shadows or sound waveform invent a cutscene loop.
+      break;
+    }
     default:break;
   }
   ctx.restore();

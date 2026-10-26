@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **182 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 91 boucles et jouent 69 éléments visuels partiels issus des fiches, 20 événements et 20 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 83 boucles et jouent 74 éléments visuels partiels issus des fiches, 20 événements et 20 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -23,8 +23,8 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | Puppet Doctor | SH1 | Rituel de clôture — Impact parasité | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Variante à réaliser avec son apparence propre. Consultation close : prise, fermeture d’une porte en premier plan puis arrêt sonore. |
 | Split Head | SH1 | Rituel de clôture — Mâchoire séparée | NIGHTMARE — Traque achevée | Deux montages écrits, conditions requises | Gueule fendue : reprendre le principe de l’attaque fatale attestée, mais adapter cadrage et cible au versus. |
 | Twinfeeler | SH1 | Rituel de clôture — Anneaux souterrains | NIGHTMARE — Dernière manifestation | Timeline propre encore à produire. | La fosse se ferme : charge qui emmène la silhouette dans une brèche puis débris opaques. |
-| Floatstinger | SH1 | Rituel de clôture — Dard aérien | NIGHTMARE — Chute sans ciel | Timeline propre encore à produire. | Dernier toit : l’abdomen renverse la cible derrière le parapet, coupe au battement des ailes. |
-| Monster Cybil | SH1 | Rituel de clôture — Service possédé | NIGHTMARE — Dernière manifestation | Timeline propre encore à produire. | Contrôle perdu : coup de crosse puis menace hors champ ; issue de possession, pas pouvoir de magie inédit. |
+| Floatstinger | SH1 | Rituel de clôture — Dard aérien | NIGHTMARE — Chute sans ciel | Deux montages écrits, conditions requises | Dernier toit : l’abdomen renverse la cible derrière le parapet, coupe au battement des ailes. |
+| Monster Cybil | SH1 | Rituel de clôture — Service possédé | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Contrôle perdu : coup de crosse puis menace hors champ ; issue de possession, pas pouvoir de magie inédit. |
 | Incubator | SH1 | Rituel de clôture — Éclair blanc | NIGHTMARE — Jugement de l’Otherworld | Deux montages écrits, conditions requises | Lumière terminale : décharge puis surexposition et silhouette qui s’éteint. |
 | Incubus | SH1 | Rituel de clôture — Foudre du démon | NIGHTMARE — Jugement de l’Otherworld | Deux montages écrits, conditions requises | Éclat rouge : la foudre clôt le duel derrière une silhouette surexposée. |
 | Bloodsucker | SH1 | Rituel de clôture — Vrilles hématophages | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Pas de fatalité mobile documentée ; événement de mur uniquement, à ne pas appeler reproduction 1:1. |
@@ -40,9 +40,9 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | Red Pyramid Thing — Great Knife | SH2 | Rituel de clôture — Traînée du Grand Couteau | NIGHTMARE — Sentence de rouille | Deux montages écrits, conditions requises | Sentence : réemployer le geste létal de l’abattement ; caméra et compatibilité des cibles à adapter, sans démembrement ajouté. |
 | Red Pyramid Thing — Spear | SH2 | Rituel de clôture — Percée de la lance | NIGHTMARE — Sentence de rouille | Deux montages écrits, conditions requises | Seuil de l’ascenseur : menace d’estoc masquée par une fermeture de porte ; montage versus original. |
 | Twin Pyramid Heads | SH2 | Rituel de clôture — Sentence jumelle | NIGHTMARE — Sentence de rouille | Timeline propre encore à produire. | Deux ombres : prises de position opposées, estocs masqués par un premier plan ; ne pas multiplier les corps. |
-| Eddie Dombrowski | SH2 | Rituel de clôture — Tir de l’abattoir | NIGHTMARE — Dernière manifestation | Timeline propre encore à produire. | Silence frigorifique : tir hors champ puis oscillation d’une carcasse au premier plan. |
-| Maria — Final Manifestation | SH2 | Rituel de clôture — Essaim de papillons | NIGHTMARE — Jugement de l’Otherworld | Timeline propre encore à produire. | Lit sans réveil : appendice qui soulève la cible, nuée qui couvre l’image puis silence. |
-| Mary — Final Manifestation | SH2 | Rituel de clôture — Lit de souffrance | NIGHTMARE — Jugement de l’Otherworld | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Lit sans réveil : appendice qui soulève la cible, nuée qui couvre l’image puis silence. |
+| Eddie Dombrowski | SH2 | Rituel de clôture — Tir de l’abattoir | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Silence frigorifique : tir hors champ puis oscillation d’une carcasse au premier plan. |
+| Maria — Final Manifestation | SH2 | Rituel de clôture — Essaim de papillons | NIGHTMARE — Jugement de l’Otherworld | Deux montages écrits, conditions requises | Lit sans réveil : appendice qui soulève la cible, nuée qui couvre l’image puis silence. |
+| Mary — Final Manifestation | SH2 | Rituel de clôture — Lit de souffrance | NIGHTMARE — Jugement de l’Otherworld | Deux montages écrits, conditions requises | Variante à réaliser avec son apparence propre. Lit sans réveil : appendice qui soulève la cible, nuée qui couvre l’image puis silence. |
 | Prisoner | SH2 | Rituel de clôture — Présence derrière les barreaux | NIGHTMARE — Hantise sans retour | Références insuffisantes ou proposition bloquée. | Aucune fatalité canonique ; ne pas inventer un bourreau visible. |
 | Spider Mannequin | SH2 | Rituel de clôture — Embuscade arachnéenne | NIGHTMARE — Cocon du cauchemar | Deux montages écrits, conditions requises | Au-dessus de vous : bond depuis le plafond et cible masquée par l’obscurité en contre-plongée. |
 | Mandarin — Floor Form | SH2 | Rituel de clôture — Langue du plancher proposée | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Variante à réaliser avec son apparence propre. Grille close : une prise sous le plancher attire la silhouette vers un écran obscurci. |
@@ -71,14 +71,14 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | Hummer | SH4 | Rituel de clôture — Nuée bourdonnante | NIGHTMARE — Chute sans ciel | Deux montages écrits, conditions requises | Dernier bourdonnement : passage près de la caméra, ombre de la cible qui s’effondre. |
 | Wall Man | SH4 | Rituel de clôture — Bras mural | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Au travers du mur : bras qui ramène la silhouette contre le support ; coupe avant détail. |
 | Gum Head — Old Type | SH4 | Rituel de clôture — Poings du Gum Head | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Ruelle close : lutte rapprochée derrière un mobilier renversé. |
-| Gum Head — New Type | SH4 | Rituel de clôture — Ruée simiesque | NIGHTMARE — Dernière manifestation | Timeline propre encore à produire. | Objet retourné : menace à l’arme arrachée, coup occulté par le corps de la créature. |
+| Gum Head — New Type | SH4 | Rituel de clôture — Ruée simiesque | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Objet retourné : menace à l’arme arrachée, coup occulté par le corps de la créature. |
 | Twin Victim | SH4 | Rituel de clôture — Marche des deux corps | NIGHTMARE — Écrasement du souvenir | Deux montages écrits, conditions requises | Les témoins restent : choc qui éclipse la cible et arrêt sur les deux têtes. |
 | Patient | SH4 | Rituel de clôture — Escalier de l’hôpital | NIGHTMARE — Dernière manifestation | Deux montages écrits, conditions requises | Derrière le lit : coup final masqué par un brancard, silence hospitalier. |
 | Toadstool | SH4 | Rituel de clôture — Spore toxique | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Pas de fatalité active canonique ; résolution de franchissement uniquement. |
 | Whitestool | SH4 | Rituel de clôture — Poussée pâle | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Variante à réaliser avec son apparence propre. Pas de fatalité active canonique ; résolution de franchissement uniquement. |
 | Tremer — Blue | SH4 | Rituel de clôture — Fourmillement bleu | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Pas de fatalité active reproduisible ; montage de piège serait original. |
 | Tremer — Red | SH4 | Rituel de clôture — Fourmillement rouge | NIGHTMARE — Dernière manifestation | Références insuffisantes ou proposition bloquée. | Variante à réaliser avec son apparence propre. Pas de fatalité active reproduisible ; montage de piège serait original. |
-| Bottom | SH4 | Rituel de clôture — Masse inférieure | NIGHTMARE — Écrasement du souvenir | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Les témoins restent : choc qui éclipse la cible et arrêt sur les deux têtes. |
+| Bottom | SH4 | Rituel de clôture — Masse inférieure | NIGHTMARE — Écrasement du souvenir | Deux montages écrits, conditions requises | Clôture versus proposée : heurt d’un grand bras puis plongeon du corps ; le dernier cadre conserve la silhouette propre du Bottom et ses trois têtes, sans manteau ajouté. |
 | Ghost — Victim | SH4 | Rituel de clôture — Étreinte persistante | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Empreinte : emprise masquée par une ombre puis espace vide ; une élimination définitive doit rester une règle de versus. |
 | Jimmy Stone — Victim 1 | SH4 | Rituel de clôture — Red Devil | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Empreinte : emprise masquée par une ombre puis espace vide ; une élimination définitive doit rester une règle de versus. |
 | Steve Garland — Victim 4 | SH4 | Rituel de clôture — Truelle du vendeur | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Empreinte : emprise masquée par une ombre puis espace vide ; une élimination définitive doit rester une règle de versus. |
@@ -87,7 +87,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | Sharon Blake — Victim 13 | SH4 | Rituel de clôture — Obscurité de Sharon | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Empreinte : emprise masquée par une ombre puis espace vide ; une élimination définitive doit rester une règle de versus. |
 | Toby Archbolt — Victim 14 | SH4 | Rituel de clôture — Gloom du pasteur | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Variante à réaliser avec son apparence propre. Empreinte : emprise masquée par une ombre puis espace vide ; une élimination définitive doit rester une règle de versus. |
 | Joseph Schreiber — Victim 15 | SH4 | Rituel de clôture — Désespoir du témoin | NIGHTMARE — Hantise sans retour | Références insuffisantes ou proposition bloquée. | Aucune fatalité infligée ; rôle de témoin ou de narrateur de résultat. |
-| Cynthia Velasquez — Victim 16 | SH4 | Rituel de clôture — Temptation spectrale | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Dernière station : cheveux qui occultent les silhouettes, disparition derrière un portillon. |
+| Cynthia Velasquez — Victim 16 | SH4 | Rituel de clôture — Temptation spectrale | NIGHTMARE — Hantise sans retour | Deux montages écrits, conditions requises | Dernière station : cheveux qui occultent les silhouettes, disparition derrière un portillon. |
 | Jasper Gein — Victim 17 | SH4 | Rituel de clôture — Candélabre enflammé | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Dernière braise : silhouette masquée par un rideau de lumière puis extinction du son. |
 | Andrew DeSalvo — Victim 18 | SH4 | Rituel de clôture — Watchfulness | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Chute sans fond : charge qui occulte l’écran, silhouette entraînée vers une profondeur sombre. |
 | Richard Braintree — Victim 19 | SH4 | Rituel de clôture — Crowbar du chaos | NIGHTMARE — Hantise sans retour | Timeline propre encore à produire. | Angle mort : décalage sur le flanc, arme masquée par un mur puis extinction du plan. |
@@ -250,7 +250,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | LAKESIDE AMUSEMENT PARK | SH1 | PLATEAU DU MANÈGE SH1 | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | DERNIER TOUR DE MANÈGE — à produire |
 | WOOD SIDE APARTMENTS | SH2 | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
 | BLUE CREEK — STAIRWELL | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PORTE SANS RETOUR — montage écrit, conditions requises |
-| BROOKHAVEN — BASEMENT | SH2 | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
+| BROOKHAVEN — BASEMENT | SH2 | SEUIL DE L’ASCENSEUR B1 | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | TOLUCA PRISON | SH2 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | THE LABYRINTH | SH2 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | LAKEVIEW HOTEL — OTHERWORLD | SH2 | BÉTON TREMPÉ | fixed-altered — aucune bascule | 1 | 0 | 2 éléments de fiche / 1 boucles | CHAMBRE DU SOUVENIR — montage écrit, conditions requises |
@@ -301,9 +301,9 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | CENTRAL SILENT HILL — OTHERWORLD | SH1 | STRUCTURE INSTABLE | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
 | SEWERS TO THE RESORT | SH1 | EAU STAGNANTE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | SOUTH VALE STREETS | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
-| BROOKHAVEN — ROOFTOP | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
+| BROOKHAVEN — ROOFTOP | SH2 | PLATEAU DU TOIT BROOKHAVEN | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | SILENT HILL HISTORICAL SOCIETY | SH2 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| LABYRINTH — MEAT LOCKER | SH2 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 3 boucles | CELLULE DU JUGEMENT — à produire |
+| LABYRINTH — MEAT LOCKER | SH2 | SOL DE LA CHAMBRE FROIDE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | LAKEVIEW HOTEL — LOBBY | SH2 | TAPIS DU LOBBY | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | CHAMBRE DU SOUVENIR — à produire |
 | BALDWIN MANSION | SH2 | PLANCHER ANCIEN | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | CENTRAL SQUARE — NIGHTMARE MALL | SH3 | BÉTON SEC | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -314,12 +314,12 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | BROOKHAVEN — NIGHTMARE HOSPITAL | SH3 | BÉTON SEC | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
 | LAKESIDE AMUSEMENT PARK — SH3 | SH3 | PLATEAU DU HAPPY CAROUSEL | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | DERNIER TOUR DE MANÈGE — à produire |
 | FOREST WORLD | SH4 | BOUE ET RACINES | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | RACINES DU BOIS — à produire |
-| BUILDING WORLD | SH4 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| BUILDING WORLD | SH4 | PALIER DU GRAND VENTILATEUR | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | OUTSIDE ROOM 302 | SH4 | MOQUETTE HUMIDE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
 | WISH HOUSE | SH4 | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | 21 SACRAMENTS — FINAL CHAMBER | SH4 | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
 | ALCHEMILLA HOSPITAL — ORIGINS | 0RIGINS | BÉTON SEC | PASSAGE PAR LE MIROIR — transition versus autorisée | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
-| ARTAUD THEATER | 0RIGINS | PLANCHER ANCIEN | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| ARTAUD THEATER | 0RIGINS | PLATEAU DE LA SCÈNE ARTAUD | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ARTAUD THEATER — NIGHTMARE | 0RIGINS | PLANCHER ANCIEN | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ALCHEMILLA — HOMECOMING NIGHTMARE | HC | BÉTON SEC | fixed-altered — aucune bascule | 1 | 0 | 0 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | SHEPHERD’S GLEN POLICE STATION | HC | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |

@@ -16,6 +16,7 @@ const NON_COMBAT_SCRIPTED = new Set([
 const GROUND_ONLY = new Set([
   'sh1_creeper_009', 'sh2_creeper_025', 'sh2_lying_figure_crawling_021',
   'sh3_slurper_042', 'sh4_one_truth_070', 'film_colin_the_janitor_174',
+  'sh1_hanged_scratcher_011','sh2_abstract_daddy_028',
   'bom_tremer_133','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'
 ]);
 const ATTACHED_BODIES = new Set(['sh4_one_truth_070']);
@@ -84,8 +85,39 @@ define('sh1_air_screamer_001 sh1_night_flutter_002', {
     desperation:contact('Plongée brisée — dernière attaque', {travel:4.1, hits:2, reach:235})
   }
 });
-define('sh1_mumbler_006', {moves:weaponKit('Griffes du Mumbler')});
-define('sh1_stalker_008 sh1_grey_child_005', {moves:weaponKit('Couteau')});
+// SH1 (1999), enemies_en.htm: all three dive at Harry's legs and hold while
+// slashing. Direction/shoulder buttons speed the original escape. Six alternating
+// left/right inputs below are this versus game's escape rule, not source QTEs,
+// frame data, a tackle animation or a measured number of button presses.
+function lowLegRecipe(weapon){return {
+  standingStruggles:{slots:['neutralSpecial','forwardSpecial','throw','super','desperation'],
+    escapeTransitions:6,sourceTimingMeasured:false},
+  disabledSlots:{backThrow:'La prise retient les jambes ; aucune projection arrière avec échange de places n’est décrite.'},
+  moves:{...weaponKit(weapon),
+    neutralSpecial:contact('Accrochage aux jambes puis entaille',{level:'throw',effectOverride:'bind',reach:85,hits:1}),
+    forwardSpecial:contact('Approche puis accrochage aux jambes',{level:'throw',effectOverride:'bind',reach:85,travel:2.2,hits:1}),
+    throw:contact('Jambes retenues au contact',{effectOverride:'bind',hits:1}),
+    super:contact('Accrochage bas prolongé',{level:'throw',effectOverride:'bind',reach:95,hits:1}),
+    dodgeAttack:contact(`${weapon} après écart`),guardCounter:contact(`${weapon} de riposte`),
+    wakeupAttack:contact(`Reprise — ${weapon}`)
+  }
+};}
+define('sh1_mumbler_006',lowLegRecipe('Griffes du Mumbler'));
+define('sh1_stalker_008 sh1_grey_child_005',lowLegRecipe('Couteau'));
+// Ground claw attacks are documented independently of the ceiling ambush.
+// A free jump is not a ceiling attachment; the suspended attack remains absent.
+define('sh1_hanged_scratcher_011',{
+  disabledSlots:{throw:'Les griffes frappent depuis le sol ou le plafond ; aucune saisie offensive n’est attestée.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite.',
+    airLight:'L’attaque suspendue exige son support au plafond ; ce saut libre ne la reproduit pas.',
+    airHeavy:'L’attaque suspendue exige son support au plafond ; ce saut libre ne la reproduit pas.',
+    airSpecial:'L’attaque suspendue reste à produire avec son support et ses images propres.'},
+  moves:{...weaponKit('Griffes du Hanged Scratcher'),
+    neutralSpecial:contact('Entaille des griffes au sol',{hits:1}),
+    forwardSpecial:contact('Approche au sol puis griffes',{travel:2.8,hits:1}),
+    super:contact('Deux entailles rapprochées au sol',{hits:2,travel:1.6}),
+    guardCounter:contact('Griffes de riposte'),dodgeAttack:contact('Griffes après écart'),wakeupAttack:contact('Reprise des griffes')}
+});
 // SH1 enemies_en.htm: Romper leaps onto Harry, bowls him over and may hold
 // him down. Bind substitutes for the original escape inputs. Travel, jump,
 // knockdown and bind duration remain authored versus tuning.
@@ -219,6 +251,27 @@ define('sh2_mandarin_026', {moves:{...weaponKit('Appendice sous la grille'),
   neutralSpecial:contact('Frappe à travers la grille'), super:contact('Sous les pieds', {hits:2})}});
 define('sh2_flesh_lip_027', {moves:{...weaponKit('Pieds de la cage'),
   neutralSpecial:contact('Poussée des pieds'), super:contact('Lit suspendu — prise courte', {level:'throw', hits:1})}});
+// SH2 original (2001), enemies_en.htm + bosses_en.htm: the Labyrinth boss's
+// only attack lifts its bed frame over James and pulls him under it. The guide
+// says shooting it while down does no damage. Cross-work firearm classes,
+// alternate inputs, escape count, damage and recovery below are versus rules.
+// This exact boss does not confer its downed state on Hotel foes or the remake.
+const DADDY_GRIP_SLOTS=['neutralSpecial','forwardSpecial','throw','super','desperation'];
+define('sh2_abstract_daddy_028',{
+  aiSignatureOnly:true,
+  standingStruggles:{slots:DADDY_GRIP_SLOTS,escapeTransitions:6,sourceTimingMeasured:false},
+  defense:{downedFirearmImmune:true,sourceTimingMeasured:false},
+  disabledSlots:Object.fromEntries([
+    'neutralLight','forwardLight','crouchLight','airLight','neutralHeavy','forwardHeavy','crouchHeavy','airHeavy',
+    'backThrow','dodgeAttack','guardCounter','wakeupAttack','backSpecial','downSpecial','airSpecial'
+  ].map(key=>[key,'Le boss du Labyrinthe n’a qu’une prise sous son cadre ; cette frappe, ce saut ou cette projection distincte n’est pas documenté.'])),
+  moves:{
+    neutralSpecial:contact('Cadre levé puis emprise',{level:'throw',effectOverride:'bind',reach:110,hits:1}),
+    forwardSpecial:contact('Approche puis emprise sous le cadre',{level:'throw',effectOverride:'bind',reach:110,travel:2,hits:1}),
+    throw:contact('Emprise sous le cadre',{effectOverride:'bind',hits:1}),
+    super:contact('Emprise prolongée du cadre',{level:'throw',effectOverride:'bind',reach:120,hits:1})
+  }
+});
 // SH3 enemies_en.htm: padded-arm thrusts, an extending blade and arms swung
 // around the body. Church Closers are faster/stronger. The circular 2D contact
 // envelope and the Church's .85 startup / 1.12 damage factors are versus choices.
@@ -308,6 +361,19 @@ define('sh3_split_worm_046', {
 // The runtime's attack/recovery exclusions are versus state choices, not
 // measured windows from the source. No automatic counter or perfect guard.
 define('sh3_missionary_047', {defense:{frontalVisibleBullets:true}});
+// SH3 enemies_en.htm documents Scraper's own muzzle-flash-sensitive Handgun
+// defense: a silencer defeats it; Shotgun and SMG remain effective. Unlike the
+// Missionary recipe, this defense is explicitly limited to handgun-class rounds.
+define('sh3_scraper_045',{
+  defense:{frontalVisibleHandgunBullets:true},
+  disabledSlots:{throw:'Le Scraper attaque avec ses deux lames ; aucune saisie offensive n’est décrite.',
+    backThrow:'Aucune projection arrière avec échange de places n’est décrite pour le Scraper.'},
+  moves:{...weaponKit('Lames du Scraper'),
+    neutralSpecial:contact('Deux tailles des lames',{hits:2}),
+    forwardSpecial:contact('Approche puis taille des lames',{hits:1,travel:2.8}),
+    super:contact('Tailles alternées des deux lames',{hits:3,travel:1.6}),
+    dodgeAttack:contact('Lames après écart'),guardCounter:contact('Lames de riposte'),wakeupAttack:contact('Reprise des lames')}
+});
 // Each SH3 form equips exactly one weapon. Inputs, quarter-health boundaries,
 // burst size, approach distance and recovery remain original versus choices.
 const alessaWeaponPhases=ALESSA_WEAPON_PHASES.map((phase,index)=>{
@@ -736,6 +802,7 @@ export function combatReferencePolicy(fighter, references = FIGHTER_REFERENCES) 
     ...(recipe.contactSweeps?{contactSweeps:{...recipe.contactSweeps,slots:[...recipe.contactSweeps.slots]}}:{}),
     ...(recipe.groundHolds?{groundHolds:{...recipe.groundHolds,slots:[...recipe.groundHolds.slots]}}:{}),
     ...(recipe.standingBinds?{standingBinds:{...recipe.standingBinds,slots:[...recipe.standingBinds.slots]}}:{}),
+    ...(recipe.standingStruggles?{standingStruggles:{...recipe.standingStruggles,slots:[...recipe.standingStruggles.slots]}}:{}),
     ...(recipe.whiffExposure?{whiffExposure:{...recipe.whiffExposure,slots:[...recipe.whiffExposure.slots]}}:{}),
     ...(recipe.groundProjectiles?{groundProjectiles:{...recipe.groundProjectiles,slots:[...recipe.groundProjectiles.slots]}}:{}),
     ...(recipe.firearmExposure?{firearmExposure:{...recipe.firearmExposure,slots:[...recipe.firearmExposure.slots]}}:{}),
@@ -814,6 +881,18 @@ export function sourceStandingBind(fighter,move) {
   const ref=matchingReference(fighter,FIGHTER_REFERENCES),bind=ref&&RECIPES[ref.id]?.standingBinds;
   return Boolean(bind&&move?.enabled!==false&&bind.slots.includes(move?.key)&&move.effect?.id==='bind'&&
     !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw'));
+}
+
+export function sourceStandingStruggle(fighter,move) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES),grip=ref&&RECIPES[ref.id]?.standingStruggles;
+  return grip&&move?.enabled!==false&&grip.slots.includes(move?.key)&&move.effect?.id==='bind'&&
+    !move.projectile&&!move.trap&&!move.aura&&(move.level==='throw'||move.category==='throw')
+    ?{...grip,slots:[...grip.slots]}:null;
+}
+
+export function sourceDownedFirearmProtection(fighter) {
+  const ref=matchingReference(fighter,FIGHTER_REFERENCES);
+  return Boolean(ref&&RECIPES[ref.id]?.defense?.downedFirearmImmune);
 }
 
 export function sourceWhiffExposure(fighter,attack) {

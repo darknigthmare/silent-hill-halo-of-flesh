@@ -330,3 +330,49 @@ test('single packets and both review passes use the same explicit video track an
  assert.equal((await verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe,extract})).framesChecked,3);
  assert.deepEqual(probed,[1,1,1]);assert.deepEqual(extracted,[1,1]);
 });
+
+test('decoded non-square pixels are retained as capture metadata, never accepted as a source claim',async context=>{
+ const directory=await fixture(context),input=packet(),m=metadata();m.streams[0].sample_aspect_ratio='16:18';
+ const result=await verifySourceTiming(input,{baseDirectory:directory,probe:()=>m});
+ assert.deepEqual(result.capture.sampleAspectRatio,{numerator:8,denominator:9});
+ assert.equal(result.capture.width,16);assert.equal(result.capture.height,16);
+ assert.equal(result.certifiedOneToOne,false);assert.equal('sampleAspectRatio' in input.capture,false);
+ const claimed=packet();claimed.capture.sampleAspectRatio={numerator:8,denominator:9};
+ assert.throws(()=>validateSourceTiming(claimed),/unsupported fields/);
+ for(const sar of [undefined,'N/A','0:1','1:1','2:2']){
+  const decoded=metadata();if(sar!==undefined)decoded.streams[0].sample_aspect_ratio=sar;
+  const legacy=await verifySourceTiming(input,{baseDirectory:directory,probe:()=>decoded});
+  assert.equal('sampleAspectRatio' in legacy.capture,false,'square/unspecified captures retain the legacy representation');
+ }
+});
+test('malformed or unbounded decoded pixel ratios refuse verification and preview before extraction',async context=>{
+ const directory=await fixture(context);
+ for(const sar of ['8/9','1:0','-1:1','0:2','1000001:1','NaN',1,null]){
+  const m=metadata();m.streams[0].sample_aspect_ratio=sar;let extracted=false;
+  await assert.rejects(verifySourceTiming(packet(),{baseDirectory:directory,probe:()=>m}),/sample aspect ratio/);
+  const outputDirectory=join(directory,'invalid-sar-preview');
+  await assert.rejects(exportSourceTimingReview(batch(),{baseDirectory:directory,outputDirectory,probe:()=>m,
+   extract:async()=>{extracted=true;}}),/sample aspect ratio/);
+  assert.equal(extracted,false);await assert.rejects(lstat(outputDirectory),error=>error.code==='ENOENT');
+ }
+});
+test('both review passes convert the decoded non-square pixel ratio and label it without source certification',async context=>{
+ const directory=await fixture(context),input=review(batch()),m=metadata(),optionsSeen=[];
+ m.streams[0].sample_aspect_ratio='32:27';input.capture.videoStreamOrdinal=1;
+ // The track selection is an annotation; changing it requires its own digest.
+ input.entries[0].review.annotationSHA256=sourceTimingAnnotationDigest(entryPacket(input));
+ const extract=async(snapshot,indices,output,options)=>{
+  optionsSeen.push(options);await fixtureFrames(snapshot,indices,output);
+ };
+ const reviewDirectory=join(directory,'non-square-review');
+ const manifest=await exportSourceTimingReview(input,{baseDirectory:directory,outputDirectory:reviewDirectory,probe:()=>m,extract});
+ const result=await verifySourceTimingReview(input,{baseDirectory:directory,reviewDirectory,probe:()=>m,extract});
+ assert.deepEqual(optionsSeen,[{videoStreamOrdinal:1,sampleAspectRatio:{numerator:32,denominator:27}},
+  {videoStreamOrdinal:1,sampleAspectRatio:{numerator:32,denominator:27}}]);
+ assert.deepEqual(manifest.capture.sampleAspectRatio,{numerator:32,denominator:27});
+ assert.equal(result.framesChecked,3);assert.equal(result.certifiedOneToOne,false);
+ const page=await readFile(join(reviewDirectory,'index.html'),'utf8');
+ assert.ok(page.includes('Proportion décodée des pixels : 32:27'));
+ assert.ok(page.includes('en conservant les proportions affichées'));
+ assert.ok(page.includes('ne certifie pas le format du jeu d’origine'));
+});

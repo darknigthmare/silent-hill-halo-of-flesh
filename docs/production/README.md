@@ -35,6 +35,23 @@ sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
 neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
 de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
 
+## État du 26 octobre 2026
+
+Le [huitième lot](CHANTIERS_PARALLELES_LOT8_2026-10-26.md) et son
+[rapport de validation](../INTEGRATION_QA_2026-10-26.json) décrivent l’état courant :
+**840 actions ouvertes, 94 P0, 25 profils illustrés et six décors bitmap**.
+Les 33 décisions de rôle incluent huit adaptations filmiques jouables ;
+les 25 dossiers sans duel autonome restent bloqués. Le catalogue conserve
+3 499 commandes actives et 1 101 désactivées, 205 timelines stockées et
+686 présentations résolvables sans état d’acteur, plus sept contextes Cybil
+conditionnels à son équipement. Aucune certification 1:1 ni mesure originale
+n’est déduite de ces compositions.
+
+Le classeur conserve 435 observations, 154 sources et ses 80 formules.
+Les 18 400 cellules de timings originaux restent vides. L’export incrémental
+et les revues de préservation accompagnent cette version ; les chiffres
+des sections historiques ci-dessous décrivent leurs livraisons respectives.
+
 ## Ce que signifie la fidélité
 
 **Une identité documentée ne valide pas automatiquement un mouvement.** Un bestiaire peut attester une morsure, un rampement ou une arme sans établir la préparation, les frames actives, la portée ni les transitions d’un jeu de versus. Les 4 600 emplacements sont désormais classés comme composites de gestes ou adaptations de versus ; aucun n’est présenté comme une animation 1:1 directement attestée. Les paramètres d’une commande désactivée restent visibles comme données du catalogue, sans être exécutés.
@@ -55,7 +72,7 @@ Les poses `winRound1` et `loseRound1` représentent une transition réversible :
 
 La victoire finale, la défaite finale et la sortie sont suivies séparément. Un finisher prévoit plusieurs pistes synchronisées : attaquant, cible, accessoires, décor éventuel, caméra, effets et son. Sa définition du dépôt est inventoriée même quand la chorégraphie dédiée n’existe pas encore.
 
-## Suivi de l’intégration après la phase 1
+## Historique de l’intégration initiale après la phase 1
 
 La v0.9.6 et sa continuation appliquent les 230 fiches de rôle et de capacité : **3 694 commandes
 actives et 906 désactivées avec une raison**, sur les 4 600 emplacements conservés.

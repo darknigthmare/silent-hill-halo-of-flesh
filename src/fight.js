@@ -10,7 +10,8 @@ import { takeDamage as applyDamage, interruptAction, timeoutWinner, sweptProject
 import { weaponPhase, nextWeaponPhase, weaponPhaseReady, preserveWeaponPhaseBoundary } from './weapon-phases.js';
 import { isVisibleFirearmProjectile, isFirearmProjectile, isHandgunProjectile, passiveProximityField,
   sourceMouthPhase, sourceHitResponse, sourceContactSweep, sourceGroundHold, sourceStandingBind,
-  sourceWhiffExposure, sourceFrontalDamageScale, sourceGroundProjectile, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
+  sourceWhiffExposure, sourceFrontalDamageScale, sourceGroundProjectile, sourceStandingStruggle,
+  sourceDownedFirearmProtection, firearmExposure, nonDamagingStagger } from './combat-reference-policy.js';
 import { localHazardAllowed } from './stage-lore-policy.js';
 import { loadControls, GamepadSlots } from './player-input.js';
 import { createActorPresentation, seekActorPresentation, presentationClipDuration, presentationDuration, OUTRO_TICKS } from './presentation-sequences.js';
@@ -64,6 +65,8 @@ function actualWhiffExposure(actor) {
 }
 const heldByHair=actor=>actor.status?.id==='bind'&&actor.status.bindingOrigin?.id==='sh4_cynthia_velasquez_victim_16'&&
   actor.status.bindingOrigin.source==='sh4';
+const heldByStruggle=actor=>actor.status?.id==='bind'&&Boolean(actor.status.struggleOrigin);
+const heldStanding=actor=>heldByHair(actor)||heldByStruggle(actor);
 function updateWeaponState(actor) {
   const resource=ammoProfile(actor);
   if(resource?.exhaustion!=='unarmed')return;
@@ -81,6 +84,7 @@ function deflectsFrontalBullet(attacker,target,move,direction) {
   const defense=referencePolicy(target).defense;
   if(!bladeDefenseAvailable(target,direction))return false;
   if(defense?.frontalHandgunBullets===true)return isHandgunProjectile(attacker.data,move);
+  if(defense?.frontalVisibleHandgunBullets===true)return move.silenced!==true&&isHandgunProjectile(attacker.data,move);
   return defense?.frontalVisibleBullets===true&&
     (defense.silencedBullets===true?isFirearmProjectile(attacker.data,move):isVisibleFirearmProjectile(attacker.data,move));
 }
@@ -922,6 +926,12 @@ export class FightEngine {
     };
     const preferred = personality.preferredRange || 145;
 
+    if(heldByStruggle(actor)){
+      // CPU opponents use the same alternating controls and progress counter.
+      // Their difficulty reaction interval is authored versus behaviour.
+      return {[Math.floor(this.frame/baseDiff.react)%2?'left':'right']:true};
+    }
+
     // Stage awareness belongs to AI too: it reads the same visible telegraphs as humans.
     // No invisible knowledge of random upcoming events or hazard placement.
     const environmentalDefense = this.readTelegraphedHazard(actor, baseDiff.react);
@@ -1047,11 +1057,12 @@ export class FightEngine {
     updateMouthState(actor);
     const enemy = this.actors[1 - index];
     const controls = this.getControls(index);
+    this.updateSourceStruggle(actor,controls);
     const profile = actor.profile;
     const policy=referencePolicy(actor);
     if(policy.canMove===false){controls.left=false;controls.right=false;actor.vx=0;}
     if(policy.canJump===false)controls.jump=false;
-    if(heldByHair(actor)){controls.left=false;controls.right=false;controls.jump=false;actor.vx=0;}
+    if(heldStanding(actor)){controls.left=false;controls.right=false;controls.jump=false;actor.vx=0;}
     if(policy.canDodge===false)controls.dodge=false;
     if(!offensiveAllowed(actor))for(const action of ATTACK_ACTIONS)controls[action]=false;
     if(actor.presentation?.key==='taunt') {
@@ -1282,14 +1293,14 @@ export class FightEngine {
     actor.blocking = false;
     actor.crouching = move.stance === 'crouching';
     if (move.button === 'throw') {
-      actor.vx = referencePolicy(actor).canMove === false||heldByHair(actor) ? 0 : actor.facing * 2.2;
+      actor.vx = referencePolicy(actor).canMove === false||heldStanding(actor) ? 0 : actor.facing * 2.2;
       actor.stats.throws++;
     }
     if (key === 'backThrow') actor.stats.backThrows++;
     if (key === 'dodgeAttack') actor.stats.dodgeAttacks++;
     if (key === 'guardCounter') actor.stats.guardCounters++;
     if (key === 'wakeupAttack') actor.stats.wakeupAttacks++;
-    if (move.verticalTravel && actor.grounded && !move.requiresAir && referencePolicy(actor).canJump!==false&&!heldByHair(actor)) {
+    if (move.verticalTravel && actor.grounded && !move.requiresAir && referencePolicy(actor).canJump!==false&&!heldStanding(actor)) {
       actor.vy = -Math.min(actor.profile.jump * .72, Math.abs(move.verticalTravel) * 2.2);
       actor.grounded = false;
     }
@@ -1337,7 +1348,7 @@ export class FightEngine {
 
     if (move.invulnFrames && attack.frame <= move.invulnFrames) actor.invuln = Math.max(actor.invuln, 2);
 
-    if (move.teleport && referencePolicy(actor).canMove!==false&&!heldByHair(actor) && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
+    if (move.teleport && referencePolicy(actor).canMove!==false&&!heldStanding(actor) && !attack.teleported && attack.frame >= Math.max(1, move.startup - 2)) {
       attack.teleported = true;
       const inset = this.arenaInset(70);
       if (move.teleport === 'behind') {
@@ -1391,7 +1402,7 @@ export class FightEngine {
     }
 
     if (attack.frame < activeEnd) {
-      if (move.travel && referencePolicy(actor).canMove!==false&&!heldByHair(actor)) actor.vx = actor.facing * move.travel;
+      if (move.travel && referencePolicy(actor).canMove!==false&&!heldStanding(actor)) actor.vx = actor.facing * move.travel;
       if (!actor.grounded && move.verticalTravel && referencePolicy(actor).canJump!==false) actor.vy += Math.sign(move.verticalTravel) * Math.abs(move.verticalTravel) * .035;
     }
 
@@ -1533,8 +1544,16 @@ export class FightEngine {
     if (this.destroyed||this.phase !== 'fight' || !offensiveAllowed(attacker)||move.enabled===false||target.health <= 0 || target.invuln > 0 || target.ko) return false;
     const groundHold=attacker.profile.moves[move.key]===move&&sourceGroundHold(attacker.data,move);
     const standingBind=attacker.profile.moves[move.key]===move&&sourceStandingBind(attacker.data,move);
-    if((groundHold||standingBind)&&(!hasGroundContact(target)||contact.ranged))return false;
-    if(standingBind&&target.knockdownTimer>0)return false; // Do not invent a lift from an already downed pose.
+    const standingStruggle=attacker.profile.moves[move.key]===move&&sourceStandingStruggle(attacker.data,move);
+    if((groundHold||standingBind||standingStruggle)&&(!hasGroundContact(target)||contact.ranged))return false;
+    if((standingBind||standingStruggle)&&target.knockdownTimer>0)return false; // Do not invent a lift from an already downed pose.
+    if(sourceDownedFirearmProtection(target.data)&&target.grounded&&target.knockdownTimer>0&&
+      isFirearmProjectile(attacker.data,move)){
+      // The source describes no damage from shots while this exact boss is
+      // down. Do not turn the rejected hit into chip, meter, stun or a counter.
+      this.addText('TIRS SANS EFFET À TERRE',target.x,target.y-145,'guard');
+      return false;
+    }
     const stagger=nonDamagingStagger(attacker.data,move);
     if(stagger&&attacker.profile.moves[move.key]===move&&!contact.ranged){
       if(target.knockdownTimer>0||target.phaseLock>0||stagger.groundedOnly&&!hasGroundContact(target))return false;
@@ -1741,7 +1760,7 @@ export class FightEngine {
       if (knocksDown) target.grounded = false;
     }
     if(sourceResponse?.knockdown){target.vy=Math.max(0,target.vy);target.grounded=false;}
-    const standingResponse=standingBind||heldByHair(target);
+    const standingResponse=standingBind||standingStruggle||heldStanding(target);
     if (isThrow||standingResponse) {
       if(groundHold||standingResponse){target.vx=0;target.vy=0;target.grounded=true;}
       else{target.vy = -Math.max(6.5, Math.abs(move.launch || 0));target.grounded = false;}
@@ -1783,6 +1802,24 @@ export class FightEngine {
     return true;
   }
 
+  updateSourceStruggle(actor,controls) {
+    if(!heldByStruggle(actor))return;
+    const origin=actor.status.struggleOrigin,source=this.actors[actor.status.source];
+    const move=source?.profile?.moves[origin.moveKey];
+    const rule=source&&source.data.id===origin.id&&source.data.source===origin.source&&sourceStandingStruggle(source.data,move);
+    if(!rule||!offensiveAllowed(source)||source.health<=0||source.ko){actor.status=null;return;}
+    // A held direction, simultaneous opposites or repeated presses of the same
+    // direction do not manufacture progress. Only actual alternating controls
+    // count; keyboard, touch and the normal gamepad path share this state.
+    const direction=Boolean(controls.left)===Boolean(controls.right)?0:controls.left?-1:1;
+    if(direction&&direction!==origin.lastDirection){
+      origin.lastDirection=direction;origin.progress++;
+      if(origin.progress>=rule.escapeTransitions){
+        actor.status=null;this.addText('PRISE ROMPUE',actor.x,actor.y-210,'counter');
+      }
+    }
+  }
+
   applyStatus(target, effect, source = null, move = null) {
     if(source&&!offensiveAllowed(source))return false;
     const definition = AFFLICTIONS[effect.id];
@@ -1800,11 +1837,22 @@ export class FightEngine {
       target.status.bindingOrigin={id:source.data.id,source:source.data.source,moveKey:move.key};
       this.addText('CHEVEUX : FRAPPEZ CYNTHIA',target.x,target.y-244,'status');
     }else delete target.status.bindingOrigin;
+    const struggle=source&&move&&source.profile.moves[move.key]===move&&sourceStandingStruggle(source.data,move);
+    if(struggle){
+      const previous=target.status.struggleOrigin;
+      target.status.struggleOrigin=previous?.id===source.data.id&&previous.source===source.data.source&&previous.moveKey===move.key
+        ?previous:{id:source.data.id,source:source.data.source,moveKey:move.key,progress:0,lastDirection:0};
+      this.addText('PRISE : ALTERNEZ ← →',target.x,target.y-244,'status');
+    }else delete target.status.struggleOrigin;
     if (source) source.stats.statusesApplied++;
   }
 
   updateStatus(actor) {
     if (!actor.status) return;
+    if(heldByStruggle(actor)){
+      this.updateSourceStruggle(actor,{}); // Validate the source before an early KO/round return.
+      if(!actor.status)return;
+    }
     if(actor.status.source!=null&&!offensiveAllowed(this.actors[actor.status.source])){actor.status=null;return;}
     const status = actor.status;
     status.timer--;
@@ -2798,6 +2846,12 @@ export class FightEngine {
 
   sourceCombatCue(actor) {
     if(this.phase!=='fight'||actor.ko||actor.health<=0||!offensiveAllowed(actor))return null;
+    if(heldByStruggle(actor)){
+      const origin=actor.status.struggleOrigin,source=this.actors[actor.status.source];
+      const rule=source&&sourceStandingStruggle(source.data,source.profile.moves[origin.moveKey]);
+      if(rule)return `DÉGAGEMENT ←→ ${origin.progress}/${rule.escapeTransitions} · VERSUS`;
+    }
+    if(sourceDownedFirearmProtection(actor.data)&&actor.grounded&&actor.knockdownTimer>0)return 'TIRS SANS EFFET À TERRE';
     if(sourceMouthPhase(actor.data)&&actualExposure(actor))return 'GUEULE OUVERTE · VERSUS';
     const whiff=actualWhiffExposure(actor);
     return whiff?(whiff.rearOnly?'DOS EXPOSÉ · VERSUS':'CORPS EXPOSÉ · VERSUS'):null;

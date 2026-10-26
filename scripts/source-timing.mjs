@@ -71,7 +71,7 @@ export function validateSourceTiming(packet,{roster=ROSTER,references=FIGHTER_RE
 export function probeSourceCapture(path,options={}){
   const ordinal=selectedVideoStream(options);
   const result=spawnSync('ffprobe',['-v','error','-select_streams',`v:${ordinal}`,'-count_frames','-show_frames','-show_entries',
-    'stream=codec_type,width,height,r_frame_rate,avg_frame_rate,nb_read_frames:frame=best_effort_timestamp_time','-of','json',path],
+    'stream=codec_type,width,height,sample_aspect_ratio,r_frame_rate,avg_frame_rate,nb_read_frames:frame=best_effort_timestamp_time','-of','json',path],
     {encoding:'utf8',timeout:60000,maxBuffer:8*1024*1024,windowsHide:true});
   if(result.error||result.status!==0)fail('ffprobe could not verify the capture (ffprobe is required)');
   try{return JSON.parse(result.stdout);}catch{fail('ffprobe returned invalid metadata');}
@@ -80,6 +80,16 @@ function sameRate(text,expected){
   if(typeof text!=='string'||!/^\d+\/\d+$/.test(text))return false;
   const [n,d]=text.split('/').map(Number);
   return n>0&&d>0&&n*expected.denominator===d*expected.numerator;
+}
+function decodedPixelAspectRatio(value){
+  // Missing/unspecified SAR is also treated as square pixels by ffmpeg. A known
+  // non-square ratio must survive preview conversion instead of being erased by
+  // setsar=1, which would distort older console and anamorphic recordings.
+  if(value===undefined||value==='N/A'||value==='0:1')return {numerator:1,denominator:1};
+  if(typeof value!=='string'||!/^\d+:\d+$/.test(value))fail('decoded sample aspect ratio is invalid');
+  const [n,d]=value.split(':').map(Number);
+  if(![n,d].every(number=>Number.isSafeInteger(number)&&number>0&&number<=1000000))fail('decoded sample aspect ratio is invalid');
+  const divisor=gcd(n,d);return {numerator:n/divisor,denominator:d/divisor};
 }
 async function verifyCapture(capture,{baseDirectory,probe,consume}){
   const base=await realpath(baseDirectory),path=resolve(base,capture.path);
@@ -118,7 +128,9 @@ async function verifyCapture(capture,{baseDirectory,probe,consume}){
     const step=capture.frameRate.denominator/capture.frameRate.numerator,tolerance=Math.max(0.000002,step*.005);
     const timestamps=frames.map(frame=>typeof frame.best_effort_timestamp_time==='string'&&/^-?\d+(?:\.\d+)?$/.test(frame.best_effort_timestamp_time)?Number(frame.best_effort_timestamp_time):NaN);
     if(timestamps.some((time,index)=>!Number.isFinite(time)||index>0&&Math.abs(time-timestamps[index-1]-step)>tolerance))fail('constant capture frame spacing required; variable or missing timestamps refused');
-    const verified={...capture,bytes:size,width:stream.width,height:stream.height};
+    const pixelAspectRatio=decodedPixelAspectRatio(stream.sample_aspect_ratio);
+    const verified={...capture,bytes:size,width:stream.width,height:stream.height,
+      ...(pixelAspectRatio.numerator!==pixelAspectRatio.denominator?{sampleAspectRatio:pixelAspectRatio}:{})};
     return consume?await consume(verified,snapshot):verified;
   }finally{
     try{await source.close();}finally{if(directory)await rm(directory,{recursive:true,force:true});}
@@ -179,7 +191,10 @@ function verifiedTimingBatch(normalized,capture,catalogue){
 export function extractSourceReviewFrames(snapshot,indices,directory,options={}){
   const ordinal=selectedVideoStream(options);
   const select=indices.map(index=>`eq(n\\,${index})`).join('+');
-  const filter=`select=${select},scale=w=min(640\\,iw):h=min(640\\,ih):force_original_aspect_ratio=decrease,setsar=1`;
+  const scale=options.sampleAspectRatio?
+    'scale=w=max(1\\,round(iw*sar*min(1\\,min(640/(iw*sar)\\,640/ih)))):h=max(1\\,round(ih*min(1\\,min(640/(iw*sar)\\,640/ih))))':
+    'scale=w=min(640\\,iw):h=min(640\\,ih):force_original_aspect_ratio=decrease';
+  const filter=`select=${select},${scale},setsar=1`;
   const result=spawnSync('ffmpeg',['-nostdin','-v','error','-n','-i',snapshot,'-map',`0:v:${ordinal}`,'-vf',filter,
     '-fps_mode','passthrough','-frames:v',String(indices.length),'-an','-sn','-dn','-start_number','0',join(directory,'frame-%05d.png')],
     {encoding:'utf8',timeout:60000,maxBuffer:1024*1024,windowsHide:true});
@@ -198,7 +213,7 @@ function reviewHtml(manifest){
 <style>body{font:16px system-ui;background:#17191b;color:#eee;margin:2rem auto;padding:0 1rem;max-width:1200px}a{color:#90c8ff}section{border-top:1px solid #777;margin-top:2rem}.frames{display:flex;flex-wrap:wrap;gap:1rem}figure{margin:0;flex:1 1 240px}img{display:block;max-width:100%;height:auto;image-rendering:auto}code{overflow-wrap:anywhere}p{line-height:1.5}</style>
 <h1>Relecture candidate de capture</h1><p>${html(manifest.fighterId)} · ${html(manifest.edition)}</p>
 <p>Images de consultation, réduites à 640 pixels au maximum par côté. Les indices désignent les images de cette capture, à partir de zéro ; ils ne sont pas des mesures du moteur d’origine. Comparer aussi la capture originale. Aucune fidélité 1:1 certifiée ; aucun timing Excel rempli.</p>
-<p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}${own(manifest.capture,'videoStreamOrdinal')?'<br>Piste vidéo sélectionnée (numérotation à partir de zéro) : '+manifest.capture.videoStreamOrdinal:''}</p>
+<p>Source déclarée : ${html(manifest.capture.sourceUrl)}<br>Capture SHA256 : <code>${manifest.capture.sha256}</code><br>Fichier relatif au dossier du paquet d’entrée : ${html(manifest.capture.path)}${own(manifest.capture,'videoStreamOrdinal')?'<br>Piste vidéo sélectionnée (numérotation à partir de zéro) : '+manifest.capture.videoStreamOrdinal:''}${manifest.capture.sampleAspectRatio?'<br>Proportion décodée des pixels : '+manifest.capture.sampleAspectRatio.numerator+':'+manifest.capture.sampleAspectRatio.denominator+' ; aperçus convertis en pixels carrés en conservant les proportions affichées. Cette métadonnée ne certifie pas le format du jeu d’origine.':''}</p>
 <p>Les relectures éventuelles sont déclaratives et liées aux annotations. Ces aperçus n’ajoutent aucune attestation. Métadonnées et empreintes des images : <a href="review-manifest.json">manifeste JSON</a>.</p>${sections}</html>\n`;
 }
 function reviewFrameIndices(verified){
@@ -240,7 +255,8 @@ export async function exportSourceTimingReview(batch,{outputDirectory,baseDirect
     await mkdir(destination);let complete=false;
     try{
       const frameDirectory=join(destination,'frames');await mkdir(frameDirectory);
-      await extract(snapshot,indices,frameDirectory,{videoStreamOrdinal:selectedVideoStream(capture)});
+      await extract(snapshot,indices,frameDirectory,{videoStreamOrdinal:selectedVideoStream(capture),
+        ...(capture.sampleAspectRatio?{sampleAspectRatio:capture.sampleAspectRatio}:{})});
       const manifest=sourceReviewManifest(verified,await readReviewFrames(frameDirectory,indices,capture));
       await writeFile(join(destination,'review-manifest.json'),JSON.stringify(manifest,null,2)+'\n',{flag:'wx'});
       await writeFile(join(destination,'index.html'),reviewHtml(manifest),{flag:'wx'});
@@ -256,7 +272,8 @@ export async function verifySourceTimingReview(batch,{reviewDirectory,baseDirect
   return verifyCapture(normalized.capture,{baseDirectory,probe,consume:async(capture,snapshot)=>{
     const verified=verifiedTimingBatch(normalized,capture,catalogue),indices=reviewFrameIndices(verified);
     const freshDirectory=join(dirname(snapshot),'review-frames');await mkdir(freshDirectory,{mode:0o700});
-    await extract(snapshot,indices,freshDirectory,{videoStreamOrdinal:selectedVideoStream(capture)});
+    await extract(snapshot,indices,freshDirectory,{videoStreamOrdinal:selectedVideoStream(capture),
+      ...(capture.sampleAspectRatio?{sampleAspectRatio:capture.sampleAspectRatio}:{})});
     const expected=sourceReviewManifest(verified,await readReviewFrames(freshDirectory,indices,capture));
     const manifest=JSON.parse((await readReviewFile(join(directory,'review-manifest.json'),2*1024*1024,'review manifest')).toString('utf8'));
     if(!isDeepStrictEqual(manifest,expected))fail('review manifest differs from exact annotations or freshly extracted capture frames; regenerate the preview');

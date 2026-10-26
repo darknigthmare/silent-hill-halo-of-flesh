@@ -25,6 +25,15 @@ const proposalFor=(actor,key)=>sourceOf(actor)?.proposals?.[proposalKey(key)];
 const approvedProposal=proposal=>proposal?.status==='adaptation-versus-proposee';
 const anatomyMatches=(recipe,data)=>(!recipe.attackerKind||bodyProfile(data).kind===recipe.attackerKind)&&
   (!recipe.attackerLimbs||data.visual?.limbs===recipe.attackerLimbs)&&(!recipe.attackerHead||data.visual?.head===recipe.attackerHead);
+// A static pistol in the catalogue never restores Cybil's discarded runtime
+// weapon. Match the existing ten-shot/low-health transition without mutating it.
+function cybilWeaponState(actor) {
+  const data=dataOf(actor);
+  if(data.id!=='sh1_monster_cybil_017'||data.source!=='sh1')return null;
+  if(actor.weaponDiscarded===true||actor.ammo===0||
+    (Number.isFinite(actor.health)&&Number.isFinite(actor.maxHealth)&&actor.maxHealth>0&&actor.health>0&&actor.health<actor.maxHealth*.5))return 'unarmed';
+  return actor.weaponDiscarded===false&&Number.isSafeInteger(actor.ammo)&&actor.ammo>0&&actor.ammo<=10?'armed':null;
+}
 
 /* Each recipe is a deliberate action grammar. Variants share only actions
  * documented for their own IDs; the contextual artwork never crosses editions. */
@@ -525,6 +534,71 @@ const RECIPES={
     beat('RECEPTION LOURDE PROPOSEE',31,frame('bom-mama-detached-land',.83),frame('fall',.22,35,.2), 'impact','heavy',.96),
     beat('FORME DETACHEE TOUJOURS UNIQUE',48,frame('bom-mama-detached-held',.61),frame('held',.22,35,.2), 'vignette','silence',1)
   ]},
+  sh1MothAbdomenPass:{attackerKind:'flyer',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Heurt d’abdomen documenté pour Floatstinger SH1. Passage et résultat sont composés pour le versus ; aucun toit, parapet, jet acide, chute mortelle ou cycle d’ailes original n’est créé par ces offsets.',steps:[
+    beat('ABDOMEN DE LA FORME AILEE',43,frame('sh1-moth-abdomen-approach',.12,-23),frame('watch'), 'wind','wing',.98),
+    beat('PASSAGE A COURTE PORTEE',32,frame('sh1-moth-abdomen-pass',.48,-18),frame('brace'), 'wind','rush',.95),
+    beat('HEURT DE L ABDOMEN',26,frame('sh1-moth-abdomen-butt',.78,-10),frame('recoil',.17,16), 'impact','heavy',.94),
+    beat('CIBLE OCCULTEE AU SOL',34,frame('sh1-moth-abdomen-recover',.59,-29),frame('occluded',.25,35,.2), 'vignette','wing',.97),
+    beat('VOL CONSERVE SANS PARAPET AJOUTE',48,frame('sh1-moth-abdomen-hover',.39,-34),frame('held',.25,35,.2), 'fog','silence',1)
+  ]},
+  cybilArmedPistolButt:{attackerKind:'humanoid',weapon:'pistol',attackerState:'cybil-armed',targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Crosse de la Cybil possédée en phase armée uniquement. Le finisher ne tire pas, ne consomme ni ne restaure une balle et ne joue pas l’expulsion du parasite. Après abandon du pistolet, ce montage est bloqué ; les présentations restent désarmées.',steps:[
+    beat('PISTOLET ENCORE EQUIPE',41,frame('sh1-cybil-armed-pistol-held',.12),frame('watch'), 'vignette','metal',.98),
+    beat('APPROCHE DE LA CROSSE',31,frame('sh1-cybil-armed-pistol-close',.52),frame('brace'), 'vignette','step',.95),
+    beat('COUP DE CROSSE DOCUMENTE',25,frame('sh1-cybil-armed-pistol-butt',.72),frame('recoil',.12,12), 'impact','hit',.94),
+    beat('COUPE DEVANT LA CHUTE',35,frame('sh1-cybil-armed-pistol-retract',.57),frame('occluded',.21,35,.2), 'blackout','silence',.97),
+    beat('ARME GARDEE SANS TIR NI GUERISON',47,frame('sh1-cybil-armed-pistol-held',.43),frame('held',.21,35,.2), 'vignette','breath',1)
+  ]},
+  eddieFreezerRevolverCut:{attackerKind:'humanoid',weapon:'revolver',targets:STANDING,maxTargetHeight:310,
+    stageIds:['prison_meat_locker'],propsAll:['hooks','freezer'],
+    scopeNote:'Revolver humain d’Eddie SH2 original 2001, dans la seconde chambre froide. Tir et chute sont masqués ; la carcasse du lieu doit déjà exister. Aucun projectile de gameplay, munition, transfert vers la salle suivante, vapeur ou rail mobile du remake 2024 n’est ajouté.',steps:[
+    beat('REVOLVER DANS LA CHAMBRE FROIDE',44,frame('sh2-eddie-freezer-revolver-held',.1),frame('watch'), 'vignette','breath',.98),
+    beat('LIGNE DE VISEE HUMAINE',34,frame('sh2-eddie-freezer-revolver-aim',.22),frame('brace'), 'vignette','metal',.95),
+    beat('COUPE AVANT LE TIR',28,frame('sh2-eddie-freezer-revolver-offscreen-shot',.22),frame('occluded',.07,9,.12), 'blackout','hit',.94),
+    beat('RESULTAT DERRIERE LE PREMIER PLAN',36,frame('sh2-eddie-freezer-revolver-lower',.16),frame('held',.1,35,.12), 'vignette','cloth',.97),
+    beat('CROCHETS ET RAILS DU LIEU RESTENT FIXES',48,frame('sh2-eddie-freezer-revolver-held',.08),frame('held',.1,35,.12), 'vignette','silence',1)
+  ]},
+  mariaFinalMothClosure:{attackerKind:'deity',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Manifestation finale Maria SH2 original 2001 : cage déjà formée, essaim puis appendice noir. Montage versus propre à cette identité ; aucune transformation, apparition de lit, attribution d’une fin narrative ou image de Mary n’est fournie.',steps:[
+    beat('CAGE DE MARIA DEJA FORMEE',45,frame('sh2-maria-final-cage-held'),frame('watch'), 'vignette','breath',.98),
+    beat('MENACE D ESSAIM DOCUMENTEE',34,frame('sh2-maria-final-moth-threat'),frame('brace'), 'vignette','hiss',.95),
+    beat('APPENDICE NOIR A COURTE PORTEE',31,frame('sh2-maria-final-black-tail-grip'),frame('gripped',-.08,-17), 'vignette','creak',.94),
+    beat('CADRAGE FERME SUR L EMPRISE',35,frame('sh2-maria-final-black-tail-held'),frame('occluded',-.08,-17,.14), 'blackout','silence',.97),
+    beat('CAGE DE MARIA CONSERVEE',49,frame('sh2-maria-final-cage-held'),frame('held',-.08,35,.14), 'vignette','breath',1)
+  ]},
+  maryFinalBlackTail:{attackerKind:'deity',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Manifestation finale Mary SH2 original 2001, conservée séparément de Maria. L’appendice et l’essaim appartiennent à cette famille de boss ; leur ordre et le résultat sont composés pour le versus. Pas de dialogue, transformation, fin narrative ou pixels empruntés à Maria.',steps:[
+    beat('CAGE DE MARY DEJA FORMEE',46,frame('sh2-mary-final-cage-held'),frame('watch'), 'vignette','breath',.98),
+    beat('APPENDICE NOIR EN APPROCHE',35,frame('sh2-mary-final-black-tail-reach'),frame('brace'), 'vignette','creak',.95),
+    beat('EMPRISE DE LA MANIFESTATION',30,frame('sh2-mary-final-black-tail-grip'),frame('gripped',-.1,-19), 'impact','hit',.94),
+    beat('ESSAIM SUGGERE PAR LE CADRAGE',37,frame('sh2-mary-final-moth-closure'),frame('occluded',-.1,-19,.13), 'blackout','hiss',.97),
+    beat('CAGE DE MARY CONSERVEE',48,frame('sh2-mary-final-cage-held'),frame('held',-.1,35,.13), 'vignette','silence',1)
+  ]},
+  gumNewEquippedClub:{attackerKind:'humanoid',weapon:'club',targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Gum Head New Type SH4 avec le club déjà équipé par cette fiche versus. Coup armé documenté ; aucun vol d’inventaire, vol de bougie, nouvel objet ou geste du Old Type n’est joué. Le modèle de club et chaque pose restent à produire.',steps:[
+    beat('CLUB DEJA DANS LA MAIN',41,frame('sh4-gum-new-club-held',.12),frame('watch'), 'vignette','breath',.98),
+    beat('REPLACEMENT DU BRAS ARME',32,frame('sh4-gum-new-club-ready',.47),frame('brace'), 'vignette','creak',.95),
+    beat('COUP DU CLUB EQUIPE',27,frame('sh4-gum-new-club-swing',.72),frame('recoil',.12,14), 'impact','heavy',.94),
+    beat('CORPS DEVANT LE RESULTAT',35,frame('sh4-gum-new-club-retract',.62),frame('occluded',.2,35,.2), 'blackout','cloth',.97),
+    beat('CLUB CONSERVE SANS OBJET CREE',47,frame('sh4-gum-new-club-held',.44),frame('held',.2,35,.2), 'vignette','silence',1)
+  ]},
+  bottomThreeHeadDive:{attackerKind:'giant',attackerLimbs:2,attackerHead:'three',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Bottom SH4 : deux bras et mains porteurs, deux têtes supérieures et une troisième inversée en bas, sans manteau du Twin Victim. Poursuite et plongeon documentés ; aucun pointage, seconde créature ou disparition de tête n’est ajouté.',steps:[
+    beat('TROIS TETES ET DEUX APPUIS',43,frame('sh4-bottom-three-head-support',.1),frame('watch'), 'vignette','breath',.98),
+    beat('POURSUITE SUR LES MAINS',31,frame('sh4-bottom-three-head-hand-run',.48),frame('brace'), 'dust','step',.95),
+    beat('PLONGEON DU CORPS PROPRE',28,frame('sh4-bottom-three-head-dive',.79),frame('recoil',.15,16), 'impact','heavy',.94),
+    beat('MASSE DEVANT LE RESULTAT',34,frame('sh4-bottom-three-head-land',.84),frame('occluded',.22,35,.17), 'vignette','cloth',.97),
+    beat('TROIS TETES TOUJOURS DANS LE CADRE',48,frame('sh4-bottom-three-head-support',.64),frame('held',.22,35,.17), 'vignette','silence',1)
+  ]},
+  cynthiaStandingHairClosure:{attackerKind:'ghost',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Cynthia Victim 16 SH4 : cheveux qui maintiennent la cible debout, puis coupe de résultat versus. Aucun plaquage, projection, téléportation de Richard, portillon ou passage mural non présents dans le lieu n’est créé ; aucune élimination définitive du fantôme n’est affirmée.',steps:[
+    beat('CHEVEUX DE CYNTHIA A PORTEE',43,frame('sh4-cynthia-standing-hair-ready',.1),frame('watch'), 'vignette','breath',.98),
+    beat('CHEVEUX VERS LA CIBLE',34,frame('sh4-cynthia-standing-hair-reach',.46),frame('brace'), 'vignette','creak',.95),
+    beat('ENTRAVE DEBOUT SANS PROJECTION',31,frame('sh4-cynthia-standing-hair-bind',.66),frame('standing-bound',0,0,1), 'vignette','cloth',.94),
+    beat('COUPE SUR LA MEME EMPRISE',36,frame('sh4-cynthia-standing-hair-held',.66),frame('standing-occluded',0,0,.13), 'blackout','silence',.97),
+    beat('MEME AXE SANS PORTILLON INVENTE',48,frame('sh4-cynthia-standing-hair-held',.54),frame('standing-held',0,0,.13), 'vignette','breath',1)
+  ]},
   filmGrip:{targets:STANDING,weapon:'great_knife',steps:[
     beat('CASQUE DANS LE HALO',45,frame('film-helmet',.1),frame('brace'), 'vignette','scrape',.97),
     beat('SAISIE DU FILM',39,frame('film-grip',.69),frame('gripped',.04,-8), 'vignette','creak',.94),
@@ -569,7 +643,10 @@ const FIGHTER_RECIPES=Object.freeze({
   bom_straight_jacket_131:'bomClosedTorsoJet',origins_two_back_080:'originsJoinedTackle',
   homecoming_amnion_hanging_form_097:'amnionSupportedFrontLegs',homecoming_amnion_exposed_form_098:'amnionExposedCloseGrip',
   bom_nurse_128:'bomPipePairStop',bom_tremer_133:'bomTremerLowPressure',bom_fire_guardian_137:'bomFireHandsEmission',
-  bom_light_guardian_140:'bomHeartMaceArm',bom_water_guardian_141:'bomAquaticMembers',bom_blood_mama_145:'bomDetachedMamaPounce'
+  bom_light_guardian_140:'bomHeartMaceArm',bom_water_guardian_141:'bomAquaticMembers',bom_blood_mama_145:'bomDetachedMamaPounce',
+  sh1_floatstinger_016:'sh1MothAbdomenPass',sh1_monster_cybil_017:'cybilArmedPistolButt',sh2_eddie_dombrowski_032:'eddieFreezerRevolverCut',
+  sh2_maria_final_manifestation_033:'mariaFinalMothClosure',sh2_mary_final_manifestation_034:'maryFinalBlackTail',
+  sh4_gum_head_new_type_058:'gumNewEquippedClub',sh4_bottom_065:'bottomThreeHeadDive',sh4_cynthia_velasquez_victim_16:'cynthiaStandingHairClosure'
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -622,9 +699,25 @@ const PRESENTATION_STAGING=Object.freeze({
   bom_fire_guardian_137:{id:'bom-fire-guardian-hand-origin',entry:0,retreat:0,recoil:5,outroHold:true,poses:['bom-fire-mass-rise-entry','bom-fire-hands-muted-threat','bom-fire-stable-appuis','bom-fire-low-appui-recovery','bom-fire-relaxed-final-watch','bom-fire-final-body-rest','bom-fire-held-result']},
   bom_light_guardian_140:{id:'bom-light-guardian-heart-and-arm',entry:16,retreat:0,recoil:6,outroHold:true,poses:['bom-light-heart-arm-entry','bom-light-heart-muted-threat','bom-light-mace-arm-stable','bom-light-mace-arm-low-recovery','bom-light-heart-relaxed-final-watch','bom-light-final-body-rest','bom-light-held-result']},
   bom_water_guardian_141:{id:'bom-water-guardian-aquatic-body',entry:0,retreat:0,recoil:0,outroHold:true,poses:['bom-water-members-emergence-awaiting-water','bom-water-members-muted-threat','bom-water-members-surface-held','bom-water-members-surface-recovery','bom-water-members-final-surface-held','bom-water-members-final-submerge','bom-water-members-held-result']},
-  bom_blood_mama_145:{id:'bom-blood-mama-detached-pounce',entry:21,retreat:0,recoil:7,outroHold:true,poses:['bom-mama-detached-entry','bom-mama-detached-muted-threat','bom-mama-detached-stable-watch','bom-mama-detached-low-recovery','bom-mama-detached-relaxed-final-watch','bom-mama-detached-final-rest','bom-mama-detached-held-result']}
+  bom_blood_mama_145:{id:'bom-blood-mama-detached-pounce',entry:21,retreat:0,recoil:7,outroHold:true,poses:['bom-mama-detached-entry','bom-mama-detached-muted-threat','bom-mama-detached-stable-watch','bom-mama-detached-low-recovery','bom-mama-detached-relaxed-final-watch','bom-mama-detached-final-rest','bom-mama-detached-held-result']},
+  sh1_floatstinger_016:{id:'sh1-moth-abdomen-and-flight',entry:31,retreat:42,recoil:8,landing:30,roundDip:17,ascent:42,poses:['sh1-moth-abdomen-flying-entry','sh1-moth-abdomen-muted-threat','sh1-moth-abdomen-hover-held','sh1-moth-abdomen-height-recovery','sh1-moth-abdomen-final-watch','sh1-moth-abdomen-final-ground-fall-awaiting-frames','sh1-moth-abdomen-horizontal-departure']},
+  sh1_monster_cybil_017:{id:'sh1-cybil-runtime-weapon',entry:15,retreat:0,recoil:9,outroHold:true,
+    poses:['sh1-cybil-armed-pistol-entry','sh1-cybil-armed-pistol-muted-threat','sh1-cybil-armed-pistol-watch','sh1-cybil-armed-pistol-recovery','sh1-cybil-armed-pistol-final-watch','sh1-cybil-armed-pistol-final-loss-no-cure','sh1-cybil-armed-pistol-held-result'],
+    unarmedPoses:['sh1-cybil-unarmed-entry','sh1-cybil-unarmed-muted-threat','sh1-cybil-unarmed-watch','sh1-cybil-unarmed-recovery','sh1-cybil-unarmed-final-watch','sh1-cybil-unarmed-final-loss-no-cure','sh1-cybil-unarmed-held-result']},
+  sh2_eddie_dombrowski_032:{id:'sh2-eddie-revolver-human',entry:15,retreat:0,recoil:9,outroHold:true,poses:['sh2-eddie-revolver-entry-awaiting-freezer','sh2-eddie-revolver-muted-threat','sh2-eddie-revolver-watch','sh2-eddie-revolver-human-recovery','sh2-eddie-revolver-final-lowered','sh2-eddie-revolver-human-final-loss','sh2-eddie-revolver-held-result']},
+  sh2_maria_final_manifestation_033:{id:'sh2-maria-final-cage-identity',entry:0,retreat:0,recoil:0,outroHold:true,poses:['sh2-maria-final-cage-reveal-already-formed','sh2-maria-final-cage-muted-threat','sh2-maria-final-cage-hover-held','sh2-maria-final-cage-support-recovery','sh2-maria-final-cage-final-watch','sh2-maria-final-cage-terminal-fall-awaiting-frames','sh2-maria-final-cage-held-result']},
+  sh2_mary_final_manifestation_034:{id:'sh2-mary-final-cage-identity',entry:0,retreat:0,recoil:0,outroHold:true,poses:['sh2-mary-final-cage-reveal-already-formed','sh2-mary-final-cage-muted-threat','sh2-mary-final-cage-hover-held','sh2-mary-final-cage-support-recovery','sh2-mary-final-cage-final-watch','sh2-mary-final-cage-terminal-fall-awaiting-frames','sh2-mary-final-cage-held-result']},
+  sh4_gum_head_new_type_058:{id:'sh4-gum-new-already-equipped-club',entry:21,retreat:0,recoil:8,outroHold:true,poses:['sh4-gum-new-club-entry','sh4-gum-new-club-muted-threat','sh4-gum-new-club-stable-watch','sh4-gum-new-club-support-recovery','sh4-gum-new-club-final-watch','sh4-gum-new-club-final-body-rest','sh4-gum-new-club-held-result']},
+  sh4_bottom_065:{id:'sh4-bottom-three-head-two-hands',entry:19,retreat:0,recoil:8,outroHold:true,poses:['sh4-bottom-three-head-hand-entry','sh4-bottom-three-head-muted-threat','sh4-bottom-three-head-support-watch','sh4-bottom-three-head-hand-recovery','sh4-bottom-three-head-final-watch','sh4-bottom-three-head-final-body-rest','sh4-bottom-three-head-held-result']},
+  sh4_cynthia_velasquez_victim_16:{id:'sh4-cynthia-hair-standing-axis',entry:17,retreat:0,recoil:0,roundDim:.2,outroHold:true,poses:['sh4-cynthia-standing-hair-entry','sh4-cynthia-standing-hair-muted-threat','sh4-cynthia-standing-hair-watch','sh4-cynthia-standing-hair-low-recovery','sh4-cynthia-standing-hair-final-watch','sh4-cynthia-standing-hair-final-contained-awaiting-frames','sh4-cynthia-standing-hair-held-result']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
+function presentationStaging(actor) {
+  const staging=PRESENTATION_STAGING[dataOf(actor).id];
+  if(!staging?.unarmedPoses)return staging;
+  const state=cybilWeaponState(actor);
+  return state==='armed'?staging:state==='unarmed'?{...staging,id:staging.id+'-unarmed',poses:staging.unarmedPoses}:null;
+}
 
 function compileRecipe(recipe,type) {
   const steps=recipe.steps.map(step=>({...step,attacker:{...step.attacker},target:{...step.target}}));
@@ -678,8 +771,11 @@ export function loreFinisher({attacker,target,stage,definition,stageBased=false,
   if(!anatomyMatches(recipe,a))return blocked('Anatomie du sujet incompatible avec sa séquence exacte.',definition.id);
   if(recipe.unarmed&&a.visual?.weapon)return blocked('Cette variante exige ses membres sans arme ajoutée.',definition.id);
   if(recipe.weapon&&a.visual?.weapon!==recipe.weapon)return blocked('Arme exacte absente de cette variante.',definition.id);
-  if((recipe.propsAny||recipe.needsCeiling)&&(!STAGE_REFERENCES[stage?.id]||STAGE_REFERENCES[stage.id].source!==stage.source||stage?.reference?.blocked))return blocked('Lieu non confirmé pour cet appui ou cet accessoire.',definition.id);
+  if(recipe.attackerState==='cybil-armed'&&cybilWeaponState(attacker)!=='armed')return blocked('Le pistolet de Cybil est abandonné ou sa phase armée n’est pas confirmée.',definition.id);
+  if((recipe.propsAny||recipe.propsAll||recipe.stageIds||recipe.needsCeiling)&&(!STAGE_REFERENCES[stage?.id]||STAGE_REFERENCES[stage.id].source!==stage.source||stage?.reference?.blocked))return blocked('Lieu non confirmé pour cet appui ou cet accessoire.',definition.id);
+  if(recipe.stageIds&&!recipe.stageIds.includes(stage.id))return blocked('Pièce exacte requise absente de ce lieu.',definition.id);
   const set=motifs(stage);
+  if(recipe.propsAll&&!recipe.propsAll.every(prop=>set.has(prop)))return blocked('Premier plan requis absent du lieu.',definition.id);
   if(recipe.propsAny&&!recipe.propsAny.some(prop=>set.has(prop)))return blocked('Premier plan requis absent du lieu.',definition.id);
   if(recipe.needsCeiling&&!hasCeiling(stage,set))return blocked('Appui de plafond absent du lieu.',definition.id);
   const steps=compileRecipe(recipe,definition.type);
@@ -782,7 +878,8 @@ export function cinematicSummary(definitionId) {
   return {id:definitionId,ownerId,source:ref.source,type:stageBased?'stage':suffix,authored:true,recipeId,duration:steps.at(-1).to,
     description:stageBased?recipe.description:ref.proposals.finisher.description,scopeNote:recipe.scopeNote||null,referenceIds:[...(ref.referenceIds||[])],
     adaptationStatus:'adaptation-versus-scripted',fidelity:'original-versus-staging',artStatus:'contextual-images-missing',
-    requirements:{targets:[...recipe.targets],props:[...(recipe.props||[])],propsAny:[...(recipe.propsAny||[])],weapon:recipe.weapon||null,
+    requirements:{targets:[...recipe.targets],props:[...(recipe.props||recipe.propsAll||[])],propsAny:[...(recipe.propsAny||[])],stageIds:[...(recipe.stageIds||[])],weapon:recipe.weapon||null,
+      attackerState:recipe.attackerState||null,
       attackerKind:recipe.attackerKind||null,attackerLimbs:recipe.attackerLimbs||null,attackerHead:recipe.attackerHead||null,unarmed:!!recipe.unarmed,
       needsCeiling:!!recipe.needsCeiling,zone:recipe.zone||'combat-space',decisiveMatchOnly:true},
     beats:steps.map(s=>({label:s.label,from:s.from,to:s.to,attackerPose:s.attacker.pose,targetPose:s.target.pose,effect:s.effect,sound:s.sound,
@@ -792,10 +889,10 @@ export function cinematicSummary(definitionId) {
 export function lorePresentation(actor,key) {
   const data=dataOf(actor),ref=sourceOf(actor),proposal=proposalFor(actor,key);
   const contextId=`${data.id}:${proposalKey(key)}`;
-  const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=PRESENTATION_STAGING[data.id];
+  const recipe=RECIPES[FIGHTER_RECIPES[data.id]],staging=presentationStaging(actor);
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
-    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data),
+    authored:ref?.source===data.source&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data),
     stagingId:staging?.id||null,poseIntent:staging?.poses[PRESENTATION_POSE_INDEX[key]]||null,
     reversible:['winRound','loseRound','taunt'].includes(key),artStatus:'contextual-images-missing',timingProvenance:'original-versus-ticks'};
 }
@@ -843,7 +940,7 @@ export function sampleLorePresentation(actor,presentation) {
   const key=presentation.key,p=clamp(presentation.progress||0),body=ref.bodyKind;
   const locomotion=combatPolicy(actor).canMove!==false;
   const facing=actor.facing||1;
-  const staging=PRESENTATION_STAGING[data.id];
+  const staging=presentationStaging(actor);
   if(staging&&ref.stagingId===staging.id){
     const pose=staging.poses[PRESENTATION_POSE_INDEX[key]];
     if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(p)):0,

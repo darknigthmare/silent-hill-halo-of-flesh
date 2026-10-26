@@ -1,12 +1,12 @@
 # Systèmes de combat — v0.9.6
 
-La v0.9.6 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **29 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **91 animations d’arène**, **20 événements**, **14 terrains** et **15 types de bascule**.
+La v0.9.6 réunit **4600 coups documentés**, **12 traits**, **8 afflictions**, **29 dangers**, **9 rites**, **12 personnalités IA** et **150 transitions de boss**, **460 fatalités de combattant**, **123 fatalités d’arène** et **83 animations d’arène**, **20 événements**, **14 terrains** et **15 types de bascule**.
 
 ## Architecture des movesets
 
-Chaque fiche conserve **20 emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **3524 commandes sont activées ; 1076 sont désactivées avec une raison explicite.**
+Chaque fiche conserve **20 emplacements** : huit attaques normales contextuelles, deux saisies, trois ripostes de situation, cinq techniques, un Nightmare et une attaque Otherworld de désespoir. **3499 commandes sont activées ; 1101 sont désactivées avec une raison explicite.**
 
-Répartition : **0 directement attestées**, **2660 composites lore-friendly**, **1940 adaptations versus**.
+Répartition : **0 directement attestées**, **2635 composites lore-friendly**, **1965 adaptations versus**.
 
 Chaque coup contient son input, ses frames de démarrage/activité/récupération, dégâts, portée, niveau de garde, propriétés, routes d’annulation, références et état d’exécution. Les nombres sont des paramètres de versus non mesurés dans la source ; les valeurs d’une commande désactivée restent documentées mais ne sont pas exécutées.
 
@@ -130,7 +130,7 @@ Les **75 boss** possèdent deux transitions, soit **150 phases déclenchables**.
 - **Observation** : hitboxes, historique des inputs, soin automatique, jauge libre, reset, transformation Otherworld et phase de boss forcées.
 - **Rites du Jugement** : huit combats à modificateur tournant, vitalité et jauge partiellement conservées.
 - **IA adaptative** : le CPU repère les actions répétées et choisit distance, garde, esquive ou contre.
-- **Fatalités de combattant** : 182 montages originaux écrits, uniquement à la victoire finale, après vérification de l’identité, de l’arme et des corps. Les autres propositions restent à produire.
+- **Fatalités de combattant** : 198 montages originaux écrits, uniquement à la victoire finale, après vérification de l’identité, de l’arme et des corps. Les autres propositions restent à produire.
 - **Fatalités d’arène** : 7 montages propres à un lieu, sous conditions de zone, d’accessoires et de mécanisme autorisé. Aucun repli vers une exécution générique incompatible.
 - **Arènes animées** : éclairages, sirènes, chaînes, eau, météo, machineries, ombres et décors réagissent au temps et à l’Otherworld.
 - **Terrain contextuel** : adhérence, esquive, saut, garde et recul suivent la matière du lieu sans annuler la lisibilité du versus.

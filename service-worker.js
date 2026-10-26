@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261025-pass7';
+const CACHE_REVISION = 'parallel-20261026-pass8';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '8a6d9a86e05e5555a5654b51ba3b8ab5f7d3dad6720c3d020c95fa414b7cb898';
+const BITMAP_REVISION = '78a2d0f70cf7b76fa56d3221b782dbc300af5ebe91db39101157d04f52f14a15';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -33,13 +33,17 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+  "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
+  "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
+  "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+  "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",

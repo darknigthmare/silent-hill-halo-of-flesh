@@ -141,7 +141,7 @@ test('weapons and enclosed bodies preserve the restrictions recorded for their o
     ['origins_faceless_nurse', /Seringue/, /Scalpel|Tuyau/],
     ['homecoming_nurse', /Scalpel/, /Seringue|Tuyau/],
     ['sh2_bubble_head_nurse_024', /Tuyau/, /Seringue|Scalpel/],
-    ['sh1_mumbler_006', /Griffes/, /Couteau/]
+    ['sh1_mumbler_006', /Griffes|Accrochage aux jambes puis entaille/, /Couteau/]
   ];
   for (const [id, correct, wrong] of weapons) {
     const p = profile(id);

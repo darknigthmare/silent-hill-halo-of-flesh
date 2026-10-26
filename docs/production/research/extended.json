@@ -994,6 +994,56 @@
       "scope": "Position de la pièce dans l’anneau du deuxième étage ; aucune cote ou caméra de combat mesurée.",
       "consultedAt": "2026-10-25",
       "caveat": "Capture consultée et archivée avec SHA256 ; documente le lieu et ses éléments visibles, sans clôturer l’art ni certifier une reproduction1:1."
+    },
+    {
+      "id": "EXT_REVELATION_CREDITS_20261026",
+      "url": "https://www.silenthillmemories.net/shm2/credits_en.htm",
+      "title": "Silent Hill: Revelation 3D — Credits",
+      "type": "secondaire-transcription-generique",
+      "scope": "Film Revelation2012 : le générique reproduit distingue notamment Stunt Missionary ; aucune commande interactive ou durée source.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Transcription de générique sur un site de fans, pas publication directe du distributeur ; consultée et archivée HTTP200/SHA256. Identité de scène uniquement.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT_REVELATION_BASSETT_DC_20261026",
+      "url": "https://www.silenthillmemories.net/creators/interviews/2012.10.26_bassett_dreadcentral_en.htm",
+      "title": "Dread Central — Michael J. Bassett interview, 26 October2012 (transcription SHM)",
+      "type": "secondaire-transcription-entretien",
+      "scope": "Bassett décrit une créature arachnéenne composée de mannequins et le choix CGI ; nomenclature et réalisation Revelation2012.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Entretien de réalisation reproduit par SHM ; l’édition originale du média n’est pas directement archivée ici. Aucune anatomie comptée ou attaque mesurée à partir de cette citation.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT_REVELATION_COMPARISON_20261026",
+      "url": "https://www.silenthillmemories.net/shm2/sh_revelation_vs_sh3_en.htm",
+      "title": "Silent Hill: Revelation vs. Silent Hill3 — A visual comparison",
+      "type": "comparaison-specialisee-secondaire",
+      "scope": "Distingue l’araignée de mannequins du film et Claudia transformée en Missionary, avec images comparatives film/jeu ; pas d’emprunt du bossSH3.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Comparaison secondaire consultée et archivée ; interprétations humoristiques, rapprochements et commentaires symboliques non validés comme faits. Aucun timing ou art livré.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT_REVELATION_BASSETT_BD_20261026",
+      "url": "https://www.silenthillmemories.net/creators/interviews/2012.10.23_bassett_bloodydisgusting_en.htm",
+      "title": "Bloody Disgusting — Michael J. Bassett interview, 23 October2012 (transcription SHM)",
+      "type": "secondaire-transcription-entretien",
+      "scope": "Question et réponse de Bassett autour du Mannequin-Spider et de la création des créatures de Revelation2012, distincte du film2006.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Texte d’entretien reproduit par SHM, sans capture audiovisuelle de la scène originale ; ne suffit pas à certifier une pose, un nombre de membres ou un geste offensif.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT_ORIGINS_THEATER_GUIDE_20261026",
+      "url": "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+      "title": "Silent Hill: Origins — Walkthrough, Artaud Theater",
+      "type": "guide-specialise-secondaire",
+      "scope": "Parcours Artaud : projecteurs rétablis dans le monde normal, commande du rideau puis leviers des décors et grand miroir ; phases du plateau distinctes.",
+      "consultedAt": "2026-10-26",
+      "caveat": "Guide textuel archivé HTTP200/SHA256 ; pas de timing original, de géométrie mesurée ou de mouvement continu des projecteurs déduit des consignes du puzzle.",
+      "wordLimit": 200
     }
   ],
   "fighters": [
@@ -16008,18 +16058,23 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Version Revelation2012; pas Mannequin à quatre jambes SH2.",
+      "identityNote": "Version Revelation2012; pas Mannequin à quatre jambes SH2. Identité et rôle de scène corroborés pour l’édition2012 par les nouvelles transcriptions consultées ; adaptation versus jouable déclarée séparément. Aucune capacité ou image du jeuSH3 ou du film2006 transférée.",
       "referenceIds": [
         "EXT50",
-        "EXT53"
+        "EXT53",
+        "EXT_REVELATION_BASSETT_DC_20261026",
+        "EXT_REVELATION_COMPARISON_20261026",
+        "EXT_REVELATION_BASSETT_BD_20261026"
       ],
       "observedMoves": [
         {
           "name": "Attaque de l’araignée d’entrepôt",
-          "description": "Attaque de l’araignée d’entrepôt",
+          "description": "Les entretiens de Bassett décrivent un monstre arachnéen composé de mannequins et la comparaison situe Heather dans cette scène du film2012. Ils corroborent l’identité et la réalisation, sans décompte fiable des membres, boucle de marche ou timing d’attaque. Les gestes détaillés restent à relever dans le film exact.",
           "evidence": [
             "EXT50",
-            "EXT53"
+            "EXT53",
+            "EXT_REVELATION_BASSETT_DC_20261026",
+            "EXT_REVELATION_COMPARISON_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -16030,7 +16085,8 @@
       "constraints": [
         "Version Revelation2012; pas Mannequin à quatre jambes SH2.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rôle de scène du film2012 confirmé ; les commandes restent des propositions du versus, sans gameplay interactif original, art validé ni mesure d’animation source."
       ],
       "proposals": {
         "super": {
@@ -16119,7 +16175,22 @@
       "artDirectionFocus": "membres de mannequins",
       "existingCatalogueBehavior": "Grimpe, bondit et referme ses membres autour de la cible.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Revelation (2012, film de Michael J. Bassett)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_mannequin_monster_176",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill: Revelation (2012, film de Michael J. Bassett)",
+        "evidence": [
+          "EXT_REVELATION_BASSETT_DC_20261026",
+          "EXT_REVELATION_COMPARISON_20261026",
+          "EXT_REVELATION_BASSETT_BD_20261026"
+        ],
+        "rationale": "Les entretiens de Bassett reproduits et la comparaison visuelle identifient le monstre arachnéen composé de mannequins dans Revelation2012, distinct du Mannequin SH2 et des autres films. La décision confirme l’identité et le rôle de scène scénarisée de ce film. Le projet conserve ses commandes jouables comme adaptation versus-scripted explicitement proposée ; aucun art, geste exhaustif, timing, anatomie mesurée ou combat interactif original n’est certifié.",
+        "reviewedAt": "2026-10-26"
+      }
     },
     {
       "combatRole": "scripted-encounter",
@@ -16128,18 +16199,22 @@
       "source": "film",
       "baseId": null,
       "identityStatus": "identite-documentee-secondaire",
-      "identityNote": "Version Revelation; ne pas copier boss Missionary SH3 ou Needler.",
+      "identityNote": "Version Revelation; ne pas copier boss Missionary SH3 ou Needler. Identité et rôle de scène corroborés pour l’édition2012 par les nouvelles transcriptions consultées ; adaptation versus jouable déclarée séparément. Aucune capacité ou image du jeuSH3 ou du film2006 transférée.",
       "referenceIds": [
         "EXT50",
-        "EXT52"
+        "EXT52",
+        "EXT_REVELATION_CREDITS_20261026",
+        "EXT_REVELATION_COMPARISON_20261026"
       ],
       "observedMoves": [
         {
           "name": "Estoc",
-          "description": "Estoc",
+          "description": "Le Missionary du film2012 porte des lames intégrées ; le générique et la comparaison avecSH3 confirment son identité de scène liée à Claudia. L’estoc proposé doit encore être isolé et mesuré dans le film, sans emprunt au bossSH3.",
           "evidence": [
             "EXT50",
-            "EXT52"
+            "EXT52",
+            "EXT_REVELATION_CREDITS_20261026",
+            "EXT_REVELATION_COMPARISON_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -16148,10 +16223,12 @@
         },
         {
           "name": "Taillades",
-          "description": "Taillades",
+          "description": "Les lames appartiennent à la silhouette du Missionary Revelation2012 ; la présence de la créature est corroborée, mais l’ordre, les poses et le contact de chaque taillade restent à relever dans cette édition filmée.",
           "evidence": [
             "EXT50",
-            "EXT52"
+            "EXT52",
+            "EXT_REVELATION_CREDITS_20261026",
+            "EXT_REVELATION_COMPARISON_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -16160,10 +16237,12 @@
         },
         {
           "name": "Assaut frontal",
-          "description": "Assaut frontal",
+          "description": "L’assaut reste une proposition à comparer au Missionary Revelation2012, dont les nouvelles preuves confirment l’identité et le rôle de scène ; elles ne mesurent ni charge, parade, récupération ou téléportation.",
           "evidence": [
             "EXT50",
-            "EXT52"
+            "EXT52",
+            "EXT_REVELATION_CREDITS_20261026",
+            "EXT_REVELATION_COMPARISON_20261026"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -16174,7 +16253,8 @@
       "constraints": [
         "Version Revelation; ne pas copier boss Missionary SH3 ou Needler.",
         "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
-        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rôle de scène du film2012 confirmé ; les commandes restent des propositions du versus, sans gameplay interactif original, art validé ni mesure d’animation source."
       ],
       "proposals": {
         "super": {
@@ -16263,7 +16343,21 @@
       "artDirectionFocus": "lames intégrées",
       "existingCatalogueBehavior": "Assauts rapides avec lames intégrées et parade agressive.",
       "existingCatalogueBoss": true,
-      "productionStatus": "phase1-documentation-pas-implementation"
+      "productionStatus": "phase1-documentation-pas-implementation",
+      "referenceEdition": "Silent Hill: Revelation (2012, film de Michael J. Bassett)",
+      "roleDecision": {
+        "status": "resolved",
+        "fighterId": "film_missionary_revelation_177",
+        "decision": "scripted-encounter",
+        "adaptationScope": "versus-scripted",
+        "edition": "Silent Hill: Revelation (2012, film de Michael J. Bassett)",
+        "evidence": [
+          "EXT_REVELATION_CREDITS_20261026",
+          "EXT_REVELATION_COMPARISON_20261026"
+        ],
+        "rationale": "Le générique reproduit nomme Stunt Missionary et la comparaison visuelle rattache la créature à la transformation de Claudia dans Revelation2012, distincte du bossMissionary SH3 et du Needler. La décision confirme l’identité et le rôle de scène scénarisée de ce film. Le projet conserve ses commandes jouables comme adaptation versus-scripted explicitement proposée ; aucun art, geste exhaustif, timing, anatomie mesurée ou combat interactif original n’est certifié.",
+        "reviewedAt": "2026-10-26"
+      }
     },
     {
       "combatRole": "unverified",
@@ -20247,10 +20341,11 @@
       "source": "origins",
       "baseId": null,
       "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Artaud Theater; décors de scène et rôle d’Ariel/Caliban attestés.",
+      "locationNote": "Artaud Theater, Origins : plateau normal après pose et activation des quatre ampoules du catwalk, puis lever du rideau depuis Curtain Control. Le guide distingue ensuite les configurations commandées par leviers et le passage du grand miroir, dont l’état menant au combat Caliban ; le prototype ne fusionne pas ces états. Éclairage fixe de la scène documenté, balayage cyclique et caméra du versus non mesurés.",
       "referenceIds": [
         "EXT03",
-        "EXT01"
+        "EXT01",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
       ],
       "animations": [
         {

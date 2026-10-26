@@ -1,6 +1,32 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — septième lot du 25 octobre 2026
+## Chantiers parallèles — huitième lot du 26 octobre 2026
+
+Les six chantiers avancent : trois nouveaux sprites SH4, le toit Brookhaven
+SH2 avant la chute, cinq pièces et pistes précises, six profils de combat,
+seize timelines et 56 contextes de présentation supplémentaires. Les sept
+contextes Cybil exigent son état d’arme ; le plan compte 686 présentations
+résolvables sans état d’acteur.
+
+Deux rôles Revelation 2012 sont confirmés avec leur adaptation du versus
+jouable. Les aperçus vidéo conservent désormais les proportions des captures
+aux pixels non carrés. L’Excel est actualisé avec 1 273 cellules modifiées
+et cinq nouvelles sources, en conservant les annotations et les 80 formules.
+
+Le suivi compte **840 actions ouvertes, dont 94 P0**, avec **3 499 commandes
+actives et 1 101 désactivées**. La couverture atteint **25 profils illustrés,
+30 PNG acteurs et six PNG de décor**, tous candidats. Le toit reste une
+reconstruction du versus faute de vue large suffisante. Aucune fidélité 1:1
+n’est certifiée ; les 4 600 relevés originaux restent vides.
+
+**Validation : 875 tests Node, 100 tests Python et 1 341 contrôles navigateur
+dans quatorze suites ; 210 captures et aucune exception JavaScript.**
+
+[Réalisation, références et limites](docs/production/CHANTIERS_PARALLELES_LOT8_2026-10-26.md) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-26.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — septième lot du 25 octobre 2026
 
 Les six chantiers ont avancé : Romper, Double Head, Insane Cancer et Sniffer
 mâle illustrés, Helen’s Bakery normale, quatre pistes SH1/SH3, dix-huit

@@ -9,7 +9,7 @@ const copy = value => JSON.parse(JSON.stringify(value));
 const has = (stage, ...props) => props.some(prop => (stage.props || []).includes(prop));
 const unresolved = /non.confirme|non.confirmee|a.identifier|a.documenter|a.corroborer|a.verifier|a.relever|a.fixer|a.preciser|composite.a.separer/;
 const INTERIOR = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','sewer','church','lair','otherworld','labyrinth']);
-const ALTERED = new Set(['nowhere','hospital_nightmare','midwich_nightmare','central_nightmare','hotel_otherworld','brookhaven_sh3','nightmare_mall','nightmare_hilltop','nightmare_hospital_sh3','outside_room_302','final_sacrament','nightmare_theater','nightmare_hospital_hc','scarlet_chamber','nightmare_school','frozen_streets','nightmare_hospital_sm','nightmare_mall_sm','otherworld_void','dark_shrine','dark_shrine_corridors','dark_shrine_main','corrupted_ebisugaoka','film_midwich','ascension_otherworld']);
+const ALTERED = new Set(['nowhere','hospital_nightmare','midwich_nightmare','central_nightmare','hotel_otherworld','brookhaven_sh2','brookhaven_sh3','nightmare_mall','nightmare_hilltop','nightmare_hospital_sh3','outside_room_302','final_sacrament','nightmare_theater','nightmare_hospital_hc','scarlet_chamber','nightmare_school','frozen_streets','nightmare_hospital_sm','nightmare_mall_sm','otherworld_void','dark_shrine','dark_shrine_corridors','dark_shrine_main','corrupted_ebisugaoka','film_midwich','ascension_otherworld']);
 const TRANSITIONS = new Set(['cedar_grove','alchemilla_origins','film_church','ebisugaoka','stilledalen','hope_junction']);
 const NARRATIVE_ONLY = new Set(['looping_hall','villa','villa_rooftop','villa_stairwell','final_sacrament','otherworld_void','anne_fight','arcade_1918','arcade_1993']);
 const STYLE = Object.freeze({sh1:'rust',sh2:'decay',sh3:'flesh',sh4:'haunting',origins:'mirror',homecoming:'rust',shattered:'ice',downpour:'storm',arcade:'rust',bom:'elemental',pt:'loop',shortmessage:'floral',shf:'shrine',film:'ash',ascension:'ritual',townfall:'signal'});
@@ -19,7 +19,8 @@ const ENVIRONMENT = Object.freeze({
   old_silent_hill: {weather:'snow'},
   church_hc: {name:'CHURCH OF THE HOLY WAY',weather:'dust'},
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
-  prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER'},
+  prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER',weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['cells','watchtower','chains']},
+  brookhaven_sh2:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['ward','curtains','monitor','beds','cages']},
   alchemilla: {weather:'dust',disabledEvents:{referenceLightReply:'Salle d’attente normale retenue ; le voyant de l’ascenseur appartient à un autre sous-lieu.'}}, nowhere:{weather:'flicker'}, central_nightmare:{weather:'dust'},
   lakeside_amusement:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
   lakeside_sh3:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['wheel','booths']},
@@ -30,14 +31,16 @@ const ENVIRONMENT = Object.freeze({
   hotel_otherworld:{weather:'water',terrain:'wetConcrete',removeProps:['fire','mirrors']},
   lakeview:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['portraits','fire','firelight','crtv','screens','monitors','television']}, labyrinth:{weather:'dust',terrain:'concrete',style:'decay'},
   historical_society:{removeProps:['stairs']}, baldwin_mansion:{removeProps:['fireplace']},
-  brookhaven_roof:{weather:'fog'}, apartment_roof:{weather:'fog'},
+  brookhaven_roof:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['water','fence']}, apartment_roof:{weather:'fog'},
   room_302:{weather:'dust'}, apartment_world:{weather:'dust'}, forest_world:{weather:'fog',removeProps:['wish_house','wish house']},
   subway_world:{weather:'dust',removeProps:['turnstile']},
+  building_world:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['doors','signs','elevator']},
   water_prison:{weather:'dust',terrain:'concrete',removeProps:['tower','watchtower','cells','spotlight','chains']},
   hospital_world:{removeProps:['beds','head','curtains','monitor']},
   town_hall_hc:{removeProps:['stairs','flags']}, shepherd_house_hc:{removeProps:['portraits','stairs','mirrors']},
   devils_pit:{weather:'dust',terrain:'concrete',removeProps:['water','rails','cart']},
   cedar_grove:{weather:'dust'}, riverside_motel:{weather:'fog'}, grand_hotel:{weather:'dust'},
+  artaud_theater:{weather:'none',fog:0,automaticFinishers:false,disableAnimations:true},
   nightmare_school:{weather:'cold'}, nightmare_hospital_sm:{weather:'cold'}, nightmare_mall_sm:{weather:'cold'},
   police_station_hc:{weather:'dust'}, centennial_building:{weather:'dust'}, st_marias:{weather:'dust'}, overlook:{weather:'dust',removeProps:['towers','watchtower','flood','chains']},
   church:{weather:'dust',removeProps:['fans','flesh','symbols']}, hilltop_center:{removeProps:['elevator']}, underground_hc:{weather:'dust'},
@@ -55,6 +58,11 @@ const ENVIRONMENT = Object.freeze({
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
 const SCENE_PRESENTATION = Object.freeze({
+  prison_meat_locker:{source:'sh2',policy:{normalPhaseLabel:'CHAMBRE FROIDE · SECONDE SALLE',terrainRules:false,terrainPresentation:{name:'SOL DE LA CHAMBRE FROIDE',description:'Seconde salle du combat Eddie de SH2 original ; carcasses et rails de fond distincts du plateau versus. Matériau, humidité et physique non mesurés ; cadrage non certifié 1:1.'}}},
+  brookhaven_sh2:{source:'sh2',policy:{terrainRules:false,terrainPresentation:{name:'SEUIL DE L’ASCENSEUR B1',description:'Couloir Otherworld B1 de Brookhaven SH2 original, devant l’ascenseur de la poursuite. Plateau versus adapté sans reproduire le sort de Maria ; physique et géométrie non certifiées 1:1.'}}},
+  brookhaven_roof:{source:'sh2',policy:{normalPhaseLabel:'TOIT AVANT LA CHUTE',terrainRules:false,terrainPresentation:{name:'PLATEAU DU TOIT BROOKHAVEN',description:'Toit de Brookhaven SH2 original avant la chute, grille encore intacte. Matériau et humidité non déterminés ; règles matérielles désactivées, cadrage et collisions non certifiés 1:1.'}}},
+  building_world:{source:'sh4',policy:{normalPhaseLabel:'ESCALIER B12–B15 · PREMIER PASSAGE',terrainRules:false,terrainPresentation:{name:'PALIER DU GRAND VENTILATEUR',description:'Escalier B12–B15 du premier Building World, sous le grand ventilateur. Palier horizontal adapté au versus ; aucune chute, physique ou géométrie source certifiée 1:1.'}}},
+  artaud_theater:{source:'origins',policy:{normalPhaseLabel:'SCÈNE NORMALE · PROJECTEURS ACTIVÉS',terrainRules:false,terrainPresentation:{name:'PLATEAU DE LA SCÈNE ARTAUD',description:'Scène normale du théâtre après activation des projecteurs et levée du rideau. Décor peint non identifié, reflet et bascule non importés ; géométrie, physique et lumière non certifiées 1:1.'}}},
   lakeview:{source:'sh2',policy:{normalPhaseLabel:'AVANT LA CASSETTE',terrainRules:false,terrainPresentation:{name:'TAPIS DU LOBBY',description:'Tapis du lobby avant la cassette ; humidité non déterminée. Règles de terrain désactivées ; caméra et géométrie non certifiées 1:1.'}}},
   shopping_mall:{source:'sh3',policy:{normalPhaseLabel:'CENTRE COMMERCIAL NORMAL',terrainRules:false,terrainPresentation:{name:'SOL DU CENTRE COMMERCIAL',description:'Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée.'}}},
   midwich_nightmare:{source:'sh1',policy:{terrainRules:false,terrainPresentation:{name:'DALLE AUTOUR DU FOYER',description:'Chaufferie Otherworld de Midwich ; passage de duel devant le foyer, cadrage adapté. Règles matérielles désactivées ; caméra et collisions non certifiées 1:1.'}}},
@@ -106,6 +114,11 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   canalCableSway:{name:'Câble sur la passerelle, eau à niveau fixe',layer:'background',replaces:[],stageId:'sewers',source:'sh3',locationScope:'Passerelle du canal après utilisation du sèche-cheveux',limits:'Câble installé après le sèche-cheveux ; petites vibrations proposées pour le versus. Aucun corps vivant, électricité active, électrocution ou eau sur le plateau de duel.'},
   sh1CarouselOrbit:{name:'Rotation de fond du manège SH1',layer:'background',replaces:[],stageId:'lakeside_amusement',source:'sh1',locationScope:'Manège de la rencontre Cybil dans le parc SH1 original',limits:'Rotation lente proposée avec un cheval fixe comme repère ; silhouettes de sculptures originales partielles, ni Cybil, ni gaz et énigme du Happy Carousel SH3.'},
   sh3HorseBob:{name:'Chevaux du Happy Carousel sur mâts fixes',layer:'background',replaces:[],stageId:'lakeside_sh3',source:'sh3',locationScope:'Happy Carousel SH3 avant la transition et la rencontre Memory of Alessa',limits:'Trois sculptures de fond interprètent une partie du manège ; va-et-vient proposé, ensemble des douze chevaux et puzzle non reproduits. Aucun poison, monstre ou scène Cybil SH1.'},
+  freezerCarcassSway:{name:'Une carcasse suspendue dans la seconde chambre froide',layer:'background',replaces:['chainSway'],stageId:'prison_meat_locker',source:'sh2',locationScope:'Seconde salle principale de la chambre froide du combat Eddie, SH2 original 2001',limits:'Rail et crochet restent fixes ; une masse abstraite suspendue oscille lentement comme proposition versus. Aucun Eddie, corps humain, obstacle de collision, jet de vapeur du remake ou transport de carcasse. Aspect, nombre de crochets, angle et cadence source non mesurés.'},
+  rooftopFenceFlex:{name:'Grille intacte avant la chute de Brookhaven',layer:'background',replaces:[],stageId:'brookhaven_roof',source:'sh2',locationScope:'Toit de Brookhaven SH2 original, grille entre la porte et Elevator Control Room, avant la chute narrative',limits:'Poteaux fixes et déformation minime du treillis proposés pour le versus ; aucune rupture, chute, apparition de Pyramid Head ou grille du remake. Piste préparée mais masquée lorsqu’un bitmap remplace ce toit.'},
+  stairwellFanTurn:{name:'Grand ventilateur au-dessus du puits B12–B15',layer:'background',replaces:[],stageId:'building_world',source:'sh4',locationScope:'Grand escalier vide B12 vers B15, premier Building World de SH4',limits:'Le guide atteste un énorme ventilateur au-dessus de l’escalier. Rotor abstrait en perspective et rotation proposés pour le versus ; orientation, nombre de pales et vitesse non confirmés par une vue originale. Aucune enseigne, corde, toit à Gum Heads, boutique ou chute d’ascenseur.'},
+  artaudSpotlightGlide:{name:'Lueur des projecteurs sur le fond de scène normal',layer:'background',replaces:['spotlightSweep'],stageId:'artaud_theater',source:'origins',locationScope:'Scène normale Artaud après les quatre ampoules, le panneau d’éclairage et le levier du rideau',limits:'Deux sources fixes et une variation douce de lueur proposées pour le versus ; aucun spot mobile source revendiqué, texte peint, décor d’arbre ou océan sélectionné sans preuve, marionnette, miroir, Ariel ou Caliban. Géométrie et cadence non mesurées.'},
+  pursuitElevatorGap:{name:'Panneaux de l’ascenseur au bout du couloir B1',layer:'background',replaces:[],stageId:'brookhaven_sh2',source:'sh2',locationScope:'Couloir Otherworld B1 de la poursuite à la lance, devant l’ascenseur de Brookhaven SH2 original',limits:'Cadre fixe et battants maintenus entrouverts dans une suspension versus avant fermeture scénique ; faible variation d’écart proposée, aucun cycle canonique revendiqué. Sans Maria, Pyramid Head, ombre, chute d’ascenseur, sirène répétée ou reprise de la mort narrative.'},
 });
 
 // [render key, zero-based research proposal, exact rear anchor, optional event].
@@ -124,7 +137,9 @@ const BINDINGS = Object.freeze({
   baldwin_mansion:[['closedDoorReply',2,[.5,.57],'referenceClosedDoorReply']],
   hotel_otherworld:[['waterRings',1,[.51,.72]],['dustDrift',2,[.73,.39],'referenceDustRelease']],
   south_vale:[['fogLayers',1,[.5,.55]]],
-  brookhaven_roof:[['paperFlutter',1,[.73,.65]]],
+  brookhaven_roof:[['paperFlutter',1,[.73,.65]],['rooftopFenceFlex',2,[.5,.57]]],
+  prison_meat_locker:[['freezerCarcassSway',1,[.5,.21]]],
+  brookhaven_sh2:[['pursuitElevatorGap',1,[.5,.57]]],
   brookhaven_sh3:[['waterRings',1,[.51,.72]]],
   shopping_mall:[['shutterLift',1,[.26,.53]]],
   nightmare_mall:[['dustDrift',1,[.24,.53]]],
@@ -137,6 +152,7 @@ const BINDINGS = Object.freeze({
   forest_world:[['forestWindLayers',1,[.5,.57]]],
   water_prison:[['waterwheelTurn',1,[.71,.49]]],
   hospital_world:[['wheelchairDrift',1,[.72,.57]]],
+  building_world:[['stairwellFanTurn',1,[.5,.23]]],
   town_hall_hc:[['lecternGlint',1,[.5,.57]]],
   shepherd_house_hc:[['atticDustFall',1,[.5,.17]]],
   devils_pit:[['mineBeamDrips',0,[.28,.24]]],
@@ -150,7 +166,7 @@ const BINDINGS = Object.freeze({
   shepherds_glen:[['fogLayers',0,[.5,.55]]],
   grand_hotel:[['dustDrift',1,[.69,.45]]],
   alchemilla_origins:[['curtainBreathe',2,[.3,.39]]],
-  artaud_theater:[['curtainBreathe',1,[.21,.3]]],
+  artaud_theater:[['curtainBreathe',1,[.21,.3]],['artaudSpotlightGlide',2,[.5,.43]]],
   police_station_hc:[['lampReply',0,[.53,.3]]],
   curtis_shop:[['chainPendulum',0,[.71,.25]]],
   frozen_streets:[['snowDepth',0,[.5,.45]]],
@@ -204,7 +220,8 @@ export function stageReferenceTrackAllowed(stage, track) {
   if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
   if(!definition.stageId)return true;
   return stage?.id===definition.stageId&&stage?.source===definition.source&&track.source===definition.source&&
-    track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`;
+    track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`&&
+    (BINDINGS[stage.id]||[]).some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;

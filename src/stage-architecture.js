@@ -7,6 +7,64 @@ export function stageSpace(stage) {
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
 export function drawStageArchitecture(c,w,h,stage) {
+  if(stage?.id==='brookhaven_roof'&&stage.source==='sh2'){
+    // The still-intact fence is drawn by its exact-room track, behind the duel.
+    // The roof is outside at night; a mountain backdrop would invent its view.
+    c.save();c.fillStyle='#070b0b';c.fillRect(0,0,w,h*.57);
+    c.fillStyle='#232a26';c.fillRect(w*.12,h*.19,w*.27,h*.38);
+    c.fillStyle='#151c19';c.fillRect(w*.155,h*.29,w*.11,h*.28);
+    c.fillStyle='#323831';c.fillRect(w*.15,h*.28,w*.12,6);
+    line(c,w*.12,h*.19,w*.39,h*.19,'#43473d',4);
+    for(let i=0;i<5;i++)line(c,w*.135,h*(.24+i*.055),w*.37,h*(.24+i*.055),'rgba(94,97,80,.16)',1);
+    c.restore();return true;
+  }
+  if(stage?.id==='building_world'&&stage.source==='sh4'){
+    // Abstract upper landing of the empty stairwell, without shop/elevator props.
+    c.save();c.fillStyle='#161c1a';c.fillRect(0,0,w,h*.57);
+    c.fillStyle='#091210';c.fillRect(w*.26,h*.31,w*.48,h*.26);
+    for(const side of[-1,1]){
+      const x=w*(.5+side*.24);line(c,x,h*.31,x,h*.57,'#4d5548',5);
+      line(c,x,h*.29,w*(.5+side*.08),h*.49,'#626757',3);
+      for(let i=0;i<7;i++){
+        const y=h*(.34+i*.025),stepX=w*(.5+side*(.23-i*.023)),end=stepX-side*w*.115;
+        line(c,stepX,y,end,y,'rgba(108,116,93,.54)',3);
+        line(c,end,y,end,y+h*.025,'rgba(58,70,55,.68)',2);
+      }
+    }
+    c.fillStyle='#3b4438';c.fillRect(w*.16,h*.57-8,w*.68,8);
+    c.restore();return true;
+  }
+  if(stage?.id==='prison_meat_locker'&&stage.source==='sh2'){
+    // The second freezer has ceiling rails and racks, not cells or a watchtower.
+    c.save();c.fillStyle='#1a2925';c.fillRect(0,0,w,h*.57);
+    for(const x of[w*.22,w*.5,w*.78])line(c,x,h*.09,x,h*.32,'#263a32',9);
+    line(c,w*.12,h*.21,w*.88,h*.21,'#596356',5);
+    for(const side of[-1,1]){
+      const x=w*(.5+side*.32);line(c,x,h*.21,x,h*.31,'#575e50',2);
+      c.strokeStyle='#575e50';c.lineWidth=2;c.beginPath();c.arc(x,h*.32,8,0,Math.PI*1.55);c.stroke();
+      c.fillStyle='#343a2c';c.beginPath();c.moveTo(x-14,h*.33);c.lineTo(x+18,h*.34);c.lineTo(x+24,h*.43);c.lineTo(x+7,h*.51);c.lineTo(x-14,h*.48);c.lineTo(x-21,h*.39);c.closePath();c.fill();
+    }
+    c.restore();return true;
+  }
+  if(stage?.id==='artaud_theater'&&stage.source==='origins'){
+    // A neutral painted backdrop avoids selecting an unverified prop configuration.
+    c.save();c.fillStyle='#151715';c.fillRect(0,0,w,h*.57);
+    c.fillStyle='#35372c';c.fillRect(w*.27,h*.2,w*.46,h*.37);
+    c.fillStyle='#3e2826';c.fillRect(w*.16,h*.12,w*.11,h*.45);c.fillRect(w*.73,h*.12,w*.11,h*.45);
+    c.fillStyle='#292923';c.fillRect(w*.15,h*.12,w*.7,h*.055);
+    for(const x of[w*.36,w*.64]){line(c,x,h*.1,x,h*.185,'#42483a',3);c.fillStyle='#56594a';c.fillRect(x-18,h*.18,36,17);}
+    c.fillStyle='#45412f';c.fillRect(w*.16,h*.57-7,w*.68,7);
+    c.restore();return true;
+  }
+  if(stage?.id==='brookhaven_sh2'&&stage.source==='sh2'){
+    // The pursuit ends in a narrow service corridor, outside the patient wards.
+    c.save();c.fillStyle='#2a2921';c.fillRect(0,0,w,h*.57);
+    for(let i=0;i<8;i++)line(c,w*.22,h*(.13+i*.055),w*.78,h*(.13+i*.055),'rgba(96,87,63,.16)',1);
+    c.fillStyle='#161c17';c.fillRect(w*.12,h*.24,w*.21,h*.27);
+    for(let i=0;i<9;i++){const x=w*(.12+i*.026),end=Math.min(w*.33,x+w*.045);line(c,x,h*.24,end,h*.51,'rgba(92,91,66,.42)',1);line(c,x,h*.51,end,h*.24,'rgba(92,91,66,.42)',1);}
+    line(c,w*.115,h*.235,w*.335,h*.235,'#535744',5);line(c,w*.115,h*.515,w*.335,h*.515,'#535744',5);
+    c.restore();return true;
+  }
   if((stage?.id==='lakeside_amusement'&&stage.source==='sh1')||(stage?.id==='lakeside_sh3'&&stage.source==='sh3')){
     // Covered, open-sided rides: no distant ferris wheel or interior-room door.
     const top=h*.22,ground=h*.57;

@@ -28,6 +28,8 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'The six source leg/bite holds keep their victim on the floor instead of inheriting the generic throw launch. A real second-player jump during their startup verifies refusal while airborne; gamepad bindings are separately exercised with the standard virtual-pad Node harness, not certified on physical hardware.',
   'Lot7 adds real keyboard Patient multi-contact/pivot, Bottom rotation/dive, frontal Asphyxia resistance and native missed-attack recovery for Scarlet and exposed Amnion. Position/facing fixtures move a shooter or target, but never replace HP, move definitions, attack frames or hit counts.',
   'Cynthia hair catches a standing victim: actual attempted movement/jump remains restricted, and only its real counter-projectile hit releases the source-owned binding. The Downpour Bogeyman wave is the existing projectile fixed to the floor; an actual timed second-player jump tests clearance.',
+  'Lot8 uses the three original SH1 leg holds and the SH2 Labyrinth Abstract Daddy grip: the victim remains standing, and six alternating left/right controls release it. This escape count, control mapping and duration are versus choices, not original escape timing or animation. Held or contradictory directions do not generate extra progress. Prepared knockdown tests only this boss against actual firearm projectiles.',
+  'Lot8 Hanged Scratcher uses its ground claws: a free jump never substitutes for attachment to a ceiling. Scraper independently reacts to visible handgun-class rounds; its shotgun and SMG exceptions differ from Missionary. Silenced-shot metadata is covered in Node without inventing an authored silenced weapon.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
 let server,browser,context;
@@ -441,6 +443,54 @@ try{
    for(let n=0;n<70;n++){q.advance(1);highest=Math.min(highest,b.y);stable&&=e.projectiles.every(p=>p.y===p.groundY&&p.vy===0&&p.gravity===0);}return {highest,stable,scene:q.scene()};});report.scenes[jump?'bogeymanWaveJump':'bogeymanWaveGround']={wave,crossed};
   check('Bogeyman wave '+(jump?'is cleared by the actual timed jump without damage or rewards':'hits an actually grounded target with matching combat records'),crossed.stable&&(jump?crossed.highest<594&&crossed.scene.actors[1].health===wave.before&&crossed.scene.actors[0].damage===0:crossed.scene.actors[1].health<wave.before&&crossed.scene.actors[0].damage===wave.before-crossed.scene.actors[1].health),{wave,crossed});
  }
+
+
+ for(const id of ['sh1_grey_child_005','sh1_mumbler_006','sh1_stalker_008','sh2_abstract_daddy_028']){
+  await launch(page,id,'sh3_nurse_revolver_044');
+  await page.evaluate(daddy=>__SOURCE_EXPANSION_QA__.position(500,daddy?610:575),id==='sh2_abstract_daddy_028');
+  await page.keyboard.press('i');
+  const grip=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,victim=e.actors[1];
+   for(let n=0;n<80&&!victim.status?.struggleOrigin;n++)q.advance(1);while(e.hitstop>0)q.advance(1);return q.scene();});
+  report.scenes[id+'StandingGrip']=grip;
+  check(id+' actual attack catches a grounded standing target without a generic lift or floor pin',grip.actors[1].status?.struggleOrigin?.id===id&&grip.actors[1].grounded&&grip.actors[1].y===594&&grip.actors[1].vx===0&&grip.actors[1].vy===0&&grip.actors[1].knockdown===0&&grip.actors[0].damage>0&&grip.emitted===0,grip);
+  await page.keyboard.down('q');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(8));await page.keyboard.up('q');
+  const held=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  check(id+' held direction counts only one real transition and its readable cue remains visible',held.actors[1].status?.struggleOrigin?.progress===1&&/DÉGAGEMENT.*1\/6/.test(held.actors[1].sourceCue)&&held.actors[1].health===grip.actors[1].health,held);
+  if(id==='sh1_mumbler_006'){
+   await page.click('#pauseBtn');const before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(20));
+   const after=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   check('real pause freezes both the new grip countdown and accumulated escape transitions',after.paused&&after.actors[1].status.timer===before.actors[1].status.timer&&after.actors[1].status.struggleOrigin.progress===before.actors[1].status.struggleOrigin.progress,{before,after});
+   await page.click('[data-pause=resume]');
+  }
+  await capture(page,'27-'+id+'-standing-grip');
+  for(const key of ['d','q','d','q','d']){await page.keyboard.down(key);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));await page.keyboard.up(key);}
+  const released=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes[id+'RealDirectionalEscape']=released;
+  check(id+' six actual alternating keyboard controls release the grip without fabricated extra damage',released.actors[1].status===null&&released.texts.includes('PRISE ROMPUE')&&released.actors[1].health===grip.actors[1].health&&released.actors[0].damage===grip.actors[0].damage&&released.emitted===0,released);
+ }
+
+ await launch(page,'sh3_nurse_revolver_044','sh2_abstract_daddy_028');
+ await page.evaluate(()=>{__SOURCE_EXPANSION_QA__.position(300,650);const a=__HALO_QA__.engine.actors[1];a.knockdownTimer=120;a.state='knockdown';});
+ const daddyBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('i');
+ const downedDaddy=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__;let rejected=false;for(let n=0;n<80;n++){q.advance(1);rejected ||= q.scene().texts.includes('TIRS SANS EFFET À TERRE');}return {rejected,scene:q.scene()};});report.scenes.abstractDaddyDownedFirearm=downedDaddy;
+ check('real revolver collision cannot damage the downed Labyrinth boss or grant meter and combat credit',downedDaddy.rejected&&downedDaddy.scene.emitted===1&&downedDaddy.scene.projectiles===0&&downedDaddy.scene.actors[1].health===daddyBefore.actors[1].health&&downedDaddy.scene.actors[1].meter===daddyBefore.actors[1].meter&&downedDaddy.scene.actors[0].damage===0,downedDaddy);
+ await capture(page,'28-abstract-daddy-downed-shot');
+ await launch(page,'sh3_nurse_revolver_044','sh2_abstract_daddy_028');const standingDaddyBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+ await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(80));scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.abstractDaddyStandingFirearm=scene;
+ check('standing Labyrinth Daddy stays vulnerable to the same actual firearm class',scene.emitted===1&&scene.actors[1].health<standingDaddyBefore.actors[1].health&&scene.actors[0].damage>0,scene);
+
+ await launch(page,'sh1_hanged_scratcher_011','sh3_nurse_revolver_044');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,635));
+ const clawBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('ArrowUp');await page.keyboard.press('i');
+ await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(40));scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.hangedScratcherGroundClaws=scene;
+ check('Hanged Scratcher ground claw input hits without pretending a free jump attaches to a ceiling',scene.actors[0].move==='neutralSpecial'&&scene.actors[0].y===594&&scene.actors[0].grounded&&scene.actors[1].health<clawBefore.actors[1].health&&scene.emitted===0,scene);
+ check('Hanged Scratcher native catalogue blocks unsupported grabs and airborne ceiling substitutes',!['throw','backThrow','airLight','airHeavy','airSpecial'].some(key=>scene.actors[0].activeCommands.includes(key)),scene.actors[0]);
+ await capture(page,'29-hanged-scratcher-ground-claws');
+
+ await launch(page,'sh3_nurse_revolver_044','sh3_scraper_045');const scraperBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('i');
+ const scraperDeflection=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__;let deflected=false;for(let n=0;n<80;n++){q.advance(1);deflected ||= q.scene().texts.includes('TIR DÉVIÉ');}return {deflected,scene:q.scene()};});report.scenes.scraperOwnHandgunDefense=scraperDeflection;
+ check('Scraper own source-sensitive blades deflect a real visible handgun without chip or automatic counter',scraperDeflection.deflected&&scraperDeflection.scene.emitted===1&&scraperDeflection.scene.actors[1].health===scraperBefore.actors[1].health&&scraperDeflection.scene.actors[0].damage===0&&scraperDeflection.scene.actors[1].meter===0,scraperDeflection);
+ await launch(page,'arcade_robbie_the_rabbit_shotgun','sh3_scraper_045');const scraperShotgunBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(80));scene=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());report.scenes.scraperShotgunException=scene;
+ check('Scraper handgun-only defense leaves a real shotgun projectile effective',scene.emitted>=1&&scene.actors[1].health<scraperShotgunBefore.actors[1].health&&scene.actors[0].damage>0,scene);
+ await capture(page,'30-scraper-shotgun-exception');
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',
   'shattered_raw_shock_diseased_101','shattered_raw_shock_abstract_102','shattered_raw_shock_atrophied_103','homecoming_bogeyman_092']){

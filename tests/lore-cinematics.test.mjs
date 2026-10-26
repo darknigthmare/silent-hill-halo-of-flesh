@@ -23,7 +23,11 @@ const stage = id => {
   return entry;
 };
 const AIR = 'sh1_air_screamer_001', NURSE = 'sh2_bubble_head_nurse_024';
-const actorFor = (id, index = 0) => ({ data: fighter(id), profile: createCombatProfile(fighter(id)), index, x: index ? 720 : 500, y: 594, grounded: true, facing: index ? -1 : 1 });
+const actorFor = (id, index = 0) => {
+  const profile=createCombatProfile(fighter(id));
+  return {data:fighter(id),profile,index,x:index?720:500,y:594,grounded:true,facing:index?-1:1,
+    ...(profile.moveset.ammoProfile?{ammo:profile.moveset.ammoProfile.capacity,weaponDiscarded:false}:{})};
+};
 const definitionFor = (actor, type = 'signature') => actor.data.fatalities.find(f => f.type === type);
 const planFor = (id = AIR, type = 'signature', options = {}) => {
   const attacker = actorFor(id), target = actorFor(NURSE, 1);
@@ -105,7 +109,7 @@ test('every authored exact finisher has a viable real pairing and contiguous syn
       plans++;
     }
   }
-  assert.equal(plans, 182);
+  assert.equal(plans, 198);
   assert.equal(LORE_CINEMATIC_COVERAGE.animatedImagesCreated, 0);
 });
 
@@ -129,7 +133,7 @@ test('signature, nightmare, anatomy and film edition change the edit instead of 
 
 test('unknown, blocked, fixed-body, airborne and missing-prop pairings do not acquire a generic fatality', () => {
   assert.equal(cinematicSummary('invented_signature').authored, false);
-  assert.equal(planFor('sh1_monster_cybil_017').allowed, false);
+  assert.equal(planFor('sh1_stalker_008').allowed, false);
   for (const id of ['sh1_larval_stalker_007', 'sh4_wall_man_056']) assert.equal(planFor(AIR, 'signature', { target: actorFor(id, 1) }).allowed, false, id);
   assert.equal(planFor('sh1_groaner_003', 'signature', { target: actorFor(AIR, 1) }).allowed, false);
   assert.equal(planFor('sh2_red_pyramid_thing_spear_030', 'signature', { stage: { props: [], layers: [] } }).allowed, false);
@@ -303,7 +307,7 @@ test('a direct request cannot finish a healthy or intermediate-round target and 
   target.health = 0; assert.equal(engine.startFatality(attacker, target, definition), false);
   engine.resolveKnockouts(); assert.equal(engine.phase, 'roundEnd'); assert.equal(target.presentation.key, 'loseRound');
   assert.equal(target.presentation.reversible, true); assert.equal(attacker.stats.fatalities, 0);
-  const other = engineFor({ p1: fighter('sh1_monster_cybil_017') }); enterFight(other); prepareKnockout(other);
+  const other = engineFor({ p1: fighter('sh1_stalker_008') }); enterFight(other); prepareKnockout(other);
   assert.equal(other.phase, 'roundEnd'); assert.equal(other.fatality, null); assert.equal(other.actors[0].stats.fatalities, 0);
 });
 

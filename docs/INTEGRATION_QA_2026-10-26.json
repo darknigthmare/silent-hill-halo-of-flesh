@@ -1,0 +1,539 @@
+{
+  "schema": 1,
+  "date": "2026-10-26",
+  "verifiedAt": "2026-10-26T08:50:24.234896+00:00",
+  "version": "0.9.6",
+  "baselineCommit": "c95ffc58f233ee186184404f204f0983995206c0",
+  "node": {
+    "passed": 875,
+    "failed": 0,
+    "command": "HALO_PYTHON=/workspace/.cloud-env/halo/venv/bin/python npm test",
+    "log": "/workspace/.cloud-env/halo/logs/batch8-full-node-tests.log",
+    "logSha256": "fdc3ee461e77a6f56b96b119873a5edba0a1f4f5bf3fc22e3f5eb75ebde23c75"
+  },
+  "python": {
+    "passed": 100,
+    "failed": 0,
+    "command": "/workspace/.cloud-env/halo/venv/bin/python -m unittest discover -s tests -p test_*.py -v",
+    "log": "/workspace/.cloud-env/halo/logs/batch8-full-python-tests.log",
+    "logSha256": "df236195d818d7ce6a17fc74f646fa208b1bbcc4c1ab1df2bcdfd4a67bff8fb7"
+  },
+  "browser": {
+    "suites": 14,
+    "passed": 1341,
+    "failed": 0,
+    "captures": 210,
+    "javascriptErrors": 0,
+    "servedBuild": "dist",
+    "command": "npm run qa:browser",
+    "log": "/workspace/.cloud-env/halo/logs/batch8-full-browser-tests.log",
+    "logSha256": "4917e38159f0868ff0a3a063aaa142118efa87f33ab6d0d707753d07820267f1",
+    "artifactDirectory": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26"
+  },
+  "build": {
+    "files": 112,
+    "sourceFilesCompared": 111,
+    "sourceMismatches": [],
+    "sha256": "30947096d0d5e7896119363b4ad27ad27d3977c4eb39bc1de2c2f7a74fc93f69",
+    "digestFormat": "sorted relative path UTF-8 + NUL + raw SHA256 file digest",
+    "diffWhitespaceCheck": "passed",
+    "cacheRevision": "parallel-20261026-pass8"
+  },
+  "browserReports": [
+    {
+      "report": "tests/http-v090/http-report.json",
+      "sha256": "5065376d689e3c9528f63e6d657884bd425802dbded605d31fa3b5cd411cd3aa",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 15,
+      "captures": 3,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result/outro ticks and the engine match callback for checkpoint QA only; no played victory is claimed.",
+        "explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign"
+      ]
+    },
+    {
+      "report": "tests/http-sprites/report.json",
+      "sha256": "4f02a5b89055a8e301ada1116cdf76391868c35c32bdd51f2d143ee3debd8cac",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 55,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "saved arcade checkpoint for non-mutation assertion; no completed campaign simulated as play",
+        "Real unillustrated combat profile selected for art-gate checks: sh1_grey_child_005"
+      ]
+    },
+    {
+      "report": "tests/http-art-v092/report.json",
+      "sha256": "c7dd32b1292cda277ac87f31ef9dcab3f104c8ce5212d4712ee8ccd96546b733",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 22,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Direct actor placement at both stage edges and synthetic world amounts exercise only the render envelope; they do not certify or enable a fixed-stage transition. The genuine stage and complete world state are restored for the capture."
+      ]
+    },
+    {
+      "report": "tests/http-clips-v093/report.json",
+      "sha256": "affda8031843ba96991114f65dc93c8f971dc3c40a3c16e177ec21a8180261ac",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 24,
+      "captures": 4,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Two repeated steps referencing the same real PNG test static-vs-animation accounting; no new artwork is created."
+      ]
+    },
+    {
+      "report": "tests/http-recovery-v094/report.json",
+      "sha256": "50b8af189a82ac0d607e4bcf81214f5db3ce037e1b161cccf5ea70957bc6ad93",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 25,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result/outro ticks produce the engine match callback and the result screen; no campaign victory is claimed.",
+        "SpriteCache.prepare is temporarily made to fail for the pause retry test. No production file is changed.",
+        "Timeline steps reference the same existing PNG; no new art or animation is produced.",
+        "CacheStorage is deliberately emptied before the final offline fallback test."
+      ]
+    },
+    {
+      "report": "tests/http-boundaries-v095/report.json",
+      "sha256": "ed72c3a4ca66bb44f8598510e9f50ae242895ffa9d354c5e5a8eefd7597b8b98",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 43,
+      "captures": 7,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.",
+        "Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.",
+        "Valid generated route/control backups and deliberately invalid primary JSON isolate recovery/export; the route is not played.",
+        "Prepared deciding KOs and prior-round scores advance all eight Rite encounters to check the real launch configuration. Finishers are disabled and real intro/round-result/outro ticks produce each engine result; this is not a played campaign.",
+        "Air Screamer performs the prepared decisive aerial finisher against the film candidate. The inverse film grip is incompatible with a flying target and is not substituted.",
+        "The two existing candidate profiles and their imported frames are used. The fixtures add no new production image or animation."
+      ]
+    },
+    {
+      "report": "tests/http-presentations/report.json",
+      "sha256": "1aaeac98d2cd059331c13a053175630e4842bc60907cb16e9cc5b8eebc8513ee",
+      "version": "0.9.6",
+      "build": "dist (server configured by suite)",
+      "passed": true,
+      "checks": 57,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Local round knockouts, decisive score states and simulation advancement are prepared through the explicit ?qa=1 bridge. No fight or campaign is claimed as played.",
+        "The first intro is sought to tick 80 while paused solely to make the real retry/reset comparison deterministic.",
+        "A timing-only outro clip holds the existing candidate PNG for 540 simulated ticks in memory. It bypasses the dedicated-image import gate only as a test fixture; it is not new art, a produced animation, or a fidelity review.",
+        "Original SPRITES entries are retained and restored before navigation and again on failure when that page is still available. No registry, PNG, gameplay file or save outside the isolated browser context is edited.",
+        "The dojo uses its real RESET button, real control rebinding and prepared match results. These are lifecycle tests, not a played training session.",
+        "The prepared finisher uses Air Screamer against the film candidate, a compatible body pairing. The authored aerial outro is also exercised with no imported outro clip; its staging is not new animation artwork.",
+        "Keyboard, viewport and offline browser checks do not certify a physical controller or mobile device."
+      ]
+    },
+    {
+      "report": "tests/http-reference-integration/report.json",
+      "sha256": "aadf9fb5cf01bbb2ea154f109ef66ce1be71e840460b3eb7f52b62a0bdf10aa3",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 42,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "The explicit ?qa=1 bridge stops the animation loop and advances actual simulation ticks after the real launch button. Positions and one hit/collision are prepared; these are regression scenes, not a played campaign.",
+        "The explicit art diagnostic is enabled for subjects without imported PNGs. Existing candidate images remain unchanged; no diagnostic shape is counted as produced artwork.",
+        "Cybil fires ten accepted shots toward a distant opponent before an eleventh input resolves to the unarmed contact move. Actual emitted projectiles are counted, including hits and misses. No ammunition, health or move definition is injected.",
+        "A separate real keyboard-fired Cybil bullet hits a prepared stationary target and must knock it down. Source attack 63 attests the reaction; the versus damage and recovery duration are not source measurements.",
+        "Alessa receives prepared damage through the normal damage path to exhaust each versus phase budget. Her source weapon order is exercised through recovery, pause and keyboard input; the quarter-health budgets, burst cadence and recovery ticks are adaptations, not measured original animations.",
+        "Missionary receives real keyboard-fired revolver bullets. A prepared shooter crossing lets an existing bullet approach its back; a separate knockdown fixture checks the documented vulnerability. No source timing or silenced weapon is claimed.",
+        "Incubator stays idle while real directional input approaches its local passive field. Knockdown behavior and blue/red lightning hues are sourced; radius, damage, cooldown, recovery and exact RGB values are versus choices. Incubus does not inherit the field.",
+        "Split Worm receives the real crouch-special input against a prepared one-HP target. Its source ground pound staggers without health damage; local range, 18-tick stagger and crouch guard are versus rules. Shell resistance and tunnel travel are not certified by this scene.",
+        "A valid local checkpoint is prepared solely to verify that a refused noncombatant contact cannot overwrite progression or records.",
+        "Browser keyboard input and a narrow viewport do not certify a physical controller or mobile device. Missing contextual clips must remain visibly missing."
+      ]
+    },
+    {
+      "report": "tests/http-chronicles/report.json",
+      "sha256": "c9e7136a2e821a39b0c85b5a9b9473610312f92f8b754e20b5413cd991851b53",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 27,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "browser": "not recorded",
+      "fixtures": [
+        "Isolated browser storage and synthetic old checkpoints prepared for regression verification. No campaign is claimed as played and no combat result is injected into the engine.",
+        "The ordinary room_21 route really launches through its menu. Two archive-only pursuit routes are inspected through their real dossier buttons, then their launch and legacy-resume refusals must preserve checkpoints, backups, records and attempts byte-for-byte.",
+        "A separate isolated Alex Home context launches its real first encounter and inspects the five-entry queue with original chapter/arena pairing. Homecoming Bogeyman remains the dossier at index 3, displayed chapter 4; the remaining campaign is not played or marked complete.",
+        "The room_21 checkpoint explicitly contains one historical synthetic win to check preservation. Old pursuit-route fixtures contain zero wins and all original chapters; no archive dossier is turned into a victory or removed from a saved route."
+      ]
+    },
+    {
+      "report": "tests/http-stage-bitmaps/report.json",
+      "sha256": "f9fe07a5f1826dfd0bff0a906ae904ec7e7150a7e5a50c86ec6f30e263d617fc",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 17,
+      "captures": 1,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Opaque 4×4 test PNGs and a manifest are injected only in Playwright HTTP routes. No production scenery or visual fidelity is claimed.",
+        "A failed pause retry and a newer storage warning are injected to verify recovery without changing production files."
+      ]
+    },
+    {
+      "report": "tests/http-alessa-weapons/report.json",
+      "sha256": "8e5cab31623ce76c112548bd3717540c85b5624d697467065c2bd6edee256600",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 20,
+      "captures": 2,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Four transparent colored rectangles and an exact SH3 Alessa manifest are intercepted in Playwright only. No production artwork or 1:1 certification is created."
+      ]
+    },
+    {
+      "report": "tests/http-source-expansion/report.json",
+      "sha256": "04f96ad29e4885c3658f48366fa184377119bb99f0c4ee7e191f04c40169fbf3",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 133,
+      "captures": 34,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "The explicit ?qa=1 bridge stops the animation loop and advances real simulation ticks after the normal launch button. Actor positions, facing and one knockdown timer are prepared. No campaign or source-game playthrough is claimed.",
+        "Art diagnostic is explicitly enabled for profiles without production PNGs. No synthetic picture, source-animation certification or source timing measurement is created by this suite.",
+        "Attacks are triggered by actual keyboard inputs. Projectile instrumentation only counts the real spawn method; ammunition, damage formulas, move definitions and actor identities are not replaced.",
+        "The Needler rear scene moves the shooter after its actual bullet has spawned. A separate prepared knockdown checks vulnerability, without claiming that its timer is measured from Homecoming.",
+        "Smog is made to prepare its real smoke attack using the second keyboard while an actual Eddie bullet is in flight. The 2x opening multiplier, opening window, damage and counter bonus are authored versus values.",
+        "Mary and Maria use their real moth projectile. The resulting bind restricts movement and dodge in the versus engine; original struggle inputs, stun animation and duration are not reproduced.",
+        "SH3 Pendulum is represented by its source-scoped flying body, not the old tiny insect collider. Its handgun-class defense excludes the actual Arcade shotgun; these cross-work weapon mappings and defensive windows are versus choices.",
+        "Insane Cancer and Slurper charges use real directional keyboard commands. Ghost proximity is checked with idle casters, and Jasper damage is compared with the common drain. Radii, pulse intervals, health conversion and bind are versus tuning, not measured source-game values.",
+        "Split Head is angered with real keyboard gunfire, not a replaced health field. Its 70% transition, 2x frontal active-mouth multiplier and readable HUD cue are versus rules. No original mouth animation or instant-kill swallow is claimed.",
+        "Hummer knockdown, Wall Man claws and both Sniffer holds use real keyboard attacks. Sakura Head and the five Raw Shock variants are checked through the normal refused launch and source dossiers; their pursuit encounters are not turned into invented duels.",
+        "Hummer height is measured from collision and the real PNG drawImage arguments/matrix before, during and after knockdown. The same bitmap is lowered without rotating or fabricating a pose; source knockdown/KO clips remain absent. Prepared guard-counter windows test the real Split Head heavy-key gate.",
+        "Closer and Twin Victim arm rotations are bounded two-sided physical contacts at the normal strike height, not an aura. Prepared facing allows the real keyboard command to prove a rear hit and outward knockback. The original 3D arc, animations, frame timings and Church multipliers are not measured.",
+        "Double Head, Romper, Twin Victim, Lurker and Feral pursuit inputs physically leave the floor. Close holds use the versus bind instead of original struggle inputs. Homecoming Bogeyman remains a documented cutscene figure and is refused as a duel, independently of its other works.",
+        "The six source leg/bite holds keep their victim on the floor instead of inheriting the generic throw launch. A real second-player jump during their startup verifies refusal while airborne; gamepad bindings are separately exercised with the standard virtual-pad Node harness, not certified on physical hardware.",
+        "Lot7 adds real keyboard Patient multi-contact/pivot, Bottom rotation/dive, frontal Asphyxia resistance and native missed-attack recovery for Scarlet and exposed Amnion. Position/facing fixtures move a shooter or target, but never replace HP, move definitions, attack frames or hit counts.",
+        "Cynthia hair catches a standing victim: actual attempted movement/jump remains restricted, and only its real counter-projectile hit releases the source-owned binding. The Downpour Bogeyman wave is the existing projectile fixed to the floor; an actual timed second-player jump tests clearance.",
+        "Lot8 uses the three original SH1 leg holds and the SH2 Labyrinth Abstract Daddy grip: the victim remains standing, and six alternating left/right controls release it. This escape count, control mapping and duration are versus choices, not original escape timing or animation. Held or contradictory directions do not generate extra progress. Prepared knockdown tests only this boss against actual firearm projectiles.",
+        "Lot8 Hanged Scratcher uses its ground claws: a free jump never substitutes for attachment to a ceiling. Scraper independently reacts to visible handgun-class rounds; its shotgun and SMG exceptions differ from Missionary. Silenced-shot metadata is covered in Node without inventing an authored silenced weapon.",
+        "Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices."
+      ]
+    },
+    {
+      "report": "tests/http-cinematic-expansion/report.json",
+      "sha256": "df5835ff3177d52c803180c88320bb4c9d3eabfac918697a2b6aec1b7128c0c7",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 606,
+      "captures": 64,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.",
+        "The ?qa=1 bridge stops requestAnimationFrame and advances actual simulation ticks. Two prepared target KOs per match exercise ordinary round scoring and the real deciding-finisher gate; no prior win score or cinematic recipe is injected.",
+        "Keyboard taunt, directional cancellation and the real pause/resume controls are used. Prepared local mirror-free pairings and state advancement are regression scenes, not played fights or a campaign.",
+        "The missing contextual sprite check permits an existing candidate idle fallback or an explicit missing-profile cartouche. Neither is counted as a produced attack, KO or finisher pose.",
+        "Explicit real-menu stage choices cover ceiling, floor grate, water, wall, furniture and mechanical support. Fixed actors cancel taunts with the real guard key; they never receive injected locomotion. Six additional menu matches reject waterless, ceilingless, wall-less or mechanically unsupported locations. Bitmap replacements use their structured geometry.ceiling contract, independently of their scene name.",
+        "The previous ten exact-subject edits include SH1 blue and red lightning branches, SH3 incomplete-body ground fire, SH2 low Creeper, Origins closed-torso leg capture and suspended dolls/cages/wall head, plus Homecoming Lurker claws and exposed-lung Smog exhalation.",
+        "Ten additional Book of Memories Vita subjects use their own documented capacities and workbook proposals. The Double Head edit limits itself to the documented circling charge; the proposed bite is explicitly left unverified. Four-legged Needler and blade-headed Schism keep their own anatomy. No original-title animation or finisher is borrowed.",
+        "A separate real-menu pairing prepares Insane Cancer as the loser: round-one recovery must not request its terminal explosion art, while the final ordinary KO requests only the missing final-loss image context. No explosion image, destructive body effect or extra gameplay damage is generated.",
+        "Nine further source-specific subjects retain joined Two-Back bodies, separate mechanically supported Amnion stances, the Vita Nurse Steel Pipe, low Tremer, anatomical mace-arm, aquatic members and detached Blood Mama. Fire Guardian is restricted to documented hand fire; unsupported jump/body discharge and the uncertain Demon dossier are not performed. No total Amnion limb count is certified.",
+        "Eight further subjects keep Floatstinger abdomen contact without an invented rooftop, Cybil pistol-butt only while actually armed, Eddie in the original second freezer, separate Mary/Maria cage identities, the New Type equipped club, Bottom three heads/two hands and Cynthia standing hair hold. Contextual poses remain missing. The source-only Split Worm tunnel is not fabricated in the current mall room.",
+        "An additional Cybil fixture prepares widely separated actors, then spends all ten bullets through actual keyboard special inputs. No ammunition or discarded-weapon state is injected. Both results must retain unarmed presentation intents and the deciding match must reject an armed finisher. A separate Eddie pairing rejects a borrowed place despite existing prison meat props.",
+        "All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified."
+      ]
+    },
+    {
+      "report": "tests/http-art-batch4/report.json",
+      "sha256": "3c397bca2efa4eed67cd91772f506ef1033c7db11c29562907a7f51f2ce22ee6",
+      "version": "0.9.6",
+      "build": "dist",
+      "passed": true,
+      "checks": 255,
+      "captures": 62,
+      "javascriptErrors": 0,
+      "browser": "154.0.8037.57",
+      "fixtures": [
+        "Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7, then three SH4 profiles from batch 8, are required and inspected through the actual workshop controls; a missing import fails the suite.",
+        "The browser independently decodes the registered files on an offscreen canvas to measure alpha; these temporary canvases do not replace the real inspector or combat rendering.",
+        "Local matches retain Groaner/Split Head/Wood Side, Wormhead/Closer/Alchemilla and Twin Victim/Slurper/Lakeview coverage, then require Double Head/Insane Cancer/Central Square Mall through the real roster and stage gallery. Two further real matches cover Patient/Gum Head New Type and Bottom/Patient on the original Brookhaven roof before the fall; the wide facade camera is a bounded reconstruction rather than source geometry. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.",
+        "Canvas drawImage calls are recorded without changing their arguments. The genuine pause/resume button and a 430-pixel viewport exercise the same loaded assets.",
+        "Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified."
+      ]
+    }
+  ],
+  "workbook": {
+    "file": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "sha256": "70a73b37a849facd7fd64ecac1f0a1d83f756b711724f1bc91ce95602ff4f3d9",
+    "planSha256": "0a893808b4c4119240826f185d5b96b5f2e75b25b2eca0250f095b51b3804247",
+    "preservation": {
+      "passed": true,
+      "comparedCells": 249654,
+      "authoredChanges": 1273,
+      "enlargedRows": 427,
+      "appendedSourceRows": 5,
+      "appendedSourceCells": 35,
+      "auditedFormulaExpansions": 1,
+      "unchanged": [
+        "worksheet order",
+        "unrelated values",
+        "all unrelated formulas",
+        "effective cell formatting",
+        "column widths",
+        "unrelated row heights",
+        "native tables and validation features outside the audited Sources expansion",
+        "unrelated ZIP members"
+      ]
+    },
+    "recalculatedFormulas": 80,
+    "sourceUrlsPreserved": 149,
+    "openActions": 840,
+    "openP0": 94,
+    "completedTechnicalAction": "global:cinematic-clips",
+    "missingActionsCsv": "/workspace/shared/halo-of-flesh/recherche-batch8-2026-10-26/manquants-excel.csv",
+    "validatedActions": [
+      "sh1_larval_stalker_007:role",
+      "sh1_bloodsucker:role",
+      "sh3_valtiel_051:role",
+      "sh3_sewer_creature_052:role",
+      "sh3_glutton:role",
+      "sh4_toadstool_061:role",
+      "sh4_whitestool_062:role",
+      "sh4_tremer_blue_063:role",
+      "sh4_tremer_red_064:role",
+      "sh4_joseph_schreiber_victim_15:role",
+      "sh4_wheelchair_068:role",
+      "sh4_sacrificed_walter_071:role",
+      "homecoming_bogeyman_092:role",
+      "shattered_raw_shock_base_099:role",
+      "shattered_raw_shock_feminine_100:role",
+      "shattered_raw_shock_diseased_101:role",
+      "shattered_raw_shock_abstract_102:role",
+      "shattered_raw_shock_atrophied_103:role",
+      "downpour_doll_106:role",
+      "downpour_tormented_soul_111:role",
+      "downpour_void_113:role",
+      "downpour_monocle_man_114:role",
+      "bom_mother_135:role",
+      "bom_valtiel_136:role",
+      "shortmessage_sakura_head_150:role",
+      "film_armless_man_170:role",
+      "film_dark_nurse_171:role",
+      "film_grey_child_film_172:role",
+      "film_creeper_swarm_film_173:role",
+      "film_colin_the_janitor_174:role",
+      "film_red_pyramid_film_175:role",
+      "film_mannequin_monster_176:role",
+      "film_missionary_revelation_177:role",
+      "global:round-boundaries",
+      "global:cinematic-clips"
+    ],
+    "structureChangeLog": "docs/production/workbook-structure-changes.json.gz",
+    "sourceRowsTotal": 154,
+    "appendedSourceRows": 5,
+    "observationEditionClarifications": [
+      {
+        "id": "film_mannequin_monster_176:ref:01",
+        "fighterId": "film_mannequin_monster_176",
+        "before": "Silent Hill: Revelation (2012)",
+        "after": "Silent Hill: Revelation (2012, film de Michael J. Bassett)"
+      },
+      {
+        "id": "film_missionary_revelation_177:ref:01",
+        "fighterId": "film_missionary_revelation_177",
+        "before": "Silent Hill: Revelation (2012)",
+        "after": "Silent Hill: Revelation (2012, film de Michael J. Bassett)"
+      },
+      {
+        "id": "film_missionary_revelation_177:ref:02",
+        "fighterId": "film_missionary_revelation_177",
+        "before": "Silent Hill: Revelation (2012)",
+        "after": "Silent Hill: Revelation (2012, film de Michael J. Bassett)"
+      },
+      {
+        "id": "film_missionary_revelation_177:ref:03",
+        "fighterId": "film_missionary_revelation_177",
+        "before": "Silent Hill: Revelation (2012)",
+        "after": "Silent Hill: Revelation (2012, film de Michael J. Bassett)"
+      }
+    ]
+  },
+  "artwork": {
+    "illustratedProfiles": 25,
+    "activePngFiles": 30,
+    "candidateAnimatedClips": 1,
+    "stageBitmapCandidates": 6,
+    "certifiedOneToOne": 0,
+    "sourceTimingRowsMeasured": 0,
+    "unillustratedProfiles": 205,
+    "alessaWeaponImages": {
+      "present": [
+        "knife",
+        "handgun",
+        "pipe"
+      ],
+      "missing": [
+        "smg"
+      ]
+    },
+    "stagePngFiles": 6,
+    "contextualPresentationClips": 1,
+    "animatedPresentationClips": 0
+  },
+  "independentReview": {
+    "scope": "Read-only review of exact film editions, new source mechanics, room scope and final dist artwork.",
+    "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/independent-runtime-review.md",
+    "sha256": "eb0ede0ecc27dc7895a175dae955b5a2cb2d9dd61562083ab050a0094d25d432",
+    "visualReport": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/visual-http-review.json",
+    "visualReportSha256": "11f0dd53c96e219b52465ab68fdf90f9e7fc5a081734e45b4557fc9d040f943d"
+  },
+  "limits": [
+    "Prepared positions, local KOs and simulation ticks verify regressions, not a played campaign or original animation fidelity.",
+    "All 4600 original timing records remain blank. Pixel-aspect fixtures are synthetic captures; no original capture was measured or automatically attested.",
+    "Actor and room PNGs remain unverified candidates. Anatomy, silhouette, contrast, camera, perspective and scale have explicit review limits; no 1:1 image is certified.",
+    "A static idle does not produce locomotion, attacks or an animated clip. Prior artwork refusals were respected.",
+    "Film scene-role decisions keep explicit playable versus adaptation scope. They confirm identity and scene role alone, without validating gestures, art or original interactive controls.",
+    "Each reviewed film identity requires its own exact edition, native twenty-slot integrity and reviewed playable policy. The prior twenty-five noncombat dossiers stay blocked.",
+    "New combat coefficients, capture-release inputs, recovery windows and authored choreography are versus translations. No original frames or source struggle animation is claimed.",
+    "There are 693 prepared presentation contexts: 686 resolve without actor state, while seven Cybil contexts require the actual ammunition and discarded-weapon state. Future Cybil artwork needs phase-specific image contracts; no Cybil image is currently registered.",
+    "Stage tracks use the documented room, phase and encounter. Bitmap replacement may mask prepared procedural motion; those tracks are counted separately.",
+    "Non-square pixel previews use the selected capture track’s decoded sample aspect ratio, then square output pixels; this does not establish the original game display format. Legacy square-pixel packages retain their old output.",
+    "Mobile touch and viewport checks use Chromium emulation. Physical phones and controllers were not tested.",
+    "Workbook preservation audits OOXML, trailing Sources additions and formula ranges. Observation IDs, names, owners and order are preserved; film edition clarifications are explicitly listed. No native Excel session is claimed."
+  ],
+  "publicationChecks": {
+    "nodeCi": "Python venv, Pillow 11.3.0 and HALO_PYTHON configured.",
+    "browserCi": "All 14 browser suite reports retained; Chromium tested locally. GitHub CI execution not observed.",
+    "githubCiExecution": "Not observed; these are local validation results."
+  },
+  "passId": "parallel-production-2026-10-26-pass8",
+  "production": {
+    "fighters": 230,
+    "stages": 123,
+    "moves": 4600,
+    "supers": 460,
+    "fighterFinishers": 460,
+    "stageFinishers": 123,
+    "presentations": 1610,
+    "poses": 2300,
+    "stageAnimations": 1799,
+    "observations": 435,
+    "sources": 154,
+    "tasks": 875,
+    "pngCandidates": 25,
+    "animatedClips": 1,
+    "certifiedOneToOne": 0,
+    "newGameplaySequences": 205,
+    "presentationHooks": 9,
+    "openActions": 840,
+    "openP0": 94,
+    "playableFighters": 187,
+    "reviewedCombatProfiles": 230,
+    "disabledMoves": 1101,
+    "authoredFinishers": 205,
+    "authoredFighterFinishers": 198,
+    "authoredStageFinishers": 7,
+    "authoredPresentations": 686,
+    "resolvedRoleDecisions": 33,
+    "stageBitmapCandidates": 6,
+    "stageBitmapLayers": 6,
+    "stageBitmapFiles": 6,
+    "sourceTimingSchema": 1,
+    "sourceTimingBatchSchema": 1,
+    "sourceTimingReviewSchema": 1,
+    "measuredSourceMoves": 0,
+    "referenceStageTracks": 74,
+    "retiredStageItems": 1190,
+    "visibleReferenceStageTracks": 68,
+    "maskedReferenceStageTracks": 6,
+    "additionalStageBindings": 11
+  },
+  "additionalSourceReports": [
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/source-aspect-fixture/report.json",
+      "sha256": "aaa86827203a5f3cd20a60df1a3861311628e863505142733217e0bf5ccac6b0",
+      "checks": 26,
+      "captures": 5,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/stages/report.json",
+      "sha256": "63d178adeb364e750bedd3418ff5935ff9f3ccbeeda3895ce1c5246770dc0f31",
+      "checks": 36,
+      "captures": 5,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/independent-film-role-review.json",
+      "sha256": "235e8d976048701cdf887a1b96a074e8ceb8a059e5940d96f27b54fa7b43e705",
+      "checks": 411,
+      "captures": 0,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/cinematic-source/report.json",
+      "sha256": "a8b3bafedf33f2fb52ee62dffa1d8f82f619846d7214854378329cdd642d5bbb",
+      "checks": 606,
+      "captures": 64,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/combat-source/report.json",
+      "sha256": "e877ee15012375db98cabb1bd0d1910736bcaf377c1fed908f5eb2ac17c8922c",
+      "checks": 133,
+      "captures": 34,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/art-source/report.json",
+      "sha256": "208bb067c340e7ff4cbb3bc3951a92bea149271b68e19d70e81f711e7f219057",
+      "checks": 255,
+      "captures": 62,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    },
+    {
+      "report": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/final-workbook-consistency-review.json",
+      "sha256": "b278ff771f46cbb868af0426ad8c3dc34e6c380cde13c6665085b6716fdbdad5",
+      "checks": 37,
+      "captures": 0,
+      "scope": "Supplemental source or synthetic fixture; final dist reports above are authoritative."
+    }
+  ]
+}

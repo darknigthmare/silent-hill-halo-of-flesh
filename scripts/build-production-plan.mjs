@@ -30,14 +30,19 @@ const isBlocked = status => /bloqu|unverified|unconfirmed|non.vérif|non.verif|r
 const isNonCombat = status => /non.combat|non.applicable|non.hostil|passi[ fv]|set.piece|environment|obstacle|scenery/i.test(status || '');
 const productionState = (locked,noncombat,proposalStatus='') => locked||isBlocked(proposalStatus)?'À référencer':noncombat||isNonCombat(proposalStatus)?'Rôle à décider':'À produire';
 const RESOLVED_NONCOMBAT_ROLES = new Set(['noncombatant','environmental-obstacle','scripted-encounter']);
-const SCRIPTED_FILM_EDITION = 'Silent Hill (2006, film de Christophe Gans)';
-// These six film identities have a separately reviewed source-role decision.
+const FILM_2006_EDITION = 'Silent Hill (2006, film de Christophe Gans)';
+const FILM_2012_EDITION = 'Silent Hill: Revelation (2012, film de Michael J. Bassett)';
+// Each film identity has its own reviewed source-role decision and exact edition.
 // Their playable versus adaptation is not an original interactive film combat.
-const SCRIPTED_FILM_ADAPTATIONS = new Set(['film_armless_man_170','film_dark_nurse_171',
-  'film_grey_child_film_172','film_creeper_swarm_film_173','film_colin_the_janitor_174','film_red_pyramid_film_175']);
+const SCRIPTED_FILM_ADAPTATIONS = new Map([
+  ...['film_armless_man_170','film_dark_nurse_171','film_grey_child_film_172',
+    'film_creeper_swarm_film_173','film_colin_the_janitor_174','film_red_pyramid_film_175'].map(id=>[id,FILM_2006_EDITION]),
+  ...['film_mannequin_monster_176','film_missionary_revelation_177'].map(id=>[id,FILM_2012_EDITION])
+]);
 function playableRoleDecision(decision,fighter){
   return decision?.adaptationScope==='versus-scripted'&&decision.decision==='scripted-encounter'&&
-    decision.edition===SCRIPTED_FILM_EDITION&&fighter?.source==='film'&&SCRIPTED_FILM_ADAPTATIONS.has(fighter.id);
+    fighter?.source==='film'&&SCRIPTED_FILM_ADAPTATIONS.has(fighter.id)&&
+    decision.edition===SCRIPTED_FILM_ADAPTATIONS.get(fighter.id);
 }
 const roleNames = {noncombatant:'non-combattant', 'environmental-obstacle':'obstacle du décor', 'scripted-encounter':'rencontre scénarisée sans combat autonome'};
 const roleDescription=decision=>decision.adaptationScope==='versus-scripted'?'figure de scène adaptée au versus':roleNames[decision.decision];
@@ -408,6 +413,7 @@ function applyRuntimeProgress(plan){
   capture.reason+=' La commande review-preview extrait les images début/impact/fin du même snapshot vérifié par ffmpeg : index HTML local et manifeste SHA256, aperçus réduits à 640 pixels maximum, sans nouvelle attestation ni import Excel.';
   capture.reason+=' La commande verify-review compare en lecture seule les PNG, le manifeste et la page HTML à une extraction fraîche de cette capture avec la version actuelle de l’outil ; une image remplacée reste refusée même si son hash déclaré a été recalculé.';
   capture.reason+=' Les captures à plusieurs pistes vidéo peuvent déclarer videoStreamOrdinal (numérotation vidéo à partir de zéro) : même piste pour ffprobe et ffmpeg, sélection liée aux annotations et à la relecture. Les anciens paquets gardent la première piste et leurs empreintes.';
+  capture.reason+=' Les aperçus de captures aux pixels non carrés conservent leur proportion affichée décodée, sans certifier le format du jeu original.';
   return {playableFighters:[...profiles.values()].filter(p=>p.referencePolicy.combatEnabled).length,
     reviewedCombatProfiles:[...profiles.values()].filter(p=>p.referencePolicy.capabilities.reviewed).length,
     disabledMoves:plan.moves.filter(m=>!m.enabled).length,authoredFinishers:[...summaries.values()].filter(s=>s.authored).length,
@@ -433,8 +439,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-10-25',
-    scope:'PR #4 et continuation des 23, 24 et 25 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    updatedAt:'2026-10-26',
+    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});

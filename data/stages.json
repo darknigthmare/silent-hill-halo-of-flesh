@@ -2049,8 +2049,6 @@
     ],
     "weather": "none",
     "props": [
-      "beds",
-      "cages",
       "elevator"
     ],
     "hazard": "fallingDebris",
@@ -2068,23 +2066,23 @@
       "fidelity": "environmental-adaptation",
       "canonicalBasis": "Décor et dangers documentés de BROOKHAVEN — BASEMENT."
     },
-    "catalogueStatus": "reference-blocked",
+    "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Le libellé « Basement » doit préciser le couloir Otherworld de la poursuite et son ascenseur.",
+      "premise": "SH2 original2001 : extrémité du couloir Otherworld B1 de Brookhaven, devant l’ascenseur pendant la poursuite de Pyramid Head. Le guide décrit une cutscène puis la remontée vers le premier étage ; la capture de cabine montre l’état après fermeture. Le maintien des portes entrouvertes avant cette fermeture est une suspension adaptée au versus, sans capture prouvant cette ouverture ni cycle original mesuré. Aucun trajet vers le lobby, décès de Maria ou poursuivant n’est rejoué automatiquement. Dimensions, caméra et battement des portes restent à comparer aux captures originales.",
       "canonicalBasis": "CL_SH2_06_NIGHTMARE_HOSPITAL",
-      "fidelity": "reference-bloquee",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "concrete",
-      "name": "BÉTON SEC",
+      "name": "SEUIL DE L’ASCENSEUR B1",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Couloir Otherworld B1 de Brookhaven SH2 original, devant l’ascenseur de la poursuite. Plateau versus adapté sans reproduire le sort de Maria ; physique et géométrie non certifiées 1:1."
     },
     "visibility": {
       "fog": 0,
@@ -2103,9 +2101,9 @@
       "radioScale": 1.06,
       "overlay": "decay",
       "description": "La surface familière se dégrade, noircit et révèle un espace gorgé d’eau ou de moisissure.",
-      "startOtherworld": false,
+      "startOtherworld": true,
       "enabled": false,
-      "referenceState": "unresolved"
+      "referenceState": "fixed-altered"
     },
     "director": {
       "cadence": 318,
@@ -2170,22 +2168,17 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "brookhaven_sh2:decay:concrete:unresolved::"
+      "signature": "brookhaven_sh2:decay:concrete:fixed-altered::"
     },
     "gameplay": {
       "arenaInset": 92,
       "terrainRules": false,
-      "environmentalDirector": false,
+      "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": true
     },
     "layers": [
-      "ward",
-      "curtains",
-      "monitor",
-      "beds",
-      "cages",
       "elevator"
     ],
     "animationTracks": [],
@@ -2194,11 +2187,11 @@
       "id": "brookhaven_sh2",
       "source": "sh2",
       "identityMatched": true,
-      "blocked": true,
-      "locationStatus": "version-et-sous-lieu-a-fixer",
+      "blocked": false,
+      "locationStatus": "lieu-documente",
       "catalogueName": "BROOKHAVEN — BASEMENT",
       "correctedName": null,
-      "locationNote": "Le libellé « Basement » doit préciser le couloir Otherworld de la poursuite et son ascenseur.",
+      "locationNote": "SH2 original2001 : extrémité du couloir Otherworld B1 de Brookhaven, devant l’ascenseur pendant la poursuite de Pyramid Head. Le guide décrit une cutscène puis la remontée vers le premier étage ; la capture de cabine montre l’état après fermeture. Le maintien des portes entrouvertes avant cette fermeture est une suspension adaptée au versus, sans capture prouvant cette ouverture ni cycle original mesuré. Aucun trajet vers le lobby, décès de Maria ou poursuivant n’est rejoué automatiquement. Dimensions, caméra et battement des portes restent à comparer aux captures originales.",
       "referenceIds": [
         "CL_SH2_06_NIGHTMARE_HOSPITAL"
       ],
@@ -2246,15 +2239,47 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "brookhaven_sh2:reference:2",
+        "key": "pursuitElevatorGap",
+        "name": "Panneaux de l’ascenseur au bout du couloir B1",
+        "description": "Une porte d’ascenseur reste entrouverte avec bourdonnement mécanique cyclique.",
+        "proposalIndex": 1,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_06_NIGHTMARE_HOSPITAL"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Panneaux de l’ascenseur au bout du couloir B1",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Couloir Otherworld B1 de la poursuite à la lance, devant l’ascenseur de Brookhaven SH2 original",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cadre fixe et battants maintenus entrouverts dans une suspension versus avant fermeture scénique ; faible variation d’écart proposée, aucun cycle canonique revendiqué. Sans Maria, Pyramid Head, ombre, chute d’ascenseur, sirène répétée ou reprise de la mort narrative."
+      }
+    ],
     "referencePolicy": {
-      "worldState": "unresolved",
+      "worldState": "fixed-altered",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SEUIL DE L’ASCENSEUR B1",
+        "description": "Couloir Otherworld B1 de Brookhaven SH2 original, devant l’ascenseur de la poursuite. Plateau versus adapté sans reproduire le sort de Maria ; physique et géométrie non certifiées 1:1."
+      },
       "weather": "none",
       "interior": true,
-      "baselineMotion": false,
+      "baselineMotion": true,
       "suppression": [
         {
           "kind": "event",
@@ -2298,10 +2323,11 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "brookhaven_sh2:reference:2"
+      ],
       "pendingProposalIds": [
         "brookhaven_sh2:reference:1",
-        "brookhaven_sh2:reference:2",
         "brookhaven_sh2:reference:3",
         "brookhaven_sh2:reference:4"
       ]
@@ -16466,16 +16492,11 @@
       "#111413",
       "#030404"
     ],
-    "weather": "fog",
+    "weather": "none",
     "props": [
-      "fence",
-      "elevator",
-      "water"
+      "elevator"
     ],
-    "animations": [
-      "elevatorBlink",
-      "lightFlicker"
-    ],
+    "animations": [],
     "hazard": "fallingDebris",
     "fatality": {
       "id": "brookhaven_roof_fatality",
@@ -16499,17 +16520,17 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "PLATEAU DU TOIT BROOKHAVEN",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Toit de Brookhaven SH2 original avant la chute, grille encore intacte. Matériau et humidité non déterminés ; règles matérielles désactivées, cadrage et collisions non certifiés 1:1."
     },
     "visibility": {
-      "fog": 0.74,
+      "fog": 0,
       "darkness": 0.42,
       "radioScale": 1.1448,
       "silhouetteRange": 437,
@@ -16578,13 +16599,23 @@
           },
           {
             "kind": "animation",
+            "id": "elevatorBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "lightning",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "rain",
-            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       },
@@ -16593,7 +16624,7 @@
     },
     "gameplay": {
       "arenaInset": 70,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": true,
       "verticalPressure": true,
@@ -16601,27 +16632,10 @@
     },
     "layers": [
       "roofline",
-      "fence",
       "sky",
-      "elevator",
-      "water"
+      "elevator"
     ],
-    "animationTracks": [
-      {
-        "id": "elevatorBlink",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
-      {
-        "id": "lightFlicker",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "irregular"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "brookhaven_roof",
@@ -16705,14 +16719,46 @@
         "captureStatus": "storyboard-a-valider",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "brookhaven_roof:reference:3",
+        "key": "rooftopFenceFlex",
+        "name": "Grille intacte avant la chute de Brookhaven",
+        "description": "Le grillage tremble au contact ; destruction éventuelle isolée dans une fin de scène validée.",
+        "proposalIndex": 2,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.57
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Grille intacte avant la chute de Brookhaven",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Toit de Brookhaven SH2 original, grille entre la porte et Elevator Control Room, avant la chute narrative",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Poteaux fixes et déformation minime du treillis proposés pour le versus ; aucune rupture, chute, apparition de Pyramid Head ou grille du remake. Piste préparée mais masquée lorsqu’un bitmap remplace ce toit."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "fog",
+      "automaticFinishers": false,
+      "normalPhaseLabel": "TOIT AVANT LA CHUTE",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLATEAU DU TOIT BROOKHAVEN",
+        "description": "Toit de Brookhaven SH2 original avant la chute, grille encore intacte. Matériau et humidité non déterminés ; règles matérielles désactivées, cadrage et collisions non certifiés 1:1."
+      },
+      "weather": "none",
       "interior": false,
       "baselineMotion": true,
       "suppression": [
@@ -16748,22 +16794,32 @@
         },
         {
           "kind": "animation",
+          "id": "elevatorBlink",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "lightning",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "lightFlicker",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
         },
         {
           "kind": "weather",
           "id": "rain",
-          "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+          "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "brookhaven_roof:reference:2"
+        "brookhaven_roof:reference:2",
+        "brookhaven_roof:reference:3"
       ],
       "pendingProposalIds": [
         "brookhaven_roof:reference:1",
-        "brookhaven_roof:reference:3",
         "brookhaven_roof:reference:4"
       ]
     }
@@ -17073,17 +17129,12 @@
       "#0d0c0b",
       "#020202"
     ],
-    "weather": "cold",
+    "weather": "none",
     "props": [
       "hooks",
-      "chains",
       "freezer"
     ],
-    "animations": [
-      "chainSway",
-      "coldBreath",
-      "lightFlicker"
-    ],
+    "animations": [],
     "hazard": "frostWave",
     "fatality": {
       "id": "prison_meat_locker_fatality",
@@ -17107,17 +17158,17 @@
     },
     "terrain": {
       "id": "steel",
-      "name": "CAILLEBOTIS MÉTALLIQUE",
-      "moveScale": 0.98,
-      "jumpScale": 0.96,
-      "dodgeScale": 0.98,
-      "friction": 0.86,
-      "knockbackScale": 1.04,
-      "guardRegenScale": 0.94,
-      "description": "Le métal résonne, accentue la radio et transmet les chocs."
+      "name": "SOL DE LA CHAMBRE FROIDE",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Seconde salle du combat Eddie de SH2 original ; carcasses et rails de fond distincts du plateau versus. Matériau, humidité et physique non mesurés ; cadrage non certifié 1:1."
     },
     "visibility": {
-      "fog": 0.2,
+      "fog": 0,
       "darkness": 0.42,
       "radioScale": 1.1448,
       "silhouetteRange": 437,
@@ -17172,8 +17223,28 @@
           },
           {
             "kind": "animation",
+            "id": "chainSway",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "coldBreath",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "cold",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       },
@@ -17182,42 +17253,17 @@
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
     "layers": [
-      "cells",
-      "chains",
-      "watchtower",
       "hooks",
       "freezer"
     ],
-    "animationTracks": [
-      {
-        "id": "chainSway",
-        "phase": "both",
-        "layer": "foreground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
-      {
-        "id": "coldBreath",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
-      {
-        "id": "lightFlicker",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "irregular"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "prison_meat_locker",
@@ -17275,13 +17321,46 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "prison_meat_locker:reference:2",
+        "key": "freezerCarcassSway",
+        "name": "Une carcasse suspendue dans la seconde chambre froide",
+        "description": "Une seule carcasse oscille très lentement dans le fond pour éviter un écran visuel permanent.",
+        "proposalIndex": 1,
+        "source": "sh2",
+        "evidence": [
+          "CL_SH2_10_THE_LABYRINTH"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.21
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Une carcasse suspendue dans la seconde chambre froide",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Seconde salle principale de la chambre froide du combat Eddie, SH2 original 2001",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rail et crochet restent fixes ; une masse abstraite suspendue oscille lentement comme proposition versus. Aucun Eddie, corps humain, obstacle de collision, jet de vapeur du remake ou transport de carcasse. Aspect, nombre de crochets, angle et cadence source non mesurés."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "cold",
+      "automaticFinishers": false,
+      "normalPhaseLabel": "CHAMBRE FROIDE · SECONDE SALLE",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SOL DE LA CHAMBRE FROIDE",
+        "description": "Seconde salle du combat Eddie de SH2 original ; carcasses et rails de fond distincts du plateau versus. Matériau, humidité et physique non mesurés ; cadrage non certifié 1:1."
+      },
+      "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -17297,15 +17376,36 @@
         },
         {
           "kind": "animation",
+          "id": "chainSway",
+          "reason": "Remplacé par une piste précise du classeur."
+        },
+        {
+          "kind": "animation",
+          "id": "coldBreath",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "lightFlicker",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "cellShadow",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "cold",
+          "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "prison_meat_locker:reference:2"
+      ],
       "pendingProposalIds": [
         "prison_meat_locker:reference:1",
-        "prison_meat_locker:reference:2",
         "prison_meat_locker:reference:3",
         "prison_meat_locker:reference:4"
       ]
@@ -20387,16 +20487,11 @@
       "#10100d",
       "#030303"
     ],
-    "weather": "flicker",
+    "weather": "none",
     "props": [
-      "stairs",
-      "signs",
-      "elevator"
+      "stairs"
     ],
-    "animations": [
-      "elevatorBlink",
-      "neonFlicker"
-    ],
+    "animations": [],
     "hazard": "staticBurst",
     "fatality": {
       "id": "building_world_fatality",
@@ -20420,17 +20515,17 @@
     },
     "terrain": {
       "id": "concrete",
-      "name": "BÉTON SEC",
+      "name": "PALIER DU GRAND VENTILATEUR",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Escalier B12–B15 du premier Building World, sous le grand ventilateur. Palier horizontal adapté au versus ; aucune chute, physique ou géométrie source certifiée 1:1."
     },
     "visibility": {
-      "fog": 0.2,
+      "fog": 0,
       "darkness": 0.6,
       "radioScale": 1.4396,
       "silhouetteRange": 524,
@@ -20501,8 +20596,23 @@
           },
           {
             "kind": "animation",
+            "id": "elevatorBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "neonFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       },
@@ -20511,7 +20621,7 @@
     },
     "gameplay": {
       "arenaInset": 100,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -20519,28 +20629,10 @@
     },
     "layers": [
       "stairwell",
-      "doors",
       "shaft",
-      "stairs",
-      "signs",
-      "elevator"
+      "stairs"
     ],
-    "animationTracks": [
-      {
-        "id": "elevatorBlink",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      },
-      {
-        "id": "neonFlicker",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "building_world",
@@ -20598,13 +20690,46 @@
         }
       ]
     },
-    "referenceTracks": [],
+    "referenceTracks": [
+      {
+        "id": "building_world:reference:2",
+        "key": "stairwellFanTurn",
+        "name": "Grand ventilateur au-dessus du puits B12–B15",
+        "description": "Une corde d’enseigne se tend au-dessus du vide tandis qu’un ventilateur tourne dans le fond.",
+        "proposalIndex": 1,
+        "source": "sh4",
+        "evidence": [
+          "CL_SH4_05_BUILDING_WORLD"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.23
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Grand ventilateur au-dessus du puits B12–B15",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "storyboard-a-valider",
+        "locationScope": "Grand escalier vide B12 vers B15, premier Building World de SH4",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide atteste un énorme ventilateur au-dessus de l’escalier. Rotor abstrait en perspective et rotation proposés pour le versus ; orientation, nombre de pales et vitesse non confirmés par une vue originale. Aucune enseigne, corde, toit à Gum Heads, boutique ou chute d’ascenseur."
+      }
+    ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "flicker",
+      "automaticFinishers": false,
+      "normalPhaseLabel": "ESCALIER B12–B15 · PREMIER PASSAGE",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PALIER DU GRAND VENTILATEUR",
+        "description": "Escalier B12–B15 du premier Building World, sous le grand ventilateur. Palier horizontal adapté au versus ; aucune chute, physique ou géométrie source certifiée 1:1."
+      },
+      "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -20640,15 +20765,31 @@
         },
         {
           "kind": "animation",
+          "id": "elevatorBlink",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "neonFlicker",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
           "id": "shadowPass",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "flicker",
+          "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [],
+      "renderedProposalIds": [
+        "building_world:reference:2"
+      ],
       "pendingProposalIds": [
         "building_world:reference:1",
-        "building_world:reference:2",
         "building_world:reference:3",
         "building_world:reference:4"
       ]
@@ -21792,15 +21933,13 @@
       "#130e0b",
       "#030202"
     ],
-    "weather": "dust",
+    "weather": "none",
     "props": [
       "stage",
       "curtains",
       "spotlights"
     ],
-    "animations": [
-      "spotlightSweep"
-    ],
+    "animations": [],
     "hazard": "fallingDebris",
     "fatality": {
       "id": "artaud_theater_fatality",
@@ -21817,25 +21956,24 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Artaud Theater; décors de scène et rôle d’Ariel/Caliban attestés.",
-      "canonicalBasis": "EXT03 ; EXT01",
+      "premise": "Artaud Theater, Origins : plateau normal après pose et activation des quatre ampoules du catwalk, puis lever du rideau depuis Curtain Control. Le guide distingue ensuite les configurations commandées par leviers et le passage du grand miroir, dont l’état menant au combat Caliban ; le prototype ne fusionne pas ces états. Éclairage fixe de la scène documenté, balayage cyclique et caméra du versus non mesurés.",
+      "canonicalBasis": "EXT03 ; EXT01 ; EXT_ORIGINS_THEATER_GUIDE_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "wood",
-      "name": "PLANCHER ANCIEN",
-      "moveScale": 0.97,
+      "name": "PLATEAU DE LA SCÈNE ARTAUD",
+      "moveScale": 1,
       "jumpScale": 1,
-      "dodgeScale": 0.96,
-      "friction": 0.85,
+      "dodgeScale": 1,
+      "friction": 0.84,
       "knockbackScale": 1,
-      "guardRegenScale": 0.98,
-      "creak": true,
-      "description": "Le plancher trahit les déplacements par des craquements."
+      "guardRegenScale": 1,
+      "description": "Scène normale du théâtre après activation des projecteurs et levée du rideau. Décor peint non identifié, reflet et bascule non importés ; géométrie, physique et lumière non certifiées 1:1."
     },
     "visibility": {
-      "fog": 0.2,
+      "fog": 0,
       "darkness": 0.4,
       "radioScale": 1.1130000000000002,
       "silhouetteRange": 497,
@@ -21897,8 +22035,18 @@
           },
           {
             "kind": "animation",
+            "id": "spotlightSweep",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       },
@@ -21907,7 +22055,7 @@
     },
     "gameplay": {
       "arenaInset": 92,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -21919,15 +22067,7 @@
       "spotlight",
       "spotlights"
     ],
-    "animationTracks": [
-      {
-        "id": "spotlightSweep",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "continuous"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "artaud_theater",
@@ -21937,10 +22077,11 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "ARTAUD THEATER",
       "correctedName": null,
-      "locationNote": "Artaud Theater; décors de scène et rôle d’Ariel/Caliban attestés.",
+      "locationNote": "Artaud Theater, Origins : plateau normal après pose et activation des quatre ampoules du catwalk, puis lever du rideau depuis Curtain Control. Le guide distingue ensuite les configurations commandées par leviers et le passage du grand miroir, dont l’état menant au combat Caliban ; le prototype ne fusionne pas ces états. Éclairage fixe de la scène documenté, balayage cyclique et caméra du versus non mesurés.",
       "referenceIds": [
         "EXT03",
-        "EXT01"
+        "EXT01",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -22021,14 +22162,47 @@
         "captureStatus": "capture-a-relever",
         "locationScope": null,
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      },
+      {
+        "id": "artaud_theater:reference:3",
+        "key": "artaudSpotlightGlide",
+        "name": "Lueur des projecteurs sur le fond de scène normal",
+        "description": "Glissement de lumière sur les décors peints",
+        "proposalIndex": 2,
+        "source": "origins",
+        "evidence": [
+          "EXT03",
+          "EXT01"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.43
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Lueur des projecteurs sur le fond de scène normal",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": "Scène normale Artaud après les quatre ampoules, le panneau d’éclairage et le levier du rideau",
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Deux sources fixes et une variation douce de lueur proposées pour le versus ; aucun spot mobile source revendiqué, texte peint, décor d’arbre ou océan sélectionné sans preuve, marionnette, miroir, Ariel ou Caliban. Géométrie et cadence non mesurées."
       }
     ],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "dust",
+      "automaticFinishers": false,
+      "normalPhaseLabel": "SCÈNE NORMALE · PROJECTEURS ACTIVÉS",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLATEAU DE LA SCÈNE ARTAUD",
+        "description": "Scène normale du théâtre après activation des projecteurs et levée du rideau. Décor peint non identifié, reflet et bascule non importés ; géométrie, physique et lumière non certifiées 1:1."
+      },
+      "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -22054,17 +22228,27 @@
         },
         {
           "kind": "animation",
+          "id": "spotlightSweep",
+          "reason": "Remplacé par une piste précise du classeur."
+        },
+        {
+          "kind": "animation",
           "id": "shadowPass",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "dust",
+          "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
       "renderedProposalIds": [
-        "artaud_theater:reference:2"
+        "artaud_theater:reference:2",
+        "artaud_theater:reference:3"
       ],
       "pendingProposalIds": [
         "artaud_theater:reference:1",
-        "artaud_theater:reference:3",
         "artaud_theater:reference:4"
       ]
     }

@@ -125,7 +125,7 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,69);assert.equal(keys.size,39);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  assert.equal(tracks.length,74);assert.equal(keys.size,44);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];

@@ -29,7 +29,12 @@ const subjects=[
   ['homecoming_amnion_hanging_form_097','amnionSupportedFrontLegs','underground_hc'],['homecoming_amnion_exposed_form_098','amnionExposedCloseGrip','underground_hc'],
   ['bom_nurse_128','bomPipePairStop','book_light'],['bom_tremer_133','bomTremerLowPressure','book_earth'],
   ['bom_fire_guardian_137','bomFireHandsEmission','book_fire'],['bom_light_guardian_140','bomHeartMaceArm','book_light'],
-  ['bom_water_guardian_141','bomAquaticMembers','book_water'],['bom_blood_mama_145','bomDetachedMamaPounce','book_blood']
+  ['bom_water_guardian_141','bomAquaticMembers','book_water'],['bom_blood_mama_145','bomDetachedMamaPounce','book_blood'],
+  ['sh1_floatstinger_016','sh1MothAbdomenPass','central_nightmare'],['sh1_monster_cybil_017','cybilArmedPistolButt','lakeside_amusement'],
+  ['sh2_eddie_dombrowski_032','eddieFreezerRevolverCut','prison_meat_locker'],
+  ['sh2_maria_final_manifestation_033','mariaFinalMothClosure','hotel_otherworld'],['sh2_mary_final_manifestation_034','maryFinalBlackTail','hotel_otherworld'],
+  ['sh4_gum_head_new_type_058','gumNewEquippedClub','building_world'],['sh4_bottom_065','bottomThreeHeadDive','outside_room_302'],
+  ['sh4_cynthia_velasquez_victim_16','cynthiaStandingHairClosure','subway_world']
 ];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
@@ -41,6 +46,8 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'Ten additional Book of Memories Vita subjects use their own documented capacities and workbook proposals. The Double Head edit limits itself to the documented circling charge; the proposed bite is explicitly left unverified. Four-legged Needler and blade-headed Schism keep their own anatomy. No original-title animation or finisher is borrowed.',
   'A separate real-menu pairing prepares Insane Cancer as the loser: round-one recovery must not request its terminal explosion art, while the final ordinary KO requests only the missing final-loss image context. No explosion image, destructive body effect or extra gameplay damage is generated.',
   'Nine further source-specific subjects retain joined Two-Back bodies, separate mechanically supported Amnion stances, the Vita Nurse Steel Pipe, low Tremer, anatomical mace-arm, aquatic members and detached Blood Mama. Fire Guardian is restricted to documented hand fire; unsupported jump/body discharge and the uncertain Demon dossier are not performed. No total Amnion limb count is certified.',
+  'Eight further subjects keep Floatstinger abdomen contact without an invented rooftop, Cybil pistol-butt only while actually armed, Eddie in the original second freezer, separate Mary/Maria cage identities, the New Type equipped club, Bottom three heads/two hands and Cynthia standing hair hold. Contextual poses remain missing. The source-only Split Worm tunnel is not fabricated in the current mall room.',
+  'An additional Cybil fixture prepares widely separated actors, then spends all ten bullets through actual keyboard special inputs. No ammunition or discarded-weapon state is injected. Both results must retain unarmed presentation intents and the deciding match must reject an armed finisher. A separate Eddie pairing rejects a borrowed place despite existing prison meat props.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
@@ -66,7 +73,7 @@ async function start(page,id,stageId,targetId='sh2_bubble_head_nurse_024'){
       tracks:e.actors.map(a=>a.presentation?{key:a.presentation.key,frame:a.presentation.frame,sequenceId:a.presentation.sequenceId,duration:a.presentation.duration,reversible:a.presentation.reversible,poseIntent:a.presentation.lore?.poseIntent||null,
         clipKey:a.presentation.clipKey,authored:a.presentation.lore?.authored,ownerId:a.presentation.lore?.ownerId,staging:a.presentation.staging||sampleLorePresentation(a,a.presentation)}:null),
       actors:e.actors.map(a=>{const s=sampleSpriteClip(SPRITES[a.data.id],actorSpriteState(a));return {id:a.data.id,source:a.data.source,x:a.x,health:a.health,weapon:a.data.visual.weapon,lastMove:a.lastMoveKey,
-        canMove:a.profile.referencePolicy?.canMove!==false,fatalities:a.stats.fatalities,sprite:s?{pose:s.pose,fallback:s.fallback,reason:s.fallbackReason,requested:s.requested}:null};})});
+        ammo:a.ammo,weaponDiscarded:a.weaponDiscarded,canMove:a.profile.referencePolicy?.canMove!==false,fatalities:a.stats.fatalities,sprite:s?{pose:s.pose,fallback:s.fallback,reason:s.fallbackReason,requested:s.requested}:null};})});
     q.advance=n=>{for(let tick=0;tick<n;tick++)e.update();e.render(performance.now());return q.snapshot();};
     q.knockout=()=>{const target=e.actors[1];target.health=0;target.lastHit={attackerIndex:0,isSuper:false,environmental:false};e.resolveKnockouts();e.render(performance.now());return q.snapshot();};
     return q.snapshot();
@@ -118,7 +125,8 @@ try{
   for(const [id,stageId,reason] of [
     ['sh3_leonard_wolf_048','midwich','Premier plan requis'],['sh2_flesh_lip_027','midwich','Appui de plafond'],
     ['origins_memory_of_helen_grady_082','midwich','Appui de plafond'],['origins_memory_of_richard_grady_083','old_silent_hill','Premier plan requis'],
-    ['homecoming_amnion_hanging_form_097','alchemilla','Premier plan requis'],['bom_water_guardian_141','book_fire','Premier plan requis']
+    ['homecoming_amnion_hanging_form_097','alchemilla','Premier plan requis'],['bom_water_guardian_141','book_fire','Premier plan requis'],
+    ['sh2_eddie_dombrowski_032','toluca_prison','Pièce exacte requise']
   ]){
     const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
     let current=await start(page,id,stageId);
@@ -128,6 +136,32 @@ try{
     current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
     check(id+': missing physical support yields the ordinary deciding KO with an explicit reason',current.phase==='roundEnd'&&current.wins[0]===2&&!current.fatality&&current.actors[0].fatalities===0&&current.cinematicBlock?.reason.includes(reason),current);
     report.scenes[id+'@unsupported-'+stageId]=current;await shot(page,'unsupported-'+id);await page.close();
+  }
+  {
+    const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
+    let current=await start(page,'sh1_monster_cybil_017','lakeside_amusement');
+    check('Cybil discard: real menu starts the ten-shot armed intro',current.phase==='intro'&&current.actors[0].ammo===10&&!current.actors[0].weaponDiscarded&&/cybil-armed-pistol-entry/.test(current.tracks[0]?.poseIntent),current);
+    current=await advance(page,current.phaseTimer);
+    await page.evaluate(()=>{const e=__HALO_QA__.engine;e.actors[0].x=110;e.actors[1].x=1150;e.actors[0].facing=1;e.actors[1].facing=-1;});
+    for(let shot=0;shot<10;shot++){
+      await page.keyboard.press('i');current=await advance(page,70);
+      check(`Cybil discard: actual keyboard shot ${shot+1} spends one bullet and misses the remote target`,current.phase==='fight'&&current.actors[0].ammo===9-shot&&current.health[1]===current.maxHealth[1],current);
+    }
+    check('Cybil discard: the tenth shot actually abandons the pistol',current.actors[0].ammo===0&&current.actors[0].weaponDiscarded,current);
+    // A bullet already emitted before discard keeps its own lifetime. Await
+    // its real expiry rather than erasing it to make the unarmed fixture pass.
+    for(let settle=0;current.projectiles>0&&settle<16;settle++)current=await advance(page,30);
+    check('Cybil discard: already emitted bullets expire normally while the pistol stays discarded',current.projectiles===0&&current.health[1]===current.maxHealth[1]&&current.actors[0].ammo===0&&current.actors[0].weaponDiscarded,current);
+    await page.keyboard.press('p');current=await advance(page,12);
+    check('Cybil discard: the real taunt requests only the unarmed pose context',current.tracks[0]?.key==='taunt'&&/cybil-unarmed/.test(current.tracks[0]?.poseIntent)&&/cybil-unarmed/.test(current.tracks[0]?.staging.pose)&&current.actors[0].ammo===0,current);
+    await shot(page,'cybil-actual-discard-taunt');
+    current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
+    check('Cybil discard: the first round uses an unarmed reversible result',current.phase==='roundEnd'&&!current.fatality&&current.wins[0]===1&&current.tracks[0]?.reversible&&/cybil-unarmed/.test(current.tracks[0]?.poseIntent),current);
+    current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);
+    check('Cybil discard: the next round keeps zero ammunition and the discarded state',current.phase==='fight'&&current.actors[0].ammo===0&&current.actors[0].weaponDiscarded&&current.health[0]===current.maxHealth[0],current);
+    current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
+    check('Cybil discard: the deciding result rejects the armed edit without creating a pistol or parasite cure',current.phase==='roundEnd'&&!current.fatality&&current.wins[0]===2&&current.actors[0].fatalities===0&&current.actors[0].ammo===0&&current.actors[0].weaponDiscarded&&/pistolet/.test(current.cinematicBlock?.reason)&&/cybil-unarmed/.test(current.tracks[0]?.poseIntent),current);
+    report.scenes['sh1_monster_cybil_017@actual-ten-shot-discard']=current;await shot(page,'cybil-disarmed-final-result');await page.close();
   }
   {
     const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());

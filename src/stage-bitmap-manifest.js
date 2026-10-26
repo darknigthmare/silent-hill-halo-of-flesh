@@ -196,5 +196,44 @@ export const STAGE_BITMAPS = {
         ]
       }
     ]
+  },
+  "brookhaven_roof": {
+    "stageId": "brookhaven_roof",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "original-roof-before-fall",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+    ],
+    "notes": "Toit Brookhaven SH2 original avant la chute. Plan RF, détail du journal et gros plan narratif corroborent la pièce, l’accès et les matériaux locaux ; aucune vue large exploitable ne confirme ces façades complètes. Caméra frontale, positions et dimensions des deux structures, fenêtre, grille intacte et aire de combat reconstruits pour le versus. Pas de chute, trou, pluie ou personnage ; aucune géométrie ni animation originale certifiée.",
+    "layers": [
+      {
+        "id": "roof-before-fall",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+            "sha256": "52cd844d609cf9403cbcd2340429c5d53c9e61da4d72696e79961eb21117ae11",
+            "bytes": 2849870,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ]
   }
 };

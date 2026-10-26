@@ -1,0 +1,532 @@
+{
+  "schema": "halo-batch8-visual-provenance-v1",
+  "reviewedAt": "2026-10-26",
+  "origin": "conversation-image-generation",
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "references": {
+    "schema": "halo-source-visual-references-batch8-v1",
+    "reviewedAt": "2026-10-26",
+    "network": "Inherited proxy and CA trust preserved; HTTP200 for selected files; challenged Google pages were not bypassed. No original footage downloaded or measured.",
+    "documentaryPages": [
+      {
+        "file": "probe-1.html",
+        "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+        "httpStatus": 200,
+        "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+        "bytes": 55413,
+        "role": "identity-and-appearance-guide",
+        "independentViewGroup": "sh4-guide",
+        "limits": "Secondary text identifies hammer, Bottom anatomy and New Type versus Old Type; does not measure source scale/frames.",
+        "visuallyInspected": true,
+        "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/probe-1.html"
+      },
+      {
+        "file": "brookhaven-walkthrough.html",
+        "url": "https://www.silenthillmemories.net/sh2/walkthrough_05_brookhaven_hospital_en.htm",
+        "httpStatus": 200,
+        "sha256": "b6ae13cdb84ff82a421f7859af8d9feb363700f08ca6e5eb34c39d4ad5920b29",
+        "bytes": 46337,
+        "role": "roof-state-guide",
+        "independentViewGroup": "sh2-roof-guide",
+        "limits": "Roof RF access, locked door, diary and fence before narrative fall; no matching frontal wide camera.",
+        "visuallyInspected": true,
+        "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/brookhaven-walkthrough.html"
+      },
+      {
+        "file": "sh4-arts_monsters_en.htm",
+        "url": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+        "httpStatus": 200,
+        "sha256": "3f87e050e7ef8ec67d00a96184b78c50dfa58a0da2ebea8997e69810a7c3f50e",
+        "bytes": 28910,
+        "role": "gallery-provenance-index",
+        "independentViewGroup": "sh4-gallery",
+        "limits": "Gallery titles source images Patients/Bottom/Gum Heads without platform, region or capture provenance.",
+        "visuallyInspected": true,
+        "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4-arts_monsters_en.htm"
+      }
+    ],
+    "actors": [
+      {
+        "id": "sh4_patient_060",
+        "edition": "Silent Hill 4: The Room original 2004 model renders; platform/region/render processing not established",
+        "refs": [
+          {
+            "file": "patient-guide.png",
+            "url": "https://www.silenthillmemories.net/sh4/monsters/patient.png",
+            "httpStatus": 200,
+            "sha256": "ddd6efad8cd35fc3325d6f4e8b21ef0014e3b32dfdeb043f1d7a11d8d26536e3",
+            "bytes": 72774,
+            "role": "primary-model",
+            "independentViewGroup": "patient-front",
+            "limits": "One whole idle posture with hammer; source floor scale and attack timing not measured.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/patient-guide.png",
+            "dimensions": [
+              300,
+              350
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+          },
+          {
+            "file": "sh4_art_cre_22_patient.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_22_patient.jpg",
+            "httpStatus": 200,
+            "sha256": "48ae644c4eb4afbc4ae5dac8b449f8ce85df3b87568f196399a7113582f2b67a",
+            "bytes": 16799,
+            "role": "two-view-model-composite",
+            "independentViewGroup": "patient-front-plus-secondary",
+            "limits": "Includes primary front view plus second view of same identity; two creatures in source montage are NOT two characters to reproduce. Secondary view not a measured animation.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4_art_cre_22_patient.jpg",
+            "dimensions": [
+              186,
+              295
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          }
+        ],
+        "independentSourceAngles": 2
+      },
+      {
+        "id": "sh4_bottom_065",
+        "edition": "Silent Hill 4: The Room original 2004 model render; platform/region/render processing not established",
+        "refs": [
+          {
+            "file": "bottom-guide.png",
+            "url": "https://www.silenthillmemories.net/sh4/monsters/bottom.png",
+            "httpStatus": 200,
+            "sha256": "63058a311c297b6599c3fae0ff522ad5dcc9c2c9046a8ffe8ccbadda121d40b9",
+            "bytes": 91495,
+            "role": "primary-model",
+            "independentViewGroup": "bottom-same-view",
+            "limits": "One bowed posture. Exactly two upper heads and one inverted underside head documented; two supporting arms.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/bottom-guide.png",
+            "dimensions": [
+              300,
+              350
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+          },
+          {
+            "file": "sh4_art_cre_23_bottom.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_23_bottom.jpg",
+            "httpStatus": 200,
+            "sha256": "229206dbd5016b4aa9d592275ea85aa64e6a6ba81c71c55fc041acbf596c3bbc",
+            "bytes": 15443,
+            "role": "same-model-duplicate",
+            "independentViewGroup": "bottom-same-view",
+            "limits": "Same angle as guide; does NOT count as independent posture or second view. No source locomotion clip.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4_art_cre_23_bottom.jpg",
+            "dimensions": [
+              184,
+              271
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          }
+        ],
+        "independentSourceAngles": 1
+      },
+      {
+        "id": "sh4_gum_head_new_type_058",
+        "edition": "Silent Hill 4: The Room original 2004 model and gallery rendered scene; platform/region unknown",
+        "refs": [
+          {
+            "file": "gum_head-guide.png",
+            "url": "https://www.silenthillmemories.net/sh4/monsters/gum_head.png",
+            "httpStatus": 200,
+            "sha256": "450069c185b11401fa10a2a0ca96e8431583fb2dbd47c324756b260137b4b9f8",
+            "bytes": 79511,
+            "role": "primary-armed-model",
+            "independentViewGroup": "gum-new-model",
+            "limits": "Guide distinguishes Old grey/pink from New pale with more pronounced orange chest and possible pipe; this pictured pale armed model corresponds to New Type.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/gum_head-guide.png",
+            "dimensions": [
+              300,
+              350
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+          },
+          {
+            "file": "sh4_art_cre_19_gum_head.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_19_gum_head.jpg",
+            "httpStatus": 200,
+            "sha256": "97419e0987cc69f7d2caa174870b6c5c3edb503891237696b8689bcf3b51791c",
+            "bytes": 15040,
+            "role": "same-model-duplicate",
+            "independentViewGroup": "gum-new-model",
+            "limits": "Same angled armed model, not a new independent pose.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4_art_cre_19_gum_head.jpg",
+            "dimensions": [
+              238,
+              261
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          },
+          {
+            "file": "sh4_art_cre_36_gum_head.png",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_36_gum_head.png",
+            "httpStatus": 200,
+            "sha256": "b2d1e8e9cf8fefb1ebf6763db0e627ce6279e382862d279e078c21db887e0e34",
+            "bytes": 596915,
+            "role": "distinct-gallery-rendered-scene",
+            "independentViewGroup": "gum-new-scene",
+            "limits": "Pale bald face and pronounced throat/chest swelling corroborated. Gallery render provenance is not enough to claim an interactive game capture or measured attack. Grey Old Type behind excluded.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4_art_cre_36_gum_head.png",
+            "dimensions": [
+              800,
+              320
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          },
+          {
+            "file": "sh4_art_cre_18_gum_head.jpg",
+            "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_18_gum_head.jpg",
+            "httpStatus": 200,
+            "sha256": "4ecc98fb547e437e1d0519fe3ab7c3febe82e553184dfe4e8118601423a6a980",
+            "bytes": 12958,
+            "role": "excluded-old-type",
+            "independentViewGroup": "gum-old-excluded",
+            "limits": "Grey unarmed Old Type; explicitly NOT owner of New Type sprite, weapon or pose.",
+            "visuallyInspected": true,
+            "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/sh4_art_cre_18_gum_head.jpg",
+            "dimensions": [
+              146,
+              293
+            ],
+            "sourcePage": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+          }
+        ],
+        "independentSourceAngles": 2
+      }
+    ],
+    "stage": {
+      "id": "brookhaven_roof",
+      "edition": "Silent Hill 2 original 2001, not remake; exact platform/region unspecified",
+      "state": "original-roof-before-fall",
+      "refs": [
+        {
+          "file": "roof-close.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w05_pyramid_head_hospital_roof.jpg",
+          "httpStatus": 200,
+          "sha256": "5039b286579c54d8f5823b5004aca32f6a55359097fea4593bd6d6ebd227c724",
+          "bytes": 54991,
+          "role": "narrative-closeup-local-wall-material",
+          "independentViewGroup": "roof-ph-close",
+          "limits": "Pyramid Head close-up provides only a small hospital wall/window/meter area, NOT wide roof layout. Actor removed; no pose/timing inferred.",
+          "visuallyInspected": true,
+          "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/roof-close.jpg",
+          "dimensions": [
+            700,
+            394
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh2/walkthrough_05_brookhaven_hospital_en.htm"
+        },
+        {
+          "file": "roof-diary.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/memos/pics/diary_from_roof.jpg",
+          "httpStatus": 200,
+          "sha256": "5b211cbe0300730ed1661095bed0cb7d27d122d58bba16023eddf120298fb9da",
+          "bytes": 97761,
+          "role": "memo-closeup-local-floor",
+          "independentViewGroup": "roof-diary-close",
+          "limits": "Close-up confirms notebook and loose pages on rough cracked concrete, not full roof camera. Diary text is not an observation that it currently rains.",
+          "visuallyInspected": true,
+          "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/roof-diary.jpg",
+          "dimensions": [
+            1024,
+            768
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh2/memos_en.htm#diary_from_roof"
+        },
+        {
+          "file": "hospital-plan.jpg",
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/pics/sh2_map_05b_hospital.jpg",
+          "httpStatus": 200,
+          "sha256": "60cdcb50ea8069ac17ddaad3aebb76bd3416f0740d78b2685f3cd32827e71993",
+          "bytes": 739623,
+          "role": "roof-plan-rf",
+          "independentViewGroup": "roof-plan",
+          "limits": "Plan locates stairwell, Elevator Control Room, open RF area and memo; dimensions, façade details, window placement and camera are not established.",
+          "visuallyInspected": true,
+          "localPath": "/workspace/shared/halo-of-flesh/references/batch8-2026-10-26/hospital-plan.jpg",
+          "dimensions": [
+            2018,
+            1200
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh2/walkthrough_05_brookhaven_hospital_en.htm"
+        }
+      ],
+      "explicitReconstruction": "No accessible wide original roof view found. Frontal versus camera, complete façades, dimensions, positions of window/fence/structures and broad foreground fighting strip are reconstructed. Source room identity is supported, exact geometry is not.",
+      "excluded": "No James/Pyramid Head, fall hole, broken fence, remake architecture, rain, puddles, fog, harmful hazards or autonomous scene transition."
+    },
+    "excludedInspectedFiles": [
+      "wall_man-guide.png (different stationary wall identity not selected)",
+      "sh4_13_outside_room_302_01.jpg (Walter scene, no Bottom)",
+      "sh4_13_outside_room_302_02.jpg (Eileen mechanism scene, no Bottom)",
+      "sh4_07_hospital_world_01.jpg (scene characters, no Patient)",
+      "sh4_07_hospital_world_03.jpg (Eileen closeup, no Patient)",
+      "sh4_07_hospital_world_04.jpg (Henry and corridor, no full Patient)",
+      "google-roof-images.html and google-roof-text.html (challenge/no usable reference, no bypass)"
+    ]
+  },
+  "candidateReview": {
+    "schema": "halo-batch8-candidate-review-v1",
+    "reviewedAt": "2026-10-26",
+    "actorReviews": [
+      {
+        "id": "sh4_patient_060",
+        "source": "sh4",
+        "generatedSourceFile": "exec-6b3b53ff-a2a7-4bfa-8a36-89cce7d77be3.png",
+        "sourceSHA256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e",
+        "registeredFrame": {
+          "sha256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e",
+          "bytes": 1644132,
+          "width": 1024,
+          "height": 1536,
+          "visibleBounds": [
+            179,
+            35,
+            798,
+            1510
+          ],
+          "pixelSHA256": "0a9d931806929820a0eafe66b79e0363200625bb9f3dcead8492b5bb0f01146d",
+          "transparentFraction": 0.7606,
+          "path": "assets/sprites/sh4_patient_060.735bcaec2736.png",
+          "facing": 1,
+          "anchor": [
+            0.56,
+            0.9831
+          ],
+          "bodyHeight": 0.96,
+          "sourceFile": "exec-6b3b53ff-a2a7-4bfa-8a36-89cce7d77be3.png",
+          "sourceSHA256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e",
+          "origin": "conversation-image-generation"
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "visuallyReviewed": true,
+        "certifiedOneToOne": false,
+        "silhouette": "One very tall humanoid, two arms and two bare legs, dark top/pale shorts, lowered hammer at source hand. Head and both feet present; hammer shape remains candidate, original hand/weapon clip not produced.",
+        "deviation": "Texture and contrast stronger than small original views. Low-alpha fringe at canvas margins excluded from technical visible envelope. Opposite side/feet depth and scale unmeasured."
+      },
+      {
+        "id": "sh4_bottom_065",
+        "source": "sh4",
+        "generatedSourceFile": "exec-5394180f-4578-409b-9441-3d28f11cd985.png",
+        "sourceSHA256": "b0daf4900078accec37c8b970ed195824fce879d39b51cd61d33f863a8bb2d70",
+        "registeredFrame": {
+          "sha256": "b0daf4900078accec37c8b970ed195824fce879d39b51cd61d33f863a8bb2d70",
+          "bytes": 1121950,
+          "width": 1161,
+          "height": 1355,
+          "visibleBounds": [
+            156,
+            35,
+            1071,
+            1321
+          ],
+          "pixelSHA256": "8b3e4cf1f41e624cd7ed2049d9101c2de0e51bd1e300f53375118e4e0e5a95ac",
+          "transparentFraction": 0.72396,
+          "path": "assets/sprites/sh4_bottom_065.b0daf4900078.png",
+          "facing": 1,
+          "anchor": [
+            0.55,
+            0.9749
+          ],
+          "bodyHeight": 0.95,
+          "sourceFile": "exec-5394180f-4578-409b-9441-3d28f11cd985.png",
+          "sourceSHA256": "b0daf4900078accec37c8b970ed195824fce879d39b51cd61d33f863a8bb2d70",
+          "origin": "conversation-image-generation"
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "visuallyReviewed": true,
+        "certifiedOneToOne": false,
+        "silhouette": "One Bottom: exactly two upper head masses, one inverted underside head; two very long supporting arms and splayed hands, no overcoat, no Twin Victim art reuse.",
+        "deviation": "Only one independent angle. Additional fine texture and high contrast reconstructed; anatomy depth, hidden surfaces, support plane and rotation unmeasured. Faint red/lowalpha fringe near silhouette."
+      },
+      {
+        "id": "sh4_gum_head_new_type_058",
+        "source": "sh4",
+        "generatedSourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png",
+        "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+        "registeredFrame": {
+          "sha256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+          "bytes": 1057167,
+          "width": 1161,
+          "height": 1355,
+          "visibleBounds": [
+            33,
+            66,
+            1145,
+            1249
+          ],
+          "pixelSHA256": "34e17b868827940876a852f4d26b06137c8b271aa7a911032232a4380ad4a7b9",
+          "transparentFraction": 0.72547,
+          "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+          "facing": 1,
+          "anchor": [
+            0.62,
+            0.9225
+          ],
+          "bodyHeight": 0.94,
+          "sourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png",
+          "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+          "origin": "conversation-image-generation"
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "visuallyReviewed": true,
+        "certifiedOneToOne": false,
+        "silhouette": "One pale New Type, bald deformity face, orange-red throat/chest bump, two arms and two bent legs; model pipe hanging to left, free hand on right. No Old Type body or weapon transfer.",
+        "deviation": "Red/contrast pronounced; shape and cloth-free posture follow model but hidden anatomy unverified. Raised knee is static source stance, not animation; alpha dust outside envelope."
+      }
+    ],
+    "stageReview": {
+      "id": "brookhaven_roof",
+      "sourceFile": "exec-a8c8d67e-0a40-4aca-9d66-35d70e969c09.png",
+      "registeredPath": "assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+      "visuallyReviewed": true,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "opaque": true,
+      "description": "Intact fence, two closed back structures, small notebook/papers, uncluttered cracked floor. Single opaque still, no actor or animated layer.",
+      "limit": "No accessible wide original roof view found. Frontal versus camera, complete façades, dimensions, positions of window/fence/structures and broad foreground fighting strip are reconstructed. Source room identity is supported, exact geometry is not.",
+      "certifiedOneToOne": false
+    },
+    "pendingFinalHttpVisualReview": false,
+    "pendingFinalDistVisualReview": false
+  },
+  "delivery": "Three single-frame idle actor candidates and one single-frame reconstructed exact-room bitmap. No new animated clip, attacks, source frame measurement or 1:1 certification.",
+  "sourceHttpVisualReview": {
+    "schema": "halo-batch8-source-http-visual-review-v1",
+    "reviewedAt": "2026-10-26",
+    "build": "source",
+    "checks": 255,
+    "captures": 62,
+    "javascriptErrors": 0,
+    "passed": true,
+    "technicalIssues": [],
+    "visualIssuesBlocking": [],
+    "visuallyInspectedCaptures": [
+      {
+        "file": "combat-new-pngs-brookhaven-roof-patient-new-type.png",
+        "sha256": "0a2502b566ad39ca2f1623b7f8fe23ebc512076e816f4a320a178014806ccb44",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "combat-new-pngs-brookhaven-roof-bottom-patient.png",
+        "sha256": "99bc7d04fb05142255aee5d8e4cb8d80f2d372152a69c2a524dd117aea08f59a",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "mobile-new-pngs-brookhaven-roof-patient-new-type.png",
+        "sha256": "1f8ae90fc28e841db8110b304ce153169f75d3e6ee225aa5ba3b76020726dbc6",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "mobile-new-pngs-brookhaven-roof-bottom-patient.png",
+        "sha256": "21e9049e54fa2b39f801dd68f8e02d7d92e0e9d5481bc3904cd264e6c7bbdc82",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "inspector-sh4_bottom_065.png",
+        "sha256": "f647dba7ed1bb57a595a6bda8bb7eb57dc1f1716ca693dbac1e66d88a1b0c686",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "missing-poses-sh4_patient_060.png",
+        "sha256": "60201b0a0bc9d3f5c951ba03de4d337f2d1b78a246745924873e667a527bfdff",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "missing-poses-sh4_gum_head_new_type_058.png",
+        "sha256": "92a7d81abbd8337be1cf3a23abddc10fa02021cb52dcd777c39c55ee9f611fe3",
+        "sameAsPreliminary": false
+      },
+      {
+        "file": "missing-poses-sh4_bottom_065.png",
+        "sha256": "f1523585382c316f5ad762d9bd3b4fad5a7bdd7b49501a97953e3a8bddd7b658",
+        "sameAsPreliminary": true
+      },
+      {
+        "file": "mobile-static-inspector.png",
+        "sha256": "4bd330429969d467d4724afea8adc4893c96f5f71a918b8139218cef2d8b0ed1",
+        "sameAsPreliminary": false
+      },
+      {
+        "file": "inspector-sh4_gum_head_new_type_058.png",
+        "sha256": "8a8d981c8c2d89e443260a364b230479dbb77b7b174b1ab6d352dacff2476886",
+        "sameAsPreliminary": false
+      }
+    ],
+    "findings": [
+      "Three exact SH4 idle candidates appear through real inspector/roster controls; no cropped limbs or missing asset substitution visible.",
+      "Two real local matches paint Patient/Gum Head New Type and Bottom/Patient on original Brookhaven roof candidate before fall; all three bodies and source-owned props appear.",
+      "Actual HUD displays TOIT AVANT LA CHUTE and PLATEAU DU TOIT BROOKHAVEN; terrain coefficients are neutral and there is no rain, phase switch or automatic fall.",
+      "Attack, introduction, taunt, finisher and locomotion poses remain explicitly missing and idle previews; no new animated clip is claimed.",
+      "430px matches preserve 16:9 letterboxing and controls within viewport; HUD and actor details are small in portrait, a known usability limitation.",
+      "Texture/contrast/colour, source perspective/depth, inferred façade geometry and lowalpha margin traces remain unresolved fidelity limits.",
+      "Final registry wording calls Gum Head corroboration a distinct gallery rendered scene, without claiming an interactive game capture."
+    ],
+    "sourceGeometryCertified": false,
+    "sourceMotionMeasured": false,
+    "certifiedOneToOne": false,
+    "pendingFinalDistVisualReview": false,
+    "finalDistReviewCompletedAt": "2026-10-26T08:49:31.671914+00:00"
+  },
+  "finalHttpVisualReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch8-2026-10-26/visual-http-review.json",
+    "sha256": "11f0dd53c96e219b52465ab68fdf90f9e7fc5a081734e45b4557fc9d040f943d",
+    "build_reviewed": "dist",
+    "passed": true,
+    "checks": 255,
+    "captures": 62,
+    "javascriptErrors": 0,
+    "directlyViewedDistCaptures": 10,
+    "digestComparisonSummary": {
+      "total": 62,
+      "byte_identical": 61,
+      "changed": 1,
+      "all_changed_directly_reinspected": true,
+      "directly_viewed_dist": 10
+    },
+    "blockingFindings": [],
+    "limitations": [
+      "Brookhaven roof has no accessible wide source view: full façades, dimensions, fence/window/structure positions and frontal camera are explicit versus reconstructions bounded by RF plan and local details. Geometry and animation remain unverified.",
+      "Bottom has one independent source angle; duplicate guide/gallery renders do not establish another pose. Gum Head gallery scene is not certified as an interactive gameplay frame.",
+      "Generated textures, contrast/red saturation, source perspective/opposite side, qualitative scale and low-alpha fringe remain to compare.",
+      "Portrait combat retains a small 16:9 letterboxed arena and very small HUD/actor details; no physical-device playtest or usability resolution is claimed."
+    ],
+    "certifiedOneToOne": false
+  }
+}

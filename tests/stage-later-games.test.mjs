@@ -73,5 +73,5 @@ test('only the documented original Lakeview lobby gets neutral presentation labe
   const projected=applyStageReferencePolicy(other,{...reference,id:other.id,source:other.source});assert.equal(projected.referencePolicy.normalPhaseLabel,undefined);assert.equal(projected.referencePolicy.terrainPresentation,undefined);
  }
  const unresolved=applyStageReferencePolicy(lake,{...reference,locationStatus:'etat-narratif-a-preciser'});assert.equal(unresolved.referencePolicy.normalPhaseLabel,undefined);assert.equal(unresolved.referencePolicy.terrainPresentation,undefined);
- for(const location of STAGES.filter(s=>!['lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3'].includes(s.id))){assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);}
+ for(const location of STAGES.filter(s=>!['lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3','prison_meat_locker','brookhaven_sh2','brookhaven_roof','building_world','artaud_theater'].includes(s.id))){assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);}
 });

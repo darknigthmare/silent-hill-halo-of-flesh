@@ -100,7 +100,9 @@ test('attack, recovery, knockdown and broken-guard states leave Missionary expos
 
 test('the defensive policy does not transfer to a different native identity or source',()=>{
   const original=fighter('sh3_missionary_047');
-  for(const defender of [{...original,id:'another-missionary-edition'},{...original,source:'film'},fighter('sh3_scraper_045')]){
+  // Scraper now has its own independently sourced, handgun-only defense;
+  // a pipe Nurse still verifies that a real native neighbour inherits nothing.
+  for(const defender of [{...original,id:'another-missionary-edition'},{...original,source:'film'},fighter('sh3_nurse_pipe_043')]){
     const engine=engineFor({defender}),target=engine.actors[1],before=target.health;
     assert.equal(target.profile.moveset.referencePolicy.defense?.frontalVisibleBullets,undefined);
     impact(engine);assert.ok(target.health<before);
