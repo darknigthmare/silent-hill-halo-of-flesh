@@ -35,9 +35,32 @@ sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
 neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
 de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
 
-## État du 26 octobre 2026
+## État du 28 octobre 2026
 
-Le [dixième lot](CHANTIERS_PARALLELES_LOT10_2026-10-26.md) est l’état courant :
+Le [onzième lot](CHANTIERS_PARALLELES_LOT11_2026-10-28.md) compte **180 lignes :
+106 réalisations candidates, 60 spécifications et 14 blocages explicites**.
+Vingt-cinq nouveaux profils ont une image entière de combat 2D. Le cadrage
+contient les contours faiblement opaques reliés au corps et toutes les poses
+du clip, avec une marge pour les secousses. Les traces faibles isolées ne
+font pas reculer la caméra. Ce contrôle ne certifie pas l’anatomie source.
+
+Le registre compte **74 profils illustrés et 109 PNG actifs**, sans nouveau
+cycle animé. Le plan conserve 246 sources, 147 pistes de lieux, 776 présentations
+résolvables sans état d’acteur et sept contextes Cybil conditionnels. Les 217
+sources précédentes, les 435 observations et les 33 décisions de rôle sont
+préservées. Les 840 actions ouvertes comprennent 93 P0.
+
+Les [relevés du lot](batches/lot11-summary.json) et le
+[rapport QA](../INTEGRATION_QA_2026-10-28-lot11.json) distinguent les candidats,
+les spécifications et les blocages. Les 21 cibles de lieux corrigées conservent
+l’ancienne proposition dans la ligne Excel et l’action ; son remplacement
+documenté ne signifie pas que l’ancien objet inventé a été réalisé. Les treize
+blocages historiques restent visibles. Les 18 400 cellules de timings source
+restent vides et aucune image ou animation 1:1 n’est certifiée.
+
+## État précédent — dixième lot du 26 octobre 2026
+
+Le [dixième lot](CHANTIERS_PARALLELES_LOT10_2026-10-26.md) décrit la livraison précédente :
 **six lots de trente lignes, 120 réalisations candidates et 60 spécifications**.
 Les 180 lignes ont changé ; les 13 blocages du lot précédent restent visibles.
 Il compte 49 profils illustrés, 84 PNG actifs, 217 sources,

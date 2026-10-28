@@ -646,9 +646,9 @@ export const ROSTER = [
 
   // ORIGINS
   monster('origins','Straight-Jacket',{kind:'humanoid',archetype:'zoner',signature:'Crachat contraint',behavior:'Corps enfermé qui projette un liquide et frappe du torse.'}),
-  monster('origins','Faceless Nurse',{kind:'nurse',archetype:'balanced',signature:'Seringue de Cedar Grove',behavior:'Attaque au scalpel et mouvement irrégulier.',weapon:'scalpel'}),
+  monster('origins','Faceless Nurse',{kind:'nurse',archetype:'balanced',signature:'Seringue de Cedar Grove',behavior:'Attaque à la seringue, selon le bestiaire propre à Origins.',weapon:'syringe'}),
   monster('origins','Carrion',{kind:'quadruped',archetype:'juggernaut',signature:'Masse charognarde',behavior:'Bête lourde qui charge au sol.'}),
-  monster('origins','Remnant',{kind:'ghost',archetype:'ghost',signature:'Ombre miroir',behavior:'Silhouette projetée qui apparaît au contact des miroirs.'}),
+  monster('origins','Remnant',{kind:'ghost',archetype:'ghost',signature:'Ombre de la cage',behavior:'Cage filaire flottante projetant une ombre humanoïde.'}),
   monster('origins','Ariel',{kind:'doll',archetype:'trickster',signature:'Fil de marionnette',behavior:'Mannequin suspendu, coups de jambes et chutes verticales.'}),
   monster('origins','Caliban',{kind:'giant',archetype:'juggernaut',signature:'Charge de Caliban',behavior:'Grande créature animale à membres disloqués.'}),
   monster('origins','Two-Back',{kind:'mass',archetype:'grappler',signature:'Étreinte double',behavior:'Masse à deux corps, saisie et écrasement.'}),
@@ -667,7 +667,7 @@ export const ROSTER = [
   monster('homecoming','Order Soldier',{kind:'humanoid',archetype:'balanced',category:'HUMAN ENEMY',signature:'Matraque de l’Ordre',behavior:'Combattant humain armé.',weapon:'baton'}),
   monster('homecoming','Nurse',{kind:'nurse',archetype:'balanced',signature:'Scalpel de l’hôpital',behavior:'Réagit à la lumière et frappe au scalpel dans l’hôpital cauchemardesque.',weapon:'scalpel',stageId:'nightmare_hospital_hc'}),
   monster('homecoming','Swarm',{kind:'insect',archetype:'swarm',signature:'Nuée de cafards',behavior:'Petites créatures qui encerclent et attaquent au ras du sol.',stageId:'nightmare_hospital_hc'}),
-  monster('homecoming','Curtis Ackers',{kind:'humanoid',archetype:'boss',boss:true,category:'HUMAN BOSS',signature:'Scie de Curtis',behavior:'Affrontement humain agressif dans l’atelier, utilisant une scie circulaire.',weapon:'chainsaw',stageId:'curtis_shop'}),
+  monster('homecoming','Curtis Ackers',{kind:'humanoid',archetype:'boss',boss:true,category:'HUMAN BOSS',signature:'Scie de Curtis',behavior:'Affrontement humain dans Underground, avec une scie circulaire.',weapon:'circular_saw',stageId:'curtis_shop'}),
   monster('homecoming','Bogeyman',{kind:'pyramid',archetype:'juggernaut',boss:true,signature:'Apparitions du Bogeyman',behavior:'Trois apparitions en cinématiques dans Homecoming, sans duel autonome.',adaptation:'Dossier de rencontre scénarisée ; ne reprend pas les combats de SH2, Downpour ou des films.',catalogueStatus:'canon-scripted-encounter',weapon:'great_knife'}),
   monster('homecoming','Sepulcher',{kind:'giant',archetype:'boss',boss:true,signature:'Frappe des racines',behavior:'Boss pendu qui écrase et frappe avec ses appendices.',stageId:'shepherds_glen',limbs:6}),
   monster('homecoming','Scarlet — Doll Form',{kind:'doll',archetype:'boss',boss:true,signature:'Danse de porcelaine',behavior:'Poupée géante, coups longs et bris de membres.',stageId:'grand_hotel'}),

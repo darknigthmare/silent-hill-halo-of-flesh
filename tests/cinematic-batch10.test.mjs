@@ -80,8 +80,8 @@ test('Harai withdraws through three continuous blade-support transfers without a
 test('the new thirty contexts preserve both prior moving exits and do not enable any of their own taunts or finishers',()=>{
   for(const id of IDS){assert.equal(lorePresentation(actor(id),'taunt').authored,false);for(const type of ['signature','nightmare'])assert.equal(cinematicSummary(id+'_'+type).authored,false);}
   assert.equal(lorePresentation(actor('sh4_richard_braintree_victim_19'),'outro').hasComposedOutro,true);assert.equal(lorePresentation(actor('homecoming_swarm'),'outro').hasComposedOutro,true);
-  assert.equal(LORE_CINEMATIC_COVERAGE.fighterIds.length,99);assert.equal(LORE_CINEMATIC_COVERAGE.recipes.length,79);assert.equal(LORE_CINEMATIC_COVERAGE.presentationOnlyIds.length,10);
-  const staticCount=ROSTER.reduce((n,f)=>n+['intro','winRound','loseRound','winMatch','loseMatch','outro','taunt'].filter(k=>lorePresentation(f,k).authored).length,0);assert.equal(staticCount,746);
+  assert.equal(LORE_CINEMATIC_COVERAGE.fighterIds.length,99);assert.equal(LORE_CINEMATIC_COVERAGE.recipes.length,79);assert.equal(LORE_CINEMATIC_COVERAGE.presentationOnlyIds.length,15);
+  const staticCount=ROSTER.reduce((n,f)=>n+['intro','winRound','loseRound','winMatch','loseMatch','outro','taunt'].filter(k=>lorePresentation(f,k).authored).length,0);assert.equal(staticCount,776);
 });
 
 function engine(id){

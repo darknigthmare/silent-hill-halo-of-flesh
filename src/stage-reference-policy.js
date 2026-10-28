@@ -14,6 +14,249 @@ const TRANSITIONS = new Set(['cedar_grove','alchemilla_origins','film_church','e
 const NARRATIVE_ONLY = new Set(['looping_hall','villa','villa_rooftop','villa_stairwell','final_sacrament','otherworld_void','anne_fight','arcade_1918','arcade_1993']);
 const STYLE = Object.freeze({sh1:'rust',sh2:'decay',sh3:'flesh',sh4:'haunting',origins:'mirror',homecoming:'rust',shattered:'ice',downpour:'storm',arcade:'rust',bom:'elemental',pt:'loop',shortmessage:'floral',shf:'shrine',film:'ash',ascension:'ritual',townfall:'signal'});
 
+const LOT11_ENVIRONMENT = Object.freeze({
+  "curtis_shop": {
+    "source": "homecoming",
+    "name": "CURTIS — COMPTOIR DE L’ATELIER",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "tools",
+      "chains",
+      "saws",
+      "machinery"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "looping_hall": {
+    "source": "pt",
+    "name": "P.T. — COULOIR ÉCLAIRÉ",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "radio",
+      "bathroom",
+      "clock",
+      "corridor",
+      "doors",
+      "ceiling-lights"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true,
+    "disabledEvents": {
+      "powerFailure": "État éclairé des vues retenues ; coupure de courant et changements des autres boucles exclus."
+    }
+  },
+  "cedar_grove": {
+    "source": "origins",
+    "name": "CEDAR GROVE — FEMALE TREATMENT",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "cells",
+      "mirrors",
+      "gurneys",
+      "ward",
+      "curtains",
+      "monitor"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "antique_shop": {
+    "source": "origins",
+    "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "flauros",
+      "altar",
+      "fire",
+      "grates",
+      "chains",
+      "industrial-depth"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "church_hc": {
+    "source": "homecoming",
+    "name": "CHURCH OF THE HOLY WAY — NEF",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "organ",
+      "altar",
+      "chains",
+      "nave",
+      "symbols"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "underground_hc": {
+    "source": "homecoming",
+    "name": "UNDERGROUND — ANTICHAMBRE DES FAMILLES",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-normal",
+    "removeProps": [
+      "webs",
+      "machines",
+      "cocoons",
+      "organic-wall",
+      "pipes",
+      "roots"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "dark_shrine_corridors": {
+    "source": "shf",
+    "name": "DARK SHRINE — AUTEL INARI",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "lanterns",
+      "runes",
+      "roots",
+      "torii",
+      "ritual-depth"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  },
+  "dark_shrine_main": {
+    "source": "shf",
+    "name": "DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "worldState": "fixed-altered",
+    "removeProps": [
+      "altar",
+      "lanterns",
+      "runes",
+      "torii",
+      "ritual-depth"
+    ],
+    "automaticFinishers": false,
+    "disableAnimations": true
+  }
+});
+const LOT11_SCENE_PRESENTATION = Object.freeze({
+  "curtis_shop": {
+    "source": "homecoming",
+    "policy": {
+      "sceneId": "junkyard-counter-first-exchange",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "DEVANT LE COMPTOIR DE L’ATELIER",
+        "description": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "normalPhaseLabel": "COMPTOIR · PREMIER ÉCHANGE"
+    }
+  },
+  "looping_hall": {
+    "source": "pt",
+    "policy": {
+      "sceneId": "lit-beige-hall-unidentified-loop",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLANCHER DU COULOIR P.T.",
+        "description": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "normalPhaseLabel": "COULOIR ÉCLAIRÉ · BOUCLE NON DATÉE"
+    }
+  },
+  "cedar_grove": {
+    "source": "origins",
+    "policy": {
+      "sceneId": "female-treatment-mirror",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "SEUIL DU MIROIR DE SOINS",
+        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR"
+    }
+  },
+  "antique_shop": {
+    "source": "origins",
+    "policy": {
+      "sceneId": "green-lion-inner-passage",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
+        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION"
+    }
+  },
+  "church_hc": {
+    "source": "homecoming",
+    "policy": {
+      "sceneId": "holy-way-main-hall-before-glass-break",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "ALLÉE DE LA NEF",
+        "description": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "normalPhaseLabel": "NEF · AVANT RUPTURE DU VITRAIL"
+    }
+  },
+  "underground_hc": {
+    "source": "homecoming",
+    "policy": {
+      "sceneId": "founding-families-antechamber",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "DEVANT LA PORTE À ANNEAUX",
+        "description": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "normalPhaseLabel": "ANTICHAMBRE · PORTE ENCORE FERMÉE"
+    }
+  },
+  "dark_shrine_corridors": {
+    "source": "shf",
+    "policy": {
+      "sceneId": "inari-altar-before-replacement",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLANCHER DEVANT L’AUTEL",
+        "description": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "alteredPhaseLabel": "AUTEL · AVANT RESTITUTION"
+    }
+  },
+  "dark_shrine_main": {
+    "source": "shf",
+    "policy": {
+      "sceneId": "first-ritual-chamber-threshold",
+      "terrainRules": false,
+      "terrainPresentation": {
+        "name": "PLANCHER DU SEUIL RITUEL",
+        "description": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      },
+      "alteredPhaseLabel": "PREMIÈRE CHAMBRE · SEUIL"
+    }
+  }
+});
+
 const LOT10_ENVIRONMENT = Object.freeze({
   "dark_shrine": {
     "weather": "none",
@@ -319,10 +562,12 @@ const ENVIRONMENT = Object.freeze({
   },
 
   ...LOT10_ENVIRONMENT,
+  ...LOT11_ENVIRONMENT,
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
 const SCENE_PRESENTATION = Object.freeze({
+  ...LOT11_SCENE_PRESENTATION,
   ...{
   "dark_shrine": {
     "source": "shf",
@@ -907,7 +1152,407 @@ const LOT10_REFERENCE_TRACKS = Object.freeze({
 });
 const LOT10_BINDINGS = Object.freeze({"dark_shrine":[["hokoraRopeSway",1,[0.27,0.46]],["hokoraShideFlutter",2,[0.27,0.46]],["hokoraRoundRest",3,[0.27,0.46]]],"hinako_home":[["residenceEntryPanel",0,[0.67,0.57]],["residenceThresholdLight",2,[0.67,0.57]],["entryRoundRest",3,[0.67,0.57]]],"shimizu_residence":[["residenceDiningDishes",0,[0.5,0.57]],["diningRoundRest",3,[0.5,0.57]]],"school_shf":[["schoolStaffChalkDust",1,[0.73,0.39]],["staffRoomRoundRest",3,[0.73,0.39]]],"corrupted_ebisugaoka":[["residenceForecourtPetals",1,[0.5,0.32]],["residenceForecourtFog",2,[0.5,0.48]],["forecourtRoundRest",3,[0.5,0.48]]],"nightmare_school":[["midwichCourtyardIcePane",0,[0.64,0.49]],["midwichCourtyardColdBeam",1,[0.64,0.49]],["courtyardRoundRest",3,[0.64,0.49]]],"nightmare_hospital_sm":[["alchemillaERColdWall",2,[0.67,0.45]],["erRoundRest",3,[0.67,0.45]]],"nightmare_mall_sm":[["tolucaGumballFrostSign",0,[0.3,0.34]],["gumballRoundRest",3,[0.3,0.34]]],"book_fire":[["fireGrateRoundRest",3,[0.5,0.55]]],"book_wood":[["woodClearingRoundRest",3,[0.5,0.57]]],"book_earth":[["earthGalleryRoundRest",3,[0.5,0.6]]],"book_blood":[["bloodPlatformRoundRest",3,[0.5,0.59]]],"film_church":[["naveRoundRest",3,[0.5,0.57]]],"film_hospital":[["alessaRoomRoundRest",3,[0.68,0.57]]],"nightmare_hospital_hc":[["clinicalDreamRoundRest",3,[0.76,0.57]]],"police_station_hc":[["policeCellRoundRest",3,[0.35,0.57]]],"prison_hc":[["cellBlockBRoundRest",3,[0.68,0.57]]],"grand_hotel":[["atriumRoundRest",3,[0.69,0.45]]]});
 
+const LOT11_REFERENCE_TRACKS = Object.freeze({
+  "curtisCounterClock": {
+    "name": "Pendule et livres du comptoir",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "curtis_shop",
+    "source": "homecoming",
+    "sceneId": "junkyard-counter-first-exchange",
+    "locationScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+    "limits": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée."
+  },
+  "curtisWindowSlits": {
+    "name": "Fenêtre à planches de l’atelier",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "curtis_shop",
+    "source": "homecoming",
+    "sceneId": "junkyard-counter-first-exchange",
+    "locationScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+    "limits": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée."
+  },
+  "ptHangingLantern": {
+    "name": "Lanterne du second tronçon éclairé",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "looping_hall",
+    "source": "pt",
+    "sceneId": "lit-beige-hall-unidentified-loop",
+    "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+    "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+  },
+  "ptRadioCabinet": {
+    "name": "Poste radio et meuble du couloir éclairé",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "looping_hall",
+    "source": "pt",
+    "sceneId": "lit-beige-hall-unidentified-loop",
+    "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+    "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+  },
+  "ptBackDoorLight": {
+    "name": "Porte fermée du second tronçon",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "looping_hall",
+    "source": "pt",
+    "sceneId": "lit-beige-hall-unidentified-loop",
+    "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+    "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+  },
+  "treatmentMirrorVeil": {
+    "name": "Reflet contenu dans le miroir de soins",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "cedar_grove",
+    "source": "origins",
+    "sceneId": "female-treatment-mirror",
+    "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
+    "limits": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
+  },
+  "greenLionPassageDust": {
+    "name": "Poussière au bord du passage intérieur",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "antique_shop",
+    "source": "origins",
+    "sceneId": "green-lion-inner-passage",
+    "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+    "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+  },
+  "flaurosCoreShade": {
+    "name": "Ombre du volume géométrique assemblé",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "antique_shop",
+    "source": "origins",
+    "sceneId": "green-lion-inner-passage",
+    "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+    "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+  },
+  "greenLionWallGlint": {
+    "name": "Lueur contenue du passage final",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "antique_shop",
+    "source": "origins",
+    "sceneId": "green-lion-inner-passage",
+    "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+    "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+  },
+  "holyWayCandleRow": {
+    "name": "Cierges de la nef de Holy Way",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "church_hc",
+    "source": "homecoming",
+    "sceneId": "holy-way-main-hall-before-glass-break",
+    "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+    "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+  },
+  "holyWayGlassLight": {
+    "name": "Lumière du vitrage de Holy Way",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "church_hc",
+    "source": "homecoming",
+    "sceneId": "holy-way-main-hall-before-glass-break",
+    "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+    "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+  },
+  "holyWayOrganPanel": {
+    "name": "Panneau de l’orgue à cinq logements",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "church_hc",
+    "source": "homecoming",
+    "sceneId": "holy-way-main-hall-before-glass-break",
+    "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+    "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+  },
+  "foundersTabletLight": {
+    "name": "Quatre tablettes couvertes de l’antichambre",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "sceneId": "founding-families-antechamber",
+    "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+    "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+  },
+  "foundersDoorRings": {
+    "name": "Deux anneaux de la porte encore fermée",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "sceneId": "founding-families-antechamber",
+    "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+    "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+  },
+  "foundersDaggerColumns": {
+    "name": "Colonnes des verrous cérémoniels",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "sceneId": "founding-families-antechamber",
+    "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+    "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+  },
+  "inariAltarCandles": {
+    "name": "Cierges du petit autel Inari",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_corridors",
+    "source": "shf",
+    "sceneId": "inari-altar-before-replacement",
+    "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+    "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+  },
+  "inariAltarRedGlint": {
+    "name": "Reflet rouge contenu au meuble de l’autel",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_corridors",
+    "source": "shf",
+    "sceneId": "inari-altar-before-replacement",
+    "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+    "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+  },
+  "inariAltarWoodLight": {
+    "name": "Reflet sur les boiseries de l’autel",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_corridors",
+    "source": "shf",
+    "sceneId": "inari-altar-before-replacement",
+    "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+    "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+  },
+  "ritualThresholdBraziers": {
+    "name": "Braseros du premier seuil rituel",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_main",
+    "source": "shf",
+    "sceneId": "first-ritual-chamber-threshold",
+    "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+    "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+  },
+  "ritualThresholdPanels": {
+    "name": "Panneaux du premier seuil rituel",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_main",
+    "source": "shf",
+    "sceneId": "first-ritual-chamber-threshold",
+    "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+    "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+  },
+  "ritualThresholdDoorGlint": {
+    "name": "Lueur sur la porte rituelle fermée",
+    "layer": "background",
+    "replaces": [],
+    "stageId": "dark_shrine_main",
+    "source": "shf",
+    "sceneId": "first-ritual-chamber-threshold",
+    "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+    "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+  }
+});
+const LOT11_BINDINGS = Object.freeze({
+  "curtis_shop": [
+    [
+      "curtisCounterClock",
+      1,
+      [
+        0.45,
+        0.54
+      ]
+    ],
+    [
+      "curtisWindowSlits",
+      2,
+      [
+        0.8,
+        0.32
+      ]
+    ]
+  ],
+  "looping_hall": [
+    [
+      "ptHangingLantern",
+      0,
+      [
+        0.48,
+        0.25
+      ]
+    ],
+    [
+      "ptRadioCabinet",
+      1,
+      [
+        0.77,
+        0.55
+      ]
+    ],
+    [
+      "ptBackDoorLight",
+      2,
+      [
+        0.5,
+        0.57
+      ]
+    ]
+  ],
+  "cedar_grove": [
+    [
+      "treatmentMirrorVeil",
+      1,
+      [
+        0.66,
+        0.4
+      ]
+    ]
+  ],
+  "antique_shop": [
+    [
+      "greenLionPassageDust",
+      0,
+      [
+        0.25,
+        0.45
+      ]
+    ],
+    [
+      "flaurosCoreShade",
+      1,
+      [
+        0.68,
+        0.48
+      ]
+    ],
+    [
+      "greenLionWallGlint",
+      2,
+      [
+        0.68,
+        0.35
+      ]
+    ]
+  ],
+  "church_hc": [
+    [
+      "holyWayCandleRow",
+      0,
+      [
+        0.5,
+        0.55
+      ]
+    ],
+    [
+      "holyWayGlassLight",
+      1,
+      [
+        0.72,
+        0.29
+      ]
+    ],
+    [
+      "holyWayOrganPanel",
+      2,
+      [
+        0.5,
+        0.43
+      ]
+    ]
+  ],
+  "underground_hc": [
+    [
+      "foundersTabletLight",
+      0,
+      [
+        0.5,
+        0.39
+      ]
+    ],
+    [
+      "foundersDoorRings",
+      1,
+      [
+        0.5,
+        0.43
+      ]
+    ],
+    [
+      "foundersDaggerColumns",
+      2,
+      [
+        0.5,
+        0.47
+      ]
+    ]
+  ],
+  "dark_shrine_corridors": [
+    [
+      "inariAltarRedGlint",
+      1,
+      [
+        0.6,
+        0.39
+      ]
+    ],
+    [
+      "inariAltarWoodLight",
+      2,
+      [
+        0.3,
+        0.36
+      ]
+    ],
+    [
+      "inariAltarCandles",
+      0,
+      [
+        0.6,
+        0.49
+      ]
+    ]
+  ],
+  "dark_shrine_main": [
+    [
+      "ritualThresholdBraziers",
+      0,
+      [
+        0.5,
+        0.52
+      ]
+    ],
+    [
+      "ritualThresholdPanels",
+      1,
+      [
+        0.5,
+        0.34
+      ]
+    ],
+    [
+      "ritualThresholdDoorGlint",
+      2,
+      [
+        0.5,
+        0.4
+      ]
+    ]
+  ]
+});
+
 export const STAGE_REFERENCE_TRACKS = Object.freeze({
+  ...LOT11_REFERENCE_TRACKS,
   ...LOT10_REFERENCE_TRACKS,
   ...LOT9_REFERENCE_TRACKS,
   fogLayers: {name:'Nappes de brume à deux vitesses',layer:'background',replaces:['fogDrift']},
@@ -1005,7 +1650,6 @@ const BINDINGS = Object.freeze({
   alchemilla_origins:[['curtainBreathe',2,[.3,.39]]],
   artaud_theater:[['curtainBreathe',1,[.21,.3]],['artaudSpotlightGlide',2,[.5,.43]]],
   police_station_hc:[['lampReply',0,[.53,.3]]],
-  curtis_shop:[['chainPendulum',0,[.71,.25]]],
   frozen_streets:[['snowDepth',0,[.5,.45]]],
   centennial_building:[['dustDrift',1,[.52,.39]],['paperFlutter',0,[.3,.6]]],
   st_marias:[['curtainBreathe',0,[.28,.36]]],
@@ -1055,11 +1699,15 @@ export function stageReferenceHazardAllowed(stage, id) {
 export function stageReferenceTrackAllowed(stage, track) {
   const definition=STAGE_REFERENCE_TRACKS[track?.key];
   if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
+  const selectedScene=LOT11_SCENE_PRESENTATION[stage?.id];
+  if(selectedScene?.source===stage?.source&&stage.referencePolicy?.sceneId===selectedScene.policy.sceneId&&
+    !(LOT11_BINDINGS[stage.id]||[]).some(([key,index])=>key===track.key&&index===track.proposalIndex))return false;
   if(!definition.stageId)return true;
   return stage?.id===definition.stageId&&stage?.source===definition.source&&track.source===definition.source&&
     (!definition.trigger||track.trigger===definition.trigger)&&
+    (!definition.sceneId||stage.referencePolicy?.sceneId===definition.sceneId)&&
     track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`&&
-    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
+    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[]),...(LOT11_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;
@@ -1130,7 +1778,7 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || []),...(LOT10_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
+  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || []),...(LOT10_BINDINGS[stage.id] || []),...(LOT11_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,

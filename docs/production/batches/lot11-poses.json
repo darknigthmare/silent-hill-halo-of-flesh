@@ -1,0 +1,618 @@
+{
+  "schema": 1,
+  "batch": "lot11",
+  "workstream": "poses",
+  "baseCommit": "7b9980d102dc2db385445bc20e4172c1113dda2b",
+  "requestedItems": 30,
+  "documentationOnly": true,
+  "poseImagesProduced": 0,
+  "sourceTimingsMeasured": 0,
+  "certifiedOneToOne": 0,
+  "existingFixedIdleCandidatesCountedAsNewImages": false,
+  "sourceReview": {
+    "consultedAt": "2026-10-28",
+    "archive": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/",
+    "sources": [
+      {
+        "referenceId": "CL_SH1_ENEMIES",
+        "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "status": 200,
+        "sha256": "a2104860a497d58024d8d15ce5d17d87e92f166dace9a2a07f10db31c995e0a7",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/cl_sh1_enemies.html"
+      },
+      {
+        "referenceId": "CL_SH1_CREATURES",
+        "url": "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm",
+        "status": 200,
+        "sha256": "b3c234bbb57d844f68a3e6c586d9555b184336a3704ab6b680ba79b126d1f979",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/cl_sh1_creatures.html"
+      },
+      {
+        "referenceId": "CL_SH2_ENEMIES",
+        "url": "https://www.silenthillmemories.net/sh2/enemies_en.htm",
+        "status": 200,
+        "sha256": "4849e62a41c32f1c3463ed791770990cac10a7096349520a67fb517c6d0a297c",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/cl_sh2_enemies.html"
+      },
+      {
+        "referenceId": "CL_SH2_CREATURES",
+        "url": "https://www.silenthillmemories.net/lost_memories/guide/048-049_en.htm",
+        "status": 200,
+        "sha256": "ef3673b044ab3d4bf726365f3305748fa28c6ec1f278bc5768cbf83de09fead8",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/cl_sh2_creatures.html"
+      }
+    ],
+    "visualReferences": [
+      {
+        "url": "https://www.silenthillmemories.net/sh1/creatures/night_flutter.png",
+        "status": 200,
+        "sha256": "82871b44a08e7b198ef79e939f780ac960e02a95fd75051eba1105b4a9a08102",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh1-night_flutter.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/sh1/creatures/mumbler.png",
+        "status": 200,
+        "sha256": "1cd5637c43b9330f00b7d92b974ef4c9d0209be45bd30769c2de8b4d068c843e",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh1-mumbler.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_nurse.png",
+        "status": 200,
+        "sha256": "d8c4b98a3030d1eba0615d48570b10cef68122a26073534a89d765e440a4e563",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh1-puppet_nurse.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/sh1/creatures/puppet_doctor.png",
+        "status": 200,
+        "sha256": "7e59b3028957aa3cc646c333931a102347ca8288ab05024f7ac75e2ed791a0b9",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh1-puppet_doctor.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/sh2/creatures/lying_figure.png",
+        "status": 200,
+        "sha256": "6ec8d10e387f0e9fdab0603ea411087f230b01355eb7fab8af139ec5910ff2af",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh2-lying_figure.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/sh2/creatures/creeper.png",
+        "status": 200,
+        "sha256": "27796638661288550c224d2fe5b6f03aab5dd193078b0f36c728a47476a580bb",
+        "path": "/workspace/shared/halo-of-flesh/references/lot11-poses-2026-10-28/sh2-creeper.png",
+        "limit": "Static model republished by a specialist guide; body and equipment view only, build and original animation not certified."
+      }
+    ],
+    "limitations": "Four specialist-guide pages and six republished static model views. All six images viewed directly; exact build, opposite side, animation timing and full source pose cycles remain unverified. Existing fixed idle candidates do not close these documentary cycle and transition briefs."
+  },
+  "items": [
+    {
+      "rowId": "sh1_night_flutter_002:pose:idle",
+      "collection": "poses",
+      "entityId": "sh1_night_flutter_002",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Night Flutter SH1 : cadrer le corps entier avec tête vermiforme, deux ailes membraneuses et deux pattes, en conservant les extrémités dans l’image de combat 2D. Distinguer attente aérienne et attente debout aux ailes repliées ; le modèle fixe publié montre une posture au sol, pas toute une boucle. Garder la peau sombre de cette identité sans reprendre la tête nue d’Air Screamer. La marge autour du corps est un choix de cadrage du projet, pas une mesure source. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "limits": "Le PNG idle candidat existant ne fournit pas la boucle d’attente ni ses raccords ; orientation, respiration et battements restent à relever. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_night_flutter_002:pose:walk",
+      "collection": "poses",
+      "entityId": "sh1_night_flutter_002",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Night Flutter SH1 : relever séparément translation aérienne et progression sur les deux pattes au sol, en cadrant ailes, tête couverte de vers et pieds en entier. Ne pas convertir les ailes en bras de boxeur ni employer une alternance humaine en vol. Le piqué et le coup de tête sont des attaques, pas des images de marche. La vitesse qualitativement supérieure à Air Screamer ne donne ni multiplicateur officiel ni cycle interchangeable entre espèces. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "limits": "Deux supports sont documentés ; alternance des pattes, battement, hauteur et vitesse originale ne sont ni mesurés ni produits. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_night_flutter_002:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh1_night_flutter_002",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Night Flutter SH1 : préparer l’impact depuis l’état aérien ou debout en conservant tout le corps, les deux ailes et les pattes. Relever une éventuelle perte d’altitude avant de placer les pieds au sol ; ne pas téléporter un corps suspendu sur sa ligne d’appui. La tête vermiforme reste attachée, sans détacher les vers pour fabriquer un projectile. Une réaction hurt du versus doit être comparée à la capture propre à Night Flutter, pas à un recoloriage d’Air Screamer. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "limits": "Atteinte et mise au sol sont documentées ; angle de recul, arrêt du vol et reprise après chaque arme restent à capturer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_night_flutter_002:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh1_night_flutter_002",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Night Flutter SH1 : séparer perte de portance, réception et corps au sol, avec ailes repliées ou étendues uniquement selon la vue relevée. Garder le corps entier, les deux pattes et la tête couverte de vers sans les masquer par une rotation du PNG idle. Le coup d’achèvement après la chute ne doit pas devenir une mort automatique à chaque knockdown du versus. Relever le contact des ailes et du torse avant de composer une récupération. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "limits": "État abattu et achèvement documentés ; côté de réception, durée au sol et retour aérien récupérable ne sont pas établis. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_night_flutter_002:pose:phase",
+      "collection": "poses",
+      "entityId": "sh1_night_flutter_002",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Night Flutter SH1 : le slot phase conserve le même corps entier sombre à tête vermiforme entre attente, progression et éventuel changement de support. Sa présence dans le cauchemar ne prouve pas qu’Air Screamer se transforme sous les yeux du joueur ; ne pas substituer une tête ou une peau d’une autre fiche. Une réaction à la lumière ne devient pas une attaque lumineuse, et un seuil de santé du versus ne certifie aucune métamorphose originale. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_NIGHT_FLUTTER_MODEL_20261026"
+      ],
+      "limits": "Contexte de cauchemar et sensibilité à la lumière attestés ; raccord sol/vol et éventuel changement de comportement restent à relever. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_mumbler_006:pose:idle",
+      "collection": "poses",
+      "entityId": "sh1_mumbler_006",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Mumbler SH1 : cadrer le corps entier, de la petite tête au sommet du tronc jusqu’aux deux pieds et aux longues griffes des deux mains. Garder son volume ramassé et son absence de cou visible, sans lui donner un couteau de Grey Child ou une garde humaine redressée. La vue de combat 2D doit laisser une marge autour des griffes et conserver les membres éloignés réellement visibles ; leur face cachée reste à documenter. Le modèle fixe ne fournit pas une respiration complète. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "limits": "Anatomie et petites proportions documentées qualitativement ; nombre exact de doigts cachés, pose opposée et boucle idle restent ouverts. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_mumbler_006:pose:walk",
+      "collection": "poses",
+      "entityId": "sh1_mumbler_006",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Mumbler SH1 : relever la marche lente sur ses deux jambes avec continuité des longues griffes et du petit sommet de tête. Conserver le corps entier dans le cadre de combat 2D sans agrandir les jambes pour obtenir une démarche de personnage humain. Le plongeon vers les pieds de Harry est une attaque séparée, pas tout le cycle walk. Distinguer appui, transfert de masse et retour du pied en attendant les captures de l’édition retenue. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "limits": "Marche lente attestée sans coefficient, nombre d’images ou ordre d’appuis mesuré ; aucune locomotion nouvelle n’est produite. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_mumbler_006:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh1_mumbler_006",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Mumbler SH1 : conserver petite tête, tronc et deux mains griffues pendant l’impact, avec le corps entier et les pieds encore lisibles. Identifier séparément recul pendant la marche, arrêt d’une griffure et interruption du plongeon ; une image droite ne doit pas effacer un corps déjà engagé vers le sol. Ne pas remplacer une main par un couteau de Grey Child ni donner une posture de garde aux poings. Le hitstun du moteur ne certifie pas l’amplitude originale. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "limits": "Atteinte possible et anatomie attestées ; ordre des articulations, déplacement subi et récupération par arme restent à capturer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_mumbler_006:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh1_mumbler_006",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Mumbler SH1 : relever la réception du petit corps en gardant les griffes et les deux pieds dans l’image entière, sans étendre artificiellement le cou ou détacher les mains. La même silhouette doit relier réaction, contact au sol et éventuelle reprise du versus. Le plongeon offensif qui saisit les pieds de Harry ne doit pas servir de chute subie par défaut. Une pose finale d’ennemi tué ne prouve pas comment ce corps se relève pour une nouvelle manche. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "limits": "La défaite par les armes est documentée ; chute précise, contacts au sol et redressement récupérable ne sont pas mesurés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_mumbler_006:pose:phase",
+      "collection": "poses",
+      "entityId": "sh1_mumbler_006",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Mumbler SH1 : conserver le corps entier griffu de la même fiche pendant tout raccord de phase. Le remplacement régional de Grey Child est une différence d’édition, pas une métamorphose en cours de duel ; ni couteau ni silhouette de Grey Child ne doit apparaître après un seuil de santé. Identifier l’édition et la rencontre avant de produire l’entrée ou la sortie. Les variations de vitesse du versus ne deviennent pas une seconde forme originale. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "limits": "Répartition régionale attestée ; édition de capture à fixer, aucune transformation temporelle ou nouvelle anatomie n’est validée. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:pose:idle",
+      "collection": "poses",
+      "entityId": "sh1_puppet_nurse_012",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Nurse SH1 : cadrer le corps entier voûté, les deux pieds, les deux mains, le petit couteau et la masse parasitaire dorsale. Préserver uniforme et coiffure de la variante relevée, sans injecter le tube de Bubble Head Nurse SH2, le revolver SH3 ou un visage de Nurse du film. La garde de combat 2D doit partir de sa posture parasitée naturelle ; ne pas la redresser en combattante humaine générique. Le couteau reste dans la même main porteuse sur les raccords documentés. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "limits": "Uniforme, parasite et couteau attestés ; variante exacte, côté armé et boucle d’attente demandent une capture plutôt qu’un portrait fixe. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:pose:walk",
+      "collection": "poses",
+      "entityId": "sh1_puppet_nurse_012",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Nurse SH1 : relever les appuis des deux jambes sous le corps voûté et la continuité du parasite quand elle approche, avec couteau et extrémités dans le cadre entier. Ne pas importer la marche de Puppet Doctor ni choisir une vitesse chiffrée depuis la seule couleur de robe. L’autre main peut préparer la saisie uniquement quand la capture la montre ; le coup de couteau reste une attaque distincte de walk. La vue opposée doit conserver l’arme, pas inverser silencieusement sa main. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "limits": "Approche et variantes qualitatives documentées ; cadence, pied directeur et oscillation du parasite ne sont pas relevés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh1_puppet_nurse_012",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Nurse SH1 : suivre la réaction de tout le corps parasité, uniforme et couteau compris, sans détacher le parasite ni l’utiliser comme un bouclier inventé. Relever quelle jambe porte le recul et comment la main de saisie revient après interruption. Une Nurse tenue par une chorégraphie du versus ne change pas en Puppet Doctor ; l’arme ne disparaît pas pour permettre une pose de boxe. Conserver l’extrémité du couteau dans le cadre de l’impact. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "limits": "Atteinte et mise au sol possibles ; mouvement du parasite, interruption de prise et devenir du couteau après chaque arme restent à observer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh1_puppet_nurse_012",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Nurse SH1 : relever chute, contact au sol et éventuelle reprise en conservant corps entier, masse dorsale, uniforme et couteau. Déterminer dans la capture le côté de réception et l’état de la main armée au lieu de retourner l’image idle ou de masquer le dos hors écran. Une mise à terre récupérable de manche n’est pas une extraction du parasite ni une mort définitive automatique. Le relèvement du versus demande un raccord propre si la source ne le montre pas. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "limits": "Mise à terre documentée ; appuis de réception, position de l’arme au sol et récupération complète ne sont pas mesurés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_nurse_012:pose:phase",
+      "collection": "poses",
+      "entityId": "sh1_puppet_nurse_012",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Nurse SH1 : garder la même variante entière d’uniforme, coiffure, parasite et couteau pendant les phases d’un duel. Une autre robe ou coiffure représente un choix de variante à documenter, pas un changement automatique à faible santé. Ne pas retirer le parasite pour prétendre rendre la Nurse humaine, ni lui donner le tube, revolver ou scalpel d’une autre œuvre. L’entrée, la reprise et la sortie doivent raccorder sa posture voûtée sans nouvelle métamorphose. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_NURSE_MODEL_20261026"
+      ],
+      "limits": "Variantes et parasitisme attestés ; aucune extraction, guérison, nouvelle arme ou transformation temporelle n’est validée par cette référence. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:pose:idle",
+      "collection": "poses",
+      "entityId": "sh1_puppet_doctor_013",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Doctor SH1 : cadrer le corps entier voûté avec deux jambes, deux mains, couteau et parasite dorsal, en gardant les extrémités dans la vue de combat 2D. Retenir la tenue et le corps masculins de cette fiche, sans recolorier Puppet Nurse ni importer un médecin de Brookhaven SH2 ou un film. Le modèle publié montre un geste armé, pas une boucle de repos ; relever une attente distincte avant d’en composer les raccords. Garder la même main porteuse documentée. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "limits": "Identité SH1, tenue, parasite et couteau attestés ; repos naturel, main opposée masquée et boucle complète restent à relever. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:pose:walk",
+      "collection": "poses",
+      "entityId": "sh1_puppet_doctor_013",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Doctor SH1 : relever l’approche sur ses deux jambes sous le torse voûté, en conservant tout le corps, le parasite et le couteau dans le cadre. Une agressivité qualitative ne fournit ni vitesse chiffrée ni autorisation d’accélérer une animation de Nurse. Garder la continuité de la tenue et des appuis pendant la translation 2D ; l’attaque au couteau et la main qui attrape Harry ne sont pas des images de marche interchangeables. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "limits": "Approche et agressivité décrites sans cadence officielle ; cycle de pas, posture au repos et mouvement du dos restent à capturer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh1_puppet_doctor_013",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Doctor SH1 : construire la réaction d’impact sur le corps entier parasité en préservant couteau, tenue et dos, sans fabriquer une armure depuis sa robustesse relative. Distinguer interruption d’un coup levé, rupture de saisie et simple recul avant l’attaque. La main armée suit le même raccord plutôt que changer de côté au changement d’orientation ; la caméra doit garder lame et pieds visibles. Une réaction de Nurse ne remplace pas la capture de ce Doctor. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "limits": "Atteinte et robustesse qualitative attestées ; angles articulaires, réponse par arme et reprise d’une prise interrompue ne sont pas relevés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh1_puppet_doctor_013",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Doctor SH1 : relever la chute du même corps entier, en gardant parasite, costume, mains et couteau attachés selon les images originales. Identifier la réception de l’épaule, du dos ou des genoux sans choisir un côté depuis le modèle fixe. L’état au sol ne donne pas un nouveau Doctor sans parasite, et une reprise de manche du versus n’autorise pas une résurrection présentée comme scène canonique. Le couteau ne devient pas un projectile à la chute. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "limits": "Défaite par les armes documentée ; contacts de réception, tenue au sol et redressement récupérable restent à produire sur capture. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh1_puppet_doctor_013:pose:phase",
+      "collection": "poses",
+      "entityId": "sh1_puppet_doctor_013",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Puppet Doctor SH1 : maintenir le corps entier et l’identité du Doctor entre attente, approche et sortie. Une différence de force face à Puppet Nurse ne prouve pas une transformation de Nurse en Doctor à faible santé. Conserver parasite dorsal, tenue et couteau, sans importer la protection ou les armes d’une autre œuvre. Les changements de posture autorisés doivent avoir un raccord relevé ; disparition du parasite ou changement de sexe ne remplit pas ce slot phase. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES",
+        "EXT10_REF_PUPPET_DOCTOR_MODEL_20261026"
+      ],
+      "limits": "Type distinct propre à SH1 attesté ; aucune métamorphose anatomique, extraction de parasite ou nouvelle phase de boss n’est documentée. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_lying_figure_020:pose:idle",
+      "collection": "poses",
+      "entityId": "sh2_lying_figure_020",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Lying Figure020 SH2 original : cadrer le corps entier avec ses deux jambes et l’enveloppe charnelle qui emprisonne les bras, sans mains libérées ni garde de boxeur. Relever une attente debout propre à020 ; la vue publiée agenouillée ne certifie pas cette boucle. Ne pas ajouter les bottes rouges d’un dessin préparatoire ou une bouche ouverte conçue autrement au remake. Préserver silhouette et appuis visibles pour la vue de combat 2D, sans employer le portrait comme corps complet animé. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Enveloppe des bras et états debout/au sol attestés ; attente exacte de020, vue latérale et boucle entière restent à capturer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_lying_figure_020:pose:walk",
+      "collection": "poses",
+      "entityId": "sh2_lying_figure_020",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Lying Figure020 SH2 original : relever la progression debout sur les deux jambes avec les bras toujours emprisonnés, corps entier et pieds dans le cadre. Distinguer ce cycle de la course rampante associée à la fiche021 sans changer silencieusement d’identité ou d’image en plein déplacement. La projection jaunâtre est une attaque séparée de walk. Une translation du PNG idle ne fournit ni transfert de masse ni séquence de pas, et ne libère pas de mains d’appui. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Deux états de locomotion sont décrits pour l’espèce ; cycle debout propre à020, cadence et raccord vers le rampement restent à relever. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_lying_figure_020:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh2_lying_figure_020",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Lying Figure020 SH2 original : conserver le corps entier et les bras contenus sous la chair pendant l’impact. Relever perte d’équilibre et pli des jambes avant de passer à une position au sol ; ne pas sortir des bras pour fabriquer une réception humaine. Séparer l’interruption de projection, le recul debout et l’entrée éventuelle dans le rampement. Le hitstun du versus n’établit pas la durée de cette transition ni une animation identique au remake. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Atteinte, chute et possibilité de reprise sont documentées ; gestes, orientations et délai de récupération par arme restent non mesurés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_lying_figure_020:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh2_lying_figure_020",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Lying Figure020 SH2 original : relever la réception du torse enveloppé et des deux jambes en gardant le corps entier et les bras prisonniers, sans mains ajoutées au sol. Distinguer chute récupérable, déplacement rampant possible et achèvement définitif. La fiche021 peut décrire l’état rampant, mais le slot knockdown de020 ne doit pas remplacer son propriétaire ni prouver une transformation en une autre œuvre. Prévoir des raccords différents vers redressement, rampement et fin définitive. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Rampement et relèvement possibles après chute ; ordre des appuis, choix de branche et images de récupération originale restent à capturer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_lying_figure_020:pose:phase",
+      "collection": "poses",
+      "entityId": "sh2_lying_figure_020",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Lying Figure020 SH2 original : spécifier le raccord continu entre corps entier debout, réception au sol et éventuel retour sur les deux jambes, avec les bras toujours contenus. Ne pas importer les bottes rouges ou la bouche d’un rough sketch pour créer une seconde phase, ni emprunter la chair et les attaques d’un film ou du remake. La séparation des fiches020/021 dans le versus doit rester visible dans le suivi, sans prétendre qu’un seuil de vie original commande cet échange. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "États et reprise possibles attestés ; transition exacte, seuil éventuel et animation source complète ne sont pas relevés. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_creeper_025:pose:idle",
+      "collection": "poses",
+      "entityId": "sh2_creeper_025",
+      "pose": "idle",
+      "status": "specified",
+      "field": "description",
+      "description": "Creeper025 SH2 original : cadrer l’insecte entier, ses six pattes et ses antennes, en conservant son échelle qualitative de chaussure plutôt que celle d’un humain. Relever une attente basse naturelle depuis une vue latérale de combat 2D ; la vue dorsale du guide ne mesure pas sa hauteur ni l’implantation des pattes cachées. Ne pas reprendre le Creeper géant jaune et rouge de SH1 ni le grouillement du film pour remplir le corps. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Six extrémités, teinte et petite taille qualitatives attestées ; profil latéral, appuis et boucle d’attente restent à relever. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_creeper_025:pose:walk",
+      "collection": "poses",
+      "entityId": "sh2_creeper_025",
+      "pose": "walk",
+      "status": "specified",
+      "field": "description",
+      "description": "Creeper025 SH2 original : relever la progression rapide sur six pattes, avec corps bas et antennes solidaires dans le cadre entier. Distinguer déplacement et morsure au pied sans inventer un saut humain, un vol ou des bras de prise. L’ordre des contacts doit venir d’une capture, pas d’un cycle de marche de cafard générique ; la vitesse qualitative du commentaire ne donne aucun chiffre officiel. L’échelle reste distincte du Creeper009 SH1. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Course basse attestée ; coordination des six appuis, cadence et hauteur de silhouette latérale ne sont pas mesurées. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_creeper_025:pose:hurt",
+      "collection": "poses",
+      "entityId": "sh2_creeper_025",
+      "pose": "hurt",
+      "status": "specified",
+      "field": "description",
+      "description": "Creeper025 SH2 original : relever l’impact sur l’insecte entier en préservant six pattes, antennes et abdomen, sans l’étirer pour rendre le hitstun plus lisible. La faible taille n’autorise pas à couper le corps par la caméra ou à remplacer hurt par une icône. Ne pas supposer une envolée, un retournement sur le dos ou un saut après chaque tir : ces mouvements attendent leur capture. Une morsure interrompue ne devient pas une prise de jambe. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Atteinte par les armes attestée ; recul, orientation du corps et durée d’une réaction survivable restent à observer. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_creeper_025:pose:knockdown",
+      "collection": "poses",
+      "entityId": "sh2_creeper_025",
+      "pose": "knockdown",
+      "status": "specified",
+      "field": "description",
+      "description": "Creeper025 SH2 original : distinguer insecte atteint au sol, éventuel coup final et écrasement au talon, en cadrant les six pattes et les antennes entières tant qu’elles sont présentes. Une animation d’écrasement terminale ne fournit pas un relèvement de manche ; ne pas ressusciter un corps écrasé pour certifier knockdown. Le versus doit qualifier sa récupération si aucune chute récupérable source n’est relevée, sans réutiliser un PNG idle retourné. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Achèvement et écrasement documentés ; posture survivable, contacts au sol et récupération de versus restent à produire séparément. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    },
+    {
+      "rowId": "sh2_creeper_025:pose:phase",
+      "collection": "poses",
+      "entityId": "sh2_creeper_025",
+      "pose": "phase",
+      "status": "specified",
+      "field": "description",
+      "description": "Creeper025 SH2 original : conserver le même insecte entier à six pattes entre attente, course et sortie. Sa réapparition dans un autre jeu n’est pas une phase qui agrandit le CreeperSH2 en varianteSH1 ni le multiplie en essaim filmique à faible santé. Ne pas importer une sensibilité lumineuse depuis le commentaire SH1 pour lui donner un pouvoir. Les changements de posture du versus demandent leurs propres raccords tout en gardant antennes et petite échelle. Spécification documentaire à produire et comparer sur capture : aucune nouvelle image, animation, durée originale ou certification 1:1 livrée.",
+      "artifacts": [
+        "scripts/source-pose-specifications.mjs"
+      ],
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "limits": "Identité d’insecte récurrent documentée ; aucune mue, métamorphose, duplication ou nouvelle phase originale n’est attestée. Spécification documentaire, sans nouvelle image ni clip, cadence source ou certification 1:1 ; le PNG idle fixe déjà présent ne constitue pas une nouvelle production."
+    }
+  ]
+}

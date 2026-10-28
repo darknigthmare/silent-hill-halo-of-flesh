@@ -1,0 +1,710 @@
+{
+  "schema": 1,
+  "batch": "lot11",
+  "workstream": "stages",
+  "baseCommit": "7b9980d102dc2db385445bc20e4172c1113dda2b",
+  "requestedItems": 30,
+  "items": [
+    {
+      "rowId": "curtis_shop:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "curtis_shop",
+      "status": "implemented-candidate",
+      "runtimeKey": "curtisCounterClock",
+      "trigger": "ambient",
+      "sourceScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+      "originalName": "CURTIS’S JUNKYARD WORKSHOP",
+      "originalProposal": "Tremblement d’ampoule sur établi",
+      "revisedProposal": "La pendule ronde et les livres restent sur le comptoir de l’échange initial ; une variation de reflet remplace l’ampoule non attestée.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Pendule et livres du comptoir",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_095.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "curtis_shop:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "curtis_shop",
+      "status": "implemented-candidate",
+      "runtimeKey": "curtisWindowSlits",
+      "trigger": "ambient",
+      "sourceScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+      "originalName": "CURTIS’S JUNKYARD WORKSHOP",
+      "originalProposal": "Rotation résiduelle d’un outil coupé",
+      "revisedProposal": "La lumière traverse les interstices des planches devant la fenêtre ; aucun outil en rotation ni scie circulaire transférée du combat Underground.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Fenêtre à planches de l’atelier",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_095.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "looping_hall:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "looping_hall",
+      "status": "implemented-candidate",
+      "runtimeKey": "ptHangingLantern",
+      "trigger": "ambient",
+      "sourceScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+      "originalName": "204863 — LOOPING HALL",
+      "originalProposal": "Balancement de l’ampoule",
+      "revisedProposal": "La lanterne suspendue du second tronçon reçoit une oscillation très faible ; cadence et angle du versus, sans extinction de boucle.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Lanterne du second tronçon éclairé",
+      "evidence": [
+        "https://www.silenthillmemories.net/silent_hills/screens_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_02.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_03.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_04.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "looping_hall:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "looping_hall",
+      "status": "implemented-candidate",
+      "runtimeKey": "ptRadioCabinet",
+      "trigger": "ambient",
+      "sourceScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+      "originalName": "204863 — LOOPING HALL",
+      "originalProposal": "Téléphone qui vibre avant un appel",
+      "revisedProposal": "Le poste RADIO visible sur le meuble garde son boîtier fixe ; une variation de reflet remplace le téléphone vibrant non confirmé dans ce cadrage.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Poste radio et meuble du couloir éclairé",
+      "evidence": [
+        "https://www.silenthillmemories.net/silent_hills/screens_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_02.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_03.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_04.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "looping_hall:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "looping_hall",
+      "status": "implemented-candidate",
+      "runtimeKey": "ptBackDoorLight",
+      "trigger": "ambient",
+      "sourceScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+      "originalName": "204863 — LOOPING HALL",
+      "originalProposal": "Porte au fond qui ramène au même cadrage",
+      "revisedProposal": "La porte de fond reste fermée dans le cadrage éclairé ; seule sa lumière varie doucement, sans rejouer une boucle ni ouvrir un passage.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Porte fermée du second tronçon",
+      "evidence": [
+        "https://www.silenthillmemories.net/silent_hills/screens_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_02.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_03.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_04.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "cedar_grove:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "cedar_grove",
+      "status": "implemented-candidate",
+      "runtimeKey": "treatmentMirrorVeil",
+      "trigger": "ambient",
+      "sourceScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
+      "originalName": "CEDAR GROVE SANITARIUM",
+      "originalProposal": "Reflet du miroir basculant en environnement altéré",
+      "revisedProposal": "La surface du miroir conserve un voile de reflet fixe avec un glissement lumineux proposé ; aucun changement automatique du monde.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Reflet contenu dans le miroir de soins",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh0/maps_en.htm"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "antique_shop:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "antique_shop",
+      "status": "implemented-candidate",
+      "runtimeKey": "greenLionPassageDust",
+      "trigger": "ambient",
+      "sourceScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+      "originalName": "GREEN LION ANTIQUES",
+      "originalProposal": "Poussière au-dessus des objets anciens",
+      "revisedProposal": "Quelques particules restent au bord du trou menant au passage intérieur ; aucun meuble de la boutique SH1 ajouté.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Poussière au bord du passage intérieur",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh0/walkthrough/sh0_15.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "antique_shop:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "antique_shop",
+      "status": "implemented-candidate",
+      "runtimeKey": "flaurosCoreShade",
+      "trigger": "ambient",
+      "sourceScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+      "originalName": "GREEN LION ANTIQUES",
+      "originalProposal": "Ombre du Flauros sur le sol",
+      "revisedProposal": "Une ombre douce accompagne une représentation abstraite du Flauros assemblé ; son emplacement est une composition versus à partir du motif du puzzle.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Ombre du volume géométrique assemblé",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh0/walkthrough/sh0_15.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "antique_shop:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "antique_shop",
+      "status": "implemented-candidate",
+      "runtimeKey": "greenLionWallGlint",
+      "trigger": "ambient",
+      "sourceScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+      "originalName": "GREEN LION ANTIQUES",
+      "originalProposal": "Lumière du rituel gagnant les murs après une manche",
+      "revisedProposal": "Une faible lueur de fond gagne le mur du passage, sans jouer un rituel ou révéler un corps ; éclairage original de versus.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Lueur contenue du passage final",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh0/walkthrough/sh0_15.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "church_hc:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "church_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "holyWayCandleRow",
+      "trigger": "ambient",
+      "sourceScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+      "originalName": "CHURCH OF THE HOLY WAY",
+      "originalProposal": "Flammes des bougies inclinées",
+      "revisedProposal": "Flammes limitées aux cierges de la nef documentée, sans cérémonie ou dégâts passifs.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Cierges de la nef de Holy Way",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_100.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_12b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "church_hc:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "church_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "holyWayGlassLight",
+      "trigger": "ambient",
+      "sourceScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+      "originalName": "CHURCH OF THE HOLY WAY",
+      "originalProposal": "Ombres du vitrail sur le Halo du sol",
+      "revisedProposal": "Lueur abstraite à travers un vitrage de la nef avant sa rupture ; aucun Halo inventé au sol ni dessin du chevalier reproduit.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Lumière du vitrage de Holy Way",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_100.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_12b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "church_hc:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "church_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "holyWayOrganPanel",
+      "trigger": "ambient",
+      "sourceScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+      "originalName": "CHURCH OF THE HOLY WAY",
+      "originalProposal": "Volets et tentures du sanctuaire frémissants",
+      "revisedProposal": "Reflet lent sur les cinq logements du panneau de l’orgue ; les tentures et volets non attestés sont écartés et le puzzle ne se résout pas.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Panneau de l’orgue à cinq logements",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_100.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_12b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "underground_hc:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "underground_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "foundersTabletLight",
+      "trigger": "ambient",
+      "sourceScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+      "originalName": "UNDERGROUND LAIR",
+      "originalProposal": "Vapeur des conduites",
+      "revisedProposal": "La lumière glisse sur les quatre tablettes couvertes de l’antichambre Founding Families ; aucune vapeur de tuyau supposé.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Quatre tablettes couvertes de l’antichambre",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13c.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13d.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "underground_hc:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "underground_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "foundersDoorRings",
+      "trigger": "ambient",
+      "sourceScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+      "originalName": "UNDERGROUND LAIR",
+      "originalProposal": "Oscillation des lampes d’atelier",
+      "revisedProposal": "Deux anneaux concentriques restent verrouillés sur leur porte ; seul un reflet varie, sans rotation de puzzle ou lampe d’atelier supposée.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Deux anneaux de la porte encore fermée",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13c.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13d.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "underground_hc:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "underground_hc",
+      "status": "implemented-candidate",
+      "runtimeKey": "foundersDaggerColumns",
+      "trigger": "ambient",
+      "sourceScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+      "originalName": "UNDERGROUND LAIR",
+      "originalProposal": "Tension visible des appareils suspendus",
+      "revisedProposal": "Les quatre colonnes à droite des tablettes gardent leurs verrous intacts ; léger reflet proposé, sans insérer la dague ni enlever les couvertures.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Colonnes des verrous cérémoniels",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13c.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13d.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_corridors:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_corridors",
+      "status": "implemented-candidate",
+      "runtimeKey": "inariAltarCandles",
+      "trigger": "ambient",
+      "sourceScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+      "originalName": "DARK SHRINE — CORRIDORS",
+      "originalProposal": "Chaîne rituelle qui résonne",
+      "revisedProposal": "Un vacillement local reste sur les cierges du petit autel à statue manquante, sans chaîne du boss dans le décor.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Cierges du petit autel Inari",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_04_dark_shrine_corridors_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_altar.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_inari_sculpture_a.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_corridors:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_corridors",
+      "status": "implemented-candidate",
+      "runtimeKey": "inariAltarRedGlint",
+      "trigger": "ambient",
+      "sourceScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+      "originalName": "DARK SHRINE — CORRIDORS",
+      "originalProposal": "Halo révélé au fond du couloir",
+      "revisedProposal": "Une lueur rouge reste dans le fond du meuble de l’autel ; aucun Halo ou portail inventé dans le couloir.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Reflet rouge contenu au meuble de l’autel",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_04_dark_shrine_corridors_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_altar.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_inari_sculpture_a.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_corridors:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_corridors",
+      "status": "implemented-candidate",
+      "runtimeKey": "inariAltarWoodLight",
+      "trigger": "ambient",
+      "sourceScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+      "originalName": "DARK SHRINE — CORRIDORS",
+      "originalProposal": "Reflets des cloches après impact",
+      "revisedProposal": "De faibles reflets suivent les boiseries et étagères de la même salle ; aucune cloche-suzu de Sakuko empruntée.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Reflet sur les boiseries de l’autel",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_04_dark_shrine_corridors_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_altar.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_inari_sculpture_a.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_main:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_main",
+      "status": "implemented-candidate",
+      "runtimeKey": "ritualThresholdBraziers",
+      "trigger": "ambient",
+      "sourceScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+      "originalName": "DARK SHRINE — MAIN HALL",
+      "originalProposal": "Poupées en arrière-plan avant activation",
+      "revisedProposal": "Les deux braseros bordent le premier seuil rituel ; aucune poupée ou créature de fond ajoutée.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Braseros du premier seuil rituel",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_09_dark_shrine_main_hall_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1a.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_main:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_main",
+      "status": "implemented-candidate",
+      "runtimeKey": "ritualThresholdPanels",
+      "trigger": "ambient",
+      "sourceScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+      "originalName": "DARK SHRINE — MAIN HALL",
+      "originalProposal": "Battement de tissus rituels",
+      "revisedProposal": "Les panneaux du seuil restent en place et leur reflet varie faiblement ; aucun tissu rituel non confirmé.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Panneaux du premier seuil rituel",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_09_dark_shrine_main_hall_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1a.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "dark_shrine_main:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "dark_shrine_main",
+      "status": "implemented-candidate",
+      "runtimeKey": "ritualThresholdDoorGlint",
+      "trigger": "ambient",
+      "sourceScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+      "originalName": "DARK SHRINE — MAIN HALL",
+      "originalProposal": "Lueur du hall sous geste de purification",
+      "revisedProposal": "La lueur des braseros accompagne la porte fermée, sans geste de purification, déclenchement de boss ou ouverture automatique.",
+      "revisionReason": "La proposition non mesurée est resserrée sur un élément documenté de cette pièce ; l’ancienne invention ne devient pas une animation attestée.",
+      "implementedElement": "Lueur sur la porte rituelle fermée",
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/walkthrough_09_dark_shrine_main_hall_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1a.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1b.jpg"
+      ],
+      "artifacts": [
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js"
+      ],
+      "limits": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Toutes amplitudes et cadences restent des réglages originaux du versus ; aucune mesure de l’œuvre ni certification1:1."
+    },
+    {
+      "rowId": "cedar_grove:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "cedar_grove",
+      "status": "blocked",
+      "sourceScope": "Cedar Grove Sanitarium; préciser pièce retenue, ne pas assimiler tout le bâtiment à la cellule d’Helen.",
+      "originalName": "CEDAR GROVE SANITARIUM",
+      "originalProposal": "Oscillation d’une lampe du couloir",
+      "reason": "Le guide situe un miroir dans Female Treatment, sans attester une lampe de couloir dans cette pièce. Le cadre du miroir ne constitue pas un deuxième objet de substitution pour gonfler le lot.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "apartment_roof:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "apartment_roof",
+      "status": "blocked",
+      "sourceScope": "Toit Daisy Villa du combat Missionary de SH3.",
+      "originalName": "DAISY VILLA ROOFTOP",
+      "originalProposal": "Une antenne plie légèrement dans le vent ; câbles tendus gardés hors collision.",
+      "reason": "La vue native de Missionary est trop sombre et recadrée pour établir une antenne ; une installation de toit générique ne suffit pas.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_09_daisy_villa_apartments_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_missionary.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "apartment_roof:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "apartment_roof",
+      "status": "blocked",
+      "sourceScope": "Toit Daisy Villa du combat Missionary de SH3.",
+      "originalName": "DAISY VILLA ROOFTOP",
+      "originalProposal": "Un choc contre le coffre technique provoque une pluie brève d’étincelles sans dégâts supplémentaires.",
+      "reason": "Aucun coffre électrique ni émission d’étincelles n’est identifié dans la vue du toit retenue. Le choc proposé ne doit pas inventer cet accessoire.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_09_daisy_villa_apartments_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_missionary.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "nightmare_theater:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_theater",
+      "status": "blocked",
+      "sourceScope": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+      "originalName": "ARTAUD THEATER — NIGHTMARE",
+      "originalProposal": "Toiles de décor déformées lentement",
+      "reason": "Le guide décrit les panneaux de décor et la traversée du miroir, mais la vue/phase exacte des toiles altérées reste non identifiée. Ne pas mélanger scène normale, décors traversés et arène Caliban.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "nightmare_theater:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_theater",
+      "status": "blocked",
+      "sourceScope": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+      "originalName": "ARTAUD THEATER — NIGHTMARE",
+      "originalProposal": "Cordes d’Ariel en tension",
+      "reason": "Les fils d’Ariel appartiennent à la marionnette ; aucune installation de cordes vide dans cette scène et cette phase n’a été confirmée.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "nightmare_theater:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "nightmare_theater",
+      "status": "blocked",
+      "sourceScope": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+      "originalName": "ARTAUD THEATER — NIGHTMARE",
+      "originalProposal": "Lumière de rampe révélant une seconde profondeur",
+      "reason": "Les quatre ampoules et projecteurs sont documentés pour la scène normale ; la rampe et une seconde profondeur dans la scène Otherworld ne sont pas établies.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "villa_stairwell:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "villa_stairwell",
+      "status": "blocked",
+      "sourceScope": "Escaliers de la Villa, sous-lieu du complexe.",
+      "originalName": "KETTENSTADT VILLA — STAIRWELL",
+      "originalProposal": "Ombre avançant sur palier",
+      "reason": "Les images consultées montrent appartements, couloirs et poursuite, mais pas un palier d’escalier identifié avec cette ombre. Aucune silhouette ou victime ajoutée.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_the_short_message/screenshots_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "villa_stairwell:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "villa_stairwell",
+      "status": "blocked",
+      "sourceScope": "Escaliers de la Villa, sous-lieu du complexe.",
+      "originalName": "KETTENSTADT VILLA — STAIRWELL",
+      "originalProposal": "Grésillement du néon",
+      "reason": "Aucun néon identifié dans une vue de cet escalier n’est confirmé. Les lampes d’un couloir ou d’une autre pièce ne sont pas transférées.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_the_short_message/screenshots_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    },
+    {
+      "rowId": "villa_stairwell:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "villa_stairwell",
+      "status": "blocked",
+      "sourceScope": "Escaliers de la Villa, sous-lieu du complexe.",
+      "originalName": "KETTENSTADT VILLA — STAIRWELL",
+      "originalProposal": "Poussière soufflée par porte de secours",
+      "reason": "Le guide confirme les escaliers du toit, pas la porte de secours ni la poussière proposée dans ce cadrage ; aucun accessoire ajouté sans vue.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_the_short_message/screenshots_en.htm"
+      ],
+      "artifacts": [],
+      "limits": "Référence native complète et phase précise encore requises ; aucun objet, corps, éclairage ou mouvement supposé ajouté au moteur. Ni capture originale ni certification1:1."
+    }
+  ],
+  "scope": "Vingt et un nouveaux éléments documentés, neuf propositions non étayées explicitement bloquées ; les cibles révisées gardent leur texte initial dans originalProposal. Aucun résultat de manche compté.",
+  "outOfScopeCorrections": [
+    {
+      "rowId": "curtis_shop:reference:1",
+      "previousRuntimeKey": "chainPendulum",
+      "action": "retained-as-unproduced-proposal",
+      "reason": "La vue précise du comptoir ne confirme pas la chaîne générique de l’ancien rendu ; cible historique conservée dans le classeur, aucune chaîne nouvelle."
+    }
+  ],
+  "validation": {
+    "status": "implemented-candidates-with-explicit-blockers",
+    "newNodeTests": 12,
+    "targetedNodeTests": 110,
+    "targetedNodePassed": 110,
+    "nodeLog": "/workspace/shared/halo-of-flesh/validation-batch11-2026-10-28/stages/node-regression.log",
+    "nodeLogSha256": "f235e08a025165587b479cb863e0ce02030feb8a08b7248459d202f21a8c7e2e",
+    "sourceBrowserStatus": "passed",
+    "sourceBrowserChecks": 122,
+    "sourceBrowserCaptures": 37,
+    "sourceBrowserScenes": 8,
+    "sourceBrowserErrors": [],
+    "sourceBrowserReport": "/workspace/shared/halo-of-flesh/validation-batch11-2026-10-28/stages/report.json",
+    "sourceBrowserReportSha256": "f5218cac13b70b741abcd5304eb937d495ff9fb588dbadc9fe71bc1fb07b2933",
+    "sourceScript": "/workspace/.cloud-env/halo/qa-stages-lot11.mjs",
+    "sourceScriptSha256": "29c5fe66c5f8baa48468ea5e9ab05ca958fcbbdca62e82b7c861faa3ccdd374b",
+    "sourceCompiledReferenceSha256": "a3047233cf58b1ff1e22502dc9f7d47eeeb1ae40618d9aeaf5384c81d9a99a37",
+    "frozenCode": {
+      "src/stage-reference-policy.js": "14f7c57b464f7353a88e199a65a6d9ed8b605ec9bc844debb5888e7fc0c8ef1c",
+      "src/stage-architecture.js": "9fad5ec48978bc88fd4595a854e0c18f6d31ef16b8baf811becd863a5eb971e0",
+      "src/stage-cinematics.js": "3cb4b991f603a5499ba549d9d7b28c844a58b76c846984883d593d66d7ef49ab",
+      "tests/stage-lot11.test.mjs": "857deebad5a68d5a6ab51b8aab02f244cf15154d3f57470e5e9e81659928b116"
+    },
+    "composedVisibleElements": 21,
+    "sourceTimingMeasured": false,
+    "certifiedOneToOne": false,
+    "limits": "Supplemental SOURCE renderer proof with prepared local engine and temporary isolated canvases; final DIST integration remains root authority. No native game animation or full campaign certified."
+  }
+}

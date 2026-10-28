@@ -6,14 +6,17 @@ import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
 import {FightEngine} from '../src/fight.js';
 import {loreFinisher,lorePresentation,sampleLorePresentation,sampleLoreCinematic,cinematicSummary,drawLoreCinematic,LORE_CINEMATIC_COVERAGE} from '../src/lore-cinematics.js';
 
+// Ariel and Helen use a synthetic cross-work versus pairing in the reviewed
+// enclosed SH1 tunnel. The selected Cedar Grove electrotherapy room provides
+// no confirmed overhead attachment contract and is not their native boss set.
 const SUBJECTS=[
   ['sh1_incubator_018','blueTerminalExposure','nowhere'],
   ['sh1_incubus_019','redSuspendedExposure','nowhere'],
   ['sh2_creeper_025','sh2LowShadowBite','woodside'],
   ['sh3_god_050','incompleteBodyFireline','church'],
   ['origins_straight_jacket_074','closedTorsoLegRelease','alchemilla_origins'],
-  ['origins_ariel_078','tetheredDollKicks','cedar_grove'],
-  ['origins_memory_of_helen_grady_082','helenSuspendedWheel','cedar_grove'],
+  ['origins_ariel_078','tetheredDollKicks','sewer_resort'],
+  ['origins_memory_of_helen_grady_082','helenSuspendedWheel','sewer_resort'],
   ['origins_memory_of_richard_grady_083','richardWallTentacles','labyrinth'],
   ['homecoming_lurker_085','lurkerLowClawFold','blue_creek'],
   ['homecoming_smog_087','smogExposedExhalation','nightmare_hospital_hc']
@@ -29,6 +32,13 @@ const plan=(id,type='signature',options={})=>{const a=actor(id);return loreFinis
 const samplePresentation=(a,key,progress)=>sampleLorePresentation(a,{key,progress,lore:lorePresentation(a,key)});
 const engines=new Set();
 afterEach(()=>{for(const e of engines)e.destroy();engines.clear();});
+
+test('the selected Cedar Grove room cannot supply unconfirmed overhead attachments for Ariel or Helen',()=>{
+  for(const id of ['origins_ariel_078','origins_memory_of_helen_grady_082'])for(const type of ['signature','nightmare']){
+    assert.equal(plan(id,type).allowed,true,'the explicit cross-work tunnel fixture has reviewed overhead support');
+    const refused=plan(id,type,{stage:stage('cedar_grove')});assert.equal(refused.allowed,false);assert.match(refused.reason,/Appui de plafond/);
+  }
+});
 
 test('ten additional exact subjects own twenty distinct edits and seventy proposal contexts',()=>{
   const recipes=new Set(),contexts=new Set();

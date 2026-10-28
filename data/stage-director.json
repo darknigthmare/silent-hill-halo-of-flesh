@@ -5831,24 +5831,24 @@
     },
     {
       "id": "cedar_grove",
-      "name": "CEDAR GROVE SANITARIUM",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
       "source": "origins",
       "lore": {
-        "premise": "Cedar Grove Sanitarium; préciser pièce retenue, ne pas assimiler tout le bâtiment à la cellule d’Helen.",
-        "canonicalBasis": "EXT03 ; EXT02",
+        "premise": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
+        "canonicalBasis": "EXT03 ; EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "concrete",
-        "name": "BÉTON SEC",
+        "name": "SEUIL DU MIROIR DE SOINS",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "mirror",
@@ -5861,20 +5861,12 @@
         "overlay": "mirror",
         "description": "Le reflet se fracture et remplace progressivement la version normale du lieu.",
         "startOtherworld": false,
-        "enabled": true,
-        "referenceState": "versus-transition"
+        "enabled": false,
+        "referenceState": "fixed-normal"
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "lightFlicker",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "irregular"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -5884,11 +5876,12 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "CEDAR GROVE SANITARIUM",
-        "correctedName": null,
-        "locationNote": "Cedar Grove Sanitarium; préciser pièce retenue, ne pas assimiler tout le bâtiment à la cellule d’Helen.",
+        "correctedName": "CEDAR GROVE — FEMALE TREATMENT",
+        "locationNote": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
         "referenceIds": [
           "EXT03",
-          "EXT02"
+          "EXT02",
+          "EXT_ORIGINS_THEATER_GUIDE_20261026"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -5909,11 +5902,12 @@
           },
           {
             "name": "cedar_grove_ambient_02",
-            "description": "Reflet du miroir basculant en environnement altéré",
+            "description": "La surface du miroir conserve un voile de reflet fixe avec un glissement lumineux proposé ; aucun changement automatique du monde.",
             "status": "adaptation-animation-proposee",
             "evidence": [
               "EXT03",
-              "EXT02"
+              "EXT02",
+              "EXT_ORIGINS_THEATER_GUIDE_20261026"
             ],
             "category": "ambient",
             "timecode": null
@@ -5943,11 +5937,18 @@
         ]
       },
       "referencePolicy": {
-        "worldState": "versus-transition",
+        "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "female-treatment-mirror",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SEUIL DU MIROIR DE SOINS",
+          "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -5983,25 +5984,60 @@
           },
           {
             "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "hospitalMonitor",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "ash",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
+        "renderedProposalIds": [
+          "cedar_grove:reference:2"
+        ],
         "pendingProposalIds": [
           "cedar_grove:reference:1",
-          "cedar_grove:reference:2",
           "cedar_grove:reference:3",
           "cedar_grove:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "cedar_grove:reference:2",
+          "key": "treatmentMirrorVeil",
+          "name": "Reflet contenu dans le miroir de soins",
+          "description": "La surface du miroir conserve un voile de reflet fixe avec un glissement lumineux proposé ; aucun changement automatique du monde.",
+          "proposalIndex": 1,
+          "source": "origins",
+          "evidence": [
+            "EXT03",
+            "EXT02",
+            "EXT_ORIGINS_THEATER_GUIDE_20261026"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.66,
+            "y": 0.4
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Reflet contenu dans le miroir de soins",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -6046,13 +6082,18 @@
           },
           {
             "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "hospitalMonitor",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "ash",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -8026,24 +8067,24 @@
     },
     {
       "id": "looping_hall",
-      "name": "204863 — LOOPING HALL",
+      "name": "P.T. — COULOIR ÉCLAIRÉ",
       "source": "pt",
       "lore": {
-        "premise": "Couloir bouclé de P.T.; 204863 est un motif sonore, pas adresse attestée.",
-        "canonicalBasis": "EXT27 ; EXT28",
+        "premise": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée.",
+        "canonicalBasis": "EXT27 ; EXT28 ; EXT11_REF_LOOPING_HALL_ROOM_1_20261028 ; EXT11_REF_LOOPING_HALL_ROOM_2_20261028 ; EXT11_REF_LOOPING_HALL_ROOM_3_20261028 ; EXT11_REF_LOOPING_HALL_ROOM_4_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "narrow",
-        "name": "COULOIR ÉTROIT",
-        "moveScale": 0.95,
-        "jumpScale": 0.88,
-        "dodgeScale": 0.84,
+        "name": "PLANCHER DU COULOIR P.T.",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
         "friction": 0.84,
-        "knockbackScale": 0.82,
-        "guardRegenScale": 1.02,
-        "description": "Les murs réduisent l’espace de recul et rendent les saisies plus dangereuses."
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "loop",
@@ -8059,63 +8100,11 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "duration": 150,
-          "darkness": 0.72,
-          "radioBoost": 0.22,
-          "message": "LES LUMIÈRES S’ÉTEIGNENT",
-          "animation": "lightFlicker"
-        }
-      ],
+      "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "lightFlicker",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "irregular"
-        }
-      ],
-      "interactions": [
-        {
-          "id": "looping_hall_powerFailure_1",
-          "event": "powerFailure",
-          "name": "PANNE GÉNÉRALE",
-          "trigger": "time-or-first-heavy-impact",
-          "triggerLabel": "IMPACT LOURD / PREMIER TEMPS",
-          "triggerDescription": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu.",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
-          "canonicalBasis": "Couloir bouclé de P.T.; 204863 est un motif sonore, pas adresse attestée.",
-          "referenceIds": [
-            "EXT27",
-            "EXT28"
-          ],
-          "proposalId": null
-        }
-      ],
-      "choreography": [
-        {
-          "event": "powerFailure",
-          "prop": "light",
-          "description": "Les lampes du lieu décrochent",
-          "layer": "background",
-          "anchor": {
-            "x": 0.648,
-            "y": 0.59
-          },
-          "direction": 1,
-          "evidence": [
-            "EXT27",
-            "EXT28"
-          ],
-          "fidelity": "original-versus-adaptation"
-        }
-      ],
+      "animations": [],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "looping_hall",
         "source": "pt",
@@ -8123,11 +8112,15 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "204863 — LOOPING HALL",
-        "correctedName": null,
-        "locationNote": "Couloir bouclé de P.T.; 204863 est un motif sonore, pas adresse attestée.",
+        "correctedName": "P.T. — COULOIR ÉCLAIRÉ",
+        "locationNote": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée.",
         "referenceIds": [
           "EXT27",
-          "EXT28"
+          "EXT28",
+          "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+          "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+          "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+          "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -8137,33 +8130,45 @@
         "proposals": [
           {
             "name": "looping_hall_ambient_01",
-            "description": "Balancement de l’ampoule",
+            "description": "La lanterne suspendue du second tronçon reçoit une oscillation très faible ; cadence et angle du versus, sans extinction de boucle.",
             "status": "adaptation-animation-proposee",
             "evidence": [
               "EXT27",
-              "EXT28"
+              "EXT28",
+              "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "looping_hall_ambient_02",
-            "description": "Téléphone qui vibre avant un appel",
+            "description": "Le poste RADIO visible sur le meuble garde son boîtier fixe ; une variation de reflet remplace le téléphone vibrant non confirmé dans ce cadrage.",
             "status": "adaptation-animation-proposee",
             "evidence": [
               "EXT27",
-              "EXT28"
+              "EXT28",
+              "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "looping_hall_ambient_03",
-            "description": "Porte au fond qui ramène au même cadrage",
+            "description": "La porte de fond reste fermée dans le cadrage éclairé ; seule sa lumière varie doucement, sans rejouer une boucle ni ouvrir un passage.",
             "status": "adaptation-animation-proposee",
             "evidence": [
               "EXT27",
-              "EXT28"
+              "EXT28",
+              "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+              "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -8183,15 +8188,25 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "powerFailure"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": false,
-        "weather": "flicker",
+        "sceneId": "lit-beige-hall-unidentified-loop",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLANCHER DU COULOIR P.T.",
+          "description": "Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "normalPhaseLabel": "COULOIR ÉCLAIRÉ · BOUCLE NON DATÉE",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
           {
             "kind": "event",
             "id": "roomBreath",
@@ -8211,22 +8226,125 @@
             "kind": "animation",
             "id": "doorPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "looping_hall:reference:1",
           "looping_hall:reference:2",
-          "looping_hall:reference:3",
+          "looping_hall:reference:3"
+        ],
+        "pendingProposalIds": [
           "looping_hall:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "looping_hall:reference:1",
+          "key": "ptHangingLantern",
+          "name": "Lanterne du second tronçon éclairé",
+          "description": "La lanterne suspendue du second tronçon reçoit une oscillation très faible ; cadence et angle du versus, sans extinction de boucle.",
+          "proposalIndex": 0,
+          "source": "pt",
+          "evidence": [
+            "EXT27",
+            "EXT28",
+            "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.48,
+            "y": 0.25
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lanterne du second tronçon éclairé",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+        },
+        {
+          "id": "looping_hall:reference:2",
+          "key": "ptRadioCabinet",
+          "name": "Poste radio et meuble du couloir éclairé",
+          "description": "Le poste RADIO visible sur le meuble garde son boîtier fixe ; une variation de reflet remplace le téléphone vibrant non confirmé dans ce cadrage.",
+          "proposalIndex": 1,
+          "source": "pt",
+          "evidence": [
+            "EXT27",
+            "EXT28",
+            "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.77,
+            "y": 0.55
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poste radio et meuble du couloir éclairé",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+        },
+        {
+          "id": "looping_hall:reference:3",
+          "key": "ptBackDoorLight",
+          "name": "Porte fermée du second tronçon",
+          "description": "La porte de fond reste fermée dans le cadrage éclairé ; seule sa lumière varie doucement, sans rejouer une boucle ni ouvrir un passage.",
+          "proposalIndex": 2,
+          "source": "pt",
+          "evidence": [
+            "EXT27",
+            "EXT28",
+            "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+            "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Porte fermée du second tronçon",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée."
+        }
+      ],
       "motifPolicy": {
-        "events": [
-          "powerFailure"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -8239,6 +8357,11 @@
         "suppression": [
           {
             "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
             "id": "roomBreath",
             "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
           },
@@ -8256,6 +8379,16 @@
             "kind": "animation",
             "id": "doorPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -11807,24 +11940,24 @@
     },
     {
       "id": "antique_shop",
-      "name": "GREEN LION ANTIQUES",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
       "source": "origins",
       "lore": {
-        "premise": "Green Lion Antiques, séquence du Flauros Demon; emplacement final documenté par guide.",
-        "canonicalBasis": "EXT02",
+        "premise": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
+        "canonicalBasis": "EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "steel",
-        "name": "CAILLEBOTIS MÉTALLIQUE",
-        "moveScale": 0.98,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.98,
-        "friction": 0.86,
-        "knockbackScale": 1.04,
-        "guardRegenScale": 0.94,
-        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "mirror",
@@ -11836,9 +11969,9 @@
         "radioScale": 1.05,
         "overlay": "mirror",
         "description": "Le reflet se fracture et remplace progressivement la version normale du lieu.",
-        "startOtherworld": false,
+        "startOtherworld": true,
         "enabled": false,
-        "referenceState": "fixed-normal"
+        "referenceState": "fixed-altered"
       },
       "events": [],
       "hazards": [],
@@ -11852,10 +11985,12 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "GREEN LION ANTIQUES",
-        "correctedName": null,
-        "locationNote": "Green Lion Antiques, séquence du Flauros Demon; emplacement final documenté par guide.",
+        "correctedName": "GREEN LION — PASSAGE VERS LE RITUEL",
+        "locationNote": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
         "referenceIds": [
-          "EXT02"
+          "EXT02",
+          "EXT_ORIGINS_THEATER_GUIDE_20261026",
+          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -11865,30 +12000,36 @@
         "proposals": [
           {
             "name": "antique_shop_ambient_01",
-            "description": "Poussière au-dessus des objets anciens",
+            "description": "Quelques particules restent au bord du trou menant au passage intérieur ; aucun meuble de la boutique SH1 ajouté.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT02"
+              "EXT02",
+              "EXT_ORIGINS_THEATER_GUIDE_20261026",
+              "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "antique_shop_ambient_02",
-            "description": "Ombre du Flauros sur le sol",
+            "description": "Une ombre douce accompagne une représentation abstraite du Flauros assemblé ; son emplacement est une composition versus à partir du motif du puzzle.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT02"
+              "EXT02",
+              "EXT_ORIGINS_THEATER_GUIDE_20261026",
+              "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "antique_shop_ambient_03",
-            "description": "Lumière du rituel gagnant les murs après une manche",
+            "description": "Une faible lueur de fond gagne le mur du passage, sans jouer un rituel ou révéler un corps ; éclairage original de versus.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT02"
+              "EXT02",
+              "EXT_ORIGINS_THEATER_GUIDE_20261026",
+              "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -11906,11 +12047,18 @@
         ]
       },
       "referencePolicy": {
-        "worldState": "fixed-normal",
+        "worldState": "fixed-altered",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "embers",
+        "automaticFinishers": false,
+        "sceneId": "green-lion-inner-passage",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLATEAU DU PASSAGE INTÉRIEUR",
+          "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -11953,18 +12101,109 @@
             "kind": "animation",
             "id": "chainSway",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "antique_shop:reference:1",
           "antique_shop:reference:2",
-          "antique_shop:reference:3",
+          "antique_shop:reference:3"
+        ],
+        "pendingProposalIds": [
           "antique_shop:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "antique_shop:reference:1",
+          "key": "greenLionPassageDust",
+          "name": "Poussière au bord du passage intérieur",
+          "description": "Quelques particules restent au bord du trou menant au passage intérieur ; aucun meuble de la boutique SH1 ajouté.",
+          "proposalIndex": 0,
+          "source": "origins",
+          "evidence": [
+            "EXT02",
+            "EXT_ORIGINS_THEATER_GUIDE_20261026",
+            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.25,
+            "y": 0.45
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière au bord du passage intérieur",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+        },
+        {
+          "id": "antique_shop:reference:2",
+          "key": "flaurosCoreShade",
+          "name": "Ombre du volume géométrique assemblé",
+          "description": "Une ombre douce accompagne une représentation abstraite du Flauros assemblé ; son emplacement est une composition versus à partir du motif du puzzle.",
+          "proposalIndex": 1,
+          "source": "origins",
+          "evidence": [
+            "EXT02",
+            "EXT_ORIGINS_THEATER_GUIDE_20261026",
+            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.68,
+            "y": 0.48
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Ombre du volume géométrique assemblé",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+        },
+        {
+          "id": "antique_shop:reference:3",
+          "key": "greenLionWallGlint",
+          "name": "Lueur contenue du passage final",
+          "description": "Une faible lueur de fond gagne le mur du passage, sans jouer un rituel ou révéler un corps ; éclairage original de versus.",
+          "proposalIndex": 2,
+          "source": "origins",
+          "evidence": [
+            "EXT02",
+            "EXT_ORIGINS_THEATER_GUIDE_20261026",
+            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.68,
+            "y": 0.35
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lueur contenue du passage final",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -12016,30 +12255,35 @@
             "kind": "animation",
             "id": "chainSway",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
     },
     {
       "id": "church_hc",
-      "name": "CHURCH OF THE HOLY WAY",
+      "name": "CHURCH OF THE HOLY WAY — NEF",
       "source": "homecoming",
       "lore": {
-        "premise": "Nom à corriger : Church of the Holy Way dans Silent Hill, pas église de Shepherd’s Glen.",
-        "canonicalBasis": "EXT07",
+        "premise": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu.",
+        "canonicalBasis": "EXT07 ; EXT06 ; EXT11_REF_CHURCH_HC_ROOM_2_20261028 ; EXT11_REF_CHURCH_HC_ROOM_3_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "ritualStone",
-        "name": "PIERRE RITUELLE",
-        "moveScale": 0.97,
-        "jumpScale": 0.94,
-        "dodgeScale": 0.94,
-        "friction": 0.83,
-        "knockbackScale": 1.02,
-        "guardRegenScale": 0.88,
-        "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+        "name": "ALLÉE DE LA NEF",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "rust",
@@ -12067,10 +12311,13 @@
         "blocked": false,
         "locationStatus": "nom-a-corriger",
         "catalogueName": "SHEPHERD’S GLEN CHURCH",
-        "correctedName": "CHURCH OF THE HOLY WAY",
-        "locationNote": "Nom à corriger : Church of the Holy Way dans Silent Hill, pas église de Shepherd’s Glen.",
+        "correctedName": "CHURCH OF THE HOLY WAY — NEF",
+        "locationNote": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu.",
         "referenceIds": [
-          "EXT07"
+          "EXT07",
+          "EXT06",
+          "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+          "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -12080,30 +12327,39 @@
         "proposals": [
           {
             "name": "church_hc_ambient_01",
-            "description": "Flammes des bougies inclinées",
+            "description": "Flammes limitées aux cierges de la nef documentée, sans cérémonie ou dégâts passifs.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT07"
+              "EXT07",
+              "EXT06",
+              "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+              "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "church_hc_ambient_02",
-            "description": "Ombres du vitrail sur le Halo du sol",
+            "description": "Lueur abstraite à travers un vitrage de la nef avant sa rupture ; aucun Halo inventé au sol ni dessin du chevalier reproduit.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT07"
+              "EXT07",
+              "EXT06",
+              "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+              "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "church_hc_ambient_03",
-            "description": "Volets et tentures du sanctuaire frémissants",
+            "description": "Reflet lent sur les cinq logements du panneau de l’orgue ; les tentures et volets non attestés sont écartés et le puzzle ne se résout pas.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT07"
+              "EXT07",
+              "EXT06",
+              "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+              "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -12124,8 +12380,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "holy-way-main-hall-before-glass-break",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "ALLÉE DE LA NEF",
+          "description": "Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "normalPhaseLabel": "NEF · AVANT RUPTURE DU VITRAIL",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -12167,19 +12430,108 @@
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "church_hc:reference:1",
           "church_hc:reference:2",
-          "church_hc:reference:3",
+          "church_hc:reference:3"
+        ],
+        "pendingProposalIds": [
           "church_hc:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "church_hc:reference:1",
+          "key": "holyWayCandleRow",
+          "name": "Cierges de la nef de Holy Way",
+          "description": "Flammes limitées aux cierges de la nef documentée, sans cérémonie ou dégâts passifs.",
+          "proposalIndex": 0,
+          "source": "homecoming",
+          "evidence": [
+            "EXT07",
+            "EXT06",
+            "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+            "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Cierges de la nef de Holy Way",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+        },
+        {
+          "id": "church_hc:reference:2",
+          "key": "holyWayGlassLight",
+          "name": "Lumière du vitrage de Holy Way",
+          "description": "Lueur abstraite à travers un vitrage de la nef avant sa rupture ; aucun Halo inventé au sol ni dessin du chevalier reproduit.",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT07",
+            "EXT06",
+            "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+            "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.72,
+            "y": 0.29
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lumière du vitrage de Holy Way",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+        },
+        {
+          "id": "church_hc:reference:3",
+          "key": "holyWayOrganPanel",
+          "name": "Panneau de l’orgue à cinq logements",
+          "description": "Reflet lent sur les cinq logements du panneau de l’orgue ; les tentures et volets non attestés sont écartés et le puzzle ne se résout pas.",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT07",
+            "EXT06",
+            "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+            "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.43
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Panneau de l’orgue à cinq logements",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -12230,31 +12582,31 @@
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
     },
     {
       "id": "underground_hc",
-      "name": "UNDERGROUND LAIR",
+      "name": "UNDERGROUND — ANTICHAMBRE DES FAMILLES",
       "source": "homecoming",
       "lore": {
-        "premise": "Underground/Lair; installation de l’Ordre, scène finale Amnion.",
-        "canonicalBasis": "EXT06",
+        "premise": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion.",
+        "canonicalBasis": "EXT06 ; EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028 ; EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "mud",
-        "name": "BOUE ET RACINES",
-        "moveScale": 0.88,
-        "jumpScale": 0.9,
-        "dodgeScale": 0.86,
-        "friction": 0.77,
-        "knockbackScale": 0.9,
-        "guardRegenScale": 0.92,
-        "description": "Le terrain retient les pieds et favorise les attaques de poursuite."
+        "name": "DEVANT LA PORTE À ANNEAUX",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "rust",
@@ -12282,10 +12634,12 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "UNDERGROUND LAIR",
-        "correctedName": null,
-        "locationNote": "Underground/Lair; installation de l’Ordre, scène finale Amnion.",
+        "correctedName": "UNDERGROUND — ANTICHAMBRE DES FAMILLES",
+        "locationNote": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion.",
         "referenceIds": [
-          "EXT06"
+          "EXT06",
+          "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+          "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -12295,30 +12649,36 @@
         "proposals": [
           {
             "name": "underground_hc_ambient_01",
-            "description": "Vapeur des conduites",
+            "description": "La lumière glisse sur les quatre tablettes couvertes de l’antichambre Founding Families ; aucune vapeur de tuyau supposé.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT06"
+              "EXT06",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "underground_hc_ambient_02",
-            "description": "Oscillation des lampes d’atelier",
+            "description": "Deux anneaux concentriques restent verrouillés sur leur porte ; seul un reflet varie, sans rotation de puzzle ou lampe d’atelier supposée.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT06"
+              "EXT06",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "underground_hc_ambient_03",
-            "description": "Tension visible des appareils suspendus",
+            "description": "Les quatre colonnes à droite des tablettes gardent leurs verrous intacts ; léger reflet proposé, sans insérer la dague ni enlever les couvertures.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT06"
+              "EXT06",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+              "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -12339,8 +12699,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "founding-families-antechamber",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "DEVANT LA PORTE À ANNEAUX",
+          "description": "Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "normalPhaseLabel": "ANTICHAMBRE · PORTE ENCORE FERMÉE",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -12368,18 +12735,109 @@
             "kind": "animation",
             "id": "bloodPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "underground_hc:reference:1",
           "underground_hc:reference:2",
-          "underground_hc:reference:3",
+          "underground_hc:reference:3"
+        ],
+        "pendingProposalIds": [
           "underground_hc:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "underground_hc:reference:1",
+          "key": "foundersTabletLight",
+          "name": "Quatre tablettes couvertes de l’antichambre",
+          "description": "La lumière glisse sur les quatre tablettes couvertes de l’antichambre Founding Families ; aucune vapeur de tuyau supposé.",
+          "proposalIndex": 0,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.39
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Quatre tablettes couvertes de l’antichambre",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+        },
+        {
+          "id": "underground_hc:reference:2",
+          "key": "foundersDoorRings",
+          "name": "Deux anneaux de la porte encore fermée",
+          "description": "Deux anneaux concentriques restent verrouillés sur leur porte ; seul un reflet varie, sans rotation de puzzle ou lampe d’atelier supposée.",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.43
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Deux anneaux de la porte encore fermée",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+        },
+        {
+          "id": "underground_hc:reference:3",
+          "key": "foundersDaggerColumns",
+          "name": "Colonnes des verrous cérémoniels",
+          "description": "Les quatre colonnes à droite des tablettes gardent leurs verrous intacts ; léger reflet proposé, sans insérer la dague ni enlever les couvertures.",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+            "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.47
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Colonnes des verrous cérémoniels",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -12418,6 +12876,11 @@
             "kind": "animation",
             "id": "bloodPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -22435,24 +22898,24 @@
     },
     {
       "id": "curtis_shop",
-      "name": "CURTIS’S JUNKYARD WORKSHOP",
+      "name": "CURTIS — COMPTOIR DE L’ATELIER",
       "source": "homecoming",
       "lore": {
-        "premise": "Atelier junkyard = lieu de rencontre et échange d’arme; ne pas le présenter comme lieu du combat Curtis sans relevé.",
-        "canonicalBasis": "EXT06",
+        "premise": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground. La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée.",
+        "canonicalBasis": "EXT06 ; EXT11_REF_CURTIS_SHOP_ROOM_2_20261028 ; EXT11_REF_CURTIS_SHOP_ROOM_3_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "steel",
-        "name": "CAILLEBOTIS MÉTALLIQUE",
-        "moveScale": 0.98,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.98,
-        "friction": 0.86,
-        "knockbackScale": 1.04,
-        "guardRegenScale": 0.94,
-        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+        "name": "DEVANT LE COMPTOIR DE L’ATELIER",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "rust",
@@ -22470,22 +22933,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "sawSpin",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "sparks",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -22495,10 +22943,12 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "CURTIS’S JUNKYARD WORKSHOP",
-        "correctedName": null,
-        "locationNote": "Atelier junkyard = lieu de rencontre et échange d’arme; ne pas le présenter comme lieu du combat Curtis sans relevé.",
+        "correctedName": "CURTIS — COMPTOIR DE L’ATELIER",
+        "locationNote": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground. La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée.",
         "referenceIds": [
-          "EXT06"
+          "EXT06",
+          "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+          "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -22518,20 +22968,24 @@
           },
           {
             "name": "curtis_shop_ambient_02",
-            "description": "Tremblement d’ampoule sur établi",
+            "description": "La pendule ronde et les livres restent sur le comptoir de l’échange initial ; une variation de reflet remplace l’ampoule non attestée.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT06"
+              "EXT06",
+              "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+              "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "curtis_shop_ambient_03",
-            "description": "Rotation résiduelle d’un outil coupé",
+            "description": "La lumière traverse les interstices des planches devant la fenêtre ; aucun outil en rotation ni scie circulaire transférée du combat Underground.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT06"
+              "EXT06",
+              "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+              "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -22552,8 +23006,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "sparks",
+        "automaticFinishers": false,
+        "sceneId": "junkyard-counter-first-exchange",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "DEVANT LE COMPTOIR DE L’ATELIER",
+          "description": "La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "normalPhaseLabel": "COMPTOIR · PREMIER ÉCHANGE",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -22580,45 +23041,90 @@
           {
             "kind": "animation",
             "id": "chainSway",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "sawSpin",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "sparks",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "sparks",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "curtis_shop:reference:1"
+          "curtis_shop:reference:2",
+          "curtis_shop:reference:3"
         ],
         "pendingProposalIds": [
-          "curtis_shop:reference:2",
-          "curtis_shop:reference:3",
+          "curtis_shop:reference:1",
           "curtis_shop:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "curtis_shop:reference:1",
-          "key": "chainPendulum",
-          "name": "Chaîne suspendue à faible amplitude",
-          "description": "Chaîne d’atelier qui oscille",
-          "proposalIndex": 0,
+          "id": "curtis_shop:reference:2",
+          "key": "curtisCounterClock",
+          "name": "Pendule et livres du comptoir",
+          "description": "La pendule ronde et les livres restent sur le comptoir de l’échange initial ; une variation de reflet remplace l’ampoule non attestée.",
+          "proposalIndex": 1,
           "source": "homecoming",
           "evidence": [
-            "EXT06"
+            "EXT06",
+            "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+            "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.71,
-            "y": 0.25
+            "x": 0.45,
+            "y": 0.54
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Chaîne suspendue à faible amplitude",
+          "implementedElement": "Pendule et livres du comptoir",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "capture-a-relever",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée."
+        },
+        {
+          "id": "curtis_shop:reference:3",
+          "key": "curtisWindowSlits",
+          "name": "Fenêtre à planches de l’atelier",
+          "description": "La lumière traverse les interstices des planches devant la fenêtre ; aucun outil en rotation ni scie circulaire transférée du combat Underground.",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+            "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.8,
+            "y": 0.32
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Fenêtre à planches de l’atelier",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée."
         }
       ],
       "motifPolicy": {
@@ -22656,7 +23162,22 @@
           {
             "kind": "animation",
             "id": "chainSway",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "sawSpin",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "sparks",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "sparks",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -28226,24 +28747,24 @@
     },
     {
       "id": "dark_shrine_corridors",
-      "name": "DARK SHRINE — CORRIDORS",
+      "name": "DARK SHRINE — AUTEL INARI",
       "source": "shf",
       "lore": {
-        "premise": "Dark Shrine Corridors, entité ressemblant à Sakuko.",
-        "canonicalBasis": "EXT34",
+        "premise": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé.",
+        "canonicalBasis": "EXT34 ; EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028 ; EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028 ; EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "ritualStone",
-        "name": "PIERRE RITUELLE",
-        "moveScale": 0.97,
-        "jumpScale": 0.94,
-        "dodgeScale": 0.94,
-        "friction": 0.83,
-        "knockbackScale": 1.02,
-        "guardRegenScale": 0.88,
-        "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+        "name": "PLANCHER DEVANT L’AUTEL",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "shrine",
@@ -28261,22 +28782,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "petalSpiral",
-          "phase": "both",
-          "layer": "foreground",
-          "intensity": 1,
-          "cadence": "continuous"
-        },
-        {
-          "id": "lanternSway",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -28286,10 +28792,13 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "DARK SHRINE — CORRIDORS",
-        "correctedName": null,
-        "locationNote": "Dark Shrine Corridors, entité ressemblant à Sakuko.",
+        "correctedName": "DARK SHRINE — AUTEL INARI",
+        "locationNote": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé.",
         "referenceIds": [
-          "EXT34"
+          "EXT34",
+          "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+          "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+          "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -28299,30 +28808,39 @@
         "proposals": [
           {
             "name": "dark_shrine_corridors_ambient_01",
-            "description": "Chaîne rituelle qui résonne",
+            "description": "Un vacillement local reste sur les cierges du petit autel à statue manquante, sans chaîne du boss dans le décor.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "dark_shrine_corridors_ambient_02",
-            "description": "Halo révélé au fond du couloir",
+            "description": "Une lueur rouge reste dans le fond du meuble de l’autel ; aucun Halo ou portail inventé dans le couloir.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "dark_shrine_corridors_ambient_03",
-            "description": "Reflets des cloches après impact",
+            "description": "De faibles reflets suivent les boiseries et étagères de la même salle ; aucune cloche-suzu de Sakuko empruntée.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -28343,9 +28861,16 @@
         "worldState": "fixed-altered",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "petals",
-        "interior": false,
+        "automaticFinishers": false,
+        "sceneId": "inari-altar-before-replacement",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLANCHER DEVANT L’AUTEL",
+          "description": "La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "alteredPhaseLabel": "AUTEL · AVANT RESTITUTION",
+        "weather": "none",
+        "interior": true,
         "baselineMotion": true,
         "suppression": [
           {
@@ -28375,6 +28900,16 @@
           },
           {
             "kind": "animation",
+            "id": "petalSpiral",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "rootsCreep",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
@@ -28382,18 +28917,112 @@
             "kind": "animation",
             "id": "ritualGlyph",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
-          "dark_shrine_corridors:reference:1",
+        "renderedProposalIds": [
           "dark_shrine_corridors:reference:2",
           "dark_shrine_corridors:reference:3",
+          "dark_shrine_corridors:reference:1"
+        ],
+        "pendingProposalIds": [
           "dark_shrine_corridors:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "dark_shrine_corridors:reference:2",
+          "key": "inariAltarRedGlint",
+          "name": "Reflet rouge contenu au meuble de l’autel",
+          "description": "Une lueur rouge reste dans le fond du meuble de l’autel ; aucun Halo ou portail inventé dans le couloir.",
+          "proposalIndex": 1,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.6,
+            "y": 0.39
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Reflet rouge contenu au meuble de l’autel",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+        },
+        {
+          "id": "dark_shrine_corridors:reference:3",
+          "key": "inariAltarWoodLight",
+          "name": "Reflet sur les boiseries de l’autel",
+          "description": "De faibles reflets suivent les boiseries et étagères de la même salle ; aucune cloche-suzu de Sakuko empruntée.",
+          "proposalIndex": 2,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.3,
+            "y": 0.36
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Reflet sur les boiseries de l’autel",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+        },
+        {
+          "id": "dark_shrine_corridors:reference:1",
+          "key": "inariAltarCandles",
+          "name": "Cierges du petit autel Inari",
+          "description": "Un vacillement local reste sur les cierges du petit autel à statue manquante, sans chaîne du boss dans le décor.",
+          "proposalIndex": 0,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.6,
+            "y": 0.49
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Cierges du petit autel Inari",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -28429,6 +29058,16 @@
           },
           {
             "kind": "animation",
+            "id": "petalSpiral",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "rootsCreep",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
@@ -28436,6 +29075,11 @@
             "kind": "animation",
             "id": "ritualGlyph",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -28757,24 +29401,24 @@
     },
     {
       "id": "dark_shrine_main",
-      "name": "DARK SHRINE — MAIN HALL",
+      "name": "DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE",
       "source": "shf",
       "lore": {
-        "premise": "Dark Shrine Main Hall, entité ressemblant à Rinko.",
-        "canonicalBasis": "EXT34",
+        "premise": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit.",
+        "canonicalBasis": "EXT34 ; EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028 ; EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028 ; EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "ritualStone",
-        "name": "PIERRE RITUELLE",
-        "moveScale": 0.97,
-        "jumpScale": 0.94,
-        "dodgeScale": 0.94,
-        "friction": 0.83,
-        "knockbackScale": 1.02,
-        "guardRegenScale": 0.88,
-        "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+        "name": "PLANCHER DU SEUIL RITUEL",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
       },
       "shift": {
         "style": "shrine",
@@ -28792,15 +29436,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "lanternSway",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "continuous"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -28810,10 +29446,13 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "DARK SHRINE — MAIN HALL",
-        "correctedName": null,
-        "locationNote": "Dark Shrine Main Hall, entité ressemblant à Rinko.",
+        "correctedName": "DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE",
+        "locationNote": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit.",
         "referenceIds": [
-          "EXT34"
+          "EXT34",
+          "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+          "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+          "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -28823,30 +29462,39 @@
         "proposals": [
           {
             "name": "dark_shrine_main_ambient_01",
-            "description": "Poupées en arrière-plan avant activation",
+            "description": "Les deux braseros bordent le premier seuil rituel ; aucune poupée ou créature de fond ajoutée.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "dark_shrine_main_ambient_02",
-            "description": "Battement de tissus rituels",
+            "description": "Les panneaux du seuil restent en place et leur reflet varie faiblement ; aucun tissu rituel non confirmé.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
           },
           {
             "name": "dark_shrine_main_ambient_03",
-            "description": "Lueur du hall sous geste de purification",
+            "description": "La lueur des braseros accompagne la porte fermée, sans geste de purification, déclenchement de boss ou ouverture automatique.",
             "status": "adaptation-animation-proposee",
             "evidence": [
-              "EXT34"
+              "EXT34",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+              "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
             ],
             "category": "ambient",
             "timecode": null
@@ -28867,9 +29515,16 @@
         "worldState": "fixed-altered",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
-        "interior": false,
+        "automaticFinishers": false,
+        "sceneId": "first-ritual-chamber-threshold",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "PLANCHER DU SEUIL RITUEL",
+          "description": "L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        },
+        "alteredPhaseLabel": "PREMIÈRE CHAMBRE · SEUIL",
+        "weather": "none",
+        "interior": true,
         "baselineMotion": true,
         "suppression": [
           {
@@ -28894,25 +29549,119 @@
           },
           {
             "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "firePulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "dark_shrine_main:reference:1",
           "dark_shrine_main:reference:2",
-          "dark_shrine_main:reference:3",
+          "dark_shrine_main:reference:3"
+        ],
+        "pendingProposalIds": [
           "dark_shrine_main:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "dark_shrine_main:reference:1",
+          "key": "ritualThresholdBraziers",
+          "name": "Braseros du premier seuil rituel",
+          "description": "Les deux braseros bordent le premier seuil rituel ; aucune poupée ou créature de fond ajoutée.",
+          "proposalIndex": 0,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.52
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Braseros du premier seuil rituel",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+        },
+        {
+          "id": "dark_shrine_main:reference:2",
+          "key": "ritualThresholdPanels",
+          "name": "Panneaux du premier seuil rituel",
+          "description": "Les panneaux du seuil restent en place et leur reflet varie faiblement ; aucun tissu rituel non confirmé.",
+          "proposalIndex": 1,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.34
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Panneaux du premier seuil rituel",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+        },
+        {
+          "id": "dark_shrine_main:reference:3",
+          "key": "ritualThresholdDoorGlint",
+          "name": "Lueur sur la porte rituelle fermée",
+          "description": "La lueur des braseros accompagne la porte fermée, sans geste de purification, déclenchement de boss ou ouverture automatique.",
+          "proposalIndex": 2,
+          "source": "shf",
+          "evidence": [
+            "EXT34",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+            "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.4
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lueur sur la porte rituelle fermée",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -28949,13 +29698,18 @@
           },
           {
             "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
             "id": "firePulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }

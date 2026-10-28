@@ -171,7 +171,7 @@ const RECIPES={
     beat('RETRACTION DES BRAS',35,frame('retract',.55),frame('held',.24,38,.45), 'vignette','creak',.98),
     beat('CORPS UNIQUE MAINTENU',47,frame('hold',.48),frame('held',.24,38,.25), 'vignette','silence',1)
   ]},
-  clinicalInjection:{targets:STANDING,steps:[
+  clinicalInjection:{source:'origins',attackerKind:'nurse',weapon:'syringe',targets:STANDING,steps:[
     beat('APPROCHE RAIDIE',36,frame('approach',.32),frame('brace'), 'vignette','step',.98),
     beat('IMMOBILISATION BREVE',32,frame('grip',.69),frame('gripped',.04), 'vignette','creak',.95),
     beat('GESTE D INJECTION',24,frame('inject',.7),frame('recoil',.07,8), 'impact','hiss',.94),
@@ -474,16 +474,16 @@ const RECIPES={
     beat('RELACHEMENT SANS SEPARATION',34,frame('origins-joined-bodies-release',.63),frame('occluded',.19,35,.18), 'vignette','cloth',.97),
     beat('MEME ASSEMBLAGE AU REPOS',47,frame('origins-joined-bodies-held',.48),frame('held',.19,35,.18), 'vignette','silence',1)
   ]},
-  amnionSupportedFrontLegs:{attackerKind:'spider',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['machines'],
-    scopeNote:'Balayages des membres avant de première phase décrits par le guide Homecoming. Le choc rapproché du classeur utilise ce geste, sans smash ni prise de seconde phase ; nombre total des pattes non relevé.',steps:[
+  amnionSupportedFrontLegs:{source:'homecoming',attackerKind:'spider',attackerSupport:'own-mechanical-limbs',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Balayages des membres avant de première phase décrits par le guide Homecoming. Les appuis mécaniques appartiennent au monstre sélectionné, pas aux machines du décor ; la pièce de versus ne devient pas sa salle de boss originale. Le choc rapproché utilise ce geste, sans smash ni prise de seconde phase ; nombre total des pattes non relevé.',steps:[
     beat('TORSE SUSPENDU SUR LE DISPOSITIF',45,frame('hc-amnion-hanging-supported'),frame('watch'), 'vignette','metal',.98),
     beat('FRAPPE DU MEMBRE AVANT',31,frame('hc-amnion-hanging-front-swing'),frame('recoil',-.14,8), 'impact','heavy',.95),
     beat('AUTRE MEMBRE AVANT PROPOSE',32,frame('hc-amnion-hanging-front-alternate'),frame('backstep',-.2,13), 'impact','metal',.94),
     beat('DERNIER BALAYAGE AVANT PROPOSE',29,frame('hc-amnion-hanging-close-swing'),frame('fall',-.24,35,.2), 'vignette','metal',.96),
     beat('APPUIS DE PREMIERE FORME CONSERVES',49,frame('hc-amnion-hanging-supported'),frame('held',-.24,35,.2), 'vignette','silence',1)
   ]},
-  amnionExposedCloseGrip:{attackerKind:'mass',unarmed:true,targets:STANDING,maxTargetHeight:310,propsAny:['machines'],
-    scopeNote:'Prise de seconde phase décrite par le guide Homecoming. La forme exposée est conservée, sans retour à la première stance ni ouverture de ventre du vainqueur.',steps:[
+  amnionExposedCloseGrip:{source:'homecoming',attackerKind:'mass',attackerSupport:'own-mechanical-limbs',unarmed:true,targets:STANDING,maxTargetHeight:310,
+    scopeNote:'Prise de seconde phase décrite par le guide Homecoming. Les appuis mécaniques restent ceux du monstre, sans exiger ni fabriquer une machine ambiante. La forme exposée est conservée, sans retour à la première stance, revendication de salle de boss ou ouverture de ventre du vainqueur.',steps:[
     beat('TORSE EXPOSE ENTRE LES APPUIS',43,frame('hc-amnion-exposed-supported'),frame('brace'), 'vignette','creak',.98),
     beat('PRISE DE SECONDE PHASE',34,frame('hc-amnion-exposed-close-grip'),frame('gripped',-.18,6), 'vignette','cloth',.95),
     beat('MEMBRES REFERMES A PORTEE DU TORSE',32,frame('hc-amnion-exposed-members-close'),frame('recoil',-.28,19), 'impact','heavy',.93),
@@ -672,7 +672,17 @@ const PRESENTATION_ONLY_RECIPES=Object.freeze({
   shf_harai_katashiro_158:{source:'shf',sourceYear:2025,attackerKind:'doll',weapon:'knife',presentationKeys:PRESENTATION_ONLY_KEYS,
     scopeNote:'Harai Katashiro Silent Hill f 2025 : jambes-lames du journal transcrit et couteau tenu décrit par SHM, encore à recouper visuellement en détail. Retrait en trois appuis composé pour le versus ; aucune rotation offensive, téléportation, leurre, nouveau couteau ou animation source mesurée. Les changements d’appui ne déforment ni ne tournent un PNG pour fabriquer une pose.'},
   film_dark_nurse_171:{source:'film',sourceYear:2006,edition:'Silent Hill (2006, film de Christophe Gans)',scripted:true,attackerKind:'nurse',weapon:'knife',presentationKeys:PRESENTATION_ONLY_KEYS,
-    scopeNote:'Dark Nurse du film de Christophe Gans 2006, conservée comme adaptation versus-scripted. Arrêt et reprise de marionnette sont composés après son réveil ; aucun déclencheur réel de lumière, son de Revelation ou groupe de Nurses n’est simulé. knife reste l’instrument choisi par le catalogue, sans modèle de lame ni retiming de postproduction original certifiés.'}
+    scopeNote:'Dark Nurse du film de Christophe Gans 2006, conservée comme adaptation versus-scripted. Arrêt et reprise de marionnette sont composés après son réveil ; aucun déclencheur réel de lumière, son de Revelation ou groupe de Nurses n’est simulé. knife reste l’instrument choisi par le catalogue, sans modèle de lame ni retiming de postproduction original certifiés.'},
+  origins_remnant_077:{source:'origins',sourceYear:2007,requiredRole:'combatant',attackerKind:'ghost',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Remnant Origins 2007 : cage filaire flottante et ombre humanoïde attestées, sans corps charnel visible. Les six contextes gardent la cage et son ombre dans le même cadrage ; pas de miroir, faisceau lumineux créé, téléportation, aura offensive ou anatomie humaine ajoutée. Atténuation du résultat et décalages sont des compositions versus, sans photométrie ni animation source mesurées.'},
+  homecoming_curtis_ackers:{source:'homecoming',sourceYear:2008,requiredRole:'combatant',attackerKind:'humanoid',weapon:'circular_saw',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Curtis Ackers Homecoming 2008 : humain avec scie circulaire décrite pour le combat de Room 321 Underground. Le rendu neutre entier ne montre pas cet outil ; modèle équipé et prises restent à relever. Le token circular_saw le distingue des tronçonneuses de Walter et Robbie. Ni démarrage moteur, rotation de disque, table, transfert du boss au junkyard, projectile ou exécution d’Elle n’est créé par ces présentations.'},
+  downpour_weeping_bat_105:{source:'downpour',sourceYear:2012,requiredRole:'combatant',attackerKind:'humanoid',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Weeping Bat Downpour 2012 : très longs membres, accrochage au plafond ou au mur attesté, sans ailes ni vol libre. Ce cadrage versus conserve le corps entier au niveau du sol ; accrochage, descente et changement de surface restent à produire avec un support réel. Aucun saut vertical, plafond fictif, déformation de membres, morsure ou animation suspendue n’est simulé.'},
+  downpour_prisoner_minion_brawler_108:{source:'downpour',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Aucun art martial nommé attesté.',attackerKind:'humanoid',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Prisoner Minion Brawler Downpour : variante bagarreur, cadre métallique facial et convulsions décrits pour la famille. Le rendu familial ne certifie pas à lui seul l’identification de variante. Les appuis et mains vides restent cadrés sans animer le cadre ni dessiner une garde d’art martial. Aucun coup, prisonnier supplémentaire, barreau, arme ou geste de Juggernaut n’est ajouté.'},
+  downpour_prisoner_minion_agile_109:{source:'downpour',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Variante plus agile documentée; ne pas inventer téléportation.',attackerKind:'humanoid',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Prisoner Minion Agile Downpour : seconde variante plus agile documentée, conservée distincte de Brawler et Juggernaut. Le rendu familial ne certifie pas les proportions propres à cette variante. Deux transferts d’appui de sortie sont composés pour le versus, sans téléportation, saut, art martial nommé, changement du cadre facial, attaque ou cadence originale mesurée.'}
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -756,7 +766,18 @@ const PRESENTATION_STAGING=Object.freeze({
     outroFootwork:[{from:0,to:.22,distance:8,pose:'left-blade-support'},{from:.38,to:.64,distance:12,pose:'right-blade-support'},{from:.78,to:1,distance:8,pose:'both-blades-support'}],
     poses:['shf-harai-blade-legs-hand-knife-entry',null,'shf-harai-blade-appuis-knife-round-watch','shf-harai-blade-appuis-recover-with-knife','shf-harai-hand-knife-low-final-watch','shf-harai-blade-legs-and-hand-knife-final-rest','shf-harai-authored-blade-support-withdrawal']},
   film_dark_nurse_171:{id:'film2006-dark-nurse-awakened-puppet-hold',entry:11,entryDelay:.34,retreat:0,recoil:3,outroHold:true,
-    poses:['film2006-nurse-awakened-puppet-held-entry',null,'film2006-nurse-awakened-rigid-instrument-round-watch','film2006-nurse-awakened-instrument-retained-recovery','film2006-nurse-awakened-puppet-final-stop','film2006-nurse-own-body-final-stillness','film2006-nurse-awakened-held-no-light-trigger']}
+    poses:['film2006-nurse-awakened-puppet-held-entry',null,'film2006-nurse-awakened-rigid-instrument-round-watch','film2006-nurse-awakened-instrument-retained-recovery','film2006-nurse-awakened-puppet-final-stop','film2006-nurse-own-body-final-stillness','film2006-nurse-awakened-held-no-light-trigger']},
+  origins_remnant_077:{id:'origins-remnant-wire-cage-and-shadow',entry:14,entryDelay:.12,entryFade:false,retreat:0,recoil:0,roundDim:.08,finalDim:.3,outroHold:true,
+    poses:['origins-remnant-wire-cage-shadow-entry',null,'origins-remnant-cage-shadow-round-held','origins-remnant-cage-shadow-recoverable-dim','origins-remnant-cage-shadow-final-watch','origins-remnant-cage-shadow-final-suppression-retained','origins-remnant-cage-shadow-held-no-new-body']},
+  homecoming_curtis_ackers:{id:'homecoming-curtis-existing-circular-saw',entry:12,entryDelay:.15,retreat:0,recoil:7,outroHold:true,
+    poses:['hc-curtis-circular-saw-held-whole-body-entry',null,'hc-curtis-circular-saw-retained-round-watch','hc-curtis-circular-saw-support-recovery','hc-curtis-circular-saw-lowered-final-watch','hc-curtis-circular-saw-retained-final-rest','hc-curtis-circular-saw-held-no-start-or-execution']},
+  downpour_weeping_bat_105:{id:'downpour-weeping-bat-long-limbs-ground-level',entry:0,entryFade:false,retreat:0,recoil:0,outroHold:true,
+    poses:['dp-weeping-bat-whole-long-limbs-ground-entry',null,'dp-weeping-bat-long-limbs-ground-round-watch','dp-weeping-bat-same-ground-support-recovery','dp-weeping-bat-ground-held-awaiting-real-high-support','dp-weeping-bat-long-limbs-final-ground-rest','dp-weeping-bat-ground-result-no-invented-ceiling']},
+  downpour_prisoner_minion_brawler_108:{id:'downpour-prisoner-brawler-frame-and-empty-hands',entry:13,retreat:0,recoil:6,outroHold:true,
+    poses:['dp-brawler-frame-empty-hands-whole-body-entry',null,'dp-brawler-frame-empty-hands-round-watch','dp-brawler-frame-retained-support-recovery','dp-brawler-empty-hands-relaxed-final-watch','dp-brawler-own-framed-body-final-rest','dp-brawler-framed-body-held-no-juggernaut']},
+  downpour_prisoner_minion_agile_109:{id:'downpour-prisoner-agile-continuous-ground-supports',entry:18,retreat:0,recoil:8,
+    outroFootwork:[{from:.1,to:.34,distance:8,pose:'rear-ground-support'},{from:.54,to:.9,distance:12,pose:'front-ground-support'}],
+    poses:['dp-agile-frame-empty-hands-whole-body-entry',null,'dp-agile-own-frame-round-watch','dp-agile-frame-retained-support-recovery','dp-agile-empty-hands-relaxed-final-watch','dp-agile-own-framed-body-final-rest','dp-agile-authored-two-support-ground-withdrawal']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 function presentationStaging(actor) {
@@ -812,6 +833,7 @@ export function loreFinisher({attacker,target,stage,definition,stageBased=false,
   if(!approvedProposal(ref.proposals?.finisher))return blocked('Clôture bloquée par les références.',definition.id);
   const recipeId=FIGHTER_RECIPES[a.id],recipe=RECIPES[recipeId];
   if(!recipe)return blocked('Timeline propre à cette fiche encore à produire.',definition.id);
+  if(recipe.source&&recipe.source!==a.source)return blocked('L’œuvre ne correspond pas à cette séquence exacte.',definition.id);
   const body=bodyProfile(t);
   if(!recipe.targets.includes(body.kind))return blocked('Anatomie de la cible incompatible avec cette prise ou trajectoire.',definition.id);
   if(recipe.maxTargetHeight&&body.height*body.scale>recipe.maxTargetHeight)return blocked('La cible dépasse la portée corporelle de cette séquence.',definition.id);
@@ -926,7 +948,7 @@ export function cinematicSummary(definitionId) {
     description:stageBased?recipe.description:ref.proposals.finisher.description,scopeNote:recipe.scopeNote||null,referenceIds:[...(ref.referenceIds||[])],
     adaptationStatus:'adaptation-versus-scripted',fidelity:'original-versus-staging',artStatus:'contextual-images-missing',
     requirements:{targets:[...recipe.targets],props:[...(recipe.props||recipe.propsAll||[])],propsAny:[...(recipe.propsAny||[])],stageIds:[...(recipe.stageIds||[])],weapon:recipe.weapon||null,
-      attackerState:recipe.attackerState||null,
+      attackerState:recipe.attackerState||null,attackerSupport:recipe.attackerSupport||null,
       attackerKind:recipe.attackerKind||null,attackerLimbs:recipe.attackerLimbs||null,attackerHead:recipe.attackerHead||null,unarmed:!!recipe.unarmed,
       needsCeiling:!!recipe.needsCeiling,zone:recipe.zone||'combat-space',decisiveMatchOnly:true},
     beats:steps.map(s=>({label:s.label,from:s.from,to:s.to,attackerPose:s.attacker.pose,targetPose:s.target.pose,effect:s.effect,sound:s.sound,
@@ -941,8 +963,10 @@ export function lorePresentation(actor,key) {
   const ownEdition=!specific||(data.year===specific.sourceYear&&(!specific.edition||ref?.referenceEdition===specific.edition)&&
     (!specific.requiredConstraint||ref?.constraints?.includes(specific.requiredConstraint))&&
     (!Object.keys(policy).length||(policy.id===data.id&&policy.source===data.source&&policy.edition===(specific.edition||specific.source))));
-  const ownRole=!specific?.scripted||(ref?.combatRole==='scripted-encounter'&&ref?.roleDecision?.adaptationScope==='versus-scripted'&&
-    (!Object.keys(policy).length||(policy.role==='scripted-encounter'&&scriptedAllowed(actor))));
+  const ownRole=(!specific?.requiredRole||(ref?.combatRole===specific.requiredRole&&
+    (!Object.keys(policy).length||(policy.role===specific.requiredRole&&policy.combatEnabled===true))))&&
+    (!specific?.scripted||(ref?.combatRole==='scripted-encounter'&&ref?.roleDecision?.adaptationScope==='versus-scripted'&&
+    (!Object.keys(policy).length||(policy.role==='scripted-encounter'&&scriptedAllowed(actor)))));
   const authored=ref?.source===data.source&&ownEdition&&ownRole&&Object.hasOwn(PRESENTATION_POSE_INDEX,key)&&approvedProposal(proposal)&&Boolean(recipe)&&(!recipe.source||recipe.source===data.source)&&(!recipe.presentationKeys||recipe.presentationKeys.includes(key))&&(!recipe.attackerState||Boolean(staging))&&(!recipe.weapon||data.visual?.weapon===recipe.weapon)&&(!recipe.unarmed||!data.visual?.weapon)&&anatomyMatches(recipe,data);
   return {ownerId:data.id,source:ref?.source,contextId,clipKey:`${key}@${contextId}`,name:proposal?.name||data.name||'',description:proposal?.description||'',referenceIds:[...(ref?.referenceIds||[])],
     adaptationStatus:proposal?.status||'bloque-reference',bodyKind:bodyProfile(data).kind,
@@ -1000,7 +1024,7 @@ export function sampleLorePresentation(actor,presentation) {
     const pose=staging.poses[PRESENTATION_POSE_INDEX[key]];
     if(key==='intro')return {x:locomotion?-facing*staging.entry*(1-ease(clamp((p-(staging.entryDelay||0))/(1-(staging.entryDelay||0))))):0,
       y:locomotion&&combatPolicy(actor).canJump!==false&&staging.landing?-staging.landing*(1-ease(p)):0,
-      alpha:clamp(p*4),pose};
+      alpha:staging.entryFade===false?1:clamp(p*4),pose};
     if(key==='loseRound')return {x:locomotion?-facing*staging.recoil*Math.sin(p*Math.PI):0,
       y:locomotion&&combatPolicy(actor).canJump!==false?(staging.roundDip||0)*Math.sin(p*Math.PI):0,alpha:1-(staging.roundDim||0)*Math.sin(p*Math.PI),
       pose:p<.6?pose:pose+'-ready'};

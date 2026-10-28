@@ -1,6 +1,7 @@
 /* Original perspective sets. These are not traced recreations of official maps. */
 const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
+  if(lot11Room(stage))return 'interior';
   if(stage?.source==='shf'&&['dark_shrine','corrupted_ebisugaoka'].includes(stage.id))return 'exterior';
   if(stage?.source==='shattered'&&stage.id==='nightmare_school')return 'exterior';
   if(stage?.source==='bom'&&['book_fire','book_earth'].includes(stage.id))return 'interior';
@@ -9,7 +10,94 @@ export function stageSpace(stage) {
   return stage?.id === 'brookhaven_roof' ? 'exterior' : INTERIORS.has(stage?.family) ? 'interior' : 'exterior';
 }
 const line = (c,x,y,xx,yy,color,width=2) => { c.strokeStyle=color;c.lineWidth=width;c.beginPath();c.moveTo(x,y);c.lineTo(xx,yy);c.stroke(); };
+// Original frontal compositions of six explicitly selected sub-rooms. The
+// guide-only Origins sets are deliberately sparse; they do not claim a traced
+// map or photographed placement. Source objects are painted by their tracks.
+const LOT11_ROOM_SCENES = Object.freeze({
+  curtis_shop:['homecoming','junkyard-counter-first-exchange'],
+  looping_hall:['pt','lit-beige-hall-unidentified-loop'],
+  cedar_grove:['origins','female-treatment-mirror'],
+  antique_shop:['origins','green-lion-inner-passage'],
+  church_hc:['homecoming','holy-way-main-hall-before-glass-break'],
+  underground_hc:['homecoming','founding-families-antechamber'],
+  dark_shrine_corridors:['shf','inari-altar-before-replacement'],
+  dark_shrine_main:['shf','first-ritual-chamber-threshold']
+});
+const lot11Room = stage => {
+  const expected=LOT11_ROOM_SCENES[stage?.id];
+  return expected&&stage.source===expected[0]&&stage.referencePolicy?.sceneId===expected[1];
+};
+function drawLot11Room(c,w,h,stage){
+  if(!lot11Room(stage))return false;
+  const ground=h*.57,id=stage.id;c.save();
+  if(id==='curtis_shop'){
+    c.fillStyle='#343c33';c.fillRect(0,0,w,ground);
+    for(const x of[w*.13,w*.4,w*.66])line(c,x,h*.12,x,ground,'#4b5140',7);
+    // Back shelves in the counter photograph, without a body or tool cameo.
+    const xx=w*.39;c.fillStyle='#252d25';c.fillRect(xx-128,h*.14,256,h*.34);
+    for(let row=0;row<3;row++){
+      line(c,xx-128,h*(.2+row*.11),xx+128,h*(.2+row*.11),'#75715b',5);
+      for(let col=0;col<4;col++){c.fillStyle=col%2?'#4a4b38':'#5b5842';c.fillRect(xx-113+col*57,h*(.15+row*.11),37,31);}
+    }
+  }else if(id==='looping_hall'){
+    c.fillStyle='#3f4837';c.fillRect(0,0,w,ground);
+    c.fillStyle='#666d51';c.fillRect(w*.12,h*.11,w*.76,ground-h*.11);
+    for(const y of[h*.11,h*.145,h*.52,h*.56])line(c,w*.12,y,w*.88,y,'#8c8d68',4);
+    for(const side of[-1,1]){
+      const x=w*(.5+side*.35);c.fillStyle='#171f1a';c.fillRect(x-31,h*.2,62,h*.29);
+      for(let i=0;i<3;i++)line(c,x-26+i*26,h*.205,x-26+i*26,h*.48,'#606b4c',3);
+      for(let i=0;i<5;i++)line(c,x-28,h*(.21+i*.065),x+28,h*(.21+i*.065),'#606b4c',3);
+    }
+    // The two photographed turns are restaged frontally, not connected as a
+    // source-map loop. No cellar, bathroom or red hanging-fridge phase is added.
+  }else if(id==='cedar_grove'){
+    c.fillStyle='#333d35';c.fillRect(0,0,w,ground);
+    c.fillStyle='#4c5948';c.fillRect(w*.16,h*.15,w*.69,ground-h*.15);
+    for(let i=0;i<10;i++)line(c,w*.16,h*(.18+i*.04),w*.85,h*(.18+i*.04),'rgba(132,143,112,.17)',1);
+    for(let i=0;i<15;i++)line(c,w*(.16+i*.049),h*.15,w*(.16+i*.049),ground,'rgba(115,130,103,.12)',1);
+    line(c,0,ground-18,w,ground-18,'#25362c',9);
+  }else if(id==='antique_shop'){
+    c.fillStyle='#26251f';c.fillRect(0,0,w,ground);
+    for(let row=0;row<6;row++){
+      const y=h*(.12+row*.075);line(c,0,y,w,y,'rgba(98,87,64,.2)',3);
+      for(let col=0;col<10;col++){const x=w*((col+.5*(row%2))/9);line(c,x,y,x,y+h*.075,'rgba(98,87,64,.17)',2);}
+    }
+    // Fixed hole and passage, not an opening in the fighter collision plane.
+    const x=w*.25,y=h*.57;c.fillStyle='#0a1410';c.beginPath();c.moveTo(x-89,y);c.lineTo(x-94,y-98);c.lineTo(x-61,y-157);c.lineTo(x+36,y-163);c.lineTo(x+91,y-117);c.lineTo(x+85,y);c.closePath();c.fill();
+    line(c,x-94,y-98,x-61,y-157,'#4c4938',9);line(c,x-61,y-157,x+36,y-163,'#4c4938',10);line(c,x+36,y-163,x+91,y-117,'#4c4938',8);
+  }else if(id==='church_hc'){
+    c.fillStyle='#2a2821';c.fillRect(0,0,w,ground);
+    for(const side of[-1,1]){
+      const x=w*(.5+side*.34);c.fillStyle='#474335';c.fillRect(x-17,h*.08,34,ground-h*.08);line(c,x,h*.08,x,ground,'#645c42',5);
+    }
+    // Only the photographed lower panel is reconstructed. Upper organ pipes
+    // are not inferred from the cropped nave view or a generic church family.
+    c.fillStyle='#4a3829';c.fillRect(w*.5-126,h*.49,252,h*.08);line(c,w*.5-132,h*.49,w*.5+132,h*.49,'#756044',6);
+  }else if(id==='underground_hc'){
+    c.fillStyle='#29352d';c.fillRect(0,0,w,ground);
+    for(let row=0;row<9;row++)line(c,0,h*(.16+row*.046),w,h*(.16+row*.046),'rgba(98,116,94,.16)',1);
+    for(const x of[w*.1,w*.41,w*.59,w*.9])line(c,x,h*.11,x,ground,'#414e3c',8);
+    const x=w*.5;c.fillStyle='#505740';c.fillRect(x-79,h*.24,158,ground-h*.24);c.fillStyle='#172a21';c.fillRect(x-70,h*.25,140,ground-h*.25);line(c,x,h*.25,x,ground,'#4b5942',4);
+    // No operating table, torture device, cocoon or Amnion machine silhouette.
+  }else if(id==='dark_shrine_corridors'){
+    c.fillStyle='#604b32';c.fillRect(0,0,w,ground);
+    c.fillStyle='#a1936b';c.fillRect(w*.08,h*.12,w*.84,ground-h*.12);
+    for(const x of[w*.08,w*.42,w*.79,w*.92])line(c,x,h*.1,x,ground,'#594329',9);
+    for(const y of[h*.15,h*.43,h*.56])line(c,w*.08,y,w*.92,y,'#60482b',6);
+    c.fillStyle='#4a3825';c.fillRect(w*.44,h*.17,w*.31,h*.4);
+  }else{
+    c.fillStyle='#7a6040';c.fillRect(0,0,w,ground);
+    c.fillStyle='#9b8052';c.fillRect(w*.1,h*.1,w*.8,ground-h*.1);
+    for(const x of[w*.1,w*.32,w*.68,w*.9])line(c,x,h*.1,x,ground,'#614629',10);
+    line(c,0,h*.49,w,h*.49,'#5b432a',9);
+    for(let i=0;i<18;i++)line(c,w*.1+i*w*.046,h*.49,w*.1+i*w*.046,ground,'rgba(53,43,26,.4)',2);
+  }
+  line(c,0,ground,w,ground,'rgba(22,25,17,.7)',5);
+  c.restore();return true;
+}
+
 export function drawStageArchitecture(c,w,h,stage) {
+  if(drawLot11Room(c,w,h,stage))return true;
   if(stage?.source==='shf'&&['dark_shrine','hinako_home','shimizu_residence','school_shf','corrupted_ebisugaoka'].includes(stage.id)){
     // Separate photographed rooms. Original frontal sets, never traced plans.
     const id=stage.id,ground=h*.57;c.save();

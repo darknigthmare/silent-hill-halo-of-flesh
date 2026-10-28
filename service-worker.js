@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261026-pass10';
+const CACHE_REVISION = 'parallel-20261028-pass11';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '4d5ed7a5f4596f084a1725939e5c9e8049b44e0305c7c22a35ba2d53639731cc';
+const BITMAP_REVISION = 'b0067b0f19bcc98d86e62338d21c85ab58534429de55828f3de257ad2b2d21a3';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -10,7 +10,30 @@ const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+  "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+  "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+  "/assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+  "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
   "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+  "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+  "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+  "/assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+  "/assets/sprites/homecoming_needler_088.39331afee89d.png",
+  "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+  "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+  "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+  "/assets/sprites/homecoming_schism_089.b94be9905392.png",
+  "/assets/sprites/homecoming_siam_090.88b378486212.png",
+  "/assets/sprites/homecoming_smog_087.24134515bb83.png",
+  "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+  "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
+  "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+  "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
+  "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+  "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+  "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+  "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
@@ -21,6 +44,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
   "/assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+  "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_mumbler_006.38861850b609.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
@@ -42,6 +66,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+  "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
   "/assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
   "/assets/sprites/sh3_closer_036.83102a051acb.png",

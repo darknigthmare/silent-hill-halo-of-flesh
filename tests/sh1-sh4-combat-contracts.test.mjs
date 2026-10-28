@@ -6,7 +6,7 @@ import {combatReferencePolicy,sourceMouthPhase,sourceHitResponse,firearmExposure
 import {bodyProfile,bodyBox,hasGroundContact} from '../src/combat-geometry.js';
 import {actorSpriteState} from '../src/sprite-animation.js';
 import {spriteFor,rasterPlacement,drawRasterMonster} from '../src/sprite-system.js';
-import {combatFraming,visibleSpriteBox,toScreen} from '../src/sprite-framing.js';
+import {combatFraming,visibleSpriteBox,completeSpriteBox,toScreen} from '../src/sprite-framing.js';
 
 const SPLIT='sh1_split_head_014',HUMMER='sh4_hummer_055',WALL='sh4_wall_man_056';
 const NURSE='sh3_nurse_revolver_044',PIPE='sh2_bubble_head_nurse_024',SAKURA='shortmessage_sakura_head_150';
@@ -129,7 +129,8 @@ test('Wall Man actual claw special knocks down while its supported body stays fi
   for(let n=0;n<60&&b.health===before;n++)e.update();
   assert.ok(b.health<before);assert.ok(b.knockdownTimer>0);assert.equal(a.x,start);assert.equal(a.y,594);
   const other=createCombatProfile(fighter('sh4_one_truth_070'));
-  assert.equal(other.moves.neutralSpecial.knockdown,false,'One Truth does not inherit a Wall Man source correction');
+  assert.equal(other.moves.neutralSpecial.knockdown,true,'One Truth now has its own separately documented knocking arm swing');
+  assert.equal(other.moves.forwardSpecial.knockdown,false,'its distinct close headbutt does not borrow the Wall Man claw knockdown');
 });
 
 test('both Sniffer variants actually hold through contact and apply the limited versus bind',()=>{
@@ -241,7 +242,8 @@ test('state-aware Hummer clip bounds and camera frame the same lowered raster in
     for(const frame of art.frames){
       const ground=visibleSpriteBox(data,frame,x,594,facing,state),hover=visibleSpriteBox(data,frame,x,594,facing,{});
       assert.ok(Math.abs(ground.y-hover.y-34*data.visual.scale)<1e-9);
-      lower=Math.max(lower,ground.y+ground.h+18);
+      const full=completeSpriteBox(data,frame,x,594,facing,state);
+      lower=Math.max(lower,full.y+full.h+18);
       const screen=toScreen(ground,camera);assert.ok(screen.x>=-1e-8&&screen.x+screen.w<=1280+1e-8);
       assert.ok(screen.y>=132-1e-8&&screen.y+screen.h<=694+1e-8);
     }

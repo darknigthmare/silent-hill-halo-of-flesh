@@ -83,7 +83,7 @@ test('the ruined SH2 hotel keeps wet tiles and burnt plaster without a new fire 
 });
 
 test('geographic corrections change the actual displayed name and retain the former catalogue label',()=>{
-  for(const [id,name] of [['church_hc','CHURCH OF THE HOLY WAY'],['prison_hc','OVERLOOK PENITENTIARY'],['prison_meat_locker','LABYRINTH — MEAT LOCKER']]){
+  for(const [id,name] of [['church_hc','CHURCH OF THE HOLY WAY — NEF'],['prison_hc','OVERLOOK PENITENTIARY'],['prison_meat_locker','LABYRINTH — MEAT LOCKER']]){
     const s=stage(id);assert.equal(s.name,name);assert.equal(s.reference.correctedName,name);assert.notEqual(s.reference.catalogueName,name);
   }
 });
@@ -125,7 +125,7 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,127);assert.equal(keys.size,97);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  assert.equal(tracks.length,147);assert.equal(keys.size,118);assert.equal(keys.size,Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];

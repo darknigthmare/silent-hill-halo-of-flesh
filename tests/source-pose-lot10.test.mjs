@@ -14,8 +14,9 @@ const text=(id,pose)=>LOT10_SOURCE_POSE_SPECIFICATIONS.find(row=>row.rowId===`${
 test('lot10 contributes thirty new source-pose descriptions while the thirty lot9 briefs remain intact',async()=>{
   assert.equal(LOT10_SOURCE_POSE_SPECIFICATIONS.length,30);
   assert.equal(LOT9_SOURCE_POSE_SPECIFICATIONS.length,30);
-  assert.equal(SOURCE_POSE_SPECIFICATIONS.length,60);
-  assert.equal(new Set(SOURCE_POSE_SPECIFICATIONS.map(row=>row.rowId)).size,60);
+  const legacy=SOURCE_POSE_SPECIFICATIONS.filter(row=>['lot9','lot10'].includes(row.batch));
+  assert.equal(legacy.length,60);
+  assert.equal(new Set(legacy.map(row=>row.rowId)).size,60);
   const old=JSON.parse(await readFile(new URL('../docs/production/batches/lot9-poses.json',import.meta.url)));
   for(const item of old.items){
     assert.equal(LOT9_SOURCE_POSE_SPECIFICATIONS.find(row=>row.rowId===item.rowId).description,item.description);

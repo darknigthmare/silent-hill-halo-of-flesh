@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "317ebe4006e47cad2e348ac069c30a024dd5de686dbd3f680d6c03c81fcb43e3",
+  "planSha256": "41483987edecad042f7a7c7bc238fb12a3668af248e3bfa424ca6ed4c47d44b0",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -216,9 +216,9 @@
       }
     },
     "Sources": {
-      "rows": 217,
+      "rows": 246,
       "columns": 7,
-      "range": "A5:G222",
+      "range": "A5:G251",
       "fields": {
         "id": "A",
         "title": "B",
@@ -241,9 +241,9 @@
     "poses": 2300,
     "stageAnimations": 1799,
     "observations": 435,
-    "sources": 217,
+    "sources": 246,
     "tasks": 875,
-    "pngCandidates": 49,
+    "pngCandidates": 74,
     "animatedClips": 1,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 205,
@@ -256,7 +256,7 @@
     "authoredFinishers": 205,
     "authoredFighterFinishers": 198,
     "authoredStageFinishers": 7,
-    "authoredPresentations": 746,
+    "authoredPresentations": 776,
     "resolvedRoleDecisions": 33,
     "stageBitmapCandidates": 6,
     "stageBitmapLayers": 6,
@@ -265,9 +265,9 @@
     "sourceTimingBatchSchema": 1,
     "sourceTimingReviewSchema": 1,
     "measuredSourceMoves": 0,
-    "referenceStageTracks": 127,
-    "retiredStageItems": 1203,
-    "visibleReferenceStageTracks": 121,
+    "referenceStageTracks": 147,
+    "retiredStageItems": 1213,
+    "visibleReferenceStageTracks": 141,
     "maskedReferenceStageTracks": 6,
     "additionalStageBindings": 29
   },
@@ -282,8 +282,8 @@
     2300,
     1799,
     435,
-    217,
-    49,
+    246,
+    74,
     1,
     0,
     840,
@@ -291,22 +291,22 @@
   ],
   "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "7a3c4b6fe3749eb00c50ea3e99f5e8edb4c7826db2dee9b49414f7085d403191",
-  "changedCells": 1875,
+  "sourceSha256": "3da8c5e4215aa6add9398019896aa693b833e15fdbef84d93a24eb7b8dbfbc7f",
+  "changedCells": 1670,
   "changesBySheet": {
-    "Combattants": 16,
-    "Mouvements": 628,
-    "Finishers": 40,
-    "Présentations": 144,
-    "Clips": 305,
-    "Arènes": 65,
-    "Animations arènes": 281,
-    "Actions": 87,
-    "Gestes référencés": 76,
-    "Sources": 231,
-    "Synthèse": 2
+    "Combattants": 39,
+    "Mouvements": 600,
+    "Finishers": 29,
+    "Présentations": 141,
+    "Clips": 115,
+    "Arènes": 57,
+    "Animations arènes": 301,
+    "Actions": 123,
+    "Gestes référencés": 59,
+    "Sources": 203,
+    "Synthèse": 3
   },
-  "enlargedRows": 540,
+  "enlargedRows": 528,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
@@ -611,8 +611,8 @@
     {
       "sheet": "Synthèse",
       "address": "B16",
-      "formula": "COUNTA('Sources'!$A$6:$A$222)",
-      "value": 217
+      "formula": "COUNTA('Sources'!$A$6:$A$251)",
+      "value": 246
     },
     {
       "sheet": "Synthèse",
@@ -642,7 +642,7 @@
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 49
+      "value": 74
     },
     {
       "sheet": "Synthèse",
@@ -789,21 +789,21 @@
       "value": 11
     }
   ],
-  "changeLogSha256": "99abba7a12b9452ee3ab22eaaaa353088b4865c1d6a720118e4eeb3f1bd7ebae",
+  "changeLogSha256": "73d9711e8ea4408fe203ebd7fe0db16e9c7a0ae3db7a7f58e6c7de233bf6bdc5",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
-  "structureChangeLogSha256": "fbd4682958cdac3d06fb842637543dabe45d5065232240bbb727f23ceaa6ec71",
-  "appendedSources": 33,
+  "structureChangeLogSha256": "428f86db1a1e3882beb6675fd83efa752c17280b572927ed47b4150973d366d4",
+  "appendedSources": 29,
   "verification": {
     "passed": true,
     "preservation": {
       "passed": true,
-      "comparedCells": 249899,
-      "authoredChanges": 1875,
-      "enlargedRows": 540,
-      "appendedSourceRows": 33,
-      "appendedSourceCells": 231,
+      "comparedCells": 250130,
+      "authoredChanges": 1670,
+      "enlargedRows": 528,
+      "appendedSourceRows": 29,
+      "appendedSourceCells": 203,
       "auditedFormulaExpansions": 1,
       "unchanged": [
         "worksheet order",

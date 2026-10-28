@@ -16,17 +16,29 @@ const paeth=(a,b,c)=>{const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.ab
 const ADAM7=[[0,0,8,8],[4,0,8,8],[0,4,4,8],[2,0,4,4],[0,2,2,4],[1,0,2,2],[0,1,1,2]];
 function checkedDimensions(w,h){if(!Number.isInteger(w)||!Number.isInteger(h)||w<256||h<128||w>4096||h>4096)fail('dimensions outside 256..4096 × 128..4096');}
 function alphaSummary(rgba,w,h){
- let clear=0,maximum=0,left=w,top=h,right=0,bottom=0;
+ let clear=0,maximum=0,left=w,top=h,right=0,bottom=0,alphaLeft=w,alphaTop=h,alphaRight=0,alphaBottom=0;
+ const visited=new Uint8Array(w*h),queue=new Uint32Array(w*h);let tail=0;
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
   const i=(y*w+x)*4,a=rgba[i+3];if(a<16)clear++;maximum=Math.max(maximum,a);
-  if(a>=32){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x+1);bottom=Math.max(bottom,y+1);}
+  if(a>=32){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x+1);bottom=Math.max(bottom,y+1);visited[y*w+x]=1;queue[tail++]=y*w+x;}
+  if(a>0){alphaLeft=Math.min(alphaLeft,x);alphaTop=Math.min(alphaTop,y);alphaRight=Math.max(alphaRight,x+1);alphaBottom=Math.max(alphaBottom,y+1);}
   // Invisible RGB data must not make re-encoded copies appear to be distinct art.
   if(a===0)rgba.fill(0,i,i+3);
  }
  const fraction=clear/(w*h);
  if(fraction<.08||fraction>.98||maximum<96)fail('opaque, empty or unreadable alpha');
  if(left<1||top<1||right>=w||bottom>=h||right<=left||bottom<=top)fail('visible subject touches image edge');
- return {visibleBounds:[left,top,right,bottom],transparentFraction:Math.round(fraction*1e5)/1e5,
+ // Keep faint edges connected to any readable part of the subject. Isolated
+ // alpha-one speckles in transparent padding must not make a fighter tiny.
+ let framingLeft=left,framingTop=top,framingRight=right,framingBottom=bottom;
+ for(let head=0;head<tail;head++){
+  const at=queue[head],x=at%w,y=Math.floor(at/w);
+  for(let ny=Math.max(0,y-1);ny<=Math.min(h-1,y+1);ny++)for(let nx=Math.max(0,x-1);nx<=Math.min(w-1,x+1);nx++){
+   const next=ny*w+nx;if(visited[next])continue;visited[next]=1;
+   if(rgba[next*4+3]>0){queue[tail++]=next;framingLeft=Math.min(framingLeft,nx);framingTop=Math.min(framingTop,ny);framingRight=Math.max(framingRight,nx+1);framingBottom=Math.max(framingBottom,ny+1);}
+  }
+ }
+ return {visibleBounds:[left,top,right,bottom],alphaBounds:[alphaLeft,alphaTop,alphaRight,alphaBottom],framingBounds:[framingLeft,framingTop,framingRight,framingBottom],transparentFraction:Math.round(fraction*1e5)/1e5,
   pixelSHA256:createHash('sha256').update(rgba).digest('hex')};
 }
 export function decodePng(bytes){
@@ -92,6 +104,6 @@ export function auditRaster(bytes,{python=process.env.HALO_PYTHON||(process.plat
  if(processResult.error||processResult.status!==0)fail('WebP pixel decode failed (Python + Pillow required): '+String(processResult.stderr||processResult.error||'decoder exit').slice(0,500));
  let result;try{result=JSON.parse(processResult.stdout.toString());}catch{fail('invalid WebP decoder response');}
  checkedDimensions(result.width,result.height);
- if(result.format!=='WEBP'||result.sha256!==createHash('sha256').update(bytes).digest('hex')||!result.alpha||result.animated||!Array.isArray(result.visibleBounds)||result.visibleBounds.length!==4||!/^[a-f0-9]{64}$/.test(result.pixelSHA256))fail('inconsistent WebP decoder response');
+ if(result.format!=='WEBP'||result.sha256!==createHash('sha256').update(bytes).digest('hex')||!result.alpha||result.animated||!Array.isArray(result.visibleBounds)||result.visibleBounds.length!==4||!Array.isArray(result.alphaBounds)||result.alphaBounds.length!==4||!Array.isArray(result.framingBounds)||result.framingBounds.length!==4||!/^[a-f0-9]{64}$/.test(result.pixelSHA256))fail('inconsistent WebP decoder response');
  return result;
 }

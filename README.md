@@ -1,6 +1,33 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
-## Chantiers parallèles — dixième lot du 26 octobre 2026
+## Corps entiers et chantiers parallèles — onzième lot du 28 octobre 2026
+
+**Six agents, trente lignes chacun : 180 éléments suivis**, avec
+106 réalisations candidates, 60 spécifications et 14 blocages documentés.
+Les 166 lignes non bloquées diffèrent du lot précédent ; les treize blocages
+historiques restent visibles.
+
+**25 nouveaux monstres entiers** sont intégrés comme images fixes de combat 2D,
+avec équipement et édition propres. Le registre atteint **74 profils illustrés
+et 109 PNG actifs**. Le cadrage contient les contours fins reliés au corps,
+écarte le bruit faible isolé et réserve une marge pour les secousses.
+Cette correction de cadrage ne modifie pas les collisions.
+
+Le lot ajoute 30 commandes, 30 présentations, 21 éléments de lieux et 29 sources.
+Les propositions de décors non attestées sont révisées avec leur ancien texte
+conservé. Les 246 sources préservent les 217 précédentes à l’identique.
+
+**Validation : 1 098 tests Node, 101 tests Python et 2 860 contrôles navigateur
+réussis dans quatorze suites ; 503 captures et aucune exception JavaScript.**
+Il reste 156 profils sans PNG et 840 actions ouvertes, dont 93 P0. Les images
+sont candidates ; aucune fidélité 1:1 ou animation originale n’est certifiée.
+
+[Réalisation et limites](docs/production/CHANTIERS_PARALLELES_LOT11_2026-10-28.md) ·
+[Six lots vérifiés](docs/production/batches/lot11-summary.json) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-10-28-lot11.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
+## Chantiers parallèles précédents — dixième lot du 26 octobre 2026
 
 **Six agents, trente lignes Excel chacun : 180 éléments supplémentaires**,
 avec 120 réalisations candidates et 60 spécifications documentaires.

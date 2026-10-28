@@ -59,7 +59,7 @@ test('local reactions require an actual nearby heavy hit and add no damage, mete
   const state=()=>({health:e.actors.map(a=>a.health),meter:e.actors.map(a=>a.meter),terrain:e.currentTerrain(),world:e.world.amount,hazards:e.hazards.length});const before=state();assert.equal(e.tryStageInteraction(),true);assert.equal(runtime.activeEvent.id,track.event);assert.deepEqual(state(),before);assert.equal(runtime.linkedHazard,null);assert.equal(runtime.pendingTerrain,null);
   runtime.activeEvent=null;runtime.heavyImpactPending=true;runtime.lastHeavyImpact={x:target.x};assert.equal(e.tryStageInteraction(),false,'reply remains once per round');
  }
- assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),29);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),29);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
+ assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
 });
 
 test('new scenery moves normally and freezes geometry with reduced motion without leaking Canvas state',()=>{

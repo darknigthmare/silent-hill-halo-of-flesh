@@ -4,6 +4,7 @@ import hashlib
 import json
 from io import BytesIO
 import sys
+from array import array
 from PIL import Image, ImageFile
 
 Image.MAX_IMAGE_PIXELS = 4096 * 4096
@@ -25,10 +26,32 @@ def inspect(raw):
             raise ValueError('Opaque or empty image')
         if bounds[0] < 1 or bounds[1] < 1 or bounds[2] >= im.width or bounds[3] >= im.height:
             raise ValueError('Visible subject touches edge')
+        pixels = alpha.tobytes()
+        visited = bytearray(im.width * im.height)
+        queue = array('I')
+        for index, value in enumerate(pixels):
+            if value >= 32:
+                visited[index] = 1
+                queue.append(index)
+        left, top, right, bottom = bounds
+        head = 0
+        while head < len(queue):
+            index = queue[head]
+            head += 1
+            x, y = index % im.width, index // im.width
+            for ny in range(max(0, y - 1), min(im.height, y + 2)):
+                for nx in range(max(0, x - 1), min(im.width, x + 2)):
+                    following = ny * im.width + nx
+                    if visited[following]:
+                        continue
+                    visited[following] = 1
+                    if pixels[following] > 0:
+                        queue.append(following)
+                        left, top, right, bottom = min(left, nx), min(top, ny), max(right, nx + 1), max(bottom, ny + 1)
         rgba = im.convert('RGBA')
         rgba.paste((0, 0, 0, 0), mask=alpha.point(lambda a: 255 if a == 0 else 0))
         return dict(width=im.width, height=im.height, format='WEBP', alpha=True, animated=False,
-                    visibleBounds=list(bounds), transparentFraction=round(fraction, 5),
+                    visibleBounds=list(bounds), alphaBounds=list(alpha.getbbox()), framingBounds=[left, top, right, bottom], transparentFraction=round(fraction, 5),
                     sha256=hashlib.sha256(raw).hexdigest(), pixelSHA256=hashlib.sha256(rgba.tobytes()).hexdigest())
 
 if __name__ == '__main__':

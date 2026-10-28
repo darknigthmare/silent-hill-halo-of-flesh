@@ -130,17 +130,17 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Faceless Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Carrion | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Remnant | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Ariel | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Caliban | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
-| Two-Back | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Straight-Jacket | combatant | `zoner` | TRAIT VERSUS LIMITÉ | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Faceless Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Carrion | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Remnant | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Ariel | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Caliban | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
+| Two-Back | multi-body | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
 | The Butcher | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
-| Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE SANITARIUM |
+| Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
 | Memory of Richard Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
-| Demon | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GREEN LION ANTIQUES |
+| Demon | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GREEN LION — PASSAGE VERS LE RITUEL |
 
 ## SILENT HILL: HOMECOMING (2008)
 
@@ -157,14 +157,14 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Order Soldier | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ALCHEMILLA — HOMECOMING NIGHTMARE |
 | Swarm | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ALCHEMILLA — HOMECOMING NIGHTMARE |
-| Curtis Ackers | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CURTIS’S JUNKYARD WORKSHOP |
+| Curtis Ackers | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CURTIS — COMPTOIR DE L’ATELIER |
 | Bogeyman | scripted-encounter | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-scripted-encounter / official-or-established | SHEPHERD’S GLEN |
 | Sepulcher | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SHEPHERD’S GLEN |
 | Scarlet — Doll Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GRAND HOTEL |
 | Scarlet — Spider Form | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GRAND HOTEL |
-| Asphyxia | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CHURCH OF THE HOLY WAY |
-| Amnion — Hanging Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
-| Amnion — Exposed Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND LAIR |
+| Asphyxia | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CHURCH OF THE HOLY WAY — NEF |
+| Amnion — Hanging Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND — ANTICHAMBRE DES FAMILLES |
+| Amnion — Exposed Form | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | UNDERGROUND — ANTICHAMBRE DES FAMILLES |
 
 ## SILENT HILL: SHATTERED MEMORIES (2009)
 
@@ -266,7 +266,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Lisa | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | 204863 — LOOPING HALL |
+| Lisa | scripted-encounter | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-scripted · canon-combatant / official-or-established | P.T. — COULOIR ÉCLAIRÉ |
 
 ## SILENT HILL: THE SHORT MESSAGE (2024)
 

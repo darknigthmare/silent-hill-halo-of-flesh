@@ -36,6 +36,7 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Lot9 terminal fixtures prepare one HP, one near-expired match clock or an ordinary airborne target. Native attacks still cause the KO and the round transition. A second-player cage grip followed by a real directional foot kick uses the naturally expiring bind timer; it checks that expiry never strands a grounded flag above the floor.',
   'Lot10 adds thirty distinct native command rows. Origins body charges and stomps use bounded low contact, Mandarin attacks through its fixed local support, and Great Knife free-hand grips lift with an exact-owner movement lock and bounded release rules. These are versus mechanics and collider choices, not original pose frames or measured source timing.',
   'Origins acid lifetime is bounded rather than full-arena. The SH3 revolver Nurse chooses a close pistol-whip or a distant shot once at attack start. Earlier genuine counter-projectile scenes now use Eddie where the new close Nurse would correctly choose her crosse; source-owned hair and whiff exposure rules are unchanged.',
+  'Lot11 exercises five exact inputs for each Numb Body size, SH4 Hummer, Wall Man and One Truth. The three armless Numb Bodies physically jump into one frontal headbutt. Hummer bites are small bounded contacts; wall claws and One Truth arm/head contacts remain fixed to their support. Heights, arcs, reach, health damage and five input variants are versus tuning, not original-game measurements or new produced animation frames.',
   'The optional output directory and local server port isolate supplemental source validation from the final dist suite; normal CI defaults are unchanged.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
@@ -688,6 +689,50 @@ try{
    report.scenes['lot10-'+label]=row;
   }
   check('lot10 covers exactly thirty new movement rows and thirty-eight real near-far executions',Object.keys(report.scenes).filter(k=>k.startsWith('lot10-')).length===30&&lot10Executions===38,lot10Executions);
+ }
+
+ // Lot11: exactly thirty newly constrained native rows, not thirty copies of
+ // one diagnostic. Every strike is accepted through the real keyboard path.
+ {
+  const numbs=['sh3_numb_body_small_037','sh3_numb_body_medium','sh3_numb_body_large_038'];
+  const ids=[...numbs,'sh4_hummer_055','sh4_wall_man_056','sh4_one_truth_070'];
+  const keys=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+  for(const id of ids)for(const key of keys){
+   await launch(page,id);
+   await page.evaluate(({id,key})=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];
+    q.position(500,id==='sh4_hummer_055'?605:id.startsWith('sh3_numb_body')?650:660);
+    a.meter=100;
+    if(key==='desperation'){
+     a.health=Math.floor(a.maxHealth*.3);
+     for(let n=0;n<220;n++){const next=a.bossPhases[a.bossPhaseIndex+1];if(!a.phaseLock&&(!a.data.boss||!next||a.health/a.maxHealth>next.threshold))break;q.advance(1);}
+    }
+   },{id,key});
+   const before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   const direction=key==='forwardSpecial'?'ArrowRight':key==='downSpecial'?'ArrowDown':null;
+   if(direction)await page.keyboard.down(direction);
+   await page.keyboard.press(['super','desperation'].includes(key)?'o':'i');
+   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));if(direction)await page.keyboard.up(direction);
+   const contact=await page.evaluate(()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],b=e.actors[1],health=b.health;let highest=a.y,hits=0,knockdown=false;
+    for(let n=0;n<100;n++){q.advance(1);highest=Math.min(highest,a.y);hits=Math.max(hits,a.attack?.hitCount||0);knockdown ||=b.knockdownTimer>0;if(b.health<health)break;}
+    return {highest,hits,knockdown,scene:q.scene()};
+   });
+   check('lot11 '+id+':'+key+' actual input creates one physical contact without projectile aura trap or teleport',contact.scene.actors[0].move===key&&contact.scene.actors[1].health<before.actors[1].health&&contact.hits===1&&contact.scene.emitted===0&&contact.scene.actors[1].status===null,contact);
+   const isNumb=numbs.includes(id),isWall=id==='sh4_wall_man_056'||id==='sh4_one_truth_070';
+   check('lot11 '+id+':'+key+' respects its front body or fixed-support movement and knockdown contract',
+    isNumb?contact.highest<594&&contact.scene.actors[0].x>before.actors[0].x&&!contact.knockdown
+     :isWall?contact.highest===594&&contact.scene.actors[0].x===before.actors[0].x&&contact.knockdown===(id==='sh4_wall_man_056'||key!=='forwardSpecial')
+     :contact.highest===594&&!contact.knockdown&&before.actors[1].health-contact.scene.actors[1].health<100,contact);
+   if(key==='forwardSpecial')await capture(page,'48-lot11-'+id+'-native-contact');
+   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(110));
+   report.scenes['lot11-'+id+':'+key]={before,contact,ended:await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene())};
+  }
+  check('lot11 covers exactly thirty distinct native command rows',Object.keys(report.scenes).filter(k=>k.startsWith('lot11-')).length===30);
+  await launch(page,'sh4_hummer_055','sh1_creeper_009');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,605));
+  const floorBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('i');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(100));
+  const floorAfter=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  check('lot11 Hummer mouth band cannot hit a floor insect by borrowing the broad wing or generic low envelope',floorAfter.actors[1].health===floorBefore.actors[1].health&&floorAfter.actors[0].damage===0&&floorAfter.emitted===0,floorAfter);
+  report.scenes.lot11HummerFloorClearance={before:floorBefore,after:floorAfter};
+  await capture(page,'49-lot11-hummer-floor-insect-clearance');
  }
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',

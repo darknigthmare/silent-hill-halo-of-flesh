@@ -6,20 +6,20 @@
 | SILENT HILL 2 | 18 | 8 | 12 | 4 | 48 | Cibles de catalogue présentes |
 | SILENT HILL 3 | 20 | 6 | 12 | 7 | 52 | Cibles de catalogue présentes |
 | SILENT HILL 4: THE ROOM | 32 | 4 | 10 | 3 | 74 | Cibles de catalogue présentes |
-| SILENT HILL: ORIGINS | 11 | 4 | 6 | 3 | 28 | Cibles de catalogue présentes |
-| SILENT HILL: HOMECOMING | 17 | 8 | 11 | 8 | 45 | Cibles de catalogue présentes |
+| SILENT HILL: ORIGINS | 11 | 4 | 6 | 2 | 28 | Cibles de catalogue présentes |
+| SILENT HILL: HOMECOMING | 17 | 8 | 11 | 6 | 45 | Cibles de catalogue présentes |
 | SILENT HILL: SHATTERED MEMORIES | 5 | 0 | 5 | 0 | 15 | Cibles de catalogue présentes |
 | SILENT HILL: DOWNPOUR | 14 | 4 | 7 | 5 | 35 | Cibles de catalogue présentes |
 | SILENT HILL: THE ARCADE | 19 | 6 | 12 | 13 | 50 | Cibles de catalogue présentes |
 | SILENT HILL: BOOK OF MEMORIES | 28 | 10 | 8 | 0 | 64 | Cibles de catalogue présentes |
-| P.T. | 1 | 0 | 1 | 1 | 3 | Cibles de catalogue présentes |
+| P.T. | 1 | 0 | 1 | 0 | 3 | Cibles de catalogue présentes |
 | SILENT HILL: THE SHORT MESSAGE | 1 | 1 | 3 | 3 | 5 | Cibles de catalogue présentes |
-| SILENT HILL f | 19 | 10 | 9 | 3 | 47 | Cibles de catalogue présentes |
+| SILENT HILL f | 19 | 10 | 9 | 0 | 47 | Cibles de catalogue présentes |
 | SILENT HILL — FILM UNIVERSE | 13 | 5 | 8 | 5 | 34 | Cibles de catalogue présentes |
 | SILENT HILL: ASCENSION | 7 | 2 | 3 | 3 | 17 | Cibles de catalogue présentes |
 | SILENT HILL: TOWNFALL | 5 | 1 | 7 | 4 | 17 | Cibles de catalogue présentes |
 
-**Total : 230 manifestations · 4600 coups · 0 directement attestés · 2635 composites · 1965 adaptations · 75 boss · 123 arènes · 71 animations · 16 sources.**
+**Total : 230 manifestations · 4600 coups · 0 directement attestés · 2635 composites · 1965 adaptations · 75 boss · 123 arènes · 64 animations · 16 sources.**
 
 ## Contrat de fidélité
 

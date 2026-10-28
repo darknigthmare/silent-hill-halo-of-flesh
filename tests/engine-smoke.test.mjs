@@ -51,7 +51,7 @@ test('fight engine advances and renders with a headless canvas contract',()=>{
 });
 
 test('forced Otherworld shift reaches a renderable transformed state',()=>{
-  const engine=makeEngine({stage:stageById('cedar_grove'),stageHazards:true,otherworldShift:true,radioWarning:true});
+  const engine=makeEngine({stage:stageById('alchemilla_origins'),stageHazards:true,otherworldShift:true,radioWarning:true});
   engine.phase='fight';engine.forceOtherworldShift();
   for(let i=0;i<180;i++)engine.update();
   engine.render(8000);
@@ -91,7 +91,7 @@ test('boss phases can be forced in Observation and alter the combat snapshot',()
 });
 
 test('rituals apply initial endurance, meter and starting Otherworld state',()=>{
-  const engine=makeEngine({stage:stageById('cedar_grove'),ritualId:'redJudgment',initialHealthRatio:.42,initialMeter:47});
+  const engine=makeEngine({stage:stageById('alchemilla_origins'),ritualId:'redJudgment',initialHealthRatio:.42,initialMeter:47});
   const state=engine.snapshot();
   assert.ok(Math.abs(state.p1.health/state.p1.maxHealth-.42)<.01);
   assert.equal(state.p1.meter,47);
@@ -336,7 +336,7 @@ test('stage events can darken the scene, pulse terrain and summon their lore-lin
 });
 
 test('each stage uses its own Otherworld cue, duration and start state',()=>{
-  const mirrorStage=stageById('cedar_grove');
+  const mirrorStage=stageById('alchemilla_origins');
   const immediate=stageById('midwich_nightmare');
   const engine=makeEngine({stage:mirrorStage,otherworldShift:true});
   engine.phase='fight';

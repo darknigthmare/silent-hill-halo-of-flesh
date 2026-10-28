@@ -27,7 +27,7 @@ for(const [id,art] of Object.entries(registry.assets)){
     if(!decoded.has(sha))decoded.set(sha,auditRaster(bytes));
     const audit=decoded.get(sha),{width:w,height:h,alpha,animated}=audit;
     const target=i<art.frames.length?runtimeAssets[id].frames[i]:runtimeAssets[id].portrait;
-    target.visibleBounds=audit.visibleBounds;target.pixelSHA256=audit.pixelSHA256;
+    target.visibleBounds=audit.visibleBounds;target.alphaBounds=audit.alphaBounds;target.framingBounds=audit.framingBounds;target.pixelSHA256=audit.pixelSHA256;
     target.transparentFraction=audit.transparentFraction;
     if(pixelOwners.has(audit.pixelSHA256)&&pixelOwners.get(audit.pixelSHA256)!==id)fail('re-encoded cross-profile clone '+id);
     pixelOwners.set(audit.pixelSHA256,id);

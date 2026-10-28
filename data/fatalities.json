@@ -3750,7 +3750,7 @@
             "incision",
             "blackout"
           ],
-          "canonicalBasis": "Attaque au scalpel et mouvement irrégulier.",
+          "canonicalBasis": "Attaque à la seringue, selon le bestiaire propre à Origins.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -3767,7 +3767,7 @@
             "otherworld",
             "blackout"
           ],
-          "canonicalBasis": "Attaque au scalpel et mouvement irrégulier.",
+          "canonicalBasis": "Attaque à la seringue, selon le bestiaire propre à Origins.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -3822,7 +3822,7 @@
         {
           "id": "origins_remnant_077_signature",
           "type": "signature",
-          "name": "Rituel de clôture — Ombre miroir",
+          "name": "Rituel de clôture — Ombre de la cage",
           "trigger": "decisive-special",
           "pose": "haunt",
           "effect": "dread",
@@ -3832,7 +3832,7 @@
             "possession",
             "fade"
           ],
-          "canonicalBasis": "Silhouette projetée qui apparaît au contact des miroirs.",
+          "canonicalBasis": "Cage filaire flottante projetant une ombre humanoïde.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 2
         },
@@ -3849,7 +3849,7 @@
             "otherworld",
             "fade"
           ],
-          "canonicalBasis": "Silhouette projetée qui apparaît au contact des miroirs.",
+          "canonicalBasis": "Cage filaire flottante projetant une ombre humanoïde.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         }
@@ -4529,7 +4529,7 @@
             "strike",
             "collapse"
           ],
-          "canonicalBasis": "Affrontement humain agressif dans l’atelier, utilisant une scie circulaire.",
+          "canonicalBasis": "Affrontement humain dans Underground, avec une scie circulaire.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 3
         },
@@ -4546,7 +4546,7 @@
             "otherworld",
             "collapse"
           ],
-          "canonicalBasis": "Affrontement humain agressif dans l’atelier, utilisant une scie circulaire.",
+          "canonicalBasis": "Affrontement humain dans Underground, avec une scie circulaire.",
           "fidelity": "adapted-from-canonical-behavior",
           "intensity": 4
         }
@@ -9850,7 +9850,7 @@
     },
     {
       "id": "cedar_grove",
-      "name": "CEDAR GROVE SANITARIUM",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
       "source": "origins",
       "fatality": {
         "id": "cedar_grove_fatality",
@@ -9865,9 +9865,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de CEDAR GROVE SANITARIUM."
       },
-      "animations": [
-        "lightFlicker"
-      ]
+      "animations": []
     },
     {
       "id": "riverside_motel",
@@ -10008,7 +10006,7 @@
     },
     {
       "id": "looping_hall",
-      "name": "204863 — LOOPING HALL",
+      "name": "P.T. — COULOIR ÉCLAIRÉ",
       "source": "pt",
       "fatality": {
         "id": "looping_hall_fatality",
@@ -10023,9 +10021,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de 204863 — LOOPING HALL."
       },
-      "animations": [
-        "lightFlicker"
-      ]
+      "animations": []
     },
     {
       "id": "villa",
@@ -10278,7 +10274,7 @@
     },
     {
       "id": "antique_shop",
-      "name": "GREEN LION ANTIQUES",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
       "source": "origins",
       "fatality": {
         "id": "antique_shop_fatality",
@@ -10297,7 +10293,7 @@
     },
     {
       "id": "church_hc",
-      "name": "CHURCH OF THE HOLY WAY",
+      "name": "CHURCH OF THE HOLY WAY — NEF",
       "source": "homecoming",
       "fatality": {
         "id": "church_hc_fatality",
@@ -10316,7 +10312,7 @@
     },
     {
       "id": "underground_hc",
-      "name": "UNDERGROUND LAIR",
+      "name": "UNDERGROUND — ANTICHAMBRE DES FAMILLES",
       "source": "homecoming",
       "fatality": {
         "id": "underground_hc_fatality",
@@ -11107,7 +11103,7 @@
     },
     {
       "id": "curtis_shop",
-      "name": "CURTIS’S JUNKYARD WORKSHOP",
+      "name": "CURTIS — COMPTOIR DE L’ATELIER",
       "source": "homecoming",
       "fatality": {
         "id": "curtis_shop_fatality",
@@ -11122,10 +11118,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de CURTIS’S JUNKYARD WORKSHOP."
       },
-      "animations": [
-        "sawSpin",
-        "sparks"
-      ]
+      "animations": []
     },
     {
       "id": "frozen_streets",
@@ -11597,7 +11590,7 @@
     },
     {
       "id": "dark_shrine_corridors",
-      "name": "DARK SHRINE — CORRIDORS",
+      "name": "DARK SHRINE — AUTEL INARI",
       "source": "shf",
       "fatality": {
         "id": "dark_shrine_corridors_fatality",
@@ -11612,10 +11605,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de DARK SHRINE — CORRIDORS."
       },
-      "animations": [
-        "petalSpiral",
-        "lanternSway"
-      ]
+      "animations": []
     },
     {
       "id": "shimizu_residence",
@@ -11638,7 +11628,7 @@
     },
     {
       "id": "dark_shrine_main",
-      "name": "DARK SHRINE — MAIN HALL",
+      "name": "DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE",
       "source": "shf",
       "fatality": {
         "id": "dark_shrine_main_fatality",
@@ -11653,9 +11643,7 @@
         "fidelity": "environmental-adaptation",
         "canonicalBasis": "Décor et dangers documentés de DARK SHRINE — MAIN HALL."
       },
-      "animations": [
-        "lanternSway"
-      ]
+      "animations": []
     },
     {
       "id": "corrupted_ebisugaoka",

@@ -38,7 +38,19 @@ export const SPRITES = {
         "bodyHeight": 0.58,
         "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
         "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          34,
+          39,
+          1750,
+          843
+        ],
+        "framingBounds": [
+          34,
+          229,
+          1750,
+          676
+        ]
       },
       {
         "sha256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
@@ -62,7 +74,19 @@ export const SPRITES = {
         "bodyHeight": 0.58,
         "sourceFile": "exec-c077a414-e5ab-4b8a-bea2-e53663c8a88c.png",
         "sourceSHA256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          81,
+          29,
+          1746,
+          871
+        ],
+        "framingBounds": [
+          81,
+          57,
+          1727,
+          789
+        ]
       },
       {
         "sha256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
@@ -86,7 +110,19 @@ export const SPRITES = {
         "bodyHeight": 0.58,
         "sourceFile": "exec-8f429514-4016-414a-9594-f9abdb569045.png",
         "sourceSHA256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          25,
+          30,
+          1756,
+          854
+        ],
+        "framingBounds": [
+          50,
+          219,
+          1741,
+          760
+        ]
       }
     ],
     "portrait": {
@@ -101,6 +137,18 @@ export const SPRITES = {
         234,
         1747,
         673
+      ],
+      "alphaBounds": [
+        34,
+        39,
+        1750,
+        843
+      ],
+      "framingBounds": [
+        34,
+        229,
+        1750,
+        676
       ],
       "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
       "transparentFraction": 0.84725
@@ -159,6 +207,18 @@ export const SPRITES = {
           1336,
           988
         ],
+        "alphaBounds": [
+          23,
+          17,
+          1522,
+          1024
+        ],
+        "framingBounds": [
+          27,
+          17,
+          1344,
+          994
+        ],
         "pixelSHA256": "a71e59df2c65727baee35fedf11b98e0f2abaf286226b800334e810adb9e4fc2",
         "transparentFraction": 0.76169
       }
@@ -174,6 +234,18 @@ export const SPRITES = {
         19,
         1336,
         988
+      ],
+      "alphaBounds": [
+        23,
+        17,
+        1522,
+        1024
+      ],
+      "framingBounds": [
+        27,
+        17,
+        1344,
+        994
       ],
       "pixelSHA256": "a71e59df2c65727baee35fedf11b98e0f2abaf286226b800334e810adb9e4fc2",
       "transparentFraction": 0.76169
@@ -227,7 +299,19 @@ export const SPRITES = {
         "bodyHeight": 0.943,
         "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png",
         "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          21,
+          1021,
+          1516
+        ],
+        "framingBounds": [
+          87,
+          49,
+          984,
+          1503
+        ]
       },
       {
         "sha256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617",
@@ -251,7 +335,19 @@ export const SPRITES = {
         "bodyHeight": 0.943,
         "sourceFile": "exec-5fad91f7-2351-4e41-802a-0bb768d80ca7.png",
         "sourceSHA256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          33,
+          51,
+          994,
+          1503
+        ],
+        "framingBounds": [
+          89,
+          52,
+          991,
+          1503
+        ]
       },
       {
         "sha256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93",
@@ -275,7 +371,19 @@ export const SPRITES = {
         "bodyHeight": 0.943,
         "sourceFile": "exec-f2873763-d166-42dc-af80-4621e0ce767e.png",
         "sourceSHA256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          51,
+          990,
+          1504
+        ],
+        "framingBounds": [
+          87,
+          54,
+          990,
+          1504
+        ]
       }
     ],
     "portrait": {
@@ -290,6 +398,18 @@ export const SPRITES = {
         55,
         981,
         1500
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1021,
+        1516
+      ],
+      "framingBounds": [
+        87,
+        49,
+        984,
+        1503
       ],
       "pixelSHA256": "287f3a065672fd518e99e6efe7037fd2fb54bcd975e19380f06d33b9759dc2a3",
       "transparentFraction": 0.73538
@@ -367,7 +487,19 @@ export const SPRITES = {
         "bodyHeight": 0.85,
         "sourceFile": "exec-45dffa0d-d14e-4b95-a7e1-222fc5b16d45.png",
         "sourceSHA256": "86ac95da85c7b200ae8029addca33d1ab044517269033d679ad87e698421b955",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          37,
+          1021,
+          1536
+        ],
+        "framingBounds": [
+          207,
+          167,
+          979,
+          1376
+        ]
       }
     ],
     "portrait": {
@@ -382,6 +514,18 @@ export const SPRITES = {
         169,
         976,
         1372
+      ],
+      "alphaBounds": [
+        0,
+        37,
+        1021,
+        1536
+      ],
+      "framingBounds": [
+        207,
+        167,
+        979,
+        1376
       ],
       "pixelSHA256": "2bf231d5561d59d4d8e77e821fc99a121e2fe068c81867c059e0d693aba91726",
       "transparentFraction": 0.70478
@@ -435,7 +579,19 @@ export const SPRITES = {
         "bodyHeight": 0.98,
         "sourceFile": "exec-af8a45f3-9ca9-4092-a6c2-33f6ebff283a.png",
         "sourceSHA256": "fc01d3735b749a9771b618afb5d2748b7ac9ea28cdbb75800e2ed329b8b8b6d8",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          17,
+          1,
+          1010,
+          1536
+        ],
+        "framingBounds": [
+          143,
+          1,
+          868,
+          1520
+        ]
       }
     ],
     "portrait": {
@@ -450,6 +606,18 @@ export const SPRITES = {
         11,
         865,
         1516
+      ],
+      "alphaBounds": [
+        17,
+        1,
+        1010,
+        1536
+      ],
+      "framingBounds": [
+        143,
+        1,
+        868,
+        1520
       ],
       "pixelSHA256": "92ab67d582c45c20a5376e2f1548f6181e366105628602590f58bc860bcbf101",
       "transparentFraction": 0.77358
@@ -503,7 +671,19 @@ export const SPRITES = {
         "bodyHeight": 0.5,
         "sourceFile": "exec-5c460c54-daf2-43de-b3ae-b0f79eb35554.png",
         "sourceSHA256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1238,
+          1233
+        ],
+        "framingBounds": [
+          45,
+          312,
+          1224,
+          941
+        ]
       }
     ],
     "portrait": {
@@ -518,6 +698,18 @@ export const SPRITES = {
         317,
         1222,
         938
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1238,
+        1233
+      ],
+      "framingBounds": [
+        45,
+        312,
+        1224,
+        941
       ],
       "pixelSHA256": "3c4db831881090e2417c283be8ded34f40fe67863267160208bf10f3ab87efc5",
       "transparentFraction": 0.80692
@@ -571,7 +763,19 @@ export const SPRITES = {
         "bodyHeight": 0.79,
         "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
         "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          16,
+          34,
+          1757,
+          865
+        ],
+        "framingBounds": [
+          16,
+          155,
+          1757,
+          864
+        ]
       },
       {
         "sha256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375",
@@ -595,7 +799,19 @@ export const SPRITES = {
         "bodyHeight": 0.386,
         "sourceFile": "exec-ea84aa48-3f8f-4c79-8332-7899511c887b.png",
         "sourceSHA256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          27,
+          39,
+          1243,
+          1053
+        ],
+        "framingBounds": [
+          43,
+          477,
+          1243,
+          1026
+        ]
       },
       {
         "sha256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495",
@@ -619,7 +835,19 @@ export const SPRITES = {
         "bodyHeight": 0.384,
         "sourceFile": "exec-8f7a0382-0560-4044-b35e-368f287e4732.png",
         "sourceSHA256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          17,
+          1225,
+          1236
+        ],
+        "framingBounds": [
+          33,
+          514,
+          1225,
+          1184
+        ]
       },
       {
         "sha256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee",
@@ -643,7 +871,19 @@ export const SPRITES = {
         "bodyHeight": 0.389,
         "sourceFile": "exec-afb0840d-f12f-4c2c-9e61-2b3e0974fb08.png",
         "sourceSHA256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1234,
+          1204
+        ],
+        "framingBounds": [
+          27,
+          724,
+          1229,
+          1112
+        ]
       }
     ],
     "portrait": {
@@ -658,6 +898,18 @@ export const SPRITES = {
         158,
         1753,
         861
+      ],
+      "alphaBounds": [
+        16,
+        34,
+        1757,
+        865
+      ],
+      "framingBounds": [
+        16,
+        155,
+        1757,
+        864
       ],
       "pixelSHA256": "edf228380b552db7705a281afda74e4e2ef96a8bfb78d62dff251662dc46547c",
       "transparentFraction": 0.67668
@@ -732,7 +984,19 @@ export const SPRITES = {
         "bodyHeight": 0.79,
         "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
         "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          77,
+          1780,
+          845
+        ],
+        "framingBounds": [
+          28,
+          98,
+          1780,
+          835
+        ]
       }
     ],
     "portrait": {
@@ -747,6 +1011,18 @@ export const SPRITES = {
         102,
         1778,
         832
+      ],
+      "alphaBounds": [
+        0,
+        77,
+        1780,
+        845
+      ],
+      "framingBounds": [
+        28,
+        98,
+        1780,
+        835
       ],
       "pixelSHA256": "51b84eb91f45e4b14ba2d6e062ec85e453a44b7c8fd58c9d1c2f47cb258fbcf4",
       "transparentFraction": 0.63605
@@ -800,7 +1076,19 @@ export const SPRITES = {
         "bodyHeight": 0.93,
         "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
         "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          49,
+          47,
+          1316,
+          1141
+        ],
+        "framingBounds": [
+          215,
+          47,
+          1090,
+          1141
+        ]
       },
       {
         "sha256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a",
@@ -824,7 +1112,19 @@ export const SPRITES = {
         "bodyHeight": 0.84,
         "sourceFile": "exec-a8c525aa-faa2-4541-b1d9-f4611024cfe3.png",
         "sourceSHA256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          55,
+          1194,
+          1238
+        ],
+        "framingBounds": [
+          207,
+          215,
+          1061,
+          1188
+        ]
       },
       {
         "sha256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f",
@@ -848,7 +1148,19 @@ export const SPRITES = {
         "bodyHeight": 0.83,
         "sourceFile": "exec-45734f2d-6cf1-416b-a904-7ef68977ea7a.png",
         "sourceSHA256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          23,
+          1226,
+          1254
+        ],
+        "framingBounds": [
+          223,
+          144,
+          1048,
+          1191
+        ]
       },
       {
         "sha256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae",
@@ -872,7 +1184,19 @@ export const SPRITES = {
         "bodyHeight": 0.84,
         "sourceFile": "exec-7c73d1bc-422b-487f-a4ad-9924a795cac5.png",
         "sourceSHA256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          71,
+          1238,
+          1204
+        ],
+        "framingBounds": [
+          80,
+          522,
+          1238,
+          1203
+        ]
       }
     ],
     "portrait": {
@@ -887,6 +1211,18 @@ export const SPRITES = {
         55,
         1086,
         1138
+      ],
+      "alphaBounds": [
+        49,
+        47,
+        1316,
+        1141
+      ],
+      "framingBounds": [
+        215,
+        47,
+        1090,
+        1141
       ],
       "pixelSHA256": "a5a9475a23d0bbca8966b12b7af2795a7ed94a94b9f6c23f33791786eb42d906",
       "transparentFraction": 0.76783
@@ -961,7 +1297,19 @@ export const SPRITES = {
         "bodyHeight": 0.85,
         "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
         "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          13,
+          1434,
+          1086
+        ],
+        "framingBounds": [
+          14,
+          134,
+          1434,
+          1055
+        ]
       },
       {
         "sha256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db",
@@ -985,7 +1333,19 @@ export const SPRITES = {
         "bodyHeight": 0.65,
         "sourceFile": "exec-e53aec0d-d645-4cca-a4b3-395de38ec09c.png",
         "sourceSHA256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          37,
+          1254,
+          1160
+        ],
+        "framingBounds": [
+          9,
+          292,
+          1254,
+          1062
+        ]
       },
       {
         "sha256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f",
@@ -1009,7 +1369,19 @@ export const SPRITES = {
         "bodyHeight": 0.7,
         "sourceFile": "exec-ce8d9c93-2018-4f72-8680-abf207e3112f.png",
         "sourceSHA256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          28,
+          41,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          28,
+          127,
+          1240,
+          1207
+        ]
       },
       {
         "sha256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce",
@@ -1033,7 +1405,19 @@ export const SPRITES = {
         "bodyHeight": 0.62,
         "sourceFile": "exec-992584c9-1435-490e-9387-fc7eeef5bc66.png",
         "sourceSHA256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          32,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          54,
+          686,
+          1233,
+          1115
+        ]
       }
     ],
     "portrait": {
@@ -1048,6 +1432,18 @@ export const SPRITES = {
         136,
         1432,
         1050
+      ],
+      "alphaBounds": [
+        0,
+        13,
+        1434,
+        1086
+      ],
+      "framingBounds": [
+        14,
+        134,
+        1434,
+        1055
       ],
       "pixelSHA256": "8ee16afdf8f63b0fbde6e5b751241efe5bb5f19b4c6822fe07d10f2c24aa4f00",
       "transparentFraction": 0.6668
@@ -1122,7 +1518,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
         "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          22,
+          11,
+          1422,
+          1086
+        ],
+        "framingBounds": [
+          94,
+          11,
+          1366,
+          1071
+        ]
       },
       {
         "sha256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578",
@@ -1146,7 +1554,19 @@ export const SPRITES = {
         "bodyHeight": 0.76,
         "sourceFile": "exec-e66d6b67-b1a4-4746-9fba-5bc95584d6c0.png",
         "sourceSHA256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          29,
+          1245,
+          1232
+        ],
+        "framingBounds": [
+          58,
+          163,
+          1245,
+          1143
+        ]
       },
       {
         "sha256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730",
@@ -1170,7 +1590,19 @@ export const SPRITES = {
         "bodyHeight": 0.77,
         "sourceFile": "exec-f624a4c5-9b03-4ae1-ad21-f6c3b2230b64.png",
         "sourceSHA256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          33,
+          39,
+          1244,
+          1230
+        ],
+        "framingBounds": [
+          78,
+          108,
+          1188,
+          1176
+        ]
       },
       {
         "sha256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8",
@@ -1194,7 +1626,19 @@ export const SPRITES = {
         "bodyHeight": 0.787,
         "sourceFile": "exec-bd5e1350-b08c-40e8-ba07-d883a734d0d3.png",
         "sourceSHA256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          17,
+          1237,
+          1222
+        ],
+        "framingBounds": [
+          20,
+          538,
+          1237,
+          1127
+        ]
       }
     ],
     "portrait": {
@@ -1209,6 +1653,18 @@ export const SPRITES = {
         13,
         1361,
         1068
+      ],
+      "alphaBounds": [
+        22,
+        11,
+        1422,
+        1086
+      ],
+      "framingBounds": [
+        94,
+        11,
+        1366,
+        1071
       ],
       "pixelSHA256": "f525ca031771e4ebad1c5d8c132136be25713b9ecd54f40946a0a66ca179c2a0",
       "transparentFraction": 0.57779
@@ -1283,7 +1739,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-98898749-e6f6-429c-9ea8-bafb131a660d.png",
         "sourceSHA256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          16,
+          1394,
+          1086
+        ],
+        "framingBounds": [
+          118,
+          16,
+          1371,
+          1070
+        ]
       }
     ],
     "portrait": {
@@ -1298,6 +1766,18 @@ export const SPRITES = {
         18,
         1368,
         1065
+      ],
+      "alphaBounds": [
+        0,
+        16,
+        1394,
+        1086
+      ],
+      "framingBounds": [
+        118,
+        16,
+        1371,
+        1070
       ],
       "pixelSHA256": "f3ff012a17b70c02e939f8629fb66e4c58c6c704cd0b7e33677397306ca7092a",
       "transparentFraction": 0.55874
@@ -1351,7 +1831,19 @@ export const SPRITES = {
         "bodyHeight": 0.88,
         "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
         "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          19,
+          1701,
+          913
+        ],
+        "framingBounds": [
+          104,
+          46,
+          1691,
+          883
+        ]
       },
       {
         "sha256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54",
@@ -1375,7 +1867,19 @@ export const SPRITES = {
         "bodyHeight": 0.55,
         "sourceFile": "exec-5fe9ef5f-36e6-4b11-a6f8-35b3c5e292a1.png",
         "sourceSHA256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          41,
+          1183,
+          1207
+        ],
+        "framingBounds": [
+          73,
+          301,
+          1183,
+          1113
+        ]
       },
       {
         "sha256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58",
@@ -1399,7 +1903,19 @@ export const SPRITES = {
         "bodyHeight": 0.53,
         "sourceFile": "exec-7cd60508-403c-4c27-b3ed-f94f174c54c9.png",
         "sourceSHA256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          29,
+          1234,
+          1230
+        ],
+        "framingBounds": [
+          141,
+          129,
+          1208,
+          1045
+        ]
       },
       {
         "sha256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755",
@@ -1423,7 +1939,19 @@ export const SPRITES = {
         "bodyHeight": 0.61,
         "sourceFile": "exec-046255fb-f065-46a1-9f49-8dbb49af8536.png",
         "sourceSHA256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          27,
+          1253,
+          1214
+        ],
+        "framingBounds": [
+          150,
+          545,
+          1135,
+          1031
+        ]
       }
     ],
     "portrait": {
@@ -1438,6 +1966,18 @@ export const SPRITES = {
         49,
         1688,
         881
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1701,
+        913
+      ],
+      "framingBounds": [
+        104,
+        46,
+        1691,
+        883
       ],
       "pixelSHA256": "666d46d2f9a0760f65e51e4ff7ac75643e2eff788cb47a75f62c27809a9a99f2",
       "transparentFraction": 0.77321
@@ -1512,7 +2052,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
         "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1186,
+          1320
+        ],
+        "framingBounds": [
+          158,
+          0,
+          1087,
+          1305
+        ]
       },
       {
         "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5",
@@ -1536,7 +2088,19 @@ export const SPRITES = {
         "bodyHeight": 0.764,
         "sourceFile": "exec-7daf9e74-e110-4c5a-98c2-b661d33adef2.png",
         "sourceSHA256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          20,
+          1208,
+          1254
+        ],
+        "framingBounds": [
+          203,
+          197,
+          1079,
+          1172
+        ]
       },
       {
         "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715",
@@ -1560,7 +2124,19 @@ export const SPRITES = {
         "bodyHeight": 0.893,
         "sourceFile": "exec-6432a110-0e3b-4955-85dd-2946c5156144.png",
         "sourceSHA256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          39,
+          1239,
+          1254
+        ],
+        "framingBounds": [
+          85,
+          47,
+          1239,
+          1188
+        ]
       },
       {
         "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910",
@@ -1584,7 +2160,19 @@ export const SPRITES = {
         "bodyHeight": 0.83,
         "sourceFile": "exec-e7a88306-6955-4093-9f23-8be407094be1.png",
         "sourceSHA256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          29,
+          1228,
+          1254
+        ],
+        "framingBounds": [
+          67,
+          613,
+          1172,
+          1187
+        ]
       }
     ],
     "portrait": {
@@ -1599,6 +2187,18 @@ export const SPRITES = {
         7,
         1083,
         1298
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1186,
+        1320
+      ],
+      "framingBounds": [
+        158,
+        0,
+        1087,
+        1305
       ],
       "pixelSHA256": "6f1cd7dcae231817f44954e9e411c4cb0dc0120cc9769fd9d198cec07630ad97",
       "transparentFraction": 0.6252
@@ -1673,7 +2273,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
         "sourceSHA256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          5,
+          1408,
+          1066
+        ],
+        "framingBounds": [
+          342,
+          20,
+          1116,
+          1066
+        ]
       }
     ],
     "portrait": {
@@ -1688,6 +2300,18 @@ export const SPRITES = {
         23,
         1111,
         1061
+      ],
+      "alphaBounds": [
+        0,
+        5,
+        1408,
+        1066
+      ],
+      "framingBounds": [
+        342,
+        20,
+        1116,
+        1066
       ],
       "pixelSHA256": "849ba15fc0377b53d101af6d18ee040dc43e3789d278d44bc09f41165584847f",
       "transparentFraction": 0.75225
@@ -1741,7 +2365,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-e7b75677-02c1-4348-891b-febba7ef231b.png",
         "sourceSHA256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          9,
+          1075,
+          1449
+        ],
+        "framingBounds": [
+          12,
+          43,
+          1075,
+          1434
+        ]
       }
     ],
     "portrait": {
@@ -1756,6 +2392,18 @@ export const SPRITES = {
         46,
         1072,
         1432
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1075,
+        1449
+      ],
+      "framingBounds": [
+        12,
+        43,
+        1075,
+        1434
       ],
       "pixelSHA256": "1200af5432b2102f41c7ae3fce73edbd04357d968172f144a2bcbf8951bf6b84",
       "transparentFraction": 0.75401
@@ -1809,7 +2457,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-af4a2bdb-b971-45d5-97bc-55dc7c8da620.png",
         "sourceSHA256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          33,
+          1047,
+          1401
+        ],
+        "framingBounds": [
+          88,
+          50,
+          1047,
+          1401
+        ]
       },
       {
         "sha256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
@@ -1833,7 +2493,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-8fdcb1e3-3bdc-4f19-bbbb-f8b15cb399a7.png",
         "sourceSHA256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          23,
+          32,
+          1081,
+          1428
+        ],
+        "framingBounds": [
+          190,
+          32,
+          913,
+          1374
+        ]
       }
     ],
     "portrait": {
@@ -1848,6 +2520,18 @@ export const SPRITES = {
         55,
         1040,
         1398
+      ],
+      "alphaBounds": [
+        0,
+        33,
+        1047,
+        1401
+      ],
+      "framingBounds": [
+        88,
+        50,
+        1047,
+        1401
       ],
       "pixelSHA256": "32db5372c62bc7d7169ffc5a85374c7631d82a3fabf67f1dfa0456b2e93f1534",
       "transparentFraction": 0.62215
@@ -1908,7 +2592,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
         "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          25,
+          15,
+          1302,
+          1160
+        ],
+        "framingBounds": [
+          30,
+          17,
+          1302,
+          1152
+        ]
       },
       {
         "sha256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88",
@@ -1932,7 +2628,19 @@ export const SPRITES = {
         "bodyHeight": 0.864,
         "sourceFile": "exec-4500b15d-2461-4c53-9adc-0db948903409.png",
         "sourceSHA256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          35,
+          1240,
+          1205
+        ],
+        "framingBounds": [
+          20,
+          401,
+          1240,
+          1093
+        ]
       },
       {
         "sha256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae",
@@ -1956,7 +2664,19 @@ export const SPRITES = {
         "bodyHeight": 0.815,
         "sourceFile": "exec-3cb603be-1a41-4e65-8a4b-7f6bf9a192bb.png",
         "sourceSHA256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          9,
+          1253,
+          1236
+        ],
+        "framingBounds": [
+          63,
+          146,
+          1221,
+          1110
+        ]
       },
       {
         "sha256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de",
@@ -1980,7 +2700,19 @@ export const SPRITES = {
         "bodyHeight": 0.867,
         "sourceFile": "exec-cb826583-fe5d-40f6-a4ec-b3398b7bf777.png",
         "sourceSHA256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          15,
+          53,
+          1242,
+          1199
+        ],
+        "framingBounds": [
+          15,
+          514,
+          1242,
+          1011
+        ]
       }
     ],
     "portrait": {
@@ -1995,6 +2727,18 @@ export const SPRITES = {
         21,
         1298,
         1150
+      ],
+      "alphaBounds": [
+        25,
+        15,
+        1302,
+        1160
+      ],
+      "framingBounds": [
+        30,
+        17,
+        1302,
+        1152
       ],
       "pixelSHA256": "35627559f5f3d9d2b17fd5cab5e8af0f749ec47106963fea4662415f70879f9a",
       "transparentFraction": 0.62058
@@ -2069,7 +2813,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
         "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          15,
+          10,
+          1425,
+          1073
+        ],
+        "framingBounds": [
+          15,
+          10,
+          1425,
+          1073
+        ]
       },
       {
         "sha256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946",
@@ -2093,7 +2849,19 @@ export const SPRITES = {
         "bodyHeight": 0.72,
         "sourceFile": "exec-b6c9998c-35e0-42ef-8dfc-7f42e5d8209e.png",
         "sourceSHA256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          31,
+          93,
+          1234,
+          1182
+        ],
+        "framingBounds": [
+          71,
+          263,
+          1204,
+          1123
+        ]
       },
       {
         "sha256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91",
@@ -2117,7 +2885,19 @@ export const SPRITES = {
         "bodyHeight": 0.82,
         "sourceFile": "exec-2753eb94-48bc-46ce-97bd-58ec67e13c0e.png",
         "sourceSHA256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          8,
+          1224,
+          1254
+        ],
+        "framingBounds": [
+          187,
+          174,
+          1178,
+          1191
+        ]
       },
       {
         "sha256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45",
@@ -2141,7 +2921,19 @@ export const SPRITES = {
         "bodyHeight": 0.78,
         "sourceFile": "exec-5c31180c-e39d-4bc2-a32f-df31c388c344.png",
         "sourceSHA256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          19,
+          1240,
+          1232
+        ],
+        "framingBounds": [
+          30,
+          596,
+          1224,
+          1125
+        ]
       }
     ],
     "portrait": {
@@ -2156,6 +2948,18 @@ export const SPRITES = {
         12,
         1422,
         1071
+      ],
+      "alphaBounds": [
+        15,
+        10,
+        1425,
+        1073
+      ],
+      "framingBounds": [
+        15,
+        10,
+        1425,
+        1073
       ],
       "pixelSHA256": "c13c0c02eef68c571bd1a5000558b95d907cc04603a314ac8bdc8c06016faf8f",
       "transparentFraction": 0.68422
@@ -2230,7 +3034,19 @@ export const SPRITES = {
         "bodyHeight": 0.78,
         "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
         "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          23,
+          1432,
+          1064
+        ],
+        "framingBounds": [
+          47,
+          121,
+          1418,
+          975
+        ]
       },
       {
         "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90",
@@ -2254,7 +3070,19 @@ export const SPRITES = {
         "bodyHeight": 0.57,
         "sourceFile": "exec-76daef10-47de-4400-9981-1143767c9f5b.png",
         "sourceSHA256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          17,
+          19,
+          1246,
+          1254
+        ],
+        "framingBounds": [
+          77,
+          336,
+          1230,
+          1148
+        ]
       },
       {
         "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd",
@@ -2278,7 +3106,19 @@ export const SPRITES = {
         "bodyHeight": 0.59,
         "sourceFile": "exec-5a926ab6-2011-413d-ac0b-b87d96e2a76b.png",
         "sourceSHA256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          17,
+          1240,
+          1230
+        ],
+        "framingBounds": [
+          178,
+          323,
+          1188,
+          1128
+        ]
       },
       {
         "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683",
@@ -2302,7 +3142,19 @@ export const SPRITES = {
         "bodyHeight": 0.56,
         "sourceFile": "exec-89c34b6c-4c96-4b78-9bf0-ca7a27ed0d1e.png",
         "sourceSHA256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          29,
+          1224,
+          1230
+        ],
+        "framingBounds": [
+          71,
+          466,
+          1202,
+          984
+        ]
       }
     ],
     "portrait": {
@@ -2317,6 +3169,18 @@ export const SPRITES = {
         127,
         1406,
         972
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1432,
+        1064
+      ],
+      "framingBounds": [
+        47,
+        121,
+        1418,
+        975
       ],
       "pixelSHA256": "cbab4646b87969eba096de4a3595791248179ebfd023f8adc34bb56be54fba2e",
       "transparentFraction": 0.64678
@@ -2391,7 +3255,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-47e05011-615d-456c-b50d-553443b9e11a.png",
         "sourceSHA256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          15,
+          1343,
+          1154
+        ],
+        "framingBounds": [
+          94,
+          15,
+          1252,
+          1146
+        ]
       }
     ],
     "portrait": {
@@ -2406,6 +3282,18 @@ export const SPRITES = {
         17,
         1246,
         1141
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        1343,
+        1154
+      ],
+      "framingBounds": [
+        94,
+        15,
+        1252,
+        1146
       ],
       "pixelSHA256": "4dfc4627242b60700561492e6abc0426be6181e4185fbeee18a56054ce7179ba",
       "transparentFraction": 0.55492
@@ -2459,7 +3347,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-e9737414-9611-4c77-bcea-a3fe354a5ad9.png",
         "sourceSHA256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          15,
+          1375,
+          1131
+        ],
+        "framingBounds": [
+          161,
+          15,
+          1191,
+          1118
+        ]
       }
     ],
     "portrait": {
@@ -2474,6 +3374,18 @@ export const SPRITES = {
         18,
         1185,
         1116
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        1375,
+        1131
+      ],
+      "framingBounds": [
+        161,
+        15,
+        1191,
+        1118
       ],
       "pixelSHA256": "62617d6bd7afdba38ba4d6f1bbca0be7435d7eaaab3b844a9c417e8627ff36ef",
       "transparentFraction": 0.63092
@@ -2527,7 +3439,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-6b3b53ff-a2a7-4bfa-8a36-89cce7d77be3.png",
         "sourceSHA256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1023,
+          1536
+        ],
+        "framingBounds": [
+          171,
+          30,
+          801,
+          1518
+        ]
       }
     ],
     "portrait": {
@@ -2542,6 +3466,18 @@ export const SPRITES = {
         35,
         798,
         1510
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1023,
+        1536
+      ],
+      "framingBounds": [
+        171,
+        30,
+        801,
+        1518
       ],
       "pixelSHA256": "0a9d931806929820a0eafe66b79e0363200625bb9f3dcead8492b5bb0f01146d",
       "transparentFraction": 0.7606
@@ -2595,7 +3531,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-5394180f-4578-409b-9441-3d28f11cd985.png",
         "sourceSHA256": "b0daf4900078accec37c8b970ed195824fce879d39b51cd61d33f863a8bb2d70",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          21,
+          1155,
+          1355
+        ],
+        "framingBounds": [
+          146,
+          29,
+          1081,
+          1324
+        ]
       }
     ],
     "portrait": {
@@ -2610,6 +3558,18 @@ export const SPRITES = {
         35,
         1071,
         1321
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1155,
+        1355
+      ],
+      "framingBounds": [
+        146,
+        29,
+        1081,
+        1324
       ],
       "pixelSHA256": "8b3e4cf1f41e624cd7ed2049d9101c2de0e51bd1e300f53375118e4e0e5a95ac",
       "transparentFraction": 0.72396
@@ -2663,7 +3623,19 @@ export const SPRITES = {
         "bodyHeight": 0.94,
         "sourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png",
         "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          9,
+          1148,
+          1355
+        ],
+        "framingBounds": [
+          30,
+          63,
+          1148,
+          1256
+        ]
       }
     ],
     "portrait": {
@@ -2678,6 +3650,18 @@ export const SPRITES = {
         66,
         1145,
         1249
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1148,
+        1355
+      ],
+      "framingBounds": [
+        30,
+        63,
+        1148,
+        1256
       ],
       "pixelSHA256": "34e17b868827940876a852f4d26b06137c8b271aa7a911032232a4380ad4a7b9",
       "transparentFraction": 0.72547
@@ -2731,7 +3715,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
         "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          12,
+          1094,
+          1428
+        ],
+        "framingBounds": [
+          96,
+          12,
+          1032,
+          1428
+        ]
       }
     ],
     "portrait": {
@@ -2746,6 +3742,18 @@ export const SPRITES = {
         14,
         1026,
         1417
+      ],
+      "alphaBounds": [
+        0,
+        12,
+        1094,
+        1428
+      ],
+      "framingBounds": [
+        96,
+        12,
+        1032,
+        1428
       ],
       "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
       "transparentFraction": 0.62002
@@ -2799,7 +3807,19 @@ export const SPRITES = {
         "bodyHeight": 0.97,
         "sourceFile": "exec-7940cc9e-dbde-4f28-b7a1-1abb1f09b61c.png",
         "sourceSHA256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          111,
+          9,
+          978,
+          1523
+        ],
+        "framingBounds": [
+          213,
+          27,
+          807,
+          1523
+        ]
       }
     ],
     "portrait": {
@@ -2814,6 +3834,18 @@ export const SPRITES = {
         30,
         804,
         1519
+      ],
+      "alphaBounds": [
+        111,
+        9,
+        978,
+        1523
+      ],
+      "framingBounds": [
+        213,
+        27,
+        807,
+        1523
       ],
       "pixelSHA256": "0da4b86776ba636ed2c7d5cf6c30a055693efdd3cd0adfa7d0d3011237f1421c",
       "transparentFraction": 0.82096
@@ -2867,7 +3899,19 @@ export const SPRITES = {
         "bodyHeight": 0.98,
         "sourceFile": "exec-1d1dccbe-cad9-4754-acb6-5f76c6bc73d4.png",
         "sourceSHA256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          27,
+          0,
+          1408,
+          1086
+        ],
+        "framingBounds": [
+          417,
+          0,
+          1051,
+          1086
+        ]
       }
     ],
     "portrait": {
@@ -2882,6 +3926,18 @@ export const SPRITES = {
         5,
         1048,
         1080
+      ],
+      "alphaBounds": [
+        27,
+        0,
+        1408,
+        1086
+      ],
+      "framingBounds": [
+        417,
+        0,
+        1051,
+        1086
       ],
       "pixelSHA256": "069882d4ce5aa1f326d25f0273c4b9402135294b3725fbebc1f2dc3f8dc726d2",
       "transparentFraction": 0.79369
@@ -2935,7 +3991,19 @@ export const SPRITES = {
         "bodyHeight": 0.72,
         "sourceFile": "exec-e91725ea-7cb0-4488-939a-7fafeea2ec1e.png",
         "sourceSHA256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          14,
+          994,
+          1536
+        ],
+        "framingBounds": [
+          159,
+          14,
+          865,
+          1520
+        ]
       }
     ],
     "portrait": {
@@ -2950,6 +4018,18 @@ export const SPRITES = {
         17,
         862,
         1518
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        994,
+        1536
+      ],
+      "framingBounds": [
+        159,
+        14,
+        865,
+        1520
       ],
       "pixelSHA256": "a270d2482fc9311b897a555ba32907ff38974c5af0f86173e5744c2f697e0b94",
       "transparentFraction": 0.71704
@@ -3003,7 +4083,19 @@ export const SPRITES = {
         "bodyHeight": 0.65,
         "sourceFile": "exec-986c42df-eaaf-490d-9025-6e21a6118112.png",
         "sourceSHA256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          72,
+          2182,
+          695
+        ],
+        "framingBounds": [
+          0,
+          166,
+          2181,
+          639
+        ]
       }
     ],
     "portrait": {
@@ -3018,6 +4110,18 @@ export const SPRITES = {
         171,
         2177,
         637
+      ],
+      "alphaBounds": [
+        0,
+        72,
+        2182,
+        695
+      ],
+      "framingBounds": [
+        0,
+        166,
+        2181,
+        639
       ],
       "pixelSHA256": "47b593c5df2fcb8350ddb5cd4b9642344773b96c9f0c8aea85c1c8ca02d690b5",
       "transparentFraction": 0.67641
@@ -3071,7 +4175,19 @@ export const SPRITES = {
         "bodyHeight": 0.94,
         "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
         "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1535,
+          1024
+        ],
+        "framingBounds": [
+          31,
+          28,
+          1533,
+          992
+        ]
       },
       {
         "sha256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d",
@@ -3095,7 +4211,19 @@ export const SPRITES = {
         "bodyHeight": 0.66,
         "sourceFile": "exec-40fe3a8c-ca4e-46f4-bb88-fb2ecef7764b.png",
         "sourceSHA256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          39,
+          1243,
+          1228
+        ],
+        "framingBounds": [
+          35,
+          353,
+          1243,
+          1160
+        ]
       },
       {
         "sha256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0",
@@ -3119,7 +4247,19 @@ export const SPRITES = {
         "bodyHeight": 0.68,
         "sourceFile": "exec-c712b199-0d16-4834-b68c-bddef108e879.png",
         "sourceSHA256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          12,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          46,
+          97,
+          1240,
+          1207
+        ]
       },
       {
         "sha256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5",
@@ -3143,7 +4283,19 @@ export const SPRITES = {
         "bodyHeight": 0.68,
         "sourceFile": "exec-56b27d6c-9148-42bc-8244-b44e69cd394c.png",
         "sourceSHA256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1236,
+          1254
+        ],
+        "framingBounds": [
+          53,
+          544,
+          1236,
+          1134
+        ]
       }
     ],
     "portrait": {
@@ -3157,6 +4309,18 @@ export const SPRITES = {
         36,
         34,
         1526,
+        992
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1535,
+        1024
+      ],
+      "framingBounds": [
+        31,
+        28,
+        1533,
         992
       ],
       "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
@@ -3232,7 +4396,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-cb6e1fcd-1b3f-402e-9174-b5be610326f3.png",
         "sourceSHA256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          15,
+          865,
+          1747
+        ],
+        "framingBounds": [
+          57,
+          15,
+          826,
+          1734
+        ]
       }
     ],
     "portrait": {
@@ -3247,6 +4423,18 @@ export const SPRITES = {
         18,
         824,
         1732
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        865,
+        1747
+      ],
+      "framingBounds": [
+        57,
+        15,
+        826,
+        1734
       ],
       "pixelSHA256": "7159d40aeb020ccd97142e7894a7012e8e5bf36ecbf4f71da708b83ba668b3d2",
       "transparentFraction": 0.585
@@ -3300,7 +4488,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-e119938c-db55-4d1d-ada3-f5b2ae11bcc9.png",
         "sourceSHA256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          3,
+          1023,
+          1525
+        ],
+        "framingBounds": [
+          64,
+          15,
+          1003,
+          1493
+        ]
       }
     ],
     "portrait": {
@@ -3315,6 +4515,18 @@ export const SPRITES = {
         19,
         1000,
         1487
+      ],
+      "alphaBounds": [
+        0,
+        3,
+        1023,
+        1525
+      ],
+      "framingBounds": [
+        64,
+        15,
+        1003,
+        1493
       ],
       "pixelSHA256": "4f7ecd22d8a9cae6f2accef3f83a91f387a35e5cfdd7b7c9133756c3bd78efc6",
       "transparentFraction": 0.51683
@@ -3368,7 +4580,19 @@ export const SPRITES = {
         "bodyHeight": 0.92,
         "sourceFile": "exec-304a1eb4-203c-4839-99c1-aa24fe4bc96a.png",
         "sourceSHA256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          39,
+          1032,
+          1512
+        ],
+        "framingBounds": [
+          31,
+          63,
+          1014,
+          1462
+        ]
       }
     ],
     "portrait": {
@@ -3383,6 +4607,18 @@ export const SPRITES = {
         71,
         1009,
         1456
+      ],
+      "alphaBounds": [
+        0,
+        39,
+        1032,
+        1512
+      ],
+      "framingBounds": [
+        31,
+        63,
+        1014,
+        1462
       ],
       "pixelSHA256": "81a58c247998c6a718324fe10aa7ed6b2be09c67bcad3b85b061b52c5240e4ae",
       "transparentFraction": 0.53126
@@ -3436,7 +4672,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
         "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          12,
+          1273,
+          1212
+        ],
+        "framingBounds": [
+          21,
+          12,
+          1273,
+          1184
+        ]
       }
     ],
     "portrait": {
@@ -3451,6 +4699,18 @@ export const SPRITES = {
         15,
         1271,
         1180
+      ],
+      "alphaBounds": [
+        0,
+        12,
+        1273,
+        1212
+      ],
+      "framingBounds": [
+        21,
+        12,
+        1273,
+        1184
       ],
       "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
       "transparentFraction": 0.58268
@@ -3504,7 +4764,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
         "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          16,
+          1408,
+          1096
+        ],
+        "framingBounds": [
+          9,
+          16,
+          1408,
+          1096
+        ]
       }
     ],
     "portrait": {
@@ -3519,6 +4791,18 @@ export const SPRITES = {
         18,
         1405,
         1092
+      ],
+      "alphaBounds": [
+        0,
+        16,
+        1408,
+        1096
+      ],
+      "framingBounds": [
+        9,
+        16,
+        1408,
+        1096
       ],
       "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
       "transparentFraction": 0.5229
@@ -3572,7 +4856,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
         "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1186,
+          1326
+        ],
+        "framingBounds": [
+          13,
+          0,
+          1177,
+          1294
+        ]
       }
     ],
     "portrait": {
@@ -3587,6 +4883,18 @@ export const SPRITES = {
         8,
         1174,
         1288
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1186,
+        1326
+      ],
+      "framingBounds": [
+        13,
+        0,
+        1177,
+        1294
       ],
       "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
       "transparentFraction": 0.46625
@@ -3640,7 +4948,19 @@ export const SPRITES = {
         "bodyHeight": 0.98,
         "sourceFile": "exec-0221b030-82d1-43ea-a80d-def14cb06b99.png",
         "sourceSHA256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          113,
+          17,
+          1334,
+          1155
+        ],
+        "framingBounds": [
+          250,
+          17,
+          1077,
+          1155
+        ]
       }
     ],
     "portrait": {
@@ -3655,6 +4975,18 @@ export const SPRITES = {
         22,
         1075,
         1151
+      ],
+      "alphaBounds": [
+        113,
+        17,
+        1334,
+        1155
+      ],
+      "framingBounds": [
+        250,
+        17,
+        1077,
+        1155
       ],
       "pixelSHA256": "e9050f92c487fcfb5c132cedf9dc6904c9b9f107d12602b61999e5d1ad927d5c",
       "transparentFraction": 0.77414
@@ -3708,7 +5040,19 @@ export const SPRITES = {
         "bodyHeight": 0.98,
         "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
         "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          8,
+          922,
+          1683
+        ],
+        "framingBounds": [
+          91,
+          8,
+          889,
+          1669
+        ]
       }
     ],
     "portrait": {
@@ -3723,6 +5067,18 @@ export const SPRITES = {
         11,
         886,
         1666
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        922,
+        1683
+      ],
+      "framingBounds": [
+        91,
+        8,
+        889,
+        1669
       ],
       "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
       "transparentFraction": 0.67812
@@ -3776,7 +5132,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
         "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          37,
+          0,
+          1387,
+          1081
+        ],
+        "framingBounds": [
+          372,
+          17,
+          1048,
+          1081
+        ]
       }
     ],
     "portrait": {
@@ -3791,6 +5159,18 @@ export const SPRITES = {
         22,
         1046,
         1078
+      ],
+      "alphaBounds": [
+        37,
+        0,
+        1387,
+        1081
+      ],
+      "framingBounds": [
+        372,
+        17,
+        1048,
+        1081
       ],
       "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
       "transparentFraction": 0.76568
@@ -3844,7 +5224,19 @@ export const SPRITES = {
         "bodyHeight": 0.93,
         "sourceFile": "exec-3f2a4958-7498-4c53-8866-42f438acdde9.png",
         "sourceSHA256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          23,
+          1422,
+          1096
+        ],
+        "framingBounds": [
+          71,
+          33,
+          1386,
+          1073
+        ]
       }
     ],
     "portrait": {
@@ -3859,6 +5251,18 @@ export const SPRITES = {
         36,
         1376,
         1068
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1422,
+        1096
+      ],
+      "framingBounds": [
+        71,
+        33,
+        1386,
+        1073
       ],
       "pixelSHA256": "98cde8a19f0dc215e9b324d0b1ec105302812430bad2293410f7e12e297c24c6",
       "transparentFraction": 0.75175
@@ -3912,7 +5316,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-7ddfb808-9ec9-4150-89a2-78b07ed3c485.png",
         "sourceSHA256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          21,
+          1436,
+          1076
+        ],
+        "framingBounds": [
+          128,
+          31,
+          1404,
+          1076
+        ]
       }
     ],
     "portrait": {
@@ -3927,6 +5343,18 @@ export const SPRITES = {
         34,
         1399,
         1074
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        1436,
+        1076
+      ],
+      "framingBounds": [
+        128,
+        31,
+        1404,
+        1076
       ],
       "pixelSHA256": "c4cc70446db294ee64ccaacfee231d2a2fac4467fb8067b0b283deb744c6134d",
       "transparentFraction": 0.78347
@@ -3980,7 +5408,19 @@ export const SPRITES = {
         "bodyHeight": 0.92,
         "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
         "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          1143,
+          1355
+        ],
+        "framingBounds": [
+          165,
+          64,
+          1003,
+          1309
+        ]
       }
     ],
     "portrait": {
@@ -3995,6 +5435,18 @@ export const SPRITES = {
         72,
         999,
         1307
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1143,
+        1355
+      ],
+      "framingBounds": [
+        165,
+        64,
+        1003,
+        1309
       ],
       "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
       "transparentFraction": 0.72292
@@ -4048,7 +5500,19 @@ export const SPRITES = {
         "bodyHeight": 1,
         "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
         "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          16,
+          9,
+          1654,
+          942
+        ],
+        "framingBounds": [
+          16,
+          16,
+          1653,
+          928
+        ]
       }
     ],
     "portrait": {
@@ -4063,6 +5527,18 @@ export const SPRITES = {
         19,
         1650,
         923
+      ],
+      "alphaBounds": [
+        16,
+        9,
+        1654,
+        942
+      ],
+      "framingBounds": [
+        16,
+        16,
+        1653,
+        928
       ],
       "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
       "transparentFraction": 0.66923
@@ -4116,7 +5592,19 @@ export const SPRITES = {
         "bodyHeight": 0.94,
         "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
         "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          29,
+          17,
+          1141,
+          1325
+        ],
+        "framingBounds": [
+          203,
+          29,
+          887,
+          1325
+        ]
       }
     ],
     "portrait": {
@@ -4131,6 +5619,18 @@ export const SPRITES = {
         40,
         879,
         1315
+      ],
+      "alphaBounds": [
+        29,
+        17,
+        1141,
+        1325
+      ],
+      "framingBounds": [
+        203,
+        29,
+        887,
+        1325
       ],
       "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
       "transparentFraction": 0.77828
@@ -4184,7 +5684,19 @@ export const SPRITES = {
         "bodyHeight": 0.95,
         "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
         "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          43,
+          42,
+          1008,
+          1536
+        ],
+        "framingBounds": [
+          206,
+          42,
+          859,
+          1508
+        ]
       }
     ],
     "portrait": {
@@ -4199,6 +5711,18 @@ export const SPRITES = {
         45,
         853,
         1505
+      ],
+      "alphaBounds": [
+        43,
+        42,
+        1008,
+        1536
+      ],
+      "framingBounds": [
+        206,
+        42,
+        859,
+        1508
       ],
       "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
       "transparentFraction": 0.70186
@@ -4252,7 +5776,19 @@ export const SPRITES = {
         "bodyHeight": 0.94,
         "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
         "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          10,
+          1054,
+          1462
+        ],
+        "framingBounds": [
+          19,
+          11,
+          1035,
+          1448
+        ]
       }
     ],
     "portrait": {
@@ -4267,6 +5803,18 @@ export const SPRITES = {
         12,
         1032,
         1445
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        1054,
+        1462
+      ],
+      "framingBounds": [
+        19,
+        11,
+        1035,
+        1448
       ],
       "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
       "transparentFraction": 0.69194
@@ -4320,7 +5868,19 @@ export const SPRITES = {
         "bodyHeight": 0.88,
         "sourceFile": "exec-d2856c8a-862b-4239-911d-57a4f8846f07.png",
         "sourceSHA256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          25,
+          1010,
+          1527
+        ],
+        "framingBounds": [
+          223,
+          26,
+          800,
+          1510
+        ]
       }
     ],
     "portrait": {
@@ -4335,6 +5895,18 @@ export const SPRITES = {
         28,
         797,
         1507
+      ],
+      "alphaBounds": [
+        0,
+        25,
+        1010,
+        1527
+      ],
+      "framingBounds": [
+        223,
+        26,
+        800,
+        1510
       ],
       "pixelSHA256": "78e08ae09d0960cdfdb9e621807a6a189e166aa898a6547c266018bf16f7fa3b",
       "transparentFraction": 0.76936
@@ -4388,7 +5960,19 @@ export const SPRITES = {
         "bodyHeight": 0.96,
         "sourceFile": "exec-bf240cb5-8d9a-4b41-8296-4ac86e495fb9.png",
         "sourceSHA256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b",
-        "origin": "conversation-image-generation"
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          43,
+          15,
+          1002,
+          1520
+        ],
+        "framingBounds": [
+          209,
+          16,
+          864,
+          1520
+        ]
       }
     ],
     "portrait": {
@@ -4404,8 +5988,2320 @@ export const SPRITES = {
         860,
         1515
       ],
+      "alphaBounds": [
+        43,
+        15,
+        1002,
+        1520
+      ],
+      "framingBounds": [
+        209,
+        16,
+        864,
+        1520
+      ],
       "pixelSHA256": "55d02e37186901811104e1acb027e1eb82065ae94e6ae6629769ed7fbe9ee29f",
       "transparentFraction": 0.66704
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_straight_jacket_074": {
+    "fighterId": "origins_straight_jacket_074",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-c274a4e8-3da7-4935-9548-23fdca8432b9.png",
+    "sourceSHA256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Origins PSP : bras enfermés dans le torse, deux jambes et appuis visibles. Pose 2D composée depuis les vues de modèle ; texture/volume reconstruits, aucune animation ni mesure originale, fidélité non certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+        "bytes": 671659,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          326,
+          108,
+          914,
+          1151
+        ],
+        "pixelSHA256": "6b2fa82ae5e19aa62cc9abb05155c08cecdba2355a5bbd36856bf6765dec7efc",
+        "transparentFraction": 0.84527,
+        "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.9178628389154705
+        ],
+        "bodyHeight": 0.8317384370015949,
+        "sourceFile": "exec-c274a4e8-3da7-4935-9548-23fdca8432b9.png",
+        "sourceSHA256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          25,
+          21,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          322,
+          98,
+          916,
+          1159
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "sha256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+      "bytes": 671659,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        326,
+        108,
+        914,
+        1151
+      ],
+      "alphaBounds": [
+        25,
+        21,
+        1240,
+        1254
+      ],
+      "framingBounds": [
+        322,
+        98,
+        916,
+        1159
+      ],
+      "pixelSHA256": "6b2fa82ae5e19aa62cc9abb05155c08cecdba2355a5bbd36856bf6765dec7efc",
+      "transparentFraction": 0.84527
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_carrion_076": {
+    "fighterId": "origins_carrion_076",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-fe6e51e5-343a-42fd-98c5-449dbcb8a56c.png",
+    "sourceSHA256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Origins PSP : masse contorsionnée et appuis naturels, aucune tête canine ou arme ajoutée. Vue tournée vers la gauche correctement étiquetée puis miroir de présentation en combat. Extrémités éloignées partiellement occultées par le tronc ; géométrie et texture reconstruites, sans animation ni mesure originale certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c",
+        "bytes": 1202192,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          245,
+          137,
+          1087,
+          1129
+        ],
+        "pixelSHA256": "bd7269dcc7bf8077058c8f31155a53439c9ca854c465a2b6fe52707975d33097",
+        "transparentFraction": 0.65476,
+        "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+        "facing": -1,
+        "anchor": [
+          0.55,
+          0.9003189792663477
+        ],
+        "bodyHeight": 0.7910685805422647,
+        "sourceFile": "exec-fe6e51e5-343a-42fd-98c5-449dbcb8a56c.png",
+        "sourceSHA256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          15,
+          1248,
+          1254
+        ],
+        "framingBounds": [
+          241,
+          130,
+          1093,
+          1139
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "sha256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c",
+      "bytes": 1202192,
+      "width": 1254,
+      "height": 1254,
+      "facing": -1,
+      "visibleBounds": [
+        245,
+        137,
+        1087,
+        1129
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        1248,
+        1254
+      ],
+      "framingBounds": [
+        241,
+        130,
+        1093,
+        1139
+      ],
+      "pixelSHA256": "bd7269dcc7bf8077058c8f31155a53439c9ca854c465a2b6fe52707975d33097",
+      "transparentFraction": 0.65476
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_faceless_nurse": {
+    "fighterId": "origins_faceless_nurse",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png",
+    "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Origins PSP : adulte en uniforme, tête sans visage, seringue visible et deux chaussures. Seringue propre à Origins ; aucun scalpel, pipe ou arme SH3/film emprunté. Matière/échelle/pose2D composées depuis les rendus, sans animation ni mesure originale certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+        "bytes": 574669,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          413,
+          94,
+          908,
+          1164
+        ],
+        "pixelSHA256": "472b269dd5afbd440786ec7e7b42fd912cdfc7ff2fd6a456418d8a7dc27318bd",
+        "transparentFraction": 0.88166,
+        "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.9282296650717703
+        ],
+        "bodyHeight": 0.8532695374800638,
+        "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png",
+        "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          23,
+          23,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          410,
+          92,
+          961,
+          1176
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+      "bytes": 574669,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        413,
+        94,
+        908,
+        1164
+      ],
+      "alphaBounds": [
+        23,
+        23,
+        1240,
+        1254
+      ],
+      "framingBounds": [
+        410,
+        92,
+        961,
+        1176
+      ],
+      "pixelSHA256": "472b269dd5afbd440786ec7e7b42fd912cdfc7ff2fd6a456418d8a7dc27318bd",
+      "transparentFraction": 0.88166
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_the_butcher_081": {
+    "fighterId": "origins_the_butcher_081",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-99e5fa2d-437a-40ed-afa5-382b89d5d7f4.png",
+    "sourceSHA256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Origins PSP : tablier long, protection de tête propre au Butcher, deux bottes, grand couperet entier. Ne remplace pas les Pyramid Head SH2/film. Image fixe et pose2D reconstruites, aspect du côté masqué/texture à comparer ; aucune animation ou fidélité1:1 certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+        "bytes": 849326,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          396,
+          116,
+          939,
+          1151
+        ],
+        "pixelSHA256": "daa59efc6b127ae5ecf8728d8ebbf587fbb654664aed4751cc9ecdc979e23cf8",
+        "transparentFraction": 0.80339,
+        "path": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.9178628389154705
+        ],
+        "bodyHeight": 0.8253588516746412,
+        "sourceFile": "exec-99e5fa2d-437a-40ed-afa5-382b89d5d7f4.png",
+        "sourceSHA256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          57,
+          19,
+          1242,
+          1254
+        ],
+        "framingBounds": [
+          394,
+          112,
+          941,
+          1156
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+      "sha256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+      "bytes": 849326,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        396,
+        116,
+        939,
+        1151
+      ],
+      "alphaBounds": [
+        57,
+        19,
+        1242,
+        1254
+      ],
+      "framingBounds": [
+        394,
+        112,
+        941,
+        1156
+      ],
+      "pixelSHA256": "daa59efc6b127ae5ecf8728d8ebbf587fbb654664aed4751cc9ecdc979e23cf8",
+      "transparentFraction": 0.80339
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_caliban_079": {
+    "fighterId": "origins_caliban_079",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-45cd2a08-88e3-450d-87e6-39ba54594f9b.png",
+    "sourceSHA256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Origins PSP : masse bossue et appuis contorsionnés ; emplacement tête et détails de membres éloignés à comparer au modèle. Deux corrections de cadrage/couleur par outil image, aucun recadrage Python. Pose fixe isolée, zéro animation ou timing original certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+        "bytes": 478897,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          368,
+          415,
+          959,
+          846
+        ],
+        "pixelSHA256": "fd9b94539a1f0051cb4c575c721dca003a89fd3d2eeb4a644566cc4e71e8a4f9",
+        "transparentFraction": 0.9011,
+        "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+        "facing": 1,
+        "anchor": [
+          0.52,
+          0.6746411483253588
+        ],
+        "bodyHeight": 0.3437001594896332,
+        "sourceFile": "exec-45cd2a08-88e3-450d-87e6-39ba54594f9b.png",
+        "sourceSHA256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          69,
+          53,
+          1202,
+          1190
+        ],
+        "framingBounds": [
+          364,
+          411,
+          964,
+          852
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "sha256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+      "bytes": 478897,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        368,
+        415,
+        959,
+        846
+      ],
+      "alphaBounds": [
+        69,
+        53,
+        1202,
+        1190
+      ],
+      "framingBounds": [
+        364,
+        411,
+        964,
+        852
+      ],
+      "pixelSHA256": "fd9b94539a1f0051cb4c575c721dca003a89fd3d2eeb4a644566cc4e71e8a4f9",
+      "transparentFraction": 0.9011
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_lurker_085": {
+    "fighterId": "homecoming_lurker_085",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e424236d-13c1-49a7-a812-958f1083457d.png",
+    "sourceSHA256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Homecoming2008 : torse rampant, partie inférieure réunie et deux bras à doigts crochus. Toutes pointes dans le cadre, pose2D transposée et cadrage élargi par outil image ; aucune jambe debout inventée. Détails de peau et géométrie non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+        "bytes": 305795,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          342,
+          412,
+          996,
+          885
+        ],
+        "pixelSHA256": "363ef19a623f1fc147da2d632a5b1e608596e46a87c25f9b6b8dafe3e0520b6b",
+        "transparentFraction": 0.95125,
+        "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+        "facing": 1,
+        "anchor": [
+          0.55,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.37719298245614036,
+        "sourceFile": "exec-e424236d-13c1-49a7-a812-958f1083457d.png",
+        "sourceSHA256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          93,
+          29,
+          1095,
+          1156
+        ],
+        "framingBounds": [
+          337,
+          409,
+          998,
+          887
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "sha256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+      "bytes": 305795,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        342,
+        412,
+        996,
+        885
+      ],
+      "alphaBounds": [
+        93,
+        29,
+        1095,
+        1156
+      ],
+      "framingBounds": [
+        337,
+        409,
+        998,
+        887
+      ],
+      "pixelSHA256": "363ef19a623f1fc147da2d632a5b1e608596e46a87c25f9b6b8dafe3e0520b6b",
+      "transparentFraction": 0.95125
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_feral_086": {
+    "fighterId": "homecoming_feral_086",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-065d86b8-6512-4369-b65a-f782dd037268.png",
+    "sourceSHA256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier candidat Homecoming2008 : quatre pattes, tête canine, petite queue et dos propres aux rendus Feral, sans mélange Groaner/Wormhead. Une correction de cadrage par outil image préserve toutes les pointes. Échelle/anatomie détaillée/texture à vérifier ; pas de cycle ni timing original.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+        "bytes": 523293,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          320,
+          431,
+          944,
+          889
+        ],
+        "pixelSHA256": "dafc565786295a986e544343cbd139cadeeea2d77ff4088652035a6782b8855d",
+        "transparentFraction": 0.90858,
+        "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7089314194577353
+        ],
+        "bodyHeight": 0.3652312599681021,
+        "sourceFile": "exec-065d86b8-6512-4369-b65a-f782dd037268.png",
+        "sourceSHA256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          65,
+          103,
+          1041,
+          1045
+        ],
+        "framingBounds": [
+          318,
+          428,
+          947,
+          892
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "sha256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+      "bytes": 523293,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        320,
+        431,
+        944,
+        889
+      ],
+      "alphaBounds": [
+        65,
+        103,
+        1041,
+        1045
+      ],
+      "framingBounds": [
+        318,
+        428,
+        947,
+        892
+      ],
+      "pixelSHA256": "dafc565786295a986e544343cbd139cadeeea2d77ff4088652035a6782b8855d",
+      "transparentFraction": 0.90858
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_needler_088": {
+    "fighterId": "homecoming_needler_088",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-d5da8645-6833-405d-b8c5-d8fbe8c0bd4c.png",
+    "sourceSHA256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Quatre membres-lames et tête inversée propres au Needler Homecoming2008 ; toutes les pointes dans le cadre. Le concept corrobore le modèle final, sans mélange d’une variante abandonnée. Pose fixe2D, correction de cadrage par outil image, géométrie/contacts et texture non certifiés.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+        "bytes": 318503,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          304,
+          416,
+          978,
+          850
+        ],
+        "pixelSHA256": "698c8114824024cc4399c723281add6548faab5a36a99ac8505f1c4a5cc6a0f3",
+        "transparentFraction": 0.9451,
+        "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.6778309409888357
+        ],
+        "bodyHeight": 0.34609250398724084,
+        "sourceFile": "exec-d5da8645-6833-405d-b8c5-d8fbe8c0bd4c.png",
+        "sourceSHA256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          73,
+          115,
+          1210,
+          1196
+        ],
+        "framingBounds": [
+          301,
+          414,
+          981,
+          852
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "sha256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+      "bytes": 318503,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        304,
+        416,
+        978,
+        850
+      ],
+      "alphaBounds": [
+        73,
+        115,
+        1210,
+        1196
+      ],
+      "framingBounds": [
+        301,
+        414,
+        981,
+        852
+      ],
+      "pixelSHA256": "698c8114824024cc4399c723281add6548faab5a36a99ac8505f1c4a5cc6a0f3",
+      "transparentFraction": 0.9451
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_schism_089": {
+    "fighterId": "homecoming_schism_089",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-4ac579be-3d74-45db-826e-a5f5bb74d4de.png",
+    "sourceSHA256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Corps entier Schism Homecoming2008 : deux bras, deux jambes et tête-fente allongée, sans arme portée. Franges blanches de fond retirées par outil image et cadre élargi ; image fixe, aucune animation ou cadence originale certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1",
+        "bytes": 445424,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          339,
+          363,
+          951,
+          925
+        ],
+        "pixelSHA256": "3a25f202ae63b328a2d00f2e219231b3be472512cb6931f31eda82c1cc25ebcf",
+        "transparentFraction": 0.90517,
+        "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7376395534290271
+        ],
+        "bodyHeight": 0.4481658692185008,
+        "sourceFile": "exec-4ac579be-3d74-45db-826e-a5f5bb74d4de.png",
+        "sourceSHA256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          33,
+          77,
+          1234,
+          1222
+        ],
+        "framingBounds": [
+          336,
+          360,
+          954,
+          933
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "sha256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1",
+      "bytes": 445424,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        339,
+        363,
+        951,
+        925
+      ],
+      "alphaBounds": [
+        33,
+        77,
+        1234,
+        1222
+      ],
+      "framingBounds": [
+        336,
+        360,
+        954,
+        933
+      ],
+      "pixelSHA256": "3a25f202ae63b328a2d00f2e219231b3be472512cb6931f31eda82c1cc25ebcf",
+      "transparentFraction": 0.90517
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_weeping_bat_105": {
+    "fighterId": "downpour_weeping_bat_105",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-74514e74-1860-43ce-8ad7-8ab331609b00.png",
+    "sourceSHA256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Weeping Bat Downpour2012 entier : deux bras longs et deux jambes, bouche ouverte, aucune aile ni vol ajouté. Posture de garde transposée2D, contacts à comparer, franges blanches corrigées par outil image. Aucun cycle ou timing original certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+        "bytes": 374348,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          324,
+          383,
+          968,
+          924
+        ],
+        "pixelSHA256": "42a8f5179b7ba88dec382fcb91e730c2f876d876bfb69b6b9793f58c4dd2f567",
+        "transparentFraction": 0.93881,
+        "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7368421052631579
+        ],
+        "bodyHeight": 0.4314194577352472,
+        "sourceFile": "exec-74514e74-1860-43ce-8ad7-8ab331609b00.png",
+        "sourceSHA256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          55,
+          54,
+          1186,
+          1212
+        ],
+        "framingBounds": [
+          322,
+          380,
+          971,
+          927
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "sha256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+      "bytes": 374348,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        324,
+        383,
+        968,
+        924
+      ],
+      "alphaBounds": [
+        55,
+        54,
+        1186,
+        1212
+      ],
+      "framingBounds": [
+        322,
+        380,
+        971,
+        927
+      ],
+      "pixelSHA256": "42a8f5179b7ba88dec382fcb91e730c2f876d876bfb69b6b9793f58c4dd2f567",
+      "transparentFraction": 0.93881
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_siam_090": {
+    "fighterId": "homecoming_siam_090",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-a3d8a707-6941-4799-8b03-3ffdbed2e24d.png",
+    "sourceSHA256": "88b378486212fa6d2d4243b4ef3e4fd308035420b8dd620069b250b9f69ba730",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Siam Homecoming2008 entier : sujet composé attaché dos à dos, gros bras-clubs intrinsèques et bras fins arrière, vêtement/harnachement et bottes distincts. Posture2D et échelle adaptées, petites zones arrière occultées par le corps ; géométrie/contact des bras par rapport aux bottes à comparer, aucune certification1:1.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "88b378486212fa6d2d4243b4ef3e4fd308035420b8dd620069b250b9f69ba730",
+        "bytes": 900136,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          143,
+          241,
+          1175,
+          1081
+        ],
+        "pixelSHA256": "60835b54cbb6b8b0230c01999065b5d22e804afa2940c371c3e8f0f2a7483fd5",
+        "transparentFraction": 0.7867,
+        "path": "assets/sprites/homecoming_siam_090.88b378486212.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8014354066985646
+        ],
+        "bodyHeight": 0.6092503987240829,
+        "sourceFile": "exec-a3d8a707-6941-4799-8b03-3ffdbed2e24d.png",
+        "sourceSHA256": "88b378486212fa6d2d4243b4ef3e4fd308035420b8dd620069b250b9f69ba730",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          23,
+          1240,
+          1238
+        ],
+        "framingBounds": [
+          139,
+          239,
+          1177,
+          1085
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_siam_090.88b378486212.png",
+      "sha256": "88b378486212fa6d2d4243b4ef3e4fd308035420b8dd620069b250b9f69ba730",
+      "bytes": 900136,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        143,
+        241,
+        1175,
+        1081
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1240,
+        1238
+      ],
+      "framingBounds": [
+        139,
+        239,
+        1177,
+        1085
+      ],
+      "pixelSHA256": "60835b54cbb6b8b0230c01999065b5d22e804afa2940c371c3e8f0f2a7483fd5",
+      "transparentFraction": 0.7867
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_screamer_104": {
+    "fighterId": "downpour_screamer_104",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-1da0ec57-8ba4-4282-a5aa-aea218ead4a8.png",
+    "sourceSHA256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Screamer Downpour2012 entière : robe longue opaque, cheveux, griffes, deux appuis bandés. Aucun projectile, aile ou nouvelle arme. Cadre intégral ; texture, expression et pose2D reconstruites depuis le modèle, sans cycle ni timing original certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654",
+        "bytes": 514759,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          369,
+          293,
+          990,
+          1041
+        ],
+        "pixelSHA256": "55e50b368817083f9564aec07db85d62b272e8f672b4b1e099c8ada5a799afae",
+        "transparentFraction": 0.89539,
+        "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8301435406698564
+        ],
+        "bodyHeight": 0.5964912280701754,
+        "sourceFile": "exec-1da0ec57-8ba4-4282-a5aa-aea218ead4a8.png",
+        "sourceSHA256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          79,
+          1240,
+          1229
+        ],
+        "framingBounds": [
+          367,
+          289,
+          995,
+          1045
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "sha256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654",
+      "bytes": 514759,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        369,
+        293,
+        990,
+        1041
+      ],
+      "alphaBounds": [
+        0,
+        79,
+        1240,
+        1229
+      ],
+      "framingBounds": [
+        367,
+        289,
+        995,
+        1045
+      ],
+      "pixelSHA256": "55e50b368817083f9564aec07db85d62b272e8f672b4b1e099c8ada5a799afae",
+      "transparentFraction": 0.89539
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_anne_cunningham": {
+    "fighterId": "downpour_anne_cunningham",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-31c547fa-76d9-4785-a523-dd85ed46153b.png",
+    "sourceSHA256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Anne Cunningham Downpour2012 adulte entière : veste marine, pantalon gris-vert, ceinture et pistolet propre à son rendu. Pose de garde2D composée, visage/insignes/prise exacte à comparer ; aucun mélange Cybil ou autre édition. Zéro animation et timing original mesuré.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d",
+        "bytes": 465883,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          490,
+          134,
+          818,
+          1160
+        ],
+        "pixelSHA256": "267128912a76aebf033b556b5f125eb1c59d145e8784c9c76c1332a9cb74e2c2",
+        "transparentFraction": 0.88125,
+        "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.9250398724082934
+        ],
+        "bodyHeight": 0.8181818181818182,
+        "sourceFile": "exec-31c547fa-76d9-4785-a523-dd85ed46153b.png",
+        "sourceSHA256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          49,
+          37,
+          1186,
+          1222
+        ],
+        "framingBounds": [
+          485,
+          129,
+          821,
+          1164
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d",
+      "bytes": 465883,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        490,
+        134,
+        818,
+        1160
+      ],
+      "alphaBounds": [
+        49,
+        37,
+        1186,
+        1222
+      ],
+      "framingBounds": [
+        485,
+        129,
+        821,
+        1164
+      ],
+      "pixelSHA256": "267128912a76aebf033b556b5f125eb1c59d145e8784c9c76c1332a9cb74e2c2",
+      "transparentFraction": 0.88125
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_swarm": {
+    "fighterId": "homecoming_swarm",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-f0147a93-74f9-45e5-9443-654081827051.png",
+    "sourceSHA256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Un individu complet du Swarm Homecoming2008 : insecte à élytres, ailes et pattes propres au modèle, pas de monstre humanoïde. Vue3/4 : certaines pattes éloignées partiellement occultées par la carapace, ni nombre visible ni angle ne valent certification anatomique1:1. Corps entier dans le cadre ; pose fixe, sans cycle de vol mesuré.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+        "bytes": 732687,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          252,
+          227,
+          1117,
+          1042
+        ],
+        "pixelSHA256": "cc599364fa90470c3f431e71d8fbaab2770bedd979c20c5e5fc90090fe924820",
+        "transparentFraction": 0.84805,
+        "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8309409888357256
+        ],
+        "bodyHeight": 0.6499202551834131,
+        "sourceFile": "exec-f0147a93-74f9-45e5-9443-654081827051.png",
+        "sourceSHA256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          35,
+          26,
+          1226,
+          1228
+        ],
+        "framingBounds": [
+          246,
+          224,
+          1121,
+          1045
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "sha256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+      "bytes": 732687,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        252,
+        227,
+        1117,
+        1042
+      ],
+      "alphaBounds": [
+        35,
+        26,
+        1226,
+        1228
+      ],
+      "framingBounds": [
+        246,
+        224,
+        1121,
+        1045
+      ],
+      "pixelSHA256": "cc599364fa90470c3f431e71d8fbaab2770bedd979c20c5e5fc90090fe924820",
+      "transparentFraction": 0.84805
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_bogeyman_115": {
+    "fighterId": "downpour_bogeyman_115",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-297186c1-4b2c-4f06-a176-a692a0a1b237.png",
+    "sourceSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Bogeyman Downpour2012 entier : manteau long, masque à deux filtres, brassard et masse complète propres à Downpour, sans emprunt à Homecoming/Pyramid Head. Vue gauche correctement étiquetée puis miroir de présentation. Pose2D et détails d’équipement reconstruits, aucune animation ni géométrie source certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+        "bytes": 554533,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          368,
+          203,
+          846,
+          1098
+        ],
+        "pixelSHA256": "74ef8c05bea31765c239cf7e4fc1bfb3bcfe34c6987eb0ce3708f196179b4bf5",
+        "transparentFraction": 0.85983,
+        "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+        "facing": -1,
+        "anchor": [
+          0.5,
+          0.8755980861244019
+        ],
+        "bodyHeight": 0.7137161084529505,
+        "sourceFile": "exec-297186c1-4b2c-4f06-a176-a692a0a1b237.png",
+        "sourceSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          33,
+          31,
+          1192,
+          1254
+        ],
+        "framingBounds": [
+          366,
+          200,
+          852,
+          1103
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+      "bytes": 554533,
+      "width": 1254,
+      "height": 1254,
+      "facing": -1,
+      "visibleBounds": [
+        368,
+        203,
+        846,
+        1098
+      ],
+      "alphaBounds": [
+        33,
+        31,
+        1192,
+        1254
+      ],
+      "framingBounds": [
+        366,
+        200,
+        852,
+        1103
+      ],
+      "pixelSHA256": "74ef8c05bea31765c239cf7e4fc1bfb3bcfe34c6987eb0ce3708f196179b4bf5",
+      "transparentFraction": 0.85983
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_ariel_078": {
+    "fighterId": "origins_ariel_078",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0fc63c9c-6bf9-49eb-9363-cd8dcdc17c53.png",
+    "sourceSHA256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Ariel Origins PSP entière : marionnette inversée, deux mains d’appui et deux pieds au-dessus, sans corps de boxeur ni faux ancrage au plafond. Forme au sol transposée depuis anatomie et guide sol/plafond ; contacts exacts et matière reconstruits, aucun cycle ni timing original certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+        "bytes": 321708,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          454,
+          237,
+          836,
+          1008
+        ],
+        "pixelSHA256": "a7ef154220e2fbf90e1bec66706cd4efbc252c740fbd027cc3a617e0fc5a5c11",
+        "transparentFraction": 0.94765,
+        "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8038277511961722
+        ],
+        "bodyHeight": 0.6148325358851675,
+        "sourceFile": "exec-0fc63c9c-6bf9-49eb-9363-cd8dcdc17c53.png",
+        "sourceSHA256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          41,
+          37,
+          1206,
+          1228
+        ],
+        "framingBounds": [
+          449,
+          232,
+          839,
+          1015
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+      "bytes": 321708,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        454,
+        237,
+        836,
+        1008
+      ],
+      "alphaBounds": [
+        41,
+        37,
+        1206,
+        1228
+      ],
+      "framingBounds": [
+        449,
+        232,
+        839,
+        1015
+      ],
+      "pixelSHA256": "a7ef154220e2fbf90e1bec66706cd4efbc252c740fbd027cc3a617e0fc5a5c11",
+      "transparentFraction": 0.94765
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_two_back_080": {
+    "fighterId": "origins_two_back_080",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-58b61379-ecc9-43d4-8241-2d8c2f8bf9a7.png",
+    "sourceSHA256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Two-Back Origins PSP entier : un seul corps composé contorsionné suivant les vues du modèle, sans deux acteurs séparés ni nouvelle arme. Extrémités visibles comprises dans le cadre ; structures éloignées occultées et surfaces reconstruites à comparer. Pose2D fixe, aucune animation originale certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+        "bytes": 467569,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          377,
+          343,
+          901,
+          970
+        ],
+        "pixelSHA256": "919bfe83288d0b6631cb37308e60bb3f0a6fb29c59b1db26ca861f4ad99db42f",
+        "transparentFraction": 0.90302,
+        "path": "assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.773524720893142
+        ],
+        "bodyHeight": 0.5,
+        "sourceFile": "exec-58b61379-ecc9-43d4-8241-2d8c2f8bf9a7.png",
+        "sourceSHA256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          29,
+          1230,
+          1228
+        ],
+        "framingBounds": [
+          371,
+          341,
+          904,
+          974
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+      "sha256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+      "bytes": 467569,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        377,
+        343,
+        901,
+        970
+      ],
+      "alphaBounds": [
+        0,
+        29,
+        1230,
+        1228
+      ],
+      "framingBounds": [
+        371,
+        341,
+        904,
+        974
+      ],
+      "pixelSHA256": "919bfe83288d0b6631cb37308e60bb3f0a6fb29c59b1db26ca861f4ad99db42f",
+      "transparentFraction": 0.90302
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_nurse": {
+    "fighterId": "homecoming_nurse",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-668a4c79-cc75-41e3-9136-497617e7c1a5.png",
+    "sourceSHA256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Nurse Homecoming2008 adulte entière : tête et uniforme propres au modèle, couteau/scalpel visible, deux chaussures et appuis en garde. Aucun mélange Nurse Origins à seringue, SH3 ou film. Angle, prise et texture reconstruits ; aucune séquence ou mesure originale certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+        "bytes": 549518,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          408,
+          167,
+          914,
+          1101
+        ],
+        "pixelSHA256": "3980f1c9d2d167b4f88bc5470969ada771a69ece171eca20301fd5439473b8ff",
+        "transparentFraction": 0.89868,
+        "path": "assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8779904306220095
+        ],
+        "bodyHeight": 0.74481658692185,
+        "sourceFile": "exec-668a4c79-cc75-41e3-9136-497617e7c1a5.png",
+        "sourceSHA256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          73,
+          37,
+          1176,
+          1254
+        ],
+        "framingBounds": [
+          401,
+          160,
+          917,
+          1110
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+      "sha256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+      "bytes": 549518,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        408,
+        167,
+        914,
+        1101
+      ],
+      "alphaBounds": [
+        73,
+        37,
+        1176,
+        1254
+      ],
+      "framingBounds": [
+        401,
+        160,
+        917,
+        1110
+      ],
+      "pixelSHA256": "3980f1c9d2d167b4f88bc5470969ada771a69ece171eca20301fd5439473b8ff",
+      "transparentFraction": 0.89868
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_smog_087": {
+    "fighterId": "homecoming_smog_087",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-1de76300-5276-4aa8-9017-1407541c06bb.png",
+    "sourceSHA256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Smog Homecoming2008 entier : deux jambes, bras enfermés, matière sombre et cavité orange propres au rendu final. Rendu3D secondaire plus clair ne certifie pas une nouvelle variante. Cadrage élargi par outil image ; texture, exposition et appuis à comparer, aucune flamme ou arme ajoutée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6",
+        "bytes": 369366,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          462,
+          282,
+          833,
+          1021
+        ],
+        "pixelSHA256": "23a1a11d16522ec6b551cae40d0ccc505d609203556ef26ece533d1b8a9e75c8",
+        "transparentFraction": 0.92955,
+        "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8141945773524721
+        ],
+        "bodyHeight": 0.5893141945773525,
+        "sourceFile": "exec-1de76300-5276-4aa8-9017-1407541c06bb.png",
+        "sourceSHA256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          49,
+          136,
+          1216,
+          1198
+        ],
+        "framingBounds": [
+          455,
+          278,
+          836,
+          1023
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "sha256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6",
+      "bytes": 369366,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        462,
+        282,
+        833,
+        1021
+      ],
+      "alphaBounds": [
+        49,
+        136,
+        1216,
+        1198
+      ],
+      "framingBounds": [
+        455,
+        278,
+        836,
+        1023
+      ],
+      "pixelSHA256": "23a1a11d16522ec6b551cae40d0ccc505d609203556ef26ece533d1b8a9e75c8",
+      "transparentFraction": 0.92955
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh1_incubator_018": {
+    "fighterId": "sh1_incubator_018",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-f7e9cd23-163b-488e-92c3-6c089ca1567a.png",
+    "sourceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Incubator SH1original1999 entier : figure féminine blonde, robe blanche opaque à manches évasées, deux mains et deux pieds. Source native complète très surexposée ; visage, matière et petits contours lumineux restent peu déterminés. Distincte d’Incubus : aucune aile, corne ou arme. Pose fixe reconstruite, zéro fidélité1:1 certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+        "bytes": 196032,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          459,
+          354,
+          802,
+          997
+        ],
+        "pixelSHA256": "2043908a67becc570d10f8f21185411b3ef52c0b5b4c658abc1bc5c8d8f716c2",
+        "transparentFraction": 0.93983,
+        "path": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7950558213716108
+        ],
+        "bodyHeight": 0.5127591706539075,
+        "sourceFile": "exec-f7e9cd23-163b-488e-92c3-6c089ca1567a.png",
+        "sourceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          178,
+          102,
+          1194,
+          1205
+        ],
+        "framingBounds": [
+          453,
+          351,
+          805,
+          1000
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+      "sha256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+      "bytes": 196032,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        459,
+        354,
+        802,
+        997
+      ],
+      "alphaBounds": [
+        178,
+        102,
+        1194,
+        1205
+      ],
+      "framingBounds": [
+        453,
+        351,
+        805,
+        1000
+      ],
+      "pixelSHA256": "2043908a67becc570d10f8f21185411b3ef52c0b5b4c658abc1bc5c8d8f716c2",
+      "transparentFraction": 0.93983
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_order_soldier_091": {
+    "fighterId": "homecoming_order_soldier_091",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-7bc7c507-77a5-458a-b703-91cbb7c91662.png",
+    "sourceSHA256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Order Soldier Homecoming2008 entier, variante du rendu à lunettes rondes et long tablier, masques/canisters/tank propres à cette vue. Le tuyau équipé reste un choix de versus, son modèle exact n’est pas établi par la vue source du corps non armé. Dot parasite retiré/cadre élargi par outil image ; aucun transfert d’arme ou pouvoir certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+        "bytes": 380212,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          476,
+          333,
+          884,
+          956
+        ],
+        "pixelSHA256": "ab714d38de07e5a33b7d8e73f3868004f43f68dbb3f3c70b7ae80e1bb820069e",
+        "transparentFraction": 0.92648,
+        "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7623604465709729
+        ],
+        "bodyHeight": 0.49681020733652315,
+        "sourceFile": "exec-7bc7c507-77a5-458a-b703-91cbb7c91662.png",
+        "sourceSHA256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          65,
+          83,
+          1105,
+          1142
+        ],
+        "framingBounds": [
+          467,
+          330,
+          886,
+          963
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+      "bytes": 380212,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        476,
+        333,
+        884,
+        956
+      ],
+      "alphaBounds": [
+        65,
+        83,
+        1105,
+        1142
+      ],
+      "framingBounds": [
+        467,
+        330,
+        886,
+        963
+      ],
+      "pixelSHA256": "ab714d38de07e5a33b7d8e73f3868004f43f68dbb3f3c70b7ae80e1bb820069e",
+      "transparentFraction": 0.92648
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_prisoner_juggernaut_110": {
+    "fighterId": "downpour_prisoner_juggernaut_110",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-65144c49-3abd-440c-9301-8e55b3d885c2.png",
+    "sourceSHA256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Prisoner Juggernaut Downpour2012 entier : rendu explicitement légendé Juggernaut, crâne chauve, tatouages, pantalon brun et pieds nus. Ne remplace pas les variantes Brawler/Agile non identifiées. Pose2D, proportions/texture et petits reflets de bord reconstruits ; aucun mouvement ou timing original certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f",
+        "bytes": 481197,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          411,
+          273,
+          933,
+          1021
+        ],
+        "pixelSHA256": "683fb5b0eb3dfb34eda9e8ebfcc0dc0aa757e6600dfa1aa9342634d5850840ef",
+        "transparentFraction": 0.90251,
+        "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8141945773524721
+        ],
+        "bodyHeight": 0.5964912280701754,
+        "sourceFile": "exec-65144c49-3abd-440c-9301-8e55b3d885c2.png",
+        "sourceSHA256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          45,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          405,
+          270,
+          936,
+          1024
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "sha256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f",
+      "bytes": 481197,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        411,
+        273,
+        933,
+        1021
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        1234,
+        1254
+      ],
+      "framingBounds": [
+        405,
+        270,
+        936,
+        1024
+      ],
+      "pixelSHA256": "683fb5b0eb3dfb34eda9e8ebfcc0dc0aa757e6600dfa1aa9342634d5850840ef",
+      "transparentFraction": 0.90251
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh2_lying_figure_crawling_021": {
+    "fighterId": "sh2_lying_figure_crawling_021",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png",
+    "sourceSHA256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Lying Figure rampante SH2original2001 entière : torse refermé sans bras libres, deux jambes repliées, tête vers la droite, posture basse composée selon le comportement documenté. BodyHeight est une hauteur équivalente debout du projet, pas la hauteur visible rampante. Surfaces et cycle de propulsion non certifiés ; aucun mélange remake/film.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+        "bytes": 459361,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          169,
+          463,
+          1147,
+          878
+        ],
+        "pixelSHA256": "22f2a82a9c634c30099bfe62c1c01779466a00fc860571fbe8c0c18d047093e8",
+        "transparentFraction": 0.88073,
+        "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7001594896331739
+        ],
+        "bodyHeight": 0.8,
+        "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png",
+        "sourceSHA256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          31,
+          1234,
+          1252
+        ],
+        "framingBounds": [
+          165,
+          460,
+          1150,
+          882
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+      "bytes": 459361,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        169,
+        463,
+        1147,
+        878
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        1234,
+        1252
+      ],
+      "framingBounds": [
+        165,
+        460,
+        1150,
+        882
+      ],
+      "pixelSHA256": "22f2a82a9c634c30099bfe62c1c01779466a00fc860571fbe8c0c18d047093e8",
+      "transparentFraction": 0.88073
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_scarlet_spider_form_095": {
+    "fighterId": "homecoming_scarlet_spider_form_095",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-a4059c06-9cc0-4e91-aee8-5bcd31f54243.png",
+    "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Scarlet Homecoming2008 forme2 entière : quatre membres longs, corps interne exposé et porcelaine restante du rendu21. Aucune mécanique Amnion, aucun huitième membre ou câble de Sepulcher. Portrait de la forme1 ne certifie pas son corps entier. Pose2D/fentes de porcelaine et contacts reconstruits, zéro animation originale mesurée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+        "bytes": 520470,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          213,
+          324,
+          1096,
+          932
+        ],
+        "pixelSHA256": "b919886ca7d4a7836e57a8aefd3cb469a7b4870044ee26c6b8481abb8e250d40",
+        "transparentFraction": 0.90624,
+        "path": "assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.7432216905901117
+        ],
+        "bodyHeight": 0.48484848484848486,
+        "sourceFile": "exec-a4059c06-9cc0-4e91-aee8-5bcd31f54243.png",
+        "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          130,
+          32,
+          1188,
+          1148
+        ],
+        "framingBounds": [
+          208,
+          321,
+          1099,
+          935
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+      "sha256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+      "bytes": 520470,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        213,
+        324,
+        1096,
+        932
+      ],
+      "alphaBounds": [
+        130,
+        32,
+        1188,
+        1148
+      ],
+      "framingBounds": [
+        208,
+        321,
+        1099,
+        935
+      ],
+      "pixelSHA256": "b919886ca7d4a7836e57a8aefd3cb469a7b4870044ee26c6b8481abb8e250d40",
+      "transparentFraction": 0.90624
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_asphyxia_096": {
+    "fighterId": "homecoming_asphyxia_096",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-d14ee30c-9fe6-49df-9c61-5b37c0b0b46f.png",
+    "sourceSHA256": "75b6c185db1d1159b8321118622224359eadd24b238a74fade3c5844aef548e3",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Asphyxia Homecoming2008 entière : corps composé vertical et segment arrière, bras et appuis du rendu propre, sans attribution à Scarlet ou Sepulcher. Certaines attaches arrière restent naturellement occultées ; leur anatomie précise et la peau reconstruite ne sont pas certifiées. Pose fixe2D, zéro relevé original.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "75b6c185db1d1159b8321118622224359eadd24b238a74fade3c5844aef548e3",
+        "bytes": 718070,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          295,
+          147,
+          1040,
+          1153
+        ],
+        "pixelSHA256": "bf8e17a2e91ce46e4e93eede6de1f8db6e75a2699650c1213eb751559e4c9187",
+        "transparentFraction": 0.85558,
+        "path": "assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.919457735247209
+        ],
+        "bodyHeight": 0.8022328548644339,
+        "sourceFile": "exec-d14ee30c-9fe6-49df-9c61-5b37c0b0b46f.png",
+        "sourceSHA256": "75b6c185db1d1159b8321118622224359eadd24b238a74fade3c5844aef548e3",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          27,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          285,
+          144,
+          1045,
+          1160
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+      "sha256": "75b6c185db1d1159b8321118622224359eadd24b238a74fade3c5844aef548e3",
+      "bytes": 718070,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        295,
+        147,
+        1040,
+        1153
+      ],
+      "alphaBounds": [
+        0,
+        27,
+        1240,
+        1254
+      ],
+      "framingBounds": [
+        285,
+        144,
+        1045,
+        1160
+      ],
+      "pixelSHA256": "bf8e17a2e91ce46e4e93eede6de1f8db6e75a2699650c1213eb751559e4c9187",
+      "transparentFraction": 0.85558
     },
     "clips": {
       "idle": {

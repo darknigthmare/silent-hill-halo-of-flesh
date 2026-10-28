@@ -25,7 +25,7 @@ const planDir = path.join(root, 'docs/production');
 const stageAnimationBaseline=JSON.parse(await fs.readFile(path.join(planDir,'research/stage-animation-baseline.json'),'utf8')).rows;
 // Keep unresolved delivery limits visible in the exported Excel rows and tasks.
 // These are production notes only; they do not change the game's capabilities.
-const recordedDeliveries=(await Promise.all(['lot9','lot10'].flatMap(batch=>['art','stages'].map(async workstream=>{
+const recordedDeliveries=(await Promise.all(['lot9','lot10','lot11'].flatMap(batch=>['art','stages'].map(async workstream=>{
   try{
     const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/${batch}-${workstream}.json`),'utf8'));
     return (ledger.items||[]).map(item=>({...item,workstream,batch}));
@@ -278,6 +278,14 @@ function runtimeMoveReferenceNote(profile,move){
     return 'Emprise des jambes sur le torse, sans bras libres ajoutés. Verrou local du propriétaire et dégagement du versus ; une riposte réelle peut rompre le contact. Aucun plaquage ou étranglement de main emprunté à un autre monstre.';
   if(policy.id==='origins_straight_jacket_074'&&move.projectile&&['neutralSpecial','super','desperation'].includes(move.key))
     return 'Projection acide simple à portée et durée bornées dans le versus ; aucun nuage persistant ou effet de corrosion ajouté. Les chiffres du moteur ne mesurent pas ceux d’Origins.';
+  if(['sh3_numb_body_small_037','sh3_numb_body_medium','sh3_numb_body_large_038'].includes(policy.id)&&policy.contactBands?.[move.key])
+    return 'Bond frontal physique du corps sans bras, avec un seul contact de tête ; aucune prise ou frappe de main ajoutée. Variante de taille distincte ; arc, portée et collision du versus, sans animation originale mesurée.';
+  if(policy.id==='sh4_hummer_055'&&policy.contactBands?.[move.key])
+    return 'Petite morsure locale : la zone de contact suit le corps et le bec, sans employer les ailes comme une grande attaque. Portée, hauteur et dégâts du versus, sans mesure originale.';
+  if(policy.id==='sh4_wall_man_056'&&policy.contactBands?.[move.key])
+    return 'Griffe renversante depuis le support mural fixe ; contact vertical borné, sans bras détaché ni déplacement libre. Bande, portée et chute adaptées au versus, sans géométrie originale mesurée.';
+  if(policy.id==='sh4_one_truth_070'&&policy.contactBands?.[move.key])
+    return `${move.key==='forwardSpecial'?'Heurt de tête rapproché, sans renversement':'Balayage local du bras avec renversement'} depuis son support fixe. Ces gestes restent distincts des griffes de Wall Man ; réglages du versus, sans hitbox ou animation source mesurée.`;
   if(policy.contactBands?.[move.key])
     return 'Zone de contact propre au geste documenté, distincte de la grande hauteur du corps. Bande de collision réglée pour le versus, sans géométrie source mesurée.';
   if(policy.sensoryParalysis?.slots.includes(move.key))
@@ -478,8 +486,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-10-26',
-    scope:'PR #4 et continuation des 23, 24, 25 et 26 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes aux neuvième et dixième lots. Règles et prototypes de mise en scène séparés des images dédiées et de la certification visuelle.',
+    updatedAt:'2026-10-28',
+    scope:'PR #4 et continuation des 23, 24, 25, 26 et 28 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes aux neuvième, dixième et onzième lots. Corps entiers et cadrage du combat 2D contrôlés séparément des animations et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -558,6 +566,15 @@ export function buildProductionPlan(research) {
   Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
   const runtimeProgress=applyRuntimeProgress(plan);
+  for(const revision of latestDelivery.values()){
+    if(revision.workstream!=='stages'||revision.status!=='implemented-candidate'||!revision.originalProposal||!revision.revisedProposal)continue;
+    const row=plan.stageAnimations.find(row=>row.id===revision.rowId);
+    if(!row||row.stageId!==revision.entityId)throw Error('Invalid revised stage target: '+revision.rowId);
+    const note=`Révision de cible du lot ${revision.batch.slice(3)} (${revision.rowId}) : ancienne proposition « ${revision.originalProposal} » remplacée par « ${revision.implementedElement} ». ${revision.revisionReason} L’ancienne proposition n’est pas déclarée réalisée.`;
+    row.existing+=' '+note;
+    const task=plan.tasks.find(task=>task.id===revision.entityId+':stage');
+    if(task)task.reason+=' '+note;
+  }
   for(const block of recordedBlocks){
     const collection=block.workstream==='art'?'poses':'stageAnimations';
     const row=plan[collection].find(row=>row.id===block.rowId);

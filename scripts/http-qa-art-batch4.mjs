@@ -1,7 +1,7 @@
-/** Successive batch-4 through batch-10 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
+/** Successive batch-4 through batch-11 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
 import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
-import {mkdir,writeFile} from 'node:fs/promises';
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
@@ -18,8 +18,12 @@ const batch9=["sh1_mumbler_006","sh1_creeper_009","sh1_puppet_nurse_012","sh1_pu
 const blocked9=["sh1_incubus_019","sh3_nurse_pipe_043","sh3_valtiel_051","sh4_jasper_gein_victim_17","sh4_andrew_desalvo_victim_18","sh3_split_worm_046"];
 const batch10=['sh1_groaner_003','sh1_wormhead_004','sh4_hummer_055','sh3_double_head_040','sh3_numb_body_small_037','sh4_sniffer_dog_female_054','sh1_romper_010','sh1_split_head_014','sh3_closer_036','sh3_slurper_042'];
 const batch10Poses=['walk','hurt','ko'];
+const ledger11=JSON.parse(await readFile(resolve(root,'docs/production/batches/lot11-art.json'),'utf8'));
+if(ledger11.batch!=='lot11'||ledger11.workstream!=='art'||ledger11.items.length!==30)throw Error('The complete thirty-row lot11 art ledger is required.');
+const batch11=ledger11.items.filter(item=>item.status==='implemented-candidate').map(item=>item.entityId);
+const blocked11=ledger11.items.filter(item=>item.status==='blocked').map(item=>item.entityId);
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
-const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9];
+const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9,...batch11];
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],fixtures:[
   'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7, then three SH4 profiles from batch 8 and twenty-four exact profiles from batch 9, are required and inspected through the actual workshop controls; a missing import fails the suite. Six blocked batch-9 identities must retain explicit missing-art dossiers; five tool refusals and one partial source body are never replaced by borrowed pixels.',
@@ -27,7 +31,8 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'Local matches retain Groaner/Split Head/Wood Side, Wormhead/Closer/Alchemilla and Twin Victim/Slurper/Lakeview coverage, then require Double Head/Insane Cancer/Central Square Mall through the real roster and stage gallery. Two further real matches cover Patient/Gum Head New Type and Bottom/Patient on the original Brookhaven roof before the fall; the wide facade camera is a bounded reconstruction rather than source geometry. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.',
   'Canvas drawImage calls are recorded without changing their arguments. The genuine pause/resume button and a 430-pixel viewport exercise the same loaded assets.',
   'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.',
-  'Batch10 adds thirty independent one-image walk/hurt/ko clips to ten existing exact profiles, preserving their idle files. All thirty files are decoded, painted with the actual inspector, and checked for alpha support and standing-equivalent scale. Three additional ordinary matches cover Hummer/Small Numb Body, Romper/Slurper and Groaner/Split Head; genuine movement controls select the new walk PNGs. The last match uses repeated real player2 neutralLight inputs to reach a grounded final KO. These played-versus input observations are separate from the static workshop pose previews and prove no original-game motion/timing.'
+  'Batch10 adds thirty independent one-image walk/hurt/ko clips to ten existing exact profiles, preserving their idle files. All thirty files are decoded, painted with the actual inspector, and checked for alpha support and standing-equivalent scale. Three additional ordinary matches cover Hummer/Small Numb Body, Romper/Slurper and Groaner/Split Head; genuine movement controls select the new walk PNGs. The last match uses repeated real player2 neutralLight inputs to reach a grounded final KO. These played-versus input observations are separate from the static workshop pose previews and prove no original-game motion/timing.',
+  'Lot11 requires every implemented exact-ID full-body idle from its thirty-row art ledger, and keeps every blocked identity without artwork. Independent browser alpha decoding checks raw alpha metadata; framing includes the readable subject and its connected faint tips, excluding detached low-alpha padding noise. Five additional ordinary menu matches exercise humanoids, quadrupeds, large bodies, long limbs and weapons on existing bitmap arenas. These cross-work versus pairings are not original encounters; source anatomy and unseen details remain unverified. No extra images, poses or tests are counted as production rows.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
@@ -90,8 +95,8 @@ try{
     return {registeredIds:Object.keys(SPRITES),subjects:required.map(id=>({id,art:SPRITES[id]||null,fighter:ROSTER.find(f=>f.id===id)})),
       scenes:['woodside','alchemilla','lakeview','shopping_mall','brookhaven_roof'].map(id=>({id,stage:STAGES.find(s=>s.id===id),stageIndex:STAGES.findIndex(s=>s.id===id),decor:STAGE_BITMAPS[id]}))};
   },required);
-  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9,batch10,batch10Poses};
-  check('all forty-three required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
+  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9,batch10,batch10Poses,batch11,blocked11};
+  check('all '+required.length+' required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
   await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.selectOption('#spriteFilter','ready');
   report.readyPages=[];
   for(let index=0;index<Math.ceil(registry.registeredIds.length/18);index++){
@@ -105,8 +110,8 @@ try{
   check('real gallery pages contain every registered exact ID once and finish at a disabled next button',paged.length===registry.registeredIds.length&&new Set(paged).size===paged.length&&JSON.stringify([...paged].sort())===JSON.stringify([...registry.registeredIds].sort())&&await page.locator('#spriteNext').isDisabled());
   for(const subject of registry.subjects){
     const {id,art,fighter}=subject;
-    const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id);
-    const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004}[exactSource];
+    const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id),isBatch11=batch11.includes(id);
+    const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012}[exactSource];
     const isTwin=id===twinId;
     check(id+': exact source owns its static idle and only its declared additional stills',art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===(isBatch10?4:isTwin?2:1)&&Object.keys(art.clips).length===(isBatch10?4:isTwin?2:1)&&art.clips.idle?.frames.length===1&&art.clips.idle.frames[0]===0&&art.animatedClips===0&&(!isTwin||art.clips[twinTaunt]?.frames.length===1&&art.clips[twinTaunt].frames[0]===1&&art.clips[twinTaunt].loop===false&&art.frames[0].path!==art.frames[1].path)&&(!isBatch10||batch10Poses.every((pose,i)=>art.clips[pose]?.frames.length===1&&art.clips[pose].frames[0]===i+1&&art.clips[pose].loop===false)&&new Set(art.frames.map(frame=>frame.pixelSHA256)).size===4),art);
     await selectSubject(page,id,fighter.source);
@@ -138,10 +143,12 @@ try{
       return {width:canvas.width,height:canvas.height,transparent,visible,partial,bounds:{minX,minY,maxX,maxY}};
     },frame);
     check(id+': decoded PNG retains transparent background and visible subject',decoded.width===frame.width&&decoded.height===frame.height&&decoded.transparent>0&&decoded.visible>0,decoded);
+    check(id+': raw-alpha metadata includes every decoded nontransparent pixel',JSON.stringify(frame.alphaBounds)===JSON.stringify([decoded.bounds.minX,decoded.bounds.minY,decoded.bounds.maxX+1,decoded.bounds.maxY+1]),{published:frame.alphaBounds,decoded:decoded.bounds});
+    if(isBatch11)check(id+': the new full-body still keeps transparent space around its readable silhouette',frame.visibleBounds[0]>0&&frame.visibleBounds[1]>0&&frame.visibleBounds[2]<frame.width&&frame.visibleBounds[3]<frame.height&&art.clips.idle.loop===false,frame.visibleBounds);
     report.assets.push({id,frameIndex,source:art.source,path:frame.path,sha256:frame.sha256,bytes:frame.bytes,alpha:decoded});
     check(id+': inspector drawImage used that registered image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path&&draw.width>0),frame.path));
     }
-    for(const pose of [...(isBatch10?['guard','dodge']:['walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
+    for(const pose of [...(isBatch10?['guard','dodge']:['walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
       await page.selectOption('[data-inspect=pose]',pose);
       check(id+': absent '+pose+' stays an explicit static idle preview',/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent())&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')===pose);
     }
@@ -190,7 +197,7 @@ try{
     check(id+': real missing-variant dossier has no borrowed bitmap or duel link',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('.sprite-inspector').count()===0&&await page.locator('#spriteDetail a').count()===0);
   }
   report.blockedBatch9=[];
-  for(const id of blocked9){
+  for(const id of [...blocked9,...blocked11]){
     await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.selectOption('#spriteFilter','all');await page.fill('#spriteSearch',id);
     await page.locator(`.sprite-card[data-id="${id}"]`).click();
     const absent=await page.evaluate(async id=>{const {SPRITES}=await import('/src/sprite-manifest.js');return !Object.hasOwn(SPRITES,id);},id);
@@ -223,7 +230,12 @@ try{
     {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh4_cynthia_velasquez_victim_16','sh4_richard_braintree_victim_19'],captureId:'batch9-cynthia-richard-lakeview'},
     {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['sh4_hummer_055','sh3_numb_body_small_037'],captureId:'batch10-hummer-small-numb'},
     {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['sh1_romper_010','sh3_slurper_042'],captureId:'batch10-romper-slurper'},
-    {scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:['sh1_groaner_003','sh1_split_head_014'],captureId:'batch10-grounded-ko-groaner-split-head'}];
+    {scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:['sh1_groaner_003','sh1_split_head_014'],captureId:'batch10-grounded-ko-groaner-split-head'},
+    {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['origins_straight_jacket_074','origins_faceless_nurse'],captureId:'batch11-origins-bound-body-and-syringe'},
+    {scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:['origins_caliban_079','homecoming_siam_090'],captureId:'batch11-large-complete-bodies'},
+    {scene:registry.scenes.find(scene=>scene.id==='lakeview'),ids:['homecoming_needler_088','homecoming_asphyxia_096'],captureId:'batch11-complete-limbs-and-tail'},
+    {scene:registry.scenes.find(scene=>scene.id==='shopping_mall'),ids:['homecoming_scarlet_spider_form_095','downpour_weeping_bat_105'],captureId:'batch11-grounded-spider-and-climber'},
+    {scene:registry.scenes.find(scene=>scene.id==='brookhaven_roof'),ids:['sh1_incubator_018','downpour_bogeyman_115'],captureId:'batch11-gown-and-hammer'}];
   for(const {scene,ids,captureId=scene.id} of matches){
     const {id:stageId,stageIndex,decor}=scene;
     await page.setViewportSize({width:1440,height:1000});
@@ -247,7 +259,8 @@ try{
     await page.waitForFunction(()=>__HALO_QA__.engine.phase==='fight'&&__HALO_QA__.engine.texts.every(text=>!['intro','round','fight'].includes(text.kind)));
     const combat=await page.evaluate(()=>({phase:__HALO_QA__.engine.phase,stage:__HALO_QA__.engine.stage.id,diagnostic:__HALO_QA__.engine.config.artDiagnostic,camera:__HALO_QA__.engine.presentationCamera,
       actors:__HALO_QA__.engine.actors.map(actor=>({id:actor.data.id,source:actor.data.source,x:actor.x,y:actor.y})),draws:__ART_BATCH4_DRAWS__.filter(draw=>draw.canvas==='game'),actorPins:[...__HALO_QA__.assetCache.pins],stagePins:[...__HALO_QA__.stageAssetCache.pins]}));
-    if(captureId.startsWith('batch10-'))(report.combatBatch10??=[]).push(combat);else if(captureId.startsWith('batch9-'))(report.combatBatch9??=[]).push(combat);else if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else if(stageId==='lakeview')report.combatBatch6=combat;else if(stageId==='shopping_mall')report.combatBatch7=combat;else (report.combatBatch8??=[]).push(combat);
+    if(captureId.startsWith('batch11-'))(report.combatBatch11??=[]).push(combat);else if(captureId.startsWith('batch10-'))(report.combatBatch10??=[]).push(combat);else if(captureId.startsWith('batch9-'))(report.combatBatch9??=[]).push(combat);else if(stageId==='woodside')report.combat=combat;else if(stageId==='alchemilla')report.combatBatch5=combat;else if(stageId==='lakeview')report.combatBatch6=combat;else if(stageId==='shopping_mall')report.combatBatch7=combat;else (report.combatBatch8??=[]).push(combat);
+    if(captureId==='batch11-large-complete-bodies')check('large full-body duel keeps a readable arena rather than shrinking for detached padding speckles',combat.camera.scale>.6,combat.camera);
     if(['lakeview','shopping_mall','brookhaven_roof'].includes(stageId)){
       combat.terrain=await page.evaluate(async()=>{const {stageTerrainProfile}=await import('/src/stage-director.js');const stage=__HALO_QA__.engine.stage;return {rules:stage.referencePolicy.terrainRules,profile:stageTerrainProfile(stage)};});
       check(stageId+': actual room terrain is physically neutral rather than inherited wet/slippery rules',combat.terrain.rules===false&&combat.terrain.profile.moveScale===1&&combat.terrain.profile.jumpScale===1&&combat.terrain.profile.dodgeScale===1&&combat.terrain.profile.friction===.84&&combat.terrain.profile.knockbackScale===1&&combat.terrain.profile.guardRegenScale===1&&!combat.terrain.profile.splash&&!combat.terrain.profile.slip,combat.terrain);

@@ -372,11 +372,31 @@ define('sh3_double_head_040', {
     wakeupAttack:contact('Reprise de la mâchoire')
   }
 });
-define('sh3_numb_body_small_037 sh3_numb_body_medium sh3_numb_body_large_038', {
-  disabledSlots:{throw:'Ce corps sans bras n’a pas de saisie documentée.',backThrow:'Ce corps sans bras n’a pas de projection documentée.'},
-  moves:{...weaponKit('Heurt de tête'), neutralSpecial:contact('Bond de tête', {travel:3.2}),
-    super:contact('Approche puis heurt de tête', {hits:2, travel:3.2})}
-});
+// SH3 enemies_en.htm: the only Numb Body attack is a lunging headbutt,
+// explicitly described as a jump forward. Small/medium/large remain their
+// own IDs; these five input variations never become arm strikes, low kicks,
+// a grab or repeated invisible contacts. Heights, arcs, reach and damage are
+// authored versus calibration, not original model geometry or measured frames.
+const NUMB_LUNGE_SLOTS=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+function numbLunges(size){
+  const profile={small:{offset:104,height:55,reach:100},medium:{offset:127,height:66,reach:118},large:{offset:165,height:85,reach:140}}[size];
+  const clean={level:'mid',hits:1,launch:0,knockdown:false,hardKnockdown:false,groundBounce:false,
+    invulnFrames:0,armorFrames:0,unblockable:false,effectOverride:null};
+  return {
+    contactBands:Object.fromEntries(NUMB_LUNGE_SLOTS.map(key=>[key,{footOffset:profile.offset,height:profile.height,sourceTimingMeasured:false}])),
+    disabledSlots:{throw:'Ce corps sans bras n’a pas de saisie documentée.',backThrow:'Ce corps sans bras n’a pas de projection documentée.'},
+    moves:{...weaponKit('Heurt frontal du Numb Body'),
+      neutralSpecial:contact('Heurt frontal — petit bond',{...clean,knockbackAdd:-6,reach:profile.reach,travel:3.1,verticalTravel:1.7}),
+      forwardSpecial:contact('Heurt frontal — bond en poursuite',{...clean,knockbackAdd:-9,reach:profile.reach+12,travel:4.1,verticalTravel:2.3}),
+      downSpecial:contact('Heurt frontal — bond court',{...clean,knockbackAdd:-4,reach:profile.reach-8,travel:2.5,verticalTravel:.9}),
+      super:contact('Heurt frontal — longue approche',{...clean,knockbackAdd:-16,reach:profile.reach+24,travel:3.8,verticalTravel:2.5}),
+      desperation:contact('Heurt frontal — dernier bond',{...clean,knockbackAdd:-20,reach:profile.reach+32,travel:4.3,verticalTravel:2.7})
+    }
+  };
+}
+define('sh3_numb_body_small_037',numbLunges('small'));
+define('sh3_numb_body_medium',numbLunges('medium'));
+define('sh3_numb_body_large_038',numbLunges('large'));
 // SH3 (2003), enemies_en.htm: frontal Handgun rounds are deflected; the
 // Shotgun and Submachine Gun remain effective. Mapping other works' handguns
 // to the same versus class and the idle defense window are local choices.
@@ -479,16 +499,36 @@ define('sh3_god_050', {
   super:shot('Couronne de flammes', {effectOverride:'burn', projectileSpeed:9}),
   desperation:shot('Dernière vague de flammes', {effectOverride:'burn', projectileSpeed:9})
 }});
-define('sh4_one_truth_070', {moves:{...weaponKit('Bras de la paroi'),
-  neutralSpecial:contact('Balayage depuis le support'), super:contact('Deux balayages localisés', {hits:2})
-}});
+// SH4 bosses_en.htm distinguishes a knocking arm swing and a close headbutt.
+// The single versus body stays fixed to its support: no twelve-body puzzle,
+// native vertical descent, free-floating arm or measured source hitbox.
+const WALL_CONTACT_SLOTS=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+const wallContact=(name,extra={})=>contact(name,{level:'mid',hits:1,travel:0,verticalTravel:0,
+  launch:0,hardKnockdown:false,groundBounce:false,invulnFrames:0,armorFrames:0,unblockable:false,effectOverride:null,...extra});
+define('sh4_one_truth_070', {
+  contactBands:Object.fromEntries(WALL_CONTACT_SLOTS.map(key=>[key,{footOffset:key==='forwardSpecial'?220:151,
+    height:key==='forwardSpecial'?65:95,sourceTimingMeasured:false}])),
+  moves:{...weaponKit('Bras de la paroi'),
+    neutralSpecial:wallContact('Bras mural — balayage renversant',{reach:170,knockdown:true}),
+    forwardSpecial:wallContact('Tête — heurt rapproché du support',{reach:135,knockdown:false}),
+    downSpecial:wallContact('Bras mural — contact local',{reach:160,knockdown:true}),
+    super:wallContact('Bras mural — grand balayage borné',{reach:205,knockdown:true}),
+    desperation:wallContact('Bras mural — dernier balayage borné',{reach:220,knockdown:true})
+  }
+});
 // SH4 enemies_en.htm: the claw swing knocks Henry to the floor. This applies
 // to Wall Man only; sharing a visual support does not establish One Truth's kit.
-define('sh4_wall_man_056', {moves:{...weaponKit('Griffes de la paroi'),
-  neutralHeavy:contact('Balayage renversant des griffes',{knockdown:true}),
-  neutralSpecial:contact('Griffes depuis le support',{knockdown:true,hits:1}),
-  super:contact('Deux balayages depuis la paroi',{knockdown:true,hits:2})
-}});
+define('sh4_wall_man_056', {
+  contactBands:Object.fromEntries(WALL_CONTACT_SLOTS.map(key=>[key,{footOffset:132,height:90,sourceTimingMeasured:false}])),
+  moves:{...weaponKit('Griffes de la paroi'),
+    neutralHeavy:contact('Balayage renversant des griffes',{knockdown:true}),
+    neutralSpecial:wallContact('Griffes — balayage depuis la paroi',{reach:150,knockdown:true}),
+    forwardSpecial:wallContact('Griffes — allonge depuis le support',{reach:185,knockdown:true}),
+    downSpecial:wallContact('Griffes — contact local de la paroi',{reach:145,knockdown:true}),
+    super:wallContact('Griffes — grand balayage borné',{reach:205,knockdown:true}),
+    desperation:wallContact('Griffes — dernier balayage borné',{reach:220,knockdown:true})
+  }
+});
 // SH4 enemies_en.htm: Sniffers lunge and may hold Henry in a biting grip.
 // Bind substitutes for that hold; it is not a measured source escape sequence.
 define('sh4_sniffer_dog_male_053 sh4_sniffer_dog_female_054', {
@@ -501,15 +541,20 @@ define('sh4_sniffer_dog_male_053 sh4_sniffer_dog_female_054', {
 // SH4 enemies_en.htm: a single melee hit bats Hummers down. Their health and
 // the knockdown recovery below retain versus rules; this does not force death.
 define('sh4_hummer_055', {hitResponse:{meleeKnockdown:true,sourceTimingMeasured:false},
+  // The guide gives a small biting flyer, not wing-tip hits or a large aura.
+  // This narrow front contact and small health damage are versus tuning.
+  contactBands:Object.fromEntries(WALL_CONTACT_SLOTS.map(key=>[key,{footOffset:116,height:38,sourceTimingMeasured:false}])),
   disabledSlots:{throw:'Les attaques décrites sont des morsures en vol, pas un enlèvement de Henry.',
     backThrow:'Aucune projection aérienne avec échange de places n’est documentée.'},
   moves:{...weaponKit('Morsure du Hummer'),
-    neutralSpecial:contact('Morsure en vol stationnaire',{hits:1}),
-    forwardSpecial:contact('Morsure en passage rapide',{hits:1,travel:4.5}),
+    neutralSpecial:wallContact('Morsure en vol stationnaire',{reach:85,knockdown:false,damageScale:.4,knockbackAdd:-8}),
+    forwardSpecial:wallContact('Morsure en passage rapide',{reach:95,knockdown:false,damageScale:.4,knockbackAdd:-11,travel:4.5}),
+    downSpecial:wallContact('Morsure en vol rapproché',{reach:75,knockdown:false,damageScale:.4,knockbackAdd:-6}),
     guardCounter:contact('Morsure de riposte'),
     dodgeAttack:contact('Morsure après écart en vol'),
     wakeupAttack:contact('Morsure à la reprise du vol'),
-    super:contact('Passage rapide puis morsure',{hits:1,travel:4.3})
+    super:wallContact('Passage rapide puis morsure',{reach:105,knockdown:false,damageScale:.18,knockbackAdd:-18,travel:4.3}),
+    desperation:wallContact('Dernier passage mordu',{reach:115,knockdown:false,damageScale:.18,knockbackAdd:-22,travel:4.7})
   }
 });
 define('sh4_gum_head_old_type_057', {moves:weaponKit('Poing du Gum Head')});

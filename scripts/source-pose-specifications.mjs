@@ -268,6 +268,143 @@ const groups=[
   }}
 ];
 
+// A full-body production brief is distinct from an already imported fixed idle.
+// These rows specify missing cycles and transitions; they create no new pixels.
+groups.push(
+  {batch:'lot11',fighterId:'sh1_night_flutter_002',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES','EXT10_REF_NIGHT_FLUTTER_MODEL_20261026'],poses:{
+    idle:{
+      basis:'Le guide distingue Night Flutter sombre à tête couverte de vers, présent dans le cauchemar, de son équivalent Air Screamer.',
+      description:'Night Flutter SH1 : cadrer le corps entier avec tête vermiforme, deux ailes membraneuses et deux pattes, en conservant les extrémités dans l’image de combat 2D. Distinguer attente aérienne et attente debout aux ailes repliées ; le modèle fixe publié montre une posture au sol, pas toute une boucle. Garder la peau sombre de cette identité sans reprendre la tête nue d’Air Screamer. La marge autour du corps est un choix de cadrage du projet, pas une mesure source.',
+      limits:'Le PNG idle candidat existant ne fournit pas la boucle d’attente ni ses raccords ; orientation, respiration et battements restent à relever.'},
+    walk:{
+      basis:'Le guide décrit poursuite et coups des pattes depuis les airs, ainsi qu’une rencontre en marche au sol avec coup de tête distinct.',
+      description:'Night Flutter SH1 : relever séparément translation aérienne et progression sur les deux pattes au sol, en cadrant ailes, tête couverte de vers et pieds en entier. Ne pas convertir les ailes en bras de boxeur ni employer une alternance humaine en vol. Le piqué et le coup de tête sont des attaques, pas des images de marche. La vitesse qualitativement supérieure à Air Screamer ne donne ni multiplicateur officiel ni cycle interchangeable entre espèces.',
+      limits:'Deux supports sont documentés ; alternance des pattes, battement, hauteur et vitesse originale ne sont ni mesurés ni produits.'},
+    hurt:{
+      basis:'Le guide décrit des armes permettant d’abattre Night Flutter puis recommande un coup au sol ; il distingue donc atteinte et achèvement.',
+      description:'Night Flutter SH1 : préparer l’impact depuis l’état aérien ou debout en conservant tout le corps, les deux ailes et les pattes. Relever une éventuelle perte d’altitude avant de placer les pieds au sol ; ne pas téléporter un corps suspendu sur sa ligne d’appui. La tête vermiforme reste attachée, sans détacher les vers pour fabriquer un projectile. Une réaction hurt du versus doit être comparée à la capture propre à Night Flutter, pas à un recoloriage d’Air Screamer.',
+      limits:'Atteinte et mise au sol sont documentées ; angle de recul, arrêt du vol et reprise après chaque arme restent à capturer.'},
+    knockdown:{
+      basis:'Le guide propose de faire tomber la créature puis de suivre par un coup de pied ou un autre tir, sans décrire un relèvement de manche.',
+      description:'Night Flutter SH1 : séparer perte de portance, réception et corps au sol, avec ailes repliées ou étendues uniquement selon la vue relevée. Garder le corps entier, les deux pattes et la tête couverte de vers sans les masquer par une rotation du PNG idle. Le coup d’achèvement après la chute ne doit pas devenir une mort automatique à chaque knockdown du versus. Relever le contact des ailes et du torse avant de composer une récupération.',
+      limits:'État abattu et achèvement documentés ; côté de réception, durée au sol et retour aérien récupérable ne sont pas établis.'},
+    phase:{
+      basis:'Night Flutter occupe les zones de cauchemar et réagit à la lumière selon le commentaire ; aucun changement anatomique en plein combat n’est décrit.',
+      description:'Night Flutter SH1 : le slot phase conserve le même corps entier sombre à tête vermiforme entre attente, progression et éventuel changement de support. Sa présence dans le cauchemar ne prouve pas qu’Air Screamer se transforme sous les yeux du joueur ; ne pas substituer une tête ou une peau d’une autre fiche. Une réaction à la lumière ne devient pas une attaque lumineuse, et un seuil de santé du versus ne certifie aucune métamorphose originale.',
+      limits:'Contexte de cauchemar et sensibilité à la lumière attestés ; raccord sol/vol et éventuel changement de comportement restent à relever.'}
+  }},
+  {batch:'lot11',fighterId:'sh1_mumbler_006',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES'],poses:{
+    idle:{
+      basis:'Le guide décrit une petite créature rougeâtre, une très petite tête sans cou visible et de longs doigts griffus sur les deux mains.',
+      description:'Mumbler SH1 : cadrer le corps entier, de la petite tête au sommet du tronc jusqu’aux deux pieds et aux longues griffes des deux mains. Garder son volume ramassé et son absence de cou visible, sans lui donner un couteau de Grey Child ou une garde humaine redressée. La vue de combat 2D doit laisser une marge autour des griffes et conserver les membres éloignés réellement visibles ; leur face cachée reste à documenter. Le modèle fixe ne fournit pas une respiration complète.',
+      limits:'Anatomie et petites proportions documentées qualitativement ; nombre exact de doigts cachés, pose opposée et boucle idle restent ouverts.'},
+    walk:{
+      basis:'Le commentaire décrit des mouvements lents et une puissante attaque de griffes ; le guide sépare approche, plongeon aux pieds et griffure.',
+      description:'Mumbler SH1 : relever la marche lente sur ses deux jambes avec continuité des longues griffes et du petit sommet de tête. Conserver le corps entier dans le cadre de combat 2D sans agrandir les jambes pour obtenir une démarche de personnage humain. Le plongeon vers les pieds de Harry est une attaque séparée, pas tout le cycle walk. Distinguer appui, transfert de masse et retour du pied en attendant les captures de l’édition retenue.',
+      limits:'Marche lente attestée sans coefficient, nombre d’images ou ordre d’appuis mesuré ; aucune locomotion nouvelle n’est produite.'},
+    hurt:{
+      basis:'Le guide conseille plusieurs armes contre Mumbler et décrit des griffures ainsi qu’un plongeon aux pieds de Harry.',
+      description:'Mumbler SH1 : conserver petite tête, tronc et deux mains griffues pendant l’impact, avec le corps entier et les pieds encore lisibles. Identifier séparément recul pendant la marche, arrêt d’une griffure et interruption du plongeon ; une image droite ne doit pas effacer un corps déjà engagé vers le sol. Ne pas remplacer une main par un couteau de Grey Child ni donner une posture de garde aux poings. Le hitstun du moteur ne certifie pas l’amplitude originale.',
+      limits:'Atteinte possible et anatomie attestées ; ordre des articulations, déplacement subi et récupération par arme restent à capturer.'},
+    knockdown:{
+      basis:'Le guide conseille des armes pour abattre Mumbler mais ne décrit pas un cycle récupérable de combat en manches.',
+      description:'Mumbler SH1 : relever la réception du petit corps en gardant les griffes et les deux pieds dans l’image entière, sans étendre artificiellement le cou ou détacher les mains. La même silhouette doit relier réaction, contact au sol et éventuelle reprise du versus. Le plongeon offensif qui saisit les pieds de Harry ne doit pas servir de chute subie par défaut. Une pose finale d’ennemi tué ne prouve pas comment ce corps se relève pour une nouvelle manche.',
+      limits:'La défaite par les armes est documentée ; chute précise, contacts au sol et redressement récupérable ne sont pas mesurés.'},
+    phase:{
+      basis:'Mumbler remplace Grey Child dans les éditions PAL ; dans les versions nord-américaine et japonaise, il apparaît surtout dans les égouts.',
+      description:'Mumbler SH1 : conserver le corps entier griffu de la même fiche pendant tout raccord de phase. Le remplacement régional de Grey Child est une différence d’édition, pas une métamorphose en cours de duel ; ni couteau ni silhouette de Grey Child ne doit apparaître après un seuil de santé. Identifier l’édition et la rencontre avant de produire l’entrée ou la sortie. Les variations de vitesse du versus ne deviennent pas une seconde forme originale.',
+      limits:'Répartition régionale attestée ; édition de capture à fixer, aucune transformation temporelle ou nouvelle anatomie n’est validée.'}
+  }},
+  {batch:'lot11',fighterId:'sh1_puppet_nurse_012',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES','EXT10_REF_PUPPET_NURSE_MODEL_20261026'],poses:{
+    idle:{
+      basis:'Le guide décrit une infirmière en uniforme portant un petit couteau et une importante masse parasitaire dans le dos.',
+      description:'Puppet Nurse SH1 : cadrer le corps entier voûté, les deux pieds, les deux mains, le petit couteau et la masse parasitaire dorsale. Préserver uniforme et coiffure de la variante relevée, sans injecter le tube de Bubble Head Nurse SH2, le revolver SH3 ou un visage de Nurse du film. La garde de combat 2D doit partir de sa posture parasitée naturelle ; ne pas la redresser en combattante humaine générique. Le couteau reste dans la même main porteuse sur les raccords documentés.',
+      limits:'Uniforme, parasite et couteau attestés ; variante exacte, côté armé et boucle d’attente demandent une capture plutôt qu’un portrait fixe.'},
+    walk:{
+      basis:'Le guide décrit son approche avant prise et coup de couteau ; le commentaire distingue vitesse et force selon robe et coiffure.',
+      description:'Puppet Nurse SH1 : relever les appuis des deux jambes sous le corps voûté et la continuité du parasite quand elle approche, avec couteau et extrémités dans le cadre entier. Ne pas importer la marche de Puppet Doctor ni choisir une vitesse chiffrée depuis la seule couleur de robe. L’autre main peut préparer la saisie uniquement quand la capture la montre ; le coup de couteau reste une attaque distincte de walk. La vue opposée doit conserver l’arme, pas inverser silencieusement sa main.',
+      limits:'Approche et variantes qualitatives documentées ; cadence, pied directeur et oscillation du parasite ne sont pas relevés.'},
+    hurt:{
+      basis:'Le guide décrit des coups pouvant mettre les Nurses au sol ; parasite et couteau demeurent les attributs de cette identité SH1.',
+      description:'Puppet Nurse SH1 : suivre la réaction de tout le corps parasité, uniforme et couteau compris, sans détacher le parasite ni l’utiliser comme un bouclier inventé. Relever quelle jambe porte le recul et comment la main de saisie revient après interruption. Une Nurse tenue par une chorégraphie du versus ne change pas en Puppet Doctor ; l’arme ne disparaît pas pour permettre une pose de boxe. Conserver l’extrémité du couteau dans le cadre de l’impact.',
+      limits:'Atteinte et mise au sol possibles ; mouvement du parasite, interruption de prise et devenir du couteau après chaque arme restent à observer.'},
+    knockdown:{
+      basis:'Le guide explique notamment que les coups de marteau peuvent rapidement faire tomber une Nurse ; il ne fournit pas les images du relèvement.',
+      description:'Puppet Nurse SH1 : relever chute, contact au sol et éventuelle reprise en conservant corps entier, masse dorsale, uniforme et couteau. Déterminer dans la capture le côté de réception et l’état de la main armée au lieu de retourner l’image idle ou de masquer le dos hors écran. Une mise à terre récupérable de manche n’est pas une extraction du parasite ni une mort définitive automatique. Le relèvement du versus demande un raccord propre si la source ne le montre pas.',
+      limits:'Mise à terre documentée ; appuis de réception, position de l’arme au sol et récupération complète ne sont pas mesurés.'},
+    phase:{
+      basis:'Le commentaire relie vitesse et force à robe et coiffure ; ces variantes visibles ne sont pas décrites comme une transformation durant le combat.',
+      description:'Puppet Nurse SH1 : garder la même variante entière d’uniforme, coiffure, parasite et couteau pendant les phases d’un duel. Une autre robe ou coiffure représente un choix de variante à documenter, pas un changement automatique à faible santé. Ne pas retirer le parasite pour prétendre rendre la Nurse humaine, ni lui donner le tube, revolver ou scalpel d’une autre œuvre. L’entrée, la reprise et la sortie doivent raccorder sa posture voûtée sans nouvelle métamorphose.',
+      limits:'Variantes et parasitisme attestés ; aucune extraction, guérison, nouvelle arme ou transformation temporelle n’est validée par cette référence.'}
+  }},
+  {batch:'lot11',fighterId:'sh1_puppet_doctor_013',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES','EXT10_REF_PUPPET_DOCTOR_MODEL_20261026'],poses:{
+    idle:{
+      basis:'Le guide décrit un docteur en uniforme portant un couteau et une masse parasitaire dorsale ; le commentaire l’attribue au premier jeu seulement.',
+      description:'Puppet Doctor SH1 : cadrer le corps entier voûté avec deux jambes, deux mains, couteau et parasite dorsal, en gardant les extrémités dans la vue de combat 2D. Retenir la tenue et le corps masculins de cette fiche, sans recolorier Puppet Nurse ni importer un médecin de Brookhaven SH2 ou un film. Le modèle publié montre un geste armé, pas une boucle de repos ; relever une attente distincte avant d’en composer les raccords. Garder la même main porteuse documentée.',
+      limits:'Identité SH1, tenue, parasite et couteau attestés ; repos naturel, main opposée masquée et boucle complète restent à relever.'},
+    walk:{
+      basis:'Le guide décrit l’approche précédant saisie et couteau, avec une agressivité qualitativement supérieure à celle des Nurses.',
+      description:'Puppet Doctor SH1 : relever l’approche sur ses deux jambes sous le torse voûté, en conservant tout le corps, le parasite et le couteau dans le cadre. Une agressivité qualitative ne fournit ni vitesse chiffrée ni autorisation d’accélérer une animation de Nurse. Garder la continuité de la tenue et des appuis pendant la translation 2D ; l’attaque au couteau et la main qui attrape Harry ne sont pas des images de marche interchangeables.',
+      limits:'Approche et agressivité décrites sans cadence officielle ; cycle de pas, posture au repos et mouvement du dos restent à capturer.'},
+    hurt:{
+      basis:'Le guide permet de toucher le Doctor avant son attaque, sans décrire une immunité ni une réaction commune aux Nurses et Doctors.',
+      description:'Puppet Doctor SH1 : construire la réaction d’impact sur le corps entier parasité en préservant couteau, tenue et dos, sans fabriquer une armure depuis sa robustesse relative. Distinguer interruption d’un coup levé, rupture de saisie et simple recul avant l’attaque. La main armée suit le même raccord plutôt que changer de côté au changement d’orientation ; la caméra doit garder lame et pieds visibles. Une réaction de Nurse ne remplace pas la capture de ce Doctor.',
+      limits:'Atteinte et robustesse qualitative attestées ; angles articulaires, réponse par arme et reprise d’une prise interrompue ne sont pas relevés.'},
+    knockdown:{
+      basis:'Le guide conseille plusieurs armes pour le vaincre et mentionne les coups de marteau, mais ne décrit pas son relèvement de manche.',
+      description:'Puppet Doctor SH1 : relever la chute du même corps entier, en gardant parasite, costume, mains et couteau attachés selon les images originales. Identifier la réception de l’épaule, du dos ou des genoux sans choisir un côté depuis le modèle fixe. L’état au sol ne donne pas un nouveau Doctor sans parasite, et une reprise de manche du versus n’autorise pas une résurrection présentée comme scène canonique. Le couteau ne devient pas un projectile à la chute.',
+      limits:'Défaite par les armes documentée ; contacts de réception, tenue au sol et redressement récupérable restent à produire sur capture.'},
+    phase:{
+      basis:'Le commentaire identifie Puppet Doctor comme un type parasité propre au premier jeu, non comme une phase ultérieure de Puppet Nurse.',
+      description:'Puppet Doctor SH1 : maintenir le corps entier et l’identité du Doctor entre attente, approche et sortie. Une différence de force face à Puppet Nurse ne prouve pas une transformation de Nurse en Doctor à faible santé. Conserver parasite dorsal, tenue et couteau, sans importer la protection ou les armes d’une autre œuvre. Les changements de posture autorisés doivent avoir un raccord relevé ; disparition du parasite ou changement de sexe ne remplit pas ce slot phase.',
+      limits:'Type distinct propre à SH1 attesté ; aucune métamorphose anatomique, extraction de parasite ou nouvelle phase de boss n’est documentée.'}
+  }},
+  {batch:'lot11',fighterId:'sh2_lying_figure_020',source:'sh2',edition:SH2,evidence:['CL_SH2_ENEMIES','CL_SH2_CREATURES'],poses:{
+    idle:{
+      basis:'Le guide décrit un humanoïde luisant aux bras enveloppés dans sa propre chair, rencontré debout ou au sol ; le commentaire distingue dessins préparatoires et forme finale.',
+      description:'Lying Figure020 SH2 original : cadrer le corps entier avec ses deux jambes et l’enveloppe charnelle qui emprisonne les bras, sans mains libérées ni garde de boxeur. Relever une attente debout propre à020 ; la vue publiée agenouillée ne certifie pas cette boucle. Ne pas ajouter les bottes rouges d’un dessin préparatoire ou une bouche ouverte conçue autrement au remake. Préserver silhouette et appuis visibles pour la vue de combat 2D, sans employer le portrait comme corps complet animé.',
+      limits:'Enveloppe des bras et états debout/au sol attestés ; attente exacte de020, vue latérale et boucle entière restent à capturer.'},
+    walk:{
+      basis:'Le guide distingue station debout avec projection et progression rapide au sol ; le commentaire décrit chute puis déplacement rampant.',
+      description:'Lying Figure020 SH2 original : relever la progression debout sur les deux jambes avec les bras toujours emprisonnés, corps entier et pieds dans le cadre. Distinguer ce cycle de la course rampante associée à la fiche021 sans changer silencieusement d’identité ou d’image en plein déplacement. La projection jaunâtre est une attaque séparée de walk. Une translation du PNG idle ne fournit ni transfert de masse ni séquence de pas, et ne libère pas de mains d’appui.',
+      limits:'Deux états de locomotion sont décrits pour l’espèce ; cycle debout propre à020, cadence et raccord vers le rampement restent à relever.'},
+    hurt:{
+      basis:'Le guide indique qu’après une mise au sol, la créature peut ramper ou se relever ; la chute n’équivaut pas systématiquement à une mort.',
+      description:'Lying Figure020 SH2 original : conserver le corps entier et les bras contenus sous la chair pendant l’impact. Relever perte d’équilibre et pli des jambes avant de passer à une position au sol ; ne pas sortir des bras pour fabriquer une réception humaine. Séparer l’interruption de projection, le recul debout et l’entrée éventuelle dans le rampement. Le hitstun du versus n’établit pas la durée de cette transition ni une animation identique au remake.',
+      limits:'Atteinte, chute et possibilité de reprise sont documentées ; gestes, orientations et délai de récupération par arme restent non mesurés.'},
+    knockdown:{
+      basis:'Le guide conseille un coup au sol pour éviter qu’elle se mette à ramper ou se relève ; ces issues sont distinctes de l’achèvement.',
+      description:'Lying Figure020 SH2 original : relever la réception du torse enveloppé et des deux jambes en gardant le corps entier et les bras prisonniers, sans mains ajoutées au sol. Distinguer chute récupérable, déplacement rampant possible et achèvement définitif. La fiche021 peut décrire l’état rampant, mais le slot knockdown de020 ne doit pas remplacer son propriétaire ni prouver une transformation en une autre œuvre. Prévoir des raccords différents vers redressement, rampement et fin définitive.',
+      limits:'Rampement et relèvement possibles après chute ; ordre des appuis, choix de branche et images de récupération originale restent à capturer.'},
+    phase:{
+      basis:'Station debout, posture basse et retour possible debout appartiennent à la même espèce ; les designs préparatoires ne sont pas des phases de combat.',
+      description:'Lying Figure020 SH2 original : spécifier le raccord continu entre corps entier debout, réception au sol et éventuel retour sur les deux jambes, avec les bras toujours contenus. Ne pas importer les bottes rouges ou la bouche d’un rough sketch pour créer une seconde phase, ni emprunter la chair et les attaques d’un film ou du remake. La séparation des fiches020/021 dans le versus doit rester visible dans le suivi, sans prétendre qu’un seuil de vie original commande cet échange.',
+      limits:'États et reprise possibles attestés ; transition exacte, seuil éventuel et animation source complète ne sont pas relevés.'}
+  }},
+  {batch:'lot11',fighterId:'sh2_creeper_025',source:'sh2',edition:SH2,evidence:['CL_SH2_ENEMIES','CL_SH2_CREATURES'],poses:{
+    idle:{
+      basis:'Le guide décrit un cafard jaunâtre à six extrémités, de taille comparable à une chaussure ; le modèle publié montre aussi ses antennes.',
+      description:'Creeper025 SH2 original : cadrer l’insecte entier, ses six pattes et ses antennes, en conservant son échelle qualitative de chaussure plutôt que celle d’un humain. Relever une attente basse naturelle depuis une vue latérale de combat 2D ; la vue dorsale du guide ne mesure pas sa hauteur ni l’implantation des pattes cachées. Ne pas reprendre le Creeper géant jaune et rouge de SH1 ni le grouillement du film pour remplir le corps.',
+      limits:'Six extrémités, teinte et petite taille qualitatives attestées ; profil latéral, appuis et boucle d’attente restent à relever.'},
+    walk:{
+      basis:'Le guide et le commentaire décrivent une progression rapide d’insecte ; sa seule attaque consiste à atteindre le pied de James puis le mordre.',
+      description:'Creeper025 SH2 original : relever la progression rapide sur six pattes, avec corps bas et antennes solidaires dans le cadre entier. Distinguer déplacement et morsure au pied sans inventer un saut humain, un vol ou des bras de prise. L’ordre des contacts doit venir d’une capture, pas d’un cycle de marche de cafard générique ; la vitesse qualitative du commentaire ne donne aucun chiffre officiel. L’échelle reste distincte du Creeper009 SH1.',
+      limits:'Course basse attestée ; coordination des six appuis, cadence et hauteur de silhouette latérale ne sont pas mesurées.'},
+    hurt:{
+      basis:'Le guide décrit des tirs et un éventuel coup de pied permettant de le vaincre, sans réaction d’impact ni saut d’esquive précisés.',
+      description:'Creeper025 SH2 original : relever l’impact sur l’insecte entier en préservant six pattes, antennes et abdomen, sans l’étirer pour rendre le hitstun plus lisible. La faible taille n’autorise pas à couper le corps par la caméra ou à remplacer hurt par une icône. Ne pas supposer une envolée, un retournement sur le dos ou un saut après chaque tir : ces mouvements attendent leur capture. Une morsure interrompue ne devient pas une prise de jambe.',
+      limits:'Atteinte par les armes attestée ; recul, orientation du corps et durée d’une réaction survivable restent à observer.'},
+    knockdown:{
+      basis:'Le guide indique qu’un tir peut nécessiter un coup de pied supplémentaire et décrit l’écrasement au talon comme une autre issue.',
+      description:'Creeper025 SH2 original : distinguer insecte atteint au sol, éventuel coup final et écrasement au talon, en cadrant les six pattes et les antennes entières tant qu’elles sont présentes. Une animation d’écrasement terminale ne fournit pas un relèvement de manche ; ne pas ressusciter un corps écrasé pour certifier knockdown. Le versus doit qualifier sa récupération si aucune chute récupérable source n’est relevée, sans réutiliser un PNG idle retourné.',
+      limits:'Achèvement et écrasement documentés ; posture survivable, contacts au sol et récupération de versus restent à produire séparément.'},
+    phase:{
+      basis:'Le commentaire signale le retour du type d’insecte dans SH2 mais ne décrit aucune croissance, mue ou transformation en essaim.',
+      description:'Creeper025 SH2 original : conserver le même insecte entier à six pattes entre attente, course et sortie. Sa réapparition dans un autre jeu n’est pas une phase qui agrandit le CreeperSH2 en varianteSH1 ni le multiplie en essaim filmique à faible santé. Ne pas importer une sensibilité lumineuse depuis le commentaire SH1 pour lui donner un pouvoir. Les changements de posture du versus demandent leurs propres raccords tout en gardant antennes et petite échelle.',
+      limits:'Identité d’insecte récurrent documentée ; aucune mue, métamorphose, duplication ou nouvelle phase originale n’est attestée.'}
+  }}
+);
+
 export const SOURCE_POSE_SPECIFICATIONS=Object.freeze(groups.flatMap(group=>Object.entries(group.poses).map(([pose,detail])=>Object.freeze({
   rowId:`${group.fighterId}:pose:${pose}`,batch:group.batch||'lot9',fighterId:group.fighterId,source:group.source,edition:group.edition,pose,
   evidence:Object.freeze([...group.evidence]),basis:detail.basis,
@@ -275,6 +412,7 @@ export const SOURCE_POSE_SPECIFICATIONS=Object.freeze(groups.flatMap(group=>Obje
 }))));
 export const LOT9_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot9'));
 export const LOT10_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot10'));
+export const LOT11_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot11'));
 const byRow=new Map(SOURCE_POSE_SPECIFICATIONS.map(spec=>[spec.rowId,spec]));
 
 /** Refuse a brief borrowed by another edition, source, identity or unbound evidence. */

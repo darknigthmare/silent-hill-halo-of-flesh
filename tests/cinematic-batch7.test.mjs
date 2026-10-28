@@ -48,7 +48,7 @@ test('Amnion stances keep separate anatomical frames and do not borrow a ceiling
     const p=plan(id),a=actor(id);assert.equal(a.data.visual.kind,kind);
     assert.ok(p.steps.every(b=>b.attacker.pose.startsWith(prefix)&&b.attacker.x===0&&b.attacker.y===0));
     assert.ok(p.steps.every(b=>!/(belly|joshua|birth|detach|transform|flight)/.test(b.attacker.pose)));
-    const summary=cinematicSummary(p.id);assert.equal(summary.requirements.needsCeiling,false);assert.equal(summary.requirements.attackerLimbs,null,'unverified total limb count is not canonized');
+    const summary=cinematicSummary(p.id);assert.equal(summary.requirements.needsCeiling,false);assert.equal(summary.requirements.attackerLimbs,null,'unverified total limb count is not canonized');assert.equal(summary.requirements.attackerSupport,'own-mechanical-limbs');assert.deepEqual(summary.requirements.propsAny,[],'the monster owns its legs, not ambient machines');
     for(const key of KEYS)for(const progress of [0,.4,1]){const s=samplePresentation(a,key,progress);assert.equal(Math.abs(s.x),0);assert.equal(Math.abs(s.y),0);assert.ok(s.pose.startsWith(prefix));}
     const forged={...a,data:{...a.data,visual:{...a.data.visual,kind:kind==='spider'?'mass':'spider'}}};
     assert.equal(plan(id,'signature',{attacker:forged}).allowed,false);assert.equal(lorePresentation(forged,'intro').authored,false);
@@ -58,8 +58,8 @@ test('Amnion stances keep separate anatomical frames and do not borrow a ceiling
   assert.ok(plan('homecoming_amnion_exposed_form_098').steps.some(b=>b.attacker.pose==='hc-amnion-exposed-close-grip'));
 });
 
-test('mechanical and aquatic edits require a reviewed supporting place, including identity, source and blocked-place guards',()=>{
-  for(const id of SUPPORTED){
+test('aquatic edits require a reviewed supporting place, including identity, source and blocked-place guards',()=>{
+  for(const id of ['bom_water_guardian_141']){
     const original=stage(SUBJECTS.find(s=>s[0]===id)[2]);assert.equal(plan(id).allowed,true);
     for(const replacement of [{...original,props:[],layers:[]},{...original,id:'invented-support'},{...original,source:'wrong-work'},{...original,reference:{...original.reference,blocked:true}}]){
       assert.equal(plan(id,'signature',{stage:replacement}).allowed,false,id);
@@ -70,6 +70,14 @@ test('mechanical and aquatic edits require a reviewed supporting place, includin
     const water=plan('bom_water_guardian_141',type);assert.ok(water.steps.every(b=>b.attacker.x===0&&b.attacker.y===0));
     assert.equal(plan('bom_water_guardian_141',type,{stage:stage('book_fire')}).allowed,false,'aquatic action is unavailable on a dry floor');
     assert.ok(water.steps.at(-1).label.includes('NIVEAU FIXE'));
+  }
+});
+
+test('Amnion owns its mechanical limbs while the actual Founding Families room stays free of invented machines',()=>{
+  const room=stage('underground_hc');assert.ok(![...room.props,...room.layers].includes('machines'));
+  for(const id of ['homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'])for(const type of ['signature','nightmare']){
+    for(const place of [room,stage('midwich'),stage('alchemilla')])assert.equal(plan(id,type,{stage:place}).allowed,true,'explicit versus pairing uses the creature own limbs, not a native boss encounter');
+    const a=actor(id);for(const data of [{...a.data,source:'sh2'},{...a.data,visual:{...a.data.visual,kind:'humanoid'}},{...a.data,visual:{...a.data.visual,weapon:'club'}}])assert.equal(plan(id,type,{attacker:{...a,data}}).allowed,false,'ambient props cannot supply missing body or equipment identity');
   }
 });
 

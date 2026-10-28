@@ -11,7 +11,7 @@ const chunk=(kind,data)=>{const size=Buffer.alloc(4),tail=Buffer.alloc(4),type=B
 function fixture({filter=0,depth=8,color=6,interlace=0,alpha='valid',corruptFilter=false,extraPixels=0}={}){
  const w=256,h=128,channels=color===6?4:2,bpp=channels*depth/8,rgba=Buffer.alloc(w*h*4);
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-  const at=(y*w+x)*4,a=alpha==='opaque'?255:alpha==='empty'?0:alpha==='edge'?(x<180?255:0):(x>=40&&x<190&&y>=16&&y<110?255:0);
+  const at=(y*w+x)*4,a=alpha==='opaque'?255:alpha==='empty'?0:alpha==='edge'?(x<180?255:0):alpha==='faint'&&((x===6&&y===5)||(x===245&&y===120)||(x===39&&y===15)||(x===190&&y===110))?1:(x>=40&&x<190&&y>=16&&y<110?255:0);
   rgba[at]=a?x:0;rgba[at+1]=a?(channels===4?y:x):0;rgba[at+2]=a?(channels===4?64:x):0;rgba[at+3]=a;
  }
  const header=Buffer.alloc(13);header.writeUInt32BE(w);header.writeUInt32BE(h,4);header[8]=depth;header[9]=color;header[12]=interlace;
@@ -30,6 +30,11 @@ function fixture({filter=0,depth=8,color=6,interlace=0,alpha='valid',corruptFilt
  return {bytes:Buffer.concat([sig,chunk('IHDR',header),chunk('IDAT',idat),chunk('IEND',Buffer.alloc(0))]),header,idat,rgba};
 }
 for(const filter of [0,1,2,3,4])test('PNG actual pixels decode filter '+filter,()=>{const f=fixture({filter}),a=decodePng(f.bytes);assert.deepEqual(a.visibleBounds,[40,16,190,110]);assert.equal(a.pixelSHA256,createHash('sha256').update(f.rgba).digest('hex'));});
+test('connected faint extremities stay framed while isolated low-alpha noise cannot force a zoom',()=>{
+ const audit=decodePng(fixture({alpha:'faint',filter:4}).bytes);
+ assert.deepEqual(audit.visibleBounds,[40,16,190,110]);assert.deepEqual(audit.alphaBounds,[6,5,246,121]);
+ assert.deepEqual(audit.framingBounds,[39,15,191,111]);
+});
 for(const depth of [8,16])for(const color of [4,6])test(`PNG Adam7 ${depth}-bit color ${color} reconstructs pixels`,()=>{const f=fixture({depth,color,interlace:1,filter:4}),a=decodePng(f.bytes);assert.equal(a.pixelSHA256,createHash('sha256').update(f.rgba).digest('hex'));});
 test('PNG header-only fake cannot pass even with matching digest and dimensions',()=>assert.throws(()=>decodePng(fixture().bytes.subarray(0,33)),/IEND|image data/));
 test('PNG corruption fails CRC',()=>{const b=Buffer.from(fixture().bytes);b[50]^=1;assert.throws(()=>decodePng(b),/CRC/);});
@@ -48,5 +53,5 @@ test('re-encoding the same pixels produces the same pixel fingerprint',()=>asser
 test('RIFF header without real WebP payload rejected',()=>{const b=Buffer.alloc(20);b.write('RIFF');b.writeUInt32LE(12,4);b.write('WEBP',8);assert.throws(()=>auditRaster(b,{python:'/no-decoder-here'}),/WebP pixel decode failed/);});
 test('oversized file fails before decode',()=>assert.throws(()=>auditRaster(Buffer.alloc(MAX_RASTER_BYTES+1)),/24 MiB/));
 test('both live candidate files decode and their published alpha bounds match',async()=>{
- for(const asset of Object.values(SPRITES))for(const f of asset.frames){const a=auditRaster(await readFile(new URL('../'+f.path,import.meta.url)));assert.deepEqual(f.visibleBounds,a.visibleBounds);assert.equal(f.pixelSHA256,a.pixelSHA256);}
+ for(const asset of Object.values(SPRITES))for(const f of asset.frames){const a=auditRaster(await readFile(new URL('../'+f.path,import.meta.url)));assert.deepEqual(f.visibleBounds,a.visibleBounds);assert.deepEqual(f.alphaBounds,a.alphaBounds);assert.deepEqual(f.framingBounds,a.framingBounds);assert.equal(f.pixelSHA256,a.pixelSHA256);}
 });
