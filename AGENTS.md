@@ -1,0 +1,3 @@
+# Silent Hill: Halo of Flesh — agent guidance
+
+Read [the development guide](docs/GAMEDEV_GUIDANCE.md) before changing code. Preserve the existing JavaScript/Canvas 2D engine, roster IDs, source provenance, and production workbook. Choose only relevant disciplines from [awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills), not unrelated Unity/Godot recipes. Keep candidate sprites, animated clips, playable integration and verified fidelity as separate statuses. Never claim 1:1 fidelity without source evidence. Use existing generation scripts for derived data; check the diff. Run targeted tests, inspect gameplay visually for art changes, and report what was and was not tested.
