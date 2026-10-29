@@ -27,7 +27,7 @@ export function advanceSpriteClock(actor){
  const state=actorSpriteState(actor),pose=poseFromState(state);
  const presentation=presentationOf(actor);
  const identity=presentation?`${pose}:presentation:${presentation.id??presentation.sequenceId??''}`:pose+':'+(actor.attack?.id??'')+':'+(state.weaponContext||'');
- actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?actor.spriteClock.tick+1:0};
+ actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?frameTick(actor.spriteClock.tick)+1:0};
 }
 export function requestedSpriteClipKey(state={}){
  const pose=poseFromState(state),presentation=presentationOf(state);

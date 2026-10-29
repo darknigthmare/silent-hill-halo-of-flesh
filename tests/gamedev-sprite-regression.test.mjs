@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sampleSpriteClip,requestedSpriteClipKey} from '../src/sprite-animation.js';
+import {sampleSpriteClip,requestedSpriteClipKey,advanceSpriteClock} from '../src/sprite-animation.js';
 import {clipSummary} from '../src/sprite-clips.js';
 
 const art=()=>({
@@ -77,4 +77,18 @@ test('attack clip cannot borrow its obsolete animation clock after an interrupti
  const interrupted=sampleSpriteClip(a,{hurt:true,frame:1});
  assert.equal(interrupted.pose,'hurt');
  assert.equal(interrupted.frameIndex,1);
+});
+
+test('sprite clock resets on pose changes and sanitizes invalid legacy ticks',()=>{
+ const actor={ko:false,hurtFrames:0,phaseLock:0,knockdownTimer:0,dodgeFrames:0,blocking:false,crouching:false,grounded:true,state:'walk',spriteClock:{identity:'walk::',pose:'walk',tick:NaN}};
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.tick,1);
+ actor.hurtFrames=3;
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.pose,'hurt');
+ assert.equal(actor.spriteClock.tick,0);
+ actor.hurtFrames=0;
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.pose,'walk');
+ assert.equal(actor.spriteClock.tick,0);
 });
