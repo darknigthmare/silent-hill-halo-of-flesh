@@ -49,3 +49,14 @@ test('repeated pixels do not qualify as animation',()=>{
  a.frames[1].pixelSHA256='pixel-a';
  assert.equal(clipSummary(a,a.clips.walk).animated,false);
 });
+
+test('runtime rejects malformed and oversized authored clip durations',()=>{
+ const a=art();
+ a.clips.walk.frameTicks=[2,0];
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+ a.clips.walk.frameTicks=[2,601];
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+ a.clips.walk.frameTicks=[2,3];
+ a.clips.walk.ticksPerFrame=1;
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:2}).frameIndex,1);
+});

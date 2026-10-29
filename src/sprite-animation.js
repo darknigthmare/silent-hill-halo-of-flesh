@@ -53,9 +53,9 @@ export function sampleSpriteClip(art,state={}){
  const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
  if(!clip?.frames?.length)return null;
  const durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame||1);
- if(durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1))return null;
+ if(durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1||t>600))return null;
  const total=durations.reduce((n,t)=>n+t,0);
- if(!Number.isSafeInteger(total)||total<1)return null;
+ if(!Number.isSafeInteger(total)||total<1||total>36000)return null;
  // The engine's shared sequence tick also drives direct inspector samples.
  // No clip may read an obsolete attack clock after a round/finisher transition.
  let tick=frameTick(presentationOf(state)?.frame??state.frame);
