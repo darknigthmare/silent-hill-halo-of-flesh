@@ -92,3 +92,27 @@ test('sprite clock resets on pose changes and sanitizes invalid legacy ticks',()
  assert.equal(actor.spriteClock.pose,'walk');
  assert.equal(actor.spriteClock.tick,0);
 });
+
+test('presentation clock uses its own sequence frame and resets after it ends',()=>{
+ const actor={ko:false,hurtFrames:0,phaseLock:0,knockdownTimer:0,dodgeFrames:0,blocking:false,crouching:false,grounded:true,state:'walk',spriteClock:{identity:'walk::',pose:'walk',tick:12}};
+ actor.presentation={key:'winRound',id:'round-1',frame:4};
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.pose,'winRound');
+ assert.equal(actor.spriteClock.tick,4);
+ actor.presentation.frame=7;
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.tick,7);
+ actor.presentation=null;
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.pose,'walk');
+ assert.equal(actor.spriteClock.tick,0);
+});
+
+test('changing attack identity resets the pose clock even for the same move',()=>{
+ const actor={ko:false,hurtFrames:0,phaseLock:0,knockdownTimer:0,dodgeFrames:0,blocking:false,crouching:false,grounded:true,state:'attack',attack:{id:'attack-1',key:'light',frame:1},spriteClock:{identity:'light:attack-1:',pose:'light',tick:4}};
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.tick,5);
+ actor.attack={id:'attack-2',key:'light',frame:0};
+ advanceSpriteClock(actor);
+ assert.equal(actor.spriteClock.tick,0);
+});
