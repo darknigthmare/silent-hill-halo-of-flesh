@@ -43,5 +43,11 @@ export function markdownSpriteAudit(result) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const data=JSON.parse(readFileSync(new URL('../data/sprite-coverage.json',import.meta.url),'utf8'));
   const result=auditSpriteCoverage(data);
-  process.stdout.write(process.argv.includes('--json')?JSON.stringify(result,null,2)+'\n':markdownSpriteAudit(result));
+  const fighterIndex=process.argv.indexOf('--fighter');
+  const fighterId=fighterIndex>=0?process.argv[fighterIndex+1]:null;
+  if(fighterIndex>=0&&(!fighterId||fighterId.startsWith('--')))throw new Error('--fighter requires a fighter ID');
+  const selected=fighterId?result.rows.filter(row=>row.id===fighterId):result.rows;
+  if(fighterId&&!selected.length)throw new Error('Unknown fighter ID: '+fighterId);
+  const output=fighterId?{summary:result.summary,rows:selected}:result;
+  process.stdout.write(process.argv.includes('--json')?JSON.stringify(output,null,2)+'\n':markdownSpriteAudit(output));
 }

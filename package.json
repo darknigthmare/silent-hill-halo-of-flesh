@@ -17,7 +17,8 @@
     "sprites:check": "node scripts/build-sprites.mjs",
     "qa:sprites": "node scripts/http-qa-sprites.mjs",
     "test:art": "python -m unittest discover -s tests -p 'test_*.py' -v",
-    "references:check": "node scripts/build-production-reference.mjs --check"
+    "references:check": "node scripts/build-production-reference.mjs --check",
+    "audit:sprites": "node scripts/audit-sprite-backlog.mjs"
   },
   "engines": {
     "node": ">=20"
