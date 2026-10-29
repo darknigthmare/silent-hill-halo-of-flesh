@@ -116,3 +116,11 @@ test('changing attack identity resets the pose clock even for the same move',()=
  advanceSpriteClock(actor);
  assert.equal(actor.spriteClock.tick,0);
 });
+
+test('runtime refuses missing ticksPerFrame rather than silently inventing timing',()=>{
+ const a=art();
+ a.clips.walk={frames:[0,1],loop:true};
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:1}),null);
+ a.clips.walk={frames:[0,1],ticksPerFrame:2,loop:true};
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:2}).frameIndex,1);
+});
