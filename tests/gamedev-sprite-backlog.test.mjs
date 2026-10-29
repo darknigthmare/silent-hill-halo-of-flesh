@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {auditSpriteCoverage,markdownSpriteAudit} from '../scripts/audit-sprite-backlog.mjs';
+import {auditSpriteCoverage,markdownSpriteAudit,inspectFighterClips} from '../scripts/audit-sprite-backlog.mjs';
 
 test('sprite backlog separates missing art, static art and actual animation',()=>{
  const result=auditSpriteCoverage({entries:[
@@ -38,4 +38,11 @@ test('real sprite coverage identifies Air Screamer as animation-validation candi
  assert.equal(first.priority,'P0-validate-animation');
  assert.equal(first.animated,1);
  assert.equal(first.fidelity,'unverified');
+});
+
+test('clip inspector lists only actual authored poses and distinct pixels',()=>{
+ const registry={assets:{bird:{frames:[{sha256:'a'},{sha256:'b'}],clips:{idle:{frames:[0,1,0],loop:true},hurt:{frames:[1],loop:false}}}}};
+ const inspected=inspectFighterClips(registry,'bird');
+ assert.deepEqual(inspected.clips.map(c=>[c.pose,c.animated]),[['idle',true],['hurt',false]]);
+ assert.equal(inspectFighterClips(registry,'absent').registered,false);
 });

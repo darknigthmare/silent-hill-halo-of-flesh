@@ -29,6 +29,20 @@ export function auditSpriteCoverage(report) {
     certified:rows.filter(r=>r.fidelity==='verified').length},rows};
 }
 
+
+/** Exact authored clips, not inferred from frame counts or catalogue entries. */
+export function inspectFighterClips(registry,fighterId){
+ const art=registry?.assets?.[fighterId];
+ if(!art) return {fighterId,registered:false,clips:[]};
+ const clips=Object.entries(art.clips||{}).map(([pose,clip])=>{
+  const indices=Array.isArray(clip?.frames)?clip.frames:[];
+  const pixels=new Set(indices.map(i=>art.frames?.[i]?.pixelSHA256||art.frames?.[i]?.sha256).filter(Boolean));
+  return {pose,frames:indices.length,distinctPixels:pixels.size,
+    animated:pixels.size>1,loop:clip?.loop===true};
+ });
+ return {fighterId,registered:true,clips};
+}
+
 export function markdownSpriteAudit(result) {
   const s=result.summary;
   const lines=['# Animation production backlog','',
@@ -49,5 +63,11 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const selected=fighterId?result.rows.filter(row=>row.id===fighterId):result.rows;
   if(fighterId&&!selected.length)throw new Error('Unknown fighter ID: '+fighterId);
   const output=fighterId?{summary:result.summary,rows:selected}:result;
-  process.stdout.write(process.argv.includes('--json')?JSON.stringify(output,null,2)+'\n':markdownSpriteAudit(output));
+  if(fighterId){
+    const registry=JSON.parse(readFileSync(new URL('../art/registry.json',import.meta.url),'utf8'));
+    output.clipInspection=inspectFighterClips(registry,fighterId);
+  }
+  const rendered=markdownSpriteAudit(output);
+  const details=output.clipInspection?.registered?'\n## Authored clips\n\n'+output.clipInspection.clips.map(c=>'- '+c.pose+': '+c.frames+' steps, '+c.distinctPixels+' distinct images, animated='+c.animated+', loop='+c.loop).join('\n')+'\n':'';
+  process.stdout.write(process.argv.includes('--json')?JSON.stringify(output,null,2)+'\n':rendered+details);
 }
