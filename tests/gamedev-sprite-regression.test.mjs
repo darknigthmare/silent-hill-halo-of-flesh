@@ -124,3 +124,13 @@ test('runtime refuses missing ticksPerFrame rather than silently inventing timin
  a.clips.walk={frames:[0,1],ticksPerFrame:2,loop:true};
  assert.equal(sampleSpriteClip(a,{moving:true,frame:2}).frameIndex,1);
 });
+
+test('malformed runtime clip arrays fail safely without throwing',()=>{
+ const a=art();
+ a.clips.walk.frameTicks='not-an-array';
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+ a.clips.walk={frames:'broken',ticksPerFrame:2,loop:true};
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+ a.clips.walk={frames:[999],ticksPerFrame:2,loop:true};
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+});
