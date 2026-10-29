@@ -60,3 +60,21 @@ test('runtime rejects malformed and oversized authored clip durations',()=>{
  a.clips.walk.ticksPerFrame=1;
  assert.equal(sampleSpriteClip(a,{moving:true,frame:2}).frameIndex,1);
 });
+
+test('combat pose priority never lets stale movement hide hurt or knockdown',()=>{
+ const a=art();
+ a.clips.knockdown={frames:[1],ticksPerFrame:1,loop:false};
+ const hurt=sampleSpriteClip(a,{hurt:true,moving:true,moveKey:'light',frame:0});
+ assert.equal(hurt.pose,'hurt');
+ const down=sampleSpriteClip(a,{knockdown:true,hurt:true,moving:true,frame:0});
+ assert.equal(down.pose,'knockdown');
+});
+
+test('attack clip cannot borrow its obsolete animation clock after an interruption',()=>{
+ const a=art();
+ a.clips.light={frames:[0,1],frameTicks:[1,1],ticksPerFrame:1,loop:false};
+ assert.equal(sampleSpriteClip(a,{moveKey:'light',frame:1}).frameIndex,1);
+ const interrupted=sampleSpriteClip(a,{hurt:true,frame:1});
+ assert.equal(interrupted.pose,'hurt');
+ assert.equal(interrupted.frameIndex,1);
+});
