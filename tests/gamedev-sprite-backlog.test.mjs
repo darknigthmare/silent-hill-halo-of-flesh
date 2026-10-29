@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {auditSpriteCoverage,markdownSpriteAudit} from '../scripts/audit-sprite-backlog.mjs';
 
 test('sprite backlog separates missing art, static art and actual animation',()=>{
@@ -24,4 +25,17 @@ test('audit rejects duplicated fighter identities and contradictory counts',()=>
  assert.throws(()=>auditSpriteCoverage({entries:[row],integrated:0}),/integrated mismatch/);
  assert.throws(()=>auditSpriteCoverage({entries:[{...row,frames:0,animatedClips:1}]}),/Animation without frames/);
  assert.throws(()=>auditSpriteCoverage({entries:[{...row,frames:-1}]}),/Invalid sprite counters/);
+});
+
+test('real sprite coverage identifies Air Screamer as animation-validation candidate',()=>{
+ const report=JSON.parse(readFileSync(new URL('../data/sprite-coverage.json',import.meta.url),'utf8'));
+ const result=auditSpriteCoverage(report);
+ assert.equal(result.summary.total,230);
+ assert.equal(result.summary.illustrated,74);
+ assert.equal(result.summary.missing,156);
+ const first=result.rows[0];
+ assert.equal(first.id,'sh1_air_screamer_001');
+ assert.equal(first.priority,'P0-validate-animation');
+ assert.equal(first.animated,1);
+ assert.equal(first.fidelity,'unverified');
 });
