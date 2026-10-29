@@ -52,6 +52,7 @@ export function sampleSpriteClip(art,state={}){
  const pose=state.weaponContext!==undefined?idle:validContext&&has(requested)?requested:!strictContext&&requestedPose!=='idle'&&has(requestedPose)?requestedPose:finalKo?'ko':idle;
  const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
  if(!Array.isArray(clip?.frames)||!clip.frames.length)return null;
+ if(typeof clip.loop!=='boolean')return null;
  const durations=clip.frameTicks??clip.frames.map(()=>clip.ticksPerFrame);
  if(!Array.isArray(durations)||durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1||t>600))return null;
  const total=durations.reduce((n,t)=>n+t,0);

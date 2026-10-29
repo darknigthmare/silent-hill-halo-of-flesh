@@ -134,3 +134,11 @@ test('malformed runtime clip arrays fail safely without throwing',()=>{
  a.clips.walk={frames:[999],ticksPerFrame:2,loop:true};
  assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
 });
+
+test('runtime rejects clips without explicit loop semantics',()=>{
+ const a=art();
+ a.clips.walk={frames:[0,1],ticksPerFrame:2};
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:0}),null);
+ a.clips.walk.loop=true;
+ assert.equal(sampleSpriteClip(a,{moving:true,frame:2}).frameIndex,1);
+});
