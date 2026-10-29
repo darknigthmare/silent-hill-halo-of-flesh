@@ -40,3 +40,13 @@ test('swept projectiles catch fast crossings without hits behind or outside the 
  assert.equal(sweptProjectileContact({x:0,y:15},{x:30,y:15},-1,body),null);
  assert.equal(sweptProjectileContact({x:NaN,y:15},{x:30,y:15},1,body),null);
 });
+
+test('timeout handles huge values and invalid health without overflow',()=>{
+ const a={health:9e307,maxHealth:1e308};
+ const b={health:8e307,maxHealth:1e308};
+ assert.equal(timeoutWinner(a,b),a);
+ assert.equal(timeoutWinner({health:5e307,maxHealth:1e308},{health:5e307,maxHealth:1e308}),null);
+ const valid={health:1,maxHealth:100};
+ assert.equal(timeoutWinner({health:NaN,maxHealth:100},valid),valid);
+ assert.equal(timeoutWinner({health:0,maxHealth:100},{health:0,maxHealth:100}),null);
+});
