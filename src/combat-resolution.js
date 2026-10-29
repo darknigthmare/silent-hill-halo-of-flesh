@@ -19,11 +19,15 @@ export function interruptAction(actor, state = 'hurt') {
   actor.state = state;
 }
 
-/** A monster with more starting HP does not win time-out by virtue of size alone. */
+/** Compare timeout using remaining health proportions, including very large boss health. */
 export function timeoutWinner(left, right) {
-  const a = Math.max(0, left.health) * Math.max(1, right.maxHealth);
-  const b = Math.max(0, right.health) * Math.max(1, left.maxHealth);
-  return Math.abs(a - b) < 1e-7 ? null : a > b ? left : right;
+  const ratio = actor => {
+    const hp = Number.isFinite(actor?.health) ? Math.max(0, actor.health) : 0;
+    const max = Number.isFinite(actor?.maxHealth) && actor.maxHealth > 0 ? actor.maxHealth : 1;
+    return Math.min(1, hp / max);
+  };
+  const a = ratio(left), b = ratio(right);
+  return Math.abs(a - b) < 1e-9 ? null : a > b ? left : right;
 }
 
 /** Swept square projectile against a body. Same square envelope as the old hitbox.
