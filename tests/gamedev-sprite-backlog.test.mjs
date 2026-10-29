@@ -16,3 +16,12 @@ test('sprite backlog separates missing art, static art and actual animation',()=
 test('sprite backlog rejects absent entries instead of inventing coverage',()=>{
  assert.throws(()=>auditSpriteCoverage({}),/entries missing/);
 });
+
+test('audit rejects duplicated fighter identities and contradictory counts',()=>{
+ const row={id:'same',name:'Test',source:'sh1',frames:1,animatedClips:0,fidelity:'unverified'};
+ assert.throws(()=>auditSpriteCoverage({entries:[row,{...row}]}),/Duplicate/);
+ assert.throws(()=>auditSpriteCoverage({entries:[row],total:2}),/total mismatch/);
+ assert.throws(()=>auditSpriteCoverage({entries:[row],integrated:0}),/integrated mismatch/);
+ assert.throws(()=>auditSpriteCoverage({entries:[{...row,frames:0,animatedClips:1}]}),/Animation without frames/);
+ assert.throws(()=>auditSpriteCoverage({entries:[{...row,frames:-1}]}),/Invalid sprite counters/);
+});

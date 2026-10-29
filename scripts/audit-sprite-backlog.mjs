@@ -4,6 +4,17 @@ import {resolve} from 'node:path';
 
 export function auditSpriteCoverage(report) {
   if (!Array.isArray(report?.entries)) throw new Error('Sprite coverage entries missing');
+  const ids=new Set();
+  for (const entry of report.entries) {
+    if (!entry || typeof entry.id!=='string' || !entry.id.trim() || ids.has(entry.id)) throw new Error('Duplicate or invalid fighter ID in sprite coverage');
+    ids.add(entry.id);
+    if (!Number.isSafeInteger(entry.frames) || entry.frames<0 || !Number.isSafeInteger(entry.animatedClips) || entry.animatedClips<0) throw new Error('Invalid sprite counters: '+entry.id);
+    if (entry.frames===0 && entry.animatedClips!==0) throw new Error('Animation without frames: '+entry.id);
+  }
+  if (Number.isSafeInteger(report.total) && report.total!==report.entries.length) throw new Error('Sprite coverage total mismatch');
+  if (Number.isSafeInteger(report.integrated) && report.integrated!==report.entries.filter(e=>e.frames>0).length) throw new Error('Sprite coverage integrated mismatch');
+  if (Number.isSafeInteger(report.missing) && report.missing!==report.entries.filter(e=>e.frames===0).length) throw new Error('Sprite coverage missing mismatch');
+  if (Number.isSafeInteger(report.animatedClips) && report.animatedClips!==report.entries.reduce((n,e)=>n+e.animatedClips,0)) throw new Error('Sprite coverage animation count mismatch');
   const rows = report.entries.map(e => {
     const frames = Number.isSafeInteger(e.frames) && e.frames >= 0 ? e.frames : 0;
     const animated = Number.isSafeInteger(e.animatedClips) && e.animatedClips >= 0 ? e.animatedClips : 0;
