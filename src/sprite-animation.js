@@ -27,7 +27,7 @@ export function advanceSpriteClock(actor){
  const state=actorSpriteState(actor),pose=poseFromState(state);
  const presentation=presentationOf(actor);
  const identity=presentation?`${pose}:presentation:${presentation.id??presentation.sequenceId??''}`:pose+':'+(actor.attack?.id??'')+':'+(state.weaponContext||'');
- actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?actor.spriteClock.tick+1:0};
+ actor.spriteClock={identity,pose,tick:presentation?frameTick(presentation.frame):actor.spriteClock?.identity===identity?frameTick(actor.spriteClock.tick)+1:0};
 }
 export function requestedSpriteClipKey(state={}){
  const pose=poseFromState(state),presentation=presentationOf(state);
@@ -51,11 +51,12 @@ export function sampleSpriteClip(art,state={}){
  // KO or presentation art has no weapon identity and cannot dress another phase.
  const pose=state.weaponContext!==undefined?idle:validContext&&has(requested)?requested:!strictContext&&requestedPose!=='idle'&&has(requestedPose)?requestedPose:finalKo?'ko':idle;
  const clip=Object.prototype.hasOwnProperty.call(art.clips||{},pose)?art.clips[pose]:null;
- if(!clip?.frames?.length)return null;
- const durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame||1);
- if(durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1))return null;
+ if(!Array.isArray(clip?.frames)||!clip.frames.length)return null;
+ if(typeof clip.loop!=='boolean')return null;
+ const durations=clip.frameTicks??clip.frames.map(()=>clip.ticksPerFrame);
+ if(!Array.isArray(durations)||durations.length!==clip.frames.length||durations.some(t=>!Number.isSafeInteger(t)||t<1||t>600))return null;
  const total=durations.reduce((n,t)=>n+t,0);
- if(!Number.isSafeInteger(total)||total<1)return null;
+ if(!Number.isSafeInteger(total)||total<1||total>36000)return null;
  // The engine's shared sequence tick also drives direct inspector samples.
  // No clip may read an obsolete attack clock after a round/finisher transition.
  let tick=frameTick(presentationOf(state)?.frame??state.frame);
@@ -64,7 +65,7 @@ export function sampleSpriteClip(art,state={}){
  if(pose===idle&&pose!==requested)tick=0;
  tick=clip.loop?tick%total:Math.min(tick,total-1);
  let index=0,elapsed=0;while(index<durations.length-1&&tick>=elapsed+durations[index])elapsed+=durations[index++];
- const frameIndex=clip.frames[index],frame=art.frames[frameIndex];
+ const frameIndex=clip.frames[index],frame=Array.isArray(art.frames)&&Number.isSafeInteger(frameIndex)&&frameIndex>=0?art.frames[frameIndex]:null;
  return frame?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
   fallbackReason:pose===requested?null:state.weaponContext!==undefined&&pose===idle?'missing-weapon-pose':strictContext?'missing-contextual-finisher':pose==='ko'&&finalKo?'core-ko-final-defeat':pose===requestedPose?'generic-presentation':'missing-presentation',
   frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
