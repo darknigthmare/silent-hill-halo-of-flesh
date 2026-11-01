@@ -1,0 +1,665 @@
+{
+  "schema": 1,
+  "batch": "lot12",
+  "date": "2026-11-01",
+  "baseCommit": "1e6e408a3ef9d66869fdf7ce26eded06e383d12a",
+  "sources": 277,
+  "preservedSourceObjects": 246,
+  "newSourceFiles": 31,
+  "observations": 435,
+  "observationSpecificationsDelivered": 30,
+  "additionalCinematicDescriptions": 30,
+  "additionalStageDescriptions": 25,
+  "additionalRoomNotes": 9,
+  "checks": [
+    {
+      "name": "All246 previous source objects remain the exact ordered prefix",
+      "passed": true
+    },
+    {
+      "name": "Source identifiers are unique and HTTPS",
+      "passed": true
+    },
+    {
+      "name": "230 fighter identities names works base IDs and edition declarations preserved",
+      "passed": true
+    },
+    {
+      "name": "33 complete historical role decisions preserved",
+      "passed": true
+    },
+    {
+      "name": "435 observation names identities statuses order and timing metadata preserved",
+      "passed": true
+    },
+    {
+      "name": "Exactly30 distinct baseline observation rows changed, no extra observation delivery",
+      "passed": true
+    },
+    {
+      "name": "All30 declarations are documentary specifications",
+      "passed": true
+    },
+    {
+      "name": "No observation source timing or animation certification introduced",
+      "passed": true
+    },
+    {
+      "name": "Proposal names statuses and counts preserved",
+      "passed": true
+    },
+    {
+      "name": "30 cinematic descriptions match final cooperating-agent source specifications",
+      "passed": true
+    },
+    {
+      "name": "123 stage identities statuses and original slot order preserved",
+      "passed": true
+    },
+    {
+      "name": "25 stage descriptions and9 room notes match inspected-source revisions",
+      "passed": true
+    },
+    {
+      "name": "Five new blocked stage proposals remain unchanged in research",
+      "passed": true
+    },
+    {
+      "name": "Every research citation resolves to an existing source identifier",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_01_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_01_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_04_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_04_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_10_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_10_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_12_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_12_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_13_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_13_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_14_MODEL_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_SH4_VICTIM_14_FILE_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_WOODSIDE_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_WOODSIDE_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BLUE_CREEK_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_LABYRINTH_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_LABYRINTH_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_SHOPPING_MALL_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_CHURCH_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_CHURCH_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_ROOM_302_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_ROOM_302_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_WATER_PRISON_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+      "passed": true
+    },
+    {
+      "name": "HTTP200 and raw file SHA for EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101",
+      "passed": true
+    },
+    {
+      "name": "31 newly appended fixed view sources, no new image assets counted",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from sh4-enemies",
+      "passed": true,
+      "quotedWords": 34
+    },
+    {
+      "name": "Quotes under100 words from sh4-enemies",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from sh4-victims",
+      "passed": true,
+      "quotedWords": 31
+    },
+    {
+      "name": "Quotes under100 words from sh4-victims",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from sh4-bosses",
+      "passed": true,
+      "quotedWords": 14
+    },
+    {
+      "name": "Quotes under100 words from sh4-bosses",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from hc-creatures",
+      "passed": true,
+      "quotedWords": 28
+    },
+    {
+      "name": "Quotes under100 words from hc-creatures",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from hc-walkthrough",
+      "passed": true,
+      "quotedWords": 21
+    },
+    {
+      "name": "Quotes under100 words from hc-walkthrough",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from sh3-shopping",
+      "passed": true,
+      "quotedWords": 5
+    },
+    {
+      "name": "Quotes under100 words from sh3-shopping",
+      "passed": true
+    },
+    {
+      "name": "Exact short quotes from bom-bestiary",
+      "passed": true,
+      "quotedWords": 31
+    },
+    {
+      "name": "Quotes under100 words from bom-bestiary",
+      "passed": true
+    },
+    {
+      "name": "Eric pinned sword and juvenile Peter limitations remain explicit",
+      "passed": true
+    },
+    {
+      "name": "Earth presentation does not invent legs or floor support",
+      "passed": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "sourceId": "EXT12_SH4_VICTIM_01_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_01.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-01.png",
+      "sha256": "df309f0818dd41bf76b85f615bf7a547d341f01a350f38bfcc26cc845d0fc0fa",
+      "bytes": 97074,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_01_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_01.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-01.jpg",
+      "sha256": "f8cd3611ff45eb0f616e7f6a7badd1772e623106d11989c01a7af9b3db61fc5b",
+      "bytes": 17514,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_04_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_04.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-04.png",
+      "sha256": "af353d15ff11cc4bd1d9eb3ddabcbe677434be82293c4ebfbd24e56fe2b61bf8",
+      "bytes": 67935,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_04_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_04.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-04.jpg",
+      "sha256": "21070891641f68a122009d4499f8b6df54f6851a88ddf0fc35f3c82ccfd87a6a",
+      "bytes": 21065,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_10_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_10.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-10.png",
+      "sha256": "49611b0487b507802535e67999b0b10c1cb0a4e1da50ed58efc19955cf8b6956",
+      "bytes": 71196,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_10_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_10.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-10.jpg",
+      "sha256": "794611d9c8e4775975b5962359f3a572dc1c7a239d139e3979097246a8cbfb2c",
+      "bytes": 19741,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_12_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_12.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-12.png",
+      "sha256": "1861b1c199c94a93e1a39edf261f8bff6bdffe7572b0f0d68f04ef948b112ab1",
+      "bytes": 83312,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_12_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_12.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-12.jpg",
+      "sha256": "614f00c9a84f21cc1c553add0732222be0ab054bfcdf46f402fd0af543efcc39",
+      "bytes": 20442,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_13_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_13.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-13.png",
+      "sha256": "d3265d854e627cb7b9a0b45b55567f21402fc5cb6374f2d6be54f6d7b763f0ac",
+      "bytes": 78497,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_13_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_13.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-13.jpg",
+      "sha256": "79c36d2789443eed14504719e060f119c4b472de57c26141025ff7d849f0d7de",
+      "bytes": 17673,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_14_MODEL_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/monsters/victim_14.png",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-model-14.png",
+      "sha256": "654fc6818c3e474c756753181f793869ce821cc71d68b56a704d0ebf58605953",
+      "bytes": 60166,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 350
+    },
+    {
+      "sourceId": "EXT12_SH4_VICTIM_14_FILE_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/victim_files/victim_14.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/ghost-file-14.jpg",
+      "sha256": "db94d780b5b8afc5365f29212447128b92beaf6671c10e54da11c8bffc263aaf",
+      "bytes": 20174,
+      "httpStatus": 200,
+      "width": 150,
+      "height": 315
+    },
+    {
+      "sourceId": "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_clock_puzzle_01.jpg",
+      "sha256": "d73fc5dffa31885ad204a500f3bebeb7be81395a3892a11d6181635dc96634c6",
+      "bytes": 70002,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_WOODSIDE_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_w02_deadman_room_208.jpg",
+      "sha256": "fb74d661e0b41ebad2d818f36932b48c1fd292b99927e5e32795171fe963ae2b",
+      "bytes": 76093,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_w03_boss_1b_pyramid_head.jpg",
+      "sha256": "e9d3be73f6e0439e4702e213c01db0ed69ab9774b041df174de6df3f2e1f66de",
+      "bytes": 69343,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_BLUE_CREEK_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_w03_boss_1c_pyramid_head.jpg",
+      "sha256": "678aeced631f02b5d066eb3d7e95b05110fc8c187955124645cd8665018e90a4",
+      "bytes": 104155,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w09_scaffold.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_w09_scaffold.jpg",
+      "sha256": "bf3330b2376cc98eeeb42df36d6c57468a16d0cd6e16f41b878725250960fa5e",
+      "bytes": 55102,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_01.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_box_of_faces_puzzle_01.jpg",
+      "sha256": "eba4c17c0d3a7b3cba9f5a7ae649f65a7e00df48087157480a577e62e7c17b97",
+      "bytes": 76478,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_LABYRINTH_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_02.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh2_box_of_faces_puzzle_02.jpg",
+      "sha256": "024521ec25a7af036d01e45bbd9727b190d9050bf770bb6c413a61176df8d5d7",
+      "bytes": 70859,
+      "httpStatus": 200,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "sourceId": "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh3_02_shopping_center_01.jpg",
+      "sha256": "e48b20a11193e3e1c2c4f59785ff6c9e24b2aefb370ffb0530272b933de3b074",
+      "bytes": 346200,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_CHURCH_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh3_14_eye_of_night_tarot_card.jpg",
+      "sha256": "9e73403d60ead0b5f9d8b533cb571373563d86001853bb49eab5632456e5abb6",
+      "bytes": 435927,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_CHURCH_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-sh3_14_church_map_location.jpg",
+      "sha256": "8c30198a35a0fa542c10f8c0c2a1d2dbd756ab9ab6b56dee76614040cbecc5f1",
+      "bytes": 612840,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_ROOM_302_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-01_front_door.jpg",
+      "sha256": "8adb1e87b977a9f283627e0434b534ade0f9423564c50cd97608dae9a5f4cf7d",
+      "bytes": 305652,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_ROOM_302_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-01_memo_01_first_letter.jpg",
+      "sha256": "ce56c431acd454c00b079fe6183c6199da5dd09873244e34bc9cd0c8f4781e59",
+      "bytes": 252256,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_WATER_PRISON_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/04_revolving_prison_cells.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-04_revolving_prison_cells.jpg",
+      "sha256": "6da8a75a8243840a4ea1b8c712a9f4ce5ed5c3cb2763b696c5b7033615fa53c3",
+      "bytes": 502083,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_a.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-06_apartment_keys_a.jpg",
+      "sha256": "99a08a5b520b3267142507fbdb7b312e1f832de3c2a9b44bcb448485ec431b43",
+      "bytes": 369372,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_b.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/stage-06_apartment_keys_b.jpg",
+      "sha256": "bcba33a3f943f29a3b0a9ae9870d37c821bd226142bda18196137348d323ddb3",
+      "bytes": 386809,
+      "httpStatus": 200,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourceId": "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-extra-bom-2026-11-01/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+      "sha256": "d909e485a7861f121b1d1e52b1e7efcf3d0b9bb3a64ced1a64bd05d99433affd",
+      "bytes": 169136,
+      "httpStatus": 200,
+      "width": 960,
+      "height": 544
+    },
+    {
+      "sourceId": "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-extra-bom-2026-11-01/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+      "sha256": "27b013e4c4eb1a28dfcae8af1663c0e1d53fc0e7bd90c07a088fa81febe95d5c",
+      "bytes": 182943,
+      "httpStatus": 200,
+      "width": 960,
+      "height": 544
+    },
+    {
+      "sourceId": "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-extra-bom-2026-11-01/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+      "sha256": "23ac88bec9c8b6a8d6bebf5e229e23e195e5c01b75821384f1a5662e344670a3",
+      "bytes": 165156,
+      "httpStatus": 200,
+      "width": 784,
+      "height": 679
+    },
+    {
+      "sourceId": "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_15_steel_boss.jpg",
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-extra-bom-2026-11-01/sh_bom_art_20160221_hershberg_15_steel_boss.jpg",
+      "sha256": "35fe17a31abefb85723f7c7f54029381dc7e26a854f3c178a282e58cbd799211",
+      "bytes": 88451,
+      "httpStatus": 200,
+      "width": 593,
+      "height": 785
+    }
+  ],
+  "textualEvidence": [
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/sh4-enemies.html",
+      "sha256": "f630fc5032ace2fc72698e2cecd7c8e4dc41f9f64e1153359b432ff958cab588",
+      "quotes": [
+        "They float above the ground without using their legs.",
+        "Carries a trowel as a weapon,",
+        "Found with a Sword of Obedience stabbed into him.",
+        "White female with a dark blouse, long skirt and hat."
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/sh4-victims.html",
+      "sha256": "3b9917584fb1410f808631e836c7ef24ad3b66e0abc3710372b1273d9c09d46c",
+      "quotes": [
+        "Victim 04/21 - Steve Garland",
+        "Victim 10/21 - Eric Walsh",
+        "Victim 12/21 - Peter Walls",
+        "High School student",
+        "Juvenile white male",
+        "Victim 13/21 - Sharon Blake",
+        "Victim 14/21 - Toby Archbolt"
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/sh4-bosses.html",
+      "sha256": "0214189234c109be773d5a79fbad963c55360f33964da4e4052aaab5ab0fe40b",
+      "quotes": [
+        "there are 12 large Wall Men in this room.",
+        "The other is a headbutt,"
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/hc-creatures.html",
+      "sha256": "8c71d64a36cf1fd5f3de90992a22605401d879e713fcf6dda9bfe55c5c7219fb",
+      "quotes": [
+        "Lurkers use their sharp claws to attack.",
+        "trying to rip your throat out.",
+        "They attack with their enormous blades",
+        "They can damage you pretty badly with various combos,"
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/hc-walkthrough.html",
+      "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+      "quotes": [
+        "Sepulcher will drop to the ground.",
+        "Scarlet is now moving much faster.",
+        "Amnion’s primary attack is swinging with its front leg."
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-stages-2026-11-01/CL_SH3_02_SHOPPING_CENTER.html",
+      "sha256": "505776f47b3d3dce3842827a630c73d05956bdecb9b2833cc4a13deed4ad9a3e",
+      "quotes": [
+        "Heather awakens in Happy Burger."
+      ],
+      "allExact": true
+    },
+    {
+      "sourceFile": "/workspace/shared/halo-of-flesh/references/batch12-references-2026-11-01/bom-bestiary.html",
+      "sha256": "bb67afba7c5b5bb57eb3129270ab07da1c0ccec9640cc34db9010a2886c5f751",
+      "quotes": [
+        "A relatively small, roach-like creature that pesters and feeds on anyone that gets too close.",
+        "Formed of stone and contempt,",
+        "A sadistic, powerful creature birthed of steel and your own desires,"
+      ],
+      "allExact": true
+    }
+  ],
+  "researchFileSha256": {
+    "classic": "677a0580a8abc6fc816e8f4fb028b96d5df0576c8c7f12d2049b35e4eba7e9da",
+    "extended": "3fb766eed4d6405cf7be4c1d6c9dae0420a2fb7030ebb4b5b7f82e6ec1fa1696"
+  },
+  "passed": true,
+  "certifiedOneToOne": false,
+  "limits": "Documentary identity, edition, source scope and raw fixed-view file validation. No new production PNG, native animation, measured original timing or 1:1 certification. Guardian promotional stills and model art do not certify final geometry or attack motion; previously inaccessible references remain qualified. FandomEarth/Steel returned402, not retried or bypassed."
+}

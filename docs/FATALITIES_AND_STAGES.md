@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 147 éléments visuels partiels issus des fiches, 28 événements et 28 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 163 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -248,21 +248,21 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | OLD SILENT HILL | SH1 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |
 | NOWHERE | SH1 | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
 | LAKESIDE AMUSEMENT PARK | SH1 | PLATEAU DU MANÈGE SH1 | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | DERNIER TOUR DE MANÈGE — à produire |
-| WOOD SIDE APARTMENTS | SH2 | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
-| BLUE CREEK — STAIRWELL | SH2 | PALIER DE L’ESCALIER | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 0 boucles | PORTE SANS RETOUR — montage écrit, conditions requises |
+| WOOD SIDE — APPARTEMENT 208 | SH2 | PLATEAU SEC · APPARTEMENT 208 | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
+| BLUE CREEK — PALIER DE L’ESCALIER | SH2 | PALIER DE L’ESCALIER | fixed-normal — aucune bascule | 1 | 0 | 4 éléments de fiche / 0 boucles | PORTE SANS RETOUR — montage écrit, conditions requises |
 | BROOKHAVEN — BASEMENT | SH2 | SEUIL DE L’ASCENSEUR B1 | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
-| TOLUCA PRISON | SH2 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 1 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
-| THE LABYRINTH | SH2 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| TOLUCA — COUR DU GIBET | SH2 | PLATEAU SEC · COUR DU GIBET | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
+| LABYRINTHE — COMMANDE BOX OF FACES | SH2 | PLATEAU SEC · COMMANDE BOX OF FACES | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | LAKEVIEW HOTEL — OTHERWORLD | SH2 | BÉTON TREMPÉ | fixed-altered — aucune bascule | 1 | 0 | 2 éléments de fiche / 1 boucles | CHAMBRE DU SOUVENIR — montage écrit, conditions requises |
-| CENTRAL SQUARE — HELEN’S BAKERY | SH3 | SOL DU CENTRE COMMERCIAL | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| CENTRAL SQUARE — HAPPY BURGER | SH3 | PLATEAU SEC · HAPPY BURGER | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | BROOKHAVEN — FLOODED ROOM | SH3 | BÉTON SEC | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — montage écrit, conditions requises |
-| THE CHURCH | SH3 | PIERRE RITUELLE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
+| CHURCH — CHAPELLE INITIALE | SH3 | PLATEAU SEC · CHAPELLE INITIALE | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
 | DAISY VILLA ROOFTOP | SH3 | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | SEWER CHANNEL | SH3 | PASSERELLE DU CANAL | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — montage écrit, conditions requises |
-| ROOM 302 | SH4 | PLANCHER ANCIEN | fixed-normal — aucune bascule | 1 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — montage écrit, conditions requises |
+| ROOM302 — ENTRÉE ENCHAÎNÉE | SH4 | PLATEAU SEC · ENTRÉE ENCHAÎNÉE | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — montage écrit, conditions requises |
 | SUBWAY WORLD | SH4 | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| WATER PRISON WORLD | SH4 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
-| APARTMENT WORLD | SH4 | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
+| WATER PRISON — SURVEILLANCE2F | SH4 | PLATEAU SEC · SURVEILLANCE2F | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
+| APARTMENT WORLD — BUREAU105 | SH4 | PLATEAU SEC · BUREAU105 | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
 | HOSPITAL WORLD | SH4 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
 | CEDAR GROVE — FEMALE TREATMENT | 0RIGINS | SEUIL DU MIROIR DE SOINS | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | RIVERSIDE MOTEL | 0RIGINS | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |

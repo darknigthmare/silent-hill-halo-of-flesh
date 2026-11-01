@@ -26,8 +26,8 @@ test('lot11 owns thirty new exact presentation rows without replacing either pre
     assert.equal(lorePresentation(actor(row.entityId),row.contextKey).authored,true);assert.equal(lorePresentation(fighter(row.entityId),row.contextKey).authored,true);
   }
   for(const id of IDS){assert.equal(lorePresentation(actor(id),'taunt').authored,false);for(const type of ['signature','nightmare'])assert.equal(cinematicSummary(id+'_'+type).authored,false);}
-  assert.equal(LORE_CINEMATIC_COVERAGE.fighterIds.length,99);assert.equal(LORE_CINEMATIC_COVERAGE.recipes.length,79);assert.equal(LORE_CINEMATIC_COVERAGE.presentationOnlyIds.length,15);
-  assert.equal(ROSTER.reduce((n,f)=>n+['intro','winRound','loseRound','winMatch','loseMatch','outro','taunt'].filter(key=>lorePresentation(f,key).authored).length,0),776);
+  assert.equal(LORE_CINEMATIC_COVERAGE.fighterIds.length,99);assert.equal(LORE_CINEMATIC_COVERAGE.recipes.length,79);assert.equal(LORE_CINEMATIC_COVERAGE.presentationOnlyIds.length,20);
+  assert.equal(ROSTER.reduce((n,f)=>n+['intro','winRound','loseRound','winMatch','loseMatch','outro','taunt'].filter(key=>lorePresentation(f,key).authored).length,0),806);
 });
 
 test('thirty source-owned pose intents sample without changing anatomy, weapon, role, resources or physical state',()=>{

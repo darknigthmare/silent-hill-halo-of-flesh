@@ -1,0 +1,767 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-01",
+  "origin": "conversation-image-generation",
+  "baseCommit": "1e6e408a3ef9d66869fdf7ce26eded06e383d12a",
+  "requestedItems": 30,
+  "deliveredPngCandidates": 12,
+  "blockedItems": 18,
+  "generationCalls": 15,
+  "successfulPngArtifacts": 13,
+  "qualityEdits": 0,
+  "unusedSuccessfulCandidates": 1,
+  "capturedModerationErrorResponses": 2,
+  "unretrievedOrCancelledSubjects": 0,
+  "newAnimatedClips": 0,
+  "newSingleFramePoseClips": 12,
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "measuredOriginalTimingRows": 0,
+  "priorRefusalsRespected": [
+    "SH2 Mannequin and all variants",
+    "SH3 Memory of Alessa SMG",
+    "SH1 Incubus",
+    "SH3 Nurse Pipe",
+    "SH3 Valtiel",
+    "SH4 Jasper17",
+    "SH4 Andrew18",
+    "SH2 Flesh Lip / SH1 Cybil ambiguous group refusal from lot11"
+  ],
+  "newRefusals": [
+    {
+      "fighterId": "sh4_toby_archbolt_victim_14",
+      "requestId": "cbdfef7f-6a5c-405e-a58f-a5a455b2e62f",
+      "categories": [
+        "violence"
+      ],
+      "retry": false
+    },
+    {
+      "fighterId": "homecoming_amnion_hanging_form_097",
+      "requestId": "618d08f4-0487-4b32-839f-f69a2983f6e2",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "retry": false,
+      "exposedFormNotUsedAsWorkaround": true
+    }
+  ],
+  "noRefusalRetryOrWorkaround": true,
+  "generationCollection": {
+    "strategy": "Every independent request awaited through Promise.allSettled and saved with exact fighter ID, prompt, reference file paths and output/failure. No cancellation or ambiguous attribution.",
+    "records": [
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/generation-records-2.json",
+        "sha256": "ecce158d3fd1c5aec0a48feb1b176a19aad7f9a211bd21cc5e00292d8e1a3dfc",
+        "bytes": 6986
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/generation-records-3.json",
+        "sha256": "9de3d5c0aaf35a8bf2e0579dee85f844f38d24a4ac81930ecda06b96bce98efd",
+        "bytes": 11111
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/generation-records-4.json",
+        "sha256": "41aa12c59d514cfa5f6f081404770e84f86e206386400b622adc13d19c323db0",
+        "bytes": 4008
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/generation-records.json",
+        "sha256": "cb02dfc70d6bc33895d355139ea51a0d34e977290813972e8e5440041bdb1401",
+        "bytes": 5126
+      }
+    ]
+  },
+  "excludedSuccessfulCandidate": {
+    "fighterId": "sh4_peter_walls_victim_12",
+    "generatedFile": "/workspace/generated_images/exec-97ea5218-6734-4b0c-860c-21deb9fbd426.png",
+    "reason": "Prompt called Peter an adult before Victim Files established he is a juvenile high-school student. Output excluded, not imported, not retried; no source accuracy claimed.",
+    "sourceUrl": "https://www.silenthillmemories.net/sh4/victim_files_en.htm",
+    "notInRegistry": true,
+    "notCopiedIntoRepository": true
+  },
+  "rejectedBeforeFinalSelection": [
+    {
+      "fighterIds": [
+        "shattered_raw_shock_base_099",
+        "shattered_raw_shock_feminine_100",
+        "shattered_raw_shock_diseased_101",
+        "shattered_raw_shock_abstract_102",
+        "shattered_raw_shock_atrophied_103"
+      ],
+      "reason": "Runtime non-duel pursuit dossiers; no combat idle produced or counted. No generation request."
+    },
+    {
+      "fighterId": "arcade_nurse_arcade",
+      "reason": "Not selected to avoid borrowing/approaching the previously refused SH3 pipe-nurse variant. No generation request."
+    }
+  ],
+  "network": {
+    "observationsCurrent": true,
+    "policy": "enforced",
+    "restricted": true,
+    "proxyAndCaTrustPreserved": true,
+    "blockedStatusBypass": false
+  },
+  "referenceArchive": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01",
+  "referenceArchiveMetadata": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/downloads-2.json",
+      "sha256": "d770c219f5ea4389cfc6834b41049094be6525788d1d2223289a3693dfed6c64",
+      "bytes": 6051
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/downloads-3.json",
+      "sha256": "def7a2e7099721dbbdace51bd9fdf7d610fa0977c20114647638709e16fdb5ce",
+      "bytes": 248
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/downloads.json",
+      "sha256": "c5cbbffff2ca13d99fe93b9fbcf1595a35222537dbb8ed253475e9f4b35d484c",
+      "bytes": 12997
+    }
+  ],
+  "additionalReferenceArchives": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-extra-bom-2026-11-01/selected-image-collection.json",
+      "sha256": "9593ae001e167817d95d547f60a5a0d00c33857ecb3ef37d0577eaf000b7dd58",
+      "bytes": 6222
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/batch12-final-art-support-2026-11-01/additional-art-support-summary.json",
+      "sha256": "a320022d77d7741c1b249d1102f149420897fb5e40dfb36ee7de6cea838c32da",
+      "bytes": 4699
+    }
+  ],
+  "oldRegistryObjectsPreserved": 74,
+  "oldPngFilesPreserved": 109,
+  "registryProfilesAfter": 86,
+  "registryFramesAfter": 121,
+  "minimumReadablePaddingFraction": 0.05661881977671451,
+  "pendingHttpReview": false,
+  "pendingFinalVisualReview": false,
+  "pendingDistReview": false,
+  "selected": [
+    {
+      "fighterId": "sh4_steve_garland_victim_4",
+      "png": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "sha256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_04.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_26_victim_04.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.48724082934609253,
+          0.8452950558213717
+        ],
+        "bodyHeight": 0.6610845295055822,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Steve Garland Victim4 SH4 entier, posture sans appui fixe : corps flottant sans garde de boxeur, petite truelle de jardin entière dans sa main droite. Pose et texture recomposées depuis deux rendus ; aucune trajectoire, échelle ou animation originale certifiée."
+    },
+    {
+      "fighterId": "sh4_eric_walsh_victim_10",
+      "png": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "sha256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_10.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_28_victim_10.jpg",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5307017543859649,
+          0.8508771929824561
+        ],
+        "bodyHeight": 0.6778309409888357,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Eric Walsh Victim10 SH4 entier, genoux pliés et deux mains vides. État réveillé après retrait de la Sword of Obedience ; le rendu source est empalé par cette épée amovible, jamais tenue comme arme. Suppression visuelle et raccord du vêtement constituent une reconstruction non vérifiée, aucun plan original de réveil livré."
+    },
+    {
+      "fighterId": "sh4_sharon_blake_victim_13",
+      "png": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "sha256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_13.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_30_victim_13.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5215311004784688,
+          0.8277511961722488
+        ],
+        "bodyHeight": 0.6379585326953748,
+        "facing": -1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Sharon Blake Victim13 SH4 entière, femme adulte avec chapeau, blouse, longue jupe et deux chaussures ; posture flottante naturelle, mains vides. Sens gauche déclaré puis miroir de présentation. Aucun pied planté, arme ou pouvoir ajouté ; un seul idle composé et non certifié."
+    },
+    {
+      "fighterId": "sh4_wall_man_056",
+      "png": "assets/sprites/sh4_wall_man_056.397d02f8b567.png",
+      "sha256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/wall_man.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_20_wall_man.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.4996012759170654,
+          0.8604465709728868
+        ],
+        "bodyHeight": 0.6602870813397129,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Wall Man SH4 : extérieur attesté entier, tête inversée, deux bras et leurs griffes, tissu supérieur jusqu’au raccord mural. Le raccord reste tronqué anatomiquement par le mur dans l’œuvre : aucun bassin, pied ou corps caché inventé. Pose fixe candidate ancrée au support, pas un monstre libre ou une mesure de géométrie 1:1."
+    },
+    {
+      "fighterId": "sh4_one_truth_070",
+      "png": "assets/sprites/sh4_one_truth_070.fdb890443d18.png",
+      "sha256": "fdb890443d1826edaf577c0be1720e82cf076fb44ef0579d39fd2cd4fbc64336",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_24_one_truth.jpg",
+        "https://www.silenthillmemories.net/sh4/bosses_en.htm"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5039872408293461,
+          0.835725677830941
+        ],
+        "bodyHeight": 0.6746411483253588,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "One Truth SH4 : une cible réelle représentée avec quatre bras et cadre/support complet de son rendu source. Aucun corps inférieur ou pied inventé. Une seule figure du versus, pas livraison des douze Wall Men ni du puzzle complet ; aucune course de rail ou anatomie cachée certifiée."
+    },
+    {
+      "fighterId": "sh4_man_with_the_coat_067",
+      "png": "assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+      "sha256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0",
+      "source": "sh4",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/man_with_the_coat.png",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5115629984051037,
+          0.8421052631578947
+        ],
+        "bodyHeight": 0.6523125996810207,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Man with the Coat SH4 entier, manteau bleu-gris, pantalon, deux chaussures et deux pistolets bas distincts. Configuration du poursuivant adulte ; aucune pelle, hache ou mutation finale importée. Type et prise reconstruits depuis rendu, pas modèle mécanique ni geste original mesuré."
+    },
+    {
+      "fighterId": "homecoming_sepulcher_093",
+      "png": "assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
+      "sha256": "0c93c08d540b680f9af2c2ca9d1806497b59df7f81b0368b1ea37422ae7d5aac",
+      "source": "homecoming",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_20_sepulcher.png",
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_baudoin_03_sepulcher.jpg",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5350877192982456,
+          0.9433811802232854
+        ],
+        "bodyHeight": 0.854066985645933,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Sepulcher Homecoming : tête, deux grands bras/mains, masse frontale et racine inférieure entières depuis rendu identifié. Aucune jambe humaine ni accessoire meatsack inventé. Configuration suspendue transposée en idle 2D ; la chute au sol de seconde phase et ses contacts ne sont pas animés ou mesurés."
+    },
+    {
+      "fighterId": "bom_wood_sapling_139",
+      "png": "assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
+      "sha256": "5d67aa29cc354986fd6c5ec2d758b592b28844ec55af42d670268dbd4c409c24",
+      "source": "bom",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/wood_sapling.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_54_wood_boss.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5418660287081339,
+          0.9393939393939394
+        ],
+        "bodyHeight": 0.8692185007974481,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Wood Sapling Book of Memories : tête pointue, bras de branches et racines inférieures entiers. Corps composé depuis portrait et vue de préversion du 6 juin 2012 ; rameaux/texture et vue 2D reconstruits, correspondance au modèle commercial non certifiée. Aucun pied ou jambage humain, aucun cycle de marche original."
+    },
+    {
+      "fighterId": "arcade_gum_head_arcade",
+      "png": "assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
+      "sha256": "98c6e097cb8a6fd7c7df71e444b197ad37f42f6c0c18f96d40a3537b76f309b2",
+      "source": "arcade",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures/gumhead.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/gumhead_screen01.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/gumhead_screen02.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5247208931419458,
+          0.8660287081339713
+        ],
+        "bodyHeight": 0.6802232854864434,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Gum Head Arcade 2007 entier, peau grise mouchetée, deux mains et deux pieds nus. Aucun gourdin des Gum Heads SH4 emprunté. Pose 2D composée depuis rendu Arcade et deux captures natives ; lecture matière et géométrie non certifiées, pas nouveau cycle de combat."
+    },
+    {
+      "fighterId": "arcade_scraper_arcade",
+      "png": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+      "sha256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
+      "source": "arcade",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures/scraper.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/scraper_screen01.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/scraper_screen02.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5318979266347688,
+          0.8700159489633174
+        ],
+        "bodyHeight": 0.682615629984051,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Scraper Arcade 2007 entier, visage voilé, tunique et pantalon rayé, deux lames courtes et chaussures visibles. Les lames restent tenues dans les mains du rendu ; pas greffe de bras ou transfert de Missionary SH3. Pose/outil et matière reconstruits, aucune mesure originale."
+    },
+    {
+      "fighterId": "arcade_red_pyramid_thing_arcade",
+      "png": "assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
+      "sha256": "0afa295f8be5d01fff44a863359237a49b5622ecab9c70c2da2be8ba9d369d05",
+      "source": "arcade",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures/redpyramidthing.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/redpyramidthing_screen01.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/redpyramidthing_screen02.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.48724082934609253,
+          0.9138755980861244
+        ],
+        "bodyHeight": 0.8476874003189793,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Red Pyramid Thing Arcade 2007 entier, casque étroit propre au modèle, grande lame basse et deux pieds. Aucune lance du duo SH2 ni costume du film. Reconstruction à partir du rendu et de deux captures Arcade ; proportions et orientation 2D non mesurées, seule image fixe candidate."
+    },
+    {
+      "fighterId": "arcade_robbie_the_rabbit_chainsaw",
+      "png": "assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
+      "sha256": "204f63a133386a7069ca430805dbf8bcb70b75354135af8dedb16e50f0eb969f",
+      "source": "arcade",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg"
+      ],
+      "calibration": {
+        "anchor": [
+          0.49122807017543857,
+          0.8995215311004785
+        ],
+        "bodyHeight": 0.8293460925039873,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Robbie the Rabbit Arcade 2007 tronçonneuse : oreilles, salopette, deux pieds et outil entier ; aucun fusil ou hache emprunté. Pose 2D composée depuis le modèle identifié et le groupe de la capture native ; mécanique de chaîne et séquence source non reproduites."
+    }
+  ],
+  "blocked": [
+    {
+      "rowId": "sh4_peter_walls_victim_12:pose:idle",
+      "collection": "poses",
+      "entityId": "sh4_peter_walls_victim_12",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_12.png",
+        "https://www.silenthillmemories.net/sh4/victim_files_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. La première requête a décrit Peter comme adulte avant lecture des Victim Files qui le qualifient de lycéen mineur. La sortie obtenue est exclue du registre et du dépôt ; aucun remplacement ou nouvel essai. Le modèle doit être réévalué avec une identification correcte, sans revendiquer une image fidèle.",
+      "reason": "La première requête a décrit Peter comme adulte avant lecture des Victim Files qui le qualifient de lycéen mineur. La sortie obtenue est exclue du registre et du dépôt ; aucun remplacement ou nouvel essai. Le modèle doit être réévalué avec une identification correcte, sans revendiquer une image fidèle."
+    },
+    {
+      "rowId": "sh4_toby_archbolt_victim_14:pose:idle",
+      "collection": "poses",
+      "entityId": "sh4_toby_archbolt_victim_14",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_14.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_31_victim_14.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Refus explicite de l’outil de génération, catégorie violence, requête cbdfef7f-6a5c-405e-a58f-a5a455b2e62f. Aucun nouvel essai, autre prompt ou emprunt de corps ; ligne artistique ouverte.",
+      "reason": "Refus explicite de l’outil de génération, catégorie violence, requête cbdfef7f-6a5c-405e-a58f-a5a455b2e62f. Aucun nouvel essai, autre prompt ou emprunt de corps ; ligne artistique ouverte."
+    },
+    {
+      "rowId": "sh4_ghost_victim_066:pose:idle",
+      "collection": "poses",
+      "entityId": "sh4_ghost_victim_066",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+        "https://www.silenthillmemories.net/sh4/victim_files_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Profil collectif des anciens fantômes, sans septième individu ou vingt-deuxième victime propre. Les vues identifiées appartiennent à Jimmy, Steve, Eric, Peter, Sharon ou Toby ; aucune copie ou recoloration de leur PNG ne peut remplir ce profil collectif comme corps canonique autonome.",
+      "reason": "Profil collectif des anciens fantômes, sans septième individu ou vingt-deuxième victime propre. Les vues identifiées appartiennent à Jimmy, Steve, Eric, Peter, Sharon ou Toby ; aucune copie ou recoloration de leur PNG ne peut remplir ce profil collectif comme corps canonique autonome."
+    },
+    {
+      "rowId": "homecoming_amnion_hanging_form_097:pose:idle",
+      "collection": "poses",
+      "entityId": "homecoming_amnion_hanging_form_097",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_23_amnion.png",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Refus explicite de génération sexual/violence, requête 618d08f4-0487-4b32-839f-f69a2983f6e2, sur la première forme et son rig complet. Aucun essai supplémentaire ni retrait des éléments du corps pour contourner ; aucun PNG livré.",
+      "reason": "Refus explicite de génération sexual/violence, requête 618d08f4-0487-4b32-839f-f69a2983f6e2, sur la première forme et son rig complet. Aucun essai supplémentaire ni retrait des éléments du corps pour contourner ; aucun PNG livré."
+    },
+    {
+      "rowId": "homecoming_amnion_exposed_form_098:pose:idle",
+      "collection": "poses",
+      "entityId": "homecoming_amnion_exposed_form_098",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_23_amnion.png",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le rendu identifié montre l’abdomen fermé et ne valide pas l’anatomie exposée de seconde phase. La génération de la première forme a de plus été refusée ; aucune tentative sur cette variante ne sert de contournement. Corps et animation restent à produire, sans copie de la première forme.",
+      "reason": "Le rendu identifié montre l’abdomen fermé et ne valide pas l’anatomie exposée de seconde phase. La génération de la première forme a de plus été refusée ; aucune tentative sur cette variante ne sert de contournement. Corps et animation restent à produire, sans copie de la première forme."
+    },
+    {
+      "rowId": "bom_fire_guardian_137:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_fire_guardian_137",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/fire_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés.",
+      "reason": "Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés."
+    },
+    {
+      "rowId": "bom_light_guardian_140:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_light_guardian_140",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/light_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés.",
+      "reason": "Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés."
+    },
+    {
+      "rowId": "bom_blood_guardian_143:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_guardian_143",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés.",
+      "reason": "Le portrait de bestiaire de 127 pixels coupe des membres ou le bas du sujet. Les recherches conservées ne fournissent pas une vue lisible complète propre à cette forme ; aucun corps inférieur, appui ou envergure cachés ne sont inventés."
+    },
+    {
+      "rowId": "bom_wood_guardian_138:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_wood_guardian_138",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/wood_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_51_wood_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_52_wood_boss.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Portrait tronqué et captures de préversion du 6 juin 2012 : sommet et branches éloignées partiellement hors champ, identité complète de la version finale non établie. Aucun grand arbre entièrement reconstruit à partir de silhouettes coupées.",
+      "reason": "Portrait tronqué et captures de préversion du 6 juin 2012 : sommet et branches éloignées partiellement hors champ, identité complète de la version finale non établie. Aucun grand arbre entièrement reconstruit à partir de silhouettes coupées."
+    },
+    {
+      "rowId": "bom_water_guardian_141:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_water_guardian_141",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/water_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. La capture de préversion expose la base cylindrique et les mains mais coupe le sommet du monstre, le portrait coupe le bas. Ces vues ne certifient pas toutes les extrémités de sa silhouette finale ; pas de reconstitution entièrement inventée.",
+      "reason": "La capture de préversion expose la base cylindrique et les mains mais coupe le sommet du monstre, le portrait coupe le bas. Ces vues ne certifient pas toutes les extrémités de sa silhouette finale ; pas de reconstitution entièrement inventée."
+    },
+    {
+      "rowId": "bom_earth_guardian_142:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_earth_guardian_142",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/earth_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Masse rocheuse flottante et mains disjointes attestées ; les deux captures de préversion coupent le sommet et masquent des pierres éloignées. Aucun torse ou jambes de golem, aucun assemblage de toutes les pièces non visibles n’est inventé pour compléter le corps.",
+      "reason": "Masse rocheuse flottante et mains disjointes attestées ; les deux captures de préversion coupent le sommet et masquent des pierres éloignées. Aucun torse ou jambes de golem, aucun assemblage de toutes les pièces non visibles n’est inventé pour compléter le corps."
+    },
+    {
+      "rowId": "bom_blood_mama_145:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_mama_145",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_mama.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_01_blood_mama.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le dessin entier signé Castillo diffère fortement de la silhouette du portrait de bestiaire ; statut de concept et correspondance au corps final commercial non verrouillés. Il ne justifie pas de transférer arbitrairement deux longues jambes au profil multi-corps du jeu.",
+      "reason": "Le dessin entier signé Castillo diffère fortement de la silhouette du portrait de bestiaire ; statut de concept et correspondance au corps final commercial non verrouillés. Il ne justifie pas de transférer arbitrairement deux longues jambes au profil multi-corps du jeu."
+    },
+    {
+      "rowId": "bom_steel_guardian_146:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_steel_guardian_146",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/steel_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_15_steel_boss.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le dessin coloré coupe les extrémités des ailes métalliques ; l’étude grise entière omet les ailes. Les deux ne prouvent pas leur envergure ni tous les maillons de la forme finale. Aucun assemblage ou fermeture d’ailes de convenance pour masquer ce manque.",
+      "reason": "Le dessin coloré coupe les extrémités des ailes métalliques ; l’étude grise entière omet les ailes. Les deux ne prouvent pas leur envergure ni tous les maillons de la forme finale. Aucun assemblage ou fermeture d’ailes de convenance pour masquer ce manque."
+    },
+    {
+      "rowId": "bom_swarm_132:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_swarm_132",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/swarm.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Petit portrait seul : extrémités des ailes et des pattes proches du bord, détail de la version Vita et groupe actif non lisibles. Ne pas transférer les pixels ou l’anatomie du Swarm Homecoming déjà illustré ; aucune macro inventée.",
+      "reason": "Petit portrait seul : extrémités des ailes et des pattes proches du bord, détail de la version Vita et groupe actif non lisibles. Ne pas transférer les pixels ou l’anatomie du Swarm Homecoming déjà illustré ; aucune macro inventée."
+    },
+    {
+      "rowId": "arcade_robbie_the_rabbit_axe:pose:idle",
+      "collection": "poses",
+      "entityId": "arcade_robbie_the_rabbit_axe",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen01.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Les nouvelles recherches de 38 images et 96 vignettes n’ont pas établi de modèle entier propre à la configuration hache. La tronçonneuse seule est rendue en entier ; ni outil générique, ni arme de joueur, ni copie recolorée de Robbie ne remplit cette ligne.",
+      "reason": "Les nouvelles recherches de 38 images et 96 vignettes n’ont pas établi de modèle entier propre à la configuration hache. La tronçonneuse seule est rendue en entier ; ni outil générique, ni arme de joueur, ni copie recolorée de Robbie ne remplit cette ligne."
+    },
+    {
+      "rowId": "arcade_robbie_the_rabbit_shotgun:pose:idle",
+      "collection": "poses",
+      "entityId": "arcade_robbie_the_rabbit_shotgun",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen01.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Les nouvelles recherches de 38 images et 96 vignettes n’ont pas établi de modèle entier propre à la configuration fusil long. La tronçonneuse seule est rendue en entier ; ni outil générique, ni arme de joueur, ni copie recolorée de Robbie ne remplit cette ligne.",
+      "reason": "Les nouvelles recherches de 38 images et 96 vignettes n’ont pas établi de modèle entier propre à la configuration fusil long. La tronçonneuse seule est rendue en entier ; ni outil générique, ni arme de joueur, ni copie recolorée de Robbie ne remplit cette ligne."
+    },
+    {
+      "rowId": "sh2_twin_pyramid_heads_031:pose:idle",
+      "collection": "poses",
+      "entityId": "sh2_twin_pyramid_heads_031",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_5a_pyramid_head_duo.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_5c_pyramid_head_duo.jpg",
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. La vue du duel et la fin narrative ne fournissent pas deux corps avec leurs deux lances entièrement lisibles en position de combat. Un seul ancien PNG du lancier n’est pas dupliqué pour simuler une paire 1:1 ; aucune fusion ou pointe de lance masquée inventée.",
+      "reason": "La vue du duel et la fin narrative ne fournissent pas deux corps avec leurs deux lances entièrement lisibles en position de combat. Un seul ancien PNG du lancier n’est pas dupliqué pour simuler une paire 1:1 ; aucune fusion ou pointe de lance masquée inventée."
+    },
+    {
+      "rowId": "sh3_god_050:pose:idle",
+      "collection": "poses",
+      "entityId": "sh3_god_050",
+      "pose": "idle",
+      "status": "blocked",
+      "artifacts": [],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_15_god.png",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_god.jpg"
+      ],
+      "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le visage de la capture et l’art plongeant coupent les extrémités du grand corps et ne suffisent pas à une vue entière source. Son bas anatomiquement incomplet n’est pas rempli de jambes fictives ; aucun PNG ni reprise du sujet Incubus refusé.",
+      "reason": "Le visage de la capture et l’art plongeant coupent les extrémités du grand corps et ne suffisent pas à une vue entière source. Son bas anatomiquement incomplet n’est pas rempli de jambes fictives ; aucun PNG ni reprise du sujet Incubus refusé."
+    }
+  ],
+  "scopeLimits": [
+    "Full exterior attested by references, not unseen anatomy. Wall Man joins a wall; One Truth includes one true body and its frame, not twelve bodies.",
+    "Wood Sapling reference is a prerelease screenshot from June2012; commercial-version correspondence remains unverified.",
+    "Eric unpinned clothing reconstruction is authored; no source revival frame or held Sword of Obedience.",
+    "All poses static; no fresh animated clips, exact game geometry/scale or source timing measurements.",
+    "Presentation mirror only, opposite-facing source view is not independently generated."
+  ],
+  "importFreeze": {
+    "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/art-import-freeze.json",
+    "sha256": "17b1bfc6a42d031ce7b7b34fdf0ea5a285e7519746924ff9326c4562669fbe9e"
+  },
+  "sourceHttpReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/art-source/report.json",
+    "sha256": "e4a693271f6100edf46ee208b6a9fa66b49aee64ea7c371ceb85b4def2ee7e67",
+    "checks": 1549,
+    "captures": 278,
+    "errors": 0,
+    "decodedFrames": 111,
+    "newDecodedFrames": 12,
+    "passed": true
+  },
+  "sourceVisualReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/art-source-visual-review.json",
+    "sha256": "457ef9511b59b949d27dca7f2dc2cba932a81d5f071e114ccc2772d2acdc90ea",
+    "directlyViewedCaptures": 21,
+    "blockingFindings": [],
+    "passed": true
+  },
+  "distHttpReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/art-dist/report.json",
+    "sha256": "7ee70d845dfa5983292715d4bd3d78a1532c0be964490c51651baec013be8e1e",
+    "checks": 1549,
+    "captures": 278,
+    "decodedFrames": 111,
+    "errors": 0,
+    "passed": true
+  },
+  "distVisualReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/art-dist-visual-review.json",
+    "sha256": "2b512dd8e950012f78a436431a0e48a74aa1a52a6f8b7fd29bcc06f602b93ea1",
+    "directlyViewedDistCaptures": 27,
+    "directlyViewedNewCaptures": 24,
+    "blockingFindings": [],
+    "passed": true
+  },
+  "sourceDistComparison": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/art-source-dist-comparison.json",
+    "sha256": "3898cb06caf24e45770d6b01cfa769294506fb5352577b0f458f4c751eb29d67",
+    "httpPngHashesIdentical": 111,
+    "capturesCompared": 278,
+    "capturesIdentical": 254,
+    "capturesDifferent": 24,
+    "newInspectorsIdentical": 12,
+    "newMatchCapturesIdentical": 12,
+    "newMatchCapturesCompared": 18
+  },
+  "finalDistFence": {
+    "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/final-dist-run-after-upstream.json",
+    "sha256": "3a32a199156de348f16d81b413f891914002bebd71dc2de642586a98baa7c025",
+    "schema": 1,
+    "commit": "ced77333b07e1ea08cf04263c9abe23bbd4361ae",
+    "startedAt": "2026-11-01T01:09:43.829647+00:00",
+    "startedAtEpochMs": 1793495383829,
+    "finalMetadataSha256": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "scope": "Final full DIST validation after upstream integration and all five source/equipment metadata corrections; all application code frozen."
+  },
+  "sourceEvidenceScope": "Historical SOURCE run before upstream integration and five final source/equipment metadata corrections; final DIST review is separately fenced after all application changes."
+}

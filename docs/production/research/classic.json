@@ -8532,7 +8532,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Depuis son ancrage mural, griffe ou frappe de ses grands bras et renverse Henry ; le support ne devient pas une locomotion libre. Le bestiaire SH4 décrit des griffes qui renversent Henry. Le corps reste lié à son support mural ; les contacts du versus doivent être localisés aux membres sortant du mur, sans course autonome, vague d’énergie ni rectangle de dégâts couvrant toute sa silhouette.",
+          "description": "La page Enemies décrit le torse et les grandes mains griffues sortant du mur, puis des supports mobiles verticaux dans certaines zones de SH4. Les mains frappent et renversent Henry. La vue de profil ne fournit pas un corps caché derrière le support : la mise en garde 2D garde ce torse ancré, sans inventer jambes, marche libre ou anatomie dorsale. Les amplitudes et zones du prototype restent composées.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -9665,14 +9665,19 @@
       "identityStatus": "famille-canonique-composite",
       "identityNote": "Profil collectif de production pour les fantômes anciens ; pas un 22e individu ajouté au canon.",
       "referenceIds": [
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "CL_SH4_VICTIMS",
+        "EXT12_SH4_VICTIM_01_MODEL_20261101",
+        "EXT12_SH4_VICTIM_01_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Aura",
-          "description": "Les Ghosts infligent de faibles dégâts simplement par proximité, indépendamment d’un coup ou d’une prise ; le Saint Medallion neutralise ce danger de proximité.",
+          "description": "Dans SH4, tous les Ghosts infligent des dégâts de proximité distincts d’une frappe ; Saint Medallion supprime ce danger tout en les ralentissant. Le modèle Victim 01 et sa vue identifiée Jimmy Stone servent à contrôler une silhouette flottante, sans constituer un individu collectif canonique ni transférer ses vêtements aux cinq autres anciens Ghosts. Rayon, cadence et rendu d’aura du versus ne sont pas mesurés.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_01_MODEL_20261101",
+            "EXT12_SH4_VICTIM_01_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -9680,9 +9685,11 @@
         },
         {
           "name": "Prise",
-          "description": "Agrippe et frappe.",
+          "description": "Le guide décrit pour les anciens Ghosts des saisies, coups, morsures et frappes lorsqu’une arme propre est présente. Cette liste commune ne prouve pas qu’un seul individu utilise tous ces gestes. Leurs jambes restent pendantes en flottement ; aucune garde de boxeur, impulsion de course ou traversée de mur filmée n’est déduite des vues fixes. Une prise exacte et ses appuis restent à capturer par victime.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_01_MODEL_20261101",
+            "EXT12_SH4_VICTIM_01_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -9713,7 +9720,7 @@
         },
         "intro": {
           "name": "Entrée proposée — Ghost — Victim",
-          "description": "Corps qui traverse un mur puis se stabilise à faible hauteur.",
+          "description": "Le Ghost composite est déjà présent et glisse légèrement dans le cadrage de ses propres contours ; aucune traversée de mur n’est montrée sans image et support vérifiés.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9721,7 +9728,7 @@
         },
         "outro": {
           "name": "Sortie proposée — Ghost — Victim",
-          "description": "Retour dans le mur avec décroissance de l’aura.",
+          "description": "Le Ghost conserve son propre contour dans le cadrage final ; le retour à travers un mur et la décroissance d’une aura native restent à produire sur références contextualisées.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9729,7 +9736,7 @@
         },
         "winRound1": {
           "name": "Victoire manche 1 proposée — Ghost — Victim",
-          "description": "Flotter immobile au-dessus du sol.",
+          "description": "Le Ghost garde sa suspension et son corps propre ; aucun individu supplémentaire, coup, aura offensive nouvelle ou épée n’est ajouté par la pose de résultat.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9737,7 +9744,7 @@
         },
         "loseRound1": {
           "name": "Défaite manche 1 proposée — Ghost — Victim",
-          "description": "Chute puis retour en lévitation ; aucune nouvelle vie gagnée mécaniquement.",
+          "description": "La présence du Ghost est atténuée brièvement puis revient sans disparition totale ; la reprise de manche ne lui donne aucune vie ou immunité nouvelle.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9745,7 +9752,7 @@
         },
         "winMatch": {
           "name": "Victoire du match proposée — Ghost — Victim",
-          "description": "Retraverser le mur et laisser le décor calme.",
+          "description": "Le Ghost garde une présence flottante contenue après le résultat ; aucune personne nommée, traversée de mur ou suppression définitive n’est créée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9753,7 +9760,7 @@
         },
         "loseMatch": {
           "name": "Défaite du match proposée — Ghost — Victim",
-          "description": "Confinement plutôt que mort ; neutralisation via épée d’obéissance seulement si contexte et accessoire présents.",
+          "description": "Le Ghost reste visible sous une atténuation de résultat ; aucune mort définitive, épée d’obéissance ou chandelle sacrée non présente n’est inventée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -9896,15 +9903,19 @@
       "identityNote": "Steve Garland = victime 04/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_04_MODEL_20261101",
+        "EXT12_SH4_VICTIM_04_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Victim Files identifie Steve Garland comme la victime 04 ; Enemies montre son torse adulte dénudé, sa salopette en denim et sa truelle. La silhouette flottante et les faibles dégâts de proximité renvoient à la famille Ghost ; ni la biographie de gérant d’animalerie ni son meurtre par arme à feu ne lui confèrent une invocation animale ou une mitraillette.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_04_MODEL_20261101",
+            "EXT12_SH4_VICTIM_04_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -9912,9 +9923,11 @@
         },
         {
           "name": "Petite pelle",
-          "description": "Utilise une truelle en arme.",
+          "description": "Enemies indique explicitement que la victime 04 porte une truelle comme arme, et les deux vues fixes identifiées montrent le petit outil dans sa main. Il faut conserver lame, poignée et main entière dans le cadrage. Aucun modèle de pelle longue, marteau, fusil ou trajectoire d’attaque n’est établi par cette image ; le mot petite pelle du dossier n’autorise pas de changer l’équipement.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_04_MODEL_20261101",
+            "EXT12_SH4_VICTIM_04_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -10022,15 +10035,19 @@
       "identityNote": "Eric Walsh = victime 10/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_10_MODEL_20261101",
+        "EXT12_SH4_VICTIM_10_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Eric Walsh est identifié comme victime 10 par Victim Files ; Enemies le décrit en veste brune et jean et le montre traversé d’une Sword of Obedience. Le guide permet de retirer cette épée trouvée sur lui : elle n’est pas une arme tenue et ne devient pas un pouvoir propre. Une pose libre après retrait doit être explicitement reconstruite ou rester à produire ; aura et flottement héritent seulement de Ghost — Victim.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_10_MODEL_20261101",
+            "EXT12_SH4_VICTIM_10_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -10138,15 +10155,19 @@
       "identityNote": "Peter Walls = victime 12/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_12_MODEL_20261101",
+        "EXT12_SH4_VICTIM_12_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Peter Walls, victime 12, est décrit comme lycéen mineur dans Victim Files. Enemies et les vues attribuées montrent bonnet, veste de sport brune à bandes claires sur les bras et pantalon jaune. Ces traits distinguent son modèle des autres Ghosts ; ils ne prouvent ni arme individuelle, ni téléportation de Richard, ni roulade d’Andrew. La fiche hérite du flottement et de la proximité de la famille, avec poses spécifiques encore à capturer.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_12_MODEL_20261101",
+            "EXT12_SH4_VICTIM_12_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -10254,15 +10275,19 @@
       "identityNote": "Sharon Blake = victime 13/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_13_MODEL_20261101",
+        "EXT12_SH4_VICTIM_13_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "La victime 13 est Sharon Blake selon Victim Files ; les vues Enemies et dossier conservent chapeau sombre, blouse et longue jupe avec les pieds flottants entièrement visibles. Son histoire de noyade n’ajoute pas d’eau offensive ni de fantôme générique en robe blanche. Les gestes communs renvoient à Ghost — Victim, sans preuve d’une morsure ou d’une prise individuelle par cette seule vue fixe.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_13_MODEL_20261101",
+            "EXT12_SH4_VICTIM_13_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -10370,15 +10395,19 @@
       "identityNote": "Toby Archbolt = victime 14/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_14_MODEL_20261101",
+        "EXT12_SH4_VICTIM_14_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Victim Files identifie Toby Archbolt comme victime 14 et prêtre adulte. Enemies décrit chemise rouge, gilet noir et pantalon brun clair ; la vue assombrie ne doit pas devenir un costume emprunté à Jimmy ou Eric. Aucune arme, invocation ou attaque liée à la profession n’est attestée. Flottement et proximité sont des traits de la famille Ghost, tandis que les poses d’attaque propres restent à relever.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_14_MODEL_20261101",
+            "EXT12_SH4_VICTIM_14_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -11466,7 +11495,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Le guide des boss distingue un balayage des bras qui peut renverser Henry et un heurt de tête rapproché, souvent après la descente d’un Wall Man. Ces contacts partent de son emplacement mural ; aucune poursuite libre, téléportation ou bras indépendant n’est déduit de la vue partielle.",
+          "description": "Le guide Bosses distingue deux attaques des Giant Wall Men : un balayage des bras qui renverse Henry et un coup de tête souvent après la descente du support. Cette ligne Bras désigne les membres réellement sortis du cadre, avec contact localisé ; elle ne transforme pas la paroi ou les douze supports en grande zone de dégâts. Portée, hauteur et durée restent des paramètres versus.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -11479,7 +11508,7 @@
         },
         {
           "name": "Leurres",
-          "description": "Le guide décrit douze grands Wall Men dans la salle : onze réagissent normalement à leur propre impact, tandis que frapper le vrai corps fait sursauter tous les Wall Men. La photo n’en cadre qu’une partie. Réaction collective ne signifie pas douze acteurs jouables, douze vies partagées ou duplication spontanée d’un corps du versus.",
+          "description": "La rencontre comprend douze grands Wall Men : onze réagissent seuls, tandis que frapper le vrai fait réagir l’ensemble, lui compris. Il s’agit d’identifier un maître déjà présent, pas de créer onze corps par invocation pendant une attaque. Une image de la salle n’atteste ni chaque côté caché des modèles ni une multiplication de sprites en combat 2D.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -11492,7 +11521,7 @@
         },
         {
           "name": "Rail",
-          "description": "Les Wall Men montent et redescendent dans leurs emplacements, ce qui peut soustraire leur corps aux coups puis le remettre à portée. Le mot Rail du catalogue désigne cette contrainte verticale ; la vue partielle et le guide ne mesurent pas une mécanique de rail, sa course ou sa vitesse. Aucun déplacement horizontal libre ne leur est attribué.",
+          "description": "Le guide indique que les grands Wall Men descendent puis remontent hors de portée ; les bras et le torse restent attachés à leurs supports. Les douze rails appartiennent à la rencontre précise du Building World. Un déplacement de hauteur du prototype est une transposition de ce support, sans marche, bond libre, nouvelle jambe ou géométrie arrière inventée.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -11506,7 +11535,7 @@
         },
         {
           "name": "Cible réelle",
-          "description": "Pour repérer la cible réelle, Henry teste les corps un à un : le vrai Wall Man provoque le sursaut de l’ensemble quand il est frappé. Le guide décrit ensuite tous les corps immobiles et la porte déverrouillée à la fin. Cette progression de puzzle reste distincte d’un simple seuil de santé ou d’une animation de victoire du combattant unique.",
+          "description": "Le véritable Wall Man se reconnaît à la réaction simultanée des douze quand il est frappé ; sa défaite rend ensuite les corps immobiles et déverrouille la porte de la scène. Cette règle de puzzle ne prouve pas une invulnérabilité générique dans tous les lieux ni une mort de tous les Ghosts. La pose de résultat conserve son ancrage, et les conditions versus restent distinctes du scénario SH4.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -12450,36 +12479,44 @@
       "source": "sh2",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH2_02_WOOD_SIDE_APTS"
+        "CL_SH2_02_WOOD_SIDE_APTS",
+        "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+        "EXT12_REF_WOODSIDE_ROOM_3_20261101"
       ],
-      "locationNote": "Wood Side original 2001 ; éclairage et architecture du remake ne sont pas interchangeables.",
+      "locationNote": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "Un Mannequin réagit à la prise de la lampe.",
+          "description": "L’horloge haute reste fermée et immobile ; un reflet parcourt le bois sans avancer les aiguilles ni résoudre le puzzle.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH2_02_WOOD_SIDE_APTS"
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "La neige vidéo du téléviseur change doucement ; aucun message inédit présenté comme canon.",
+          "description": "Le téléviseur garde son boîtier fixe ; l’écran sombre reçoit une faible variation lumineuse, sans corps, sang ou programme inédit.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_02_WOOD_SIDE_APTS"
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Une secousse du meuble fait vibrer les aiguilles de l’horloge sans résoudre un puzzle de combat.",
+          "description": "Les volets en bois restent clos ; leur reflet varie, sans les faire claquer ni transférer un autre puzzle d’horloge.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_02_WOOD_SIDE_APTS"
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -12502,26 +12539,32 @@
       "source": "sh2",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH2_03_BLUE_CREEK_APTS"
+        "CL_SH2_03_BLUE_CREEK_APTS",
+        "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+        "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
       ],
-      "locationNote": "Cage d’escalier du premier duel Pyramid Head, SH2 original.",
+      "locationNote": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "La sirène accompagne son départ dans l’escalier noyé.",
+          "description": "La porte de fond du palier reste fermée, sans entrée ou départ automatique de PyramidHead ; la lumière y varie faiblement.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH2_03_BLUE_CREEK_APTS"
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "Ondulations lentes contre les marches immergées ; fixer un niveau d’eau mesuré sur référence.",
+          "description": "Quelques rides gardent un niveau constant au fond des marches ; hauteur et cadence sont des réglages du versus, sans drainage de manche.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_03_BLUE_CREEK_APTS"
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -12538,10 +12581,12 @@
         },
         {
           "name": "Transition de manche proposée",
-          "description": "Sirène brève et déplacement de la brume au résultat ; départ du boss réservé à sa scène dédiée.",
+          "description": "Un reflet révèle les taches de l’enduit au-dessus du garde-corps ; aucune sirène, chute de plâtre ou transition de pièce.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_03_BLUE_CREEK_APTS"
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -12606,16 +12651,18 @@
       "source": "sh2",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH2_09_TOLUCA_PRISON"
+        "CL_SH2_09_TOLUCA_PRISON",
+        "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
       ],
-      "locationNote": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus.",
+      "locationNote": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "Les cellules et la cour participent au rituel des plaques.",
+          "description": "Le panneau frontal et son encadrement de bois restent intacts ; une faible lueur expose leurs logements sans placer les trois plaques.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH2_09_TOLUCA_PRISON"
+            "CL_SH2_09_TOLUCA_PRISON",
+            "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
@@ -12658,36 +12705,44 @@
       "source": "sh2",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH2_10_THE_LABYRINTH"
+        "CL_SH2_10_THE_LABYRINTH",
+        "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+        "EXT12_REF_LABYRINTH_ROOM_3_20261101"
       ],
-      "locationNote": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits.",
+      "locationNote": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "La rotation du cube modifie les passages.",
+          "description": "Le cube demeure sur son pied circulaire et sa table ; un reflet local ne commande aucune rotation du labyrinthe.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH2_10_THE_LABYRINTH"
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "Le cube tourne lentement dans un espace de fond sécurisé ; pas de modification du sol actif.",
+          "description": "Le cube à face abstraite conserve son orientation ; seule sa lumière varie. Aucune rotation automatique ou face source inventée.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_10_THE_LABYRINTH"
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Une barrière de fil se tend et se détend lorsque l’adversaire heurte la paroi.",
+          "description": "Un éclairage lent reste sur les panneaux perforés de la pièce photographiée ; aucun fil qui se tend après impact.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH2_10_THE_LABYRINTH"
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -13079,36 +13134,40 @@
         "CL_SH3_02_SHOPPING_CENTER",
         "EXT_SH3_MALL_BAKERY_20261025",
         "EXT_SH3_MALL_TONGS_VIEW_20261025",
-        "EXT_SH3_MALL_TONGS_MAP_20261025"
+        "EXT_SH3_MALL_TONGS_MAP_20261025",
+        "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
       ],
-      "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
+      "locationNote": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "Les couloirs sont séparés par vitrines et rideaux métalliques.",
+          "description": "Les lattes des stores restent en place ; le reflet chaud varie sans enseigne ou rideau de boutique ajouté.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH3_02_SHOPPING_CENTER"
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "Le rideau d’une boutique monte de quelques centimètres puis s’arrête, sans accès jouable.",
+          "description": "La table et ses petits condiments gardent leurs positions ; un reflet remplace le rideau métallique non situé dans ce café.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH3_02_SHOPPING_CENTER"
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Un choc au pied de la vitrine fait tourner un petit présentoir ; verre intact par défaut.",
+          "description": "Les deux chaises restent vides et stables ; leur ombre varie faiblement sans présentoir, verre brisé ou apparition.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH3_02_SHOPPING_CENTER"
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -13183,36 +13242,44 @@
       "source": "sh3",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH3_14_CHURCH"
+        "CL_SH3_14_CHURCH",
+        "EXT12_REF_CHURCH_ROOM_2_20261101",
+        "EXT12_REF_CHURCH_ROOM_3_20261101"
       ],
-      "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
+      "locationNote": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "La progression mène à la naissance incomplète du dieu.",
+          "description": "L’autel conserve son panneau de bois et sa niche centrale ; un reflet remplace toute naissance automatique du dieu.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH3_14_CHURCH"
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "Les flammes des cierges se couchent ensemble sans atteindre les combattants.",
+          "description": "Les flammes restent sur les cierges de la chapelle photographiée ; leur très faible variation est originale au versus, sans dégâts.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH3_14_CHURCH"
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Une vibration du pupitre fait tourner une seule page du livre, sans texte rituel inventé lisible.",
+          "description": "Une lueur douce traverse trois panneaux de verre coloré abstraits ; aucun livre dont une page tournerait sans référence.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH3_14_CHURCH"
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -13703,36 +13770,44 @@
       "source": "sh4",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH4_01_ROOM_302"
+        "CL_SH4_01_ROOM_302",
+        "EXT12_REF_ROOM_302_ROOM_2_20261101",
+        "EXT12_REF_ROOM_302_ROOM_3_20261101"
       ],
-      "locationNote": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive.",
+      "locationNote": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "Porte enchaînée et trou de la salle de bain structurent le lieu.",
+          "description": "La porte reste fermée sous ses chaînes ; les maillons reçoivent une faible variation de reflet sans ouverture automatique.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH4_01_ROOM_302"
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "La chaîne la plus basse oscille faiblement au bruit d’un pas extérieur.",
+          "description": "Le plafonnier rond photographié conserve sa place et une lumière douce ; aucune chaîne autonome qui pend depuis le plafond.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_01_ROOM_302"
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+          "description": "Le réfrigérateur, le carrelage et les placards restent fixes près de la porte ; un reflet remplace le trou de bain absent du cadrage.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_01_ROOM_302"
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -13807,36 +13882,40 @@
       "source": "sh4",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH4_04_WATER_PRISON_WORLD"
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
       ],
-      "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
+      "locationNote": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "Les étages pivotent pour aligner les trous des cellules.",
+          "description": "Le volant posé sur son piédestal reste immobile ; une lueur sur le métal ne déclenche aucune rotation des cellules.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH4_04_WATER_PRISON_WORLD"
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "La roue hydraulique tourne à vitesse lente visible dans une ouverture de fond.",
+          "description": "Les œilletons métalliques gardent leurs ouvertures sombres ; un reflet remplace la roueB2 située dans une autre pièce.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_04_WATER_PRISON_WORLD"
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Une poignée entraîne un segment de tour hors de l’aire de duel ; verrouillage sonore clair avant arrêt.",
+          "description": "L’ouverture circulaire et le haut de l’échelle restent derrière le plateau sec ; aucun mécanisme entraîné ni chute des combattants.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_04_WATER_PRISON_WORLD"
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
@@ -13859,36 +13938,44 @@
       "source": "sh4",
       "locationStatus": "lieu-documente",
       "referenceIds": [
-        "CL_SH4_06_APARTMENT_WORLD"
+        "CL_SH4_06_APARTMENT_WORLD",
+        "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+        "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
       ],
-      "locationNote": "South Ashfield Heights de SH4 vu depuis les couloirs et logements.",
+      "locationNote": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
-          "description": "La progression utilise les appartements et leur serrurerie.",
+          "description": "Le bureau reste à sa place avec des feuilles abstraites sans texte lisible ; le reflet ne résout aucune serrurerie.",
           "status": "motif-documente-a-capturer",
           "evidence": [
-            "CL_SH4_06_APARTMENT_WORLD"
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
           ],
           "captureStatus": "capture-a-relever",
           "timecode": ""
         },
         {
           "name": "Boucle d’ambiance proposée",
-          "description": "Une porte entrebâillée laisse osciller une mince bande de lumière au sol.",
+          "description": "La chaise vide reste devant le bureau ; son reflet varie sans porte entrouverte ou couloir transporté dans la pièce.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_06_APARTMENT_WORLD"
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""
         },
         {
           "name": "Interaction proposée",
-          "description": "Après impact de mur, une chaîne de porte résonne dans un appartement voisin.",
+          "description": "Les barreaux photographiés restent en arrière-plan ; aucune chaîne de porte résonnante ou arrivée de Walter.",
           "status": "adaptation-versus-proposee",
           "evidence": [
-            "CL_SH4_06_APARTMENT_WORLD"
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
           ],
           "captureStatus": "storyboard-a-valider",
           "timecode": ""

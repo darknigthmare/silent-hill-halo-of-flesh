@@ -14,11 +14,11 @@ const subjects=[
   ['sh2_mandarin_026','underGrateGrip','midwich_nightmare'],['sh2_flesh_lip_027','cageFootLift','sewer_resort'],
   ['sh2_abstract_daddy_028','organicFrameOcclusion','labyrinth'],['sh3_pendulum_039','rotatingShadow','shopping_mall'],
   ['sh3_leonard_wolf_048','waterSurfaceGrip','brookhaven_sh3'],['sh4_hummer_055','buzzingCameraPass','room_302'],
-  ['sh4_wall_man_056','wallSupportPull','labyrinth'],['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','hilltop_center'],
+  ['sh4_gum_head_old_type_057','unarmedFurnitureStruggle','hilltop_center'],
   ['sh1_incubator_018','blueTerminalExposure','nowhere'],['sh1_incubus_019','redSuspendedExposure','nowhere'],
   ['sh2_creeper_025','sh2LowShadowBite','woodside'],['sh3_god_050','incompleteBodyFireline','church'],
   ['origins_straight_jacket_074','closedTorsoLegRelease','alchemilla_origins'],['origins_ariel_078','tetheredDollKicks','sewer_resort'],
-  ['origins_memory_of_helen_grady_082','helenSuspendedWheel','sewer_resort'],['origins_memory_of_richard_grady_083','richardWallTentacles','labyrinth'],
+  ['origins_memory_of_helen_grady_082','helenSuspendedWheel','sewer_resort'],
   ['homecoming_lurker_085','lurkerLowClawFold','blue_creek'],['homecoming_smog_087','smogExposedExhalation','nightmare_hospital_hc'],
   ['bom_air_screamer_121','bomTalonsCircle','book_wood'],['bom_bogeyman_122','bomHammerStop','book_earth'],
   ['bom_butcher_123','bomCleaverPair','book_wood'],['bom_double_head_124','bomCirclingCharge','book_fire'],
@@ -49,6 +49,10 @@ const presentationBatches=[{id:'lot9',subjects:presentationSubjects},{id:'lot10'
   ['origins_remnant_077','cedar_grove'],['homecoming_curtis_ackers','underground_hc'],
   ['downpour_weeping_bat_105','centennial_building'],['downpour_prisoner_minion_brawler_108','overlook'],
   ['downpour_prisoner_minion_agile_109','overlook']
+]},{id:'lot12',subjects:[
+  ['downpour_anne_cunningham','overlook'],['sh4_ghost_victim_066','subway_world'],
+  ['bom_earth_guardian_142','book_earth'],['bom_steel_guardian_146','book_steel'],
+  ['bom_swarm_132','book_wood']
 ]}];
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'Each subject is selected through the real menu and launch button in local mode, with the explicit missing-art diagnostic enabled. No production PNG or contextual animation is created by this suite.',
@@ -70,6 +74,10 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'The Nurse is staged after activation as the projects playable scripted adaptation; these result contexts neither implement a light sensor nor copy Revelation sound response. Prepared cross-body arena matches are versus transpositions, not proof these characters meet in their original story rooms. Every new contextual image remains explicitly unproduced.',
   'Lot11 adds thirty presentation rows on Remnant, Curtis Ackers, Weeping Bat and the separate Downpour Brawler/Agile Prisoner dossiers. Remnant keeps its wire cage and shadow without new flesh or a light beam. Curtis requires the circular_saw category and is not given the chainsaw of Walter or Robbie; the neutral official render does not certify the saw model or grip. The Underground menu setting is a versus room pairing, not a reconstruction of Room 321.',
   'Weeping Bat remains framed at ground level: the documented wall/ceiling retreat is still awaiting real support and contextual images. The Prisoner family render does not identify either variant on its own. Their presentational intent neither certifies variant proportions nor creates martial arts, new minions or Juggernaut actions. Agile alone has a continuous two-support 90-tick authored exit; no original gait or source timing is claimed.',
+  'Lot12 owns thirty presentation-only rows on Anne Cunningham, the composite SH4 Old Ghost dossier and Vita Earth Guardian, Steel Guardian and Swarm. Anne retains her pistol and an authored two-support withdrawal, with no Juggernaut generation or spare/kill ending choice. The Old Ghost remains a composite production profile, persistent and visible after result suppression without a new canonical individual, wall traversal or sacred item.',
+  'The Vita Guardians enter already formed without assembled fragments, new blades, projectiles or reality changes. Swarm keeps its own small roach-like family rather than a Homecoming model. Its group offset and opacity are versus staging awaiting individual contextual images; they do not produce a native gait. Whole-body camera framing is inherited from the production actor renderer.',
+  'The reviewed Labyrinth Box of Faces rear panels establish no usable foreground wall. Wall Man and Origins Richard therefore exercise negative real-menu matches here; their stored timelines remain unit-tested only with an explicitly synthetic wall contract, outside this browser production proof.',
+  'The selected Woodside Room 208 no longer renders the legacy corridor bitmap. The same scene identity mismatch also prevents that inactive bitmap from granting a ceiling to Flesh Lip or Helen in the real-menu negative fixtures. A historical corridor bitmap contract is tested only in explicitly selected unit fixtures.',
   'All staging durations and offsets are authored versus adaptations. No original-game footage, source FPS, timecodes or physical controller fidelity are certified.'
 ]};
 let server,browser;
@@ -148,6 +156,8 @@ try{
   for(const [id,stageId,reason] of [
     ['sh3_leonard_wolf_048','midwich','Premier plan requis'],['sh2_flesh_lip_027','midwich','Appui de plafond'],
     ['origins_memory_of_helen_grady_082','midwich','Appui de plafond'],['origins_memory_of_richard_grady_083','old_silent_hill','Premier plan requis'],
+    ['sh4_wall_man_056','labyrinth','Premier plan requis'],['origins_memory_of_richard_grady_083','labyrinth','Premier plan requis'],
+    ['sh2_flesh_lip_027','woodside','Appui de plafond'],['origins_memory_of_helen_grady_082','woodside','Appui de plafond'],
     ['origins_ariel_078','cedar_grove','Appui de plafond'],
     ['bom_water_guardian_141','book_fire','Premier plan requis'],
     ['sh2_eddie_dombrowski_032','toluca_prison','Pièce exacte requise']
@@ -159,7 +169,7 @@ try{
     check(id+': unsupported place still preserves the first round',current.phase==='roundEnd'&&current.wins[0]===1&&!current.fatality,current);
     current=await advance(page,current.phaseTimer);current=await advance(page,current.phaseTimer);current=await page.evaluate(()=>__CINEMATIC_EXPANSION_QA__.knockout());
     check(id+': missing physical support yields the ordinary deciding KO with an explicit reason',current.phase==='roundEnd'&&current.wins[0]===2&&!current.fatality&&current.actors[0].fatalities===0&&current.cinematicBlock?.reason.includes(reason),current);
-    report.scenes[id+'@unsupported-'+stageId]=current;await shot(page,'unsupported-'+id);await page.close();
+    report.scenes[id+'@unsupported-'+stageId]=current;await shot(page,'unsupported-'+id+'-'+stageId);await page.close();
   }
   {
     const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
@@ -210,6 +220,10 @@ try{
     check(id+': '+batch.id+' real menu owns its exact presentation-only intro',current.phase==='intro'&&current.actors[0].id===id&&current.tracks[0]?.authored&&current.tracks[0].ownerId===id&&current.tracks[0].scopeNote&&current.tracks[0].key==='intro',current);
     if(batch.id==='lot11')check(id+': lot11 body and existing equipment belong to the selected work without a borrowed offensive action',current.actors[0].source===(id.startsWith('origins_')?'origins':id.startsWith('homecoming_')?'homecoming':'downpour')&&current.actors[0].weapon===(id==='homecoming_curtis_ackers'?'circular_saw':null)&&current.projectiles===0&&current.actors[0].fatalities===0,current);
     if(['origins_remnant_077','downpour_weeping_bat_105'].includes(id))check(id+': lot11 already framed body starts visible without a fabricated materialization or high support',current.tracks[0].staging.alpha===1&&current.tracks[0].staging.y===0,current);
+    if(batch.id==='lot12'){
+      check(id+': lot12 selected body and equipment are source-owned without added actors or attack effects',current.actors.length===2&&current.actors[0].source===(id.startsWith('downpour_')?'downpour':id.startsWith('sh4_')?'sh4':'bom')&&current.actors[0].weapon===(id==='downpour_anne_cunningham'?'pistol':null)&&current.projectiles===0&&current.actors[0].fatalities===0,current);
+      check(id+': lot12 already framed body remains visible without assembled fragments or new anatomy',current.tracks[0].staging.alpha===1&&current.tracks[0].staging.y===0,current);
+    }
     ownedContexts.add(id+':intro');current=await advance(page,25);if(winner===0)await shot(page,batch.id+'-'+id+'-intro');
     current=await advance(page,current.phaseTimer);current=await advance(page,80);
     check(id+': '+batch.id+' live idle has no injected action, projectile or fatality',current.phase==='fight'&&current.projectiles===0&&current.actors.every(a=>a.lastMove===null&&a.fatalities===0),current);
@@ -230,7 +244,7 @@ try{
     if(winner===0){
       check(id+': '+batch.id+' winner alone owns the exact outro',current.phase==='matchEnd'&&current.tracks[0]?.key==='outro'&&current.tracks[0].authored&&current.tracks[0].ownerId===id&&current.tracks[1]?.key==='loseMatch',current);
       ownedContexts.add(id+':outro');const physical=current.actors.map(a=>a.x);
-      if(['sh4_richard_braintree_victim_19','homecoming_swarm','shf_harai_katashiro_158','downpour_prisoner_minion_agile_109'].includes(id)){
+      if(['sh4_richard_braintree_victim_19','homecoming_swarm','shf_harai_katashiro_158','downpour_prisoner_minion_agile_109','downpour_anne_cunningham','bom_swarm_132'].includes(id)){
         check(id+': '+batch.id+' moving outro owns the full authored clock and keeps the result pending',current.outroPlaying&&current.resultHidden&&current.tracks[0].composedOutro&&current.tracks[0].stagingDuration===90,current);
         current=await advance(page,30);await page.click('#pauseBtn');const frozen=await scene(page);current=await advance(page,12);await page.waitForTimeout(650);
         check(id+': '+batch.id+' real pause freezes the moving exit and keeps result hidden beyond its reveal timer',current.paused&&current.frame===frozen.frame&&current.tracks[0].frame===frozen.tracks[0].frame&&current.outroPlaying&&await page.locator('#result').isHidden(),current);
@@ -238,9 +252,13 @@ try{
         if(id==='sh4_richard_braintree_victim_19')check(id+': '+batch.id+' actual Richard outro samples the short shift while physical coordinates stay unchanged',/after-shift/.test(current.tracks[0].staging.pose)&&Math.abs(current.tracks[0].staging.x)===43&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
         if(id==='shf_harai_katashiro_158')check(id+': '+batch.id+' actual Harai exit keeps the second continuous blade support and physical coordinates',/right-blade-support$/.test(current.tracks[0].staging.pose)&&Math.abs(current.tracks[0].staging.x)===20&&current.tracks[0].staging.y===0&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
         if(id==='downpour_prisoner_minion_agile_109')check(id+': '+batch.id+' actual Agile exit is inside its continuous second ground support with unchanged physical bodies',/front-ground-support$/.test(current.tracks[0].staging.pose)&&Math.abs(current.tracks[0].staging.x)>8&&Math.abs(current.tracks[0].staging.x)<20&&current.tracks[0].staging.y===0&&current.tracks[0].staging.alpha===1&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
+        if(id==='downpour_anne_cunningham')check(id+': lot12 actual human withdrawal is inside its continuous second ground support, pistol retained and no cells spawned',/front-foot-ground-support$/.test(current.tracks[0].staging.pose)&&Math.abs(current.tracks[0].staging.x)>9&&Math.abs(current.tracks[0].staging.x)<21&&current.tracks[0].staging.y===0&&current.tracks[0].staging.alpha===1&&current.actors[0].weapon==='pistol'&&current.actors.length===2&&current.projectiles===0&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
+        if(id==='bom_swarm_132')check(id+': lot12 Vita group departure has its own roach-family intent and keeps physical bodies unchanged',/^bom-swarm-/.test(current.tracks[0].poseIntent)&&Math.abs(current.tracks[0].staging.x)>0&&Math.abs(current.tracks[0].staging.x)<31&&current.tracks[0].staging.y===0&&current.actors.length===2&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
         current=await advance(page,90-current.tracks[0].frame+1);await page.waitForSelector('#result:not(.hidden)');
         check(id+': '+batch.id+' result appears only after the moving outro completes',!current.outroPlaying&&current.tracks[0].frame===89&&JSON.stringify(current.actors.map(a=>a.x))===JSON.stringify(physical),current);
         if(id==='downpour_prisoner_minion_agile_109')check(id+': '+batch.id+' completed ground withdrawal settles at its authored offset without a jump or fade',Math.abs(current.tracks[0].staging.x)===20&&current.tracks[0].staging.y===0&&current.tracks[0].staging.alpha===1,current);
+        if(id==='downpour_anne_cunningham')check(id+': lot12 completed two-support exit settles without firing or choosing a story ending',Math.abs(current.tracks[0].staging.x)===21&&current.tracks[0].staging.y===0&&current.tracks[0].staging.alpha===1&&current.actors[0].weapon==='pistol'&&current.projectiles===0,current);
+        if(id==='bom_swarm_132')check(id+': lot12 group exit ends with authored attenuation without extra insects or native walk claims',Math.abs(current.tracks[0].staging.x)===31&&current.tracks[0].staging.y===0&&current.tracks[0].staging.alpha===0&&current.actors.length===2,current);
       }else{current=await advance(page,30);await shot(page,batch.id+'-'+id+'-outro');}
     }else check(id+': '+batch.id+' loser holds its own final context while only the other actor exits',current.phase==='matchEnd'&&current.tracks[0]?.key==='loseMatch'&&current.tracks[1]?.key==='outro',current);
     report.scenes[id+'@'+batch.id+'-'+(winner===0?'win':'loss')]=current;await page.close();

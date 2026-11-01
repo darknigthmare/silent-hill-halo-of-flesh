@@ -13028,7 +13028,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Depuis son ancrage mural, griffe ou frappe de ses grands bras et renverse Henry ; le support ne devient pas une locomotion libre. Le bestiaire SH4 décrit des griffes qui renversent Henry. Le corps reste lié à son support mural ; les contacts du versus doivent être localisés aux membres sortant du mur, sans course autonome, vague d’énergie ni rectangle de dégâts couvrant toute sa silhouette.",
+          "description": "La page Enemies décrit le torse et les grandes mains griffues sortant du mur, puis des supports mobiles verticaux dans certaines zones de SH4. Les mains frappent et renversent Henry. La vue de profil ne fournit pas un corps caché derrière le support : la mise en garde 2D garde ce torse ancré, sans inventer jambes, marche libre ou anatomie dorsale. Les amplitudes et zones du prototype restent composées.",
           "evidence": [
             "CL_SH4_ENEMIES"
           ],
@@ -14991,14 +14991,19 @@
       "identityStatus": "famille-canonique-composite",
       "identityNote": "Profil collectif de production pour les fantômes anciens ; pas un 22e individu ajouté au canon.",
       "referenceIds": [
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "CL_SH4_VICTIMS",
+        "EXT12_SH4_VICTIM_01_MODEL_20261101",
+        "EXT12_SH4_VICTIM_01_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Aura",
-          "description": "Les Ghosts infligent de faibles dégâts simplement par proximité, indépendamment d’un coup ou d’une prise ; le Saint Medallion neutralise ce danger de proximité.",
+          "description": "Dans SH4, tous les Ghosts infligent des dégâts de proximité distincts d’une frappe ; Saint Medallion supprime ce danger tout en les ralentissant. Le modèle Victim 01 et sa vue identifiée Jimmy Stone servent à contrôler une silhouette flottante, sans constituer un individu collectif canonique ni transférer ses vêtements aux cinq autres anciens Ghosts. Rayon, cadence et rendu d’aura du versus ne sont pas mesurés.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_01_MODEL_20261101",
+            "EXT12_SH4_VICTIM_01_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -15006,9 +15011,11 @@
         },
         {
           "name": "Prise",
-          "description": "Agrippe et frappe.",
+          "description": "Le guide décrit pour les anciens Ghosts des saisies, coups, morsures et frappes lorsqu’une arme propre est présente. Cette liste commune ne prouve pas qu’un seul individu utilise tous ces gestes. Leurs jambes restent pendantes en flottement ; aucune garde de boxeur, impulsion de course ou traversée de mur filmée n’est déduite des vues fixes. Une prise exacte et ses appuis restent à capturer par victime.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_01_MODEL_20261101",
+            "EXT12_SH4_VICTIM_01_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -15039,7 +15046,7 @@
         },
         "intro": {
           "name": "Entrée proposée — Ghost — Victim",
-          "description": "Corps qui traverse un mur puis se stabilise à faible hauteur.",
+          "description": "Le Ghost composite est déjà présent et glisse légèrement dans le cadrage de ses propres contours ; aucune traversée de mur n’est montrée sans image et support vérifiés.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15047,7 +15054,7 @@
         },
         "outro": {
           "name": "Sortie proposée — Ghost — Victim",
-          "description": "Retour dans le mur avec décroissance de l’aura.",
+          "description": "Le Ghost conserve son propre contour dans le cadrage final ; le retour à travers un mur et la décroissance d’une aura native restent à produire sur références contextualisées.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15055,7 +15062,7 @@
         },
         "winRound1": {
           "name": "Victoire manche 1 proposée — Ghost — Victim",
-          "description": "Flotter immobile au-dessus du sol.",
+          "description": "Le Ghost garde sa suspension et son corps propre ; aucun individu supplémentaire, coup, aura offensive nouvelle ou épée n’est ajouté par la pose de résultat.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15063,7 +15070,7 @@
         },
         "loseRound1": {
           "name": "Défaite manche 1 proposée — Ghost — Victim",
-          "description": "Chute puis retour en lévitation ; aucune nouvelle vie gagnée mécaniquement.",
+          "description": "La présence du Ghost est atténuée brièvement puis revient sans disparition totale ; la reprise de manche ne lui donne aucune vie ou immunité nouvelle.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15071,7 +15078,7 @@
         },
         "winMatch": {
           "name": "Victoire du match proposée — Ghost — Victim",
-          "description": "Retraverser le mur et laisser le décor calme.",
+          "description": "Le Ghost garde une présence flottante contenue après le résultat ; aucune personne nommée, traversée de mur ou suppression définitive n’est créée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15079,7 +15086,7 @@
         },
         "loseMatch": {
           "name": "Défaite du match proposée — Ghost — Victim",
-          "description": "Confinement plutôt que mort ; neutralisation via épée d’obéissance seulement si contexte et accessoire présents.",
+          "description": "Le Ghost reste visible sous une atténuation de résultat ; aucune mort définitive, épée d’obéissance ou chandelle sacrée non présente n’est inventée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "CL_SH4_ENEMIES"
@@ -15366,7 +15373,7 @@
       "accent": "#beb6aa",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "knife",
+      "weapon": "trowel",
       "head": null,
       "limbs": null,
       "aura": null
@@ -15388,15 +15395,19 @@
       "identityNote": "Steve Garland = victime 04/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_04_MODEL_20261101",
+        "EXT12_SH4_VICTIM_04_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Victim Files identifie Steve Garland comme la victime 04 ; Enemies montre son torse adulte dénudé, sa salopette en denim et sa truelle. La silhouette flottante et les faibles dégâts de proximité renvoient à la famille Ghost ; ni la biographie de gérant d’animalerie ni son meurtre par arme à feu ne lui confèrent une invocation animale ou une mitraillette.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_04_MODEL_20261101",
+            "EXT12_SH4_VICTIM_04_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -15404,9 +15415,11 @@
         },
         {
           "name": "Petite pelle",
-          "description": "Utilise une truelle en arme.",
+          "description": "Enemies indique explicitement que la victime 04 porte une truelle comme arme, et les deux vues fixes identifiées montrent le petit outil dans sa main. Il faut conserver lame, poignée et main entière dans le cadrage. Aucun modèle de pelle longue, marteau, fusil ou trajectoire d’attaque n’est établi par cette image ; le mot petite pelle du dossier n’autorise pas de changer l’équipement.",
           "evidence": [
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_04_MODEL_20261101",
+            "EXT12_SH4_VICTIM_04_FILE_20261101"
           ],
           "status": "documente-secondaire",
           "captureStatus": "capture-a-relever",
@@ -15597,15 +15610,19 @@
       "identityNote": "Eric Walsh = victime 10/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_10_MODEL_20261101",
+        "EXT12_SH4_VICTIM_10_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Eric Walsh est identifié comme victime 10 par Victim Files ; Enemies le décrit en veste brune et jean et le montre traversé d’une Sword of Obedience. Le guide permet de retirer cette épée trouvée sur lui : elle n’est pas une arme tenue et ne devient pas un pouvoir propre. Une pose libre après retrait doit être explicitement reconstruite ou rester à produire ; aura et flottement héritent seulement de Ghost — Victim.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_10_MODEL_20261101",
+            "EXT12_SH4_VICTIM_10_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -15796,15 +15813,19 @@
       "identityNote": "Peter Walls = victime 12/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_12_MODEL_20261101",
+        "EXT12_SH4_VICTIM_12_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Peter Walls, victime 12, est décrit comme lycéen mineur dans Victim Files. Enemies et les vues attribuées montrent bonnet, veste de sport brune à bandes claires sur les bras et pantalon jaune. Ces traits distinguent son modèle des autres Ghosts ; ils ne prouvent ni arme individuelle, ni téléportation de Richard, ni roulade d’Andrew. La fiche hérite du flottement et de la proximité de la famille, avec poses spécifiques encore à capturer.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_12_MODEL_20261101",
+            "EXT12_SH4_VICTIM_12_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -15995,15 +16016,19 @@
       "identityNote": "Sharon Blake = victime 13/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_13_MODEL_20261101",
+        "EXT12_SH4_VICTIM_13_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "La victime 13 est Sharon Blake selon Victim Files ; les vues Enemies et dossier conservent chapeau sombre, blouse et longue jupe avec les pieds flottants entièrement visibles. Son histoire de noyade n’ajoute pas d’eau offensive ni de fantôme générique en robe blanche. Les gestes communs renvoient à Ghost — Victim, sans preuve d’une morsure ou d’une prise individuelle par cette seule vue fixe.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_13_MODEL_20261101",
+            "EXT12_SH4_VICTIM_13_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -16194,15 +16219,19 @@
       "identityNote": "Toby Archbolt = victime 14/21. Gestes généraux hérités ; pas de technique individuelle supplémentaire certifiée.",
       "referenceIds": [
         "CL_SH4_VICTIMS",
-        "CL_SH4_ENEMIES"
+        "CL_SH4_ENEMIES",
+        "EXT12_SH4_VICTIM_14_MODEL_20261101",
+        "EXT12_SH4_VICTIM_14_FILE_20261101"
       ],
       "observedMoves": [
         {
           "name": "Renvoi au jeu de gestes de base",
-          "description": "Consulter sh4_ghost_victim_066, y compris ses faibles dégâts passifs de proximité communs aux Ghosts ; seules les différences explicites de cette fiche sont à produire.",
+          "description": "Victim Files identifie Toby Archbolt comme victime 14 et prêtre adulte. Enemies décrit chemise rouge, gilet noir et pantalon brun clair ; la vue assombrie ne doit pas devenir un costume emprunté à Jimmy ou Eric. Aucune arme, invocation ou attaque liée à la profession n’est attestée. Flottement et proximité sont des traits de la famille Ghost, tandis que les poses d’attaque propres restent à relever.",
           "evidence": [
             "CL_SH4_VICTIMS",
-            "CL_SH4_ENEMIES"
+            "CL_SH4_ENEMIES",
+            "EXT12_SH4_VICTIM_14_MODEL_20261101",
+            "EXT12_SH4_VICTIM_14_FILE_20261101"
           ],
           "status": "heritage-documente",
           "captureStatus": "capture-variante-a-relever",
@@ -17953,7 +17982,7 @@
     "archetype": "boss",
     "aiProfile": "boss",
     "phaseStyle": "giant",
-    "stageId": "water_prison",
+    "stageId": "building_world",
     "signature": "Visages du puits",
     "trait": "nightmareArmor",
     "affliction": "dread",
@@ -17972,7 +18001,7 @@
           "crush",
           "dust"
         ],
-        "canonicalBasis": "Forme finale du Twin Victim, attaques lourdes et pulsations.",
+        "canonicalBasis": "Maître parmi douze Giant Wall Men sous Building World lors de la seconde visite ; corps à quatre bras enchâssé dans son cadre, distinct du Twin Victim.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       },
@@ -17989,12 +18018,12 @@
           "otherworld",
           "dust"
         ],
-        "canonicalBasis": "Forme finale du Twin Victim, attaques lourdes et pulsations.",
+        "canonicalBasis": "Maître parmi douze Giant Wall Men sous Building World lors de la seconde visite ; corps à quatre bras enchâssé dans son cadre, distinct du Twin Victim.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 4
       }
     ],
-    "canonicalBehavior": "Forme finale du Twin Victim, attaques lourdes et pulsations.",
+    "canonicalBehavior": "Maître parmi douze Giant Wall Men sous Building World lors de la seconde visite ; corps à quatre bras enchâssé dans son cadre, distinct du Twin Victim.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL 4: THE ROOM.",
     "catalogueStatus": "canon-combatant",
@@ -18037,7 +18066,7 @@
       "observedMoves": [
         {
           "name": "Bras",
-          "description": "Le guide des boss distingue un balayage des bras qui peut renverser Henry et un heurt de tête rapproché, souvent après la descente d’un Wall Man. Ces contacts partent de son emplacement mural ; aucune poursuite libre, téléportation ou bras indépendant n’est déduit de la vue partielle.",
+          "description": "Le guide Bosses distingue deux attaques des Giant Wall Men : un balayage des bras qui renverse Henry et un coup de tête souvent après la descente du support. Cette ligne Bras désigne les membres réellement sortis du cadre, avec contact localisé ; elle ne transforme pas la paroi ou les douze supports en grande zone de dégâts. Portée, hauteur et durée restent des paramètres versus.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -18050,7 +18079,7 @@
         },
         {
           "name": "Leurres",
-          "description": "Le guide décrit douze grands Wall Men dans la salle : onze réagissent normalement à leur propre impact, tandis que frapper le vrai corps fait sursauter tous les Wall Men. La photo n’en cadre qu’une partie. Réaction collective ne signifie pas douze acteurs jouables, douze vies partagées ou duplication spontanée d’un corps du versus.",
+          "description": "La rencontre comprend douze grands Wall Men : onze réagissent seuls, tandis que frapper le vrai fait réagir l’ensemble, lui compris. Il s’agit d’identifier un maître déjà présent, pas de créer onze corps par invocation pendant une attaque. Une image de la salle n’atteste ni chaque côté caché des modèles ni une multiplication de sprites en combat 2D.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -18063,7 +18092,7 @@
         },
         {
           "name": "Rail",
-          "description": "Les Wall Men montent et redescendent dans leurs emplacements, ce qui peut soustraire leur corps aux coups puis le remettre à portée. Le mot Rail du catalogue désigne cette contrainte verticale ; la vue partielle et le guide ne mesurent pas une mécanique de rail, sa course ou sa vitesse. Aucun déplacement horizontal libre ne leur est attribué.",
+          "description": "Le guide indique que les grands Wall Men descendent puis remontent hors de portée ; les bras et le torse restent attachés à leurs supports. Les douze rails appartiennent à la rencontre précise du Building World. Un déplacement de hauteur du prototype est une transposition de ce support, sans marche, bond libre, nouvelle jambe ou géométrie arrière inventée.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -18077,7 +18106,7 @@
         },
         {
           "name": "Cible réelle",
-          "description": "Pour repérer la cible réelle, Henry teste les corps un à un : le vrai Wall Man provoque le sursaut de l’ensemble quand il est frappé. Le guide décrit ensuite tous les corps immobiles et la porte déverrouillée à la fin. Cette progression de puzzle reste distincte d’un simple seuil de santé ou d’une animation de victoire du combattant unique.",
+          "description": "Le véritable Wall Man se reconnaît à la réaction simultanée des douze quand il est frappé ; sa défaite rend ensuite les corps immobiles et déverrouille la porte de la scène. Cette règle de puzzle ne prouve pas une invulnérabilité générique dans tous les lieux ni une mort de tous les Ghosts. La pose de résultat conserve son ancrage, et les conditions versus restent distinctes du scénario SH4.",
           "evidence": [
             "CL_ONE_TRUTH",
             "EXT10_SH4_BOSSES_20261026",
@@ -19113,7 +19142,7 @@
       "observedMoves": [
         {
           "name": "Attaque à la seringue",
-          "description": "Le bestiaire Origins décrit une Nurse sans visage qui erre dans Alchemilla et Cedar Grove et attaque à la seringue. L’illustration de cette œuvre sert à contrôler sa tenue, ses mains et l’outil ; elle ne transforme pas cette arme en scalpel de Homecoming, ne mesure pas l’allonge ni les phases d’une piqûre et ne prouve aucun mouvement original1:1.",
+          "description": "Le bestiaire Origins décrit une infirmière au visage absent qui attaque avec une seringue. Les vues PSP de l’uniforme, de la main et de la seringue distinguent ce sujet du couteau Homecoming et du tuyau SH2. Les cinq commandes spéciales du prototype déclinent un contact de seringue local : elles ne constituent pas cinq gestes natifs, ni une injection certifiée de dos, à distance ou à travers une cible au sol. Les durées, doses et dégâts restent versus.",
           "evidence": [
             "EXT01",
             "EXT9_REF_ORIGINS_NURSE_20261026"
@@ -21188,7 +21217,7 @@
       "observedMoves": [
         {
           "name": "Griffure",
-          "description": "Le bestiaire Homecoming décrit un Lurker dissimulé dans l’eau ou les ouvertures sombres qui frappe avec ses griffes. L’illustration de cette œuvre contraint ses appuis bas et ses membres griffus ; elle n’autorise ni griffes surnuméraires, garde humaine, téléportation depuis toute flaque ni mesure originale de l’attaque.",
+          "description": "Dans Homecoming, le Lurker se cache dans l’eau ou les ouvertures sombres et frappe avec ses griffes naturelles. La garde 2D conserve son corps bas et ses membres propres ; la zone de contact doit suivre les extrémités antérieures, sans frapper derrière le dos, à travers le corps entier ni ajouter une lame tenue. Les cinq commandes du prototype sont des variations composées sur ce geste, avec portée et cadence non mesurées.",
           "evidence": [
             "EXT04",
             "HC_ENEMIES_20261023",
@@ -21201,7 +21230,7 @@
         },
         {
           "name": "Bond griffes ouvertes",
-          "description": "Le bestiaire Homecoming distingue un bond du Lurker sur Alex qui le renverse, avec possibilité de l’esquiver ou de le contrer en l’air au tuyau. Ce contact corporel est distinct d’un tir ; courbe, hauteur, portée et fenêtre de contre du prototype restent des réglages versus, pas des frames mesurées sur cette image fixe.",
+          "description": "Le bestiaire distingue le bond du Lurker sur Alex qui le renverse et peut être esquivé ou contré en l’air au tuyau. Le renversement vient d’un contact réel du corps et des griffes, sans projectile ni dégât à l’atterrissage hors cible. Arc, hauteur et fenêtres des commandes versus restent composés ; une capture complète doit encore confirmer les appuis et poses successives.",
           "evidence": [
             "EXT04",
             "HC_ENEMIES_20261023",
@@ -21395,7 +21424,7 @@
       "observedMoves": [
         {
           "name": "Morsure",
-          "description": "Le bestiaire Homecoming décrit le Feral comme une créature canine rapide qui peut se jeter sur Alex et tenter de lui déchirer la gorge. Sa silhouette, ses quatre appuis et sa gueule doivent provenir du Feral de cette œuvre, sans recevoir le crâne de Double Head ou le museau de Wormhead. La morsure, ses contacts et son timing restent à relever.",
+          "description": "Le Feral Homecoming est décrit comme une créature canine rapide qui tente de déchirer la gorge après avoir sauté sur Alex. Les attaques légères et lourdes du prototype localisent la morsure près de la gueule, avec quatre membres conservés dans l’image entière ; les pattes arrière, l’ombre ou un simple rapprochement n’ajoutent pas un contact. Aucun coup de poing humain ou morsure omnidirectionnelle n’est attesté.",
           "evidence": [
             "EXT04",
             "HC_ENEMIES_20261023",
@@ -21408,7 +21437,7 @@
         },
         {
           "name": "Bond",
-          "description": "Le bond du Feral décrit dans Homecoming renverse Alex et précède une attaque à la gorge. Le modèle de référence conserve le corps canin entier, les pattes et les extrémités dans le cadrage. Une image fixe ne donne ni arc, vitesse, point d’appui ni durée de saisie ; aucun vol soutenu ou projectile de feu n’est inféré.",
+          "description": "Le bond du Feral documenté renverse Alex puis prépare une attaque à la gorge. Un petit déplacement avant d’une commande légère ou lourde du prototype reste un réglage versus, sans certifier la trajectoire complète de ce bond original. Les cinq commandes ne doivent ni multiplier les contacts pour une seule morsure, ni donner au Feral un vol, une lame, du feu ou la tête d’un autre chien de Silent Hill.",
           "evidence": [
             "EXT04",
             "HC_ENEMIES_20261023",
@@ -21811,7 +21840,7 @@
       "observedMoves": [
         {
           "name": "Frappe des membres-lames",
-          "description": "Dans Homecoming, le bestiaire décrit des attaques par les grandes lames naturelles du Needler et une saisie avec ses pattes avant. L’illustration contrôle tous ses appuis et appendices : il ne tient pas des épées avec des mains humaines. Frappes, portée des lames et articulation de la prise restent à relever sur des captures exactes.",
+          "description": "Le bestiaire Homecoming décrit les énormes membres-lames qui peuvent renverser Alex et une saisie distincte avec les pattes avant. Le Needler n’empoigne pas des épées : le corps entier garde ses appendices naturels. Un seul balayage composé ne justifie pas trois impacts gratuits ou une hitbox sur toute la silhouette ; les contacts des cinq commandes versus restent localisés, et aucun timing source n’est mesuré.",
           "evidence": [
             "HC_ENEMIES_20261023",
             "EXT11_REF_HC_NEEDLER_20261028"
@@ -21823,7 +21852,7 @@
         },
         {
           "name": "Blocage frontal",
-          "description": "Le bestiaire Homecoming précise que le Needler bloque les attaques frontales, y compris les tirs, alors que son dos devient vulnérable après une esquive. Ce comportement défensif ne prouve ni invincibilité totale ni résistance des arrières ou du corps au sol. La posture de blocage doit garder les membres-lames réels et les paramètres versus restent distincts.",
+          "description": "Le Needler bloque les attaques frontales, tirs compris, et devient vulnérable dans le dos après esquive selon le bestiaire. Cette défense n’autorise pas des dégâts offensifs au dos ou en hauteur d’une cible sans contact, ni une invincibilité de tous côtés. Le garde-fou des commandes versus doit rester distinct des animations de blocage et de saisie encore à capturer sur ce modèle.",
           "evidence": [
             "HC_ENEMIES_20261023",
             "EXT06",
@@ -22667,14 +22696,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Homecoming; pas de tuyau SH2 ni seringue Origins.",
       "referenceIds": [
-        "EXT04"
+        "EXT04",
+        "HC_ENEMIES_20261023"
       ],
       "observedMoves": [
         {
           "name": "Scalpel bref",
-          "description": "Scalpel bref",
+          "description": "Le bestiaire Homecoming parle de couteaux et de combos, sans nommer séparément un coup de scalpel bref. Le scalpel déjà choisi pour le modèle du projet reste à comparer aux plans exacts ; cette ligne conserve son intitulé sans canoniser l’outil ou le timing. Le contact 2D de l’arme est rapproché, sans seringue Origins, tuyau SH2 ou attaque arrière à travers le buste.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -22683,9 +22714,10 @@
         },
         {
           "name": "Double frappe",
-          "description": "Double frappe",
+          "description": "La page Enemies Homecoming atteste diverses combinaisons de lames, mais ne mesure pas le nombre ou l’espacement de cette Double frappe du catalogue. La commande du prototype reste une adaptation à contacts vérifiables, sans impacts additionnels automatiques sur un seul geste. Les deux mains, l’arme et les chaussures doivent rester dans le cadrage de chaque pose ; un idle fixe ne valide pas un combo animé.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -22694,9 +22726,10 @@
         },
         {
           "name": "Abattement vertical",
-          "description": "Abattement vertical",
+          "description": "L’abattement vertical est conservé comme proposition de geste issue des combos de couteau décrits pour Nurse Homecoming. La page ne fournit ni angle exact, séquence de frames ou portée de ce coup précis. Les réglages versus gardent l’attaque près de la main armée et du corps adulte, sans frappe sur toute la hauteur de l’écran ni déclenchement d’un pouvoir lié à la lumière ; la réaction à la lampe est un comportement séparé.",
           "evidence": [
-            "EXT04"
+            "EXT04",
+            "HC_ENEMIES_20261023"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -23498,14 +23531,16 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Phases suspendue/rampante; ne pas marcher debout.",
       "referenceIds": [
-        "EXT05"
+        "EXT05",
+        "EXT06"
       ],
       "observedMoves": [
         {
           "name": "Poings massifs",
-          "description": "Poings massifs",
+          "description": "Le guide Homecoming décrit les longs bras de Sepulcher, ses poings frappant le sol et les débris de verre dans la première phase suspendue. Après la chute, un balayage peut laisser un bras coincé au sol et exposer la tête. Une pose entière doit garder les propres bras et supports de la phase choisie, sans jambes de marche ou transfert automatique des livres, sacs et verre vers toutes les arènes.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -23514,9 +23549,10 @@
         },
         {
           "name": "Transition suspendu vers sol",
-          "description": "Transition suspendu vers sol",
+          "description": "La destruction des quatre sacs suspendus fait tomber Sepulcher ; la seconde phase utilise ses bras au sol et ne revient pas spontanément à la suspension. Une vue fixe d’une seule phase ne permet pas d’inventer le corps masqué ou le mouvement complet de transition. La mise en garde 2D doit nommer sa phase, conserver les attaches attestées et distinguer supports de la créature et décor de Grand Hotel.",
           "evidence": [
-            "EXT05"
+            "EXT05",
+            "EXT06"
           ],
           "status": "documente-secondaire",
           "animationMeasured": false,
@@ -23921,7 +23957,7 @@
       "observedMoves": [
         {
           "name": "Plafond",
-          "description": "Dans sa seconde phase rapide et rampante, Scarlet se cache dans l’obscurité avant de bondir sur Alex ; l’appui exact au plafond et les poses doivent être relevés dans Homecoming.",
+          "description": "Le guide Homecoming sépare Scarlet seconde phase, rapide et rampante après l’ouverture de son dos, de la forme debout en porcelaine. Il décrit sa disparition dans l’obscurité et son attaque depuis le plafond. Ce support doit réellement exister et être identifié dans la scène ; la pose 2D au sol ne lui ajoute ni plafond universel, appendices d’araignée supplémentaires ni carapace de la première forme.",
           "evidence": [
             "EXT06"
           ],
@@ -23932,7 +23968,7 @@
         },
         {
           "name": "Bond",
-          "description": "Scarlet bondit sur Alex depuis l’obscurité pendant la seconde phase ; le guide conseille une esquive en posture de combat, sans donner de durée mesurée.",
+          "description": "La seconde forme de Scarlet bondit sur Alex ; le guide recommande de rester en posture de combat et d’esquiver. Un bond composé au sol dans le versus ne certifie pas cette attaque depuis le plafond. Le contact reste un heurt ou une saisie rapprochée de son propre corps, sans projectile, zone de dégâts arrière ou morsure canine ; trajectoire et nombre de frames restent à relever.",
           "evidence": [
             "EXT06"
           ],
@@ -23943,7 +23979,7 @@
         },
         {
           "name": "Echec du bond",
-          "description": "Si Alex évite ce bond, il peut atteindre le dos de Scarlet et déclencher une attaque contextuelle infligeant de gros dégâts. Le bonus, la fenêtre d’exposition et l’entrée de commande du prototype sont une transposition versus, pas un QTE ou un timing copié du jeu.",
+          "description": "Après l’esquive réussie du bond, Alex peut passer dans le dos de Scarlet et déclencher l’attaque contextuelle ; s’il est touché, il doit d’abord se libérer. La vulnérabilité arrière liée au raté est distincte d’un bonus automatique pour toute frappe éloignée. Le prototype doit reconnaître le geste raté puis une cible réellement dans le dos et à portée ; fenêtre, multiplicateur et commande restent des règles versus.",
           "evidence": [
             "EXT06"
           ],
@@ -24341,7 +24377,7 @@
       "observedMoves": [
         {
           "name": "Frappe lourde",
-          "description": "En première phase, Amnion balance une patte avant vers Alex ; le guide recommande d’observer la levée d’une ou des deux pattes avant pour esquiver. La qualification lourde correspond au catalogue, sans poids, cadence ou dégâts source mesurés.",
+          "description": "Le guide Homecoming nomme en première phase une frappe de la patte avant d’Amnion et invite à observer la levée d’une ou des deux pattes pour esquiver. Ses pattes mécaniques propres et leur liaison au torse suspendu doivent rester visibles dans une pose entière ; aucune machine de la pièce précédente ne remplace son rig. Le mot lourde du catalogue ne fournit ni poids, rythme, dégâts ou animation source mesurée.",
           "evidence": [
             "EXT05",
             "EXT06"
@@ -24353,7 +24389,7 @@
         },
         {
           "name": "Frappe rapide",
-          "description": "Même famille de coups des pattes avant documentée pour la première phase ; aucune différence de vitesse chiffrée entre cette variante rapide du catalogue et la frappe lourde n’est établie par EXT06.",
+          "description": "La frappe rapide du catalogue renvoie à la même famille de mouvements des pattes avant décrite pour la première phase ; aucune comparaison de vitesse chiffrée n’est fournie. Le changement de posture et les deux pattes coincées au sol sont explicitement situés en seconde phase et ne doivent pas migrer ici. Une vue d’Amnion ne certifie ni son corps caché, ni un nombre d’appuis inventé, ni les articulations d’une phase exposée.",
           "evidence": [
             "EXT05",
             "EXT06"
@@ -28513,7 +28549,7 @@
         },
         "intro": {
           "name": "Anne Cunningham — entrée en scène",
-          "description": "Garde la cible en joue depuis l’autre côté de l’espace carcéral.",
+          "description": "Anne est déjà debout, corps entier et pistolet conservés, dans une distance de garde composée pour le versus ; aucune cellule, cible Bogeyman ou prise exacte non mesurée n’est reconstruite.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -28521,7 +28557,7 @@
         },
         "outro": {
           "name": "Anne Cunningham — sortie du plan",
-          "description": "Après validation du résultat : Anne Cunningham regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Anne recule par deux transferts d’appui continus, pistolet conservé et corps cadré ; sortie de résultat composée pour le versus, sans tir, téléportation ou réapparition de cellule.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -28529,7 +28565,7 @@
         },
         "winRound1": {
           "name": "Avantage de première manche",
-          "description": "Anne Cunningham stabilise ses appuis et réoriente sa silhouette vers la cible; pause brève avant reprise.",
+          "description": "Anne conserve son pistolet et ses appuis, orientée vers la cible ; aucune munition, frappe, ouverture de cellule ou prise de marteau n’est déclenchée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -28537,7 +28573,7 @@
         },
         "loseRound1": {
           "name": "Défaite de première manche — reprise possible",
-          "description": "Anne Cunningham cède sur un appui, baisse le buste puis se relève lentement; conserver accessoires et silhouette.",
+          "description": "Anne cède brièvement sur un appui puis revient à son emplacement initial avec le pistolet conservé ; cette reprise de manche ne choisit aucune fin narrative.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -28545,7 +28581,7 @@
         },
         "winMatch": {
           "name": "Victoire finale",
-          "description": "Anne Cunningham regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Anne relâche la pression après le résultat en conservant son arme de service ; ni Juggernaut ni effet du Boogeyman n’est ajouté.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -28553,7 +28589,7 @@
         },
         "loseMatch": {
           "name": "Défaite finale",
-          "description": "Les appuis d’Anne Cunningham cèdent; le corps reste au sol avec ses accessoires dans une pose finale distincte du recul de manche.",
+          "description": "Anne reste dans son propre contexte humain de défaite finale avec son pistolet ; la pose est à illustrer et ne tranche pas entre épargner ou tuer du scénario.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT66"
@@ -30591,7 +30627,7 @@
           "strike",
           "collapse"
         ],
-        "canonicalBasis": "Retour du Gum Head, parfois armé, dans les vagues de The Arcade.",
+        "canonicalBasis": "Gum Head aux mains nues dans les vues de The Arcade ; les armes de ses variantes SH4 ne lui sont pas attribuées automatiquement.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -30608,12 +30644,12 @@
           "otherworld",
           "collapse"
         ],
-        "canonicalBasis": "Retour du Gum Head, parfois armé, dans les vagues de The Arcade.",
+        "canonicalBasis": "Gum Head aux mains nues dans les vues de The Arcade ; les armes de ses variantes SH4 ne lui sont pas attribuées automatiquement.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Retour du Gum Head, parfois armé, dans les vagues de The Arcade.",
+    "canonicalBehavior": "Gum Head aux mains nues dans les vues de The Arcade ; les armes de ses variantes SH4 ne lui sont pas attribuées automatiquement.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL: THE ARCADE.",
     "catalogueStatus": "canon-combatant",
@@ -30627,7 +30663,7 @@
       "accent": "#c6a786",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "club",
+      "weapon": null,
       "head": null,
       "limbs": null,
       "aura": null
@@ -31790,7 +31826,7 @@
           "break",
           "still"
         ],
-        "canonicalBasis": "Mascotte hostile armée d’une hache dans The Arcade.",
+        "canonicalBasis": "Mascotte hostile décrite avec une hache dans The Arcade ; forme et prise de l’outil à confirmer visuellement.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -31807,12 +31843,12 @@
           "otherworld",
           "still"
         ],
-        "canonicalBasis": "Mascotte hostile armée d’une hache dans The Arcade.",
+        "canonicalBasis": "Mascotte hostile décrite avec une hache dans The Arcade ; forme et prise de l’outil à confirmer visuellement.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Mascotte hostile armée d’une hache dans The Arcade.",
+    "canonicalBehavior": "Mascotte hostile décrite avec une hache dans The Arcade ; forme et prise de l’outil à confirmer visuellement.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL: THE ARCADE.",
     "catalogueStatus": "canon-enemy-variant",
@@ -31826,7 +31862,7 @@
       "accent": "#c6a786",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "cleaver",
+      "weapon": "axe",
       "head": null,
       "limbs": null,
       "aura": null
@@ -32176,7 +32212,7 @@
           "break",
           "still"
         ],
-        "canonicalBasis": "Variante hostile de Robbie armée d’un fusil.",
+        "canonicalBasis": "Variante hostile portant une arme longue ; le modèle exact et la désignation shotgun du catalogue restent à confirmer dans les vues de The Arcade.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 2
       },
@@ -32193,12 +32229,12 @@
           "otherworld",
           "still"
         ],
-        "canonicalBasis": "Variante hostile de Robbie armée d’un fusil.",
+        "canonicalBasis": "Variante hostile portant une arme longue ; le modèle exact et la désignation shotgun du catalogue restent à confirmer dans les vues de The Arcade.",
         "fidelity": "adapted-from-canonical-behavior",
         "intensity": 3
       }
     ],
-    "canonicalBehavior": "Variante hostile de Robbie armée d’un fusil.",
+    "canonicalBehavior": "Variante hostile portant une arme longue ; le modèle exact et la désignation shotgun du catalogue restent à confirmer dans les vues de The Arcade.",
     "adaptation": "Les timings, dégâts et règles de versus sont une adaptation de jeu de combat.",
     "lore": "Manifestation associée à SILENT HILL: THE ARCADE.",
     "catalogueStatus": "canon-combatant",
@@ -32212,7 +32248,7 @@
       "accent": "#c6a786",
       "secondary": "#2d2b29",
       "motif": null,
-      "weapon": "pistol",
+      "weapon": "long_gun",
       "head": null,
       "limbs": null,
       "aura": null
@@ -34598,7 +34634,7 @@
         },
         "intro": {
           "name": "Swarm — entrée en scène",
-          "description": "Déborde de l’entrée en une bande irrégulière.",
+          "description": "Le groupe Vita déjà présent avance à faible hauteur dans le cadre du versus ; chaque individu doit rester lisible dans les images à produire, sans emprunt aux modèles Homecoming.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -34606,7 +34642,7 @@
         },
         "outro": {
           "name": "Swarm — sortie du plan",
-          "description": "Après validation du résultat : Swarm converge puis quitte progressivement la surface de jeu.",
+          "description": "Le groupe Vita déjà présent se décale puis s’atténue en bord de cadrage sur le temps du versus ; aucune nouvelle animation individuelle ou vitesse de marche originale n’est déclarée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -34614,7 +34650,7 @@
         },
         "winRound1": {
           "name": "Avantage de première manche",
-          "description": "Swarm se redistribue en bordure; conserver chaque individu distinct.",
+          "description": "Les insectes Vita gardent une distribution de résultat sans nouveau contact sur la cible ; aucun individu, œuf ou trou de mur n’est engendré.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -34622,7 +34658,7 @@
         },
         "loseRound1": {
           "name": "Défaite de première manche — reprise possible",
-          "description": "Swarm se disperse sans disparition totale puis se regroupe.",
+          "description": "La présence du groupe est partiellement atténuée puis revient au niveau initial ; les déplacements individuels restent à illustrer, sans disparition totale du groupe.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -34630,7 +34666,7 @@
         },
         "winMatch": {
           "name": "Victoire finale",
-          "description": "Swarm converge puis quitte progressivement la surface de jeu.",
+          "description": "Le groupe Vita garde sa silhouette après le résultat ; la convergence des individus demeure une intention d’image et ne fabrique aucune attaque ou espèce nouvelle.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -34638,7 +34674,7 @@
         },
         "loseMatch": {
           "name": "Défaite finale",
-          "description": "Les derniers insectes se dispersent et disparaissent dans le décor.",
+          "description": "Les insectes sont atténués dans leur propre contexte final ; aucune carcasse humaine, eau, brûlure ou créature Homecoming n’est ajoutée.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT20"
@@ -36538,7 +36574,10 @@
       "identityStatus": "identite-documentee-secondaire",
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
-        "EXT24"
+        "EXT24",
+        "EXT20",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
       ],
       "observedMoves": [
         {
@@ -36588,50 +36627,62 @@
         },
         "intro": {
           "name": "Earth Guardian — entrée en scène",
-          "description": "La pierre se rassemble dans une posture massive.",
+          "description": "Earth Guardian est déjà présent, tête/masse et mains de pierre disjointes cadrées ensemble en suspension ; aucun assemblage de pierres, jambe, marche ou projectile n’est fabriqué pour l’entrée.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "outro": {
           "name": "Earth Guardian — sortie du plan",
-          "description": "Après validation du résultat : Earth Guardian regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Earth Guardian garde ensemble ses masses de pierre disjointes dans le cadrage de résultat ; aucune marche, fuite en fragments, construction de rochers ou transformation de terrain n’est ajoutée.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "winRound1": {
           "name": "Avantage de première manche",
-          "description": "Earth Guardian stabilise ses appuis et réoriente sa silhouette vers la cible; pause brève avant reprise.",
+          "description": "Les masses de pierre disjointes gardent leur position relative dans le cadrage ; la pause ne déclenche ni poing au sol, onde, projectile ou nouveau fragment.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "loseRound1": {
           "name": "Défaite de première manche — reprise possible",
-          "description": "Earth Guardian cède sur un appui, baisse le buste puis se relève lentement; conserver accessoires et silhouette.",
+          "description": "Les masses de pierre disjointes restent cadrées ensemble pendant la reprise de manche ; aucun genou, chute sur des jambes, démembrement ou reconstitution n’est inventé.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "winMatch": {
           "name": "Victoire finale",
-          "description": "Earth Guardian regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Les masses de pierre restent présentes après le résultat ; aucune ruine, onde au sol, posture sur des jambes ou capacité de Steel Guardian n’est transférée.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "loseMatch": {
           "name": "Défaite finale",
-          "description": "Les appuis d’Earth Guardian cèdent; le corps reste au sol avec ses accessoires dans une pose finale distincte du recul de manche.",
+          "description": "Le groupe de masses de pierre garde sa silhouette finale, encore à illustrer ; aucun genou au sol, effondrement sur des pieds, particule ou reconstitution depuis le décor n’est créé.",
           "status": "adaptation-versus-proposee",
           "basis": [
-            "EXT24"
+            "EXT24",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+            "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
           ]
         },
         "taunt": {
@@ -37320,7 +37371,10 @@
       "identityNote": "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
       "referenceIds": [
         "EXT25",
-        "EXT26"
+        "EXT26",
+        "EXT20",
+        "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+        "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
       ],
       "observedMoves": [
         {
@@ -37362,56 +37416,68 @@
         },
         "intro": {
           "name": "Steel Guardian — entrée en scène",
-          "description": "Les lames se placent autour du corps avant l’attaque.",
+          "description": "Steel Guardian est déjà constitué, corps entier et contour d’acier maintenus ; aucun nouvel anneau de lames, lame indépendante ou décor modifié n’est généré.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "outro": {
           "name": "Steel Guardian — sortie du plan",
-          "description": "Après validation du résultat : Steel Guardian regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Steel Guardian conserve le corps et les contours d’acier déjà présents ; pas de fermeture de lames distante, projectile ou modification du décor.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "winRound1": {
           "name": "Avantage de première manche",
-          "description": "Steel Guardian stabilise ses appuis et réoriente sa silhouette vers la cible; pause brève avant reprise.",
+          "description": "Le gardien d’acier conserve ses propres contours au repos ; aucune lame projetée, nouvelle arme tenue ou variation de réalité n’accompagne le résultat.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "loseRound1": {
           "name": "Défaite de première manche — reprise possible",
-          "description": "Steel Guardian cède sur un appui, baisse le buste puis se relève lentement; conserver accessoires et silhouette.",
+          "description": "Steel Guardian garde le corps et le grand ensemble courbe de pointes et chaînes dans le même cadre pendant la reprise ; aucun genou, pas, nouvelle lame ou trajectoire indépendante n’est inventé.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "winMatch": {
           "name": "Victoire finale",
-          "description": "Steel Guardian regarde la cible au sol puis relâche sa posture; tenir cette silhouette en fin de combat.",
+          "description": "Le gardien d’acier conserve une silhouette de résultat entière ; aucune victoire narrative, effet de souhait ou pouvoir du gardien terrestre n’est simulé.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "loseMatch": {
           "name": "Défaite finale",
-          "description": "Les appuis de Steel Guardian cèdent; le corps reste au sol avec ses accessoires dans une pose finale distincte du recul de manche.",
+          "description": "La silhouette d’acier reste dans son contexte final distinct de la reprise ; pas de lame surgie du sol, démembrement ou effacement du corps.",
           "status": "adaptation-versus-proposee",
           "basis": [
             "EXT25",
-            "EXT26"
+            "EXT26",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_1_20261101",
+            "EXT12_REF_BOM_STEEL_GUARDIAN_146_VIEW_2_20261101"
           ]
         },
         "taunt": {

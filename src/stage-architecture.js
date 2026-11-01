@@ -1,7 +1,8 @@
+import {stageLot12Room,drawStageLot12Architecture} from './stage-lot12-renderer.js';
 /* Original perspective sets. These are not traced recreations of official maps. */
 const INTERIORS = new Set(['school','hospital','apartment','hotel','room','house','hall','office','building','prison','gallery','museum','mall','theater','subway','workshop','motelInterior','labyrinth','church']);
 export function stageSpace(stage) {
-  if(lot11Room(stage))return 'interior';
+  if(lot11Room(stage)||stageLot12Room(stage))return 'interior';
   if(stage?.source==='shf'&&['dark_shrine','corrupted_ebisugaoka'].includes(stage.id))return 'exterior';
   if(stage?.source==='shattered'&&stage.id==='nightmare_school')return 'exterior';
   if(stage?.source==='bom'&&['book_fire','book_earth'].includes(stage.id))return 'interior';
@@ -97,7 +98,7 @@ function drawLot11Room(c,w,h,stage){
 }
 
 export function drawStageArchitecture(c,w,h,stage) {
-  if(drawLot11Room(c,w,h,stage))return true;
+  if(drawStageLot12Architecture(c,w,h,stage)||drawLot11Room(c,w,h,stage))return true;
   if(stage?.source==='shf'&&['dark_shrine','hinako_home','shimizu_residence','school_shf','corrupted_ebisugaoka'].includes(stage.id)){
     // Separate photographed rooms. Original frontal sets, never traced plans.
     const id=stage.id,ground=h*.57;c.save();

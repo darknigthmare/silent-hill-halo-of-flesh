@@ -23,7 +23,7 @@ function harness(Type=StageBitmapCache,options={}){
 const context=()=>{const calls=[];return {calls,save(){},restore(){},drawImage(...args){calls.push(args);}};};
 test('production stage candidates are exact and unregistered stages retain procedural rendering',async()=>{
   for(const [id,art] of Object.entries(STAGE_BITMAPS)){
-    const subject=STAGES.find(item=>item.id===id);assert.ok(subject);assert.equal(stageBitmapFor(subject),art);
+    const subject=STAGES.find(item=>item.id===id);assert.ok(subject);assert.equal(stageBitmapFor(subject),subject.referencePolicy?.sceneId&&subject.referencePolicy.sceneId!==art.scene?null:art);
     assert.equal(art.fidelity,'unverified');
   }
   const procedural=STAGES.find(item=>!Object.hasOwn(STAGE_BITMAPS,item.id));assert.ok(procedural);
@@ -125,4 +125,13 @@ test('failed replacement cannot evict old pinned images and restoring lease keep
   const original=h.cache.peek(art.layers[0].frames[0].path),restore=captureCombatAssetPins(options);
   assert.equal((await h.cache.prepare(other)).ok,false);restore();
   assert.equal(h.cache.peek(art.layers[0].frames[0].path),original);assert.equal(h.cache.bytes,16);
+});
+
+test('a different documented sub-room cannot render or lease an older raster from the same location',async()=>{
+ for(const id of ['woodside','shopping_mall']){
+  const s=STAGES.find(v=>v.id===id),art=STAGE_BITMAPS[id];assert.ok(s.referencePolicy.sceneId);assert.notEqual(s.referencePolicy.sceneId,art.scene);
+  assert.equal(stageBitmapFor(s),null);assert.deepEqual(stageBitmapFrames([s]),[]);assert.equal(drawStageBitmaps(context(),s,100).kind,'unregistered');
+  const sameRoom={...s,referencePolicy:{...s.referencePolicy,sceneId:art.scene}};assert.equal(stageBitmapFor(sameRoom),art);assert.ok(stageBitmapFrames([sameRoom]).length);
+  const c=harness(StageBitmapCache);assert.equal((await c.cache.prepare([s])).ok,true);assert.equal(c.images.length,0);
+ }
 });

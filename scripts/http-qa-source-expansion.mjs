@@ -9,8 +9,9 @@ import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const out=resolve(process.env.QA_SOURCE_OUTPUT||resolve(root,'tests/http-source-expansion'));
 const source=process.env.QA_SOURCE_TREE==='1',port=process.env.QA_SOURCE_PORT||'4193';
+const lot12Only=process.env.QA_SOURCE_ONLY_LOT12==='1';
 const base=process.env.QA_BASE_URL||`http://127.0.0.1:${port}`;
-const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',
+const report={version:VERSION,base,scope:lot12Only?'lot12 supplemental native commands':'complete source regression',build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',
  checks:[],errors:[],captures:[],scenes:{},fixtures:[
   'The explicit ?qa=1 bridge stops the animation loop and advances real simulation ticks after the normal launch button. Actor positions, facing and one knockdown timer are prepared. No campaign or source-game playthrough is claimed.',
   'Art diagnostic is explicitly enabled for profiles without production PNGs. No synthetic picture, source-animation certification or source timing measurement is created by this suite.',
@@ -37,6 +38,7 @@ const report={version:VERSION,base,build:process.env.QA_BASE_URL?'external HTTP'
   'Lot10 adds thirty distinct native command rows. Origins body charges and stomps use bounded low contact, Mandarin attacks through its fixed local support, and Great Knife free-hand grips lift with an exact-owner movement lock and bounded release rules. These are versus mechanics and collider choices, not original pose frames or measured source timing.',
   'Origins acid lifetime is bounded rather than full-arena. The SH3 revolver Nurse chooses a close pistol-whip or a distant shot once at attack start. Earlier genuine counter-projectile scenes now use Eddie where the new close Nurse would correctly choose her crosse; source-owned hair and whiff exposure rules are unchanged.',
   'Lot11 exercises five exact inputs for each Numb Body size, SH4 Hummer, Wall Man and One Truth. The three armless Numb Bodies physically jump into one frontal headbutt. Hummer bites are small bounded contacts; wall claws and One Truth arm/head contacts remain fixed to their support. Heights, arcs, reach, health damage and five input variants are versus tuning, not original-game measurements or new produced animation frames.',
+  'Lot12 bounds thirty new native commands to Origins syringe, Homecoming scalpel, Needler blades, Lurker claws, Scarlet phase2 limbs and five Feral mouth contacts. Only the Homecoming Nurse pressure permits two contacts. Authored contact bands, reach, arcs and damage are versus choices; no source frames, ceiling transition or original combo is fabricated. Explicit zero move armor overrides generic desperation armor, separately from actor traits/phases. Behind-target fixtures move the target during the real keyboard-selected startup, preserving the actual attack facing instead of defeating the normal idle auto-facing.',
   'The optional output directory and local server port isolate supplemental source validation from the final dist suite; normal CI defaults are unchanged.',
   'Browser keyboard, pause and narrow viewport checks do not certify physical gamepads or mobile devices.'
  ]};
@@ -94,6 +96,7 @@ try{
  context=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1000}});
  const page=await context.newPage();page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
 
+ if(!lot12Only){
  let scene=await launch(page,'sh2_lying_figure_crawling_021');
  check('normal launch accepts the exact crawling source profile',scene.phase==='fight'&&scene.actors[0].id==='sh2_lying_figure_crawling_021',scene);
  const crawlerBefore=scene.actors[1].health;
@@ -733,6 +736,78 @@ try{
   check('lot11 Hummer mouth band cannot hit a floor insect by borrowing the broad wing or generic low envelope',floorAfter.actors[1].health===floorBefore.actors[1].health&&floorAfter.actors[0].damage===0&&floorAfter.emitted===0,floorAfter);
   report.scenes.lot11HummerFloorClearance={before:floorBefore,after:floorAfter};
   await capture(page,'49-lot11-hummer-floor-insect-clearance');
+ }
+
+ }
+
+ // Lot12: thirty new exact command rows; actual key controls select all moves.
+ {
+  const specialKeys=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+  const scopes=Object.fromEntries(['origins_faceless_nurse','homecoming_nurse','homecoming_needler_088',
+   'homecoming_lurker_085','homecoming_scarlet_spider_form_095','homecoming_feral_086'].map(id=>[id,
+    id==='homecoming_feral_086'?['neutralLight','forwardLight','crouchLight','neutralHeavy','forwardHeavy']:specialKeys]));
+  for(const[id,keys]of Object.entries(scopes))for(const key of keys){
+   await launch(page,id,'sh3_nurse_revolver_044');
+   await page.evaluate(({key})=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0];q.position(500,610);a.meter=100;
+    if(key==='desperation'){a.health=Math.floor(a.maxHealth*.3);
+     for(let n=0;n<220;n++){const next=a.bossPhases[a.bossPhaseIndex+1];if(!a.phaseLock&&(!a.data.boss||!next||a.health/a.maxHealth>next.threshold))break;q.advance(1);}}
+   },{key});
+   const before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   const direction=key.startsWith('forward')?'ArrowRight':key==='downSpecial'||key==='crouchLight'?'ArrowDown':null;
+   if(direction)await page.keyboard.down(direction);
+   const button=['super','desperation'].includes(key)?'o':key.endsWith('Heavy')?'k':key.endsWith('Light')?'j':'i';
+   await page.keyboard.press(button);await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(1));if(direction)await page.keyboard.up(direction);
+   const contact=await page.evaluate(async()=>{const e=__HALO_QA__.engine,q=__SOURCE_EXPANSION_QA__,a=e.actors[0],b=e.actors[1];
+    const {sourceContactBand}=await import('/src/combat-reference-policy.js');const native=a.attack?.move;
+    let highest=a.y,hits=0,knockdown=false;
+    for(let n=0;n<100;n++){q.advance(1);highest=Math.min(highest,a.y);hits=Math.max(hits,a.attack?.hitCount||0);knockdown ||=b.knockdownTimer>0;}
+    return {highest,hits,knockdown,band:sourceContactBand(a.data,native),native:native&&{key:native.key,hits:native.hits,
+     armorFrames:native.armorFrames,invulnFrames:native.invulnFrames,unblockable:native.unblockable,reach:native.reach},scene:q.scene()};
+   });
+   const label='lot12 '+id+':'+key,leaps=['homecoming_lurker_085','homecoming_scarlet_spider_form_095'].includes(id)&&['forwardSpecial','super','desperation'].includes(key);
+   check(label+' keyboard-selected native command damages by bounded physical contact without emissions or status',contact.scene.actors[0].move===key&&contact.scene.actors[1].health<before.actors[1].health&&contact.hits>0&&contact.hits<=contact.native?.hits&&contact.scene.emitted===0&&contact.scene.actors[1].status===null,contact);
+   check(label+' retains source-specific contact and refuses generic desperation armor or a full-height envelope',!!contact.band&&contact.band.height<=100&&contact.native?.reach<=245&&contact.native.armorFrames===0&&contact.native.invulnFrames===0&&!contact.native.unblockable&&(leaps?contact.highest<594&&contact.scene.actors[0].x>before.actors[0].x:contact.highest===594),contact);
+   report.scenes['lot12-'+id+':'+key]={before,contact};
+   await capture(page,'50-lot12-'+id+'-'+key);
+  }
+  check('lot12 covers exactly thirty distinct native command rows',Object.keys(report.scenes).filter(k=>k.startsWith('lot12-')).length===30);
+  for(const[id,keys]of Object.entries(scopes))for(const location of ['behind','far','high']){
+   await launch(page,id,'sh3_nurse_revolver_044');
+   await page.evaluate(location=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine;q.position(500,location==='far'?1190:610);
+    if(location==='high')Object.assign(e.actors[1],{y:80,grounded:false,vy:-20});
+   },location);
+   const key=keys[0],before=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   await page.keyboard.press(key==='neutralLight'?'j':'i');
+   const miss=await page.evaluate(location=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine;let hits=0;
+    q.advance(1);if(location==='behind')q.positionActor(1,320);
+    for(let n=0;n<100;n++){if(location==='high')Object.assign(e.actors[1],{y:80,grounded:false,vy:-20});q.advance(1);hits=Math.max(hits,e.actors[0].attack?.hitCount||0);}
+    return {hits,scene:q.scene()};
+   },location);
+   check('lot12 '+id+' actual '+key+' misses '+location+' without a hidden body-wide or arena-wide strike',miss.scene.actors[0].move===key&&miss.scene.actors[1].health===before.actors[1].health&&miss.hits===0&&miss.scene.emitted===0,miss);
+   report.scenes['lot12Clearance-'+id+'-'+location]={before,miss};
+  }
+  for(const key of ['super','desperation']){
+   await launch(page,'homecoming_scarlet_spider_form_095','sh3_nurse_revolver_044');
+   await page.evaluate(key=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine,a=e.actors[0];q.position(300,1190);a.meter=100;
+    if(key==='desperation'){a.health=Math.floor(a.maxHealth*.3);for(let n=0;n<220;n++){
+     const next=a.bossPhases[a.bossPhaseIndex+1];if(!a.phaseLock&&(!next||a.health/a.maxHealth>next.threshold))break;q.advance(1);}}
+   },key);
+   await page.keyboard.press('o');
+   const missed=await page.evaluate(()=>{const q=__SOURCE_EXPANSION_QA__,e=__HALO_QA__.engine,a=e.actors[0];q.advance(1);
+    for(let n=0;n<130&&a.attack?.frame<a.attack.move.startup+a.attack.move.active;n++)q.advance(1);return q.scene();});
+   check('lot12 Scarlet '+key+' real missed leap exposes its own recovery without a separate timer',missed.actors[0].move===key&&missed.actors[0].attackHits===0&&missed.actors[0].sourceCue==='DOS EXPOSÉ · VERSUS'&&missed.actors[1].damageTaken===0,missed);
+   await page.click('#pauseBtn');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(20));const paused=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   check('lot12 Scarlet '+key+' real pause freezes the missed-leap recovery and dorsal weakness',paused.paused&&paused.actors[0].attackFrame===missed.actors[0].attackFrame&&paused.actors[0].sourceCue==='DOS EXPOSÉ · VERSUS',paused);
+   await capture(page,'51-lot12-scarlet-'+key+'-missed-recovery-paused');await page.click('[data-pause=resume]');
+   await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(80));const ended=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+   check('lot12 Scarlet '+key+' native recovery closes naturally after resume',!ended.paused&&ended.actors[0].attackFrame===null&&ended.actors[0].sourceCue===null&&ended.emitted===0,ended);
+   report.scenes['lot12ScarletRecovery-'+key]={missed,paused,ended};
+  }
+  await launch(page,'homecoming_feral_086','sh1_creeper_009');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.position(500,610));
+  const floorBefore=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());await page.keyboard.press('j');await page.evaluate(()=>__SOURCE_EXPANSION_QA__.advance(100));
+  const floorAfter=await page.evaluate(()=>__SOURCE_EXPANSION_QA__.scene());
+  check('lot12 Feral small low mouth contact physically reaches a floor insect without a floating throat-height attack',floorAfter.actors[0].move==='neutralLight'&&floorAfter.actors[1].health<floorBefore.actors[1].health&&floorAfter.actors[0].damage>0&&floorAfter.emitted===0,floorAfter);
+  report.scenes.lot12FeralLowMouthContact={before:floorBefore,after:floorAfter};await capture(page,'52-lot12-feral-low-mouth-insect-contact');
  }
 
  for(const id of ['shortmessage_sakura_head_150','shattered_raw_shock_base_099','shattered_raw_shock_feminine_100',

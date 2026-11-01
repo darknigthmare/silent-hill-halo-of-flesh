@@ -35,7 +35,30 @@ sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
 neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
 de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
 
-## État du 28 octobre 2026
+## État du 1er novembre 2026
+
+Le [douzième lot](CHANTIERS_PARALLELES_LOT12_2026-11-01.md) compte **180 lignes :
+97 réalisations candidates, 60 spécifications et 23 blocages**. Douze nouveaux
+idles entiers portent le registre à 86 profils et 121 PNG actifs. Les images,
+les 25 maquettes d’éléments de lieux, les contacts et les présentations gardent
+leur statut candidat ; aucun nouveau cycle animé ni timing original n’est produit.
+
+Les 277 sources conservent les 246 objets antérieurs à l’identique. Le plan
+compte 163 pistes de lieux, dont 158 visibles et cinq masquées, ainsi que
+806 présentations sans état d’acteur et sept contextes Cybil conditionnels.
+Six bitmaps sont conservés, quatre actifs dans les pièces sélectionnées et deux
+archivés pour leurs scènes historiques. Les 33 décisions de rôle sont inchangées.
+
+L’Excel conserve les treize blocages historiques, 46 révisions de cibles de lieux
+et les trente anciennes propositions cinématiques sans les déclarer réalisées.
+L’export modifie 1 756 cellules et ajuste 611 hauteurs ; 137 contrôles indépendants
+passent sur 249 415 champs mappés. Les 18 400 cellules de timings restent vides.
+Les 840 actions ouvertes comprennent 93 P0 ; 144 profils restent sans PNG.
+
+[Relevés du lot](batches/lot12-summary.json) ·
+[Rapport QA](../INTEGRATION_QA_2026-11-01-lot12.json).
+
+## État précédent — 28 octobre 2026
 
 Le [onzième lot](CHANTIERS_PARALLELES_LOT11_2026-10-28.md) compte **180 lignes :
 106 réalisations candidates, 60 spécifications et 14 blocages explicites**.

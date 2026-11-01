@@ -682,7 +682,17 @@ const PRESENTATION_ONLY_RECIPES=Object.freeze({
   downpour_prisoner_minion_brawler_108:{source:'downpour',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Aucun art martial nommé attesté.',attackerKind:'humanoid',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
     scopeNote:'Prisoner Minion Brawler Downpour : variante bagarreur, cadre métallique facial et convulsions décrits pour la famille. Le rendu familial ne certifie pas à lui seul l’identification de variante. Les appuis et mains vides restent cadrés sans animer le cadre ni dessiner une garde d’art martial. Aucun coup, prisonnier supplémentaire, barreau, arme ou geste de Juggernaut n’est ajouté.'},
   downpour_prisoner_minion_agile_109:{source:'downpour',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Variante plus agile documentée; ne pas inventer téléportation.',attackerKind:'humanoid',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
-    scopeNote:'Prisoner Minion Agile Downpour : seconde variante plus agile documentée, conservée distincte de Brawler et Juggernaut. Le rendu familial ne certifie pas les proportions propres à cette variante. Deux transferts d’appui de sortie sont composés pour le versus, sans téléportation, saut, art martial nommé, changement du cadre facial, attaque ou cadence originale mesurée.'}
+    scopeNote:'Prisoner Minion Agile Downpour : seconde variante plus agile documentée, conservée distincte de Brawler et Juggernaut. Le rendu familial ne certifie pas les proportions propres à cette variante. Deux transferts d’appui de sortie sont composés pour le versus, sans téléportation, saut, art martial nommé, changement du cadre facial, attaque ou cadence originale mesurée.'},
+  downpour_anne_cunningham:{source:'downpour',sourceYear:2012,requiredRole:'combatant',attackerKind:'humanoid',weapon:'pistol',presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Anne Cunningham Downpour 2012 : humaine et pistolet conservés. Deux transferts d’appui de sortie sont composés pour le versus, sans tir, téléportation, marteau du Boogeyman ni Juggernaut invoqué. Les cellules et les choix épargner/tuer appartiennent à la confrontation finale ; aucun de ces résultats narratifs n’est exécuté par une reprise ou défaite de versus. Prise, arme exacte et cadence source restent à relever.'},
+  sh4_ghost_victim_066:{source:'sh4',sourceYear:2004,edition:'SH4 original 2004',requiredRole:'combatant',requiredIdentityStatus:'famille-canonique-composite',attackerKind:'ghost',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Ghost — Victim SH4 original 2004 : dossier composite des anciens Ghosts flottants, pas un individu canonique supplémentaire. Le corps présent reste visible et persistant après le résultat. Aucun mur traversé, arme, épée d’obéissance, chandelle, nouveau dommage d’aura ou mort définitive n’est créé. Les offsets et l’atténuation sont des montages versus ; les contextes individuels restent à illustrer.'},
+  bom_earth_guardian_142:{source:'bom',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.',attackerKind:'giant',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Earth Guardian Book of Memories Vita 2012 : tête/masse et mains de pierre disjointes maintenues ensemble en suspension. Aucun pied ou jambe n’est déduit du gabarit giant. Les résultats conservent ces fragments ; aucun assemblage de fragments, onde, poing au sol, projectile, reconstitution ou changement de terrain n’est exécuté. La présence de pierre est attestée par le bestiaire ; les prises et timings originaux restent à mesurer.'},
+  bom_steel_guardian_146:{source:'bom',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.',attackerKind:'giant',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Steel Guardian Book of Memories Vita 2012 : corps d’acier déjà constitué et conservé entier. Les lames contrôlées du dossier ne sont ni créées ni déplacées indépendamment par ces poses de résultat ; aucune nouvelle arme, projection, formation de lames, modification de réalité ou capacité de Earth Guardian n’est produite. Détails de contours et mouvements natifs restent à relever.'},
+  bom_swarm_132:{source:'bom',sourceYear:2012,requiredRole:'combatant',requiredConstraint:'Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.',attackerKind:'insect',unarmed:true,presentationKeys:PRESENTATION_ONLY_KEYS,
+    scopeNote:'Swarm Book of Memories Vita 2012 : petite créature semblable à un cafard, distincte du Swarm Homecoming. Le groupe déjà présent se tient ou se décale pour le résultat sans nouveaux individus, œufs, prise ou contact offensif. Les images individuelles restent à produire ; un offset de groupe et une atténuation ne constituent ni cycle de marche natif, ni modèle emprunté, ni mesure source.'}
 });
 
 /* Presentation intent belongs to the exact subject. These world-space edits
@@ -777,7 +787,18 @@ const PRESENTATION_STAGING=Object.freeze({
     poses:['dp-brawler-frame-empty-hands-whole-body-entry',null,'dp-brawler-frame-empty-hands-round-watch','dp-brawler-frame-retained-support-recovery','dp-brawler-empty-hands-relaxed-final-watch','dp-brawler-own-framed-body-final-rest','dp-brawler-framed-body-held-no-juggernaut']},
   downpour_prisoner_minion_agile_109:{id:'downpour-prisoner-agile-continuous-ground-supports',entry:18,retreat:0,recoil:8,
     outroFootwork:[{from:.1,to:.34,distance:8,pose:'rear-ground-support'},{from:.54,to:.9,distance:12,pose:'front-ground-support'}],
-    poses:['dp-agile-frame-empty-hands-whole-body-entry',null,'dp-agile-own-frame-round-watch','dp-agile-frame-retained-support-recovery','dp-agile-empty-hands-relaxed-final-watch','dp-agile-own-framed-body-final-rest','dp-agile-authored-two-support-ground-withdrawal']}
+    poses:['dp-agile-frame-empty-hands-whole-body-entry',null,'dp-agile-own-frame-round-watch','dp-agile-frame-retained-support-recovery','dp-agile-empty-hands-relaxed-final-watch','dp-agile-own-framed-body-final-rest','dp-agile-authored-two-support-ground-withdrawal']},
+  downpour_anne_cunningham:{id:'downpour-anne-human-pistol-and-ground-supports',entry:9,entryDelay:.2,entryFade:false,retreat:0,recoil:7,
+    outroFootwork:[{from:.05,to:.32,distance:9,pose:'rear-foot-ground-support'},{from:.55,to:.94,distance:12,pose:'front-foot-ground-support'}],
+    poses:['dp-anne-human-pistol-whole-body-entry',null,'dp-anne-pistol-retained-ground-round-watch','dp-anne-human-pistol-recoverable-support','dp-anne-pistol-lowered-human-final-watch','dp-anne-human-final-rest-no-ending-choice','dp-anne-authored-pistol-two-support-withdrawal']},
+  sh4_ghost_victim_066:{id:'sh4-old-ghost-composite-persistent-body',entry:13,entryDelay:.1,entryFade:false,retreat:0,recoil:0,roundDim:.1,finalDim:.25,outroHold:true,
+    poses:['sh4-old-ghost-composite-already-present-entry',null,'sh4-old-ghost-composite-suspension-round-watch','sh4-old-ghost-composite-recoverable-suppression','sh4-old-ghost-composite-persistent-final-watch','sh4-old-ghost-composite-suppressed-body-retained','sh4-old-ghost-composite-held-without-new-individual']},
+  bom_earth_guardian_142:{id:'bom-earth-already-formed-stone-weight',entry:0,entryFade:false,retreat:0,recoil:0,outroHold:true,
+    poses:['bom-earth-already-formed-stone-whole-body-entry',null,'bom-earth-separated-stone-masses-round-watch','bom-earth-separated-masses-recoverable-hold','bom-earth-stone-weight-relaxed-final-watch','bom-earth-own-stone-body-final-rest','bom-earth-stone-body-held-without-fragments']},
+  bom_steel_guardian_146:{id:'bom-steel-existing-body-no-new-blades',entry:0,entryFade:false,retreat:0,recoil:0,outroHold:true,
+    poses:['bom-steel-already-formed-whole-body-entry',null,'bom-steel-existing-contours-round-watch','bom-steel-own-body-recoverable-hold','bom-steel-own-contours-relaxed-final-watch','bom-steel-own-body-final-rest','bom-steel-existing-body-held-without-new-blades']},
+  bom_swarm_132:{id:'bom-swarm-existing-roach-group-only',entry:24,entryFade:false,retreat:31,recoil:0,roundDim:.14,finalDim:.35,
+    poses:['bom-swarm-own-roach-group-whole-entry',null,'bom-swarm-own-individuals-round-watch','bom-swarm-own-group-recoverable-dispersal','bom-swarm-own-group-final-collection-awaiting-images','bom-swarm-own-group-final-attenuation','bom-swarm-existing-group-authored-departure']}
 });
 const PRESENTATION_POSE_INDEX=Object.freeze({intro:0,taunt:1,winRound:2,loseRound:3,winMatch:4,loseMatch:5,outro:6});
 function presentationStaging(actor) {
@@ -806,9 +827,13 @@ function compileRecipe(recipe,type) {
 const blocked=(reason,id=null)=>({allowed:false,reason,id,artStatus:'contextual-images-missing',fidelity:'original-versus-staging'});
 const motifs=stage=>new Set([...(stage?.props||[]),...(stage?.layers||[])]);
 function hasCeiling(stage,set){
-  const bitmap=STAGE_BITMAPS[stage?.id];
+  const candidate=STAGE_BITMAPS[stage?.id];
+  if(candidate&&(candidate.stageId!==stage.id||candidate.source!==stage.source))return false;
+  // Match the stage renderer's sub-room selection: an inactive legacy raster
+  // supplies neither visible scenery nor ceiling geometry to the new room.
+  const selectedScene=stage?.referencePolicy?.sceneId;
+  const bitmap=selectedScene&&candidate?.scene&&selectedScene!==candidate.scene?null:candidate;
   if(bitmap){
-    if(bitmap.stageId!==stage.id||bitmap.source!==stage.source)return false;
     // A full replacement owns the visible geometry. Neither its scene name nor
     // inherited procedural motifs may invent a support absent from its contract.
     if(bitmap.mode==='replace')return bitmap.geometry?.ceiling===true;
@@ -962,6 +987,7 @@ export function lorePresentation(actor,key) {
   const specific=PRESENTATION_ONLY_RECIPES[data.id],policy=combatPolicy(actor);
   const ownEdition=!specific||(data.year===specific.sourceYear&&(!specific.edition||ref?.referenceEdition===specific.edition)&&
     (!specific.requiredConstraint||ref?.constraints?.includes(specific.requiredConstraint))&&
+    (!specific.requiredIdentityStatus||ref?.identityStatus===specific.requiredIdentityStatus)&&
     (!Object.keys(policy).length||(policy.id===data.id&&policy.source===data.source&&policy.edition===(specific.edition||specific.source))));
   const ownRole=(!specific?.requiredRole||(ref?.combatRole===specific.requiredRole&&
     (!Object.keys(policy).length||(policy.role===specific.requiredRole&&policy.combatEnabled===true))))&&

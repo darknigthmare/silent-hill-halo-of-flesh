@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS, MOVESET_KEYS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
-import {validateStageBitmap} from '../src/stage-bitmaps.js';
+import {validateStageBitmap,stageBitmapFor} from '../src/stage-bitmaps.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
@@ -25,7 +25,7 @@ const planDir = path.join(root, 'docs/production');
 const stageAnimationBaseline=JSON.parse(await fs.readFile(path.join(planDir,'research/stage-animation-baseline.json'),'utf8')).rows;
 // Keep unresolved delivery limits visible in the exported Excel rows and tasks.
 // These are production notes only; they do not change the game's capabilities.
-const recordedDeliveries=(await Promise.all(['lot9','lot10','lot11'].flatMap(batch=>['art','stages'].map(async workstream=>{
+const recordedDeliveries=(await Promise.all(['lot9','lot10','lot11','lot12'].flatMap(batch=>['art','stages',...(batch==='lot12'?['cinematics']:[])].map(async workstream=>{
   try{
     const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/${batch}-${workstream}.json`),'utf8'));
     return (ledger.items||[]).map(item=>({...item,workstream,batch}));
@@ -197,8 +197,10 @@ function roleDecisionNote(decision){
   return `Rôle confirmé le ${decision.reviewedAt} : ${roleDescription(decision)} (${decision.edition}). ${decision.rationale} Preuves : ${rowRefs(decision.evidence)}. Cette décision ne valide ni image, ni animation, ni mouvement offensif.`;
 }
 
-function stageBitmapProgress(stage){
-  const art=STAGE_BITMAPS[stage.id];
+function stageBitmapProgress(stage,{includeInactive=false}={}){
+  // Inventory includes retained older room candidates; selected progress must
+  // follow the same exact-scene resolver as the running renderer.
+  const art=includeInactive?STAGE_BITMAPS[stage.id]:stageBitmapFor(stage);
   if(!art)return null;
   validateStageBitmap(stage,art);
   return {layers:art.layers.length,files:new Set(art.layers.flatMap(layer=>layer.frames.map(frame=>frame.path))).size,
@@ -386,6 +388,7 @@ function applyRuntimeProgress(plan){
   for(const row of plan.stages){
     const s=stages.get(row.id);row.runtimePolicy=s.referencePolicy;row.referenceTracks=s.referenceTracks;
     row.bitmapProgress=stageBitmapProgress(s);
+    row.archivedBitmapProgress=row.bitmapProgress?null:stageBitmapProgress(s,{includeInactive:true});
     row.additionalBindings=plan.stageAnimations.filter(a=>a.stageId===row.id&&!stageAnimationBaseline.some(old=>old.id===a.id));
     row.shift=s.shift.enabled===false?`${s.shift.style} — ${s.shift.startOtherworld?'Otherworld fixe':'bascule désactivée'}`:s.shift.style;
     row.locationNote+=`\nMoteur : ${(s.referenceTracks||[]).length} piste(s) de la fiche, ${s.director.events.length} événement(s), ${s.director.hazardDeck.length} danger(s) autorisé(s).`;
@@ -394,6 +397,7 @@ function applyRuntimeProgress(plan){
       row.locationNote+=`\nDécor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s), mode ${bitmap.mode}${bitmap.scene?' ; vue '+bitmap.scene:''} ; couches ${bitmap.layerNames.join(', ')}. Images de travail non certifiées ; profondeur, animation et comparaison source à vérifier.`;
       if(bitmap.mode==='replace')row.locationNote+=' Les pistes procédurales restent préparées mais sont masquées par cette vue bitmap.';
     }
+    if(row.archivedBitmapProgress){const bitmap=row.archivedBitmapProgress;row.locationNote+=`\nDécor bitmap conservé pour une autre vue : ${bitmap.scene}, ${bitmap.layers} couche(s), ${bitmap.files} PNG. Cette ancienne vue ne correspond pas à la pièce sélectionnée et ne masque pas ses pistes actuelles ; aucun nouveau bitmap de cette pièce n’est produit.`;}
     if(row.additionalBindings.length)row.locationNote+='\nNouveaux raccords de versus : '+row.additionalBindings.map(a=>`${a.id} — ${a.animationName} (${a.type})`).join(' ; ')+'. Ces règles de jeu ne certifient aucune action de l’œuvre.';
     if(row.productionStatus==='À produire')row.productionStatus='En cours';
   }
@@ -449,6 +453,8 @@ function applyRuntimeProgress(plan){
       const tracks=s.referenceTracks?.length||0,masked=bitmap?.mode==='replace';
       task.reason=`Contraintes du lieu appliquées : ${masked?0:tracks} piste(s) de la fiche rendue(s)${masked?`, ${tracks} piste(s) préparée(s) mais masquée(s) par la vue bitmap`:''}. Météo, phase et dangers filtrés ; architecture et captures à vérifier.`;
       if(bitmap)task.reason+=` Décor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s). Montage animé et fidélité à vérifier ; aucune certification.`;
+      const archived=plan.stages.find(row=>row.id===task.entityId).archivedBitmapProgress;
+      if(archived)task.reason+=` Ancien bitmap ${archived.scene} conservé (${archived.files} PNG), sans affichage dans la pièce sélectionnée. Nouveau décor bitmap de cette pièce à produire.`;
     }
   }
   const hooks=plan.tasks.find(t=>t.id==='global:cinematic-clips');
@@ -468,9 +474,15 @@ function applyRuntimeProgress(plan){
     authoredStageFinishers:plan.finishers.filter(f=>f.entityType==='Arène'&&summaries.get(f.id).authored).length,
     authoredPresentations:plan.presentations.filter(p=>p.runtimePresentation.authored).length,
     resolvedRoleDecisions:resolvedRoles.size,
-    stageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress).length,
-    stageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0),0),
-    stageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
+    stageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress||s.archivedBitmapProgress).length,
+    activeStageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress).length,
+    inactiveStageBitmapCandidates:plan.stages.filter(s=>s.archivedBitmapProgress).length,
+    stageBitmapLayers:plan.stages.reduce((n,s)=>n+((s.bitmapProgress||s.archivedBitmapProgress)?.layers||0),0),
+    activeStageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0),0),
+    inactiveStageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.archivedBitmapProgress?.layers||0),0),
+    stageBitmapFiles:plan.stages.reduce((n,s)=>n+((s.bitmapProgress||s.archivedBitmapProgress)?.files||0),0),
+    activeStageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
+    inactiveStageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.archivedBitmapProgress?.files||0),0),
     sourceTimingSchema:SOURCE_TIMING_SCHEMA,
     sourceTimingBatchSchema:SOURCE_TIMING_BATCH_SCHEMA,
     sourceTimingReviewSchema:SOURCE_TIMING_REVIEW_SCHEMA,
@@ -486,8 +498,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-10-28',
-    scope:'PR #4 et continuation des 23, 24, 25, 26 et 28 octobre 2026. Suivi de l’intégration des fiches dans le moteur, avec six lots de trente lignes aux neuvième, dixième et onzième lots. Corps entiers et cadrage du combat 2D contrôlés séparément des animations et de la certification visuelle.',
+    updatedAt:'2026-11-01',
+    scope:'PR #4 et continuation des 23, 24, 25, 26 et 28 octobre, puis du 1er novembre 2026. Suivi de l’intégration des fiches dans le moteur, avec six chantiers de trente lignes aux neuvième, dixième, onzième et douzième lots. Corps entiers et cadrage du combat 2D contrôlés séparément des animations et de la certification visuelle.',
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -566,13 +578,24 @@ export function buildProductionPlan(research) {
   Object.assign(plan.tasks.at(-1),{status:'En cours',delivery:IMPLEMENTATION_REVISION});
   task('global:reference-capture','reference','Références','P1','Relever les séquences image par image','Les pages consultées attestent des comportements ou des lieux, pas de toutes les poses ni des timings.','Capture exacte avec œuvre/édition, durée, FPS, timecodes, gestes clés et différences entre versions. Aucune durée inventée.');
   const runtimeProgress=applyRuntimeProgress(plan);
-  for(const revision of latestDelivery.values()){
+  // Retain the full revision history even if a later batch revisits the same row.
+  for(const revision of recordedDeliveries){
     if(revision.workstream!=='stages'||revision.status!=='implemented-candidate'||!revision.originalProposal||!revision.revisedProposal)continue;
     const row=plan.stageAnimations.find(row=>row.id===revision.rowId);
     if(!row||row.stageId!==revision.entityId)throw Error('Invalid revised stage target: '+revision.rowId);
     const note=`Révision de cible du lot ${revision.batch.slice(3)} (${revision.rowId}) : ancienne proposition « ${revision.originalProposal} » remplacée par « ${revision.implementedElement} ». ${revision.revisionReason} L’ancienne proposition n’est pas déclarée réalisée.`;
     row.existing+=' '+note;
     const task=plan.tasks.find(task=>task.id===revision.entityId+':stage');
+    if(task)task.reason+=' '+note;
+  }
+  for(const revision of recordedDeliveries){
+    if(revision.workstream!=='cinematics'||revision.status!=='implemented-candidate'||!revision.descriptionRevisedBeforeDelivery)continue;
+    const row=plan.presentations.find(row=>row.id===revision.rowId);
+    if(!row||row.fighterId!==revision.entityId||!revision.baselineDescription||revision.previousProposalDeclaredImplemented!==false)
+      throw Error('Invalid revised presentation target: '+revision.rowId);
+    const note=`Révision de cible de présentation du lot ${revision.batch.slice(3)} (${revision.rowId}) : ancienne proposition « ${revision.baselineDescription} ». La description actuelle porte la cible révisée. L’ancienne proposition et ses images contextuelles ne sont pas déclarées réalisées.`;
+    row.engineState+=' '+note;
+    const task=plan.tasks.find(task=>task.id===revision.entityId+':cinematics');
     if(task)task.reason+=' '+note;
   }
   for(const block of recordedBlocks){

@@ -83,6 +83,6 @@ test('actual engine frames pause and render without mutating mechanics, health, 
 });
 
 test('no bitmap or older room is replaced by lot11 and the reviewed global deltas stay explicit',()=>{
- assert.equal(Object.keys(STAGE_BITMAPS).length,6);assert.ok(!candidates.some(i=>STAGE_BITMAPS[i.entityId]));assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),147);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
+ assert.equal(Object.keys(STAGE_BITMAPS).length,6);assert.ok(!candidates.some(i=>STAGE_BITMAPS[i.entityId]));assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),163);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
  const waiting=stage('alchemilla');for(const key of['ward','curtains','monitor','beds'])assert.ok(![...waiting.props,...waiting.layers].includes(key));assert.match(stage('artaud_theater').referencePolicy.normalPhaseLabel,/SCÈNE NORMALE/);assert.equal(stage('hinako_home').referencePolicy.sceneId,undefined);
 });

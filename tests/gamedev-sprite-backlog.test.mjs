@@ -31,8 +31,8 @@ test('real sprite coverage identifies Air Screamer as animation-validation candi
  const report=JSON.parse(readFileSync(new URL('../data/sprite-coverage.json',import.meta.url),'utf8'));
  const result=auditSpriteCoverage(report);
  assert.equal(result.summary.total,230);
- assert.equal(result.summary.illustrated,74);
- assert.equal(result.summary.missing,156);
+ assert.equal(result.summary.illustrated,86);
+ assert.equal(result.summary.missing,144);
  const first=result.rows[0];
  assert.equal(first.id,'sh1_air_screamer_001');
  assert.equal(first.priority,'P0-validate-animation');

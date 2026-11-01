@@ -1,3 +1,4 @@
+import {drawStageLot12Track} from './stage-lot12-renderer.js';
 /*
  * SILENT HILL: HALO OF FLESH — Reactive stage cinematography, v0.8.0.
  * Original canvas shapes only. Every set-piece is staged from the location's
@@ -78,6 +79,7 @@ function referenceTrack(ctx,w,h,track,time,progress=null) {
   const pulse=.5+.5*Math.sin(t*.0012),sway=Math.sin(t*.0008);
   const reply=progress===null?0:Math.sin(progress*Math.PI)*Math.sin(progress*Math.PI*6);
   ctx.save();
+  if(drawStageLot12Track(ctx,w,h,track,t)){ctx.restore();return;}
   switch(track.key){
     case 'curtisCounterClock':{
       const wide=354,ground=h*.57,top=ground-84;

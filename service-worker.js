@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261028-pass11';
+const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'b0067b0f19bcc98d86e62338d21c85ab58534429de55828f3de257ad2b2d21a3';
+const BITMAP_REVISION = 'f9a69434b57f6d29c2b74d15349244159c09c09fb93d57fa2d7a9f76dfdb95dc';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -10,6 +10,11 @@ const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
+  "/assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
+  "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
+  "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+  "/assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
   "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
@@ -24,6 +29,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
   "/assets/sprites/homecoming_schism_089.b94be9905392.png",
+  "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
   "/assets/sprites/homecoming_siam_090.88b378486212.png",
   "/assets/sprites/homecoming_smog_087.24134515bb83.png",
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
@@ -97,6 +103,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+  "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
   "/assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
@@ -104,18 +111,23 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+  "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+  "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+  "/assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+  "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
   "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
+  "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",
   "/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
   "/assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
   "/assets/sprites/sh4_whitestool_062.bcbd83497241.png",
@@ -140,6 +152,8 @@ const ESSENTIAL_SHELL = [
   '/src/combat-reference-policy.js',
   '/src/weapon-phases.js',
   '/src/stage-reference-policy.js',
+  '/src/stage-lot12-policy.js',
+  '/src/stage-lot12-renderer.js',
   '/src/lore-cinematics.js',
   '/src/reference-ui.js',
   '/src/stage-director.js',

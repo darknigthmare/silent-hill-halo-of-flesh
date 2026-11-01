@@ -10,6 +10,7 @@ import {drawStageArchitecture,stageSpace} from '../src/stage-architecture.js';
 import {stageTerrainProfile} from '../src/stage-director.js';
 import {FightEngine} from '../src/fight.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
+import {stageBitmapFor} from '../src/stage-bitmaps.js';
 const ledger=JSON.parse(readFileSync(new URL('../docs/production/batches/lot10-stages.json',import.meta.url))),previous=JSON.parse(readFileSync(new URL('../docs/production/batches/lot9-stages.json',import.meta.url)));
 const parts=ledger.items.filter(i=>i.trigger==='ambient'),recipes=ledger.items.filter(i=>i.trigger==='match-phase');
 const stage=id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,id);return s;};
@@ -59,6 +60,6 @@ test('new SHf and Wii rooms retain exact distinct phases, no unsupported fixture
 });
 
 test('renderer forwards match projection to all scenery while leaving galleries ambient and all six replacement bitmaps masked',()=>{
- const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),28);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,147);
- const replaced=STAGES.filter(s=>STAGE_BITMAPS[s.id]?.source===s.source&&STAGE_BITMAPS[s.id].mode==='replace');assert.equal(replaced.length,6);assert.equal(replaced.flatMap(s=>s.referenceTracks).length,6);assert.ok(!replaced.some(s=>recipes.some(i=>i.entityId===s.id)));
+ const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,163);
+ const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');assert.equal(replaced.length,4);assert.equal(replaced.flatMap(s=>s.referenceTracks).length,5);assert.ok(!replaced.some(s=>recipes.some(i=>i.entityId===s.id)));
 });

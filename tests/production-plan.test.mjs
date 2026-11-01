@@ -303,6 +303,39 @@ test('replacement bitmap scenery keeps procedural proposals prepared and visibly
  }finally{if(previous)STAGE_BITMAPS[stage.id]=previous;else delete STAGE_BITMAPS[stage.id];}
 });
 
+test('new room selections retain older bitmaps as inventory without hiding the current room tracks',()=>{
+ const generated=buildProductionPlan(research);
+ const expected={woodside:'original-pc-corridor',shopping_mall:'normal-helens-bakery'};
+ for(const [id,oldScene] of Object.entries(expected)){
+  const row=generated.stages.find(stage=>stage.id===id);
+  assert.equal(row.bitmapProgress,null,id);assert.equal(row.archivedBitmapProgress.scene,oldScene);
+  assert.equal(row.archivedBitmapProgress.files,1);assert.match(row.locationNote,/ancienne vue ne correspond pas à la pièce sélectionnée/);
+  for(const track of generated.stageAnimations.filter(track=>track.stageId===id&&track.runtimeTrack)){
+   assert.equal(track.runtimeTrackVisible,true);assert.match(track.existing,/Prototype Canvas partiel joué/);
+   assert.doesNotMatch(track.existing,/masquée par la vue bitmap/);
+  }
+  const task=generated.tasks.find(task=>task.id===id+':stage');assert.match(task.reason,/Ancien bitmap.*sans affichage dans la pièce sélectionnée/);
+ }
+ assert.equal(generated.metrics.stageBitmapCandidates,Object.keys(STAGE_BITMAPS).length);
+ assert.equal(generated.metrics.inactiveStageBitmapCandidates,2);
+ assert.equal(generated.metrics.activeStageBitmapCandidates,generated.metrics.stageBitmapCandidates-2);
+ assert.equal(generated.metrics.stageBitmapFiles,generated.metrics.activeStageBitmapFiles+generated.metrics.inactiveStageBitmapFiles);
+ assert.equal(generated.metrics.inactiveStageBitmapFiles,2);
+});
+
+test('all thirty revised lot12 presentation targets archive their old proposal without declaring it delivered',async()=>{
+ const ledger=JSON.parse(await readFile(new URL('../docs/production/batches/lot12-cinematics.json',import.meta.url),'utf8'));
+ assert.equal(ledger.items.length,30);
+ for(const item of ledger.items){
+  const row=plan.presentations.find(row=>row.id===item.rowId),task=plan.tasks.find(task=>task.id===item.entityId+':cinematics');
+  assert.equal(item.descriptionRevisedBeforeDelivery,true);assert.equal(item.previousProposalDeclaredImplemented,false);
+  assert.notEqual(row.description,item.baselineDescription,item.rowId);
+  assert.ok(row.engineState.includes(item.baselineDescription));assert.ok(task.reason.includes(item.baselineDescription));
+  for(const note of [row.engineState,task.reason])assert.match(note,/L’ancienne proposition et ses images contextuelles ne sont pas déclarées réalisées/);
+  assert.notEqual(row.productionStatus,'Validé');assert.notEqual(task.status,'Validé');
+ }
+});
+
 test('the workbook exposes delivered weapon phases and the flight candidate without claiming measured source animation',()=>{
  const missionary=plan.fighters.find(row=>row.id==='sh3_missionary_047');
  assert.match(missionary.identityNote,/balles visibles arrêtées de face.*sans timings source mesurés/);

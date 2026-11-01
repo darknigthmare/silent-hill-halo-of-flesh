@@ -11,7 +11,7 @@ const nonempty=value=>typeof value==='string'&&value.trim().length>0;
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 
 export function validateProductionBatches(ledgers,plan,{baseCommit,itemsPerAgent=30,batch='lot9',previousPlan}={}){
-  const errors=[],seen=new Set(),summaries=[];
+  const errors=[],seen=new Set(),deliveredRows=new Set(),summaries=[];
   if(!/^[a-f0-9]{40}$/.test(baseCommit||''))throw Error('Exact baseline commit is required.');
   if(!Number.isSafeInteger(itemsPerAgent)||itemsPerAgent<1)throw Error('Positive item count required.');
   if(!Array.isArray(ledgers))throw Error('Agent ledgers must be an array.');
@@ -29,6 +29,11 @@ export function validateProductionBatches(ledgers,plan,{baseCommit,itemsPerAgent
       const label=name+': '+item?.rowId,row=rows.get(item?.rowId);
       if(!item||!nonempty(item.rowId)||ids.has(item.rowId))errors.push(label+': missing or duplicate row');
       ids.add(item?.rowId);
+      // Art and pose briefs share the same Excel collection. Count their row
+      // once across agents, even when both ledgers use the correct owner.
+      const deliveryKey=JSON.stringify([collection,item?.rowId]);
+      if(deliveredRows.has(deliveryKey))errors.push(label+': Excel row already assigned to another agent');
+      deliveredRows.add(deliveryKey);
       if(item?.collection!==collection||!row)errors.push(label+': exact Excel collection and row required');
       const owner=row?.fighterId||row?.stageId||row?.entityId;
       if(!nonempty(item?.entityId)||item.entityId!==owner)errors.push(label+': row owner mismatch');

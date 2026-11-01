@@ -2,6 +2,7 @@ import test, {afterEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {ROSTER,STAGES,createCombatProfile} from '../src/data.js';
 import {FIGHTER_REFERENCES} from '../src/production-reference.js';
+import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
 import {FightEngine} from '../src/fight.js';
 import {loreFinisher,lorePresentation,sampleLorePresentation,sampleLoreCinematic,cinematicSummary,LORE_CINEMATIC_COVERAGE} from '../src/lore-cinematics.js';
 
@@ -25,9 +26,12 @@ const FIXED=['sh2_mandarin_026','sh2_flesh_lip_027','sh4_wall_man_056'];
 const KEYS=['intro','taunt','winRound','loseRound','winMatch','loseMatch','outro'];
 const fighter=id=>{const d=ROSTER.find(f=>f.id===id);assert.ok(d,id);return d;};
 const stage=id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,id);return s;};
+// Labyrinth now names the reviewed Box of Faces room. Its rear panels do not
+// establish a usable wall: only this synthetic unit fixture supplies that contract.
+const subjectStage=id=>{const s=stage(SUBJECTS.find(entry=>entry[0]===id)[2]);return id==='sh4_wall_man_056'?{...s,props:['wall'],layers:[]}:s;};
 const actor=(id,index=0)=>({data:fighter(id),profile:createCombatProfile(fighter(id)),index,x:index?720:500,y:594,grounded:true,facing:index?-1:1});
 const target=()=>actor('sh2_bubble_head_nurse_024',1);
-const plan=(id,type='signature',options={})=>{const a=actor(id);return loreFinisher({attacker:a,target:target(),stage:stage(SUBJECTS.find(s=>s[0]===id)[2]),definition:a.data.fatalities.find(f=>f.type===type),...options});};
+const plan=(id,type='signature',options={})=>{const a=actor(id);return loreFinisher({attacker:a,target:target(),stage:subjectStage(id),definition:a.data.fatalities.find(f=>f.type===type),...options});};
 const presentation=(a,key,progress)=>sampleLorePresentation(a,{key,progress,lore:lorePresentation(a,key)});
 const engines=new Set();
 afterEach(()=>{for(const e of engines)e.destroy();engines.clear();});
@@ -58,7 +62,7 @@ test('ten source-specific grammars provide twenty contiguous edits without produ
 
 test('ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks',()=>{
   for(const id of ['sh1_hanged_scratcher_011','sh2_mandarin_026','sh2_flesh_lip_027','sh3_leonard_wolf_048','sh4_wall_man_056','sh4_gum_head_old_type_057']){
-    const validStage=stage(SUBJECTS.find(s=>s[0]===id)[2]);assert.ok(plan(id).allowed,id);
+    const validStage=subjectStage(id);assert.ok(plan(id).allowed,id);
     for(const replacement of [
       {...validStage,props:[],layers:[]},
       {...validStage,id:'invented-support'},
@@ -69,6 +73,7 @@ test('ceiling, floor grate, water, wall and furniture are real requirements, inc
   assert.equal(plan('sh3_leonard_wolf_048','signature',{stage:stage('midwich')}).allowed,false,'no dry-water teleport');
   assert.equal(plan('sh2_mandarin_026','signature',{stage:stage('alchemilla')}).allowed,false,'a ceiling does not substitute for a floor grate');
   assert.equal(plan('sh4_wall_man_056','signature',{stage:stage('old_silent_hill')}).allowed,false,'open street does not supply the fixed wall');
+  assert.equal(plan('sh4_wall_man_056','signature',{stage:stage('labyrinth')}).allowed,false,'actual Box of Faces rear panels do not establish the required wall support');
   assert.equal(plan('sh4_gum_head_old_type_057','signature',{stage:stage('alchemilla')}).allowed,false,'the reviewed SH1 waiting room does not supply a desk, bed, gurney or wheelchair');
 });
 
@@ -98,7 +103,9 @@ test('the actual open Midwich courtyard overrides inherited ceiling motifs for n
     const courtyard=loreFinisher({...options,stage:stage('midwich')});
     assert.equal(courtyard.allowed,false,id);assert.match(courtyard.reason,/Appui de plafond/);
     assert.equal(loreFinisher({...options,stage:stage('sewer_resort')}).allowed,true,id+' retains the real sewer tunnel support');
-    assert.equal(loreFinisher({...options,stage:stage('woodside')}).allowed,true,id+' retains the enclosed apartment hallway support');
+    assert.equal(loreFinisher({...options,stage:stage('woodside')}).allowed,false,id+' cannot borrow the inactive hallway bitmap ceiling for actual Room 208');
+    const historicalCorridor={...stage('woodside'),referencePolicy:{...stage('woodside').referencePolicy,sceneId:STAGE_BITMAPS.woodside.scene}};
+    assert.equal(loreFinisher({...options,stage:historicalCorridor}).allowed,true,id+' retains the explicitly selected historical corridor bitmap contract in a synthetic fixture');
   }
 });
 
@@ -177,14 +184,14 @@ function engine(id,stageId){
   Object.defineProperty(globalThis,'navigator',{value:{getGamepads:()=>[],vibrate:()=>false},configurable:true});
   globalThis.addEventListener=()=>{};globalThis.removeEventListener=()=>{};globalThis.requestAnimationFrame=()=>0;
   const gradient=()=>({addColorStop(){}}),ctx=new Proxy({createLinearGradient:gradient,createRadialGradient:gradient},{get:(t,k)=>k in t?t[k]:()=>{}});
-  const e=new FightEngine({getContext:()=>ctx},{p1:fighter(id),p2:fighter('sh2_bubble_head_nurse_024'),stage:stage(stageId),mode:'local',roundsToWin:2,timeLimit:99,seed:1104,
+  const e=new FightEngine({getContext:()=>ctx},{p1:fighter(id),p2:fighter('sh2_bubble_head_nurse_024'),stage:subjectStage(id),mode:'local',roundsToWin:2,timeLimit:99,seed:1104,
     stageTerrain:false,stageHazards:false,stageDirector:false,otherworldShift:false,fatalities:true,stageFatalities:false});
   engines.add(e);return e;
 }
 function ticks(e,n){for(let i=0;i<n;i++)e.update();}
 function knockout(e,type){const target=e.actors[1];target.health=0;target.lastHit={attackerIndex:0,isSuper:type==='nightmare',environmental:false};e.resolveKnockouts();}
 
-test('all ten actual matches preserve round one, freeze each final clock and award the deciding score exactly once',()=>{
+test('ten engine matches, including the explicit synthetic wall contract, preserve scoring and final clocks',()=>{
   for(const [id,recipeId,stageId] of SUBJECTS)for(const type of ['signature','nightmare']){
     const e=engine(id,stageId);ticks(e,e.phaseTimer);assert.equal(e.phase,'fight');
     knockout(e,type);assert.equal(e.phase,'roundEnd',id);assert.equal(e.fatality,null);assert.equal(e.actors[0].roundWins,1);

@@ -650,7 +650,27 @@ define('sh4_man_with_the_coat_067 sh4_walter_sullivan_072', {moves:{
   ...weaponKit('Tube de la rencontre'),
   neutralSpecial:shot('Tir de pistolet'), super:shot('Poursuite — tir'), desperation:shot('Dernier tir du poursuivant')
 }});
-define('origins_faceless_nurse', {moves:weaponKit('Seringue')});
+// Lot12: short weapon/limb contacts must not inherit the generated super's
+// full-height, multi-impact or unblockable envelope. Each band and all numbers
+// below are authored versus calibration, not original geometry or frame data.
+const HC_LOCAL_SLOTS=['neutralSpecial','forwardSpecial','downSpecial','super','desperation'];
+const localBands=(slots,footOffset,height)=>Object.fromEntries(slots.map(key=>[key,
+  {footOffset,height,sourceTimingMeasured:false}]));
+const localStrike=(name,extra={})=>contact(name,{level:'mid',hits:1,travel:0,verticalTravel:0,
+  knockdown:false,hardKnockdown:false,groundBounce:false,launch:0,unblockable:false,
+  invulnFrames:0,armorFrames:0,effectOverride:null,...extra});
+// Origins creatures_en.htm identifies a syringe. Five versus inputs reuse
+// that close tool; they never turn it into poison, a thrown needle or a scalpel.
+define('origins_faceless_nurse', {
+  contactBands:localBands(HC_LOCAL_SLOTS,145,64),
+  moves:{...weaponKit('Seringue'),
+    neutralSpecial:localStrike('Seringue — piqûre rapprochée',{reach:95}),
+    forwardSpecial:localStrike('Seringue — approche puis piqûre',{reach:105,travel:1.6}),
+    downSpecial:localStrike('Seringue — piqûre depuis appuis bas',{reach:90}),
+    super:localStrike('Seringue — pression de contact bornée',{reach:115,damageScale:.62}),
+    desperation:localStrike('Seringue — dernière piqûre bornée',{reach:125,damageScale:.62})
+  }
+});
 define('origins_straight_jacket_074', {moves:{
   ...weaponKit('Heurt du corps entravé'),
   throw:contact('Jambes — emprise autour du torse',{effectOverride:'bind',hits:1,launch:0,knockdown:false}),
@@ -696,25 +716,47 @@ define('origins_demon_084', {moves:{
   neutralSpecial:shot('Décharge d’énergie'), downSpecial:shot('Pluie de feu', {effectOverride:'burn'}),
   super:shot('Pression d’énergie'), desperation:shot('Dernière décharge')
 }});
-define('homecoming_nurse', {moves:weaponKit('Scalpel')});
+// Homecoming's own guide describes short knife combos. The two-contact
+// pressure is an authored sequence, not a measured original combo or light AI.
+define('homecoming_nurse', {
+  contactBands:localBands(HC_LOCAL_SLOTS,145,76),
+  moves:{...weaponKit('Scalpel'),
+    neutralSpecial:localStrike('Scalpel — taille rapprochée',{reach:100}),
+    forwardSpecial:localStrike('Scalpel — pas puis taille',{reach:110,travel:1.8}),
+    downSpecial:localStrike('Scalpel — taille depuis appuis bas',{reach:95}),
+    super:localStrike('Scalpel — deux tailles rapprochées',{reach:120,hits:2,hitInterval:8,knockbackAdd:-16,damageScale:.6}),
+    desperation:localStrike('Scalpel — dernières tailles bornées',{reach:130,hits:2,hitInterval:8,knockbackAdd:-20,damageScale:.6})
+  }
+});
 // Homecoming creatures_en.htm: Lurker uses claws and a jumping collision that
 // knocks Alex down. Feral also pounces and holds him while biting his throat.
 // These body motions, inputs and bind durations are versus transpositions.
 define('homecoming_lurker_085', {
+  contactBands:localBands(HC_LOCAL_SLOTS,100,86),
   disabledSlots:{throw:'La source décrit griffes et saut renversant, pas une saisie soulevant Alex.',
     backThrow:'Aucune projection arrière avec échange de places n’est décrite.'},
   moves:{...weaponKit('Griffes du Lurker'),
-    neutralSpecial:contact('Entaille des griffes',{hits:2}),
-    forwardSpecial:contact('Saut renversant du Lurker',{travel:4.3,verticalTravel:2.6,knockdown:true,hits:1}),
-    super:contact('Bond puis percussion des griffes',{travel:3.8,knockdown:true,hits:1}),
+    neutralSpecial:localStrike('Griffes du Lurker — entaille locale',{reach:120}),
+    forwardSpecial:localStrike('Saut renversant du Lurker',{reach:145,travel:4.3,verticalTravel:2.6,knockdown:true}),
+    downSpecial:localStrike('Griffes du Lurker — frappe basse du corps',{reach:115}),
+    super:localStrike('Lurker — bond puis percussion locale',{reach:155,travel:3.8,verticalTravel:2.2,knockdown:true,damageScale:.7}),
+    desperation:localStrike('Lurker — dernier bond renversant',{reach:165,travel:4.1,verticalTravel:2.4,knockdown:true,damageScale:.7}),
     dodgeAttack:contact('Griffes après écart'),guardCounter:contact('Griffes de riposte'),
     wakeupAttack:contact('Reprise des griffes')
   }
 });
 define('homecoming_feral_086', {
+  // Keep these ordinary bites inside the low canine body. The jaw does not
+  // float at human throat height; the separate documented pounce/hold can rise.
+  contactBands:localBands(['neutralLight','forwardLight','crouchLight','neutralHeavy','forwardHeavy'],68,54),
   groundHolds:{slots:['neutralSpecial','throw','super','desperation'],sourceTimingMeasured:false},
   disabledSlots:{backThrow:'Le Feral plaque et mord de face ; aucune projection arrière avec échange de places n’est décrite.'},
   moves:{...weaponKit('Morsure du Feral'),
+    neutralLight:localStrike('Morsure du Feral — contact bref',{reach:90}),
+    forwardLight:localStrike('Morsure du Feral — pas court',{reach:100,travel:1.5}),
+    crouchLight:localStrike('Morsure du Feral — appuis bas',{reach:85}),
+    neutralHeavy:localStrike('Morsure du Feral — pression proche',{reach:105}),
+    forwardHeavy:localStrike('Morsure du Feral — avancée proche',{reach:115,travel:1.8}),
     neutralSpecial:contact('Gorge retenue entre les mâchoires',{level:'throw',effectOverride:'bind',reach:90,hits:1}),
     forwardSpecial:contact('Bond renversant du Feral',{travel:5.1,verticalTravel:3,knockdown:true,hits:1}),
     throw:contact('Plaquage puis morsure de gorge',{effectOverride:'bind',hits:1}),
@@ -745,25 +787,33 @@ define('homecoming_smog_087', {
 // armor-break/Nightmare exceptions are versus choices. A silencer does not
 // remove a physical bullet from this defense (unlike Missionary's visual cue).
 define('homecoming_needler_088', {
+  contactBands:localBands(HC_LOCAL_SLOTS,135,100),
   defense:{frontalVisibleBullets:true,frontalMelee:true,silencedBullets:true},
   disabledSlots:{backSpecial:'La garde des lames est une défense de posture ; cette attente ne produit pas une frappe gratuite.',
     backThrow:'Aucune projection arrière avec échange de places n’est documentée pour cette forme.'},
   moves:{...weaponKit('Membres-lames'),
     neutralHeavy:contact('Abattement des membres-lames',{knockdown:true,armorFrames:0}),
-    forwardSpecial:contact('Assaut des membres-lames',{knockdown:true,travel:4.7,hits:3}),
+    neutralSpecial:localStrike('Membres-lames — abattement local',{reach:145,knockdown:true}),
+    forwardSpecial:localStrike('Assaut des membres-lames',{reach:165,knockdown:true,travel:4.7}),
+    downSpecial:localStrike('Membres-lames — contact depuis appuis bas',{reach:135,knockdown:true}),
+    super:localStrike('Membres-lames — pression renversante bornée',{reach:175,knockdown:true,travel:1.8,damageScale:.7}),
+    desperation:localStrike('Membres-lames — dernier abattement borné',{reach:185,knockdown:true,travel:2,damageScale:.7}),
     throw:contact('Prise des membres antérieurs',{level:'throw',reach:90,hits:1})}
 });
 // Homecoming walkthrough: Scarlet phase2 exposes her back after a missed leap;
 // Amnion phase2 gets its legs stuck after a missed two-leg smash. These exact
 // profiles use their real attack recovery, never an independent exposure timer.
 define('homecoming_scarlet_spider_form_095', {
-  whiffExposure:{slots:['forwardSpecial'],rearOnly:true,damageScale:2,sourceTimingMeasured:false},
+  contactBands:localBands(HC_LOCAL_SLOTS,115,100),
+  whiffExposure:{slots:['forwardSpecial','super','desperation'],rearOnly:true,damageScale:2,sourceTimingMeasured:false},
   disabledSlots:{backThrow:'Aucune projection arrière avec échange de places n’est décrite dans cette forme.'},
   moves:{...weaponKit('Membres de Scarlet après la mue'),
-    forwardSpecial:contact('Bond de la seconde forme',{travel:4.8,verticalTravel:3.2,hits:1,armorFrames:0}),
-    neutralSpecial:contact('Membres de la seconde forme — frappe',{hits:1}),
+    forwardSpecial:localStrike('Bond de la seconde forme',{reach:165,travel:4.8,verticalTravel:3.2}),
+    neutralSpecial:localStrike('Membres de la seconde forme — frappe locale',{reach:140}),
+    downSpecial:localStrike('Membres de la seconde forme — appuis bas',{reach:135}),
     throw:contact('Emprise après le bond',{effectOverride:'bind',hits:1}),
-    super:contact('Plongeon puis frappe des membres',{travel:4.2,hits:2}),
+    super:localStrike('Seconde forme — bond puis contact des membres',{reach:175,travel:4.2,verticalTravel:2.8,damageScale:.7}),
+    desperation:localStrike('Seconde forme — dernier bond borné',{reach:185,travel:4.5,verticalTravel:3,damageScale:.7}),
     guardCounter:contact('Membres de riposte'),dodgeAttack:contact('Membres après écart'),wakeupAttack:contact('Reprise des membres')
   }
 });

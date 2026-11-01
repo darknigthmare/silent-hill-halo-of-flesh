@@ -8,7 +8,7 @@ import {drawStageReferenceTracks,drawStageCinematics} from '../src/stage-cinemat
 import {stageSpace,drawStageArchitecture} from '../src/stage-architecture.js';
 
 const stage=id=>{const value=STAGES.find(s=>s.id===id);assert.ok(value,id);return value;};
-const additions=[['subway_world','subwayDoorCycle'],['forest_world','forestWindLayers'],['water_prison','waterwheelTurn'],['hospital_world','wheelchairDrift']];
+const additions=[['subway_world','subwayDoorCycle'],['forest_world','forestWindLayers'],['water_prison','waterPrisonPeepholes'],['hospital_world','wheelchairDrift']];
 function trace(){
  const calls=[],stack=[],state={globalAlpha:.4,canvas:{width:1280,height:720}};
  state.save=()=>{stack.push(state.globalAlpha);calls.push(['save']);};
@@ -28,7 +28,7 @@ test('four SH4 proposals bind the existing exact first-visit room evidence witho
   assert.ok(track,id);assert.equal(track.id,`${id}:reference:2`);assert.equal(track.source,'sh4');assert.equal(track.proposalIndex,1);
   assert.equal(track.description,proposal.description);assert.deepEqual(track.evidence,proposal.evidence);
   assert.equal(track.fidelity,'adaptation-versus-proposee');assert.equal(track.coverage,'partial-visual-prototype');assert.equal(track.event,null);
-  assert.equal(track.timecode,undefined);assert.ok(track.locationScope);assert.match(track.limits,/proposé/);
+  assert.equal(track.timecode,undefined);assert.ok(track.locationScope);assert.match(track.limits,/proposé|composées/);
   assert.equal(stageReferenceTrackAllowed(location,track),true);
   for(const forged of [{...location,source:'sh3'},{...location,id:id+'_second_visit'}]){
    assert.equal(stageReferenceTrackAllowed(forged,track),false);assert.deepEqual(draw({...forged,referenceTracks:[track]},1400),[]);
@@ -41,7 +41,7 @@ test('selected SH4 rooms exclude adjoining locations, unsupported ambience and t
  const subway=stage('subway_world');assert.equal(subway.weather,'dust');assert.equal(stageSpace(subway),'interior');assert.ok(!subway.props.includes('turnstile'));
  assert.deepEqual(subway.director.hazardDeck,[]);assert.ok(!subway.director.events.includes('trainRumble'));assert.ok(!subway.referenceTracks.some(t=>/Wallmen|escalator/.test(t.name)));
  const forest=stage('forest_world');assert.equal(stageSpace(forest),'exterior');assert.ok(!forest.props.includes('wish_house'));assert.ok(!forest.layers.includes('wish house'));assert.ok(!forest.animations.includes('forestWind'));
- const prison=stage('water_prison');assert.equal(stageSpace(prison),'interior');assert.equal(prison.weather,'dust');assert.deepEqual(prison.terrain,{id:'concrete',...STAGE_TERRAINS.concrete});
+ const prison=stage('water_prison');assert.equal(stageSpace(prison),'interior');assert.equal(prison.weather,'none');for(const key of['moveScale','jumpScale','dodgeScale','friction','knockbackScale','guardRegenScale'])assert.equal(prison.terrain[key],STAGE_TERRAINS.concrete[key]);assert.equal(prison.terrain.id,'concrete');assert.match(prison.terrain.name,/SURVEILLANCE2F/);
  for(const prop of ['tower','watchtower','cells','spotlight','chains']){assert.ok(!prison.props.includes(prop));assert.ok(!prison.layers.includes(prop));}
  const hospital=stage('hospital_world');for(const prop of ['beds','head','curtains','monitor']){assert.ok(!hospital.props.includes(prop));assert.ok(!hospital.layers.includes(prop));}
  assert.match(hospital.referenceTracks[0].locationScope,/deuxième étage/);assert.match(hospital.referenceTracks[0].limits,/ennemis/);assert.deepEqual(hospital.director.events,[]);
@@ -52,10 +52,10 @@ test('four new ambient prototypes freeze under reduced motion and preserve Canva
  for(const [id] of additions){const location=stage(id);assert.notDeepEqual(draw(location,1400),draw(location,5900),id);assert.deepEqual(draw(location,1400,true),draw(location,5900,true),id);}
 });
 
-test('the B2 rotor stays horizontal, stopped car body stays fixed and wheelchair wheels stay grounded',()=>{
+test('the2F peepholes stay fixed, B2 rotor stays absent, stopped car body stays fixed and wheelchair wheels stay grounded',()=>{
  const prison=stage('water_prison');
  for(const time of [0,1400,5900,15999]){
-  const wheel=draw(prison,time);assert.ok(wheel.some(c=>c[0]==='ellipse'&&c[3]===97&&c[4]===27));assert.ok(!wheel.some(c=>c[0]==='arc'));
+  const wheel=draw(prison,time);assert.ok(wheel.some(c=>c[0]==='ellipse'&&c[3]===25&&c[4]===25));assert.ok(!wheel.some(c=>c[0]==='ellipse'&&c[3]===97&&c[4]===27));assert.ok(!prison.referenceTracks.some(t=>t.key==='waterwheelTurn'));assert.ok(!wheel.some(c=>c[0]==='rotate'));
   const car=draw(stage('subway_world'),time).filter(c=>c[0]==='fillRect')[0];assert.deepEqual(car,['fillRect',640-186,720*.57-720*.24,372,720*.24]);
   const chair=draw(stage('hospital_world'),time);const translation=chair.find(c=>c[0]==='translate');assert.equal(translation[2],720*.57);
   const wheels=chair.filter(c=>c[0]==='arc');assert.ok(wheels.length===2&&wheels.every(c=>c[2]+c[3]===0));

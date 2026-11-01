@@ -29,7 +29,11 @@ test('room wording cannot change physical values or rename an explicit material 
  assert.equal(local.id,'carpet');assert.equal(local.moveScale,1);assert.equal(local.jumpScale,1);
  const override=stageTerrainProfile(modified,'ice');
  assert.deepEqual(override,{id:'ice',...STAGE_TERRAINS.ice});
- const other=STAGES.find(s=>s.id==='woodside');
- assert.equal(stageTerrainProfile(other).name,STAGE_TERRAINS[other.terrain.id].name);
+ // Wood Side now has its own Room208 caption too. Exercise the unlabelled
+ // fallback explicitly instead of borrowing an unrelated documented room.
+ const other={...lake,referencePolicy:{...lake.referencePolicy,terrainPresentation:null}};
+ assert.equal(stageTerrainProfile(other).name,STAGE_TERRAINS.concrete.name);
+ assert.equal(stageTerrainProfile({...other,referencePolicy:{...other.referencePolicy,terrainRules:true}}).name,
+  STAGE_TERRAINS[other.terrain.id].name);
  assert.deepEqual(STAGE_TERRAINS,originals);assert.equal(Object.keys(STAGE_TERRAINS).length,14);
 });

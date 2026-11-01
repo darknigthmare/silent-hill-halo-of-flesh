@@ -25,10 +25,13 @@ const FIXED=['sh1_incubator_018','sh1_incubus_019','sh3_god_050','origins_memory
 const KEYS=['intro','taunt','winRound','loseRound','winMatch','loseMatch','outro'];
 const fighter=id=>{const d=ROSTER.find(f=>f.id===id);assert.ok(d,id);return d;};
 const stage=id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,id);return s;};
+// Labyrinth now names the reviewed Box of Faces room. Its rear panels do not
+// establish a usable wall: only this synthetic unit fixture supplies that contract.
+const subjectStage=id=>{const s=stage(SUBJECTS.find(entry=>entry[0]===id)[2]);return id==='origins_memory_of_richard_grady_083'?{...s,props:['wall'],layers:[]}:s;};
 const actor=(id,index=0)=>({data:fighter(id),profile:createCombatProfile(fighter(id)),index,x:index?720:500,y:594,grounded:true,facing:index?-1:1});
 const target=()=>actor('sh2_bubble_head_nurse_024',1);
 const definition=(a,type='signature')=>a.data.fatalities.find(f=>f.type===type);
-const plan=(id,type='signature',options={})=>{const a=actor(id);return loreFinisher({attacker:a,target:target(),stage:stage(SUBJECTS.find(s=>s[0]===id)[2]),definition:definition(a,type),...options});};
+const plan=(id,type='signature',options={})=>{const a=actor(id);return loreFinisher({attacker:a,target:target(),stage:subjectStage(id),definition:definition(a,type),...options});};
 const samplePresentation=(a,key,progress)=>sampleLorePresentation(a,{key,progress,lore:lorePresentation(a,key)});
 const engines=new Set();
 afterEach(()=>{for(const e of engines)e.destroy();engines.clear();});
@@ -90,10 +93,13 @@ test('five fixed bosses retain world anchors and Ariel descends only vertically 
     assert.equal(plan(id,'signature',{stage:stage('old_silent_hill')}).allowed,false,id+' cannot suspend in an open street');
   }
   assert.equal(plan('origins_memory_of_richard_grady_083','signature',{stage:stage('old_silent_hill')}).allowed,false,'the wall is mandatory');
+  assert.equal(plan('origins_memory_of_richard_grady_083','signature',{stage:stage('labyrinth')}).allowed,false,'the actual Box of Faces cannot replace the missing wall contract');
 });
 
 test('replacement bitmap ceiling contracts override names and motifs, while compatible overlays retain the procedural support',()=>{
-  const id='origins_ariel_078',a=actor(id),options={attacker:a,target:target(),stage:stage('woodside'),definition:definition(a)};
+  // This deliberately synthetic motif tests overlay precedence; the actual
+  // clock-room bitmap is not evidence for an underlying generic corridor.
+  const id='origins_ariel_078',a=actor(id),options={attacker:a,target:target(),stage:{...stage('woodside'),props:['corridor'],referencePolicy:{...stage('woodside').referencePolicy,sceneId:null}},definition:definition(a)};
   const original=STAGE_BITMAPS.woodside;
   try{
     STAGE_BITMAPS.woodside={...original,scene:'renamed-open-looking-title',geometry:{ceiling:true}};
@@ -173,14 +179,14 @@ function engine(id,stageId){
   Object.defineProperty(globalThis,'navigator',{value:{getGamepads:()=>[],vibrate:()=>false},configurable:true});
   globalThis.addEventListener=()=>{};globalThis.removeEventListener=()=>{};globalThis.requestAnimationFrame=()=>0;
   const gradient=()=>({addColorStop(){}}),ctx=new Proxy({createLinearGradient:gradient,createRadialGradient:gradient},{get:(t,k)=>k in t?t[k]:()=>{}});
-  const e=new FightEngine({getContext:()=>ctx},{p1:fighter(id),p2:fighter('sh2_bubble_head_nurse_024'),stage:stage(stageId),mode:'local',roundsToWin:2,timeLimit:99,seed:2405,
+  const e=new FightEngine({getContext:()=>ctx},{p1:fighter(id),p2:fighter('sh2_bubble_head_nurse_024'),stage:subjectStage(id),mode:'local',roundsToWin:2,timeLimit:99,seed:2405,
     stageTerrain:false,stageHazards:false,stageDirector:false,otherworldShift:false,fatalities:true,stageFatalities:false});
   engines.add(e);return e;
 }
 function ticks(e,n){for(let i=0;i<n;i++)e.update();}
 function knockout(e,type){const t=e.actors[1];t.health=0;t.lastHit={attackerIndex:0,isSuper:type==='nightmare',environmental:false};e.resolveKnockouts();}
 
-test('twenty actual deciding matches keep round one reversible, pause their common clock and finish exactly once without reviving the target',()=>{
+test('twenty engine matches, including the explicit synthetic wall contract, preserve round scoring and final clocks',()=>{
   for(const [id,recipeId,stageId] of SUBJECTS)for(const type of ['signature','nightmare']){
     const e=engine(id,stageId);ticks(e,e.phaseTimer);assert.equal(e.phase,'fight');
     knockout(e,type);assert.equal(e.phase,'roundEnd',id);assert.equal(e.fatality,null);assert.equal(e.actors[0].roundWins,1);assert.ok(e.actors.every(a=>a.presentation.reversible));

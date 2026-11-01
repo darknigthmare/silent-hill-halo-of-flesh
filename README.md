@@ -1,5 +1,36 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Corps entiers et chantiers parallèles — douzième lot du 1er novembre 2026
+
+**Six lots de trente lignes Excel : 180 éléments suivis**, dont 97 réalisations
+candidates, 60 spécifications et 23 blocages. Les 157 lignes non bloquées ont changé.
+
+**12 nouveaux sprites de combat 2D** montrent chaque sujet avec ses extrémités,
+outils ou cadre visibles, selon son anatomie. Le registre atteint **86 profils
+illustrés et 121 PNG actifs** ; les 74 profils antérieurs restent identiques.
+Wall Man et One Truth représentent leur extérieur attesté, sans inventer les
+parties enchâssées dans le mur. Les douze poses sont fixes, sans nouveau cycle animé.
+
+Trente commandes et trente présentations sont révisées. Les bonds ratés de
+Scarlet exposent son dos ; les contacts Feral restent à hauteur de sa mâchoire.
+Les armures expressément refusées ne sont plus ajoutées aux desperations.
+Vingt-cinq éléments de neuf pièces ont des maquettes Canvas documentées ; leur
+rendu géométrique simple reste loin d’une reconstruction visuelle 1:1.
+
+Le catalogue compte **277 sources**, avec les 246 anciennes préservées.
+Les six bitmaps restent stockés ; quatre correspondent aux scènes actuelles,
+deux restent archivés pour leurs pièces distinctes. Leur plafond ne peut pas
+être prêté à une autre salle.
+
+**Validation : 1 201 tests Node, 101 tests Python et 3 296 contrôles navigateur dans 14 suites, avec 610 captures distinctes et aucune erreur JavaScript.**
+Il reste **144 profils sans image et 840 actions ouvertes, dont 93 P0**.
+Aucune fidélité 1:1 ni animation originale n’est certifiée.
+
+[Réalisation et limites](docs/production/CHANTIERS_PARALLELES_LOT12_2026-11-01.md) ·
+[Six lots vérifiés](docs/production/batches/lot12-summary.json) ·
+[Rapport de validation](docs/INTEGRATION_QA_2026-11-01-lot12.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
 ## Corps entiers et chantiers parallèles — onzième lot du 28 octobre 2026
 
 **Six agents, trente lignes chacun : 180 éléments suivis**, avec

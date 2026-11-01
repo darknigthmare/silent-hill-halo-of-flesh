@@ -8,7 +8,7 @@ import {drawStageReferenceTracks,drawStageCinematics} from '../src/stage-cinemat
 import {drawStageArchitecture,stageSpace} from '../src/stage-architecture.js';
 
 const stage=id=>{const value=STAGES.find(s=>s.id===id);assert.ok(value,id);return value;};
-const additions=[['toluca_prison','sh2','cellDoorReply',2,'referenceCellReply'],['labyrinth','sh2','cubeTurn',1,null],['room_302','sh4','washroomHoleReply',2,'referenceWashroomReply']];
+const additions=[['toluca_prison','sh2','tolucaScaffoldPanel',0,null],['labyrinth','sh2','boxFacesCube',1,null],['room_302','sh4','room302ChainedDoor',0,null]];
 function trace(){
  const calls=[],stack=[],state={globalAlpha:.4,canvas:{width:1280,height:720}};
  state.save=()=>{stack.push(state.globalAlpha);calls.push(['save']);};
@@ -47,7 +47,7 @@ test('pending props cannot merge the music room with its courtyard or the gallow
  assert.equal(stageReferenceTrackAllowed(location,forged),false);
  const r=trace();assert.deepEqual(drawStageReferenceTracks(r.context,1280,720,{...location,referenceTracks:[forged]},1000),[]);assert.deepEqual(r.calls,[]);
  const prison=stage('toluca_prison');assert.equal(stageSpace(prison),'interior');assert.equal(STAGE_REFERENCE_TRACKS.ropePendulum.pendingLocation,'gallows-courtyard');
- assert.ok(!prison.referenceTracks.some(track=>track.key==='ropePendulum'));assert.ok(prison.referenceTracks.some(track=>track.key==='cellDoorReply'));
+ assert.ok(!prison.referenceTracks.some(track=>track.key==='ropePendulum'));assert.ok(!prison.referenceTracks.some(track=>track.key==='cellDoorReply'));assert.ok(prison.referenceTracks.some(track=>track.key==='tolucaScaffoldPanel'));
  const rope={key:'ropePendulum',id:'toluca_prison:reference:2',source:'sh2',proposalIndex:1,anchor:{x:.68,y:.25}};
  assert.equal(stageReferenceTrackAllowed(prison,rope),false);
  const cellblock=trace();assert.deepEqual(drawStageReferenceTracks(cellblock.context,1280,720,{...prison,referenceTracks:[rope]},1000),[]);assert.deepEqual(cellblock.calls,[]);
@@ -81,23 +81,22 @@ test('new ambient props and reactions freeze geometry under reduced motion and p
  }
 });
 
-test('the underground Labyrinth uses interior architecture and the initial washroom hole is stationary',()=>{
+test('the underground control room uses interior architecture while Room302 entrance excludes its separate washroom',()=>{
  const maze=stage('labyrinth');assert.equal(stageSpace(maze),'interior');assert.equal(maze.referencePolicy.interior,true);assert.ok(maze.visibility.fog<=.2);
  const interior=trace();assert.equal(drawStageArchitecture(interior.context,1280,720,maze),true);assert.equal(interior.stack.length,0);
  const room=stage('room_302'),a=trace(),b=trace();drawStageArchitecture(a.context,1280,720,room);drawStageArchitecture(b.context,1280,720,room);
- assert.deepEqual(a.calls,b.calls);assert.ok(a.calls.some(call=>call[0]==='ellipse'&&call[1]===1280*.78&&call[2]===720*.49));
+ assert.deepEqual(a.calls,b.calls);assert.ok(!a.calls.some(call=>call[0]==='ellipse'&&call[1]===1280*.78&&call[2]===720*.49));assert.equal(room.referencePolicy.sceneId,'room302-first-entry-door');
  const other=trace();drawStageArchitecture(other.context,1280,720,{...room,source:'film'});assert.ok(!other.calls.some(call=>call[0]==='ellipse'&&call[1]===1280*.78));
 });
 
-test('two real local impact reactions grant no extra health, meter, hazard, terrain or phase changes',()=>{
+test('retired cellblock and washroom cues cannot run in the courtyard or entrance, even after a real hit',()=>{
  for(const id of ['toluca_prison','room_302']){
-  const location=stage(id),engine=engineFor(location),runtime=engine.stageRuntime,interaction=location.interactions.find(i=>i.trigger==='local-heavy-impact');assert.ok(interaction,id);
-  runtime.eventTimer=-1;for(let tick=0;tick<10;tick++)engine.updateStageDirector();assert.equal(runtime.activeEvent,null,id+': elapsed time alone');
-  runtime.heavyImpactPending=true;runtime.lastHeavyImpact={x:interaction.zone.x>.5?30:1250};assert.equal(engine.tryStageInteraction(),false,id+': remote impact');
-  const [actor,target]=engine.actors;target.x=interaction.zone.x*1280;const health=target.health;engine.applyHit(actor,target,actor.profile.moves.neutralHeavy,951);assert.ok(target.health<health);assert.equal(runtime.heavyImpactPending,true);
-  const state=()=>({health:engine.actors.map(a=>a.health),meter:engine.actors.map(a=>a.meter),phase:engine.world.amount,terrain:engine.stage.terrain.id,hazards:engine.hazards.length});
-  const before=state();assert.equal(engine.tryStageInteraction(),true,id);assert.equal(runtime.activeEvent.id,interaction.event);
-  assert.deepEqual(state(),before,id+': visual cue adds no gameplay reward');assert.equal(runtime.pendingTerrain,null);assert.equal(runtime.linkedHazard,null);
-  runtime.activeEvent=null;runtime.heavyImpactPending=true;runtime.lastHeavyImpact={x:target.x};assert.equal(engine.tryStageInteraction(),false,id+': once per round');
+  const location=stage(id),engine=engineFor(location),runtime=engine.stageRuntime;
+  assert.deepEqual(location.interactions,[]);assert.deepEqual(location.director.events,[]);
+  runtime.eventTimer=-1;for(let tick=0;tick<10;tick++)engine.updateStageDirector();assert.equal(runtime.activeEvent,null);
+  const [actor,target]=engine.actors;target.x=640;const health=target.health;engine.applyHit(actor,target,actor.profile.moves.neutralHeavy,951);assert.ok(target.health<health);
+  const stamp=()=>JSON.stringify({health:engine.actors.map(a=>a.health),meter:engine.actors.map(a=>a.meter),world:engine.world,terrain:engine.stage.terrain,hazards:engine.hazards});const before=stamp();
+  runtime.heavyImpactPending=true;runtime.lastHeavyImpact={x:target.x};assert.equal(engine.tryStageInteraction(),false);assert.equal(stamp(),before);assert.equal(runtime.activeEvent,null);assert.equal(runtime.pendingTerrain,null);assert.equal(runtime.linkedHazard??null,null);
+  for(const event of ['referenceCellReply','referenceWashroomReply']){const r=trace();drawStageCinematics(r.context,1280,720,location,{activeEvent:{id:event,duration:100},activeTimer:50});assert.deepEqual(r.calls,[]);}
  }
 });

@@ -1,3 +1,4 @@
+import {LOT12_ENVIRONMENT,LOT12_SCENE_PRESENTATION,LOT12_REFERENCE_TRACKS,LOT12_BINDINGS} from './stage-lot12-policy.js';
 /**
  * Production-reference decisions, kept separate from the source catalogue.
  * A cited proposal is still a proposal. These original Canvas prototypes are
@@ -563,10 +564,11 @@ const ENVIRONMENT = Object.freeze({
 
   ...LOT10_ENVIRONMENT,
   ...LOT11_ENVIRONMENT,
+  ...LOT12_ENVIRONMENT,
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
-const SCENE_PRESENTATION = Object.freeze({
+const SCENE_PRESENTATION_BASE = Object.freeze({
   ...LOT11_SCENE_PRESENTATION,
   ...{
   "dark_shrine": {
@@ -694,6 +696,8 @@ const SCENE_PRESENTATION = Object.freeze({
   lakeside_amusement:{source:'sh1',policy:{normalPhaseLabel:'MANÈGE DE CYBIL · SH1',terrainRules:false,terrainPresentation:{name:'PLATEAU DU MANÈGE SH1',description:'Manège du parc SH1 ; humidité et matériau du plateau non déterminés. Rotation de fond proposée, règles matérielles désactivées et caméra non certifiée 1:1.'}}},
   lakeside_sh3:{source:'sh3',policy:{normalPhaseLabel:'AVANT LA TRANSITION DU CARROUSEL',terrainRules:false,terrainPresentation:{name:'PLATEAU DU HAPPY CAROUSEL',description:'Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1.'}}},
 });
+
+const SCENE_PRESENTATION = Object.freeze({...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION});
 
 const LOT9_REFERENCE_TRACKS = Object.freeze({
   blueStairRailReply:{"name":"Rampe fixée au-dessus de l’escalier noyé","layer":"background","replaces":[],"stageId":"blue_creek","source":"sh2","locationScope":"Palier nord Blue Creek, duel SH2 original avant drainage","limits":"Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré."},
@@ -1555,6 +1559,7 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   ...LOT11_REFERENCE_TRACKS,
   ...LOT10_REFERENCE_TRACKS,
   ...LOT9_REFERENCE_TRACKS,
+  ...LOT12_REFERENCE_TRACKS,
   fogLayers: {name:'Nappes de brume à deux vitesses',layer:'background',replaces:['fogDrift']},
   snowDepth: {name:'Neige dans la profondeur',layer:'air',replaces:['snowGust']},
   ashDepth: {name:'Cendre dans la profondeur',layer:'air',replaces:['ashFall']},
@@ -1582,7 +1587,7 @@ export const STAGE_REFERENCE_TRACKS = Object.freeze({
   washroomHoleReply: {name:'Lueur contenue du trou de la salle de bain',layer:'background',replaces:[],stageId:'room_302',source:'sh4'},
   paintingGlint: {name:'Reflet sur le vitrage d’un cadre sombre',layer:'background',replaces:[],stageId:'historical_society',source:'sh2',locationScope:'Salles d’exposition du musée ; hors escalier et puits',limits:'Vitrage et cadre abstraits ; aucun tableau officiel ni personnage reproduit ou animé.'},
   closedDoorReply: {name:'Battant fermé du Lounge d’Ernest',layer:'background',replaces:[],stageId:'baldwin_mansion',source:'sh2',locationScope:'Palier devant le Lounge ; porte fermée de Born from a Wish',limits:'La porte reste opaque et fermée ; aucun Ernest visible, aucune bougie du grenier déplacée ici.'},
-  chapelCandleLean: {name:'Flammes des cierges de la chapelle',layer:'background',replaces:[],stageId:'church',source:'sh3',locationScope:'Chapelle avec autel et vitraux ; hors passages mémoire et fosse finale',limits:'Cierges attestés ; inclinaison commune proposée pour le versus, sans invocation ni effet sur les combattants.'},
+  chapelCandleLean: LOT12_REFERENCE_TRACKS.chapelCandleLean,
   officeBlindSway: {name:'Store du bureau de Monica’s Dance Studio',layer:'background',replaces:[],stageId:'hilltop_center',source:'sh3',locationScope:'Bureau / réception de Monica’s Dance Studio, Hilltop Center normal',limits:'Store attesté dans cette pièce ; oscillation proposée pour le versus, sans atelier ni seuil de baignoire.'},
   subwayDoorCycle: {name:'Panneaux d’une voiture arrêtée',layer:'background',replaces:[],stageId:'subway_world',source:'sh4',locationScope:'Premier passage, quai Lynch Street et voitures arrêtées',limits:'Commande rouge attestée ; cycle lent proposé pour le versus, sans Cynthia, Wallmen, départ du train ou danger Hazel Street SH3.'},
   forestWindLayers: {name:'Vent distinct dans les branches et les herbes',layer:'background',replaces:['forestWind','windGust'],stageId:'forest_world',source:'sh4',locationScope:'Sentier et clairière arborée du premier passage ; hors enceinte Wish House',limits:'Deux fréquences de vent proposées pour le versus ; troncs et appuis fixes, aucune maison brûlée ni racine animée comme une main.'},
@@ -1688,6 +1693,14 @@ const AMBIENT_EVENTS = Object.freeze({
 const PHYSICAL_ANIMATIONS = Object.freeze({trainPass:'trainRush',mineCart:'trainRush',carouselTurn:'carouselSweep',rootsCreep:'rootSnare',voidSurge:'voidPull',chasmPulse:'roadCollapse',iceCrack:'iceFracture'});
 const FORBIDDEN_CAMEOS = new Set(['shadowPass','windowShadow','cellShadow','portraitBlink','dollTurn']);
 
+function referenceBindings(stage) {
+  const selection=LOT12_SCENE_PRESENTATION[stage?.id];
+  if(selection?.source===stage?.source) {
+    return [...(LOT12_BINDINGS[stage.id]||[]),...(stage.id==='blue_creek' ? LOT9_BINDINGS.blue_creek : [])];
+  }
+  return [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[]),...(LOT11_BINDINGS[stage.id]||[])];
+}
+
 /** Public predicates also protect rendering against an old or injected cue. */
 export function stageReferenceEventAllowed(stage, id) {
   return !stage?.reference?.blocked && (!stage?.referencePolicy || stage.referencePolicy.allowedEvents.includes(id));
@@ -1699,6 +1712,8 @@ export function stageReferenceHazardAllowed(stage, id) {
 export function stageReferenceTrackAllowed(stage, track) {
   const definition=STAGE_REFERENCE_TRACKS[track?.key];
   if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
+  const lot12Scene=LOT12_SCENE_PRESENTATION[stage?.id];
+  if(lot12Scene?.source===stage?.source && !referenceBindings(stage).some(([key,index])=>key===track.key&&index===track.proposalIndex))return false;
   const selectedScene=LOT11_SCENE_PRESENTATION[stage?.id];
   if(selectedScene?.source===stage?.source&&stage.referencePolicy?.sceneId===selectedScene.policy.sceneId&&
     !(LOT11_BINDINGS[stage.id]||[]).some(([key,index])=>key===track.key&&index===track.proposalIndex))return false;
@@ -1707,7 +1722,7 @@ export function stageReferenceTrackAllowed(stage, track) {
     (!definition.trigger||track.trigger===definition.trigger)&&
     (!definition.sceneId||stage.referencePolicy?.sceneId===definition.sceneId)&&
     track.id===`${definition.stageId}:reference:${track.proposalIndex+1}`&&
-    [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[]),...(LOT11_BINDINGS[stage.id]||[])].some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
+    referenceBindings(stage).some(([key,index,,event])=>key===track.key&&index===track.proposalIndex&&(event||null)===(track.event||null));
 }
 export function stageAnimationConflictsWithHazard(id, hazardId) {
   return PHYSICAL_ANIMATIONS[id] === hazardId || ({hospitalMonitor:'gurneyRush',pipeSteam:'steamVent',waterRipple:'waterSurge',mirrorGlitch:'mirrorFracture',elevatorBlink:'elevatorDrop',ashFall:'emberFall'})[id] === hazardId;
@@ -1778,7 +1793,7 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : [...(BINDINGS[stage.id] || []),...(LOT9_BINDINGS[stage.id] || []),...(LOT10_BINDINGS[stage.id] || []),...(LOT11_BINDINGS[stage.id] || [])].flatMap(([key,index,anchor,event]) => {
+  const referenceTracks = blocked ? [] : referenceBindings(stage).flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,

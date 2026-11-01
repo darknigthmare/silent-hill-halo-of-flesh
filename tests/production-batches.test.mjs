@@ -37,6 +37,11 @@ test('a test case or another character cannot substitute for the exact Excel row
     const f=fixture();change(f.ledgers[0].items[0]);assert.throws(()=>run(f));
   }
 });
+test('art and pose agents cannot count the same correctly owned Excel row twice',()=>{
+  const f=fixture(),art=f.ledgers.find(ledger=>ledger.workstream==='art'),poses=f.ledgers.find(ledger=>ledger.workstream==='poses');
+  poses.items[0]=structuredClone(art.items[0]);
+  assert.throws(()=>run(f),/Excel row already assigned to another agent/);
+});
 test('the baseline comparison refuses unchanged claimed deliveries and accepts explicitly blocked rows',()=>{
   const f=fixture(),previousPlan=structuredClone(f.plan);
   assert.throws(()=>validateProductionBatches(f.ledgers,f.plan,{baseCommit,previousPlan}),/did not change/);

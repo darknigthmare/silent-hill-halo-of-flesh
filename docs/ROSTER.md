@@ -26,7 +26,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | Puppet Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Puppet Doctor | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | MIDWICH ELEMENTARY |
 | Split Head | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
-| Twinfeeler | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Twinfeeler | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
 | Floatstinger | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | OLD SILENT HILL |
 | Monster Cybil | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
 | Incubator | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | NOWHERE |
@@ -39,23 +39,23 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Lying Figure | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Lying Figure — Crawling | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Mannequin — Ambusher | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Bubble Head Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
-| Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE APARTMENTS |
+| Lying Figure | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
+| Lying Figure — Crawling | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
+| Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
+| Mannequin — Ambusher | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
+| Bubble Head Nurse | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
+| Creeper | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WOOD SIDE — APPARTEMENT 208 |
 | Mandarin | stationary-boss | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Flesh Lip | stationary-boss | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — BASEMENT |
-| Abstract Daddy | combatant | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE LABYRINTH |
-| Red Pyramid Thing — Great Knife | combatant | `juggernaut` | ARMURE DE ROUILLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
+| Abstract Daddy | combatant | `grappler` | CONSTRICTION | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LABYRINTHE — COMMANDE BOX OF FACES |
+| Red Pyramid Thing — Great Knife | combatant | `juggernaut` | ARMURE DE ROUILLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — PALIER DE L’ESCALIER |
 | Red Pyramid Thing — Spear | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Twin Pyramid Heads | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
-| Eddie Dombrowski | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | TOLUCA PRISON |
+| Eddie Dombrowski | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | TOLUCA — COUR DU GIBET |
 | Maria — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 | Mary — Final Manifestation | combatant | `boss` | ARMURE DU CAUCHEMAR | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
-| Prisoner | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · reference-unverified / official-or-established | TOLUCA PRISON |
-| Spider Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — STAIRWELL |
+| Prisoner | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · reference-unverified / official-or-established | TOLUCA — COUR DU GIBET |
+| Spider Mannequin | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BLUE CREEK — PALIER DE L’ESCALIER |
 | Mandarin — Floor Form | unverified | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · unverified-project-adaptation / official-or-established | LAKEVIEW HOTEL — OTHERWORLD |
 
 ## SILENT HILL 3 (2003)
@@ -64,24 +64,24 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Closer — Church Variant | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
-| Numb Body — Small | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Numb Body — Medium | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Numb Body — Large | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Pendulum | combatant | `flyer` | INSTINCT AÉRIEN | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Double Head | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Slurper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Nurse — Pipe | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Scraper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
-| Split Worm | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HELEN’S BAKERY |
+| Closer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Closer — Church Variant | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CHURCH — CHAPELLE INITIALE |
+| Numb Body — Small | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Numb Body — Medium | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Numb Body — Large | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Pendulum | combatant | `flyer` | INSTINCT AÉRIEN | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Double Head | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Insane Cancer | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Slurper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Nurse — Pipe | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Nurse — Revolver | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Scraper | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
+| Split Worm | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CENTRAL SQUARE — HAPPY BURGER |
 | Missionary | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | DAISY VILLA ROOFTOP |
 | Leonard Wolf | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BROOKHAVEN — FLOODED ROOM |
 | Memory of Alessa | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | LAKESIDE AMUSEMENT PARK |
-| God | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | THE CHURCH |
-| Valtiel | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | THE CHURCH |
+| God | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CHURCH — CHAPELLE INITIALE |
+| Valtiel | noncombatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | CHURCH — CHAPELLE INITIALE |
 | Sewer Creature | scripted-encounter | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | SEWER CHANNEL |
 | Glutton | environmental-obstacle | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | HILLTOP CENTER — OTHERWORLD |
 
@@ -91,37 +91,37 @@ Les rôles non combattants et les identités non confirmées restent consultable
 
 | Manifestation | Type | Archétype | Trait | Affliction | Fatalités | Statut | Arène |
 |---|---|---|---|---|---:|---|---|
-| Sniffer Dog — Male | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Sniffer Dog — Female | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Hummer | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
+| Sniffer Dog — Male | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Sniffer Dog — Female | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Hummer | combatant | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
 | Wall Man | stationary-boss | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SUBWAY WORLD |
-| Gum Head — Old Type | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Gum Head — New Type | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Twin Victim | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Patient | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Toadstool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
-| Whitestool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
-| Tremer — Blue | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
-| Tremer — Red | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM 302 |
-| Bottom | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
-| Ghost — Victim | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM 302 |
+| Gum Head — Old Type | combatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Gum Head — New Type | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Twin Victim | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Patient | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Toadstool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Whitestool | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Tremer — Blue | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Tremer — Red | environmental-obstacle | `swarm` | PROFIL RAMPANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Bottom | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| Ghost — Victim | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
 | Jimmy Stone — Victim 1 | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FOREST WORLD |
 | Steve Garland — Victim 4 | combatant | `grappler` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SUBWAY WORLD |
 | Eric Walsh — Victim 10 | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BUILDING WORLD |
 | Peter Walls — Victim 12 | combatant | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SUBWAY WORLD |
 | Sharon Blake — Victim 13 | combatant | `trickster` | FAUSSE PRÉSENCE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FOREST WORLD |
 | Toby Archbolt — Victim 14 | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FOREST WORLD |
-| Joseph Schreiber — Victim 15 | noncombatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-nonhostile-adapted / official-or-established | ROOM 302 |
+| Joseph Schreiber — Victim 15 | noncombatant | `balanced` | ÉCHO PERSISTANT | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-nonhostile-adapted / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
 | Cynthia Velasquez — Victim 16 | combatant | `trickster` | FAUSSE PRÉSENCE | ENTRAVE | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | SUBWAY WORLD |
 | Jasper Gein — Victim 17 | combatant | `artillery` | TRAIT VERSUS LIMITÉ | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | FOREST WORLD |
-| Andrew DeSalvo — Victim 18 | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER PRISON WORLD |
+| Andrew DeSalvo — Victim 18 | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER PRISON — SURVEILLANCE2F |
 | Richard Braintree — Victim 19 | combatant | `rushdown` | POURSUITE OBSESSIONNELLE | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BUILDING WORLD |
-| Man with the Coat | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD |
+| Man with the Coat | combatant | `zoner` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD — BUREAU105 |
 | Wheelchair | environmental-obstacle | `ghost` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | HOSPITAL WORLD |
-| Greedy Worm | noncombatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · reference-unverified / official-or-established | ROOM 302 |
-| One Truth | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | WATER PRISON WORLD |
-| Sacrificed Walter | scripted-encounter | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | APARTMENT WORLD |
-| Walter Sullivan | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD |
+| Greedy Worm | noncombatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · reference-unverified / official-or-established | ROOM302 — ENTRÉE ENCHAÎNÉE |
+| One Truth | multi-body | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | BUILDING WORLD |
+| Sacrificed Walter | scripted-encounter | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-combatant / official-or-established | APARTMENT WORLD — BUREAU105 |
+| Walter Sullivan | combatant | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | APARTMENT WORLD — BUREAU105 |
 | Eileen Head | noncombatant | `artillery` | TRAIT VERSUS LIMITÉ | AUCUNE AFFLICTION | 0 montages / 2 propositions | Dossier uniquement · canon-set-piece-adapted / official-or-established | HOSPITAL WORLD |
 
 ## SILENT HILL: ORIGINS (2007)

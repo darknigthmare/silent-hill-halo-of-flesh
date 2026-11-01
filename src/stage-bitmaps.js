@@ -38,6 +38,10 @@ export function stageBitmapFor(stage,registry=STAGE_BITMAPS){
   if(!stage||!own(registry,stage.id))return null;
   const art=validateStageBitmap(stage,registry[stage.id]);
   if(stage.reference?.blocked)throw new Error('Stage bitmap: unresolved stage');
+  // A roster location can select a newly documented sub-room. An older raster
+  // from that location must not hide it or grant the old room's geometry.
+  const selectedScene=stage.referencePolicy?.sceneId;
+  if(selectedScene&&art.scene&&selectedScene!==art.scene)return null;
   return art;
 }
 export function stageBitmapFrames(stages,registry=STAGE_BITMAPS){

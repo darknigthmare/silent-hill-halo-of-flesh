@@ -1905,24 +1905,24 @@
     },
     {
       "id": "woodside",
-      "name": "WOOD SIDE APARTMENTS",
+      "name": "WOOD SIDE — APPARTEMENT 208",
       "source": "sh2",
       "lore": {
-        "premise": "Wood Side original 2001 ; éclairage et architecture du remake ne sont pas interchangeables.",
-        "canonicalBasis": "CL_SH2_02_WOOD_SIDE_APTS",
+        "premise": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH2_02_WOOD_SIDE_APTS ; EXT12_REF_WOODSIDE_ROOM_2_20261101 ; EXT12_REF_WOODSIDE_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "carpet",
-        "name": "MOQUETTE HUMIDE",
-        "moveScale": 0.92,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.9,
-        "friction": 0.76,
-        "knockbackScale": 0.88,
-        "guardRegenScale": 1.04,
-        "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+        "id": "concrete",
+        "name": "PLATEAU SEC · APPARTEMENT 208",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "decay",
@@ -1950,39 +1950,47 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "WOOD SIDE APARTMENTS",
-        "correctedName": null,
-        "locationNote": "Wood Side original 2001 ; éclairage et architecture du remake ne sont pas interchangeables.",
+        "correctedName": "WOOD SIDE — APPARTEMENT 208",
+        "locationNote": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH2_02_WOOD_SIDE_APTS"
+          "CL_SH2_02_WOOD_SIDE_APTS",
+          "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+          "EXT12_REF_WOODSIDE_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "Un Mannequin réagit à la prise de la lampe.",
+            "description": "L’horloge haute reste fermée et immobile ; un reflet parcourt le bois sans avancer les aiguilles ni résoudre le puzzle.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH2_02_WOOD_SIDE_APTS"
+              "CL_SH2_02_WOOD_SIDE_APTS",
+              "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+              "EXT12_REF_WOODSIDE_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "La neige vidéo du téléviseur change doucement ; aucun message inédit présenté comme canon.",
+            "description": "Le téléviseur garde son boîtier fixe ; l’écran sombre reçoit une faible variation lumineuse, sans corps, sang ou programme inédit.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_02_WOOD_SIDE_APTS"
+              "CL_SH2_02_WOOD_SIDE_APTS",
+              "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+              "EXT12_REF_WOODSIDE_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Une secousse du meuble fait vibrer les aiguilles de l’horloge sans résoudre un puzzle de combat.",
+            "description": "Les volets en bois restent clos ; leur reflet varie, sans les faire claquer ni transférer un autre puzzle d’horloge.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_02_WOOD_SIDE_APTS"
+              "CL_SH2_02_WOOD_SIDE_APTS",
+              "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+              "EXT12_REF_WOODSIDE_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -2003,8 +2011,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "fog",
+        "automaticFinishers": false,
+        "sceneId": "woodside-208-clock-room",
+        "terrainRules": false,
+        "normalPhaseLabel": "APPARTEMENT 208",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · APPARTEMENT 208",
+          "description": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -2027,18 +2042,109 @@
             "kind": "animation",
             "id": "windowShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "fog",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [],
-        "pendingProposalIds": [
+        "renderedProposalIds": [
           "woodside:reference:1",
           "woodside:reference:2",
-          "woodside:reference:3",
+          "woodside:reference:3"
+        ],
+        "pendingProposalIds": [
           "woodside:reference:4"
         ]
       },
-      "referenceTracks": [],
+      "referenceTracks": [
+        {
+          "id": "woodside:reference:1",
+          "key": "wood208Clock",
+          "name": "Horloge haute de l’appartement208",
+          "description": "L’horloge haute reste fermée et immobile ; un reflet parcourt le bois sans avancer les aiguilles ni résoudre le puzzle.",
+          "proposalIndex": 0,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.31,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Horloge haute de l’appartement208",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "woodside:reference:2",
+          "key": "wood208TV",
+          "name": "Téléviseur de l’appartement208",
+          "description": "Le téléviseur garde son boîtier fixe ; l’écran sombre reçoit une faible variation lumineuse, sans corps, sang ou programme inédit.",
+          "proposalIndex": 1,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.71,
+            "y": 0.53
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Téléviseur de l’appartement208",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "woodside:reference:3",
+          "key": "wood208Shutters",
+          "name": "Volets à lattes de l’appartement208",
+          "description": "Les volets en bois restent clos ; leur reflet varie, sans les faire claquer ni transférer un autre puzzle d’horloge.",
+          "proposalIndex": 2,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_02_WOOD_SIDE_APTS",
+            "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+            "EXT12_REF_WOODSIDE_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.14,
+            "y": 0.29
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Volets à lattes de l’appartement208",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        }
+      ],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -2071,22 +2177,27 @@
             "kind": "animation",
             "id": "windowShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "fog",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
     },
     {
       "id": "blue_creek",
-      "name": "BLUE CREEK — STAIRWELL",
+      "name": "BLUE CREEK — PALIER DE L’ESCALIER",
       "source": "sh2",
       "lore": {
-        "premise": "Cage d’escalier du premier duel Pyramid Head, SH2 original.",
-        "canonicalBasis": "CL_SH2_03_BLUE_CREEK_APTS",
+        "premise": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH2_03_BLUE_CREEK_APTS ; EXT12_REF_BLUE_CREEK_ROOM_2_20261101 ; EXT12_REF_BLUE_CREEK_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "wetConcrete",
+        "id": "concrete",
         "name": "PALIER DE L’ESCALIER",
         "moveScale": 1,
         "jumpScale": 1,
@@ -2094,7 +2205,7 @@
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        "description": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "decay",
@@ -2171,29 +2282,35 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "BLUE CREEK — STAIRWELL",
-        "correctedName": null,
-        "locationNote": "Cage d’escalier du premier duel Pyramid Head, SH2 original.",
+        "correctedName": "BLUE CREEK — PALIER DE L’ESCALIER",
+        "locationNote": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH2_03_BLUE_CREEK_APTS"
+          "CL_SH2_03_BLUE_CREEK_APTS",
+          "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+          "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "La sirène accompagne son départ dans l’escalier noyé.",
+            "description": "La porte de fond du palier reste fermée, sans entrée ou départ automatique de PyramidHead ; la lumière y varie faiblement.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH2_03_BLUE_CREEK_APTS"
+              "CL_SH2_03_BLUE_CREEK_APTS",
+              "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+              "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "Ondulations lentes contre les marches immergées ; fixer un niveau d’eau mesuré sur référence.",
+            "description": "Quelques rides gardent un niveau constant au fond des marches ; hauteur et cadence sont des réglages du versus, sans drainage de manche.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_03_BLUE_CREEK_APTS"
+              "CL_SH2_03_BLUE_CREEK_APTS",
+              "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+              "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -2210,10 +2327,12 @@
           },
           {
             "name": "Transition de manche proposée",
-            "description": "Sirène brève et déplacement de la brume au résultat ; départ du boss réservé à sa scène dédiée.",
+            "description": "Un reflet révèle les taches de l’enduit au-dessus du garde-corps ; aucune sirène, chute de plâtre ou transition de pièce.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_03_BLUE_CREEK_APTS"
+              "CL_SH2_03_BLUE_CREEK_APTS",
+              "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+              "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -2227,13 +2346,14 @@
         ],
         "allowedHazards": [],
         "automaticFinishers": false,
+        "sceneId": "blue-creek-stairwell-before-drainage",
         "terrainRules": false,
+        "normalPhaseLabel": "AVANT LE DRAINAGE",
         "terrainPresentation": {
           "name": "PALIER DE L’ESCALIER",
-          "description": "Palier au-dessus de l’escalier noyé ; eau tenue au fond, aucune physique source mesurée. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+          "description": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
         },
-        "normalPhaseLabel": "AVANT LE DRAINAGE",
-        "weather": "water",
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -2275,45 +2395,102 @@
           {
             "kind": "weather",
             "id": "dust",
-            "reason": "Ambiance remplacée par water pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
+          "blue_creek:reference:1",
           "blue_creek:reference:2",
+          "blue_creek:reference:4",
           "blue_creek:reference:3"
         ],
-        "pendingProposalIds": [
-          "blue_creek:reference:1",
-          "blue_creek:reference:4"
-        ]
+        "pendingProposalIds": []
       },
       "referenceTracks": [
         {
-          "id": "blue_creek:reference:2",
-          "key": "waterRings",
-          "name": "Ondes à niveau d’eau constant",
-          "description": "Ondulations lentes contre les marches immergées ; fixer un niveau d’eau mesuré sur référence.",
-          "proposalIndex": 1,
+          "id": "blue_creek:reference:1",
+          "key": "blueStairDoor",
+          "name": "Porte fermée du palier",
+          "description": "La porte de fond du palier reste fermée, sans entrée ou départ automatique de PyramidHead ; la lumière y varie faiblement.",
+          "proposalIndex": 0,
           "source": "sh2",
           "evidence": [
-            "CL_SH2_03_BLUE_CREEK_APTS"
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.5,
-            "y": 0.72
+            "x": 0.75,
+            "y": 0.57
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Ondes à niveau d’eau constant",
+          "implementedElement": "Porte fermée du palier",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "blue_creek:reference:2",
+          "key": "blueStairWater",
+          "name": "Eau au pied des marches",
+          "description": "Quelques rides gardent un niveau constant au fond des marches ; hauteur et cadence sont des réglages du versus, sans drainage de manche.",
+          "proposalIndex": 1,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.52
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Eau au pied des marches",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "blue_creek:reference:4",
+          "key": "blueStairPlaster",
+          "name": "Enduit dégradé de l’escalier",
+          "description": "Un reflet révèle les taches de l’enduit au-dessus du garde-corps ; aucune sirène, chute de plâtre ou transition de pièce.",
+          "proposalIndex": 3,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+            "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.22,
+            "y": 0.3
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Enduit dégradé de l’escalier",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         },
         {
           "id": "blue_creek:reference:3",
@@ -2390,7 +2567,7 @@
           {
             "kind": "weather",
             "id": "dust",
-            "reason": "Ambiance remplacée par water pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -2642,24 +2819,24 @@
     },
     {
       "id": "toluca_prison",
-      "name": "TOLUCA PRISON",
+      "name": "TOLUCA — COUR DU GIBET",
       "source": "sh2",
       "lore": {
-        "premise": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus.",
-        "canonicalBasis": "CL_SH2_09_TOLUCA_PRISON",
+        "premise": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH2_09_TOLUCA_PRISON ; EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "steel",
-        "name": "CAILLEBOTIS MÉTALLIQUE",
-        "moveScale": 0.98,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.98,
-        "friction": 0.86,
-        "knockbackScale": 1.04,
-        "guardRegenScale": 0.94,
-        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+        "id": "concrete",
+        "name": "PLATEAU SEC · COUR DU GIBET",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "decay",
@@ -2675,60 +2852,11 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "referenceCellReply",
-          "name": "PORTE DE CELLULE",
-          "duration": 96,
-          "darkness": 0,
-          "radioBoost": 0,
-          "gameplayRole": "ambience",
-          "referenceOnly": true,
-          "message": "UNE PORTE VIBRE AU FOND"
-        }
-      ],
+      "events": [],
       "hazards": [],
       "animations": [],
-      "interactions": [
-        {
-          "id": "toluca_prison_referenceCellReply_1",
-          "event": "referenceCellReply",
-          "name": "Une porte de cellule sur ses charnières",
-          "trigger": "local-heavy-impact",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
-          "canonicalBasis": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
-          "referenceIds": [
-            "CL_SH2_09_TOLUCA_PRISON"
-          ],
-          "proposalId": "toluca_prison:reference:3",
-          "zone": {
-            "x": 0.28,
-            "radius": 0.15
-          },
-          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
-          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
-        }
-      ],
-      "choreography": [
-        {
-          "event": "referenceCellReply",
-          "prop": "cellDoorReply",
-          "description": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
-          "layer": "background",
-          "anchor": {
-            "x": 0.28,
-            "y": 0.61
-          },
-          "direction": 1,
-          "referenceTracks": [
-            "toluca_prison:reference:3"
-          ],
-          "evidence": [
-            "CL_SH2_09_TOLUCA_PRISON"
-          ]
-        }
-      ],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "toluca_prison",
         "source": "sh2",
@@ -2736,19 +2864,21 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "TOLUCA PRISON",
-        "correctedName": null,
-        "locationNote": "Prison de SH2 original ; séparer les blocs de cellules et la cour du gibet. Séparer cour du gibet et blocs de cellules ; trois cordes attestées au gibet, réactions et balancement restent des propositions de versus.",
+        "correctedName": "TOLUCA — COUR DU GIBET",
+        "locationNote": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH2_09_TOLUCA_PRISON"
+          "CL_SH2_09_TOLUCA_PRISON",
+          "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "Les cellules et la cour participent au rituel des plaques.",
+            "description": "Le panneau frontal et son encadrement de bois restent intacts ; une faible lueur expose leurs logements sans placer les trois plaques.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH2_09_TOLUCA_PRISON"
+              "CL_SH2_09_TOLUCA_PRISON",
+              "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
@@ -2787,12 +2917,17 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "referenceCellReply"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "cold",
+        "automaticFinishers": false,
+        "sceneId": "toluca-courtyard-scaffold",
+        "terrainRules": false,
+        "normalPhaseLabel": "COUR DU GIBET",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · COUR DU GIBET",
+          "description": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -2815,50 +2950,54 @@
             "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "cold",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "toluca_prison:reference:3"
+          "toluca_prison:reference:1"
         ],
         "pendingProposalIds": [
-          "toluca_prison:reference:1",
           "toluca_prison:reference:2",
+          "toluca_prison:reference:3",
           "toluca_prison:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "toluca_prison:reference:3",
-          "key": "cellDoorReply",
-          "name": "Une porte de cellule sur ses charnières",
-          "description": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
-          "proposalIndex": 2,
+          "id": "toluca_prison:reference:1",
+          "key": "tolucaScaffoldPanel",
+          "name": "Panneau du gibet de la cour",
+          "description": "Le panneau frontal et son encadrement de bois restent intacts ; une faible lueur expose leurs logements sans placer les trois plaques.",
+          "proposalIndex": 0,
           "source": "sh2",
           "evidence": [
-            "CL_SH2_09_TOLUCA_PRISON"
+            "CL_SH2_09_TOLUCA_PRISON",
+            "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.28,
-            "y": 0.61
+            "x": 0.5,
+            "y": 0.57
           },
-          "trigger": "local-heavy-impact",
-          "event": "referenceCellReply",
-          "eventEnabled": true,
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Une porte de cellule sur ses charnières",
+          "implementedElement": "Panneau du gibet de la cour",
           "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
-        "events": [
-          "referenceCellReply"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -2890,30 +3029,35 @@
             "kind": "animation",
             "id": "cellShadow",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "cold",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
     },
     {
       "id": "labyrinth",
-      "name": "THE LABYRINTH",
+      "name": "LABYRINTHE — COMMANDE BOX OF FACES",
       "source": "sh2",
       "lore": {
-        "premise": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits.",
-        "canonicalBasis": "CL_SH2_10_THE_LABYRINTH",
+        "premise": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH2_10_THE_LABYRINTH ; EXT12_REF_LABYRINTH_ROOM_2_20261101 ; EXT12_REF_LABYRINTH_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "concrete",
-        "name": "BÉTON SEC",
+        "name": "PLATEAU SEC · COMMANDE BOX OF FACES",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "decay",
@@ -2941,39 +3085,47 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "THE LABYRINTH",
-        "correctedName": null,
-        "locationNote": "Labyrinthe de SH2 original ; la salle d’Abstract Daddy et le cube sont des sous-lieux distincts. Labyrinthe souterrain fermé ; le cube oriente les passages dans l’œuvre. Sa rotation décorative du versus ne remappe pas le sol actif et ses visages ne sont pas reproduits.",
+        "correctedName": "LABYRINTHE — COMMANDE BOX OF FACES",
+        "locationNote": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH2_10_THE_LABYRINTH"
+          "CL_SH2_10_THE_LABYRINTH",
+          "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+          "EXT12_REF_LABYRINTH_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "La rotation du cube modifie les passages.",
+            "description": "Le cube demeure sur son pied circulaire et sa table ; un reflet local ne commande aucune rotation du labyrinthe.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH2_10_THE_LABYRINTH"
+              "CL_SH2_10_THE_LABYRINTH",
+              "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+              "EXT12_REF_LABYRINTH_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "Le cube tourne lentement dans un espace de fond sécurisé ; pas de modification du sol actif.",
+            "description": "Le cube à face abstraite conserve son orientation ; seule sa lumière varie. Aucune rotation automatique ou face source inventée.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_10_THE_LABYRINTH"
+              "CL_SH2_10_THE_LABYRINTH",
+              "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+              "EXT12_REF_LABYRINTH_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Une barrière de fil se tend et se détend lorsque l’adversaire heurte la paroi.",
+            "description": "Un éclairage lent reste sur les panneaux perforés de la pièce photographiée ; aucun fil qui se tend après impact.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH2_10_THE_LABYRINTH"
+              "CL_SH2_10_THE_LABYRINTH",
+              "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+              "EXT12_REF_LABYRINTH_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -2994,8 +3146,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "labyrinth-box-of-faces-control",
+        "terrainRules": false,
+        "normalPhaseLabel": "COMMANDE BOX OF FACES",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · COMMANDE BOX OF FACES",
+          "description": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -3042,45 +3201,103 @@
           {
             "kind": "weather",
             "id": "water",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "labyrinth:reference:2"
+          "labyrinth:reference:1",
+          "labyrinth:reference:2",
+          "labyrinth:reference:3"
         ],
         "pendingProposalIds": [
-          "labyrinth:reference:1",
-          "labyrinth:reference:3",
           "labyrinth:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "labyrinth:reference:2",
-          "key": "cubeTurn",
-          "name": "Cube de commande, orientation de fond",
-          "description": "Le cube tourne lentement dans un espace de fond sécurisé ; pas de modification du sol actif.",
-          "proposalIndex": 1,
+          "id": "labyrinth:reference:1",
+          "key": "boxFacesPedestal",
+          "name": "Pied et table de BoxofFaces",
+          "description": "Le cube demeure sur son pied circulaire et sa table ; un reflet local ne commande aucune rotation du labyrinthe.",
+          "proposalIndex": 0,
           "source": "sh2",
           "evidence": [
-            "CL_SH2_10_THE_LABYRINTH"
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.69,
-            "y": 0.49
+            "x": 0.43,
+            "y": 0.57
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Cube de commande, orientation de fond",
+          "implementedElement": "Pied et table de BoxofFaces",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "labyrinth:reference:2",
+          "key": "boxFacesCube",
+          "name": "Cube de BoxofFaces, orientation fixe",
+          "description": "Le cube à face abstraite conserve son orientation ; seule sa lumière varie. Aucune rotation automatique ou face source inventée.",
+          "proposalIndex": 1,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.43,
+            "y": 0.35
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Cube de BoxofFaces, orientation fixe",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "labyrinth:reference:3",
+          "key": "boxFacesPanels",
+          "name": "Panneaux perforés de la commande",
+          "description": "Un éclairage lent reste sur les panneaux perforés de la pièce photographiée ; aucun fil qui se tend après impact.",
+          "proposalIndex": 2,
+          "source": "sh2",
+          "evidence": [
+            "CL_SH2_10_THE_LABYRINTH",
+            "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+            "EXT12_REF_LABYRINTH_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.76,
+            "y": 0.34
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Panneaux perforés de la commande",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
@@ -3134,7 +3351,7 @@
           {
             "kind": "weather",
             "id": "water",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -3437,24 +3654,24 @@
     },
     {
       "id": "shopping_mall",
-      "name": "CENTRAL SQUARE — HELEN’S BAKERY",
+      "name": "CENTRAL SQUARE — HAPPY BURGER",
       "source": "sh3",
       "lore": {
-        "premise": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
-        "canonicalBasis": "CL_SH3_02_SHOPPING_CENTER ; EXT_SH3_MALL_BAKERY_20261025 ; EXT_SH3_MALL_TONGS_VIEW_20261025 ; EXT_SH3_MALL_TONGS_MAP_20261025",
+        "premise": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH3_02_SHOPPING_CENTER ; EXT_SH3_MALL_BAKERY_20261025 ; EXT_SH3_MALL_TONGS_VIEW_20261025 ; EXT_SH3_MALL_TONGS_MAP_20261025 ; EXT12_REF_SHOPPING_MALL_ROOM_2_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "concrete",
-        "name": "SOL DU CENTRE COMMERCIAL",
+        "name": "PLATEAU SEC · HAPPY BURGER",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée."
+        "description": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "flesh",
@@ -3482,42 +3699,46 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "CENTRAL SQUARE — HELEN’S BAKERY",
-        "correctedName": null,
-        "locationNote": "Central Square Shopping Center de SH3 avant son état Nightmare. Vue retenue : Helen’s Bakery normale à l’étage2, avant le basculement Nightmare ; petit comptoir des pinces près de la porte, plateaux de pains, rayonnages métalliques et carrelage documentés par deux vues concordantes et le plan du guide. Ne pas importer le lance-flammes réservé à Extra New Game ni un personnage de la capture. Les anciennes propositions de rideau/vitrine/enseigne décrivent le centre commercial général et restent hors du cadre de cette pièce ; aucune animation originale, dimension ou caméra 1:1 n’est validée.",
+        "correctedName": "CENTRAL SQUARE — HAPPY BURGER",
+        "locationNote": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
           "CL_SH3_02_SHOPPING_CENTER",
           "EXT_SH3_MALL_BAKERY_20261025",
           "EXT_SH3_MALL_TONGS_VIEW_20261025",
-          "EXT_SH3_MALL_TONGS_MAP_20261025"
+          "EXT_SH3_MALL_TONGS_MAP_20261025",
+          "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "Les couloirs sont séparés par vitrines et rideaux métalliques.",
+            "description": "Les lattes des stores restent en place ; le reflet chaud varie sans enseigne ou rideau de boutique ajouté.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH3_02_SHOPPING_CENTER"
+              "CL_SH3_02_SHOPPING_CENTER",
+              "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "Le rideau d’une boutique monte de quelques centimètres puis s’arrête, sans accès jouable.",
+            "description": "La table et ses petits condiments gardent leurs positions ; un reflet remplace le rideau métallique non situé dans ce café.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH3_02_SHOPPING_CENTER"
+              "CL_SH3_02_SHOPPING_CENTER",
+              "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Un choc au pied de la vitrine fait tourner un petit présentoir ; verre intact par défaut.",
+            "description": "Les deux chaises restent vides et stables ; leur ombre varie faiblement sans présentoir, verre brisé ou apparition.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH3_02_SHOPPING_CENTER"
+              "CL_SH3_02_SHOPPING_CENTER",
+              "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -3539,11 +3760,12 @@
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": false,
-        "normalPhaseLabel": "CENTRE COMMERCIAL NORMAL",
+        "sceneId": "central-square-happy-burger",
         "terrainRules": false,
+        "normalPhaseLabel": "HAPPY BURGER",
         "terrainPresentation": {
-          "name": "SOL DU CENTRE COMMERCIAL",
-          "description": "Couloir normal du Central Square ; plateau versus adapté, humidité et physique non déterminées. Aucun effet de terrain source revendiqué ; fidélité 1:1 non certifiée."
+          "name": "PLATEAU SEC · HAPPY BURGER",
+          "description": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
         },
         "weather": "none",
         "interior": true,
@@ -3577,7 +3799,7 @@
           {
             "kind": "animation",
             "id": "storeShutters",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "animation",
@@ -3597,40 +3819,95 @@
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "shopping_mall:reference:2"
+          "shopping_mall:reference:1",
+          "shopping_mall:reference:2",
+          "shopping_mall:reference:3"
         ],
         "pendingProposalIds": [
-          "shopping_mall:reference:1",
-          "shopping_mall:reference:3",
           "shopping_mall:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "shopping_mall:reference:2",
-          "key": "shutterLift",
-          "name": "Rideau métallique partiellement relevé",
-          "description": "Le rideau d’une boutique monte de quelques centimètres puis s’arrête, sans accès jouable.",
-          "proposalIndex": 1,
+          "id": "shopping_mall:reference:1",
+          "key": "happyBurgerBlinds",
+          "name": "Stores de Happy Burger",
+          "description": "Les lattes des stores restent en place ; le reflet chaud varie sans enseigne ou rideau de boutique ajouté.",
+          "proposalIndex": 0,
           "source": "sh3",
           "evidence": [
-            "CL_SH3_02_SHOPPING_CENTER"
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.26,
-            "y": 0.53
+            "x": 0.27,
+            "y": 0.27
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Rideau métallique partiellement relevé",
+          "implementedElement": "Stores de Happy Burger",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "shopping_mall:reference:2",
+          "key": "happyBurgerTable",
+          "name": "Table et condiments de Happy Burger",
+          "description": "La table et ses petits condiments gardent leurs positions ; un reflet remplace le rideau métallique non situé dans ce café.",
+          "proposalIndex": 1,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.52,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Table et condiments de Happy Burger",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "shopping_mall:reference:3",
+          "key": "happyBurgerChairs",
+          "name": "Chaises de Happy Burger",
+          "description": "Les deux chaises restent vides et stables ; leur ombre varie faiblement sans présentoir, verre brisé ou apparition.",
+          "proposalIndex": 2,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_02_SHOPPING_CENTER",
+            "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.52,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Chaises de Happy Burger",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
@@ -3671,7 +3948,7 @@
           {
             "kind": "animation",
             "id": "storeShutters",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "animation",
@@ -3903,24 +4180,24 @@
     },
     {
       "id": "church",
-      "name": "THE CHURCH",
+      "name": "CHURCH — CHAPELLE INITIALE",
       "source": "sh3",
       "lore": {
-        "premise": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
-        "canonicalBasis": "CL_SH3_14_CHURCH",
+        "premise": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH3_14_CHURCH ; EXT12_REF_CHURCH_ROOM_2_20261101 ; EXT12_REF_CHURCH_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "ritualStone",
-        "name": "PIERRE RITUELLE",
-        "moveScale": 0.97,
-        "jumpScale": 0.94,
-        "dodgeScale": 0.94,
-        "friction": 0.83,
-        "knockbackScale": 1.02,
-        "guardRegenScale": 0.88,
-        "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+        "id": "concrete",
+        "name": "PLATEAU SEC · CHAPELLE INITIALE",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "flesh",
@@ -3948,39 +4225,47 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "THE CHURCH",
-        "correctedName": null,
-        "locationNote": "Église du culte dans SH3 ; chapelle, passages de mémoire et fosse finale à distinguer. Vue retenue : chapelle SH3 avec autel, vitraux et cierges ; séparer les passages mémoire et fosse finale. Inclinaison synchrone des flammes = proposition versus.",
+        "correctedName": "CHURCH — CHAPELLE INITIALE",
+        "locationNote": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH3_14_CHURCH"
+          "CL_SH3_14_CHURCH",
+          "EXT12_REF_CHURCH_ROOM_2_20261101",
+          "EXT12_REF_CHURCH_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "La progression mène à la naissance incomplète du dieu.",
+            "description": "L’autel conserve son panneau de bois et sa niche centrale ; un reflet remplace toute naissance automatique du dieu.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH3_14_CHURCH"
+              "CL_SH3_14_CHURCH",
+              "EXT12_REF_CHURCH_ROOM_2_20261101",
+              "EXT12_REF_CHURCH_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "Les flammes des cierges se couchent ensemble sans atteindre les combattants.",
+            "description": "Les flammes restent sur les cierges de la chapelle photographiée ; leur très faible variation est originale au versus, sans dégâts.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH3_14_CHURCH"
+              "CL_SH3_14_CHURCH",
+              "EXT12_REF_CHURCH_ROOM_2_20261101",
+              "EXT12_REF_CHURCH_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Une vibration du pupitre fait tourner une seule page du livre, sans texte rituel inventé lisible.",
+            "description": "Une lueur douce traverse trois panneaux de verre coloré abstraits ; aucun livre dont une page tournerait sans référence.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH3_14_CHURCH"
+              "CL_SH3_14_CHURCH",
+              "EXT12_REF_CHURCH_ROOM_2_20261101",
+              "EXT12_REF_CHURCH_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -4001,8 +4286,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "sh3-chapel-before-altar-departure",
+        "terrainRules": false,
+        "normalPhaseLabel": "CHAPELLE INITIALE",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · CHAPELLE INITIALE",
+          "description": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -4044,45 +4336,103 @@
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "church:reference:2"
+          "church:reference:1",
+          "church:reference:2",
+          "church:reference:3"
         ],
         "pendingProposalIds": [
-          "church:reference:1",
-          "church:reference:3",
           "church:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "church:reference:2",
-          "key": "chapelCandleLean",
-          "name": "Flammes des cierges de la chapelle",
-          "description": "Les flammes des cierges se couchent ensemble sans atteindre les combattants.",
-          "proposalIndex": 1,
+          "id": "church:reference:1",
+          "key": "sh3ChapelAltar",
+          "name": "Autel de la chapelle initiale",
+          "description": "L’autel conserve son panneau de bois et sa niche centrale ; un reflet remplace toute naissance automatique du dieu.",
+          "proposalIndex": 0,
           "source": "sh3",
           "evidence": [
-            "CL_SH3_14_CHURCH"
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.71,
-            "y": 0.49
+            "x": 0.5,
+            "y": 0.57
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Flammes des cierges de la chapelle",
+          "implementedElement": "Autel de la chapelle initiale",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "church:reference:2",
+          "key": "chapelCandleLean",
+          "name": "Cierges de la chapelle initiale",
+          "description": "Les flammes restent sur les cierges de la chapelle photographiée ; leur très faible variation est originale au versus, sans dégâts.",
+          "proposalIndex": 1,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Cierges de la chapelle initiale",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": "Chapelle avec autel et vitraux ; hors passages mémoire et fosse finale",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Cierges attestés ; inclinaison commune proposée pour le versus, sans invocation ni effet sur les combattants."
+          "locationScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "church:reference:3",
+          "key": "sh3ChapelGlass",
+          "name": "Triple vitrage de la chapelle",
+          "description": "Une lueur douce traverse trois panneaux de verre coloré abstraits ; aucun livre dont une page tournerait sans référence.",
+          "proposalIndex": 2,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_14_CHURCH",
+            "EXT12_REF_CHURCH_ROOM_2_20261101",
+            "EXT12_REF_CHURCH_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.27
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Triple vitrage de la chapelle",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
@@ -4135,7 +4485,7 @@
           {
             "kind": "weather",
             "id": "embers",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -4630,25 +4980,24 @@
     },
     {
       "id": "room_302",
-      "name": "ROOM 302",
+      "name": "ROOM302 — ENTRÉE ENCHAÎNÉE",
       "source": "sh4",
       "lore": {
-        "premise": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive.",
-        "canonicalBasis": "CL_SH4_01_ROOM_302",
+        "premise": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH4_01_ROOM_302 ; EXT12_REF_ROOM_302_ROOM_2_20261101 ; EXT12_REF_ROOM_302_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "wood",
-        "name": "PLANCHER ANCIEN",
-        "moveScale": 0.97,
+        "id": "concrete",
+        "name": "PLATEAU SEC · ENTRÉE ENCHAÎNÉE",
+        "moveScale": 1,
         "jumpScale": 1,
-        "dodgeScale": 0.96,
-        "friction": 0.85,
+        "dodgeScale": 1,
+        "friction": 0.84,
         "knockbackScale": 1,
-        "guardRegenScale": 0.98,
-        "creak": true,
-        "description": "Le plancher trahit les déplacements par des craquements."
+        "guardRegenScale": 1,
+        "description": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "haunting",
@@ -4664,60 +5013,11 @@
         "enabled": false,
         "referenceState": "fixed-normal"
       },
-      "events": [
-        {
-          "id": "referenceWashroomReply",
-          "name": "TROU DE LA SALLE DE BAIN",
-          "duration": 108,
-          "darkness": 0,
-          "radioBoost": 0,
-          "gameplayRole": "ambience",
-          "referenceOnly": true,
-          "message": "UNE LUEUR DANS LE PASSAGE"
-        }
-      ],
+      "events": [],
       "hazards": [],
       "animations": [],
-      "interactions": [
-        {
-          "id": "room_302_referenceWashroomReply_1",
-          "event": "referenceWashroomReply",
-          "name": "Lueur contenue du trou de la salle de bain",
-          "trigger": "local-heavy-impact",
-          "fidelity": "adaptation-versus-proposee",
-          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
-          "canonicalBasis": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
-          "referenceIds": [
-            "CL_SH4_01_ROOM_302"
-          ],
-          "proposalId": "room_302:reference:3",
-          "zone": {
-            "x": 0.78,
-            "radius": 0.15
-          },
-          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
-          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
-        }
-      ],
-      "choreography": [
-        {
-          "event": "referenceWashroomReply",
-          "prop": "washroomHoleReply",
-          "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
-          "layer": "background",
-          "anchor": {
-            "x": 0.78,
-            "y": 0.49
-          },
-          "direction": 1,
-          "referenceTracks": [
-            "room_302:reference:3"
-          ],
-          "evidence": [
-            "CL_SH4_01_ROOM_302"
-          ]
-        }
-      ],
+      "interactions": [],
+      "choreography": [],
       "reference": {
         "id": "room_302",
         "source": "sh4",
@@ -4725,39 +5025,47 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "ROOM 302",
-        "correctedName": null,
-        "locationNote": "Appartement de Henry au début de SH4 ; les hantises tardives demandent une variante. Appartement initial : ouverture fixe de la salle de bain ; la lueur après impact est proposée, sans téléportation du duel ni hantise tardive.",
+        "correctedName": "ROOM302 — ENTRÉE ENCHAÎNÉE",
+        "locationNote": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH4_01_ROOM_302"
+          "CL_SH4_01_ROOM_302",
+          "EXT12_REF_ROOM_302_ROOM_2_20261101",
+          "EXT12_REF_ROOM_302_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "Porte enchaînée et trou de la salle de bain structurent le lieu.",
+            "description": "La porte reste fermée sous ses chaînes ; les maillons reçoivent une faible variation de reflet sans ouverture automatique.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH4_01_ROOM_302"
+              "CL_SH4_01_ROOM_302",
+              "EXT12_REF_ROOM_302_ROOM_2_20261101",
+              "EXT12_REF_ROOM_302_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "La chaîne la plus basse oscille faiblement au bruit d’un pas extérieur.",
+            "description": "Le plafonnier rond photographié conserve sa place et une lumière douce ; aucune chaîne autonome qui pend depuis le plafond.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_01_ROOM_302"
+              "CL_SH4_01_ROOM_302",
+              "EXT12_REF_ROOM_302_ROOM_2_20261101",
+              "EXT12_REF_ROOM_302_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+            "description": "Le réfrigérateur, le carrelage et les placards restent fixes près de la porte ; un reflet remplace le trou de bain absent du cadrage.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_01_ROOM_302"
+              "CL_SH4_01_ROOM_302",
+              "EXT12_REF_ROOM_302_ROOM_2_20261101",
+              "EXT12_REF_ROOM_302_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -4776,12 +5084,17 @@
       },
       "referencePolicy": {
         "worldState": "fixed-normal",
-        "allowedEvents": [
-          "referenceWashroomReply"
-        ],
+        "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "room302-first-entry-door",
+        "terrainRules": false,
+        "normalPhaseLabel": "ENTRÉE ENCHAÎNÉE",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · ENTRÉE ENCHAÎNÉE",
+          "description": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -4819,76 +5132,111 @@
             "kind": "animation",
             "id": "bloodPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
+          "room_302:reference:1",
           "room_302:reference:2",
           "room_302:reference:3"
         ],
         "pendingProposalIds": [
-          "room_302:reference:1",
           "room_302:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "room_302:reference:2",
-          "key": "chainPendulum",
-          "name": "Chaîne suspendue à faible amplitude",
-          "description": "La chaîne la plus basse oscille faiblement au bruit d’un pas extérieur.",
-          "proposalIndex": 1,
+          "id": "room_302:reference:1",
+          "key": "room302ChainedDoor",
+          "name": "Porte enchaînée de l’entrée",
+          "description": "La porte reste fermée sous ses chaînes ; les maillons reçoivent une faible variation de reflet sans ouverture automatique.",
+          "proposalIndex": 0,
           "source": "sh4",
           "evidence": [
-            "CL_SH4_01_ROOM_302"
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.52,
-            "y": 0.34
+            "x": 0.4,
+            "y": 0.57
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Chaîne suspendue à faible amplitude",
+          "implementedElement": "Porte enchaînée de l’entrée",
           "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         },
         {
-          "id": "room_302:reference:3",
-          "key": "washroomHoleReply",
-          "name": "Lueur contenue du trou de la salle de bain",
-          "description": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
-          "proposalIndex": 2,
+          "id": "room_302:reference:2",
+          "key": "room302CeilingLight",
+          "name": "Plafonnier rond de l’entrée",
+          "description": "Le plafonnier rond photographié conserve sa place et une lumière douce ; aucune chaîne autonome qui pend depuis le plafond.",
+          "proposalIndex": 1,
           "source": "sh4",
           "evidence": [
-            "CL_SH4_01_ROOM_302"
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.78,
-            "y": 0.49
+            "x": 0.4,
+            "y": 0.16
           },
-          "trigger": "local-heavy-impact",
-          "event": "referenceWashroomReply",
-          "eventEnabled": true,
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Lueur contenue du trou de la salle de bain",
+          "implementedElement": "Plafonnier rond de l’entrée",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "room_302:reference:3",
+          "key": "room302Kitchenette",
+          "name": "Kitchenette adjacente à l’entrée",
+          "description": "Le réfrigérateur, le carrelage et les placards restent fixes près de la porte ; un reflet remplace le trou de bain absent du cadrage.",
+          "proposalIndex": 2,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_01_ROOM_302",
+            "EXT12_REF_ROOM_302_ROOM_2_20261101",
+            "EXT12_REF_ROOM_302_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.76,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Kitchenette adjacente à l’entrée",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
-        "events": [
-          "referenceWashroomReply"
-        ],
+        "events": [],
         "hazards": [],
         "ambienceOnly": true,
         "excludedEvents": [
@@ -4933,6 +5281,11 @@
             "kind": "animation",
             "id": "bloodPulse",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
@@ -5155,24 +5508,24 @@
     },
     {
       "id": "water_prison",
-      "name": "WATER PRISON WORLD",
+      "name": "WATER PRISON — SURVEILLANCE2F",
       "source": "sh4",
       "lore": {
-        "premise": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
-        "canonicalBasis": "CL_SH4_04_WATER_PRISON_WORLD",
+        "premise": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH4_04_WATER_PRISON_WORLD ; EXT12_REF_WATER_PRISON_ROOM_2_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "concrete",
-        "name": "BÉTON SEC",
+        "name": "PLATEAU SEC · SURVEILLANCE2F",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "haunting",
@@ -5200,39 +5553,43 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "WATER PRISON WORLD",
-        "correctedName": null,
-        "locationNote": "Tour-prison de SH4 : cellules autour d’un axe et mécanismes hydrauliques. Vue retenue : B2 Waterwheel Room et son mécanisme vu depuis la coursive sèche ; axe vertical et roue dans le plan horizontal à garder, cellules pivotantes et vanne du toit hors cadre. Rotation lente proposée pour le versus, aucun déclenchement de vanne ou déplacement du sol.",
+        "correctedName": "WATER PRISON — SURVEILLANCE2F",
+        "locationNote": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH4_04_WATER_PRISON_WORLD"
+          "CL_SH4_04_WATER_PRISON_WORLD",
+          "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "Les étages pivotent pour aligner les trous des cellules.",
+            "description": "Le volant posé sur son piédestal reste immobile ; une lueur sur le métal ne déclenche aucune rotation des cellules.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH4_04_WATER_PRISON_WORLD"
+              "CL_SH4_04_WATER_PRISON_WORLD",
+              "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "La roue hydraulique tourne à vitesse lente visible dans une ouverture de fond.",
+            "description": "Les œilletons métalliques gardent leurs ouvertures sombres ; un reflet remplace la roueB2 située dans une autre pièce.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_04_WATER_PRISON_WORLD"
+              "CL_SH4_04_WATER_PRISON_WORLD",
+              "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Une poignée entraîne un segment de tour hors de l’aire de duel ; verrouillage sonore clair avant arrêt.",
+            "description": "L’ouverture circulaire et le haut de l’échelle restent derrière le plateau sec ; aucun mécanisme entraîné ni chute des combattants.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_04_WATER_PRISON_WORLD"
+              "CL_SH4_04_WATER_PRISON_WORLD",
+              "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -5253,8 +5610,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "water-prison-2f-surveillance",
+        "terrainRules": false,
+        "normalPhaseLabel": "SURVEILLANCE2F",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · SURVEILLANCE2F",
+          "description": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -5291,45 +5655,100 @@
           {
             "kind": "weather",
             "id": "water",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "water_prison:reference:2"
+          "water_prison:reference:1",
+          "water_prison:reference:2",
+          "water_prison:reference:3"
         ],
         "pendingProposalIds": [
-          "water_prison:reference:1",
-          "water_prison:reference:3",
           "water_prison:reference:4"
         ]
       },
       "referenceTracks": [
         {
-          "id": "water_prison:reference:2",
-          "key": "waterwheelTurn",
-          "name": "Roue horizontale au fond de la salle B2",
-          "description": "La roue hydraulique tourne à vitesse lente visible dans une ouverture de fond.",
-          "proposalIndex": 1,
+          "id": "water_prison:reference:1",
+          "key": "waterPrisonValve",
+          "name": "Volant de la surveillance2F",
+          "description": "Le volant posé sur son piédestal reste immobile ; une lueur sur le métal ne déclenche aucune rotation des cellules.",
+          "proposalIndex": 0,
           "source": "sh4",
           "evidence": [
-            "CL_SH4_04_WATER_PRISON_WORLD"
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
           ],
           "layer": "background",
           "anchor": {
-            "x": 0.71,
-            "y": 0.49
+            "x": 0.58,
+            "y": 0.57
           },
           "trigger": "ambient",
           "event": null,
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Roue horizontale au fond de la salle B2",
+          "implementedElement": "Volant de la surveillance2F",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "water_prison:reference:2",
+          "key": "waterPrisonPeepholes",
+          "name": "Œilletons de la surveillance2F",
+          "description": "Les œilletons métalliques gardent leurs ouvertures sombres ; un reflet remplace la roueB2 située dans une autre pièce.",
+          "proposalIndex": 1,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.47,
+            "y": 0.29
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Œilletons de la surveillance2F",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": "B2 Waterwheel Room, mécanisme sous la coursive sèche",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Roue dans le plan horizontal et axe vertical ; rotation lente proposée, sans cellule pivotante, vanne automatique, moulin vertical ou sol inondé."
+          "locationScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "water_prison:reference:3",
+          "key": "waterPrisonShaft",
+          "name": "Puits central de la surveillance2F",
+          "description": "L’ouverture circulaire et le haut de l’échelle restent derrière le plateau sec ; aucun mécanisme entraîné ni chute des combattants.",
+          "proposalIndex": 2,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_04_WATER_PRISON_WORLD",
+            "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.58,
+            "y": 0.56
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Puits central de la surveillance2F",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
@@ -5375,31 +5794,31 @@
           {
             "kind": "weather",
             "id": "water",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }
     },
     {
       "id": "apartment_world",
-      "name": "APARTMENT WORLD",
+      "name": "APARTMENT WORLD — BUREAU105",
       "source": "sh4",
       "lore": {
-        "premise": "South Ashfield Heights de SH4 vu depuis les couloirs et logements.",
-        "canonicalBasis": "CL_SH4_06_APARTMENT_WORLD",
+        "premise": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+        "canonicalBasis": "CL_SH4_06_APARTMENT_WORLD ; EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101 ; EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "carpet",
-        "name": "MOQUETTE HUMIDE",
-        "moveScale": 0.92,
-        "jumpScale": 0.96,
-        "dodgeScale": 0.9,
-        "friction": 0.76,
-        "knockbackScale": 0.88,
-        "guardRegenScale": 1.04,
-        "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+        "id": "concrete",
+        "name": "PLATEAU SEC · BUREAU105",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
       },
       "shift": {
         "style": "haunting",
@@ -5427,39 +5846,47 @@
         "blocked": false,
         "locationStatus": "lieu-documente",
         "catalogueName": "APARTMENT WORLD",
-        "correctedName": null,
-        "locationNote": "South Ashfield Heights de SH4 vu depuis les couloirs et logements.",
+        "correctedName": "APARTMENT WORLD — BUREAU105",
+        "locationNote": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
         "referenceIds": [
-          "CL_SH4_06_APARTMENT_WORLD"
+          "CL_SH4_06_APARTMENT_WORLD",
+          "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+          "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
         ],
         "constraints": [],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
-            "description": "La progression utilise les appartements et leur serrurerie.",
+            "description": "Le bureau reste à sa place avec des feuilles abstraites sans texte lisible ; le reflet ne résout aucune serrurerie.",
             "status": "motif-documente-a-capturer",
             "evidence": [
-              "CL_SH4_06_APARTMENT_WORLD"
+              "CL_SH4_06_APARTMENT_WORLD",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
             ],
             "captureStatus": "capture-a-relever",
             "timecode": ""
           },
           {
             "name": "Boucle d’ambiance proposée",
-            "description": "Une porte entrebâillée laisse osciller une mince bande de lumière au sol.",
+            "description": "La chaise vide reste devant le bureau ; son reflet varie sans porte entrouverte ou couloir transporté dans la pièce.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_06_APARTMENT_WORLD"
+              "CL_SH4_06_APARTMENT_WORLD",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
           },
           {
             "name": "Interaction proposée",
-            "description": "Après impact de mur, une chaîne de porte résonne dans un appartement voisin.",
+            "description": "Les barreaux photographiés restent en arrière-plan ; aucune chaîne de porte résonnante ou arrivée de Walter.",
             "status": "adaptation-versus-proposee",
             "evidence": [
-              "CL_SH4_06_APARTMENT_WORLD"
+              "CL_SH4_06_APARTMENT_WORLD",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+              "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
             ],
             "captureStatus": "storyboard-a-valider",
             "timecode": ""
@@ -5480,8 +5907,15 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "south-ashfield-room105-desk",
+        "terrainRules": false,
+        "normalPhaseLabel": "BUREAU105",
+        "terrainPresentation": {
+          "name": "PLATEAU SEC · BUREAU105",
+          "description": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Physique neutre du versus ; géométrie et caméra non certifiées1:1."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -5503,7 +5937,7 @@
           {
             "kind": "animation",
             "id": "doorPulse",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "animation",
@@ -5513,29 +5947,59 @@
           {
             "kind": "weather",
             "id": "ash",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
         "renderedProposalIds": [
-          "apartment_world:reference:2"
+          "apartment_world:reference:1",
+          "apartment_world:reference:2",
+          "apartment_world:reference:3"
         ],
         "pendingProposalIds": [
-          "apartment_world:reference:1",
-          "apartment_world:reference:3",
           "apartment_world:reference:4"
         ]
       },
       "referenceTracks": [
         {
+          "id": "apartment_world:reference:1",
+          "key": "room105Desk",
+          "name": "Bureau du concierge105",
+          "description": "Le bureau reste à sa place avec des feuilles abstraites sans texte lisible ; le reflet ne résout aucune serrurerie.",
+          "proposalIndex": 0,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.29,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Bureau du concierge105",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
           "id": "apartment_world:reference:2",
-          "key": "doorReply",
-          "name": "Battant entrouvert, appui fixe",
-          "description": "Une porte entrebâillée laisse osciller une mince bande de lumière au sol.",
+          "key": "room105Chair",
+          "name": "Chaise tubulaire du bureau105",
+          "description": "La chaise vide reste devant le bureau ; son reflet varie sans porte entrouverte ou couloir transporté dans la pièce.",
           "proposalIndex": 1,
           "source": "sh4",
           "evidence": [
-            "CL_SH4_06_APARTMENT_WORLD"
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
           ],
           "layer": "background",
           "anchor": {
@@ -5547,11 +6011,39 @@
           "eventEnabled": null,
           "implementation": "canvas-prototype",
           "coverage": "partial-visual-prototype",
-          "implementedElement": "Battant entrouvert, appui fixe",
+          "implementedElement": "Chaise tubulaire du bureau105",
           "fidelity": "adaptation-versus-proposee",
           "captureStatus": "storyboard-a-valider",
-          "locationScope": null,
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+          "locationScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+        },
+        {
+          "id": "apartment_world:reference:3",
+          "key": "room105Bars",
+          "name": "Partition à barreaux du bureau105",
+          "description": "Les barreaux photographiés restent en arrière-plan ; aucune chaîne de porte résonnante ou arrivée de Walter.",
+          "proposalIndex": 2,
+          "source": "sh4",
+          "evidence": [
+            "CL_SH4_06_APARTMENT_WORLD",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+            "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.76,
+            "y": 0.4
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Partition à barreaux du bureau105",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
         }
       ],
       "motifPolicy": {
@@ -5585,7 +6077,7 @@
           {
             "kind": "animation",
             "id": "doorPulse",
-            "reason": "Remplacé par une piste précise du classeur."
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
           },
           {
             "kind": "animation",
@@ -5595,7 +6087,7 @@
           {
             "kind": "weather",
             "id": "ash",
-            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }

@@ -1,0 +1,806 @@
+{
+  "schema": 1,
+  "batch": "lot12",
+  "workstream": "stages",
+  "baseCommit": "1e6e408a3ef9d66869fdf7ce26eded06e383d12a",
+  "requestedItems": 30,
+  "items": [
+    {
+      "rowId": "woodside:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "woodside",
+      "status": "implemented-candidate",
+      "runtimeKey": "wood208Clock",
+      "sourceScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+      "originalName": "WOOD SIDE APARTMENTS",
+      "originalProposal": "Un Mannequin réagit à la prise de la lampe.",
+      "revisedProposal": "L’horloge haute reste fermée et immobile ; un reflet parcourt le bois sans avancer les aiguilles ni résoudre le puzzle.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Horloge haute de l’appartement208",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_02_wood_side_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg"
+      ],
+      "limits": "Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "woodside:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "woodside",
+      "status": "implemented-candidate",
+      "runtimeKey": "wood208TV",
+      "sourceScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+      "originalName": "WOOD SIDE APARTMENTS",
+      "originalProposal": "La neige vidéo du téléviseur change doucement ; aucun message inédit présenté comme canon.",
+      "revisedProposal": "Le téléviseur garde son boîtier fixe ; l’écran sombre reçoit une faible variation lumineuse, sans corps, sang ou programme inédit.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Téléviseur de l’appartement208",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_02_wood_side_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg"
+      ],
+      "limits": "Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "woodside:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "woodside",
+      "status": "implemented-candidate",
+      "runtimeKey": "wood208Shutters",
+      "sourceScope": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin.",
+      "originalName": "WOOD SIDE APARTMENTS",
+      "originalProposal": "Une secousse du meuble fait vibrer les aiguilles de l’horloge sans résoudre un puzzle de combat.",
+      "revisedProposal": "Les volets en bois restent clos ; leur reflet varie, sans les faire claquer ni transférer un autre puzzle d’horloge.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Volets à lattes de l’appartement208",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_02_wood_side_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg"
+      ],
+      "limits": "Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "blue_creek:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "blue_creek",
+      "status": "implemented-candidate",
+      "runtimeKey": "blueStairDoor",
+      "sourceScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+      "originalName": "BLUE CREEK — STAIRWELL",
+      "originalProposal": "La sirène accompagne son départ dans l’escalier noyé.",
+      "revisedProposal": "La porte de fond du palier reste fermée, sans entrée ou départ automatique de PyramidHead ; la lumière y varie faiblement.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Porte fermée du palier",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+      ],
+      "limits": "Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "blue_creek:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "blue_creek",
+      "status": "implemented-candidate",
+      "runtimeKey": "blueStairWater",
+      "sourceScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+      "originalName": "BLUE CREEK — STAIRWELL",
+      "originalProposal": "Ondulations lentes contre les marches immergées ; fixer un niveau d’eau mesuré sur référence.",
+      "revisedProposal": "Quelques rides gardent un niveau constant au fond des marches ; hauteur et cadence sont des réglages du versus, sans drainage de manche.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Eau au pied des marches",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+      ],
+      "limits": "Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "blue_creek:reference:4",
+      "collection": "stageAnimations",
+      "entityId": "blue_creek",
+      "status": "implemented-candidate",
+      "runtimeKey": "blueStairPlaster",
+      "sourceScope": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté.",
+      "originalName": "BLUE CREEK — STAIRWELL",
+      "originalProposal": "Sirène brève et déplacement de la brume au résultat ; départ du boss réservé à sa scène dédiée.",
+      "revisedProposal": "Un reflet révèle les taches de l’enduit au-dessus du garde-corps ; aucune sirène, chute de plâtre ou transition de pièce.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Enduit dégradé de l’escalier",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+      ],
+      "limits": "Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "toluca_prison:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "toluca_prison",
+      "status": "implemented-candidate",
+      "runtimeKey": "tolucaScaffoldPanel",
+      "sourceScope": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules.",
+      "originalName": "TOLUCA PRISON",
+      "originalProposal": "Les cellules et la cour participent au rituel des plaques.",
+      "revisedProposal": "Le panneau frontal et son encadrement de bois restent intacts ; une faible lueur expose leurs logements sans placer les trois plaques.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Panneau du gibet de la cour",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_09_toluca_prison_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w09_scaffold.jpg"
+      ],
+      "limits": "Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "labyrinth:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "labyrinth",
+      "status": "implemented-candidate",
+      "runtimeKey": "boxFacesPedestal",
+      "sourceScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+      "originalName": "THE LABYRINTH",
+      "originalProposal": "La rotation du cube modifie les passages.",
+      "revisedProposal": "Le cube demeure sur son pied circulaire et sa table ; un reflet local ne commande aucune rotation du labyrinthe.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Pied et table de BoxofFaces",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_02.jpg"
+      ],
+      "limits": "Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "labyrinth:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "labyrinth",
+      "status": "implemented-candidate",
+      "runtimeKey": "boxFacesCube",
+      "sourceScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+      "originalName": "THE LABYRINTH",
+      "originalProposal": "Le cube tourne lentement dans un espace de fond sécurisé ; pas de modification du sol actif.",
+      "revisedProposal": "Le cube à face abstraite conserve son orientation ; seule sa lumière varie. Aucune rotation automatique ou face source inventée.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Cube de BoxofFaces, orientation fixe",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_02.jpg"
+      ],
+      "limits": "Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "labyrinth:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "labyrinth",
+      "status": "implemented-candidate",
+      "runtimeKey": "boxFacesPanels",
+      "sourceScope": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes.",
+      "originalName": "THE LABYRINTH",
+      "originalProposal": "Une barrière de fil se tend et se détend lorsque l’adversaire heurte la paroi.",
+      "revisedProposal": "Un éclairage lent reste sur les panneaux perforés de la pièce photographiée ; aucun fil qui se tend après impact.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Panneaux perforés de la commande",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_02.jpg"
+      ],
+      "limits": "Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "shopping_mall:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "shopping_mall",
+      "status": "implemented-candidate",
+      "runtimeKey": "happyBurgerBlinds",
+      "sourceScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+      "originalName": "CENTRAL SQUARE — HELEN’S BAKERY",
+      "originalProposal": "Les couloirs sont séparés par vitrines et rideaux métalliques.",
+      "revisedProposal": "Les lattes des stores restent en place ; le reflet chaud varie sans enseigne ou rideau de boutique ajouté.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Stores de Happy Burger",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+      ],
+      "limits": "Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "shopping_mall:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "shopping_mall",
+      "status": "implemented-candidate",
+      "runtimeKey": "happyBurgerTable",
+      "sourceScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+      "originalName": "CENTRAL SQUARE — HELEN’S BAKERY",
+      "originalProposal": "Le rideau d’une boutique monte de quelques centimètres puis s’arrête, sans accès jouable.",
+      "revisedProposal": "La table et ses petits condiments gardent leurs positions ; un reflet remplace le rideau métallique non situé dans ce café.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Table et condiments de Happy Burger",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+      ],
+      "limits": "Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "shopping_mall:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "shopping_mall",
+      "status": "implemented-candidate",
+      "runtimeKey": "happyBurgerChairs",
+      "sourceScope": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué.",
+      "originalName": "CENTRAL SQUARE — HELEN’S BAKERY",
+      "originalProposal": "Un choc au pied de la vitrine fait tourner un petit présentoir ; verre intact par défaut.",
+      "revisedProposal": "Les deux chaises restent vides et stables ; leur ombre varie faiblement sans présentoir, verre brisé ou apparition.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Chaises de Happy Burger",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+      ],
+      "limits": "Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "church:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "church",
+      "status": "implemented-candidate",
+      "runtimeKey": "sh3ChapelAltar",
+      "sourceScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+      "originalName": "THE CHURCH",
+      "originalProposal": "La progression mène à la naissance incomplète du dieu.",
+      "revisedProposal": "L’autel conserve son panneau de bois et sa niche centrale ; un reflet remplace toute naissance automatique du dieu.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Autel de la chapelle initiale",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg"
+      ],
+      "limits": "Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "church:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "church",
+      "status": "implemented-candidate",
+      "runtimeKey": "chapelCandleLean",
+      "sourceScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+      "originalName": "THE CHURCH",
+      "originalProposal": "Les flammes des cierges se couchent ensemble sans atteindre les combattants.",
+      "revisedProposal": "Les flammes restent sur les cierges de la chapelle photographiée ; leur très faible variation est originale au versus, sans dégâts.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Cierges de la chapelle initiale",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg"
+      ],
+      "limits": "Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "church:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "church",
+      "status": "implemented-candidate",
+      "runtimeKey": "sh3ChapelGlass",
+      "sourceScope": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu.",
+      "originalName": "THE CHURCH",
+      "originalProposal": "Une vibration du pupitre fait tourner une seule page du livre, sans texte rituel inventé lisible.",
+      "revisedProposal": "Une lueur douce traverse trois panneaux de verre coloré abstraits ; aucun livre dont une page tournerait sans référence.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Triple vitrage de la chapelle",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg"
+      ],
+      "limits": "Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "room_302:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "room_302",
+      "status": "implemented-candidate",
+      "runtimeKey": "room302ChainedDoor",
+      "sourceScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+      "originalName": "ROOM 302",
+      "originalProposal": "Porte enchaînée et trou de la salle de bain structurent le lieu.",
+      "revisedProposal": "La porte reste fermée sous ses chaînes ; les maillons reçoivent une faible variation de reflet sans ouverture automatique.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Porte enchaînée de l’entrée",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_01_room_302_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg"
+      ],
+      "limits": "Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "room_302:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "room_302",
+      "status": "implemented-candidate",
+      "runtimeKey": "room302CeilingLight",
+      "sourceScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+      "originalName": "ROOM 302",
+      "originalProposal": "La chaîne la plus basse oscille faiblement au bruit d’un pas extérieur.",
+      "revisedProposal": "Le plafonnier rond photographié conserve sa place et une lumière douce ; aucune chaîne autonome qui pend depuis le plafond.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Plafonnier rond de l’entrée",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_01_room_302_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg"
+      ],
+      "limits": "Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "room_302:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "room_302",
+      "status": "implemented-candidate",
+      "runtimeKey": "room302Kitchenette",
+      "sourceScope": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures.",
+      "originalName": "ROOM 302",
+      "originalProposal": "Une pulsation lumineuse traverse le trou de la salle de bain après impact proche, sans téléportation de duel.",
+      "revisedProposal": "Le réfrigérateur, le carrelage et les placards restent fixes près de la porte ; un reflet remplace le trou de bain absent du cadrage.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Kitchenette adjacente à l’entrée",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_01_room_302_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg"
+      ],
+      "limits": "Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "water_prison:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "water_prison",
+      "status": "implemented-candidate",
+      "runtimeKey": "waterPrisonValve",
+      "sourceScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+      "originalName": "WATER PRISON WORLD",
+      "originalProposal": "Les étages pivotent pour aligner les trous des cellules.",
+      "revisedProposal": "Le volant posé sur son piédestal reste immobile ; une lueur sur le métal ne déclenche aucune rotation des cellules.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Volant de la surveillance2F",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_04_water_prison_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/04_revolving_prison_cells.jpg"
+      ],
+      "limits": "Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "water_prison:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "water_prison",
+      "status": "implemented-candidate",
+      "runtimeKey": "waterPrisonPeepholes",
+      "sourceScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+      "originalName": "WATER PRISON WORLD",
+      "originalProposal": "La roue hydraulique tourne à vitesse lente visible dans une ouverture de fond.",
+      "revisedProposal": "Les œilletons métalliques gardent leurs ouvertures sombres ; un reflet remplace la roueB2 située dans une autre pièce.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Œilletons de la surveillance2F",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_04_water_prison_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/04_revolving_prison_cells.jpg"
+      ],
+      "limits": "Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "water_prison:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "water_prison",
+      "status": "implemented-candidate",
+      "runtimeKey": "waterPrisonShaft",
+      "sourceScope": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit.",
+      "originalName": "WATER PRISON WORLD",
+      "originalProposal": "Une poignée entraîne un segment de tour hors de l’aire de duel ; verrouillage sonore clair avant arrêt.",
+      "revisedProposal": "L’ouverture circulaire et le haut de l’échelle restent derrière le plateau sec ; aucun mécanisme entraîné ni chute des combattants.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Puits central de la surveillance2F",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_04_water_prison_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/04_revolving_prison_cells.jpg"
+      ],
+      "limits": "Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "apartment_world:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "apartment_world",
+      "status": "implemented-candidate",
+      "runtimeKey": "room105Desk",
+      "sourceScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+      "originalName": "APARTMENT WORLD",
+      "originalProposal": "La progression utilise les appartements et leur serrurerie.",
+      "revisedProposal": "Le bureau reste à sa place avec des feuilles abstraites sans texte lisible ; le reflet ne résout aucune serrurerie.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Bureau du concierge105",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_06_apartment_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_a.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_b.jpg"
+      ],
+      "limits": "Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "apartment_world:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "apartment_world",
+      "status": "implemented-candidate",
+      "runtimeKey": "room105Chair",
+      "sourceScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+      "originalName": "APARTMENT WORLD",
+      "originalProposal": "Une porte entrebâillée laisse osciller une mince bande de lumière au sol.",
+      "revisedProposal": "La chaise vide reste devant le bureau ; son reflet varie sans porte entrouverte ou couloir transporté dans la pièce.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Chaise tubulaire du bureau105",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_06_apartment_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_a.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_b.jpg"
+      ],
+      "limits": "Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "apartment_world:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "apartment_world",
+      "status": "implemented-candidate",
+      "runtimeKey": "room105Bars",
+      "sourceScope": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard.",
+      "originalName": "APARTMENT WORLD",
+      "originalProposal": "Après impact de mur, une chaîne de porte résonne dans un appartement voisin.",
+      "revisedProposal": "Les barreaux photographiés restent en arrière-plan ; aucune chaîne de porte résonnante ou arrivée de Walter.",
+      "revisionReason": "Cible resserrée sur un élément visible de la pièce et phase retenues ; la proposition historique n’est pas déclarée réalisée.",
+      "implementedElement": "Partition à barreaux du bureau105",
+      "artifacts": [
+        "src/stage-lot12-policy.js",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "src/stage-cinematics.js",
+        "src/stage-lot12-renderer.js",
+        "src/stage-bitmaps.js"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_06_apartment_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_a.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_b.jpg"
+      ],
+      "limits": "Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée."
+    },
+    {
+      "rowId": "brookhaven_sh2:reference:1",
+      "collection": "stageAnimations",
+      "entityId": "brookhaven_sh2",
+      "status": "blocked",
+      "sourceScope": "CouloirOtherworldB1 devant l’ascenseur de la poursuite.",
+      "originalName": "BROOKHAVEN — BASEMENT",
+      "originalProposal": "La poursuite à la lance se termine devant l’ascenseur.",
+      "reason": "La poursuiteB1 est décrite dans le chapitre Otherworld, mais la capture de douche normale consultée ne montre pas ce couloir. Pas de déplacement d’une scène normale ou du sort de Maria dans ce cadrage.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_06_nightmare_hospital_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w05_shower_room.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Vue native exacte et phase à attribuer ; aucun mouvement, objet ou son capturé ajouté et aucune fidélité1:1 certifiée."
+    },
+    {
+      "rowId": "brookhaven_sh2:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "brookhaven_sh2",
+      "status": "blocked",
+      "sourceScope": "CouloirOtherworldB1 devant l’ascenseur de la poursuite.",
+      "originalName": "BROOKHAVEN — BASEMENT",
+      "originalProposal": "Une porte d’ascenseur reste entrouverte avec bourdonnement mécanique cyclique.",
+      "reason": "La vue native du seuil de l’ascenseurB1 et la position exacte de ses panneaux restent à attribuer. Le prototype antérieur de porte est conservé comme adaptation historique, sans revendication nouvelle de reproduction1:1.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_06_nightmare_hospital_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w05_shower_room.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Vue native exacte et phase à attribuer ; aucun mouvement, objet ou son capturé ajouté et aucune fidélité1:1 certifiée."
+    },
+    {
+      "rowId": "brookhaven_sh2:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "brookhaven_sh2",
+      "status": "blocked",
+      "sourceScope": "CouloirOtherworldB1 devant l’ascenseur de la poursuite.",
+      "originalName": "BROOKHAVEN — BASEMENT",
+      "originalProposal": "Après impact près du mur, une lumière de maintenance oscille au bout du couloir.",
+      "reason": "Aucune lampe de maintenance oscillante n’est identifiée dans une vue native attribuée au couloirB1. Pas d’accessoire ou mouvement ajouté à partir de la seule mention de la poursuite.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_06_nightmare_hospital_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w05_shower_room.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Vue native exacte et phase à attribuer ; aucun mouvement, objet ou son capturé ajouté et aucune fidélité1:1 certifiée."
+    },
+    {
+      "rowId": "toluca_prison:reference:2",
+      "collection": "stageAnimations",
+      "entityId": "toluca_prison",
+      "status": "blocked",
+      "sourceScope": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules.",
+      "originalName": "TOLUCA PRISON",
+      "originalProposal": "Balancement presque imperceptible d’une corde au fond de la cour, sans force surnaturelle attribuée à un combattant.",
+      "reason": "Le haut du gibet et sa corde restent hors lumière dans la vue de cour. Le motgibet ne permet pas de reconstruire ou balancer une corde précise.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_09_toluca_prison_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w09_scaffold.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Vue native exacte et phase à attribuer ; aucun mouvement, objet ou son capturé ajouté et aucune fidélité1:1 certifiée."
+    },
+    {
+      "rowId": "toluca_prison:reference:3",
+      "collection": "stageAnimations",
+      "entityId": "toluca_prison",
+      "status": "blocked",
+      "sourceScope": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules.",
+      "originalName": "TOLUCA PRISON",
+      "originalProposal": "Une porte de cellule vibre après impact proche ; les autres restent closes.",
+      "reason": "La porte de cellule appartient aux blocs intérieurs, absents du cadrage de la cour retenu. La piste générique de porte après impact est retirée, pas déclarée produite.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_09_toluca_prison_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w09_scaffold.jpg"
+      ],
+      "artifacts": [],
+      "limits": "Vue native exacte et phase à attribuer ; aucun mouvement, objet ou son capturé ajouté et aucune fidélité1:1 certifiée."
+    }
+  ],
+  "scope": "25 révisions candidates sur9pièces distinctes ;5blocages. Les objets, pas les captures et tests, comptent comme lignes. Géométrie et lumière versus non certifiées1:1.",
+  "retiredOrSupersededTracks": [
+    "waterRings@blue_creek:reference:2",
+    "cellDoorReply@toluca_prison:reference:3",
+    "cubeTurn@labyrinth:reference:2",
+    "shutterLift@shopping_mall:reference:2",
+    "chainPendulum@room_302:reference:2",
+    "washroomHoleReply@room_302:reference:3",
+    "waterwheelTurn@water_prison:reference:2",
+    "doorReply@apartment_world:reference:2"
+  ],
+  "historicalRasterScenesPreserved": [
+    {
+      "stageId": "woodside",
+      "scene": "original-pc-corridor",
+      "selectedScene": "woodside-208-clock-room"
+    },
+    {
+      "stageId": "shopping_mall",
+      "scene": "normal-helens-bakery",
+      "selectedScene": "central-square-happy-burger"
+    }
+  ],
+  "rasterScope": "6 fichiers candidats conservés dans le manifeste ;4 utilisés pour les scènes actuelles et2 conservés pour une autre pièce historique. stageBitmapFor rejette un sceneId explicite incompatible. Aucun PNG de décor créé, supprimé ou re-encodé.",
+  "validation": {
+    "sourceReport": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/stages-source/report.json",
+      "sha256": "e81e22f545e5f01794d21cf951609c994bcdb8666b13df601c17c6e34e42c557",
+      "checks": 152,
+      "captures": 45,
+      "scenes": 9,
+      "errors": 0
+    },
+    "visualReview": {
+      "path": "/workspace/shared/halo-of-flesh/validation-batch12-2026-11-01/stages-source/visual-review.json",
+      "sha256": "e7e47aa7841b2ff1515672c8da4266a8994406eed5718f44e7d78401a3c6c7bf"
+    },
+    "targetedNode": {
+      "tests": 141,
+      "passed": 141,
+      "log": "/workspace/.cloud-env/halo/logs/batch12-stage-node.log",
+      "sha256": "3e816954e3b136709f708d4767e5fa56a02ea5225472b8677d452aec8af0cb49"
+    },
+    "httpScript": {
+      "path": "/workspace/.cloud-env/halo/qa-stages-lot12.mjs",
+      "sha256": "3440e72d267361878d4e08a36cae57953aec85036552bc5efcaceec074f7d565"
+    },
+    "certifiedOneToOne": false
+  }
+}

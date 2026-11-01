@@ -594,7 +594,9 @@ function makeMove(slot, fighter, context, override = {}) {
 
   if (slot === 'desperation') {
     move.projectileScale *= 1.35;
-    move.armorFrames = Math.max(move.armorFrames, fighter.boss ? 28 : 16);
+    // A reviewed recipe can explicitly refuse generic desperation armor.
+    // Keep the versus fallback only when the move did not specify a value.
+    if (override.armorFrames == null) move.armorFrames = Math.max(move.armorFrames, fighter.boss ? 28 : 16);
   }
 
   return move;

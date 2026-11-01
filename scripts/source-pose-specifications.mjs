@@ -405,20 +405,127 @@ groups.push(
   }}
 );
 
+groups.push(
+  {batch:'lot12',fighterId:'sh1_groaner_003',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'Le guide décrit un chien maigre sans poils ; le modèle publié montre quatre pattes, la queue et la gueule.',
+      description:'Groaner003 SH1 original : préparer le corps entier du chien maigre sans poils, sur ses quatre pattes, avec queue et museau dans le cadre 2D. Conserver son apparence propre plutôt que les vers du Wormhead004. La sensibilité au son décrite par le commentaire peut orienter la tête vers un bruit, mais ne fournit ni cycle de reniflement ni garde humaine. Le modèle fixe ne mesure pas la respiration ni une station d’attente originale.',
+      limits:'Anatomie quadrupède et sensibilité au son documentées ; attente, profil opposé et cadence restent à capturer.'},
+    walk:{basis:'Le guide distingue l’approche du bond mordu offensif et permet de croiser des chiens en groupe.',
+      description:'Groaner003 SH1 original : relever le déplacement du corps entier sur quatre pattes, en gardant queue et tête continues entre les images. Distinguer progression au sol et bond mordu ; une translation du PNG ne fournit ni alternance des appuis ni trot. La présence en groupe ne doit pas dédoubler un acteur pour produire sa marche. Relever le cycle de cette espèce plutôt qu’importer les appuis d’un chien réaliste ou d’un Feral Homecoming.',
+      limits:'Approche et bond sont distingués sans cadence officielle ; ordre des quatre contacts et cycle de locomotion restent non relevés.'},
+    hurt:{basis:'Le guide indique qu’un tir pendant le bond peut renverser le Groaner ; tous les impacts ne sont pas décrits comme des chutes.',
+      description:'Groaner003 SH1 original : garder le corps entier quadrupède, la queue et les quatre pattes lors de l’impact. Séparer réaction au sol et interruption du bond mordu, avec continuité de la hauteur et de la gueule. Le renversement possible pendant le bond ne justifie pas une rotation automatique à chaque tir ; relever le contact et l’orientation avant de produire les images. Ne pas donner des mains ou une garde de boxeur au chien pour exprimer le recul.',
+      limits:'Renversement aérien possible attesté ; réaction survivable, trajectoire et raccord de récupération ne sont pas mesurés.'},
+    knockdown:{basis:'Le guide permet d’abattre le chien pendant son saut mais ne détaille pas un relèvement récupérable de manche.',
+      description:'Groaner003 SH1 original : préparer chute et contact au sol du corps entier avec les quatre pattes et la queue, sans faire disparaître la moitié éloignée. Identifier la réception depuis une capture du bond interrompu ; ne pas choisir un flanc ou une roulade depuis le modèle fixe. La défaite source ne prouve pas un relèvement de versus. Pour une reprise de manche, documenter séparément retour aux appuis et transition d’attente, en les qualifiant d’adaptation si la source manque.',
+      limits:'Mise à terre après bond documentée ; côté de réception, état couché vivant et relèvement original restent ouverts.'},
+    phase:{basis:'Groaner et Wormhead sont des identités visuelles distinctes rencontrées dans des états différents du monde.',
+      description:'Groaner003 SH1 original : maintenir le corps entier de Groaner dans les raccords attente, approche et bond. La rencontre de Wormhead dans l’Otherworld ne prouve pas une métamorphose de ce chien en plein combat à faible santé. Garder la tête sans infestation propre à003 ; ne pas changer de PNG ou ajouter des vers au seuil de jauge. Tout passage du sol au bond doit conserver les quatre pattes et la queue sans téléportation ni duplication.',
+      limits:'Différence de bestiaire liée au monde, sans transformation individuelle mesurée ; aucun seuil anatomique original n’est livré.'}
+  }},
+  {batch:'lot12',fighterId:'sh1_wormhead_004',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'Le guide et le commentaire distinguent le chien sombre de l’Otherworld dont la tête est couverte de vers.',
+      description:'Wormhead004 SH1 original : cadrer le corps entier du chien quadrupède sombre et sa tête infestée, avec les quatre pattes et la queue. Les vers sont les détails propres au modèle ; ils ne deviennent pas une arme détachée ou un essaim indépendant. Relever une attente de Wormhead plutôt que recolorer Groaner003. La puissance qualitative supérieure donnée par le guide ne définit ni gonflement du torse ni boucle de menace différente.',
+      limits:'Tête infestée, apparence sombre et quatre appuis attestés ; attente exacte et mouvement local des vers restent à observer.'},
+    walk:{basis:'Le guide lui attribue les mêmes familles de sauts et morsures que Groaner, sans fournir un cycle de pas identique.',
+      description:'Wormhead004 SH1 original : relever la progression du corps entier sur quatre pattes, avec la tête infestée conservée dans toutes les vues. Le renvoi aux sauts et morsures de Groaner n’autorise pas à copier ses images ou sa cadence. Distinguer approche au sol, impulsion et bond offensif ; ne pas traiter le mouvement des vers comme locomotion du corps. Relever les pattes éloignées sans inventer un cinquième appui ni supprimer la queue pour le cadrage 2D.',
+      limits:'Famille de gestes commune attestée ; cycle propre à004, vitesse chiffrée et appuis opposés ne sont pas mesurés.'},
+    hurt:{basis:'Des tirs pendant le temps aérien peuvent renverser Wormhead ; sa résistance plus forte n’est que qualitative.',
+      description:'Wormhead004 SH1 original : conserver le corps entier sombre, la tête infestée et les quatre pattes quand le tir interrompt le bond. Distinguer cette branche de la réaction d’impact au sol, sans perdre l’altitude d’un coup ni faire voler des vers comme projectile. La robustesse qualitative ne prouve ni armure ni absence de réaction. Relever tête, torse et pattes sur une capture004 au lieu d’emprunter le recul de Groaner.',
+      limits:'Renversement possible et résistance relative documentés ; orientation, amplitude et récupération par arme restent non relevées.'},
+    knockdown:{basis:'Le guide mentionne la chute possible sous les tirs aériens sans décrire une résurrection ou une régénération.',
+      description:'Wormhead004 SH1 original : relever chute, réception et état au sol du corps entier, en gardant les vers sur sa tête et les quatre pattes attachées. Ne pas utiliser un Groaner couché comme doublure, même si les familles d’attaque sont communes. Séparer corps atteint vivant et fin définitive ; la tête infestée ne justifie ni régénération ni apparition d’un nouveau chien. Le retour à l’attente de manche doit être produit et qualifié indépendamment de la défaite source.',
+      limits:'Chute aérienne possible attestée ; contacts au sol, issue vivante et relèvement de versus ne sont pas validés.'},
+    phase:{basis:'Wormhead remplace Groaner dans Nightmare Silent Hill ; le commentaire décrit un effet du monde sur son apparence.',
+      description:'Wormhead004 SH1 original : conserver le corps entier et la tête infestée entre attente, approche, bond et sortie. Son remplacement de Groaner dans le monde cauchemardesque est un contexte de rencontre, pas une transition anatomique observée au milieu d’une manche. Aucun seuil de santé ne doit nettoyer les vers, faire pousser des membres ou changer004 en003. Les raccords de posture gardent la même silhouette et demandent leurs propres captures.',
+      limits:'Variante de contexte attestée ; aucune métamorphose en temps réel ou nouvelle phase de boss n’est établie.'}
+  }},
+  {batch:'lot12',fighterId:'sh1_romper_010',source:'sh1',edition:SH1,evidence:['CL_SH1_ENEMIES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'Le guide décrit un humanoïde simiesque sur quatre membres ; le modèle montre les grandes mains porteuses et les jambes repliées.',
+      description:'Romper010 SH1 original : maintenir le corps entier bas sur ses quatre membres, avec les deux grandes mains et les deux pieds visibles dans la vue 2D. Conserver les proportions simiesques et le dos voûté du modèle, sans le redresser en combattant humain. Une attente n’immobilise pas une victime : distinguer les mains porteuses de leur futur rôle dans le plaquage. Relever l’état de repos exact et ses transferts de poids avant de produire une boucle.',
+      limits:'Quatre membres locomoteurs attestés ; contact exact de chacun, pose opposée et cadence d’attente restent à capturer.'},
+    walk:{basis:'Le guide décrit une approche par bonds et distingue bond avec étouffement d’un grand bond qui renverse sans maintien.',
+      description:'Romper010 SH1 original : relever l’approche bondissante du corps entier depuis les mains et les pieds, sans cadence de bipède ni poings de boxeur. Distinguer déplacement vers la cible, bond offensif avec maintien et long bond qui renverse sans étouffer. Les quatre membres restent solidaires entre impulsion et réception. Un défilement horizontal du PNG fixe ne prouve pas ce cycle ; relever appuis et phases aériennes sans inventer une prise à chaque pas.',
+      limits:'Approche par bonds et deux issues offensives documentées ; cycle de déplacement et ordre des contacts restent non mesurés.'},
+    hurt:{basis:'Le guide conseille de tirer à distance avant le bond ; il ne donne pas une unique réaction à chaque arme ni une garde.',
+      description:'Romper010 SH1 original : préparer l’impact sur le corps entier à quatre membres en conservant mains, pieds et dos voûté. Relever séparément l’interruption de l’approche, celle d’un bond et la rupture éventuelle d’un maintien, sans les fusionner dans une pose humaine debout. Si la prise est interrompue, suivre aussi la séparation de la cible ; le hitstun du moteur ne certifie ni relâchement original ni durée de lutte. Aucun projectile ou recul magique n’est ajouté.',
+      limits:'Atteinte avant l’approche documentée ; interruption de maintien, angles et reprise source restent à relever.'},
+    knockdown:{basis:'Le guide indique la possibilité de l’abattre avec des tirs ; sa posture locomotrice basse n’est pas déjà une défaite.',
+      description:'Romper010 SH1 original : différencier attente basse vivante et knockdown du corps entier après impact. Garder les deux grandes mains et les deux pieds lors de la réception ; relever quels membres cessent de porter le torse au lieu de retourner l’image idle. Un plaquage subi par Harry décrit la victime, pas la chute du Romper. Aucune roulade d’épaule ni reprise aux quatre appuis ne doit être certifiée sans capture propre à010.',
+      limits:'Défaite par tir attestée ; réception du Romper, état au sol récupérable et retour de manche restent non capturés.'},
+    phase:{basis:'Le guide distingue une immobilisation et un renversement sans maintien comme issues des bonds du même Romper.',
+      description:'Romper010 SH1 original : conserver le corps entier et ses quatre membres entre approche, bond, maintien et retour au sol. Le long bond qui renverse sans étouffer et le bond avec immobilisation sont des branches d’attaque, pas deux anatomies ni une croissance de boss. Relever les raccords de prise et de séparation avec la cible, sans garder des mains libres au sol tout en les plaçant simultanément sur la victime. Aucun seuil de santé ne valide cette permutation.',
+      limits:'Branches offensives documentées ; raccords complets de contact et retour aux appuis restent à produire sur capture.'}
+  }},
+  {batch:'lot12',fighterId:'sh1_split_head_014',source:'sh1',edition:SH1,evidence:['CL_SH1_BOSSES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'Le commentaire et le modèle montrent un grand lézard allongé avec membres antérieurs et longue partie caudale ; le début de rencontre garde la gueule fermée.',
+      description:'Split Head014 SH1 original : cadrer le corps entier allongé, la tête fermée, les membres antérieurs et toute la partie caudale. Le modèle publié ne justifie pas l’ajout de deux pattes arrière de chien pour fabriquer une garde quadrupède. Relever la pose basse du début de rencontre et ses appuis réels ; garder la fente de la tête sans l’ouvrir comme une bouche humaine. La faiblesse interne n’est pas exposée pendant toutes les attentes.',
+      limits:'Corps allongé et début bouche fermée attestés ; appuis masqués, vue opposée et boucle exacte restent à relever.'},
+    walk:{basis:'Le guide décrit une approche lente et une attaque de tête avant la phase de gueule ouverte ; le corps reste au sol.',
+      description:'Split Head014 SH1 original : relever la translation du corps entier au sol, avec tête, membres antérieurs et extrémité caudale continues. Ne pas ajouter des pas arrière cachés à partir d’une anatomie de lézard générique. Distinguer progression basse, heurt de tête et approche de la gueule ouverte. Le modèle de profil donne la silhouette, pas une ondulation ni un cycle de reptation mesuré ; chaque contact d’appui doit venir du jeu original.',
+      limits:'Progression au sol documentée sans vitesse officielle ; coordination des appuis, ondulation et raccord d’arrêt restent ouverts.'},
+    hurt:{basis:'Le guide distingue tirs sur le corps résistant et tirs dans la gueule ouverte qui expose le point faible.',
+      description:'Split Head014 SH1 original : garder le corps entier dans l’impact et préserver l’état initial de la tête, fermée ou ouverte. Différencier atteinte du corps et atteinte de la gueule vulnérable sans refermer instantanément une tête ouverte à chaque hitstun. Relever mâchoires, torse et contacts au sol avant de créer la réaction. Les dégâts et le multiplicateur du versus ne mesurent pas le recul original ; aucune partie du corps ne se détache pour rendre l’impact plus lisible.',
+      limits:'Deux états de vulnérabilité attestés ; réponse articulée par zone, amplitude et récupération ne sont pas mesurées.'},
+    knockdown:{basis:'Le guide décrit la fin du combat après les tirs dans la gueule et un effet de flou ; il ne fournit pas de chute récupérable intermédiaire.',
+      description:'Split Head014 SH1 original : séparer fin terminale de la rencontre et chute récupérable du versus, toujours avec le corps entier, la queue et les membres antérieurs. Ne pas inventer un effondrement latéral depuis le simple flou de fin ni transformer la tête ouverte en deux créatures indépendantes. Relever l’état des mâchoires et les contacts au sol sur une séquence du boss. Le relèvement de manche constitue un raccord d’adaptation tant qu’aucune capture ne le documente.',
+      limits:'Résolution terminale documentée ; posture finale précise, côté de chute et récupération survivable restent non établis.'},
+    phase:{basis:'Le guide décrit une aggravation après laquelle le lézard se fige, rejette un liquide verdâtre et utilise ensuite sa gueule ouverte.',
+      description:'Split Head014 SH1 original : documenter le raccord du corps entier entre heurt de tête initial et attaque de gueule ouverte. Relever immobilisation, rejet verdâtre et ouverture des mâchoires comme événements distincts ; ne pas les convertir en projectile offensif ou nouvelle anatomie. Conserver la continuité du long corps et des appuis. Le nombre approximatif de tirs cité par le guide et le seuil de santé du prototype ne constituent pas un minutage ni un seuil source certifié.',
+      limits:'Ordre qualitatif des deux comportements attesté ; images, durée et déclencheur exact de transition restent à mesurer.'}
+  }},
+  {batch:'lot12',fighterId:'sh1_twinfeeler_015',source:'sh1',edition:SH1,combatRole:'stationary-boss',evidence:['CL_SH1_BOSSES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'La larve verte segmentée se tient dans la fosse et le modèle publié montre le corps complet ; les états enterré et exposé sont distincts.',
+      description:'Twinfeeler015 SH1 original : préparer le corps entier de la larve segmentée exposée, de la tête aux appendices caudaux, sans lui ajouter les ailes de Floatstinger016. Conserver les petits appuis ventraux visibles sans inventer leur nombre du côté masqué. Séparer attente en surface et présence souterraine : une trace au sol ne remplace pas un corps complet. Le rôle de boss de fosse ne certifie aucune station fixe universelle ni attente suspendue.',
+      limits:'Larve et deux états de terrain documentés ; appuis éloignés, échelle et boucle d’attente en surface restent non mesurés.'},
+    walk:{basis:'Le guide distingue déplacement souterrain et reptation exposée ; la plaque métallique empêche la replongée immédiate.',
+      description:'Twinfeeler015 SH1 original : relever le déplacement du corps entier segmenté lorsqu’il rampe à la surface de la fosse. Suivre tête, segments et extrémité caudale sans ajouter des jambes de bipède. Sur la plaque métallique, conserver le corps exposé jusqu’à la sortie de la plaque ; ne pas simuler un enfouissement dans tout sol d’arène. Le trajet souterrain a sa branche et ses effets de terrain propres, qui ne fournissent pas un cycle complet visible par simple translation de l’idle.',
+      limits:'Reptation et restriction de terrain attestées ; ondulation, appuis et vitesse restent à capturer, aucun tunnel mesuré n’est produit.'},
+    hurt:{basis:'Le guide décrit une fenêtre de tirs pendant l’exposition et un repli vivant en fin de rencontre, sans réaction identique à chaque tir.',
+      description:'Twinfeeler015 SH1 original : conserver le corps entier segmenté et son état de terrain quand il reçoit un impact. Un tir sur la plaque ne permet pas une disparition sous le métal ; relever tête, segments et contacts avant une éventuelle replongée autorisée. Distinguer recul intermédiaire et repli terminal en boule. La divergence de libellés jet acide et gaz toxique entre sources ne fournit ni réaction d’impact chimique ni couleur canonique à fabriquer.',
+      limits:'Exposition aux tirs et repli vivant attestés ; déformation locale, recul et récupération intermédiaire restent non relevés.'},
+    knockdown:{basis:'La fin de rencontre montre la larve se repliant puis quittant la fosse vivante ; le guide exclut sa mort à ce stade.',
+      description:'Twinfeeler015 SH1 original : garder le corps entier lors du repli en boule de fin de rencontre, sans le présenter comme cadavre. Distinguer cette retraite vivante d’un knockdown récupérable ajouté au versus ; relever segments et contacts réels avant de composer la chute de manche. La fuite par les portes est une issue de la fosse, pas une roulade universelle ni un enfouissement possible à travers un sol métallique. Aucun relèvement mortuaire n’est inféré.',
+      limits:'Retraite vivante documentée ; chute de manche, position finale exacte et déploiement récupérable restent à produire séparément.'},
+    phase:{basis:'Le guide indique que la larve s’échappe avant la rencontre ultérieure de sa forme mature Floatstinger ; aucune transformation continue n’est montrée dans la fosse.',
+      description:'Twinfeeler015 SH1 original : garder le corps entier larvaire dans les raccords émergence, exposition, replongée et retraite. La relation avec Floatstinger016 est documentée, mais ne fournit ni cocon ni métamorphose animée dans le même duel. Ne pas ajouter des ailes à un seuil de santé ni substituer le PNG016 pour remplir ce slot. Tout passage sous le sol doit respecter terre et plaque métallique, avec continuité des segments et du contact de terrain relevée sur capture.',
+      limits:'Lien larve/forme mature et retraite attestés ; transformation hors champ, seuil et raccord image par image ne sont pas documentés.'}
+  }},
+  {batch:'lot12',fighterId:'sh1_floatstinger_016',source:'sh1',edition:SH1,evidence:['CL_SH1_BOSSES','CL_SH1_CREATURES'],poses:{
+    idle:{basis:'Le modèle publié montre le papillon à deux paires d’ailes et abdomen ; le guide situe la rencontre en vol au-dessus du toit.',
+      description:'Floatstinger016 SH1 original : cadrer le corps entier aérien, les deux paires d’ailes, les antennes et l’extrémité de l’abdomen, sans pieds humains ajoutés au sol. Relever l’attente en vol et la position relative des ailes depuis une capture ; le modèle frontal ne prouve ni profil opposé ni battement complet. Le point de vue du toit bas peut masquer une partie du sujet dans le jeu, mais ne justifie pas de tronquer sa pose 2D candidate.',
+      limits:'Vol et silhouette entière du modèle attestés ; amplitude des ailes, hauteur et cadence d’attente restent non mesurées.'},
+    walk:{basis:'Le guide décrit un combat aérien avec approche et frappe rapprochée de l’abdomen ; aucune marche au sol n’est donnée.',
+      description:'Floatstinger016 SH1 original : le slot walk décrit la translation du corps entier en vol, avec deux paires d’ailes et abdomen solidaires. Aucun cycle de pas ne porte la masse ; suivre le mouvement du thorax et l’orientation de l’abdomen séparément du battement. La frappe proche et la projection à distance sont des attaques distinctes. Une translation du PNG idle ou une oscillation du moteur ne produit pas le cycle d’aile original.',
+      limits:'Déplacement aérien attesté ; trajectoire, cycle d’ailes et vitesse ne sont pas mesurés, aucune marche terrestre n’est validée.'},
+    hurt:{basis:'Le boss reçoit des tirs pendant le vol puis chute en fin de combat ; le guide ne décrit pas une chute à chaque coup.',
+      description:'Floatstinger016 SH1 original : garder le corps entier en vol pendant la réaction d’impact proposée, avec les deux paires d’ailes et l’abdomen continus. Relever une réaction intermédiaire sans transformer chaque hitstun en arrêt d’ailes ou chute terminale. Le crachat acide du guide et le gaz ou dard du commentaire sont des descriptions offensives distinctes, pas des preuves de démembrement à l’impact. Préserver antennes et extrémité caudale dans le cadre.',
+      limits:'Atteinte en vol et chute terminale attestées ; recul, maintien d’altitude et réponse propre des ailes restent à observer.'},
+    knockdown:{basis:'Le guide indique qu’il tombe et meurt cette fois, après la retraite vivante du Twinfeeler ; les sirènes accompagnent la résolution.',
+      description:'Floatstinger016 SH1 original : relever la chute terminale du corps entier, avec les deux paires d’ailes et l’abdomen, sans employer une image du Twinfeeler en boule. Préserver le premier contact et l’état réel des ailes plutôt que choisir une rotation de PNG. La mort source ne fournit ni redécollage ni knockdown récupérable ; un retour de manche du versus doit donc être qualifié d’adaptation. La sirène de résolution ne remplace pas les images corporelles manquantes.',
+      limits:'Chute et mort finales attestées ; réception exacte, durée et récupération de manche restent non produites.'},
+    phase:{basis:'Le commentaire identifie la forme mature de Twinfeeler ; le guide distingue sa rencontre aérienne et sa chute finale, pas une nouvelle métamorphose.',
+      description:'Floatstinger016 SH1 original : maintenir le corps entier adulte entre vol, approche, projection et chute finale. Le lien antérieur avec la larve015 ne prouve pas une transformation inverse ou l’ajout d’une troisième paire d’ailes en cours de manche. Relever les raccords de posture et le déclenchement de chute depuis la rencontre du toit. Aucun seuil de jauge, coup d’abdomen ou son annonciateur ne doit être présenté comme nouvelle forme anatomique sans autre capture.',
+      limits:'Relation de formes et fin terminale documentées ; aucune nouvelle métamorphose, cadence ou transition source complète n’est livrée.'}
+  }}
+);
+
 export const SOURCE_POSE_SPECIFICATIONS=Object.freeze(groups.flatMap(group=>Object.entries(group.poses).map(([pose,detail])=>Object.freeze({
   rowId:`${group.fighterId}:pose:${pose}`,batch:group.batch||'lot9',fighterId:group.fighterId,source:group.source,edition:group.edition,pose,
   evidence:Object.freeze([...group.evidence]),basis:detail.basis,
+  ...(group.combatRole?{combatRole:group.combatRole}:{}),
   description:detail.description+' '+documentationLimit,limits:detail.limits
 }))));
 export const LOT9_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot9'));
 export const LOT10_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot10'));
 export const LOT11_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot11'));
+export const LOT12_SOURCE_POSE_SPECIFICATIONS=Object.freeze(SOURCE_POSE_SPECIFICATIONS.filter(spec=>spec.batch==='lot12'));
 const byRow=new Map(SOURCE_POSE_SPECIFICATIONS.map(spec=>[spec.rowId,spec]));
 
 /** Refuse a brief borrowed by another edition, source, identity or unbound evidence. */
 export function sourcePoseSpecification(fighter,reference,pose){
   const spec=byRow.get(`${fighter?.id}:pose:${pose}`);
   return spec&&fighter.id===reference?.id&&fighter.source===spec.source&&reference.source===spec.source&&
-    reference.referenceEdition===spec.edition&&reference.combatRole==='combatant'&&
+    reference.referenceEdition===spec.edition&&reference.combatRole===(spec.combatRole||'combatant')&&
     Array.isArray(reference.referenceIds)&&spec.evidence.every(id=>reference.referenceIds.includes(id))?spec:null;
 }
