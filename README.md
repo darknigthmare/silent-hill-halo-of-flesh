@@ -1,5 +1,28 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Images entières — campagne des 144 profils du 1er novembre 2026
+
+**52 nouvelles images fixes candidates** sont intégrées à leur profil exact,
+avec corps et équipements visibles en entier. Les **144 profils initialement sans image**
+ont été examinés en cinq lots de **30, 30, 30, 30 et 24**. **92 restent sans image** :
+leurs références insuffisantes, identités incertaines ou refus de génération sont consignés
+individuellement. Les anciens blocages restent conservés dans l’historique.
+
+Le registre compte désormais **138 profils illustrés et 173 PNG actifs**.
+Les 86 profils et 121 PNG antérieurs sont préservés. Les dossiers sans duel autonome
+gardent leur rôle et restent consultables dans l’atelier. Les nouveaux PNG sont des idles
+statiques ; aucune animation originale ni fidélité 1:1 n’est certifiée.
+
+**Validation : 1214 tests Node, 101 tests Python,
+5446 contrôles navigateur et 903 captures.**
+L’Excel conserve ses 18 400 cellules de timings originaux vides et ses 840 actions
+ouvertes, dont 93 P0.
+
+[Les 144 profils et leurs résultats](docs/production/ART144_PROFILE_STATUS.md) ·
+[Images, références et limites](docs/production/IMAGES_ART144_2026-11-01.md) ·
+[Rapport QA](docs/INTEGRATION_QA_2026-11-01-art144.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
 ## Corps entiers et chantiers parallèles — douzième lot du 1er novembre 2026
 
 **Six lots de trente lignes Excel : 180 éléments suivis**, dont 97 réalisations

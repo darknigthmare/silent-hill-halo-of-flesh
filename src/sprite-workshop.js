@@ -1,5 +1,5 @@
 import {mountSpriteInspector} from './sprite-inspector.js';
-import {ROSTER,SOURCE_META,VERSION} from './data.js';
+import {ROSTER,SOURCE_META,VERSION,createCombatProfile} from './data.js';
 import {spriteCoverage,spriteFor,spriteStatus,paintRasterPortrait,assetURL} from './sprite-system.js';
 import {escapeHTML} from './shared.js';
 import {presentationClipCoverage} from './sprite-clips.js';
@@ -16,7 +16,8 @@ function details(){disposeInspector?.();disposeInspector=null;const f=selected,a
  const c=document.createElement('canvas');c.width=720;c.height=500;el.append(c);if(!art)paintRasterPortrait(c,f);
  const presentations=presentationClipCoverage(art);
  const copy=document.createElement('div');copy.innerHTML=`<small>${escapeHTML(f.game)}</small><h2>${escapeHTML(f.name)}</h2><code>${escapeHTML(f.id)}</code><p>${escapeHTML(status.label)}</p><dl><dt>Images de poses</dt><dd>${status.frames}</dd><dt>Clips animés</dt><dd>${status.animatedClips}</dd><dt>Présentations importées</dt><dd>${presentations.present.length} / ${PRESENTATION_KEYS.length} · ${presentations.animated} animées</dd><dt>Fidélité visuelle</dt><dd>${art?'À valider':'Non évaluée'}</dd><dt>Affectation</dt><dd>Identifiant exact, sans clone</dd></dl><p>${escapeHTML(art?.notes||'Aucun bitmap de qualité accepté pour ce profil. Conserver sa variante et son média; ne pas réutiliser le dessin d’un autre monstre.')}</p><p data-presentation-coverage>${presentations.missing.length?'Séquences à produire : '+escapeHTML(presentations.missing.map(poseLabel).join(' ; '))+'.':'Les huit séquences sont importées ; leur présence ne certifie pas la fidélité visuelle.'}</p><p>Importer le prochain PNG individuel avec <code>python scripts/import-sprite.py --help</code>. Le contrôle technique n’atteste pas la fidélité canonique.</p>`;
- if(art){const link=document.createElement('a');link.href=`unified-versus.html?p1=${encodeURIComponent(f.id)}&p2=${encodeURIComponent(f.id)}`;link.className='ui-button';link.textContent='OBSERVER CE SPRITE EN DUEL MIROIR';copy.append(link);
+ if(art){if(createCombatProfile(f).referencePolicy?.combatEnabled!==false){const link=document.createElement('a');link.href=`unified-versus.html?p1=${encodeURIComponent(f.id)}&p2=${encodeURIComponent(f.id)}`;link.className='ui-button';link.textContent='OBSERVER CE SPRITE EN DUEL MIROIR';copy.append(link);}
+  else {const role=document.createElement('p');role.dataset.referenceOnly='true';role.textContent='Image consultable dans cet atelier. Le rôle de ce profil dans son œuvre ne permet pas de duel.';copy.append(role);}
   const image=document.createElement('a');image.href=assetURL(art.frames[0].path);image.textContent=' Ouvrir le bitmap individuel';copy.append(image);}
  el.append(copy);if(art)disposeInspector=mountSpriteInspector({host:copy,canvas:c,fighter:f,art});
 }

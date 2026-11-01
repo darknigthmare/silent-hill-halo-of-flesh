@@ -1,0 +1,728 @@
+{
+  "schema": 1,
+  "campaign": "art144",
+  "group": "c",
+  "baseCommit": "221dcc8cac927291bb7e0b89139a504dabb857db",
+  "assets": {
+    "bom_air_screamer_121": {
+      "fighterId": "bom_air_screamer_121",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-8e6ebc9b-a986-422e-870b-fc7866b6694b.png",
+      "sourceSHA256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Air Screamer BoM entier depuis capture native20120126_09 et portrait bestiaire : deux ailes, tête et deux membres à griffes. Vue complète native isométrique de640×363 ; textures, angle 2D et détails fins reconstruits, pas de rendu SH1 transféré. Marge lisible connectée minimale réelle :8.13% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "5b93ef3388e0aacb813fa18759577d883b962b4dc914e2ad557fb9e1353507ad",
+          "sha256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+          "bytes": 513919,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            109,
+            242,
+            1115,
+            1010
+          ],
+          "transparentFraction": 0.89943,
+          "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+          "facing": 1,
+          "anchor": [
+            0.68,
+            0.807815
+          ],
+          "bodyHeight": 0.616427,
+          "sourceFile": "exec-8e6ebc9b-a986-422e-870b-fc7866b6694b.png",
+          "sourceSHA256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+        "sha256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+        "bytes": 513919,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_bogeyman_122": {
+      "fighterId": "bom_bogeyman_122",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-dcec60b6-05d3-42a6-b5aa-c4107411bea4.png",
+      "sourceSHA256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Bogeyman BoM entier avec manteau, masque à gaz et marteau complet établis par son rendu natif. Sens gauche déclaré d’après la sortie réelle ; pas de substitution du modèle Downpour. Prise et posture statiques recomposées. Marge lisible connectée minimale réelle :3.75% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "61fb717590e7757d48b610b94dcaa3598513f38be197f0244bcceaf4b5c4b051",
+          "sha256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+          "bytes": 859661,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            339,
+            67,
+            925,
+            1199
+          ],
+          "transparentFraction": 0.76866,
+          "path": "assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
+          "facing": -1,
+          "anchor": [
+            0.545,
+            0.96252
+          ],
+          "bodyHeight": 0.912281,
+          "sourceFile": "exec-dcec60b6-05d3-42a6-b5aa-c4107411bea4.png",
+          "sourceSHA256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
+        "sha256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+        "bytes": 859661,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_butcher_123": {
+      "fighterId": "bom_butcher_123",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5f5846ba-104a-415d-8f55-70f19505059a.png",
+      "sourceSHA256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Butcher BoM entier depuis modèles couleur/sculpt Hershberg, avec Great Cleaver natif entier. La page armes associe explicitement cet objet au Butcher. Prise et posture composées, détails de lame depuis vignette127px ; aucun transfert du modèle Origins. Marge lisible connectée minimale réelle :8.77% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "376f62999fd506235f05590c14051f75caf170d26482ae4ae824abc5e57e128f",
+          "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+          "bytes": 665309,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            376,
+            142,
+            919,
+            1140
+          ],
+          "transparentFraction": 0.84225,
+          "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+          "facing": 1,
+          "anchor": [
+            0.51,
+            0.912281
+          ],
+          "bodyHeight": 0.802233,
+          "sourceFile": "exec-5f5846ba-104a-415d-8f55-70f19505059a.png",
+          "sourceSHA256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+        "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+        "bytes": 665309,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_double_head_124": {
+      "fighterId": "bom_double_head_124",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-d0a35b6e-092b-48ad-88aa-5f0f52a75470.png",
+      "sourceSHA256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Double Head BoM entier depuis ses modèles couleur/sculpt Hershberg : quatre pattes, bandages, tête fendue et queue courte ; pas de texture SH3 substituée. L’appui et le volume sont recomposés, les surfaces cachées ne sont pas mesurées. Marge lisible connectée minimale réelle :10.61% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "e067f5ca6f94282823486239c08bedfdecc01e31763ce501ee7743e929ccd634",
+          "sha256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+          "bytes": 596995,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            244,
+            362,
+            1118,
+            999
+          ],
+          "transparentFraction": 0.85629,
+          "path": "assets/sprites/bom_double_head_124.7b4030beb9da.png",
+          "facing": 1,
+          "anchor": [
+            0.53,
+            0.798246
+          ],
+          "bodyHeight": 0.515152,
+          "sourceFile": "exec-d0a35b6e-092b-48ad-88aa-5f0f52a75470.png",
+          "sourceSHA256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_double_head_124.7b4030beb9da.png",
+        "sha256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+        "bytes": 596995,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_insane_cancer_126": {
+      "fighterId": "bom_insane_cancer_126",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-d7dfe102-4c85-4390-b8fd-f4f35638496b.png",
+      "sourceSHA256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Insane Cancer BoM entier depuis capture native20120126_10 et portrait bestiaire : masse, deux bras et pieds courts. Vue640×363 avec dessous partiellement occulté par la masse ; texture et angle recomposés, pas d’emprunt de PNG SH3. Marge lisible connectée minimale réelle :22.57% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "9b8ec793fb4775b931df13ad867f4f041bc497a4751f9a099c83ae19b467ffc7",
+          "sha256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+          "bytes": 686664,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            315,
+            303,
+            968,
+            962
+          ],
+          "transparentFraction": 0.83461,
+          "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+          "facing": 1,
+          "anchor": [
+            0.52,
+            0.769537
+          ],
+          "bodyHeight": 0.5311,
+          "sourceFile": "exec-d7dfe102-4c85-4390-b8fd-f4f35638496b.png",
+          "sourceSHA256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+        "sha256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+        "bytes": 686664,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_needler_127": {
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png",
+      "sourceSHA256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Needler BoM entier depuis capture native20120713_01 complétant le bestiaire recadré : quatre membres à lames, configuration inversée. Silhouette source retenue ; perspective, occultations et détails des raccords restent reconstruits, sans modèle Homecoming substitué. Marge lisible connectée minimale réelle :4.70% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "f96191d586481bb1d9b2bcded0b982f7db1a1404f32a34d24e6be9f33634bbf0",
+          "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+          "bytes": 386427,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            251,
+            305,
+            1193,
+            976
+          ],
+          "transparentFraction": 0.9464,
+          "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+          "facing": 1,
+          "anchor": [
+            0.55,
+            0.783892
+          ],
+          "bodyHeight": 0.543062,
+          "sourceFile": "exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png",
+          "sourceSHA256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+        "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+        "bytes": 386427,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_nurse_128": {
+      "fighterId": "bom_nurse_128",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-604e0ddf-6084-4513-9818-98b4932bacf9.png",
+      "sourceSHA256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Nurse BoM entière depuis le modèle Hershberg à tête chair lisse, avec Steel Pipe natif entier explicitement associé aux nurses sur la page armes. Ce modèle d’artiste diffère du rendu couleur2013 à tête sombre ; correspondance exacte à chaque modèle retail et prise non certifiées. Aucun modèle SH3 Pipe réétiqueté. Marge lisible connectée minimale réelle :7.34% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "dd0dbd9ebc5090803a8b62663912a1c7fdf3707bdc30579980d8f850ff4524e8",
+          "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+          "bytes": 509415,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            336,
+            97,
+            931,
+            1159
+          ],
+          "transparentFraction": 0.89212,
+          "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+          "facing": 1,
+          "anchor": [
+            0.52,
+            0.926635
+          ],
+          "bodyHeight": 0.851675,
+          "sourceFile": "exec-604e0ddf-6084-4513-9818-98b4932bacf9.png",
+          "sourceSHA256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+        "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+        "bytes": 509415,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_pyramid_head_129": {
+      "fighterId": "bom_pyramid_head_129",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-53d11e7b-04ca-4760-a965-cc3c6f9bc4c5.png",
+      "sourceSHA256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Pyramid Head BoM entier et Great Knife complet depuis rendu natif2012, complété pour les matériaux par le rendu2013 de la même galerie. Deux bottes et pointe du casque visibles ; sens gauche déclaré selon la sortie. Aucun costume SH2/film ou lance substitués. Marge lisible connectée minimale réelle :5.10% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "4a1dc2d014d850879e3bd66bbc915917bfa8a06e04695a204a02b44bf4380a44",
+          "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+          "bytes": 775204,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            105,
+            87,
+            1110,
+            1187
+          ],
+          "transparentFraction": 0.83751,
+          "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+          "facing": -1,
+          "anchor": [
+            0.735,
+            0.948963
+          ],
+          "bodyHeight": 0.881978,
+          "sourceFile": "exec-53d11e7b-04ca-4760-a965-cc3c6f9bc4c5.png",
+          "sourceSHA256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+        "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+        "bytes": 775204,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_schism_130": {
+      "fighterId": "bom_schism_130",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-65ddeb39-3945-4b2a-aaa7-6906476ae819.png",
+      "sourceSHA256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Schism BoM entier depuis son portrait bestiaire complet, tête-lame et deux bras/jambes visibles. Référence127px : détail des doigts, surface et proportions fines restent reconstruits et non certifiés ; aucun modèle Homecoming repris. Marge lisible connectée minimale réelle :11.16% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "1c34f711029ab985994ead613cd52166b8572c54db18d3193244f06be79b9765",
+          "sha256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+          "bytes": 663117,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            190,
+            147,
+            1035,
+            1112
+          ],
+          "transparentFraction": 0.87835,
+          "path": "assets/sprites/bom_schism_130.89c7127c0006.png",
+          "facing": -1,
+          "anchor": [
+            0.56,
+            0.888357
+          ],
+          "bodyHeight": 0.77512,
+          "sourceFile": "exec-65ddeb39-3945-4b2a-aaa7-6906476ae819.png",
+          "sourceSHA256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_schism_130.89c7127c0006.png",
+        "sha256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+        "bytes": 663117,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_straight_jacket_131": {
+      "fighterId": "bom_straight_jacket_131",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-225602ac-cb71-4a0f-ba57-04fb7611efc4.png",
+      "sourceSHA256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Straight Jacket BoM entier, bras contenus dans la gaine, deux jambes/pieds visibles. Appuis recomposés depuis le rendu de cette édition ; aucun bras extérieur ajouté et aucune animation de vomissement livrée. Marge lisible connectée minimale réelle :6.30% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "910b777dbaadaa09ac276bce99b4533e2f0b51e34d26888f13766c6d0bc58734",
+          "sha256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+          "bytes": 638823,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            349,
+            88,
+            938,
+            1164
+          ],
+          "transparentFraction": 0.82723,
+          "path": "assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.934609
+          ],
+          "bodyHeight": 0.871611,
+          "sourceFile": "exec-225602ac-cb71-4a0f-ba57-04fb7611efc4.png",
+          "sourceSHA256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
+        "sha256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+        "bytes": 638823,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_swarm_132": {
+      "fighterId": "bom_swarm_132",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-a544f798-80e4-4d8a-9a7f-171382d61b15.png",
+      "sourceSHA256": "96315f628aaffbbd4d707ca471e50b0e0732be6943bb7202663ef418fe21f04a",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Un seul insecte Swarm BoM entier, ailes et extrémités visibles, en suspension. Référence bestiaire de127px ; détail des pattes, parties occultées et texture reconstruits et non certifiés. Aucun groupe de créatures ni cycle de vol natif livré. Marge lisible connectée minimale réelle :14.11% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "55b1751052c0f83a2bdbccf5c225de1819bfd7e93818d7bf342053d3eefaa789",
+          "sha256": "96315f628aaffbbd4d707ca471e50b0e0732be6943bb7202663ef418fe21f04a",
+          "bytes": 726212,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            233,
+            253,
+            1068,
+            1002
+          ],
+          "transparentFraction": 0.86831,
+          "path": "assets/sprites/bom_swarm_132.96315f628aaf.png",
+          "facing": -1,
+          "anchor": [
+            0.52,
+            0.801435
+          ],
+          "bodyHeight": 0.603668,
+          "sourceFile": "exec-a544f798-80e4-4d8a-9a7f-171382d61b15.png",
+          "sourceSHA256": "96315f628aaffbbd4d707ca471e50b0e0732be6943bb7202663ef418fe21f04a",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_swarm_132.96315f628aaf.png",
+        "sha256": "96315f628aaffbbd4d707ca471e50b0e0732be6943bb7202663ef418fe21f04a",
+        "bytes": 726212,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_tremer_133": {
+      "fighterId": "bom_tremer_133",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-00ea7530-d15c-48dc-b3c1-e0b09ff1155a.png",
+      "sourceSHA256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Tremer BoM entier, forme rampante sans membres depuis le bestiaire. Référence127px : silhouette simple conservée, relief et texture recomposés ; aucune patte, bouche ou autre extrémité cachée inventée. Marge lisible connectée minimale réelle :25.60% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "pixelSHA256": "b98afc1cd22121f1d3d59ed8e59dca6ad6b363aba8c2a8e0e9c133c8a2cbc5a4",
+          "sha256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254",
+          "bytes": 266529,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            342,
+            490,
+            930,
+            818
+          ],
+          "transparentFraction": 0.93148,
+          "path": "assets/sprites/bom_tremer_133.637b09a88365.png",
+          "facing": -1,
+          "anchor": [
+            0.507,
+            0.653907
+          ],
+          "bodyHeight": 0.267943,
+          "sourceFile": "exec-00ea7530-d15c-48dc-b3c1-e0b09ff1155a.png",
+          "sourceSHA256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_tremer_133.637b09a88365.png",
+        "sha256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254",
+        "bytes": 266529,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    }
+  }
+}

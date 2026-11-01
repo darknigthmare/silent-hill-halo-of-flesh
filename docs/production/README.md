@@ -35,7 +35,22 @@ sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
 neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
 de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
 
-## État du 1er novembre 2026
+## Campagne ART144 — 1er novembre 2026
+
+Les 144 profils initialement sans PNG ont tous une disposition individualisée :
+**52 images entières candidates et 92 blocages**. Les lots comptent exactement
+30/30/30/30/24 profils ; le dernier lot n’est pas complété artificiellement.
+Le registre atteint 138 profils illustrés et 173 PNG actifs, sans modifier les
+86 objets de registre antérieurs ni les 121 fichiers existants. Les rôles,
+commandes, présentations et lieux sont préservés ; une image fixe ne clôt pas
+l’action artistique de son profil et ne mesure aucune animation d’origine.
+
+[Résultat des 144 profils](ART144_PROFILE_STATUS.md) ·
+[Références et limites](IMAGES_ART144_2026-11-01.md) ·
+[Contrôle d’import](batches/art144-summary.json) ·
+[Validation](../INTEGRATION_QA_2026-11-01-art144.json).
+
+## État précédent — douzième lot du 1er novembre 2026
 
 Le [douzième lot](CHANTIERS_PARALLELES_LOT12_2026-11-01.md) compte **180 lignes :
 97 réalisations candidates, 60 spécifications et 23 blocages**. Douze nouveaux

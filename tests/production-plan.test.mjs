@@ -238,7 +238,11 @@ test('a sourced noncombat role closes only its identity decision while productio
   assert.equal(m.enabled,false);assert.equal(m.productionStatus,'À tester');assert.match(m.target,/Ne produire aucune attaque autonome/);
   for(const key of ['sourceFrameRate','sourceStart','sourceImpact','sourceEnd'])assert.equal(m[key],'');
  }
- for(const p of [...generated.poses,...generated.presentations].filter(p=>p.fighterId===ref.id))assert.equal(p.productionStatus,'À produire',p.id);
+ for(const p of generated.poses.filter(p=>p.fighterId===ref.id)){
+  assert.equal(p.productionStatus,SPRITES[ref.id]?.clips?.[p.pose]?'En cours':'À produire',p.id);
+  assert.notEqual(p.productionStatus,'Validé',p.id);
+ }
+ for(const p of generated.presentations.filter(p=>p.fighterId===ref.id))assert.equal(p.productionStatus,'À produire',p.id);
  assert.equal(generated.metrics.resolvedRoleDecisions,1);
  assert.equal(generated.metrics.openActions,generated.tasks.filter(t=>t.status!=='Validé').length);
  assert.equal(generated.metrics.openP0,generated.tasks.filter(t=>t.status!=='Validé'&&t.priority==='P0').length);

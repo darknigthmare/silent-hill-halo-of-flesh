@@ -1,0 +1,751 @@
+{
+  "schema": 1,
+  "campaign": "art144",
+  "group": "b",
+  "baseCommit": "221dcc8cac927291bb7e0b89139a504dabb857db",
+  "createdAt": "2026-11-01",
+  "requestedItems": 30,
+  "candidateImages": 9,
+  "blockedItems": 21,
+  "scope": "Static complete-exterior images only; no role, move, source timing or animation edits.",
+  "generationRefusalsThisBatch": 1,
+  "networkLimitations": [
+    "Fandom pages returned HTTP402; no alternate route or variant retried.",
+    "Google images requests returned a JavaScript redirect page; no new usable image evidence."
+  ],
+  "referenceArchive": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01",
+  "items": [
+    {
+      "fighterId": "sh4_andrew_desalvo_victim_18",
+      "source": "sh4",
+      "status": "blocked",
+      "blocker": "prior-tool-refusal",
+      "reason": "Refus antérieur de génération pour Andrew DeSalvo Victim 18 ; aucune nouvelle requête, variante ou substitution.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "sh4_greedy_worm_069",
+      "source": "sh4",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "Structure tubulaire attestée par segments ; aucune nouvelle vue ne montre les deux extrémités et la silhouette extérieure complète. Ne pas inventer tête, bouche, queue ou corps libre.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_05_building_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "sh4_sacrificed_walter_071",
+      "source": "sh4",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "Les captures finales montrent le Conjurer fixé au décor mais coupent le haut et les extrémités. Le Shadow Walter mobile est une autre identité ; aucune substitution.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_01.jpg",
+        "https://www.silenthillmemories.net/sh4/bosses_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "source": "sh4",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "Le dossier décrit une tête géante immobile. Les captures hospitalières consultées ne montrent pas sa silhouette entière ; ne pas réutiliser le corps humain d’Eileen ni inventer une créature combattante.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_07_hospital_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/arts_characters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "origins_remnant_077",
+      "source": "origins",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "La vue native de 200 px ne résout qu’une petite cage flottante et une ombre au sol. Aucune nouvelle vue complète et lisible des deux composantes ; ne pas inventer un fantôme charnel.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/creatures/remnant.jpg",
+        "https://www.silenthillmemories.net/sh0/creatures_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "source": "origins",
+      "edition": "SILENT HILL: ORIGINS (2007)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Memory of Helen Grady / Momma from Silent Hill Origins2007. Reproduce ONE exact complete creature from first provided native3D reference. Wrapped covered full adult body vertically suspended INSIDE the exact bulb-shaped transparent shell and rust iron cage, narrow circular neck ribs and broad rounded lower ring from FIRST image; arms lowered beside body, bound tapered legs. Head wrapped with its source metal restraint, preserve draped transparent fabric and original material details. Second image identifies same design only; follow first3D model for exact apparatus silhouette, do not borrow different flat skirt ring from concept. Present natural static suspended source pose slightly angled right, no new combat guard, no chains beyond short visible top suspension hardware, no attack scene. Whole cage/shell and complete body both visible; no free-standing human legs, no additional apparatus or wounds. One isolated complete static subject on true transparent RGBA canvas. At least20percent empty margin on all4sides, complete exterior with all natural appendage and apparatus ends visible. Match the supplied source materials and proportions, readable uniform light, no floor, no shadow, no scene, no text or interface, no additional injuries or graphic emphasis. Source-constrained authored still, fidelity unverified, no new motion or 1:1 certificate.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-creature9.jpg",
+          "sha256": "cf8a2f0db7cb9695d4eeb82ec5c02b9325e2429d9801ffa75a1bec1ad268277a",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_09_momma.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-marchese6.jpg",
+          "sha256": "e7a5049678e1cf1e007078663865e227a83baeb56f99c119a2b2b700470fb913",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_saul_marchese_06_momma.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-4ee513ac-02d3-4871-8c59-5ac771a6335a.png",
+      "publishedPath": "assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+      "technical": {
+        "pixelSHA256": "89d4ae75580df921708580d78e3268f5811b55b97aebd533ec3a34f00634bc68",
+        "sha256": "0be64df8f39b77810c26f50869ba3194e268f719722376377476ddcf5296822d",
+        "bytes": 733764,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          351,
+          92,
+          859,
+          1128
+        ],
+        "transparentFraction": 0.80055
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Rendu natif complet et concept Momma comparés ; terminaison courte du support supérieur interprétée lors de la correction de cadrage, à comparer à une vue commerciale complète.",
+      "rolePreserved": "stationary-boss",
+      "combatEnabledPreserved": true,
+      "compositionCorrection": {
+        "reason": "Generated first image cuts top suspension, fails complete-exterior/margin audit.",
+        "prompt": "Correct the COMPOSITION of first image only. Keep this exact same Silent Hill Origins Momma model and source cage shape, covered wrapped body, materials, drape, proportions, pose and all details. Expand the transparent canvas greatly and reduce subject scale to center complete cage and suspension inside middle60percent of a SQUARE1024x1024canvas with at least20percent empty margin on every edge. The body and bulb cage are already complete; top suspension is clipped, so show only its SHORT natural rig segment with a clean visible termination ABOVE the curved crossbar as in existing source structure, no invented chain hanging out of canvas. Whole complete model including all top apparatus ends, cage bottom and every finger entirely visible inside margins. TRUE transparent RGBA. No scene, shadow, floor, caption, duplicate, additional wounds or other changes.",
+        "inputPaths": [
+          "/workspace/generated_images/exec-f4a57601-dbda-4a1c-9273-04e069ddb981.png",
+          "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-creature9.jpg"
+        ],
+        "result": "accepted-complete-exterior"
+      },
+      "rejectedOutput": "/workspace/generated_images/exec-f4a57601-dbda-4a1c-9273-04e069ddb981.png"
+    },
+    {
+      "fighterId": "origins_memory_of_richard_grady_083",
+      "source": "origins",
+      "status": "blocked",
+      "blocker": "conflicting-concept-retail-reference",
+      "reason": "Les vues Sad Daddy consultées sont des concepts suspendus ; la correspondance de toute la silhouette et du support au modèle commercial n’est pas établie. Aucun nouveau rendu complet final pour résoudre ce conflit.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_30_sad_daddy.jpg",
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_saul_marchese_07_daddy.jpg",
+        "https://www.silenthillmemories.net/sh0/arts_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "origins_demon_084",
+      "source": "origins",
+      "status": "blocked",
+      "blocker": "conflicting-concept-retail-reference",
+      "reason": "Les concepts du boss final ne suffisent pas à identifier une silhouette commerciale entière. Aucun nouveau rendu complet du modèle final ; pas d’invention d’ailes ni de transfert d’un autre jeu.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_jsmarantz_01_final_boss.jpg",
+        "https://www.silenthillmemories.net/sh0/arts_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "homecoming_curtis_ackers",
+      "source": "homecoming",
+      "status": "blocked",
+      "blocker": "tool-refusal",
+      "reason": "Nouvelles références complètes concordantes trouvées : corps Curtis natif, scie circulaire dans l’inventaire et attribution dans le walkthrough Underground. La génération de cette identité armée a ensuite été refusée par le système de sécurité du fournisseur (moderation_blocked, catégorie self-harm). Sujet arrêté sans nouvelle requête, variante ou substitution.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_08_curtis_ackers.png",
+        "https://www.silenthillmemories.net/sh5/weapons/circular%20saw.jpg",
+        "https://www.silenthillmemories.net/sh5/weapons_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Create ONE full-body static sprite candidate of Curtis Ackers, age41 adult man from Silent Hill Homecoming2008. Use FIRST reference exact native full-body model for identity, proportions, costume, face and stance: stocky adult repairman, brown baseball cap over dark hair, prominent eyebrows and rugged stubbled face, dirty brown short-sleeved collared button shirt OVER pale long-sleeved undershirt, dark brown full length trousers, worn dark shoes, small silver cross chain. Retain all clothing and exact proportions, no costume redesign. Now equip him with the exact gas-powered portable CIRCULAR SAW in SECOND native inventory reference: large round toothed steel disc at front, weathered compact motor housing behind disc and rear rectangular loop handle. Follow only that tool silhouette, disc blade is circular, NOT a chainsaw bar, no rifle, no Walter chainsaw or imaginary machinery. Hold this specific circular saw lowered in front at waist height using existing tool handles, both hands visibly on the proper grips, a reserved slightly bent-knee combat-ready standing stance facing RIGHT in slight side3quarter view. Whole body from cap to both shoes and the WHOLE tool including all disc teeth and handle ends inside canvas. Calm non-attack pose, no target or violence, no added injuries. Only one individual with one circular saw, no accessory duplicates. TRUE transparent RGBA SQUARE1024canvas, make the subject SMALL centered within middle55percent of canvas width AND height; at least22percent empty transparent padding on ALL4edges, no crop, full silhouette. Detailed2008game-inspired surface and readable neutral lighting. No floor, cast shadow, environment, fog, text, UI, sheet or additional figures. This is a source-constrained authored still with reconstructed weapon grip, not an extracted original frame or certified1:1 animation.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/shh_render_08_curtis_ackers.png",
+          "sha256": "4d45c290442d5c88585ee0528ae425e11d23a259e78430aa5ff4fc5f505a480e",
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_08_curtis_ackers.png",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/hc-circular-saw.jpg",
+          "sha256": "206b8c39d286b298dd8cca58cb9ffd546a33cb17ee93da109edf51236662d3b5",
+          "url": "https://www.silenthillmemories.net/sh5/weapons/circular%20saw.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID a55dd5fe-3bd4-44ce-97db-22edc1bb8e74. safety_violations=[self-harm].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"self-harm\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "requestId": "a55dd5fe-3bd4-44ce-97db-22edc1bb8e74",
+      "retryAttempted": false
+    },
+    {
+      "fighterId": "homecoming_bogeyman_092",
+      "source": "homecoming",
+      "edition": "Silent Hill: Homecoming (2008, version commerciale)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Silent Hill Homecoming (2008) exact Bogeyman/Pyramid Head model from the three supplied native references. ONE individual only. Preserve the very tall pointed rust metal helmet with wire mesh front and rear circular fittings, muscular uncovered upper torso, leather waist wraps and long stained dark apron covering lower body down to its source hem. Full figure head-to-hem with both hands, holding the exact giant serrated-edged blade from second reference in one hand lowered diagonally forward. Entire blade point, whole helmet and apron hem visible. Quiet looming source standing posture, slight side three-quarter facing right, no fighting guard invented, no other characters or victims. No SH2 helmet/apron substitution, no redesign, no additional injuries. One isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside middle60percent BOTH dimensions, >=20percent empty margin every edge, all tips inside. Detailed source-inspired material, readable even light. No floor, shadow, environment, text, UI, sheet or duplicate. Source-constrained authored still for a dossier; original non-combat/set-piece role unchanged. No new source animation or claimed 1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/hc-bogeyman01.jpg",
+          "sha256": "06b5d6c74916c6e13e275beaee3c7d4daf16ce5b04d02b5fa24c4c9931952ebb",
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_escalante_01_pyramid_head.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/hc-bogeyman02.jpg",
+          "sha256": "2309515d79ddf210b530c273d5c988fd5ad02cc0c8b6654f329d143a1cd15ce2",
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_escalante_02_pyramid_head.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/homecoming-creatures-bogeyman.jpg",
+          "sha256": "edc897387b166807c7a43d2dc687b9e22dd9cc244e65f7f17edb16260b3cd902",
+          "url": "https://www.silenthillmemories.net/sh5/creatures/bogeyman.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-63730073-a2ee-47ea-86d9-23f4ceb1c1d9.png",
+      "publishedPath": "assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+      "technical": {
+        "pixelSHA256": "e29e92c2eba4fbc07c1448c5072123d25e4751f7ee6aed261a2bb2ee2084cdd6",
+        "sha256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
+        "bytes": 773338,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          57,
+          141,
+          972,
+          1192
+        ],
+        "transparentFraction": 0.82676
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "homecoming_scarlet_doll_form_094",
+      "source": "homecoming",
+      "status": "blocked",
+      "blocker": "exact-phase-reference-missing",
+      "reason": "Le rendu Scarlet disponible coupe les membres et ne prouve pas le corps entier de la première phase Doll. Ne pas reconstruire ses longues extrémités ni emprunter celles d’une autre phase.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_21_scarlet.png",
+        "https://www.silenthillmemories.net/sh5/arts_creatures_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "homecoming_amnion_hanging_form_097",
+      "source": "homecoming",
+      "status": "blocked",
+      "blocker": "prior-tool-refusal",
+      "reason": "Refus antérieur du sujet Amnion ; aucune nouvelle requête ni reformulation pour cette phase.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "homecoming_amnion_exposed_form_098",
+      "source": "homecoming",
+      "status": "blocked",
+      "blocker": "prior-tool-refusal",
+      "reason": "Même sujet Amnion que le refus antérieur ; la phase Exposed ne sert pas de variante de contournement. Aucune requête.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "shattered_raw_shock_base_099",
+      "source": "shattered",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "La référence neutre montre le visage, le torse et le haut des membres seulement. Ne pas emprunter les jambes ou le corps entier d’un variant psychologique distinct.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_neutral.jpg"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Feminine Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match this exact full-body design and its face: pale sealed eyes under smooth taut skin, closed thick lips, narrow non-human body with two very long slender arms, two bent legs, the source folds and openings. Preserve the low asymmetric four-limb stalking/crawling ready posture with hands and feet visible, facing RIGHT in a slight side three-quarter view. Do not turn it into a human woman, nurse, humanoid boxer, or add sexualized anatomy. No extra wounds or attack victim.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_feminine_art_05.jpg",
+          "sha256": "b592eeadeed8c37b568c87cfee1838ac32df5391f92aef9539d95380483027da",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_feminine_art_05.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_feminine.jpg",
+          "sha256": "9bb0d82c9d52bb83d9fc71e0d6437c8b31de9f63dbf98dbb71ee576a7c7a4153",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_feminine.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-f4dd61e1-bc92-4826-8493-dc35e94fa33f.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "technical": {
+        "pixelSHA256": "75b50dd044b656f90cb4caf1b3dce4a4de485d547d8aed13d8c116fb58d3f763",
+        "sha256": "1226cc9a34196d764e02863f1556ef5a29ad003b63a6d9b7fbd15c7fa1124c9f",
+        "bytes": 657894,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          118,
+          358,
+          1149,
+          940
+        ],
+        "transparentFraction": 0.87816
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "shattered_raw_shock_diseased_101",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Diseased Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match ONLY this exact full-body and portrait variant: enlarged lumpy sealed head with dark central seam and swollen facial folds, pale thick pitted body and localized lumpy surface texture. Two arms and two bent legs in its original low four-limb ready crawling posture, entire head and all hand and foot tips visible, facing RIGHT in a slight side view. No human boxing guard, no weapons, no extra organs or graphic wounds, no victim.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_diseased_art_04.jpg",
+          "sha256": "6ec5b275bc7b100ea51ecac52169336c776d1c58f4cfe0cce37107b6c7e11818",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_diseased_art_04.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_diseased.jpg",
+          "sha256": "4aa8db000ea5d8d0e7e5828b1729a69aca4f20bd3ccbac9b2a15ed869164eaf9",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_diseased.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-f4632371-503d-4c5f-b04d-eb730f743840.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+      "technical": {
+        "pixelSHA256": "4fc09898f41f8692c64dde5b8f995832eec1ffa9159b9d7909453c24520bb950",
+        "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+        "bytes": 1065628,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          157,
+          317,
+          1103,
+          1038
+        ],
+        "transparentFraction": 0.74606
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "shattered_raw_shock_abstract_102",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Abstract Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match this exact full-body image and portrait: broad pale geometric stepped slab-head with its single round central hollow, matching stepped blocks along its back; very long forearms with slender spread fingers and two bent rear legs. Preserve the natural low four-limb stalking ready stance, whole slab crown and every hand and foot tip visible, facing RIGHT in slight side three-quarter view. Do not make a robot, change the stepped head into Pyramid Head, add a human face, weapons, boxing guard, extra limbs, or new injuries.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_abstract_art_04.jpg",
+          "sha256": "49e44e4560e23c913e3b11d22b5464a633064affeba63cbf9463c362097aab6c",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_abstract_art_04.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_abstract.jpg",
+          "sha256": "d781dd2048b974df31ea0c1d5c5126110765e5c2258ec5f030e2027e3288a71d",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_abstract.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-b46bd9bc-fad0-4806-a947-3b04e4d38ee5.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
+      "technical": {
+        "pixelSHA256": "0f28e3905fdb47a4f2a8dc14a5f3f32270a86a3e2bb4c4f10ca733f2a6b4429f",
+        "sha256": "1ff0846e3fc4a77c4c2b68038864fdcc485c0d65649017014ce5a0ab24ee0f79",
+        "bytes": 838584,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          171,
+          324,
+          1094,
+          983
+        ],
+        "transparentFraction": 0.83086
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "shattered_raw_shock_atrophied_103",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Atrophied Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era non-human creature design. Match ONLY the exact complete reference silhouette: a thin skeletal arched body with large open spaces in torso/hips/back, very long bony bent arms and legs, and the rounded upward open split hollow head shown by the second full-body design and portrait. Keep its source low four-limb crawling ready stance, all limb tips and head rim visible, facing RIGHT in slight side three-quarter view. No human child or adult substitution, no invented clothing, boxing guard, weapon, additional limbs, flesh filling the holes, or graphic violence.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_atrophied_art_02.jpg",
+          "sha256": "9053671e2268273ad4a549e9b6712aef045b42260a92aa062a40ea965c7f11ac",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_atrophied_art_02.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_atrophied.jpg",
+          "sha256": "fc562a8595c317cc6262605428d0f829f982c6f633e1aca2ff78744ca29d8a79",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_atrophied.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-af2cf8a2-7b58-4293-b308-a3cefe3be726.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+      "technical": {
+        "pixelSHA256": "a4f48c35ba0fc5cfde0f9a46467c24f576e4a89640b46849ccc6f8be2a387242",
+        "sha256": "d37aa45dec3443a7b1e8465dca4741830dd13bdaca012141f910e98febe10e40",
+        "bytes": 764069,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          221,
+          332,
+          1061,
+          1035
+        ],
+        "transparentFraction": 0.85217
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "downpour_doll_106",
+      "source": "downpour",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Create the exact Doll creature from Silent Hill Downpour (2012), using these two native full-body render references exclusively. It is the pale worn human-shaped doll with short straight silver bob hair, dark eye cavities, dark open mouth, faded red circular cheek paint; the dark one-piece camisole with reddish pink neckline and thin straps, covered torso and wrapped/patterned bare-looking doll legs from the references. Preserve all clothing, seams, markings and exact proportions. Whole body including both hands and feet. Natural slightly bent knees and forward reaching stalking ready posture from the second reference, facing right in side three-quarter view for 2D gameplay. Match the specific Downpour doll model and original wardrobe; do not add weapons, doll strings, extra limbs, detached parts, violence, or an action victim. One isolated complete single-subject static sprite candidate on TRUE transparent RGBA square canvas. Subject centered in middle60percent BOTH dimensions, at least20percent empty margin every edge, all hair and finger and toe tips fully inside canvas. Readable softly lit detailed 2012 game-inspired material. No environment, floor, shadow, captions, UI, sheet or duplicate. Source-constrained authored still; no claimed source animation or certified 1:1.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/sh_downpour_art_120422_08_doll.png",
+          "sha256": "e1099f4be5ca07568609df5a35fd2a757dee746649b4d5b83332a99a0f837ea7",
+          "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_08_doll.png",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/sh_downpour_art_120422_09_doll.png",
+          "sha256": "10e5d7205ae59e935a9e0354dee28c7c6c6f3af1a365589378e5f830a636f26a",
+          "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_09_doll.png",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-b62acf56-59e8-4495-aa24-38dd529f8928.png",
+      "publishedPath": "assets/sprites/downpour_doll_106.50727eee886c.png",
+      "technical": {
+        "pixelSHA256": "67108827ec5401d8eee5f36966e5648e5ac79fe2f679bf2507a5c0545711d56d",
+        "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+        "bytes": 745018,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          242,
+          95,
+          1128,
+          1186
+        ],
+        "transparentFraction": 0.83416
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "rolePreserved": "environmental-obstacle",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "downpour_shadow_107",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "exact-entity-reference-missing",
+      "reason": "La projection invoquée de la Doll est documentée mais aucune vue propre entière de son rendu spectral n’est disponible dans les sources inspectées. Le PNG de la Doll solide ne peut pas remplir deux identités.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+        "https://www.silenthillmemories.net/sh8/arts_creatures_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "downpour_prisoner_minion_brawler_108",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "exact-variant-reference-missing",
+      "reason": "Les deux rendus natifs partagent le nom Prisoner Minion sans rattachement vérifié Brawler/Agile. Un seul corps générique ne peut pas peupler deux profils ni certifier le variant demandé.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_11_pr_minion.png",
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_12_pr_minion.png",
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "downpour_prisoner_minion_agile_109",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "exact-variant-reference-missing",
+      "reason": "Les deux rendus natifs partagent le nom Prisoner Minion sans rattachement vérifié Brawler/Agile. Ne pas inventer une différence de musculature, tenue ou posture pour combler le variant Agile.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_11_pr_minion.png",
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_12_pr_minion.png",
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "downpour_tormented_soul_111",
+      "source": "downpour",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Exact Tormented Soul from Silent Hill Downpour2012, the passive iron-cage creature from supplied native bestiary render. Recreate this whole rectangular narrow rusted iron cage AND its one fixed torso-shaped effigy within, as a single isolated dossier asset. Cage has rectangular top and bottom lattice and4cornerposts; effigy stretched inside with pale membrane straps toward cage bars. Preserve wrapped tilted head, ragged worn central torso and source proportions, no invented legs, extended fighting arms or weapon. Camera source three-quarter view facing right; do not give a combat stance, creature is passive environmental setpiece. Complete cage and enclosed exterior all visible. The low-resolution reference constrains largeforms; do not invent tiny markings or wounds. One isolated complete static subject on true transparent RGBA canvas. At least20percent empty margin on all4sides, complete exterior with all natural appendage and apparatus ends visible. Match the supplied source materials and proportions, readable uniform light, no floor, no shadow, no scene, no text or interface, no additional injuries or graphic emphasis. Source-constrained authored still, fidelity unverified, no new motion or 1:1 certificate.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/dp-tormented-soul.png",
+          "sha256": "fa2ff7c30772713edb3bc21126a7b2d7bdaa1ceb8b65c1d1754b39d227db8bc0",
+          "url": "https://www.silenthillmemories.net/sh8/creatures/tormented_soul.png",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-7d838258-316e-4973-a540-3008a290dd17.png",
+      "publishedPath": "assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
+      "technical": {
+        "pixelSHA256": "6f7985906d08f1c32ced6c3bf46e51763d15485ac5aca96a0d06830032ff6889",
+        "sha256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db",
+        "bytes": 1553476,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          343,
+          71,
+          949,
+          1181
+        ],
+        "transparentFraction": 0.66188
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Référence native unique de faible résolution et description de la cage ; microdétails et vues cachées non vérifiés.",
+      "rolePreserved": "environmental-obstacle",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "source": "downpour",
+      "edition": "SILENT HILL: DOWNPOUR (2012)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Exact Wall Corpse from Silent Hill Downpour 2012. Reproduce the complete exterior of the two supplied official-render references as one static isolated asset: a fixed battered torso effigy tapering to its natural closed bottom, two short rounded upper-arm stumps and the smooth wrapped tilted head. The existing flat rust metal supports protrude behind the effigy exactly as shown. This creature canonically has NO legs and NO extended arms; do not invent them or give a fighting stance. Preserve original worn materials and markings without adding gore, fresh injury, motion or victims. Whole head, torso natural end and every support end visible. Source natural three-quarter display posture facing right. One isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside middle60percent BOTH dimensions, >=20percent empty margin every edge, all tips inside. Detailed source-inspired material, readable even light. No floor, shadow, environment, text, UI, sheet or duplicate. Source-constrained authored still for a dossier; original non-combat/set-piece role unchanged. No new source animation or claimed 1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/sh_downpour_art_120422_10_wall_corpse.png",
+          "sha256": "d191f376ef255ddd737d1fd8a3bae13c4e2d04105c3e65e111e65e2cbb77f0b0",
+          "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_10_wall_corpse.png",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/dp-wall-corpse.png",
+          "sha256": "1d2eaef070ca05658c39b233b897c4e5fe9ec7f48443c0eaa03b1c70b30059c6",
+          "url": "https://www.silenthillmemories.net/sh8/creatures/wall_corpse.png",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-199cc470-9e03-4488-949b-a3e1f3b3cfa0.png",
+      "publishedPath": "assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
+      "technical": {
+        "pixelSHA256": "cdf14aa9b61c710c5123cb780b27f40390cd596d4750c9449166118f513ccc77",
+        "sha256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5",
+        "bytes": 869164,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          345,
+          128,
+          1026,
+          1133
+        ],
+        "transparentFraction": 0.8151
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "rolePreserved": "environmental-obstacle",
+      "combatEnabledPreserved": false
+    },
+    {
+      "fighterId": "downpour_void_113",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "no-bounded-body-reference",
+      "reason": "La référence représente une lumière et un phénomène environnemental qui consomme le décor, sans corps délimité. Un sprite de monstre entier nécessiterait une anatomie inventée ; le rôle de poursuite reste conservé.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/creatures/void.png",
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "downpour_monocle_man_114",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "La membrane faciale, le monocle et les rayons sont visibles mais tous les rayons et la chaîne sortent du cadre. Aucune nouvelle vue complète de leurs extrémités ; aucune anatomie humaine ajoutée.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/creatures/monocle_man.png",
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "downpour_wheelman_116",
+      "source": "downpour",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "Le rendu natif coupe le bas du support médical et du modèle. La silhouette du boss fixe et ses connexions ne sont pas attestées en entier ; ne pas remplacer par un fauteuil roulant humain ordinaire.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh8/creatures/wheelman.png",
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "arcade_mama_117",
+      "source": "arcade",
+      "status": "blocked",
+      "blocker": "exact-entity-reference-missing",
+      "reason": "La galerie The Arcade contient les ennemis ordinaires mais aucune vue native complète de Mama. Les recherches supplémentaires n’ont fourni aucune image exploitable ; aucun transfert de Blood Mama de Book of Memories.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh_arcade/arts_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "arcade_phantom_118",
+      "source": "arcade",
+      "status": "blocked",
+      "blocker": "exact-entity-reference-missing",
+      "reason": "La galerie The Arcade ne contient pas de vue entière exploitable du Phantom final. Aucun fantôme générique ni portrait d’un autre personnage ne peut constituer le corps exact du boss.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh_arcade/arts_en.htm"
+      ],
+      "generationAttempted": false
+    },
+    {
+      "fighterId": "arcade_greedy_worm_arcade_119",
+      "source": "arcade",
+      "status": "blocked",
+      "blocker": "exact-edition-reference-missing",
+      "reason": "Aucune nouvelle vue entière du boss Greedy Worm de The Arcade. Le segment environnemental de SH4 est une autre édition et ne peut remplir cette identité.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh_arcade/arts_en.htm"
+      ],
+      "generationAttempted": false
+    }
+  ]
+}

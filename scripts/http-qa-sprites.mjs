@@ -35,7 +35,7 @@ try{
  assert('available-only filter matches exact registered profiles across real roster pages',availableIds.length===artCount&&new Set(availableIds).size===artCount&&JSON.stringify([...availableIds].sort())===JSON.stringify(Object.keys(SPRITES).sort()));
  assert('available roster pages keep the thirty-card limit and end at the final page',rosterPages.every((ids,index)=>ids.length===Math.min(30,artCount-index*30))&&await page.locator('#nextPage').isDisabled());
  while(!await page.locator('#prevPage').isDisabled())await page.click('#prevPage');
- await page.click('#randomAll');assert('random chooses only available art',await page.evaluate(()=>[__HALO_QA__.selection.p1,__HALO_QA__.selection.p2].every(f=>__HALO_QA__.spriteStatus(f).kind==='candidate')));
+ await page.click('#randomAll');assert('random chooses only available combat art',await page.evaluate(async()=>{const {createCombatProfile}=await import('/src/data.js');return [__HALO_QA__.selection.p1,__HALO_QA__.selection.p2].every(f=>__HALO_QA__.spriteStatus(f).kind==='candidate'&&createCombatProfile(f).referencePolicy.combatEnabled);}));
  await page.selectOption('#mode','local');await page.click('#launch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
  assert('normal battle loads without diagnostic mode',await page.evaluate(()=>!__HALO_QA__.engine.config.artDiagnostic));await shot(page,'02-battle');
  await page.click('#pauseBtn');const frame=await page.evaluate(()=>__HALO_QA__.engine.frame);await page.waitForTimeout(150);assert('pause freezes the actual simulation',await page.evaluate(n=>__HALO_QA__.engine.frame===n,frame));await page.keyboard.press('Escape');await page.click('#leaveFight');
@@ -57,7 +57,7 @@ try{
  assert('workshop missing filter selects a matching missing dossier',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('#spriteDetail a').count()===0);
  await page.fill('#spriteSearch','no-profile-matches-987654321');assert('workshop empty search clears the stale dossier',await page.locator('#spriteDetail canvas').count()===0&&await page.locator('#spriteDetail a').count()===0);
  await page.fill('#spriteSearch','');await page.selectOption('#spriteFilter','ready');assert('workshop ready filter restores a matching image dossier',await page.locator('#spriteDetail a').count()===2);
- await page.selectOption('#spriteSource','film');assert('workshop source filter updates exact dossier identity',await page.locator('#spriteDetail code').first().textContent()==='film_red_pyramid_film_175');
+ await page.selectOption('#spriteSource','film');const firstFilm=ROSTER.find(f=>f.source==='film'&&SPRITES[f.id]);assert('workshop source filter updates exact dossier identity',!!firstFilm&&await page.locator('#spriteDetail code').first().textContent()===firstFilm.id);
  // The shell activates the genuine versioned offline service worker.
  await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});assert('real service worker controls the page',true);
  await context.setOffline(true);await page.goto(base+'/modules/unified-versus.html?qa=1');await ready(page);assert('both native PNG portraits and modules load fully offline',true);await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);assert('normal raster battle launches offline',true);await shot(page,'04-offline');await context.setOffline(false);

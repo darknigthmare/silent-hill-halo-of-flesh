@@ -6,6 +6,7 @@ import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
+import {SPRITES} from '../src/sprite-manifest.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-batch4');
 const source=process.env.QA_SOURCE_TREE==='1',base=process.env.QA_BASE_URL||'http://127.0.0.1:4195';
@@ -26,6 +27,18 @@ const ledger12=JSON.parse(await readFile(resolve(root,'docs/production/batches/l
 if(ledger12.batch!=='lot12'||ledger12.workstream!=='art'||ledger12.items.length!==30)throw Error('The complete thirty-row lot12 art ledger is required.');
 const batch12=ledger12.items.filter(item=>item.status==='implemented-candidate').map(item=>item.entityId);
 const blocked12=ledger12.items.filter(item=>item.status==='blocked').map(item=>item.entityId);
+// Old ledgers remain historical evidence. A later exact-ID candidate can resolve
+// an old source/cropping blocker, but cannot silently erase that history.
+const art144Rows=(await Promise.all(['a','b','c','d','e'].map(async group=>JSON.parse(await readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8')).items))).flat();
+const historicalBlocked=[...new Set([...blocked9,...blocked11,...blocked12])];
+const resolvedHistorical=historicalBlocked.filter(id=>SPRITES[id]);
+const currentBlocked=historicalBlocked.filter(id=>!SPRITES[id]);
+const unretriedRefusals=['sh1_incubus_019','sh3_nurse_pipe_043','sh3_valtiel_051','sh4_jasper_gein_victim_17','sh4_andrew_desalvo_victim_18','sh4_toby_archbolt_victim_14','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'];
+if(unretriedRefusals.some(id=>SPRITES[id]))throw Error('A previously tool-refused identity unexpectedly acquired artwork.');
+for(const id of resolvedHistorical){
+ const row=art144Rows.find(item=>item.entityId===id),art=SPRITES[id];
+ if(row?.status!=='implemented-candidate'||!row.evidence?.length||!row.limits?.trim()||!row.artifacts?.includes(art.frames[0].path))throw Error('Historical blocker requires a documented later exact-ID delivery: '+id);
+}
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
 const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9,...batch11,...batch12];
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
@@ -37,7 +50,7 @@ const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':sour
   'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.',
   'Batch10 adds thirty independent one-image walk/hurt/ko clips to ten existing exact profiles, preserving their idle files. All thirty files are decoded, painted with the actual inspector, and checked for alpha support and standing-equivalent scale. Three additional ordinary matches cover Hummer/Small Numb Body, Romper/Slurper and Groaner/Split Head; genuine movement controls select the new walk PNGs. The last match uses repeated real player2 neutralLight inputs to reach a grounded final KO. These played-versus input observations are separate from the static workshop pose previews and prove no original-game motion/timing.',
   'Lot11 requires every implemented exact-ID full-body idle from its thirty-row art ledger, and keeps every blocked identity without artwork. Independent browser alpha decoding checks raw alpha metadata; framing includes the readable subject and its connected faint tips, excluding detached low-alpha padding noise. Five additional ordinary menu matches exercise humanoids, quadrupeds, large bodies, long limbs and weapons on existing bitmap arenas. These cross-work versus pairings are not original encounters; source anatomy and unseen details remain unverified. No extra images, poses or tests are counted as production rows.',
-  'Lot12 requires all twelve new exact-ID single-frame idle images and all eighteen blocked dossiers. Six ordinary menu matches cover all twelve new exterior bodies, attached supports and weapons. Wall Man and One Truth show their attested visible exterior, not hidden anatomy or a twelve-body encounter. The discarded Peter12 candidate is never imported. Tool-refused Toby14 and Amnion are not retried. No source animation, source scale or 1:1 fidelity is certified.'
+  'Lot12 retains its twelve exact-ID single-frame idle images and its eighteen historical blockers. Every blocker still unresolved after documented ART144 deliveries keeps a missing-art dossier. Six ordinary menu matches cover the twelve lot12 exterior bodies, attached supports and weapons. Wall Man and One Truth show their attested visible exterior, not hidden anatomy or a twelve-body encounter. The discarded lot12 Peter12 image is never imported; the later ART144 candidate preserves the source age13 and has separate evidence. Tool-refused Toby14 and Amnion are not retried. No source animation, source scale or 1:1 fidelity is certified.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
@@ -101,7 +114,7 @@ try{
     return {registeredIds:Object.keys(SPRITES),subjects:required.map(id=>({id,art:SPRITES[id]||null,fighter:ROSTER.find(f=>f.id===id)})),
       scenes:['woodside','alchemilla','lakeview','shopping_mall','brookhaven_roof'].map(id=>({id,stage:STAGES.find(s=>s.id===id),stageIndex:STAGES.findIndex(s=>s.id===id),decor:STAGE_BITMAPS[id],activeDecor:stageBitmapFor(STAGES.find(s=>s.id===id))}))};
   },required);
-  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9,batch10,batch10Poses,batch11,blocked11,batch12,blocked12};
+  report.candidateBatches={batch4,batch5,batch6,batch7,batch8,batch9,blocked9,batch10,batch10Poses,batch11,blocked11,batch12,blocked12,historicalBlocked,resolvedHistorical,currentBlocked};
   check('all '+required.length+' required exact-ID candidates are registered',registry.subjects.length===required.length&&registry.subjects.every(subject=>subject.art&&subject.fighter),registry.subjects.filter(subject=>!subject.art||!subject.fighter).map(subject=>subject.id));
   await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.selectOption('#spriteFilter','ready');
   report.readyPages=[];
@@ -203,7 +216,7 @@ try{
     check(id+': real missing-variant dossier has no borrowed bitmap or duel link',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('.sprite-inspector').count()===0&&await page.locator('#spriteDetail a').count()===0);
   }
   report.blockedBatch9=[];
-  for(const id of [...blocked9,...blocked11,...blocked12]){
+  for(const id of currentBlocked){
     await page.fill('#spriteSearch','');await page.selectOption('#spriteSource','all');await page.selectOption('#spriteFilter','all');await page.fill('#spriteSearch',id);
     await page.locator(`.sprite-card[data-id="${id}"]`).click();
     const absent=await page.evaluate(async id=>{const {SPRITES}=await import('/src/sprite-manifest.js');return !Object.hasOwn(SPRITES,id);},id);

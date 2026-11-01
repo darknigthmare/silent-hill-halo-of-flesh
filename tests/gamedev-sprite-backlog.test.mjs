@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {auditSpriteCoverage,markdownSpriteAudit,inspectFighterClips} from '../scripts/audit-sprite-backlog.mjs';
+import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES} from '../scripts/art-campaign-tracking.mjs';
 
 test('sprite backlog separates missing art, static art and actual animation',()=>{
  const result=auditSpriteCoverage({entries:[
@@ -29,10 +30,35 @@ test('audit rejects duplicated fighter identities and contradictory counts',()=>
 
 test('real sprite coverage identifies Air Screamer as animation-validation candidate',()=>{
  const report=JSON.parse(readFileSync(new URL('../data/sprite-coverage.json',import.meta.url),'utf8'));
+ const assets=JSON.parse(readFileSync(new URL('../art/registry.json',import.meta.url),'utf8')).assets;
+ const intake=JSON.parse(readFileSync(new URL('../docs/production/art144-intake.json',import.meta.url),'utf8'));
+ assert.equal(intake.baseCommit,ART_CAMPAIGN_BASE);
+ assert.equal(intake.baselineProfiles,86);
+ assert.equal(intake.requested,144);
+ assert.equal(intake.entries.length,144);
+ const ledgers=Object.entries(ART_CAMPAIGN_GROUP_SIZES).map(([group,size])=>{
+  const ledger=JSON.parse(readFileSync(new URL(`../docs/production/batches/art144-${group}.json`,import.meta.url),'utf8'));
+  assert.equal(ledger.baseCommit,ART_CAMPAIGN_BASE);
+  assert.equal(ledger.requestedItems,size);
+  assert.equal(ledger.items.length,size);
+  return ledger;
+ });
+ const rows=ledgers.flatMap(ledger=>ledger.items),candidates=rows.filter(row=>row.status==='implemented-candidate'),blocked=rows.filter(row=>row.status==='blocked');
+ assert.equal(rows.length,144,'the original intake is exactly 144 profiles');
+ assert.equal(new Set(rows.map(row=>row.entityId)).size,144);
+ assert.deepEqual(rows.map(row=>row.entityId).sort(),intake.entries.map(row=>row.fighter.id).sort());
+ assert.equal(candidates.length+blocked.length,144);
+ for(const row of rows){
+  assert.equal(row.rowId,row.entityId+':pose:idle');
+  assert.equal(!!assets[row.entityId],row.status==='implemented-candidate',row.entityId);
+ }
  const result=auditSpriteCoverage(report);
  assert.equal(result.summary.total,230);
- assert.equal(result.summary.illustrated,86);
- assert.equal(result.summary.missing,144);
+ // At 221dcc8 the same 230 identities had 86 images and 144 missing.
+ // New static candidates move only their own original missing identity.
+ assert.equal(result.summary.illustrated,intake.baselineProfiles+candidates.length);
+ assert.equal(result.summary.missing,blocked.length);
+ assert.equal(result.summary.certified,0);
  const first=result.rows[0];
  assert.equal(first.id,'sh1_air_screamer_001');
  assert.equal(first.priority,'P0-validate-animation');

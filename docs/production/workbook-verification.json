@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "63c08b63218968be7dcae892edd70dcbafe411859b1f7e52f12dbe404f66fae6",
+  "planSha256": "937ab71a5b62b01c34f81f1595510c359ee4be627be4eae176b43302b391bd20",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -243,7 +243,7 @@
     "observations": 435,
     "sources": 277,
     "tasks": 875,
-    "pngCandidates": 86,
+    "pngCandidates": 138,
     "animatedClips": 1,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 205,
@@ -289,7 +289,7 @@
     1799,
     435,
     277,
-    86,
+    138,
     1,
     0,
     840,
@@ -297,22 +297,15 @@
   ],
   "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "c0d6053d6ea65899a522a5a9eb104a7b5f8848033b78ea5e906ee2a7f8dacbed",
-  "changedCells": 1756,
+  "sourceSha256": "931517647d9844af829dbf5c0fabe2f529bfe909f3b8c8215768d38a24a91907",
+  "changedCells": 494,
   "changesBySheet": {
-    "Combattants": 22,
-    "Mouvements": 647,
-    "Finishers": 38,
-    "Présentations": 172,
-    "Clips": 172,
-    "Arènes": 61,
-    "Animations arènes": 263,
-    "Actions": 118,
-    "Gestes référencés": 43,
-    "Sources": 217,
-    "Synthèse": 3
+    "Combattants": 52,
+    "Clips": 192,
+    "Actions": 248,
+    "Synthèse": 2
   },
-  "enlargedRows": 611,
+  "enlargedRows": 287,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
@@ -648,7 +641,7 @@
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 86
+      "value": 138
     },
     {
       "sheet": "Synthèse",
@@ -795,30 +788,30 @@
       "value": 11
     }
   ],
-  "changeLogSha256": "f9cddacf7c5d1324ba090e80c7017c1531273c44c47d5e04c5c0795a68b28b6c",
+  "changeLogSha256": "cc279b9e416052efbd485c24d356c5b23dc6718a86d0f58f59d4503717322ae3",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
-  "structureChangeLogSha256": "b0c9ed1cb082e5258acdba16f1253bc888b1a324d43e88536fd3da4707026682",
-  "appendedSources": 31,
+  "structureChangeLogSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "appendedSources": 0,
   "verification": {
     "passed": true,
     "preservation": {
       "passed": true,
-      "comparedCells": 250333,
-      "authoredChanges": 1756,
-      "enlargedRows": 611,
-      "appendedSourceRows": 31,
-      "appendedSourceCells": 217,
-      "auditedFormulaExpansions": 1,
+      "comparedCells": 250550,
+      "authoredChanges": 494,
+      "enlargedRows": 287,
+      "appendedSourceRows": 0,
+      "appendedSourceCells": 0,
+      "auditedFormulaExpansions": 0,
       "unchanged": [
         "worksheet order",
         "unrelated values",
-        "all unrelated formulas",
+        "all formulas",
         "effective cell formatting",
         "column widths",
         "unrelated row heights",
-        "native tables and validation features outside the audited Sources expansion",
+        "native tables and validation features",
         "unrelated ZIP members"
       ]
     }

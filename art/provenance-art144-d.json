@@ -1,0 +1,1314 @@
+{
+  "schema": 1,
+  "campaign": "art144",
+  "group": "d",
+  "baseCommit": "221dcc8cac927291bb7e0b89139a504dabb857db",
+  "reviewedAt": "2026-11-01",
+  "requestedItems": 30,
+  "deliveredPngCandidates": 15,
+  "blockedItems": 15,
+  "generationCalls": 21,
+  "successfulPngArtifacts": 17,
+  "qualityEdits": 2,
+  "unusedSuccessfulCandidates": 2,
+  "capturedModerationErrorResponses": 4,
+  "newAnimatedClips": 0,
+  "newSingleFramePoseClips": 15,
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "measuredOriginalTimingRows": 0,
+  "noRefusalRetryOrWorkaround": true,
+  "newRefusals": [
+    {
+      "fighterId": "shf_ayakakashi_152",
+      "requestId": "8ab20bbe-af0e-44c3-95c3-34b9bbb4d019",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "retry": false,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "fighterId": "shf_corruptor_155",
+      "requestId": "dbf7e92d-aba3-4115-b752-0234e8660483",
+      "categories": [
+        "violence"
+      ],
+      "retry": false,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "fighterId": "shf_hatcher_156",
+      "requestId": "5cb09bcb-9e8b-40be-b3c2-391e62900d5e",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "retry": false,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "fighterId": "shf_hinako_s_mother_165",
+      "requestId": "13cb56a1-c05c-45b6-a193-987153da6fca",
+      "categories": [
+        "violence"
+      ],
+      "retry": false,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ],
+  "relatedVariantStopped": [
+    "shf_dark_hatcher_160"
+  ],
+  "generationCollection": {
+    "strategy": "Every independent batch used Promise.allSettled; exact subject, references, prompt, output or refusal saved. Framing edits preserve approved subject only.",
+    "records": [
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-01.json",
+        "sha256": "d20a4a0f3ad40aee4c778b1ccb9492707321d9449ee1e47d3e9460e96f690881",
+        "bytes": 6169
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-02.json",
+        "sha256": "c7f5f9d63fafab42f4975f0d074b6b57792fa63984e151186aaf1396eab2d7ca",
+        "bytes": 5935
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-03.json",
+        "sha256": "9aa2c630c2866f216076af91fc08f39b28cc8906b03da2631316d2e9e0b182b9",
+        "bytes": 7874
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-04.json",
+        "sha256": "e2f05c50cd5c6fe9ab7effe889be90cab810b7b3431ed2a99b9c7dc61a9142b2",
+        "bytes": 7929
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-05.json",
+        "sha256": "4c5b28ecc08990759fab11617df897bd5e3960f15efb746587a41e71bcb1f64e",
+        "bytes": 7757
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/generation-06.json",
+        "sha256": "9ff074f023a71e12e20939ca621387038e0cd2ac341161f8fd3b99fe27e3746d",
+        "bytes": 2080
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/framing-edits-01.json",
+        "sha256": "a6a8ad6a518b3158eabcabe7fff1aede58f395321903ffb0f383059c051d41ea",
+        "bytes": 2692
+      }
+    ]
+  },
+  "candidateEntries": [
+    {
+      "fighterId": "bom_blood_baby_144",
+      "file": "assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
+      "generatedFile": "/workspace/generated_images/exec-138dad7e-8858-4b83-9769-a49a50b5bfa9.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_everson_01_blood_baby.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_03_blood_baby.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_baby.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "bom-sh_bom_art_20160221_everson_01_blood_baby.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_everson_01_blood_baby.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-sh_bom_art_20160221_everson_01_blood_baby.jpg",
+          "status": 200,
+          "bytes": 840420,
+          "sha256": "35cd5a11b796b5a2d2f739fde820e36c3244814601c7b623f432a7f8a1937312"
+        },
+        {
+          "name": "bom-sh_bom_art_20160221_castillo_03_blood_baby.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_03_blood_baby.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-sh_bom_art_20160221_castillo_03_blood_baby.jpg",
+          "status": 200,
+          "bytes": 713658,
+          "sha256": "69a74b03af4e424c76a6d8ce4223f1597deaf42470c495a992f83c85d68ff7ac"
+        },
+        {
+          "name": "bom-blood_baby.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_baby.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-blood_baby.jpg",
+          "status": 200,
+          "bytes": 14570,
+          "sha256": "2b002d98370e157015b4a479a07ab483bd2fcc98cb23f9374e7549d596be9740"
+        }
+      ],
+      "sha256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          164,
+          119,
+          1095,
+          1175
+        ],
+        "alphaBounds": [
+          25,
+          29,
+          1250,
+          1254
+        ],
+        "framingBounds": [
+          160,
+          110,
+          1098,
+          1177
+        ],
+        "transparentFraction": 0.77741,
+        "pixelSHA256": "68edd7f0888da1c1e5eb88054cf7bee55348da801b7135b01a09d9ece4320a53"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Modèle texturé de production face/dos et portrait retail concordants. Créature canonique non humaine avec crâne fendu, langue et mâchoire verticale, bras asymétriques, griffes et pieds entiers ; aucune réidentification en humain adulte, aucune substitution de Mother ou Blood Mama. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shortmessage_sakura_head_150",
+      "file": "assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
+      "generatedFile": "/workspace/generated_images/exec-e0e5f88c-83bc-4a18-87ea-260f15b1d5ad.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/sh_the_short_message/monster/pics/cherry_blossom.webp",
+        "https://www.silenthillmemories.net/sh_the_short_message/art/pics/sh_short_message_art_cherry_blossom_monster_04.png",
+        "https://www.silenthillmemories.net/sh_the_short_message/monster/pics/cherry_blossom_screenshot_02.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "sakura-cherry_blossom.webp",
+          "url": "https://www.silenthillmemories.net/sh_the_short_message/monster/pics/cherry_blossom.webp",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/sakura-cherry_blossom.webp",
+          "status": 200,
+          "bytes": 101594,
+          "sha256": "fe68c9ae6b779c572c5eb71f863f7741d76fdd6176c634c606b8252bad89881e"
+        },
+        {
+          "name": "sakura-sh_short_message_art_cherry_blossom_monster_04.png",
+          "url": "https://www.silenthillmemories.net/sh_the_short_message/art/pics/sh_short_message_art_cherry_blossom_monster_04.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/sakura-sh_short_message_art_cherry_blossom_monster_04.png",
+          "status": 200,
+          "bytes": 569769,
+          "sha256": "0cef228f9115bee11c615abac2a950d29ee9296b1daa3512c6032a26491ca02c"
+        },
+        {
+          "name": "sakura-cherry_blossom_screenshot_02.jpg",
+          "url": "https://www.silenthillmemories.net/sh_the_short_message/monster/pics/cherry_blossom_screenshot_02.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/sakura-cherry_blossom_screenshot_02.jpg",
+          "status": 200,
+          "bytes": 222871,
+          "sha256": "d3f4bdd58a8cb7314d2129db014eac7fe3c6691aa28fbc7899a1c39c3a7e97e4"
+        }
+      ],
+      "sha256": "19576d20cace562055107c3de8c54ea16a84007f80fe20acab52e88ff16c4806",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          401,
+          28,
+          881,
+          1236
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          398,
+          23,
+          886,
+          1238
+        ],
+        "transparentFraction": 0.80514,
+        "pixelSHA256": "2ab199bd9844590d7f65c0b6bff441433739d5bd9513b93bec57b6fcec864ef3"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Sakura Head 2024 : couronne et traîne de fleurs roses, veste blanche, fil noir, mains et extrémités végétales conservés depuis la capture retail ; la planche de concept aux baskets reste secondaire. Pose de poursuite debout, aucune arme de combat ajoutée. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_kashimashi_151",
+      "file": "assets/sprites/shf_kashimashi_151.3f2710657644.png",
+      "generatedFile": "/workspace/generated_images/exec-af296098-ca68-444b-b7ee-93ab78a1c6b1.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_01.png",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_02.png",
+        "https://www.silenthillmemories.net/shf/monsters/kashimashi.png"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_01.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "status": 200,
+          "bytes": 160727,
+          "sha256": "78592beefc3774ea3146f678c88cf0fb17350f5ec3aba8c28792453c3ef18b0e"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_02.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "status": 200,
+          "bytes": 330585,
+          "sha256": "4f77abeeaf8c4ae86d4caa840b0ab1bb5c9567bc389fa70009445fc9f2f2ce43"
+        },
+        {
+          "name": "shf-kashimashi.png",
+          "url": "https://www.silenthillmemories.net/shf/monsters/kashimashi.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-kashimashi.png",
+          "status": 200,
+          "bytes": 299212,
+          "sha256": "910c20b161863044e95ce61b1359d4a8a67fb1a78675f17a2fe8c4e35930d46a"
+        }
+      ],
+      "sha256": "3f2710657644f962c1f8b7405a4e059bfc0c6fd0db1a7cc2e61ae0ba81b2834b",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          360,
+          59,
+          973,
+          1209
+        ],
+        "alphaBounds": [
+          0,
+          20,
+          1224,
+          1230
+        ],
+        "framingBounds": [
+          353,
+          47,
+          981,
+          1217
+        ],
+        "transparentFraction": 0.76569,
+        "pixelSHA256": "ff27df71d39a67b7c654f1c2110145d76cfd668dc599838e10d3d964fd9846a1"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Kashimashi : inclinaison du corps et de la tête, longs cheveux, trois bras extérieurs dans la disposition du modèle, couteau long et deux pieds visibles. L’apparence adulte du modèle ne doit pas être transférée aux autres figures SHf. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_ara_abare_153",
+      "file": "assets/sprites/shf_ara_abare_153.a11358a86425.png",
+      "generatedFile": "/workspace/generated_images/exec-10aaab20-aae9-4289-9450-f44bdf7499f0.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_01.png",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_02.png"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_01.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "status": 200,
+          "bytes": 767943,
+          "sha256": "6e7a307420905a82b49afa9ab675e58e9d014513a3b80abf7c2af359beb53646"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_02.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "status": 200,
+          "bytes": 759368,
+          "sha256": "e6c4e6fd25c5fd4bcfefce5198718e18fb3b84e2013eae3d5ec24d7f4d7e0034"
+        }
+      ],
+      "sha256": "a11358a86425baef9b66cfe5dda6d3bbcc2dcccdc8b33cbd42d85b6fe8b0c54a",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          35,
+          194,
+          1223,
+          1059
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1242,
+          1254
+        ],
+        "framingBounds": [
+          33,
+          191,
+          1230,
+          1060
+        ],
+        "transparentFraction": 0.68423,
+        "pixelSHA256": "964bdd5d493ec3b11e48f5d75e56c0301655b301c0edee23c0931f697c045ece"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Ara-abare : masse florale ronde, bouche centrale, bras asymétriques, petit appui inférieur et grand couteau entièrement dans le canevas. Aucun corps humain debout substitué. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_irohihi_154",
+      "file": "assets/sprites/shf_irohihi_154.28e17594542d.png",
+      "generatedFile": "/workspace/generated_images/exec-833de22a-f76d-4fd7-844c-1eebfb61f7af.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/monsters/irohihi.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_04.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_05.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-irohihi.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/irohihi.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-irohihi.jpg",
+          "status": 200,
+          "bytes": 79411,
+          "sha256": "e1a504da17f97b078c8ed3542b334e8291ca54dbe8b66d1b7f8ea86930598799"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_04.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "status": 200,
+          "bytes": 325152,
+          "sha256": "e15d9ee2d0f52b322837fad988066981323b8dc3e5777c0bd560bbe658be5d0d"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_05.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "status": 200,
+          "bytes": 304493,
+          "sha256": "a5cc1ea0e2fb22c7be114f2923588f8144ce4d82cfa8c7e816ab70c59dfa58fd"
+        }
+      ],
+      "sha256": "28e17594542d86387562c0d7fe88c6a1703429ed2f0baff5230abce50bf3e774",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          211,
+          164,
+          1202,
+          1183
+        ],
+        "alphaBounds": [
+          49,
+          23,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          207,
+          160,
+          1207,
+          1190
+        ],
+        "transparentFraction": 0.71155,
+        "pixelSHA256": "85c4e71feeaef13934980946ad921d7a8eaee7f58ab64854f7248ffd8f0e53c3"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Irohihi : posture basse rampante, longs bras et mains écartées, jambes repliées, ventre renflé et polype floral facial issus des vues face/dos/profil. Ne constitue pas une animation de langue ou de marche. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_kamugara_157",
+      "file": "assets/sprites/shf_kamugara_157.c71b154fd6db.png",
+      "generatedFile": "/workspace/generated_images/exec-afb5d71d-d5d3-4ef0-9eac-385df069ea8b.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kamugara_04.jpg",
+        "https://www.silenthillmemories.net/shf/monsters/kamugara.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kamugara_04.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "status": 200,
+          "bytes": 264976,
+          "sha256": "16577a6f0e5de894c6ee14e0cbed658d0344b1baa0f4a7d2138d86f0995283e9"
+        },
+        {
+          "name": "shf-kamugara.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/kamugara.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-kamugara.jpg",
+          "status": 200,
+          "bytes": 42251,
+          "sha256": "352e778c8839f0fd6f01b736a03c65c6d1f2cabba0b4aaeb95f3310191136477"
+        }
+      ],
+      "sha256": "c71b154fd6dbf71aa521eb1cd444ac24d65356c0af443a9a225599876d44e663",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          468,
+          77,
+          825,
+          1191
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1208,
+          1226
+        ],
+        "framingBounds": [
+          465,
+          73,
+          834,
+          1193
+        ],
+        "transparentFraction": 0.88388,
+        "pixelSHA256": "e82670ed385a45f47b4d482060bf2dc29360f582ce97d1bd02b3af8c297c0c1e"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Kamugara : modèle pâle maigre, cavités natives, pagne, collier et entraves/chaînes conservés ; deux bras et jambes, orteils et chaînes dans le cadre. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_harai_katashiro_158",
+      "file": "assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
+      "generatedFile": "/workspace/generated_images/exec-2364dc1b-e557-41a2-a6ae-4472c614f2b2.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/monsters/harai_katashiro.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_04.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_05.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-harai_katashiro.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/harai_katashiro.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-harai_katashiro.jpg",
+          "status": 200,
+          "bytes": 23809,
+          "sha256": "e176dfed196aa4b3602160868da9dd437b0bb5d59f9f4368f57971a7cbf20998"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "status": 200,
+          "bytes": 279737,
+          "sha256": "02023c32ab98f0604a2777e936f10038bcb1c4e4348c9e51bed08ca362d71283"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "status": 200,
+          "bytes": 209355,
+          "sha256": "2339efb6f44c5a61a4b98d479d8e509fd2bd3e120b1c76ed8a31c1ebbdf1a3e8"
+        }
+      ],
+      "sha256": "9cd0b864b7bdc88090e19f8b4522e65838240f2cd061bfd0eb37f25ae7ad1e6e",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          305,
+          92,
+          950,
+          1180
+        ],
+        "alphaBounds": [
+          25,
+          71,
+          1210,
+          1254
+        ],
+        "framingBounds": [
+          302,
+          85,
+          952,
+          1186
+        ],
+        "transparentFraction": 0.8857,
+        "pixelSHA256": "fb136dcb803d232f696322be01f862b6f83fefa827838d71f22799ef6e3e2579"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Harai Katashiro : poupée/effigie de céramique à articulations rondes, coiffure-racines, couteau courbe et jambes-lames entières. Orientation native vers la gauche enregistrée facing -1, pas de mauvais étiquetage vers la droite. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_oi_omoi_159",
+      "file": "assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
+      "generatedFile": "/workspace/generated_images/exec-a598214e-c353-424b-b572-172889025f22.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_01.png",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_02.png"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_oi-omoi_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_01.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_oi-omoi_01.png",
+          "status": 200,
+          "bytes": 132279,
+          "sha256": "efff3b61da9ae881885061a54c13655c0262edc0f533377fe0defafe2adc7037"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_oi-omoi_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_02.png",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_oi-omoi_02.png",
+          "status": 200,
+          "bytes": 372632,
+          "sha256": "27e27043573ed9276f6344f135e7e82bf43b569cc152ed5c254ea3a3fa25b52d"
+        }
+      ],
+      "sha256": "5b5945b00b180b41d7dfa20fd1c14e22dc0f8dd2ee0390d2eeba10ad8377bbaa",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          372,
+          45,
+          905,
+          1220
+        ],
+        "alphaBounds": [
+          0,
+          40,
+          1232,
+          1236
+        ],
+        "framingBounds": [
+          369,
+          41,
+          907,
+          1223
+        ],
+        "transparentFraction": 0.80928,
+        "pixelSHA256": "245914e24d15f589b4890ea088784393c5455920d35cf9a19a16654c746a483e"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Oi-omoi : assemblage de poupées artificielles aux têtes bob, bras imbriqués, jupe bleue à fleurs, deux jambes articulées et chaussures. Les petites têtes/mains superposées ne permettent pas un décompte morphologique certifié. Orientation faciale dominante gauche, facing -1. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_drum_monster_161",
+      "file": "assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
+      "generatedFile": "/workspace/generated_images/exec-3c7e073a-9a28-493d-bf11-a1ede9c20a43.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_drum_monster_01.jpg",
+        "https://www.silenthillmemories.net/shf/monsters/tank_dark.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_drum_monster_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "status": 200,
+          "bytes": 345205,
+          "sha256": "d6868d72df8e54f72013e8eceb12522f99ac35708672226b3c9ecf2c4d770292"
+        },
+        {
+          "name": "shf-tank_dark.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/tank_dark.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-tank_dark.jpg",
+          "status": 200,
+          "bytes": 30859,
+          "sha256": "f7f1130d32f04376cea0c1a53d342ac19d44930a36a7b57bdafb7e0fbb4fadfe"
+        }
+      ],
+      "sha256": "e7aefe55a14b33d32a033f964b6eaf737a694c8f9cf949b63134cac918afd512",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          73,
+          278,
+          1210,
+          974
+        ],
+        "alphaBounds": [
+          70,
+          49,
+          1214,
+          1198
+        ],
+        "framingBounds": [
+          70,
+          275,
+          1214,
+          975
+        ],
+        "transparentFraction": 0.76165,
+        "pixelSHA256": "8a619c992a97ca34d96788fe119f9bdf88eb0a99253d73e02f34e98caa7f1b48"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Drum Monster : corps de tambour à tomoe, peaux supérieures, corde, clochettes, massue hérissée et maillet torsadé entiers ; recadrage par outil image conservant les deux bras et appuis natifs. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_rinko_like_entity_163",
+      "file": "assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
+      "generatedFile": "/workspace/generated_images/exec-cd8f5df2-4255-4055-8a2c-daa4fcd32b25.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_rinkolike_entity_01.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/rinko-like_entity.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_rinkolike_entity_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_rinkolike_entity_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_rinkolike_entity_01.jpg",
+          "status": 200,
+          "bytes": 343172,
+          "sha256": "a5d926e06cda1175e8ec0c60ca49a1b8757a3501df938faa9de92068fcc025a8"
+        },
+        {
+          "name": "shf-rinko-like_entity.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/rinko-like_entity.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-rinko-like_entity.jpg",
+          "status": 200,
+          "bytes": 47387,
+          "sha256": "19712d13f3329ee943521b92463f12b6fd47d5153674b1d90f0cb1f05960db8e"
+        }
+      ],
+      "sha256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          91,
+          42,
+          1170,
+          1217
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1244,
+          1254
+        ],
+        "framingBounds": [
+          75,
+          38,
+          1174,
+          1224
+        ],
+        "transparentFraction": 0.7606,
+        "pixelSHA256": "f0581ea0fdbaea334b25f53cdedbcd26c20f55795faab474ddd39245cba8792e"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Rinko-Like Entity : forme de prêtre vêtue, coiffe haute, cheveux jusqu’au sol, robe violette, surface surnaturelle sombre à lumière orange et chaîne abaissée. Identité/âge incertains maintenus ; pas de relabel adulte et aucun visage humain ou gore ajouté ; les spawns scolaires séparés ne sont pas utilisés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_hinako_s_father_164",
+      "file": "assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",
+      "generatedFile": "/workspace/generated_images/exec-b4ee0f60-a69c-44ac-9cdd-c0b56a3f959f.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hinakos_parents_01.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/hinakos_parents.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_hinakos_parents_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hinakos_parents_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_hinakos_parents_01.jpg",
+          "status": 200,
+          "bytes": 375604,
+          "sha256": "57d5ac04270a9e98b1e4d9907862a820eeec8740eb39153df76619e5dc5b85f2"
+        },
+        {
+          "name": "shf-hinakos_parents.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/hinakos_parents.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-hinakos_parents.jpg",
+          "status": 200,
+          "bytes": 53463,
+          "sha256": "dd283aff16498352fc06a44e04045a293d980f1544f8e78cda5129acfa546426"
+        }
+      ],
+      "sha256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          50,
+          239,
+          1175,
+          1034
+        ],
+        "alphaBounds": [
+          0,
+          17,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          47,
+          237,
+          1177,
+          1039
+        ],
+        "transparentFraction": 0.7176,
+        "pixelSHA256": "b4d80547fc4cce30e8e97d2a83d95ac93d7eda2d631e09f5c5d7801045e968c4"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Père de Hinako : grande forme monstrueuse avant, masse ronde, veste navy, deux petits appuis, appendice courbe et lame de cuisine entiers. Ni le petit croquis humain ni la mère du portrait double ne sont importés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_shiromuku_166",
+      "file": "assets/sprites/shf_shiromuku_166.25d31075e81d.png",
+      "generatedFile": "/workspace/generated_images/exec-9eb06ede-4312-455f-aec2-ef71904823a9.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_02.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/shiromuku.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "status": 200,
+          "bytes": 292935,
+          "sha256": "1412c6cecde4d392c72befd0910248c927ee9447f89aed36b7f2fb908a57a796"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_02.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "status": 200,
+          "bytes": 315832,
+          "sha256": "371e112daddc8811b26ca55f84601b3c2b5972d98af60464e379e94cd56ad90a"
+        },
+        {
+          "name": "shf-shiromuku.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/shiromuku.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-shiromuku.jpg",
+          "status": 200,
+          "bytes": 34394,
+          "sha256": "b39b12546d2a36937bc2d9d5ff74ff49c61ec3159335257cd539507dddf2979a"
+        }
+      ],
+      "sha256": "25d31075e81d8d72f354c857ebbd13db3168a5fa524088085d3ecfa0ab88b2f1",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          319,
+          162,
+          945,
+          1117
+        ],
+        "alphaBounds": [
+          0,
+          23,
+          1240,
+          1206
+        ],
+        "framingBounds": [
+          312,
+          160,
+          950,
+          1127
+        ],
+        "transparentFraction": 0.8493,
+        "pixelSHA256": "c07128a310ce40c9e4da0d3b36315878555bb0db0c43392deb0de7a7ea7c0e43"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Shiromuku : forme de base du premier modèle, deux bras/mains natifs seulement, kimono blanc, wataboshi et masque, ourlets entiers. Les phases à extensions velues ne sont pas inventées. Pieds cachés par robe non reconstruits ; âge/identité non réétiquetés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_tsukumogami_167",
+      "file": "assets/sprites/shf_tsukumogami_167.e8130e444254.png",
+      "generatedFile": "/workspace/generated_images/exec-c20b8739-1904-4cff-b198-037c47146f26.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_02.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_01.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/tsukumogami.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "status": 200,
+          "bytes": 399438,
+          "sha256": "e400c6158a7348e7b38ff4b908a4f9c9949b1f78589b8888594d265e39ecfe79"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "status": 200,
+          "bytes": 333764,
+          "sha256": "218b5ecb26668131fcfccef2aa34ae645d5349bc6794d64eedd545457374baae"
+        },
+        {
+          "name": "shf-tsukumogami.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/tsukumogami.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-tsukumogami.jpg",
+          "status": 200,
+          "bytes": 57049,
+          "sha256": "32d426cddfb1d1318ed58e3956919b862b9311af2a024dce4cc5012d328435f4"
+        }
+      ],
+      "sha256": "e8130e4442548fcd861d4364d08cd43f946600f61bcd834bd5158ede5960b212",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          217,
+          33,
+          1098,
+          1221
+        ],
+        "alphaBounds": [
+          0,
+          15,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          208,
+          23,
+          1108,
+          1232
+        ],
+        "transparentFraction": 0.65249,
+        "pixelSHA256": "57d7e65696ef018308dbe86cf34baccb59ee9f9d799254df574b0ac8d21b5069"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Tsukumogami : huit bras externes visibles, quatre de chaque côté, masque Noh central et masques latéraux, chevelure blanche, manches noires à croissants, corde, racines et deux pieds. Variante mains ouvertes sans armes ; aucun membre bonus. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_shichibi_168",
+      "file": "assets/sprites/shf_shichibi_168.332222c595ae.png",
+      "generatedFile": "/workspace/generated_images/exec-183664cc-9acc-474b-9e63-9c3f82f84f94.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shichibi_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shichibi_02.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/shichibi.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_shichibi_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shichibi_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_shichibi_01.jpg",
+          "status": 200,
+          "bytes": 263700,
+          "sha256": "5d394e3f7753b014fc90d90a2209334eae576f01a5a41cf94c2eb81e93c6f5e5"
+        },
+        {
+          "name": "shf-silent_hill_f_art_monster_shichibi_02.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shichibi_02.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_shichibi_02.jpg",
+          "status": 200,
+          "bytes": 315258,
+          "sha256": "5e0f42cb92233255a92611a8abcf8a601f73521c3606a1e13f1b9bee609febc4"
+        },
+        {
+          "name": "shf-shichibi.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/shichibi.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-shichibi.jpg",
+          "status": 200,
+          "bytes": 37921,
+          "sha256": "8014f27b22d17d7ed99bb5642f2bc43bada71a4f97fe2c7a41a0de65c53574f3"
+        }
+      ],
+      "sha256": "332222c595aed3a03602f3b8a673f66f33601395d775fe9aa49c1d666ce17763",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          31,
+          103,
+          1224,
+          1146
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1242,
+          1254
+        ],
+        "framingBounds": [
+          21,
+          98,
+          1229,
+          1158
+        ],
+        "transparentFraction": 0.69017,
+        "pixelSHA256": "b5df0163720c5f941277240825cdefa4fa0f8c0c771953ab7ac4a57402c3e4da"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Shichibi : phase dorée tardive documentée, corps quadrupède de renard, yeux rouges, crinière crème et fan de queues selon la planche complète. Les phases rouge puis dorée sont distinguées. Les racines de queues superposées empêchent une certification morphologique exacte. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    },
+    {
+      "fighterId": "shf_kyubi_169",
+      "file": "assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
+      "generatedFile": "/workspace/generated_images/exec-060c27af-3075-451d-ac83-a0e2f80d78a8.png",
+      "sourceImageReferences": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kyubi_01.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/kyubi.jpg"
+      ],
+      "referenceFiles": [
+        {
+          "name": "shf-silent_hill_f_art_monster_kyubi_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kyubi_01.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-silent_hill_f_art_monster_kyubi_01.jpg",
+          "status": 200,
+          "bytes": 327367,
+          "sha256": "04a909c649314795b2803686e92f4d7833715f23c3b4734d10aad6a00aa59e7b"
+        },
+        {
+          "name": "shf-kyubi.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/kyubi.jpg",
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/shf-kyubi.jpg",
+          "status": 200,
+          "bytes": 26185,
+          "sha256": "b5aace55dd6e5dab997141efef940eb73103e7cf4da9809577ac4f899a0a0146"
+        }
+      ],
+      "sha256": "abb1af2fa71c8286ecc7ac212d6d9e55eaafaca2656eea15c119a9b2a08639d2",
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          88,
+          151,
+          1173,
+          1124
+        ],
+        "alphaBounds": [
+          25,
+          21,
+          1232,
+          1190
+        ],
+        "framingBounds": [
+          83,
+          148,
+          1178,
+          1127
+        ],
+        "transparentFraction": 0.72205,
+        "pixelSHA256": "400448100a7ac8d8d0b157df01c813c043d9ae1b01b025452ea687ca86d46712"
+      },
+      "reviewed": true,
+      "certifiedOneToOne": false,
+      "limitations": "Kyubi : modèle noir propre à ce sujet, yeux/bouche bleus, rubans froids et fan de queues selon la planche complète ; pas une recoloration du Shichibi généré. Édition de cadrage pour garder la frange entière. Le chevauchement des queues empêche de certifier visuellement neuf pointes indépendantes ; fidélité morphologique à revoir. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté."
+    }
+  ],
+  "blockedEntries": [
+    {
+      "rowId": "bom_light_guardian_140:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_light_guardian_140",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/light_guardian.jpg"
+      ],
+      "reason": "Portrait retail 127 × 127 et description disponibles, mais la texture et le contour supérieur/assemblage des membres ne sont pas attestés par plusieurs vues natives complètes. Aucun torse ou pied générique inventé.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Portrait retail 127 × 127 et description disponibles, mais la texture et le contour supérieur/assemblage des membres ne sont pas attestés par plusieurs vues natives complètes. Aucun torse ou pied générique inventé."
+    },
+    {
+      "rowId": "bom_water_guardian_141:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_water_guardian_141",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/water_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+      ],
+      "reason": "Portrait retail tronqué et capture de juin 2012 cadrant partiellement le monolithe aquatique. Le sommet et tous les membres détachés ne sont pas visibles ensemble ; ne pas inventer des jambes humanoïdes.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Portrait retail tronqué et capture de juin 2012 cadrant partiellement le monolithe aquatique. Le sommet et tous les membres détachés ne sont pas visibles ensemble ; ne pas inventer des jambes humanoïdes."
+    },
+    {
+      "rowId": "bom_earth_guardian_142:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_earth_guardian_142",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/earth_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg"
+      ],
+      "reason": "Portrait/captures natives montrent une tête de pierre et bras rocheux détachés, sans silhouette totale attestée. Ajouter des jambes ou un corps de golem serait une invention.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Portrait/captures natives montrent une tête de pierre et bras rocheux détachés, sans silhouette totale attestée. Ajouter des jambes ou un corps de golem serait une invention."
+    },
+    {
+      "rowId": "bom_blood_guardian_143:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_guardian_143",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_guardian.jpg"
+      ],
+      "reason": "Portrait de la masse multi-bras et de sa marionnettiste disponible, mais contour complet/base et membres cachés non établis par plusieurs vues retail. Pas de masse générique ni mélange avec Mother.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Portrait de la masse multi-bras et de sa marionnettiste disponible, mais contour complet/base et membres cachés non établis par plusieurs vues retail. Pas de masse générique ni mélange avec Mother."
+    },
+    {
+      "rowId": "bom_blood_mama_145:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_mama_145",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_mama.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_01_blood_mama.jpg"
+      ],
+      "reason": "Le concept complet Blood Mama et portrait retail distinguent ce sujet de Mother, mais la correspondance intégrale du corps final avec le concept n’est pas suffisamment corroborée. Aucune réutilisation de Mother refusée ni de son concept.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Le concept complet Blood Mama et portrait retail distinguent ce sujet de Mother, mais la correspondance intégrale du corps final avec le concept n’est pas suffisamment corroborée. Aucune réutilisation de Mother refusée ni de son concept."
+    },
+    {
+      "rowId": "bom_steel_guardian_146:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_steel_guardian_146",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/steel_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_15_steel_boss.jpg"
+      ],
+      "reason": "Rendu texturé de production coupe les pointes externes des ailes ; rendu gris complet montre une autre configuration sans les mêmes ailes. Les fusionner produirait une anatomie finale non attestée.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Rendu texturé de production coupe les pointes externes des ailes ; rendu gris complet montre une autre configuration sans les mêmes ailes. Les fusionner produirait une anatomie finale non attestée."
+    },
+    {
+      "rowId": "bom_gray_child_147:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_gray_child_147",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/gray_child.jpg"
+      ],
+      "reason": "Profil DLC enfant-like confirmé, sans plusieurs vues de production complètes et lisibles de la version BoM. Ne pas transférer automatiquement le corps de SH1, réétiqueter adulte ou ajouter des blessures.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Profil DLC enfant-like confirmé, sans plusieurs vues de production complètes et lisibles de la version BoM. Ne pas transférer automatiquement le corps de SH1, réétiqueter adulte ou ajouter des blessures."
+    },
+    {
+      "rowId": "bom_raw_shock_148:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_raw_shock_148",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/raw_shock.jpg"
+      ],
+      "reason": "Portrait DLC BoM partiel et description de transformation ; forme humaine déguisée et vraie forme sans modèle complet corroboré. Aucune copie du Raw Shock Shattered Memories ni humain générique.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Portrait DLC BoM partiel et description de transformation ; forme humaine déguisée et vraie forme sans modèle complet corroboré. Aucune copie du Raw Shock Shattered Memories ni humain générique."
+    },
+    {
+      "rowId": "pt_lisa_149:pose:idle",
+      "collection": "poses",
+      "entityId": "pt_lisa_149",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_05.jpg",
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_04.jpg"
+      ],
+      "reason": "Deux captures natives inspectées : silhouette entière trop petite/sombre et visage vu à travers porte. Pas de vue complète lisible attestant la robe et les deux pieds. Fandom retourne HTTP 402, aucun contournement ; recherche Google sans référence visuelle exploitable. Aucun fantôme générique substitué.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Deux captures natives inspectées : silhouette entière trop petite/sombre et visage vu à travers porte. Pas de vue complète lisible attestant la robe et les deux pieds. Fandom retourne HTTP 402, aucun contournement ; recherche Google sans référence visuelle exploitable. Aucun fantôme générique substitué."
+    },
+    {
+      "rowId": "shf_ayakakashi_152:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_ayakakashi_152",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_01.png",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_02.png"
+      ],
+      "reason": "Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun PNG produit/importé pour ce profil. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_corruptor_155:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_corruptor_155",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_02.jpg"
+      ],
+      "reason": "Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun PNG produit/importé pour ce profil. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_hatcher_156:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_hatcher_156",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_02.jpg",
+        "https://www.silenthillmemories.net/shf/monsters/hatcher.jpg"
+      ],
+      "reason": "Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun PNG produit/importé pour ce profil. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_dark_hatcher_160:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_dark_hatcher_160",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/monsters_en.htm",
+        "https://www.silenthillmemories.net/shf/monsters/hatcher_dark.jpg"
+      ],
+      "reason": "Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement."
+    },
+    {
+      "rowId": "shf_sakuko_like_entity_162:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_sakuko_like_entity_162",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_02.jpg"
+      ],
+      "reason": "Sources intégrales inspectées : jeune prêtresse ressemblant explicitement à Sakuko, pigtails/voix et cavités/blessures natives. L’âge/identité restent incertains. Une reconstruction sûre sans blessures explicites ni relabel adulte ne peut pas garantir la fidélité de ce modèle ; aucune génération effectuée plutôt que modifier son identité ou inventer une anatomie.",
+      "limits": "Aucun PNG produit/importé pour ce profil. Sources intégrales inspectées : jeune prêtresse ressemblant explicitement à Sakuko, pigtails/voix et cavités/blessures natives. L’âge/identité restent incertains. Une reconstruction sûre sans blessures explicites ni relabel adulte ne peut pas garantir la fidélité de ce modèle ; aucune génération effectuée plutôt que modifier son identité ou inventer une anatomie."
+    },
+    {
+      "rowId": "shf_hinako_s_mother_165:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_hinako_s_mother_165",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art144-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hinakos_parents_02.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/hinakos_parents.jpg"
+      ],
+      "reason": "Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun PNG produit/importé pour ce profil. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ],
+  "referenceArchive": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01",
+  "sourceDownloadIndices": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/ref-index.json",
+      "sha256": "ab36eefe3d7f75f5edc3583375e6e8cb94085bd405d748c2313842341a0c29e2"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-extra-index.json",
+      "sha256": "f9bd46141f58e82a7ef783a9e3a315d472b4870c7bdf3a1f6d2df58005986713"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-portraits-index.json",
+      "sha256": "2df1a59bcdc6f683169abd080efad78a423deac6a5a5ae878b9552d4088af52d"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/pt-extra-index.json",
+      "sha256": "f9402c1a878a29a3511ecdd3e1d2d6c392ff38aa77ac9ed7a0c7061bf3867504"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/extra-pages-index.json",
+      "sha256": "2e5b22b829c2219c38a5f22c46342f9a87f97cc350dfee682b8fcd9520d07fe6"
+    }
+  ],
+  "reviewLimitations": [
+    "Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "Kyubi : nombre exact de pointes de queues non certifiable à cause du chevauchement, revue croisée demandée.",
+    "Cadrage validé sur enveloppe lisible et alpha connectée ; alpha isolé quasi transparent peut toucher le canevas sans indiquer une coupe du sujet.",
+    "Sakuko bloqué sans génération plutôt qu’un relabel d’âge ou une altération des blessures natives.",
+    "BoM Blood Baby est un monstre autonome confirmé par modèle et portrait retail ; ne sert pas de substitution à Mother refusée."
+  ]
+}

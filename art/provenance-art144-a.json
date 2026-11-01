@@ -1,0 +1,1355 @@
+{
+  "schema": 1,
+  "campaign": "art144",
+  "group": "a",
+  "baseCommit": "221dcc8cac927291bb7e0b89139a504dabb857db",
+  "reviewedAt": "2026-11-01",
+  "requestedItems": 30,
+  "deliveredPngCandidates": 12,
+  "blockedItems": 18,
+  "generationCalls": 14,
+  "successfulPngArtifacts": 13,
+  "qualityEdits": 1,
+  "unusedSuccessfulCandidates": 1,
+  "newAnimatedClips": 0,
+  "newSingleFramePoseClips": 12,
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "measuredOriginalTimingRows": 0,
+  "priorRefusalsRespected": [
+    "SH1 Cybil / SH2 Flesh Lip ambiguous prior group refusal",
+    "SH1 Incubus",
+    "SH2 Mannequin including Ambusher and Spider variants",
+    "SH3 Nurse Pipe",
+    "SH3 Valtiel",
+    "SH4 Toby14",
+    "SH4 Jasper17"
+  ],
+  "newRefusals": [
+    {
+      "fighterId": "sh2_mary_final_manifestation_034",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30",
+      "categories": [
+        "violence"
+      ],
+      "stage": "output",
+      "retry": false
+    }
+  ],
+  "noRefusalRetryOrWorkaround": true,
+  "generationCollection": {
+    "strategy": "Independent outcomes awaited through Promise.allSettled; exact subject, prompt, native references, result path or error saved. Final single call saved separately. No cancelled request and no moderation retry.",
+    "records": [
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-1.json",
+        "sha256": "244e8934fbcb7d8dfcb9d7cd9719b2702fccdc108aa75271dd2f8901763649fb",
+        "bytes": 5975
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-2.json",
+        "sha256": "e1642e6948542d50700e4c6c16433381e9556b36957205e6ff557f414215fc9b",
+        "bytes": 5606
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-3.json",
+        "sha256": "d938263f5a056e2a8cd9480f8ee4453a3d432df4a3fa4ed508ef9bbb9e4ca79d",
+        "bytes": 5856
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-4.json",
+        "sha256": "715615a75ab94a9eaa14daded7423b8941ec796663d0d16125f05c5a86c41902",
+        "bytes": 4285
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-5.json",
+        "sha256": "c5ae23c02084d1b37b271ced14d1215e570fdf86553deac6f81cfaf9d6489de7",
+        "bytes": 4749
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-6.json",
+        "sha256": "b31de41974326dc034ed1bd6cf02a88e858828d75ddafcdbfcac350ad14c0c8a",
+        "bytes": 1992
+      }
+    ]
+  },
+  "archivedEvidenceFiles": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/extra-native.json",
+      "sha256": "2210e003aaae39bde2be8caeaf155fd925b2f407cfeb4b964e5b40af225c9a47",
+      "bytes": 13559
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-1.json",
+      "sha256": "244e8934fbcb7d8dfcb9d7cd9719b2702fccdc108aa75271dd2f8901763649fb",
+      "bytes": 5975
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-2.json",
+      "sha256": "e1642e6948542d50700e4c6c16433381e9556b36957205e6ff557f414215fc9b",
+      "bytes": 5606
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-3.json",
+      "sha256": "d938263f5a056e2a8cd9480f8ee4453a3d432df4a3fa4ed508ef9bbb9e4ca79d",
+      "bytes": 5856
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-4.json",
+      "sha256": "715615a75ab94a9eaa14daded7423b8941ec796663d0d16125f05c5a86c41902",
+      "bytes": 4285
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-5.json",
+      "sha256": "c5ae23c02084d1b37b271ced14d1215e570fdf86553deac6f81cfaf9d6489de7",
+      "bytes": 4749
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/generation-6.json",
+      "sha256": "b31de41974326dc034ed1bd6cf02a88e858828d75ddafcdbfcac350ad14c0c8a",
+      "bytes": 1992
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/image-search.json",
+      "sha256": "0bc938208b2cb8bca936c3555d6d8f149cb40b71bb938f6d9313ed9113c69a4d",
+      "bytes": 1221
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/images.json",
+      "sha256": "7e7bac6c0cd46fb6a2121d062d326a5abb49e783a564c7413cd85dbf0037f1ab",
+      "bytes": 5413
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/more-exact.json",
+      "sha256": "24e3effe7e15af06034c8869212d7a91d5a826c76d3dd6f03b7719a83423f057",
+      "bytes": 7457
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pages.json",
+      "sha256": "3c27bb87f66bf5069754b563a7bf28b02eecf0625768015fe7d2b6cd019302d7",
+      "bytes": 15333
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/search-more.json",
+      "sha256": "9ef2e4e8bd4fe1ac82f35b68680ea4b44f25e20582dd2b7a8082aa5634fba416",
+      "bytes": 14026
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/selection-additions.json",
+      "sha256": "b1c4a3d36ce243af9beb637ad0d87d486b53c9a13aa78d0dedd5eb3e73ed4ae1",
+      "bytes": 2814
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/selection.json",
+      "sha256": "6632ca7345ccc110d2ad2ddfc1a8176bbd6b85c19c0d886dae2f6137b1aeb003",
+      "bytes": 10908
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sources-native.json",
+      "sha256": "0ce86dc5a03895e2fa054cdcf1b102f63da6cda6548b95fa8fbbaa35ef759082",
+      "bytes": 65165
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/variants-models.json",
+      "sha256": "0c3f7a45a97795a3b190df036400460a35377537a904c5d973541d90345bb601",
+      "bytes": 663
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/wiki-more.json",
+      "sha256": "24910f2f584976f9f77fba5389fff46c827d0d052538164f1db30acf19d573d8",
+      "bytes": 999
+    }
+  ],
+  "network": {
+    "policy": "enforced",
+    "restricted": true,
+    "proxyAndCaTrustPreserved": true,
+    "blockedStatusBypass": false,
+    "accessLimits": "Silent Hill Wiki Fandom pages returned 402. Google returned JavaScript activation interstitials without usable result images. Native Silent Hill Memories pages and model references were used."
+  },
+  "candidates": [
+    {
+      "fighterId": "sh1_grey_child_005",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
+      "sha256": "29acacc0dd424d9d90a00a1c0b83b91ffa98ad52c97aec660889e944d0db3149",
+      "generatedFile": "/workspace/generated_images/exec-7c63db89-11bb-4726-be4a-edcc6fe638ed.png",
+      "generationRecord": {
+        "id": "sh1_grey_child_005",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-grey_child.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_01.jpg"
+        ],
+        "prompt": "Grey Child, the fictional nonhuman creature from the ORIGINAL Silent Hill1999 North American/Japanese PS1 game. Match these exact model references: small green-grey mottled body, elongated smooth head, indistinct facial slits, hunched torso, two arms with hands and two short bent legs with feet. Preserve the exact single narrow knife in its right hand, complete blade and point. Natural hunched forward ready posture for a2D fighter, slight side three-quarter view facing RIGHT, both foot tips visible. No human anatomical detail beyond the original stylized monster model, no added wound, blood, victim or action scene. Not the Mumbler or movie version.\nOne isolated single-subject whole-body sprite on a TRUE transparent RGBA square canvas. Keep the entire subject SMALL and CENTERED inside the middle60 percent of width and height, with at least20 percent empty transparent margin on every side. Every visible original extremity and weapon tip must remain inside. Source-faithful game model materials, muted even readable light. No room, floor, cast shadow, text, labels, UI, sheet or duplicates. Authored still candidate only; no original animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-7c63db89-11bb-4726-be4a-edcc6fe638ed.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-7c63db89-11bb-4726-be4a-edcc6fe638ed.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-grey_child.png",
+          "sha256": "8a0e64cae08358de221f69f60fa1fc60dd77b4b02000713c04db053cc41d5953",
+          "bytes": 75143
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_01.jpg",
+          "sha256": "ba05275c5b450b0d0488a2966196a0e050f4a4d586e233a31c837f26cca0edbe",
+          "bytes": 115128
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/creatures/grey_child.png",
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_01.jpg",
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Grey Child original SH1 1999, modèle Japon/Amérique du Nord ; petit corps complet, couteau droit entier et pieds inclus. La lame, les doigts, le visage et les proportions de la pose recomposée restent à comparer à des captures ; pas le Mumbler PAL. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          400,
+          281,
+          847,
+          1029
+        ],
+        "alphaBounds": [
+          33,
+          100,
+          1214,
+          1228
+        ],
+        "framingBounds": [
+          398,
+          276,
+          850,
+          1031
+        ],
+        "transparentFraction": 0.9116,
+        "pixelSHA256": "49257a5cfb632f56baa08f20fc5f003aedd6839e4a16155985ddf10907e7d2cf",
+        "sourcePath": "/workspace/generated_images/exec-7c63db89-11bb-4726-be4a-edcc6fe638ed.png",
+        "assetPath": "assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
+        "sha256": "29acacc0dd424d9d90a00a1c0b83b91ffa98ad52c97aec660889e944d0db3149",
+        "bytes": 379092,
+        "margins": [
+          0.31738,
+          0.2201,
+          0.32217,
+          0.17783
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "noncombatant",
+      "assetPath": "assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+      "sha256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
+      "generatedFile": "/workspace/generated_images/exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png",
+      "generationRecord": {
+        "id": "sh1_larval_stalker_007",
+        "revision": true,
+        "refs": [
+          "/workspace/generated_images/exec-df4b906f-c984-4f02-b5cc-198eb9e2499d.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-larval_stalker.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_16.jpg"
+        ],
+        "prompt": "Correct this Larval Stalker still image to match its ORIGINAL Silent Hill 1999 harmless black shadow apparition appearance. The first image accidentally retained green wall/floor photograph texture inside its translucent body. Remove ALL wall colors, stripes and environmental texture from inside silhouette. Keep the featureless elongated head, narrow torso, two drooping arms and two tiny separated feet from original reference. Make the body only dark neutral grey-black semi-transparent alpha, smooth indistinct edges and no invented facial features, eyes, clothing or weapon. Quiet passive standing three-quarter toward RIGHT. Distinct little foot tips and both arms readable. No new aggression or power.\nWhole original visible body and all structural extremities fully visible within central 60 percent of transparent RGBA square canvas. At least 20 percent empty transparent margin every side. One isolated subject only, no scenery, ground, shadow, UI, label or duplicate. Muted native game model materials and even readable light. Still image candidate, no animation or certified fidelity.",
+        "path": "/workspace/generated_images/exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/generated_images/exec-df4b906f-c984-4f02-b5cc-198eb9e2499d.png",
+          "sha256": "eafa59273f5fb5fe81cb981e2aa7670d46113ab7a146c0ae5cb79009d016e624",
+          "bytes": 246622
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-larval_stalker.png",
+          "sha256": "fe45476fdf3e2911ca06624fc1f0c6c3a4e1229aead45742ff77e7f77cdc4b6e",
+          "bytes": 130329
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_16.jpg",
+          "sha256": "f64fb3d2016c2228ec94f340b60841296936eee12d57a96a3ebd0ffb41530258",
+          "bytes": 130872
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/creatures/larval_stalker.png",
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_16.jpg",
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Larval Stalker SH1 1999 non hostile ; contour sombre translucide complet sans visage ni arme. Correction imagegen retirant la texture murale accidentelle de la première sortie ; densité alpha et proportions de l’ombre restent non mesurées. Pose passive, rôle moteur inchangé. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          460,
+          219,
+          842,
+          1055
+        ],
+        "alphaBounds": [
+          0,
+          20,
+          1240,
+          1234
+        ],
+        "framingBounds": [
+          453,
+          217,
+          850,
+          1062
+        ],
+        "transparentFraction": 0.90641,
+        "pixelSHA256": "660764a10368d72f2445320897df2434834b8f6b41063a3b2de05b366674cd32",
+        "sourcePath": "/workspace/generated_images/exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png",
+        "assetPath": "assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+        "sha256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
+        "bytes": 302136,
+        "margins": [
+          0.36124,
+          0.17305,
+          0.32217,
+          0.15311
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh1_stalker_008",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+      "sha256": "4cf565113e5e9ada56cec266db9f5fdf2e4002f7b3ec4d25d4a4db4a389cfa66",
+      "generatedFile": "/workspace/generated_images/exec-088dd928-13ea-4303-b4bb-1839b91046a2.png",
+      "generationRecord": {
+        "id": "sh1_stalker_008",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-grey_child.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_01.jpg"
+        ],
+        "prompt": "Stalker, the armed shadow apparition from the Nowhere level of ORIGINAL Silent Hill 1999 PS1. The native enemy guide explicitly describes it as the apparition form of the Grey Child, a shadowy figure very hard to see while carrying a knife. Use the supplied ORIGINAL Grey Child model views ONLY as its underlying canonical body reference, and independently render this Stalker as the same complete small nonhuman elongated-head hunched silhouette in neutral dark grey-black translucent apparition material. Exactly two arms, two bent legs with both feet, and one complete narrow knife in its original right hand. Indistinct original facial slits, no human anatomical detail added, no new clothing, glowing eyes or invented features. Preserve its hunched naturally ready stance. It is NOT the harmless thin Larval Stalker and not a Grey Child with ordinary opaque olive texture. This is a candidate variant reconstruction from the native written observation, its exact scene view was not recovered.\nSingle isolated whole original subject on TRUE transparent RGBA square, small centered composition, all original extremities and weapon tips completely visible with at least 20 percent empty transparent margin all sides. Natural slight side three-quarter pose facing RIGHT suitable as a still 2D fighter reference. Native original game model materials with even readable light. No floor, room, cast shadow, UI, text, extra person, duplicate, added wound or extra violence. Still image candidate, no animation or certified 1:1 claim.",
+        "path": "/workspace/generated_images/exec-088dd928-13ea-4303-b4bb-1839b91046a2.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-088dd928-13ea-4303-b4bb-1839b91046a2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-grey_child.png",
+          "sha256": "8a0e64cae08358de221f69f60fa1fc60dd77b4b02000713c04db053cc41d5953",
+          "bytes": 75143
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_01.jpg",
+          "sha256": "ba05275c5b450b0d0488a2966196a0e050f4a4d586e233a31c837f26cca0edbe",
+          "bytes": 115128
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "https://www.silenthillmemories.net/sh1/walkthrough_15_nowhere_en.htm",
+        "https://www.silenthillmemories.net/sh1/creatures/grey_child.png",
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_01.jpg"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Stalker armé de Nowhere SH1 1999, apparence de Grey Child fantomatique explicitement attestée par les deux textes natifs. Nouvelle génération indépendante depuis les vues natives du corps Grey Child, pas depuis nos PNG. Variante reconstruite depuis description, vue exacte non relevée ; opacité, texture spectrale et orientation ne sont pas des relevés originaux. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": true,
+      "nativeQuote": "The adult form of the Larval Stalker, and the apparition form of the Grey Child, appearing as a shadowy figure that's very hard to see while also carrying a knife.",
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          285,
+          78,
+          908,
+          1191
+        ],
+        "alphaBounds": [
+          17,
+          54,
+          1167,
+          1254
+        ],
+        "framingBounds": [
+          280,
+          74,
+          911,
+          1194
+        ],
+        "transparentFraction": 0.82179,
+        "pixelSHA256": "85b07fd886cdb4ffbbefdd16f1eed9e37fa074232e0c2c21c157bef3dbb872f8",
+        "sourcePath": "/workspace/generated_images/exec-088dd928-13ea-4303-b4bb-1839b91046a2.png",
+        "assetPath": "assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+        "sha256": "4cf565113e5e9ada56cec266db9f5fdf2e4002f7b3ec4d25d4a4db4a389cfa66",
+        "bytes": 586822,
+        "margins": [
+          0.22329,
+          0.05901,
+          0.27352,
+          0.04785
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh1_bloodsucker",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "environmental-obstacle",
+      "assetPath": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "sha256": "04acbc6820b32ad83ff5d7f9e2fd10dbeed469d7dcbce379a2b2b26b40f9efe0",
+      "generatedFile": "/workspace/generated_images/exec-c5070434-658e-4c3e-a478-1c1903b85c5b.png",
+      "generationRecord": {
+        "id": "sh1_bloodsucker",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_08.jpg"
+        ],
+        "prompt": "Bloodsucker from ORIGINAL Silent Hill 1999 PS1. Reproduce the complete one clustered creature in this official model reference: exactly three thick mottled brown jointed tube tendrils, each ending in its original circular open mouth rim, curving from the same small black root-like base. Preserve the native angular shapes, lengths, materials and three distinctive curves. Entire three mouth rims and whole base in view. Slight three-quarter side view toward RIGHT. Passive original environmental entity, no humanoid body, legs, blood, victim, projectile, invented hidden anatomy or extra appendages.\nOne isolated single subject whole visible original-body sprite on TRUE transparent RGBA square. Small centered composition occupying central 60 percent, at least 20 percent transparent margin on all sides. Every extremity remains inside. Muted source-faithful game-model materials, clear even lighting. No room, floor, shadow, labels, UI, sheet, extra subject or duplicate. This is a still image candidate, no animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-c5070434-658e-4c3e-a478-1c1903b85c5b.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-c5070434-658e-4c3e-a478-1c1903b85c5b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh1_art_cre_08.jpg",
+          "sha256": "fc7a03abc396cd278770151fa5008d080131cd2f7f5ea9ebf6ba01352a019739",
+          "bytes": 119372
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_08.jpg",
+        "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Bloodsucker SH1 1999 : les trois tubes et leurs bouches, courbures et base visibles entièrement. Extérieur de la créature environnementale seulement, aucun corps caché ou pouvoir ajouté ; pose de référence passive, rôle inchangé. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          74,
+          209,
+          1213,
+          1081
+        ],
+        "alphaBounds": [
+          23,
+          21,
+          1240,
+          1210
+        ],
+        "framingBounds": [
+          67,
+          207,
+          1216,
+          1086
+        ],
+        "transparentFraction": 0.83538,
+        "pixelSHA256": "d9c433988178d2d06eefdd1fae2208bb50872be878610e26ce3e8e676fe20a94",
+        "sourcePath": "/workspace/generated_images/exec-c5070434-658e-4c3e-a478-1c1903b85c5b.png",
+        "assetPath": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+        "sha256": "04acbc6820b32ad83ff5d7f9e2fd10dbeed469d7dcbce379a2b2b26b40f9efe0",
+        "bytes": 556729,
+        "margins": [
+          0.05343,
+          0.16507,
+          0.0303,
+          0.13397
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh2_mandarin_026",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "stationary-boss",
+      "assetPath": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+      "sha256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
+      "generatedFile": "/workspace/generated_images/exec-6581fdfe-c060-4083-9538-7e4806b59c34.png",
+      "generationRecord": {
+        "id": "sh2_mandarin_026",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_10_mandarin.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-mandarin.png"
+        ],
+        "prompt": "Mandarin from ORIGINAL Silent Hill2 2001 PS2/PC. Match only these two complete original-model views: one HEADLESS rusty-brown central body/tunic-like surface, two extremely thick raised arms ending in the original broad circular sucker-mouth palms, and two thin dark dangling legs/feet. All two mouth rims, both arms, full torso and both tapered foot tips visible. Natural suspended ready pose beneath an implied grate, slightly turned RIGHT for a2D fighter. No new human head, weapon, hanging cage, chains, metal bracing, grid, room or remake ground-running anatomy; the original hanging form only. Preserve native material and anatomy without added gore.\nOne isolated single-subject whole-body sprite on a TRUE transparent RGBA square canvas. Keep the entire subject SMALL and CENTERED inside the middle60 percent of width and height, with at least20 percent empty transparent margin on every side. Every visible original extremity and weapon tip must remain inside. Source-faithful game model materials, muted even readable light. No room, floor, cast shadow, text, labels, UI, sheet or duplicates. Authored still candidate only; no original animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-6581fdfe-c060-4083-9538-7e4806b59c34.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-6581fdfe-c060-4083-9538-7e4806b59c34.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_10_mandarin.png",
+          "sha256": "474656dbefd3112f810c2591eb6de13109d6db7f5e8fa93ed24b4fb735d2aa26",
+          "bytes": 227940
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-mandarin.png",
+          "sha256": "35ff53e4537e6c5a2f029ebeeede342efd596d961258091fe67c8dfefd1150d0",
+          "bytes": 98549
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_10_mandarin.png",
+        "https://www.silenthillmemories.net/sh2/creatures/mandarin.png",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Mandarin SH2 original 2001 suspendu : deux bras à terminaisons circulaires, corps sans tête et deux extrémités basses intégralement cadrés. Le support est implicite pour le sprite ; pas une forme debout sur le sol. Suspente, taille et orientation latérale exacte non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          361,
+          236,
+          945,
+          1028
+        ],
+        "alphaBounds": [
+          49,
+          53,
+          1240,
+          1214
+        ],
+        "framingBounds": [
+          353,
+          231,
+          949,
+          1031
+        ],
+        "transparentFraction": 0.90106,
+        "pixelSHA256": "9859775d0f4872b9fc048e9302d0a218edbe4994ce599615d30a24b2f658fa3e",
+        "sourcePath": "/workspace/generated_images/exec-6581fdfe-c060-4083-9538-7e4806b59c34.png",
+        "assetPath": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+        "sha256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
+        "bytes": 454043,
+        "margins": [
+          0.2815,
+          0.18421,
+          0.24322,
+          0.17783
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh2_abstract_daddy_028",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+      "sha256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
+      "generatedFile": "/workspace/generated_images/exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png",
+      "generationRecord": {
+        "id": "sh2_abstract_daddy_028",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_07_abstract_daddy.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-abstract_daddy.png"
+        ],
+        "prompt": "Abstract Daddy creature from ORIGINAL Silent Hill 2 2001 PS2/PC. Follow the exact complete original-model silhouette from both references: rectangular dark rigid frame with its original closed folded organic-looking mottled surface forming rounded bulges above, and short thick original lower limbs below. Show the complete four corners of the frame and all visible lower extremities, natural low moving-ready stance turned three-quarter RIGHT. Keep the original exterior as a single fictional creature; no exposed human figures, no scene or additional subject, no added injuries, no remake design.\nOne isolated single subject whole visible original-body sprite on TRUE transparent RGBA square. Small centered composition occupying central 60 percent, at least 20 percent transparent margin on all sides. Every extremity remains inside. Muted source-faithful game-model materials, clear even lighting. No room, floor, shadow, labels, UI, sheet, extra subject or duplicate. This is a still image candidate, no animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_07_abstract_daddy.jpg",
+          "sha256": "a98ee9d035531713bcf5b87b8b9c5a9bbdc953d2f7fa94ca21602c1b0c124e7d",
+          "bytes": 563525
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/creatures-abstract_daddy.png",
+          "sha256": "35cdf07d873f0046292d28cf61aaf213060e0b6c9e1da5e2de99e3804abaaff6",
+          "bytes": 73639
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_07_abstract_daddy.jpg",
+        "https://www.silenthillmemories.net/sh2/creatures/abstract_daddy.png"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Abstract Daddy SH2 original 2001 : silhouette rectangulaire du cadre, surface organique fermée et quatre extrémités inférieures visibles entièrement. Nouvelle pose recomposée depuis les modèles, géométrie exacte et matériaux non certifiés ; aucun autre sujet ou modèle remake. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          114,
+          325,
+          1156,
+          1068
+        ],
+        "alphaBounds": [
+          0,
+          23,
+          1242,
+          1214
+        ],
+        "framingBounds": [
+          112,
+          321,
+          1158,
+          1077
+        ],
+        "transparentFraction": 0.74747,
+        "pixelSHA256": "26345aa04bd48b44cecb09f7841391ec30306bc7e62a589abda6d448d5150808",
+        "sourcePath": "/workspace/generated_images/exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png",
+        "assetPath": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+        "sha256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
+        "bytes": 813733,
+        "margins": [
+          0.08931,
+          0.25598,
+          0.07656,
+          0.14115
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh2_twin_pyramid_heads_031",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "multi-body",
+      "assetPath": "assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
+      "sha256": "849712862c160a1f4b3fbbb7fe34fca6186ac1d8b93ab824fcd809cdf5bac36d",
+      "generatedFile": "/workspace/generated_images/exec-a1c81d33-2a43-4adc-a146-24e37ddb5ebd.png",
+      "generationRecord": {
+        "id": "sh2_twin_pyramid_heads_031",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_5a_pyramid_head_duo.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/twins-detail.jpg",
+          "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-red_pyramid_thing.png"
+        ],
+        "prompt": "Twin Pyramid Heads encounter from ORIGINAL Silent Hill 2 2001, exactly the TWO canonical Pyramid Head creatures as ONE duo roster profile. The first two reference screenshots establish their original pointed rusty helmets, pale sleeveless stained long smocks, bare arms, dark boots and TWO long narrow spears. The third reference is ONLY the original single creature's body/material reference, do NOT copy its large knife or lifted-leg pose. Compose both whole figures side by side in an original calm ready stance, turned three-quarter RIGHT, each holding its own complete thin spear in a different natural angle, all four boots and both helmet apexes visible, with space between bodies. Original pointed helmets, NOT film helmets. Only these two encounter creatures, no woman, cage, victim, violence, attack, blood added or knife.\nEntire visible subjects and both complete weapon tips inside the central 60 percent of TRUE transparent RGBA square, at least 20 percent margin every side. Native source model aesthetic and muted even light. No room, floor, shadow, lettering, UI, extra unrelated person or duplicate. A still candidate only; no animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-a1c81d33-2a43-4adc-a146-24e37ddb5ebd.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-a1c81d33-2a43-4adc-a146-24e37ddb5ebd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_5a_pyramid_head_duo.jpg",
+          "sha256": "843b30572e0047481f658466fa5c30c3e26f07e7eb690c3feb4f7f90b71b50ff",
+          "bytes": 64176
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/twins-detail.jpg",
+          "sha256": "27e4f5f51309038f6019b541b2d8a4ca8773ff5a8b22eab03cbfa599e1b494ab",
+          "bytes": 57518
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch9-art-2026-10-26/sh2-red_pyramid_thing.png",
+          "sha256": "f88a815eb04d669b4b6780d852ce314c9e3385fd4c7cd8dec3f486199c14b0c8",
+          "bytes": 111747
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_5a_pyramid_head_duo.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/pics/sh2_b05_01.jpg",
+        "https://www.silenthillmemories.net/sh2/creatures/red_pyramid_thing.png",
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Duo Pyramid Heads SH2 original 2001 : deux figures composées indépendamment en une image de dossier de rencontre, quatre bottes, deux casques et deux lances entières. Le gros plan natif supplémentaire précise les lances ; une vue du modèle de base renseigne la matière. Pose duo, bottes et pointes recomposées, pas une capture entière originale ni deux anciens PNG dupliqués. Exception à sujet simple : le duo est l’identité collective du profil. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "canonical-encounter-duo",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          64,
+          61,
+          1226,
+          1150
+        ],
+        "alphaBounds": [
+          19,
+          9,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          61,
+          58,
+          1230,
+          1158
+        ],
+        "transparentFraction": 0.76372,
+        "pixelSHA256": "dc1f871199b8dec0cad469a889dd36c2012cb8b867ff0813a8977a7251ce0465",
+        "sourcePath": "/workspace/generated_images/exec-a1c81d33-2a43-4adc-a146-24e37ddb5ebd.png",
+        "assetPath": "assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
+        "sha256": "849712862c160a1f4b3fbbb7fe34fca6186ac1d8b93ab824fcd809cdf5bac36d",
+        "bytes": 1201361,
+        "margins": [
+          0.04864,
+          0.04625,
+          0.01914,
+          0.07656
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh2_maria_final_manifestation_033",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
+      "sha256": "64ae6430cae704a68014cdc55096030799fca5f4ada003abe836256a0423bf88",
+      "generatedFile": "/workspace/generated_images/exec-e15b5918-20e4-4e85-99fd-6ac7ae99a8b8.png",
+      "generationRecord": {
+        "id": "sh2_maria_final_manifestation_033",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_12_mary.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_6a_mary_maria.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_6c_mary_maria.jpg"
+        ],
+        "prompt": "Maria Final Manifestation, final boss from ORIGINAL Silent Hill 2 2001, the non-Maria-ending encounter. Reproduce the ORIGINAL suspended inverted female apparition in a narrow rectangular rusty dark bed-frame cage from reference. Full frame including all thin projecting original rods/spikes in view. Inverted original adult head low within frame, complete original full-length faded closed hospital garment, both arms extending sideways with both hands visible. Natural suspended idle pose three-quarter turned RIGHT. Faithful original model textures and proportions. Entire visible subject including top and bottom cage tips. No remake mechanical spider legs or additional victims, no new injury, no added blood or exposed anatomy, no attack scene.\nWhole original visible body and all structural extremities fully visible within central 60 percent of transparent RGBA square canvas. At least 20 percent empty transparent margin every side. One isolated subject only, no scenery, ground, shadow, UI, label or duplicate. Muted native game model materials and even readable light. Still image candidate, no animation or certified fidelity.",
+        "path": "/workspace/generated_images/exec-e15b5918-20e4-4e85-99fd-6ac7ae99a8b8.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-e15b5918-20e4-4e85-99fd-6ac7ae99a8b8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh2_art_monster_12_mary.png",
+          "sha256": "c2ecf71e995382ef609fc17e20f14c0d6a753015c5d513b0afa5b0767a91f9e2",
+          "bytes": 309168
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_6a_mary_maria.jpg",
+          "sha256": "b97a4d24a3f2ab3e107d5150a5b17dd7cf76ad5c75f4d6c421c8f81f41d271b9",
+          "bytes": 48882
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/walkthrough-sh2_w13_boss_6c_mary_maria.jpg",
+          "sha256": "1b706f554407b3ef182063fe32fa62b89fb280d058489c4bc4808fcb3de4cd45",
+          "bytes": 61194
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_12_mary.png",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_6a_mary_maria.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_boss_6c_mary_maria.jpg",
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Maria manifestation finale SH2 original 2001, branche hors fin Maria ; cadre suspendu, barres, pointes, deux mains et silhouette inversée entièrement inclus. Une seule pose fixe recomposée ; vêtements, géométrie des pointes et identité de fin demandent comparaison par branche. Générée avant le refus ultérieur de Mary, aucune nouvelle tentative apparentée après ce refus. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          161,
+          36,
+          1114,
+          1195
+        ],
+        "alphaBounds": [
+          21,
+          17,
+          1230,
+          1254
+        ],
+        "framingBounds": [
+          158,
+          33,
+          1117,
+          1204
+        ],
+        "transparentFraction": 0.81453,
+        "pixelSHA256": "96627db4a6ec6c7c5d6ee9ca272d233500f4bd3015b803b07bb8c9f5f75fa281",
+        "sourcePath": "/workspace/generated_images/exec-e15b5918-20e4-4e85-99fd-6ac7ae99a8b8.png",
+        "assetPath": "assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
+        "sha256": "64ae6430cae704a68014cdc55096030799fca5f4ada003abe836256a0423bf88",
+        "bytes": 797620,
+        "margins": [
+          0.126,
+          0.02632,
+          0.10925,
+          0.03987
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh3_closer_church_variant",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
+      "sha256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
+      "generatedFile": "/workspace/generated_images/exec-3409d1b6-c8c1-489e-b45b-413687a50744.png",
+      "generationRecord": {
+        "id": "sh3_closer_church_variant",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh3-closer.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_01_closer.jpg",
+          "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh3_closer_dvd_model.jpg"
+        ],
+        "prompt": "Church Closer variant from ORIGINAL Silent Hill 3 2003. The native enemy guide states: Closers in the endgame Church take on a transformative greenish appearance while becoming stronger and faster. Independently render the SAME complete original Closer anatomy from these native model views, with its attested muted greenish cast rather than the base pale tan. Preserve the very tall hunched narrow torso, small original circular mouth head, extremely long padded arms that widen hugely toward their rounded ends, original straps and garment, and two original lower legs and foot tips. Natural standing ready stance with both large arm ends fully visible, no knife extended during this idle. Whole body and both feet. No additional weapon, spikes, armor, new monster anatomy, neon or glow. The exact Church material/colour view is not recovered; this is explicitly a candidate variant reconstructed from written observation, not a source-verified palette.\nSingle isolated whole original subject on TRUE transparent RGBA square, small centered composition, all original extremities and weapon tips completely visible with at least 20 percent empty transparent margin all sides. Natural slight side three-quarter pose facing RIGHT suitable as a still 2D fighter reference. Native original game model materials with even readable light. No floor, room, cast shadow, UI, text, extra person, duplicate, added wound or extra violence. Still image candidate, no animation or certified 1:1 claim.",
+        "path": "/workspace/generated_images/exec-3409d1b6-c8c1-489e-b45b-413687a50744.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-3409d1b6-c8c1-489e-b45b-413687a50744.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh3-closer.png",
+          "sha256": "28230c0d16d008336ff2e7565a139acb981e4cd94420376174bd95e7a4276b58",
+          "bytes": 88267
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_01_closer.jpg",
+          "sha256": "570f9cbc93f5c2dbe96783a85fa3600be21ae64297284126d961215e2267af73",
+          "bytes": 533936
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch5-2026-10-24/sh3_closer_dvd_model.jpg",
+          "sha256": "3ded1ac7a7ec7ad19f9d8d2fe2d4ae7fec957f12932e2ee53f2e2ed7b4a25848",
+          "bytes": 75717
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+        "https://www.silenthillmemories.net/sh3/creatures/closer.png",
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_01_closer.jpg"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Closer Church SH3 2003 : même corps original à deux grands bras rembourrés et deux pieds, teinte verdâtre attestée dans le texte natif ; nouvelle pose générée depuis les modèles de source, aucun PNG du projet copié ou recoloré. Variante reconstruite depuis description, vue exacte non relevée ; palette, proportions et vitesse non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": true,
+      "nativeQuote": "Closers in the endgame's Church take on a transformative, greenish appearance while becoming stronger and faster.",
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          66,
+          94,
+          1216,
+          1128
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1222,
+          1254
+        ],
+        "framingBounds": [
+          62,
+          90,
+          1222,
+          1131
+        ],
+        "transparentFraction": 0.69144,
+        "pixelSHA256": "46b2d715ce16306e671486c65f40f09facb908717c89b82a2832db3371b3c0ad",
+        "sourcePath": "/workspace/generated_images/exec-3409d1b6-c8c1-489e-b45b-413687a50744.png",
+        "assetPath": "assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
+        "sha256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
+        "bytes": 1252750,
+        "margins": [
+          0.04944,
+          0.07177,
+          0.02552,
+          0.09809
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh3_numb_body_medium",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+      "sha256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
+      "generatedFile": "/workspace/generated_images/exec-7d058297-c068-433d-85a0-bc8dd74af71e.png",
+      "generationRecord": {
+        "id": "sh3_numb_body_medium",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh3-numb-body.png",
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_02_numb_body.jpg"
+        ],
+        "prompt": "Numb Body MEDIUM size from ORIGINAL Silent Hill 3 2003. The native enemy guide explicitly says it comes in small, medium and large sizes; this is a candidate of the middle size from the original complete family model reference, with absolute scale and ratio not yet measured. Independently render its complete original armless pale muted purple/grey bulbous forward body and indistinct original dark front eye, original two pointed rear extensions, exactly two slender bent legs and BOTH complete foot tips. Preserve original delicate vein-like material without additional wounds or gore. Natural clumsy standing balance pose on the two legs, three-quarter side facing RIGHT suitable for a 2D fighter. No human arms, fingers, clothing, separate humanoid head, weapon or added anatomy. One isolated whole subject on TRUE transparent RGBA square, SMALL centered in the central 60 percent with at least 20 percent empty margin all sides, every tip inside. Original source model aesthetic, even readable lighting. No room, floor, shadow, text, UI, duplicate or additional subject. Still candidate only, no animation, source scale measurement or certified 1:1 fidelity.",
+        "path": "/workspace/generated_images/exec-7d058297-c068-433d-85a0-bc8dd74af71e.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-7d058297-c068-433d-85a0-bc8dd74af71e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/sh3-numb-body.png",
+          "sha256": "fdc9a17af8343e003b01ed61a59815c225ff287840c717cd0fe803c672220703",
+          "bytes": 64884
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_02_numb_body.jpg",
+          "sha256": "83e5033122a0e314c5b8438dab20f1e24a6a51a942b0214795ea195b7d738166",
+          "bytes": 360371
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+        "https://www.silenthillmemories.net/lost_memories/guide/068-069_en.htm",
+        "https://www.silenthillmemories.net/sh3/creatures/numb_body.png",
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Numb Body Medium SH3 2003 : taille intermédiaire explicitement attestée dans le texte natif « small, medium and large » ; famille à deux jambes, sans bras, pointes arrière et deux pieds complets. Nouvelle pose depuis les vues natives, aucun autre PNG redimensionné. Ratio intermédiaire, hauteur et contacts restent à mesurer ; candidat de variante non calibré. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": true,
+      "nativeQuote": "Makes sounds similar to goats or lambs and comes in sizes small, medium and large.",
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          324,
+          269,
+          928,
+          1038
+        ],
+        "alphaBounds": [
+          31,
+          55,
+          1208,
+          1204
+        ],
+        "framingBounds": [
+          320,
+          265,
+          932,
+          1043
+        ],
+        "transparentFraction": 0.88878,
+        "pixelSHA256": "522222f62030984200e30eb987d7489a57de4c439b74ab225925d8b059b4ba10",
+        "sourcePath": "/workspace/generated_images/exec-7d058297-c068-433d-85a0-bc8dd74af71e.png",
+        "assetPath": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+        "sha256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
+        "bytes": 539598,
+        "margins": [
+          0.25518,
+          0.21132,
+          0.25678,
+          0.16826
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh3_glutton",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "role": "environmental-obstacle",
+      "assetPath": "assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "sha256": "90c14e5d4c7d390beedd4794d7e5b29cc03afed3d3f8f9864665f8da78cf2589",
+      "generatedFile": "/workspace/generated_images/exec-2e7c174c-2fd4-456f-bdc0-556e1949bb6e.png",
+      "generationRecord": {
+        "id": "sh3_glutton",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_10_glutton.jpg"
+        ],
+        "prompt": "Glutton from ORIGINAL Silent Hill 3 2003. Match this whole original model: tall cylindrical rusty cage with complete upper and lower circular rims, vertical rods and spikes, original hanging ribbed dark golden curtain-like strips around its sides, central narrow mottled brown closed body with the two original circular protrusions, and original little extremities inside bottom cage. Preserve every original cage extremity and visible exterior; no hidden limbs invented, no extra person. Static passive environmental reference pose, slight three-quarter view toward RIGHT, not a fighter guard and no weapon.\nWhole original visible body and all structural extremities fully visible within central 60 percent of transparent RGBA square canvas. At least 20 percent empty transparent margin every side. One isolated subject only, no scenery, ground, shadow, UI, label or duplicate. Muted native game model materials and even readable light. Still image candidate, no animation or certified fidelity.",
+        "path": "/workspace/generated_images/exec-2e7c174c-2fd4-456f-bdc0-556e1949bb6e.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-2e7c174c-2fd4-456f-bdc0-556e1949bb6e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-a-2026-11-01/pics-sh3_art_creature_10_glutton.jpg",
+          "sha256": "da88979b4b71ca15d2ac903eac6e47f17717eb4359e60100b58b4afa07489759",
+          "bytes": 134504
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_10_glutton.jpg",
+        "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Glutton SH3 original 2003 : extérieur complet du cylindre, deux anneaux, tiges, rideaux segmentés, protubérances centrales et petits pieds internes. Pose passive de référence seulement ; aucun déplacement ou combat activé. La densité des barreaux et les détails de surface restent à comparer. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          273,
+          86,
+          1002,
+          1166
+        ],
+        "alphaBounds": [
+          0,
+          41,
+          1226,
+          1229
+        ],
+        "framingBounds": [
+          269,
+          80,
+          1011,
+          1176
+        ],
+        "transparentFraction": 0.59174,
+        "pixelSHA256": "0a46a2df98a32ea9a5d864b46fea9a155019186ae89c99aa548e5da6ba12a40c",
+        "sourcePath": "/workspace/generated_images/exec-2e7c174c-2fd4-456f-bdc0-556e1949bb6e.png",
+        "assetPath": "assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+        "sha256": "90c14e5d4c7d390beedd4794d7e5b29cc03afed3d3f8f9864665f8da78cf2589",
+        "bytes": 1572464,
+        "margins": [
+          0.21451,
+          0.0638,
+          0.19378,
+          0.0622
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "sh4_peter_walls_victim_12",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "role": "combatant",
+      "assetPath": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+      "sha256": "216d7213feb9e2e2392d87471b168d41f01a47b44dd5514b9781a35586bc575c",
+      "generatedFile": "/workspace/generated_images/exec-a24137d4-dcd0-4bdd-8539-e0a6a39f9681.png",
+      "generationRecord": {
+        "id": "sh4_peter_walls_victim_12",
+        "refs": [
+          "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/sh4-victim_12.png",
+          "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/sh4-sh4_art_cre_29_victim_12.jpg"
+        ],
+        "prompt": "Peter Walls, Victim 12 apparition from ORIGINAL Silent Hill 4: The Room 2004. He is a 13-year-old boy; keep the original youthful proportions, not an adult. Match these fully clothed original model references: dark knit beanie, dark zipped track jacket with two ochre stripes down each sleeve, mustard-brown loose trousers, dark shoes. Preserve the natural tilted head and floating bent-knee apparition pose, complete head, both hands, both knees and two shoe tips visible, slightly turned to RIGHT. Neutral still reference pose, no combat, victim, action, weapon, fire, new injury or added blood. Retain the ordinary worn clothing and original pale face without exaggerating disturbing detail.\nOne isolated single subject whole visible original-body sprite on TRUE transparent RGBA square. Small centered composition occupying central 60 percent, at least 20 percent transparent margin on all sides. Every extremity remains inside. Muted source-faithful game-model materials, clear even lighting. No room, floor, shadow, labels, UI, sheet, extra subject or duplicate. This is a still image candidate, no animation or 1:1 certification.",
+        "path": "/workspace/generated_images/exec-a24137d4-dcd0-4bdd-8539-e0a6a39f9681.png",
+        "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-a24137d4-dcd0-4bdd-8539-e0a6a39f9681.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "referenceFiles": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/sh4-victim_12.png",
+          "sha256": "1861b1c199c94a93e1a39edf261f8bff6bdffe7572b0f0d68f04ef948b112ab1",
+          "bytes": 83312
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/sh4-sh4_art_cre_29_victim_12.jpg",
+          "sha256": "c4b8ba876eaba8a0e71425e7a77182de8adfb5882deb65b5b45f162295fba0c8",
+          "bytes": 14829
+        }
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_12.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_29_victim_12.jpg",
+        "https://www.silenthillmemories.net/sh4/victim_files_en.htm"
+      ],
+      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Peter Walls Victim 12 SH4 original 2004, âge source 13 ans explicitement conservé dans la requête ; bonnet, veste à deux bandes, pantalon ocre, mains, genoux pliés et deux chaussures complets. Pose flottante naturelle. Nouvelle génération correctement identifiée ; l’ancienne sortie ayant été appelée adulte demeure exclue. Proportions juvéniles et texture du visage non certifiées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "singleSubjectReviewed": true,
+      "composition": "single-creature",
+      "variantReconstruction": false,
+      "nativeQuote": null,
+      "framingReview": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          369,
+          160,
+          952,
+          1100
+        ],
+        "alphaBounds": [
+          41,
+          23,
+          1200,
+          1198
+        ],
+        "framingBounds": [
+          367,
+          160,
+          954,
+          1104
+        ],
+        "transparentFraction": 0.84199,
+        "pixelSHA256": "d3e7ab2343a10a5a558668dcbcc8078892c9607dde7a7e01ab1c4a26b588b9e6",
+        "sourcePath": "/workspace/generated_images/exec-a24137d4-dcd0-4bdd-8539-e0a6a39f9681.png",
+        "assetPath": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+        "sha256": "216d7213feb9e2e2392d87471b168d41f01a47b44dd5514b9781a35586bc575c",
+        "bytes": 610744,
+        "margins": [
+          0.29266,
+          0.12759,
+          0.23923,
+          0.11962
+        ],
+        "requested20PercentMarginMet": false,
+        "noReadableSubjectTouchesEdge": true
+      },
+      "originalPixelsCopied": false,
+      "animatedClips": 0,
+      "certifiedOneToOne": false
+    }
+  ],
+  "blocked": [
+    {
+      "fighterId": "sh1_monster_cybil_017",
+      "reason": "Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel ; action artistique ouverte.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_char_05.jpg",
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_char_12.jpg",
+        "https://www.silenthillmemories.net/sh1/characters/cybil_bennet.png"
+      ]
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "reason": "Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_14.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh2_mannequin_022",
+      "reason": "Refus antérieur explicite du Mannequin SH2 ; aucune nouvelle tentative, variante ou corps emprunté.",
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_mannequin_ambusher_023",
+      "reason": "Même sujet Mannequin SH2 que le refus antérieur ; aucune variante Ambusher utilisée pour reprendre la génération refusée.",
+      "evidence": [
+        "CL_SH2R_MONSTERS",
+        "CL_SH2R_DEV",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_flesh_lip_027",
+      "reason": "Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_11_flesh_lips.png",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w05_boss_2b_flesh_lips.jpg",
+        "https://www.silenthillmemories.net/sh2/bosses_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_mary_final_manifestation_034",
+      "reason": "Refus explicite de l’outil image pour Mary Final Manifestation SH2, catégorie output violence, requête aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. Un seul appel ; aucune nouvelle requête ou autre identité utilisée après le refus.",
+      "evidence": [
+        "CL_SH2_BOSSES",
+        "CL_SH2_CREATURES",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_prisoner_035",
+      "reason": "Prisoner SH2 est une présence invisible du niveau prison ; aucune morphologie visible canonique à reproduire intégralement. Les sources textuelles ne justifient pas d’inventer un corps de prisonnier ni d’emprunter une autre œuvre.",
+      "evidence": [
+        "CL_PRISONER",
+        "CL_SH2_CREATURES",
+        "EXT_SH2_FAQ_20261024",
+        "EXT_SH2_ODDITIES_20261024",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_spider_mannequin",
+      "reason": "Même famille de sujet Mannequin SH2 précédemment refusée ; variante Spider non utilisée comme nouvel essai ni substitution.",
+      "evidence": [
+        "CL_SH2R_MONSTERS",
+        "CL_SH2R_DEV",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh2_mandarin_floor_form",
+      "reason": "Floor Form est une adaptation non canonique déclarée du projet, rôle et apparence propres non établis. La source du Mandarin original interdit sa présence au-dessus du sol. Aucun corps de surface inventé ni reprise du PNG suspendu.",
+      "evidence": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES",
+        "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh3_nurse_pipe_043",
+      "reason": "Refus antérieur explicite de génération de Nurse Pipe SH3 ; aucun nouvel appel ni infirmière apparentée utilisée comme contournement.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_38.jpg",
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_07_nurse.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh3_split_worm_046",
+      "reason": "Split Worm SH3 : modèle et vues de combat montrent la tête/cou exposés avec le reste caché par le tunnel ; croquis supplémentaire également tronqué dans le mur. Aucun contour complet de l’animal attesté ; aucune queue, jambes ou anatomie cachée inventée.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_11_split_worm.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_split_worm.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh3_god_050",
+      "reason": "God SH3 : le modèle plongeant coupe les extrémités des bras et le bas reste incomplet ; les vues natives disponibles ne donnent pas un extérieur complet lisible. Aucun membre caché, jambe fictive ou reprise de l’Incubus SH1 refusé.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_15_god.png",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_boss_god.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh3_valtiel_051",
+      "reason": "Refus antérieur explicite de génération de Valtiel SH3 ; aucune nouvelle tentative ou substitution.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_09_valtiel.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh3_sewer_creature_052",
+      "reason": "Créature des égouts SH3 : présence sous l’eau ou hors champ, appendice ponctuellement montré ; aucun modèle complet de corps source exploitable. Une anatomie entière, longueur ou nombre de membres ne peut être déduit de cette présence.",
+      "evidence": [
+        "CL_SH3_05_UNDERPASS",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh4_ghost_victim_066",
+      "reason": "Dossier collectif des anciens Ghosts SH4, sans individu canonique autonome supplémentaire. Les corps disponibles appartiennent à Jimmy, Steve, Eric, Peter, Sharon ou Toby ; aucune copie ou fusion de ces victimes pour inventer un septième corps.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+        "https://www.silenthillmemories.net/sh4/victim_files_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh4_toby_archbolt_victim_14",
+      "reason": "Refus antérieur explicite de Toby Archbolt Victim 14 SH4, catégorie violence, requête cbdfef7f-6a5c-405e-a58f-a5a455b2e62f. Aucun nouvel appel, variante ou corps de substitution.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/monsters/victim_14.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_31_victim_14.jpg"
+      ]
+    },
+    {
+      "fighterId": "sh4_joseph_schreiber_victim_15",
+      "reason": "Joseph Victim 15 SH4 est l’apparition non hostile d’un buste inversé au plafond de Room 302 of the Past. Son corps complet n’est pas montré dans les sources consultées ; aucun bassin ou jambes inventés et aucun kit Ghost offensif hérité.",
+      "evidence": [
+        "CL_JOSEPH",
+        "CL_SH4_VICTIMS",
+        "EXT_SH4_SCRIPT_20261023",
+        "CL_SH4_12_ROOM_302_OF_THE_PAST",
+        "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+      ]
+    },
+    {
+      "fighterId": "sh4_jasper_gein_victim_17",
+      "reason": "Refus antérieur explicite de génération de Jasper Gein Victim 17 SH4 ; aucune nouvelle tentative, autre arme ou variante pour contourner ce refus.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_33_victim_17.jpg",
+        "https://www.silenthillmemories.net/sh4/monsters/victim_17.png"
+      ]
+    }
+  ],
+  "excludedSuccessfulCandidates": [
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "generatedFile": "/workspace/generated_images/exec-df4b906f-c984-4f02-b5cc-198eb9e2499d.png",
+      "reason": "Larval Stalker first output retained a green wall texture inside its transparent silhouette; replaced by one imagegen quality correction before final selection."
+    }
+  ],
+  "policyNotes": [
+    "All PNG assets copied byte-for-byte from imagegen outputs; no pixel edits, recolors of project PNGs or reused bodies from another profile.",
+    "Twin Pyramid Heads is one canonical roster encounter identity consisting of exactly two independently generated complete figures.",
+    "Stalker and Church Closer are reconstructed from exact native body model references plus explicit native written observations; exact variant scene views were not recovered.",
+    "Numb Body medium size is explicitly named small, medium and large in the native guide; no source height or ratio was measured.",
+    "Environmental and noncombatant profiles retain their existing runtime roles; no combat behavior is activated by these stills.",
+    "Maria successful output was obtained before the later Mary refusal. No related generation was attempted after that refusal."
+  ]
+}

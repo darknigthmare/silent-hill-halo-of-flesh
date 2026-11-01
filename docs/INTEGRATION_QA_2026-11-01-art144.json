@@ -1,0 +1,417 @@
+{
+  "schema": 1,
+  "campaign": "art144",
+  "date": "2026-11-01",
+  "verifiedAt": "2026-11-01T02:54:53.874250+00:00",
+  "baselineCommit": "221dcc8cac927291bb7e0b89139a504dabb857db",
+  "version": "0.9.6",
+  "node": {
+    "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/node-tests-final.log",
+    "sha256": "2240b203178b010323ed52ac70fe113fab9a0a39b1c6295caa4b9f3bf58dfd74",
+    "passed": 1214,
+    "failed": 0,
+    "command": "HALO_PYTHON=/workspace/.cloud-env/halo/venv/bin/python node --test tests/*.test.mjs",
+    "generationChecks": "npm test completed production-reference, sprite, generated documentation and build --verify-only checks. The obsolete Glutton fixture was corrected, then all1214 Node tests and the final build --verify were rerun successfully."
+  },
+  "python": {
+    "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/python-tests.log",
+    "sha256": "22e8a0cc43e7748e9cb14d1eb298beffdb0ad2c67f73b3b6caac3946c0835c20",
+    "passed": 101,
+    "failed": 0,
+    "command": "/workspace/.cloud-env/halo/venv/bin/python -m unittest discover -s tests -p test_*.py -v"
+  },
+  "browserReports": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-v090/http-report.json",
+      "sha256": "5065376d689e3c9528f63e6d657884bd425802dbded605d31fa3b5cd411cd3aa",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 15,
+      "captures": 3,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-sprites/report.json",
+      "sha256": "ac3daa1a29315017620627d461ced8e21b11abcc6d837f505350553cb10b9430",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 169,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-art-v092/report.json",
+      "sha256": "c7dd32b1292cda277ac87f31ef9dcab3f104c8ce5212d4712ee8ccd96546b733",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 22,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-clips-v093/report.json",
+      "sha256": "affda8031843ba96991114f65dc93c8f971dc3c40a3c16e177ec21a8180261ac",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 24,
+      "captures": 4,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-recovery-v094/report.json",
+      "sha256": "50b8af189a82ac0d607e4bcf81214f5db3ce037e1b161cccf5ea70957bc6ad93",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 25,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-boundaries-v095/report.json",
+      "sha256": "ed72c3a4ca66bb44f8598510e9f50ae242895ffa9d354c5e5a8eefd7597b8b98",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 43,
+      "captures": 7,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-presentations/report.json",
+      "sha256": "ab6e23a1475c93c2dda9d630fbb70c468ddbb148808cb11a2bfc7e4a1c840e9c",
+      "scope": "Final dist regression suite",
+      "build": "dist (server configured by suite)",
+      "checks": 57,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-reference-integration/report.json",
+      "sha256": "1c4738170c077c3cbdc3b91ecf58eff77ccfe048e399269be05de9d8fbc53ab2",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 42,
+      "captures": 6,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-chronicles/report.json",
+      "sha256": "59b2829cb93f0dfaa0ce06252848017f93b381d4385b865ff16fc336d7ef46b8",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 27,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "not recorded"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-stage-bitmaps/report.json",
+      "sha256": "2cca65fb86c7a5a0ac7787c515abfb1ba16fd262a64302c23f762c8c0069603c",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 17,
+      "captures": 1,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-alessa-weapons/report.json",
+      "sha256": "8e5cab31623ce76c112548bd3717540c85b5624d697467065c2bd6edee256600",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 20,
+      "captures": 2,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-source-expansion/report.json",
+      "sha256": "e5bd985e678664caec7d934bfb1fc9e1ae1504081d8d290bdbe6c12667fd1057",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 430,
+      "captures": 96,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-cinematic-expansion/report.json",
+      "sha256": "037a96ee9df774694665aea20d7f8d3939925ee764c71bb96a73f915f9d872e8",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 908,
+      "captures": 186,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/legacy-dist/http-art-batch4/report.json",
+      "sha256": "30143f605d13be9cede2a4520b3512f75f222b697e2b64f8e9bae61be552563f",
+      "scope": "Final dist regression suite",
+      "build": "dist",
+      "checks": 1549,
+      "captures": 281,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/art144-dist/report.json",
+      "sha256": "fdf391ad8f34721f756ece9c33d710cc5bd2e5d4e671113cd9b6d6c529df3b95",
+      "scope": "All52 new images,92 missing dossiers,13 noncombat roles and40 ordinary local duels",
+      "build": "dist",
+      "checks": 1049,
+      "captures": 145,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/art144-source/report.json",
+      "sha256": "1069f18c5fc22931d26c4baaf37e1bd8ed47010d1f6ccccda6a42017bb65be2b",
+      "scope": "All52 new images,92 missing dossiers,13 noncombat roles and40 ordinary local duels",
+      "build": "source",
+      "checks": 1049,
+      "captures": 145,
+      "javascriptErrors": 0,
+      "passed": true,
+      "browser": "154.0.8037.57"
+    }
+  ],
+  "browser": {
+    "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/browser-dist.log",
+    "sha256": "90ae3b19597d00ca684f0b9a5dec261d03c5a54706a32d77a1079d8bd092659b",
+    "command": "QA_BROWSER_EXECUTABLE=/usr/bin/chromium HALO_PYTHON=/workspace/.cloud-env/halo/venv/bin/python npm run qa:browser",
+    "distSuites": 15,
+    "additionalSourceRuns": 1,
+    "checks": 5446,
+    "captures": 903,
+    "javascriptErrors": 0,
+    "limits": "Fifteen distinct suites run on final dist; ART144 is additionally run on source. Captures and test cases are verification evidence, never production rows or animation frames."
+  },
+  "build": {
+    "log": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/build-final.log",
+      "sha256": "a7fed52cc098b29ad5b22c9edce9d674181daf6281cfa806f64fe2133d8c7a68"
+    },
+    "files": 257,
+    "sourceFilesCompared": 256,
+    "sourceMismatches": [],
+    "sha256": "3ef0c875cd600ee0fdb59275cb1d3306701223c084b5a51bf0102cec1bdcccf6",
+    "digestFormat": "Sorted relative path UTF8 + NUL + raw SHA256 file digest"
+  },
+  "artwork": {
+    "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-summary.json",
+    "sha256": "646fa13a30ee19cf491078cff9a77c2e8ee87eff7f3ae0d128015a98ca36db5b",
+    "requested": 144,
+    "candidates": 52,
+    "blocked": 92,
+    "pendingAssessment": 0,
+    "integratedProfiles": 138,
+    "activePngFiles": 173,
+    "preservedProfiles": 86,
+    "preservedPngFiles": 121,
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": 0,
+    "combatEnabledCandidates": 39,
+    "referenceOnlyCandidates": 13,
+    "intake": {
+      "path": "/workspace/silent-hill-halo-of-flesh/docs/production/art144-intake.json",
+      "sha256": "962b05b8ce82b5459c1b83fbedaf46f51e6a35203b9d9f3e9aee00abd895c0b1"
+    },
+    "groups": [
+      {
+        "group": "a",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-a.json",
+          "sha256": "c4768d28c9cab0cdee1f44d736dec3bb8eafc2e13ede574d2a577143d8ce86c2"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art144-a.json",
+          "sha256": "19d508c3ee72b58f82982455bce4089d918fc1737fb62290823514465b37246a"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art144-a.json",
+          "sha256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+        }
+      },
+      {
+        "group": "b",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-b.json",
+          "sha256": "a29d2fc051da954f673e0f8544fcbd66e66dd3eb243e5c91da75ffbe8fcf47a6"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art144-b.json",
+          "sha256": "8b3cae142cb87c9944a01f6c527447f69138237ab3b9b0c179c7d3b794780b26"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art144-b.json",
+          "sha256": "d6a54fb1994730863eda2f4e848452cc2222346283892c62b5c7057161b6f424"
+        }
+      },
+      {
+        "group": "c",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-c.json",
+          "sha256": "16f116ef087b58c55a7ffc7f95e24cf375e2ce97326085346ac792face9f4f0f"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art144-c.json",
+          "sha256": "f5b29cf87036a80e6cab6e8c8ccf52da6b31cec73f8f5264198e3142a1b5e3cc"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art144-c.json",
+          "sha256": "dbfdfced01b5afc77366ddd4f596df2c75f357cb2c20f86de4d0236193f01090"
+        }
+      },
+      {
+        "group": "d",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-d.json",
+          "sha256": "b07fa7b3b2e3a20ab04879f282f9ff0030f65b5b765f679f896f6c06fa4b38a6"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art144-d.json",
+          "sha256": "ee328ae2b516bd12f752a17351911728b5d154a3650c5d54ee6bba1e0d2914dd"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art144-d.json",
+          "sha256": "6ab389d5291fbbd32a553c7351d7c91a2ad83d9ece3e5f6d0520f70d4afc7a39"
+        }
+      },
+      {
+        "group": "e",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art144-e.json",
+          "sha256": "8db2da3cb7e3c6751ab989eb5dd20ff95cb080af6d100cb26dc703e0ce41d351"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art144-e.json",
+          "sha256": "b19012c4c2bf17268941aa8243bbd28c4c4f4c4978c5db6c8f6ef6b9c6d55b80"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art144-e.json",
+          "sha256": "59ac30245433315222220c62d544908d10faae87d6c1555e2cf6b1572b7f9212"
+        }
+      }
+    ],
+    "newCapturedToolRefusals": [
+      {
+        "fighterId": "sh2_mary_final_manifestation_034",
+        "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30",
+        "retried": false
+      },
+      {
+        "fighterId": "homecoming_curtis_ackers",
+        "requestId": "a55dd5fe-3bd4-44ce-97db-22edc1bb8e74",
+        "retried": false
+      },
+      {
+        "fighterId": "bom_mother_135",
+        "requestId": "a78228ad-d44c-40b7-8a8e-214bf0b7508e",
+        "retried": false
+      },
+      {
+        "fighterId": "shf_ayakakashi_152",
+        "requestId": "8ab20bbe-af0e-44c3-95c3-34b9bbb4d019",
+        "retried": false
+      },
+      {
+        "fighterId": "shf_corruptor_155",
+        "requestId": "dbf7e92d-aba3-4115-b752-0234e8660483",
+        "retried": false
+      },
+      {
+        "fighterId": "shf_hatcher_156",
+        "requestId": "5cb09bcb-9e8b-40be-b3c2-391e62900d5e",
+        "retried": false
+      },
+      {
+        "fighterId": "shf_hinako_s_mother_165",
+        "requestId": "13cb56a1-c05c-45b6-a193-987153da6fca",
+        "retried": false
+      }
+    ],
+    "refusalLimits": "Seven captured responses in this campaign; prior refusals, ambiguous historical grouped refusal and related unattempted variants remain separate documentary blockers. Maria candidate predates the later Mary refusal; no related request was made after it."
+  },
+  "workbook": {
+    "file": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "sha256": "f86c5d271966f015c131f8eeaadaa2661af636c8efb850ba992d7a6302273ffe",
+    "bytes": 1778605,
+    "planSha256": "937ab71a5b62b01c34f81f1595510c359ee4be627be4eae176b43302b391bd20",
+    "mappedFields": 249415,
+    "independentChecks": 329,
+    "changedCells": 494,
+    "expandedRows": 287,
+    "recalculatedFormulas": 80,
+    "actualBlankOriginalTimingCells": 18400,
+    "sources": 277,
+    "observations": 435,
+    "roleDecisions": 33,
+    "openActions": 840,
+    "openP0": 93,
+    "review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/final-workbook-consistency-review.json",
+      "sha256": "2e0c9af0372a4a283f3f21de734318769c804953772ef4905b54ea36ff73bf6c"
+    }
+  },
+  "fullBodyFraming": {
+    "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/independent-fullbody-review.json",
+    "sha256": "8e31289eff705f7a45178c9a852131de5e571b8b862da91d235c1553d4f63cd4",
+    "profiles": 138,
+    "profilePairStateCases": 685584,
+    "frameEnvelopesInspected": 1718928,
+    "maximumScreenShake": {
+      "x": 9,
+      "y": 4.5
+    },
+    "physicalMovesOrCollisionChanged": false,
+    "scope": "Synthetic numerical screen projection only; connected silhouette, not every detached weak-alpha noise pixel. Not source motion, native anatomy or gameplay evidence."
+  },
+  "visualReview": {
+    "path": "/workspace/shared/halo-of-flesh/validation-art144-2026-11-01/root-visual-review.json",
+    "sha256": "807e33ab0dbafbe4c3d68e093613629103843d636a68ebc36818cb633d8bd10f"
+  },
+  "verification": {
+    "nodeTests": 1214,
+    "pythonTests": 101,
+    "browserChecks": 5446,
+    "browserCaptures": 903
+  },
+  "resolvedFindings": [
+    "Ledger evidence IDs were resolved to their HTTPS URLs while retained as referenceIds; list-form limits were normalized to exact strings before import.",
+    "The old Glutton fixture assumed all its poses were absent; it now permits only a genuinely imported clip to be En cours, keeps other poses À produire and validates no production row. All1214 Node tests then passed."
+  ],
+  "limits": [
+    "All144 profiles are assessed;52 have new images and92 remain missing. Assessment is not completion.",
+    "All new images are reconstructed unverified static idles, not original source pixels, animations or1to1 certification.",
+    "Generation-tool refusals were not retried through variants or relabelled subjects; missing full native views and uncertain identities remain blocked.",
+    "Mirroring changes presentation only. Collective profiles retain their collective bodies; existing PNGs are not cloned to new IDs.",
+    "Exact source proportions, hidden anatomy, pose timings and Kyubi tail-tip count remain unverified; individual provenance documents other limits.",
+    "All277 earlier source objects,435 observations,33 roles and875 parent action identities are preserved. Artwork does not close its parent action or grant noncombatants a duel.",
+    "Workbook checks read OOXML and journals; no native Excel desktop session or GitHub CI run is claimed.",
+    "Browser suites contain their own documented diagnostic and synthetic fixtures. The new ART144 duels use ordinary menu launch and actual inputs with no injected actor state."
+  ],
+  "passed": true
+}
