@@ -1,17 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {validateArtCampaign} from '../scripts/merge-art-campaign.mjs';
-import {ART_CAMPAIGN_BASE} from '../scripts/art-campaign-tracking.mjs';
+import {ART_CAMPAIGN_BASE,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from '../scripts/art-campaign-tracking.mjs';
 
 // A documentary fixture: these blocked rows never enter the production registry.
-function fixture(){
- const baseCommit=ART_CAMPAIGN_BASE,entries=Array.from({length:144},(_,i)=>({fighter:{id:'subject_'+i,source:'sh1'}}));
- const inventory={campaign:'art144',requested:144,baseCommit,entries};
+function fixture(campaign='art144'){
+ const requested=campaign==='art92'?92:144,baseCommit=campaign==='art92'?ART_CONTINUATION_BASE:ART_CAMPAIGN_BASE;
+ const entries=Array.from({length:requested},(_,i)=>({fighter:{id:'subject_'+i,source:'sh1'}}));
+ const inventory={campaign,requested,baseCommit,entries};
  const fragments=[],ledgers=[];
- for(const [i,group] of [...'abcde'].entries()){
-  const assigned=entries.slice(i*30,(i+1)*30);
-  fragments.push({schema:1,campaign:'art144',group,baseCommit,assets:{}});
-  ledgers.push({schema:1,campaign:'art144',group,baseCommit,requestedItems:assigned.length,
+ let offset=0;
+ for(const group of 'abcde'){
+  const size=campaign==='art92'?ART_CONTINUATION_GROUP_SIZES[group]:(group==='e'?24:30);
+  const assigned=entries.slice(offset,offset+size);offset+=size;
+  fragments.push({schema:1,campaign,group,baseCommit,assets:{}});
+  ledgers.push({schema:1,campaign,group,baseCommit,requestedItems:assigned.length,
    items:assigned.map(({fighter:{id}})=>({rowId:id+':pose:idle',collection:'poses',entityId:id,status:'blocked',
     evidence:['https://example.com/edition'],artifacts:[],limits:'Whole source model is not established.',reason:'No complete reference.'}))});
  }
@@ -41,6 +44,17 @@ test('candidate accounts for one exact new profile without claiming animation or
  const f=fixture(),asset=candidate(f),report=check(f);
  assert.equal(report.candidates,1);assert.equal(report.blocked,143);
  assert.deepEqual(Object.keys(report.assets),['subject_0']);assert.equal(report.assets.subject_0,asset);
+});
+test('the92-profile continuation uses its real uneven groups and cannot reuse the previous baseline',()=>{
+ const f=fixture('art92'),report=check(f);
+ assert.equal(report.requested,92);assert.equal(report.blocked,92);
+ assert.deepEqual(report.groups.map(row=>row.requestedItems),[18,21,18,15,20]);
+ f.inventory.baseCommit=ART_CAMPAIGN_BASE;
+ assert.throws(()=>check(f),/baseline commit/);
+});
+test('a later campaign cannot generate a previously refused subject or substitute variant',()=>{
+ const f=fixture('art92');candidate(f);f.inventory.entries[0].generationExcluded=true;
+ assert.throws(()=>check(f),/prior tool refusal/);
 });
 test('missing, duplicated and reassigned source identities cannot satisfy the campaign',()=>{
  for(const mutate of [

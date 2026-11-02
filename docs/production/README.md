@@ -35,6 +35,27 @@ sprites SH2, le premier décor bitmap Midwich, les contraintes de cinq sujets,
 neuf ensembles de mise en scène et onze décisions de rôle. Le nouvel outil
 de relevés vérifie des paquets de capture ; aucun timing original n'est encore livré.
 
+## Reprise ART92 — 2 novembre 2026
+
+Les 92 profils encore sans image ont reçu un nouveau diagnostic : **16 candidats
+statiques intégrés et 76 blocages**. Le registre compte 154 profils illustrés et
+189 PNG actifs ; les 138 profils et 173 PNG de départ sont préservés.
+Treize candidats sont autorisés au combat, trois restent des dossiers hors duel.
+L’image idle fixe ne clôt aucun parent artistique ni aucune cible d’animation.
+
+L’export incrémental depuis `82e5f41` modifie 247 cellules et agrandit 162 lignes.
+Les 217 contrôles indépendants passent sur 249 415 champs. Les 80 formules et
+18 400 cellules de timings originaux vides restent préservées. Les cinq anciens
+ledgers ART144, leur résumé et leur inventaire sont identiques octet par octet ;
+les 144 diagnostics antérieurs restent visibles dans l’Excel. Les 875 actions,
+277 sources, 435 observations et 33 décisions de rôle conservent leur identité.
+Les 840 actions ouvertes comprennent toujours 93 P0.
+
+[Les 92 résultats](ART92_PROFILE_STATUS.md) ·
+[Références et limites](IMAGES_ART92_2026-11-02.md) ·
+[Contrôle d’import](batches/art92-summary.json) ·
+[QA ciblée](../INTEGRATION_QA_2026-11-02-art92.json).
+
 ## Campagne ART144 — 1er novembre 2026
 
 Les 144 profils initialement sans PNG ont tous une disposition individualisée :

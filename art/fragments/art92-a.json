@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "campaign": "art92",
+  "group": "a",
+  "baseCommit": "82e5f413300ca1112d153ee407dd988b70efd313",
+  "assets": {
+    "sh3_split_worm_046": {
+      "fighterId": "sh3_split_worm_046",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-d5c9e8e7-3047-4176-aa44-92d62df4c7fd.png",
+      "sourceSHA256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Une seule image fixe candidate du modèle extérieur exposé de Split Worm SH3 original2003, idle non bouclé. Les deux lobes, dents et cône arrière fermé sont entièrement cadrés ; aucune longue anatomie cachée ou patte inventée. Le rendu source3200×2400 a des bornes non-grises [456,39,2896,2373] et se termine avant le fond gris sur tous les côtés (SHA256 843364cd78f75e2751f248c84bbc318340a1d9b4fa9e7f0e5ee3abc6ebb3f5ca). La capture retail corrobore ce même extérieur sortant du tunnel. Cela documente le modèle exposé entier, pas l’anatomie souterraine supposée. Source orientée gauche conservée ; miroir de présentation uniquement. Rôle et support de tunnel inchangés ; ancrage/échelle sont des réglages de présentation, pas des mesures originales. Une correction imagegen réduit le sujet dans une marge transparente connectée minimale de17.54%. Aucun cycle, timing, fidélité1:1 ou anatomie inaccessible certifié.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+          "bytes": 825350,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            278,
+            346,
+            1032,
+            1022
+          ],
+          "alphaBounds": [
+            57,
+            21,
+            1182,
+            1222
+          ],
+          "framingBounds": [
+            274,
+            344,
+            1034,
+            1029
+          ],
+          "pixelSHA256": "9f70317bf71f66137dd6f9833eb124d7c157539b261369c8b477a823ccb190c1",
+          "transparentFraction": 0.82887,
+          "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+          "facing": -1,
+          "anchor": [
+            0.52233,
+            0.81499
+          ],
+          "bodyHeight": 0.53907,
+          "sourceFile": "exec-d5c9e8e7-3047-4176-aa44-92d62df4c7fd.png",
+          "sourceSHA256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+        "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+        "bytes": 825350,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    }
+  }
+}

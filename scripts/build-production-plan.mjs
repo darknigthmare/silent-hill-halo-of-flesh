@@ -12,7 +12,7 @@ import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
 import {SOURCE_TIMING_SCHEMA,SOURCE_TIMING_BATCH_SCHEMA,SOURCE_TIMING_REVIEW_SCHEMA} from './source-timing.mjs';
 import {sourcePoseSpecification} from './source-pose-specifications.mjs';
-import {applyArtCampaignProgress,ART_CAMPAIGN_GROUP_SIZES} from './art-campaign-tracking.mjs';
+import {applyArtCampaignProgress,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
 
 export const PLAN_SCHEMA = 1;
 export const BASE_COMMIT = 'd11cf4e8c03668aa535631cb2ef60767ee51e75b';
@@ -38,7 +38,13 @@ const campaignDeliveries=(await Promise.all(Object.keys(ART_CAMPAIGN_GROUP_SIZES
     return (ledger.items||[]).map(item=>({...item,workstream:'art',batch:'art144',group}));
   }catch(error){if(error.code==='ENOENT')return [];throw error;}
 }))).flat();
-const recordedDeliveries=[...priorDeliveries,...campaignDeliveries];
+const continuationDeliveries=(await Promise.all(Object.keys(ART_CONTINUATION_GROUP_SIZES).map(async group=>{
+  try{
+    const ledger=JSON.parse(await fs.readFile(path.join(planDir,`batches/art92-${group}.json`),'utf8'));
+    return (ledger.items||[]).map(item=>({...item,workstream:'art',batch:'art92',group}));
+  }catch(error){if(error.code==='ENOENT')return [];throw error;}
+}))).flat();
+const recordedDeliveries=[...priorDeliveries,...campaignDeliveries,...continuationDeliveries];
 const latestDelivery=new Map(recordedDeliveries.map(item=>[`${item.collection}:${item.rowId}`,item]));
 const recordedBlocks=[...latestDelivery.values()].filter(item=>item.status==='blocked');
 const text = value => typeof value === 'string' ? value : value == null ? '' : Array.isArray(value) ? value.map(text).join(' / ') : JSON.stringify(value);
@@ -506,8 +512,8 @@ export function buildProductionPlan(research) {
   const refs=new Map(research.fighters.map(f=>[f.id,f]));
   const stageRefs=new Map(research.stages.map(s=>[s.id,s]));
   const plan={schema:PLAN_SCHEMA,phase:1,date:'2026-10-17',baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,
-    updatedAt:'2026-11-01',
-    scope:'PR #4 et continuation des 23, 24, 25, 26 et 28 octobre, puis du 1er novembre 2026. Six chantiers de trente lignes aux lots 9 à 12, puis campagne ART144 sur les 144 profils encore sans image, répartis en groupes de 30, 30, 30, 30 et 24. Corps entiers et cadrage du combat 2D contrôlés séparément des animations et de la certification visuelle.',
+    updatedAt:continuationDeliveries.length?'2026-11-02':'2026-11-01',
+    scope:'PR #4 et continuation des 23, 24, 25, 26 et 28 octobre, puis du 1er novembre 2026. Six chantiers de trente lignes aux lots 9 à 12, puis campagne ART144 sur les 144 profils encore sans image, répartis en groupes de 30, 30, 30, 30 et 24. Corps entiers et cadrage du combat 2D contrôlés séparément des animations et de la certification visuelle.'+(continuationDeliveries.length?' Reprise ART92 du 2 novembre sur les 92 blocages historiques, en groupes de 18, 21, 18, 15 et 20 ; anciens diagnostics conservés sans certification automatique.':''),
     fidelityPolicy:'Une identité ou un comportement documenté ne valide pas les 20 slots de versus. Supers, finishers et poses de manche sont des propositions. Les valeurs du moteur ne sont jamais des mesures officielles.',
     sources:research.sources,fighters:[],observations:[],moves:[],finishers:[],presentations:[],poses:[],stages:[],stageAnimations:[],tasks:[]};
   const task=(id,entityId,entityType,priority,title,reason,acceptance,referenceIds=[])=>plan.tasks.push({id,entityId,entityType,priority,title,reason,acceptance,referenceIds:rowRefs(referenceIds),status:'À faire',owner:'',delivery:''});
@@ -607,7 +613,7 @@ export function buildProductionPlan(research) {
     if(task)task.reason+=' '+note;
   }
   for(const block of recordedBlocks){
-    if(block.batch==='art144')continue; // Dedicated notes retain previous limits too.
+    if(['art144','art92'].includes(block.batch))continue; // Dedicated notes retain previous limits too.
     const collection=block.workstream==='art'?'poses':'stageAnimations';
     const row=plan[collection].find(row=>row.id===block.rowId);
     if(block.collection!==collection||!row||(row.fighterId||row.stageId)!==block.entityId||!block.reason?.trim())
@@ -629,7 +635,7 @@ export async function writePlan() {
   const payload=JSON.stringify(plan,null,2)+'\n';
   await fs.mkdir(planDir,{recursive:true});
   await fs.writeFile(path.join(planDir,'production-plan.json'),payload);
-  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,updatedAt:plan.updatedAt,baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,sha256:sha256(payload),metrics:plan.metrics,...(plan.artCampaign?{artCampaign:plan.artCampaign}:{})},null,2)+'\n');
+  await fs.writeFile(path.join(planDir,'production-plan-summary.json'),JSON.stringify({schema:PLAN_SCHEMA,date:plan.date,updatedAt:plan.updatedAt,baseCommit:BASE_COMMIT,implementationRevision:IMPLEMENTATION_REVISION,sha256:sha256(payload),metrics:plan.metrics,...(plan.artCampaign?{artCampaign:plan.artCampaign}:{}),...(plan.artContinuation?{artContinuation:plan.artContinuation}:{})},null,2)+'\n');
   console.log(JSON.stringify({output:'docs/production/production-plan.json',...plan.metrics},null,2));
   return plan;
 }

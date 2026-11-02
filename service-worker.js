@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '4624bff5f50b54d7bcd0e11c2e0fedd7d15c57c0049924c4122936b4adec7576';
+const BITMAP_REVISION = '8c309b761e7a8d3330e238410bd4f31c3e0eb1ec0ef795455b58e825dbcbc09b';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -21,14 +21,19 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
   "/assets/sprites/bom_butcher_123.95b439f69ed7.png",
   "/assets/sprites/bom_double_head_124.7b4030beb9da.png",
+  "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
+  "/assets/sprites/bom_gray_child_147.947d757ecfea.png",
   "/assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+  "/assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
   "/assets/sprites/bom_needler_127.9f41a2f38998.png",
   "/assets/sprites/bom_nurse_128.af4b765e1618.png",
   "/assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+  "/assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
   "/assets/sprites/bom_schism_130.89c7127c0006.png",
   "/assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
   "/assets/sprites/bom_swarm_132.96315f628aaf.png",
   "/assets/sprites/bom_tremer_133.637b09a88365.png",
+  "/assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
   "/assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
   "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
@@ -40,6 +45,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+  "/assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
   "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
   "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
   "/assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
@@ -48,6 +54,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_needler_088.39331afee89d.png",
   "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+  "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
   "/assets/sprites/homecoming_schism_089.b94be9905392.png",
   "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
@@ -59,6 +66,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+  "/assets/sprites/origins_remnant_077.912fa1130daa.png",
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
   "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
   "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
@@ -134,9 +142,11 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
   "/assets/sprites/sh3_slurper_042.5cda350161d4.png",
   "/assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+  "/assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
   "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+  "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
   "/assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
@@ -167,6 +177,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_whitestool_062.bcbd83497241.png",
   "/assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
   "/assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+  "/assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
   "/assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
   "/assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
   "/assets/sprites/shf_ara_abare_153.a11358a86425.png",
@@ -183,6 +194,11 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shf_shiromuku_166.25d31075e81d.png",
   "/assets/sprites/shf_tsukumogami_167.e8130e444254.png",
   "/assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
+  "/assets/sprites/townfall_fallen.50be585d8b6e.png",
+  "/assets/sprites/townfall_lunger.c53d378bc7df.png",
+  "/assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+  "/assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+  "/assets/sprites/townfall_widow.853146bb99d2.png",
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",

@@ -1,5 +1,8 @@
 # Les 144 profils initialement sans image
 
+État archivé du **1er novembre 2026**. La reprise du 2 novembre ajoute 16 images
+sans réécrire les diagnostics ci-dessous : [résultat actuel des 92 profils](ART92_PROFILE_STATUS.md).
+
 Les images ci-dessous sont des poses fixes candidates entières, sans certification 1:1.
 Les profils bloqués restent sans PNG ; leur motif n’est pas une réalisation.
 Les détails, références complètes et limites sont conservés dans les cinq relevés.

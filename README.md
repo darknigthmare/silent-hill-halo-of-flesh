@@ -1,5 +1,33 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Reprise des 92 profils — 2 novembre 2026
+
+**16 nouveaux rendus entiers candidats** sont intégrés : Split Worm, Greedy Worm,
+Remnant, Raw Shock neutre, Scarlet Doll, cinq profils de *Book of Memories*, les cinq
+profils *Townfall* encore sans image et Mannequin Monster du film de 2012.
+Les 92 diagnostics précédents ont été réexaminés en cinq lots de 18/21/18/15/20.
+**76 profils restent sans image**, avec des motifs et références individualisés.
+
+Le registre atteint **154 profils illustrés et 189 PNG actifs**. Les 138 profils
+et 173 PNG antérieurs sont préservés. Les 13 nouveaux profils autorisés au combat
+ont été observés dans les deux slots ; les 3 dossiers hors combat restent consultables
+sans recevoir de duel. Les images sont fixes et non certifiées 1:1.
+
+La revue a retiré un visage ajouté au Light Guardian, une main attribuée à tort au
+Water Guardian et un halo autour du Mannequin Monster. Des détails restent interprétés,
+notamment la cage de Remnant, les pieds de Scarlet et les raccords cachés du Mannequin.
+L’échelle relative utilise les paramètres existants du moteur et reste à confronter aux sources.
+
+**Validation : 1 230 tests Node, 101 tests Python,
+3 650 contrôles navigateur ciblés et 526 captures.**
+L’Excel conserve ses 80 formules, 18 400 timings originaux vides et tout l’historique ART144.
+Les 840 actions ouvertes, dont 93 P0, restent suivies.
+
+[Les 92 profils et leurs résultats](docs/production/ART92_PROFILE_STATUS.md) ·
+[Références et limites](docs/production/IMAGES_ART92_2026-11-02.md) ·
+[Rapport QA](docs/INTEGRATION_QA_2026-11-02-art92.json) ·
+[Classeur actualisé](docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx).
+
 ## Images entières — campagne des 144 profils du 1er novembre 2026
 
 **52 nouvelles images fixes candidates** sont intégrées à leur profil exact,

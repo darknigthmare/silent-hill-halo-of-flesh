@@ -1,0 +1,301 @@
+{
+  "schema": 1,
+  "campaign": "art92",
+  "date": "2026-11-02",
+  "verifiedAt": "2026-11-02T05:30:20.121161+00:00",
+  "baselineCommit": "82e5f413300ca1112d153ee407dd988b70efd313",
+  "version": "0.9.6",
+  "node": {
+    "log": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/node-tests.log",
+      "sha256": "a99e33aa1d8d08bfb2e897c2b6f599080cfee1bbc076b1a326d9fccd6f44681a"
+    },
+    "passed": 1230,
+    "failed": 0,
+    "command": "HALO_PYTHON=/workspace/.cloud-env/halo/venv/bin/python npm test"
+  },
+  "python": {
+    "log": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/python-tests.log",
+      "sha256": "31f207c389a6e71e380c3041f8c1d579a99eb628128824dcfd9e8f33bcf1388a"
+    },
+    "passed": 101,
+    "failed": 0,
+    "command": "/workspace/.cloud-env/halo/venv/bin/python -m unittest discover -s tests -p test_*.py -v"
+  },
+  "browserReports": [
+    {
+      "report": {
+        "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/art92-source/report.json",
+        "sha256": "abb92523fd8586ae287a54a6cef6224c336d6a6b88f378e42c683f5ad1f1eb86"
+      },
+      "scope": "All16 new static images,76 missing dossiers,24 original generation exclusions,13 playable profiles in both slots and3 outside-duel dossiers.",
+      "build": "source",
+      "checks": 442,
+      "captures": 47,
+      "javascriptErrors": 0,
+      "passed": true
+    },
+    {
+      "report": {
+        "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/art92-dist/report.json",
+        "sha256": "4c9f66959c867096cdc6455445b5ab269c73b4b282fd52e7c201abd30d8c2964"
+      },
+      "scope": "All16 new static images,76 missing dossiers,24 original generation exclusions,13 playable profiles in both slots and3 outside-duel dossiers.",
+      "build": "dist",
+      "checks": 442,
+      "captures": 47,
+      "javascriptErrors": 0,
+      "passed": true
+    },
+    {
+      "report": {
+        "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/historical-art144-dist/report.json",
+        "sha256": "65335e658a05e3f25119857250a137126f78bc83d632c7637502eefd2d38e7c3"
+      },
+      "scope": "Historical ART144 remains52 candidates/92 earlier blockers. Only16 exact later deliveries permit artwork on previously blocked identities; the original52 receive their own unchanged review.",
+      "build": "dist",
+      "checks": 1036,
+      "captures": 145,
+      "javascriptErrors": 0,
+      "passed": true
+    },
+    {
+      "report": {
+        "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/http-sprites/report.json",
+        "sha256": "668e9e77856b1275eb82f0623fd4bb7e5f5464d060df1034180c7aacac7085e6"
+      },
+      "scope": "Final dist image catalogue, fallback and existing authored art regressions.",
+      "build": "dist (configured by suite)",
+      "checks": 185,
+      "captures": 5,
+      "javascriptErrors": 0,
+      "passed": true
+    },
+    {
+      "report": {
+        "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/http-art-batch4/report.json",
+        "sha256": "b2d7e765b31affddd40902f576246a27e1ab3536bfb3b363e1f5ea886859a9c0"
+      },
+      "scope": "Final dist image catalogue, fallback and existing authored art regressions.",
+      "build": "dist",
+      "checks": 1545,
+      "captures": 282,
+      "javascriptErrors": 0,
+      "passed": true
+    }
+  ],
+  "browser": {
+    "runs": 5,
+    "uniqueSuites": 4,
+    "sourceRuns": 1,
+    "distRuns": 4,
+    "checks": 3650,
+    "captures": 526,
+    "javascriptErrors": 0,
+    "scope": "Targeted image and continuity browser checks on final source and dist. The12 unrelated package browser suites were not rerun for this image-only change; no whole16-suite browser run is claimed.",
+    "commands": [
+      "QA_SOURCE_TREE=1 node scripts/http-qa-art92.mjs",
+      "node scripts/http-qa-art92.mjs",
+      "node scripts/http-qa-art144.mjs",
+      "node scripts/http-qa-sprites.mjs",
+      "node scripts/http-qa-art-batch4.mjs"
+    ]
+  },
+  "build": {
+    "files": 273,
+    "sourceFilesCompared": 272,
+    "sourceMismatches": [],
+    "sha256": "e4f7d9d8f9b692a23aee987ab957699b6244879db7f72ce9cd4d9f7ebfb34f94",
+    "digestFormat": "Sorted relative path UTF8 + NUL + raw SHA256 file digest"
+  },
+  "artwork": {
+    "importReview": {
+      "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-summary.json",
+      "sha256": "8f50f26e14918bc523b00ba39de30dd78d02c2150053b3e6099cdd29f6e75e01"
+    },
+    "intake": {
+      "path": "/workspace/silent-hill-halo-of-flesh/docs/production/art92-intake.json",
+      "sha256": "6bccd22d983e3bfaa43a867df40e7cf89301dd87281f3d28bf1ae35f8a8b9cad"
+    },
+    "requested": 92,
+    "newCandidates": 16,
+    "remainingMissing": 76,
+    "assessed": 92,
+    "pendingAssessment": 0,
+    "integratedProfiles": 154,
+    "activePngFiles": 189,
+    "preservedProfiles": 138,
+    "preservedPngFiles": 173,
+    "priorGenerationExclusions": 24,
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": 0,
+    "combatEnabledCandidates": 13,
+    "referenceOnlyCandidates": 3,
+    "historicalArt144": {
+      "candidates": 52,
+      "blocked": 92,
+      "unchanged": true
+    },
+    "groups": [
+      {
+        "group": "a",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-a.json",
+          "sha256": "4f7f6711272f7a53f3f7e875f9808decd9bd0a4a464db3617d0f3d5a35367f2b"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art92-a.json",
+          "sha256": "326c645e79758a866c10dad9a6056600fd9f301df1362bacaa22a0e853534f32"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art92-a.json",
+          "sha256": "5384abc212e1e40fddea4cc7ce5b5dbcda5ed43aa83e6977a1805c843de8231c"
+        }
+      },
+      {
+        "group": "b",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-b.json",
+          "sha256": "8c1c31ff4ef95ae5cb5f682435f4c5416c56e982ecfb6d795b0b0b2eba6ade79"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art92-b.json",
+          "sha256": "31d7a6b5ef17a21112b616c434fe8a565eb87f6c79971cca4f2777ad9192a448"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art92-b.json",
+          "sha256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873"
+        }
+      },
+      {
+        "group": "c",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-c.json",
+          "sha256": "fd78f06a6ae0dd78fc964911da4773ba0a049a50a6dba3d6cb89cdd482912041"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art92-c.json",
+          "sha256": "534bcc79317225473a03805cbd6019c7b5f67da9eff2b58eb8e3a2f6592de2ec"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art92-c.json",
+          "sha256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5"
+        }
+      },
+      {
+        "group": "d",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-d.json",
+          "sha256": "4562a0cb7e05bb697e12047859757381fe946b8a94753f4497daf6edbc0e8f11"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art92-d.json",
+          "sha256": "554bf4b72b44ab5d5e59b302c15e5f23f3264f5d2013329a67de8a56497169cc"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art92-d.json",
+          "sha256": "732f8e893a0e508bc2a76c2c595f155b0333666898a2811bcfeb11fa5a68d974"
+        }
+      },
+      {
+        "group": "e",
+        "ledger": {
+          "path": "/workspace/silent-hill-halo-of-flesh/docs/production/batches/art92-e.json",
+          "sha256": "37fd1bf407859d70c647fea93c69e02abb5477027be0659a706bf20799924deb"
+        },
+        "fragment": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/fragments/art92-e.json",
+          "sha256": "03303e01b3db1a1b9742815353f3a69358cb43123b6b049286e41f1b3d605261"
+        },
+        "provenance": {
+          "path": "/workspace/silent-hill-halo-of-flesh/art/provenance-art92-e.json",
+          "sha256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5"
+        }
+      }
+    ],
+    "newCapturedRefusals": [
+      {
+        "fighterId": "bom_blood_mama_145",
+        "requestId": "b6688211-2810-4d1e-ae1c-963cc64a7ea9",
+        "retried": false
+      }
+    ],
+    "sameSubjectVariantNotAttempted": [
+      "bom_blood_guardian_143"
+    ]
+  },
+  "workbook": {
+    "file": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "sha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+    "bytes": 1808573,
+    "planSha256": "45b092009538a4586933571ac633f094b8de3f9bb7fdbad4cb8795ef5873bede",
+    "changedCells": 247,
+    "expandedRows": 162,
+    "mappedFields": 249415,
+    "independentChecks": 217,
+    "recalculatedFormulas": 80,
+    "actualBlankOriginalTimingCells": 18400,
+    "sources": 277,
+    "observations": 435,
+    "roleDecisions": 33,
+    "parentActions": 875,
+    "openActions": 840,
+    "openP0": 93,
+    "review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/final-workbook-consistency-review.json",
+      "sha256": "fa02c141e341dc818dc8d615d363a2bb6bafed4004955773ae600d9dc761638c"
+    }
+  },
+  "fullbody": {
+    "review": {
+      "path": "/workspace/shared/halo-of-flesh/validation-art92-2026-11-02/independent-fullbody-review.json",
+      "sha256": "76be754563250bdce4deadab98a956b2fdf69341d723aa533e3e5995002e4dd9"
+    },
+    "profilePairStateCases": 853776,
+    "frameEnvelopesInspected": 2095632,
+    "minimumCameraScale": 0.6694616286008696,
+    "scope": "Read-only synthetic numerical framing, not source anatomy, native scale or played source footage."
+  },
+  "peerReviews": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/art92-2026-11-02/peer-review-a.json",
+      "sha256": "205ffe6258ee25ca363269bc56fd69efb5fb803963e44d9d4e304aa28631ba23"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/art92-2026-11-02/peer-review-b.json",
+      "sha256": "5348005e459f7b92d03d1c3ec89dc770c35de651df92158a5a74e2b55cf4e7fd"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/art92-2026-11-02/peer-review-d.json",
+      "sha256": "3fbdcb6e39ffd913855d916a2ed1a789680532b983cceda31ae88aabb2c47bda"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/art92-2026-11-02/peer-review-e.json",
+      "sha256": "04dc99c23e0e56a5ed49c6b5f5acb820d57c20a1e77a6a352a2c2d7fac7e09a5"
+    }
+  ],
+  "verification": {
+    "nodeTests": 1230,
+    "pythonTests": 101,
+    "browserChecks": 3650,
+    "browserCaptures": 526
+  },
+  "resolvedQualityFindings": [
+    "Light Guardian invented face removed by ImageGen and reviewed against the native portrait.",
+    "Water Guardian extra detached hand came from misreading the player hammer; removed by ImageGen and independently reviewed.",
+    "Mannequin Monster2012 brown halo removed; the earlier output remains excluded from the production assets.",
+    "Split Worm source3200x2400 mesh terminates visibly on neutral background; reconstruction preserves the closed exposed cone rather than inventing a long hidden animal."
+  ],
+  "limits": [
+    "16 new static reconstructed candidates,76 profiles still without images. Assessment is not completed art or source fidelity.",
+    "Remnant cage topology and hooks, Scarlet feet and several low-resolution Guardian surfaces remain interpreted; adding a PNG does not resolve their old qualitative source limitations.",
+    "Fallen uses a final concept; Mannequin2012 combines full production CG not labelled final with partial final MrX views. Hidden appendage counts/connections remain unverified.",
+    "Presentation mirrors and existing engine body scales do not establish opposite-side source views or canonical cross-work relative scale.",
+    "No new native animation, original source pixels, original motion timing or1to1 certification. All18400 source timing cells remain blank.",
+    "Original ledgers,33role decisions and875parent action identities are preserved. A static idle closes no parent art action and grants no noncombatant a duel.",
+    "One new captured tool refusal is preserved without retry. Its same-subject Blood Guardian phase was not attempted;24 earlier excluded identities also remain without new generation.",
+    "Only the five targeted browser runs listed above were run;12 unchanged browser suites were not rerun. All1230 Node and101Python tests were run. No GitHub CI or native Excel desktop run is claimed."
+  ],
+  "passed": true
+}

@@ -1,0 +1,610 @@
+{
+  "schema": 1,
+  "campaign": "art92",
+  "group": "d",
+  "baseCommit": "82e5f413300ca1112d153ee407dd988b70efd313",
+  "reviewedAt": "2026-11-02",
+  "requestedItems": 15,
+  "deliveredPngCandidates": 5,
+  "blockedItems": 10,
+  "generationCalls": 8,
+  "successfulPngArtifacts": 7,
+  "qualityEdits": 2,
+  "unusedSuccessfulCandidates": 2,
+  "capturedModerationErrorResponses": 1,
+  "newAnimatedClips": 0,
+  "newSingleFramePoseClips": 5,
+  "certifiedOneToOne": false,
+  "originalSourcePixelsDelivered": false,
+  "noRefusalRetryOrWorkaround": true,
+  "newRefusals": [
+    {
+      "fighterId": "bom_blood_mama_145",
+      "requestId": "b6688211-2810-4d1e-ae1c-963cc64a7ea9",
+      "categories": [
+        "violence",
+        "sexual"
+      ],
+      "moderationStage": "input",
+      "retry": false,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID b6688211-2810-4d1e-ae1c-963cc64a7ea9. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ],
+  "relatedSubjectsStopped": [
+    {
+      "fighterId": "bom_blood_guardian_143",
+      "relatedTo": "bom_blood_mama_145",
+      "attempted": false
+    }
+  ],
+  "priorRefusalsRespected": [
+    "shf_ayakakashi_152",
+    "shf_corruptor_155",
+    "shf_hatcher_156",
+    "shf_dark_hatcher_160",
+    "shf_hinako_s_mother_165",
+    "BoM Mother"
+  ],
+  "candidateEntries": [
+    {
+      "fighterId": "bom_light_guardian_140",
+      "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+      "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+      "generatedFile": "/workspace/generated_images/exec-674a2abb-4e35-4ab0-ad2f-b383338a63ce.png",
+      "referenceImages": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/bom-light_guardian.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/light_guardian.jpg",
+          "bytes": 14266,
+          "sha256": "4f2956b54839e80e339c2ecd15a191be1427c780556628da528c43df72cf53ae"
+        }
+      ],
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          191,
+          192,
+          1096,
+          1102
+        ],
+        "alphaBounds": [
+          0,
+          52,
+          1226,
+          1254
+        ],
+        "framingBounds": [
+          187,
+          189,
+          1099,
+          1108
+        ],
+        "transparentFraction": 0.78096,
+        "pixelSHA256": "4089d791631950349c614d2c86df5d59ffd559a5dbe33aa7713b4b3f356f9398"
+      },
+      "connectedMargins": {
+        "left": 0.14912280701754385,
+        "top": 0.1507177033492823,
+        "right": 0.12360446570972887,
+        "bottom": 0.11642743221690591
+      },
+      "singleSubjectReviewed": true,
+      "limitations": "Light Guardian BoM : portrait natif complet dont les contours commencent après le bord supérieur, cœur lumineux, carapace large, bras-masse asymétrique et deux petits appuis. Une face humaine ajoutée par la première génération a été supprimée par édition et cette première sortie est exclue. Seul le portrait 127×127 et le texte identifiant le cœur/bras-masse attestent ce modèle : microtextures et découpe fine des plaques non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop."
+    },
+    {
+      "fighterId": "bom_water_guardian_141",
+      "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+      "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+      "generatedFile": "/workspace/generated_images/exec-3e612d94-b98b-4acd-a620-dac1df388f9b.png",
+      "referenceImages": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/bom-water_guardian.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/water_guardian.jpg",
+          "bytes": 15725,
+          "sha256": "e2d0890413f937fc55af63467349bbd6a43bca39ec23425588b236982b90b0e7"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+          "bytes": 162926,
+          "sha256": "92143fe2c8def2311cd8317671e3d8c3317c390d6ebebf5f0f21eb026ae95b44"
+        }
+      ],
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          155,
+          226,
+          1226,
+          1099
+        ],
+        "alphaBounds": [
+          75,
+          31,
+          1238,
+          1254
+        ],
+        "framingBounds": [
+          148,
+          223,
+          1229,
+          1101
+        ],
+        "transparentFraction": 0.70699,
+        "pixelSHA256": "a03265376af28b43f72d1b729e9d277bc26c854075589265529e0167420a28ae"
+      },
+      "connectedMargins": {
+        "left": 0.11802232854864433,
+        "top": 0.17783094098883573,
+        "right": 0.019936204146730464,
+        "bottom": 0.12200956937799043
+      },
+      "singleSubjectReviewed": true,
+      "limitations": "Water Guardian BoM : tête/couronne complète du portrait combinée aux membres et à la base naturellement fermée de la capture native50. Masse aquatique tronquée à base arrondie, deux bras principaux et une seule pièce main/avant-bras détachée attestée en bas à droite de la capture ; aucune jambe humaine ni pied ajouté. La première sortie comprenait une main inférieure gauche inventée après confusion avec le marteau du joueur ; elle a été supprimée par édition et cette première sortie est exclue. La composition assemble des vues complémentaires, sans prétendre reproduire une pose source mesurée ; surfaces et raccords fins restent approximatifs. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop."
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+      "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+      "generatedFile": "/workspace/generated_images/exec-c55b634e-320b-4af5-8222-7f216c95c57d.png",
+      "referenceImages": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/batch12-art-2026-11-01/bom-earth_guardian.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/earth_guardian.jpg",
+          "bytes": 14434,
+          "sha256": "35b540a197e219be014350daca9129b2faf9c70b74c5938d0e0f6a44064c4ad3"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+          "bytes": 169136,
+          "sha256": "d909e485a7861f121b1d1e52b1e7efcf3d0b9bb3a64ced1a64bd05d99433affd"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+          "bytes": 182943,
+          "sha256": "27b013e4c4eb1a28dfcae8af1663c0e1d53fc0e7bd90c07a088fa81febe95d5c"
+        }
+      ],
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          58,
+          322,
+          1227,
+          888
+        ],
+        "alphaBounds": [
+          25,
+          38,
+          1236,
+          1238
+        ],
+        "framingBounds": [
+          51,
+          319,
+          1229,
+          898
+        ],
+        "transparentFraction": 0.78856,
+        "pixelSHA256": "cb7abf7372391c07c3321c94f4e08e12f4a5ca5e3a4e82a06c56e73f283507a9"
+      },
+      "connectedMargins": {
+        "left": 0.04066985645933014,
+        "top": 0.2543859649122807,
+        "right": 0.019936204146730464,
+        "bottom": 0.2838915470494418
+      },
+      "singleSubjectReviewed": true,
+      "limitations": "Earth Guardian BoM : ensemble canonique de tête rocheuse et bras/blocs détachés vu dans le portrait et les captures48/49 ; terminaison inférieure rocheuse préservée, aucun tronc ni jambe humanoïde ajouté. Le sommet entier vient du portrait, les gros blocs des captures ; leur composition et nombre de petits segments ne sont pas certifiés image pour image. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop."
+    },
+    {
+      "fighterId": "bom_gray_child_147",
+      "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+      "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+      "generatedFile": "/workspace/generated_images/exec-0a841488-fd5a-4f5d-927b-eab8377d5643.png",
+      "referenceImages": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-gray_child.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/gray_child.jpg",
+          "bytes": 11675,
+          "sha256": "869bede26c83995d9f98f9263abb4a8ab408faa7496d472ff135bc62bddc1059"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20130115_29.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_29.jpg",
+          "bytes": 236504,
+          "sha256": "074fab1703829d48fc19b3b8508b93316831b93079db08078e58c5bcb0cd7013"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20130115_30.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_30.jpg",
+          "bytes": 162524,
+          "sha256": "9f4534c924581e7e39066792c35b25d616e6d1b0e344ef9ee2a7255a74547d4f"
+        }
+      ],
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          288,
+          295,
+          956,
+          1024
+        ],
+        "alphaBounds": [
+          59,
+          37,
+          1240,
+          1180
+        ],
+        "framingBounds": [
+          285,
+          290,
+          965,
+          1029
+        ],
+        "transparentFraction": 0.90074,
+        "pixelSHA256": "0aca463c4dc4c4a9d731c2b4d25a4750a72900d6de59333f8ae42ecbca480662"
+      },
+      "connectedMargins": {
+        "left": 0.22727272727272727,
+        "top": 0.23125996810207336,
+        "right": 0.23046251993620415,
+        "bottom": 0.17942583732057416
+      },
+      "singleSubjectReviewed": true,
+      "limitations": "Gray Child de l’Expansion Pack BoM : le portrait et les nouvelles captures29/30, dont la cible nommée Gray Child, attestent la petite silhouette, tête massive, longs bras, deux petits appuis et couteau bas. Identité enfant-like conservée, aucun relabel adulte ; aucun corps SH1 transféré. Géométrie fine et textures limitées par la résolution des captures ; aucun gore ajouté au prompt. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop."
+    },
+    {
+      "fighterId": "bom_raw_shock_148",
+      "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+      "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+      "generatedFile": "/workspace/generated_images/exec-b3b560c5-cb11-4234-8fb3-b9be29c14149.png",
+      "referenceImages": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-d-2026-11-01/bom-raw_shock.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/raw_shock.jpg",
+          "bytes": 11553,
+          "sha256": "86fd3db0e75c5f5e87b60506644337b1cb36e13cf112a26999254341dbe6ba05"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20130115_27.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_27.jpg",
+          "bytes": 293531,
+          "sha256": "d16e16c076d617d0c20c5a4090d885643653aa6b52898dc6c32e855fa79ba3f1"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20130115_28.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_28.jpg",
+          "bytes": 221071,
+          "sha256": "c4a5ad781ed77de155ef7e256ce798caba9d15acfdbc568893003e0240f5e22d"
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/sh_book_of_memories_screen_20130115_34.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_34.jpg",
+          "bytes": 192893,
+          "sha256": "ec8bb34abfe06061f179c2e47408bbc1e17bcf2d47a9d0f20a52ba6969b55ce1"
+        }
+      ],
+      "raster": {
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          294,
+          123,
+          1009,
+          1158
+        ],
+        "alphaBounds": [
+          39,
+          39,
+          1242,
+          1254
+        ],
+        "framingBounds": [
+          288,
+          119,
+          1015,
+          1161
+        ],
+        "transparentFraction": 0.88902,
+        "pixelSHA256": "d5d0aa557dd7f117949fe4f2f780f9122408cf963c1037291062c7fa7dd28e5b"
+      },
+      "connectedMargins": {
+        "left": 0.22966507177033493,
+        "top": 0.094896331738437,
+        "right": 0.19059011164274323,
+        "bottom": 0.07416267942583732
+      },
+      "singleSubjectReviewed": true,
+      "limitations": "Raw Shock révélé de l’Expansion Pack BoM : portrait et nouvelles captures27/28/34, dont les cibles nommées Raw Shock, établissent le déguisement humain séparé de la vraie silhouette maigre à tête pâle, bras et doigts allongés, deux jambes/appuis. Forme révélée uniquement, pas de vêtement du déguisement ni transfert de variante Shattered Memories. Visage/plis fins non certifiés à partir des sources peu résolues. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop."
+    }
+  ],
+  "blockedEntries": [
+    {
+      "rowId": "bom_blood_guardian_143:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_guardian_143",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_guardian.jpg"
+      ],
+      "reason": "Non tenté : Blood Guardian contient la même Blood Mama dans son état sur la masse multi-bras. Le refus nouveau Blood Mama b6688211-2810-4d1e-ae1c-963cc64a7ea9 interdit un essai de cet autre état comme variante ou substitut ; aucune image demandée ni importée pour Blood Guardian.",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Non tenté : Blood Guardian contient la même Blood Mama dans son état sur la masse multi-bras. Le refus nouveau Blood Mama b6688211-2810-4d1e-ae1c-963cc64a7ea9 interdit un essai de cet autre état comme variante ou substitut ; aucune image demandée ni importée pour Blood Guardian."
+    },
+    {
+      "rowId": "bom_blood_mama_145:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_blood_mama_145",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_mama.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_01_blood_mama.jpg"
+      ],
+      "reason": "Génération individuelle refusée ; aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID b6688211-2810-4d1e-ae1c-963cc64a7ea9. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Génération individuelle refusée ; aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID b6688211-2810-4d1e-ae1c-963cc64a7ea9. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "bom_steel_guardian_146:pose:idle",
+      "collection": "poses",
+      "entityId": "bom_steel_guardian_146",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/steel_guardian.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_15_steel_boss.jpg"
+      ],
+      "reason": "Réexamen des deux planches de production : rendu texturé avec ailes coupe leurs extrémités externes ; modèle gris complet montre le corps sans ailes. Aucun modèle entier attestant les ailes finales ni preuve d’une phase canonique sans ailes trouvés. Le corps seul ne remplace pas la silhouette complète ; aucun mélange des états ni longueur de plume/lame inventée.",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Réexamen des deux planches de production : rendu texturé avec ailes coupe leurs extrémités externes ; modèle gris complet montre le corps sans ailes. Aucun modèle entier attestant les ailes finales ni preuve d’une phase canonique sans ailes trouvés. Le corps seul ne remplace pas la silhouette complète ; aucun mélange des états ni longueur de plume/lame inventée."
+    },
+    {
+      "rowId": "pt_lisa_149:pose:idle",
+      "collection": "poses",
+      "entityId": "pt_lisa_149",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_05.jpg",
+        "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_04.jpg",
+        "https://www.silenthillmemories.net/silent_hills/arts_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/arts/pics/silent_hills_art_20140812_03_pt_bg.jpg",
+        "https://www.silenthillmemories.net/silent_hills/arts/pics/silent_hills_art_20140901_01.jpg"
+      ],
+      "reason": "Nouvelles recherches : galerie d’art P.T. complète et illustrations natives examinées (logos, forêt, protagoniste) ne montrent pas Lisa ; galerie vidéo liste des liens sans modèle complet accessible. Les deux captures de jeu existantes donnent un visage à travers une porte et une silhouette lointaine sombre, sans robe/pieds lisibles. Aucune nouvelle vue complète sûre ; pas de fantôme générique ni arme inventée. Fandom précédemment402 et aucune tentative de contournement.",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Nouvelles recherches : galerie d’art P.T. complète et illustrations natives examinées (logos, forêt, protagoniste) ne montrent pas Lisa ; galerie vidéo liste des liens sans modèle complet accessible. Les deux captures de jeu existantes donnent un visage à travers une porte et une silhouette lointaine sombre, sans robe/pieds lisibles. Aucune nouvelle vue complète sûre ; pas de fantôme générique ni arme inventée. Fandom précédemment402 et aucune tentative de contournement."
+    },
+    {
+      "rowId": "shf_ayakakashi_152:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_ayakakashi_152",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_01.png",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_02.png"
+      ],
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_corruptor_155:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_corruptor_155",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_02.jpg"
+      ],
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_hatcher_156:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_hatcher_156",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_02.jpg",
+        "https://www.silenthillmemories.net/shf/monsters/hatcher.jpg"
+      ],
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "rowId": "shf_dark_hatcher_160:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_dark_hatcher_160",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/monsters_en.htm",
+        "https://www.silenthillmemories.net/shf/monsters/hatcher_dark.jpg"
+      ],
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement.",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement."
+    },
+    {
+      "rowId": "shf_sakuko_like_entity_162:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_sakuko_like_entity_162",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_01.jpg",
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_02.jpg"
+      ],
+      "reason": "Non tenté : les planches identifient une jeune figure ressemblant explicitement à Sakuko avec des blessures/cavités natives ; âge/identité incertains maintenus. Aucune génération à violence graphique de mineur ni relabel adulte ; ne pas altérer l’identité ou substituer un prêtre générique pour remplir la ligne.",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Non tenté : les planches identifient une jeune figure ressemblant explicitement à Sakuko avec des blessures/cavités natives ; âge/identité incertains maintenus. Aucune génération à violence graphique de mineur ni relabel adulte ; ne pas altérer l’identité ou substituer un prêtre générique pour remplir la ligne."
+    },
+    {
+      "rowId": "shf_hinako_s_mother_165:pose:idle",
+      "collection": "poses",
+      "entityId": "shf_hinako_s_mother_165",
+      "status": "blocked",
+      "artifacts": [
+        "art/provenance-art92-d.json"
+      ],
+      "evidence": [
+        "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hinakos_parents_02.jpg",
+        "https://www.silenthillmemories.net/shf/bosses/hinakos_parents.jpg"
+      ],
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "limits": "Aucun nouveau PNG ni asset pour ce profil. Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ],
+  "excludedSuccessfulCandidates": [
+    {
+      "fighterId": "bom_light_guardian_140",
+      "path": "/workspace/generated_images/exec-1e7453a6-032f-4d00-aac8-6e32b7a90551.png",
+      "reason": "Invented gray human facial anatomy above heart; excluded and replaced by targeted corrected image. No original file modified or copied into repository."
+    },
+    {
+      "fighterId": "bom_water_guardian_141",
+      "path": "/workspace/generated_images/exec-809c1445-af31-42d8-8831-afa3bc6dfdf5.png",
+      "reason": "Extra lower-left detached hand invented by confusing player hammer with creature limb; excluded and replaced by corrected image. Only its own untracked copied PNG removed; generated original and baseline PNGs preserved."
+    }
+  ],
+  "generationCollection": {
+    "strategy": "Each generation batch used Promise.allSettled; exact subject, references, prompt, image path or individual error retained.",
+    "records": [
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/generation-01.json",
+        "bytes": 2551,
+        "sha256": "d933acb1c521bfca6674d5482e2e7dfa6399180557d3a4193c71d8b9f0e7af6f"
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/generation-02.json",
+        "bytes": 7579,
+        "sha256": "3fd3a5501b75b5d0271d63f19a926f34d18af3c60ca4ebab41234f708fe18b5e"
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/generation-03.json",
+        "bytes": 5553,
+        "sha256": "8595ca9a060b001317bd1f8378e638b19f8eda1884e4c8ce5b4a1faa03e70959"
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/quality-edits-01.json",
+        "bytes": 2171,
+        "sha256": "84b4cad56a421f9e9515af77452f90a2cd9449f30154dab1fc3cc6aa0d55938b"
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/quality-edits-02.json",
+        "bytes": 1994,
+        "sha256": "49602cc3eb4482bb956f047dd9971140010ef0beb0ab5c87c24aedf7c18067f4"
+      }
+    ]
+  },
+  "referenceArchive": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02",
+  "newSourceResearch": [
+    "24 successful native art/search responses, with Google JavaScript interstitials not counted as usable image references.",
+    "15 complete original BoM screenshots downloaded; Gray Child/Raw Shock target names and full silhouettes visually inspected.",
+    "Five P.T. art images downloaded; no Lisa model among logos, forest and protagonist.",
+    "Seven new BoM Fandom pages HTTP402; no alternate route, user-agent bypass or proxy/TLS change used.",
+    "Steel Guardian textured and gray production model inspected separately; no whole final wing outline established."
+  ],
+  "network": {
+    "proxyAndTLSUnchanged": true,
+    "no402Or403Bypass": true,
+    "observationsCurrent": true,
+    "state": "enforced"
+  },
+  "sourceIndices": [
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/research-index.json",
+      "sha256": "01fc13f64afb78c971a757bf5c99882f9c2810f7e38fbfaa7cef88549467e07a"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/pages-index.json",
+      "sha256": "e3d092442005df92d9d00831bfe7be3135edef9fa3a48db664be827d32280be8"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/pages-extra-index.json",
+      "sha256": "a5f7e14feaf414e80b201d634721da978eeba06f4c32c6f04c6bc002d7ede3c1"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/screens-index.json",
+      "sha256": "69eda7ef1d226c1090b487e33d0c2125742496985091bb67d41370db6aa06e12"
+    },
+    {
+      "path": "/workspace/shared/halo-of-flesh/references/art92-d-2026-11-02/pt-art-index.json",
+      "sha256": "9dbcc006eee6fd76f7b74f97ba721f5a8f8589a7359e4a6215a1e8f0d32582ec"
+    }
+  ],
+  "limits": "Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+  "crossReview": {
+    "reviewer": "art144_a",
+    "readOnly": true,
+    "reviewedAt": "2026-11-02",
+    "checks": [
+      "Light corrected: invented human face removed; continuous cracked plate, yellow heart, asymmetric arms and two supports preserved.",
+      "Earth: rocky head/arm assembly, no human trunk or legs added.",
+      "Water corrected: invented lower-left detached hand removed; two main arms and one native detached hand at lower right; closed natural base and entire contours.",
+      "BoM Gray Child and revealed Raw Shock: source family of silhouettes, expected limbs and knife reviewed."
+    ],
+    "outcome": "Material review concerns resolved after two quality edits; all five retained as unverified candidates, no 1:1 certification.",
+    "padding": "12 percent was a prompt target; actual connected margins are recorded per candidate and remain interior."
+  },
+  "verification": {
+    "targetedFragmentChecks": "passed",
+    "exactRowCount": 15,
+    "uniqueRetainedPngs": 5,
+    "sha12ByteHashPaths": true,
+    "portraitEqualsFrame": true,
+    "rgbaDecode": true,
+    "connectedFramingInterior": true,
+    "singleFrameIdleNonLoop": true,
+    "excludedIntermediatePngCopiesInRepository": 0,
+    "baselinePngsTouched": 0,
+    "centralBuildRun": false,
+    "gameplayQARunByThisAgent": false
+  }
+}

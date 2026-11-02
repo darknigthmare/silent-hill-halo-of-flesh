@@ -1,4 +1,4 @@
-/** ART144 delivery checks over real HTTP, without replacing art or combat state.
+/** ART144/ART92 delivery checks over real HTTP, without replacing art or combat state.
  * Numeric framing proves the delivered exterior fits; it cannot prove source anatomy.
  */
 import {chromium} from 'playwright-core';
@@ -8,16 +8,21 @@ import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
-import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES} from './art-campaign-tracking.mjs';
+import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
+import {readArtContinuation,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
-const source=process.env.QA_SOURCE_TREE==='1',port=process.env.QA_ART144_PORT||(source?'4197':'4196');
+const campaign=process.env.QA_ART_CAMPAIGN||'art144';
+const spec={art144:{base:ART_CAMPAIGN_BASE,groups:ART_CAMPAIGN_GROUP_SIZES,requested:144,baselineProfiles:86},
+ art92:{base:ART_CONTINUATION_BASE,groups:ART_CONTINUATION_GROUP_SIZES,requested:92,baselineProfiles:138}}[campaign];
+if(!spec)throw Error('Unknown artwork review campaign.');
+const source=process.env.QA_SOURCE_TREE==='1',port=process.env[`QA_${campaign.toUpperCase()}_PORT`]||process.env.QA_ART144_PORT||(campaign==='art92'?(source?'4217':'4216'):(source?'4197':'4196'));
 const base=process.env.QA_BASE_URL||`http://127.0.0.1:${port}`;
-const out=resolve(process.env.QA_ART144_OUTPUT||`/tmp/halo-art144-qa-${source?'source':'dist'}`);
-const report={schema:1,campaign:'art144',version:VERSION,baselineCommit:ART_CAMPAIGN_BASE,base,
+const out=resolve(process.env[`QA_${campaign.toUpperCase()}_OUTPUT`]||process.env.QA_ART144_OUTPUT||`/tmp/halo-${campaign}-qa-${source?'source':'dist'}`);
+const report={schema:1,campaign,version:VERSION,baselineCommit:spec.base,base,
  build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],inspectors:[],roles:[],duels:[],
  limits:[
-  'All 144 original missing identities are assessed exactly once. Static candidates, blockers and source fidelity remain separate.',
+  `All ${spec.requested} original missing identities are assessed exactly once. Static candidates, blockers and source fidelity remain separate. Historical blockers may be resolved only by a documented later exact-ID delivery.`,
   'Production PNGs and modules arrive over HTTP. Independent browser decoding measures alpha and duplicate pixels; no replacement imagery is injected.',
   'The real workshop flip, zoom and pose controls inspect the complete delivered exterior. Native anatomy, hidden parts, exact proportions and 1:1 fidelity are not certified by this geometry.',
   'Ordinary local matches cover every new combat-enabled profile on both player sides. Normal inputs and intros are used; actor positions, facing, health, poses, wins and timers are never injected.',
@@ -55,25 +60,30 @@ function measuredDrawing({path,bounds,canvas}){
 
 await mkdir(out,{recursive:true});
 try{
- const intake=JSON.parse(await readFile(resolve(root,'docs/production/art144-intake.json'),'utf8'));
- check('immutable intake retains 144 originally absent identities',intake.campaign==='art144'&&intake.baseCommit===ART_CAMPAIGN_BASE&&intake.requested===144&&intake.baselineProfiles===86&&intake.entries?.length===144&&new Set(intake.entries.map(row=>row.fighter.id)).size===144);
- const ledgers=await Promise.all(Object.entries(ART_CAMPAIGN_GROUP_SIZES).map(async([group,size])=>{
-  const ledger=JSON.parse(await readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8'));
-  check(group+': exact assigned campaign and original count',ledger.schema===1&&ledger.campaign==='art144'&&ledger.group===group&&ledger.baseCommit===ART_CAMPAIGN_BASE&&ledger.requestedItems===size&&ledger.items?.length===size);
+ const intake=JSON.parse(await readFile(resolve(root,`docs/production/${campaign}-intake.json`),'utf8'));
+ check('immutable intake retains '+spec.requested+' originally absent identities',intake.campaign===campaign&&intake.baseCommit===spec.base&&intake.requested===spec.requested&&intake.baselineProfiles===spec.baselineProfiles&&intake.entries?.length===spec.requested&&new Set(intake.entries.map(row=>row.fighter.id)).size===spec.requested);
+ const ledgers=await Promise.all(Object.entries(spec.groups).map(async([group,size])=>{
+  const ledger=JSON.parse(await readFile(resolve(root,`docs/production/batches/${campaign}-${group}.json`),'utf8'));
+  check(group+': exact assigned campaign and original count',ledger.schema===1&&ledger.campaign===campaign&&ledger.group===group&&ledger.baseCommit===spec.base&&ledger.requestedItems===size&&ledger.items?.length===size);
   return ledger;
  }));
  const rows=ledgers.flatMap(ledger=>ledger.items),ids=rows.map(row=>row.entityId);
- check('all 144 exact idle identities are assessed once',rows.length===144&&new Set(ids).size===144&&rows.every(row=>row.rowId===row.entityId+':pose:idle'&&row.collection==='poses'&&['implemented-candidate','blocked'].includes(row.status)&&row.evidence?.length&&row.limits?.trim()));
+ check('all '+spec.requested+' exact idle identities are assessed once',rows.length===spec.requested&&new Set(ids).size===spec.requested&&rows.every(row=>row.rowId===row.entityId+':pose:idle'&&row.collection==='poses'&&['implemented-candidate','blocked'].includes(row.status)&&row.evidence?.length&&row.limits?.trim()));
  check('deliveries assess exactly the immutable intake in their original groups',ledgers.every(ledger=>ledger.items.every(row=>intake.entries.some(original=>original.fighter.id===row.entityId&&original.group===ledger.group&&original.workbookRowId===row.rowId))));
- const fragments=await Promise.all(Object.keys(ART_CAMPAIGN_GROUP_SIZES).map(async group=>{
-  const fragment=JSON.parse(await readFile(resolve(root,`art/fragments/art144-${group}.json`),'utf8'));
-  check(group+': exact source-owned fragment is retained',fragment.schema===1&&fragment.campaign==='art144'&&fragment.group===group&&fragment.baseCommit===ART_CAMPAIGN_BASE&&!!fragment.assets);
+ check('previously refused subjects and related variants remain blocked',intake.entries.filter(entry=>entry.generationExcluded).every(entry=>rows.find(row=>row.entityId===entry.fighter.id)?.status==='blocked'));
+ const fragments=await Promise.all(Object.keys(spec.groups).map(async group=>{
+  const fragment=JSON.parse(await readFile(resolve(root,`art/fragments/${campaign}-${group}.json`),'utf8'));
+  check(group+': exact source-owned fragment is retained',fragment.schema===1&&fragment.campaign===campaign&&fragment.group===group&&fragment.baseCommit===spec.base&&!!fragment.assets);
   return fragment;
  }));
  const fragmentAssets=Object.assign({},...fragments.map(fragment=>fragment.assets));
  const candidates=rows.filter(row=>row.status==='implemented-candidate'),blocked=rows.filter(row=>row.status==='blocked');
+ if(campaign==='art144')check('ART144 retains its historical 52 candidates and 92 blockers',candidates.length===52&&blocked.length===92);
  check('fragments contain exactly their declared candidate identities',Object.keys(fragmentAssets).length===candidates.length&&fragments.every(fragment=>Object.keys(fragment.assets).every(id=>ledgers.find(ledger=>ledger.group===fragment.group).items.some(row=>row.entityId===id&&row.status==='implemented-candidate'))));
- report.counts={requested:144,candidates:candidates.length,blocked:blocked.length,newAnimatedClips:0,certifiedOneToOne:0};
+ report.counts={requested:spec.requested,candidates:candidates.length,blocked:blocked.length,newAnimatedClips:0,certifiedOneToOne:0};
+ const continuation=await readArtContinuation(root);
+ if(campaign==='art92')check('ART92 requires the complete bound continuation review',!!continuation&&continuation.rows.length===92);
+ const candidateIds=new Set(candidates.map(row=>row.entityId));
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs',port,...(source?[]:['--dist'])],{cwd:root,stdio:'ignore'});
  let ready=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}
  check('real HTTP server is ready',ready);
@@ -145,11 +155,15 @@ try{
  }
  for(const row of blocked){
   const subject=byId.get(row.entityId);
+  if(resolvedHistoricalArtwork(row,subject?.art,continuation)){
+   check(row.entityId+': historical blocker has an exact later source-owned delivery',true);
+   (report.resolvedHistorical||=[]).push({id:row.entityId,originalStatus:'blocked',laterCampaign:'art92'});continue;
+  }
   check(row.entityId+': blocker has a specific reason and no imported image',!!subject?.fighter&&!subject.art&&!fragmentAssets[row.entityId]&&!!row.reason?.trim());
   await selectDossier(page,row.entityId,false);
   check(row.entityId+': real missing dossier has no substituted image, inspector or duel',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('.sprite-inspector').count()===0&&await page.locator('#spriteDetail a').count()===0);
  }
- for(const subject of subjects.filter(subject=>subject.art&&!subject.policy.combatEnabled)){
+ for(const subject of subjects.filter(subject=>candidateIds.has(subject.id)&&subject.art&&!subject.policy.combatEnabled)){
   await page.goto(base+`/modules/unified-versus.html?qa=1&p1=${encodeURIComponent(subject.id)}&p2=sh2_bubble_head_nurse_024`);
   await page.waitForFunction(id=>window.__HALO_QA__?.selection.p1.id===id,subject.id);await page.selectOption('#mode','local');
   for(const diagnostic of [false,true]){
@@ -158,9 +172,10 @@ try{
    check(subject.id+': illustrated noncombatant rejects '+(diagnostic?'diagnostic':'normal')+' duel',await page.evaluate(()=>!__HALO_QA__.engine)&&/rôle non combattant|identité à confirmer/.test(await page.locator('#spriteLaunchStatus').textContent()));
   }
  }
- const playable=subjects.filter(subject=>subject.art&&subject.policy.combatEnabled),pairs=[];
+ const playable=subjects.filter(subject=>candidateIds.has(subject.id)&&subject.art&&subject.policy.combatEnabled),pairs=[];
  for(let i=0;i<playable.length;i+=2)pairs.push([playable[i].id,playable[i+1]?.id||'sh2_bubble_head_nurse_024']);
  report.counts.combatEnabledCandidates=playable.length;report.counts.referenceOnlyCandidates=candidates.length-playable.length;
+ if(campaign==='art144')check('ART144 still exercises its original 39 combatants and 13 source dossiers',playable.length===39&&candidates.length-playable.length===13);
  for(const pair of pairs)for(const ids of [pair,[...pair].reverse()]){
   await page.goto(base+`/modules/unified-versus.html?qa=1&p1=${encodeURIComponent(ids[0])}&p2=${encodeURIComponent(ids[1])}`);
   await page.waitForFunction(()=>!!window.__HALO_QA__);

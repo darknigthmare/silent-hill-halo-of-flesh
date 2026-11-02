@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "campaign": "art92",
+  "group": "d",
+  "baseCommit": "82e5f413300ca1112d153ee407dd988b70efd313",
+  "assets": {
+    "bom_light_guardian_140": {
+      "fighterId": "bom_light_guardian_140",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-674a2abb-4e35-4ab0-ad2f-b383338a63ce.png",
+      "sourceSHA256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Light Guardian BoM : portrait natif complet dont les contours commencent après le bord supérieur, cœur lumineux, carapace large, bras-masse asymétrique et deux petits appuis. Une face humaine ajoutée par la première génération a été supprimée par édition et cette première sortie est exclue. Seul le portrait 127×127 et le texte identifiant le cœur/bras-masse attestent ce modèle : microtextures et découpe fine des plaques non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+          "bytes": 1042574,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            191,
+            192,
+            1096,
+            1102
+          ],
+          "alphaBounds": [
+            0,
+            52,
+            1226,
+            1254
+          ],
+          "framingBounds": [
+            187,
+            189,
+            1099,
+            1108
+          ],
+          "pixelSHA256": "4089d791631950349c614d2c86df5d59ffd559a5dbe33aa7713b4b3f356f9398",
+          "transparentFraction": 0.78096,
+          "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+          "facing": 1,
+          "anchor": [
+            0.5131578947368421,
+            0.8787878787878788
+          ],
+          "bodyHeight": 0.7256778309409888,
+          "sourceFile": "exec-674a2abb-4e35-4ab0-ad2f-b383338a63ce.png",
+          "sourceSHA256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+        "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+        "bytes": 1042574,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_water_guardian_141": {
+      "fighterId": "bom_water_guardian_141",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-3e612d94-b98b-4acd-a620-dac1df388f9b.png",
+      "sourceSHA256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Water Guardian BoM : tête/couronne complète du portrait combinée aux membres et à la base naturellement fermée de la capture native50. Masse aquatique tronquée à base arrondie, deux bras principaux et une seule pièce main/avant-bras détachée attestée en bas à droite de la capture ; aucune jambe humaine ni pied ajouté. La première sortie comprenait une main inférieure gauche inventée après confusion avec le marteau du joueur ; elle a été supprimée par édition et cette première sortie est exclue. La composition assemble des vues complémentaires, sans prétendre reproduire une pose source mesurée ; surfaces et raccords fins restent approximatifs. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+          "bytes": 1220038,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            155,
+            226,
+            1226,
+            1099
+          ],
+          "alphaBounds": [
+            75,
+            31,
+            1238,
+            1254
+          ],
+          "framingBounds": [
+            148,
+            223,
+            1229,
+            1101
+          ],
+          "pixelSHA256": "a03265376af28b43f72d1b729e9d277bc26c854075589265529e0167420a28ae",
+          "transparentFraction": 0.70699,
+          "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+          "facing": 1,
+          "anchor": [
+            0.5506379585326954,
+            0.8763955342902712
+          ],
+          "bodyHeight": 0.6961722488038278,
+          "sourceFile": "exec-3e612d94-b98b-4acd-a620-dac1df388f9b.png",
+          "sourceSHA256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+        "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+        "bytes": 1220038,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_earth_guardian_142": {
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c55b634e-320b-4af5-8222-7f216c95c57d.png",
+      "sourceSHA256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Earth Guardian BoM : ensemble canonique de tête rocheuse et bras/blocs détachés vu dans le portrait et les captures48/49 ; terminaison inférieure rocheuse préservée, aucun tronc ni jambe humanoïde ajouté. Le sommet entier vient du portrait, les gros blocs des captures ; leur composition et nombre de petits segments ne sont pas certifiés image pour image. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+          "bytes": 912883,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            58,
+            322,
+            1227,
+            888
+          ],
+          "alphaBounds": [
+            25,
+            38,
+            1236,
+            1238
+          ],
+          "framingBounds": [
+            51,
+            319,
+            1229,
+            898
+          ],
+          "pixelSHA256": "cb7abf7372391c07c3321c94f4e08e12f4a5ca5e3a4e82a06c56e73f283507a9",
+          "transparentFraction": 0.78856,
+          "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+          "facing": 1,
+          "anchor": [
+            0.5123604465709729,
+            0.7081339712918661
+          ],
+          "bodyHeight": 0.4513556618819777,
+          "sourceFile": "exec-c55b634e-320b-4af5-8222-7f216c95c57d.png",
+          "sourceSHA256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+        "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+        "bytes": 912883,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_gray_child_147": {
+      "fighterId": "bom_gray_child_147",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0a841488-fd5a-4f5d-927b-eab8377d5643.png",
+      "sourceSHA256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Gray Child de l’Expansion Pack BoM : le portrait et les nouvelles captures29/30, dont la cible nommée Gray Child, attestent la petite silhouette, tête massive, longs bras, deux petits appuis et couteau bas. Identité enfant-like conservée, aucun relabel adulte ; aucun corps SH1 transféré. Géométrie fine et textures limitées par la résolution des captures ; aucun gore ajouté au prompt. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+          "bytes": 467880,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            288,
+            295,
+            956,
+            1024
+          ],
+          "alphaBounds": [
+            59,
+            37,
+            1240,
+            1180
+          ],
+          "framingBounds": [
+            285,
+            290,
+            965,
+            1029
+          ],
+          "pixelSHA256": "0aca463c4dc4c4a9d731c2b4d25a4750a72900d6de59333f8ae42ecbca480662",
+          "transparentFraction": 0.90074,
+          "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+          "facing": 1,
+          "anchor": [
+            0.4960127591706539,
+            0.8165869218500797
+          ],
+          "bodyHeight": 0.5813397129186603,
+          "sourceFile": "exec-0a841488-fd5a-4f5d-927b-eab8377d5643.png",
+          "sourceSHA256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+        "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+        "bytes": 467880,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    },
+    "bom_raw_shock_148": {
+      "fighterId": "bom_raw_shock_148",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b3b560c5-cb11-4234-8fb3-b9be29c14149.png",
+      "sourceSHA256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Raw Shock révélé de l’Expansion Pack BoM : portrait et nouvelles captures27/28/34, dont les cibles nommées Raw Shock, établissent le déguisement humain séparé de la vraie silhouette maigre à tête pâle, bras et doigts allongés, deux jambes/appuis. Forme révélée uniquement, pas de vêtement du déguisement ni transfert de variante Shattered Memories. Visage/plis fins non certifiés à partir des sources peu résolues. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+          "bytes": 574321,
+          "width": 1254,
+          "height": 1254,
+          "visibleBounds": [
+            294,
+            123,
+            1009,
+            1158
+          ],
+          "alphaBounds": [
+            39,
+            39,
+            1242,
+            1254
+          ],
+          "framingBounds": [
+            288,
+            119,
+            1015,
+            1161
+          ],
+          "pixelSHA256": "d5d0aa557dd7f117949fe4f2f780f9122408cf963c1037291062c7fa7dd28e5b",
+          "transparentFraction": 0.88902,
+          "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+          "facing": 1,
+          "anchor": [
+            0.5195374800637959,
+            0.9234449760765551
+          ],
+          "bodyHeight": 0.8253588516746412,
+          "sourceFile": "exec-b3b560c5-cb11-4234-8fb3-b9be29c14149.png",
+          "sourceSHA256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+          "origin": "conversation-image-generation"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+        "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+        "bytes": 574321,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "input": "production-plan.json",
-  "planSha256": "937ab71a5b62b01c34f81f1595510c359ee4be627be4eae176b43302b391bd20",
+  "planSha256": "45b092009538a4586933571ac633f094b8de3f9bb7fdbad4cb8795ef5873bede",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
   "sheets": {
     "Combattants": {
@@ -243,7 +243,7 @@
     "observations": 435,
     "sources": 277,
     "tasks": 875,
-    "pngCandidates": 138,
+    "pngCandidates": 154,
     "animatedClips": 1,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 205,
@@ -289,7 +289,7 @@
     1799,
     435,
     277,
-    138,
+    154,
     1,
     0,
     840,
@@ -297,15 +297,15 @@
   ],
   "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
   "operation": "Narrow update of existing workbook",
-  "sourceSha256": "931517647d9844af829dbf5c0fabe2f529bfe909f3b8c8215768d38a24a91907",
-  "changedCells": 494,
+  "sourceSha256": "f86c5d271966f015c131f8eeaadaa2661af636c8efb850ba992d7a6302273ffe",
+  "changedCells": 247,
   "changesBySheet": {
-    "Combattants": 52,
-    "Clips": 192,
-    "Actions": 248,
+    "Combattants": 16,
+    "Clips": 105,
+    "Actions": 124,
     "Synthèse": 2
   },
-  "enlargedRows": 287,
+  "enlargedRows": 162,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
@@ -641,7 +641,7 @@
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 138
+      "value": 154
     },
     {
       "sheet": "Synthèse",
@@ -788,7 +788,7 @@
       "value": 11
     }
   ],
-  "changeLogSha256": "cc279b9e416052efbd485c24d356c5b23dc6718a86d0f58f59d4503717322ae3",
+  "changeLogSha256": "e7f1a5c752cec46fc0f17980d2b9d25e308c40dd6b6005da23e891f287dc2029",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
@@ -799,8 +799,8 @@
     "preservation": {
       "passed": true,
       "comparedCells": 250550,
-      "authoredChanges": 494,
-      "enlargedRows": 287,
+      "authoredChanges": 247,
+      "enlargedRows": 162,
       "appendedSourceRows": 0,
       "appendedSourceCells": 0,
       "auditedFormulaExpansions": 0,

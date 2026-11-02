@@ -4,34 +4,41 @@ import {createHash} from 'node:crypto';
 import {resolve,isAbsolute,relative} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {auditRaster} from './raster-validation.mjs';
-import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES} from './art-campaign-tracking.mjs';
+import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const nonempty=value=>typeof value==='string'&&value.trim().length>0;
-const counts=ART_CAMPAIGN_GROUP_SIZES;
+const specs={art144:{base:ART_CAMPAIGN_BASE,requested:144,counts:ART_CAMPAIGN_GROUP_SIZES},
+ art92:{base:ART_CONTINUATION_BASE,requested:92,counts:ART_CONTINUATION_GROUP_SIZES}};
+const campaignSpec=inventory=>{
+ const spec=Object.hasOwn(specs,inventory?.campaign)?specs[inventory.campaign]:null;
+ if(!spec||inventory.requested!==spec.requested||inventory.entries?.length!==spec.requested)
+  throw Error('Exactly '+(spec?.requested||'the declared')+' original missing profiles are required.');
+ if(inventory.baseCommit!==spec.base)throw Error('Exact baseline commit required.');
+ return spec;
+};
 const origins=new Set(['conversation-image-generation','external-unspecified','artist-created','scan']);
 const safePath=path=>nonempty(path)&&!isAbsolute(path)&&!path.includes('\\')&&
  path.split('/').every(part=>part&&part!=='.'&&part!=='..');
 
 export function validateArtCampaign(inventory,ledgers,fragments,baseline){
  const errors=[],seen=new Set(),groups=new Set(),assets={},totals={candidates:0,blocked:0};
- if(inventory?.campaign!=='art144'||inventory.requested!==144||inventory.entries?.length!==144)
-  throw Error('Exactly 144 original missing profiles are required.');
- if(inventory.baseCommit!==ART_CAMPAIGN_BASE)throw Error('Exact baseline commit required.');
+ const {requested,counts}=campaignSpec(inventory),campaign=inventory.campaign;
  const entries=new Map(inventory.entries.map(row=>[row.fighter?.id,row]));
- if(entries.size!==144||entries.has(undefined))throw Error('Unique original fighter identities required.');
+ if(entries.size!==requested||entries.has(undefined))throw Error('Unique original fighter identities required.');
  if(ledgers.length!==5||fragments.length!==5||new Set(fragments.map(row=>row.group)).size!==5)throw Error('All five complete groups required.');
  if(baseline?.schema!==1||!baseline.assets||typeof baseline.assets!=='object')throw Error('Original registry required.');
  for(const ledger of ledgers){
   const group=ledger?.group,fragment=fragments.find(item=>item.group===group);
   if(!Object.hasOwn(counts,group)||groups.has(group)){errors.push('Unknown or duplicate group');continue;}
   groups.add(group);
-  if(ledger.schema!==1||ledger.campaign!=='art144'||ledger.baseCommit!==inventory.baseCommit||ledger.requestedItems!==counts[group]||ledger.items?.length!==counts[group])
+  if(ledger.schema!==1||ledger.campaign!==campaign||ledger.baseCommit!==inventory.baseCommit||ledger.requestedItems!==counts[group]||ledger.items?.length!==counts[group])
    errors.push(group+': wrong campaign, baseline or exact assigned count');
-  if(!fragment||fragment.schema!==1||fragment.campaign!=='art144'||fragment.baseCommit!==inventory.baseCommit||!fragment.assets||typeof fragment.assets!=='object'){
+  if(!fragment||fragment.schema!==1||fragment.campaign!==campaign||fragment.baseCommit!==inventory.baseCommit||!fragment.assets||typeof fragment.assets!=='object'){
    errors.push(group+': registry fragment required');continue;
   }
-  const expected=new Set(inventory.entries.slice((group.charCodeAt(0)-97)*30,(group.charCodeAt(0)-96)*30).map(row=>row.fighter.id));
+  const offset=Object.entries(counts).slice(0,Object.keys(counts).indexOf(group)).reduce((n,[,size])=>n+size,0);
+  const expected=new Set(inventory.entries.slice(offset,offset+counts[group]).map(row=>row.fighter.id));
   const delivered=new Set();
   for(const item of ledger.items||[]){
    const id=item.entityId,entry=entries.get(id),asset=fragment.assets[id],label=group+':'+id;
@@ -48,6 +55,7 @@ export function validateArtCampaign(inventory,ledgers,fragments,baseline){
     if(!nonempty(item.reason)||asset)errors.push(label+': blocked rows need a reason and cannot acquire artwork');
    }else if(item.status==='implemented-candidate'){
     totals.candidates++;delivered.add(id);
+    if(entry?.generationExcluded)errors.push(label+': prior tool refusal or same-subject variant cannot receive new artwork');
     if(!asset||asset.fighterId!==id||asset.source!==entry?.fighter.source||asset.fidelity!=='unverified'||asset.status!=='integrated-candidate'||asset.singleSubjectReviewed!==true)
      errors.push(label+': exact source-owned unverified candidate required');
     if(asset?.frames?.length!==1||asset.animatedClips!==0||Object.keys(asset.clips||{}).length!==1||
@@ -68,9 +76,9 @@ export function validateArtCampaign(inventory,ledgers,fragments,baseline){
   }
   if(Object.keys(fragment.assets).some(id=>!delivered.has(id)))errors.push(group+': undeclared fragment artwork');
  }
- if(seen.size!==144)errors.push('All original 144 profiles must be covered exactly once.');
+ if(seen.size!==requested)errors.push('All original '+requested+' profiles must be covered exactly once.');
  if(errors.length)throw Error(errors.join('\n'));
- return {schema:1,campaign:'art144',baseCommit:inventory.baseCommit,requested:144,
+ return {schema:1,campaign,baseCommit:inventory.baseCommit,requested,
   groups:Object.entries(counts).map(([group,requestedItems])=>({group,requestedItems})),
   candidates:totals.candidates,blocked:totals.blocked,newAnimatedClips:0,certifiedOneToOne:0,assets,passed:true};
 }
@@ -78,9 +86,10 @@ export function validateArtCampaign(inventory,ledgers,fragments,baseline){
 export async function mergeArtCampaign({root,inventoryPath,baselineRegistryPath,output,apply=false}){
  root=await realpath(root);
  const inventory=JSON.parse(await readFile(inventoryPath)),baseline=JSON.parse(await readFile(baselineRegistryPath));
+ const {counts}=campaignSpec(inventory),campaign=inventory.campaign;
  if(hash(await readFile(baselineRegistryPath))!==inventory.baselineRegistrySha256)throw Error('Original baseline registry bytes required.');
- const ledgerPaths=Object.keys(counts).map(group=>`docs/production/batches/art144-${group}.json`);
- const fragmentPaths=Object.keys(counts).map(group=>`art/fragments/art144-${group}.json`);
+ const ledgerPaths=Object.keys(counts).map(group=>`docs/production/batches/${campaign}-${group}.json`);
+ const fragmentPaths=Object.keys(counts).map(group=>`art/fragments/${campaign}-${group}.json`);
  const read=async path=>JSON.parse(await readFile(resolve(root,path)));
  const ledgers=await Promise.all(ledgerPaths.map(read)),fragments=await Promise.all(fragmentPaths.map(read));
  const result=validateArtCampaign(inventory,ledgers,fragments,baseline),registry=await read('art/registry.json');

@@ -14202,5 +14202,1477 @@ export const SPRITES = {
       }
     },
     "animatedClips": 0
+  },
+  "sh3_split_worm_046": {
+    "fighterId": "sh3_split_worm_046",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-d5c9e8e7-3047-4176-aa44-92d62df4c7fd.png",
+    "sourceSHA256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Une seule image fixe candidate du modèle extérieur exposé de Split Worm SH3 original2003, idle non bouclé. Les deux lobes, dents et cône arrière fermé sont entièrement cadrés ; aucune longue anatomie cachée ou patte inventée. Le rendu source3200×2400 a des bornes non-grises [456,39,2896,2373] et se termine avant le fond gris sur tous les côtés (SHA256 843364cd78f75e2751f248c84bbc318340a1d9b4fa9e7f0e5ee3abc6ebb3f5ca). La capture retail corrobore ce même extérieur sortant du tunnel. Cela documente le modèle exposé entier, pas l’anatomie souterraine supposée. Source orientée gauche conservée ; miroir de présentation uniquement. Rôle et support de tunnel inchangés ; ancrage/échelle sont des réglages de présentation, pas des mesures originales. Une correction imagegen réduit le sujet dans une marge transparente connectée minimale de17.54%. Aucun cycle, timing, fidélité1:1 ou anatomie inaccessible certifié.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+        "bytes": 825350,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          278,
+          346,
+          1032,
+          1022
+        ],
+        "alphaBounds": [
+          57,
+          21,
+          1182,
+          1222
+        ],
+        "framingBounds": [
+          274,
+          344,
+          1034,
+          1029
+        ],
+        "pixelSHA256": "9f70317bf71f66137dd6f9833eb124d7c157539b261369c8b477a823ccb190c1",
+        "transparentFraction": 0.82887,
+        "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+        "facing": -1,
+        "anchor": [
+          0.52233,
+          0.81499
+        ],
+        "bodyHeight": 0.53907,
+        "sourceFile": "exec-d5c9e8e7-3047-4176-aa44-92d62df4c7fd.png",
+        "sourceSHA256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38",
+      "bytes": 825350,
+      "width": 1254,
+      "height": 1254,
+      "facing": -1,
+      "visibleBounds": [
+        278,
+        346,
+        1032,
+        1022
+      ],
+      "alphaBounds": [
+        57,
+        21,
+        1182,
+        1222
+      ],
+      "framingBounds": [
+        274,
+        344,
+        1034,
+        1029
+      ],
+      "pixelSHA256": "9f70317bf71f66137dd6f9833eb124d7c157539b261369c8b477a823ccb190c1",
+      "transparentFraction": 0.82887
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh4_greedy_worm_069": {
+    "fighterId": "sh4_greedy_worm_069",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-a8215607-b249-4e18-bc79-246fbe120844.png",
+    "sourceSHA256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Deux nouveaux rendus natifs nommés Greedy Worm attestent le corps entier enroulé. Texture, volume, diamètre de bouche, pose et orientation restent recomposés. Dossier hors duel conservé. Aucun1:1 certifié. Marges réelles=[0.20255, 0.14514, 0.18022, 0.09091] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021",
+        "bytes": 1167472,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          257,
+          185,
+          1022,
+          1127
+        ],
+        "alphaBounds": [
+          0,
+          32,
+          1240,
+          1198
+        ],
+        "framingBounds": [
+          254,
+          182,
+          1028,
+          1140
+        ],
+        "pixelSHA256": "0ac614dd65132d0b9b715b0dc22feae2a29326cc4081e9acab377ee814620fc7",
+        "transparentFraction": 0.6741,
+        "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+        "facing": 1,
+        "anchor": [
+          0.511164,
+          0.909091
+        ],
+        "bodyHeight": 0.763955,
+        "sourceFile": "exec-a8215607-b249-4e18-bc79-246fbe120844.png",
+        "sourceSHA256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "sha256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021",
+      "bytes": 1167472,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        257,
+        185,
+        1022,
+        1127
+      ],
+      "alphaBounds": [
+        0,
+        32,
+        1240,
+        1198
+      ],
+      "framingBounds": [
+        254,
+        182,
+        1028,
+        1140
+      ],
+      "pixelSHA256": "0ac614dd65132d0b9b715b0dc22feae2a29326cc4081e9acab377ee814620fc7",
+      "transparentFraction": 0.6741
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_remnant_077": {
+    "fighterId": "origins_remnant_077",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-a467e7bb-1114-480b-8161-6b984f866388.png",
+    "sourceSHA256": "912fa1130daa4c9299ffd9dd926f25787dbd175b88947ad8992671e02df31098",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. La capture native de 200×272 et le texte attestent la cage vide flottante et une ombre humanoïde plate, sans corps charnel. La topologie du fil, les anneaux/crochets ajoutés au bas et la projection d’ombre sont interprétés, non prouvés par cette petite capture. Aucun mécanisme original ou anatomie cachée n’est certifié. Aucun1:1 certifié. Marges réelles=[0.38437, 0.22887, 0.34689, 0.18022] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "912fa1130daa4c9299ffd9dd926f25787dbd175b88947ad8992671e02df31098",
+        "bytes": 306562,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          491,
+          290,
+          808,
+          1017
+        ],
+        "alphaBounds": [
+          41,
+          39,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          482,
+          287,
+          819,
+          1028
+        ],
+        "pixelSHA256": "1939f46bd5ccddafae3a1ee73d16f94344e387812ed9b14ed24044933237ce3e",
+        "transparentFraction": 0.95083,
+        "path": "assets/sprites/origins_remnant_077.912fa1130daa.png",
+        "facing": 1,
+        "anchor": [
+          0.51874,
+          0.819777
+        ],
+        "bodyHeight": 0.590909,
+        "sourceFile": "exec-a467e7bb-1114-480b-8161-6b984f866388.png",
+        "sourceSHA256": "912fa1130daa4c9299ffd9dd926f25787dbd175b88947ad8992671e02df31098",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_remnant_077.912fa1130daa.png",
+      "sha256": "912fa1130daa4c9299ffd9dd926f25787dbd175b88947ad8992671e02df31098",
+      "bytes": 306562,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        491,
+        290,
+        808,
+        1017
+      ],
+      "alphaBounds": [
+        41,
+        39,
+        1240,
+        1254
+      ],
+      "framingBounds": [
+        482,
+        287,
+        819,
+        1028
+      ],
+      "pixelSHA256": "1939f46bd5ccddafae3a1ee73d16f94344e387812ed9b14ed24044933237ce3e",
+      "transparentFraction": 0.95083
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "homecoming_scarlet_doll_form_094": {
+    "fighterId": "homecoming_scarlet_doll_form_094",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png",
+    "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Nouvelles captures126/127 correctement identifiées Scarlet à coque de porcelaine, distinctes des anciennes133-138 Asphyxia/Sepulcher. La127 atteint le bord inférieur et son pied droit est en partie masqué par le watermark ; la126 coupe les jambes. Les deux terminaisons sombres des pieds/capsules de la sortie sont donc interprétées et non attestées nettement. Silhouette générée entière ; détails des pieds, proportions, motifs et état exact de la coque non certifiés. Aucun1:1 certifié. Marges réelles=[0.19059, 0.02313, 0.10128, 0.02313] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+        "bytes": 768803,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          245,
+          32,
+          1123,
+          1222
+        ],
+        "alphaBounds": [
+          17,
+          18,
+          1218,
+          1230
+        ],
+        "framingBounds": [
+          239,
+          29,
+          1127,
+          1225
+        ],
+        "pixelSHA256": "12c1a354ecf3100a4b827240cc958106f721cc72b73f02372861da8c9729a5a2",
+        "transparentFraction": 0.86377,
+        "path": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+        "facing": 1,
+        "anchor": [
+          0.544657,
+          0.976874
+        ],
+        "bodyHeight": 0.953748,
+        "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png",
+        "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+      "sha256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+      "bytes": 768803,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        245,
+        32,
+        1123,
+        1222
+      ],
+      "alphaBounds": [
+        17,
+        18,
+        1218,
+        1230
+      ],
+      "framingBounds": [
+        239,
+        29,
+        1127,
+        1225
+      ],
+      "pixelSHA256": "12c1a354ecf3100a4b827240cc958106f721cc72b73f02372861da8c9729a5a2",
+      "transparentFraction": 0.86377
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "shattered_raw_shock_base_099": {
+    "fighterId": "shattered_raw_shock_base_099",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-8a946815-a0e5-4db5-b826-b05d10de78ff.png",
+    "sourceSHA256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Deux captures complètent désormais les jambes/pieds manquants du portrait neutre. La capture20090826_08 montre le corps entier au centre, la35 corrobore la famille neutre ; build promotionnel précis non établi. Pose calme et membres recomposés, pas de variante féminine/malade/abstraite/atrophiée transférée. Rôle de poursuite hors duel inchangé. Aucun1:1 certifié. Marges réelles=[0.33333, 0.0622, 0.29346, 0.063] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+        "bytes": 736613,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          421,
+          81,
+          883,
+          1172
+        ],
+        "alphaBounds": [
+          0,
+          31,
+          1240,
+          1235
+        ],
+        "framingBounds": [
+          418,
+          78,
+          886,
+          1175
+        ],
+        "pixelSHA256": "94d5a73dc6a57ff763779d1da4aaa4d75cbab4dfc8413e09136a9d443e7f8317",
+        "transparentFraction": 0.86733,
+        "path": "assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+        "facing": 1,
+        "anchor": [
+          0.519936,
+          0.937002
+        ],
+        "bodyHeight": 0.874801,
+        "sourceFile": "exec-8a946815-a0e5-4db5-b826-b05d10de78ff.png",
+        "sourceSHA256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+      "sha256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+      "bytes": 736613,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        421,
+        81,
+        883,
+        1172
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        1240,
+        1235
+      ],
+      "framingBounds": [
+        418,
+        78,
+        886,
+        1175
+      ],
+      "pixelSHA256": "94d5a73dc6a57ff763779d1da4aaa4d75cbab4dfc8413e09136a9d443e7f8317",
+      "transparentFraction": 0.86733
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_light_guardian_140": {
+    "fighterId": "bom_light_guardian_140",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-674a2abb-4e35-4ab0-ad2f-b383338a63ce.png",
+    "sourceSHA256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Light Guardian BoM : portrait natif complet dont les contours commencent après le bord supérieur, cœur lumineux, carapace large, bras-masse asymétrique et deux petits appuis. Une face humaine ajoutée par la première génération a été supprimée par édition et cette première sortie est exclue. Seul le portrait 127×127 et le texte identifiant le cœur/bras-masse attestent ce modèle : microtextures et découpe fine des plaques non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+        "bytes": 1042574,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          191,
+          192,
+          1096,
+          1102
+        ],
+        "alphaBounds": [
+          0,
+          52,
+          1226,
+          1254
+        ],
+        "framingBounds": [
+          187,
+          189,
+          1099,
+          1108
+        ],
+        "pixelSHA256": "4089d791631950349c614d2c86df5d59ffd559a5dbe33aa7713b4b3f356f9398",
+        "transparentFraction": 0.78096,
+        "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+        "facing": 1,
+        "anchor": [
+          0.5131578947368421,
+          0.8787878787878788
+        ],
+        "bodyHeight": 0.7256778309409888,
+        "sourceFile": "exec-674a2abb-4e35-4ab0-ad2f-b383338a63ce.png",
+        "sourceSHA256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+      "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241",
+      "bytes": 1042574,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        191,
+        192,
+        1096,
+        1102
+      ],
+      "alphaBounds": [
+        0,
+        52,
+        1226,
+        1254
+      ],
+      "framingBounds": [
+        187,
+        189,
+        1099,
+        1108
+      ],
+      "pixelSHA256": "4089d791631950349c614d2c86df5d59ffd559a5dbe33aa7713b4b3f356f9398",
+      "transparentFraction": 0.78096
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_water_guardian_141": {
+    "fighterId": "bom_water_guardian_141",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-3e612d94-b98b-4acd-a620-dac1df388f9b.png",
+    "sourceSHA256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Water Guardian BoM : tête/couronne complète du portrait combinée aux membres et à la base naturellement fermée de la capture native50. Masse aquatique tronquée à base arrondie, deux bras principaux et une seule pièce main/avant-bras détachée attestée en bas à droite de la capture ; aucune jambe humaine ni pied ajouté. La première sortie comprenait une main inférieure gauche inventée après confusion avec le marteau du joueur ; elle a été supprimée par édition et cette première sortie est exclue. La composition assemble des vues complémentaires, sans prétendre reproduire une pose source mesurée ; surfaces et raccords fins restent approximatifs. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+        "bytes": 1220038,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          155,
+          226,
+          1226,
+          1099
+        ],
+        "alphaBounds": [
+          75,
+          31,
+          1238,
+          1254
+        ],
+        "framingBounds": [
+          148,
+          223,
+          1229,
+          1101
+        ],
+        "pixelSHA256": "a03265376af28b43f72d1b729e9d277bc26c854075589265529e0167420a28ae",
+        "transparentFraction": 0.70699,
+        "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+        "facing": 1,
+        "anchor": [
+          0.5506379585326954,
+          0.8763955342902712
+        ],
+        "bodyHeight": 0.6961722488038278,
+        "sourceFile": "exec-3e612d94-b98b-4acd-a620-dac1df388f9b.png",
+        "sourceSHA256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+      "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+      "bytes": 1220038,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        155,
+        226,
+        1226,
+        1099
+      ],
+      "alphaBounds": [
+        75,
+        31,
+        1238,
+        1254
+      ],
+      "framingBounds": [
+        148,
+        223,
+        1229,
+        1101
+      ],
+      "pixelSHA256": "a03265376af28b43f72d1b729e9d277bc26c854075589265529e0167420a28ae",
+      "transparentFraction": 0.70699
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_earth_guardian_142": {
+    "fighterId": "bom_earth_guardian_142",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-c55b634e-320b-4af5-8222-7f216c95c57d.png",
+    "sourceSHA256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Earth Guardian BoM : ensemble canonique de tête rocheuse et bras/blocs détachés vu dans le portrait et les captures48/49 ; terminaison inférieure rocheuse préservée, aucun tronc ni jambe humanoïde ajouté. Le sommet entier vient du portrait, les gros blocs des captures ; leur composition et nombre de petits segments ne sont pas certifiés image pour image. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+        "bytes": 912883,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          58,
+          322,
+          1227,
+          888
+        ],
+        "alphaBounds": [
+          25,
+          38,
+          1236,
+          1238
+        ],
+        "framingBounds": [
+          51,
+          319,
+          1229,
+          898
+        ],
+        "pixelSHA256": "cb7abf7372391c07c3321c94f4e08e12f4a5ca5e3a4e82a06c56e73f283507a9",
+        "transparentFraction": 0.78856,
+        "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+        "facing": 1,
+        "anchor": [
+          0.5123604465709729,
+          0.7081339712918661
+        ],
+        "bodyHeight": 0.4513556618819777,
+        "sourceFile": "exec-c55b634e-320b-4af5-8222-7f216c95c57d.png",
+        "sourceSHA256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+      "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+      "bytes": 912883,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        58,
+        322,
+        1227,
+        888
+      ],
+      "alphaBounds": [
+        25,
+        38,
+        1236,
+        1238
+      ],
+      "framingBounds": [
+        51,
+        319,
+        1229,
+        898
+      ],
+      "pixelSHA256": "cb7abf7372391c07c3321c94f4e08e12f4a5ca5e3a4e82a06c56e73f283507a9",
+      "transparentFraction": 0.78856
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_gray_child_147": {
+    "fighterId": "bom_gray_child_147",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0a841488-fd5a-4f5d-927b-eab8377d5643.png",
+    "sourceSHA256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Gray Child de l’Expansion Pack BoM : le portrait et les nouvelles captures29/30, dont la cible nommée Gray Child, attestent la petite silhouette, tête massive, longs bras, deux petits appuis et couteau bas. Identité enfant-like conservée, aucun relabel adulte ; aucun corps SH1 transféré. Géométrie fine et textures limitées par la résolution des captures ; aucun gore ajouté au prompt. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+        "bytes": 467880,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          288,
+          295,
+          956,
+          1024
+        ],
+        "alphaBounds": [
+          59,
+          37,
+          1240,
+          1180
+        ],
+        "framingBounds": [
+          285,
+          290,
+          965,
+          1029
+        ],
+        "pixelSHA256": "0aca463c4dc4c4a9d731c2b4d25a4750a72900d6de59333f8ae42ecbca480662",
+        "transparentFraction": 0.90074,
+        "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+        "facing": 1,
+        "anchor": [
+          0.4960127591706539,
+          0.8165869218500797
+        ],
+        "bodyHeight": 0.5813397129186603,
+        "sourceFile": "exec-0a841488-fd5a-4f5d-927b-eab8377d5643.png",
+        "sourceSHA256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+      "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+      "bytes": 467880,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        288,
+        295,
+        956,
+        1024
+      ],
+      "alphaBounds": [
+        59,
+        37,
+        1240,
+        1180
+      ],
+      "framingBounds": [
+        285,
+        290,
+        965,
+        1029
+      ],
+      "pixelSHA256": "0aca463c4dc4c4a9d731c2b4d25a4750a72900d6de59333f8ae42ecbca480662",
+      "transparentFraction": 0.90074
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_raw_shock_148": {
+    "fighterId": "bom_raw_shock_148",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-b3b560c5-cb11-4234-8fb3-b9be29c14149.png",
+    "sourceSHA256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Raw Shock révélé de l’Expansion Pack BoM : portrait et nouvelles captures27/28/34, dont les cibles nommées Raw Shock, établissent le déguisement humain séparé de la vraie silhouette maigre à tête pâle, bras et doigts allongés, deux jambes/appuis. Forme révélée uniquement, pas de vêtement du déguisement ni transfert de variante Shattered Memories. Visage/plis fins non certifiés à partir des sources peu résolues. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel source livré, aucune animation source ni mesure de timing. Posture et rotation 2D de présentation, côté opposé non attesté ; un seul frame idle non loop.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+        "bytes": 574321,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          294,
+          123,
+          1009,
+          1158
+        ],
+        "alphaBounds": [
+          39,
+          39,
+          1242,
+          1254
+        ],
+        "framingBounds": [
+          288,
+          119,
+          1015,
+          1161
+        ],
+        "pixelSHA256": "d5d0aa557dd7f117949fe4f2f780f9122408cf963c1037291062c7fa7dd28e5b",
+        "transparentFraction": 0.88902,
+        "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+        "facing": 1,
+        "anchor": [
+          0.5195374800637959,
+          0.9234449760765551
+        ],
+        "bodyHeight": 0.8253588516746412,
+        "sourceFile": "exec-b3b560c5-cb11-4234-8fb3-b9be29c14149.png",
+        "sourceSHA256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+      "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+      "bytes": 574321,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        294,
+        123,
+        1009,
+        1158
+      ],
+      "alphaBounds": [
+        39,
+        39,
+        1242,
+        1254
+      ],
+      "framingBounds": [
+        288,
+        119,
+        1015,
+        1161
+      ],
+      "pixelSHA256": "d5d0aa557dd7f117949fe4f2f780f9122408cf963c1037291062c7fa7dd28e5b",
+      "transparentFraction": 0.88902
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "film_mannequin_monster_176": {
+    "fighterId": "film_mannequin_monster_176",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-166e669a-3a5d-4920-b14f-e9de4eb48b77.png",
+    "sourceSHA256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Mannequin Monster du film Silent Hill: Revelation2012, édition France du booklet de production : vues CG du panneau02 recoupées avec les rendus MrXRev9/9.1 et les plans filmés03. Une araignée de pièces de mannequins de vitrine autour d’une carapace sombre, distincte du MannequinSH2. La première sortie avait un halo brun, supprimé par édition ImageGen ; cette première sortie est exclue. Les vues CG entières02 ne sont pas explicitement légendées finales ; les recouvrements des rendus03 empêchent de certifier le total source des têtes/mains/pieds et leurs raccords cachés. Le candidat conserve4têtes et ses extrémités visibles, sans prétendre certifier cette topologie ni la pose du film. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+        "bytes": 1443378,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          28,
+          164,
+          1243,
+          1120
+        ],
+        "alphaBounds": [
+          0,
+          23,
+          1253,
+          1254
+        ],
+        "framingBounds": [
+          24,
+          160,
+          1253,
+          1123
+        ],
+        "pixelSHA256": "8c19c2a229d88b42ef7f02e087d3178c49d4b205b4ad607c749dc31796d46a28",
+        "transparentFraction": 0.70793,
+        "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+        "facing": 1,
+        "anchor": [
+          0.5067783094098883,
+          0.8931419457735247
+        ],
+        "bodyHeight": 0.7623604465709729,
+        "sourceFile": "exec-166e669a-3a5d-4920-b14f-e9de4eb48b77.png",
+        "sourceSHA256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+      "sha256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+      "bytes": 1443378,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        28,
+        164,
+        1243,
+        1120
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1253,
+        1254
+      ],
+      "framingBounds": [
+        24,
+        160,
+        1253,
+        1123
+      ],
+      "pixelSHA256": "8c19c2a229d88b42ef7f02e087d3178c49d4b205b4ad607c749dc31796d46a28",
+      "transparentFraction": 0.70793
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "townfall_lunger": {
+    "fighterId": "townfall_lunger",
+    "source": "townfall",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-31b14256-a28a-4911-91ee-4f8b8e914319.png",
+    "sourceSHA256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Lunger : modèle final en jeu03 et détail04 nommés dans la nouvelle galerie. Corps maigre entier, tête asymétrique, bras liés et deux pieds conservés ; aucune hache tenue ni poing libre ajouté. Posture de présentation 2D, détails fins des sangles non mesurés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+        "bytes": 713338,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          362,
+          13,
+          933,
+          1241
+        ],
+        "alphaBounds": [
+          0,
+          10,
+          1236,
+          1246
+        ],
+        "framingBounds": [
+          354,
+          10,
+          936,
+          1244
+        ],
+        "pixelSHA256": "b5ab9ab5b4d0e7345bdd143addbc4c8f9b2540dc58659e8968d62123f8bbb88b",
+        "transparentFraction": 0.84988,
+        "path": "assets/sprites/townfall_lunger.c53d378bc7df.png",
+        "facing": 1,
+        "anchor": [
+          0.516347687400319,
+          0.9896331738437002
+        ],
+        "bodyHeight": 0.9792663476874003,
+        "sourceFile": "exec-31b14256-a28a-4911-91ee-4f8b8e914319.png",
+        "sourceSHA256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/townfall_lunger.c53d378bc7df.png",
+      "sha256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+      "bytes": 713338,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        362,
+        13,
+        933,
+        1241
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        1236,
+        1246
+      ],
+      "framingBounds": [
+        354,
+        10,
+        936,
+        1244
+      ],
+      "pixelSHA256": "b5ab9ab5b4d0e7345bdd143addbc4c8f9b2540dc58659e8968d62123f8bbb88b",
+      "transparentFraction": 0.84988
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "townfall_sorrowful": {
+    "fighterId": "townfall_sorrowful",
+    "source": "townfall",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-5a13fcd7-553b-4fb2-9a82-34a746405b9e.png",
+    "sourceSHA256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Sorrowful : modèle final en jeu07 et détail08 nommés. Tête, mains rapprochées du torse, petit cordon thoracique et deux pieds complets conservés ; pas de projectile ou nouvelle blessure. Microtexture et trajet fin du cordon non certifiés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+        "bytes": 708797,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          374,
+          32,
+          887,
+          1217
+        ],
+        "alphaBounds": [
+          25,
+          30,
+          1226,
+          1236
+        ],
+        "framingBounds": [
+          371,
+          30,
+          889,
+          1223
+        ],
+        "pixelSHA256": "afb8bc32c4dd24eed584c8e802f8db2173a5e5f663c4c4e007116d546f95f71c",
+        "transparentFraction": 0.84534,
+        "path": "assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+        "facing": 1,
+        "anchor": [
+          0.5027910685805422,
+          0.970494417862839
+        ],
+        "bodyHeight": 0.9449760765550239,
+        "sourceFile": "exec-5a13fcd7-553b-4fb2-9a82-34a746405b9e.png",
+        "sourceSHA256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+      "sha256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+      "bytes": 708797,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        374,
+        32,
+        887,
+        1217
+      ],
+      "alphaBounds": [
+        25,
+        30,
+        1226,
+        1236
+      ],
+      "framingBounds": [
+        371,
+        30,
+        889,
+        1223
+      ],
+      "pixelSHA256": "afb8bc32c4dd24eed584c8e802f8db2173a5e5f663c4c4e007116d546f95f71c",
+      "transparentFraction": 0.84534
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "townfall_fallen": {
+    "fighterId": "townfall_fallen",
+    "source": "townfall",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-2602cea2-363c-413a-8fd7-6e4290de7541.png",
+    "sourceSHA256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Fallen : silhouette entière tirée du concept04 explicitement décrit comme final, et non d’un rendu commercial en jeu. La tête, les membres et les petits filaments suivent ce concept ; leurs surfaces et la rotation de présentation restent approximatives. Le statut de concept est conservé, sans certification du modèle final filmé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+        "bytes": 674148,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          257,
+          31,
+          996,
+          1222
+        ],
+        "alphaBounds": [
+          49,
+          27,
+          1216,
+          1224
+        ],
+        "framingBounds": [
+          252,
+          27,
+          999,
+          1224
+        ],
+        "pixelSHA256": "b22ae1b188496127ccc70eb26a50a400a3a06e6a7183bcd7acc6ffb68fb3b3ff",
+        "transparentFraction": 0.83441,
+        "path": "assets/sprites/townfall_fallen.50be585d8b6e.png",
+        "facing": 1,
+        "anchor": [
+          0.4996012759170654,
+          0.9744816586921851
+        ],
+        "bodyHeight": 0.9497607655502392,
+        "sourceFile": "exec-2602cea2-363c-413a-8fd7-6e4290de7541.png",
+        "sourceSHA256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/townfall_fallen.50be585d8b6e.png",
+      "sha256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+      "bytes": 674148,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        257,
+        31,
+        996,
+        1222
+      ],
+      "alphaBounds": [
+        49,
+        27,
+        1216,
+        1224
+      ],
+      "framingBounds": [
+        252,
+        27,
+        999,
+        1224
+      ],
+      "pixelSHA256": "b22ae1b188496127ccc70eb26a50a400a3a06e6a7183bcd7acc6ffb68fb3b3ff",
+      "transparentFraction": 0.83441
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "townfall_widow": {
+    "fighterId": "townfall_widow",
+    "source": "townfall",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-66d55fec-6785-4efd-94f2-800ba35cfe7c.png",
+    "sourceSHA256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Widow : modèle final en jeu03 nommé, silhouette entière avec couvre-chef pâle, vêtement gris déchiqueté, bandes, petit élément de bois et pieds. L’image native prévaut sur la description générale évoquant un voile noir. Pose naturelle de cette image ; rôle unverified et combat désactivé conservés, sans posture de boxe ni pattern inventé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+        "bytes": 958754,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          126,
+          57,
+          1052,
+          1227
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1236,
+          1254
+        ],
+        "framingBounds": [
+          123,
+          53,
+          1061,
+          1230
+        ],
+        "pixelSHA256": "2b2b1710aa7dff816daeb86f941cfb230cfaa920367be41fc00a495972bea0d3",
+        "transparentFraction": 0.78339,
+        "path": "assets/sprites/townfall_widow.853146bb99d2.png",
+        "facing": 1,
+        "anchor": [
+          0.4696969696969697,
+          0.9784688995215312
+        ],
+        "bodyHeight": 0.9330143540669856,
+        "sourceFile": "exec-66d55fec-6785-4efd-94f2-800ba35cfe7c.png",
+        "sourceSHA256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/townfall_widow.853146bb99d2.png",
+      "sha256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+      "bytes": 958754,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        126,
+        57,
+        1052,
+        1227
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1236,
+        1254
+      ],
+      "framingBounds": [
+        123,
+        53,
+        1061,
+        1230
+      ],
+      "pixelSHA256": "2b2b1710aa7dff816daeb86f941cfb230cfaa920367be41fc00a495972bea0d3",
+      "transparentFraction": 0.78339
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "townfall_the_weight": {
+    "fighterId": "townfall_the_weight",
+    "source": "townfall",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-4c7f4b9b-8b50-4c15-b155-616ebc44aeb6.png",
+    "sourceSHA256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "The Weight : modèle final en jeu08 entier, détail matériel06. Masse sombre enveloppée, petite tête ovale, bras fusionnés et pantalon/chaussures conservés. Aucune chaîne/pierre de la description générale ni perfusion de l’autre état final03 transférée. Présentation du poursuivant, rôle scripted-encounter conservé ; face cachée et phase finale non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+        "bytes": 914571,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          335,
+          46,
+          955,
+          1208
+        ],
+        "alphaBounds": [
+          0,
+          42,
+          1226,
+          1212
+        ],
+        "framingBounds": [
+          331,
+          42,
+          961,
+          1212
+        ],
+        "pixelSHA256": "ff81206bd52dd2bc98a6031e6a90dbc74c43aec19f3f6f6edd13a9be557f4e48",
+        "transparentFraction": 0.7792,
+        "path": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+        "facing": 1,
+        "anchor": [
+          0.5143540669856459,
+          0.9633173843700159
+        ],
+        "bodyHeight": 0.9266347687400319,
+        "sourceFile": "exec-4c7f4b9b-8b50-4c15-b155-616ebc44aeb6.png",
+        "sourceSHA256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+      "sha256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+      "bytes": 914571,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        335,
+        46,
+        955,
+        1208
+      ],
+      "alphaBounds": [
+        0,
+        42,
+        1226,
+        1212
+      ],
+      "framingBounds": [
+        331,
+        42,
+        961,
+        1212
+      ],
+      "pixelSHA256": "ff81206bd52dd2bc98a6031e6a90dbc74c43aec19f3f6f6edd13a9be557f4e48",
+      "transparentFraction": 0.7792
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
   }
 };
