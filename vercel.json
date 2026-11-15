@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "buildCommand": "npm run build",
+  "buildCommand": "python3 -m venv /tmp/halo-build-python && /tmp/halo-build-python/bin/python -m pip install --disable-pip-version-check Pillow==11.3.0 && HALO_PYTHON=/tmp/halo-build-python/bin/python npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
