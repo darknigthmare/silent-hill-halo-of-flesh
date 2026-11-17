@@ -15674,5 +15674,833 @@ export const SPRITES = {
       }
     },
     "animatedClips": 0
+  },
+  "downpour_prisoner_minion_brawler_108": {
+    "fighterId": "downpour_prisoner_minion_brawler_108",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
+    "sourceSHA256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Brawler identifié dans le guide Prima Downpour. 941×1672 natifs, pas UHD/4K. Une idle statique ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. 66 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration debout estimée, revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+        "bytes": 1237533,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          63,
+          61,
+          877,
+          1634
+        ],
+        "pixelSHA256": "2463a1543869cbec31da9461284d8663aba77abd47ae3c79111aa60bfcd097da",
+        "transparentFraction": 0.66881,
+        "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "facing": -1,
+        "anchor": [
+          0.528,
+          0.9767
+        ],
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
+        "sourceSHA256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          45,
+          923,
+          1672
+        ],
+        "framingBounds": [
+          60,
+          58,
+          879,
+          1641
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "bytes": 1237533,
+      "width": 941,
+      "height": 1672,
+      "facing": -1,
+      "visibleBounds": [
+        63,
+        61,
+        877,
+        1634
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        923,
+        1672
+      ],
+      "framingBounds": [
+        60,
+        58,
+        879,
+        1641
+      ],
+      "pixelSHA256": "2463a1543869cbec31da9461284d8663aba77abd47ae3c79111aa60bfcd097da",
+      "transparentFraction": 0.66881
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_prisoner_minion_agile_109": {
+    "fighterId": "downpour_prisoner_minion_agile_109",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
+    "sourceSHA256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Stabber identifié dans le guide Prima Downpour, rapproché de la variante Agile. 941×1672 natifs, pas UHD/4K. Une idle statique avec lame ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. Le suivi historique mains vides est antérieur à cette source. Calibration équivalente debout estimée malgré la garde fléchie ; revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+        "bytes": 1025593,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          27,
+          238,
+          897,
+          1394
+        ],
+        "pixelSHA256": "989cafcac15d9d56625c816acc6b3ca9a63b276d9b84dcdd1f2d50786097f639",
+        "transparentFraction": 0.75637,
+        "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "facing": 1,
+        "anchor": [
+          0.493,
+          0.8331
+        ],
+        "bodyHeight": 0.76,
+        "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
+        "sourceSHA256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          23,
+          37,
+          927,
+          1614
+        ],
+        "framingBounds": [
+          23,
+          231,
+          900,
+          1399
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "bytes": 1025593,
+      "width": 941,
+      "height": 1672,
+      "facing": 1,
+      "visibleBounds": [
+        27,
+        238,
+        897,
+        1394
+      ],
+      "alphaBounds": [
+        23,
+        37,
+        927,
+        1614
+      ],
+      "framingBounds": [
+        23,
+        231,
+        900,
+        1399
+      ],
+      "pixelSHA256": "989cafcac15d9d56625c816acc6b3ca9a63b276d9b84dcdd1f2d50786097f639",
+      "transparentFraction": 0.75637
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "downpour_shadow_107": {
+    "fighterId": "downpour_shadow_107",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
+    "sourceSHA256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17 d’après le rendu shadow_06.png, section Doll/Shadow du guide Prima Downpour : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures . 941×1672 natifs, pas UHD/4K. Une idle fixe ; rôle multi-body du dossier inchangé. Silhouette, costume et extrémités comparés à la source. Texture, visage et proportions légèrement réinterprétés ; fidélité 1:1 non certifiée. 10 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration équivalente debout estimée, revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+        "bytes": 901831,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          30,
+          207,
+          914,
+          1555
+        ],
+        "pixelSHA256": "ef8c46a0baa804e7aa99cb9387e4efad875b48e1df3023e098363178cf233719",
+        "transparentFraction": 0.76573,
+        "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+        "facing": 1,
+        "anchor": [
+          0.327,
+          0.9294
+        ],
+        "bodyHeight": 0.9,
+        "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
+        "sourceSHA256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          17,
+          31,
+          927,
+          1672
+        ],
+        "framingBounds": [
+          21,
+          203,
+          926,
+          1560
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "bytes": 901831,
+      "width": 941,
+      "height": 1672,
+      "facing": 1,
+      "visibleBounds": [
+        30,
+        207,
+        914,
+        1555
+      ],
+      "alphaBounds": [
+        17,
+        31,
+        927,
+        1672
+      ],
+      "framingBounds": [
+        21,
+        203,
+        926,
+        1560
+      ],
+      "pixelSHA256": "ef8c46a0baa804e7aa99cb9387e4efad875b48e1df3023e098363178cf233719",
+      "transparentFraction": 0.76573
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "sh3_god_050": {
+    "fighterId": "sh3_god_050",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
+    "sourceSHA256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17 d’après les vues du modèle natif SH3 : https://gavasurface.livedoor.blog/archives/4211318.html ; modèle https://livedoor.blogimg.jp/gavasurface/imgs/1/1/1158554c.jpg recoupé avec capture retail https://livedoor.blogimg.jp/gavasurface/imgs/e/9/e9526216.jpg . 941×1672 natifs, pas UHD/4K. Une idle fixe ; bras et mains complets, extrémités inférieures canoniquement immatures conservées sans pieds inventés, rideau du modèle inclus. Proportions et texture réinterprétées ; fidélité 1:1 non certifiée. 15 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration corporelle excluant la hauteur du rideau estimée, revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+        "bytes": 1412579,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          67,
+          50,
+          874,
+          1625
+        ],
+        "pixelSHA256": "df358f8fcc3c388a06ff79a95143b1ee04fa5b0a0fa3a4053a73a7d9826b77db",
+        "transparentFraction": 0.64734,
+        "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+        "facing": 1,
+        "anchor": [
+          0.487,
+          0.9713
+        ],
+        "bodyHeight": 0.83,
+        "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
+        "sourceSHA256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          0,
+          925,
+          1656
+        ],
+        "framingBounds": [
+          64,
+          46,
+          877,
+          1627
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "bytes": 1412579,
+      "width": 941,
+      "height": 1672,
+      "facing": 1,
+      "visibleBounds": [
+        67,
+        50,
+        874,
+        1625
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        925,
+        1656
+      ],
+      "framingBounds": [
+        64,
+        46,
+        877,
+        1627
+      ],
+      "pixelSHA256": "df358f8fcc3c388a06ff79a95143b1ee04fa5b0a0fa3a4053a73a7d9826b77db",
+      "transparentFraction": 0.64734
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "arcade_robbie_the_rabbit_axe": {
+    "fighterId": "arcade_robbie_the_rabbit_axe",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
+    "sourceSHA256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré puis corrigé par image_gen le 2026-11-17. Références corps Arcade : https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg et capture hache https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg ; détail de hache complémentaire du port modifié https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039 . Quatre orteils par pied et marges augmentées vérifiés :202px en haut,174px en bas au seuil alpha32. Dentition exacte non résolue dans la petite référence officielle ; deux incisives jointes possibles, ne pas certifier une dent unique. Le premier diagnostic de dent unique certaine était trop affirmatif. Géométrie exacte de la hache non certifiée. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité1:1 non certifiée. Légers halos de contour, aucun traitement local des pixels. Calibration estimée ; revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+        "bytes": 976685,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          149,
+          202,
+          729,
+          1498
+        ],
+        "pixelSHA256": "d65df7c195da76f677ae40284ee6c7e6d94fc2585c58f46cad79e1014643172c",
+        "transparentFraction": 0.75251,
+        "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+        "facing": -1,
+        "anchor": [
+          0.497,
+          0.8953
+        ],
+        "bodyHeight": 0.7751,
+        "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
+        "sourceSHA256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          152,
+          890,
+          1672
+        ],
+        "framingBounds": [
+          145,
+          194,
+          732,
+          1498
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "bytes": 976685,
+      "width": 941,
+      "height": 1672,
+      "facing": -1,
+      "visibleBounds": [
+        149,
+        202,
+        729,
+        1498
+      ],
+      "alphaBounds": [
+        0,
+        152,
+        890,
+        1672
+      ],
+      "framingBounds": [
+        145,
+        194,
+        732,
+        1498
+      ],
+      "pixelSHA256": "d65df7c195da76f677ae40284ee6c7e6d94fc2585c58f46cad79e1014643172c",
+      "transparentFraction": 0.75251
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "origins_demon_084": {
+    "fighterId": "origins_demon_084",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
+    "sourceSHA256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Références retail : https://www.silent-hill.cz/DemonSamael.jpg et guide officiel Origins https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf page PDF124, imprimée123. Corps entier recoupé par le guide ; tête cornue, sternum lumineux, bras longs et appendices dorsaux présents. Détails fins des yeux, doigts, pieds et ramifications interprétés depuis petites captures ; couleur source fortement influencée par éclairage orange. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+        "bytes": 1295547,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          27,
+          100,
+          920,
+          1573
+        ],
+        "pixelSHA256": "fa5f08a0dce87099a36eb18a94479e50addda3ca63bd1720c46802897f9be936",
+        "transparentFraction": 0.66422,
+        "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+        "facing": 1,
+        "anchor": [
+          0.494,
+          0.9402
+        ],
+        "bodyHeight": 0.76,
+        "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
+        "sourceSHA256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          4,
+          941,
+          1672
+        ],
+        "framingBounds": [
+          21,
+          97,
+          925,
+          1579
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "bytes": 1295547,
+      "width": 941,
+      "height": 1672,
+      "facing": 1,
+      "visibleBounds": [
+        27,
+        100,
+        920,
+        1573
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        941,
+        1672
+      ],
+      "framingBounds": [
+        21,
+        97,
+        925,
+        1579
+      ],
+      "pixelSHA256": "fa5f08a0dce87099a36eb18a94479e50addda3ca63bd1720c46802897f9be936",
+      "transparentFraction": 0.66422
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "bom_fire_guardian_137": {
+    "fighterId": "bom_fire_guardian_137",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
+    "sourceSHA256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+    "sourceDimensions": [
+      1672,
+      941
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Références Book of Memories : capture retail de https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html et icône https://www.silenthillmemories.net/sh_book_of_memories/bestiary/fire_guardian.jpg . Carapace côtelée bombée, deux cornes et avant-bras longs conservés. Les sources complètent leurs occlusions mais restent insuffisantes pour certifier doigts, pieds, cornes et reliefs fins. Marge haute12px au seuil alpha32 ; image native horizontale1672×941. 1672×941 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+        "bytes": 1257243,
+        "width": 1672,
+        "height": 941,
+        "visibleBounds": [
+          243,
+          12,
+          1389,
+          926
+        ],
+        "pixelSHA256": "33e5f2f92826cdcab64f15d5e64e0e5b460b69ac0810b8ac0dddb6a4ca93a6bf",
+        "transparentFraction": 0.69417,
+        "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+        "facing": -1,
+        "anchor": [
+          0.61,
+          0.983
+        ],
+        "bodyHeight": 0.97,
+        "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
+        "sourceSHA256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          25,
+          0,
+          1642,
+          929
+        ],
+        "framingBounds": [
+          239,
+          0,
+          1397,
+          929
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "bytes": 1257243,
+      "width": 1672,
+      "height": 941,
+      "facing": -1,
+      "visibleBounds": [
+        243,
+        12,
+        1389,
+        926
+      ],
+      "alphaBounds": [
+        25,
+        0,
+        1642,
+        929
+      ],
+      "framingBounds": [
+        239,
+        0,
+        1397,
+        929
+      ],
+      "pixelSHA256": "33e5f2f92826cdcab64f15d5e64e0e5b460b69ac0810b8ac0dddb6a4ca93a6bf",
+      "transparentFraction": 0.69417
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "film_armless_man_170": {
+    "fighterId": "film_armless_man_170",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
+    "sourceSHA256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Référence du costume physique original du film2006, collection reel-relics : https://yourprops.com/armless-man-creature-costume-original-make-up-prosthetics-silent-hill-2006-yp827361 ; photos armless_2006_costume_1/2/3.jpg inspectées. Tête sans traits, torse replié sans bras extérieurs, matière réticulée, ouverture thoracique et deux pieds couverts conservés. Pose inclinée adaptée ; textures et forme des pieds réinterprétées. Les photographies du costume ne certifient pas les VFX du film final. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+        "bytes": 1220311,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          93,
+          78,
+          850,
+          1635
+        ],
+        "pixelSHA256": "ceb2ea10ced91c6867fb416f68c9f4893b62c12aa0729c288d93b570fbc37543",
+        "transparentFraction": 0.72063,
+        "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+        "facing": 1,
+        "anchor": [
+          0.488,
+          0.9773
+        ],
+        "bodyHeight": 0.99,
+        "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
+        "sourceSHA256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          25,
+          40,
+          937,
+          1672
+        ],
+        "framingBounds": [
+          78,
+          72,
+          860,
+          1642
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "bytes": 1220311,
+      "width": 941,
+      "height": 1672,
+      "facing": 1,
+      "visibleBounds": [
+        93,
+        78,
+        850,
+        1635
+      ],
+      "alphaBounds": [
+        25,
+        40,
+        937,
+        1672
+      ],
+      "framingBounds": [
+        78,
+        72,
+        860,
+        1642
+      ],
+      "pixelSHA256": "ceb2ea10ced91c6867fb416f68c9f4893b62c12aa0729c288d93b570fbc37543",
+      "transparentFraction": 0.72063
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
+  },
+  "film_red_pyramid_thing_return_to_silent_hill": {
+    "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png",
+    "sourceSHA256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+    "sourceDimensions": [
+      941,
+      1672
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Candidat corps entier généré le 2026-11-17. Référence précise : figurine licenciée Star Ace SA0164FYE Return to Silent Hill, photo pyramid-return-starace.jpg fournie et inspectée. Casque haut perforé, tablier brun en pans, boucles latérales, mollets/pieds bandés et grande lame conservés. Aucune extrémité surnuméraire observée. Rouille, peau, perforations et plis réinterprétés depuis petite photo produit. Source de merchandising Return2026, distincte du modèle de jeu et du film2006 ; apparence finale à l’écran non certifiée. Marge supérieure casque12px au seuil alpha32. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise. Page de provenance : https://www.fye.com/products/return-to-silent-hill-pyramid-head-1-6-scale-action-figure-normal-version_aec-saas81647 ; image produit : https://www.fye.com/cdn/shop/files/4552520-3745838_6edebc78-df90-45a3-9067-faaf4e14bc9d.jpg?v=1793204632&width=1946 .",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+        "bytes": 1385665,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          178,
+          12,
+          763,
+          1658
+        ],
+        "pixelSHA256": "fc512bf06adad6097a18d20cc7a4b1254fb22492a16049c4af5322799625f159",
+        "transparentFraction": 0.69877,
+        "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+        "facing": -1,
+        "anchor": [
+          0.519,
+          0.991
+        ],
+        "bodyHeight": 0.985,
+        "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png",
+        "sourceSHA256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          0,
+          1,
+          925,
+          1672
+        ],
+        "framingBounds": [
+          176,
+          1,
+          768,
+          1661
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "bytes": 1385665,
+      "width": 941,
+      "height": 1672,
+      "facing": -1,
+      "visibleBounds": [
+        178,
+        12,
+        763,
+        1658
+      ],
+      "alphaBounds": [
+        0,
+        1,
+        925,
+        1672
+      ],
+      "framingBounds": [
+        176,
+        1,
+        768,
+        1661
+      ],
+      "pixelSHA256": "fc512bf06adad6097a18d20cc7a4b1254fb22492a16049c4af5322799625f159",
+      "transparentFraction": 0.69877
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "animatedClips": 0
   }
 };

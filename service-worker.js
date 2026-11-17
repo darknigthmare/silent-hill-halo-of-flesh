@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '8c309b761e7a8d3330e238410bd4f31c3e0eb1ec0ef795455b58e825dbcbc09b';
+const BITMAP_REVISION = 'c63d86f8d9cb9be3ec2ce401dbdeae933c7684c4ad51ddc491457db936bba43f';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -12,6 +12,7 @@ const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_BEGIN
   "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
   "/assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
+  "/assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
   "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
@@ -22,6 +23,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_butcher_123.95b439f69ed7.png",
   "/assets/sprites/bom_double_head_124.7b4030beb9da.png",
   "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
+  "/assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
   "/assets/sprites/bom_gray_child_147.947d757ecfea.png",
   "/assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
   "/assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
@@ -39,14 +41,19 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
   "/assets/sprites/downpour_doll_106.50727eee886c.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+  "/assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+  "/assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
   "/assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+  "/assets/sprites/downpour_shadow_107.d39788178ac5.png",
   "/assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
   "/assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
   "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+  "/assets/sprites/film_armless_man_170.25e542fa86c4.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
   "/assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
   "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+  "/assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
   "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
   "/assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
   "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
@@ -64,6 +71,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
+  "/assets/sprites/origins_demon_084.c23b0115c82b.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
   "/assets/sprites/origins_remnant_077.912fa1130daa.png",
@@ -123,6 +131,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_double_head_040.a0885231d6ff.png",
   "/assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
   "/assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+  "/assets/sprites/sh3_god_050.ef8d8f24df0b.png",
   "/assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
   "/assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",

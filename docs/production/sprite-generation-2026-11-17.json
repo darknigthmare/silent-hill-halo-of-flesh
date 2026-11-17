@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "base": "5e01b54e9e43c950c3700050ee5b866cef75165e",
+  "initial": {
+    "total": 230,
+    "integrated": 154,
+    "missing": 76
+  },
+  "specs": [
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "ref": "/workspace/scratch/ae07d9a11c02/references/parent/downpour-brawler.png",
+      "prompt": "Use case: style-transfer / identity-preserve. Create one production-quality 2D UHD full-body fighting-game sprite by faithfully redrawing the EXACT Silent Hill Downpour BRAWLER in this official Prima guide reference image. The reference is the entire identity and design authority, not a generic monster suggestion. Preserve his exact proportions, wiry muscular adult humanoid torso, dark tattoo markings, upright two-pronged metal facial restraint, closely cropped dark hair, dark olive-brown loose worn trousers with tied waist, bare feet and ankle cuffs, both empty hands and clenched fists. Keep the same three-quarter stance facing slightly screen-right, readable side-view game silhouette, entire head, hands and feet visible. Preserve subtle worn surface colors without adding wounds, dripping blood or an action scene. Hand-painted realistic 2D art with crisp fine contours, restrained texture and neutral soft studio illumination; no thick cartoon outlines, no photoreal room, no toy seams. Reconstruct clean high-resolution detail from the source, not pixelation. Portrait canvas, request 2160 by 3840 native pixels if supported, single character filling about 80% height, clear 8% transparent margin on EVERY side. Real transparent alpha background, no checkerboard drawn, no ground plane or floor shadow, no labels, no text, no watermark, no second view or extra character. Exact Brawler only, do not add the Stabber's weapon or borrow the Juggernaut's build."
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "ref": "/workspace/scratch/ae07d9a11c02/references/parent/downpour-stabber.png",
+      "prompt": "Use case: style-transfer / identity-preserve. Faithfully redraw the exact STABBER, the agile Prisoner Minion from Silent Hill Downpour, from the supplied official Prima guide full-body render as ONE 2D UHD fighting-game sprite. This exact source image determines ALL anatomy, proportions, posture, face frame, clothing and weapon; do not redesign. Preserve the asymmetrical adult humanoid body, very thin left forearm, larger right forearm holding the long narrow pointed metal blade angled down beside the right leg, slim muscular tattooed torso, polygonal dark metal restraint arch around the shaven head and lower face, dirty dark olive baggy trousers gathered at the ankles and bare feet. Match the reference's wide low three-quarter stance and its body direction. Render subtle game-like distressed materials without adding graphic injury or splatter. Crisp highly detailed hand-painted realistic 2D game asset, fine contour edges and restrained shading, no comic outlines or environment. Full character from highest head-frame point through both soles INCLUDING the complete blade and both hands, generous transparent margins, no cropping. Single portrait 2160x3840 native resolution requested if supported; actual transparent background, not a painted checkerboard; no cast shadow, scenery, text, labels, contact sheet, alternate view, added weapon, gore action, or second character. Preserve this exact agile variant; not the Brawler or the Juggernaut."
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "ref": "/workspace/scratch/ae07d9a11c02/references/parent/dark-nurse-2006-full.jpg",
+      "ref2": "/workspace/scratch/ae07d9a11c02/references/parent/dark-nurse-2006-alt.jpg",
+      "prompt": "Use case: style-transfer / identity-preserve. Produce ONE single full-body 2D UHD game sprite of the exact DARK NURSE from the 2006 Silent Hill film. The supplied photos show the original screen-used costume displayed on a mannequin; use them as identity, mask, costume, knife and shoe references, NOT as a composition to copy. Draw exactly ONE adult nurse, entire body, in a restrained unsettling idle stance three-quarter facing screen-right, with head tilted, shoulders slightly uneven, bent right arm holding the same small serrated kitchen prop knife downwards safely at her side, left arm hanging. Faithfully retain the tiny flesh-toned folded nurse cap, fully obscured asymmetric swirling creased mask with NO visible human eyes, beige and faded rust fitted short-sleeve knee-above nurse dress with lapels and irregular aged hem, pale legs and thin mottled veins, and cream CLOSED-TOE low-to-mid high-heel pumps. Match source costume construction, modest natural proportions, no added gore or accentuation. Fine crisp realistic hand-painted 2D art, high-resolution fabric and latex-like matte detail, soft neutral illumination so game silhouette reads clearly, not a photo or toy. Request native 2160x3840 portrait pixels if supported. Head, hat, hands, complete knife and both shoes fully within frame, 8% clear margin all sides. TRUE transparent alpha background. Remove display base and support rods as they are not character parts. No copied logos or watermark, no floor shadow, no props outside knife, no background, no panel, no duplicate bust or back view. Do not import 2012 Revelation, 2026 Return or video-game Nurse elements."
+    }
+  ],
+  "status": "partial-delivery-static-candidates",
+  "notes": [
+    "One full-body static image per exact fighter and edition. Original generated files copied without pixel editing.",
+    "Fidelity remains unverified; source evidence does not certify generated output.",
+    "Native output dimensions are recorded after generation; requested UHD dimensions are not assumed.",
+    "Nine new static candidates fill nine formerly missing IDs; 67 profiles remain without an image.",
+    "Eight candidates belong to existing combat-enabled roles. Return Pyramid retains its unverified, combat-disabled dossier role.",
+    "All nine native outputs have a 1672-pixel long edge. No claim of native 4K/UHD or certified 1:1 fidelity.",
+    "Source artwork and generated images were visually compared, but final in-game anchors and clipping could not be reviewed in a browser.",
+    "The Agile Downpour slot uses the newly identified Prima Stabber reference including its blade; older empty-hand descriptive notes were not used to override the named source. Gameplay and source workbook are unchanged."
+  ],
+  "generated": [
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "file": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
+      "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "file": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
+      "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "downpour_shadow_107",
+      "file": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
+      "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "sh3_god_050",
+      "file": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
+      "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "origins_demon_084",
+      "file": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
+      "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "bom_fire_guardian_137",
+      "file": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
+      "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "film_armless_man_170",
+      "file": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
+      "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    },
+    {
+      "id": "film_red_pyramid_thing_return_to_silent_hill",
+      "file": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png",
+      "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": false
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_axe",
+      "file": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
+      "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "format": "PNG RGBA",
+      "frames": 1,
+      "pose": "idle",
+      "fidelity": "unverified",
+      "installedByteIdenticalToOutput": true,
+      "pixelsModifiedAfterGeneration": false,
+      "edgePixelsAlphaAtLeast32": 0,
+      "combatRoleChanged": false,
+      "combatEnabled": true
+    }
+  ],
+  "blockedThisTurn": [
+    {
+      "id": "film_dark_nurse_171",
+      "status": "generation-output-rejected",
+      "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+      "category": "violence",
+      "attempts": 1
+    },
+    {
+      "id": "pt_lisa_149",
+      "status": "generation-output-rejected",
+      "requestId": "36708bbe-274e-49cd-ae50-bb5aa2c6c5cd",
+      "category": "violence",
+      "attempts": 1
+    }
+  ],
+  "final": {
+    "total": 230,
+    "integrated": 163,
+    "missing": 67,
+    "certified": 0,
+    "animatedClips": 1
+  },
+  "newStaticProfiles": 9,
+  "newAnimatedClips": 0,
+  "nativeUHD": false,
+  "combatVisualReview": "blocked-by-environment; not performed",
+  "provenanceFile": "art/provenance-20261117.json",
+  "remainingProfilesFile": "docs/production/SPRITE_MISSING_2026-11-17.md",
+  "qaFile": "docs/production/sprite-qa-2026-11-17.json",
+  "additionalPromptFiles": [
+    "docs/production/sprite-prompts-2026-11-17-b.json",
+    "docs/production/sprite-prompts-2026-11-17-c.json",
+    "docs/production/sprite-prompts-2026-11-17-d.json",
+    "docs/production/sprite-prompt-correction-2026-11-17.json"
+  ]
+}
