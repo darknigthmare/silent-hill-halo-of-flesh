@@ -1,0 +1,810 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+  "scope": "Targeted continuation research for ten of the 59 profiles missing at the start. Findings preserve original attribution limits and refusal stops. Generated outputs are recorded separately in sprite-following-imports-2026-11-17.json.",
+  "missingProfilesAtStart": 59,
+  "targetedProfiles": [
+    "bom_wood_guardian_138",
+    "arcade_greedy_worm_arcade_119",
+    "arcade_toadstool_arcade",
+    "bom_ghost_125",
+    "arcade_phantom_118",
+    "downpour_wheelman_116",
+    "arcade_insane_cancer_arcade",
+    "arcade_creeper_arcade",
+    "ascension_snarler_180",
+    "sh4_eileen_head_073"
+  ],
+  "allMissingProfilesFreshlyResearched": false,
+  "referenceReports": [
+    {
+      "sourceReport": "reference-research-following-20261117.json",
+      "sha256": "c7d82c9e7074d03c211f0dcdbd301e8ccdf3ea35fb0d2dc249e3f03de5268797",
+      "record": {
+        "createdAtUtc": "2026-11-17T22:47:15.278846+00:00",
+        "scope": "Read-only reference continuation; no project repository mutations, no generation; no generic or cross-edition substitutions.",
+        "baselineCommit": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+        "findings": [
+          {
+            "fighterId": "bom_wood_guardian_138",
+            "edition": "Silent Hill: Book of Memories",
+            "status": "incomplete-reference; no generation candidate cleared",
+            "newSource": {
+              "url": "https://www.youtube.com/watch?v=Zxnvzzlbpbo",
+              "title": "Silent Hill May Cry - Silent Hill: Book of Memories Wood Guardian Boss (PS Vita)",
+              "author": "effdash",
+              "published": "2023-04-13",
+              "kind": "native gameplay capture; public YouTube storyboards advertised by watch page"
+            },
+            "reviewedSeconds": [
+              800,
+              810,
+              820,
+              830,
+              840,
+              850,
+              860,
+              870,
+              880,
+              890,
+              900,
+              910,
+              920
+            ],
+            "nativeTileDimensions": [
+              160,
+              90
+            ],
+            "evidence": [
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-watch.html",
+                "sha256": "ec532ca3a4edc12936411451e7e6e9f104032d8980545c5da10e814cc338ed4c"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-player.json",
+                "sha256": "da313bfe7973b33bb80ced924194e33df6d2c8b27ff161558f162ea6163d1d01"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-storyboard2.jpg",
+                "sha256": "fbdb4267e05ace1204983147d67a68c567ef068bcb6330fd455d2d93b657f28b"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-storyboard2-source.json",
+                "sha256": "ba5e6b444daaef3bdba767f4f90f4c550b1b1b1c9a41c5dd3c3da91c9cacd82e"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-storyboard3.jpg",
+                "sha256": "e0387c38ed9f23a668c0299505400afe25a540d48482a999dd0a6e7a527bf20d"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/wood-effdash-storyboard3-source.json",
+                "sha256": "bb25ae5e95c890eec6ef61d074b04ea64121c15ddd7eff17983c908665be4f1f"
+              }
+            ],
+            "finding": "The mobile and rooted phases are visible, but high dorsal branches are cropped, mixed with the environment or covered by the HUD. This independent capture is darker than the already known ruh4O2ZO7aA footage and does not establish the full silhouette.",
+            "preservedPriorLimits": [
+              "No generic wooden humanoid model substitution.",
+              "Existing June 2012 promotional screenshots and ruh4O2ZO7aA storyboards remain complementary, not sufficient for branch extremities.",
+              "Previously forbidden mmrtS-lYRuM storyboards, Fandom, Huiji and Sketchfab endpoints were not retried."
+            ]
+          },
+          {
+            "fighterId": "arcade_toadstool_arcade",
+            "edition": "Silent Hill: The Arcade",
+            "status": "incomplete-reference; ambiguous exact variant and attachment; no generation candidate cleared",
+            "sources": [
+              {
+                "url": "https://www.youtube.com/watch?v=IlbdUgTlD_g",
+                "author": "metheload",
+                "published": "2022-07-12",
+                "title": "SILENT HILL ： THE ARCADE all creature and character animation",
+                "kind": "uploader extraction demonstration, original skeleton/animation claimed by uploader; .xab/.x converted to Gamestudio MDL7",
+                "localCachedWatchHtml": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-model-video.html",
+                "cachedStoryboard": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-animations-storyboard-03.jpg",
+                "storyboardSourceUrl": "https://i.ytimg.com/sb/IlbdUgTlD_g/storyboard3_L2/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCI-ctpYG&sigh=rs$AOn4CLC0Q1SGMFagxa-BUS_M6Er5cjw0Uw",
+                "storyboardFirstSecond": 750,
+                "storyboardStepSeconds": 10,
+                "tileDimensions": [
+                  120,
+                  90
+                ],
+                "observedSeconds": [
+                  870,
+                  880,
+                  890,
+                  900,
+                  910,
+                  920,
+                  930,
+                  940,
+                  950
+                ],
+                "sourceLimit": "Third-party model conversion is not independently verified against original game geometry. Description lists Toadstool / Whitestool without timestamps. Internal filename cards have no explicit species-name mapping and are too small for certain transcription."
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=xmeJ82wbmHg&t=1280",
+                "author": "Emu Gamer",
+                "published": "2024-05-05",
+                "kind": "native gameplay, public 320x180 storyboard tile",
+                "observed": "Dark stalks with brown tips grow on the defeated Insane Cancer; matching overall morphology, base occluded by host body."
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=1MDB0FqsZcg&t=1260",
+                "author": "M0d3rn R3tr0 Gam3r",
+                "published": "2022-06-11",
+                "kind": "native gameplay, public 160x90 storyboard tile",
+                "observedSeconds": [
+                  1260,
+                  1270
+                ],
+                "observed": "Several small dark stationary stalk clusters visible on ground; full silhouettes very small and dark."
+              }
+            ],
+            "evidence": [
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-model-910s-native.png",
+                "sha256": "fcf45a0bf5ffb3530512abcc0f9e0829ef25c21e9efc4157d6ef3cc2d99d387c"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-model-920s-native.png",
+                "sha256": "e9675a4cf03866b5715eb50d73e318cd6e9535d795b884c18f0ae358501edf43"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-model-930s-native.png",
+                "sha256": "7c9a64a014e9e040354c3fc5d0f51ef96627ca25e30adefba6bed27e9587fa46"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-model-940s-native.png",
+                "sha256": "3a5cd0467543adb75a1f3780a5b3da92ea19f108a4a16e65521b610d9dfee5da"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-1280s-native.png",
+                "sha256": "b583462414f7782e1dbcf576f625487647d14cdffeab4422377159362943f5a6"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-modernretro-1260s-native.png",
+                "sha256": "d53347ba0af8a90f9361788443e0aeb9a29874bef76c37296e55b5c40ffc7f7f"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-modernretro-1270s-native.png",
+                "sha256": "3a773747090b2bf31241a0c46b8eb7030f0bc3d5d049e04476e3877c47c5d00b"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/arcade-model-870-950-sequence.png",
+                "sha256": "3e3ad734b3efe65239abbbbe26fa33e6f5e160d67fbf24be6e56d0384d978c74",
+                "type": "sequence contact sheet, nine native tiles enlarged nearest 4x; no new detail"
+              }
+            ],
+            "finding": "Two consecutive extracted-model segments show pale upright/extended/upright stalks (14:40,14:50,15:00), then brown upright/extended/upright stalks (15:20,15:30,15:40). The extreme foreground bulb at 15:30 is plausibly the distal end of a projected stalk, but the basal connection is not readable at 120x90. The only intervening cards contain internal filenames, not an unambiguous Toadstool/Whitestool label. The description lists both names without timestamps, and its list order is not a reliable segment map. Assigning the brown segment to Toadstool and pale segment to Whitestool would therefore remain an inference; native gameplay similarity is complementary but does not solve this identification.",
+            "reserves": [
+              "Only 120x90 native model tiles; nearest-neighbor inspection images add no information.",
+              "Fine surface texture, exact stalk count, backside contours, scale and any ground junction must not be certified 1:1.",
+              "No underground anatomy is visible; do not invent roots, limbs, a humanoid body or a generic mushroom cap.",
+              "Use as a static candidate only if parent accepts evidence; no animation or gameplay timing certified.",
+              "Brown versus pale variant assignment and head/base connection are not conclusively established; this is a blocking identity question, not merely a fine-texture reservation."
+            ],
+            "identificationAudit": {
+              "directOnscreenSpeciesName": false,
+              "chapterOrTimestampName": false,
+              "descriptionNamesBoth": true,
+              "descriptionOrderVerified": false,
+              "filenameReadings": [
+                "14:30: appears m09_wdr_lo (uncertain at 120x90)",
+                "15:10: appears m13_ton (uncertain at 120x90)"
+              ],
+              "sequenceReviewSeconds": [
+                870,
+                880,
+                890,
+                900,
+                910,
+                920,
+                930,
+                940,
+                950
+              ],
+              "decision": "Keep blocked; do not generate on this evidence alone."
+            }
+          },
+          {
+            "fighterId": "arcade_greedy_worm_arcade_119",
+            "edition": "Silent Hill: The Arcade",
+            "status": "incomplete-reference; no generation candidate cleared",
+            "sources": [
+              {
+                "url": "https://www.youtube.com/watch?v=xmeJ82wbmHg",
+                "author": "Emu Gamer",
+                "relevantSeconds": [
+                  1130,
+                  1170,
+                  1370,
+                  1380,
+                  1400,
+                  1430
+                ],
+                "kind": "native gameplay, public 320x180 storyboard tiles"
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=1MDB0FqsZcg",
+                "author": "M0d3rn R3tr0 Gam3r",
+                "kind": "native gameplay, public 160x90 storyboard tiles"
+              }
+            ],
+            "finding": "The mouth and nearby outer surface are much clearer than the historical screenshots, but the long rear body continues into dark corridor or outside frame. Available extracted-model storyboard moments are also mouth-heavy; exact entire exterior still not established.",
+            "reserves": [
+              "No SH4 coiled native model transferred to Arcade.",
+              "No arbitrary tail shortening or unseen posterior invented."
+            ]
+          },
+          {
+            "fighterId": "bom_ghost_125",
+            "edition": "Silent Hill: Book of Memories",
+            "status": "incomplete-reference; identity and complete lower body not established; no generation candidate cleared",
+            "inheritedBlocker": "Named bestiary portrait cuts the legs. Two whole-body MeriStation humanoids are not reliably attributed to Ghost and visually differ from the beanie/zippered-jacket portrait. No SH4 ghost substitution.",
+            "ledgerConsulted": [
+              "docs/production/SPRITE_MISSING_2026-11-17.md",
+              "docs/production/COMBAT_REMAINING_2026-11-17.md",
+              "docs/production/combat-references-extended-2026-11-17.json"
+            ],
+            "sources": [
+              {
+                "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA",
+                "title": "Silent Hill: Book of Memories (2012) - PS Vita Longplay | Full Game Walkthrough | No Commentary",
+                "authorFromCachedPage": "Longplay Nexus",
+                "kind": "native gameplay capture; public advertised storyboards",
+                "chapter": "Zone 16, starting 8:52:22 per uploader description",
+                "inspectedFirstSecond": 32000,
+                "inspectedLastSecond": 32740,
+                "inspectedFrameCount": 75,
+                "stepSeconds": 10,
+                "nativeTileDimensions": [
+                  160,
+                  90
+                ]
+              },
+              {
+                "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+                "kind": "named portrait reused from prior local cache",
+                "imagePath": "/workspace/scratch/ae07d9a11c02/references/extended/ghost.jpg"
+              },
+              {
+                "url": "https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html",
+                "kind": "previously downloaded in-game screenshots reinspection; not fetched again",
+                "imagePaths": [
+                  "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_03.jpg",
+                  "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_05.jpg"
+                ]
+              }
+            ],
+            "evidence": [
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard128.jpg",
+                "sha256": "8c3ff308a0c26aa9cb1c37bbb7e72498e8019c39663bd762fe73c40d3160b3b0"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard128-source.json",
+                "sha256": "af8680a1e02fc4cf64d3882a4cd404a2e750b8dc06d15782425203c189ff1bf3"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard129.jpg",
+                "sha256": "3463a2338801ad85b622b7a33184642c745bd7a6f5b29aa657a4e31f6e2c0fc1"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard129-source.json",
+                "sha256": "a3deace289fede1dd44624303f660a511cbf4395405f0fd9a514b4ed62832a87"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard130.jpg",
+                "sha256": "41be167b0532f68bed5bd12040fd31357828512f2376609fbcc14fb97c8dfa87"
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/bom-ghost-longplay-storyboard130-source.json",
+                "sha256": "d362af7a80a9514daac0ec8edc0c2e9e62b8a16d381165497f968237b2acea32"
+              }
+            ],
+            "finding": "The three newly inspected native sheets show several humanoids during the Blood-area fights, but no readable Ghost name or visually conclusive continuity from the named beanie/zippered-jacket portrait to the full lower body. Character size, darkness, overlaps and the 160x90 storyboard limit prevent reliable attribution. Named bestiary portrait and the two MeriStation humanoids remain unsuitable as a combined whole-body Ghost reference.",
+            "reserves": [
+              "Do not identify a dark-apron humanoid as Ghost merely because it is in Book of Memories.",
+              "Do not borrow Peter Walls or another Ghost body/feet from SH4.",
+              "Do not confuse the separate Forsaken Room ghost with this roster enemy.",
+              "No proof of native model/texture equality across editions is established by a secondary assertion of reuse."
+            ],
+            "access": "Only newly advertised public YouTube storyboard URLs were downloaded successfully. No retry of forbidden bestiary/Fandom/model endpoints, no alternative access bypass.",
+            "generationRecommended": false,
+            "generationAttempted": false,
+            "oneToOneCertified": false
+          }
+        ],
+        "accessResults": [
+          {
+            "url": "https://models.spriters-resource.com/arcade/silenthillthearcade/",
+            "status": "HTTP 403; stopped; no alternate disguised request"
+          },
+          {
+            "url": "https://www.silenthillparadise.com/silent-hill-the-arcade.html",
+            "status": "HTTP 403; stopped; no alternate disguised request"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=IlbdUgTlD_g",
+            "method": "web open",
+            "status": "Online fetch throttled; reused already cached public page and image, no retry"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=Zxnvzzlbpbo",
+            "status": "public watch and advertised storyboards HTTP 200"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=xmeJ82wbmHg",
+            "status": "public watch and advertised storyboards HTTP 200"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=1MDB0FqsZcg",
+            "status": "public watch and advertised storyboards HTTP 200"
+          }
+        ],
+        "inspectionMethod": "PIL crop at advertised tile grid; inspection variants are nearest-neighbor enlargement only, no generated image, no enhanced anatomy.",
+        "nextStep": "All four researched profiles remain unillustrated on current evidence. Preserve blockers: Wood upper branches, Greedy Worm Arcade posterior, Toadstool Arcade variant identity and attachment, Ghost BoM identity and lower body.",
+        "lastRevisedAtUtc": "2026-11-17T22:51:06.844630+00:00"
+      }
+    },
+    {
+      "sourceReport": "reference-research-2026-11-17.json",
+      "sha256": "7a9bf00d59a11cc6785cecdf3fea5b910ad29661d5308bca7f1e8b3f11de3a8e",
+      "record": {
+        "schema": "sprite-following-reference-audit/1",
+        "date": "2026-11-17",
+        "baseCommitAtAuditStart": "c2a9fc4a",
+        "baselineSnapshot": {
+          "illustratedProfiles": 171,
+          "missingProfiles": 59,
+          "sideCombatCandidates": 22
+        },
+        "scope": "Read-only repository audit and new temporary reference retrieval. No registry, model geometry, source images or historical journal modified. No image-generation call by this agent.",
+        "combatReserve": [
+          {
+            "id": "sh4_walter_sullivan_072",
+            "name": "Walter Sullivan — SH4 adulte",
+            "existingSelection": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+            "provenance": "art/reference-provenance-batch9.json",
+            "sourceUrls": [
+              "https://www.silenthillmemories.net/sh4/monsters/man_with_the_coat.png",
+              "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_char_16_walter_sullivan.jpg"
+            ],
+            "finding": "Existing frontal complete adult portrait, two lowered handguns, blue coat. Use the established adult fighter profile; do not substitute child or sacrificed body.",
+            "framesAtAuditStart": 1,
+            "animatedClipsAtAuditStart": 0,
+            "existingSelectionVisuallyInspected": true,
+            "priorGenerationRefusalFound": false,
+            "generationByThisAgent": false,
+            "existingSelectionSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42"
+          },
+          {
+            "id": "downpour_bogeyman_115",
+            "name": "Bogeyman — Downpour",
+            "existingSelection": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+            "provenance": "art/reference-provenance-batch11.json",
+            "sourceUrls": [
+              "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_16_boogieman.png",
+              "https://www.silenthillmemories.net/sh8/creatures/bogeyman.png"
+            ],
+            "finding": "Existing three-quarter portrait with complete sledgehammer, protective coat, gas mask and yellow armband; this is the combatant Downpour edition, not the noncombatant Homecoming profile.",
+            "framesAtAuditStart": 1,
+            "animatedClipsAtAuditStart": 0,
+            "existingSelectionVisuallyInspected": true,
+            "priorGenerationRefusalFound": false,
+            "generationByThisAgent": false,
+            "existingSelectionSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd"
+          },
+          {
+            "id": "sh4_patient_060",
+            "name": "Patient — SH4",
+            "existingSelection": "assets/sprites/sh4_patient_060.735bcaec2736.png",
+            "provenance": "art/reference-provenance-batch8.json",
+            "sourceUrls": [
+              "https://www.silenthillmemories.net/sh4/monsters/patient.png",
+              "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_22_patient.jpg"
+            ],
+            "finding": "Existing frontal portrait, complete very tall adult humanoid with hammer. Primary whole-body render and secondary model angle already documented; exact original animation remains unmeasured.",
+            "framesAtAuditStart": 1,
+            "animatedClipsAtAuditStart": 0,
+            "existingSelectionVisuallyInspected": true,
+            "priorGenerationRefusalFound": false,
+            "generationByThisAgent": false,
+            "existingSelectionSHA256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e"
+          }
+        ],
+        "reserveExclusions": [
+          {
+            "id": "origins_the_butcher_081",
+            "reason": "Prior output/violence refusal ea87a46c-f8bb-4109-b400-474ab1ba8190 retained; no retry."
+          },
+          {
+            "id": "arcade_robbie_the_rabbit_chainsaw",
+            "reason": "Prior output/other refusal 333364f3-aefb-4947-a66d-2c18ed7ca72d retained; no retry."
+          },
+          {
+            "id": "homecoming_order_soldier_091",
+            "reason": "Whole body exists but the equipped pipe is explicitly a versus adaptation, not an established exact source weapon; not selected for this reserve."
+          }
+        ],
+        "missingProfileResearch": [
+          {
+            "id": "arcade_phantom_118",
+            "generationReady": false,
+            "status": "new-native-posed-reference-found-but-complete-contours-unresolved",
+            "priorModelFindingRetained": "The OBJ has 18 opaque out_hair groups reaching Y~3028 versus central body Ymax~88.72, and no rig/weights/animation. This geometry diagnostic was not repeated. No hair group was hidden, cut, shortened or rescaled.",
+            "source": {
+              "url": "https://www.youtube.com/watch?v=_qA1h7xETYM",
+              "title": "Silent Hill: The Arcade - All Bosses (No Damage)",
+              "uploader": "MegaYoYo",
+              "published": "2025-04-28",
+              "durationSeconds": 1031,
+              "evidenceKind": "Native gameplay captured by uploader; public player storyboards retrieved from the video metadata."
+            },
+            "newEvidence": [
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/phantom-native-storyboard-07.jpg",
+                "bytes": 43484,
+                "sha256": "3ac8f7c02a3a756921af8b467381f5ced0dc2c99ed3e5ac6efe850351dd896e4",
+                "firstSecond": 630,
+                "intervalSeconds": 10,
+                "grid": [
+                  3,
+                  3
+                ],
+                "frameDimensions": [
+                  320,
+                  180
+                ],
+                "finding": "End of previous encounter and narrative transition; no whole Phantom."
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/phantom-native-storyboard-08.jpg",
+                "bytes": 50392,
+                "sha256": "5496243b19336d0b76c97b2676cc3195175904252c06e2dd612b2c7704df8ffd",
+                "firstSecond": 720,
+                "intervalSeconds": 10,
+                "grid": [
+                  3,
+                  3
+                ],
+                "frameDimensions": [
+                  320,
+                  180
+                ],
+                "finding": "Transition, facial transformation, then Phantom with head, mouth arm and deployed hair; hair continues beyond lateral viewport edges."
+              },
+              {
+                "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/phantom-native-storyboard-09.jpg",
+                "bytes": 56917,
+                "sha256": "31d5a4a0c9743d534a247a80c9fd0dda31121cb6862b8cdb780341db6da88960",
+                "firstSecond": 810,
+                "intervalSeconds": 10,
+                "grid": [
+                  3,
+                  3
+                ],
+                "frameDimensions": [
+                  320,
+                  180
+                ],
+                "finding": "Native battle and ending transition. Several head/arm poses corroborated, but tentacle ends remain outside the viewport or obscured by water and attacks."
+              }
+            ],
+            "visualConclusion": "Posed game evidence confirms that the large outer groups correspond to hair/tentacle geometry deployed across the environment. The inspected shots do not expose a complete finite terminal contour. They improve pose/material evidence but do not clear the whole-body blocker.",
+            "secondaryVideo": {
+              "url": "https://d.tube/watch/QzJHn5A1VpziuDvju2svE3",
+              "title": "Silent Hill The Arcade Eric(Player 1) Walkthrough Full Version with Cutscene",
+              "uploader": "greenlemonngeow",
+              "pageStatus": 200,
+              "listedResolution": [
+                1920,
+                1080
+              ],
+              "durationSeconds": 4381,
+              "result": "Public HLS source was listed in page data, but native frame extraction returned server 5xx. No image delivered from this route; no whole video retained."
+            },
+            "retrievalLimits": [
+              "The ordinary YouTube page returned 200 and playability OK. Public 320x180 storyboard frames were accessible; yt-dlp with the ordinary web client exposed only images, so no dense native video-frame sequence was obtained.",
+              "Silent Hill Paradise returned an infinite redirect loop; no new reference image obtained."
+            ],
+            "nextUsefulEvidence": "A native game capture showing the outer hair ends in a fully posed compact state, or correctly posed native geometry with documented rig/weights. A crop of the existing head core is insufficient."
+          },
+          {
+            "id": "downpour_wheelman_116",
+            "generationReady": false,
+            "status": "public-model-package-unavailable",
+            "newLead": "The C4D model package linked by the previously inspected public model video had not previously been inspected. Its public MEGA link metadata request returned error -16. Route stopped without attempting alternate keys/hosts or downloading geometry.",
+            "sourcePage": "https://ok.ru/video/1587089054",
+            "publicModelLink": "https://mega.nz/#!U8Vj3IpQ!393B9kv85ETjHYh1gnPZwhFroBU61UTn39tl_8He-LI",
+            "errorArtifact": {
+              "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/wheelman-public-link-status.json",
+              "bytes": 9,
+              "sha256": "38863f4ae2d40aca87e7f742a563c228fa2ee2208241d9489e243685867c8a5d"
+            },
+            "priorBlockerRetained": "The already inspected 71/86/112-second renders cut lower cables. Those images were not re-downloaded or treated as whole-body proof."
+          }
+        ],
+        "verification": {
+          "newFullyMissingProfilesCleared": 0,
+          "newNativeStoryboardBoardsInspected": 3,
+          "existingCombatReservePortraitsInspected": 3,
+          "wholeVideosRetained": 0,
+          "imageGenerationCalls": 0,
+          "repoMutations": 0,
+          "modelGeometryMutations": 0,
+          "certifiedOneToOneFidelity": false,
+          "refusalSubjectsRetried": []
+        }
+      }
+    },
+    {
+      "sourceReport": "insane-cancer-creeper-reference-audit-2026-11-17.json",
+      "sha256": "fed8ce99952affb77e83901d524e3aa46ec3f7a1e75e35e57c7c95e609049584",
+      "record": {
+        "createdAtUtc": "2026-11-17T22:52:22.402071+00:00",
+        "scope": "Read-only bounded audit of two missing Arcade profiles using cached public metadata and storyboards; no network retries, no generation, no registry mutation.",
+        "source": {
+          "url": "https://www.youtube.com/watch?v=IlbdUgTlD_g",
+          "title": "SILENT HILL ： THE ARCADE all creature and character animation",
+          "author": "metheload",
+          "publicationDate": "2022-07-12T07:58:58-07:00",
+          "kind": "Uploader demonstration of Arcade files converted from .xab/.x to Gamestudio MDL7, original bones/animation claimed in video; not independent byte-level certification.",
+          "nativeTileDimensions": [
+            120,
+            90
+          ],
+          "stepSeconds": 10,
+          "storyboardUrl": "https://i.ytimg.com/sb/IlbdUgTlD_g/storyboard3_L2/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCI-ctpYG&sigh=rs$AOn4CLC0Q1SGMFagxa-BUS_M6Er5cjw0Uw",
+          "cachedMetadata": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-model-video-metadata.json"
+        },
+        "findings": [
+          {
+            "fighterId": "arcade_insane_cancer_arcade",
+            "inheritedCategory": "incomplete-source",
+            "priorRefusalFound": false,
+            "inheritedGap": "Historical Society map names creature and Arcade screenshot15 confirms upper body, but lower legs and feet are cropped.",
+            "newEvidence": {
+              "namedCardSecond": 390,
+              "modelSeconds": [
+                400,
+                410,
+                420,
+                430,
+                440,
+                450
+              ],
+              "namedCard": "Insane Cancer",
+              "completeStandingViews": [
+                390,
+                400,
+                410,
+                440,
+                450
+              ]
+            },
+            "finding": "The named card shows the entire Arcade creature, including both lower legs and feet. Following continuous model demonstration shows the same complete body in standing, bent and fallen poses. Feet remain inside all relevant standing-frame bounds. This resolves the specific cropped-lower-body reference gap for a static adaptation when paired with the higher-resolution Arcade screenshot15.",
+            "generationReferenceEligible": true,
+            "limits": [
+              "Native tiles are only120x90; enlarged contact sheet is nearest-neighbor inspection only.",
+              "Fine foot surface, backside contours and exact geometry are not certified1:1.",
+              "Source is a third-party conversion demonstration, not a byte-verified game asset.",
+              "Do not substitute a different edition of Insane Cancer."
+            ],
+            "upperBodyCompanion": {
+              "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_15.jpg",
+              "path": "/workspace/scratch/eb1659a0c6b9/references-next/arcade-screens/sh_arcade_15.jpg"
+            }
+          },
+          {
+            "fighterId": "arcade_creeper_arcade",
+            "inheritedCategory": "incomplete-source",
+            "priorRefusalFound": false,
+            "reviewedBoard": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-animations-storyboard-03.jpg",
+            "reviewedAmbiguousSeconds": [
+              810,
+              820,
+              830,
+              840,
+              850,
+              860
+            ],
+            "finding": "The video description includes Creeper, but nearby small model segments have no legible species-name card in the available tiles. These are insufficient to positively map one complete model to Creeper Arcade.",
+            "generationReferenceEligible": false,
+            "decision": "Keep missing; no inference from description order or another edition."
+          }
+        ],
+        "evidence": [
+          {
+            "path": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-animations-storyboard-01.jpg",
+            "sha256": "66e12948f4a29d70680c5893fc31d2d10899c6bd23223099744fe654da1ad928"
+          },
+          {
+            "path": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-model-video-metadata.json",
+            "sha256": "d3713fdfbd197863e4626c992dc97c63b8ce46ddb9fc6361ad7f866e3395d460"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-390s-native.png",
+            "sha256": "737aaf56a3ca0d50d060aa79a163736ab02724d426132c55d665343a3da55be4"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-400s-native.png",
+            "sha256": "18af874ff9da053e423b66700ee8bbaddfddccc2230b9177e2afb70d174c26e5"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-410s-native.png",
+            "sha256": "0c87b18f887d8ade664734ad46af724138d3a1c04486121f98c52d4e9afb3ce2"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-420s-native.png",
+            "sha256": "e3d9b391abaa0f22c190e54fb096432d09c857641cf500858b2d9d7d83cf3151"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-430s-native.png",
+            "sha256": "d787917f2547f9d351ee6f06d5409ef371f27aedefac07af92337d6653cf0e09"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-440s-native.png",
+            "sha256": "6bdc57246d8eee1ee54eeb55fd4ece38a3b002249b970b08176e8aec5d0f67b1"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-450s-native.png",
+            "sha256": "95045e9d8361af8f7c09c1bc20fce7ff9bf2f5966d2ced3fed4a1b0e4b59d17f"
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-390-450-sequence.jpg",
+            "sha256": "5098904b9b29ee3c3dc88317a65dcf58b0b20fd394fdc2772ed170b73b67fba1"
+          }
+        ],
+        "generationAttempted": false,
+        "registryChanged": false,
+        "existingRefusalsPreserved": true
+      }
+    },
+    {
+      "sourceReport": "snarler-research.json",
+      "sha256": "a03ea40cc85097323e34f1e806fec21549b1b42a2b63d67d846600e31725522c",
+      "record": {
+        "schema": 1,
+        "researchDate": "2026-11-17",
+        "fighterId": "ascension_snarler_180",
+        "name": "Snarler",
+        "source": "ascension",
+        "status": "incomplete-source",
+        "result": "Aucun nouveau corps entier attribuable au Snarler récupéré. Aucune génération recommandée sur les éléments consultés.",
+        "generationReady": false,
+        "generationAttempted": false,
+        "newReferencePaths": [],
+        "oneToOneCertified": false,
+        "pagesActuallyOpened": [
+          {
+            "url": "https://genvid.com/2023/07/13/an-inside-look-at-silent-hill-ascension/",
+            "title": "SILENT HILL: Ascension | An Inside Look",
+            "publisher": "Genvid",
+            "type": "primary-publisher",
+            "access": "web.open",
+            "result": "Texte public lu. Présente les intervenants du making-of et un lien Watch vers IGN. Le contenu récupéré ne fournit ni vue entière nommée Snarler ni nouvelle image de ses pattes et de son arrière-train.",
+            "limits": [
+              "La vidéo liée n’a pas été visionnée dans ce relevé.",
+              "Cette page générale ne valide pas à elle seule l’identité visuelle du Snarler."
+            ]
+          }
+        ],
+        "searchResultEvidenceOnly": [
+          {
+            "url": "https://silenthill.fandom.com/wiki/Snarler",
+            "access": "indexed search results only; page not reopened",
+            "finding": "Les extraits indexés attribuent la sculpture à Amilcar Fong à partir du concept de Mike Franchina. Ils ne livrent pas de nouveaux pixels de corps entier.",
+            "primarySource": false
+          },
+          {
+            "url": "https://amilcaraldanafong.artstation.com/",
+            "access": "indexed search results only; page not reopened",
+            "finding": "L’index nomme Genvid Silent Hill Ascencion hell haund creature. Aucun nouveau rendu attribuable récupéré.",
+            "primarySource": true
+          },
+          {
+            "url": "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters",
+            "access": "indexed search results only; page not reopened",
+            "finding": "Description et scènes d’apparition documentaires retrouvées. Elles ne remplacent pas une référence visuelle complète.",
+            "primarySource": false
+          }
+        ],
+        "inheritedEvidence": {
+          "recordsRead": [
+            "art/provenance-20261117.json",
+            "docs/production/combat-references-extended-2026-11-17.json",
+            "docs/production/sprite-next-reference-research-2026-11-17.json",
+            "docs/production/sprite-suite-reference-research-2026-11-17.json",
+            "docs/production/sprite-suite-reference-audit-2026-11-17.json"
+          ],
+          "finding": "Le clip Tenor déjà récupéré montre la tête de profil puis de face, sans thorax complet ni pattes. Deux GIFs ultérieurement inspectés montraient des humains et n’apportaient pas le corps du Snarler.",
+          "newInspectionOfOldMedia": false
+        },
+        "excludedWithoutRetry": [
+          {
+            "url": "https://amilcaraldanafong.artstation.com/projects/GeBEXd",
+            "reason": "403 historique ; aucune nouvelle requête directe ni route de contournement."
+          },
+          {
+            "scope": "Routes Fandom et YouTube précédemment refusées",
+            "reason": "Aucune nouvelle tentative de récupération directe sur ces routes."
+          },
+          {
+            "scope": "Concepts rejetés ou non attribués ; canidés d’autres épisodes",
+            "reason": "Aucune substitution d’identité ; aucun concept rejeté utilisé pour produire un sprite."
+          }
+        ],
+        "limitations": [
+          "Les résultats de recherche indexés ne sont pas comptés comme des pages ouvertes ou des images inspectées.",
+          "L’absence de référence récupérée ne prouve pas l’absence de référence publique ailleurs.",
+          "Aucune nouvelle vue complète de la même identité avec les quatre pattes et l’extrémité arrière n’a été obtenue.",
+          "Aucun registre, PNG, ancien ledger, refus ou journal de livraison modifié."
+        ],
+        "nextUsefulEvidence": "Vue finale entière nominative du Snarler, issue d’un hébergement public autorisé ou d’une capture native attribuable, avec quatre pattes et extrémité arrière visibles ; idéalement une vue latérale cohérente avec le gros plan déjà connu.",
+        "writtenFromExistingResearchOnly": true
+      }
+    },
+    {
+      "sourceReport": "eileen-research.json",
+      "sha256": "c297acbe9265df1df40b87b5f40a206865ad7d44df1ddc9ad9ae43ca7f679316",
+      "record": {
+        "fighterId": "sh4_eileen_head_073",
+        "status": "incomplete-source",
+        "sourceVideo": "https://www.youtube.com/watch?v=20_-9USiyuU",
+        "title": "Giant Head | CREEPY Room in Silent Hill 4",
+        "author": "Coberto",
+        "nativeTiles": [
+          159,
+          90
+        ],
+        "videoDurationSeconds": 92,
+        "inspectedSheets": [
+          {
+            "sheet": 0,
+            "file": "eileen-storyboard-0.jpg",
+            "url": "https://i.ytimg.com/sb/20_-9USiyuU/storyboard3_L2/M0.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCL2RoswG&sigh=rs$AOn4CLCpy5U2qoKeKTVpB4lnDBKNKMBQMw",
+            "bytes": 21458,
+            "sha256": "16df997217f8b7351554e7ca6e1abfb2e044da897d8eef3f1f40d87616a3f66b"
+          },
+          {
+            "sheet": 1,
+            "file": "eileen-storyboard-1.jpg",
+            "url": "https://i.ytimg.com/sb/20_-9USiyuU/storyboard3_L2/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCL2RoswG&sigh=rs$AOn4CLCpy5U2qoKeKTVpB4lnDBKNKMBQMw",
+            "bytes": 24442,
+            "sha256": "04634fe14be1268b5eece72ded69d92ac166d6d7e56d6fc5eb16a601759143bb"
+          },
+          {
+            "sheet": 2,
+            "file": "eileen-storyboard-2.jpg",
+            "url": "https://i.ytimg.com/sb/20_-9USiyuU/storyboard3_L2/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCL2RoswG&sigh=rs$AOn4CLCpy5U2qoKeKTVpB4lnDBKNKMBQMw",
+            "bytes": 21468,
+            "sha256": "026969f86d87f52404d9e8ee840a0ecfe6ce14dd6884f8ca8d7e6080bb2a4f92"
+          },
+          {
+            "sheet": 3,
+            "file": "eileen-storyboard-3.jpg",
+            "url": "https://i.ytimg.com/sb/20_-9USiyuU/storyboard3_L2/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCL2RoswG&sigh=rs$AOn4CLCpy5U2qoKeKTVpB4lnDBKNKMBQMw",
+            "bytes": 18302,
+            "sha256": "7dc0bf942164af72aeea5d2d70e85b752681774ec97cb5cc4717411181f97068"
+          }
+        ],
+        "finding": "Four public native storyboard sheets were inspected. Several later views expose mouth and chin more clearly than the earlier press screenshot. The upper head contour and complete lateral/wall attachments remain cropped or obscured; the whole isolated environmental object is still not established.",
+        "decision": "Keep missing, noncombatant. Do not borrow the human Eileen model, invent a mobile body, or construct an arbitrary cut base.",
+        "generationAttempted": false
+      }
+    }
+  ],
+  "parentOutcome": {
+    "sourceGapResolvedForStaticCandidate": [
+      "arcade_insane_cancer_arcade"
+    ],
+    "generatedSelectionAndCombat": [
+      "arcade_insane_cancer_arcade"
+    ],
+    "otherTargetedMissingProfilesRemainBlocked": 9,
+    "fidelityCertified": false,
+    "importsJournal": "sprite-following-imports-2026-11-17.json"
+  }
+}

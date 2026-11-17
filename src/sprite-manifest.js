@@ -5666,50 +5666,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
-    "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+    "sourceFile": "exec-631a412f-6557-4b7f-b220-b52cd949c3a3.png",
+    "sourceSHA256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b",
     "sourceDimensions": [
       1024,
       1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Walter adulte final SH4, manteau bleu, cheveux longs et deux pistolets abaissés. Modèle entier du guide et portrait corroborent tenue/visage ; pas corps sacrifié ni enfant, détails du manteau/armes reconstruits. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Walter Sullivan adulte — SH4 original : garde latérale droite avec les deux pistolets du modèle source, manteau bleu-gris et silhouette entière. Portrait précédent conservé. Pose versus composée ; détails fins et côté opposé non certifiés 1:1. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
-        "bytes": 1769377,
+        "sha256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b",
+        "bytes": 1717026,
         "width": 1024,
         "height": 1536,
         "visibleBounds": [
-          208,
-          45,
-          853,
-          1505
+          180,
+          34,
+          760,
+          1513
         ],
-        "pixelSHA256": "5499231b8198466cbdf537941e47dbabd0902cb366159286f7d9a61dc1bbb48a",
-        "transparentFraction": 0.70186,
-        "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+        "pixelSHA256": "ddad6e6c2b615928014789c1cff47c9db33155fae4106e9a51786e0d675b6b8a",
+        "transparentFraction": 0.74382,
+        "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
         "facing": 1,
         "anchor": [
-          0.53,
-          0.97917
+          0.435,
+          0.9733
         ],
-        "bodyHeight": 0.95,
-        "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png",
-        "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+        "bodyHeight": 1,
+        "sourceFile": "exec-631a412f-6557-4b7f-b220-b52cd949c3a3.png",
+        "sourceSHA256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          43,
-          42,
-          1008,
-          1536
+          0,
+          0,
+          1002,
+          1520
         ],
         "framingBounds": [
-          206,
-          42,
-          859,
-          1508
+          176,
+          32,
+          763,
+          1520
         ]
       }
     ],
@@ -5750,7 +5752,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Walter adulte final SH4, manteau bleu, cheveux longs et deux pistolets abaissés. Modèle entier du guide et portrait corroborent tenue/visage ; pas corps sacrifié ni enfant, détails du manteau/armes reconstruits. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-4738bc20-188b-4cc2-aa37-93bc9292c2ab.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Walter Sullivan adulte — SH4 original : garde latérale droite avec les deux pistolets du modèle source, manteau bleu-gris et silhouette entière. Portrait précédent conservé. Pose versus composée ; détails fins et côté opposé non certifiés 1:1. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation."
   },
   "sh2_red_pyramid_thing_great_knife_029": {
     "fighterId": "sh2_red_pyramid_thing_great_knife_029",
@@ -7368,50 +7382,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-297186c1-4b2c-4f06-a176-a692a0a1b237.png",
-    "sourceSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+    "sourceFile": "exec-06845f1b-9bef-423a-a3c2-f28411f14122.png",
+    "sourceSHA256": "f6de13b5497f85cdf0c0154445f56620180bc1d2565be567e1ce7081d4f7da27",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Bogeyman Downpour2012 entier : manteau long, masque à deux filtres, brassard et masse complète propres à Downpour, sans emprunt à Homecoming/Pyramid Head. Vue gauche correctement étiquetée puis miroir de présentation. Pose2D et détails d’équipement reconstruits, aucune animation ni géométrie source certifiée.",
+    "notes": "Bogeyman — Downpour : garde orientée vers la droite, légère obliquité du buste, masque respiratoire, manteau, gants verts à bandes jaunes et masse entière selon le rendu original. Cette édition combattante est distincte du Bogeyman de Homecoming. Portrait précédent conservé. Pose fixe candidate, détails fins et côté opposé non certifiés 1:1 ; PNG natif sans retouche ni agrandissement.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
-        "bytes": 554533,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "f6de13b5497f85cdf0c0154445f56620180bc1d2565be567e1ce7081d4f7da27",
+        "bytes": 1943951,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          368,
-          203,
-          846,
-          1098
+          53,
+          85,
+          982,
+          1499
         ],
-        "pixelSHA256": "74ef8c05bea31765c239cf7e4fc1bfb3bcfe34c6987eb0ce3708f196179b4bf5",
-        "transparentFraction": 0.85983,
-        "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
-        "facing": -1,
+        "pixelSHA256": "057bd78ce0e9d56568313e67dcda8210f939813db89612612e6514181b72ffcc",
+        "transparentFraction": 0.57112,
+        "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+        "facing": 1,
         "anchor": [
-          0.5,
-          0.8755980861244019
+          0.425,
+          0.971
         ],
-        "bodyHeight": 0.7137161084529505,
-        "sourceFile": "exec-297186c1-4b2c-4f06-a176-a692a0a1b237.png",
-        "sourceSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-06845f1b-9bef-423a-a3c2-f28411f14122.png",
+        "sourceSHA256": "f6de13b5497f85cdf0c0154445f56620180bc1d2565be567e1ce7081d4f7da27",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          33,
-          31,
-          1192,
-          1254
+          0,
+          21,
+          1004,
+          1536
         ],
         "framingBounds": [
-          366,
-          200,
-          852,
-          1103
+          45,
+          80,
+          984,
+          1506
         ]
       }
     ],
@@ -7452,7 +7468,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Bogeyman Downpour2012 entier : manteau long, masque à deux filtres, brassard et masse complète propres à Downpour, sans emprunt à Homecoming/Pyramid Head. Vue gauche correctement étiquetée puis miroir de présentation. Pose2D et détails d’équipement reconstruits, aucune animation ni géométrie source certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-297186c1-4b2c-4f06-a176-a692a0a1b237.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Bogeyman — Downpour : garde orientée vers la droite, légère obliquité du buste, masque respiratoire, manteau, gants verts à bandes jaunes et masse entière selon le rendu original. Cette édition combattante est distincte du Bogeyman de Homecoming. Portrait précédent conservé. Pose fixe candidate, détails fins et côté opposé non certifiés 1:1 ; PNG natif sans retouche ni agrandissement."
   },
   "origins_ariel_078": {
     "fighterId": "origins_ariel_078",
@@ -17582,5 +17610,115 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Steel Guardian — Book of Memories : pose de combat latérale droite distincte de sa sélection. Corps vert, capuchon métallique, ailes mécaniques doubles, lames pendantes et chaînes conservés ; orientation recomposée depuis le modèle texturé et deux vues natives complémentaires. Détails fins, nombre de lames/maillons, arrière et zones occultées non certifiés. Ancre sous les griffes, hauteur de référence du corps central, posture suspendue. PNG natif conservé sans retouche ni agrandissement ; image fixe candidate non UHD native, sans certification 1:1 ni animation."
+  },
+  "arcade_insane_cancer_arcade": {
+    "fighterId": "arcade_insane_cancer_arcade",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-1c9152a1-d2b0-4f15-ae43-5f60430bfbfc.png",
+    "sourceSHA256": "05cd8a4b767265e19ea6a222f4d5614525a99da91fe5efca766e4d81447b3f69",
+    "sourceDimensions": [
+      1297,
+      1212
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Insane Cancer — The Arcade : garde latérale droite entière distincte de la sélection, poings et deux pieds visibles. Proportions et matières de la capture native Arcade15, contour inférieur du modèle extrait explicitement nommé et de ses vues continues. Pose versus recomposée ; résolution120×90 des références de jambes et conversion MDL7 ne certifient ni détails fins ni géométrie 1:1. Aucune variante SH3 ou BoM substituée ; PNG natif sans retouche ni agrandissement, image fixe sans animation.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "05cd8a4b767265e19ea6a222f4d5614525a99da91fe5efca766e4d81447b3f69",
+        "bytes": 1319346,
+        "width": 1297,
+        "height": 1212,
+        "visibleBounds": [
+          178,
+          19,
+          1145,
+          1181
+        ],
+        "pixelSHA256": "2fe732d681edfd453a6f3673cd3243050b06418c3e43c671c06500b2a5f30a74",
+        "transparentFraction": 0.61607,
+        "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+        "facing": 1,
+        "anchor": [
+          0.43,
+          0.9728
+        ],
+        "bodyHeight": 0.99,
+        "sourceFile": "exec-1c9152a1-d2b0-4f15-ae43-5f60430bfbfc.png",
+        "sourceSHA256": "05cd8a4b767265e19ea6a222f4d5614525a99da91fe5efca766e4d81447b3f69",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          14,
+          1297,
+          1212
+        ],
+        "framingBounds": [
+          174,
+          14,
+          1152,
+          1184
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "sha256": "af065e6db36b525b43e2ac38ed7d25a04cf97a050405950d9827ab5274f4edda",
+      "bytes": 1427466,
+      "width": 1199,
+      "height": 1312,
+      "facing": 1,
+      "visibleBounds": [
+        81,
+        31,
+        1117,
+        1287
+      ],
+      "pixelSHA256": "3884eeeb9e801aeed3950345e07c361a8f55377dce7b6e7c14ea45e54dff5d02",
+      "sourceFile": "exec-8a9e9277-fb9c-4597-9b38-fc9470bc0c37.png",
+      "sourceSHA256": "af065e6db36b525b43e2ac38ed7d25a04cf97a050405950d9827ab5274f4edda",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        28,
+        1159,
+        1312
+      ],
+      "framingBounds": [
+        79,
+        28,
+        1122,
+        1298
+      ],
+      "transparentFraction": 0.57914
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Insane Cancer — The Arcade : sélection entière depuis la capture Arcade15 et la carte explicitement nommée du modèle extrait à 6:30 dans IlbdUgTlD_g, complétée par les vues continues 6:40–7:30. Les deux jambes et pieds sont désormais visibles dans ces vignettes natives 120×90. La vidéo convertit les fichiers .xab/.x en MDL7 ; détails de matière et géométrie non certifiés 1:1. Aucun modèle SH3 ou Book of Memories substitué. PNG natif sans retouche ni agrandissement, image fixe candidate sans animation.",
+    "selectionProvenance": {
+      "sourceSHA256": "af065e6db36b525b43e2ac38ed7d25a04cf97a050405950d9827ab5274f4edda",
+      "sourceDimensions": [
+        1199,
+        1312
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-8a9e9277-fb9c-4597-9b38-fc9470bc0c37.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Insane Cancer — The Arcade : garde latérale droite entière distincte de la sélection, poings et deux pieds visibles. Proportions et matières de la capture native Arcade15, contour inférieur du modèle extrait explicitement nommé et de ses vues continues. Pose versus recomposée ; résolution120×90 des références de jambes et conversion MDL7 ne certifient ni détails fins ni géométrie 1:1. Aucune variante SH3 ou BoM substituée ; PNG natif sans retouche ni agrandissement, image fixe sans animation."
   }
 };

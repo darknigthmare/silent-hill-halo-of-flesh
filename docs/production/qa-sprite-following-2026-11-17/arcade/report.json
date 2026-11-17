@@ -1,0 +1,840 @@
+{
+  "schema": 2,
+  "label": "sprite-following-arcade",
+  "generatedAt": "2026-11-17T23:02:36.480Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1319346,
+        "sha256": "05cd8a4b767265e19ea6a222f4d5614525a99da91fe5efca766e4d81447b3f69"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1427466,
+        "sha256": "af065e6db36b525b43e2ac38ed7d25a04cf97a050405950d9827ab5274f4edda"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1717026,
+        "sha256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1769377,
+        "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          178,
+          19,
+          1145,
+          1181
+        ],
+        "expected": [
+          178,
+          19,
+          1145,
+          1181
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          81,
+          31,
+          1117,
+          1287
+        ],
+        "expected": [
+          81,
+          31,
+          1117,
+          1287
+        ]
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png"
+        ],
+        "portrait": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png"
+        ],
+        "expected": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png"
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png"
+        ],
+        "expected": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          180,
+          34,
+          760,
+          1513
+        ],
+        "expected": [
+          180,
+          34,
+          760,
+          1513
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          208,
+          45,
+          853,
+          1505
+        ],
+        "expected": [
+          208,
+          45,
+          853,
+          1505
+        ]
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ],
+        "portrait": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+        ],
+        "expected": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+        ],
+        "expected": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade/sh4_walter_sullivan_072 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade/sh4_walter_sullivan_072 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade/sh4_walter_sullivan_072 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_insane_cancer_arcade",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_walter_sullivan_072",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_insane_cancer_arcade/sh4_walter_sullivan_072 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 240.25230300031956,
+          "top": 360.54224800101105,
+          "right": 436.23092666835043,
+          "bottom": 594.9952026958946
+        },
+        "visible": {
+          "left": 241.053851563379,
+          "top": 361.5441837048353,
+          "right": 434.8282166829964,
+          "bottom": 594.3940412736
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 919.3691710174627,
+          "top": 393.65213893069824,
+          "right": 999.7554285525034,
+          "bottom": 597.4251392920961
+        },
+        "visible": {
+          "left": 919.7800036794816,
+          "top": 393.92602737204425,
+          "right": 999.2076516698114,
+          "bottom": 596.4665297473852
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade/sh4_walter_sullivan_072 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_walter_sullivan_072/arcade_insane_cancer_arcade asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/arcade_insane_cancer_arcade real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/arcade_insane_cancer_arcade actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_walter_sullivan_072",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_insane_cancer_arcade",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_walter_sullivan_072/arcade_insane_cancer_arcade fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 280.2446019650747,
+          "top": 393.65213893069824,
+          "right": 360.63085950011543,
+          "bottom": 597.4251392920961
+        },
+        "visible": {
+          "left": 280.79237884776666,
+          "top": 393.92602737204425,
+          "right": 360.2200268380965,
+          "bottom": 596.4665297473852
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_insane_cancer_arcade full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 843.7691038492277,
+          "top": 360.54224800101105,
+          "right": 1039.7477275172587,
+          "bottom": 594.9952026958946
+        },
+        "visible": {
+          "left": 845.1718138345817,
+          "top": 361.5441837048353,
+          "right": 1038.9461789541992,
+          "bottom": 594.3940412736
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/arcade_insane_cancer_arcade pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "20b5b12a17825314935b97ab5f99ffe1570586e04be7df1cc508ab531e6c6d94",
+        "after": "20b5b12a17825314935b97ab5f99ffe1570586e04be7df1cc508ab531e6c6d94"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "1bbf4ec3c587e88613c3965638af9001ac3aef06c250ba59dab432f32057a997",
+        "after": "1bbf4ec3c587e88613c3965638af9001ac3aef06c250ba59dab432f32057a997"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "width": 1297,
+      "height": 1212,
+      "transparentFraction": 0.6050157637197798,
+      "visibleBounds": [
+        178,
+        19,
+        1145,
+        1181
+      ]
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.5664737128501394,
+      "visibleBounds": [
+        81,
+        31,
+        1117,
+        1287
+      ]
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.732062021891276,
+      "visibleBounds": [
+        180,
+        34,
+        760,
+        1513
+      ]
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.6889883677164713,
+      "visibleBounds": [
+        208,
+        45,
+        853,
+        1505
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "file": "portrait-arcade_insane_cancer_arcade-right.png"
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "file": "portrait-arcade_insane_cancer_arcade-left.png"
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "facing": 1,
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "file": "portrait-sh4_walter_sullivan_072-right.png"
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "facing": -1,
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "file": "portrait-sh4_walter_sullivan_072-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "arcade_insane_cancer_arcade",
+        "sh4_walter_sullivan_072"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.5009166666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_insane_cancer_arcade",
+          "slot": 1,
+          "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+          "exterior": {
+            "left": 240.25230300031956,
+            "top": 360.54224800101105,
+            "right": 436.23092666835043,
+            "bottom": 594.9952026958946
+          },
+          "visible": {
+            "left": 241.053851563379,
+            "top": 361.5441837048353,
+            "right": 434.8282166829964,
+            "bottom": 594.3940412736
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.39404127360000984,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+            "args": [
+              -114.23043104310432,
+              -241.4902303030303,
+              265.65216521652167,
+              248.24242424242425
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1297,
+            "height": 1212
+          }
+        },
+        {
+          "id": "sh4_walter_sullivan_072",
+          "slot": 2,
+          "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "exterior": {
+            "left": 919.3691710174627,
+            "top": 393.65213893069824,
+            "right": 999.7554285525034,
+            "bottom": 597.4251392920961
+          },
+          "visible": {
+            "left": 919.7800036794816,
+            "top": 393.92602737204425,
+            "right": 999.2076516698114,
+            "bottom": 596.4665297473852
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.4665297473851524,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+            "args": [
+              -62.35,
+              -209.2595,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+        "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+      ],
+      "snapshots": [
+        "duel-arcade_insane_cancer_arcade--sh4_walter_sullivan_072-tick0.png",
+        "duel-arcade_insane_cancer_arcade--sh4_walter_sullivan_072-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_walter_sullivan_072",
+        "arcade_insane_cancer_arcade"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.5009166666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_walter_sullivan_072",
+          "slot": 1,
+          "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "exterior": {
+            "left": 280.2446019650747,
+            "top": 393.65213893069824,
+            "right": 360.63085950011543,
+            "bottom": 597.4251392920961
+          },
+          "visible": {
+            "left": 280.79237884776666,
+            "top": 393.92602737204425,
+            "right": 360.2200268380965,
+            "bottom": 596.4665297473852
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.4665297473851524,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+            "args": [
+              -62.35,
+              -209.2595,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "arcade_insane_cancer_arcade",
+          "slot": 2,
+          "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+          "exterior": {
+            "left": 843.7691038492277,
+            "top": 360.54224800101105,
+            "right": 1039.7477275172587,
+            "bottom": 594.9952026958946
+          },
+          "visible": {
+            "left": 845.1718138345817,
+            "top": 361.5441837048353,
+            "right": 1038.9461789541992,
+            "bottom": 594.3940412736
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.39404127360000984,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+            "args": [
+              -114.23043104310432,
+              -241.4902303030303,
+              265.65216521652167,
+              248.24242424242425
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1297,
+            "height": 1212
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+        "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png"
+      ],
+      "snapshots": [
+        "duel-sh4_walter_sullivan_072--arcade_insane_cancer_arcade-tick0.png",
+        "duel-sh4_walter_sullivan_072--arcade_insane_cancer_arcade-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "20b5b12a17825314935b97ab5f99ffe1570586e04be7df1cc508ab531e6c6d94",
+  "src/sprite-manifest.jsSHA256": "1bbf4ec3c587e88613c3965638af9001ac3aef06c250ba59dab432f32057a997",
+  "version": "0.9.6",
+  "ids": [
+    "arcade_insane_cancer_arcade",
+    "sh4_walter_sullivan_072"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

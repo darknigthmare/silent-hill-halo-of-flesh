@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {STAGES,getFighter} from '../src/data.js';
-import {SpriteCache} from '../src/sprite-system.js';
+import {SpriteCache,combatSpriteFor,spriteFor,retainedCombatFrames} from '../src/sprite-system.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
 import {StageBitmapCache,stageBitmapCache,validateStageBitmap,stageBitmapFor,stageBitmapFrames,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins,drawStageBitmaps} from '../src/stage-bitmaps.js';
 import {drawStage} from '../src/renderers.js';
@@ -11,14 +11,15 @@ function artFor(subject=stage,{mode='replace',frames=1}={}){
     frames:Array.from({length:frames},(_,i)=>{const sha256=String(i+1).repeat(64);return {path:`assets/stages/${subject.id}.fixture.${sha256.slice(0,12)}.png`,sha256,bytes:80,width:2,height:2};})}]};
 }
 function harness(Type=StageBitmapCache,options={}){
-  const failures=new Set(),held=new Set(),pending=new Map(),images=[];let cache;
+  const failures=new Set(),held=new Set(),pending=new Map(),images=[];let cache,peakBytes=0;
   cache=new Type({url:path=>path,timeout:1000,...options,createImage:()=>{
+    peakBytes=Math.max(peakBytes,cache.bytes+cache.reservedBytes);
     const image={decode:async()=>{}};images.push(image);
     Object.defineProperty(image,'src',{set(path){const frame=cache.entries.get(path).frame;image.naturalWidth=frame.width;image.naturalHeight=frame.height;
       const finish=()=>failures.has(path)?image.onerror?.():image.onload?.();if(held.has(path))pending.set(path,finish);else queueMicrotask(finish);
     }});return image;
   }});
-  return {cache,failures,held,images,release(path){pending.get(path)?.();pending.delete(path);}};
+  return {cache,failures,held,images,get peakBytes(){return peakBytes;},release(path){pending.get(path)?.();pending.delete(path);}};
 }
 const context=()=>{const calls=[];return {calls,save(){},restore(){},drawImage(...args){calls.push(args);}};};
 test('production stage candidates are exact and unregistered stages retain procedural rendering',async()=>{
@@ -125,6 +126,63 @@ test('failed replacement cannot evict old pinned images and restoring lease keep
   const original=h.cache.peek(art.layers[0].frames[0].path),restore=captureCombatAssetPins(options);
   assert.equal((await h.cache.prepare(other)).ok,false);restore();
   assert.equal(h.cache.peek(art.layers[0].frames[0].path),original);assert.equal(h.cache.bytes,16);
+});
+
+const settledActors=()=>[
+  {data:air,grounded:false,presentation:{key:'outro',frame:89,duration:90,complete:true}},
+  {data:getFighter('sh3_numb_body_small_037'),ko:true,grounded:true,presentation:{key:'loseMatch',frame:144,duration:145,complete:true}}
+];
+test('retired matches retain final presentations while live matches retain every combat pose',()=>{
+  const actors=settledActors(),engine={phase:'matchEnd',actors};
+  assert.deepEqual(retainedCombatFrames(engine).map(frame=>frame.path),[
+    'assets/sprites/sh1_air_screamer_001.f208137d6414.png',
+    'assets/sprites/sh3_numb_body_small_037.974da23966d7.png'
+  ]);
+  for(const phase of ['intro','fight','roundEnd']){
+    assert.deepEqual(retainedCombatFrames({...engine,phase}),actors.flatMap(actor=>combatSpriteFor(actor.data).frames));
+  }
+  assert.deepEqual(retainedCombatFrames({...engine,destroyed:true}),[]);
+  const anne=getFighter('downpour_anne_cunningham'),art=spriteFor(anne);
+  assert.notEqual(art.portrait.path,art.frames[0].path);
+  const retained=retainedCombatFrames({phase:'matchEnd',actors:[{data:anne,presentation:{key:'outro',frame:89}}]});
+  assert.deepEqual(retained.map(frame=>frame.path),[art.frames[0].path]);
+  assert.ok(!retained.some(frame=>frame.path===art.portrait.path),'a separated selection portrait never consumes the combat lease');
+});
+test('an active final presentation retains all its future clip frames',()=>{
+  const art=structuredClone(combatSpriteFor(air));
+  art.clips.outro={frames:[0,1,2],ticksPerFrame:6,loop:false};
+  const actor={data:air,presentation:{key:'outro',frame:0,duration:90,complete:false}};
+  assert.deepEqual(retainedCombatFrames({phase:'matchEnd',actors:[actor]},{[air.id]:art}),art.frames);
+});
+test('Numb Body to Split Head continuation stays within 64 MiB and preserves the old result on decode failure',async()=>{
+  const actors=settledActors(),old=actors.map(actor=>actor.data),next=[air,getFighter('sh1_split_head_014')];
+  const retired={phase:'matchEnd',actors},retainedFrames=retainedCombatFrames(retired);
+  const other={...stage,id:'other'},oldStage=artFor(stage,{frames:2}),nextStage=artFor(other,{frames:2});
+  const actor=harness(SpriteCache),decor=harness(StageBitmapCache,{registry:{[stage.id]:oldStage,other:nextStage}});
+  const options={fighterCache:actor.cache,stageCache:decor.cache};
+  assert.equal(actor.cache.maxBytes,64*1024*1024);
+  assert.throws(()=>pinCombatAssets([...next,...old],[],options),/decoded-memory budget/,'the old whole-fighter overlap reproduces the failure');
+  pinCombatAssets(old,[stage],options);assert.equal((await prepareCombatAssets(old,[stage],options)).ok,true);
+  const images=new Map(retainedFrames.map(frame=>[frame.path,actor.cache.peek(frame.path)]));
+  const stageImages=new Map(oldStage.layers[0].frames.map(frame=>[frame.path,decor.cache.peek(frame.path)]));
+  pinCombatAssets([],[stage],{...options,retainedFrames});const restore=captureCombatAssetPins(options);
+  pinCombatAssets(next,[stage,other],{...options,retainedFrames});
+  assert.deepEqual([...decor.cache.pins],stageBitmapFrames([stage,other],decor.cache.registry).map(frame=>frame.path));
+  const failing=combatSpriteFor(next[1]).frames[0];actor.held.add(failing.path);actor.failures.add(failing.path);
+  const ready=prepareCombatAssets(next,[other],options);await new Promise(resolve=>setImmediate(resolve));
+  for(const [path,image] of images)assert.equal(actor.cache.peek(path),image,'the previous result remains renderable during loading');
+  actor.release(failing.path);assert.equal((await ready).ok,false);restore();
+  for(const [path,image] of images)assert.equal(actor.cache.peek(path),image,'failed replacement retains each old presentation image');
+  for(const [path,image] of stageImages)assert.equal(decor.cache.peek(path),image,'all frames of the old stage remain ready');
+  assert.deepEqual([...actor.cache.pins],retainedFrames.map(frame=>frame.path));
+  assert.deepEqual([...decor.cache.pins],oldStage.layers[0].frames.map(frame=>frame.path));
+  actor.failures.clear();actor.held.clear();pinCombatAssets(next,[stage,other],{...options,retainedFrames});
+  assert.equal((await prepareCombatAssets(next,[other],options)).ok,true,'retry decodes the complete next pair');
+  for(const frame of next.flatMap(fighter=>combatSpriteFor(fighter).frames))assert.ok(actor.cache.peek(frame.path));
+  for(const [path,image] of images)assert.equal(actor.cache.peek(path),image);
+  pinCombatAssets(next,[other],options);
+  assert.ok(actor.peakBytes<=64*1024*1024,'decoded and in-flight allocations never exceed the original budget');
+  assert.ok(!actor.cache.pins.has(retainedFrames[1].path),'the retired opponent is unpinned only after successful replacement');
 });
 
 test('a different documented sub-room cannot render or lease an older raster from the same location',async()=>{

@@ -1,6 +1,6 @@
 /** Raster-only monster presentation. Combat geometry is deliberately unchanged. */
 import { SPRITES } from './sprite-manifest.js';
-import {poseFromState,sampleSpriteClip} from './sprite-animation.js';
+import {actorSpriteState,poseFromState,sampleSpriteClip} from './sprite-animation.js';
 import { bodyProfile } from './combat-geometry.js';
 import {hasCombatSprite,spriteUsage} from './sprite-usage.js';
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
@@ -14,6 +14,23 @@ export function spriteFor(fighter,registry=SPRITES){
 }
 export function combatSpriteFor(fighter,registry=SPRITES){
   const art=spriteFor(fighter,registry);return hasCombatSprite(art)?art:null;
+}
+/** Keep a retiring match renderable without retaining its unused attack/idle poses. */
+export function retainedCombatFrames(engine,registry=SPRITES){
+  if(!engine||engine.destroyed)return [];
+  const frames=engine.actors.flatMap(actor=>{
+    const art=combatSpriteFor(actor.data,registry);
+    // A live or reversible round may still use every combat pose.
+    if(engine.phase!=='matchEnd'||!actor.presentation)return art?.frames||[];
+    const state=actorSpriteState(actor),sample=sampleSpriteClip(art,state);
+    if(!sample)return [];
+    const idle=state.weaponContext===undefined?'idle':`idle@${state.weaponContext}`;
+    // Missing presentations hold the first idle image, even for an animated idle.
+    if(sample.fallback&&sample.pose===idle)return [sample.frame];
+    // An in-progress outro must retain its whole resolved clip, not just this tick.
+    return art.clips[sample.pose].frames.map(index=>art.frames[index]).filter(Boolean);
+  });
+  return [...new Map(frames.map(frame=>[frame.path,frame])).values()];
 }
 export function spriteStatus(fighter,registry=SPRITES){
   const art=spriteFor(fighter,registry),usage=spriteUsage(art);

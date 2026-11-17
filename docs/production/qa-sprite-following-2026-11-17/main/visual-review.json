@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-17T22:56:05.653758+00:00",
+  "mode": "Actual FightEngine with native Canvas",
+  "browserTest": false,
+  "result": "passed",
+  "automatedChecks": 39,
+  "failedChecks": 0,
+  "visuallyInspectedFiles": [
+    "duel-sh4_walter_sullivan_072--downpour_bogeyman_115-tick120.png",
+    "duel-downpour_bogeyman_115--sh4_walter_sullivan_072-tick120.png"
+  ],
+  "findings": [
+    {
+      "fighterId": "sh4_walter_sullivan_072",
+      "wholeBodyAndWeaponVisible": true,
+      "facesOpponentBothSlots": true,
+      "alphaBackgroundClean": true,
+      "groundGapPxBothSlots": 2.4665297473851524,
+      "finding": "Adult Walter faces the opponent with both pistols visible and separate, coat, trouser legs, hair and both shoes complete. No opaque source background or material alpha halo visible at gameplay scale. Lowest shoe pixels extend 2.47 px below the floor anchor; stable and acceptable in both slots.",
+      "recalibrationNeeded": false
+    },
+    {
+      "fighterId": "downpour_bogeyman_115",
+      "wholeBodyAndWeaponVisible": true,
+      "facesOpponentBothSlots": true,
+      "alphaBackgroundClean": true,
+      "groundGapPxBothSlots": 1.076153334121841,
+      "finding": "Downpour Bogeyman faces the opponent in both slots. Entire hammer head and shaft, hands, mask, coat and both shoes remain visible; no cut exterior or alpha rectangle/halo apparent. Lowest shoe pixels extend 1.08 px below the floor anchor; stable and acceptable.",
+      "recalibrationNeeded": false
+    }
+  ],
+  "combatPaths": [
+    "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+    "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png"
+  ],
+  "selectionPathsPreserved": true,
+  "selectionDrawnInCombat": false,
+  "registryOrManifestChanged": false,
+  "limits": [
+    "These are native Canvas renders executing the actual FightEngine, not browser screenshots. DOM/CSS/browser input/service worker behavior was not tested.",
+    "Static idle frames only; the 120 idle ticks do not constitute bitmap animation. No source-fidelity 1:1 certification.",
+    "Opposite-facing view is an engine mirror; independently sourced asymmetric anatomy was not established.",
+    "Four preserved-selection portrait captures are validated by path assertions, but only the two final combat screenshots are marked as manually inspected in this review."
+  ]
+}

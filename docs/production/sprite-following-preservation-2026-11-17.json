@@ -1,0 +1,225 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+  "verdict": "PASS",
+  "auditMethod": "Read-only byte comparison against git cat-file baseline blobs; registry/portrait object comparison; exact generated-source byte comparison; PNG IHDR metadata and current purpose reader. Only this report is written.",
+  "registrySHA256": "20b5b12a17825314935b97ab5f99ffe1570586e04be7df1cc508ab531e6c6d94",
+  "importJournalSHA256AtAudit": "3de898a331c12f242254f9485fd0e14190f9a695289beac5a858fea7e00e7d25",
+  "counts": {
+    "baselineProfiles": 171,
+    "illustratedProfiles": 172,
+    "rosterProfiles": 230,
+    "missingProfiles": 58,
+    "sideViewCombatCandidates": 25,
+    "legacyCombatViewsUnreviewed": 147,
+    "unchangedBaselineProfiles": 169,
+    "modifiedBaselineProfiles": 2,
+    "newProfiles": 1,
+    "removedProfiles": 0,
+    "baselinePNGs": 232,
+    "newPNGs": 4,
+    "totalPNGs": 236,
+    "newSelectionImages": 1,
+    "newCombatImages": 3,
+    "animatedClipsBefore": 1,
+    "animatedClipsAfter": 1,
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": 0,
+    "baselineFilesCompared": 317
+  },
+  "modifiedBaselineProfileIDs": [
+    "downpour_bogeyman_115",
+    "sh4_walter_sullivan_072"
+  ],
+  "newProfileIDs": [
+    "arcade_insane_cancer_arcade"
+  ],
+  "all171BaselinePortraitsPreserved": true,
+  "modifiedProfilePortraits": [
+    {
+      "fighterId": "downpour_bogeyman_115",
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd",
+      "bytes": 554533,
+      "width": 1254,
+      "height": 1254,
+      "facing": -1,
+      "metadataAndBytesPreserved": true,
+      "selectionProvenancePreserved": true
+    },
+    {
+      "fighterId": "sh4_walter_sullivan_072",
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42",
+      "bytes": 1769377,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "metadataAndBytesPreserved": true,
+      "selectionProvenancePreserved": true
+    }
+  ],
+  "baselineFilePreservation": {
+    "baselinePNGs": {
+      "checked": 232,
+      "byteIdentical": true,
+      "manifestSHA256": "233f241470d1eddbc3cdc9c512e6e48b23ffaa90b718803170bac0461cec8d89"
+    },
+    "workbooks": {
+      "checked": 1,
+      "byteIdentical": true,
+      "manifestSHA256": "3770c874a94274e053db02d13efd71edce30546887ea7930b4a0d83cec9bd4c1"
+    },
+    "batchLedgers": {
+      "checked": 40,
+      "byteIdentical": true,
+      "manifestSHA256": "f1461f1fc9d820d54ec75d60a053c1ca3750adcb82544b01fd5235abce36e28a"
+    },
+    "artFragments": {
+      "checked": 10,
+      "byteIdentical": true,
+      "manifestSHA256": "8a7c2205b9a8eacda3a8268dbc7ac71dc2071b8ad9262d39d4838bddcd366944"
+    },
+    "intakes": {
+      "checked": 2,
+      "byteIdentical": true,
+      "manifestSHA256": "6e77a3e7780cc906adc5576424d521bb3b75c2eda51b44ff76b9fa99ad8954c9"
+    },
+    "sourceProvenance": {
+      "checked": 24,
+      "byteIdentical": true,
+      "manifestSHA256": "b17b51b9df001a07d2edb4b7e92e5861e90b6bcab42df3828d948da639d8b75a"
+    },
+    "priorImportAndGenerationJournals": {
+      "checked": 7,
+      "byteIdentical": true,
+      "manifestSHA256": "20b92b8ae7d3f48e2a06314f80f58793f640a560b6de05bd3419d29e99999a49"
+    },
+    "roster": {
+      "checked": 1,
+      "byteIdentical": true,
+      "manifestSHA256": "9ef1e3cc5b347a0db254e5c77ba56e5b74ef8d270a0035940500dbd21840d401"
+    }
+  },
+  "preservationManifestFormat": "SHA-256 over a compact UTF-8 JSON array sorted by path, with sorted object keys: path, gitBlob, sha256, bytes.",
+  "workbookDetails": [
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "gitBlob": "22739b8c8db510c0cf83f89140e7f1b9f903e2c1",
+      "sha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+      "bytes": 1808573
+    }
+  ],
+  "newImages": [
+    {
+      "fighterId": "sh4_walter_sullivan_072",
+      "source": "sh4",
+      "purpose": "combat",
+      "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "sha256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b",
+      "bytes": 1717026,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "pngColorMode": "RGBA8",
+      "sourceFile": "exec-631a412f-6557-4b7f-b220-b52cd949c3a3.png",
+      "byteIdenticalToGeneratedSource": true,
+      "metadataMatchesRegistryAndJournal": true
+    },
+    {
+      "fighterId": "downpour_bogeyman_115",
+      "source": "downpour",
+      "purpose": "combat",
+      "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "sha256": "f6de13b5497f85cdf0c0154445f56620180bc1d2565be567e1ce7081d4f7da27",
+      "bytes": 1943951,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "pngColorMode": "RGBA8",
+      "sourceFile": "exec-06845f1b-9bef-423a-a3c2-f28411f14122.png",
+      "byteIdenticalToGeneratedSource": true,
+      "metadataMatchesRegistryAndJournal": true
+    },
+    {
+      "fighterId": "arcade_insane_cancer_arcade",
+      "source": "arcade",
+      "purpose": "selection",
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "sha256": "af065e6db36b525b43e2ac38ed7d25a04cf97a050405950d9827ab5274f4edda",
+      "bytes": 1427466,
+      "nativeDimensions": [
+        1199,
+        1312
+      ],
+      "pngColorMode": "RGBA8",
+      "sourceFile": "exec-8a9e9277-fb9c-4597-9b38-fc9470bc0c37.png",
+      "byteIdenticalToGeneratedSource": true,
+      "metadataMatchesRegistryAndJournal": true
+    },
+    {
+      "fighterId": "arcade_insane_cancer_arcade",
+      "source": "arcade",
+      "purpose": "combat",
+      "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "sha256": "05cd8a4b767265e19ea6a222f4d5614525a99da91fe5efca766e4d81447b3f69",
+      "bytes": 1319346,
+      "nativeDimensions": [
+        1297,
+        1212
+      ],
+      "pngColorMode": "RGBA8",
+      "sourceFile": "exec-1c9152a1-d2b0-4f15-ae43-5f60430bfbfc.png",
+      "byteIdenticalToGeneratedSource": true,
+      "metadataMatchesRegistryAndJournal": true
+    }
+  ],
+  "purposeReader": {
+    "journal": "docs/production/sprite-following-imports-2026-11-17.json",
+    "exactJournalDeliveries": 4,
+    "allIdentitySourcePurposePathDigestBindingsMatch": true,
+    "patientDeliveredByThisJournal": false
+  },
+  "patient": {
+    "fighterId": "sh4_patient_060",
+    "entireRegistryEntryUnchanged": true,
+    "portrait": {
+      "path": "assets/sprites/sh4_patient_060.735bcaec2736.png",
+      "sha256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e",
+      "bytes": 1644132,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1
+    },
+    "portraitMetadataAndBytesPreserved": true,
+    "refusal": {
+      "fighterId": "sh4_patient_060",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "088656ba-b3e7-4fec-807e-5cd3fa086065",
+      "stage": "output",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true
+    },
+    "generationAttemptsRecordedThisLot": 1,
+    "newImages": 0,
+    "newImports": 0
+  },
+  "registryPolicyPreserved": true,
+  "rosterAndAliasesPreserved": true,
+  "registryStableThroughoutAudit": true,
+  "limits": [
+    "No build, large test suite or visual fidelity review is performed by this preservation audit; the concurrent npm gate and native visual QA are reported separately.",
+    "The old Walter and Downpour Bogeyman images remain intact as selection portraits; their active combat slots now use distinct new PNGs.",
+    "Counts derive from the frozen registry. Static candidates establish neither native UHD, certified 1:1 identity nor new animations.",
+    "The single Patient refusal is counted within this delivery lot; historical generation and refusal journals are preserved byte-for-byte."
+  ]
+}

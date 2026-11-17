@@ -73,8 +73,8 @@ export async function prepareCombatAssets(fighters,stages,{fighterCache=spriteCa
   const [actors,decor]=await Promise.all([fighterCache.prepare(fighters,{retry,diagnostic}),stageCache.prepare(asStages(stages),{retry})]);
   return {ok:actors.ok&&decor.ok,missing:actors.missing,failed:[...actors.failed,...decor.failed],stageFailed:!decor.ok};
 }
-export function pinCombatAssets(fighters,stages,{fighterCache=spriteCache,stageCache=stageBitmapCache}={}){
-  const actors=fighters.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]),decor=stageBitmapFrames(asStages(stages),stageCache.registry);
+export function pinCombatAssets(fighters,stages,{fighterCache=spriteCache,stageCache=stageBitmapCache,retainedFrames=[]}={}){
+  const actors=[...fighters.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]),...retainedFrames],decor=stageBitmapFrames(asStages(stages),stageCache.registry);
   // Validate both leases before replacing either one.
   fighterCache.validatePins(actors);stageCache.validatePins(decor);
   fighterCache.pin(actors);stageCache.pin(decor);

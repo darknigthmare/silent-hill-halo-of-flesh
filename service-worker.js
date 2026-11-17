@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '30b035d982c6af840066d7706b382209e1347bbc373bc6a009f9f161606292d4';
+const BITMAP_REVISION = 'e3163dc889293a2eefe74f65869da2e7c9d49345540339ffbd406eeaf5a2fe5c';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -15,6 +15,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
   "/assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
   "/assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+  "/assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+  "/assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
   "/assets/sprites/arcade_mama_117.10d203f5fa42.png",
   "/assets/sprites/arcade_mama_117.fcc669873d67.png",
   "/assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
@@ -58,6 +60,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
   "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+  "/assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
   "/assets/sprites/downpour_doll_106.50727eee886c.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
@@ -212,6 +215,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
   "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",
   "/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+  "/assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
   "/assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
   "/assets/sprites/sh4_whitestool_062.bcbd83497241.png",
   "/assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",

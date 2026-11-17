@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+  "verdict": "PASS",
+  "npmTest": {
+    "passed": true,
+    "exitCode": 0,
+    "tests": 1251,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "verifiedBuildFiles": 317,
+    "verifiedJavaScriptFiles": 42,
+    "verifiedHTMLFiles": 10,
+    "logSHA256": "025d16128290bcbb3546a83c9978c3afadde669c6aa2faa3813361986b1689a6",
+    "log": "validation-sprite-following-2026-11-17/npm-test.log.gz",
+    "execution": "byte-identical isolated copy on /tmp; source volume had insufficient free space",
+    "inputFiles": 820,
+    "inputManifestSHA256": "9738dd231c0f790799694a42a1e5b71f2998f9f3442df583ea6851c668a60ee7",
+    "snapshotProof": "validation-sprite-following-2026-11-17/snapshot.json.gz",
+    "copyByteIdenticalAtVerification": true,
+    "snapshotUnchangedAfterGeneratorsAndTests": true,
+    "sourceCodeArtAssetsAndManifestUnchanged": true
+  },
+  "nodeTestSummary": {
+    "tests": 1251,
+    "pass": 1251,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "build": {
+    "verified": true,
+    "declaredPayloadFiles": 316,
+    "actualFilesIncludingManifest": 317,
+    "manifestSHA256": "ce03f82a4ff8c1573382fed466f1ce41a4bfb358100b9aca25830c9b923ec11c",
+    "allPayloadHashesMatch": true,
+    "payloadHashMismatches": [],
+    "checks": {
+      "js": 42,
+      "html": 10,
+      "traits": 12,
+      "afflictions": 8,
+      "hazards": 29,
+      "rituals": 9,
+      "aiPersonalities": 12,
+      "terrains": 14,
+      "shiftStyles": 15,
+      "stageEvents": 36,
+      "bossPhases": 150,
+      "fatalities": 460,
+      "stageFatalities": 123,
+      "stageAnimations": 64,
+      "stageDirectorEvents": 26,
+      "stageInteractions": 26,
+      "stageHazardLinks": 8,
+      "moves": 4600,
+      "directCanonicalMoves": 0,
+      "behaviorCompositeMoves": 2635,
+      "versusAdaptationMoves": 1965,
+      "coverageComplete": true
+    },
+    "bytesIncludingManifest": 279254493
+  },
+  "snapshot": {
+    "excludedRootEntries": [
+      ".git",
+      "dist",
+      "node_modules"
+    ],
+    "inputFiles": 820,
+    "inputBytes": 311713464,
+    "inputManifestSHA256": "9738dd231c0f790799694a42a1e5b71f2998f9f3442df583ea6851c668a60ee7",
+    "copyByteIdenticalToSourceAtVerification": true,
+    "snapshotChangesAfterTest": {
+      "modified": [],
+      "added": [],
+      "removed": []
+    },
+    "sourceChangesWhileTesting": {
+      "modified": [],
+      "added": [
+        "docs/production/sprite-status-following-2026-11-17.json"
+      ],
+      "removed": []
+    }
+  },
+  "initialSourceRun": {
+    "testsPassed": 1251,
+    "testsFailed": 0,
+    "commandExitCode": 1,
+    "failure": "ENOSPC during final dist copy, after all tests passed",
+    "logSHA256": "65377a4384ecf5f0715d847c24b9792fe866a84f5b4d5979a09b45bf0d786d35",
+    "incompleteUntrackedDistRemoved": true
+  },
+  "documentationFinalizationAfterGate": {
+    "modified": [
+      "docs/production/BROWSER_QA_RITE_CACHE_2026-11-17.md",
+      "docs/production/SPRITE_FOLLOWING_2026-11-17.md",
+      "docs/production/sprite-following-imports-2026-11-17.json"
+    ],
+    "added": [
+      "docs/production/sprite-status-following-2026-11-17.json",
+      "docs/production/validation-sprite-following-2026-11-17/npm-test.log.gz",
+      "docs/production/validation-sprite-following-2026-11-17/snapshot.json.gz",
+      "docs/production/validation-sprite-following-2026-11-17/summary.json"
+    ],
+    "runtimeAndTestInputsUnchanged": true,
+    "importEntriesAndRefusalsUnchanged": true
+  },
+  "nativeEngine": {
+    "passed": true,
+    "checks": 78,
+    "failed": 0,
+    "portraitRenders": 8,
+    "duels": 4,
+    "finalDuelScreenshotsInspected": 4,
+    "insaneCancerPortraitScreenshotsInspected": 2,
+    "browserTest": false,
+    "report": "qa-sprite-following-2026-11-17/summary.json"
+  },
+  "targetedCacheTests": {
+    "passed": true,
+    "tests": 110,
+    "failed": 0,
+    "newRegressionTests": 3,
+    "report": "BROWSER_QA_RITE_CACHE_2026-11-17.md"
+  },
+  "preservation": {
+    "report": "sprite-following-preservation-2026-11-17.json",
+    "baselinePNGsPreserved": 232,
+    "baselinePortraitsPreserved": 171,
+    "baselineFilesPreserved": 317,
+    "newPNGsByteIdenticalToGeneratedSources": 4,
+    "patientEntryUnchanged": true
+  },
+  "importJournalSHA256AtFinalization": "62c767d585925d6d601d13944c85aa6c18d07ba8bee7c4a357a7921f42693c5d",
+  "gitDiffCheck": true,
+  "remoteBrowserCI": {
+    "statusAtFreeze": "pending-publication",
+    "previousRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44190615221",
+    "previousHead": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+    "previousResult": "failure at Rite 3 continuation; five prior suites passed 345 checks, boundary suite passed 31 and failed 1",
+    "exactPriorFailureCauseCertified": false,
+    "localBrowserTest": false,
+    "diagnosis": "BROWSER_QA_RITE_CACHE_2026-11-17.md"
+  },
+  "limits": [
+    "Native Canvas QA is not browser QA.",
+    "Static generated candidates are neither source animation nor certified 1:1 fidelity.",
+    "The previous CI seed was not captured; the reproduced cache defect does not certify the exact cause of that historical failure."
+  ]
+}

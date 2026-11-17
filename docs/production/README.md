@@ -6,7 +6,7 @@ Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_H
 
 ## État des sprites — dernière reprise du 17 novembre 2026
 
-**171 profils illustrés sur 230, 59 encore sans image et 22 vues de combat latérales distinctes.** La dernière suite ajoute Steel Guardian (sélection et combat séparés), Anne et Juggernaut (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_SUITE_2026-11-17.md) et le [relevé de reprise exact](sprite-status-suite-2026-11-17.json). La [reprise précédente](SPRITE_NEXT_2026-11-17.md) conserve la récupération de 22 originaux et ses 4 créations. Les sections historiques ci-dessous gardent les chiffres de leur date.
+**172 profils illustrés sur 230, 58 encore sans image et 25 vues de combat latérales distinctes.** La dernière suite ajoute Insane Cancer de The Arcade (sélection et combat séparés), Walter Sullivan et le Bogeyman de Downpour (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_FOLLOWING_2026-11-17.md) et le [relevé de reprise exact](sprite-status-following-2026-11-17.json). La [suite précédente](SPRITE_SUITE_2026-11-17.md) conserve Steel Guardian, Anne et Juggernaut ; la [reprise antérieure](SPRITE_NEXT_2026-11-17.md) documente la récupération de 22 originaux. Le [correctif de transition des Rites](BROWSER_QA_RITE_CACHE_2026-11-17.md) accompagne ce lot. Les sections historiques ci-dessous gardent les chiffres de leur date.
 
 ## Contenu
 
