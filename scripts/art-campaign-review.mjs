@@ -62,9 +62,8 @@ export function readPurposeDeliveries(root){
  }
  // The independent continuation used a per-import journal and legacy frame indices.
  // Bind the immutable file and digest; the current registry owns the normalized index.
- const path='docs/production/sprite-continuation-imports-2026-11-17.json';
- let journal;try{journal=JSON.parse(readFileSync(resolve(root,path),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
- if(journal!==undefined){
+ for(const path of ['docs/production/sprite-continuation-imports-2026-11-17.json','docs/production/sprite-next-imports-2026-11-17.json']){
+  let journal;try{journal=JSON.parse(readFileSync(resolve(root,path),'utf8'));}catch(error){if(error.code==='ENOENT')continue;throw error;}
   if(!record(journal)||journal.schema!==1||!Array.isArray(journal.imports))throw Error('Invalid artwork delivery journal '+path);
   for(const row of journal.imports){
    const purpose=row?.kind==='selection-base'?'selection':row?.kind==='distinct-combat-idle'?'combat':null;

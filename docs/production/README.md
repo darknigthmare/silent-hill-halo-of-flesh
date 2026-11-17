@@ -4,6 +4,10 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
+## État des sprites — dernière reprise du 17 novembre 2026
+
+**170 profils illustrés sur 230, 60 encore sans image et 19 vues de combat latérales distinctes.** La reprise réunit 22 PNG antérieurs et ajoute 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_NEXT_2026-11-17.md) et le [relevé de reprise exact](sprite-status-next-2026-11-17.json) pour continuer sans doublons. Les sections historiques ci-dessous conservent les chiffres de leur date.
+
 ## Contenu
 
 | Onglet | Usage |

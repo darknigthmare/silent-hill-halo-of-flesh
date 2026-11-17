@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'c98a19eae65818dd1e85df25391e62c4f1aff405a125a23f2e6bc9b494e5c5d5';
+const BITMAP_REVISION = '17a097df09627d06d62a34d2cb5bc9bc5cf54ea6643aac5ab10e567b1acf9a88';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -10,6 +10,8 @@ const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+  "/assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
   "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
   "/assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
   "/assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
@@ -133,6 +135,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
+  "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
@@ -159,6 +162,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
   "/assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+  "/assets/sprites/sh3_missionary_047.820d3acca65f.png",
   "/assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
   "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
   "/assets/sprites/sh3_numb_body_medium.4018b22369f3.png",

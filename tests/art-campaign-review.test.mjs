@@ -126,7 +126,8 @@ test('continuation reader binds the two explicit purpose journals and ignores un
  await assert.rejects(readArtContinuation(root),/Invalid exact artwork delivery/);
 });
 
-test('independent continuation resolves archived blockers by exact bytes after combat index normalization',async t=>{
+for(const journalName of ['sprite-continuation-imports-2026-11-17.json','sprite-next-imports-2026-11-17.json'])
+test(`${journalName} resolves archived blockers by exact bytes after combat index normalization`,async t=>{
  let originalRow;
  const {root,candidate}=await continuationFixture(t,({row,fragments,candidate})=>{
   row.status='blocked';row.reason='Historical incomplete source.';row.artifacts=[];
@@ -139,7 +140,7 @@ test('independent continuation resolves archived blockers by exact bytes after c
   {fighterId:id,source,kind:'selection-base',path:art.portrait.path,sha256:art.portrait.sha256,frameIndex:0},
   {fighterId:id,source,kind:'distinct-combat-idle',path:combat.path,sha256:combat.sha256,frameIndex:1}
  ];
- const file=join(root,'docs/production/sprite-continuation-imports-2026-11-17.json');
+ const file=join(root,'docs/production',journalName);
  await writeFile(file,JSON.stringify({schema:1,imports}));
  const result=await readArtContinuation(root);
  assert.deepEqual(result.purposeDeliveries.map(d=>d.purpose),['selection','combat']);

@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "mode": "native-FightEngine-visual-QA",
+  "browserTest": false,
+  "runs": [
+    {
+      "label": "recovered",
+      "report": "recovered/report.json",
+      "checks": 111,
+      "passed": true,
+      "portraits": 12,
+      "duels": 6,
+      "screenshotsInspected": 6
+    },
+    {
+      "label": "new",
+      "report": "new/report.json",
+      "checks": 64,
+      "passed": true,
+      "portraits": 6,
+      "duels": 4,
+      "screenshotsInspected": 4
+    }
+  ],
+  "totals": {
+    "checks": 175,
+    "failures": 0,
+    "portraits": 18,
+    "duels": 10,
+    "finalDuelScreenshotsInspected": 10,
+    "calibrationChangesRequired": 0
+  },
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ]
+}
