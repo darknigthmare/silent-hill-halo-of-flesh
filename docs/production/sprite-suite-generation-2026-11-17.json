@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "dfd9c7f3d0b082dc0794e9f502246ffb630269da",
+  "generator": "image_gen.imagegen",
+  "transparentBackgroundRequested": true,
+  "attempts": [
+    {
+      "id": "downpour_anne_cunningham",
+      "prompt": "Create ONE production candidate combat idle sprite for Anne Cunningham from Silent Hill: Downpour, faithful to the first official character reference and visually consistent with the second existing selection illustration. Change the pose and viewpoint: a clear strict SIDE VIEW facing SCREEN RIGHT, horizontal orthographic fighting-game camera at torso height. Full body, head through both complete shoes, and the entire pistol visible within comfortable transparent margins. She stands braced with knees lightly bent, feet planted on the same baseline, torso and face pointing toward an offscreen opponent to the right, holding the same compact silver pistol in a two-handed ready grip directed right. Preserve her exact adult facial identity, short swept brown hair, dark navy buttoned field jacket with US flag shoulder patch, muted olive collared shirt and gray-olive trousers, utility belt, holster and black shoes. Do not turn toward the viewer. One figure only; realistic textured game-character rendering matching these references, not pixel art, no costume redesign. Neutral readable lighting without dramatic rim halo. Transparent RGBA background, no scenery, no floor, no cast ground shadow, no smoke, no text, no frame, no duplicate view. High native-resolution portrait canvas, clean isolated silhouette. This is a single static idle candidate, not a sprite sheet.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-suite/anne-official.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+      ],
+      "purpose": "combat",
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-6295761a-d7fe-4a97-a25e-b7004359243e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "origins_the_butcher_081",
+      "prompt": "Create ONE production candidate combat idle sprite of The Butcher specifically from Silent Hill: Origins. The first two references are original character art establishing the exact edition; the third is the existing selection illustration for visual continuity. New pose and viewpoint: strict SIDE VIEW facing SCREEN RIGHT, horizontal orthographic fighting-game camera. Preserve the distinctive asymmetrical corroded half-head metal mask of this exact Butcher, muscular bare arms, long stained weathered butcher apron, heavy boots and the exact broad rectangular cleaver with a hole near its end shown in the references. Do not substitute Pyramid Head's large triangular helmet or great sword. Static heavy ready stance with both feet on one baseline and a slight forward lean toward the opponent to the right. Hold the cleaver low in the near hand, blade fully visible and separated from the legs, no strike or action effect. Entire body and entire cleaver inside generous transparent margins, head and boots uncut. Match the existing realistic textured character style. Preserve the source's old surface staining without adding wounds, victims, loose organs, spray or any further graphic detail. One figure only, clear profile, neutral readable light without colored rim halo. Transparent RGBA background, no ground, no cast shadow, no scenery, no text, no frame, no duplicate figure. High native-resolution portrait canvas. Single static idle candidate, not a sheet.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-suite/butcher-27.png",
+        "/workspace/scratch/eb1659a0c6b9/references-suite/butcher-26.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png"
+      ],
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID ea87a46c-f8bb-4109-b400-474ab1ba8190. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "purpose": "combat",
+      "status": "refused"
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "prompt": "Create ONE production candidate combat idle sprite of the Prisoner Juggernaut from Silent Hill: Downpour, faithfully matching the first original character reference and the second existing selection illustration. New viewpoint: strict SIDE VIEW facing SCREEN RIGHT, orthographic horizontal fighting-game camera, head and gaze turned completely toward the opponent to the right. Massive bald pale muscular humanoid with the same tattooed bare torso, veined skin, eerie fixed grin and cloudy eyes, loose weathered brown prison trousers with drawstring, bare feet. Preserve the design exactly as shown; no added restraints, armor, shoes, weapons or different anatomy. Low stable unarmed guard stance, bent knees, rear fist near chest, forward fist lower ahead, both full feet planted on the same baseline. Whole body from top of head to every toe, with ample transparent margins around both fists and feet. Match the realistic textured game-character rendering of the references. Keep existing fictional monster surface detail, no new wounds, gore or blood effects. Single figure, neutral legible lighting, no glowing rim. Transparent RGBA background only: no ground, shadow, scenery, writing or frame. High native-resolution portrait canvas, crisp isolated edges, not pixel art, no multi-view or sprite sheet. A single static idle candidate.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-suite/juggernaut-official.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png"
+      ],
+      "purpose": "combat",
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-e59d9068-9ed5-49d3-a1f9-7be5d459f5ae.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "purpose": "selection",
+      "prompt": "Create ONE full-body character selection illustration of STEEL GUARDIAN from Silent Hill: Book of Memories, faithfully based on the provided exact-edition references. First reference: John Hershberg's textured production model, authoritative for anatomy, materials and construction. Second and third references: native low-resolution game views that establish the complete wing endpoints and in-game silhouette; use them for outline only, not to invent fine details. Show a single complete creature, frontal to a slight three-quarter selection pose, floating upright as in the game, with the full spread of BOTH original mechanical wings, every outer tip, every hanging chain and both clawed feet entirely inside generous margins. Reproduce the green muscular humanoid body with its source markings, irregular dark metal armor strips at shoulders/waist/thighs/shins, long thin black finger and toe claws, pointed rusty metal hood enclosing the upper face with a visible small vertical tooth grille, ring of straight spines behind the shoulders, and the exact large segmented mechanical wing construction: curved ribbed top rails, descending rusty broad pointed metal feather/blade plates, and hanging looped chains. Preserve the source's hard industrial geometry and plate proportions, not organic feathers, cloth, bat membrane or a generic fantasy demon. Keep the outer wings consistent with the two game views; do not omit wings or invent a wingless form. Realistic game-character texture rendering in the same style as the production model, readable neutral light. One subject only. Transparent RGBA background, no environment, no ground, no shadow, no effects, no text or labels, no border, no multiple views. Landscape canvas wide enough to keep the entire wing silhouette visible without cropping. High native resolution, clean separated contour. This is a static candidate selection image, not animation, and not a sprite sheet.",
+      "refs": [
+        "/workspace/scratch/ae07d9a11c02/references/extended/steel14.jpg",
+        "/workspace/scratch/eb1659a0c6b9/references-suite/steel-threequarter-14h18m10-native.png",
+        "/workspace/scratch/eb1659a0c6b9/references-suite/steel-fullbody-14h18m30-native.png"
+      ],
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-6d6483f3-2f73-4a14-84b8-e7b3716aacfa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "purpose": "combat",
+      "prompt": "Create ONE separate combat idle sprite of Steel Guardian from Silent Hill: Book of Memories. The first reference is the just-created complete selection candidate; preserve its exact creature identity and material style. The second is John Hershberg's textured original production model and is authoritative for anatomy/equipment. The two small native game references confirm full wing silhouettes; they are low resolution, use only their visible outline. Compose a DIFFERENT image for a 2D fighting game: full-body SIDE VIEW, torso, head and gaze facing SCREEN RIGHT toward the opponent, horizontal orthographic camera. Neutral hovering combat idle, arms slightly bent with clawed hands ready, legs hanging in the source's floating posture. Rotate the complete existing winged creature into this lateral viewpoint: retain BOTH large mechanical wings, naturally foreshortened in side view; keep their ribbed curved upper rails, rusty hanging pointed metal plates and loose chains. Preserve their construction and proportions, no invented extra wings, no wingless form, no new folding mechanism or different boss phase. All wing ends, spines, chains, hands and every clawed toe must fit fully within the canvas, with at least 5 percent CLEAR TRANSPARENT PADDING on all four sides. The source green muscular body, uneven metal armor strips, pointed rusty hood, vertical tooth grille and ring of long back spines must remain recognizable. No facing the viewer, no selection pose, no front-on chest. Strong readable side silhouette, realistic game-character texture rendering, neutral lighting. One figure only on TRUE TRANSPARENT RGBA: no scene, floor, background glow, aura, cast shadow, text, labels or frame. High native resolution canvas sized to accommodate the full silhouette. Single static candidate combat sprite, no sheet, no animation. Preserve original fictional monster design without adding gore or damage.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/generated_images/exec-6d6483f3-2f73-4a14-84b8-e7b3716aacfa.png",
+        "/workspace/scratch/ae07d9a11c02/references/extended/steel14.jpg",
+        "/workspace/scratch/eb1659a0c6b9/references-suite/steel-threequarter-14h18m10-native.png",
+        "/workspace/scratch/eb1659a0c6b9/references-suite/steel-fullbody-14h18m30-native.png"
+      ],
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-c7ae9856-132f-4ad9-ba2e-981810903e16.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

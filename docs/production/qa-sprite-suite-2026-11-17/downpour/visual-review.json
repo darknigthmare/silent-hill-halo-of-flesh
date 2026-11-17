@@ -1,0 +1,85 @@
+{
+  "schema": "sprite-native-visual-review/1",
+  "date": "2026-11-17",
+  "label": "sprite-suite-downpour",
+  "machineReport": "report.json",
+  "machineChecks": 39,
+  "failedMachineChecks": 0,
+  "passed": true,
+  "mode": "Actual FightEngine with native Canvas; not browser screenshots",
+  "characters": [
+    "downpour_anne_cunningham",
+    "downpour_prisoner_juggernaut_110"
+  ],
+  "portraitRenders": 4,
+  "duels": 2,
+  "finalCapturesInspected": [
+    {
+      "file": "duel-downpour_anne_cunningham--downpour_prisoner_juggernaut_110-tick120.png",
+      "sha256": "0b84aa287b57e10b38526df1e6913cd62180b727cbd1638551916823785c3d72"
+    },
+    {
+      "file": "duel-downpour_prisoner_juggernaut_110--downpour_anne_cunningham-tick120.png",
+      "sha256": "a0f3905c3ed0d89fe2de542a1076dd4bade74a7edf2ec393e7522423a955a477"
+    }
+  ],
+  "visualFindings": {
+    "orientation": "Both fighters face each other in both slot orders. Anne aims the pistol toward the opponent; Juggernaut presents a lateral fighting guard.",
+    "exterior": "Both complete silhouettes, all feet, hands and the pistol stay within the viewport. No clipping observed.",
+    "alpha": "Scene remains visible around the silhouettes. No opaque grey rectangle or conspicuous grey halo around Anne at gameplay scale. Juggernaut has bright skin highlights, without a background rectangle.",
+    "feet": "Both soles/feet align with the rendered ground/shadow area. Visible-envelope offsets are 1.5064 px below ground for Anne and 0.2266 px for Juggernaut, unchanged after slot reversal; no material anchoring correction warranted.",
+    "selectionIsolation": "Machine draw tracing confirms combat uses only the new combat PNGs while four portrait renders retain the existing selection paths.",
+    "scale": "Anne is visibly smaller than the Juggernaut in accordance with the engine render. No visual mismatch requiring a registry calibration was found."
+  },
+  "groundMeasurements": [
+    {
+      "pair": [
+        "downpour_anne_cunningham",
+        "downpour_prisoner_juggernaut_110"
+      ],
+      "actors": [
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 1,
+          "visibleBottomMinusGroundPx": 1.5064,
+          "complete": true
+        },
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "slot": 2,
+          "visibleBottomMinusGroundPx": 0.2266,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "pair": [
+        "downpour_prisoner_juggernaut_110",
+        "downpour_anne_cunningham"
+      ],
+      "actors": [
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "slot": 1,
+          "visibleBottomMinusGroundPx": 0.2266,
+          "complete": true
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 2,
+          "visibleBottomMinusGroundPx": 1.5064,
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "registryUnchangedDuringRun": true,
+  "manifestUnchangedDuringRun": true,
+  "limits": [
+    "Only static idle and intro/pause paths were exercised; no source animation, attack/collision fidelity or 1:1 fidelity is certified.",
+    "Left-facing appearance is the engine mirror, not a separately sourced opposite-side asset.",
+    "Browser DOM, CSS, input, decoding and service worker were not tested.",
+    "The in-memory Sharp normalization was lossless; original PNG files were not altered."
+  ],
+  "registryAdjustmentRecommended": false
+}

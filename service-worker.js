@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '17a097df09627d06d62a34d2cb5bc9bc5cf54ea6643aac5ab10e567b1acf9a88';
+const BITMAP_REVISION = '30b035d982c6af840066d7706b382209e1347bbc373bc6a009f9f161606292d4';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -48,15 +48,19 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
   "/assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
   "/assets/sprites/bom_schism_130.89c7127c0006.png",
+  "/assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+  "/assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
   "/assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
   "/assets/sprites/bom_swarm_132.96315f628aaf.png",
   "/assets/sprites/bom_tremer_133.637b09a88365.png",
   "/assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
   "/assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
+  "/assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
   "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
   "/assets/sprites/downpour_doll_106.50727eee886c.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+  "/assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
   "/assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
   "/assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
   "/assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",

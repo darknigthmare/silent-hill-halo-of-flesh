@@ -1,0 +1,840 @@
+{
+  "schema": 2,
+  "label": "sprite-suite-steel",
+  "generatedAt": "2026-11-17T22:24:30.121Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2117103,
+        "sha256": "221d68a36f7a38f349961e894602123202878ff23b8d07e92a2a844dea5d7f80"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2092489,
+        "sha256": "34f6a40e472904bfdf5e5927758218bbb41cf6b891b9e2358f14b02ea63a5453"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1723731,
+        "sha256": "23e6f56e2c49c75c0b7433f0e60aabe4935f6b6d96d2f819b1adaf4fab0c3ce0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 465883,
+        "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          63,
+          7,
+          1327,
+          990
+        ],
+        "expected": [
+          63,
+          7,
+          1327,
+          990
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          35,
+          8,
+          1715,
+          877
+        ],
+        "expected": [
+          35,
+          8,
+          1715,
+          877
+        ]
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png"
+        ],
+        "portrait": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png"
+        ],
+        "expected": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png"
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png"
+        ],
+        "expected": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          128,
+          20,
+          914,
+          1516
+        ],
+        "expected": [
+          128,
+          20,
+          914,
+          1516
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          490,
+          134,
+          818,
+          1160
+        ],
+        "expected": [
+          490,
+          134,
+          818,
+          1160
+        ]
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ],
+        "portrait": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+        ],
+        "expected": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+        ],
+        "expected": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146/downpour_anne_cunningham asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146/downpour_anne_cunningham real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146/downpour_anne_cunningham actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_steel_guardian_146",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_steel_guardian_146/downpour_anne_cunningham fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 26.746629787085112,
+          "top": 270.32472179532056,
+          "right": 437.3399703827454,
+          "bottom": 591.5744996690657
+        },
+        "visible": {
+          "left": 28.681869412830565,
+          "top": 272.58250135869025,
+          "right": 436.37235056987265,
+          "bottom": 589.6392600433203
+        },
+        "ground": {
+          "x": 367.54233652171723,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 922.0457294371445,
+          "top": 400.22164139508425,
+          "right": 1025.3160518131917,
+          "bottom": 595.9534125567476
+        },
+        "visible": {
+          "left": 922.5666390077677,
+          "top": 400.61232357305164,
+          "right": 1024.9253696352243,
+          "bottom": 595.4325029861244
+        },
+        "ground": {
+          "x": 981.5856951770437,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146/downpour_anne_cunningham pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_anne_cunningham/bom_steel_guardian_146 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/bom_steel_guardian_146 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/bom_steel_guardian_146 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_anne_cunningham",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_steel_guardian_146",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_anne_cunningham/bom_steel_guardian_146 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 254.68394818680827,
+          "top": 400.22164139508425,
+          "right": 357.9542705628555,
+          "bottom": 595.9534125567476
+        },
+        "visible": {
+          "left": 255.07463036477566,
+          "top": 400.61232357305164,
+          "right": 357.43336099223234,
+          "bottom": 595.4325029861244
+        },
+        "ground": {
+          "x": 298.41430482295635,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_steel_guardian_146 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 842.6599990996765,
+          "top": 270.32472179532056,
+          "right": 1253.2533396953368,
+          "bottom": 591.5744996690657
+        },
+        "visible": {
+          "left": 843.6276189125492,
+          "top": 272.58250135869025,
+          "right": 1251.3181000695913,
+          "bottom": 589.6392600433203
+        },
+        "ground": {
+          "x": 912.4576634782828,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/bom_steel_guardian_146 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "07e323b2ad0cb1020392b7f7af80050c907c2ae78224420a806614e669748cef",
+        "after": "07e323b2ad0cb1020392b7f7af80050c907c2ae78224420a806614e669748cef"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "a99ebb559df654a3b315020a8af7e591ba55b7666c1ebe03c8a6ef3eb4868184",
+        "after": "a99ebb559df654a3b315020a8af7e591ba55b7666c1ebe03c8a6ef3eb4868184"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "bom_steel_guardian_146",
+      "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.6268952687581381,
+      "visibleBounds": [
+        63,
+        7,
+        1327,
+        990
+      ]
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.37985609499103296,
+      "visibleBounds": [
+        35,
+        8,
+        1715,
+        877
+      ]
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7022247314453125,
+      "visibleBounds": [
+        128,
+        20,
+        914,
+        1516
+      ]
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.874798730187801,
+      "visibleBounds": [
+        490,
+        134,
+        818,
+        1160
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "bom_steel_guardian_146",
+      "facing": 1,
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "file": "portrait-bom_steel_guardian_146-right.png"
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "facing": -1,
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "file": "portrait-bom_steel_guardian_146-left.png"
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "facing": 1,
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "file": "portrait-downpour_anne_cunningham-right.png"
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "facing": -1,
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "file": "portrait-downpour_anne_cunningham-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "bom_steel_guardian_146",
+        "downpour_anne_cunningham"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9303687252353431,
+        "x": 79.12803169876088,
+        "y": 41.36097721020621,
+        "bounds": {
+          "left": -74.3017578125,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.0996111666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_steel_guardian_146",
+          "slot": 1,
+          "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+          "exterior": {
+            "left": 26.746629787085112,
+            "top": 270.32472179532056,
+            "right": 437.3399703827454,
+            "bottom": 591.5744996690657
+          },
+          "visible": {
+            "left": 28.681869412830565,
+            "top": 272.58250135869025,
+            "right": 436.37235056987265,
+            "bottom": 589.6392600433203
+          },
+          "ground": {
+            "x": 367.54233652171723,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -4.3607399566797085,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+            "args": [
+              -386.0625,
+              -347.9,
+              532.5,
+              355
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9303687214851379,
+              0,
+              0,
+              0.9303687214851379,
+              367.5423278808594,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 2,
+          "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "exterior": {
+            "left": 922.0457294371445,
+            "top": 400.22164139508425,
+            "right": 1025.3160518131917,
+            "bottom": 595.9534125567476
+          },
+          "visible": {
+            "left": 922.5666390077677,
+            "top": 400.61232357305164,
+            "right": 1024.9253696352243,
+            "bottom": 595.4325029861244
+          },
+          "ground": {
+            "x": 981.5856951770437,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.4325029861244047,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+            "args": [
+              -64.5,
+              -210.6608055,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9303687214851379,
+              0,
+              0,
+              0.9303687214851379,
+              981.585693359375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+        "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+      ],
+      "snapshots": [
+        "duel-bom_steel_guardian_146--downpour_anne_cunningham-tick0.png",
+        "duel-bom_steel_guardian_146--downpour_anne_cunningham-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_anne_cunningham",
+        "bom_steel_guardian_146"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9303687252353431,
+        "x": 10,
+        "y": 41.36097721020621,
+        "bounds": {
+          "left": 0,
+          "right": 1354.3017578125,
+          "upper": 132,
+          "lower": 614.0996111666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 1,
+          "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "exterior": {
+            "left": 254.68394818680827,
+            "top": 400.22164139508425,
+            "right": 357.9542705628555,
+            "bottom": 595.9534125567476
+          },
+          "visible": {
+            "left": 255.07463036477566,
+            "top": 400.61232357305164,
+            "right": 357.43336099223234,
+            "bottom": 595.4325029861244
+          },
+          "ground": {
+            "x": 298.41430482295635,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.4325029861244047,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+            "args": [
+              -64.5,
+              -210.6608055,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9303687214851379,
+              0,
+              0,
+              0.9303687214851379,
+              298.414306640625,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "bom_steel_guardian_146",
+          "slot": 2,
+          "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+          "exterior": {
+            "left": 842.6599990996765,
+            "top": 270.32472179532056,
+            "right": 1253.2533396953368,
+            "bottom": 591.5744996690657
+          },
+          "visible": {
+            "left": 843.6276189125492,
+            "top": 272.58250135869025,
+            "right": 1251.3181000695913,
+            "bottom": 589.6392600433203
+          },
+          "ground": {
+            "x": 912.4576634782828,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -4.3607399566797085,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+            "args": [
+              -386.0625,
+              -347.9,
+              532.5,
+              355
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9303687214851379,
+              0,
+              0,
+              0.9303687214851379,
+              912.4576416015625,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+        "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png"
+      ],
+      "snapshots": [
+        "duel-downpour_anne_cunningham--bom_steel_guardian_146-tick0.png",
+        "duel-downpour_anne_cunningham--bom_steel_guardian_146-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "07e323b2ad0cb1020392b7f7af80050c907c2ae78224420a806614e669748cef",
+  "src/sprite-manifest.jsSHA256": "a99ebb559df654a3b315020a8af7e591ba55b7666c1ebe03c8a6ef3eb4868184",
+  "version": "0.9.6",
+  "ids": [
+    "bom_steel_guardian_146",
+    "downpour_anne_cunningham"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

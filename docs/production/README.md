@@ -6,7 +6,7 @@ Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_H
 
 ## État des sprites — dernière reprise du 17 novembre 2026
 
-**170 profils illustrés sur 230, 60 encore sans image et 19 vues de combat latérales distinctes.** La reprise réunit 22 PNG antérieurs et ajoute 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_NEXT_2026-11-17.md) et le [relevé de reprise exact](sprite-status-next-2026-11-17.json) pour continuer sans doublons. Les sections historiques ci-dessous conservent les chiffres de leur date.
+**171 profils illustrés sur 230, 59 encore sans image et 22 vues de combat latérales distinctes.** La dernière suite ajoute Steel Guardian (sélection et combat séparés), Anne et Juggernaut (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_SUITE_2026-11-17.md) et le [relevé de reprise exact](sprite-status-suite-2026-11-17.json). La [reprise précédente](SPRITE_NEXT_2026-11-17.md) conserve la récupération de 22 originaux et ses 4 créations. Les sections historiques ci-dessous gardent les chiffres de leur date.
 
 ## Contenu
 
