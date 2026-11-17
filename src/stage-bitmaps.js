@@ -1,6 +1,6 @@
 /** Stage rasters share the bounded decoder, but own a separate lease and budget. */
 import {STAGE_BITMAPS} from './stage-bitmap-manifest.js';
-import {SpriteCache,spriteCache,spriteFor} from './sprite-system.js';
+import {SpriteCache,spriteCache,combatSpriteFor} from './sprite-system.js';
 const own=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
 const uniqueStages=stages=>{
   const result=new Map();
@@ -74,7 +74,7 @@ export async function prepareCombatAssets(fighters,stages,{fighterCache=spriteCa
   return {ok:actors.ok&&decor.ok,missing:actors.missing,failed:[...actors.failed,...decor.failed],stageFailed:!decor.ok};
 }
 export function pinCombatAssets(fighters,stages,{fighterCache=spriteCache,stageCache=stageBitmapCache}={}){
-  const actors=fighters.flatMap(fighter=>spriteFor(fighter)?.frames||[]),decor=stageBitmapFrames(asStages(stages),stageCache.registry);
+  const actors=fighters.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]),decor=stageBitmapFrames(asStages(stages),stageCache.registry);
   // Validate both leases before replacing either one.
   fighterCache.validatePins(actors);stageCache.validatePins(decor);
   fighterCache.pin(actors);stageCache.pin(decor);

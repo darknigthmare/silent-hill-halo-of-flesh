@@ -1,0 +1,1875 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c68a1a97f1680a38613ac92f00524b00c245df89",
+  "status": "reconciled-candidates-full-test-and-build-passed",
+  "scope": "Recovery and reconciliation only; no new image generation in this record.",
+  "sources": [
+    {
+      "path": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "recoveredPNGs": 15
+    },
+    {
+      "path": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "recoveredPNGs": 7
+    }
+  ],
+  "counts": {
+    "baselineProfiles": 163,
+    "illustratedProfilesAfterRecovery": 169,
+    "rosterProfiles": 230,
+    "profilesWithoutImagesAfterRecovery": 61,
+    "newProfilesFromUnpublishedPasses": 6,
+    "recoveredPNGs": 22,
+    "selectionPortraitsRecovered": 6,
+    "combatSideViewPNGsRecovered": 16,
+    "expectedSideViewCandidates": 16,
+    "newAnimatedClips": 0,
+    "certifiedFidelity": 0
+  },
+  "recoveredImages": [
+    {
+      "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "bytes": 1460832,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_hummer_arcade",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+      "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+      "bytes": 1053953,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_hummer_arcade",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+      "bytes": 638176,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_mama_117",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "sha256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+      "bytes": 1241685,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_mama_117",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+      "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+      "bytes": 1194577,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_robbie_the_rabbit_axe",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+      "bytes": 1655034,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_split_worm_arcade",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "sha256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+      "bytes": 1671312,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_split_worm_arcade",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+      "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+      "bytes": 938959,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_tremer_arcade",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+      "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "bytes": 803497,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_tremer_arcade",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+      "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "bytes": 1799232,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_tuberculosis",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+      "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+      "bytes": 1733881,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "arcade_tuberculosis",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+      "bytes": 1954430,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "ascension_fighter_179",
+          "purpose": "selection"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "sha256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+      "bytes": 1776511,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "ascension_fighter_179",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+      "bytes": 1453158,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "bom_fire_guardian_137",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+      "bytes": 912424,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "downpour_prisoner_minion_agile_109",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+      "bytes": 1156056,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "downpour_prisoner_minion_brawler_108",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+      "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+      "bytes": 909194,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "downpour_shadow_107",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+      "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+      "bytes": 1026094,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "film_armless_man_170",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+      "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+      "bytes": 435582,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "film_red_pyramid_thing_return_to_silent_hill",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+      "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+      "bytes": 1761937,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "origins_demon_084",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "sha256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+      "bytes": 960909,
+      "recoveredFrom": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "purpose": "combat"
+        }
+      ]
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "bytes": 1411208,
+      "recoveredFrom": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh",
+      "assignments": [
+        {
+          "id": "sh3_god_050",
+          "purpose": "combat"
+        }
+      ]
+    }
+  ],
+  "allBaselineSpriteFilesPreserved": [
+    {
+      "path": "assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
+      "sha256": "98c6e097cb8a6fd7c7df71e444b197ad37f42f6c0c18f96d40a3537b76f309b2"
+    },
+    {
+      "path": "assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
+      "sha256": "0afa295f8be5d01fff44a863359237a49b5622ecab9c70c2da2be8ba9d369d05"
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2"
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
+      "sha256": "204f63a133386a7069ca430805dbf8bcb70b75354135af8dedb16e50f0eb969f"
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+      "sha256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e"
+    },
+    {
+      "path": "assets/sprites/ascension_stinger_181.a031246ea341.png",
+      "sha256": "a031246ea3417f7455e4bfeecbb718337d5b24c6700f5f208004b4ef53cf1fce"
+    },
+    {
+      "path": "assets/sprites/ascension_the_immolator_182.627713ebf694.png",
+      "sha256": "627713ebf6946af104b483cea44166160c3fa8670741ff601387bcd84bae15c2"
+    },
+    {
+      "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+      "sha256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed"
+    },
+    {
+      "path": "assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
+      "sha256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952"
+    },
+    {
+      "path": "assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
+      "sha256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911"
+    },
+    {
+      "path": "assets/sprites/bom_double_head_124.7b4030beb9da.png",
+      "sha256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4"
+    },
+    {
+      "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+      "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408"
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39"
+    },
+    {
+      "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+      "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782"
+    },
+    {
+      "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+      "sha256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40"
+    },
+    {
+      "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+      "sha256": "eccb0bb176ea13782ae8dec75a74b1d498e3aa4a36e0c06a73f32e68b708a241"
+    },
+    {
+      "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f"
+    },
+    {
+      "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5"
+    },
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98"
+    },
+    {
+      "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+      "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec"
+    },
+    {
+      "path": "assets/sprites/bom_schism_130.89c7127c0006.png",
+      "sha256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408"
+    },
+    {
+      "path": "assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
+      "sha256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0"
+    },
+    {
+      "path": "assets/sprites/bom_swarm_132.96315f628aaf.png",
+      "sha256": "96315f628aaffbbd4d707ca471e50b0e0732be6943bb7202663ef418fe21f04a"
+    },
+    {
+      "path": "assets/sprites/bom_tremer_133.637b09a88365.png",
+      "sha256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254"
+    },
+    {
+      "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+      "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a"
+    },
+    {
+      "path": "assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
+      "sha256": "5d67aa29cc354986fd6c5ec2d758b592b28844ec55af42d670268dbd4c409c24"
+    },
+    {
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d"
+    },
+    {
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd"
+    },
+    {
+      "path": "assets/sprites/downpour_doll_106.50727eee886c.png",
+      "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514"
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "sha256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f"
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36"
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180"
+    },
+    {
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "sha256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654"
+    },
+    {
+      "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844"
+    },
+    {
+      "path": "assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
+      "sha256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db"
+    },
+    {
+      "path": "assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
+      "sha256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5"
+    },
+    {
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "sha256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52"
+    },
+    {
+      "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f"
+    },
+    {
+      "path": "assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
+      "sha256": "8171253b7eed7045da6e7e09ab2059c314b34e0506e3fd0713160458951a6b57"
+    },
+    {
+      "path": "assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+      "sha256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014"
+    },
+    {
+      "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+      "sha256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7"
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+      "sha256": "36b284a5f726ee2158490be8d96b15e18a6bc315860d22bcc51496900ffaa0e7"
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca"
+    },
+    {
+      "path": "assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+      "sha256": "75b6c185db1d1159b8321118622224359eadd24b238a74fade3c5844aef548e3"
+    },
+    {
+      "path": "assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+      "sha256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226"
+    },
+    {
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "sha256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9"
+    },
+    {
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "sha256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0"
+    },
+    {
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "sha256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92"
+    },
+    {
+      "path": "assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+      "sha256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b"
+    },
+    {
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e"
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+      "sha256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382"
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+      "sha256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707"
+    },
+    {
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "sha256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1"
+    },
+    {
+      "path": "assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
+      "sha256": "0c93c08d540b680f9af2c2ca9d1806497b59df7f81b0368b1ea37422ae7d5aac"
+    },
+    {
+      "path": "assets/sprites/homecoming_siam_090.88b378486212.png",
+      "sha256": "88b378486212fa6d2d4243b4ef3e4fd308035420b8dd620069b250b9f69ba730"
+    },
+    {
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "sha256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6"
+    },
+    {
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "sha256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266"
+    },
+    {
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567"
+    },
+    {
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "sha256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896"
+    },
+    {
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "sha256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c"
+    },
+    {
+      "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9"
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2"
+    },
+    {
+      "path": "assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+      "sha256": "0be64df8f39b77810c26f50869ba3194e268f719722376377476ddcf5296822d"
+    },
+    {
+      "path": "assets/sprites/origins_remnant_077.912fa1130daa.png",
+      "sha256": "912fa1130daa4c9299ffd9dd926f25787dbd175b88947ad8992671e02df31098"
+    },
+    {
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "sha256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d"
+    },
+    {
+      "path": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+      "sha256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6"
+    },
+    {
+      "path": "assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+      "sha256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782"
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+      "sha256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780"
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
+      "sha256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9"
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+      "sha256": "d8f940210f1cf7201ea32871a7dbc3aa7655d2adf20206aa582ca9653ec59ad5"
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+      "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4"
+    },
+    {
+      "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "sha256": "04acbc6820b32ad83ff5d7f9e2fd10dbeed469d7dcbce379a2b2b26b40f9efe0"
+    },
+    {
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7"
+    },
+    {
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d"
+    },
+    {
+      "path": "assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
+      "sha256": "29acacc0dd424d9d90a00a1c0b83b91ffa98ad52c97aec660889e944d0db3149"
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "sha256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce"
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd"
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "sha256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db"
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "sha256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f"
+    },
+    {
+      "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981"
+    },
+    {
+      "path": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+      "sha256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731"
+    },
+    {
+      "path": "assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+      "sha256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31"
+    },
+    {
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87"
+    },
+    {
+      "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb"
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d"
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+      "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26"
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "sha256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91"
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a"
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "sha256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45"
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "sha256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946"
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "sha256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495"
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "sha256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375"
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3"
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "sha256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee"
+    },
+    {
+      "path": "assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+      "sha256": "4cf565113e5e9ada56cec266db9f5fdf2e4002f7b3ec4d25d4a4db4a389cfa66"
+    },
+    {
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe"
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "sha256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730"
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "sha256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8"
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e"
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "sha256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578"
+    },
+    {
+      "path": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+      "sha256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d"
+    },
+    {
+      "path": "assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
+      "sha256": "fc01d3735b749a9771b618afb5d2748b7ac9ea28cdbb75800e2ed329b8b8b6d8"
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547"
+    },
+    {
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b"
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "sha256": "86ac95da85c7b200ae8029addca33d1ab044517269033d679ad87e698421b955"
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528"
+    },
+    {
+      "path": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+      "sha256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0"
+    },
+    {
+      "path": "assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
+      "sha256": "64ae6430cae704a68014cdc55096030799fca5f4ada003abe836256a0423bf88"
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1"
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315"
+    },
+    {
+      "path": "assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
+      "sha256": "849712862c160a1f4b3fbbb7fe34fca6186ac1d8b93ab824fcd809cdf5bac36d"
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.83102a051acb.png",
+      "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5"
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.a571dd362666.png",
+      "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910"
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb"
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715"
+    },
+    {
+      "path": "assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
+      "sha256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c"
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683"
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd"
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90"
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd"
+    },
+    {
+      "path": "assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "sha256": "90c14e5d4c7d390beedd4794d7e5b29cc03afed3d3f8f9864665f8da78cf2589"
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1"
+    },
+    {
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef"
+    },
+    {
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "sha256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.28ba8746f382.png",
+      "sha256": "28ba8746f382dfecd7cf5173019590602efaca08899d18204e2f36420803a1ea"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "sha256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.cac3caa79ef9.png",
+      "sha256": "cac3caa79ef9f264857c64e289832d8fbd9b76481030e5c120b3917692962f54"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.db4f61a3a239.png",
+      "sha256": "db4f61a3a239cc7899be6af5db8885aecfa576b0d1fbbe189781fcfcadd7c6f9"
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "sha256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617"
+    },
+    {
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+      "sha256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "sha256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "sha256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "sha256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6"
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+      "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7"
+    },
+    {
+      "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "sha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9"
+    },
+    {
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9"
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "sha256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88"
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de"
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "sha256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae"
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "sha256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de"
+    },
+    {
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38"
+    },
+    {
+      "path": "assets/sprites/sh4_bottom_065.b0daf4900078.png",
+      "sha256": "b0daf4900078accec37c8b970ed195824fce879d39b51cd61d33f863a8bb2d70"
+    },
+    {
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62"
+    },
+    {
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "sha256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073"
+    },
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "sha256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021"
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "sha256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329"
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4"
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63"
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "sha256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755"
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "sha256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54"
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "sha256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58"
+    },
+    {
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071"
+    },
+    {
+      "path": "assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+      "sha256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0"
+    },
+    {
+      "path": "assets/sprites/sh4_one_truth_070.fdb890443d18.png",
+      "sha256": "fdb890443d1826edaf577c0be1720e82cf076fb44ef0579d39fd2cd4fbc64336"
+    },
+    {
+      "path": "assets/sprites/sh4_patient_060.735bcaec2736.png",
+      "sha256": "735bcaec27369f961830e08a752862665ce36b93cf0d3c817037d059a8eec32e"
+    },
+    {
+      "path": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+      "sha256": "216d7213feb9e2e2392d87471b168d41f01a47b44dd5514b9781a35586bc575c"
+    },
+    {
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69"
+    },
+    {
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "sha256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "sha256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "sha256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "sha256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19"
+    },
+    {
+      "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "sha256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77"
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865"
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+      "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff"
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+      "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182"
+    },
+    {
+      "path": "assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
+      "sha256": "6db9971d6f09288ff92f91cfd6a30753f09b3fc679aaba93b7711b1696ee7545"
+    },
+    {
+      "path": "assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
+      "sha256": "80b4e2ee7ffa2da69f86870d3d7526491afc4ea54c7560bf598092d123da17ed"
+    },
+    {
+      "path": "assets/sprites/sh4_wall_man_056.397d02f8b567.png",
+      "sha256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194"
+    },
+    {
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42"
+    },
+    {
+      "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+      "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e"
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7"
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
+      "sha256": "1ff0846e3fc4a77c4c2b68038864fdcc485c0d65649017014ce5a0ab24ee0f79"
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+      "sha256": "d37aa45dec3443a7b1e8465dca4741830dd13bdaca012141f910e98febe10e40"
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+      "sha256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716"
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+      "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644"
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "sha256": "1226cc9a34196d764e02863f1556ef5a29ad003b63a6d9b7fbd15c7fa1124c9f"
+    },
+    {
+      "path": "assets/sprites/shf_ara_abare_153.a11358a86425.png",
+      "sha256": "a11358a86425baef9b66cfe5dda6d3bbcc2dcccdc8b33cbd42d85b6fe8b0c54a"
+    },
+    {
+      "path": "assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
+      "sha256": "e7aefe55a14b33d32a033f964b6eaf737a694c8f9cf949b63134cac918afd512"
+    },
+    {
+      "path": "assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
+      "sha256": "9cd0b864b7bdc88090e19f8b4522e65838240f2cd061bfd0eb37f25ae7ad1e6e"
+    },
+    {
+      "path": "assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",
+      "sha256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772"
+    },
+    {
+      "path": "assets/sprites/shf_irohihi_154.28e17594542d.png",
+      "sha256": "28e17594542d86387562c0d7fe88c6a1703429ed2f0baff5230abce50bf3e774"
+    },
+    {
+      "path": "assets/sprites/shf_kamugara_157.c71b154fd6db.png",
+      "sha256": "c71b154fd6dbf71aa521eb1cd444ac24d65356c0af443a9a225599876d44e663"
+    },
+    {
+      "path": "assets/sprites/shf_kashimashi_151.3f2710657644.png",
+      "sha256": "3f2710657644f962c1f8b7405a4e059bfc0c6fd0db1a7cc2e61ae0ba81b2834b"
+    },
+    {
+      "path": "assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
+      "sha256": "abb1af2fa71c8286ecc7ac212d6d9e55eaafaca2656eea15c119a9b2a08639d2"
+    },
+    {
+      "path": "assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
+      "sha256": "5b5945b00b180b41d7dfa20fd1c14e22dc0f8dd2ee0390d2eeba10ad8377bbaa"
+    },
+    {
+      "path": "assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
+      "sha256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32"
+    },
+    {
+      "path": "assets/sprites/shf_shichibi_168.332222c595ae.png",
+      "sha256": "332222c595aed3a03602f3b8a673f66f33601395d775fe9aa49c1d666ce17763"
+    },
+    {
+      "path": "assets/sprites/shf_shiromuku_166.25d31075e81d.png",
+      "sha256": "25d31075e81d8d72f354c857ebbd13db3168a5fa524088085d3ecfa0ab88b2f1"
+    },
+    {
+      "path": "assets/sprites/shf_tsukumogami_167.e8130e444254.png",
+      "sha256": "e8130e4442548fcd861d4364d08cd43f946600f61bcd834bd5158ede5960b212"
+    },
+    {
+      "path": "assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
+      "sha256": "19576d20cace562055107c3de8c54ea16a84007f80fe20acab52e88ff16c4806"
+    },
+    {
+      "path": "assets/sprites/townfall_fallen.50be585d8b6e.png",
+      "sha256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6"
+    },
+    {
+      "path": "assets/sprites/townfall_lunger.c53d378bc7df.png",
+      "sha256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632"
+    },
+    {
+      "path": "assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+      "sha256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273"
+    },
+    {
+      "path": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+      "sha256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3"
+    },
+    {
+      "path": "assets/sprites/townfall_widow.853146bb99d2.png",
+      "sha256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5"
+    }
+  ],
+  "normalizedRecoveredAssets": [
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "reason": "Normalize the recovered legacy two-frame representation to the strict separate portrait and side-view combat contract. Original selection pixels remain the unchanged portrait; no bitmap discarded.",
+      "originalAsset": {
+        "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+        "source": "sh2",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+        "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "sourceDimensions": [
+          1076,
+          1462
+        ],
+        "singleSubjectReviewed": true,
+        "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Great Knife SH2 original, casque triangulaire étroit, tablier et grande lame. Mobilier source exclu ; pose de présence adaptée, pieds/lame en profondeur non certifiés. Pas de film ni spear. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+        "mirrorPolicy": "presentation-only; opposite side not independently generated",
+        "frames": [
+          {
+            "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+            "bytes": 1186750,
+            "width": 1076,
+            "height": 1462,
+            "visibleBounds": [
+              23,
+              12,
+              1032,
+              1445
+            ],
+            "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
+            "transparentFraction": 0.69194,
+            "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+            "facing": 1,
+            "anchor": [
+              0.51,
+              0.94
+            ],
+            "bodyHeight": 0.94,
+            "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+            "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+            "origin": "conversation-image-generation"
+          },
+          {
+            "sha256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+            "bytes": 960909,
+            "width": 1086,
+            "height": 1448,
+            "visibleBounds": [
+              47,
+              119,
+              1017,
+              1324
+            ],
+            "pixelSHA256": "a3685284655b3e1f0ab8746bd2f4b6ada5501a13b3767a87f62ebb53e40a972d",
+            "transparentFraction": 0.77523,
+            "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+            "facing": 1,
+            "anchor": [
+              0.65,
+              0.914364640883978
+            ],
+            "bodyHeight": 0.8321823204419889,
+            "sourceFile": "exec-0cda4ca3-b1f2-491b-84dd-8b89dbd75a91.png",
+            "sourceSHA256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+            "origin": "conversation-image-generation",
+            "notes": "Sprite de combat latéral distinct, profil droit, grande lame entière traînée vers la gauche et deux bottes visibles. Généré le 2026-11-17 depuis la référence SH2 et le candidat de sélection préexistant inspectés par l’agent principal ; sélection conservée. Une pose idle fixe, aucun clip animé ajouté. Dimensions natives 1086×1448, pas UHD/4K ; détails et fidélité 1:1 non certifiés. Ancre et échelle estimées, revue en jeu requise. Pixels natifs inchangés ; résidus alpha inférieurs à 8 possibles aux bords."
+          }
+        ],
+        "portrait": {
+          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+          "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+          "bytes": 1186750,
+          "width": 1076,
+          "height": 1462,
+          "facing": 1
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              1
+            ],
+            "ticksPerFrame": 1,
+            "frameTicks": [
+              1
+            ],
+            "loop": false
+          }
+        },
+        "animatedClips": 0
+      },
+      "selectionPath": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "combatPath": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "removedOnlyFromCombatFrameList": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "newIdleIndices": [
+        0
+      ]
+    },
+    {
+      "id": "ascension_fighter_179",
+      "reason": "Normalize the recovered legacy two-frame representation to the strict separate portrait and side-view combat contract. Original selection pixels remain the unchanged portrait; no bitmap discarded.",
+      "originalAsset": {
+        "fighterId": "ascension_fighter_179",
+        "source": "ascension",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-429f05cc-e412-4428-9cdb-7c950ac47e84.png",
+        "sourceSHA256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "singleSubjectReviewed": true,
+        "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Image de sélection en pied, vue avant trois-quarts. Le combat est affecté à un fichier distinct.",
+        "mirrorPolicy": "presentation-only; opposite side not independently generated",
+        "frames": [
+          {
+            "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+            "bytes": 1954430,
+            "width": 1024,
+            "height": 1536,
+            "visibleBounds": [
+              145,
+              36,
+              880,
+              1517
+            ],
+            "pixelSHA256": "620f7c65afb2d80fb2da9d216d52091213035d5922571005a8cf19177ecb2cee",
+            "transparentFraction": 0.73082,
+            "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+            "facing": 1,
+            "anchor": [
+              0.49,
+              0.9876302083333334
+            ],
+            "bodyHeight": 0.96,
+            "sourceFile": "exec-429f05cc-e412-4428-9cdb-7c950ac47e84.png",
+            "sourceSHA256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Image de sélection en pied, vue avant trois-quarts. Le combat est affecté à un fichier distinct."
+          },
+          {
+            "sha256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+            "bytes": 1776511,
+            "width": 1024,
+            "height": 1536,
+            "visibleBounds": [
+              147,
+              26,
+              834,
+              1475
+            ],
+            "pixelSHA256": "e98adbec6a4a025977ecbcb30ef755aeddbfebb74f564a6d339570e148da29ed",
+            "transparentFraction": 0.76306,
+            "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+            "facing": 1,
+            "anchor": [
+              0.45,
+              0.9602864583333334
+            ],
+            "bodyHeight": 0.94,
+            "sourceFile": "exec-aef8f5bc-188f-49f2-aed7-fee68f9d3a3e.png",
+            "sourceSHA256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, genoux légèrement fléchis. Une seule pose idle fixe ; aucun nouveau clip animé."
+          }
+        ],
+        "portrait": {
+          "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+          "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+          "bytes": 1954430,
+          "width": 1024,
+          "height": 1536,
+          "facing": 1
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              1
+            ],
+            "ticksPerFrame": 1,
+            "frameTicks": [
+              1
+            ],
+            "loop": false
+          }
+        },
+        "animatedClips": 0
+      },
+      "selectionPath": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "combatPath": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "removedOnlyFromCombatFrameList": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "newIdleIndices": [
+        0
+      ]
+    },
+    {
+      "id": "arcade_mama_117",
+      "reason": "Normalize the recovered legacy two-frame representation to the strict separate portrait and side-view combat contract. Original selection pixels remain the unchanged portrait; no bitmap discarded.",
+      "originalAsset": {
+        "fighterId": "arcade_mama_117",
+        "source": "arcade",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-d5ad84e2-385d-442d-bdc7-6547a9b8b3c0.png",
+        "sourceSHA256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+        "sourceDimensions": [
+          1193,
+          1318
+        ],
+        "singleSubjectReviewed": true,
+        "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Image de sélection entière, 1193×1318 natifs ; pas UHD/4K. Combat affecté à un fichier séparé.",
+        "mirrorPolicy": "presentation-only; opposite side not independently generated",
+        "frames": [
+          {
+            "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+            "bytes": 638176,
+            "width": 1193,
+            "height": 1318,
+            "visibleBounds": [
+              84,
+              15,
+              1109,
+              1302
+            ],
+            "pixelSHA256": "077e948fa1dd1b04168eb4f1b1dd9314944a632e000dfebc236c34d971c18aa3",
+            "transparentFraction": 0.87491,
+            "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+            "facing": 1,
+            "anchor": [
+              0.49,
+              0.9878603945371776
+            ],
+            "bodyHeight": 0.98,
+            "sourceFile": "exec-d5ad84e2-385d-442d-bdc7-6547a9b8b3c0.png",
+            "sourceSHA256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Image de sélection entière, 1193×1318 natifs ; pas UHD/4K. Combat affecté à un fichier séparé."
+          },
+          {
+            "sha256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+            "bytes": 1241685,
+            "width": 1536,
+            "height": 1024,
+            "visibleBounds": [
+              304,
+              17,
+              1203,
+              1009
+            ],
+            "pixelSHA256": "f993ca1e7e7f18197abc4b6203051f4378fbb181a3d70884e263808779c3cb61",
+            "transparentFraction": 0.92093,
+            "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+            "facing": 1,
+            "anchor": [
+              0.395,
+              0.9853515625
+            ],
+            "bodyHeight": 0.98,
+            "sourceFile": "exec-33c65134-09c8-4089-8f18-2d9e3abbc337.png",
+            "sourceSHA256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, 1536×1024 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé."
+          }
+        ],
+        "portrait": {
+          "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+          "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+          "bytes": 638176,
+          "width": 1193,
+          "height": 1318,
+          "facing": 1
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              1
+            ],
+            "ticksPerFrame": 1,
+            "frameTicks": [
+              1
+            ],
+            "loop": false
+          }
+        },
+        "animatedClips": 0
+      },
+      "selectionPath": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "combatPath": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "removedOnlyFromCombatFrameList": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "newIdleIndices": [
+        0
+      ]
+    },
+    {
+      "id": "arcade_split_worm_arcade",
+      "reason": "Normalize the recovered legacy two-frame representation to the strict separate portrait and side-view combat contract. Original selection pixels remain the unchanged portrait; no bitmap discarded.",
+      "originalAsset": {
+        "fighterId": "arcade_split_worm_arcade",
+        "source": "arcade",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-826922eb-4818-460d-b277-34490faac83d.png",
+        "sourceSHA256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+        "sourceDimensions": [
+          1774,
+          887
+        ],
+        "singleSubjectReviewed": true,
+        "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Image de sélection en trois-quarts, 1774×887 natifs ; pas UHD/4K. Combat affecté à un fichier séparé.",
+        "mirrorPolicy": "presentation-only; opposite side not independently generated",
+        "frames": [
+          {
+            "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+            "bytes": 1655034,
+            "width": 1774,
+            "height": 887,
+            "visibleBounds": [
+              50,
+              152,
+              1717,
+              786
+            ],
+            "pixelSHA256": "94a68dc529fb4ad02c45fb80d22cccf29fd61a899fc83860b21050786689cad0",
+            "transparentFraction": 0.56678,
+            "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+            "facing": 1,
+            "anchor": [
+              0.53,
+              0.8861330326944757
+            ],
+            "bodyHeight": 0.7147688838782412,
+            "sourceFile": "exec-826922eb-4818-460d-b277-34490faac83d.png",
+            "sourceSHA256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Image de sélection en trois-quarts, 1774×887 natifs ; pas UHD/4K. Combat affecté à un fichier séparé."
+          },
+          {
+            "sha256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+            "bytes": 1671312,
+            "width": 2172,
+            "height": 724,
+            "visibleBounds": [
+              54,
+              104,
+              2116,
+              607
+            ],
+            "pixelSHA256": "9c0115290b66c9b6f6015b32b01b4fa58296e6811ed508699d4d6e1dc2a45b75",
+            "transparentFraction": 0.54314,
+            "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+            "facing": 1,
+            "anchor": [
+              0.53,
+              0.8383977900552486
+            ],
+            "bodyHeight": 0.6947513812154696,
+            "sourceFile": "exec-bcd8a0f3-fa05-44ab-b86b-1ccbd288ae1f.png",
+            "sourceSHA256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+            "origin": "conversation-image-generation",
+            "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Sprite de combat latéral, bouche légèrement en trois-quarts, 2172×724 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé."
+          }
+        ],
+        "portrait": {
+          "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+          "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+          "bytes": 1655034,
+          "width": 1774,
+          "height": 887,
+          "facing": 1
+        },
+        "clips": {
+          "idle": {
+            "frames": [
+              1
+            ],
+            "ticksPerFrame": 1,
+            "frameTicks": [
+              1
+            ],
+            "loop": false
+          }
+        },
+        "animatedClips": 0
+      },
+      "selectionPath": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "combatPath": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "removedOnlyFromCombatFrameList": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "newIdleIndices": [
+        0
+      ]
+    }
+  ],
+  "preserved": {
+    "allPriorPngBytes": true,
+    "allSelectionPortraits": true,
+    "roster": true,
+    "gameplayRules": true,
+    "workbook": true,
+    "recordedRefusals": true,
+    "sourceCodeAndAssetDirectoriesUnmodifiedByReconciliation": true
+  },
+  "limitations": [
+    "Existing technical/visual reports describe their individual source passes. The unified state requires its own QA.",
+    "Static candidate images do not certify source fidelity or constitute new animations.",
+    "The four recovered old-style entries were normalized so selection portraits cannot be used as combat frames; full prior metadata is retained in this report."
+  ],
+  "validation": {
+    "scope": "Unified recovered state before further generation, 169/230 profiles, 16 dedicated combat side views",
+    "spriteBuilder": {
+      "command": "node scripts/build-sprites.mjs",
+      "passed": true
+    },
+    "node": {
+      "command": "node --test tests/sprites.test.mjs tests/sprite-usage.test.mjs tests/sprite-clips.test.mjs tests/sprite-presentation.test.mjs tests/art-campaign-tracking.test.mjs tests/art-campaign-review.test.mjs",
+      "passed": 167,
+      "failed": 0
+    },
+    "python": {
+      "command": "python -m unittest discover -s tests -p 'test_sprite_*.py' -v",
+      "passed": 68,
+      "failed": 0
+    },
+    "browserTested": false,
+    "nativeVisualInspectionReperformed": false,
+    "registrySHA256": "75f0ff59d7993819945e2879ddbc6637fa797a7d2124c0cb1c41a3b519f6aa41",
+    "coverage": {
+      "schema": 1,
+      "version": "0.9.6",
+      "total": 230,
+      "integrated": 169,
+      "missing": 61,
+      "selectionAvailable": 169,
+      "selectionMissing": 61,
+      "combatSideViewCandidates": 16,
+      "combatLegacyUnreviewed": 153,
+      "combatMissing": 61,
+      "separateSelectionAndCombat": 16,
+      "certified": 0,
+      "animatedClips": 1,
+      "presentationClips": 1,
+      "animatedPresentationClips": 0
+    },
+    "fullGate": {
+      "command": "npm test",
+      "passed": true,
+      "nodeTests": 1245,
+      "nodeFailures": 0,
+      "buildFiles": 305,
+      "verifiedJS": 42,
+      "verifiedHTML": 10,
+      "log": "reconciliation-full-test-final.log",
+      "initialFailureResolved": "The independent seven-PNG import journal was absent from readPurposeDeliveries. Exact source/identity/hash bindings were added without modifying historical ART144/ART92 blockers. All eight initial failing cases passed in the final full gate.",
+      "scopedRegressionTests": 45,
+      "scopedRegressionFailures": 0
+    },
+    "gitDiffCheck": true
+  },
+  "missingProfilesAfterRecovery": [
+    {
+      "id": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1"
+    },
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1"
+    },
+    {
+      "id": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2"
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3"
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3"
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3"
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "name": "Joseph Schreiber — Victim 15",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4"
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "source": "origins"
+    },
+    {
+      "id": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming"
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming"
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming"
+    },
+    {
+      "id": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour"
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour"
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "name": "Wheelman",
+      "source": "downpour"
+    },
+    {
+      "id": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_double_head_arcade",
+      "name": "Double Head — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "name": "Insane Cancer — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "name": "Creeper — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade"
+    },
+    {
+      "id": "bom_ghost_125",
+      "name": "Ghost",
+      "source": "bom"
+    },
+    {
+      "id": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom"
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom"
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom"
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "name": "Wood Guardian",
+      "source": "bom"
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom"
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom"
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "name": "Steel Guardian",
+      "source": "bom"
+    },
+    {
+      "id": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt"
+    },
+    {
+      "id": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf"
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf"
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf"
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf"
+    },
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "name": "Sakuko-Like Entity",
+      "source": "shf"
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf"
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film"
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film"
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film"
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film"
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film"
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film"
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film"
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "name": "Wanderer",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_snarler_180",
+      "name": "Snarler",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension"
+    }
+  ]
+}

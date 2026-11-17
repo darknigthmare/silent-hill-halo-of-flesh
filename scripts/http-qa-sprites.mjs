@@ -5,11 +5,13 @@ import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {SPRITES} from '../src/sprite-manifest.js';
+import {hasCombatSprite} from '../src/sprite-usage.js';
 import {VERSION,ROSTER,createCombatProfile} from '../src/data.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-sprites');await mkdir(out,{recursive:true});
 const report={version:VERSION,kind:'real HTTP raster and offline checks',checks:[],errors:[],captures:[],fixtures:['saved arcade checkpoint for non-mutation assertion; no completed campaign simulated as play']};
 const artCount=Object.keys(SPRITES).length;
-const missingArtFighter=ROSTER.find(f=>!SPRITES[f.id]&&createCombatProfile(f).referencePolicy.combatEnabled);
+const combatIds=Object.keys(SPRITES).filter(id=>hasCombatSprite(SPRITES[id])),combatCount=combatIds.length;
+const missingArtFighter=ROSTER.find(f=>!hasCombatSprite(SPRITES[f.id])&&createCombatProfile(f).referencePolicy.combatEnabled);
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser;
 const assert=(name,ok)=>{report.checks.push({name,passed:!!ok});if(!ok)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
@@ -20,20 +22,21 @@ try{
  report.fixtures.push('Real unillustrated combat profile selected for art-gate checks: '+missingArtFighter.id);
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4175','--dist'],{cwd:root,stdio:'ignore'});
  let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}assert('static build HTTP server starts',available);
- for(const art of Object.values(SPRITES)){const frame=art.frames[0],response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());assert('HTTP exact PNG digest: '+art.fighterId,response.ok&&response.headers.get('content-type').includes('image/png')&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);}
+ const files=new Map(Object.values(SPRITES).flatMap(art=>[...art.frames,art.portrait]).filter(Boolean).map(frame=>[frame.path,frame]));
+ for(const frame of files.values()){const response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());assert('HTTP exact raster digest: '+frame.path,response.ok&&response.headers.get('content-type').startsWith('image/')&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);}
  browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=await browser.version();
  const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await pageIn(context);
  await page.goto(base+'/modules/unified-versus.html?qa=1');await ready(page);assert('both exact-ID candidate portraits decode from HTTP',true);
  assert('catalogue remains 30 per page',await page.locator('#roster > *').count()===30);await shot(page,'01-selection');
  await page.check('#artReadyOnly');
  const rosterPages=[],availableIds=[];
- for(let n=0;n<Math.max(1,Math.ceil(artCount/30));n++){
+ for(let n=0;n<Math.max(1,Math.ceil(combatCount/30));n++){
   const ids=await page.locator('#roster > *').evaluateAll(cards=>cards.map(card=>card.dataset.id));rosterPages.push(ids);availableIds.push(...ids);
   if(await page.locator('#nextPage').isDisabled())break;
   await page.click('#nextPage');
  }
- assert('available-only filter matches exact registered profiles across real roster pages',availableIds.length===artCount&&new Set(availableIds).size===artCount&&JSON.stringify([...availableIds].sort())===JSON.stringify(Object.keys(SPRITES).sort()));
- assert('available roster pages keep the thirty-card limit and end at the final page',rosterPages.every((ids,index)=>ids.length===Math.min(30,artCount-index*30))&&await page.locator('#nextPage').isDisabled());
+ assert('available-only filter matches exact combat profiles without selection-only portraits',availableIds.length===combatCount&&new Set(availableIds).size===combatCount&&JSON.stringify([...availableIds].sort())===JSON.stringify([...combatIds].sort()));
+ assert('available roster pages keep the thirty-card limit and end at the final page',rosterPages.every((ids,index)=>ids.length===Math.min(30,combatCount-index*30))&&await page.locator('#nextPage').isDisabled());
  while(!await page.locator('#prevPage').isDisabled())await page.click('#prevPage');
  await page.click('#randomAll');assert('random chooses only available combat art',await page.evaluate(async()=>{const {createCombatProfile}=await import('/src/data.js');return [__HALO_QA__.selection.p1,__HALO_QA__.selection.p2].every(f=>__HALO_QA__.spriteStatus(f).kind==='candidate'&&createCombatProfile(f).referencePolicy.combatEnabled);}));
  await page.selectOption('#mode','local');await page.click('#launch');await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
@@ -53,10 +56,10 @@ try{
  }
  assert('workshop has exactly the registered candidates across real pagination',registeredIds.length===artCount&&new Set(registeredIds).size===artCount&&JSON.stringify([...registeredIds].sort())===JSON.stringify(Object.keys(SPRITES).sort()));
  assert('illustrated pages keep the eighteen-card limit and reach the final page',readyPages.every((ids,index)=>ids.length===Math.min(18,artCount-index*18))&&await page.locator('#spriteNext').isDisabled());
- await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');await shot(page,'03-workshop');await page.selectOption('#spriteFilter','missing');assert('unproduced queue is paginated',await page.locator('.sprite-card').count()===18);await page.click('#spriteNext');assert('missing-art paging advances',/2\//.test(await page.locator('#spritePage').textContent()));
+ await page.waitForFunction(()=>document.querySelector('#spriteDetail img[data-art-purpose="selection"]')?.naturalWidth>0);await shot(page,'03-workshop');await page.selectOption('#spriteFilter','missing');assert('unproduced queue is paginated',await page.locator('.sprite-card').count()===18);await page.click('#spriteNext');assert('missing-art paging advances',/2\//.test(await page.locator('#spritePage').textContent()));
  assert('workshop missing filter selects a matching missing dossier',await page.locator('#spriteDetail canvas').getAttribute('data-art-status')==='missing'&&await page.locator('#spriteDetail a').count()===0);
  await page.fill('#spriteSearch','no-profile-matches-987654321');assert('workshop empty search clears the stale dossier',await page.locator('#spriteDetail canvas').count()===0&&await page.locator('#spriteDetail a').count()===0);
- await page.fill('#spriteSearch','');await page.selectOption('#spriteFilter','ready');assert('workshop ready filter restores a matching image dossier',await page.locator('#spriteDetail a').count()===2);
+ await page.fill('#spriteSearch','');await page.selectOption('#spriteFilter','ready');assert('workshop ready filter restores a matching image dossier',await page.locator('#spriteDetail a').count()>=2);
  await page.selectOption('#spriteSource','film');const firstFilm=ROSTER.find(f=>f.source==='film'&&SPRITES[f.id]);assert('workshop source filter updates exact dossier identity',!!firstFilm&&await page.locator('#spriteDetail code').first().textContent()===firstFilm.id);
  // The shell activates the genuine versioned offline service worker.
  await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});assert('real service worker controls the page',true);

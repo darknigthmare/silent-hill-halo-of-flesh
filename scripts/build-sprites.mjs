@@ -6,6 +6,7 @@ import {ROSTER,VERSION} from '../src/data.js';
 import {auditRaster,MAX_RASTER_BYTES} from './raster-validation.mjs';
 import {validateClip,presentationClipCoverage} from '../src/sprite-clips.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
+import {spriteUsage} from '../src/sprite-usage.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const registry=JSON.parse(await readFile(resolve(root,'art/registry.json'),'utf8'));
 const fail=message=>{throw Error('Sprite manifest: '+message);};
@@ -17,7 +18,10 @@ for(const [id,art] of Object.entries(registry.assets)){
   const fighter=ROSTER.find(f=>f.id===id);
   if(!fighter||art.fighterId!==id||fighter.source!==art.source)fail('identity/source mismatch '+id);
   if(art.singleSubjectReviewed!==true||(!origins.has(art.origin)&&art.origin!=='mixed')||art.fidelity!=='unverified'||art.status!=='integrated-candidate')fail('unsupported/unreviewed provenance '+id);
-  if(!Array.isArray(art.frames)||!art.frames.length||art.frames.length>256||!art.clips?.idle)fail('frames/idle absent '+id);
+  const selectionOnly=art.combatView==='selection-only',sideView=art.combatView==='side-view-candidate';
+  if(art.combatView!==undefined&&!selectionOnly&&!sideView)fail('unsupported combat view status '+id);
+  if(!Array.isArray(art.frames)||art.frames.length>256||!art.clips||typeof art.clips!=='object'||Array.isArray(art.clips))fail('invalid frames/clips '+id);
+  if(selectionOnly?(art.frames.length||Object.keys(art.clips).length):(!art.frames.length||!art.clips.idle))fail('frames/idle inconsistent with artwork purpose '+id);
   for(const [i,frame] of [...art.frames,art.portrait].entries()){
     if(!frame||!/^assets\/sprites\/[a-z0-9_.-]+\.(?:png|webp)$/.test(frame.path))fail('unsafe raster path '+id);
     const path=resolve(root,frame.path);if(relative(root,path).startsWith('..'))fail('outside source root');
@@ -36,6 +40,7 @@ for(const [id,art] of Object.entries(registry.assets)){
     if(!frame.path.includes(sha.slice(0,12)))fail('unversioned asset filename '+frame.path);
     if(frame.facing!==undefined&&![-1,1].includes(frame.facing))fail('invalid native facing '+id);
     if(i<art.frames.length){
+      if(frame.purpose==='selection'||sideView&&(frame.purpose!=='combat'||frame.view!=='side-view'))fail('selection portrait cannot be a side-view combat frame '+id);
       if(!origins.has(frame.origin??art.origin))fail('missing frame provenance '+id);
       if(![-1,1].includes(frame.facing)||!Array.isArray(frame.anchor)||frame.anchor.length!==2||!frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>1)fail('invalid anchor/scale '+id);
       if(signatures.has(sha)&&signatures.get(sha)!==id)fail('cross-profile raster clone '+id);
@@ -43,7 +48,8 @@ for(const [id,art] of Object.entries(registry.assets)){
     }
   }
   const frameOrigins=new Set(art.frames.map(f=>f.origin??art.origin));
-  if((frameOrigins.size>1?'mixed':[...frameOrigins][0])!==art.origin)fail('inconsistent aggregate provenance '+id);
+  if(art.frames.length&&(frameOrigins.size>1?'mixed':[...frameOrigins][0])!==art.origin)fail('inconsistent aggregate provenance '+id);
+  if(sideView&&runtimeAssets[id].frames.some(f=>f.pixelSHA256===runtimeAssets[id].portrait.pixelSHA256))fail('side-view combat must be distinct from selection portrait '+id);
   let animated=0;
   for(const [pose,clip] of Object.entries(art.clips)){
     try{validateClip(runtimeAssets[id],pose,clip);}catch(error){fail(id+' '+pose+': '+error.message);}
@@ -53,12 +59,17 @@ for(const [id,art] of Object.entries(registry.assets)){
   }
   if(art.animatedClips!==animated)fail('false animation count '+id);
 }
-const entries=ROSTER.map(f=>({id:f.id,name:f.name,source:f.source,game:f.game,status:registry.assets[f.id]?.status||'missing',frames:registry.assets[f.id]?.frames.length||0,animatedClips:registry.assets[f.id]?.animatedClips||0,fidelity:registry.assets[f.id]?.fidelity||'not-assessed',presentations:presentationClipCoverage(runtimeAssets[f.id])}));
-const report={schema:1,version:VERSION,total:entries.length,integrated:entries.filter(e=>e.frames>0).length,missing:entries.filter(e=>e.frames===0).length,certified:entries.filter(e=>e.fidelity==='verified').length,animatedClips:entries.reduce((n,e)=>n+e.animatedClips,0),presentationKeys:PRESENTATION_KEYS,presentationClips:entries.reduce((n,e)=>n+e.presentations.present.length,0),animatedPresentationClips:entries.reduce((n,e)=>n+e.presentations.animated,0),entries};
+const entries=ROSTER.map(f=>({id:f.id,name:f.name,source:f.source,game:f.game,status:registry.assets[f.id]?.status||'missing',frames:registry.assets[f.id]?.frames.length||0,animatedClips:registry.assets[f.id]?.animatedClips||0,fidelity:registry.assets[f.id]?.fidelity||'not-assessed',...spriteUsage(runtimeAssets[f.id]),presentations:presentationClipCoverage(runtimeAssets[f.id])}));
+const report={schema:1,version:VERSION,total:entries.length,integrated:entries.filter(e=>e.selection||e.frames>0).length,missing:entries.filter(e=>!e.selection&&e.frames===0).length,
+ selectionAvailable:entries.filter(e=>e.selection).length,selectionMissing:entries.filter(e=>!e.selection).length,
+ combatSideViewCandidates:entries.filter(e=>e.combatView==='side-view-candidate').length,combatLegacyUnreviewed:entries.filter(e=>e.combatView==='legacy-unreviewed').length,
+ combatMissing:entries.filter(e=>e.combatView==='missing').length,separateSelectionAndCombat:entries.filter(e=>e.separateSelectionAndCombat).length,
+ certified:entries.filter(e=>e.fidelity==='verified').length,animatedClips:entries.reduce((n,e)=>n+e.animatedClips,0),presentationKeys:PRESENTATION_KEYS,presentationClips:entries.reduce((n,e)=>n+e.presentations.present.length,0),animatedPresentationClips:entries.reduce((n,e)=>n+e.presentations.animated,0),entries};
 await mkdir(resolve(root,'data'),{recursive:true});
 await writeFile(resolve(root,'src/sprite-manifest.js'),'// Generated by scripts/build-sprites.mjs; edit art/registry.json instead.\nexport const SPRITES = '+JSON.stringify(runtimeAssets,null,2)+';\n');
 await writeFile(resolve(root,'data/sprite-coverage.json'),JSON.stringify(report,null,2)+'\n');
 console.log(`Raster audit: ${report.integrated}/${report.total} integrated candidates; ${report.missing} missing; ${report.certified} certified; ${report.animatedClips} animated clips.`);
+console.log(`Artwork uses: ${report.selectionAvailable} selection portraits; ${report.combatSideViewCandidates} side-view combat candidates; ${report.combatLegacyUnreviewed} legacy combat views unreviewed; ${report.combatMissing} missing combat sprites.`);
 
 const workerPath=resolve(root,'service-worker.js');
 const worker=await readFile(workerPath,'utf8');

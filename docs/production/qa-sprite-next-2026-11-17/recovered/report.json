@@ -1,0 +1,2441 @@
+{
+  "schema": 2,
+  "label": "recovered",
+  "generatedAt": "2026-11-17T21:41:53.126Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1241685,
+        "sha256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 638176,
+        "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1671312,
+        "sha256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1655034,
+        "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1776511,
+        "sha256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1954430,
+        "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 960909,
+        "sha256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1186750,
+        "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1156056,
+        "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1237533,
+        "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 912424,
+        "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1025593,
+        "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          304,
+          17,
+          1203,
+          1009
+        ],
+        "expected": [
+          304,
+          17,
+          1203,
+          1009
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          84,
+          15,
+          1109,
+          1302
+        ],
+        "expected": [
+          84,
+          15,
+          1109,
+          1302
+        ]
+      }
+    },
+    {
+      "name": "arcade_mama_117 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_mama_117.fcc669873d67.png"
+        ],
+        "portrait": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_mama_117 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_mama_117.10d203f5fa42.png"
+        ],
+        "expected": "assets/sprites/arcade_mama_117.10d203f5fa42.png"
+      }
+    },
+    {
+      "name": "arcade_mama_117 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_mama_117.10d203f5fa42.png"
+        ],
+        "expected": "assets/sprites/arcade_mama_117.10d203f5fa42.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          54,
+          104,
+          2116,
+          607
+        ],
+        "expected": [
+          54,
+          104,
+          2116,
+          607
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          50,
+          152,
+          1717,
+          786
+        ],
+        "expected": [
+          50,
+          152,
+          1717,
+          786
+        ]
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png"
+        ],
+        "portrait": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png"
+        ],
+        "expected": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png"
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png"
+        ],
+        "expected": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          147,
+          26,
+          834,
+          1475
+        ],
+        "expected": [
+          147,
+          26,
+          834,
+          1475
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          145,
+          36,
+          880,
+          1517
+        ],
+        "expected": [
+          145,
+          36,
+          880,
+          1517
+        ]
+      }
+    },
+    {
+      "name": "ascension_fighter_179 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/ascension_fighter_179.f4cf31409885.png"
+        ],
+        "portrait": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "ascension_fighter_179 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_fighter_179.429d47545e50.png"
+        ],
+        "expected": "assets/sprites/ascension_fighter_179.429d47545e50.png"
+      }
+    },
+    {
+      "name": "ascension_fighter_179 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_fighter_179.429d47545e50.png"
+        ],
+        "expected": "assets/sprites/ascension_fighter_179.429d47545e50.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          47,
+          119,
+          1017,
+          1324
+        ],
+        "expected": [
+          47,
+          119,
+          1017,
+          1324
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          23,
+          12,
+          1032,
+          1445
+        ],
+        "expected": [
+          23,
+          12,
+          1032,
+          1445
+        ]
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png"
+        ],
+        "portrait": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png"
+        ],
+        "expected": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png"
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png"
+        ],
+        "expected": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          40,
+          65,
+          872,
+          1603
+        ],
+        "expected": [
+          40,
+          65,
+          872,
+          1603
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          63,
+          61,
+          877,
+          1634
+        ],
+        "expected": [
+          63,
+          61,
+          877,
+          1634
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png"
+        ],
+        "portrait": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": true
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png"
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          36,
+          280,
+          890,
+          1438
+        ],
+        "expected": [
+          36,
+          280,
+          890,
+          1438
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          27,
+          238,
+          897,
+          1394
+        ],
+        "expected": [
+          27,
+          238,
+          897,
+          1394
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png"
+        ],
+        "portrait": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": true
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png"
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png"
+      }
+    },
+    {
+      "name": "arcade_mama_117/arcade_split_worm_arcade asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_mama_117/arcade_split_worm_arcade real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_mama_117/arcade_split_worm_arcade actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_mama_117",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_split_worm_arcade",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_mama_117/arcade_split_worm_arcade fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_mama_117.fcc669873d67.png",
+          "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_mama_117.fcc669873d67.png",
+          "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_mama_117 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 226.44475132708712,
+          "top": 298.14179296606954,
+          "right": 495.514991929374,
+          "bottom": 595.1905762858509
+        },
+        "visible": {
+          "left": 227.04003947001252,
+          "top": 298.73708110899497,
+          "right": 494.6220597149859,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 745.0290649071366,
+          "top": 479.92341910181176,
+          "right": 1209.1641734634904,
+          "bottom": 595.7894365631088
+        },
+        "visible": {
+          "left": 747.042181040634,
+          "top": 481.489176094532,
+          "right": 1208.269455181936,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_mama_117/arcade_split_worm_arcade pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "arcade_split_worm_arcade/arcade_mama_117 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade/arcade_mama_117 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade/arcade_mama_117 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_split_worm_arcade",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_mama_117",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_split_worm_arcade/arcade_mama_117 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+          "assets/sprites/arcade_mama_117.fcc669873d67.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+          "assets/sprites/arcade_mama_117.fcc669873d67.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 70.83585705408757,
+          "top": 479.92341910181176,
+          "right": 534.9709656104416,
+          "bottom": 595.7894365631088
+        },
+        "visible": {
+          "left": 71.73057533564199,
+          "top": 481.489176094532,
+          "right": 532.9578494769441,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_mama_117 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 784.4850385882041,
+          "top": 298.14179296606954,
+          "right": 1053.555279190491,
+          "bottom": 595.1905762858509
+        },
+        "visible": {
+          "left": 785.3779708025922,
+          "top": 298.73708110899497,
+          "right": 1052.9599910475656,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_split_worm_arcade/arcade_mama_117 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "ascension_fighter_179/sh2_red_pyramid_thing_great_knife_029 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_fighter_179/sh2_red_pyramid_thing_great_knife_029 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "ascension_fighter_179/sh2_red_pyramid_thing_great_knife_029 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "ascension_fighter_179",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "ascension_fighter_179/sh2_red_pyramid_thing_great_knife_029 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png"
+        ],
+        "expected": [
+          "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png"
+        ]
+      }
+    },
+    {
+      "name": "ascension_fighter_179 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 270.9897367095852,
+          "top": 382.3191993214431,
+          "right": 371.80399277948294,
+          "bottom": 594.7284267057073
+        },
+        "visible": {
+          "left": 271.4267927330096,
+          "top": 382.90194068600897,
+          "right": 371.5126220972,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 895.5390228161085,
+          "top": 336.3126622869266,
+          "right": 1103.8185404056835,
+          "bottom": 595.9166826772047
+        },
+        "visible": {
+          "left": 896.6038465256667,
+          "top": 337.3774859964847,
+          "right": 1103.1796461799486,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_fighter_179/sh2_red_pyramid_thing_great_knife_029 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029/ascension_fighter_179 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029/ascension_fighter_179 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029/ascension_fighter_179 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "ascension_fighter_179",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029/ascension_fighter_179 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+          "assets/sprites/ascension_fighter_179.f4cf31409885.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+          "assets/sprites/ascension_fighter_179.f4cf31409885.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 176.1814901118946,
+          "top": 336.3126622869266,
+          "right": 384.46100770146967,
+          "bottom": 595.9166826772047
+        },
+        "visible": {
+          "left": 176.8203843376295,
+          "top": 337.3774859964847,
+          "right": 383.39618399191147,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_fighter_179 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 908.1960377380952,
+          "top": 382.3191993214431,
+          "right": 1009.0102938079929,
+          "bottom": 594.7284267057073
+        },
+        "visible": {
+          "left": 908.4874084203782,
+          "top": 382.90194068600897,
+          "right": 1008.5732377845685,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_great_knife_029/ascension_fighter_179 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108/downpour_prisoner_minion_agile_109 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108/downpour_prisoner_minion_agile_109 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108/downpour_prisoner_minion_agile_109 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_prisoner_minion_brawler_108",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_prisoner_minion_agile_109",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108/downpour_prisoner_minion_agile_109 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+          "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+          "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 264.812835623031,
+          "top": 396.47961705265897,
+          "right": 372.29470299364283,
+          "bottom": 594.7695537530955
+        },
+        "visible": {
+          "left": 265.3258755627475,
+          "top": 396.8643970074463,
+          "right": 372.03818302378454,
+          "bottom": 594.1282538284498
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 894.22586515388,
+          "top": 414.8217446213317,
+          "right": 1025.9610060199482,
+          "bottom": 595.228260376145
+        },
+        "visible": {
+          "left": 894.3794026140969,
+          "top": 416.2035817632834,
+          "right": 1025.5003936392975,
+          "bottom": 593.9999606944102
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108/downpour_prisoner_minion_agile_109 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109/downpour_prisoner_minion_brawler_108 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109/downpour_prisoner_minion_brawler_108 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109/downpour_prisoner_minion_brawler_108 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_prisoner_minion_agile_109",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_prisoner_minion_brawler_108",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109/downpour_prisoner_minion_brawler_108 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+          "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+          "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 254.03902449763007,
+          "top": 414.8217446213317,
+          "right": 385.7741653636981,
+          "bottom": 595.228260376145
+        },
+        "visible": {
+          "left": 254.49963687828063,
+          "top": 416.2035817632834,
+          "right": 385.6206279034812,
+          "bottom": 593.9999606944102
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_brawler_108 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 907.7053275239354,
+          "top": 396.47961705265897,
+          "right": 1015.1871948945471,
+          "bottom": 594.7695537530955
+        },
+        "visible": {
+          "left": 907.9618474937936,
+          "top": 396.8643970074463,
+          "right": 1014.6741549548306,
+          "bottom": 594.1282538284498
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_minion_agile_109/downpour_prisoner_minion_brawler_108 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "75f0ff59d7993819945e2879ddbc6637fa797a7d2124c0cb1c41a3b519f6aa41",
+        "after": "75f0ff59d7993819945e2879ddbc6637fa797a7d2124c0cb1c41a3b519f6aa41"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "9c15e6e8a8b4e844356e328b41dc9aa30613453a717275fdb484ad008725085d",
+        "after": "9c15e6e8a8b4e844356e328b41dc9aa30613453a717275fdb484ad008725085d"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "arcade_mama_117",
+      "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.898766835530599,
+      "visibleBounds": [
+        304,
+        17,
+        1203,
+        1009
+      ]
+    },
+    {
+      "id": "arcade_mama_117",
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "width": 1193,
+      "height": 1318,
+      "transparentFraction": 0.8490034813600327,
+      "visibleBounds": [
+        84,
+        15,
+        1109,
+        1302
+      ]
+    },
+    {
+      "id": "arcade_split_worm_arcade",
+      "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.5283549800067153,
+      "visibleBounds": [
+        54,
+        104,
+        2116,
+        607
+      ]
+    },
+    {
+      "id": "arcade_split_worm_arcade",
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5475781328445833,
+      "visibleBounds": [
+        50,
+        152,
+        1717,
+        786
+      ]
+    },
+    {
+      "id": "ascension_fighter_179",
+      "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7473379770914713,
+      "visibleBounds": [
+        147,
+        26,
+        834,
+        1475
+      ]
+    },
+    {
+      "id": "ascension_fighter_179",
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.709564208984375,
+      "visibleBounds": [
+        145,
+        36,
+        880,
+        1517
+      ]
+    },
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "width": 1086,
+      "height": 1448,
+      "transparentFraction": 0.7606618133349613,
+      "visibleBounds": [
+        47,
+        119,
+        1017,
+        1324
+      ]
+    },
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "width": 1076,
+      "height": 1462,
+      "transparentFraction": 0.6805230651091594,
+      "visibleBounds": [
+        23,
+        12,
+        1032,
+        1445
+      ]
+    },
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "width": 941,
+      "height": 1672,
+      "transparentFraction": 0.6779214060172167,
+      "visibleBounds": [
+        40,
+        65,
+        872,
+        1603
+      ]
+    },
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "width": 941,
+      "height": 1672,
+      "transparentFraction": 0.652519588750642,
+      "visibleBounds": [
+        63,
+        61,
+        877,
+        1634
+      ]
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "width": 941,
+      "height": 1672,
+      "transparentFraction": 0.7581068953419197,
+      "visibleBounds": [
+        36,
+        280,
+        890,
+        1438
+      ]
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "width": 941,
+      "height": 1672,
+      "transparentFraction": 0.7431210561908588,
+      "visibleBounds": [
+        27,
+        238,
+        897,
+        1394
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "arcade_mama_117",
+      "facing": 1,
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "file": "portrait-arcade_mama_117-right.png"
+    },
+    {
+      "id": "arcade_mama_117",
+      "facing": -1,
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "file": "portrait-arcade_mama_117-left.png"
+    },
+    {
+      "id": "arcade_split_worm_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "file": "portrait-arcade_split_worm_arcade-right.png"
+    },
+    {
+      "id": "arcade_split_worm_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "file": "portrait-arcade_split_worm_arcade-left.png"
+    },
+    {
+      "id": "ascension_fighter_179",
+      "facing": 1,
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "file": "portrait-ascension_fighter_179-right.png"
+    },
+    {
+      "id": "ascension_fighter_179",
+      "facing": -1,
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "file": "portrait-ascension_fighter_179-left.png"
+    },
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "facing": 1,
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "file": "portrait-sh2_red_pyramid_thing_great_knife_029-right.png"
+    },
+    {
+      "id": "sh2_red_pyramid_thing_great_knife_029",
+      "facing": -1,
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "file": "portrait-sh2_red_pyramid_thing_great_knife_029-left.png"
+    },
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "facing": 1,
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "file": "portrait-downpour_prisoner_minion_brawler_108-right.png"
+    },
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "facing": -1,
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "file": "portrait-downpour_prisoner_minion_brawler_108-left.png"
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "facing": 1,
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "file": "portrait-downpour_prisoner_minion_agile_109-right.png"
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "facing": -1,
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "file": "portrait-downpour_prisoner_minion_agile_109-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "arcade_mama_117",
+        "arcade_split_worm_arcade"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8290258449304
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_mama_117",
+          "slot": 1,
+          "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+          "exterior": {
+            "left": 226.44475132708712,
+            "top": 298.14179296606954,
+            "right": 495.514991929374,
+            "bottom": 595.1905762858509
+          },
+          "visible": {
+            "left": 227.04003947001252,
+            "top": 298.73708110899497,
+            "right": 494.6220597149859,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+            "args": [
+              -184.58188775510206,
+              -306.9671755420918,
+              467.2959183673469,
+              311.53061224489795
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "arcade_split_worm_arcade",
+          "slot": 2,
+          "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+          "exterior": {
+            "left": 745.0290649071366,
+            "top": 479.92341910181176,
+            "right": 1209.1641734634904,
+            "bottom": 595.7894365631088
+          },
+          "visible": {
+            "left": 747.042181040634,
+            "top": 481.489176094532,
+            "right": 1208.269455181936,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+            "args": [
+              -263.1876739562624,
+              -138.77733598409543,
+              496.5805168986083,
+              165.52683896620277
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_mama_117.fcc669873d67.png",
+        "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png"
+      ],
+      "snapshots": [
+        "duel-arcade_mama_117--arcade_split_worm_arcade-tick0.png",
+        "duel-arcade_mama_117--arcade_split_worm_arcade-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "arcade_split_worm_arcade",
+        "arcade_mama_117"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8290258449304
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_split_worm_arcade",
+          "slot": 1,
+          "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+          "exterior": {
+            "left": 70.83585705408757,
+            "top": 479.92341910181176,
+            "right": 534.9709656104416,
+            "bottom": 595.7894365631088
+          },
+          "visible": {
+            "left": 71.73057533564199,
+            "top": 481.489176094532,
+            "right": 532.9578494769441,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+            "args": [
+              -263.1876739562624,
+              -138.77733598409543,
+              496.5805168986083,
+              165.52683896620277
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "arcade_mama_117",
+          "slot": 2,
+          "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+          "exterior": {
+            "left": 784.4850385882041,
+            "top": 298.14179296606954,
+            "right": 1053.555279190491,
+            "bottom": 595.1905762858509
+          },
+          "visible": {
+            "left": 785.3779708025922,
+            "top": 298.73708110899497,
+            "right": 1052.9599910475656,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+            "args": [
+              -184.58188775510206,
+              -306.9671755420918,
+              467.2959183673469,
+              311.53061224489795
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+        "assets/sprites/arcade_mama_117.fcc669873d67.png"
+      ],
+      "snapshots": [
+        "duel-arcade_split_worm_arcade--arcade_mama_117-tick0.png",
+        "duel-arcade_split_worm_arcade--arcade_mama_117-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "ascension_fighter_179",
+        "sh2_red_pyramid_thing_great_knife_029"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.9590871369295
+        }
+      },
+      "geometries": [
+        {
+          "id": "ascension_fighter_179",
+          "slot": 1,
+          "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+          "exterior": {
+            "left": 270.9897367095852,
+            "top": 382.3191993214431,
+            "right": 371.80399277948294,
+            "bottom": 594.7284267057073
+          },
+          "visible": {
+            "left": 271.4267927330096,
+            "top": 382.90194068600897,
+            "right": 371.5126220972,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+            "args": [
+              -68.61702127659575,
+              -219.6399878102837,
+              152.48226950354612,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "slot": 2,
+          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+          "exterior": {
+            "left": 895.5390228161085,
+            "top": 336.3126622869266,
+            "right": 1103.8185404056835,
+            "bottom": 595.9166826772047
+          },
+          "visible": {
+            "left": 896.6038465256667,
+            "top": 337.3774859964847,
+            "right": 1103.1796461799486,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+            "args": [
+              -153.65773443983406,
+              -288.20348547717845,
+              236.3965145228216,
+              315.1953526970955
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1086,
+            "height": 1448
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+        "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png"
+      ],
+      "snapshots": [
+        "duel-ascension_fighter_179--sh2_red_pyramid_thing_great_knife_029-tick0.png",
+        "duel-ascension_fighter_179--sh2_red_pyramid_thing_great_knife_029-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh2_red_pyramid_thing_great_knife_029",
+        "ascension_fighter_179"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.9590871369295
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "slot": 1,
+          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+          "exterior": {
+            "left": 176.1814901118946,
+            "top": 336.3126622869266,
+            "right": 384.46100770146967,
+            "bottom": 595.9166826772047
+          },
+          "visible": {
+            "left": 176.8203843376295,
+            "top": 337.3774859964847,
+            "right": 383.39618399191147,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+            "args": [
+              -153.65773443983406,
+              -288.20348547717845,
+              236.3965145228216,
+              315.1953526970955
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1086,
+            "height": 1448
+          }
+        },
+        {
+          "id": "ascension_fighter_179",
+          "slot": 2,
+          "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+          "exterior": {
+            "left": 908.1960377380952,
+            "top": 382.3191993214431,
+            "right": 1009.0102938079929,
+            "bottom": 594.7284267057073
+          },
+          "visible": {
+            "left": 908.4874084203782,
+            "top": 382.90194068600897,
+            "right": 1008.5732377845685,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+            "args": [
+              -68.61702127659575,
+              -219.6399878102837,
+              152.48226950354612,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+        "assets/sprites/ascension_fighter_179.f4cf31409885.png"
+      ],
+      "snapshots": [
+        "duel-sh2_red_pyramid_thing_great_knife_029--ascension_fighter_179-tick0.png",
+        "duel-sh2_red_pyramid_thing_great_knife_029--ascension_fighter_179-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_prisoner_minion_brawler_108",
+        "downpour_prisoner_minion_agile_109"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.2554342627102
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_prisoner_minion_brawler_108",
+          "slot": 1,
+          "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+          "exterior": {
+            "left": 264.812835623031,
+            "top": 396.47961705265897,
+            "right": 372.29470299364283,
+            "bottom": 594.7695537530955
+          },
+          "visible": {
+            "left": 265.3258755627475,
+            "top": 396.8643970074463,
+            "right": 372.03818302378454,
+            "bottom": 594.1282538284498
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.1282538284498287,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+            "args": [
+              -58.2072736088827,
+              -210.01835122407763,
+              123.36283556831519,
+              219.19517648270244
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 941,
+            "height": 1672
+          }
+        },
+        {
+          "id": "downpour_prisoner_minion_agile_109",
+          "slot": 2,
+          "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+          "exterior": {
+            "left": 894.22586515388,
+            "top": 414.8217446213317,
+            "right": 1025.9610060199482,
+            "bottom": 595.228260376145
+          },
+          "visible": {
+            "left": 894.3794026140969,
+            "top": 416.2035817632834,
+            "right": 1025.5003936392975,
+            "bottom": 593.9999606944102
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -3.9305589780269656e-05,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+            "args": [
+              -69.67876193805824,
+              -225.67157038631737,
+              147.67518075707815,
+              262.3941575194842
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 941,
+            "height": 1672
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+        "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png"
+      ],
+      "snapshots": [
+        "duel-downpour_prisoner_minion_brawler_108--downpour_prisoner_minion_agile_109-tick0.png",
+        "duel-downpour_prisoner_minion_brawler_108--downpour_prisoner_minion_agile_109-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_prisoner_minion_agile_109",
+        "downpour_prisoner_minion_brawler_108"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.2554342627102
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_prisoner_minion_agile_109",
+          "slot": 1,
+          "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+          "exterior": {
+            "left": 254.03902449763007,
+            "top": 414.8217446213317,
+            "right": 385.7741653636981,
+            "bottom": 595.228260376145
+          },
+          "visible": {
+            "left": 254.49963687828063,
+            "top": 416.2035817632834,
+            "right": 385.6206279034812,
+            "bottom": 593.9999606944102
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -3.9305589780269656e-05,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+            "args": [
+              -69.67876193805824,
+              -225.67157038631737,
+              147.67518075707815,
+              262.3941575194842
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 941,
+            "height": 1672
+          }
+        },
+        {
+          "id": "downpour_prisoner_minion_brawler_108",
+          "slot": 2,
+          "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+          "exterior": {
+            "left": 907.7053275239354,
+            "top": 396.47961705265897,
+            "right": 1015.1871948945471,
+            "bottom": 594.7695537530955
+          },
+          "visible": {
+            "left": 907.9618474937936,
+            "top": 396.8643970074463,
+            "right": 1014.6741549548306,
+            "bottom": 594.1282538284498
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.1282538284498287,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+            "args": [
+              -58.2072736088827,
+              -210.01835122407763,
+              123.36283556831519,
+              219.19517648270244
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 941,
+            "height": 1672
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+        "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png"
+      ],
+      "snapshots": [
+        "duel-downpour_prisoner_minion_agile_109--downpour_prisoner_minion_brawler_108-tick0.png",
+        "duel-downpour_prisoner_minion_agile_109--downpour_prisoner_minion_brawler_108-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "75f0ff59d7993819945e2879ddbc6637fa797a7d2124c0cb1c41a3b519f6aa41",
+  "src/sprite-manifest.jsSHA256": "9c15e6e8a8b4e844356e328b41dc9aa30613453a717275fdb484ad008725085d",
+  "version": "0.9.6",
+  "ids": [
+    "arcade_mama_117",
+    "arcade_split_worm_arcade",
+    "ascension_fighter_179",
+    "sh2_red_pyramid_thing_great_knife_029",
+    "downpour_prisoner_minion_brawler_108",
+    "downpour_prisoner_minion_agile_109"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true,
+  "visualReview": {
+    "performed": true,
+    "method": "All six tick120 images opened through view_image at native 1280x720.",
+    "reviewedFiles": [
+      "duel-arcade_mama_117--arcade_split_worm_arcade-tick120.png",
+      "duel-arcade_split_worm_arcade--arcade_mama_117-tick120.png",
+      "duel-ascension_fighter_179--sh2_red_pyramid_thing_great_knife_029-tick120.png",
+      "duel-sh2_red_pyramid_thing_great_knife_029--ascension_fighter_179-tick120.png",
+      "duel-downpour_prisoner_minion_brawler_108--downpour_prisoner_minion_agile_109-tick120.png",
+      "duel-downpour_prisoner_minion_agile_109--downpour_prisoner_minion_brawler_108-tick120.png"
+    ],
+    "result": "pass-with-documented-limits",
+    "observations": [
+      "Mama and Split Worm fit entirely in both slots; the long tail, long fingertips and pointed leg ends are present within the viewport.",
+      "Fighter and Red Pyramid Thing face one another in both slot orders. Both feet and the full Great Knife blade remain visible.",
+      "Brawler and Agile face inward; fists, forward knife, feet and head contours remain visible without portrait substitution.",
+      "Every tested pair keeps visible support ends near the drawn arena ground/shadow level; no corrective anchor change was required.",
+      "No opaque bitmap rectangles or obvious clipping are visible in the inspected engine captures."
+    ],
+    "limits": [
+      "Idle-only visual scenes do not validate attacks, contacts, collisions, animation timing or original source scale.",
+      "HUD and background are the existing game; no UI redesign was tested.",
+      "Opposite slots use the current runtime mirroring policy."
+    ]
+  }
+}

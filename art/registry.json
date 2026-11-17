@@ -3846,39 +3846,42 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
-      "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+      "sourceFile": "exec-0cda4ca3-b1f2-491b-84dd-8b89dbd75a91.png",
+      "sourceSHA256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
       "sourceDimensions": [
-        1076,
-        1462
+        1086,
+        1448
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Great Knife SH2 original, casque triangulaire étroit, tablier et grande lame. Mobilier source exclu ; pose de présence adaptée, pieds/lame en profondeur non certifiés. Pas de film ni spear. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+      "notes": "Sprite de combat latéral distinct, profil droit, grande lame entière traînée vers la gauche et deux bottes visibles. Généré le 2026-11-17 depuis la référence SH2 et le candidat de sélection préexistant inspectés par l’agent principal ; sélection conservée. Une pose idle fixe, aucun clip animé ajouté. Dimensions natives 1086×1448, pas UHD/4K ; détails et fidélité 1:1 non certifiés. Ancre et échelle estimées, revue en jeu requise. Pixels natifs inchangés ; résidus alpha inférieurs à 8 possibles aux bords.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
-          "bytes": 1186750,
-          "width": 1076,
-          "height": 1462,
+          "sha256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+          "bytes": 960909,
+          "width": 1086,
+          "height": 1448,
           "visibleBounds": [
-            23,
-            12,
-            1032,
-            1445
+            47,
+            119,
+            1017,
+            1324
           ],
-          "pixelSHA256": "2c1ada018c0b6d49b486fd75a15718fc5e3c6f99b7b508b9adb78acfb64ab0d9",
-          "transparentFraction": 0.69194,
-          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+          "pixelSHA256": "a3685284655b3e1f0ab8746bd2f4b6ada5501a13b3767a87f62ebb53e40a972d",
+          "transparentFraction": 0.77523,
+          "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
           "facing": 1,
           "anchor": [
-            0.51,
-            0.94
+            0.65,
+            0.914364640883978
           ],
-          "bodyHeight": 0.94,
-          "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
-          "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.8321823204419889,
+          "sourceFile": "exec-0cda4ca3-b1f2-491b-84dd-8b89dbd75a91.png",
+          "sourceSHA256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+          "origin": "conversation-image-generation",
+          "notes": "Sprite de combat latéral distinct, profil droit, grande lame entière traînée vers la gauche et deux bottes visibles. Généré le 2026-11-17 depuis la référence SH2 et le candidat de sélection préexistant inspectés par l’agent principal ; sélection conservée. Une pose idle fixe, aucun clip animé ajouté. Dimensions natives 1086×1448, pas UHD/4K ; détails et fidélité 1:1 non certifiés. Ancre et échelle estimées, revue en jeu requise. Pixels natifs inchangés ; résidus alpha inférieurs à 8 possibles aux bords.",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -3895,10 +3898,25 @@
             0
           ],
           "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Pyramid Thing Great Knife SH2 original, casque triangulaire étroit, tablier et grande lame. Mobilier source exclu ; pose de présence adaptée, pieds/lame en profondeur non certifiés. Pas de film ni spear. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+      "combatNotes": "Sprite de combat latéral distinct, profil droit, grande lame entière traînée vers la gauche et deux bottes visibles. Généré le 2026-11-17 depuis la référence SH2 et le candidat de sélection préexistant inspectés par l’agent principal ; sélection conservée. Une pose idle fixe, aucun clip animé ajouté. Dimensions natives 1086×1448, pas UHD/4K ; détails et fidélité 1:1 non certifiés. Ancre et échelle estimées, revue en jeu requise. Pixels natifs inchangés ; résidus alpha inférieurs à 8 possibles aux bords.",
+      "selectionProvenance": {
+        "sourceFile": "exec-5370740b-a581-4575-b2b1-1a248b0c33ed.png",
+        "sourceSHA256": "b681982c38d82ac37130abad78d6beba5adf2c87f1ec63e722bbe0c32b790ff1",
+        "sourceDimensions": [
+          1076,
+          1462
+        ],
+        "origin": "conversation-image-generation"
+      }
     },
     "sh2_red_pyramid_thing_spear_030": {
       "fighterId": "sh2_red_pyramid_thing_spear_030",
@@ -10843,39 +10861,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
-      "sourceSHA256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "sourceFile": "exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+      "sourceSHA256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Brawler identifié dans le guide Prima Downpour. 941×1672 natifs, pas UHD/4K. Une idle statique ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. 66 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration debout estimée, revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête ; torse légèrement en trois quarts, garde latérale. Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné. Écart de hauteur des semelles d’environ 48 px : l’appui arrière et l’appui avant ne partagent pas une ligne strictement orthographique. Les tatouages, dents et métal fin restent une interprétation générée du rendu de petite taille. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
-          "bytes": 1237533,
+          "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+          "bytes": 1156056,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            63,
-            61,
-            877,
-            1634
+            40,
+            65,
+            872,
+            1603
           ],
-          "pixelSHA256": "2463a1543869cbec31da9461284d8663aba77abd47ae3c79111aa60bfcd097da",
-          "transparentFraction": 0.66881,
-          "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
-          "facing": -1,
+          "pixelSHA256": "46d8d77832cac6af314713dd60c1cf5d4ac102614fa4fff94b80d96cd24879f6",
+          "transparentFraction": 0.69057,
+          "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+          "facing": 1,
           "anchor": [
-            0.528,
-            0.9767
+            0.471838,
+            0.958134
           ],
-          "bodyHeight": 0.95,
-          "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
-          "sourceSHA256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.980861,
+          "sourceFile": "exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+          "sourceSHA256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -10892,10 +10912,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Brawler identifié dans le guide Prima Downpour. 941×1672 natifs, pas UHD/4K. Une idle statique ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. 66 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration debout estimée, revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-53ac8101-18f3-41d2-ae63-620bd4e5ffc4.png",
+        "sourceSHA256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête ; torse légèrement en trois quarts, garde latérale. Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné. Écart de hauteur des semelles d’environ 48 px : l’appui arrière et l’appui avant ne partagent pas une ligne strictement orthographique. Les tatouages, dents et métal fin restent une interprétation générée du rendu de petite taille. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "downpour_prisoner_minion_agile_109": {
       "fighterId": "downpour_prisoner_minion_agile_109",
@@ -10903,39 +10935,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
-      "sourceSHA256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "sourceFile": "exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+      "sourceSHA256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Stabber identifié dans le guide Prima Downpour, rapproché de la variante Agile. 941×1672 natifs, pas UHD/4K. Une idle statique avec lame ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. Le suivi historique mains vides est antérieur à cette source. Calibration équivalente debout estimée malgré la garde fléchie ; revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête et posture de combat latérale. Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement. Alias de profil Agile / Stabber hérité de l’identification Prima, sans changement du profil de jeu. Lame entière ; épaisseur et détails de texture non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
-          "bytes": 1025593,
+          "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+          "bytes": 912424,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            27,
-            238,
-            897,
-            1394
+            36,
+            280,
+            890,
+            1438
           ],
-          "pixelSHA256": "989cafcac15d9d56625c816acc6b3ca9a63b276d9b84dcdd1f2d50786097f639",
-          "transparentFraction": 0.75637,
-          "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+          "pixelSHA256": "10bc90edaff686911c6cb1cde731fca8fee6753eb5c302b0833838affe4b108b",
+          "transparentFraction": 0.77318,
+          "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
           "facing": 1,
           "anchor": [
-            0.493,
-            0.8331
+            0.471838,
+            0.860048
           ],
-          "bodyHeight": 0.76,
-          "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
-          "sourceSHA256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.819378,
+          "sourceFile": "exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+          "sourceSHA256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -10952,10 +10986,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Stabber identifié dans le guide Prima Downpour, rapproché de la variante Agile. 941×1672 natifs, pas UHD/4K. Une idle statique avec lame ; fidélité 1:1 non certifiée. Proportions, tatouages et texture réinterprétés ; légers halos de contour. Le suivi historique mains vides est antérieur à cette source. Calibration équivalente debout estimée malgré la garde fléchie ; revue en jeu requise. Source : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-0ad5d398-933c-4a5c-a507-f0d6d66420bc.png",
+        "sourceSHA256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête et posture de combat latérale. Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement. Alias de profil Agile / Stabber hérité de l’identification Prima, sans changement du profil de jeu. Lame entière ; épaisseur et détails de texture non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "downpour_shadow_107": {
       "fighterId": "downpour_shadow_107",
@@ -10963,39 +11009,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
-      "sourceSHA256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "sourceFile": "exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+      "sourceSHA256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17 d’après le rendu shadow_06.png, section Doll/Shadow du guide Prima Downpour : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures . 941×1672 natifs, pas UHD/4K. Une idle fixe ; rôle multi-body du dossier inchangé. Silhouette, costume et extrémités comparés à la source. Texture, visage et proportions légèrement réinterprétés ; fidélité 1:1 non certifiée. 10 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration équivalente debout estimée, revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit clair, mains projetées vers l’adversaire à droite. Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px. Pose statique nouvelle ; aucune validation du mouvement ou du lien avec le corps Doll en combat. Motifs des jambes et détails de mains non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
-          "bytes": 901831,
+          "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+          "bytes": 909194,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            30,
-            207,
-            914,
-            1555
+            73,
+            131,
+            886,
+            1541
           ],
-          "pixelSHA256": "ef8c46a0baa804e7aa99cb9387e4efad875b48e1df3023e098363178cf233719",
-          "transparentFraction": 0.76573,
-          "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+          "pixelSHA256": "6b7e7a10a3124aa64c64888793c2ecc043796cd5462a31fbb62c2d786ea3c95a",
+          "transparentFraction": 0.76761,
+          "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
           "facing": 1,
           "anchor": [
-            0.327,
-            0.9294
+            0.435707,
+            0.921651
           ],
-          "bodyHeight": 0.9,
-          "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
-          "sourceSHA256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.944976,
+          "sourceFile": "exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+          "sourceSHA256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11012,10 +11060,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17 d’après le rendu shadow_06.png, section Doll/Shadow du guide Prima Downpour : https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures . 941×1672 natifs, pas UHD/4K. Une idle fixe ; rôle multi-body du dossier inchangé. Silhouette, costume et extrémités comparés à la source. Texture, visage et proportions légèrement réinterprétés ; fidélité 1:1 non certifiée. 10 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration équivalente debout estimée, revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-732124c3-7eb0-4613-8cbc-764fad5090a9.png",
+        "sourceSHA256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit clair, mains projetées vers l’adversaire à droite. Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px. Pose statique nouvelle ; aucune validation du mouvement ou du lien avec le corps Doll en combat. Motifs des jambes et détails de mains non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "sh3_god_050": {
       "fighterId": "sh3_god_050",
@@ -11023,39 +11083,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
-      "sourceSHA256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "sourceFile": "exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+      "sourceSHA256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17 d’après les vues du modèle natif SH3 : https://gavasurface.livedoor.blog/archives/4211318.html ; modèle https://livedoor.blogimg.jp/gavasurface/imgs/1/1/1158554c.jpg recoupé avec capture retail https://livedoor.blogimg.jp/gavasurface/imgs/e/9/e9526216.jpg . 941×1672 natifs, pas UHD/4K. Une idle fixe ; bras et mains complets, extrémités inférieures canoniquement immatures conservées sans pieds inventés, rideau du modèle inclus. Proportions et texture réinterprétées ; fidélité 1:1 non certifiée. 15 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration corporelle excluant la hauteur du rideau estimée, revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; torse et bassin en trois quarts latéral. Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure. Morphologie sans pieds : placement au sol conventionnel à vérifier dans la scène de combat. Trois quarts latéral, pas un dessin orthographique strict. Limites de référence du modèle de jeu ; aucune certification 1:1 ni conformité retail intégrale. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
-          "bytes": 1412579,
+          "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+          "bytes": 1411208,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            67,
-            50,
-            874,
-            1625
+            52,
+            25,
+            894,
+            1649
           ],
-          "pixelSHA256": "df358f8fcc3c388a06ff79a95143b1ee04fa5b0a0fa3a4053a73a7d9826b77db",
-          "transparentFraction": 0.64734,
-          "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+          "pixelSHA256": "249b53c6dfb89ba70389e336238cbfa83f9cb8ff0277c1ccf89f1bd066339f89",
+          "transparentFraction": 0.65459,
+          "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
           "facing": 1,
           "anchor": [
-            0.487,
-            0.9713
+            0.393199,
+            0.986244
           ],
-          "bodyHeight": 0.83,
-          "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
-          "sourceSHA256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.861244,
+          "sourceFile": "exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+          "sourceSHA256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11072,10 +11134,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17 d’après les vues du modèle natif SH3 : https://gavasurface.livedoor.blog/archives/4211318.html ; modèle https://livedoor.blogimg.jp/gavasurface/imgs/1/1/1158554c.jpg recoupé avec capture retail https://livedoor.blogimg.jp/gavasurface/imgs/e/9/e9526216.jpg . 941×1672 natifs, pas UHD/4K. Une idle fixe ; bras et mains complets, extrémités inférieures canoniquement immatures conservées sans pieds inventés, rideau du modèle inclus. Proportions et texture réinterprétées ; fidélité 1:1 non certifiée. 15 pixels de bord alpha=1/255 ; silhouette au seuil alpha≥32 entièrement cadrée. Calibration corporelle excluant la hauteur du rideau estimée, revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-b41b8f7b-dd1f-48e0-9e27-d23cfcfceda8.png",
+        "sourceSHA256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; torse et bassin en trois quarts latéral. Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure. Morphologie sans pieds : placement au sol conventionnel à vérifier dans la scène de combat. Trois quarts latéral, pas un dessin orthographique strict. Limites de référence du modèle de jeu ; aucune certification 1:1 ni conformité retail intégrale. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "arcade_robbie_the_rabbit_axe": {
       "fighterId": "arcade_robbie_the_rabbit_axe",
@@ -11083,39 +11157,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
-      "sourceSHA256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "sourceFile": "exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+      "sourceSHA256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré puis corrigé par image_gen le 2026-11-17. Références corps Arcade : https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg et capture hache https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg ; détail de hache complémentaire du port modifié https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039 . Quatre orteils par pied et marges augmentées vérifiés :202px en haut,174px en bas au seuil alpha32. Dentition exacte non résolue dans la petite référence officielle ; deux incisives jointes possibles, ne pas certifier une dent unique. Le premier diagnostic de dent unique certaine était trop affirmatif. Géométrie exacte de la hache non certifiée. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité1:1 non certifiée. Légers halos de contour, aucun traitement local des pixels. Calibration estimée ; revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; corps en garde latérale, hache tenue devant le corps. Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés. Le nombre exact de dents demeure non résolu dans la référence native de faible taille ; aucune exigence d’une dent unique n’est affirmée. Quatre orteils existent dans la sélection conservée ; la vue de côté masque les orteils internes et ne permet pas leur certification complète. La géométrie détaillée de la hache s’appuie aussi sur un port de modèle modifié documenté dans la provenance de sélection ; elle n’est pas certifiée comme modèle retail exact. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
-          "bytes": 976685,
+          "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+          "bytes": 1194577,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            149,
-            202,
-            729,
-            1498
+            76,
+            97,
+            818,
+            1573
           ],
-          "pixelSHA256": "d65df7c195da76f677ae40284ee6c7e6d94fc2585c58f46cad79e1014643172c",
-          "transparentFraction": 0.75251,
-          "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
-          "facing": -1,
+          "pixelSHA256": "761193ad2dc338d66ef58dcf06d2321053d04a5270f74af02f8f55f3eff6099f",
+          "transparentFraction": 0.68612,
+          "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+          "facing": 1,
           "anchor": [
-            0.497,
-            0.8953
+            0.467588,
+            0.940789
           ],
-          "bodyHeight": 0.7751,
-          "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
-          "sourceSHA256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.927033,
+          "sourceFile": "exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+          "sourceSHA256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11132,10 +11208,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré puis corrigé par image_gen le 2026-11-17. Références corps Arcade : https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg et capture hache https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg ; détail de hache complémentaire du port modifié https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039 . Quatre orteils par pied et marges augmentées vérifiés :202px en haut,174px en bas au seuil alpha32. Dentition exacte non résolue dans la petite référence officielle ; deux incisives jointes possibles, ne pas certifier une dent unique. Le premier diagnostic de dent unique certaine était trop affirmatif. Géométrie exacte de la hache non certifiée. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité1:1 non certifiée. Légers halos de contour, aucun traitement local des pixels. Calibration estimée ; revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-e7270447-9be6-44c5-9b9f-b44fc3690189.png",
+        "sourceSHA256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; corps en garde latérale, hache tenue devant le corps. Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés. Le nombre exact de dents demeure non résolu dans la référence native de faible taille ; aucune exigence d’une dent unique n’est affirmée. Quatre orteils existent dans la sélection conservée ; la vue de côté masque les orteils internes et ne permet pas leur certification complète. La géométrie détaillée de la hache s’appuie aussi sur un port de modèle modifié documenté dans la provenance de sélection ; elle n’est pas certifiée comme modèle retail exact. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "origins_demon_084": {
       "fighterId": "origins_demon_084",
@@ -11143,39 +11231,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
-      "sourceSHA256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "sourceFile": "exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+      "sourceSHA256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
       "sourceDimensions": [
-        941,
-        1672
+        1536,
+        1024
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Références retail : https://www.silent-hill.cz/DemonSamael.jpg et guide officiel Origins https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf page PDF124, imprimée123. Corps entier recoupé par le guide ; tête cornue, sternum lumineux, bras longs et appendices dorsaux présents. Détails fins des yeux, doigts, pieds et ramifications interprétés depuis petites captures ; couleur source fortement influencée par éclairage orange. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps orientés à droite, torse légèrement en trois quarts latéral. Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature. Marge haute de 9 px seulement pour les projections dorsales, mais elles restent entières. PNG natif 1536 × 1024 ; le fond brun de l’aperçu se trouve dans du RGB à alpha 0. Échantillons de fond inspectés : alpha nul ; dès alpha ≥2, les limites se resserrent au sujet. Les sources natives sont de basse résolution ; cornes, doigts et texture ne sont pas certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
-          "bytes": 1295547,
-          "width": 941,
-          "height": 1672,
+          "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+          "bytes": 1761937,
+          "width": 1536,
+          "height": 1024,
           "visibleBounds": [
-            27,
-            100,
-            920,
-            1573
+            233,
+            9,
+            1150,
+            1004
           ],
-          "pixelSHA256": "fa5f08a0dce87099a36eb18a94479e50addda3ca63bd1720c46802897f9be936",
-          "transparentFraction": 0.66422,
-          "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+          "pixelSHA256": "dc85e787ce494c9994d8c3ae73dfe7c582b0d6a50d198da50c2f91493ff9e759",
+          "transparentFraction": 0.77828,
+          "path": "assets/sprites/origins_demon_084.abac0695168a.png",
           "facing": 1,
           "anchor": [
-            0.494,
-            0.9402
+            0.364583,
+            0.979492
           ],
-          "bodyHeight": 0.76,
-          "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
-          "sourceSHA256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.966797,
+          "sourceFile": "exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+          "sourceSHA256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11192,10 +11282,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Références retail : https://www.silent-hill.cz/DemonSamael.jpg et guide officiel Origins https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf page PDF124, imprimée123. Corps entier recoupé par le guide ; tête cornue, sternum lumineux, bras longs et appendices dorsaux présents. Détails fins des yeux, doigts, pieds et ramifications interprétés depuis petites captures ; couleur source fortement influencée par éclairage orange. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-393472c0-4a7c-4cd5-a4bb-4ce9cd0f7d5b.png",
+        "sourceSHA256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps orientés à droite, torse légèrement en trois quarts latéral. Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature. Marge haute de 9 px seulement pour les projections dorsales, mais elles restent entières. PNG natif 1536 × 1024 ; le fond brun de l’aperçu se trouve dans du RGB à alpha 0. Échantillons de fond inspectés : alpha nul ; dès alpha ≥2, les limites se resserrent au sujet. Les sources natives sont de basse résolution ; cornes, doigts et texture ne sont pas certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "bom_fire_guardian_137": {
       "fighterId": "bom_fire_guardian_137",
@@ -11203,39 +11305,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
-      "sourceSHA256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "sourceFile": "exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+      "sourceSHA256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
       "sourceDimensions": [
         1672,
         941
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Références Book of Memories : capture retail de https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html et icône https://www.silenthillmemories.net/sh_book_of_memories/bestiary/fire_guardian.jpg . Carapace côtelée bombée, deux cornes et avant-bras longs conservés. Les sources complètent leurs occlusions mais restent insuffisantes pour certifier doigts, pieds, cornes et reliefs fins. Marge haute12px au seuil alpha32 ; image native horizontale1672×941. 1672×941 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps latéraux face à droite, avant-bras projetés vers l’adversaire. Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène. La source native et le portrait se complètent mais présentent des auto-occultations. La stature de référence est celle de sa pose neutre non humaine ; un étalon debout officiel n’est pas disponible. Cornes, petites griffes et détails du dos non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
-          "bytes": 1257243,
+          "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+          "bytes": 1453158,
           "width": 1672,
           "height": 941,
           "visibleBounds": [
-            243,
-            12,
-            1389,
-            926
+            136,
+            22,
+            1520,
+            905
           ],
-          "pixelSHA256": "33e5f2f92826cdcab64f15d5e64e0e5b460b69ac0810b8ac0dddb6a4ca93a6bf",
-          "transparentFraction": 0.69417,
-          "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
-          "facing": -1,
+          "pixelSHA256": "b1e0219579c76697c15471b7aaeeab41187d2d7677bf96ed1c9a4b2529235d51",
+          "transparentFraction": 0.63296,
+          "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+          "facing": 1,
           "anchor": [
-            0.61,
-            0.983
+            0.496411,
+            0.961743
           ],
-          "bodyHeight": 0.97,
-          "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
-          "sourceSHA256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.835282,
+          "sourceFile": "exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+          "sourceSHA256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11252,10 +11356,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Références Book of Memories : capture retail de https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html et icône https://www.silenthillmemories.net/sh_book_of_memories/bestiary/fire_guardian.jpg . Carapace côtelée bombée, deux cornes et avant-bras longs conservés. Les sources complètent leurs occlusions mais restent insuffisantes pour certifier doigts, pieds, cornes et reliefs fins. Marge haute12px au seuil alpha32 ; image native horizontale1672×941. 1672×941 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, aucune retouche des pixels. Calibration estimée ; revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-40235e8b-3c37-4196-bb65-9ec62799be78.png",
+        "sourceSHA256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+        "sourceDimensions": [
+          1672,
+          941
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps latéraux face à droite, avant-bras projetés vers l’adversaire. Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène. La source native et le portrait se complètent mais présentent des auto-occultations. La stature de référence est celle de sa pose neutre non humaine ; un étalon debout officiel n’est pas disponible. Cornes, petites griffes et détails du dos non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "film_armless_man_170": {
       "fighterId": "film_armless_man_170",
@@ -11263,39 +11379,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
-      "sourceSHA256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "sourceFile": "exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+      "sourceSHA256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
       "sourceDimensions": [
         941,
         1672
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Référence du costume physique original du film2006, collection reel-relics : https://yourprops.com/armless-man-creature-costume-original-make-up-prosthetics-silent-hill-2006-yp827361 ; photos armless_2006_costume_1/2/3.jpg inspectées. Tête sans traits, torse replié sans bras extérieurs, matière réticulée, ouverture thoracique et deux pieds couverts conservés. Pose inclinée adaptée ; textures et forme des pieds réinterprétées. Les photographies du costume ne certifient pas les VFX du film final. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise.",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps et tête inclinés vers la droite, côté antérieur identifié par l’ouverture thoracique. Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px. Référence de costume de tournage avec petite capture du film ; l’aspect après tous les effets visuels du film n’est pas certifié. Détails réticulés et cavité thoracique générés, non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
-          "bytes": 1220311,
+          "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+          "bytes": 1026094,
           "width": 941,
           "height": 1672,
           "visibleBounds": [
-            93,
-            78,
-            850,
-            1635
+            89,
+            115,
+            848,
+            1587
           ],
-          "pixelSHA256": "ceb2ea10ced91c6867fb416f68c9f4893b62c12aa0729c288d93b570fbc37543",
-          "transparentFraction": 0.72063,
-          "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+          "pixelSHA256": "ddda5b205fa9d77bb806b7add0c84b8cd53a7a769671441bc0bbacb0f2d72065",
+          "transparentFraction": 0.75006,
+          "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
           "facing": 1,
           "anchor": [
-            0.488,
-            0.9773
+            0.446334,
+            0.949163
           ],
-          "bodyHeight": 0.99,
-          "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
-          "sourceSHA256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.980861,
+          "sourceFile": "exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+          "sourceSHA256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11312,10 +11430,22 @@
             0
           ],
           "ticksPerFrame": 1,
-          "loop": false
+          "loop": true
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Référence du costume physique original du film2006, collection reel-relics : https://yourprops.com/armless-man-creature-costume-original-make-up-prosthetics-silent-hill-2006-yp827361 ; photos armless_2006_costume_1/2/3.jpg inspectées. Tête sans traits, torse replié sans bras extérieurs, matière réticulée, ouverture thoracique et deux pieds couverts conservés. Pose inclinée adaptée ; textures et forme des pieds réinterprétées. Les photographies du costume ne certifient pas les VFX du film final. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise.",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-e179e848-9cc2-44f7-877c-4321cd5d9532.png",
+        "sourceSHA256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+        "sourceDimensions": [
+          941,
+          1672
+        ]
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps et tête inclinés vers la droite, côté antérieur identifié par l’ouverture thoracique. Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px. Référence de costume de tournage avec petite capture du film ; l’aspect après tous les effets visuels du film n’est pas certifié. Détails réticulés et cavité thoracique générés, non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
     },
     "film_red_pyramid_thing_return_to_silent_hill": {
       "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
@@ -11323,39 +11453,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png",
-      "sourceSHA256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "sourceFile": "exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+      "sourceSHA256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
       "sourceDimensions": [
-        941,
-        1672
+        1671,
+        941
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat corps entier généré le 2026-11-17. Référence précise : figurine licenciée Star Ace SA0164FYE Return to Silent Hill, photo pyramid-return-starace.jpg fournie et inspectée. Casque haut perforé, tablier brun en pans, boucles latérales, mollets/pieds bandés et grande lame conservés. Aucune extrémité surnuméraire observée. Rouille, peau, perforations et plis réinterprétés depuis petite photo produit. Source de merchandising Return2026, distincte du modèle de jeu et du film2006 ; apparence finale à l’écran non certifiée. Marge supérieure casque12px au seuil alpha32. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise. Page de provenance : https://www.fye.com/products/return-to-silent-hill-pyramid-head-1-6-scale-action-figure-normal-version_aec-saas81647 ; image produit : https://www.fye.com/cdn/shop/files/4552520-3745838_6edebc78-df90-45a3-9067-faaf4e14bc9d.jpg?v=1793204632&width=1946 .",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Casque et corps orientés à droite, garde latérale ; main armée ramenée en arrière avec lame entière. Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature. Référence issue d’une figurine sous licence Star Ace SA0164 : elle ne certifie pas tous les détails du costume final à l’écran. Vue latérale générée ; petits perforations, boucles et texture non certifiés 1:1. Correction de cadrage acceptée : marge significative haute 108 px et basse 132 px. Le premier PNG aux marges serrées n’a pas été importé. Dimensions natives de la correction : 1671 × 941, sans prétention UHD. Candidat généré non certifié 1:1 ; aucune animation complète.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
-          "bytes": 1385665,
-          "width": 941,
-          "height": 1672,
+          "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+          "bytes": 435582,
+          "width": 1671,
+          "height": 941,
           "visibleBounds": [
-            178,
-            12,
-            763,
-            1658
+            397,
+            108,
+            1106,
+            809
           ],
-          "pixelSHA256": "fc512bf06adad6097a18d20cc7a4b1254fb22492a16049c4af5322799625f159",
-          "transparentFraction": 0.69877,
-          "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
-          "facing": -1,
+          "pixelSHA256": "844d35209d8e485f579cb9a83d52cb104a2745a90817c3846b09c967582e6b36",
+          "transparentFraction": 0.91447,
+          "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+          "facing": 1,
           "anchor": [
-            0.519,
-            0.991
+            0.550569,
+            0.859724
           ],
-          "bodyHeight": 0.985,
-          "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png",
-          "sourceSHA256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.765143,
+          "sourceFile": "exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+          "sourceSHA256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11372,10 +11504,511 @@
             0
           ],
           "ticksPerFrame": 1,
+          "loop": true
+        }
+      },
+      "animatedClips": 0,
+      "selectionNotes": "Candidat corps entier généré le 2026-11-17. Référence précise : figurine licenciée Star Ace SA0164FYE Return to Silent Hill, photo pyramid-return-starace.jpg fournie et inspectée. Casque haut perforé, tablier brun en pans, boucles latérales, mollets/pieds bandés et grande lame conservés. Aucune extrémité surnuméraire observée. Rouille, peau, perforations et plis réinterprétés depuis petite photo produit. Source de merchandising Return2026, distincte du modèle de jeu et du film2006 ; apparence finale à l’écran non certifiée. Marge supérieure casque12px au seuil alpha32. 941×1672 natifs, pas UHD/4K. Une idle fixe, fidélité 1:1 non certifiée. Légers halos de contour, pixels inchangés. Calibration estimée ; revue en jeu requise. Page de provenance : https://www.fye.com/products/return-to-silent-hill-pyramid-head-1-6-scale-action-figure-normal-version_aec-saas81647 ; image produit : https://www.fye.com/cdn/shop/files/4552520-3745838_6edebc78-df90-45a3-9067-faaf4e14bc9d.jpg?v=1793204632&width=1946 .",
+      "combatView": "side-view-candidate",
+      "selectionProvenance": {
+        "sourceSHA256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+        "sourceDimensions": [
+          941,
+          1672
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-758b1495-0a90-410c-aa5f-4885cf97749b.png"
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Casque et corps orientés à droite, garde latérale ; main armée ramenée en arrière avec lame entière. Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature. Référence issue d’une figurine sous licence Star Ace SA0164 : elle ne certifie pas tous les détails du costume final à l’écran. Vue latérale générée ; petits perforations, boucles et texture non certifiés 1:1. Correction de cadrage acceptée : marge significative haute 108 px et basse 132 px. Le premier PNG aux marges serrées n’a pas été importé. Dimensions natives de la correction : 1671 × 941, sans prétention UHD. Candidat généré non certifié 1:1 ; aucune animation complète."
+    },
+    "arcade_hummer_arcade": {
+      "fighterId": "arcade_hummer_arcade",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+      "sourceSHA256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+      "sourceDimensions": [
+        1774,
+        887
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Bec dirigé vers la droite ; corps en vol latéral, deux ailes étendues avec leurs pointes entières. Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature. Ailes en trois quarts pour les rendre distinctes ; pose latérale adaptée, pas frame native extraite. Sources entières petites ; le gros plan de jeu coupe une aile. Petites griffes et texture non certifiées. Marge haute de l’aile proche : 20 px significatifs, aile entière. Ancrage de vol et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+          "bytes": 1053953,
+          "width": 1774,
+          "height": 887,
+          "visibleBounds": [
+            145,
+            20,
+            1495,
+            817
+          ],
+          "pixelSHA256": "b5c6a454a42775809db1d8ff8de2a5d7ddc28d6bd76bc688f85d90118d97b7cd",
+          "transparentFraction": 0.719,
+          "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+          "facing": 1,
+          "anchor": [
+            0.535513,
+            0.921082
+          ],
+          "bodyHeight": 0.518602,
+          "sourceFile": "exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+          "sourceSHA256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "bytes": 1460832,
+        "width": 1536,
+        "height": 1024,
+        "facing": 1,
+        "visibleBounds": [
+          63,
+          88,
+          1483,
+          863
+        ],
+        "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+        "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+        "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": true
+        }
+      },
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Sélection individuelle Hummer, édition Silent Hill: The Arcade uniquement, distincte du futur sprite de combat. Références natives entières et gros plan du parcours DivulganteMorte : divulgantemorte_060.jpg et _061.jpg ; https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Deux ailes anguleuses entières, corps central et bec conservés. Les silhouettes entières sont petites et la grande vue coupe une aile : union des vues utilisée. Détails fins, griffes éventuelles et textures non certifiés 1:1. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0 ; aucun fond opaque importé. Usage sélection seulement, aucune animation.",
+      "animatedClips": 0,
+      "selectionProvenance": {
+        "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "sourceDimensions": [
+          1536,
+          1024
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png"
+      },
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Bec dirigé vers la droite ; corps en vol latéral, deux ailes étendues avec leurs pointes entières. Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature. Ailes en trois quarts pour les rendre distinctes ; pose latérale adaptée, pas frame native extraite. Sources entières petites ; le gros plan de jeu coupe une aile. Petites griffes et texture non certifiées. Marge haute de l’aile proche : 20 px significatifs, aile entière. Ancrage de vol et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    "arcade_tremer_arcade": {
+      "fighterId": "arcade_tremer_arcade",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+      "sourceSHA256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps rampant horizontal ; extrémité antérieure large et ouverture ventrale à droite, queue effilée à gauche. Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence. Orientation déduite de l’extrémité large et de l’ouverture ; pose latérale adaptée depuis les vues native de dessus/dessous. Corps natif petit et éclairages différents ; texture et forme fine non certifiées 1:1. Ancrage rampant et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+          "bytes": 938959,
+          "width": 2172,
+          "height": 724,
+          "visibleBounds": [
+            156,
+            133,
+            2011,
+            613
+          ],
+          "pixelSHA256": "a87ad5200052adb74dd59b59126fc6a7f5595bc5bab5539bfd9c5d95d829d656",
+          "transparentFraction": 0.68667,
+          "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+          "facing": 1,
+          "anchor": [
+            0.529466,
+            0.846685
+          ],
+          "bodyHeight": 0.662983,
+          "sourceFile": "exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+          "sourceSHA256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "bytes": 803497,
+        "width": 1086,
+        "height": 1448,
+        "facing": -1,
+        "visibleBounds": [
+          221,
+          112,
+          778,
+          1362
+        ],
+        "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+        "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+        "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": true
+        }
+      },
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Sélection individuelle Tremer, édition Silent Hill: The Arcade. Références natives divulgantemorte_085.jpg et _086.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Corps allongé courbe entier, dos brun rosé et ouverture ventrale conservés ; aucune jambe ou aile ajoutée. La vue sélection présente l’ouverture vers la gauche. Sources de petite taille et éclairages différents : texture et anatomie fine non certifiées 1:1. PNG natif 1086 × 1448, non UHD. Sélection uniquement ; aucun combat ni animation stockés dans cet import.",
+      "selectionProvenance": {
+        "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "sourceDimensions": [
+          1086,
+          1448
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png"
+      },
+      "animatedClips": 0,
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps rampant horizontal ; extrémité antérieure large et ouverture ventrale à droite, queue effilée à gauche. Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence. Orientation déduite de l’extrémité large et de l’ouverture ; pose latérale adaptée depuis les vues native de dessus/dessous. Corps natif petit et éclairages différents ; texture et forme fine non certifiées 1:1. Ancrage rampant et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    "arcade_tuberculosis": {
+      "fighterId": "arcade_tuberculosis",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+      "sourceSHA256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Long cou et gueule orientés à droite ; torse en trois quarts latéral, queue complète vers la gauche. Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène. Appuis décalés verticalement d’environ 24 px ; vue en trois quarts, pas une projection strictement orthographique. La courbure de la queue est adaptée au cadrage à partir de l’union des quatre vues, et non certifiée 1:1. Stature estimée près de la limite de la hauteur d’image ; aucun étalon natif debout complet n’est disponible. Le fond brun de l’aperçu est constitué de RGB à alpha 0 ; les échantillons périphériques ont été contrôlés. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+          "bytes": 1733881,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            69,
+            78,
+            1469,
+            924
+          ],
+          "pixelSHA256": "9537582494d64ea9a604ac64f41812ea290a3f36a5ad17daacc524e2e5e3df4d",
+          "transparentFraction": 0.77765,
+          "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+          "facing": 1,
+          "anchor": [
+            0.514323,
+            0.902344
+          ],
+          "bodyHeight": 0.996094,
+          "sourceFile": "exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+          "sourceSHA256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "bytes": 1799232,
+        "width": 1536,
+        "height": 1024,
+        "facing": 1,
+        "visibleBounds": [
+          58,
+          27,
+          1468,
+          968
+        ],
+        "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+        "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+        "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": true
+        }
+      },
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Sélection individuelle Tuberculosis, édition Silent Hill: The Arcade. Union des captures natives divulgantemorte_081.jpg à _084.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Long cou et gueule ouverte, deux bras avec membranes, extrémité en lame crochue, main griffue opposée, deux jambes griffues et queue pointue entiers. La queue est documentée par plusieurs angles mais sa courbure a été adaptée pour tenir entière : géométrie non certifiée 1:1. Texture et petits détails générés depuis des captures de faible résolution. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0. Portrait de sélection frontal, distinct du futur combat latéral ; aucune animation.",
+      "selectionProvenance": {
+        "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "sourceDimensions": [
+          1536,
+          1024
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png"
+      },
+      "animatedClips": 0,
+      "combatNotes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Long cou et gueule orientés à droite ; torse en trois quarts latéral, queue complète vers la gauche. Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène. Appuis décalés verticalement d’environ 24 px ; vue en trois quarts, pas une projection strictement orthographique. La courbure de la queue est adaptée au cadrage à partir de l’union des quatre vues, et non certifiée 1:1. Stature estimée près de la limite de la hauteur d’image ; aucun étalon natif debout complet n’est disponible. Le fond brun de l’aperçu est constitué de RGB à alpha 0 ; les échantillons périphériques ont été contrôlés. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    "ascension_fighter_179": {
+      "fighterId": "ascension_fighter_179",
+      "source": "ascension",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-aef8f5bc-188f-49f2-aed7-fee68f9d3a3e.png",
+      "sourceSHA256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, genoux légèrement fléchis. Une seule pose idle fixe ; aucun nouveau clip animé.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+          "bytes": 1776511,
+          "width": 1024,
+          "height": 1536,
+          "visibleBounds": [
+            147,
+            26,
+            834,
+            1475
+          ],
+          "pixelSHA256": "e98adbec6a4a025977ecbcb30ef755aeddbfebb74f564a6d339570e148da29ed",
+          "transparentFraction": 0.76306,
+          "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+          "facing": 1,
+          "anchor": [
+            0.45,
+            0.9602864583333334
+          ],
+          "bodyHeight": 0.94,
+          "sourceFile": "exec-aef8f5bc-188f-49f2-aed7-fee68f9d3a3e.png",
+          "sourceSHA256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+          "origin": "conversation-image-generation",
+          "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, genoux légèrement fléchis. Une seule pose idle fixe ; aucun nouveau clip animé.",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+        "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+        "bytes": 1954430,
+        "width": 1024,
+        "height": 1536,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Image de sélection en pied, vue avant trois-quarts. Le combat est affecté à un fichier distinct.",
+      "combatNotes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, genoux légèrement fléchis. Une seule pose idle fixe ; aucun nouveau clip animé.",
+      "selectionProvenance": {
+        "sourceFile": "exec-429f05cc-e412-4428-9cdb-7c950ac47e84.png",
+        "sourceSHA256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+        "sourceDimensions": [
+          1024,
+          1536
+        ],
+        "origin": "conversation-image-generation"
+      }
+    },
+    "arcade_mama_117": {
+      "fighterId": "arcade_mama_117",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-33c65134-09c8-4089-8f18-2d9e3abbc337.png",
+      "sourceSHA256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, 1536×1024 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+          "bytes": 1241685,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            304,
+            17,
+            1203,
+            1009
+          ],
+          "pixelSHA256": "f993ca1e7e7f18197abc4b6203051f4378fbb181a3d70884e263808779c3cb61",
+          "transparentFraction": 0.92093,
+          "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+          "facing": 1,
+          "anchor": [
+            0.395,
+            0.9853515625
+          ],
+          "bodyHeight": 0.98,
+          "sourceFile": "exec-33c65134-09c8-4089-8f18-2d9e3abbc337.png",
+          "sourceSHA256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+          "origin": "conversation-image-generation",
+          "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, 1536×1024 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+        "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+        "bytes": 638176,
+        "width": 1193,
+        "height": 1318,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Image de sélection entière, 1193×1318 natifs ; pas UHD/4K. Combat affecté à un fichier séparé.",
+      "combatNotes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, 1536×1024 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+      "selectionProvenance": {
+        "sourceFile": "exec-d5ad84e2-385d-442d-bdc7-6547a9b8b3c0.png",
+        "sourceSHA256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+        "sourceDimensions": [
+          1193,
+          1318
+        ],
+        "origin": "conversation-image-generation"
+      }
+    },
+    "arcade_split_worm_arcade": {
+      "fighterId": "arcade_split_worm_arcade",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-bcd8a0f3-fa05-44ab-b86b-1ccbd288ae1f.png",
+      "sourceSHA256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Sprite de combat latéral, bouche légèrement en trois-quarts, 2172×724 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [
+        {
+          "sha256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+          "bytes": 1671312,
+          "width": 2172,
+          "height": 724,
+          "visibleBounds": [
+            54,
+            104,
+            2116,
+            607
+          ],
+          "pixelSHA256": "9c0115290b66c9b6f6015b32b01b4fa58296e6811ed508699d4d6e1dc2a45b75",
+          "transparentFraction": 0.54314,
+          "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+          "facing": 1,
+          "anchor": [
+            0.53,
+            0.8383977900552486
+          ],
+          "bodyHeight": 0.6947513812154696,
+          "sourceFile": "exec-bcd8a0f3-fa05-44ab-b86b-1ccbd288ae1f.png",
+          "sourceSHA256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+          "origin": "conversation-image-generation",
+          "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Sprite de combat latéral, bouche légèrement en trois-quarts, 2172×724 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+          "purpose": "combat",
+          "view": "side-view"
+        }
+      ],
+      "portrait": {
+        "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+        "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+        "bytes": 1655034,
+        "width": 1774,
+        "height": 887,
+        "facing": 1
+      },
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "frameTicks": [
+            1
+          ],
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "combatView": "side-view-candidate",
+      "selectionNotes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Image de sélection en trois-quarts, 1774×887 natifs ; pas UHD/4K. Combat affecté à un fichier séparé.",
+      "combatNotes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Sprite de combat latéral, bouche légèrement en trois-quarts, 2172×724 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé.",
+      "selectionProvenance": {
+        "sourceFile": "exec-826922eb-4818-460d-b277-34490faac83d.png",
+        "sourceSHA256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+        "sourceDimensions": [
+          1774,
+          887
+        ],
+        "origin": "conversation-image-generation"
+      }
     }
   }
 }

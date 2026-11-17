@@ -1,0 +1,416 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c68a1a97f1680a38613ac92f00524b00c245df89",
+  "scope": "Distinct side-view combat idles appended without changing selection portraits; new exact profiles only when explicitly recorded.",
+  "imports": [
+    {
+      "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+      "source": "sh2",
+      "kind": "distinct-combat-idle",
+      "sourceFile": "exec-0cda4ca3-b1f2-491b-84dd-8b89dbd75a91.png",
+      "frameIndex": 1,
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "sha256": "d21437cdebf4ebf92d86e0461911bd0599c8e8ca80eb65b3b33dce12ceac14c7",
+      "pixelSHA256": "a3685284655b3e1f0ab8746bd2f4b6ada5501a13b3767a87f62ebb53e40a972d",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "alpha32Bounds": [
+        47,
+        119,
+        1017,
+        1324
+      ],
+      "anchor": [
+        0.65,
+        0.914364640883978
+      ],
+      "bodyHeight": 0.8321823204419889,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "previousIdle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idle": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "frameTicks": [
+          1
+        ],
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "notes": "Sprite de combat latéral distinct, profil droit, grande lame entière traînée vers la gauche et deux bottes visibles. Généré le 2026-11-17 depuis la référence SH2 et le candidat de sélection préexistant inspectés par l’agent principal ; sélection conservée. Une pose idle fixe, aucun clip animé ajouté. Dimensions natives 1086×1448, pas UHD/4K ; détails et fidélité 1:1 non certifiés. Ancre et échelle estimées, revue en jeu requise. Pixels natifs inchangés ; résidus alpha inférieurs à 8 possibles aux bords.",
+      "clipApplied": true
+    },
+    {
+      "fighterId": "ascension_fighter_179",
+      "source": "ascension",
+      "kind": "selection-base",
+      "sourceFile": "exec-429f05cc-e412-4428-9cdb-7c950ac47e84.png",
+      "frameIndex": 0,
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "sha256": "429d47545e5026dc3d1366b3835542028009f02380fa7e0220b529cbca5a4566",
+      "pixelSHA256": "620f7c65afb2d80fb2da9d216d52091213035d5922571005a8cf19177ecb2cee",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "alpha32Bounds": [
+        145,
+        36,
+        880,
+        1517
+      ],
+      "anchor": [
+        0.49,
+        0.9876302083333334
+      ],
+      "bodyHeight": 0.96,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "previousIdle": null,
+      "idleAtImport": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://rodionvlasov.artstation.com/projects/w0lOkX",
+        "https://www.youtube.com/watch?v=7DhwVu6in1I"
+      ],
+      "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Image de sélection en pied, vue avant trois-quarts. Le combat est affecté à un fichier distinct."
+    },
+    {
+      "fighterId": "ascension_fighter_179",
+      "source": "ascension",
+      "kind": "distinct-combat-idle",
+      "sourceFile": "exec-aef8f5bc-188f-49f2-aed7-fee68f9d3a3e.png",
+      "frameIndex": 1,
+      "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "sha256": "f4cf314098853f96a44995e02cd1fabf5e5c91234bb5167f626166506f27953f",
+      "pixelSHA256": "e98adbec6a4a025977ecbcb30ef755aeddbfebb74f564a6d339570e148da29ed",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "alpha32Bounds": [
+        147,
+        26,
+        834,
+        1475
+      ],
+      "anchor": [
+        0.45,
+        0.9602864583333334
+      ],
+      "bodyHeight": 0.94,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "previousIdle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idleAtImport": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "frameTicks": [
+          1
+        ],
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://rodionvlasov.artstation.com/projects/w0lOkX",
+        "https://www.youtube.com/watch?v=7DhwVu6in1I"
+      ],
+      "notes": "Candidat Fighter de SILENT HILL: ASCENSION, génération du 2026-11-17. Référence primaire Rodion Vlasov https://rodionvlasov.artstation.com/projects/w0lOkX et vues maxres2/maxres3 du turntable https://www.youtube.com/watch?v=7DhwVu6in1I inspectées par l’agent principal. Tenue fermée, liens en X tête/torse, longues griffes et deux bottes complètes ; pose adaptée et angles exacts des griffes non certifiés. Résolution native 1024×1536, pas UHD/4K ; fidélité 1:1 non certifiée. Pixels natifs inchangés, faibles résidus alpha marginaux conservés. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, genoux légèrement fléchis. Une seule pose idle fixe ; aucun nouveau clip animé."
+    },
+    {
+      "fighterId": "arcade_mama_117",
+      "source": "arcade",
+      "kind": "selection-base",
+      "sourceFile": "exec-d5ad84e2-385d-442d-bdc7-6547a9b8b3c0.png",
+      "frameIndex": 0,
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "sha256": "10d203f5fa425271fd628b42be58d0292ad9a3d1852c0017cedb37bf031ba5d1",
+      "pixelSHA256": "077e948fa1dd1b04168eb4f1b1dd9314944a632e000dfebc236c34d971c18aa3",
+      "nativeDimensions": [
+        1193,
+        1318
+      ],
+      "alpha32Bounds": [
+        84,
+        15,
+        1109,
+        1302
+      ],
+      "anchor": [
+        0.49,
+        0.9878603945371776
+      ],
+      "bodyHeight": 0.98,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "previousIdle": null,
+      "idleAtImport": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/"
+      ],
+      "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Image de sélection entière, 1193×1318 natifs ; pas UHD/4K. Combat affecté à un fichier séparé."
+    },
+    {
+      "fighterId": "arcade_mama_117",
+      "source": "arcade",
+      "kind": "distinct-combat-idle",
+      "sourceFile": "exec-33c65134-09c8-4089-8f18-2d9e3abbc337.png",
+      "frameIndex": 1,
+      "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "sha256": "fcc669873d67fcbfe40feb5f4d54f034585b09c36c7faa2fbe723d8b24c75792",
+      "pixelSHA256": "f993ca1e7e7f18197abc4b6203051f4378fbb181a3d70884e263808779c3cb61",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "alpha32Bounds": [
+        304,
+        17,
+        1203,
+        1009
+      ],
+      "anchor": [
+        0.395,
+        0.9853515625
+      ],
+      "bodyHeight": 0.98,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "previousIdle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idleAtImport": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "frameTicks": [
+          1
+        ],
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/"
+      ],
+      "notes": "Candidat Mama de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/ (archive /media/assets/338/340932.zip?updated=1755511368). Références inspectées par l’agent principal ; données de référence laissées hors dépôt. Bras longs, genoux séparés et jambes terminées en pointes sans pieds humains. Textures et détails reconstruits, pose adaptée ; fidélité 1:1 non certifiée. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise. Sprite de combat latéral tourné à droite, 1536×1024 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé."
+    },
+    {
+      "fighterId": "arcade_split_worm_arcade",
+      "source": "arcade",
+      "kind": "selection-base",
+      "sourceFile": "exec-826922eb-4818-460d-b277-34490faac83d.png",
+      "frameIndex": 0,
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "sha256": "2f1eea0ab83a975748299091f5ab350316a32b3960a00352f5d2d61b9dad5ef1",
+      "pixelSHA256": "94a68dc529fb4ad02c45fb80d22cccf29fd61a899fc83860b21050786689cad0",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "alpha32Bounds": [
+        50,
+        152,
+        1717,
+        786
+      ],
+      "anchor": [
+        0.53,
+        0.8861330326944757
+      ],
+      "bodyHeight": 0.7147688838782412,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "previousIdle": null,
+      "idleAtImport": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/"
+      ],
+      "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Image de sélection en trois-quarts, 1774×887 natifs ; pas UHD/4K. Combat affecté à un fichier séparé."
+    },
+    {
+      "fighterId": "arcade_split_worm_arcade",
+      "source": "arcade",
+      "kind": "distinct-combat-idle",
+      "sourceFile": "exec-bcd8a0f3-fa05-44ab-b86b-1ccbd288ae1f.png",
+      "frameIndex": 1,
+      "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "sha256": "64f373c1ec8a8a74e20cb456c579fac3135b1d53bc00b0c244c17f473bfeda54",
+      "pixelSHA256": "9c0115290b66c9b6f6015b32b01b4fa58296e6811ed508699d4d6e1dc2a45b75",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "alpha32Bounds": [
+        54,
+        104,
+        2116,
+        607
+      ],
+      "anchor": [
+        0.53,
+        0.8383977900552486
+      ],
+      "bodyHeight": 0.6947513812154696,
+      "nativeFacing": 1,
+      "selectionPathPreserved": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "previousIdle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "idleAtImport": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "frameTicks": [
+          1
+        ],
+        "loop": false
+      },
+      "newAnimatedClips": 0,
+      "referenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/"
+      ],
+      "notes": "Candidat Split Worm de SILENT HILL: THE ARCADE, génération du 2026-11-17 depuis rendus du modèle natif exact, source https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/ (archive /media/assets/338/340934.zip?updated=1755511368). Références inspectées par l’agent principal ; fichiers sources laissés hors dépôt. Corps entier, queue vers la gauche, tête à droite, aucune patte ajoutée. Posture latérale adaptée ; détails des textures, bouche et géométrie fine non certifiés 1:1. Pixels natifs inchangés ; faibles résidus alpha marginaux possibles. Calibration estimée, revue en jeu requise, notamment largeur du boss. Sprite de combat latéral, bouche légèrement en trois-quarts, 2172×724 natifs ; pas UHD/4K. Une pose idle fixe ; aucun nouveau clip animé."
+    }
+  ],
+  "verification": {
+    "visualGameplay": {
+      "mode": "native Canvas render of real FightEngine; not a browser screenshot",
+      "checksPassed": 73,
+      "checksFailed": 0,
+      "inspectedDuels": 4,
+      "portraitRenders": 8,
+      "idleSimulationTicks": 120,
+      "pngFilesCheckedOverHttp": 8,
+      "anchorsAdjustedAfterReview": false,
+      "browserValidated": false,
+      "browserBlocker": "System Chromium aborts before page creation: process_singleton_posix.cc socket() failed: Operation not permitted; no bundled alternate browser exists.",
+      "limits": [
+        "These are native Canvas renders of the real FightEngine, not browser screenshots. DOM, CSS, browser input and browser image decoding remain untested.",
+        "Versioned PNG bytes are verified unchanged over HTTP. Sharp then normalizes PNG encoding only in memory because @napi-rs/canvas rejects some C2PA-bearing PNG files. Full decoded pixel equality is checked before native rendering. Original files remain unchanged.",
+        "Minimal browser-global adapters supply storage/events/gamepad absence.",
+        "Normal engine intros and updates are used. Actor position, facing, pose and health are never overridden. No repo files are changed.",
+        "Opposite orientation is a runtime mirror, not additional source anatomy. Static idle candidates do not establish native animation or 1:1 fidelity."
+      ],
+      "report": "docs/production/qa-sprite-continuation-2026-11-17/report.json"
+    },
+    "fidelityOneToOneCertified": false,
+    "build": {
+      "command": "npm run build",
+      "passed": true,
+      "distFiles": 289
+    },
+    "nodeTests": {
+      "command": "node --test tests/sprites.test.mjs tests/sprite-clips.test.mjs tests/sprite-presentation.test.mjs",
+      "passed": 133,
+      "failed": 0
+    },
+    "pythonTests": {
+      "command": "python3 -m unittest tests.test_sprite_import tests.test_sprite_clip -v",
+      "passed": 58,
+      "failed": 0
+    },
+    "preservation": {
+      "baselineProfiles": 163,
+      "currentProfiles": 166,
+      "changedOldProfiles": [
+        "sh2_red_pyramid_thing_great_knife_029"
+      ],
+      "addedProfiles": [
+        "arcade_mama_117",
+        "arcade_split_worm_arcade",
+        "ascension_fighter_179"
+      ],
+      "removedProfiles": [],
+      "changedOldPortraits": [],
+      "changedOldFrames": [],
+      "newPngPaths": [
+        "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+        "assets/sprites/arcade_mama_117.fcc669873d67.png",
+        "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+        "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+        "assets/sprites/ascension_fighter_179.429d47545e50.png",
+        "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+        "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png"
+      ],
+      "oldClipsAnimated": 1,
+      "currentClipsAnimated": 1,
+      "distinctPortraitCombat": [
+        "sh2_red_pyramid_thing_great_knife_029",
+        "ascension_fighter_179",
+        "arcade_mama_117",
+        "arcade_split_worm_arcade"
+      ]
+    },
+    "gitDiffCheck": true
+  },
+  "result": {
+    "baselineProfiles": 163,
+    "registeredProfiles": 166,
+    "missingProfiles": 64,
+    "newProfiles": [
+      "arcade_mama_117",
+      "arcade_split_worm_arcade",
+      "ascension_fighter_179"
+    ],
+    "newPngFiles": 7,
+    "newSelectionImages": 3,
+    "newCombatIdleImages": 4,
+    "newAnimatedClips": 0,
+    "unchangedOldProfiles": 162,
+    "oldProfilesWithAppendedCombatFrame": [
+      "sh2_red_pyramid_thing_great_knife_029"
+    ],
+    "oldSelectionPortraitChanges": 0,
+    "oldFrameChanges": 0,
+    "fidelityCertified": 0
+  }
+}

@@ -1,5 +1,5 @@
 import {fighterReferenceHTML,stageReferenceHTML,finisherReferenceHTML,moveAvailabilityHTML,fighterRoleLabel,COMBAT_ROLE_LABELS} from './reference-ui.js';
-import { spriteFor, spriteStatus, spriteCache } from './sprite-system.js';
+import { combatSpriteFor, spriteStatus, spriteCache } from './sprite-system.js';
 import {stageBitmapCache,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
@@ -103,9 +103,9 @@ function renderSelected() {
   els.slotP1.textContent = state.activeSlot === 1 ? 'SIGNAL DU SUJET I ACTIF' : 'ACCROCHER LE SUJET I';
   els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
-  const current=[state.p1,state.p2].filter(f=>!spriteFor(f));
+  const current=[state.p1,state.p2].filter(f=>!combatSpriteFor(f));
   const blocked=[state.p1,state.p2].filter(f=>createCombatProfile(f).referencePolicy?.combatEnabled===false);
-  const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
+  const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans sprite de combat. Leur image de sélection reste consultable lorsqu’elle est disponible.`:'Sprites de combat disponibles. Les vues historiques, animations et fidélité restent à valider.';
 }
 
 function renderStageMini() {
@@ -149,7 +149,7 @@ function currentRitualId() {
 function currentRitual() { return { id: currentRitualId(), ...getRitualModifier(currentRitualId()) }; }
 
 function matchesFilters(fighter) {
-  if ($('#artReadyOnly')?.checked && !spriteFor(fighter)) return false;
+  if ($('#artReadyOnly')?.checked && !combatSpriteFor(fighter)) return false;
   const query = els.search.value.trim().toLowerCase();
   const source = els.sourceFilter.value;
   const type = els.typeFilter.value;
@@ -289,7 +289,7 @@ function closeDossier() { els.dossier.classList.add('hidden'); }
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
   const candidates = state.filtered.filter(f=>createCombatProfile(f).referencePolicy.combatEnabled);
-  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
+  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>combatSpriteFor(f));
   if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
   state.p1 = randomItem(pool);
   state.p2 = randomItem(pool.length > 1 ? pool.filter(f => f.id !== state.p1.id) : pool);

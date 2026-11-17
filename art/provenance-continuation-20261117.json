@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "origin": "built-in-image_gen",
+  "originalReferencePixelsIncludedInRepository": false,
+  "nativeModelFilesIncludedInRepository": false,
+  "referenceImages": [
+    {
+      "id": "pyramid-sh2-original",
+      "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_08_red_pyramid_thing.jpg",
+      "sha256": "ff978d20a95c34d76f5b757c7a2a2d06ef77a9640e188c3e02f4dbea93ca0858",
+      "bytes": 240974,
+      "visuallyInspected": true,
+      "includedInRepository": false
+    },
+    {
+      "id": "fighter-front",
+      "url": "https://i.ytimg.com/vi/7DhwVu6in1I/maxres2.jpg",
+      "sha256": "210932f504e66da710b93851bae0f356c0ef452794157e1828cca38f026fb010",
+      "bytes": 41116,
+      "visuallyInspected": true,
+      "includedInRepository": false
+    },
+    {
+      "id": "fighter-threequarter",
+      "url": "https://i.ytimg.com/vi/7DhwVu6in1I/maxres3.jpg",
+      "sha256": "19379e7fb91d0de428a829db7af51ffd4c6ddb8797af5f0d861dbfc2dd92ef47",
+      "bytes": 40938,
+      "visuallyInspected": true,
+      "includedInRepository": false
+    }
+  ],
+  "arcadeReferenceManifest": {
+    "purpose": "Temporary original model references for visual fidelity checks only. Not generated final assets. Do not publish original models/textures or these native renders in game.",
+    "renderer": "Blender 4.3.2 Cycles CPU, native OBJ + native textures, unlit emission, orthographic, transparent RGBA 1024x1024",
+    "sources": [
+      {
+        "name": "mama",
+        "download_url": "https://models.spriters-resource.com/media/assets/338/340932.zip?updated=1755511368",
+        "archive_sha256": "7931c8e31a6e59bcb0be6d5471b1614cd32ad778f8727e4a1c690bee5aadc575",
+        "renders": [
+          "mama-native-back.png",
+          "mama-native-front.png",
+          "mama-native-side.png",
+          "mama-native-threequarter.png"
+        ],
+        "limitation": "Native static model in bind pose; animation deformation and in-game lighting not reproduced.",
+        "archiveFilename": "mama-reference.zip",
+        "usedForThisLot": true
+      },
+      {
+        "name": "splitworm",
+        "download_url": "https://models.spriters-resource.com/media/assets/338/340934.zip?updated=1755511368",
+        "archive_sha256": "81ca7bd16cf31b930d36cd558d4186e7a04ab8866ed6d0a2e122dd553d7f4701",
+        "renders": [
+          "splitworm-native-back.png",
+          "splitworm-native-front.png",
+          "splitworm-native-side.png",
+          "splitworm-native-threequarter.png"
+        ],
+        "limitation": "Native static model in bind pose; animation deformation and in-game lighting not reproduced.",
+        "archiveFilename": "splitworm-reference.zip",
+        "usedForThisLot": true
+      },
+      {
+        "name": "phantom",
+        "download_url": "https://models.spriters-resource.com/media/assets/318/320991.zip?updated=1755505522",
+        "archive_sha256": "f89be75f6a9edea5988b695766f033f262dd259f321088a917cd39d7a8c93acd",
+        "renders": [
+          "phantom-core-detail-back.png",
+          "phantom-core-detail-front.png",
+          "phantom-core-detail-side.png",
+          "phantom-core-detail-threequarter.png"
+        ],
+        "limitation": "Phantom core-only view; out_hair extension geometry remains present but outside camera frame, full silhouette not established.",
+        "archiveFilename": "phantom-reference.zip",
+        "usedForThisLot": false
+      }
+    ]
+  },
+  "artistSource": "https://rodionvlasov.artstation.com/projects/w0lOkX",
+  "outputs": "../docs/production/sprite-continuation-imports-2026-11-17.json",
+  "prompts": "../docs/production/sprite-continuation-prompts-2026-11-17.json",
+  "limits": [
+    "All seven outputs are newly generated individual raster images; no upscaling or synthetic animation.",
+    "Original model materials and broad anatomy guide the candidates; fine geometry, poses and opposite-side details are not certified one-to-one.",
+    "Mirroring is a runtime presentation transform, not an independently generated reverse angle.",
+    "Native dimensions are recorded per file; no native UHD/4K claim.",
+    "The Fighter references show the covered final outfit; anatomy-only turntable images are excluded from its generation."
+  ]
+}

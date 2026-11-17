@@ -157,6 +157,22 @@ def atomic_write(path: Path, raw: bytes) -> None:
         if os.path.exists(name):
             os.unlink(name)
 
+def selection_provenance(asset: dict) -> dict:
+    """Describe the current portrait; old metadata is usable only for its exact source."""
+    portrait = asset['portrait']
+    source_sha = portrait.get('sourceSHA256', portrait['sha256'])
+    fallbacks = [frame for frame in asset.get('frames', [])
+                 if frame['path'] == portrait['path'] and frame['sha256'] == portrait['sha256']]
+    fallbacks += [candidate for candidate in (asset.get('selectionProvenance', {}), asset)
+                  if candidate.get('sourceSHA256') == source_sha]
+    result = {'sourceSHA256': source_sha, 'sourceDimensions': [portrait['width'], portrait['height']]}
+    for key in ('origin', 'sourceFile'):
+        for candidate in [portrait, *fallbacks]:
+            if key in candidate:
+                result[key] = candidate[key]
+                break
+    return result
+
 def import_sprite(args: argparse.Namespace) -> dict:
     root = args.root.resolve()
     manifest = root / 'art/registry.json'
@@ -183,15 +199,32 @@ def import_sprite(args: argparse.Namespace) -> dict:
     current = registry['assets'].get(args.fighter)
     if current and (current.get('fighterId') != args.fighter or current.get('source') != args.source):
         raise ValueError('Existing asset has a different exact fighter/source; no cross-edition append.')
-    if current and not (args.replace or args.append):
-        raise ValueError('This ID already has art. Use --append for a new frame or --replace to reset it explicitly.')
-    if args.append and not current:
+    separate_action = args.selection or args.selection_only or args.combat_idle
+    if current and not (args.replace or args.append or separate_action):
+        raise ValueError('This ID already has art. Use --append, --selection, --selection-only or --combat-idle; --replace resets legacy art explicitly.')
+    if args.append and (not current or current.get('combatView') == 'selection-only' or not current.get('frames')):
         raise ValueError('Cannot append to an ID without an idle frame.')
+    if separate_action and args.pose != 'idle':
+        raise ValueError('Selection and combat-idle actions use the idle import slot; append other combat poses separately.')
+    if (args.selection or args.selection_only) and args.loop:
+        raise ValueError('A selection portrait is not an animation.')
+    if args.replace and current and current.get('combatView'):
+        raise ValueError('Separated art requires --selection or --combat-idle; --replace cannot erase its other use.')
+    if args.combat_idle or args.selection_only:
+        if not current or not current.get('portrait'):
+            raise ValueError('Import a selection portrait first with --selection.')
+        if len(current.get('frames', [])) > 1 or set(current.get('clips', {})) - {'idle'}:
+            raise ValueError('This action cannot discard existing combat poses or animated frames.')
+    if args.selection_only:
+        if current.get('combatView') == 'side-view-candidate':
+            raise ValueError('A separate side-view combat image cannot be reclassified through its portrait.')
+        if meta['sha256'] != current['portrait']['sha256'] or any(f['sha256'] != current['portrait']['sha256'] for f in current['frames']):
+            raise ValueError('Selection-only reclassification requires the exact existing shared portrait PNG.')
     if not current and args.pose != 'idle' or args.replace and args.pose != 'idle':
         raise ValueError('The first frame of an asset must be idle.')
     weapon_pixels = None
     inspected_weapon_pixels = {}
-    if args.fighter == WEAPON_IDLE_OWNER and args.source == WEAPON_IDLE_SOURCE:
+    if args.fighter == WEAPON_IDLE_OWNER and args.source == WEAPON_IDLE_SOURCE and not (args.selection or args.selection_only):
         weapon_pixels = []
         if args.append:
             # Old registry pixel hashes are only caches, not authoring evidence.
@@ -205,13 +238,21 @@ def import_sprite(args: argparse.Namespace) -> dict:
                 weapon_pixels.append(previous_meta['pixelSHA256'])
                 inspected_weapon_pixels[prior['path']] = previous_meta['pixelSHA256']
         weapon_pixels.append(meta['pixelSHA256'])
+    known_pixels = {f['path']: f['pixelSHA256'] for art in registry['assets'].values() for f in art['frames'] if f.get('pixelSHA256')}
     for ident, art in registry['assets'].items():
-        for prior in art['frames']:
-            if ident == args.fighter and not args.append:
-                continue  # An explicitly replaced asset can keep its own original pixels.
+        references = [(f, 'combat') for f in art['frames']]
+        if art.get('portrait'):
+            references.append((art['portrait'], 'selection'))
+        for prior, purpose in references:
+            if ident == args.fighter:
+                if args.selection_only or args.replace or args.selection and purpose == 'selection' or args.combat_idle and purpose == 'combat':
+                    continue
             if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
                 raise ValueError('Invalid registered raster path.')
-            pixels = (inspected_weapon_pixels.get(prior['path']) if ident == args.fighter else None) or prior.get('pixelSHA256') or inspect_image(root / prior['path'])['pixelSHA256']
+            pixels = (inspected_weapon_pixels.get(prior['path']) if ident == args.fighter else None) or prior.get('pixelSHA256') or known_pixels.get(prior['path'])
+            if not pixels:
+                pixels = inspect_image(root / prior['path'])['pixelSHA256']
+                known_pixels[prior['path']] = pixels
             if prior['sha256'] == meta['sha256'] or pixels == meta['pixelSHA256']:
                 raise ValueError('Repeated or re-encoded pixels cannot populate another fighter or animation frame.')
     relative = f"assets/sprites/{args.fighter}.{meta['sha256'][:12]}.{meta['extension']}"
@@ -221,8 +262,38 @@ def import_sprite(args: argparse.Namespace) -> dict:
     frame = {k: meta[k] for k in ('sha256', 'bytes', 'width', 'height', 'visibleBounds', 'pixelSHA256', 'transparentFraction')}
     frame.update(path=relative, facing=args.facing, anchor=[args.anchor_x, args.anchor_y],
                  bodyHeight=args.body_height, sourceFile=source.name, sourceSHA256=meta['sha256'], origin=args.origin)
-    if args.append:
+    portrait = {k: frame[k] for k in ('path', 'sha256', 'bytes', 'width', 'height', 'facing', 'visibleBounds', 'pixelSHA256', 'sourceFile', 'sourceSHA256', 'origin')}
+    portrait['purpose'] = 'selection'
+    if args.selection_only:
         asset = current
+        asset.setdefault('selectionNotes', asset.get('notes', ''))
+        asset['selectionProvenance'] = selection_provenance(asset)
+        asset['frames'] = []
+        asset['clips'] = {}
+        asset['combatView'] = 'selection-only'
+    elif args.selection and current:
+        asset = current
+        asset['portrait'] = portrait
+        asset['selectionNotes'] = args.note
+        if not asset['frames']:
+            asset['combatView'] = 'selection-only'
+            asset['origin'] = args.origin
+            asset['sourceFile'] = source.name
+            asset['sourceSHA256'] = meta['sha256']
+            asset['sourceDimensions'] = [meta['width'], meta['height']]
+    elif args.combat_idle:
+        asset = current
+        asset.setdefault('selectionNotes', asset.get('notes', ''))
+        asset['selectionProvenance'] = selection_provenance(asset)
+        frame.update(purpose='combat', view='side-view')
+        asset.update(frames=[frame], clips={'idle': {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}},
+                     combatView='side-view-candidate', combatNotes=args.note, notes=args.note,
+                     origin=args.origin, sourceFile=source.name, sourceSHA256=meta['sha256'],
+                     sourceDimensions=[meta['width'], meta['height']])
+    elif args.append:
+        asset = current
+        if asset.get('combatView') == 'side-view-candidate':
+            frame.update(purpose='combat', view='side-view')
         index = len(asset['frames'])
         if index >= 256:
             raise ValueError('Maximum 256 frames per asset.')
@@ -250,14 +321,19 @@ def import_sprite(args: argparse.Namespace) -> dict:
                  'sourceFile': source.name, 'sourceSHA256': meta['sha256'],
                  'sourceDimensions': [meta['width'], meta['height']], 'singleSubjectReviewed': True,
                  'notes': args.note, 'mirrorPolicy': 'presentation-only; opposite side not independently generated',
-                 'frames': [frame], 'portrait': {k: frame[k] for k in ('path', 'sha256', 'bytes', 'width', 'height', 'facing')},
+                 'frames': [frame], 'portrait': portrait,
                  'clips': {'idle': {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}}}
+        if args.selection:
+            asset.update(frames=[], clips={}, combatView='selection-only', selectionNotes=args.note)
         registry['assets'][args.fighter] = asset
+    if args.selection:
+        asset['selectionProvenance'] = selection_provenance(asset)
     validate_weapon_clips(asset, pixel_hashes=weapon_pixels)
     animation_pixels = weapon_pixels if weapon_pixels is not None else [frame['sha256'] for frame in asset['frames']]
     asset['animatedClips'] = sum(len({animation_pixels[index] for index in clip['frames']}) > 1 for clip in asset['clips'].values())
     report = {'fighterId': args.fighter, 'source': args.source, 'path': relative, 'pose': args.pose,
               'frames': len(asset['frames']), 'animatedClips': asset['animatedClips'], 'fidelity': 'unverified',
+              'combatView': asset.get('combatView', 'legacy-unreviewed'), 'portraitPath': asset['portrait']['path'],
               'technical': meta, 'dryRun': args.dry_run}
     if not args.dry_run:
         # Write content-addressed image first; registry is the single atomic visibility point.
@@ -297,6 +373,9 @@ def parser() -> argparse.ArgumentParser:
     actions = p.add_mutually_exclusive_group()
     actions.add_argument('--append', action='store_true')
     actions.add_argument('--replace', action='store_true')
+    actions.add_argument('--selection', action='store_true', help='Import only the selection portrait; preserve any existing combat frames and clips.')
+    actions.add_argument('--selection-only', action='store_true', help='Reclassify an exact existing shared portrait/idle as selection only; preserve its PNG and portrait metadata.')
+    actions.add_argument('--combat-idle', action='store_true', help='Install a distinct side-view combat idle, preserving the existing selection portrait; refuses to discard multiple poses.')
     p.add_argument('--note', default='Image individuelle importée; fidélité et animation à valider visuellement.')
     p.add_argument('--dry-run', action='store_true')
     return p

@@ -157,7 +157,8 @@ try{
   const subject=byId.get(row.entityId);
   if(resolvedHistoricalArtwork(row,subject?.art,continuation)){
    check(row.entityId+': historical blocker has an exact later source-owned delivery',true);
-   (report.resolvedHistorical||=[]).push({id:row.entityId,originalStatus:'blocked',laterCampaign:'art92'});continue;
+   // The resolver accepts ART92 and later purpose-specific journals without attributing a campaign.
+   (report.resolvedHistorical||=[]).push({id:row.entityId,originalStatus:'blocked',laterCampaign:null,resolution:'documented-later-exact-id-delivery'});continue;
   }
   check(row.entityId+': blocker has a specific reason and no imported image',!!subject?.fighter&&!subject.art&&!fragmentAssets[row.entityId]&&!!row.reason?.trim());
   await selectDossier(page,row.entityId,false);

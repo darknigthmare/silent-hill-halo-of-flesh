@@ -55,6 +55,32 @@ test('malformed review arrays and missing eligibility fail closed without throwi
  }
 });
 
+test('a later selection delivery resolves artwork presence without completing combat',()=>{
+ const f=fixture(),portrait={...f.art.frames[0]};
+ f.art={...f.art,portrait,frames:[],clips:{},combatView:'selection-only'};
+ f.continuation.rows[0].status='blocked';f.continuation.assets={};
+ f.continuation.purposeDeliveries=[{id:'subject',file:portrait.path,sha256:portrait.sha256,purpose:'selection'}];
+ const history=JSON.stringify(f.continuation.rows);
+ assert.equal(inspect(f),true);assert.equal(resolvedHistoricalArtwork(f.row,f.art,f.continuation,{purpose:'selection'}),true);
+ assert.equal(resolvedHistoricalArtwork(f.row,f.art,f.continuation,{purpose:'combat'}),false);
+ assert.equal(JSON.stringify(f.continuation.rows),history);
+ for(const mutate of [g=>{g.art.source='sh1';},g=>{g.continuation.intake.entries[0].generationExcluded=true;},
+  g=>{g.continuation.purposeDeliveries[0].sha256='b'.repeat(64);},g=>{g.continuation.purposeDeliveries[0].id='other';},
+  g=>{g.continuation.purposeDeliveries[0].file='../borrowed.png';},g=>{g.art.singleSubjectReviewed=false;}]){
+  const changed=structuredClone(f);mutate(changed);assert.equal(inspect(changed),false);
+ }
+});
+
+test('a separate combat journal must bind an actual side-view frame, not its portrait',()=>{
+ const f=fixture();f.continuation.rows[0].status='blocked';f.continuation.assets={};f.art.combatView='side-view-candidate';
+ f.art.portrait={...f.art.frames[0],path:'assets/sprites/subject.'+'c'.repeat(12)+'.png',sha256:'c'.repeat(64)};
+ f.art.frames[0].purpose='combat';f.art.frames[0].view='side-view';
+ f.continuation.purposeDeliveries=[{id:'subject',file:f.art.frames[0].path,purpose:'combat'}];
+ assert.equal(resolvedHistoricalArtwork(f.row,f.art,f.continuation,{purpose:'combat'}),true);
+ assert.equal(resolvedHistoricalArtwork(f.row,f.art,f.continuation,{purpose:'selection'}),false);
+ f.art.combatView='selection-only';assert.equal(inspect(f),false);
+});
+
 async function continuationFixture(t,mutate=()=>{}){
  const root=await mkdtemp(join(tmpdir(),'halo-art92-review-'));t.after(()=>rm(root,{recursive:true,force:true}));
  const intake=JSON.parse(await readFile(new URL('../docs/production/art92-intake.json',import.meta.url),'utf8'));
@@ -85,6 +111,50 @@ test('continuation reader accepts five exact ledger/fragment bindings without ed
  assert.deepEqual(Object.keys(result.assets),[candidate.fighter.id]);
  const historical={rowId:candidate.workbookRowId,entityId:candidate.fighter.id,collection:'poses',status:'blocked'};
  assert.equal(resolvedHistoricalArtwork(historical,result.assets[candidate.fighter.id],result),true);
+});
+
+test('continuation reader binds the two explicit purpose journals and ignores unfinished outputs',async t=>{
+ const {root,candidate}=await continuationFixture(t),art=artwork(candidate.fighter.id,candidate.fighter.source);
+ await writeFile(join(root,'docs/production/sprite-generation-2026-11-17.json'),JSON.stringify({generated:[{id:candidate.fighter.id,file:art.frames[0].path,sha256:art.frames[0].sha256}]}));
+ await writeFile(join(root,'docs/production/combat-generation-2026-11-17.json'),JSON.stringify({selectionOutputs:[],outputs:[
+  {id:candidate.fighter.id,file:art.frames[0].path,status:'integrated-candidate'},
+  {id:'unfinished',status:'generated-not-imported'}]}));
+ const result=await readArtContinuation(root);
+ assert.deepEqual(result.purposeDeliveries.map(d=>d.purpose),['selection','combat']);
+ assert.ok(result.purposeDeliveries.every(d=>d.id===candidate.fighter.id));
+ await writeFile(join(root,'docs/production/combat-generation-2026-11-17.json'),JSON.stringify({outputs:[{id:candidate.fighter.id,file:'../borrowed.png',status:'integrated-candidate'}]}));
+ await assert.rejects(readArtContinuation(root),/Invalid exact artwork delivery/);
+});
+
+test('independent continuation resolves archived blockers by exact bytes after combat index normalization',async t=>{
+ let originalRow;
+ const {root,candidate}=await continuationFixture(t,({row,fragments,candidate})=>{
+  row.status='blocked';row.reason='Historical incomplete source.';row.artifacts=[];
+  delete fragments[candidate.group].assets[candidate.fighter.id];originalRow=structuredClone(row);
+ });
+ const id=candidate.fighter.id,source=candidate.fighter.source,art=artwork(id,source),combat=art.frames[0];
+ art.combatView='side-view-candidate';combat.purpose='combat';combat.view='side-view';
+ art.portrait={...combat,path:`assets/sprites/${id}.`+'c'.repeat(12)+'.png',sha256:'c'.repeat(64)};
+ const imports=[
+  {fighterId:id,source,kind:'selection-base',path:art.portrait.path,sha256:art.portrait.sha256,frameIndex:0},
+  {fighterId:id,source,kind:'distinct-combat-idle',path:combat.path,sha256:combat.sha256,frameIndex:1}
+ ];
+ const file=join(root,'docs/production/sprite-continuation-imports-2026-11-17.json');
+ await writeFile(file,JSON.stringify({schema:1,imports}));
+ const result=await readArtContinuation(root);
+ assert.deepEqual(result.purposeDeliveries.map(d=>d.purpose),['selection','combat']);
+ assert.equal(resolvedHistoricalArtwork(originalRow,art,result,{purpose:'combat'}),true);
+ assert.equal(resolvedHistoricalArtwork(originalRow,art,result,{purpose:'selection'}),true);
+ assert.deepEqual(result.rows.find(row=>row.entityId===id),{...originalRow,group:candidate.group});
+ for(const mutate of [r=>{r.purposeDeliveries[1].sha256='b'.repeat(64);},r=>{r.purposeDeliveries[1].source='wrong-edition';},
+  r=>{r.purposeDeliveries[1].id='borrowed';},r=>{r.intake.entries.find(e=>e.fighter.id===id).generationExcluded=true;}]){
+  const changed=structuredClone(result);mutate(changed);
+  assert.equal(resolvedHistoricalArtwork(originalRow,art,changed,{purpose:'combat'}),false);
+ }
+ for(const mutate of [r=>{r.kind='pending';},r=>{r.path='../borrowed.png';},r=>{delete r.sha256;},r=>{r.sha256='b'.repeat(64);}]){
+  const changed=structuredClone(imports);mutate(changed[1]);await writeFile(file,JSON.stringify({schema:1,imports:changed}));
+  await assert.rejects(readArtContinuation(root),/Invalid exact artwork delivery/);
+ }
 });
 
 test('continuation reader returns null before any ledger exists and rejects partial campaigns',async t=>{
