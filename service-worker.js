@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '056c0bcd551b4e79fca00140acd6ed278ef99275608ae75619b49ed3a4f7a6cd';
+const BITMAP_REVISION = '4bc70f5b7c82d082944502bfbe5aba8a5da15342ee828ec815a52099c8397131';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -112,6 +112,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
   "/assets/sprites/homecoming_siam_090.88b378486212.png",
   "/assets/sprites/homecoming_smog_087.24134515bb83.png",
+  "/assets/sprites/homecoming_smog_087.63ce313a3705.png",
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
@@ -130,6 +131,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
   "/assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
   "/assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+  "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
   "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
   "/assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
   "/assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
@@ -145,6 +147,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+  "/assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
   "/assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
   "/assets/sprites/sh1_romper_010.09a1f60ce398.png",
   "/assets/sprites/sh1_romper_010.6ceba51e9d28.png",
@@ -167,6 +170,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+  "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
   "/assets/sprites/sh2_mandarin_026.04d4be93badc.png",
   "/assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
@@ -213,6 +217,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_slurper_042.5cda350161d4.png",
   "/assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
   "/assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+  "/assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
   "/assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
@@ -220,6 +225,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
   "/assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+  "/assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
   "/assets/sprites/sh4_hummer_055.9d51cedd24be.png",
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
