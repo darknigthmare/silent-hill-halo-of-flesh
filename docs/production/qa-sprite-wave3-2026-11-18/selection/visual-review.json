@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-18T07:47:53.775113+00:00",
+  "nativeCanvas": true,
+  "browserTest": false,
+  "automatedChecks": 20,
+  "failedChecks": 0,
+  "selectionPortraitFilesInspected": [
+    "selection-film_bubble_head_nurse_return_to_silent_hill-right.png",
+    "selection-film_bubble_head_nurse_return_to_silent_hill-left.png",
+    "selection-film_creeper_return_to_silent_hill-right.png",
+    "selection-film_creeper_return_to_silent_hill-left.png"
+  ],
+  "findings": [
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "finding": "Le masque, le petit instrument crochu, les deux mains et les deux chaussures restent entiers, avec une marge visible dans les deux orientations.",
+      "selectionOnly": true,
+      "combatViewAvailable": false,
+      "combatReferenceRole": "unverified",
+      "rulesCombatEnabled": false,
+      "alphaCleanAtPortraitScale": true
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "finding": "La carapace ovale, sa ligne médiane et les six pattes recourbées restent dans le cadre. La vue dorsale reste lisible après inversion.",
+      "selectionOnly": true,
+      "combatViewAvailable": false,
+      "combatReferenceRole": "unverified",
+      "rulesCombatEnabled": false,
+      "alphaCleanAtPortraitScale": true
+    }
+  ]
+}

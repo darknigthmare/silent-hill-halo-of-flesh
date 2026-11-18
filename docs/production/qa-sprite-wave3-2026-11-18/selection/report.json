@@ -1,0 +1,305 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T07:45:32.724Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "width": 1068,
+      "height": 1472,
+      "bounds": [
+        55,
+        55,
+        982,
+        1447
+      ],
+      "role": "unverified",
+      "preexistingRulesCombatEnabled": false
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "width": 1084,
+      "height": 1451,
+      "bounds": [
+        192,
+        313,
+        888,
+        1017
+      ],
+      "role": "unverified",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "facing": 1,
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "file": "selection-film_bubble_head_nurse_return_to_silent_hill-right.png"
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "facing": -1,
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "file": "selection-film_bubble_head_nurse_return_to_silent_hill-left.png"
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "facing": 1,
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "file": "selection-film_creeper_return_to_silent_hill-right.png"
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "facing": -1,
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "file": "selection-film_creeper_return_to_silent_hill-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "unverified",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+        "sha256": "4dfe1e93350e063a2417fcaf2111b3f0e8e7502954876f1eb3c866af37177190",
+        "bytes": 1065961
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1068,
+        "height": 1472
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          55,
+          55,
+          982,
+          1447
+        ],
+        "transparentFraction": 0.6910767535824784
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png"
+        ],
+        "dataset": {
+          "spriteId": "film_bubble_head_nurse_return_to_silent_hill",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          55,
+          55,
+          927,
+          1392
+        ],
+        "destination": [
+          -162.49137931034483,
+          -244,
+          324.98275862068965,
+          488
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png"
+        ],
+        "dataset": {
+          "spriteId": "film_bubble_head_nurse_return_to_silent_hill",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "film_bubble_head_nurse_return_to_silent_hill visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          55,
+          55,
+          927,
+          1392
+        ],
+        "destination": [
+          -162.49137931034483,
+          -244,
+          324.98275862068965,
+          488
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "unverified",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+        "sha256": "fc7cb9789eef865a79e4db55247a8968970a8a7ecd21d486dd6187ff7f8b6e79",
+        "bytes": 442028
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1084,
+        "height": 1451
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          192,
+          313,
+          888,
+          1017
+        ],
+        "transparentFraction": 0.860567594304475
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png"
+        ],
+        "dataset": {
+          "spriteId": "film_creeper_return_to_silent_hill",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          192,
+          313,
+          696,
+          704
+        ],
+        "destination": [
+          -241.22727272727275,
+          -244.00000000000003,
+          482.4545454545455,
+          488.00000000000006
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png"
+        ],
+        "dataset": {
+          "spriteId": "film_creeper_return_to_silent_hill",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "film_creeper_return_to_silent_hill visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          192,
+          313,
+          696,
+          704
+        ],
+        "destination": [
+          -241.22727272727275,
+          -244.00000000000003,
+          482.4545454545455,
+          488.00000000000006
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829",
+    "src/sprite-manifest.js": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878"
+  },
+  "hashesAfter": {
+    "art/registry.json": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829",
+    "src/sprite-manifest.js": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878"
+  },
+  "passed": true
+}

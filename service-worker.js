@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '94b1bb2a8028e632ecbdf47d2e179bfe21a0f80aa92393ab0a2ed5143affece0';
+const BITMAP_REVISION = '95376b47b6603c1093e5cca063d64eb46002355023231e11db6addc9cfaa5e7a';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -78,6 +78,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
   "/assets/sprites/film_armless_man_170.25e542fa86c4.png",
   "/assets/sprites/film_armless_man_170.a103ebba3cce.png",
+  "/assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+  "/assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
   "/assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
@@ -86,8 +88,10 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
   "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
   "/assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+  "/assets/sprites/homecoming_feral_086.d944b0e329cf.png",
   "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
   "/assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+  "/assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
   "/assets/sprites/homecoming_needler_088.39331afee89d.png",
   "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
@@ -115,6 +119,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
   "/assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
   "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+  "/assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
   "/assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
   "/assets/sprites/sh1_groaner_003.82984139e47a.png",
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
@@ -124,6 +129,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
   "/assets/sprites/sh1_mumbler_006.38861850b609.png",
+  "/assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
   "/assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",

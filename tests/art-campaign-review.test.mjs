@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
 import {join,dirname} from 'node:path';
 import {tmpdir} from 'node:os';
-import {resolvedHistoricalArtwork,readArtContinuation} from '../scripts/art-campaign-review.mjs';
+import {resolvedHistoricalArtwork,readArtContinuation,readBrowserCampaignSubjects} from '../scripts/art-campaign-review.mjs';
 import {ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from '../scripts/art-campaign-tracking.mjs';
 
 function artwork(id='subject',source='sh3'){
@@ -21,6 +21,21 @@ function fixture(){
  return {row,art,continuation:{rows:[item],intake:{campaign:'art92',baseCommit:ART_CONTINUATION_BASE,entries:[entry]},assets:{subject:structuredClone(art)}}};
 }
 const inspect=f=>resolvedHistoricalArtwork(f.row,f.art,f.continuation);
+test('browser campaign review handles selection-only dossiers and detects shared combat paths and pixels',async()=>{
+ const combat=artwork('combat');
+ const frame=combat.frames[0];
+ const selection={portrait:{...frame},frames:[],clips:{}};
+ const SPRITES={selection,combat,
+  samePath:{frames:[{...frame,pixelSHA256:'c'.repeat(64)}]},
+  samePixels:{frames:[{...frame,path:'different.png'}]}};
+ const ROSTER=['selection','combat','missing'].map(id=>({id}));
+ const createCombatProfile=fighter=>({referencePolicy:{id:fighter.id}});
+ const [portrait,owned,missing]=await readBrowserCampaignSubjects(ROSTER.map(fighter=>fighter.id),[{SPRITES},{ROSTER,createCombatProfile}]);
+ assert.equal(portrait.art,selection);assert.deepEqual(portrait.owners,[]);
+ assert.deepEqual(portrait.policy,{id:'selection'});
+ assert.deepEqual(owned.owners,['combat','samePath','samePixels']);
+ assert.equal(missing.art,undefined);assert.deepEqual(missing.owners,[]);
+});
 test('historical source blocker can have a later exact-ID candidate while history stays unchanged',()=>{
  const f=fixture(),before=JSON.stringify(f.row);assert.equal(inspect(f),true);assert.equal(JSON.stringify(f.row),before);
 });
@@ -126,7 +141,7 @@ test('continuation reader binds the two explicit purpose journals and ignores un
  await assert.rejects(readArtContinuation(root),/Invalid exact artwork delivery/);
 });
 
-for(const journalName of ['sprite-continuation-imports-2026-11-17.json','sprite-next-imports-2026-11-17.json','sprite-suite-imports-2026-11-17.json','sprite-following-imports-2026-11-17.json','sprite-resume-imports-2026-11-18.json','sprite-complement-imports-2026-11-18.json'])
+for(const journalName of ['sprite-continuation-imports-2026-11-17.json','sprite-next-imports-2026-11-17.json','sprite-suite-imports-2026-11-17.json','sprite-following-imports-2026-11-17.json','sprite-resume-imports-2026-11-18.json','sprite-complement-imports-2026-11-18.json','sprite-wave3-imports-2026-11-18.json'])
 test(`${journalName} resolves archived blockers by exact bytes after combat index normalization`,async t=>{
  let originalRow;
  const {root,candidate}=await continuationFixture(t,({row,fragments,candidate})=>{

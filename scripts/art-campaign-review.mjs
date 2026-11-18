@@ -14,6 +14,23 @@ const evidence=value=>Array.isArray(value)&&value.length>0&&value.every(url=>{
 const artifacts=value=>Array.isArray(value)&&value.every(safeArtifact);
 const exactRow=(row,id)=>record(row)&&row.entityId===id&&row.collection==='poses'&&row.rowId===id+':pose:idle';
 
+// Playwright serializes this callback and resolves the modules from the served build.
+export async function readBrowserCampaignSubjects(ids, modules) {
+ const [{SPRITES}, {ROSTER, createCombatProfile}] = modules ?? await Promise.all([
+  import('/src/sprite-manifest.js'), import('/src/data.js')
+ ]);
+ return ids.map(id => {
+  const fighter = ROSTER.find(entry => entry.id === id);
+  const art = SPRITES[id];
+  const firstFrame = art?.frames[0];
+  const owners = firstFrame ? Object.entries(SPRITES)
+   .filter(([, other]) => other.frames.some(frame =>
+    frame.path === firstFrame.path || frame.pixelSHA256 === firstFrame.pixelSHA256))
+   .map(([owner]) => owner) : [];
+  return {id, fighter, art, policy: fighter ? createCombatProfile(fighter).referencePolicy : null, owners};
+ });
+}
+
 function staticCandidate(id,source,art){
  if(!record(art)||art.fighterId!==id||art.source!==source||art.fidelity!=='unverified'||art.status!=='integrated-candidate'||
   art.singleSubjectReviewed!==true||!Array.isArray(art.frames)||art.frames.length!==1||art.animatedClips!==0||
@@ -62,7 +79,7 @@ export function readPurposeDeliveries(root){
  }
  // The independent continuation used a per-import journal and legacy frame indices.
  // Bind the immutable file and digest; the current registry owns the normalized index.
- for(const path of ['docs/production/sprite-continuation-imports-2026-11-17.json','docs/production/sprite-next-imports-2026-11-17.json','docs/production/sprite-suite-imports-2026-11-17.json','docs/production/sprite-following-imports-2026-11-17.json','docs/production/sprite-resume-imports-2026-11-18.json','docs/production/sprite-complement-imports-2026-11-18.json']){
+ for(const path of ['docs/production/sprite-continuation-imports-2026-11-17.json','docs/production/sprite-next-imports-2026-11-17.json','docs/production/sprite-suite-imports-2026-11-17.json','docs/production/sprite-following-imports-2026-11-17.json','docs/production/sprite-resume-imports-2026-11-18.json','docs/production/sprite-complement-imports-2026-11-18.json','docs/production/sprite-wave3-imports-2026-11-18.json']){
   let journal;try{journal=JSON.parse(readFileSync(resolve(root,path),'utf8'));}catch(error){if(error.code==='ENOENT')continue;throw error;}
   if(!record(journal)||journal.schema!==1||!Array.isArray(journal.imports))throw Error('Invalid artwork delivery journal '+path);
   for(const row of journal.imports){

@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
 import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
-import {readArtContinuation,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {readArtContinuation,readBrowserCampaignSubjects,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const campaign=process.env.QA_ART_CAMPAIGN||'art144';
@@ -106,11 +106,7 @@ try{
  page.on('console',message=>{if(message.type()==='error')report.errors.push('console: '+message.text());});
  page.on('response',response=>{if(response.status()>=400&&/\/(assets|src|modules)\//.test(new URL(response.url()).pathname))report.errors.push(`HTTP ${response.status()}: ${response.url()}`);});
  await page.goto(base+'/modules/sprite-workshop.html');
- const subjects=await page.evaluate(async ids=>{
-  const {SPRITES}=await import('/src/sprite-manifest.js'),{ROSTER,createCombatProfile}=await import('/src/data.js');
-  return ids.map(id=>{const fighter=ROSTER.find(f=>f.id===id),art=SPRITES[id];return {id,fighter,art,policy:fighter?createCombatProfile(fighter).referencePolicy:null,
-   owners:art?Object.entries(SPRITES).filter(([,other])=>other.frames.some(frame=>frame.path===art.frames[0].path||frame.pixelSHA256===art.frames[0].pixelSHA256)).map(([owner])=>owner):[]};});
- },ids);
+ const subjects=await page.evaluate(readBrowserCampaignSubjects,ids);
  const byId=new Map(subjects.map(subject=>[subject.id,subject]));
  const browserPixels=new Map();
  for(const row of candidates){

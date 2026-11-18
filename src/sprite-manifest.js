@@ -952,50 +952,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
-    "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+    "sourceFile": "exec-5b6dcb5d-4c48-4d23-9be6-9c36358d981a.png",
+    "sourceSHA256": "80344808d0d5dad359a4fba8057cb43c4447f5212e2778ec158e3c43d4ab0024",
     "sourceDimensions": [
-      1810,
-      869
+      1312,
+      1199
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat frontal SH1 depuis modèle et capture boss ; proportions ailes/abdomen rapprochées du modèle après rejet du premier étirement vertical. Quatre ailes, deux antennes ; textures reconstruites et direction/ancrage/échelle versus. Aucun battement/FPS source mesuré, pas de certification 1:1.",
+    "notes": "Garde suspendue orientée à droite, abdomen pendant, quatre ailes et deux antennes dans le cadre. Inclinaison des ailes recomposée ; profil de tête et texture à confirmer. Portrait conservé ; image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
-        "bytes": 1290226,
-        "width": 1810,
-        "height": 869,
+        "sha256": "80344808d0d5dad359a4fba8057cb43c4447f5212e2778ec158e3c43d4ab0024",
+        "bytes": 1149291,
+        "width": 1312,
+        "height": 1199,
         "visibleBounds": [
-          31,
-          102,
-          1778,
-          832
+          101,
+          30,
+          1143,
+          1138
         ],
-        "pixelSHA256": "51b84eb91f45e4b14ba2d6e062ec85e453a44b7c8fd58c9d1c2f47cb258fbcf4",
-        "transparentFraction": 0.63605,
-        "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+        "pixelSHA256": "e82fb49289b87415c6b9af9ea0d5230670cc0bad874b82d7d09403788b7bc6c7",
+        "transparentFraction": 0.71869,
+        "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.93
+          0.54,
+          1
         ],
-        "bodyHeight": 0.79,
-        "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png",
-        "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+        "bodyHeight": 0.95,
+        "sourceFile": "exec-5b6dcb5d-4c48-4d23-9be6-9c36358d981a.png",
+        "sourceSHA256": "80344808d0d5dad359a4fba8057cb43c4447f5212e2778ec158e3c43d4ab0024",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          77,
-          1780,
-          845
+          17,
+          1286,
+          1176
         ],
         "framingBounds": [
-          28,
-          98,
-          1780,
-          835
+          96,
+          27,
+          1149,
+          1144
         ]
       }
     ],
@@ -1036,7 +1038,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat frontal SH1 depuis modèle et capture boss ; proportions ailes/abdomen rapprochées du modèle après rejet du premier étirement vertical. Quatre ailes, deux antennes ; textures reconstruites et direction/ancrage/échelle versus. Aucun battement/FPS source mesuré, pas de certification 1:1.",
+    "selectionProvenance": {
+      "sourceSHA256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d",
+      "sourceDimensions": [
+        1810,
+        869
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-343bf4ff-c38a-4f05-b0de-ba309034dcc7.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Garde suspendue orientée à droite, abdomen pendant, quatre ailes et deux antennes dans le cadre. Inclinaison des ailes recomposée ; profil de tête et texture à confirmer. Portrait conservé ; image fixe candidate, fidélité non certifiée."
   },
   "sh3_numb_body_small_037": {
     "fighterId": "sh3_numb_body_small_037",
@@ -2241,50 +2255,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
-    "sourceSHA256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+    "sourceFile": "exec-8ef31847-b0fb-4633-89fa-e7e4ed118d93.png",
+    "sourceSHA256": "4c283a4ddf4996d5a6d90faf57c175efbeb27be5ba4b0636d71a4c945e9d1492",
     "sourceDimensions": [
       1448,
       1086
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original : tête couverte de replis, deux ailes repliées et deux jambes, pose source debout uniquement. Pieds aux marges reconstruits, contraste accru ; aucun vol ni cycle établi. Échelle, appuis et miroir de présentation adaptés au versus ; aucune certification 1:1.",
+    "notes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
-        "bytes": 895527,
+        "sha256": "4c283a4ddf4996d5a6d90faf57c175efbeb27be5ba4b0636d71a4c945e9d1492",
+        "bytes": 1015670,
         "width": 1448,
         "height": 1086,
         "visibleBounds": [
-          345,
-          23,
-          1111,
-          1061
+          292,
+          54,
+          1205,
+          1041
         ],
-        "pixelSHA256": "849ba15fc0377b53d101af6d18ee040dc43e3789d278d44bc09f41165584847f",
-        "transparentFraction": 0.75225,
-        "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
-        "facing": -1,
+        "pixelSHA256": "151a8193c77d8ee1e35362d68aa184f778c7d1c322bd326de7d6b3da22721941",
+        "transparentFraction": 0.72791,
+        "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+        "facing": 1,
         "anchor": [
-          0.64,
-          0.97698
+          0.47,
+          0.95856
         ],
-        "bodyHeight": 0.95,
-        "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png",
-        "sourceSHA256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+        "bodyHeight": 0.93,
+        "sourceFile": "exec-8ef31847-b0fb-4633-89fa-e7e4ed118d93.png",
+        "sourceSHA256": "4c283a4ddf4996d5a6d90faf57c175efbeb27be5ba4b0636d71a4c945e9d1492",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          0,
-          5,
-          1408,
-          1066
+          49,
+          27,
+          1432,
+          1078
         ],
         "framingBounds": [
-          342,
-          20,
-          1116,
-          1066
+          287,
+          51,
+          1208,
+          1046
         ]
       }
     ],
@@ -2325,7 +2341,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH1 original : tête couverte de replis, deux ailes repliées et deux jambes, pose source debout uniquement. Pieds aux marges reconstruits, contraste accru ; aucun vol ni cycle établi. Échelle, appuis et miroir de présentation adaptés au versus ; aucune certification 1:1.",
+    "selectionProvenance": {
+      "sourceSHA256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb",
+      "sourceDimensions": [
+        1448,
+        1086
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée."
   },
   "sh3_pendulum_039": {
     "fighterId": "sh3_pendulum_039",
@@ -6674,50 +6702,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-065d86b8-6512-4369-b65a-f782dd037268.png",
-    "sourceSHA256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+    "sourceFile": "exec-38682cb6-852b-43cf-8780-6eba5014a43d.png",
+    "sourceSHA256": "d944b0e329cff820bc61ffe030c7eee062a6522ac943d9967b6088ccda8c76c9",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Corps entier candidat Homecoming2008 : quatre pattes, tête canine, petite queue et dos propres aux rendus Feral, sans mélange Groaner/Wormhead. Une correction de cadrage par outil image préserve toutes les pointes. Échelle/anatomie détaillée/texture à vérifier ; pas de cycle ni timing original.",
+    "notes": "Garde quadrupède de profil droit ; crâne, petite queue et quatre pattes visibles. Palette du rendu final de Homecoming. Portrait conservé ; image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
-        "bytes": 523293,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "d944b0e329cff820bc61ffe030c7eee062a6522ac943d9967b6088ccda8c76c9",
+        "bytes": 1770782,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          320,
-          431,
-          944,
-          889
+          138,
+          73,
+          1668,
+          844
         ],
-        "pixelSHA256": "dafc565786295a986e544343cbd139cadeeea2d77ff4088652035a6782b8855d",
-        "transparentFraction": 0.90858,
-        "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+        "pixelSHA256": "e9c2e928d441f25d82e5e82e94e556142bd99f2046ac19339c02865258568315",
+        "transparentFraction": 0.62147,
+        "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.7089314194577353
+          0.46,
+          0.95152
         ],
-        "bodyHeight": 0.3652312599681021,
-        "sourceFile": "exec-065d86b8-6512-4369-b65a-f782dd037268.png",
-        "sourceSHA256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+        "bodyHeight": 0.9,
+        "sourceFile": "exec-38682cb6-852b-43cf-8780-6eba5014a43d.png",
+        "sourceSHA256": "d944b0e329cff820bc61ffe030c7eee062a6522ac943d9967b6088ccda8c76c9",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          65,
-          103,
-          1041,
-          1045
+          0,
+          0,
+          1774,
+          887
         ],
         "framingBounds": [
-          318,
-          428,
-          947,
-          892
+          0,
+          0,
+          1774,
+          887
         ]
       }
     ],
@@ -6758,7 +6788,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Corps entier candidat Homecoming2008 : quatre pattes, tête canine, petite queue et dos propres aux rendus Feral, sans mélange Groaner/Wormhead. Une correction de cadrage par outil image préserve toutes les pointes. Échelle/anatomie détaillée/texture à vérifier ; pas de cycle ni timing original.",
+    "selectionProvenance": {
+      "sourceSHA256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-065d86b8-6512-4369-b65a-f782dd037268.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Garde quadrupède de profil droit ; crâne, petite queue et quatre pattes visibles. Palette du rendu final de Homecoming. Portrait conservé ; image fixe candidate, fidélité non certifiée."
   },
   "homecoming_needler_088": {
     "fighterId": "homecoming_needler_088",
@@ -6766,50 +6808,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-d5da8645-6833-405d-b8c5-d8fbe8c0bd4c.png",
-    "sourceSHA256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+    "sourceFile": "exec-44122f96-90e3-434d-8f30-f67c2a625faa.png",
+    "sourceSHA256": "04a662ecb2cb44c477e047dc2b1f6189a8e21746466122a76caa24b9308c19ff",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Quatre membres-lames et tête inversée propres au Needler Homecoming2008 ; toutes les pointes dans le cadre. Le concept corrobore le modèle final, sans mélange d’une variante abandonnée. Pose fixe2D, correction de cadrage par outil image, géométrie/contacts et texture non certifiés.",
+    "notes": "Profil droit légèrement oblique ; tronc et tête inversés, quatre appuis terminés en lames. Petites ombres de contact sous les lames. Portrait conservé ; image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
-        "bytes": 318503,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "04a662ecb2cb44c477e047dc2b1f6189a8e21746466122a76caa24b9308c19ff",
+        "bytes": 929744,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          304,
-          416,
-          978,
-          850
+          75,
+          52,
+          1709,
+          851
         ],
-        "pixelSHA256": "698c8114824024cc4399c723281add6548faab5a36a99ac8505f1c4a5cc6a0f3",
-        "transparentFraction": 0.9451,
-        "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+        "pixelSHA256": "28a81f84a71e7c876664a1d1122d357c690ceffe4bda781db261476b7be1a868",
+        "transparentFraction": 0.79641,
+        "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.6778309409888357
+          0.49,
+          0.95941
         ],
-        "bodyHeight": 0.34609250398724084,
-        "sourceFile": "exec-d5da8645-6833-405d-b8c5-d8fbe8c0bd4c.png",
-        "sourceSHA256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-44122f96-90e3-434d-8f30-f67c2a625faa.png",
+        "sourceSHA256": "04a662ecb2cb44c477e047dc2b1f6189a8e21746466122a76caa24b9308c19ff",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          73,
-          115,
-          1210,
-          1196
+          0,
+          13,
+          1760,
+          887
         ],
         "framingBounds": [
-          301,
-          414,
-          981,
-          852
+          69,
+          44,
+          1744,
+          859
         ]
       }
     ],
@@ -6850,7 +6894,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Quatre membres-lames et tête inversée propres au Needler Homecoming2008 ; toutes les pointes dans le cadre. Le concept corrobore le modèle final, sans mélange d’une variante abandonnée. Pose fixe2D, correction de cadrage par outil image, géométrie/contacts et texture non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-d5da8645-6833-405d-b8c5-d8fbe8c0bd4c.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit légèrement oblique ; tronc et tête inversés, quatre appuis terminés en lames. Petites ombres de contact sous les lames. Portrait conservé ; image fixe candidate, fidélité non certifiée."
   },
   "homecoming_schism_089": {
     "fighterId": "homecoming_schism_089",
@@ -17790,5 +17846,129 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Insane Cancer — The Arcade : garde latérale droite entière distincte de la sélection, poings et deux pieds visibles. Proportions et matières de la capture native Arcade15, contour inférieur du modèle extrait explicitement nommé et de ses vues continues. Pose versus recomposée ; résolution120×90 des références de jambes et conversion MDL7 ne certifient ni détails fins ni géométrie 1:1. Aucune variante SH3 ou BoM substituée ; PNG natif sans retouche ni agrandissement, image fixe sans animation."
+  },
+  "film_bubble_head_nurse_return_to_silent_hill": {
+    "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-c0ce28fa-dac1-438d-a952-e6c355046b9e.png",
+    "sourceSHA256": "4dfe1e93350e063a2417fcaf2111b3f0e8e7502954876f1eb3c866af37177190",
+    "sourceDimensions": [
+      1068,
+      1472
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Sélection du film de 2026 : posture oblique, coiffe, deux chaussures et bras dans le cadre. Réinterprétation fixe ; détail du masque, des doigts et de la forme de l’instrument non confirmé par le petit extrait. Aucun sprite de combat ni animation.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "sha256": "4dfe1e93350e063a2417fcaf2111b3f0e8e7502954876f1eb3c866af37177190",
+      "bytes": 1065961,
+      "width": 1068,
+      "height": 1472,
+      "facing": 1,
+      "visibleBounds": [
+        55,
+        55,
+        982,
+        1447
+      ],
+      "pixelSHA256": "e40043deb8309fdcbd0435f5d33e2a5eb7ea0db675cb417be9774e1119a13e32",
+      "sourceFile": "exec-c0ce28fa-dac1-438d-a952-e6c355046b9e.png",
+      "sourceSHA256": "4dfe1e93350e063a2417fcaf2111b3f0e8e7502954876f1eb3c866af37177190",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        0,
+        1056,
+        1472
+      ],
+      "framingBounds": [
+        47,
+        14,
+        987,
+        1456
+      ],
+      "transparentFraction": 0.74958
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Sélection du film de 2026 : posture oblique, coiffe, deux chaussures et bras dans le cadre. Réinterprétation fixe ; détail du masque, des doigts et de la forme de l’instrument non confirmé par le petit extrait. Aucun sprite de combat ni animation.",
+    "selectionProvenance": {
+      "sourceSHA256": "4dfe1e93350e063a2417fcaf2111b3f0e8e7502954876f1eb3c866af37177190",
+      "sourceDimensions": [
+        1068,
+        1472
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c0ce28fa-dac1-438d-a952-e6c355046b9e.png"
+    },
+    "animatedClips": 0
+  },
+  "film_creeper_return_to_silent_hill": {
+    "fighterId": "film_creeper_return_to_silent_hill",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-0ec56e02-bc70-4ac2-bbff-0f537c7b759f.png",
+    "sourceSHA256": "fc7cb9789eef865a79e4db55247a8968970a8a7ecd21d486dd6187ff7f8b6e79",
+    "sourceDimensions": [
+      1084,
+      1451
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Sélection du film de 2026 : un individu en vue dorsale, carapace sombre à ligne médiane, rebords brun-rouge, pattes articulées. Le contour du plan est documenté, les détails fins sont interprétatifs (spécimen natif de 59 × 79 px). Aucun combat ni animation.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "sha256": "fc7cb9789eef865a79e4db55247a8968970a8a7ecd21d486dd6187ff7f8b6e79",
+      "bytes": 442028,
+      "width": 1084,
+      "height": 1451,
+      "facing": 1,
+      "visibleBounds": [
+        192,
+        313,
+        888,
+        1017
+      ],
+      "pixelSHA256": "3d585c99d50b980c36b33664a2453774f4c9bc6764cd6e1b091bf7e723d0d7cf",
+      "sourceFile": "exec-0ec56e02-bc70-4ac2-bbff-0f537c7b759f.png",
+      "sourceSHA256": "fc7cb9789eef865a79e4db55247a8968970a8a7ecd21d486dd6187ff7f8b6e79",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        19,
+        19,
+        1052,
+        1402
+      ],
+      "framingBounds": [
+        188,
+        307,
+        892,
+        1020
+      ],
+      "transparentFraction": 0.87158
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Sélection du film de 2026 : un individu en vue dorsale, carapace sombre à ligne médiane, rebords brun-rouge, pattes articulées. Le contour du plan est documenté, les détails fins sont interprétatifs (spécimen natif de 59 × 79 px). Aucun combat ni animation.",
+    "selectionProvenance": {
+      "sourceSHA256": "fc7cb9789eef865a79e4db55247a8968970a8a7ecd21d486dd6187ff7f8b6e79",
+      "sourceDimensions": [
+        1084,
+        1451
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0ec56e02-bc70-4ac2-bbff-0f537c7b759f.png"
+    },
+    "animatedClips": 0
   }
 };

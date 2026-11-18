@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-18T07:47:53.775113+00:00",
+  "nativeCanvas": true,
+  "browserTest": false,
+  "automatedChecks": 75,
+  "failedChecks": 0,
+  "finalCombatFilesInspected": [
+    "duel-homecoming_feral_086--homecoming_needler_088-tick120.png",
+    "duel-homecoming_needler_088--homecoming_feral_086-tick120.png",
+    "duel-sh1_night_flutter_002--sh1_floatstinger_016-tick120.png",
+    "duel-sh1_floatstinger_016--sh1_night_flutter_002-tick120.png"
+  ],
+  "selectionPortraitFilesInspected": [
+    "portrait-homecoming_feral_086-right.png",
+    "portrait-homecoming_feral_086-left.png",
+    "portrait-homecoming_needler_088-right.png",
+    "portrait-homecoming_needler_088-left.png",
+    "portrait-sh1_night_flutter_002-right.png",
+    "portrait-sh1_night_flutter_002-left.png",
+    "portrait-sh1_floatstinger_016-right.png",
+    "portrait-sh1_floatstinger_016-left.png"
+  ],
+  "findings": [
+    {
+      "id": "homecoming_feral_086",
+      "finding": "La mâchoire ouverte, la queue et les quatre pattes restent entièrement visibles. Le quadrupède se tourne vers son adversaire des deux côtés.",
+      "visibleBottomMinusGroundPx": 0.00022108886423666263,
+      "combatPath": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "alphaCleanAtGameScale": true,
+      "visuallyCompleteBothSlots": true,
+      "recalibrationRecommended": false
+    },
+    {
+      "id": "homecoming_needler_088",
+      "finding": "Les quatre membres à pointes et la tête suspendue entre les membres restent dans le cadre. Les lames avant et arrière restent distinctes dans les deux sens.",
+      "visibleBottomMinusGroundPx": 0.0006373796213665628,
+      "combatPath": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "alphaCleanAtGameScale": true,
+      "visuallyCompleteBothSlots": true,
+      "recalibrationRecommended": false
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "finding": "La tête, les deux ailes repliées et les deux pieds restent dans le cadre. Les pieds touchent le sol dans cette pose.",
+      "visibleBottomMinusGroundPx": 0.000579538601641616,
+      "combatPath": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "alphaCleanAtGameScale": true,
+      "visuallyCompleteBothSlots": true,
+      "recalibrationRecommended": false
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "finding": "Les antennes, les pointes des ailes et le dard restent entiers. Le corps garde la même hauteur de vol quand on inverse les emplacements.",
+      "visibleBottomMinusGroundPx": -35.439559090264765,
+      "combatPath": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "alphaCleanAtGameScale": true,
+      "visuallyCompleteBothSlots": true,
+      "recalibrationRecommended": false
+    }
+  ],
+  "recommendRegistryAdjustment": false
+}

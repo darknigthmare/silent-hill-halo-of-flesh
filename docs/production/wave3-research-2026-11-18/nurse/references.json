@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "reviewDate": "2026-11-18",
+  "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+  "edition": "Return to Silent Hill, film released in 2026",
+  "proposedPurpose": "selection only",
+  "decision": "Exact-edition source sufficient for an unverified static selection candidate.",
+  "runtimeRole": "unverified",
+  "runtimeCombatEnabled": false,
+  "historicalReview": {
+    "art92GenerationExcluded": false,
+    "baselineBlocker": "incomplete-source",
+    "baselineStatus": "missing",
+    "previousEvidence": [
+      "Film publicity still 13, cropped below the torso",
+      "Corridor concept with small silhouettes",
+      "Stylized toy images marked PENDING LICENSOR APPROVAL"
+    ],
+    "refusalIdentifiedForExactId": false,
+    "records": [
+      "docs/production/art92-intake.json",
+      "docs/production/batches/art144-e.json",
+      "docs/production/batches/art92-e.json",
+      "art/provenance-20261117.json",
+      "docs/production/combat-remaining-2026-11-17.json",
+      "docs/production/sprite-status-complement-2026-11-18.json"
+    ]
+  },
+  "sources": [
+    {
+      "key": "trailer",
+      "publisher": "Metropolitan Filmexport",
+      "page": "https://metrofilms.com/film/retour-a-silent-hill/",
+      "url": "https://metrofilms.com/media/RetourASilentHill_TLR-Intl_EN-fr_H264_HD.3af7b467-aebb-4d08-b118-a77d67d89425.mp4",
+      "httpStatus": 200,
+      "sha256": "79027b21b10ce7b1f1dd31fd26853fa97276cd5f3da8a22a8e98037a0f8642ae",
+      "bytes": 375521275,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24/1",
+      "durationSeconds": 120,
+      "frames": [
+        {
+          "seconds": 68.75,
+          "timecode": "00:01:08.750",
+          "frameIndexZeroBased": 1650,
+          "ffmpegDecodedPngSha256": "baf988b05f046f732e177ecf8c68900d31b6a8fbe14f8e718dcda87dcaac6abd",
+          "fullFrameReview": "metro-01m08s750-full-frame.jpg",
+          "nativeCrop": "metro-01m08s750-left-nurse-native.png",
+          "cropLeftTopRightBottomPixels": [
+            285,
+            365,
+            605,
+            806
+          ],
+          "observation": "Foreground figure on left is illuminated from cap to both closed heeled shoes. Short sleeves, collar, waist, skirt, legs, raised hand and a thin implement are visible. The other forearm points back, but its fingers merge into the background."
+        },
+        {
+          "seconds": 72.125,
+          "timecode": "00:01:12.125",
+          "frameIndexZeroBased": 1731,
+          "ffmpegDecodedPngSha256": "8bbd02e15cbf1281f265f99f39cb5defedbd0d25f82ec0329279b1a5e63b6d36",
+          "nativeCrop": "metro-01m12s125-mask-native.png",
+          "cropLeftTopRightBottomPixels": [
+            1230,
+            192,
+            1825,
+            725
+          ],
+          "observation": "A second performer in the group shows a distinct cap and mask with openings. Group-level corroboration of the costume; individual continuity with the first performer is not established."
+        }
+      ]
+    },
+    {
+      "key": "french-poster",
+      "publisher": "Metropolitan Filmexport",
+      "page": "https://metrofilms.com/film/retour-a-silent-hill/",
+      "url": "https://metrofilms.com/media/Story-1080x1920-RETOUR-%C3%80-SILENT-HILL-nurses.5e0c4462-86f7-4b40-b6f0-cbceba51ccec.jpg",
+      "httpStatus": 200,
+      "sourceDimensions": [
+        1080,
+        1920
+      ],
+      "sourceBytes": 1319307,
+      "sourceSHA256": "c2932a9b96896159364292d8fe07352d46eca793c714843a6c7744a21af639bc",
+      "excerpt": "metro-nurses-poster-mask-crop.jpg",
+      "cropLeftTopRightBottomPixels": [
+        290,
+        475,
+        790,
+        940
+      ],
+      "observation": "Official group artwork explicitly named nurses. Mask openings, cap, collar and short sleeves are visible. James occludes the lower body."
+    },
+    {
+      "key": "japanese-alternate",
+      "credit": "©2026 Room 318 Productions, Inc.",
+      "publisher": "Pia, release notice of 12 May 2026",
+      "page": "https://lp.p.pia.jp/article/news/474545/index.html",
+      "url": "https://lp.p.pia.jp/shared/materials/74bba525-9494-4a5c-8b32-5015c5ffe81f/origin.jpg",
+      "local": "room318-japan-nurses.jpg",
+      "sourceDimensions": [
+        1200,
+        850
+      ],
+      "sourceSHA256": "c05f32ea3f03aa99197f1e11e459c9c91022f3d87b2bba7ab1a88ff9411a1465",
+      "observation": "Pia names Bubble Head Nurses in its notice for the film. Promotional frame reproduces the room and arrangement visible at 68.750 seconds with Japanese title overlay; this is a corroborating publication of the same setup, not a second anatomical camera angle."
+    }
+  ],
+  "limits": [
+    "One foreground member of this ensemble is the reference for the complete figure.",
+    "Exact thin instrument, hidden fingers, number and shape of individual mask openings, backside and exact color under neutral light cannot be certified.",
+    "Pose and visible exterior only. No native animation timing, combat behavior or 1:1 claim."
+  ],
+  "preservedImages": [
+    {
+      "path": "metro-01m08s750-full-frame.jpg",
+      "sha256": "7c874e4a9df3d101ad610c71ac12aaa46c0df65ff8051a49a7ddfa98d90dfcba",
+      "bytes": 246913,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "metro-01m08s750-left-nurse-native.png",
+      "sha256": "7b2e6b31eac4505b43c24aff997a702315eb8677c462a2b5e645e17e6ca4ca67",
+      "bytes": 167472,
+      "dimensions": [
+        320,
+        441
+      ]
+    },
+    {
+      "path": "metro-01m12s125-mask-native.png",
+      "sha256": "d460387bfebaa99542287f1dbadd72280e5c16a304330a70d4b9b51ec42fd946",
+      "bytes": 242328,
+      "dimensions": [
+        595,
+        533
+      ]
+    },
+    {
+      "path": "metro-nurses-poster-mask-crop.jpg",
+      "sha256": "23c27e848b4d50dc124e9a71a2f704a454283537cc6a40ab12bb61baa9e9e616",
+      "bytes": 112097,
+      "dimensions": [
+        500,
+        465
+      ]
+    },
+    {
+      "path": "room318-japan-nurses.jpg",
+      "sha256": "c05f32ea3f03aa99197f1e11e459c9c91022f3d87b2bba7ab1a88ff9411a1465",
+      "bytes": 165425,
+      "dimensions": [
+        1200,
+        850
+      ]
+    }
+  ]
+}
