@@ -926,5 +926,198 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Bureau 105 du concierge au premier passage. La table, le casier et la cloison grillagée se trouvent derrière la chaise vide. Le nouveau cadrage et le déplacement apparent de la chaise suivent la caméra du duel."
+  },
+  "looping_hall": {
+    "stageId": "looping_hall",
+    "source": "pt",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "lit-beige-hall-unidentified-loop",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT27",
+      "EXT28",
+      "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+      "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+      "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+      "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
+    ],
+    "layers": [
+      {
+        "id": "hallway",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/looping_hall.hallway.b48a0819aed4.png",
+            "sha256": "b48a0819aed4aa8a694e0a45da197cfa83121cc24281dbd0c3f1d9a4c3a3a8e0",
+            "bytes": 2139128,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "radio-cabinet",
+        "rect": [
+          0.12,
+          0.405,
+          0.255,
+          0.36
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/looping_hall.radio-cabinet.b16069870543.png",
+            "sha256": "b1606987054330e1f38a4641e7acf888ab702cd6e7eb91b48033bfcbed0372cc",
+            "bytes": 1253982,
+            "width": 1373,
+            "height": 1145
+          }
+        ],
+        "parallaxX": 0.022
+      }
+    ],
+    "notes": "Couloir résidentiel éclairé. Le poste radio, la plante et le cadre photographique restent ensemble sur le meuble du couloir. Le retour avec la porte close reste au fond, tandis que la caméra de duel élargit la vue transversale. Le numéro de boucle n’est pas établi."
+  },
+  "curtis_shop": {
+    "stageId": "curtis_shop",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "junkyard-counter-first-exchange",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06",
+      "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+      "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "workshop",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/curtis_shop.workshop.910767824f6e.png",
+            "sha256": "910767824f6eb21b92657235cb7150af60503c6f6379bca1f3ca8e2d64b86657",
+            "bytes": 2161367,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "sales-counter",
+        "rect": [
+          0.15,
+          0.408,
+          0.43,
+          0.325
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+            "sha256": "003f99674bac0fba9cd2ab3e6ebbe62657f1784c0ea40bf4106a7aed93e5691b",
+            "bytes": 2038176,
+            "width": 2061,
+            "height": 763
+          }
+        ],
+        "parallaxX": 0.032
+      }
+    ],
+    "notes": "Atelier du ferrailleur au premier échange. Le long comptoir de vente se détache de l’établi et de la fenêtre à planches du mur du fond. La bande de sol au premier plan est élargie pour le duel."
+  },
+  "dark_shrine_main": {
+    "stageId": "dark_shrine_main",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "first-ritual-chamber-threshold",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT34",
+      "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+      "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+      "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "ritual-threshold",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+            "sha256": "f8316c264028704acc290d1e00fe9ad3ea727950be0c6a807f427628e0808504",
+            "bytes": 2648676,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "tripod-brazier",
+        "rect": [
+          0.105,
+          0.342,
+          0.153,
+          0.431
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+            "sha256": "31d49a758d0287aee9bf0913c5b3fbcab59867be9e8cb3d91d32d2d4b36fc791",
+            "bytes": 1449018,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.018
+      }
+    ],
+    "notes": "Seuil fermé de la première chambre rituelle. Le brasero gauche se déplace en parallaxe et le droit reste près du mur. Les panneaux de bois, le tatami et la porte suivent la référence photographique du parcours Crimson Water. Les flammes sont fixes."
   }
 };

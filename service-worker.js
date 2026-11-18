@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'e35f509ae1d641d84d2297d4627d8b7ec454d4131913eff1c091da623645af64';
+const BITMAP_REVISION = 'd933e44aee403bb8883d832653dce91632db765bdbba60738cbcea1891645814';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -351,11 +351,17 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+  "/assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+  "/assets/stages/curtis_shop.workshop.910767824f6e.png",
+  "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+  "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
   "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
   "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
   "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
   "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
+  "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
+  "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
   "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
   "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
