@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicle-illustrations-wave8-20261118';
+const CACHE_REVISION = 'chronicle-illustrations-wave9-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'e7305495b92e019e392027e3829281ba27baee26e3072ac97b27bc9021e44100';
+const BITMAP_REVISION = '5f85dbaf789feb62bc245127672b00c03a04e2864ca9a4e1d56e67884f907793';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -169,6 +169,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
   "/assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
   "/assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+  "/assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
   "/assets/sprites/sh1_romper_010.09a1f60ce398.png",
   "/assets/sprites/sh1_romper_010.6ceba51e9d28.png",
   "/assets/sprites/sh1_romper_010.b71ffb03f441.png",
@@ -188,6 +189,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_wormhead_004.60b854394522.png",
   "/assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
   "/assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+  "/assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
   "/assets/sprites/sh2_creeper_025.f562380701ab.png",
@@ -272,6 +274,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+  "/assets/sprites/sh4_peter_walls_victim_12.977b306a917b.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
   "/assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
@@ -330,6 +333,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
   "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+  "/assets/stages/church.candle-stand.53fb59eeefa2.png",
+  "/assets/stages/church.initial-chapel.1b637d5146cd.png",
   "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
   "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
@@ -400,6 +405,8 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/heather_birth.ending.f3d3fe97049d.webp',
   '/assets/chronicles/room_21.intro.9edcdf651684.webp',
   '/assets/chronicles/room_21.ending.936178291280.webp',
+  '/assets/chronicles/trauma_together.intro.db1929b7a0b4.webp',
+  '/assets/chronicles/trauma_together.ending.5209aa4cc455.webp',
   '/assets/chronicles/maya_villa.intro.2a8d87331e10.webp',
   '/assets/chronicles/maya_villa.ending.1703f9f04378.webp',
   '/assets/chronicles/murphy_rain.intro.f5cc6b7b961b.webp',

@@ -1,0 +1,97 @@
+{
+  "stageId": "church",
+  "source": "sh3",
+  "edition": "Silent Hill 3, 2003",
+  "scene": "sh3-chapel-before-altar-departure",
+  "status": "integrated-candidate",
+  "fidelity": "unverified",
+  "sourceGuide": "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+  "referenceIds": [
+    "CL_SH3_14_CHURCH",
+    "EXT12_REF_CHURCH_ROOM_2_20261101",
+    "EXT12_REF_CHURCH_ROOM_3_20261101"
+  ],
+  "sourceImages": [
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg",
+      "path": "docs/production/wave9-stages/references/sh3_14_church_map_location.jpg",
+      "sha256": "8c30198a35a0fa542c10f8c0c2a1d2dbd756ab9ab6b56dee76614040cbecc5f1",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+      "path": "docs/production/wave9-stages/references/sh3_14_eye_of_night_tarot_card.jpg",
+      "sha256": "9e73403d60ead0b5f9d8b533cb571373563d86001853bb49eab5632456e5abb6",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "path": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+      "sha256": "1b637d5146cddd0fb69aff559dcf3496cb4237b6fa63b4294b8a1a2718145b40",
+      "bytes": 2343399,
+      "width": 1672,
+      "height": 941,
+      "sourceFile": "exec-92844e35-1dcd-4629-8eb7-e47470117db0.png",
+      "alpha": {
+        "clearPixels": 0,
+        "paintedPixelsAbove240": 1573352,
+        "totalPixels": 1573352,
+        "boundsAt128": [
+          0,
+          0,
+          1672,
+          941
+        ]
+      },
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg"
+      ],
+      "prompt": "Create an authentic-looking background plate for a side-view fighting stage of Silent Hill 3’s small initial chapel in the original 2003 game, after Heather reaches the altar. Base this reconstruction on the attached original in-game views, especially the first. A modest, slightly narrow Japanese game chapel, not a cathedral. In the centered back wall, the original gilded three stained-glass panes form a tight vertical triptych: small original stained glass religious figures in muted ochres, olive and pale blue, with the center predominantly amber/red. In front is the very distinctive dark wood central shrinelike tabernacle with its peaked lancet and bright pale quatrefoil inset, on the original low, broad dark rectangular paneled altar; an understated dark maroon-gold patterned cloth hangs down its front. Keep the group about 35 percent of screen width and have the window silhouettes begin below 15% canvas height to protect them from the fighting HUD. Preserve the two stout grimy columns framing the wall, the very worn dark wood paneling on the lower wall, green-grey aged plaster and worn dark brown wooden planks. A side wall and a small reddish door may sit at the far edge as seen in the second screenshot. Weak warm stained-glass light pools over the altar and illuminates the wood grain on the playable floor. Frontal lateral two-dimensional duel camera; level wood floor should occupy approximately 40 percent, horizon uninterrupted, legible amber window jewel against dark values rather than black void. Keep the entire lower near floor open for the separately composited candle prayer stand and fighters. The near-side lectern and its lit candles are a separate bitmap: omit all foreground candles, books, lecterns and kneeling benches from this background. High-resolution wide 16:9 OPAQUE terrain bitmap, single rectangular composition, both left and right edges filled, no inset, border, UI, typography, people, fog, ritual effects or large exaggerated Gothic architecture. Frame like a game environment, deliberately restrained and similar to the supplied 2003 setting.",
+      "placement": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "parallaxX": 0
+    },
+    {
+      "path": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+      "sha256": "53fb59eeefa2a38e42e5a7669258a3570461ccc1a60c50962f65fc628e565fcb",
+      "bytes": 1553795,
+      "width": 1536,
+      "height": 1024,
+      "sourceFile": "exec-f3e135f9-a216-4d66-b3b0-1579a824a785.png",
+      "alpha": {
+        "clearPixels": 1107641,
+        "paintedPixelsAbove240": 417461,
+        "totalPixels": 1572864,
+        "boundsAt128": [
+          209,
+          14,
+          1311,
+          1016
+        ]
+      },
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg"
+      ],
+      "prompt": "A standalone isolated small prayer-book table with three lit altar candles for compositing close to camera at the far right of a 2D duel in Silent Hill 3’s original 2003 chapel. Match the single foreground devotional arrangement visible at the bottom of the reference image, reconstructed from the side, separate from the altar at the back. One squat simple dark worn wooden prayer stand with a shallow rectangular wood top, four straight sturdy dark wood legs, and the small open yellowed book laid flat, showing softly indistinct worn pages and a faint dark red circular design on the left page, no legible text. Three wax tapers of differing heights on plain aged brass drip dishes spread along the stand near the outside edge; warm ivory-orange candle flames and dark olive-brown wax as in the original game. Feet contact a common horizontal baseline, entire fixture and flame tips within the image. Slight three-quarter glimpse of the near right edge of the stand, predominant long front edge almost horizontal. Muted gold and sepia in the weak chapel lighting, sufficiently legible dark carved wood and candle wax, fine game-texture finish and blackened corners. A modest old 2003 Silent Hill prop with a simple practical outline, no ornate Roman cathedral carvings, lectern posts, surrounding wall, floor, cast shadow or text. One phototextured environment prop on a TRUE TRANSPARENT background, including negative spaces between legs, alpha padding all around, no cut edges. No people, other objects, scenery, logo or lettering.",
+      "placement": [
+        0.738,
+        0.53,
+        0.255,
+        0.36
+      ],
+      "parallaxX": 0.045
+    }
+  ]
+}

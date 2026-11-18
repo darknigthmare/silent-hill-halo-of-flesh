@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-18",
+  "sourceType": "Portraits de l’édition Silent Hill: Ascension (2023) et peintures de production des décors par Terraform Studios archivés par Silent Hill Memories. La juxtaposition et la porte illustrent les textes de la chronique du projet.",
+  "sources": {
+    "rachel": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/characters/rachel.png",
+      "size": [
+        200,
+        250
+      ],
+      "sha256": "c81dacf71a073eece78e1f123bbd4dc152dae39ddc662f958777c064aae7008a",
+      "description": "Portrait de Rachel Hernandez."
+    },
+    "astrid": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/characters/astrid.png",
+      "size": [
+        200,
+        250
+      ],
+      "sha256": "28c60230ba05f17e72fc948189c56c40e32066d0a04d51c390a173ba36143c1c",
+      "description": "Portrait d’Astrid Johansen."
+    },
+    "03": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_environment_03.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "sha256": "04aaee17e90c4f172490353d43dee59152665dbba2f6053908c9ed47407a0af3",
+      "description": "Rue de briques, galerie de décors de Terraform Studios."
+    },
+    "16": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_environment_16.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "sha256": "31611b048e9abc64a18bec68605f323bacb3731662b9ca7bab5867d0f7903148",
+      "description": "Village enneigé dans le relief boisé, galerie de Terraform Studios."
+    },
+    "14": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_environment_14.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "sha256": "55864dbec2a7cb0c0e5f1b765e0ae74c4e757a2cc7cb2b6f319506f18aa62b30",
+      "description": "Autel avec symbole circulaire, fenêtres cintrées et bougies, galerie de Terraform Studios."
+    },
+    "01": {
+      "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_environment_01.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "sha256": "b90796afd204cbec06bd2e5f80da55120c370b31982cf1c01cc92985e9f2f22e",
+      "description": "Éclairage, profondeur et matériaux de la salle, galerie de Terraform Studios."
+    }
+  },
+  "outputs": [
+    {
+      "routeId": "trauma_together",
+      "scene": "intro",
+      "prompt": "Design one original widescreen 16:9 atmospheric illustrated film still for the French fan-game chronicle 'Le trauma partagé', based on the interactive drama Silent Hill: Ascension (2023). Full opaque bleed, readable in a game hero banner and in a narrow victory card, no titles, letters, prompts, captions, logos, watermarks or interface. Restrained atmospheric realism, grain softened in the midtones, natural colours and clear silhouettes. Reframe and repaint using the visual identities of the supplied edition references, not their original layout. Opening text: two communities carry wounds that answer each other across the world. A carefully composed cinematic diptych presents Rachel Hernandez in foggy Hope's Junction, Pennsylvania, on the LEFT and Astrid Johansen in wintry Stilledalen, Norway, on the RIGHT. Original portraits 1 and 2 define facial features and hairstyles: Rachel wears her dark hair pulled into a neat low bun and her muted light collar; Astrid has light blonde hair tied back and muted dark practical dress. Their adult faces must be distinct and recognisable, facing inward slightly, looking toward separate offscreen distances; neither looks at the other in real life. Portraits occupy the upper middle third and never touch. On the left, place brick store fronts and suspended traffic signal of environmental reference 3 receding through grey reflected light; on the right place snowy timber-roofed village houses and pines below a mountain as in environmental reference 4. A narrow naturally shadowed vertical divides these faraway places with enough negative space to distinguish both. Wide mid-close framing, deep blue/green dusk and two subtle warm window accents. No crowds, monsters or combat.",
+      "references": [
+        "rachel",
+        "astrid",
+        "03",
+        "16"
+      ],
+      "generated": {
+        "sourceFile": "exec-a1bb40b0-5767-4c8d-a50b-ed7efee35946.png",
+        "sha256": "30a84bec9852567317423fb2b9701c3911a9e3260d855925f902c7422d68c857",
+        "width": 1672,
+        "height": 941
+      },
+      "web": {
+        "path": "assets/chronicles/trauma_together.intro.db1929b7a0b4.webp",
+        "sha256": "db1929b7a0b4afe0f6bd56fe0329e18a43dc788db3022ee5b6d2c02d6ada8ec0",
+        "bytes": 125876,
+        "width": 1599,
+        "height": 900,
+        "encoding": "WebP, qualité 89, méthode 6, image entière"
+      }
+    },
+    {
+      "routeId": "trauma_together",
+      "scene": "ending",
+      "prompt": "Design one original widescreen 16:9 atmospheric illustrated film still for the French fan-game chronicle 'Le trauma partagé', based on the interactive drama Silent Hill: Ascension (2023). Full opaque bleed, readable in a game hero banner and in a narrow victory card, no titles, letters, prompts, captions, logos, watermarks or interface. Restrained atmospheric realism, grain softened in the midtones, natural colours and clear silhouettes. Reframe and repaint using the visual identities of the supplied edition references, not their original layout. The closing line for this original chronicle: The door remains ajar, fed by all the choices made. An empty room after the decision. View from a dark hallway between the edge of a heavy wooden door and its jamb, left third of the image. This is a physical large oak door left open JUST wide enough for the altar to be clearly visible. On the far side, follow the first supplied production concept EXACTLY for the recognisable dark circular wheel symbol with radial iron spikes, its vertical cradle behind the simple broad wooden altar, the TWO small short wax candles on it, and the tall arched windows. The other supplied environment is a material and atmosphere reference. Put the circle in the upper centre-right of the frame where it is fully visible, with a pale cool rim from the window and subtle warm candlelight. Splintered wood, handled patina on the latch and a narrow stripe of light falling across the threshold. Off-centre architecture and stillness. The doorway is an original narrative framing, not a magic portal. No figures, literal tally marks, monsters, occult pentagrams or generic church crosses.",
+      "references": [
+        "14",
+        "01"
+      ],
+      "generated": {
+        "sourceFile": "exec-9291c6a5-0d1a-43a4-b684-fb06339482ab.png",
+        "sha256": "29f2977833867ca3d4c15a7bea5ce2c87fee3e608352bd69c51bd5ca9f6624bb",
+        "width": 1672,
+        "height": 941
+      },
+      "web": {
+        "path": "assets/chronicles/trauma_together.ending.5209aa4cc455.webp",
+        "sha256": "5209aa4cc455a39f38169940fffc5ce8b19db48db94066996b176b57651c03e0",
+        "bytes": 72482,
+        "width": 1599,
+        "height": 900,
+        "encoding": "WebP, qualité 89, méthode 6, image entière"
+      }
+    }
+  ]
+}

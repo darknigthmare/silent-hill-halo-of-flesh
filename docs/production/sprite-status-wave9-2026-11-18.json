@@ -1,0 +1,595 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "baselineCommit": "5208e47a252310b720387a17c65ed69449e2d3aa",
+  "currentReport": "SPRITE_WAVE8_2026-11-18.md",
+  "counts": {
+    "rosterProfiles": 230,
+    "illustratedProfiles": 191,
+    "missingProfiles": 39,
+    "sideViewCombatCandidates": 90,
+    "legacyCombatViewsUnreviewed": 90,
+    "selectionOnlyProfiles": 11,
+    "missingCombatSprites": 50,
+    "spritePNGs": 321,
+    "newPNGsThisContinuation": 3,
+    "newStaticMovementPoses": 0,
+    "newProfilesThisGeneration": 0,
+    "newStaticCombatIdles": 3,
+    "newAnimatedClips": 0,
+    "animatedClipsTotal": 1,
+    "certifiedFidelity": 0,
+    "newLateralWorkshopOnly": 0,
+    "newDuelEnabledCombatIdles": 3
+  },
+  "missingProfiles": [
+    {
+      "id": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "inheritedBlocker": "immaterial-form",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": true,
+      "currentResearchRecords": [
+        "wave9-references/film-mattress.json"
+      ]
+    }
+  ],
+  "missingProfilesByInheritedBlocker": {
+    "historical-refusal-or-related-stop": 26,
+    "immaterial-form": 1,
+    "identity-or-variant-unresolved": 4,
+    "incomplete-source": 3,
+    "new-generation-refusal": 5
+  },
+  "newOutputs": [
+    {
+      "sha256": "3812705a8421836c73a9af7f4d02c41dacdde7afbf777e11cec631e458f0f1dc",
+      "bytes": 1410719,
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        224,
+        30,
+        1187,
+        993
+      ],
+      "pixelSHA256": "a961bad7f6ecbb0bb34b9ddc6b7750c73a86e932c09fd821e680ad4e4fc4a6f6",
+      "transparentFraction": 0.8739,
+      "path": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+      "facing": -1,
+      "anchor": [
+        0.5,
+        1.0
+      ],
+      "bodyHeight": 1.0,
+      "sourceFile": "exec-f71a002e-295b-492f-96aa-5680e8bbc11b.png",
+      "sourceSHA256": "3812705a8421836c73a9af7f4d02c41dacdde7afbf777e11cec631e458f0f1dc",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh2_bubble_head_nurse_024",
+      "source": "sh2",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/dvd_lm/sh2_creatures/pics/sh2_cre_05.jpg",
+          "provenance": "art/reference-provenance-parallel.json",
+          "sha256": "ae619893fce1a5cf8992a68cadccb646d6b0c05abaa8e40fefe17c3666fa87bb",
+          "nativeDimensions": [
+            1024,
+            768
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_20.jpg",
+          "provenance": "art/reference-provenance-parallel.json",
+          "sha256": "e69fa9046f88b63d51d0cc75a77b6626b1251105b4f2d6c19496c0d6ec432fc4",
+          "nativeDimensions": [
+            1024,
+            768
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Bubble Head Nurse de Brookhaven, SH2 original de 2001. Profil gauche, tuyau abaissé et jambes décalées ; le portrait historique reste disponible en sélection.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
+        "sha256": "fc01d3735b749a9771b618afb5d2748b7ac9ea28cdbb75800e2ed329b8b8b6d8",
+        "bytes": 1589092,
+        "width": 1024,
+        "height": 1536,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "8c57f3cc542768db3f07ae5ce0577160dc82d837e0e12ae62247890a243c93b6",
+      "bytes": 952762,
+      "width": 1448,
+      "height": 1086,
+      "visibleBounds": [
+        242,
+        17,
+        1139,
+        1076
+      ],
+      "pixelSHA256": "ca38a74661e1d3ef4514b2314d54da72d43367817618b65fa5c43ef147a0fbf3",
+      "transparentFraction": 0.75047,
+      "path": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+      "facing": 1,
+      "anchor": [
+        0.5,
+        1.0
+      ],
+      "bodyHeight": 1.0,
+      "sourceFile": "exec-9646ea4c-3871-44dc-bdc0-374b69fac0df.png",
+      "sourceSHA256": "8c57f3cc542768db3f07ae5ce0577160dc82d837e0e12ae62247890a243c93b6",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh1_puppet_nurse_012",
+      "source": "sh1",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_07.jpg",
+          "provenance": "art/reference-provenance-batch9.json",
+          "sha256": "16028676eb01897fdbf177bacf53ae7911c67b664b0f8eb7f6d7c0be54d27c0d",
+          "nativeDimensions": [
+            1600,
+            1200
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Puppet Nurse d’Alchemilla, SH1 original de 1999. Profil droit en appui bas, parasite dorsal et couteau visibles. Le portrait historique reste disponible en sélection.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+        "sha256": "14857368f9d93dde74c88af2332d8e6661dcbdb131fef23e0971e61e386bea26",
+        "bytes": 700743,
+        "width": 1448,
+        "height": 1086,
+        "facing": -1
+      }
+    },
+    {
+      "sha256": "977b306a917bcab211a77a03aae12427ec0c3b329813b2fdbce8a93668e6ec25",
+      "bytes": 641868,
+      "width": 1199,
+      "height": 1312,
+      "visibleBounds": [
+        210,
+        106,
+        1026,
+        1198
+      ],
+      "pixelSHA256": "59172e1250095a636cc98ac896a0f9680a884c867ee3deabd8aeda1c761e309d",
+      "transparentFraction": 0.84011,
+      "path": "assets/sprites/sh4_peter_walls_victim_12.977b306a917b.png",
+      "facing": 1,
+      "anchor": [
+        0.5,
+        0.95
+      ],
+      "bodyHeight": 0.83232,
+      "sourceFile": "exec-2b193fb8-4ebc-4862-af42-39eec4851af9.png",
+      "sourceSHA256": "977b306a917bcab211a77a03aae12427ec0c3b329813b2fdbce8a93668e6ec25",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh4_peter_walls_victim_12",
+      "source": "sh4",
+      "references": [
+        {
+          "sha256": "c4b8ba876eaba8a0e71425e7a77182de8adfb5882deb65b5b45f162295fba0c8",
+          "type": "Silent Hill 4 original official character art, Victim 12/21 (Peter Walls)",
+          "observation": "Named full figure, dark knit cap, twin ochre stripes on dark zip jacket, ochre trousers, trainers and suspended bent knees.",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_29_victim_12.jpg",
+          "nativeDimensions": [
+            199,
+            290
+          ]
+        },
+        {
+          "sha256": "6cb6f8c3a118e38c96e060444c56263beef3cc02c47c340484649de488e8af03",
+          "type": "Released SH4 encounter capture, gallery contributor AlexShepherd (2011)",
+          "observation": "Full-body hovering approach in near profile, one hand slightly forward and knees behind. Henry is not part of the specimen.",
+          "url": "https://static.wikia.nocookie.net/silent/images/b/b6/Peterwalls.png/revision/latest?cb=20110105002819",
+          "nativeDimensions": [
+            1280,
+            960
+          ]
+        },
+        {
+          "sha256": "216d7213feb9e2e2392d87471b168d41f01a47b44dd5514b9781a35586bc575c",
+          "type": "Existing approved selection reconstruction",
+          "observation": "Selection continuity only. Preserve the original source character and create an independent lateral pose for the duel.",
+          "path": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+          "nativeDimensions": [
+            1254,
+            1254
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Peter Walls, Victime 12/21 de Silent Hill 4 (2004). Vue latérale fixe tournée vers la droite, bonnet, veste de survêtement à double bande, pantalon ocre et deux chaussures. Sa posture adolescente en suspension garde les genoux fléchis, une main avancée et la seconde près de la hanche. Lot 9, dessin de duel indépendant du portrait conservé ; reconstruction candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+        "sha256": "216d7213feb9e2e2392d87471b168d41f01a47b44dd5514b9781a35586bc575c",
+        "bytes": 610744,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    }
+  ],
+  "blockedThisGeneration": [],
+  "historicalBlockersRetained": true,
+  "allMissingStatusesReconciled": true,
+  "allMissingProfilesIndependentlyResearchedAgain": false,
+  "previousStatus": "sprite-status-wave8-2026-11-18.json",
+  "inheritedBlockerAudit": "sprite-suite-reference-audit-2026-11-17.json",
+  "retainedCombatGenerationStops": [
+    {
+      "fighterId": "arcade_robbie_the_rabbit_chainsaw",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "333364f3-aefb-4947-a66d-2c18ed7ca72d",
+      "stage": "output",
+      "categories": [
+        "other"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-status-next-2026-11-17.json",
+      "retriedInThisContinuation": false,
+      "newInThisContinuation": false
+    },
+    {
+      "fighterId": "origins_the_butcher_081",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "ea87a46c-f8bb-4109-b400-474ab1ba8190",
+      "stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-suite-imports-2026-11-17.json",
+      "retriedInThisContinuation": false,
+      "newInThisContinuation": false
+    },
+    {
+      "fighterId": "sh4_patient_060",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "088656ba-b3e7-4fec-807e-5cd3fa086065",
+      "stage": "output",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-following-imports-2026-11-17.json",
+      "newInThisContinuation": false,
+      "retriedAfterRefusal": false,
+      "retriedInThisContinuation": false
+    },
+    {
+      "fighterId": "downpour_doll_106",
+      "purpose": "combat",
+      "source": "downpour",
+      "reason": "image-generation-refused",
+      "requestId": "82a5a7de-b3fa-4d32-9582-2b163ecc56e1",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "retriedInThisContinuation": false,
+      "stage": "output",
+      "usage": "workshop-lateral-only",
+      "duelEnabled": false,
+      "newInThisContinuation": true,
+      "sourceRecord": "sprite-wave6-imports-2026-11-18.json"
+    }
+  ],
+  "freshlyResearchedIds": [
+    "film_fused_mattress_manifestation_return"
+  ],
+  "freshlyClearedProfileIds": [],
+  "referenceResearch": [
+    "wave9-references/film-mattress.json"
+  ],
+  "validation": {
+    "preservation": {
+      "baselineCommit": "5208e47a252310b720387a17c65ed69449e2d3aa",
+      "identicalHistoricalPNGs": 318,
+      "identicalHistoricalPortraits": 191,
+      "unchangedRoster": true,
+      "importHashesVerified": 3,
+      "preservedMotionFramesById": {}
+    }
+  }
+}

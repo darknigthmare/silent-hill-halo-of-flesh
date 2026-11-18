@@ -68,6 +68,16 @@ const ARTWORK = {
       "path": "assets/chronicles/murphy_rain.ending.9ef51285a649.webp",
       "alt": "À Overlook, Murphy et Anne se regardent face à face. Une main ouverte entre eux accompagne le choix du pardon."
     }
+  },
+  "trauma_together": {
+    "intro": {
+      "path": "assets/chronicles/trauma_together.intro.db1929b7a0b4.webp",
+      "alt": "Rachel dans une rue de Hope’s Junction et Astrid au-dessus des maisons enneigées de Stilledalen, réunies en diptyque."
+    },
+    "ending": {
+      "path": "assets/chronicles/trauma_together.ending.5209aa4cc455.webp",
+      "alt": "Une porte reste entrouverte devant l’autel, ses deux bougies et le grand symbole circulaire de la Fondation."
+    }
   }
 };
 

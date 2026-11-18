@@ -613,5 +613,68 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Palier de la première rencontre avec Pyramid Head, avant drainage. Le tronçon de rampe bordant les marches forme le plan rapproché. Eau fixe et espace de combat adapté."
+  },
+  "church": {
+    "stageId": "church",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh3-chapel-before-altar-departure",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH3_14_CHURCH",
+      "EXT12_REF_CHURCH_ROOM_2_20261101",
+      "EXT12_REF_CHURCH_ROOM_3_20261101"
+    ],
+    "layers": [
+      {
+        "id": "initial-chapel",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+            "sha256": "1b637d5146cddd0fb69aff559dcf3496cb4237b6fa63b4294b8a1a2718145b40",
+            "bytes": 2343399,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "candle-stand",
+        "rect": [
+          0.738,
+          0.53,
+          0.255,
+          0.36
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+            "sha256": "53fb59eeefa2a38e42e5a7669258a3570461ccc1a60c50962f65fc628e565fcb",
+            "bytes": 1553795,
+            "width": 1536,
+            "height": 1024
+          }
+        ],
+        "parallaxX": 0.045
+      }
+    ],
+    "notes": "Chapelle initiale de Silent Hill 3 (2003), devant l’autel aux trois vitraux. La table au livre ouvert et les cierges forment le plan rapproché. Caméra de profil, espace du duel, supports du mobilier et détail des vitraux reconstruits."
   }
 };

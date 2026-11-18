@@ -10,9 +10,9 @@ import { chronicleArtwork } from '../src/chronicle-art.js';
 
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4282';
 const output = resolve(process.env.QA_OUTPUT || 'tests/http-chronicle-art');
-const players = { heather_birth: 'sh3_missionary_047', room_21: 'sh4_walter_sullivan_072', travis_mirrors: 'origins_ariel_078', static_beneath_st_amelia: 'townfall_lunger', murphy_rain: 'downpour_anne_cunningham' };
+const players = { heather_birth: 'sh3_missionary_047', room_21: 'sh4_walter_sullivan_072', travis_mirrors: 'origins_ariel_078', static_beneath_st_amelia: 'townfall_lunger', murphy_rain: 'downpour_anne_cunningham', trauma_together: 'ascension_snarler_180' };
 const outputs = [];
-for (const wave of [7, 8]) {
+for (const wave of [7, 8, 9]) {
   const journal = new URL(`../docs/production/wave${wave}-story/generation.json`, import.meta.url);
   outputs.push(...JSON.parse(await readFile(journal, 'utf8')).outputs);
 }
@@ -182,7 +182,7 @@ try {
     verify('checkpoint, grade and attempt persisted', saved.run.status === 'complete' && saved.run.wins === run.queue.length && saved.progress.completed.includes(id) && !!saved.progress.grades[id] && saved.progress.attempts[id] === 1);
     record.grade = saved.progress.grades[id];
     await capture(page.locator('.result-card'), id + '-ending.jpg');
-    if (id === 'room_21' || id === 'static_beneath_st_amelia') {
+    if (id === 'room_21' || id === 'static_beneath_st_amelia' || id === 'trauma_together') {
       await page.setViewportSize({ width: 390, height: 680 });
       await page.locator('#resultSelect').scrollIntoViewIfNeeded();
       verify('mobile result action reachable', await page.locator('#resultSelect').evaluate(button => { const box = button.getBoundingClientRect(); return box.bottom <= innerHeight + 1 && box.left >= 0 && box.right <= innerWidth + 1; }));

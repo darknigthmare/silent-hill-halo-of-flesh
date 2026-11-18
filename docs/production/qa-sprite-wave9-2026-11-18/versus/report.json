@@ -1,0 +1,126 @@
+{
+  "browser": "153.0.8010.0",
+  "gameCanvas": [
+    1280,
+    720
+  ],
+  "stage": "sh3-chapel-before-altar-departure",
+  "stagePaths": [
+    "assets/stages/church.initial-chapel.1b637d5146cd.png",
+    "assets/stages/church.candle-stand.53fb59eeefa2.png"
+  ],
+  "method": "Lancement local dans le menu Versus. Moteur de combat normal, acteurs et règles de la sélection. Après l’introduction, le moteur exécute 80 ticks et le test observe les images réellement dessinées dans le canvas du jeu. Les deux joueurs échangent ensuite de place dans une seconde sélection indépendante.",
+  "duels": [
+    {
+      "actors": [
+        {
+          "id": "sh1_puppet_nurse_012",
+          "source": "sh1",
+          "x": 310,
+          "facing": 1
+        },
+        {
+          "id": "sh2_bubble_head_nurse_024",
+          "source": "sh2",
+          "x": 970,
+          "facing": -1
+        }
+      ],
+      "expected": [
+        "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+        "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png"
+      ],
+      "declared": [
+        "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+        "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png"
+      ],
+      "seen": [
+        {
+          "path": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+          "urlPath": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+          "projectedCenter": 640
+        },
+        {
+          "path": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+          "urlPath": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+          "projectedCenter": 1098
+        },
+        {
+          "path": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+          "urlPath": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+          "projectedCenter": 317
+        },
+        {
+          "path": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+          "urlPath": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+          "projectedCenter": 963
+        }
+      ],
+      "phase": "fight",
+      "diagnostic": false,
+      "stage": "church",
+      "scene": "sh3-chapel-before-altar-departure",
+      "frame": 230,
+      "pageErrors": [],
+      "capture": "sh1_puppet_nurse_012--sh2_bubble_head_nurse_024.jpg",
+      "captureSHA256": "908375f7f3779db95e5035e9a082d735af53013302deb9791c5a26c37f669de1"
+    },
+    {
+      "actors": [
+        {
+          "id": "sh2_bubble_head_nurse_024",
+          "source": "sh2",
+          "x": 310,
+          "facing": 1
+        },
+        {
+          "id": "sh1_puppet_nurse_012",
+          "source": "sh1",
+          "x": 970,
+          "facing": -1
+        }
+      ],
+      "expected": [
+        "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+        "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png"
+      ],
+      "declared": [
+        "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+        "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png"
+      ],
+      "seen": [
+        {
+          "path": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+          "urlPath": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+          "projectedCenter": 640
+        },
+        {
+          "path": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+          "urlPath": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+          "projectedCenter": 1098
+        },
+        {
+          "path": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+          "urlPath": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+          "projectedCenter": 317
+        },
+        {
+          "path": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+          "urlPath": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+          "projectedCenter": 963
+        }
+      ],
+      "phase": "fight",
+      "diagnostic": false,
+      "stage": "church",
+      "scene": "sh3-chapel-before-altar-departure",
+      "frame": 230,
+      "pageErrors": [],
+      "capture": "sh2_bubble_head_nurse_024--sh1_puppet_nurse_012.jpg",
+      "captureSHA256": "fc8f0b1b0ef64ac12f4aefc80dde0e9ba4334e0bf90f7c7dc9e223d261fc0eb4"
+    }
+  ],
+  "verifiedFighterDraws": 4,
+  "verifiedSceneryDraws": 4,
+  "passed": true
+}
