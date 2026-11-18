@@ -81,7 +81,7 @@ test('a failed declared stage blocks diagnostics and can be retried',async()=>{
   const art=artFor(),frame=art.layers[0].frames[0],h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),actor=harness(SpriteCache);
   h.failures.add(frame.path);
   const options={fighterCache:actor.cache,stageCache:h.cache,diagnostic:true};
-  const missing=getFighter('sh2_mannequin_022');assert.equal(missing.id,'sh2_mannequin_022');
+  const missing={id:'stage-test-unregistered-actor',source:air.source};
   const failed=await prepareCombatAssets([missing],[stage],options);assert.deepEqual(failed.missing,[missing.id]);
   assert.equal(failed.ok,false);assert.equal(failed.stageFailed,true);assert.ok(failed.failed.includes(frame.path));
   h.failures.clear();assert.equal((await prepareCombatAssets([],stage,options)).ok,true);assert.equal(h.images.length,2);
