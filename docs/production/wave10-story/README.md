@@ -17,3 +17,5 @@ Deux images supplémentaires apparaissent quand le joueur atteint le combat du r
 Le premier passage de vérification des sept paires a couvert les quinze chroniques. [Rapport initial et captures](qa-initial/report.json)
 
 Dans la version compilée, le bouton **Combat suivant** affiche le double après le cinquième combat de Heather. La reprise du parcours de Silent Hill 4 affiche Walter au cinquième combat. Après une défaite, **Réessayer cette rencontre** ramène directement au duel. [Heather en jeu](qa-rivals/heather_birth-rival.jpg) · [Walter en jeu](qa-rivals/room_21-rival.jpg) · [Vérification des deux parcours](qa-rivals/report.json)
+
+Chromium a décodé les 32 illustrations réseau coupé et retrouvé leurs empreintes dans la version compilée. Le test de décodage des chroniques exclut les images de combat et de décors du préchargement. [Vérification hors ligne](qa-rivals/offline.json)
