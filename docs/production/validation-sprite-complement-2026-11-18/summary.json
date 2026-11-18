@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "status": "passed",
+  "baselineCommit": "e4de8d957cbb2d23856f4cb158a79785c7eba258",
+  "npmTest": {
+    "passed": true,
+    "exitCode": 0,
+    "tests": 1253,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "verifiedBuildFiles": 322,
+    "verifiedJavaScriptFiles": 42,
+    "verifiedHTMLFiles": 10,
+    "log": "validation-sprite-complement-2026-11-18/npm-test.log.gz",
+    "logSHA256": "78b30a6615f1674cd4c18a56e7d62997617955ef911677ceaca004531fa7618e",
+    "execution": "repository working tree"
+  },
+  "nativeEngine": {
+    "passed": true,
+    "checks": 39,
+    "failed": 0,
+    "portraitRenders": 4,
+    "duels": 2,
+    "finalDuelScreenshotsInspected": 2,
+    "portraitScreenshotsInspected": 4,
+    "browserTest": false,
+    "report": "qa-sprite-complement-2026-11-18/summary.json",
+    "registrySHA256": "a2629a443ca813a426cf33ecccb2399437d3733b42de3c5088f4e84e3fdd997e",
+    "manifestSHA256": "e609b3d948a054ffc33a4e777126f1d5dff9017734c65fb92a4b77beab58c8ad"
+  },
+  "sameDayNativeValidation": {
+    "checks": 103,
+    "failed": 0,
+    "duels": 6,
+    "portraits": 10,
+    "allFinalDuelsAndPortraitsVisuallyInspected": true,
+    "reports": [
+      "qa-sprite-2026-11-18/summary.json",
+      "qa-sprite-complement-2026-11-18/summary.json"
+    ],
+    "note": "Assertions across two distinct runs, not 103 unique gameplay scenarios."
+  },
+  "preservationReport": "sprite-complement-preservation-2026-11-18.json",
+  "gitDiffCheck": true,
+  "remoteCI": {
+    "statusAtFreeze": "pending-publication",
+    "localBrowserTest": false,
+    "baselineHead": "e4de8d957cbb2d23856f4cb158a79785c7eba258",
+    "baselineObservedAt": "2026-11-18T07:15:48Z",
+    "baselineQA": {
+      "status": "success",
+      "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44256785248"
+    },
+    "baselineBrowser": {
+      "status": "in_progress",
+      "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44256785154"
+    },
+    "note": "Existing cancel-in-progress behavior may supersede this baseline browser run when the next head is published."
+  },
+  "documentationFinalizedAfterGate": true,
+  "scopeLimits": [
+    "No new animated clip, native UHD, or certified source fidelity.",
+    "Native Canvas does not certify DOM, CSS, browser input, browser decoding or service worker behavior.",
+    "Relative game scale keeps existing engine parameters and is not certified against the source games."
+  ]
+}

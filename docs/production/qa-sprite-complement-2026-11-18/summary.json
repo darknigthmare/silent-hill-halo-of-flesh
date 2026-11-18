@@ -1,0 +1,42 @@
+{
+  "schema": "sprite-complement-native-qa-summary/1",
+  "date": "2026-11-18",
+  "mode": "actual FightEngine, native Canvas",
+  "browserTest": false,
+  "runs": [
+    {
+      "label": "sprite-complement-20261118",
+      "report": "main/report.json",
+      "visualReview": "main/visual-review.json",
+      "checks": 39,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 4,
+      "duels": 2,
+      "finalCapturesVisuallyInspected": 2,
+      "selectionPortraitCapturesVisuallyInspected": 4,
+      "registryAdjustmentRecommended": false
+    }
+  ],
+  "totalChecks": 39,
+  "failedChecks": 0,
+  "passed": true,
+  "portraits": 4,
+  "duels": 2,
+  "finalCapturesVisuallyInspected": 2,
+  "selectionPortraitCapturesVisuallyInspected": 4,
+  "uniqueCombatIds": [
+    "downpour_screamer_104",
+    "sh3_leonard_wolf_048"
+  ],
+  "registrySHA256": "a2629a443ca813a426cf33ecccb2399437d3733b42de3c5088f4e84e3fdd997e",
+  "manifestSHA256": "e609b3d948a054ffc33a4e777126f1d5dff9017734c65fb92a4b77beab58c8ad",
+  "limits": [
+    "39 assertions within this complement run; the check count is not a count of unique gameplay scenarios.",
+    "Source PNG bytes match the manifest. Registry and manifest remained unchanged throughout this run.",
+    "Actual FightEngine with native Canvas, not browser screenshots. DOM, CSS, browser input, browser decoding and service worker behavior are outside this review.",
+    "Static one-frame idle candidates. Introductions, 120 idle updates, rendering and pause do not certify bitmap animation, new attacks or collision timing.",
+    "Opposite facing uses the engine mirror. Neither independently established rear anatomy nor source fidelity 1:1 is certified. The slightly oblique lateral poses are recomposed from their exact-edition source references.",
+    "This run and its reports belong only to the complement. No first-batch reports were changed."
+  ]
+}

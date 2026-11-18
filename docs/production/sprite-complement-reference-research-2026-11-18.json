@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-11-18",
+  "baselineCommit": "e4de8d957cbb2d23856f4cb158a79785c7eba258",
+  "scope": {
+    "description": "Complément ciblé limité à Monocle Man Downpour et Collector Ascension, après lecture de leurs blocages. Ce rapport ne couvre pas une nouvelle recherche exhaustive des 58 profils sans image.",
+    "freshlyResearchedProfilesInThisComplement": 2,
+    "newlyUnblockedProfiles": 0,
+    "generatedSprites": 0,
+    "nativeEvidenceImages": 4,
+    "priorThreeProfileReport": "docs/production/sprite-resume-reference-research-2026-11-18.json",
+    "historicallyRefusedProfilesRetried": 0,
+    "exhaustedNineDossiersRevisited": 0
+  },
+  "verdict": "Deux nouvelles pistes inspectées, zéro référence entière validée ; profils sans image et rôles noncombatant maintenus.",
+  "profiles": [
+    {
+      "schemaVersion": 1,
+      "researchDate": "2026-11-18",
+      "characterId": "downpour_monocle_man_114",
+      "scope": "Nouvelle recherche ciblée sur le contour entier de l’apparition commerciale de Downpour ; aucun autre dossier manquant recherché par cette sous-tâche.",
+      "verdict": "reference-exterieure-entiere-encore-insuffisante",
+      "fullBodyReferenceValidated": false,
+      "generationAttempted": false,
+      "repositoryArtOrRoleMutated": false,
+      "roleSource": "data/roster.json → reference",
+      "currentRole": {
+        "combatRole": "noncombatant",
+        "identityStatus": "non-combattant-version-commerciale",
+        "identityNote": "Garder hors roster canonique; boss prototype restauré = contenu coupé à référencer séparément.",
+        "referenceEdition": "Silent Hill: Downpour (2012, version commerciale)",
+        "poseRig": "fixe-passif",
+        "artDirectionFocus": "silhouette d’apparition"
+      },
+      "readInheritedEvidence": [
+        "AGENTS.md",
+        "docs/GAMEDEV_GUIDANCE.md",
+        "art/provenance-art92-b.json",
+        "art/provenance-20261117.json",
+        "docs/production/combat-references-arcade-2026-11-17.json"
+      ],
+      "inheritedBlocker": "La référence nommée résout le visage membraneux et son monocle mais les rayons/rubans et la chaîne sortent du cadre ; aucune vue complémentaire exacte de leurs extrémités. Ne pas ajouter de corps humain.",
+      "excludedHistoricalRoutes": [
+        {
+          "url": "https://tcrf.net/Silent_Hill:_Downpour",
+          "reason": "Ancien HTTP 403 ; ni réessai ni miroir consulté."
+        }
+      ],
+      "excludedHistoricalRoutesRetried": false,
+      "conceptOrPrototypeUsed": false,
+      "rejectedAsWrongEdition": [
+        "Boss coupé/restauré, langue et tentacules inutilisés",
+        "Modèle de prototype présenté comme boss commercial",
+        "Corps humain inventé"
+      ],
+      "consultedNewSources": [
+        {
+          "sourceUrl": "https://www.artstation.com/artwork/NeWNb",
+          "sourceNature": "Portfolio potentiel de production",
+          "result": "Enveloppe de connexion/site seulement ; aucun contenu artistique inspectable récupéré. Pas de réessai par API ou route alternative."
+        },
+        {
+          "sourceUrl": "https://www.silenthillmemories.net/sh8/credits_en.htm",
+          "sourceNature": "Transcription secondaire des crédits du jeu",
+          "result": "Crédits consultés pour attribution ; ne fournit pas de contour de la créature."
+        },
+        {
+          "sourceUrl": "https://www.youtube.com/watch?v=tv1eeD83Jto",
+          "sourceNature": "Vidéo tierce intitulée Monocle Man Train Ride dans les résultats indexés",
+          "httpStatus": 200,
+          "playabilityStatus": "ERROR",
+          "result": "Compte terminé, vidéo indisponible ; aucun contenu visuel récupéré, aucun réessai."
+        },
+        {
+          "sourceUrl": "https://www.youtube.com/watch?v=y8mGuhIJ9-g",
+          "title": "Silent Hill Downpour Walkthrough Part 12 - The Devil's Train",
+          "uploader": "HowcastGaming",
+          "published": "2012-03-16T18:00:07-07:00",
+          "durationSeconds": 448,
+          "sourceNature": "Capture de gameplay publiée par un tiers, à l’époque de la sortie commerciale ; pas une publication officielle ni une planche primaire de modèle. L’absence de modification du jeu n’est pas indépendamment certifiée.",
+          "httpStatus": 200,
+          "playabilityStatus": "OK",
+          "sampling": {
+            "nativeCellWidth": 320,
+            "nativeCellHeight": 180,
+            "intervalMs": 5000,
+            "inspectedL2Sheets": [
+              0,
+              1,
+              2
+            ],
+            "inspectedL3Sheets": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "result": "L’apparition nominale à 04:15 coupe le visage à droite ; aucune extrémité complète certifiée. Le pas de cinq secondes n’est pas une lecture continue."
+        },
+        {
+          "sourceUrl": "https://www.youtube.com/watch?v=xkfo7Yw3q3c",
+          "title": "Silent Hill Downpour Gameplay - The \"WTF\" Train Ride",
+          "uploader": "ChknSnatchGrab",
+          "published": "2012-03-18T09:48:35-07:00",
+          "durationSeconds": 172,
+          "sourceNature": "Capture de gameplay tierce montrant le trajet du train de Downpour, distinct des vidéos de boss restauré ; pas une publication officielle. L’absence de modification du jeu n’est pas indépendamment certifiée.",
+          "httpStatus": 200,
+          "playabilityStatus": "OK",
+          "sampling": {
+            "nativeCellWidth": 320,
+            "nativeCellHeight": 180,
+            "intervalMs": 2000,
+            "inspectedL3Sheets": [
+              7,
+              8,
+              9
+            ]
+          },
+          "result": "À 02:44 et 02:46, visage au monocle et rayons discernables ; les attaches/extrémités ne sont pas toutes lisibles dans le tunnel ou au bord du cadre."
+        }
+      ],
+      "nativeReferenceFrames": [
+        {
+          "nominalTimeSeconds": 164,
+          "timecode": "02:44",
+          "sourceUrl": "https://www.youtube.com/watch?v=xkfo7Yw3q3c&t=164s",
+          "sourceSheet": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/chkn-L3-M9.jpg",
+          "sourceSheetSha256": "e3459abbf94209b5eeeeba86748ecd554c3bf9e23522d5790431f7187f18c89d",
+          "frameIndex": 82,
+          "sourceNativeCropXYWH": [
+            320,
+            0,
+            320,
+            180
+          ],
+          "path": "docs/production/references-missing-complement-2026-11-18/monocle-chkn-native-02m44s.png",
+          "sha256": "62b8ee86ba9da8789399ac8462cbc6d8ee48d22ae5b36c92d8cbebfacb6f5f46",
+          "width": 320,
+          "height": 180,
+          "resized": false,
+          "colourAdjusted": false,
+          "pixelsEqualDecodedSourceCrop": true,
+          "observation": "Visage au monocle lumineux visible au fond du tunnel ; appendices et attaches supérieures dépassent ou se perdent dans les limites du cadre, avec premier plan occultant.",
+          "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/monocle-chkn-native-02m44s.png",
+          "byteIdenticalCopy": true
+        },
+        {
+          "nominalTimeSeconds": 166,
+          "timecode": "02:46",
+          "sourceUrl": "https://www.youtube.com/watch?v=xkfo7Yw3q3c&t=166s",
+          "sourceSheet": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/chkn-L3-M9.jpg",
+          "sourceSheetSha256": "e3459abbf94209b5eeeeba86748ecd554c3bf9e23522d5790431f7187f18c89d",
+          "frameIndex": 83,
+          "sourceNativeCropXYWH": [
+            640,
+            0,
+            320,
+            180
+          ],
+          "path": "docs/production/references-missing-complement-2026-11-18/monocle-chkn-native-02m46s.png",
+          "sha256": "cd2fa3dff7288d47d631a69a74d410262fac23aafac95754999effd31477e714",
+          "width": 320,
+          "height": 180,
+          "resized": false,
+          "colourAdjusted": false,
+          "pixelsEqualDecodedSourceCrop": true,
+          "observation": "Vue un peu plus frontale du visage et des rayons ; extrémités des attaches non lisibles dans le tunnel et contre le cadre, donc extérieur complet non certifié.",
+          "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/monocle-chkn-native-02m46s.png",
+          "byteIdenticalCopy": true
+        }
+      ],
+      "acquisition": "Pages publiques normales YouTube et planches de storyboard qu’elles exposent. Aucun flux vidéo, client alternatif, solveur ou route de contournement employé pour ce dossier.",
+      "nativeLimits": "Échantillons natifs 320×180, pas une lecture de chaque image du flux ; aucun agrandissement, correction de luminosité ou restauration. Les temps indiqués sont nominaux selon l’intervalle des storyboards.",
+      "conclusion": {
+        "newEvidence": "Deux nouvelles captures de gameplay permettent de situer l’apparition dans le train commercial ; elles ne résolvent pas le contour complet. Aucune nouvelle planche primaire officielle entière récupérée.",
+        "remainingBlocker": "Extrémités des rayons/rubans/attaches toujours insuffisamment cadrées ou lisibles. La tête seule ne prouve pas le contour de toute l’apparition.",
+        "decision": "Clôturer sans génération ; profil sans image et rôle noncombatant conservés. Aucun humain, boss prototype, attaque ni capacité inventés.",
+        "fidelityCertified": false,
+        "animationClaimed": false,
+        "tests": "Aucun build ou test du jeu. SHA-256 et égalité des pixels des crops natifs vérifiés."
+      },
+      "detailedScratchJournal": {
+        "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/monocle-research-2026-11-18.json",
+        "sha256": "8dd5f8958c5774c6b414f436a422c15f4837d1e19cbc467f504ebff386fe1817",
+        "durableCopy": false,
+        "note": "Journal détaillé conservé à son emplacement original ; les conclusions, sources, limites et les deux pièces retenues sont intégrées ici."
+      },
+      "repositoryMutationMeaning": "Recherche sans modification du jeu, du registre ou des rôles ; seule cette nouvelle documentation autorisée a été ajoutée après clôture.",
+      "documentationFilesAddedAfterResearch": true
+    },
+    {
+      "schemaVersion": 1,
+      "researchDate": "2026-11-18",
+      "characterId": "ascension_the_collector_183",
+      "scope": "Une seule nouvelle piste publique : scène finale officielle Boundaries. Recherche ciblée en lecture seule, sans génération ni modification du dépôt.",
+      "verdict": "reference-entiere-encore-insuffisante",
+      "newPrimaryEvidenceObtained": true,
+      "fullBodyReferenceValidated": false,
+      "generationAttempted": false,
+      "currentRole": {
+        "combatRole": "noncombatant",
+        "identityStatus": "identite-documentee-secondaire",
+        "identityNote": "La source indique aucune mise à mort active montrée; finisher de capture/transport seulement.; Chorégraphie de porte et collecte à prendre dans canon, pas variantes. Le communiqué officiel Konami présente Ascension comme une série interactive dont l’audience influe sur le récit ; cette preuve générale ne confirme ni le nom propre ni le rôle individuel de cette créature, et ne convertit pas une absence de mise à mort décrite en innocence.",
+        "constraints": [
+          "La source indique aucune mise à mort active montrée; finisher de capture/transport seulement.",
+          "Chorégraphie de porte et collecte à prendre dans canon, pas variantes.",
+          "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
+          "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+        ],
+        "catalogueMetadataCaveat": "Les anciens champs catalogue boss/canon-combatant existent dans le roster ; le rôle de référence documenté noncombatant est conservé, sans modification de ces données."
+      },
+      "roleSource": "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/data/roster.json",
+      "readInheritedEvidence": [
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/AGENTS.md",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/docs/GAMEDEV_GUIDANCE.md",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/art/provenance-20261117.json",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/art/provenance-art92-e.json",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/docs/production/combat-references-extended-2026-11-17.json"
+      ],
+      "inheritedBlocker": "Aucun corps entier final attribué et lisible n’avait été récupéré. Le concept obèse voilé, la première conception Luke Starkie et la deuxième version Rodion Vlasov AZqEWe rejetée/inachevée ne sont pas des preuves de forme finale.",
+      "excludedHistoricalRoutes": [
+        "https://silenthill.fandom.com/wiki/The_Collector",
+        "https://x.com/Rodion__Vlasov/status/1826705357269598723"
+      ],
+      "excludedHistoricalRoutesRetried": false,
+      "newRoute": {
+        "sourceUrl": "https://www.youtube.com/watch?v=WiXnd2G_D2I",
+        "title": "BOUNDARIES | Airdate 02/1/24 Scene 3 | SILENT HILL: Ascension",
+        "uploader": "Genvid Entertainment",
+        "nature": "Source primaire : scène de la série publiée par Genvid Entertainment. Le nom individuel Collector n’est pas fourni dans la description officielle récupérée.",
+        "normalPublicWatchHttpStatus": 200,
+        "playabilityStatus": "OK",
+        "durationSeconds": 132,
+        "officialDescriptionNamesCollector": false,
+        "acquisition": "Page publique YouTube et planches de storyboard qu’elle expose. Aucun flux vidéo, client alternatif, solveur ou contournement employé.",
+        "sampling": {
+          "level": 3,
+          "frameWidth": 320,
+          "frameHeight": 180,
+          "frameCount": 68,
+          "columns": 3,
+          "rows": 3,
+          "intervalMs": 2000,
+          "sheetCount": 8
+        },
+        "inspectedNativeSheets": [
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M0.jpg",
+            "sha256": "f253d531b1005b655dc907e4e5353db9ea18af1dcdb351b1ac06edf50f2a14ce",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M1.jpg",
+            "sha256": "1f60e976dcc794c6695d357a26c82205647fd225fb3e05faf86c781ba401e998",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M2.jpg",
+            "sha256": "1eb2b917336cc30d3de946ebfcd975d95e97d25eb8551c9e2f9f3cc17e41eec7",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M3.jpg",
+            "sha256": "d74b12fb1e3326b1de1b27182807c53019cc6b1d68608d9e3fe213c696c65816",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M4.jpg",
+            "sha256": "75263aca45c87b5be6fbd2663679aa13c3b1366caf47c43fabc357f1a30791ff",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M5.jpg",
+            "sha256": "9848fe9332cc9a94802802fc5b773acba9c1dda9872b8d69efa5ca0e1f1b0e5f",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M6.jpg",
+            "sha256": "8a725d4e04c6bde03a95dacd35819ca55e4f039982b5294d29528c0e0e89a723",
+            "durableCopy": false
+          },
+          {
+            "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M7.jpg",
+            "sha256": "f2f14bca39d39263d18a5e5367fa364f2ae39c74966d7e278a6c266287c51307",
+            "durableCopy": false
+          }
+        ],
+        "allEightSheetsVisuallyInspected": true,
+        "relevantNominalTimeRangeSeconds": [
+          22,
+          40
+        ],
+        "timecodePrecision": "Positions nominales d’un échantillonnage storyboard toutes les deux secondes ; aucun horodatage à l’image près ni lecture intégrale du flux vidéo.",
+        "nativeLimits": "Cellules natives de 320×180 pixels. Aucun agrandissement, correction de luminosité/couleur ou restauration. Les plans proches sont tronqués ; les plans éloignés perdent les détails dans l’ombre et la brume.",
+        "metadataFile": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/source-metadata.json",
+        "downloadRecordsFile": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/download-records.json"
+      },
+      "secondaryAttribution": {
+        "sourceUrl": "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters",
+        "retrievedAs": "Extrait indexé du moteur de recherche, réf. turn626688557search6 ; pas la page intégrale.",
+        "substance": "Le guide identifie une apparition du Collector dans Boundaries, vue par Krista, auprès des corps de Toby et Mette Dahl. La scène primaire consultée montre Krista, une créature à appendices multiples et des corps au sol ; correspondance contextuelle, pas cartouche primaire nommant le personnage.",
+        "directOpenResult": "Failed to fetch restricted URL",
+        "directOpenRetried": false,
+        "identityConclusion": "Attribution secondaire maintenue ; ne convertit pas identityStatus en identité primaire confirmée."
+      },
+      "nativeReferenceFrames": [
+        {
+          "nominalTimeSeconds": 24,
+          "timecode": "00:24",
+          "sourceUrl": "https://www.youtube.com/watch?v=WiXnd2G_D2I&t=24s",
+          "sourceSheet": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M1.jpg",
+          "sourceSheetSha256": "1f60e976dcc794c6695d357a26c82205647fd225fb3e05faf86c781ba401e998",
+          "frameIndex": 12,
+          "sourceNativeCropXYWH": [
+            0,
+            180,
+            320,
+            180
+          ],
+          "path": "docs/production/references-missing-complement-2026-11-18/collector-boundaries-native-00m24s.png",
+          "sha256": "e91b12ed242fece4495ba0167a677a06cb66b98041defa72dbb8c713b33c7098",
+          "width": 320,
+          "height": 180,
+          "resized": false,
+          "colourAdjusted": false,
+          "pixelsEqualDecodedSourceCrop": true,
+          "observation": "Vue rapprochée tête/torse et appendices ; extrémités inférieures absentes du cadre.",
+          "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/collector-boundaries-native-00m24s.png",
+          "byteIdenticalCopy": true
+        },
+        {
+          "nominalTimeSeconds": 40,
+          "timecode": "00:40",
+          "sourceUrl": "https://www.youtube.com/watch?v=WiXnd2G_D2I&t=40s",
+          "sourceSheet": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/boundaries-native-L3-M2.jpg",
+          "sourceSheetSha256": "1eb2b917336cc30d3de946ebfcd975d95e97d25eb8551c9e2f9f3cc17e41eec7",
+          "frameIndex": 20,
+          "sourceNativeCropXYWH": [
+            640,
+            0,
+            320,
+            180
+          ],
+          "path": "docs/production/references-missing-complement-2026-11-18/collector-boundaries-native-00m40s.png",
+          "sha256": "b18f059aa036dffca1457ed29482257c0ce672027e65c902fd41d9b919749098",
+          "width": 320,
+          "height": 180,
+          "resized": false,
+          "colourAdjusted": false,
+          "pixelsEqualDecodedSourceCrop": true,
+          "observation": "Silhouette distante visible dans la brume ; une grande partie du corps semble cadrée mais tête, extrémités, contour exact et appuis ne sont pas assez lisibles pour certifier une référence entière.",
+          "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/collector-boundaries-native-00m40s.png",
+          "byteIdenticalCopy": true
+        }
+      ],
+      "conclusion": {
+        "newEvidence": "La piste fournit une vraie apparition de la forme diffusée dans Ascension, utile pour écarter les concepts incompatibles et documenter le contexte.",
+        "remainingBlocker": "Aucune vue récupérée ne montre de manière suffisamment lisible la tête, l’ensemble de la silhouette et les appuis/extrémités pour construire un corps entier fidèle. Le plan nominal 00:40 contient une silhouette distante mais ne résout pas cette exigence.",
+        "decision": "Clôturer cette piste sans génération. Conserver le statut de profil sans image et le rôle noncombatant. Aucune pose offensive, capacité ou combattant autonome ajouté.",
+        "fidelityCertified": false,
+        "animationClaimed": false,
+        "otherMissingProfilesSearched": 0,
+        "tests": "Aucun build ni test du jeu pour cette recherche documentaire. Vérification JSON et des SHA-256 ; neuf extractions natives vérifiées dans le journal initial, deux retenues ici et recopiées à l’identique."
+      },
+      "roleSourceJsonPath": "$[?(@.id == \"ascension_the_collector_183\")].reference",
+      "detailedScratchJournal": {
+        "path": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/collector-research-2026-11-18.json",
+        "sha256": "4126066624138477443f452ec402a09c96dd68bc0096eb6869228ca6503058bb",
+        "durableCopy": false,
+        "note": "Journal détaillé conservé à son emplacement original ; les conclusions, sources, limites et les deux pièces retenues sont intégrées ici."
+      },
+      "repositoryMutationMeaning": "Recherche sans modification du jeu, du registre ou des rôles ; seule cette nouvelle documentation autorisée a été ajoutée après clôture.",
+      "repositoryArtOrRoleMutated": false,
+      "documentationFilesAddedAfterResearch": true
+    }
+  ],
+  "preservation": {
+    "referenceRoleObjectsComparedToBaseline": [
+      {
+        "characterId": "downpour_monocle_man_114",
+        "referenceObjectEqualBaseline": true,
+        "combatRole": "noncombatant",
+        "identityStatus": "non-combattant-version-commerciale"
+      },
+      {
+        "characterId": "ascension_the_collector_183",
+        "referenceObjectEqualBaseline": true,
+        "combatRole": "noncombatant",
+        "identityStatus": "identite-documentee-secondaire"
+      }
+    ],
+    "registryChangedByThisTask": false,
+    "spriteAssetsChangedByThisTask": false,
+    "historicalProvenanceOrLedgerChangedByThisTask": false,
+    "priorThreeProfileBundleChangedByThisTask": false,
+    "prototypeSubstitutedForFinalAppearance": false,
+    "newOffensiveBehaviorAuthored": false,
+    "animationClaimed": false,
+    "oneToOneFidelityCertified": false
+  },
+  "evidenceFiles": [
+    {
+      "characterId": "downpour_monocle_man_114",
+      "path": "docs/production/references-missing-complement-2026-11-18/monocle-chkn-native-02m44s.png",
+      "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/monocle-chkn-native-02m44s.png",
+      "sha256": "62b8ee86ba9da8789399ac8462cbc6d8ee48d22ae5b36c92d8cbebfacb6f5f46",
+      "bytes": 32156,
+      "width": 320,
+      "height": 180,
+      "byteIdenticalCopy": true,
+      "pixelsEqualDecodedSourceCrop": true
+    },
+    {
+      "characterId": "downpour_monocle_man_114",
+      "path": "docs/production/references-missing-complement-2026-11-18/monocle-chkn-native-02m46s.png",
+      "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/monocle/monocle-chkn-native-02m46s.png",
+      "sha256": "cd2fa3dff7288d47d631a69a74d410262fac23aafac95754999effd31477e714",
+      "bytes": 38757,
+      "width": 320,
+      "height": 180,
+      "byteIdenticalCopy": true,
+      "pixelsEqualDecodedSourceCrop": true
+    },
+    {
+      "characterId": "ascension_the_collector_183",
+      "path": "docs/production/references-missing-complement-2026-11-18/collector-boundaries-native-00m24s.png",
+      "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/collector-boundaries-native-00m24s.png",
+      "sha256": "e91b12ed242fece4495ba0167a677a06cb66b98041defa72dbb8c713b33c7098",
+      "bytes": 21643,
+      "width": 320,
+      "height": 180,
+      "byteIdenticalCopy": true,
+      "pixelsEqualDecodedSourceCrop": true
+    },
+    {
+      "characterId": "ascension_the_collector_183",
+      "path": "docs/production/references-missing-complement-2026-11-18/collector-boundaries-native-00m40s.png",
+      "originalScratchPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/final-two/collector/collector-boundaries-native-00m40s.png",
+      "sha256": "b18f059aa036dffca1457ed29482257c0ce672027e65c902fd41d9b919749098",
+      "bytes": 16266,
+      "width": 320,
+      "height": 180,
+      "byteIdenticalCopy": true,
+      "pixelsEqualDecodedSourceCrop": true
+    }
+  ],
+  "verification": {
+    "allFourCopiesByteIdenticalToScratchOriginals": true,
+    "allFourSourceAndDestinationSha256Verified": true,
+    "allFourNativePixelCropsVerified": true,
+    "nativeDimensions": [
+      320,
+      180
+    ],
+    "resized": false,
+    "colourAdjusted": false,
+    "gameTestsRunForDocumentation": false,
+    "notes": "Aucun HTML, player JSON, URL temporaire signée ou planche entière ajouté au dépôt. Les chemins scratch restent seulement comme provenance des pièces et journaux originaux."
+  }
+}

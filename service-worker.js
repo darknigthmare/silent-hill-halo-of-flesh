@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '30f3f0f400106a579b453a5483fe6518727b51f9c7b6fd4ab91c2e1f5900b37c';
+const BITMAP_REVISION = '94b1bb2a8028e632ecbdf47d2e179bfe21a0f80aa92393ab0a2ed5143affece0';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -68,6 +68,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
   "/assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
   "/assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+  "/assets/sprites/downpour_screamer_104.6d78871316ed.png",
   "/assets/sprites/downpour_screamer_104.73dcfd40f467.png",
   "/assets/sprites/downpour_shadow_107.4a43797eb735.png",
   "/assets/sprites/downpour_shadow_107.d39788178ac5.png",
@@ -167,6 +168,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_god_050.f6f8f72ed323.png",
   "/assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
   "/assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+  "/assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
   "/assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",

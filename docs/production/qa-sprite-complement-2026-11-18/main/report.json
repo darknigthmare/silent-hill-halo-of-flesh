@@ -1,0 +1,853 @@
+{
+  "schema": 3,
+  "label": "sprite-complement-20261118",
+  "generatedAt": "2026-11-18T07:13:13.821Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4237\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1130175,
+        "sha256": "6d78871316edd6e632a90550ff1d875c8871658e4a7ef8de615ffe4ae48bd96d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 514759,
+        "sha256": "73dcfd40f4672116c1e7b931ad98890d72e85014dc26bb9303089e6b666b5654"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1734639,
+        "sha256": "cdbe5f8795195420be1706c6af8b6e184b8dc09f497bbe44d966bfae7dc6ce11"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 956088,
+        "sha256": "70857b7708e848c130e9dfff2eaca362e498ae6c738e619924253bb361cbc832"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          71,
+          28,
+          1140,
+          1268
+        ],
+        "expected": [
+          71,
+          28,
+          1140,
+          1268
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          369,
+          293,
+          990,
+          1041
+        ],
+        "expected": [
+          369,
+          293,
+          990,
+          1041
+        ]
+      }
+    },
+    {
+      "name": "downpour_screamer_104 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png"
+        ],
+        "portrait": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_screamer_104 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_screamer_104.73dcfd40f467.png"
+        ],
+        "expected": "assets/sprites/downpour_screamer_104.73dcfd40f467.png"
+      }
+    },
+    {
+      "name": "downpour_screamer_104 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_screamer_104.73dcfd40f467.png"
+        ],
+        "expected": "assets/sprites/downpour_screamer_104.73dcfd40f467.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          176,
+          18,
+          1352,
+          998
+        ],
+        "expected": [
+          176,
+          18,
+          1352,
+          998
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          132,
+          34,
+          1399,
+          1074
+        ],
+        "expected": [
+          132,
+          34,
+          1399,
+          1074
+        ]
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png"
+        ],
+        "portrait": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png"
+        ],
+        "expected": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png"
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png"
+        ],
+        "expected": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png"
+      }
+    },
+    {
+      "name": "downpour_screamer_104/sh3_leonard_wolf_048 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_screamer_104/sh3_leonard_wolf_048 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_screamer_104/sh3_leonard_wolf_048 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_screamer_104",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_leonard_wolf_048",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_screamer_104/sh3_leonard_wolf_048 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+          "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+          "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_screamer_104 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 241.42154408157506,
+          "top": 384.6968634732429,
+          "right": 422.9331199423633,
+          "bottom": 594.3275795647841
+        },
+        "visible": {
+          "left": 242.43181259285956,
+          "top": 385.2019977288851,
+          "right": 422.427985686721,
+          "bottom": 593.9908233943559
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 718.6699815063704,
+          "top": 301.71637920670804,
+          "right": 1071.378206189678,
+          "bottom": 596.3840099547876
+        },
+        "visible": {
+          "left": 720.4558459351466,
+          "top": 302.31166734963347,
+          "right": 1070.4852739752898,
+          "bottom": 594.002857383086
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_screamer_104/sh3_leonard_wolf_048 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_leonard_wolf_048/downpour_screamer_104 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048/downpour_screamer_104 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048/downpour_screamer_104 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_leonard_wolf_048",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_screamer_104",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_leonard_wolf_048/downpour_screamer_104 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 208.62182432790024,
+          "top": 301.71637920670804,
+          "right": 561.3300490112077,
+          "bottom": 596.3840099547876
+        },
+        "visible": {
+          "left": 209.51475654228838,
+          "top": 302.31166734963347,
+          "right": 559.5441845824315,
+          "bottom": 594.002857383086
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_screamer_104 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 857.0669105752148,
+          "top": 384.6968634732429,
+          "right": 1038.578486436003,
+          "bottom": 594.3275795647841
+        },
+        "visible": {
+          "left": 857.5720448308571,
+          "top": 385.2019977288851,
+          "right": 1037.5682179247185,
+          "bottom": 593.9908233943559
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_leonard_wolf_048/downpour_screamer_104 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "a2629a443ca813a426cf33ecccb2399437d3733b42de3c5088f4e84e3fdd997e",
+        "after": "a2629a443ca813a426cf33ecccb2399437d3733b42de3c5088f4e84e3fdd997e"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "e609b3d948a054ffc33a4e777126f1d5dff9017734c65fb92a4b77beab58c8ad",
+        "after": "e609b3d948a054ffc33a4e777126f1d5dff9017734c65fb92a4b77beab58c8ad"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "downpour_screamer_104",
+      "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "width": 1197,
+      "height": 1315,
+      "transparentFraction": 0.7040027190917725,
+      "visibleBounds": [
+        71,
+        28,
+        1140,
+        1268
+      ]
+    },
+    {
+      "id": "downpour_screamer_104",
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8863998840075396,
+      "visibleBounds": [
+        369,
+        293,
+        990,
+        1041
+      ]
+    },
+    {
+      "id": "sh3_leonard_wolf_048",
+      "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7909431457519531,
+      "visibleBounds": [
+        176,
+        18,
+        1352,
+        998
+      ]
+    },
+    {
+      "id": "sh3_leonard_wolf_048",
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "width": 1442,
+      "height": 1091,
+      "transparentFraction": 0.7711664342349649,
+      "visibleBounds": [
+        132,
+        34,
+        1399,
+        1074
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "downpour_screamer_104",
+      "facing": 1,
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "file": "portrait-downpour_screamer_104-right.png"
+    },
+    {
+      "id": "downpour_screamer_104",
+      "facing": -1,
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "file": "portrait-downpour_screamer_104-left.png"
+    },
+    {
+      "id": "sh3_leonard_wolf_048",
+      "facing": 1,
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "file": "portrait-sh3_leonard_wolf_048-right.png"
+    },
+    {
+      "id": "sh3_leonard_wolf_048",
+      "facing": -1,
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "file": "portrait-sh3_leonard_wolf_048-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "downpour_screamer_104",
+        "sh3_leonard_wolf_048"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.4367535076531
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_screamer_104",
+          "slot": 1,
+          "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+          "exterior": {
+            "left": 241.42154408157506,
+            "top": 384.6968634732429,
+            "right": 422.9331199423633,
+            "bottom": 594.3275795647841
+          },
+          "visible": {
+            "left": 242.43181259285956,
+            "top": 385.2019977288851,
+            "right": 422.427985686721,
+            "bottom": 593.9908233943559
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00917660564414291,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+            "args": [
+              -88.58326996197718,
+              -218.23631578947368,
+              206.00760456273764,
+              226.3157894736842
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1197,
+            "height": 1315
+          }
+        },
+        {
+          "id": "sh3_leonard_wolf_048",
+          "slot": 2,
+          "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+          "exterior": {
+            "left": 718.6699815063704,
+            "top": 301.71637920670804,
+            "right": 1071.378206189678,
+            "bottom": 596.3840099547876
+          },
+          "visible": {
+            "left": 720.4558459351466,
+            "top": 302.31166734963347,
+            "right": 1070.4852739752898,
+            "bottom": 594.002857383086
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.002857383086052323,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+            "args": [
+              -163.55357142857142,
+              -303.61773469387754,
+              467.2959183673469,
+              311.53061224489795
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+        "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png"
+      ],
+      "snapshots": [
+        "duel-downpour_screamer_104--sh3_leonard_wolf_048-tick0.png",
+        "duel-downpour_screamer_104--sh3_leonard_wolf_048-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_leonard_wolf_048",
+        "downpour_screamer_104"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.4367535076531
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_leonard_wolf_048",
+          "slot": 1,
+          "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+          "exterior": {
+            "left": 208.62182432790024,
+            "top": 301.71637920670804,
+            "right": 561.3300490112077,
+            "bottom": 596.3840099547876
+          },
+          "visible": {
+            "left": 209.51475654228838,
+            "top": 302.31166734963347,
+            "right": 559.5441845824315,
+            "bottom": 594.002857383086
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.002857383086052323,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+            "args": [
+              -163.55357142857142,
+              -303.61773469387754,
+              467.2959183673469,
+              311.53061224489795
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "downpour_screamer_104",
+          "slot": 2,
+          "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+          "exterior": {
+            "left": 857.0669105752148,
+            "top": 384.6968634732429,
+            "right": 1038.578486436003,
+            "bottom": 594.3275795647841
+          },
+          "visible": {
+            "left": 857.5720448308571,
+            "top": 385.2019977288851,
+            "right": 1037.5682179247185,
+            "bottom": 593.9908233943559
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00917660564414291,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+            "args": [
+              -88.58326996197718,
+              -218.23631578947368,
+              206.00760456273764,
+              226.3157894736842
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1197,
+            "height": 1315
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+        "assets/sprites/downpour_screamer_104.6d78871316ed.png"
+      ],
+      "snapshots": [
+        "duel-sh3_leonard_wolf_048--downpour_screamer_104-tick0.png",
+        "duel-sh3_leonard_wolf_048--downpour_screamer_104-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "a2629a443ca813a426cf33ecccb2399437d3733b42de3c5088f4e84e3fdd997e",
+  "src/sprite-manifest.jsSHA256": "e609b3d948a054ffc33a4e777126f1d5dff9017734c65fb92a4b77beab58c8ad",
+  "version": "0.9.6",
+  "ids": [
+    "downpour_screamer_104",
+    "sh3_leonard_wolf_048"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}
