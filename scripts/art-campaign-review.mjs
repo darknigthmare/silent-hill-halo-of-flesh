@@ -1,6 +1,6 @@
 /** Review later artwork without rewriting the historical ART144 dispositions. */
 import {readFile} from 'node:fs/promises';
-import {readFileSync} from 'node:fs';
+import {readFileSync,readdirSync} from 'node:fs';
 import {resolve,isAbsolute} from 'node:path';
 import {ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-constants.mjs';
 import {hasCombatSprite} from '../src/sprite-usage.js';
@@ -75,6 +75,15 @@ function validDeliveredRaster(id,frame){
   [frame.width,frame.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096);
 }
 
+function waveImportJournals(root){
+ const directory='docs/production';
+ let entries;
+ try{entries=readdirSync(resolve(root,directory),{withFileTypes:true});}
+ catch(error){if(error.code==='ENOENT')return [];throw error;}
+ return entries.filter(entry=>entry.isFile()&&/^sprite-wave[1-9]\d*-imports-\d{4}-\d{2}-\d{2}\.json$/.test(entry.name))
+  .map(entry=>entry.name).sort((a,b)=>a.localeCompare(b,'en',{numeric:true})).map(name=>directory+'/'+name);
+}
+
 /** Later journals add image presence without rewriting an old idle disposition.
  * The November 17 illustrations were explicitly reassigned to selection by the user.
  */
@@ -99,7 +108,7 @@ export function readPurposeDeliveries(root){
  }
  // The independent continuation used a per-import journal and legacy frame indices.
  // Bind the immutable file and digest; the current registry owns the normalized index.
- for(const path of ['docs/production/sprite-continuation-imports-2026-11-17.json','docs/production/sprite-next-imports-2026-11-17.json','docs/production/sprite-suite-imports-2026-11-17.json','docs/production/sprite-following-imports-2026-11-17.json','docs/production/sprite-resume-imports-2026-11-18.json','docs/production/sprite-complement-imports-2026-11-18.json','docs/production/sprite-wave3-imports-2026-11-18.json','docs/production/sprite-wave4-imports-2026-11-18.json','docs/production/sprite-wave5-imports-2026-11-18.json','docs/production/sprite-wave6-imports-2026-11-18.json','docs/production/sprite-wave7-imports-2026-11-18.json','docs/production/sprite-wave8-imports-2026-11-18.json','docs/production/sprite-wave9-imports-2026-11-18.json','docs/production/sprite-wave10-imports-2026-11-18.json','docs/production/sprite-wave11-imports-2026-11-18.json']){
+ for(const path of ['docs/production/sprite-continuation-imports-2026-11-17.json','docs/production/sprite-next-imports-2026-11-17.json','docs/production/sprite-suite-imports-2026-11-17.json','docs/production/sprite-following-imports-2026-11-17.json','docs/production/sprite-resume-imports-2026-11-18.json','docs/production/sprite-complement-imports-2026-11-18.json',...waveImportJournals(root)]){
   let journal;try{journal=JSON.parse(readFileSync(resolve(root,path),'utf8'));}catch(error){if(error.code==='ENOENT')continue;throw error;}
   if(!record(journal)||journal.schema!==1||!Array.isArray(journal.imports))throw Error('Invalid artwork delivery journal '+path);
   for(const row of journal.imports){
