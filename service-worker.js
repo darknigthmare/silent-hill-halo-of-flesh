@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '95376b47b6603c1093e5cca063d64eb46002355023231e11db6addc9cfaa5e7a';
+const BITMAP_REVISION = '82a08ff9811d83bc3cc0717aad902bc1506b4a27d8d76698be847b612fd98fe8';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -10,6 +10,8 @@ const OFFLINE_URL = '/offline.html';
 
 const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_BEGIN
+  "/assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+  "/assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
   "/assets/sprites/arcade_double_head_arcade.43246b06e708.png",
   "/assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
   "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
@@ -32,8 +34,12 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
   "/assets/sprites/ascension_fighter_179.429d47545e50.png",
   "/assets/sprites/ascension_fighter_179.f4cf31409885.png",
+  "/assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+  "/assets/sprites/ascension_snarler_180.88e712963625.png",
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
   "/assets/sprites/ascension_the_immolator_182.627713ebf694.png",
+  "/assets/sprites/ascension_wanderer_178.3da19262874e.png",
+  "/assets/sprites/ascension_wanderer_178.488439c222a8.png",
   "/assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
   "/assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
   "/assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
@@ -97,6 +103,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+  "/assets/sprites/homecoming_schism_089.40895822f98f.png",
   "/assets/sprites/homecoming_schism_089.b94be9905392.png",
   "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
   "/assets/sprites/homecoming_siam_090.88b378486212.png",
@@ -104,6 +111,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+  "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
   "/assets/sprites/origins_demon_084.abac0695168a.png",
   "/assets/sprites/origins_demon_084.c23b0115c82b.png",
@@ -125,6 +133,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
   "/assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
   "/assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+  "/assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
   "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
@@ -173,6 +182,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_god_050.ef8d8f24df0b.png",
   "/assets/sprites/sh3_god_050.f6f8f72ed323.png",
   "/assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+  "/assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
   "/assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
   "/assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
@@ -188,6 +198,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+  "/assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
   "/assets/sprites/sh3_scraper_045.2bfdc425582b.png",
   "/assets/sprites/sh3_scraper_045.827b9a459105.png",
   "/assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
@@ -197,6 +208,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+  "/assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
   "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
   "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
@@ -218,6 +230,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+  "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",

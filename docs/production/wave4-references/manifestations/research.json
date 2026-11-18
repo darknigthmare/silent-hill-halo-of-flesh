@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "baselineCommit": "0da04c7d608aa491e4b0fe6c14d15f56adfaa4f9",
+  "scope": {
+    "profilesReviewed": 3,
+    "selectionCandidatesGenerated": 1,
+    "combatSpritesGenerated": 0,
+    "refusedSubjectsRetried": 0
+  },
+  "profiles": [
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "edition": "Silent Hill 4: The Room (2004)",
+      "role": "noncombatant",
+      "generationAttempted": true,
+      "status": "selection-base-generated",
+      "historical": "ART92 questioned the visible lower termination and use of a human model. The earlier Coberto clip improved mouth/chin visibility, but the shape of a free head and its architectural attachments remained unknown.",
+      "decision": "The represented subject is the hospital manifestation as actually visible from the front. Released-game views and the dated Xbox capture corroborate the face, chin and lateral hair. A selection image can preserve the natural overhead darkness. No geometry beneath the floor, free back of skull, human body or independent combat is claimed.",
+      "nameEvidence": "The official authorised guide refers to the giant head in the hospital room and describes a purely atmospheric function. Eileen Head is the existing catalogue label. It does not assert a separately named boss or exact reuse of the human Eileen mesh.",
+      "roleSource": "https://www.silenthillmemories.net/publications/guides/silent_hill_4_the_official_strategy_guide_piggyback.pdf",
+      "consultedCaptureGalleryThumbnails": 131,
+      "inputs": [
+        {
+          "file": "eileen-xbox-20040621.jpg",
+          "sha256": "6e3c97152cf7f2bf4f2a4cb8b21cde362468351ad2df49252660179963c69204",
+          "bytes": 327153,
+          "dimensions": [
+            640,
+            480
+          ],
+          "sourceUrl": "https://www.silenthillmemories.net/sh4/screens/pics/sh4_screen_040621_12.jpg",
+          "sourceNature": "2004.06.21 Xbox press-gallery screenshot, preserved by Silent Hill Memories",
+          "observation": "Henry stands screen-left. The near-frontal face shows the entire rounded chin, mouth, nose, both side locks and the visible lower boundary near the floor. The left eye is partly obscured. The free crown is outside frame.",
+          "gallery": "https://www.silenthillmemories.net/sh4/screens_en.htm"
+        },
+        {
+          "file": "eileen-retail-08s.png",
+          "sha256": "4ab559bb6365183d0d29d5decaa341b0e3a668f1bc1ba82037836ebc2e0aa035",
+          "bytes": 34401,
+          "dimensions": [
+            240,
+            180
+          ],
+          "sourceUrl": "https://www.youtube.com/watch?v=dgWbYsHMPSw&t=8s",
+          "sourceNature": "Gameplay recording by Fungo for Silent Hill Media, Silent Hill 4: The Room",
+          "observation": "Henry stands at far right. The face, asymmetrical eyes, chin and low hair tips jointly corroborate the display. The overhead area remains dark.",
+          "nominalTimeSeconds": 8,
+          "extraction": "Original-scale player storyboard cell, cropped on its published grid. No enlargement, enhancement or retouching."
+        },
+        {
+          "file": "eileen-retail-14s.png",
+          "sha256": "48735763d4a3b73dec15b73ffb5288006c6bc1dac006d847d4cbe99d992e1404",
+          "bytes": 24188,
+          "dimensions": [
+            320,
+            180
+          ],
+          "sourceUrl": "https://www.youtube.com/watch?v=PjcZphlfJIM&t=14s",
+          "sourceNature": "Gameplay recording by Kyussari, Eileen Head Room Silent Hill 4",
+          "observation": "Henry stands at far left. The upper hair disappears into overhead shade, while the right-hand boundary and front are readable.",
+          "nominalTimeSeconds": 14,
+          "extraction": "Original-scale player storyboard cell, cropped on its published grid. No enlargement, enhancement or retouching."
+        }
+      ],
+      "excluded": "The published fan 360° treatment by FeniXVOID is outside the three generation inputs. It cannot certify unseen mesh geometry.",
+      "generation": {
+        "purpose": "selection-base",
+        "attempts": 1,
+        "status": "candidate-unverified",
+        "sha256": "66bb06b246a64aacfeaa4073184abf98fceb75c0b469e2f99a46fd329cdea226",
+        "bytes": 1528456,
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "visibleBounds": [
+          129,
+          48,
+          1123,
+          1228
+        ],
+        "promptAndOutputJournal": "wave4-manifestations/eileen-attempt.json (scratch checkpoint; the wave generation ledger carries the production copy)."
+      }
+    },
+    {
+      "fighterId": "downpour_wheelman_116",
+      "edition": "Silent Hill: Downpour (2012), released giant final encounter",
+      "role": "stationary-boss",
+      "generationAttempted": false,
+      "status": "incomplete-apparatus-reference",
+      "historical": "Named small image and public model turntable expose the torso and chair but cut lower connections. The model package linked from the turntable was previously unavailable.",
+      "decision": "Two new views of the giant released boss from the catwalk expose the figure and some equipment. Its lower medical support and cable endpoints remain obscured. The smaller seated apparition and concept art do not resolve this geometry.",
+      "sources": [
+        {
+          "file": "wheelman-retail-40s.png",
+          "sha256": "9f098d8b6d104a6a1ee24b5ab040ed68a90ff4efc1150862e1ef9f612bf56538",
+          "bytes": 90423,
+          "dimensions": [
+            320,
+            180
+          ],
+          "sourceUrl": "https://www.youtube.com/watch?v=49hC4BMjwng&t=40s",
+          "sourceNature": "Silent Hill: Downpour final boss gameplay recorded by TrueGaming Network",
+          "observation": "Spotlights reveal the arm, twisted giant figure, chest apparatus and tubes. Foreground service equipment covers the lower support.",
+          "nominalTimeSeconds": 40,
+          "extraction": "Original-scale player storyboard cell, cropped on its published grid. No enlargement, enhancement or retouching."
+        },
+        {
+          "file": "wheelman-retail-54s.png",
+          "sha256": "8995bb2c0942fe935fc41096b63be37eab5c7f39a0731ddfb810b7467972b36b",
+          "bytes": 71687,
+          "dimensions": [
+            320,
+            180
+          ],
+          "sourceUrl": "https://www.youtube.com/watch?v=49hC4BMjwng&t=54s",
+          "sourceNature": "Same published gameplay recording, separate player viewpoint",
+          "observation": "The wider view locates the wheelchair apparatus in the central shaft. Catwalk rails and the shaft edge obscure the lower silhouette.",
+          "nominalTimeSeconds": 54,
+          "extraction": "Original-scale player storyboard cell, cropped on its published grid. No enlargement, enhancement or retouching."
+        }
+      ],
+      "otherLeads": [
+        {
+          "url": "https://www.youtube.com/watch?v=3wPPZn7ajCw",
+          "result": "Xbox One backwards-compatible gameplay adds more arena viewpoints. The periodic storyboard-wide views do not isolate the lower medical base."
+        },
+        {
+          "url": "https://p3dm.ru/files/characters/supernatural/571-wheelman-.html",
+          "result": "The previously cited public model listing returned HTTP 403 on direct access. No model file obtained or alternate access attempted."
+        }
+      ]
+    },
+    {
+      "fighterId": "downpour_monocle_man_114",
+      "edition": "Silent Hill: Downpour (2012), released train apparition",
+      "role": "noncombatant",
+      "generationAttempted": false,
+      "status": "incomplete-exterior-reference",
+      "historical": "Two retail train recordings from the previous complement showed the face and its monocle; terminal radial membranes, chain and mounting remained obscured.",
+      "decision": "A third train recording shows the glowing monocle and a different train-to-chamber viewpoint. The edges and termination still merge with cave scenery. Unused prototype attacks and geometry do not establish the visible shape in the released ride.",
+      "sources": [
+        {
+          "file": "monocle-retail-162s.png",
+          "sha256": "f5dfdb166bacf428e990a1992d8f0034ea94eb1cbb4587fe328ac805ff95ec0a",
+          "bytes": 40644,
+          "dimensions": [
+            320,
+            180
+          ],
+          "sourceUrl": "https://www.youtube.com/watch?v=dDGK6t5f1Ns&t=162s",
+          "sourceNature": "Devil’s Pit train ride as recorded by Nila Gaming, normal game sequence",
+          "observation": "Monocle light, part of the stretched face and extending lines appear in the chamber. Train, cave wall and shadow interrupt the edges and terminal attachments.",
+          "nominalTimeSeconds": 162,
+          "extraction": "Original-scale player storyboard cell, cropped on its published grid. No enlargement, enhancement or retouching."
+        }
+      ],
+      "sampledNominalSeconds": [
+        142,
+        172
+      ],
+      "sampleIntervalSeconds": 2,
+      "previousReview": "docs/production/sprite-complement-reference-research-2026-11-18.json"
+    }
+  ]
+}
