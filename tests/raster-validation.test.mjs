@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {deflateSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
-import {decodePng,auditRaster,crc32,MAX_RASTER_BYTES} from '../scripts/raster-validation.mjs';
+import {decodePng,auditRaster,crc32,MAX_RASTER_BYTES,validateCombatFramePurposes} from '../scripts/raster-validation.mjs';
 import {SPRITES} from '../src/sprite-manifest.js';
 const sig=Buffer.from([137,80,78,71,13,10,26,10]);
 const paeth=(a,b,c)=>{const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c;};
@@ -54,4 +54,29 @@ test('RIFF header without real WebP payload rejected',()=>{const b=Buffer.alloc(
 test('oversized file fails before decode',()=>assert.throws(()=>auditRaster(Buffer.alloc(MAX_RASTER_BYTES+1)),/24 MiB/));
 test('both live candidate files decode and their published alpha bounds match',async()=>{
  for(const asset of Object.values(SPRITES))for(const f of asset.frames){const a=auditRaster(await readFile(new URL('../'+f.path,import.meta.url)));assert.deepEqual(f.visibleBounds,a.visibleBounds);assert.deepEqual(f.alphaBounds,a.alphaBounds);assert.deepEqual(f.framingBounds,a.framingBounds);assert.equal(f.pixelSHA256,a.pixelSHA256);}
+});
+
+
+test('a distinct combat idle retains only exact non-idle historical frames and their original purpose',()=>{
+ const sha256='a'.repeat(64),frame={sha256,purpose:'combat',view:'side-view'};
+ const art={combatView:'side-view-candidate',frames:[frame,{sha256}],clips:{idle:{frames:[0]},walk:{frames:[1]}},retainedLegacyCombatFrames:[{index:1,sha256}]};
+ assert.doesNotThrow(()=>validateCombatFramePurposes(art));
+ for(const edit of [
+   a=>delete a.retainedLegacyCombatFrames,
+   a=>{a.retainedLegacyCombatFrames=[];},
+   a=>{a.retainedLegacyCombatFrames[0].sha256='b'.repeat(64);},
+   a=>{a.retainedLegacyCombatFrames[0].index=2;},
+   a=>{a.retainedLegacyCombatFrames[0].index=0;},
+   a=>{a.retainedLegacyCombatFrames.push(a.retainedLegacyCombatFrames[0]);},
+   a=>{a.clips.idle.frames.push(1);},
+   a=>{delete a.clips.walk;},
+   a=>{a.frames[1].purpose='selection';},
+   a=>{a.frames[1].view='side-view';},
+   a=>{delete a.frames[0].view;},
+   a=>{delete a.combatView;}
+ ]){
+   const changed=structuredClone(art);edit(changed);assert.throws(()=>validateCombatFramePurposes(changed));
+ }
+ const plain=structuredClone(art);delete plain.retainedLegacyCombatFrames;plain.frames[1]={...frame};
+ assert.doesNotThrow(()=>validateCombatFramePurposes(plain));
 });

@@ -209,9 +209,48 @@ class ImportTests(unittest.TestCase):
   module.import_sprite(self.args());im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
   module.import_sprite(self.args('--append','--pose','walk'))
   path=self.root/'art/registry.json';before=path.read_bytes()
-  for action in ['--combat-idle','--selection-only']:
-   with self.subTest(action=action),self.assertRaisesRegex(ValueError,'cannot discard'):module.import_sprite(self.args(action))
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--combat-idle'))
+  with self.assertRaisesRegex(ValueError,'cannot discard'):module.import_sprite(self.args('--selection-only'))
   self.assertEqual(path.read_bytes(),before)
+
+ def test_combat_idle_replaces_only_frame_zero_and_preserves_other_clips(self):
+  module.import_sprite(self.args('--origin','scan'))
+  path=self.root/'art/registry.json'
+  with Image.open(self.image) as image:
+   for index,pose in enumerate(('walk','hurt','ko'),start=1):
+    image.putpixel((130,100),(index,23,72,255));image.save(self.image)
+    module.import_sprite(self.args('--append','--pose',pose,'--origin','scan','--ticks',str(3+index)))
+   before=json.loads(path.read_text())['assets']['a']
+   markers=[{'index':i,'sha256':v['sha256']} for i,v in enumerate(before['frames']) if i]
+   for color in (80,81):
+    image.putpixel((131,100),(color,33,82,255));image.save(self.image)
+    result=module.import_sprite(self.args('--combat-idle','--origin','artist-created'))
+    after=json.loads(path.read_text())['assets']['a']
+    self.assertEqual(after['portrait'],before['portrait'])
+    self.assertEqual(after['selectionProvenance'],module.selection_provenance(before))
+    self.assertEqual(after['frames'][1:],before['frames'][1:])
+    self.assertEqual(after['clips'],before['clips'])
+    self.assertEqual(after['retainedLegacyCombatFrames'],markers)
+    self.assertEqual(after['origin'],'mixed')
+    self.assertEqual(after['frames'][0]['path'],result['path'])
+    self.assertNotEqual(after['frames'][0]['path'],before['frames'][0]['path'])
+    self.assertEqual(result['animatedClips'],0)
+    for frame in before['frames']:
+     self.assertEqual(sha256((self.root/frame['path']).read_bytes()).hexdigest(),frame['sha256'])
+
+ def test_combat_idle_rejects_animated_or_shared_frame_zero_without_writing(self):
+  module.import_sprite(self.args())
+  with Image.open(self.image) as image:
+   image.putpixel((130,100),(41,23,72,255));image.save(self.image)
+   module.import_sprite(self.args('--append','--pose','walk'))
+   image.putpixel((131,100),(51,33,82,255));image.save(self.image)
+  path=self.root/'art/registry.json';original=json.loads(path.read_text())
+  for pose,indices,reason in [('idle',[0,1],'single static idle'),('walk',[0,1],'shared with another clip')]:
+   with self.subTest(pose=pose):
+    registry=json.loads(json.dumps(original));registry['assets']['a']['clips'][pose]['frames']=indices
+    path.write_text(json.dumps(registry));before=path.read_bytes()
+    with self.assertRaisesRegex(ValueError,reason):module.import_sprite(self.args('--combat-idle'))
+    self.assertEqual(path.read_bytes(),before)
 
  def test_separate_combat_cannot_be_demoted_through_its_portrait(self):
   module.import_sprite(self.args('--selection'));im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)

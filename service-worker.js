@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '98de059aece94db3076cf7419087ecb57c64cd4ffa29a55a7670008da9d7f1ad';
+const BITMAP_REVISION = 'b39dbbaa43885e93dbea3eefc49b07c1a1c0487896f7bada6c763e989356d55d';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -38,6 +38,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/ascension_fighter_179.f4cf31409885.png",
   "/assets/sprites/ascension_snarler_180.216c2e6ba960.png",
   "/assets/sprites/ascension_snarler_180.88e712963625.png",
+  "/assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
   "/assets/sprites/ascension_the_collector_183.55a90d583450.png",
   "/assets/sprites/ascension_the_immolator_182.627713ebf694.png",
@@ -86,6 +87,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_shadow_107.4a43797eb735.png",
   "/assets/sprites/downpour_shadow_107.d39788178ac5.png",
   "/assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
+  "/assets/sprites/downpour_void_113.aaad63ad6961.png",
   "/assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
   "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
   "/assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
@@ -101,6 +103,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
   "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
   "/assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+  "/assets/sprites/homecoming_bogeyman_092.fe3495981694.png",
   "/assets/sprites/homecoming_feral_086.d944b0e329cf.png",
   "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
   "/assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
@@ -108,6 +111,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
   "/assets/sprites/homecoming_needler_088.39331afee89d.png",
   "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+  "/assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
@@ -180,6 +184,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+  "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
   "/assets/sprites/sh2_mandarin_026.04d4be93badc.png",
   "/assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
@@ -188,6 +193,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
   "/assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
   "/assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
+  "/assets/sprites/sh3_closer_036.19e033cd6a51.png",
   "/assets/sprites/sh3_closer_036.83102a051acb.png",
   "/assets/sprites/sh3_closer_036.a571dd362666.png",
   "/assets/sprites/sh3_closer_036.e00beefd711f.png",
@@ -195,6 +201,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
   "/assets/sprites/sh3_double_head_040.0ef012666f82.png",
   "/assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+  "/assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
   "/assets/sprites/sh3_double_head_040.a0885231d6ff.png",
   "/assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
   "/assets/sprites/sh3_glutton.90c14e5d4c7d.png",
@@ -261,6 +268,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
   "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+  "/assets/sprites/sh4_tremer_red_064.50aee55d75d4.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
   "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",

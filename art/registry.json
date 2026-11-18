@@ -1426,39 +1426,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
-      "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+      "sourceFile": "exec-92f50978-a54d-4f84-8530-8466193d2255.png",
+      "sourceSHA256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26",
       "sourceDimensions": [
-        1192,
-        1320
+        1143,
+        1376
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat frontal SH3 original, anatomie contrôlée sur deux captures en jeu : deux bras colonnes latéraux, deux jambes sombres centrales et tête allongée. Premier candidat perspectif exclu pour confusion bras/jambe, jamais importé. Pose symétrisée, texture plus rouge et extrémités reconstruites ; direction de présentation et échelle versus, pas de certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+      "notes": "Closer de base de Silent Hill 3, profil gauche. Les bras-colonnes dégagent la vue sur les jambes fines et sombres qui portent le corps. Pose latérale fixe ; marche, blessure et KO hérités conservent leurs propres PNG, calibrations et rendu. Fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
-          "bytes": 1504645,
-          "width": 1192,
-          "height": 1320,
+          "sha256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26",
+          "bytes": 1271818,
+          "width": 1143,
+          "height": 1376,
           "visibleBounds": [
-            164,
-            7,
-            1083,
-            1298
+            142,
+            51,
+            1029,
+            1321
           ],
-          "pixelSHA256": "6f1cd7dcae231817f44954e9e411c4cb0dc0120cc9769fd9d198cec07630ad97",
-          "transparentFraction": 0.6252,
-          "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
-          "facing": 1,
+          "pixelSHA256": "1629a15ff4efbd30ff222c7c7ae96dc01813def5c529b9cb287519f3d0694f5a",
+          "transparentFraction": 0.66465,
+          "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+          "facing": -1,
           "anchor": [
-            0.5,
-            0.985
+            0.51,
+            0.960029
           ],
-          "bodyHeight": 0.97,
-          "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png",
-          "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.94,
+          "sourceFile": "exec-92f50978-a54d-4f84-8530-8466193d2255.png",
+          "sourceSHA256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         },
         {
           "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5",
@@ -1571,7 +1573,33 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat frontal SH3 original, anatomie contrôlée sur deux captures en jeu : deux bras colonnes latéraux, deux jambes sombres centrales et tête allongée. Premier candidat perspectif exclu pour confusion bras/jambe, jamais importé. Pose symétrisée, texture plus rouge et extrémités reconstruites ; direction de présentation et échelle versus, pas de certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+      "selectionProvenance": {
+        "sourceSHA256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "sourceDimensions": [
+          1192,
+          1320
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-ece20177-56c2-468a-948e-f4a84c2e8768.png"
+      },
+      "retainedLegacyCombatFrames": [
+        {
+          "index": 1,
+          "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5"
+        },
+        {
+          "index": 2,
+          "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715"
+        },
+        {
+          "index": 3,
+          "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910"
+        }
+      ],
+      "combatView": "side-view-candidate",
+      "combatNotes": "Closer de base de Silent Hill 3, profil gauche. Les bras-colonnes dégagent la vue sur les jambes fines et sombres qui portent le corps. Pose latérale fixe ; marche, blessure et KO hérités conservent leurs propres PNG, calibrations et rendu. Fidélité non certifiée."
     },
     "sh1_night_flutter_002": {
       "fighterId": "sh1_night_flutter_002",
@@ -2124,39 +2152,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
-      "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+      "sourceFile": "exec-1bb5c7b6-0d7b-459e-9ba0-091fd139fab2.png",
+      "sourceSHA256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
       "sourceDimensions": [
-        1448,
-        1086
+        1774,
+        887
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+      "notes": "Double Head de Silent Hill 3, profil droit sur ses quatre pattes, avant-train bas et museau fendu fermé. La pose de garde se distingue de la silhouette en course du portrait. Marche, blessure et KO hérités restent disponibles avec leurs PNG et calibrations d’origine. Fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
-          "bytes": 1433387,
-          "width": 1448,
-          "height": 1086,
+          "sha256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
+          "bytes": 1419103,
+          "width": 1774,
+          "height": 887,
           "visibleBounds": [
-            50,
-            127,
-            1406,
-            972
+            79,
+            55,
+            1667,
+            824
           ],
-          "pixelSHA256": "cbab4646b87969eba096de4a3595791248179ebfd023f8adc34bb56be54fba2e",
-          "transparentFraction": 0.64678,
-          "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
-          "facing": -1,
+          "pixelSHA256": "f7e2649d36d35c7ce0f8cf350b6474a3a67e3714ff2ae0b1621283e4270db97d",
+          "transparentFraction": 0.60847,
+          "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "facing": 1,
           "anchor": [
-            0.56,
-            0.89503
+            0.44,
+            0.928974
           ],
-          "bodyHeight": 0.78,
-          "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png",
-          "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.955,
+          "sourceFile": "exec-1bb5c7b6-0d7b-459e-9ba0-091fd139fab2.png",
+          "sourceSHA256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         },
         {
           "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90",
@@ -2269,7 +2299,33 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat fixe SH3 original : quatre pattes, un seul cou et une tête fendue en deux mâchoires, pas deux têtes canines séparées. Pose bandée du modèle conservée ; côté opposé et marche non établis, contraste accru. Faibles traces alpha aux bords hors silhouette retenue ; ancrage et échelle de versus, aucune attribution BoM ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+      "selectionProvenance": {
+        "sourceSHA256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "sourceDimensions": [
+          1448,
+          1086
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-20403533-0352-437d-95b5-8c44d4aecba2.png"
+      },
+      "retainedLegacyCombatFrames": [
+        {
+          "index": 1,
+          "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90"
+        },
+        {
+          "index": 2,
+          "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd"
+        },
+        {
+          "index": 3,
+          "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683"
+        }
+      ],
+      "combatView": "side-view-candidate",
+      "combatNotes": "Double Head de Silent Hill 3, profil droit sur ses quatre pattes, avant-train bas et museau fendu fermé. La pose de garde se distingue de la silhouette en course du portrait. Marche, blessure et KO hérités restent disponibles avec leurs PNG et calibrations d’origine. Fidélité non certifiée."
     },
     "sh3_insane_cancer_041": {
       "fighterId": "sh3_insane_cancer_041",
@@ -3396,39 +3452,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
-      "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+      "sourceFile": "exec-624962d5-5550-4252-9629-cf2c6ba4a4e0.png",
+      "sourceSHA256": "50aee55d75d4e4a8c27444f0071e4dd8cc6540c5cff8428313725a531fb20f80",
       "sourceDimensions": [
-        1416,
-        1111
+        2172,
+        724
       ],
       "singleSubjectReviewed": true,
-      "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Tremer SH4 rosé/brun en forme continue incurvée, sans constriction du Blue. Brillance/contraste renforcés ; rampement et explosion absents. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+      "notes": "Forme rouge du Tremer de Silent Hill 4, corps aplati irrégulier et extrémité amincie orientée à gauche. Vue latérale fixe présentée dans l’atelier. Le rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
-          "bytes": 2031661,
-          "width": 1416,
-          "height": 1111,
+          "sha256": "50aee55d75d4e4a8c27444f0071e4dd8cc6540c5cff8428313725a531fb20f80",
+          "bytes": 1874226,
+          "width": 2172,
+          "height": 724,
           "visibleBounds": [
-            14,
-            18,
-            1405,
-            1092
+            73,
+            113,
+            2088,
+            658
           ],
-          "pixelSHA256": "73df881e426c2ac4dde298c240f3c1aa04a58076a85819efe2bd8715828ab226",
-          "transparentFraction": 0.5229,
-          "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
-          "facing": 1,
+          "pixelSHA256": "f6671de8662440fa0ba47ae997ddf036dea0acff00636ac9583249e1cb1c09a1",
+          "transparentFraction": 0.52616,
+          "path": "assets/sprites/sh4_tremer_red_064.50aee55d75d4.png",
+          "facing": -1,
           "anchor": [
-            0.51,
-            0.982
+            0.52,
+            0.90884
           ],
-          "bodyHeight": 0.96,
-          "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png",
-          "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.98,
+          "sourceFile": "exec-624962d5-5550-4252-9629-cf2c6ba4a4e0.png",
+          "sourceSHA256": "50aee55d75d4e4a8c27444f0071e4dd8cc6540c5cff8428313725a531fb20f80",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -3448,7 +3506,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Red Tremer SH4 rosé/brun en forme continue incurvée, sans constriction du Blue. Brillance/contraste renforcés ; rampement et explosion absents. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+      "selectionProvenance": {
+        "sourceSHA256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "sourceDimensions": [
+          1416,
+          1111
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-ed13f86f-32ce-426f-bd59-0d55a08ab4a8.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Forme rouge du Tremer de Silent Hill 4, corps aplati irrégulier et extrémité amincie orientée à gauche. Vue latérale fixe présentée dans l’atelier. Le rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée."
     },
     "sh4_wheelchair_068": {
       "fighterId": "sh4_wheelchair_068",
@@ -5762,39 +5832,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-7bc7c507-77a5-458a-b703-91cbb7c91662.png",
-      "sourceSHA256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+      "sourceFile": "exec-7f3eb064-9be9-4d7a-9da8-2e17675a9f0f.png",
+      "sourceSHA256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2",
       "sourceDimensions": [
-        1254,
-        1254
+        1199,
+        1312
       ],
       "singleSubjectReviewed": true,
-      "notes": "Order Soldier Homecoming2008 entier, variante du rendu à lunettes rondes et long tablier, masques/canisters/tank propres à cette vue. Le tuyau équipé reste un choix de versus, son modèle exact n’est pas établi par la vue source du corps non armé. Dot parasite retiré/cadre élargi par outil image ; aucun transfert d’arme ou pouvoir certifié.",
+      "notes": "Soldat de l’Ordre de Silent Hill: Homecoming, en garde accroupie vers la gauche. Les deux mains tiennent le tuyau vertical devant la tête. L’écart des deux appuis et le dos fléchi raccourcissent la silhouette visible. Pose fixe candidate, fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
-          "bytes": 380212,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2",
+          "bytes": 1575569,
+          "width": 1199,
+          "height": 1312,
           "visibleBounds": [
-            476,
-            333,
-            884,
-            956
+            85,
+            84,
+            1115,
+            1241
           ],
-          "pixelSHA256": "ab714d38de07e5a33b7d8e73f3868004f43f68dbb3f3c70b7ae80e1bb820069e",
-          "transparentFraction": 0.92648,
-          "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
-          "facing": 1,
+          "pixelSHA256": "550ebe2f5a076aa3d84246b26ef1c0d569af3da358f66df81aed6e9aa010f190",
+          "transparentFraction": 0.59909,
+          "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+          "facing": -1,
           "anchor": [
             0.5,
-            0.7623604465709729
+            0.945884
           ],
-          "bodyHeight": 0.49681020733652315,
-          "sourceFile": "exec-7bc7c507-77a5-458a-b703-91cbb7c91662.png",
-          "sourceSHA256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 1.0,
+          "sourceFile": "exec-7f3eb064-9be9-4d7a-9da8-2e17675a9f0f.png",
+          "sourceSHA256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -5814,7 +5886,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Order Soldier Homecoming2008 entier, variante du rendu à lunettes rondes et long tablier, masques/canisters/tank propres à cette vue. Le tuyau équipé reste un choix de versus, son modèle exact n’est pas établi par la vue source du corps non armé. Dot parasite retiré/cadre élargi par outil image ; aucun transfert d’arme ou pouvoir certifié.",
+      "selectionProvenance": {
+        "sourceSHA256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-7bc7c507-77a5-458a-b703-91cbb7c91662.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Soldat de l’Ordre de Silent Hill: Homecoming, en garde accroupie vers la gauche. Les deux mains tiennent le tuyau vertical devant la tête. L’écart des deux appuis et le dos fléchi raccourcissent la silhouette visible. Pose fixe candidate, fidélité non certifiée."
     },
     "downpour_prisoner_juggernaut_110": {
       "fighterId": "downpour_prisoner_juggernaut_110",
@@ -5896,39 +5980,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png",
-      "sourceSHA256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+      "sourceFile": "exec-bdf7056b-da0c-46a9-8f4c-aa7b96073e4e.png",
+      "sourceSHA256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
       "sourceDimensions": [
-        1254,
-        1254
+        2172,
+        724
       ],
       "singleSubjectReviewed": true,
-      "notes": "Lying Figure rampante SH2original2001 entière : torse refermé sans bras libres, deux jambes repliées, tête vers la droite, posture basse composée selon le comportement documenté. BodyHeight est une hauteur équivalente debout du projet, pas la hauteur visible rampante. Surfaces et cycle de propulsion non certifiés ; aucun mélange remake/film.",
+      "notes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
-          "bytes": 459361,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
+          "bytes": 1113904,
+          "width": 2172,
+          "height": 724,
           "visibleBounds": [
-            169,
-            463,
-            1147,
-            878
+            113,
+            109,
+            2092,
+            611
           ],
-          "pixelSHA256": "22f2a82a9c634c30099bfe62c1c01779466a00fc860571fbe8c0c18d047093e8",
-          "transparentFraction": 0.88073,
-          "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
-          "facing": 1,
+          "pixelSHA256": "5a00cb8fe8dae2d4b0d17b6c089bdec34879879c437c602cb7507c322389b46a",
+          "transparentFraction": 0.68542,
+          "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "facing": -1,
           "anchor": [
             0.5,
-            0.7001594896331739
+            0.843923
           ],
-          "bodyHeight": 0.8,
-          "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png",
-          "sourceSHA256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.98,
+          "sourceFile": "exec-bdf7056b-da0c-46a9-8f4c-aa7b96073e4e.png",
+          "sourceSHA256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -5948,7 +6034,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Lying Figure rampante SH2original2001 entière : torse refermé sans bras libres, deux jambes repliées, tête vers la droite, posture basse composée selon le comportement documenté. BodyHeight est une hauteur équivalente debout du projet, pas la hauteur visible rampante. Surfaces et cycle de propulsion non certifiés ; aucun mélange remake/film.",
+      "selectionProvenance": {
+        "sourceSHA256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée."
     },
     "homecoming_scarlet_spider_form_095": {
       "fighterId": "homecoming_scarlet_spider_form_095",
@@ -7721,39 +7819,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-63730073-a2ee-47ea-86d9-23f4ceb1c1d9.png",
-      "sourceSHA256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
+      "sourceFile": "exec-f1b3f218-f914-4041-8178-831c4c3f0984.png",
+      "sourceSHA256": "fe3495981694af330a90ceace555e5bb5d9a1f887edee87fe5f835a01607773b",
       "sourceDimensions": [
-        1254,
-        1254
+        1536,
+        1024
       ],
       "singleSubjectReviewed": true,
-      "notes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "notes": "Bogeyman de Homecoming, casque et lame de la rencontre scénarisée. La pose latérale déploie les jambes sous la tunique, avec la lame abaissée derrière vers la gauche. Vue consultable dans l’atelier, duel désactivé pour cette édition. Fidélité non certifiée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
-          "bytes": 773338,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "fe3495981694af330a90ceace555e5bb5d9a1f887edee87fe5f835a01607773b",
+          "bytes": 1655886,
+          "width": 1536,
+          "height": 1024,
           "visibleBounds": [
-            57,
-            141,
-            972,
-            1192
+            85,
+            22,
+            1411,
+            998
           ],
-          "pixelSHA256": "e29e92c2eba4fbc07c1448c5072123d25e4751f7ee6aed261a2bb2ee2084cdd6",
-          "transparentFraction": 0.82676,
-          "path": "assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+          "pixelSHA256": "ec8fb5e050a723eb956953da09259aa04adfb2ed1540c22f37c2b6ab3822fdd1",
+          "transparentFraction": 0.77248,
+          "path": "assets/sprites/homecoming_bogeyman_092.fe3495981694.png",
           "facing": 1,
           "anchor": [
-            0.410287,
-            0.950558
+            0.744,
+            0.974609
           ],
-          "bodyHeight": 0.838118,
-          "sourceFile": "exec-63730073-a2ee-47ea-86d9-23f4ceb1c1d9.png",
-          "sourceSHA256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.974,
+          "sourceFile": "exec-f1b3f218-f914-4041-8178-831c4c3f0984.png",
+          "sourceSHA256": "fe3495981694af330a90ceace555e5bb5d9a1f887edee87fe5f835a01607773b",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -7773,7 +7873,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "selectionProvenance": {
+        "sourceSHA256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-63730073-a2ee-47ea-86d9-23f4ceb1c1d9.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Bogeyman de Homecoming, casque et lame de la rencontre scénarisée. La pose latérale déploie les jambes sous la tunique, avec la lame abaissée derrière vers la gauche. Vue consultable dans l’atelier, duel désactivé pour cette édition. Fidélité non certifiée."
     },
     "shattered_raw_shock_feminine_100": {
       "fighterId": "shattered_raw_shock_feminine_100",
@@ -13649,6 +13761,104 @@
         ],
         "origin": "conversation-image-generation",
         "sourceFile": "exec-c80b5031-50d9-4c5b-89aa-40a9c5c0b50b.png"
+      },
+      "animatedClips": 0
+    },
+    "downpour_void_113": {
+      "fighterId": "downpour_void_113",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "void-selection.png",
+      "sourceSHA256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Le Void de Downpour dans le restaurant Devil’s Pitstop : point noir et rais cramoisis de la distorsion. Le cadrage limite le rayonnement visible, sans lui donner de corps ni de limite canonique. Danger environnemental, sélection seule. La réfraction animée du décor et son étendue variable ne sont pas reproduites par cette image fixe.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [],
+      "portrait": {
+        "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+        "sha256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+        "bytes": 1561784,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1,
+        "visibleBounds": [
+          149,
+          67,
+          1061,
+          1102
+        ],
+        "pixelSHA256": "41ecbb33ad7b41d47c0a82bcd6a6df8dfe9150982d5a275467cd16f42a3d6b8b",
+        "sourceFile": "void-selection.png",
+        "sourceSHA256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "clips": {},
+      "combatView": "selection-only",
+      "selectionNotes": "Le Void de Downpour dans le restaurant Devil’s Pitstop : point noir et rais cramoisis de la distorsion. Le cadrage limite le rayonnement visible, sans lui donner de corps ni de limite canonique. Danger environnemental, sélection seule. La réfraction animée du décor et son étendue variable ne sont pas reproduites par cette image fixe.",
+      "selectionProvenance": {
+        "sourceSHA256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "void-selection.png"
+      },
+      "animatedClips": 0
+    },
+    "ascension_stilledalen_stinger_184": {
+      "fighterId": "ascension_stilledalen_stinger_184",
+      "source": "ascension",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0721bee3-5366-4c99-b3ec-203ff49b7c67.png",
+      "sourceSHA256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+      "sourceDimensions": [
+        978,
+        1609
+      ],
+      "singleSubjectReviewed": true,
+      "notes": "Apparition du Stinger à Stilledalen en Norvège dans Silent Hill: Ascension. Les grandes ailes restent repliées comme dans BREADCRUMBS à 52 secondes. La silhouette documente cette rencontre régionale, dont le statut de variante indépendante reste incertain. Sélection seule, rôle non vérifié et fidélité non certifiée.",
+      "mirrorPolicy": "presentation-only; opposite side not independently generated",
+      "frames": [],
+      "portrait": {
+        "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+        "sha256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+        "bytes": 948712,
+        "width": 978,
+        "height": 1609,
+        "facing": 1,
+        "visibleBounds": [
+          221,
+          37,
+          734,
+          1579
+        ],
+        "pixelSHA256": "6d5f23ae2d2df1664ec8923f508e3f09df0168bd8f7094e7e956f3ca1e8c5913",
+        "sourceFile": "exec-0721bee3-5366-4c99-b3ec-203ff49b7c67.png",
+        "sourceSHA256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "clips": {},
+      "combatView": "selection-only",
+      "selectionNotes": "Apparition du Stinger à Stilledalen en Norvège dans Silent Hill: Ascension. Les grandes ailes restent repliées comme dans BREADCRUMBS à 52 secondes. La silhouette documente cette rencontre régionale, dont le statut de variante indépendante reste incertain. Sélection seule, rôle non vérifié et fidélité non certifiée.",
+      "selectionProvenance": {
+        "sourceSHA256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+        "sourceDimensions": [
+          978,
+          1609
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-0721bee3-5366-4c99-b3ec-203ff49b7c67.png"
       },
       "animatedClips": 0
     }

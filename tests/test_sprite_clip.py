@@ -37,6 +37,27 @@ class ClipTests(unittest.TestCase):
         actual=json.loads(self.path.read_text())['assets']['a'];self.assertEqual(actual['animatedClips'],1)
         self.assertEqual(actual['frames'],self.asset['frames']);self.assertEqual(actual['fidelity'],'unverified')
         self.assertEqual(raws,[(self.root/f['path']).read_bytes() for f in actual['frames']])
+    def test_retained_motion_frames_remain_outside_idle_and_used_by_a_motion_clip(self):
+        self.asset['combatView']='side-view-candidate'
+        self.asset['frames'][0].update(purpose='combat',view='side-view')
+        self.asset['retainedLegacyCombatFrames']=[dict(index=1,sha256=self.asset['frames'][1]['sha256'])]
+        self.asset['clips']['walk']=dict(frames=[1],ticksPerFrame=1,loop=False)
+        self.path.write_text(json.dumps({'schema':1,'assets':{'a':self.asset}}))
+        before=self.path.read_bytes()
+        def packet(pose,frames,ticks=1):
+            clips=json.loads(self.path.read_text())['assets']['a']['clips']
+            return dict(self.packet,pose=pose,previousClip=clips.get(pose),
+                        clip=dict(frames=frames,ticksPerFrame=ticks,loop=False))
+        for pose,frames,reason in [('idle',[1],'side-view idle'),('walk',[0],'needs a non-idle clip')]:
+            with self.subTest(pose=pose),self.assertRaisesRegex(ValueError,reason):
+                self.apply(packet(pose,frames),apply=True,pose_reviewed=True)
+            self.assertEqual(self.path.read_bytes(),before)
+        self.assertTrue(self.apply(packet('walk',[1],5),apply=True,pose_reviewed=True)['applied'])
+        self.assertTrue(self.apply(packet('guard',[1]),apply=True,pose_reviewed=True)['applied'])
+        self.assertTrue(self.apply(packet('walk',[0]),apply=True,pose_reviewed=True)['applied'])
+        actual=json.loads(self.path.read_text())['assets']['a']
+        self.assertEqual(actual['frames'],self.asset['frames'])
+        self.assertEqual(actual['retainedLegacyCombatFrames'],self.asset['retainedLegacyCombatFrames'])
     def test_old_export_cannot_overwrite_a_new_timeline(self):
         self.apply(apply=True,pose_reviewed=True);before=self.path.read_bytes()
         with self.assertRaisesRegex(ValueError,'Stale'):self.apply(apply=True,pose_reviewed=True)

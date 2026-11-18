@@ -1,0 +1,47 @@
+{
+  "schema": "silent-hill-source-review/1",
+  "fighterId": "downpour_monocle_man_114",
+  "edition": "Silent Hill: Downpour (2012), final train apparition",
+  "role": "noncombatant",
+  "result": "incomplete-source",
+  "generationAttempts": 0,
+  "newGameFiles": [],
+  "historicalContext": "Three earlier retail recordings identify the face and illuminated monocle. The membrane narrows into rails and chains near the image boundaries. Its installed extent remained unresolved.",
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=iD8Vc9ktLGI&t=4640s",
+      "observation": "New playthrough of the Devil’s Train sequence. At nominal 4640 seconds the light and center of the membrane are recognizable from the dialogue and scene. At this 320×180 native sample the upper and right attachments fade into fog and stone, and the train obscures the lower region.",
+      "path": "docs/production/wave6-references/downpour/monocle-retail-train-4640s.png",
+      "sha256": "fd06e221ba1ab04f3b04e7d80e7686619afd4b3a165fb62a0300653bd6936cf0",
+      "nativeCellDimensions": [
+        320,
+        180
+      ],
+      "sourceSheet": 51,
+      "sourceCell": 5,
+      "sourceIntervalSeconds": 10,
+      "cropXYXY": [
+        640,
+        180,
+        960,
+        360
+      ],
+      "sheetSha256": "e220adcc8998e776066cf1e173b446ccb180fb9a8c862adc0a2c745f92f67ddd"
+    },
+    {
+      "url": "https://tcrf.tiago.zip/wiki/Silent_Hill-3a_Downpour",
+      "primaryWork": "Firsthand game-file analysis published by The Cutting Room Floor; text available through web index.",
+      "asset": "11_DEP_RIDE01_AI.XXX\\char_jp_boss.Meshes.char_jp_boss",
+      "observation": "The asset study explicitly identifies the head as used in retail; other elements of the stored mesh, including tongue and tentacles, belong to the cut encounter. The file name establishes identity, not the shape of the mounting. The linked model image was not available to inspect. Direct access to mirror returned HTTP 403; original page also unavailable. No geometry from the cut encounter was substituted."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh8/arts_creatures_en.htm",
+      "observation": "Named concept and render index inspected. It identifies other released creatures and contains no named whole-view Monocle Man."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh8/creatures/monocle_man.png",
+      "observation": "The existing 300×300 bestiary image shows the face and radiating faded membrane, the ocular light and some joins with the rail system. The outer metal-and-chain branches cross the frame. None of the new usable frames establishes where all visible parts end."
+    }
+  ],
+  "decision": "No independently bounded full visible head-and-mounting depiction established. No selection or combat generated. The unused boss fight does not change the noncombatant role."
+}

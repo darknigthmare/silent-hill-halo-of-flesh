@@ -213,23 +213,30 @@ def import_sprite(args: argparse.Namespace) -> dict:
     if args.combat_idle or args.selection_only:
         if not current or not current.get('portrait'):
             raise ValueError('Import a selection portrait first with --selection.')
+    if args.selection_only:
         if len(current.get('frames', [])) > 1 or set(current.get('clips', {})) - {'idle'}:
             raise ValueError('This action cannot discard existing combat poses or animated frames.')
-    if args.selection_only:
         if current.get('combatView') == 'side-view-candidate':
             raise ValueError('A separate side-view combat image cannot be reclassified through its portrait.')
         if meta['sha256'] != current['portrait']['sha256'] or any(f['sha256'] != current['portrait']['sha256'] for f in current['frames']):
             raise ValueError('Selection-only reclassification requires the exact existing shared portrait PNG.')
+    if args.combat_idle and (current['frames'] or current['clips']):
+        clips = current['clips']
+        if not current['frames'] or clips.get('idle', {}).get('frames') != [0]:
+            raise ValueError('Combat idle replacement requires a single static idle at frame 0.')
+        if any(0 in clip['frames'] for name, clip in clips.items() if name != 'idle'):
+            raise ValueError('Combat idle replacement cannot change frame 0 shared with another clip.')
     if not current and args.pose != 'idle' or args.replace and args.pose != 'idle':
         raise ValueError('The first frame of an asset must be idle.')
     weapon_pixels = None
     inspected_weapon_pixels = {}
     if args.fighter == WEAPON_IDLE_OWNER and args.source == WEAPON_IDLE_SOURCE and not (args.selection or args.selection_only):
         weapon_pixels = []
-        if args.append:
+        if args.append or args.combat_idle:
             # Old registry pixel hashes are only caches, not authoring evidence.
-            # Recheck every retained image against its digest before appending.
-            for prior in current['frames']:
+            # Recheck every retained image against its digest.
+            retained = current['frames'] if args.append else current['frames'][1:]
+            for prior in retained:
                 if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
                     raise ValueError('Invalid registered weapon raster path.')
                 previous_meta = inspect_image(root / prior['path'])
@@ -237,15 +244,18 @@ def import_sprite(args: argparse.Namespace) -> dict:
                     raise ValueError('Registered weapon image no longer matches its digest.')
                 weapon_pixels.append(previous_meta['pixelSHA256'])
                 inspected_weapon_pixels[prior['path']] = previous_meta['pixelSHA256']
-        weapon_pixels.append(meta['pixelSHA256'])
+        if args.combat_idle:
+            weapon_pixels.insert(0, meta['pixelSHA256'])
+        else:
+            weapon_pixels.append(meta['pixelSHA256'])
     known_pixels = {f['path']: f['pixelSHA256'] for art in registry['assets'].values() for f in art['frames'] if f.get('pixelSHA256')}
     for ident, art in registry['assets'].items():
         references = [(f, 'combat') for f in art['frames']]
         if art.get('portrait'):
             references.append((art['portrait'], 'selection'))
-        for prior, purpose in references:
+        for index, (prior, purpose) in enumerate(references):
             if ident == args.fighter:
-                if args.selection_only or args.replace or args.selection and purpose == 'selection' or args.combat_idle and purpose == 'combat':
+                if args.selection_only or args.replace or args.selection and purpose == 'selection' or args.combat_idle and purpose == 'combat' and index == 0:
                     continue
             if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', prior['path']):
                 raise ValueError('Invalid registered raster path.')
@@ -286,9 +296,23 @@ def import_sprite(args: argparse.Namespace) -> dict:
         asset.setdefault('selectionNotes', asset.get('notes', ''))
         asset['selectionProvenance'] = selection_provenance(asset)
         frame.update(purpose='combat', view='side-view')
-        asset.update(frames=[frame], clips={'idle': {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}},
+        retained = asset['frames'][1:]
+        if asset.get('combatView') != 'side-view-candidate' and retained:
+            legacy = [{'index': index, 'sha256': prior['sha256']}
+                      for index, prior in enumerate(retained, start=1)
+                      if 'purpose' not in prior and 'view' not in prior]
+            if legacy:
+                asset['retainedLegacyCombatFrames'] = legacy
+        old_origin = asset['origin']
+        origins = {args.origin} | {prior.get('origin', old_origin) for prior in retained}
+        origin = next(iter(origins)) if len(origins) == 1 else 'mixed'
+        if origin != old_origin:
+            for prior in retained:
+                prior.setdefault('origin', old_origin)
+        asset['clips']['idle'] = {'frames': [0], 'ticksPerFrame': args.ticks, 'loop': args.loop}
+        asset.update(frames=[frame, *retained],
                      combatView='side-view-candidate', combatNotes=args.note, notes=args.note,
-                     origin=args.origin, sourceFile=source.name, sourceSHA256=meta['sha256'],
+                     origin=origin, sourceFile=source.name, sourceSHA256=meta['sha256'],
                      sourceDimensions=[meta['width'], meta['height']])
     elif args.append:
         asset = current
@@ -375,7 +399,7 @@ def parser() -> argparse.ArgumentParser:
     actions.add_argument('--replace', action='store_true')
     actions.add_argument('--selection', action='store_true', help='Import only the selection portrait; preserve any existing combat frames and clips.')
     actions.add_argument('--selection-only', action='store_true', help='Reclassify an exact existing shared portrait/idle as selection only; preserve its PNG and portrait metadata.')
-    actions.add_argument('--combat-idle', action='store_true', help='Install a distinct side-view combat idle, preserving the existing selection portrait; refuses to discard multiple poses.')
+    actions.add_argument('--combat-idle', action='store_true', help='Install a distinct side-view idle at frame 0, preserving the portrait and other poses. An animated or shared idle cannot be replaced.')
     p.add_argument('--note', default='Image individuelle importée; fidélité et animation à valider visuellement.')
     p.add_argument('--dry-run', action='store_true')
     return p

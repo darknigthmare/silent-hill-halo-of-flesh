@@ -42,6 +42,15 @@ def validate_clip(asset: dict, pose: str, clip: dict, root: Path | None = None) 
     if base_pose in PRESENTATION_KEYS and clip['loop']:
         raise ValueError('Presentations must play once; looping is refused')
     normalized = dict(frames=list(frames), ticksPerFrame=ticks, frameTicks=list(durations), loop=clip['loop'])
+    if asset.get('retainedLegacyCombatFrames'):
+        # Replacing this timeline must preserve the build's historical motion-frame contract.
+        proposed = {**asset['clips'], pose: normalized}
+        retained = {marker['index'] for marker in asset['retainedLegacyCombatFrames']}
+        if retained.intersection(proposed['idle']['frames']):
+            raise ValueError('A retained historical motion frame cannot be used as a side-view idle.')
+        motion = {index for key, timeline in proposed.items() if key != 'idle' for index in timeline['frames']}
+        if not retained.issubset(motion):
+            raise ValueError('Every retained historical motion frame needs a non-idle clip.')
     importer.validate_weapon_clips(asset, pose=pose, clip=normalized)
     return normalized
 

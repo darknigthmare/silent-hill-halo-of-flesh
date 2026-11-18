@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve,relative} from 'node:path';
 import {ROSTER,VERSION} from '../src/data.js';
-import {auditRaster,MAX_RASTER_BYTES} from './raster-validation.mjs';
+import {auditRaster,MAX_RASTER_BYTES,validateCombatFramePurposes} from './raster-validation.mjs';
 import {validateClip,presentationClipCoverage} from '../src/sprite-clips.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {spriteUsage} from '../src/sprite-usage.js';
@@ -22,6 +22,7 @@ for(const [id,art] of Object.entries(registry.assets)){
   if(art.combatView!==undefined&&!selectionOnly&&!sideView)fail('unsupported combat view status '+id);
   if(!Array.isArray(art.frames)||art.frames.length>256||!art.clips||typeof art.clips!=='object'||Array.isArray(art.clips))fail('invalid frames/clips '+id);
   if(selectionOnly?(art.frames.length||Object.keys(art.clips).length):(!art.frames.length||!art.clips.idle))fail('frames/idle inconsistent with artwork purpose '+id);
+  try{validateCombatFramePurposes(art);}catch(error){fail(id+' '+error.message);}
   for(const [i,frame] of [...art.frames,art.portrait].entries()){
     if(!frame||!/^assets\/sprites\/[a-z0-9_.-]+\.(?:png|webp)$/.test(frame.path))fail('unsafe raster path '+id);
     const path=resolve(root,frame.path);if(relative(root,path).startsWith('..'))fail('outside source root');
@@ -40,7 +41,6 @@ for(const [id,art] of Object.entries(registry.assets)){
     if(!frame.path.includes(sha.slice(0,12)))fail('unversioned asset filename '+frame.path);
     if(frame.facing!==undefined&&![-1,1].includes(frame.facing))fail('invalid native facing '+id);
     if(i<art.frames.length){
-      if(frame.purpose==='selection'||sideView&&(frame.purpose!=='combat'||frame.view!=='side-view'))fail('selection portrait cannot be a side-view combat frame '+id);
       if(!origins.has(frame.origin??art.origin))fail('missing frame provenance '+id);
       if(![-1,1].includes(frame.facing)||!Array.isArray(frame.anchor)||frame.anchor.length!==2||!frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>1)fail('invalid anchor/scale '+id);
       if(signatures.has(sha)&&signatures.get(sha)!==id)fail('cross-profile raster clone '+id);
