@@ -9,7 +9,7 @@ const ALLOWED = new Set(Object.values(KEYS));
 const BACKUP = ':backup';
 const MAX_BYTES = 2_000_000;
 const badKeys = new Set(['__proto__','prototype','constructor']);
-const modes = new Set(['versus','arcade','boss','ritual','chronicle','chronicles','training','archive']);
+const modes = new Set(['versus','arcade','boss','ritual','chronicle','chronicles','tournament','story','training','archive']);
 export const plain = value => !!value && typeof value==='object' && !Array.isArray(value) &&
   [Object.prototype,null].includes(Object.getPrototypeOf(value));
 const text = (value, n=240) => typeof value==='string' && value.length<=n;
@@ -46,7 +46,7 @@ export function validateEntry(key, value) {
   if(key===KEYS.controls) return value.schema===1 && Array.isArray(value.players) && value.players.length===2 &&
     value.players.every(p=>plain(p)&&Object.values(p).every(v=>text(v,32))) &&
     Number.isFinite(value.deadzone)&&value.deadzone>=.15&&value.deadzone<=.65;
-  if(key===KEYS.run) return value.schema===1 && ['arcade','boss','ritual','chronicle'].includes(value.mode) &&
+  if(key===KEYS.run) return value.schema===1 && ['arcade','boss','ritual','chronicle','tournament','story'].includes(value.mode) &&
     text(value.id,180)&&text(value.playerId,180)&&ids(value.queue)&&value.queue.length>0&&ids(value.stages)&&value.stages.length>0&&
     Number.isSafeInteger(value.index)&&value.index>=0&&value.index<value.queue.length&&count(value.wins)&&
     ['ready','won','lost','complete'].includes(value.status)&&plain(value.rules)&&Array.isArray(value.results);
