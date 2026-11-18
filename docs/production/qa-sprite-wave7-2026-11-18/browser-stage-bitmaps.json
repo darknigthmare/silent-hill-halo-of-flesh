@@ -1,0 +1,105 @@
+{
+  "version": "0.9.6",
+  "build": "dist",
+  "checks": [
+    {
+      "name": "source HTTP server ready",
+      "passed": true
+    },
+    {
+      "name": "FightEngine waits for all pending stage files",
+      "passed": true
+    },
+    {
+      "name": "engine commits only with every current actor and decor frame ready",
+      "passed": true
+    },
+    {
+      "name": "combat canvas paints actual stage cache images",
+      "passed": true
+    },
+    {
+      "name": "failed pause retry preserves old paused engine and decoded pinned decor",
+      "passed": true
+    },
+    {
+      "name": "successful retry replaces engine and closes pause only after readiness",
+      "passed": true
+    },
+    {
+      "name": "the new intro publishes its unpaused button state immediately",
+      "passed": true
+    },
+    {
+      "name": "successful retry clears the obsolete loading error before stable capture",
+      "passed": true
+    },
+    {
+      "name": "HTTP stage failure blocks even explicit actor diagnostic mode",
+      "passed": true
+    },
+    {
+      "name": "failed loading preserves selection and persistent checkpoint",
+      "passed": true
+    },
+    {
+      "name": "retry after the real HTTP failure starts successfully",
+      "passed": true
+    },
+    {
+      "name": "retry issues a new stage request",
+      "passed": true
+    },
+    {
+      "name": "a newer memory warning survives the successful loading commit",
+      "passed": true
+    },
+    {
+      "name": "selection change cancels pending combat without constructing an engine",
+      "passed": true
+    },
+    {
+      "name": "selection cancellation restores the previous empty asset leases",
+      "passed": true
+    },
+    {
+      "name": "menu cancellation invalidates loading and does not resurrect its leases",
+      "passed": true
+    },
+    {
+      "name": "no unhandled browser exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    "ready.png"
+  ],
+  "fixtures": [
+    "Opaque 4×4 test PNGs and a manifest are injected only in Playwright HTTP routes. No production scenery or visual fidelity is claimed.",
+    "A failed pause retry and a newer storage warning are injected to verify recovery without changing production files."
+  ],
+  "output": "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/tests/http-stage-bitmaps",
+  "browser": "153.0.8010.0",
+  "recoveryBeforeFirstFrame": {
+    "frame": 0,
+    "paused": false,
+    "button": "PAUSE",
+    "status": ""
+  },
+  "recoveryAfterFirstFrames": {
+    "frame": 3,
+    "paused": false,
+    "button": "PAUSE",
+    "events": []
+  },
+  "readyCapture": {
+    "phase": "fight",
+    "frame": 156,
+    "paused": false,
+    "button": "PAUSE",
+    "dialogs": 0,
+    "status": ""
+  },
+  "passed": true
+}

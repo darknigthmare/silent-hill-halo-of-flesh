@@ -1,0 +1,66 @@
+{
+  "stageId": "lakeside_amusement",
+  "source": "Silent Hill, original PlayStation release (1999), Cybil encounter on the merry-go-round at Lakeside Amusement Park",
+  "chronicle": "fog_of_alessa",
+  "officialGuide": {
+    "name": "Silent Hill · The Official Strategy Guide, Piggyback authorised collection, printed page 120",
+    "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_1_official_strategy_guide_piggyback.pdf#page=120",
+    "captures": [
+      {
+        "file": "guide120-horses.jpg",
+        "figure": 7,
+        "sha256": "566842c4f3cb64477f291420d8d2fc7e6f7ad3f9bb8f8b26ed978b058a509375"
+      },
+      {
+        "file": "guide120-platform.jpg",
+        "figure": 6,
+        "sha256": "970eef3249c63ea2cef9fcef47069930bb40a66a6fa19592dce4477edf98f760"
+      },
+      {
+        "file": "guide120-rail.jpg",
+        "figure": 4,
+        "sha256": "a8b5a306dfae5922ce19426f49efa1215f6556e90b2b2a5ee2c8de540ce90df5"
+      }
+    ]
+  },
+  "observed": "Pale rigid mounted horses, narrow vertical supports, dark exterior safety rail and ochre radial-segment deck in torchlight.",
+  "adapted": "Original game screenshots are low-resolution and printed with a green cast. Relative spacings and height for a side-view duel, horse decor detail, supplemental lighting and the apparent camera travel are interpretations. The handlebar, Cybil, Harry and the wheelchair are omitted. Timing of original ride rotation and its complete geometry are not established.",
+  "outputs": {
+    "plate": {
+      "frame": {
+        "path": "assets/stages/lakeside_amusement.platform.e002db685c30.png",
+        "sha256": "e002db685c30f7364f230dc8c4ca78987c8eebd57e6d1cabfe579027e9a419f3",
+        "bytes": 1929001,
+        "width": 1672,
+        "height": 941
+      },
+      "generator": "image_gen",
+      "requestFile": "exec-374adce4-8a95-403e-b4c3-8f69dc626a72.png",
+      "exactPrompt": "Wide horizontal 16:9 opaque videogame stage background plate for a side-view duel. Reconstruct the merry-go-round as seen from ON the platform during the Cybil encounter in the original 1999 PlayStation Silent Hill. All three attached cropped screenshots from the original game's authorised guide are visual references for the stage palette, floor panel joints, fittings, distant horses and outer guardrail. Render the empty environment only in the restrained textured 3D style of this specific game, dry warm worn brown-ochre deck made of wedge-shaped panels separated by dark circumferential and radial seams, gently curving away in perspective; fine dark metal railing along the far side; pale grey old painted wooden carousel horse figures (rigid small pointed ears, carved mane, raised forelegs) and slender spiral bronze mounting poles in the middle distance. Far beyond the rail is unlit darkness. Gameplay side-on camera looks slightly down from the outer edge of the same deck. The arc of the farther ride crosses from left to right at about 54% canvas height, straight unobstructed playable platform is visible in entire lower third, strong but soft warm flashlight spill makes the lower ochre floor and two or three middle-distance horses readable against cool near-black shadow. Subdued late-1990s survival horror game texture, coherent contact shadows. Keep all close foreground horses and poles OUT of this plate (one closer horse will be composited separately). Do not include figures, wheelchair, logos, interface, signs, letters, numbers, panel borders, generic carnival arch, Ferris wheel, modern remake embellishments or a canopy showcase. No blood. The wide stage should have readable details, not a featureless blackout.",
+      "references": [
+        "guide120-horses.jpg",
+        "guide120-platform.jpg",
+        "guide120-rail.jpg"
+      ],
+      "alpha": "RGB"
+    },
+    "horse": {
+      "frame": {
+        "path": "assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+        "sha256": "d72b181aab335cd763ac5000852460d954302d0605a0004dd32b8f3381a7a4cf",
+        "bytes": 1553449,
+        "width": 1024,
+        "height": 1536
+      },
+      "generator": "image_gen",
+      "requestFile": "exec-59a565ca-bd6c-446b-9cd7-ec55813dfad7.png",
+      "exactPrompt": "Isolated side-view game art of ONE stationary sculpted wooden merry-go-round horse attached to ONE continuous vertical spiral brass/ochre pole for an independent parallax layer in a muted late-1990s survival horror scene. Original Silent Hill 1999 PlayStation Cybil merry-go-round is the source, as seen in the three supplied guide screenshot crops. Pale ash-grey painted wood, grey mane carved in short waves, simple worn dark saddle and tack, natural horse proportions, slightly raised neck, forelegs raised, hind legs extended downward in leaping carousel posture, pose fixed on the pole, never alive. Side profile facing LEFT, entire subject viewed slightly from above, same camera height as this ride's far rail. Restrained PS1-era textured game-prop aesthetic, faceted forms, worn muted paint and soft warm falloff from a low light. Pole runs up through the saddle, extends straight upward above the horse to the top canvas edge and ends below the body at a small brown metal mounting foot; its foot and tail must be fully visible. The horse fills the horizontal width with a little margin. Real alpha transparent background, no floor or floating cast shadow, no people or riders, no vignette, no scenery, no other carousel pieces, no text, no magenta chroma key, no signage, no new ornate gold trim, no gore. Portrait-ish canvas to allow sufficient mounting pole above and below the horse.",
+      "references": [
+        "guide120-horses.jpg",
+        "guide120-platform.jpg",
+        "guide120-rail.jpg"
+      ],
+      "alpha": "RGBA"
+    }
+  }
+}

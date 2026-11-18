@@ -54,7 +54,7 @@ async function loaded(page, index) {
 }
 
 function launchBrowser() {
-  return chromium.launch({ headless: true, executablePath: process.env.QA_BROWSER_EXECUTABLE || undefined });
+  return chromium.launch({ headless: true, executablePath: process.env.QA_BROWSER_EXECUTABLE || undefined, args: ['--disable-accelerated-2d-canvas'] });
 }
 
 let browser, server;

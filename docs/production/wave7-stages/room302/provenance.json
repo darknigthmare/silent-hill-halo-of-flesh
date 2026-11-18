@@ -1,0 +1,156 @@
+{
+  "stageId": "room_302",
+  "source": "sh4",
+  "scene": "room302-first-entry-door",
+  "name": "Silent Hill 4: The Room — première entrée de l’appartement 302",
+  "baseline": "a0f319d",
+  "limits": [
+    "Adaptation large du premier passage pour une arène latérale. Le plan canonique combine vue rapprochée et transitions de caméra. La profondeur, l’ouverture de la voie de combat, la disposition précise des chaînes et les dimensions des meubles sont interprétées.",
+    "Chaise isolée à l’extrême droite. Le modèle exact du siège et des traverses, partiellement occultés dans le guide, reste approximatif. Le premier plan de décor est prévu avant les deux combattants pour préserver leur lisibilité.",
+    "Deux illustrations fixes. Aucun objet interactif, effet de hantise, changement de collision ou mouvement ajouté."
+  ],
+  "references": [
+    {
+      "id": "EXT12_REF_ROOM_302_ROOM_2_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+      "sha256": "8adb1e87b977a9f283627e0434b534ade0f9423564c50cd97608dae9a5f4cf7d",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sourceRecord": "docs/production/research/extended.json",
+      "type": "Original game screenshot, independent capture hosted by Silent Hill Memories.",
+      "file": "docs/production/wave7-stages/room302/01_front_door.jpg",
+      "evidence": "La porte d’entrée fermée, ses chaînes et plaques, le plafonnier rond, le retour de cloison, le réfrigérateur et les placards sont visibles ensemble."
+    },
+    {
+      "id": "EXT12_REF_ROOM_302_ROOM_3_20261101",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg",
+      "sha256": "ce56c431acd454c00b079fe6183c6199da5dd09873244e34bc9cd0c8f4781e59",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sourceRecord": "docs/production/research/extended.json",
+      "type": "Original game screenshot, independent capture hosted by Silent Hill Memories.",
+      "file": "docs/production/wave7-stages/room302/01_memo_01_first_letter.jpg",
+      "evidence": "Vue rapprochée des ancrages et du seuil pendant le premier passage. Le mémo posé au sol ne figure pas sur le fond d’arène."
+    },
+    {
+      "id": "PIGGYBACK_SH4_2004_P30_ROOM302",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_4_the_official_strategy_guide_piggyback.pdf#page=30",
+      "sha256": "5ed054869e5d828ea54ec726e4d09241582b7443be8c259d5fa17a2a34aa53dc",
+      "dimensions": [
+        735,
+        498
+      ],
+      "sourceSha256": "2022eaefcd62a6050ff523d48dcab75826d496d869635b487699a00f117d70ed",
+      "type": "Screenshot reproduced in the official Konami / Piggyback strategy guide, printed page 30. Cropped directly from the embedded scan, no resizing or enhancement.",
+      "sourceRasterDimensions": [
+        747,
+        1058
+      ],
+      "sourceCropXYXY": [
+        8,
+        502,
+        743,
+        1000
+      ],
+      "file": "docs/production/wave7-stages/room302/piggyback-p30-room302.png",
+      "evidence": "La vue large montre des chaises en bois à dossier ajouré devant la porte et la cuisine. La table masque une partie de leurs pieds ; les traverses basses et le profil des quatre pieds dans la nouvelle illustration restent une interprétation."
+    }
+  ],
+  "layers": [
+    {
+      "id": "entrance",
+      "stageId": "room_302",
+      "layer": "background",
+      "path": "assets/stages/room_302.entrance.6535cc934c6c.png",
+      "sha256": "6535cc934c6cb9a7c5b8a5e277f8ba4f5edf7ef7625c15b2df4c53e133efe3eb",
+      "bytes": 2371319,
+      "width": 1672,
+      "height": 941,
+      "channels": "RGB",
+      "alpha": {
+        "range": [
+          255,
+          255
+        ],
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1573352,
+        "boundsAt128": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "cornerValues": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "referenceIds": [
+        "EXT12_REF_ROOM_302_ROOM_2_20261101",
+        "PIGGYBACK_SH4_2004_P30_ROOM302"
+      ],
+      "prompt": "Create one original finished 16:9 widescreen fighting-game stage background plate, opaque, 1536x864 if possible, no characters. The game location is Henry Townshend's apartment 302, South Ashfield Heights, Silent Hill 4: The Room (2004), front entrance seen from the dining area after the initial nightmare, before any hauntings. Use the attached original game screenshot of the entrance and cropped Piggyback strategy guide p30 as exact environment references. Three-quarter-on but close to frontal view, with vertically straight door frames and horizontal floor contact for a two-fighter side-view game. Art direction: a quietly oppressive, convincingly lived-in early-2000s apartment in restrained warm greys, dirty beige and dark brown, rendered with subtle PS2-era game texture and atmospheric lighting. Composition priorities: clearly legible closed pale panelled front door just left of the frame centre, multiple heavy dark iron chains stretched across the door from plates fixed to its frame and sides. This is one door with several crossing chains, not hanging chains elsewhere. One modest round flush ceiling light glows above it. At the far left a second unchained interior panelled door. To the right of the entrance a narrow wall return and modest old cream two-door refrigerator with top freezer, cupboards above it, short cream square-tiled backsplash and plain base drawers, all matching the reference. No legible writing, no sign, no pasted-over letters. Pull the camera back only enough to adapt the location for a game arena: the lower 35 percent is a quiet unobstructed continuous dark, matte grey-brown floor with subtle worn texture, sufficient space visually for two full-length actors. Keep both extreme lower corners free of close furniture so a separate chair layer can be placed there. Do not paint the dining set into this plate. Lit enough to see chains, cabinet geometry and floor without crushing shadow detail. One continuous apartment interior, no people, figures, creatures, faces, blood, weapons, chains from ceiling, supernatural effects, outside views, signage, vignettes, film borders, panels, HUD, lettering, captions or watermark. Fill the entire wide canvas with this single image.",
+      "transparentBackground": false,
+      "origin": "conversation-image-generation",
+      "originalFile": "generated_images/exec-ece1078d-1426-4485-9adb-e7c898b126f2.png",
+      "nativeBytesPreserved": true
+    },
+    {
+      "id": "chair",
+      "stageId": "room_302",
+      "layer": "foreground",
+      "path": "assets/stages/room_302.chair.739650b60353.png",
+      "sha256": "739650b60353c4cd098a0bbd47e7a0df511a0e7bf37efdfcc593e460f727c888",
+      "bytes": 1657025,
+      "width": 1024,
+      "height": 1536,
+      "channels": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fullyTransparentPixels": 897418,
+        "fullyOpaquePixels": 0,
+        "boundsAt128": [
+          72,
+          18,
+          952,
+          1528
+        ],
+        "cornerValues": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rect": [
+        0.876,
+        0.67,
+        0.12,
+        0.32
+      ],
+      "referenceIds": [
+        "PIGGYBACK_SH4_2004_P30_ROOM302"
+      ],
+      "prompt": "Produce one pre-rendered environment prop sprite for the exact kitchen in Henry Townshend's apartment 302, Silent Hill 4: The Room (2004). A single used, straight-backed dark brown wooden ladder-back dining chair seen from the rear and slightly to its LEFT, with softly worn square wooden posts rising a little above the wide horizontal wooden rails. Use the modest utilitarian dark wood chair visible in the foreground of the supplied screenshot cropped from the official strategy guide, page 30; do not include its table or any other chair. Plain wooden square dark seat; four slender straight square-section legs and restrained lower cross stretchers. Reproduce the simple boxy proportions and two broad horizontal slats visibly separated by air beneath the top rail. Camera about seat-to-chest height looking slightly down, so the seat is partly visible through and to the left of the back. Strong legible dark silhouette, a soft warm grey highlight from above and left picking up the worn back edges; muted amber grey and dark brown midtones with plausible weathered PS2-era texture, not glossy. In the game this will be a small peripheral foreground object placed along the far right edge of a fight scene. Keep every edge of the COMPLETE single chair on canvas with a tight transparent margin, seat and all four feet included. Transparent alpha background, clear alpha through slats, beneath seat, and between the legs. Do not paint a floor, contact shadow, background, mat, stage, text, border, icon, second view, or extra object. The requested image is only one environment prop.",
+      "transparentBackground": true,
+      "origin": "conversation-image-generation",
+      "originalFile": "generated_images/exec-8737c142-31f2-46bb-ba07-b68a410ff6d8.png",
+      "nativeBytesPreserved": true
+    }
+  ]
+}

@@ -59,7 +59,19 @@ test('new SHf and Wii rooms retain exact distinct phases, no unsupported fixture
  assert.equal(stageSpace(stage('dark_shrine')),'exterior');assert.equal(stageSpace(stage('nightmare_school')),'exterior');assert.match(stage('hinako_home').referencePolicy.terrainPresentation.name,/PLANCHER/);assert.match(stage('shimizu_residence').referencePolicy.terrainPresentation.name,/TATAMI/);assert.ok(!stage('hinako_home').props.includes('tatami'));assert.ok(!stage('hinako_home').props.includes('roots'));assert.ok(!stage('corrupted_ebisugaoka').props.includes('roots'));assert.ok(stage('corrupted_ebisugaoka').referenceTracks.some(t=>t.key==='rootBorder'));assert.match(stage('school_shf').reference.locationNote,/personnel/);assert.ok(!stage('nightmare_hospital_sm').props.includes('beds'));assert.ok(!stage('nightmare_mall_sm').props.includes('escalator'));assert.equal(Object.keys(materials).length,14);assert.deepEqual(STAGE_TERRAINS,materials);
 });
 
-test('renderer forwards match projection to all scenery while leaving galleries ambient and all six replacement bitmaps masked',()=>{
+test('renderer keeps gallery motion ambient and masks only matching raster rooms from result compositions',()=>{
  const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,163);
- const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');assert.equal(replaced.length,4);assert.equal(replaced.flatMap(s=>s.referenceTracks).length,5);assert.ok(!replaced.some(s=>recipes.some(i=>i.entityId===s.id)));
+ const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');
+ const original=['midwich','alchemilla','brookhaven_roof','lakeview'].map(stage);
+ assert.ok(original.every(s=>replaced.includes(s)));
+ assert.equal(original.flatMap(s=>s.referenceTracks).length,5);
+ for(const id of ['woodside','shopping_mall']){
+  const room=stage(id),art=STAGE_BITMAPS[id];
+  assert.ok(art?.scene);assert.notEqual(art.scene,room.referencePolicy.sceneId);
+  assert.equal(stageBitmapFor(room),null);
+ }
+ const parallax=['lakeside_amusement','room_302','riverside_motel'].map(stage);
+ assert.ok(parallax.every(s=>replaced.includes(s)&&stageBitmapFor(s).layers.some(layer=>layer.parallaxX>0)));
+ assert.equal(parallax.flatMap(s=>s.referenceTracks).length,6);
+ assert.ok(!replaced.some(s=>recipes.some(i=>i.entityId===s.id)));
 });
