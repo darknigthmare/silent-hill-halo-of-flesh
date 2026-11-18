@@ -6,7 +6,8 @@ import {resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {hasCombatSprite} from '../src/sprite-usage.js';
-import {VERSION,ROSTER,createCombatProfile} from '../src/data.js';
+import {VERSION,ROSTER,CHRONICLES,createCombatProfile} from '../src/data.js';
+import {chronicleEncounterPlan} from '../src/run-progress.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-sprites');await mkdir(out,{recursive:true});
 const report={version:VERSION,kind:'real HTTP raster and offline checks',checks:[],errors:[],captures:[],fixtures:['saved arcade checkpoint for non-mutation assertion; no completed campaign simulated as play']};
 const artCount=Object.keys(SPRITES).length;
@@ -46,7 +47,17 @@ try{
  await page.check('#artDiagnostic');await page.click('#launch');await page.waitForFunction(()=>!!__HALO_QA__.engine);assert('engine diagnostic is an explicit opt-in',await page.evaluate(()=>__HALO_QA__.engine.config.artDiagnostic));
  // A valid checkpoint fixture must survive a rejected new run unchanged.
  const saved=await page.evaluate(async()=>{const {createRun}=await import('/src/run-progress.js');const r=createRun({mode:'arcade',playerId:'film_red_pyramid_film_175',seed:19});const text=JSON.stringify(r);localStorage.setItem('sh-halo-of-flesh-run-v1',text);return text;});
- await page.goto(base+'/modules/unified-versus.html?qa=1&preset=boss');await page.click('#launch');await page.waitForFunction(()=>!document.querySelector('#launch').disabled);assert('whole-run art gate preserves existing checkpoint byte-for-byte',await page.evaluate(()=>localStorage.getItem('sh-halo-of-flesh-run-v1'))===saved);
+ const route=CHRONICLES.find(route=>{
+  const {queue}=chronicleEncounterPlan(route.id);
+  return hasCombatSprite(SPRITES[queue[0]])&&queue.slice(1).some(id=>!hasCombatSprite(SPRITES[id]));
+ });
+ assert('an authored run starts with available combat art and lacks a later opponent sprite',!!route);
+ report.fixtures.push('Whole-run check uses authored encounters from '+route.id);
+ await page.goto(base+'/modules/unified-versus.html?qa=1&preset=chronicle&route='+encodeURIComponent(route.id)+'&p1=film_red_pyramid_film_175');
+ await page.click('#launch');
+ await page.waitForFunction(()=>document.querySelector('#spriteLaunchStatus').textContent.includes('Sprites à produire'));
+ assert('whole-run art gate preserves existing checkpoint byte-for-byte',await page.evaluate(saved=>
+  !__HALO_QA__.engine&&!__HALO_QA__.run&&localStorage.getItem('sh-halo-of-flesh-run-v1')===saved,saved));
  await page.goto(base+'/modules/sprite-workshop.html');assert('workshop reports the actual illustrated fraction',(await page.locator('#coverage').textContent()).includes(`${artCount} / 230`));
  const readyPages=[],registeredIds=[];
  for(let n=0;n<Math.max(1,Math.ceil(artCount/18));n++){
