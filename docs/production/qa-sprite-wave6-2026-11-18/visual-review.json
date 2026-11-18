@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "baselineCommit": "318b8856ab8f0c8e18d2e25a066bc8dbad505748",
+  "reports": [
+    {
+      "report": "core/report.json",
+      "sha256": "4a34b43fce518288f70279d0842d3d6cb708fdf86c26fb31180da9c0a541ddd3",
+      "checks": 75,
+      "duels": 4,
+      "portraits": 8,
+      "workshopOrientations": 0,
+      "passed": true
+    },
+    {
+      "report": "arcade-selection/report.json",
+      "sha256": "08a9d5046efe91b27bf943ee0f017704999831ee427d060ca243967762f76210",
+      "checks": 11,
+      "duels": 0,
+      "portraits": 2,
+      "workshopOrientations": 0,
+      "passed": true
+    },
+    {
+      "report": "core-workshop/report.json",
+      "sha256": "c1a63bc9fd34b665da1c8a4e71dc88f4119654d1901ce487b04dee9615ad6f6a",
+      "checks": 9,
+      "duels": 0,
+      "portraits": 0,
+      "workshopOrientations": 2,
+      "passed": true
+    },
+    {
+      "report": "additional/report.json",
+      "sha256": "c2d4b2b66314354bbfa6ed4dcd4bdebe00a4c1d123387457521a6613c062890f",
+      "checks": 99,
+      "duels": 4,
+      "portraits": 8,
+      "workshopOrientations": 0,
+      "passed": true
+    },
+    {
+      "report": "selection/report.json",
+      "sha256": "5999bc088cba72a2c52844a58d2e5083fa7b876e0fd5d5f64167aecfec8ef159",
+      "checks": 20,
+      "duels": 0,
+      "portraits": 4,
+      "workshopOrientations": 0,
+      "passed": true
+    },
+    {
+      "report": "additional-workshop/report.json",
+      "sha256": "2bf134f1fa73e1fe8f06dcdac9fdc39d3039136cf6c979c4a5723e38e56a7ed5",
+      "checks": 28,
+      "duels": 0,
+      "portraits": 0,
+      "workshopOrientations": 6,
+      "passed": true
+    },
+    {
+      "report": "role-check.json",
+      "sha256": "4e0a6af1e9a234bc28d5544c9f1c60337611e19579d09510290f1cc85a5c08d1",
+      "checks": 9,
+      "duels": 0,
+      "portraits": 0,
+      "workshopOrientations": 0,
+      "passed": true
+    }
+  ],
+  "totalChecks": 251,
+  "totalDuels": 8,
+  "totalPortraits": 22,
+  "totalWorkshopOrientations": 8,
+  "renderReview": [
+    "Les deux inversions de chaque duel ont été inspectées au tick 120. Le Creeper reste au ras du sol, Ariel porte son poids sur les mains et Jimmy flotte au-dessus du sol. Chez Mumbler, les griffes proches de la caméra descendent légèrement plus bas que le pied en appui, dans les deux inversions.",
+    "Le soldat en garde accroupie tient son tuyau à deux mains. La Lying Figure rampante reste basse, la jambe arrière étendue. Chez le Closer, les jambes sombres restent visibles entre les deux bras-colonnes, et le Double Head garde une tête à mâchoire fendue, quatre pattes et le dos bandé. Les figures des huit duels sont orientées vers leur adversaire, sans contour coupé ni halo de fond visible.",
+    "En sélection, le Greedy Worm apparaît de front dans un fort raccourci, le Void conserve ses rayons progressifs et le Stinger de Stilledalen présente ses ailes repliées. Les deux orientations ont été inspectées dans le moteur du projet.",
+    "Dans Chromium, les Tremer bleu et rouge et le Bogeyman de Homecoming utilisent leur nouvelle vue autonome dans les deux orientations de l’atelier. La Doll de Downpour conserve son image historique après le refus de génération. Les quatre fiches rejettent la préparation de duel en modes ordinaire et diagnostic.",
+    "La lame du Bogeyman reste entièrement visible au zoom par défaut de 100 %. À 150 %, la pointe dépasse du canevas de 15,6 pixels, conformément au grossissement d’inspection. Les témoins finaux utilisent 200 % pour les Tremer et 150 % pour la Doll."
+  ],
+  "selectionOnlyIds": [
+    "arcade_greedy_worm_arcade_119",
+    "downpour_void_113",
+    "ascension_stilledalen_stinger_184"
+  ],
+  "preservation": {
+    "baselineCommit": "318b8856ab8f0c8e18d2e25a066bc8dbad505748",
+    "identicalHistoricalPNGs": 282,
+    "identicalHistoricalPortraits": 184,
+    "unchangedRoster": true,
+    "importHashesVerified": 14,
+    "preservedMotionFramesById": {
+      "sh3_double_head_040": 3,
+      "sh3_closer_036": 3
+    }
+  },
+  "scope": "Les nouveaux dessins sont fixes. Ces contrôles ne mesurent ni l’animation source, ni la fidélité 1:1. Les 251 contrôles spécifiques ci-dessus sont indépendants des suites globales Chromium et npm."
+}
