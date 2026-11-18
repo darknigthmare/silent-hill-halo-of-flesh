@@ -126,7 +126,7 @@ test('continuation reader binds the two explicit purpose journals and ignores un
  await assert.rejects(readArtContinuation(root),/Invalid exact artwork delivery/);
 });
 
-for(const journalName of ['sprite-continuation-imports-2026-11-17.json','sprite-next-imports-2026-11-17.json','sprite-suite-imports-2026-11-17.json','sprite-following-imports-2026-11-17.json'])
+for(const journalName of ['sprite-continuation-imports-2026-11-17.json','sprite-next-imports-2026-11-17.json','sprite-suite-imports-2026-11-17.json','sprite-following-imports-2026-11-17.json','sprite-resume-imports-2026-11-18.json'])
 test(`${journalName} resolves archived blockers by exact bytes after combat index normalization`,async t=>{
  let originalRow;
  const {root,candidate}=await continuationFixture(t,({row,fragments,candidate})=>{

@@ -5100,50 +5100,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
-    "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+    "sourceFile": "exec-37ef628f-793e-4ce9-9886-1fa22f327730.png",
+    "sourceSHA256": "827b9a459105e6f48d02096bbb8584e4dc553d3c79e1490138c97a65459b5c6e",
     "sourceDimensions": [
       1435,
       1096
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Scraper SH3 bas, avant-bras rouges et deux lames courtes croisées indépendantes ; pas Missionary. Couronne/tête, rouge et contraste à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Scraper — SH3 original : garde basse orientée vers la droite, tête couverte, avant-bras rouges et deux lames courtes indépendantes entièrement visibles. Sélection précédente conservée. Vue latérale composée depuis une référence frontale ; détails fins, angle et appuis à comparer. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation ou fidélité 1:1 certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
-        "bytes": 762624,
+        "sha256": "827b9a459105e6f48d02096bbb8584e4dc553d3c79e1490138c97a65459b5c6e",
+        "bytes": 1039171,
         "width": 1435,
         "height": 1096,
         "visibleBounds": [
-          380,
-          22,
-          1046,
-          1078
+          183,
+          26,
+          1256,
+          1075
         ],
-        "pixelSHA256": "ff9baddbba14af97a9c82546ec7ae166ce8c6dcaafa5e94843107f946a9b7db6",
-        "transparentFraction": 0.76568,
-        "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+        "pixelSHA256": "cb1a6e6ab1cffbbb1e1477181697fc903b56a65bd474fcf5bddf28a2ae906be3",
+        "transparentFraction": 0.7341,
+        "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.98266
+          0.45,
+          0.98
         ],
         "bodyHeight": 0.96,
-        "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png",
-        "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+        "sourceFile": "exec-37ef628f-793e-4ce9-9886-1fa22f327730.png",
+        "sourceSHA256": "827b9a459105e6f48d02096bbb8584e4dc553d3c79e1490138c97a65459b5c6e",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          37,
           0,
-          1387,
-          1081
+          0,
+          1373,
+          1080
         ],
         "framingBounds": [
-          372,
-          17,
-          1048,
-          1081
+          174,
+          21,
+          1259,
+          1080
         ]
       }
     ],
@@ -5184,7 +5186,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Scraper SH3 bas, avant-bras rouges et deux lames courtes croisées indépendantes ; pas Missionary. Couronne/tête, rouge et contraste à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9",
+      "sourceDimensions": [
+        1435,
+        1096
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-a4fb9ce9-e882-4c51-b2b0-3deffefa33ba.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Scraper — SH3 original : garde basse orientée vers la droite, tête couverte, avant-bras rouges et deux lames courtes indépendantes entièrement visibles. Sélection précédente conservée. Vue latérale composée depuis une référence frontale ; détails fins, angle et appuis à comparer. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation ou fidélité 1:1 certifiée."
   },
   "sh3_missionary_047": {
     "fighterId": "sh3_missionary_047",
@@ -5574,50 +5588,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
-    "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+    "sourceFile": "exec-aa4f14eb-3720-49cb-b579-fe8af3899295.png",
+    "sourceSHA256": "845daa5b3742a95dc4499eb16cb9a47d44719e5838c473b62ea0364e4cab5780",
     "sourceDimensions": [
-      1161,
+      1160,
       1355
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Richard Victim 19 SH4, chemise à carreaux, genou levé, tuyau courbé propre ; pas de pistolet ou identité Jimmy empruntée. Flottement, contact et temporalité non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Richard Braintree — Victim 19, SH4 original : vue latérale droite, chemise à carreaux et tuyau courbé entier. Garde suspendue, genoux fléchis et deux chaussures visibles. Portrait précédent conservé. Pose composée depuis le modèle source ; flottement, détails fins et côté opposé non certifiés 1:1. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
-        "bytes": 826091,
-        "width": 1161,
+        "sha256": "845daa5b3742a95dc4499eb16cb9a47d44719e5838c473b62ea0364e4cab5780",
+        "bytes": 830380,
+        "width": 1160,
         "height": 1355,
         "visibleBounds": [
-          208,
-          40,
-          879,
-          1315
+          274,
+          54,
+          956,
+          1303
         ],
-        "pixelSHA256": "0a55656e2916bd112745c6f7ab3e87e035d970f86a716861641a2b27e5a4adf9",
-        "transparentFraction": 0.77828,
-        "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
-        "facing": -1,
+        "pixelSHA256": "61f406a996dbca2a64d075192f6897366e655e3c9bb5a0bf737f91f85fa03eb3",
+        "transparentFraction": 0.78974,
+        "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+        "facing": 1,
         "anchor": [
-          0.56,
+          0.43,
           1
         ],
         "bodyHeight": 0.94,
-        "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png",
-        "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+        "sourceFile": "exec-aa4f14eb-3720-49cb-b579-fe8af3899295.png",
+        "sourceSHA256": "845daa5b3742a95dc4499eb16cb9a47d44719e5838c473b62ea0364e4cab5780",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          29,
-          17,
-          1141,
-          1325
+          75,
+          23,
+          1114,
+          1321
         ],
         "framingBounds": [
-          203,
-          29,
-          887,
-          1325
+          273,
+          48,
+          959,
+          1307
         ]
       }
     ],
@@ -5658,7 +5674,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Richard Victim 19 SH4, chemise à carreaux, genou levé, tuyau courbé propre ; pas de pistolet ou identité Jimmy empruntée. Flottement, contact et temporalité non mesurés. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69",
+      "sourceDimensions": [
+        1161,
+        1355
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-eb9a15b1-2c6b-4c36-9ce9-fa59eddaef48.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Richard Braintree — Victim 19, SH4 original : vue latérale droite, chemise à carreaux et tuyau courbé entier. Garde suspendue, genoux fléchis et deux chaussures visibles. Portrait précédent conservé. Pose composée depuis le modèle source ; flottement, détails fins et côté opposé non certifiés 1:1. PNG natif sans retouche ni agrandissement, une image fixe et aucune animation."
   },
   "sh4_walter_sullivan_072": {
     "fighterId": "sh4_walter_sullivan_072",
@@ -6908,50 +6936,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-74514e74-1860-43ce-8ad7-8ab331609b00.png",
-    "sourceSHA256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+    "sourceFile": "exec-23e3d89b-94b5-4ef0-9a23-f59efe61ecb8.png",
+    "sourceSHA256": "b30525a060868bc5fe120eb35d0caa9681e8b7a52eb0e7cc4fc2a2f069e9e4bc",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Weeping Bat Downpour2012 entier : deux bras longs et deux jambes, bouche ouverte, aucune aile ni vol ajouté. Posture de garde transposée2D, contacts à comparer, franges blanches corrigées par outil image. Aucun cycle ou timing original certifié.",
+    "notes": "Weeping Bat, Downpour : vue de combat latérale droite composée depuis les rendus frontaux et trois quarts. Deux bras longs, deux jambes et tous les doigts visibles. Sélection précédente conservée. Image fixe candidate ; surfaces arrière et fidélité 1:1 non certifiées.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
-        "bytes": 374348,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "b30525a060868bc5fe120eb35d0caa9681e8b7a52eb0e7cc4fc2a2f069e9e4bc",
+        "bytes": 1633526,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          324,
-          383,
-          968,
-          924
+          314,
+          18,
+          1197,
+          1003
         ],
-        "pixelSHA256": "42a8f5179b7ba88dec382fcb91e730c2f876d876bfb69b6b9793f58c4dd2f567",
-        "transparentFraction": 0.93881,
-        "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+        "pixelSHA256": "bab959673d5779f979abdbe3f39dcdc2f8d1bbf52f703d9527ce71f5efc0fa0c",
+        "transparentFraction": 0.81262,
+        "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.7368421052631579
+          0.46,
+          0.98
         ],
-        "bodyHeight": 0.4314194577352472,
-        "sourceFile": "exec-74514e74-1860-43ce-8ad7-8ab331609b00.png",
-        "sourceSHA256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-23e3d89b-94b5-4ef0-9a23-f59efe61ecb8.png",
+        "sourceSHA256": "b30525a060868bc5fe120eb35d0caa9681e8b7a52eb0e7cc4fc2a2f069e9e4bc",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          55,
-          54,
-          1186,
-          1212
+          0,
+          7,
+          1480,
+          1024
         ],
         "framingBounds": [
-          322,
-          380,
-          971,
-          927
+          310,
+          15,
+          1202,
+          1006
         ]
       }
     ],
@@ -6992,7 +7022,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Weeping Bat Downpour2012 entier : deux bras longs et deux jambes, bouche ouverte, aucune aile ni vol ajouté. Posture de garde transposée2D, contacts à comparer, franges blanches corrigées par outil image. Aucun cycle ou timing original certifié.",
+    "selectionProvenance": {
+      "sourceSHA256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-74514e74-1860-43ce-8ad7-8ab331609b00.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Weeping Bat, Downpour : vue de combat latérale droite composée depuis les rendus frontaux et trois quarts. Deux bras longs, deux jambes et tous les doigts visibles. Sélection précédente conservée. Image fixe candidate ; surfaces arrière et fidélité 1:1 non certifiées."
   },
   "homecoming_siam_090": {
     "fighterId": "homecoming_siam_090",

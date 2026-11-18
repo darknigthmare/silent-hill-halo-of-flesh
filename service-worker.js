@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'e3163dc889293a2eefe74f65869da2e7c9d49345540339ffbd406eeaf5a2fe5c';
+const BITMAP_REVISION = '30f3f0f400106a579b453a5483fe6518727b51f9c7b6fd4ab91c2e1f5900b37c';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -74,6 +74,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
   "/assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
   "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+  "/assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
   "/assets/sprites/film_armless_man_170.25e542fa86c4.png",
   "/assets/sprites/film_armless_man_170.a103ebba3cce.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
@@ -180,6 +181,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
   "/assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+  "/assets/sprites/sh3_scraper_045.827b9a459105.png",
   "/assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
   "/assets/sprites/sh3_slurper_042.5cda350161d4.png",
@@ -201,6 +203,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+  "/assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
   "/assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",

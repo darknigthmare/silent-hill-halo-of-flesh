@@ -1,0 +1,1484 @@
+{
+  "schema": 3,
+  "label": "sprite-20261118",
+  "generatedAt": "2026-11-18T06:57:17.598Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4237\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1039171,
+        "sha256": "827b9a459105e6f48d02096bbb8584e4dc553d3c79e1490138c97a65459b5c6e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 762624,
+        "sha256": "2bfdc425582b73bec4003a68c4c01131b7bd663a4343c087032db62daff064c9"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 830380,
+        "sha256": "845daa5b3742a95dc4499eb16cb9a47d44719e5838c473b62ea0364e4cab5780"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 826091,
+        "sha256": "0355a497acf2f3f1665f149b20280aa8975fafae202fe5211a75c977adf16d69"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1633526,
+        "sha256": "b30525a060868bc5fe120eb35d0caa9681e8b7a52eb0e7cc4fc2a2f069e9e4bc"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 374348,
+        "sha256": "796af2e2894df513ccd9e8ba90488b69534ce5138bdd13fc2e4a962b8286fe52"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          183,
+          26,
+          1256,
+          1075
+        ],
+        "expected": [
+          183,
+          26,
+          1256,
+          1075
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          380,
+          22,
+          1046,
+          1078
+        ],
+        "expected": [
+          380,
+          22,
+          1046,
+          1078
+        ]
+      }
+    },
+    {
+      "name": "sh3_scraper_045 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_scraper_045.827b9a459105.png"
+        ],
+        "portrait": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_scraper_045 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_scraper_045.2bfdc425582b.png"
+        ],
+        "expected": "assets/sprites/sh3_scraper_045.2bfdc425582b.png"
+      }
+    },
+    {
+      "name": "sh3_scraper_045 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_scraper_045.2bfdc425582b.png"
+        ],
+        "expected": "assets/sprites/sh3_scraper_045.2bfdc425582b.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          274,
+          54,
+          956,
+          1303
+        ],
+        "expected": [
+          274,
+          54,
+          956,
+          1303
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          208,
+          40,
+          879,
+          1315
+        ],
+        "expected": [
+          208,
+          40,
+          879,
+          1315
+        ]
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png"
+        ],
+        "portrait": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png"
+        ],
+        "expected": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png"
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png"
+        ],
+        "expected": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          314,
+          18,
+          1197,
+          1003
+        ],
+        "expected": [
+          314,
+          18,
+          1197,
+          1003
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          324,
+          383,
+          968,
+          924
+        ],
+        "expected": [
+          324,
+          383,
+          968,
+          924
+        ]
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_weeping_bat_105.b30525a06086.png"
+        ],
+        "portrait": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png"
+        ],
+        "expected": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png"
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png"
+        ],
+        "expected": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png"
+      }
+    },
+    {
+      "name": "sh3_scraper_045/sh4_richard_braintree_victim_19 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_scraper_045/sh4_richard_braintree_victim_19 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_scraper_045/sh4_richard_braintree_victim_19 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_scraper_045",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_richard_braintree_victim_19",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_scraper_045/sh4_richard_braintree_victim_19 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_scraper_045 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 222.8312672321382,
+          "top": 383.46975196159946,
+          "right": 439.7429160353294,
+          "bottom": 595.1835179363271
+        },
+        "visible": {
+          "left": 224.6305343650679,
+          "top": 384.46934481322705,
+          "right": 439.14316032435283,
+          "bottom": 594.1839250846995
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 885.3370353305444,
+          "top": 373.8374052111981,
+          "right": 1000.8929190528995,
+          "bottom": 585.914457115637
+        },
+        "visible": {
+          "left": 885.842381760817,
+          "top": 374.84809807174344,
+          "right": 1000.7244702428086,
+          "bottom": 585.2406618752733
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_scraper_045/sh4_richard_braintree_victim_19 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19/sh3_scraper_045 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19/sh3_scraper_045 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19/sh3_scraper_045 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_richard_braintree_victim_19",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_scraper_045",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19/sh3_scraper_045 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+          "assets/sprites/sh3_scraper_045.827b9a459105.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+          "assets/sprites/sh3_scraper_045.827b9a459105.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 279.10711146467867,
+          "top": 373.8374052111981,
+          "right": 394.66299518703374,
+          "bottom": 585.914457115637
+        },
+        "visible": {
+          "left": 279.27556027476953,
+          "top": 374.84809807174344,
+          "right": 394.1576487567611,
+          "bottom": 585.2406618752733
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_scraper_045 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 840.2571144822488,
+          "top": 383.46975196159946,
+          "right": 1057.16876328544,
+          "bottom": 595.1835179363271
+        },
+        "visible": {
+          "left": 840.8568701932253,
+          "top": 384.46934481322705,
+          "right": 1055.3694961525102,
+          "bottom": 594.1839250846995
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_richard_braintree_victim_19/sh3_scraper_045 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_weeping_bat_105/sh3_scraper_045 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105/sh3_scraper_045 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105/sh3_scraper_045 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_weeping_bat_105",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_scraper_045",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_weeping_bat_105/sh3_scraper_045 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+          "assets/sprites/sh3_scraper_045.827b9a459105.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+          "assets/sprites/sh3_scraper_045.827b9a459105.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 234.0205056147165,
+          "top": 386.7978045617501,
+          "right": 420.9912885335436,
+          "bottom": 594.5198290825546
+        },
+        "visible": {
+          "left": 234.8589396188368,
+          "top": 387.4266300648403,
+          "right": 419.94324602839316,
+          "bottom": 593.8910035794644
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_scraper_045 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 840.2571144822488,
+          "top": 383.46975196159946,
+          "right": 1057.16876328544,
+          "bottom": 595.1835179363271
+        },
+        "visible": {
+          "left": 840.8568701932253,
+          "top": 384.46934481322705,
+          "right": 1055.3694961525102,
+          "bottom": 594.1839250846995
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105/sh3_scraper_045 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_scraper_045/downpour_weeping_bat_105 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_scraper_045/downpour_weeping_bat_105 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_scraper_045/downpour_weeping_bat_105 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_scraper_045",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_weeping_bat_105",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_scraper_045/downpour_weeping_bat_105 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "assets/sprites/downpour_weeping_bat_105.b30525a06086.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "assets/sprites/downpour_weeping_bat_105.b30525a06086.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_scraper_045 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 222.8312672321382,
+          "top": 383.46975196159946,
+          "right": 439.7429160353294,
+          "bottom": 595.1835179363271
+        },
+        "visible": {
+          "left": 224.6305343650679,
+          "top": 384.46934481322705,
+          "right": 439.14316032435283,
+          "bottom": 594.1839250846995
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_weeping_bat_105 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 859.0087419840345,
+          "top": 386.7978045617501,
+          "right": 1045.9795249028616,
+          "bottom": 594.5198290825546
+        },
+        "visible": {
+          "left": 860.056784489185,
+          "top": 387.4266300648403,
+          "right": 1045.1410908987414,
+          "bottom": 593.8910035794644
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_scraper_045/downpour_weeping_bat_105 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "3dade53c48950a7871ca03b41b03d8f967684dbfc9d722157568ebf85947d8e5",
+        "after": "3dade53c48950a7871ca03b41b03d8f967684dbfc9d722157568ebf85947d8e5"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "36609b67124a4a1c380756674ebcc022bf9598a9f9ee66826992102b516210d9",
+        "after": "36609b67124a4a1c380756674ebcc022bf9598a9f9ee66826992102b516210d9"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh3_scraper_045",
+      "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "width": 1435,
+      "height": 1096,
+      "transparentFraction": 0.7220135303542816,
+      "visibleBounds": [
+        183,
+        26,
+        1256,
+        1075
+      ]
+    },
+    {
+      "id": "sh3_scraper_045",
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "width": 1435,
+      "height": 1096,
+      "transparentFraction": 0.7563448968691981,
+      "visibleBounds": [
+        380,
+        22,
+        1046,
+        1078
+      ]
+    },
+    {
+      "id": "sh4_richard_braintree_victim_19",
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "width": 1160,
+      "height": 1355,
+      "transparentFraction": 0.7794038681766128,
+      "visibleBounds": [
+        274,
+        54,
+        956,
+        1303
+      ]
+    },
+    {
+      "id": "sh4_richard_braintree_victim_19",
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "width": 1161,
+      "height": 1355,
+      "transparentFraction": 0.7633742383935467,
+      "visibleBounds": [
+        208,
+        40,
+        879,
+        1315
+      ]
+    },
+    {
+      "id": "downpour_weeping_bat_105",
+      "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7938054402669271,
+      "visibleBounds": [
+        314,
+        18,
+        1197,
+        1003
+      ]
+    },
+    {
+      "id": "downpour_weeping_bat_105",
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9321908330344493,
+      "visibleBounds": [
+        324,
+        383,
+        968,
+        924
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh3_scraper_045",
+      "facing": 1,
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "file": "portrait-sh3_scraper_045-right.png"
+    },
+    {
+      "id": "sh3_scraper_045",
+      "facing": -1,
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "file": "portrait-sh3_scraper_045-left.png"
+    },
+    {
+      "id": "sh4_richard_braintree_victim_19",
+      "facing": 1,
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "file": "portrait-sh4_richard_braintree_victim_19-right.png"
+    },
+    {
+      "id": "sh4_richard_braintree_victim_19",
+      "facing": -1,
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "file": "portrait-sh4_richard_braintree_victim_19-left.png"
+    },
+    {
+      "id": "downpour_weeping_bat_105",
+      "facing": 1,
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "file": "portrait-downpour_weeping_bat_105-right.png"
+    },
+    {
+      "id": "downpour_weeping_bat_105",
+      "facing": -1,
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "file": "portrait-downpour_weeping_bat_105-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh3_scraper_045",
+        "sh4_richard_braintree_victim_19"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.209701946472
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_scraper_045",
+          "slot": 1,
+          "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "exterior": {
+            "left": 222.8312672321382,
+            "top": 383.46975196159946,
+            "right": 439.7429160353294,
+            "bottom": 595.1835179363271
+          },
+          "visible": {
+            "left": 224.6305343650679,
+            "top": 384.46934481322705,
+            "right": 439.14316032435283,
+            "bottom": 594.1839250846995
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.18392508469946733,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+            "args": [
+              -131.95355269160586,
+              -219.4791666666667,
+              293.2301170924575,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1435,
+            "height": 1096
+          }
+        },
+        {
+          "id": "sh4_richard_braintree_victim_19",
+          "slot": 2,
+          "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+          "exterior": {
+            "left": 885.3370353305444,
+            "top": 373.8374052111981,
+            "right": 1000.8929190528995,
+            "bottom": 585.914457115637
+          },
+          "visible": {
+            "left": 885.842381760817,
+            "top": 374.84809807174344,
+            "right": 1000.7244702428086,
+            "bottom": 585.2406618752733
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -8.759338124726696,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+            "args": [
+              -85.88116510952345,
+              -233.29787234042556,
+              199.7236397895894,
+              233.29787234042556
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1160,
+            "height": 1355
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_scraper_045.827b9a459105.png",
+        "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png"
+      ],
+      "snapshots": [
+        "duel-sh3_scraper_045--sh4_richard_braintree_victim_19-tick0.png",
+        "duel-sh3_scraper_045--sh4_richard_braintree_victim_19-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_richard_braintree_victim_19",
+        "sh3_scraper_045"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.209701946472
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_richard_braintree_victim_19",
+          "slot": 1,
+          "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+          "exterior": {
+            "left": 279.10711146467867,
+            "top": 373.8374052111981,
+            "right": 394.66299518703374,
+            "bottom": 585.914457115637
+          },
+          "visible": {
+            "left": 279.27556027476953,
+            "top": 374.84809807174344,
+            "right": 394.1576487567611,
+            "bottom": 585.2406618752733
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -8.759338124726696,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+            "args": [
+              -85.88116510952345,
+              -233.29787234042556,
+              199.7236397895894,
+              233.29787234042556
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1160,
+            "height": 1355
+          }
+        },
+        {
+          "id": "sh3_scraper_045",
+          "slot": 2,
+          "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "exterior": {
+            "left": 840.2571144822488,
+            "top": 383.46975196159946,
+            "right": 1057.16876328544,
+            "bottom": 595.1835179363271
+          },
+          "visible": {
+            "left": 840.8568701932253,
+            "top": 384.46934481322705,
+            "right": 1055.3694961525102,
+            "bottom": 594.1839250846995
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.18392508469946733,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+            "args": [
+              -131.95355269160586,
+              -219.4791666666667,
+              293.2301170924575,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1435,
+            "height": 1096
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+        "assets/sprites/sh3_scraper_045.827b9a459105.png"
+      ],
+      "snapshots": [
+        "duel-sh4_richard_braintree_victim_19--sh3_scraper_045-tick0.png",
+        "duel-sh4_richard_braintree_victim_19--sh3_scraper_045-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_weeping_bat_105",
+        "sh3_scraper_045"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.209701946472
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_weeping_bat_105",
+          "slot": 1,
+          "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+          "exterior": {
+            "left": 234.0205056147165,
+            "top": 386.7978045617501,
+            "right": 420.9912885335436,
+            "bottom": 594.5198290825546
+          },
+          "visible": {
+            "left": 234.8589396188368,
+            "top": 387.4266300648403,
+            "right": 419.94324602839316,
+            "bottom": 593.8910035794644
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.1089964205356182,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+            "args": [
+              -151.37755102040816,
+              -215,
+              329.0816326530612,
+              219.3877551020408
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh3_scraper_045",
+          "slot": 2,
+          "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "exterior": {
+            "left": 840.2571144822488,
+            "top": 383.46975196159946,
+            "right": 1057.16876328544,
+            "bottom": 595.1835179363271
+          },
+          "visible": {
+            "left": 840.8568701932253,
+            "top": 384.46934481322705,
+            "right": 1055.3694961525102,
+            "bottom": 594.1839250846995
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.18392508469946733,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+            "args": [
+              -131.95355269160586,
+              -219.4791666666667,
+              293.2301170924575,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1435,
+            "height": 1096
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+        "assets/sprites/sh3_scraper_045.827b9a459105.png"
+      ],
+      "snapshots": [
+        "duel-downpour_weeping_bat_105--sh3_scraper_045-tick0.png",
+        "duel-downpour_weeping_bat_105--sh3_scraper_045-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_scraper_045",
+        "downpour_weeping_bat_105"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.209701946472
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_scraper_045",
+          "slot": 1,
+          "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+          "exterior": {
+            "left": 222.8312672321382,
+            "top": 383.46975196159946,
+            "right": 439.7429160353294,
+            "bottom": 595.1835179363271
+          },
+          "visible": {
+            "left": 224.6305343650679,
+            "top": 384.46934481322705,
+            "right": 439.14316032435283,
+            "bottom": 594.1839250846995
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.18392508469946733,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+            "args": [
+              -131.95355269160586,
+              -219.4791666666667,
+              293.2301170924575,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1435,
+            "height": 1096
+          }
+        },
+        {
+          "id": "downpour_weeping_bat_105",
+          "slot": 2,
+          "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+          "exterior": {
+            "left": 859.0087419840345,
+            "top": 386.7978045617501,
+            "right": 1045.9795249028616,
+            "bottom": 594.5198290825546
+          },
+          "visible": {
+            "left": 860.056784489185,
+            "top": 387.4266300648403,
+            "right": 1045.1410908987414,
+            "bottom": 593.8910035794644
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.1089964205356182,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+            "args": [
+              -151.37755102040816,
+              -215,
+              329.0816326530612,
+              219.3877551020408
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_scraper_045.827b9a459105.png",
+        "assets/sprites/downpour_weeping_bat_105.b30525a06086.png"
+      ],
+      "snapshots": [
+        "duel-sh3_scraper_045--downpour_weeping_bat_105-tick0.png",
+        "duel-sh3_scraper_045--downpour_weeping_bat_105-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "3dade53c48950a7871ca03b41b03d8f967684dbfc9d722157568ebf85947d8e5",
+  "src/sprite-manifest.jsSHA256": "36609b67124a4a1c380756674ebcc022bf9598a9f9ee66826992102b516210d9",
+  "version": "0.9.6",
+  "ids": [
+    "sh3_scraper_045",
+    "sh4_richard_braintree_victim_19",
+    "downpour_weeping_bat_105"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}
