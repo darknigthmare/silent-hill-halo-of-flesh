@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-illustrations-wave9-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '5f85dbaf789feb62bc245127672b00c03a04e2864ca9a4e1d56e67884f907793';
+const BITMAP_REVISION = '07424e28e635f74efbbebc73a0837651d1067dd71cbe61fdba6d9cbd7f2af2cb';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -107,6 +107,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
   "/assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
   "/assets/sprites/homecoming_bogeyman_092.fe3495981694.png",
+  "/assets/sprites/homecoming_curtis_ackers.8cd8e6e3a68a.png",
+  "/assets/sprites/homecoming_curtis_ackers.c613b19dad1e.png",
   "/assets/sprites/homecoming_feral_086.d944b0e329cf.png",
   "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
   "/assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
@@ -162,6 +164,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
   "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+  "/assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png",
+  "/assets/sprites/sh1_monster_cybil_017.17d8d2acf9c9.png",
   "/assets/sprites/sh1_mumbler_006.38861850b609.png",
   "/assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
   "/assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
@@ -211,6 +215,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_closer_036.a571dd362666.png",
   "/assets/sprites/sh3_closer_036.e00beefd711f.png",
   "/assets/sprites/sh3_closer_036.f18918ff7e87.png",
+  "/assets/sprites/sh3_closer_church_variant.15f7c0d43d4d.png",
   "/assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
   "/assets/sprites/sh3_double_head_040.0ef012666f82.png",
   "/assets/sprites/sh3_double_head_040.6d8c0b112533.png",
@@ -233,6 +238,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
   "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
   "/assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+  "/assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
   "/assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
   "/assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
   "/assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
@@ -269,8 +275,10 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+  "/assets/sprites/sh4_joseph_schreiber_victim_15.1f89b111bb00.png",
   "/assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
   "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+  "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
@@ -296,6 +304,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
   "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",
+  "/assets/sprites/sh4_wall_man_056.492d01451dc8.png",
   "/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
   "/assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
   "/assets/sprites/sh4_wheelchair_068.2976f1648fec.png",

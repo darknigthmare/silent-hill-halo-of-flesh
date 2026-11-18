@@ -9647,50 +9647,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-ebb287a1-5f9f-4f27-8836-ebe9314ff63b.png",
-    "sourceSHA256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194",
+    "sourceFile": "exec-5a458e19-b09b-40a5-89fa-33d0c0b79d42.png",
+    "sourceSHA256": "492d01451dc8d242c1d8774cc3b7e2ddc61c4c2b57fde794f54072e65be21489",
     "sourceDimensions": [
-      1254,
-      1254
+      1418,
+      1109
     ],
     "singleSubjectReviewed": true,
-    "notes": "Wall Man SH4 : extérieur attesté entier, tête inversée, deux bras et leurs griffes, tissu supérieur jusqu’au raccord mural. Le raccord reste tronqué anatomiquement par le mur dans l’œuvre : aucun bassin, pied ou corps caché inventé. Pose fixe candidate ancrée au support, pas un monstre libre ou une mesure de géométrie 1:1.",
+    "notes": "Vue latérale droite de la partie visible du Wall Man de Silent Hill 4, deux bras griffus décalés, tête inversée et raccord mural à gauche ; profondeur en partie reconstituée depuis les modèles du jeu.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194",
-        "bytes": 740310,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "492d01451dc8d242c1d8774cc3b7e2ddc61c4c2b57fde794f54072e65be21489",
+        "bytes": 1179891,
+        "width": 1418,
+        "height": 1109,
         "visibleBounds": [
-          256,
-          251,
-          997,
-          1079
+          96,
+          14,
+          1227,
+          1085
         ],
-        "pixelSHA256": "9f7672b00592fe4aa0a8f503f1567d250b6f6f80fd06d8d8462d8dc4135d3128",
-        "transparentFraction": 0.827,
-        "path": "assets/sprites/sh4_wall_man_056.397d02f8b567.png",
+        "pixelSHA256": "6cf04037cbcf3d3bc05188efed1972226d74aaf04094fc6e41ebc2c9d4c80d87",
+        "transparentFraction": 0.70372,
+        "path": "assets/sprites/sh4_wall_man_056.492d01451dc8.png",
         "facing": 1,
         "anchor": [
-          0.4996012759170654,
-          0.8604465709728868
+          0.5,
+          1
         ],
-        "bodyHeight": 0.6602870813397129,
-        "sourceFile": "exec-ebb287a1-5f9f-4f27-8836-ebe9314ff63b.png",
-        "sourceSHA256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194",
+        "bodyHeight": 1,
+        "sourceFile": "exec-5a458e19-b09b-40a5-89fa-33d0c0b79d42.png",
+        "sourceSHA256": "492d01451dc8d242c1d8774cc3b7e2ddc61c4c2b57fde794f54072e65be21489",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          35,
-          1230,
-          1254
+          1,
+          1402,
+          1109
         ],
         "framingBounds": [
-          253,
-          240,
-          1000,
-          1082
+          93,
+          1,
+          1230,
+          1088
         ]
       }
     ],
@@ -9731,7 +9733,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Wall Man SH4 : extérieur attesté entier, tête inversée, deux bras et leurs griffes, tissu supérieur jusqu’au raccord mural. Le raccord reste tronqué anatomiquement par le mur dans l’œuvre : aucun bassin, pied ou corps caché inventé. Pose fixe candidate ancrée au support, pas un monstre libre ou une mesure de géométrie 1:1.",
+    "selectionProvenance": {
+      "sourceSHA256": "397d02f8b5670624586b77c9fc645a58973e96bbdc66e21de0ffb476b51f2194",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-ebb287a1-5f9f-4f27-8836-ebe9314ff63b.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Vue latérale droite de la partie visible du Wall Man de Silent Hill 4, deux bras griffus décalés, tête inversée et raccord mural à gauche ; profondeur en partie reconstituée depuis les modèles du jeu."
   },
   "sh4_one_truth_070": {
     "fighterId": "sh4_one_truth_070",
@@ -9831,50 +9845,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-778b2def-be5e-488d-be72-436283656aff.png",
-    "sourceSHA256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0",
+    "sourceFile": "exec-ca4cbf53-da10-41ac-be2c-168904fc6c2f.png",
+    "sourceSHA256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Man with the Coat SH4 entier, manteau bleu-gris, pantalon, deux chaussures et deux pistolets bas distincts. Configuration du poursuivant adulte ; aucune pelle, hache ou mutation finale importée. Type et prise reconstruits depuis rendu, pas modèle mécanique ni geste original mesuré.",
+    "notes": "Walter Sullivan adulte dans le manteau bleu-gris du poursuivant de Silent Hill 4. Garde de profil vers la droite, deux pistolets baissés, appuis décalés et deux chaussures visibles. Pose latérale reconstituée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0",
-        "bytes": 366094,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a",
+        "bytes": 1639886,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          491,
-          238,
-          792,
-          1056
+          96,
+          127,
+          916,
+          1430
         ],
-        "pixelSHA256": "7e14cd61e76a5f68a8d6f4d577cf21152841a139f7a90a335bb125420105e0e6",
-        "transparentFraction": 0.9114,
-        "path": "assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+        "pixelSHA256": "6c797446b4ef300e584f380f28e06977629d835a02b47744dd919bd21011bf69",
+        "transparentFraction": 0.76212,
+        "path": "assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
         "facing": 1,
         "anchor": [
-          0.5115629984051037,
-          0.8421052631578947
+          0.5,
+          1
         ],
-        "bodyHeight": 0.6523125996810207,
-        "sourceFile": "exec-778b2def-be5e-488d-be72-436283656aff.png",
-        "sourceSHA256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0",
+        "bodyHeight": 1,
+        "sourceFile": "exec-ca4cbf53-da10-41ac-be2c-168904fc6c2f.png",
+        "sourceSHA256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          41,
-          25,
-          1232,
-          1254
+          0,
+          3,
+          1024,
+          1536
         ],
         "framingBounds": [
-          486,
-          236,
-          795,
-          1061
+          93,
+          116,
+          921,
+          1440
         ]
       }
     ],
@@ -9915,7 +9931,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Man with the Coat SH4 entier, manteau bleu-gris, pantalon, deux chaussures et deux pistolets bas distincts. Configuration du poursuivant adulte ; aucune pelle, hache ou mutation finale importée. Type et prise reconstruits depuis rendu, pas modèle mécanique ni geste original mesuré.",
+    "selectionProvenance": {
+      "sourceSHA256": "76f1458da7c7b59a9d90b62d5bfb76bc8f957427507cd31e16bac989e429fbb0",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-778b2def-be5e-488d-be72-436283656aff.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Walter Sullivan adulte dans le manteau bleu-gris du poursuivant de Silent Hill 4. Garde de profil vers la droite, deux pistolets baissés, appuis décalés et deux chaussures visibles. Pose latérale reconstituée."
   },
   "homecoming_sepulcher_093": {
     "fighterId": "homecoming_sepulcher_093",
@@ -11212,51 +11240,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-3409d1b6-c8c1-489e-b45b-413687a50744.png",
-    "sourceSHA256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
+    "sourceFile": "exec-55fc4e29-2e09-43fd-8636-e1041a633172.png",
+    "sourceSHA256": "15f7c0d43d4d40716b50360170cdf948e54c6ff4bfa43c5e93853056684956f4",
     "sourceDimensions": [
-      1254,
-      1254
+      1236,
+      1273
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Closer Church SH3 2003 : même corps original à deux grands bras rembourrés et deux pieds, teinte verdâtre attestée dans le texte natif ; nouvelle pose générée depuis les modèles de source, aucun PNG du projet copié ou recoloré. Variante reconstruite depuis description, vue exacte non relevée ; palette, proportions et vitesse non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "notes": "Closer de l’église de Silent Hill 3, deux avant-bras massifs, appuis visibles et garde vers la droite. La nuance verdâtre de cette variante est reconstituée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
-        "bytes": 1252750,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "15f7c0d43d4d40716b50360170cdf948e54c6ff4bfa43c5e93853056684956f4",
+        "bytes": 1142362,
+        "width": 1236,
+        "height": 1273,
         "visibleBounds": [
-          66,
-          94,
-          1216,
-          1128
+          51,
+          154,
+          1201,
+          1118
         ],
-        "alphaBounds": [
-          0,
-          0,
-          1222,
-          1254
-        ],
-        "framingBounds": [
-          62,
-          90,
-          1222,
-          1131
-        ],
-        "pixelSHA256": "46b2d715ce16306e671486c65f40f09facb908717c89b82a2832db3371b3c0ad",
-        "transparentFraction": 0.69144,
-        "path": "assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
+        "pixelSHA256": "5b6a64fcf02dabcd9d56397d9e0675f0a6074c5cd88652994cb3a81131f2a9aa",
+        "transparentFraction": 0.71867,
+        "path": "assets/sprites/sh3_closer_church_variant.15f7c0d43d4d.png",
         "facing": 1,
         "anchor": [
-          0.51116,
-          0.89952
+          0.5,
+          1
         ],
-        "bodyHeight": 0.82456,
-        "sourceFile": "exec-3409d1b6-c8c1-489e-b45b-413687a50744.png",
-        "sourceSHA256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 1,
+        "sourceFile": "exec-55fc4e29-2e09-43fd-8636-e1041a633172.png",
+        "sourceSHA256": "15f7c0d43d4d40716b50360170cdf948e54c6ff4bfa43c5e93853056684956f4",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          8,
+          1235,
+          1273
+        ],
+        "framingBounds": [
+          47,
+          150,
+          1204,
+          1126
+        ]
       }
     ],
     "portrait": {
@@ -11296,7 +11326,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Closer Church SH3 2003 : même corps original à deux grands bras rembourrés et deux pieds, teinte verdâtre attestée dans le texte natif ; nouvelle pose générée depuis les modèles de source, aucun PNG du projet copié ou recoloré. Variante reconstruite depuis description, vue exacte non relevée ; palette, proportions et vitesse non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "selectionProvenance": {
+      "sourceSHA256": "3d7aee8390830a554c418d3bdaee447811203bac84477551cd704fb35a65ee6c",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-3409d1b6-c8c1-489e-b45b-413687a50744.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Closer de l’église de Silent Hill 3, deux avant-bras massifs, appuis visibles et garde vers la droite. La nuance verdâtre de cette variante est reconstituée."
   },
   "sh3_numb_body_medium": {
     "fighterId": "sh3_numb_body_medium",
@@ -11304,51 +11346,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-7d058297-c068-433d-85a0-bc8dd74af71e.png",
-    "sourceSHA256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
+    "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
+    "sourceSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Numb Body Medium SH3 2003 : taille intermédiaire explicitement attestée dans le texte natif « small, medium and large » ; famille à deux jambes, sans bras, pointes arrière et deux pieds complets. Nouvelle pose depuis les vues natives, aucun autre PNG redimensionné. Ratio intermédiaire, hauteur et contacts restent à mesurer ; candidat de variante non calibré. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "notes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
-        "bytes": 539598,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "bytes": 1769688,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          324,
-          269,
-          928,
-          1038
+          121,
+          155,
+          1392,
+          903
         ],
-        "alphaBounds": [
-          31,
-          55,
-          1208,
-          1204
-        ],
-        "framingBounds": [
-          320,
-          265,
-          932,
-          1043
-        ],
-        "pixelSHA256": "522222f62030984200e30eb987d7489a57de4c439b74ab225925d8b059b4ba10",
-        "transparentFraction": 0.88878,
-        "path": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+        "pixelSHA256": "79be06f5953e6d0cb85ff1ad53c4d21289e3a2828f3ceadacf4d64524b524746",
+        "transparentFraction": 0.76072,
+        "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
         "facing": 1,
         "anchor": [
-          0.4992,
-          0.82775
+          0.5,
+          1
         ],
-        "bodyHeight": 0.61324,
-        "sourceFile": "exec-7d058297-c068-433d-85a0-bc8dd74af71e.png",
-        "sourceSHA256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 1,
+        "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
+        "sourceSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1522,
+          1024
+        ],
+        "framingBounds": [
+          119,
+          146,
+          1396,
+          912
+        ]
       }
     ],
     "portrait": {
@@ -11388,7 +11432,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Numb Body Medium SH3 2003 : taille intermédiaire explicitement attestée dans le texte natif « small, medium and large » ; famille à deux jambes, sans bras, pointes arrière et deux pieds complets. Nouvelle pose depuis les vues natives, aucun autre PNG redimensionné. Ratio intermédiaire, hauteur et contacts restent à mesurer ; candidat de variante non calibré. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "selectionProvenance": {
+      "sourceSHA256": "4018b22369f368a2b240598e42efbb7189f24f6949672d9277105e990ce14fc6",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-7d058297-c068-433d-85a0-bc8dd74af71e.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite."
   },
   "sh3_glutton": {
     "fighterId": "sh3_glutton",
@@ -19578,16 +19634,55 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-536baeac-dc59-4774-b35b-ec582ea0b11a.png",
-    "sourceSHA256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+    "sourceFile": "exec-42b0762e-5314-4947-ba22-963f18068b6a.png",
+    "sourceSHA256": "1f89b111bb00c057cf0845f00051516a6b989acd51ef743179df9fcf4a090028",
     "sourceDimensions": [
-      1277,
-      1231
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Manifestation de Joseph dans Apartment World : visage à l’envers et épaules englobées dans le plafond. La jonction sombre reprend la limite visible de l’apparition. Image fixe candidate, fidélité non certifiée.",
+    "notes": "Vue latérale droite de la manifestation de Joseph, victime 15 de Silent Hill 4, telle qu’elle pend du plafond de Room 302 du passé. Le visage et le col émergent de la jonction, angle de profil reconstitué. Réservé à la consultation du dossier et de l’atelier.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
-    "frames": [],
+    "frames": [
+      {
+        "sha256": "1f89b111bb00c057cf0845f00051516a6b989acd51ef743179df9fcf4a090028",
+        "bytes": 1283060,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          247,
+          43,
+          1272,
+          915
+        ],
+        "pixelSHA256": "38ad3984a298fdfede0aa93996f10d09f86ca4b0fcdf5b3859e9ffab48313939",
+        "transparentFraction": 0.71421,
+        "path": "assets/sprites/sh4_joseph_schreiber_victim_15.1f89b111bb00.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-42b0762e-5314-4947-ba22-963f18068b6a.png",
+        "sourceSHA256": "1f89b111bb00c057cf0845f00051516a6b989acd51ef743179df9fcf4a090028",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1496,
+          927
+        ],
+        "framingBounds": [
+          235,
+          0,
+          1288,
+          926
+        ]
+      }
+    ],
     "portrait": {
       "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
       "sha256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
@@ -19620,8 +19715,16 @@ export const SPRITES = {
       ],
       "transparentFraction": 0.66132
     },
-    "clips": {},
-    "combatView": "selection-only",
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
     "selectionNotes": "Manifestation de Joseph dans Apartment World : visage à l’envers et épaules englobées dans le plafond. La jonction sombre reprend la limite visible de l’apparition. Image fixe candidate, fidélité non certifiée.",
     "selectionProvenance": {
       "sourceSHA256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
@@ -19632,7 +19735,8 @@ export const SPRITES = {
       "origin": "conversation-image-generation",
       "sourceFile": "exec-536baeac-dc59-4774-b35b-ec582ea0b11a.png"
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "combatNotes": "Vue latérale droite de la manifestation de Joseph, victime 15 de Silent Hill 4, telle qu’elle pend du plafond de Room 302 du passé. Le visage et le col émergent de la jonction, angle de profil reconstitué. Réservé à la consultation du dossier et de l’atelier."
   },
   "shf_sakuko_like_entity_162": {
     "fighterId": "shf_sakuko_like_entity_162",
@@ -20273,5 +20377,225 @@ export const SPRITES = {
       "sourceFile": "exec-b387c292-af56-49a9-92b5-b7db7b6772de.png"
     },
     "animatedClips": 0
+  },
+  "homecoming_curtis_ackers": {
+    "fighterId": "homecoming_curtis_ackers",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-c4fee8d1-4550-4107-9a61-4641249df953.png",
+    "sourceSHA256": "c613b19dad1ed3b12996c1cb4e68b323eef7e4f094dfd9b9a5c16fd20d86074f",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Curtis en garde latérale droite avec sa scie circulaire, pieds et lame visibles.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "c613b19dad1ed3b12996c1cb4e68b323eef7e4f094dfd9b9a5c16fd20d86074f",
+        "bytes": 1894927,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          133,
+          13,
+          876,
+          1527
+        ],
+        "pixelSHA256": "9e0b516d8560016cf74338fee21549ddc09b28233a7f6a98b02e924042e8c8f6",
+        "transparentFraction": 0.64198,
+        "path": "assets/sprites/homecoming_curtis_ackers.c613b19dad1e.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-c4fee8d1-4550-4107-9a61-4641249df953.png",
+        "sourceSHA256": "c613b19dad1ed3b12996c1cb4e68b323eef7e4f094dfd9b9a5c16fd20d86074f",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1018,
+          1536
+        ],
+        "framingBounds": [
+          127,
+          0,
+          878,
+          1536
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/homecoming_curtis_ackers.8cd8e6e3a68a.png",
+      "sha256": "8cd8e6e3a68a3446fc3bfcf124e771f476041f950d3d5d7f494838d61d3cbbcf",
+      "bytes": 1758411,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        235,
+        11,
+        789,
+        1526
+      ],
+      "pixelSHA256": "0c6118a1421d2bff1a631db155218346dfa63e66310f37a736a4811a9e6d7307",
+      "sourceFile": "exec-1b59d413-e01d-4312-8d94-8b3cba28e283.png",
+      "sourceSHA256": "8cd8e6e3a68a3446fc3bfcf124e771f476041f950d3d5d7f494838d61d3cbbcf",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        41,
+        0,
+        1002,
+        1536
+      ],
+      "framingBounds": [
+        232,
+        0,
+        800,
+        1536
+      ],
+      "transparentFraction": 0.69133
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Curtis Ackers, mécanicien de Homecoming, en portrait de sélection entier avec casquette et tenue de travail.",
+    "selectionProvenance": {
+      "sourceSHA256": "8cd8e6e3a68a3446fc3bfcf124e771f476041f950d3d5d7f494838d61d3cbbcf",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-1b59d413-e01d-4312-8d94-8b3cba28e283.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Curtis en garde latérale droite avec sa scie circulaire, pieds et lame visibles."
+  },
+  "sh1_monster_cybil_017": {
+    "fighterId": "sh1_monster_cybil_017",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-d9577027-7bae-40de-8cb6-ce186cac78fa.png",
+    "sourceSHA256": "1038cbaaadbf1a89bfbb756a0036559583e16f7d4aaa6c2fedca969fec8774b7",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Cybil possédée, épaules tombantes et appuis décalés vers la droite. Reconstitution de la garde du manège de Silent Hill sur PlayStation.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "1038cbaaadbf1a89bfbb756a0036559583e16f7d4aaa6c2fedca969fec8774b7",
+        "bytes": 1493628,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          197,
+          30,
+          787,
+          1528
+        ],
+        "pixelSHA256": "17757c1757ef9ed08500c87e619fb4288be47ed935e2df398411712c9cf2808b",
+        "transparentFraction": 0.73026,
+        "path": "assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-d9577027-7bae-40de-8cb6-ce186cac78fa.png",
+        "sourceSHA256": "1038cbaaadbf1a89bfbb756a0036559583e16f7d4aaa6c2fedca969fec8774b7",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1020,
+          1536
+        ],
+        "framingBounds": [
+          191,
+          26,
+          790,
+          1536
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_monster_cybil_017.17d8d2acf9c9.png",
+      "sha256": "17d8d2acf9c9a7f029f1cf1b5beea808dac3aa11a8af90a39002cfee6d3a0618",
+      "bytes": 1359892,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        256,
+        20,
+        747,
+        1525
+      ],
+      "pixelSHA256": "85ca84f95c085de4b60f1934bd533dfde26240efc06458e8901a2083d02002b2",
+      "sourceFile": "exec-a0ede202-72f6-45b1-9b0f-c23e4b5e266b.png",
+      "sourceSHA256": "17d8d2acf9c9a7f029f1cf1b5beea808dac3aa11a8af90a39002cfee6d3a0618",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        25,
+        18,
+        1002,
+        1536
+      ],
+      "framingBounds": [
+        253,
+        18,
+        750,
+        1536
+      ],
+      "transparentFraction": 0.75063
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Cybil Bennett possédée au manège de Lakeside, édition PlayStation de 1999. Portrait en pied, uniforme de service et pistolet abaissé.",
+    "selectionProvenance": {
+      "sourceSHA256": "17d8d2acf9c9a7f029f1cf1b5beea808dac3aa11a8af90a39002cfee6d3a0618",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-a0ede202-72f6-45b1-9b0f-c23e4b5e266b.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Cybil possédée, épaules tombantes et appuis décalés vers la droite. Reconstitution de la garde du manège de Silent Hill sur PlayStation."
   }
 };
