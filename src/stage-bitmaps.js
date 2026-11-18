@@ -22,6 +22,7 @@ export function validateStageBitmap(stage,art){
   const ids=new Set(),paths=new Map();
   for(const layer of art.layers){
     if(!layer||!/^[a-z0-9_-]{1,64}$/.test(layer.id)||ids.has(layer.id))fail('invalid/duplicate layer');ids.add(layer.id);
+    if(layer.parallaxX!==undefined&&(!Number.isFinite(layer.parallaxX)||Math.abs(layer.parallaxX)>.25))fail('invalid horizontal parallax');
     if(layer.fit!==undefined&&!['stretch','cover','contain'].includes(layer.fit))fail('invalid layer fit');
     if(!Array.isArray(layer.frames)||!layer.frames.length||layer.frames.length>120||!Number.isSafeInteger(layer.ticksPerFrame)||layer.ticksPerFrame<1||layer.ticksPerFrame>600||typeof layer.loop!=='boolean')fail('invalid frame clock');
     if(!Array.isArray(layer.rect)||layer.rect.length!==4||!layer.rect.every(Number.isFinite)||layer.rect[0]<0||layer.rect[1]<0||layer.rect[2]<=0||layer.rect[3]<=0||layer.rect[0]+layer.rect[2]>1||layer.rect[1]+layer.rect[3]>1)fail('invalid layer rectangle');
@@ -83,7 +84,7 @@ export function captureCombatAssetPins({fighterCache=spriteCache,stageCache=stag
   const actors=fighterCache.pinnedFrames(),decor=stageCache.pinnedFrames();
   return ()=>{fighterCache.validatePins(actors);stageCache.validatePins(decor);fighterCache.pin(actors);stageCache.pin(decor);};
 }
-export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache=stageBitmapCache,registry=cache.registry,paint=true}={}){
+export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache=stageBitmapCache,registry=cache.registry,paint=true,viewPan=0}={}){
   let art,frames;
   try{art=stageBitmapFor(stage,registry);if(!art)return {kind:'unregistered'};frames=stageBitmapFrames([stage],registry);}
   catch(error){return {kind:'error',error:String(error.message)};}
@@ -94,11 +95,13 @@ export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache
   }
   if(!paint)return {kind:'raster',mode:art.mode,layers:art.layers.length};
   const tick=Number.isFinite(time)?Math.max(0,Math.floor(time*60/1000+1e-7)):0;
+  const pan=Number.isFinite(viewPan)?Math.max(-1,Math.min(1,viewPan)):0;
   context.save();
   for(const layer of art.layers){
     const index=layer.loop?Math.floor(tick/layer.ticksPerFrame)%layer.frames.length:Math.min(layer.frames.length-1,Math.floor(tick/layer.ticksPerFrame));
     const frame=layer.frames[index],image=cache.peek(frame.path),[x,y,w,h]=layer.rect;
-    const destination=[x*width,y*height,w*width,h*height];
+    // A closer plane travels against the direction in which the fighters draw our gaze.
+    const destination=[(x-pan*(layer.parallaxX||0))*width,y*height,w*width,h*height];
     if(!layer.fit||layer.fit==='stretch')context.drawImage(image,...destination);
     else{
       const [dx,dy,dw,dh]=destination,scale=Math[layer.fit==='cover'?'max':'min'](dw/frame.width,dh/frame.height);

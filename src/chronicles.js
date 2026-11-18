@@ -1,5 +1,6 @@
 import { CHRONICLES, ROSTER, SOURCE_META, createCombatProfile, getFighter, getStage } from './data.js';
 import { drawStage, renderPortrait } from './renderers.js';
+import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
 import { attachGlobalAudioUnlock, audio, escapeHTML, loadJSON, writeJSON, CHRONICLES_KEY, returnToCommand } from './shared.js';
 
 attachGlobalAudioUnlock();
@@ -35,6 +36,7 @@ function fillPlayerFighters(){
 }
 function renderSelected(){
   const firstStage=getStage(selected.stages[0]);drawStage(els.routeCanvas.getContext('2d'),firstStage,performance.now(),{width:els.routeCanvas.width,height:els.routeCanvas.height,cinematic:true,otherworld:completed(selected.id)?.72:.18,radio:.2});
+  setChronicleImage($('#routeIllustration'),chronicleArtwork(selected.id)?.intro);
   els.routeSource.textContent=`${SOURCE_META[selected.source].label} · DOSSIER ${String(CHRONICLES.indexOf(selected)+1).padStart(2,'0')}`;
   els.routeTitle.textContent=selected.title;els.routeSubtitle.textContent=selected.subtitle;els.routeIntro.textContent=selected.intro;els.routeOutro.textContent=selected.outro;
   const attempts=progress.attempts?.[selected.id]||0;const best=grade(selected.id);els.routeState.textContent=best?`RANG ${best} · ${attempts} TENTATIVE${attempts>1?'S':''}`:completed(selected.id)?'CHRONIQUE ARCHIVÉE':`${attempts} TENTATIVE${attempts>1?'S':''}`;

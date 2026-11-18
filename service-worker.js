@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'parallel-20261101-pass12';
+const CACHE_REVISION = 'chronicle-illustrations-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'a66bd2a8adb0ad6d470e4b86d2b8813deca2e43159d4e1b1318c79961cce50d4';
+const BITMAP_REVISION = 'a5371962fde5836fff0a255385332fb91cc170dbaf9bcf22f1864c4ca4ea1781';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -133,6 +133,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
   "/assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+  "/assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
   "/assets/sprites/origins_remnant_077.912fa1130daa.png",
   "/assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
@@ -165,6 +166,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
   "/assets/sprites/sh1_romper_010.09a1f60ce398.png",
   "/assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+  "/assets/sprites/sh1_romper_010.b71ffb03f441.png",
   "/assets/sprites/sh1_romper_010.f5be63471b21.png",
   "/assets/sprites/sh1_romper_010.fa62c070efdd.png",
   "/assets/sprites/sh1_split_head_014.0422e5926e4d.png",
@@ -241,6 +243,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+  "/assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
   "/assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
   "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
   "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
@@ -270,6 +273,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+  "/assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
   "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
@@ -312,8 +316,14 @@ const ESSENTIAL_SHELL = [
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+  "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+  "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
+  "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+  "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+  "/assets/stages/room_302.chair.739650b60353.png",
+  "/assets/stages/room_302.entrance.6535cc934c6c.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
   "/assets/stages/woodside.corridor.c6ac083599d0.png",
   // STAGE_BITMAP_ASSETS_END
@@ -365,6 +375,13 @@ const ESSENTIAL_SHELL = [
   '/src/command.js',
   '/src/versus.js',
   '/src/chronicles.js',
+  '/src/chronicle-art.js',
+  '/assets/chronicles/travis_mirrors.intro.a8432e807635.webp',
+  '/assets/chronicles/travis_mirrors.ending.e9afa58dc5c1.webp',
+  '/assets/chronicles/heather_birth.intro.2ef91708c75e.webp',
+  '/assets/chronicles/heather_birth.ending.f3d3fe97049d.webp',
+  '/assets/chronicles/room_21.intro.9edcdf651684.webp',
+  '/assets/chronicles/room_21.ending.936178291280.webp',
   '/src/archive.js',
 ];
 

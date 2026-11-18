@@ -12,6 +12,7 @@ import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
+import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
 import {
   attachGlobalAudioUnlock, audio, clamp, escapeHTML, loadJSON, loadSettings,
   returnToCommand, saveLastFront, writeJSON, RECORDS_KEY, CHRONICLES_KEY
@@ -65,6 +66,7 @@ const els = {
   pauseBtn: $('#pauseBtn'), trainingToggle: $('#trainingToggle'), trainingPanel: $('#trainingPanel'),
   hitboxes: $('#hitboxes'), autoHeal: $('#autoHeal'), freeMeter: $('#freeMeter'), resetDojo: $('#resetDojo'),
   touchLayer: $('#touchLayer'), mobileP1: $('#mobileP1'), result: $('#result'), resultKicker: $('#resultKicker'),
+  chronicleOpening: $('#chronicleOpening'), chronicleEnding: $('#chronicleEnding'),
   resultTitle: $('#resultTitle'), resultText: $('#resultText'), rematch: $('#rematch'), continueRun: $('#continueRun'),
   resultSelect: $('#resultSelect'), resultStats: $('#resultStats'),
   otherworldShift: $('#otherworldShift'), stageHazards: $('#stageHazards'), radioWarning: $('#radioWarning'), adaptiveAI: $('#adaptiveAI'),
@@ -392,10 +394,24 @@ function retryCurrentFight() {
   return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
 
-function showFight() {
+function showChronicleOpening(isNewRun) {
+  const route=isNewRun&&state.run?.mode==='chronicle'&&state.run.index===0?CHRONICLES.find(r=>r.id===state.run.routeId):null;
+  const artwork=chronicleArtwork(route?.id)?.intro;
+  const panel=els.chronicleOpening;
+  panel.hidden=!artwork;
+  setChronicleImage(panel.querySelector('img'),artwork);
+  if(artwork){
+    panel.querySelector('strong').textContent=route.title;
+    panel.querySelector('p').textContent=route.intro;
+  }
+}
+
+function showFight(isNewRun) {
   els.selectScreen.classList.add('hidden');
   els.fightScreen.classList.remove('hidden');
   els.result.classList.add('hidden');
+  els.chronicleEnding.hidden=true;
+  showChronicleOpening(isNewRun);
   window.scrollTo(0, 0);
 }
 function showSelect() {
@@ -436,7 +452,10 @@ function fightConfig() {
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
-    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot), canResume: () => flow.canResume() }
+    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => {
+      flow.syncPause(snapshot);
+      if(!els.chronicleOpening.hidden&&snapshot.phase!=='intro')els.chronicleOpening.hidden=true;
+    }, canResume: () => flow.canResume() }
   };
 }
 
@@ -506,7 +525,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   }
   if (state.run?.rituals?.length) els.ritualSelect.value = currentRitualId();
   state.engine?.destroy();
-  showFight();
+  showFight(!preserveRun);
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
@@ -615,6 +634,12 @@ function handleMatchEnd(result) {
     els.resultTitle.textContent=completedRun?(dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
     els.resultText.textContent=completedRun?(dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
       (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
+    const artwork=completedRun&&state.run.mode==='chronicle'?chronicleArtwork(route?.id)?.ending:null;
+    els.chronicleEnding.hidden=!artwork;
+    setChronicleImage(els.chronicleEnding.querySelector('img'),artwork);
+    const caption=els.chronicleEnding.querySelector('figcaption');
+    caption.hidden=!artwork||!dossiers.length;
+    caption.textContent=artwork&&dossiers.length?route.outro:'';
     const rows=[['RANG DU SUJET I',grade],['COMBO MAX',playerStats.maxCombo||0],['GARDES PARFAITES',playerStats.perfectGuards||0],
       ['CONTRES',playerStats.counters||0],['DANGERS SUBIS',playerStats.hazardsTaken||0],['FATALITÉS',playerStats.fatalities||0]];
     if(routeGrade)rows.unshift(['RANG DU PARCOURS COMPLET',routeGrade]);

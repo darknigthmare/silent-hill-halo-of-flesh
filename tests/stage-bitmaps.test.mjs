@@ -41,6 +41,16 @@ test('stage declarations require exact identity/source, provenance and versioned
   assert.throws(()=>stageBitmapFor({...stage,reference:{blocked:true}},{[stage.id]:art}),/unresolved/);
   assert.throws(()=>stageBitmapFrames([stage,{...stage,source:'sh2'}],{[stage.id]:art}),/source/);
 });
+test('parallax follows arena focus proportionally while the fixed background and gallery stay anchored',async()=>{
+  const art=artFor();const near={...structuredClone(art.layers[0]),id:'near',rect:[.25,.1,.4,.75],parallaxX:.1};art.layers.push(near);
+  for(const value of [NaN,'0.1',.26,-1]){const invalid=structuredClone(art);invalid.layers[1].parallaxX=value;assert.throws(()=>validateStageBitmap(stage,invalid),/parallax/);}
+  const {cache}=harness(StageBitmapCache,{registry:{[stage.id]:art}});await cache.prepare(stage);
+  for(const [viewPan,expected] of [[-2,35],[0,25],[1,15],[NaN,25],[undefined,25]]){
+    const ctx=context();drawStageBitmaps(ctx,stage,0,{width:100,height:100,cache,viewPan});
+    assert.equal(ctx.calls[0][1],0);assert.equal(ctx.calls[1][1],expected);
+    assert.deepEqual(ctx.calls[1].slice(2),[10,40,75]);
+  }
+});
 test('duplicate paths with conflicting measured metadata fail before loading',async()=>{
   const art=artFor();art.layers.push({...structuredClone(art.layers[0]),id:'fog'});art.layers[1].frames[0].bytes++;
   const h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),result=await h.cache.prepare([stage]);

@@ -7,3 +7,5 @@ html,body{height:100%;overflow:hidden}.chronicles-body{height:100%;overflow:hidd
 @media(max-width:700px){html,body,.chronicles-body{overflow:auto;height:auto}.chronicles-shell{height:auto;display:block}.route-rail{max-height:560px;margin-bottom:12px}.route-stage{min-height:1000px}.route-content{display:block}.encounter-path{grid-template-columns:repeat(2,1fr)}.modal-roster{grid-template-columns:repeat(2,1fr)}}
 
 .route-status.graded{border-color:#a83a43!important;background:#260f13!important;color:#f2d7d9!important}.route-button.completed .route-index{color:#d34952}.path-head #routeState{color:#cf4b53}.encounter-copy small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.route-illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}

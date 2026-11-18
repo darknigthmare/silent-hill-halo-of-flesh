@@ -3033,50 +3033,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
-    "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+    "sourceFile": "exec-c7f915ff-0083-40af-8f7e-e07ca10100c3.png",
+    "sourceSHA256": "b71ffb03f44127738dbcd7a908615e4926d9ddcfe05bc6f1f74523a90c5ac9a8",
     "sourceDimensions": [
-      1448,
-      1086
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Romper en profil droit, épaule en avant et longue main près du sol. Pose statique documentée par le modèle SH1.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
-        "bytes": 1093300,
-        "width": 1448,
-        "height": 1086,
+        "sha256": "b71ffb03f44127738dbcd7a908615e4926d9ddcfe05bc6f1f74523a90c5ac9a8",
+        "bytes": 2097371,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          17,
-          12,
-          1422,
-          1071
+          32,
+          57,
+          1510,
+          967
         ],
-        "pixelSHA256": "c13c0c02eef68c571bd1a5000558b95d907cc04603a314ac8bdc8c06016faf8f",
-        "transparentFraction": 0.68422,
-        "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+        "pixelSHA256": "b1c1b0dd445d38c63c74a7cb66a45e94b882aa8d7e1e2f6ad413b71f2b57c225",
+        "transparentFraction": 0.63221,
+        "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
         "facing": 1,
         "anchor": [
           0.5,
-          0.98619
+          1
         ],
-        "bodyHeight": 0.97,
-        "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png",
-        "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+        "bodyHeight": 1,
+        "sourceFile": "exec-c7f915ff-0083-40af-8f7e-e07ca10100c3.png",
+        "sourceSHA256": "b71ffb03f44127738dbcd7a908615e4926d9ddcfe05bc6f1f74523a90c5ac9a8",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          15,
-          10,
-          1425,
-          1073
+          0,
+          9,
+          1522,
+          1024
         ],
         "framingBounds": [
-          15,
-          10,
-          1425,
-          1073
+          0,
+          54,
+          1522,
+          1014
         ]
       },
       {
@@ -3246,7 +3248,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH1 original : humanoïde voûté à deux grands bras d’appui et deux jambes pliées. Cordons/harnais et pose du modèle conservés ; pied arrière gauche complété depuis le bord source, contraste accru. Une seule vue établie ; appuis, enveloppe et échelle de versus non mesurés, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a",
+      "sourceDimensions": [
+        1448,
+        1086
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-7e6a15cd-b8c3-443e-9db6-6e5d876be445.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946"
+      },
+      {
+        "index": 2,
+        "sha256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91"
+      },
+      {
+        "index": 3,
+        "sha256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Romper en profil droit, épaule en avant et longue main près du sol. Pose statique documentée par le modèle SH1."
   },
   "sh3_double_head_040": {
     "fighterId": "sh3_double_head_040",
@@ -5958,50 +5986,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
-    "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+    "sourceFile": "exec-a43581fa-3249-4535-bac0-583db21112c9.png",
+    "sourceSHA256": "aaa9a22e2beb715b306c8b5053fd9a36b2beae087e877ed98caa6ffbb13bb6a0",
     "sourceDimensions": [
-      1670,
-      942
+      1942,
+      810
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Cynthia Victim 16 SH4 dans sa posture horizontale voûtée, cheveux longs pendants, haut rayé et jambes pliées ; ni pose debout ni prise animée inférée. Cheveux/appuis, rouge et échelle en projection à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Cynthia Velasquez, victime 16 : pose flottante de profil gauche, cheveux longs et membres décalés. Pose statique de duel SH4.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
-        "bytes": 1303720,
-        "width": 1670,
-        "height": 942,
+        "sha256": "aaa9a22e2beb715b306c8b5053fd9a36b2beae087e877ed98caa6ffbb13bb6a0",
+        "bytes": 1165865,
+        "width": 1942,
+        "height": 810,
         "visibleBounds": [
-          19,
-          19,
-          1650,
-          923
+          40,
+          89,
+          1900,
+          745
         ],
-        "pixelSHA256": "46484ffaa34f6d1c90028962b9d022d47f52ca51ea3c998ba39499c8b46f9282",
-        "transparentFraction": 0.66923,
-        "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
-        "facing": 1,
+        "pixelSHA256": "684a36e7cb23027501e5167c6a20f2273a90bbeddf586844540ac56d4a4e61e5",
+        "transparentFraction": 0.73483,
+        "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+        "facing": -1,
         "anchor": [
-          0.58,
+          0.5,
           1
         ],
         "bodyHeight": 1,
-        "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png",
-        "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+        "sourceFile": "exec-a43581fa-3249-4535-bac0-583db21112c9.png",
+        "sourceSHA256": "aaa9a22e2beb715b306c8b5053fd9a36b2beae087e877ed98caa6ffbb13bb6a0",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          16,
-          9,
-          1654,
-          942
+          0,
+          0,
+          1928,
+          810
         ],
         "framingBounds": [
-          16,
-          16,
-          1653,
-          928
+          31,
+          82,
+          1909,
+          764
         ]
       }
     ],
@@ -6042,7 +6072,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Cynthia Victim 16 SH4 dans sa posture horizontale voûtée, cheveux longs pendants, haut rayé et jambes pliées ; ni pose debout ni prise animée inférée. Cheveux/appuis, rouge et échelle en projection à comparer. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62",
+      "sourceDimensions": [
+        1670,
+        942
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-91b1004b-7e44-473c-83c1-09047f5c1864.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Cynthia Velasquez, victime 16 : pose flottante de profil gauche, cheveux longs et membres décalés. Pose statique de duel SH4."
   },
   "sh4_richard_braintree_victim_19": {
     "fighterId": "sh4_richard_braintree_victim_19",
@@ -9108,50 +9150,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-62234ef3-2f39-4db6-9b08-6d37aad4f60f.png",
-    "sourceSHA256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77",
+    "sourceFile": "exec-710b1bbc-ef98-4718-bc17-ea07b7ce9329.png",
+    "sourceSHA256": "fbc3269a88c0a276b12056a9254a6eaf0e0334f6b12bb6629fde696b7ab19bb3",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Steve Garland Victim4 SH4 entier, posture sans appui fixe : corps flottant sans garde de boxeur, petite truelle de jardin entière dans sa main droite. Pose et texture recomposées depuis deux rendus ; aucune trajectoire, échelle ou animation originale certifiée.",
+    "notes": "Steve Garland, victime 04 : le torse et les jambes flottent en profil gauche, truelle de jardin gardée en main. Pose statique de duel SH4.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77",
-        "bytes": 399721,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "fbc3269a88c0a276b12056a9254a6eaf0e0334f6b12bb6629fde696b7ab19bb3",
+        "bytes": 1733855,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          450,
-          231,
-          772,
-          1060
+          99,
+          60,
+          913,
+          1507
         ],
-        "pixelSHA256": "3bf80951df4a05c036dd42bfd872b76cf780828b62665c71e55ea204680178d4",
-        "transparentFraction": 0.90895,
-        "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
-        "facing": 1,
+        "pixelSHA256": "fe9822bff8e178b930a606e77ede802173235576273027bda4b2253e1a9c1b45",
+        "transparentFraction": 0.73448,
+        "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+        "facing": -1,
         "anchor": [
-          0.48724082934609253,
-          0.8452950558213717
+          0.5,
+          1
         ],
-        "bodyHeight": 0.6610845295055822,
-        "sourceFile": "exec-62234ef3-2f39-4db6-9b08-6d37aad4f60f.png",
-        "sourceSHA256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77",
+        "bodyHeight": 1,
+        "sourceFile": "exec-710b1bbc-ef98-4718-bc17-ea07b7ce9329.png",
+        "sourceSHA256": "fbc3269a88c0a276b12056a9254a6eaf0e0334f6b12bb6629fde696b7ab19bb3",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          81,
-          67,
-          1226,
-          1204
+          0,
+          17,
+          1010,
+          1536
         ],
         "framingBounds": [
-          446,
-          225,
-          775,
-          1062
+          95,
+          58,
+          916,
+          1509
         ]
       }
     ],
@@ -9192,7 +9236,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Steve Garland Victim4 SH4 entier, posture sans appui fixe : corps flottant sans garde de boxeur, petite truelle de jardin entière dans sa main droite. Pose et texture recomposées depuis deux rendus ; aucune trajectoire, échelle ou animation originale certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-62234ef3-2f39-4db6-9b08-6d37aad4f60f.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Steve Garland, victime 04 : le torse et les jambes flottent en profil gauche, truelle de jardin gardée en main. Pose statique de duel SH4."
   },
   "sh4_eric_walsh_victim_10": {
     "fighterId": "sh4_eric_walsh_victim_10",
@@ -19659,16 +19715,55 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-af14124f-bf63-4928-a5a0-fec2d585c15e.png",
-    "sourceSHA256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
+    "sourceFile": "exec-2ee9c153-e351-42eb-8c2b-6d25aa293b91.png",
+    "sourceSHA256": "f72ba07f41b863e926c28f651dd28795df60571b0f5d6655a69f8988353ce5d6",
     "sourceDimensions": [
-      1444,
-      1089
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Première sélection de Sad Daddy, installation fixe de la chambre 500. Le rendu du modèle Konami à deux angles documente le plan de fixation commun, la cage centrale et les panneaux latéraux. Le duel ne reçoit aucune nouvelle pose.",
+    "notes": "Profil gauche du boss fixe de la chambre 500. Cou en extension horizontale, bouche de profil, plans de suspension superposés. L’illustration de sélection est indépendante. Aucun déplacement, saut ou esquive ajouté.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
-    "frames": [],
+    "frames": [
+      {
+        "sha256": "f72ba07f41b863e926c28f651dd28795df60571b0f5d6655a69f8988353ce5d6",
+        "bytes": 1957929,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          54,
+          11,
+          1442,
+          915
+        ],
+        "pixelSHA256": "f3129a9444b3107b9d7594781a784ebe0bd5fbfefba0120cb809e6ca94ea9503",
+        "transparentFraction": 0.60508,
+        "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+        "facing": -1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-2ee9c153-e351-42eb-8c2b-6d25aa293b91.png",
+        "sourceSHA256": "f72ba07f41b863e926c28f651dd28795df60571b0f5d6655a69f8988353ce5d6",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1526,
+          1024
+        ],
+        "framingBounds": [
+          50,
+          0,
+          1446,
+          918
+        ]
+      }
+    ],
     "portrait": {
       "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
       "sha256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
@@ -19701,8 +19796,16 @@ export const SPRITES = {
       ],
       "transparentFraction": 0.53281
     },
-    "clips": {},
-    "combatView": "selection-only",
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
     "selectionNotes": "Première sélection de Sad Daddy, installation fixe de la chambre 500. Le rendu du modèle Konami à deux angles documente le plan de fixation commun, la cage centrale et les panneaux latéraux. Le duel ne reçoit aucune nouvelle pose.",
     "selectionProvenance": {
       "sourceSHA256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
@@ -19713,6 +19816,7 @@ export const SPRITES = {
       "origin": "conversation-image-generation",
       "sourceFile": "exec-af14124f-bf63-4928-a5a0-fec2d585c15e.png"
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "combatNotes": "Profil gauche du boss fixe de la chambre 500. Cou en extension horizontale, bouche de profil, plans de suspension superposés. L’illustration de sélection est indépendante. Aucun déplacement, saut ou esquive ajouté."
   }
 };

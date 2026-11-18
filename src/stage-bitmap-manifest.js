@@ -235,5 +235,191 @@ export const STAGE_BITMAPS = {
         ]
       }
     ]
+  },
+  "lakeside_amusement": {
+    "stageId": "lakeside_amusement",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "cybil-carousel-platform-1999",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+    ],
+    "layers": [
+      {
+        "id": "platform",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/lakeside_amusement.platform.e002db685c30.png",
+            "sha256": "e002db685c30f7364f230dc8c4ca78987c8eebd57e6d1cabfe579027e9a419f3",
+            "bytes": 1929001,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "mounted-horse",
+        "rect": [
+          0.685,
+          0,
+          0.289,
+          0.77
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+            "sha256": "d72b181aab335cd763ac5000852460d954302d0605a0004dd32b8f3381a7a4cf",
+            "bytes": 1553449,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.09
+      }
+    ],
+    "notes": "Monture indépendante au bord du plateau. Le cadrage latéral, la disposition des trois chevaux et la course du plan rapproché adaptent les vues PS1 au versus."
+  },
+  "room_302": {
+    "stageId": "room_302",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "room302-first-entry-door",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH4_01_ROOM_302",
+      "EXT12_REF_ROOM_302_ROOM_2_20261101",
+      "EXT12_REF_ROOM_302_ROOM_3_20261101"
+    ],
+    "layers": [
+      {
+        "id": "entrance",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/room_302.entrance.6535cc934c6c.png",
+            "sha256": "6535cc934c6cb9a7c5b8a5e277f8ba4f5edf7ef7625c15b2df4c53e133efe3eb",
+            "bytes": 2371319,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "chair",
+        "rect": [
+          0.876,
+          0.67,
+          0.12,
+          0.32
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/room_302.chair.739650b60353.png",
+            "sha256": "739650b60353c4cd098a0bbd47e7a0df511a0e7bf37efdfcc593e460f727c888",
+            "bytes": 1657025,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.064
+      }
+    ],
+    "notes": "Entrée enchaînée vue depuis le séjour, avec la kitchenette et une chaise de salle à manger sur un plan séparé. Le cadrage et le déplacement apparent sont adaptés au versus."
+  },
+  "riverside_motel": {
+    "stageId": "riverside_motel",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "riverside-motel-mist-guest-courtyard",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT03",
+      "EXT02"
+    ],
+    "layers": [
+      {
+        "id": "courtyard",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+            "sha256": "20bf06773d8ad2ec71a75dc0f5885d54b91acf465f9d62b96c65f2889b2c9d8f",
+            "bytes": 2166190,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "gate",
+        "rect": [
+          0.007,
+          0.5,
+          0.18125,
+          0.46
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+            "sha256": "270f1cbab7c5f8a4956f481c8a4d58640de2cc1a5f8b713185910e753667d2a4",
+            "bytes": 1104301,
+            "width": 1052,
+            "height": 1495
+          }
+        ],
+        "parallaxX": 0.045
+      }
+    ],
+    "notes": "Cour des chambres 305–309 dans la brume de la version PSP. Le portillon ouvert est un plan indépendant. Cadrage et course adaptés au versus."
   }
 };

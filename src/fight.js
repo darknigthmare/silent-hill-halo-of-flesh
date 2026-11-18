@@ -2815,6 +2815,7 @@ export class FightEngine {
     context.translate(camera.x + shakeX, camera.y + shakeY);
     context.scale(camera.scale, camera.scale);
     drawStage(context, this.stage, time, {
+      viewPan:(this.actors[0].x+this.actors[1].x)/WIDTH-1,
       matchState:{phase:this.phase,frame:this.frame,phaseTimer:this.phaseTimer,round:this.round,
         phaseDuration:this.presentationSequence?.duration||145,resultTimer:this.resultTimer||0},
       width: WIDTH,
