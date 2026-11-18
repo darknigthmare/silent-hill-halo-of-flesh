@@ -1181,5 +1181,133 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Clairière terreuse de la zone Wood avec une bordure de pierres et d’arbres nus. La souche au bord gauche suit le mouvement de caméra du duel. Cadrage et proportions adaptés au versus."
+  },
+  "church_hc": {
+    "stageId": "church_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "holy-way-main-hall-before-glass-break",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT07",
+      "EXT06",
+      "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+      "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "holy-way-nave",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+            "sha256": "03a8aefbef40fd769b8ae5dcfe040cae5ddef97ef3bc3de45f517c236ddbddb7",
+            "bytes": 2448945,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "candle-stand",
+        "rect": [
+          0.075,
+          0.39,
+          0.14,
+          0.414
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/church_hc.candle-stand.31cb771411d7.png",
+            "sha256": "31cb771411d7b309f8fea4cc11cd0dd01bcefeac3d22799201cda901eba1a94f",
+            "bytes": 1058460,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.026
+      }
+    ],
+    "notes": "La nef est vue avant la rupture du vitrail. Le grand porte-cierge occupe la bordure gauche. Le personnage sculpté et les volumes du fond sont une interprétation."
+  },
+  "dark_shrine_corridors": {
+    "stageId": "dark_shrine_corridors",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "inari-altar-before-replacement",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT34",
+      "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+      "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+      "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "inari-altar",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+            "sha256": "c91ff918e5750e5f3562a4c69c685baf0ab50b926475130890ee9c8100a09926",
+            "bytes": 2145845,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "lacquer-shelf",
+        "rect": [
+          0.061,
+          0.285,
+          0.217,
+          0.515
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
+            "sha256": "fb67e770ed7405ac323a0d6cd230a3aa7f7965b95c084f4b28d05aff93483947",
+            "bytes": 2374736,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.034
+      }
+    ],
+    "notes": "La salle est représentée avant la restitution de la statue. Le meuble aux coffres occupe le bord gauche et laisse le socle éclairé visible au centre."
   }
 };

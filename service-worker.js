@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-observations-and-rivals-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '2a792e55a9de6ae9eaa150fcb395858d171f7914f2984b1f718dd45915f7c469';
+const BITMAP_REVISION = '10a10d092e5f41c51ae34cfa47ec46d81691fd1cb0cc9a3146879981d6919939';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -376,8 +376,12 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+  "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
+  "/assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
   "/assets/stages/curtis_shop.sales-counter.003f99674bac.png",
   "/assets/stages/curtis_shop.workshop.910767824f6e.png",
+  "/assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+  "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
   "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
   "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
   "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
