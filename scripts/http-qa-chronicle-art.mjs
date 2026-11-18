@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright-core';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { CHRONICLES } from '../src/data.js';
+import { combatSpriteFor } from '../src/sprite-system.js';
+import { CHRONICLES, getFighter } from '../src/data.js';
 import { chronicleEncounterPlan } from '../src/run-progress.js';
 import { chronicleArtwork } from '../src/chronicle-art.js';
 
@@ -12,13 +13,19 @@ const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4282';
 const output = resolve(process.env.QA_OUTPUT || 'tests/http-chronicle-art');
 const players = { heather_birth: 'sh3_missionary_047', room_21: 'sh4_walter_sullivan_072', travis_mirrors: 'origins_ariel_078', static_beneath_st_amelia: 'townfall_lunger', murphy_rain: 'downpour_anne_cunningham', trauma_together: 'ascension_snarler_180' };
 const outputs = [];
-for (const wave of [7, 8, 9]) {
+for (const wave of [7, 8, 9, 10]) {
   const journal = new URL(`../docs/production/wave${wave}-story/generation.json`, import.meta.url);
   outputs.push(...JSON.parse(await readFile(journal, 'utf8')).outputs);
 }
+const rivalJournal = new URL('../docs/production/wave10-story/rivals.json', import.meta.url);
+outputs.push(...JSON.parse(await readFile(rivalJournal, 'utf8')).outputs);
 const selected = process.env.QA_STORY_ROUTES?.split(',');
 const routes = CHRONICLES.filter(route => chronicleArtwork(route.id) && (!selected || selected.includes(route.id)));
 const fallback = CHRONICLES.find(route => !chronicleArtwork(route.id));
+const battleRoute = CHRONICLES.find(route => {
+  const { queue } = chronicleEncounterPlan(route.id);
+  return queue.length && queue.every(id => combatSpriteFor(id));
+});
 const report = { build: 'dist', checks: [], routes: [], captures: [], errors: [], method: 'Real HTTP navigation and combat preflight. Prepared deciding KOs advance the normal engine callbacks and result UI. No saved victory or substituted art.' };
 await mkdir(output, { recursive: true });
 
@@ -100,7 +107,8 @@ try {
     page.on('pageerror', e => report.errors.push(String(e)));
     const id = route.id, art = chronicleArtwork(id);
     const verify = (label, value) => check(id + ' / ' + label, value);
-    const record = { id, player: players[id], encounters: [], dossiers: [] };
+    const playerId = players[id] || 'sh3_missionary_047';
+    const record = { id, player: playerId, encounters: [], dossiers: [] };
     report.routes.push(record);
     await page.goto(base + '/modules/chronicles.html');
     verify('15 chronicles available', await page.locator('.route-button').count() === 15);
@@ -110,12 +118,16 @@ try {
     await hero.waitFor({ state: 'visible' });
     verify('archive displays authored opening', (await hero.getAttribute('src')).endsWith(art.intro.path) && await hero.getAttribute('alt') === art.intro.alt && await page.locator('#routeIntro').textContent() === route.intro);
     await capture(page.locator('.route-art'), id + '-archive.jpg');
-    await page.locator('.route-button').filter({ hasText: fallback.title }).click();
-    verify('unillustrated route returns to procedural artwork', !await hero.isVisible() && await hero.getAttribute('src') === null);
-    await routeButton.click();
+    if (fallback) {
+      await page.locator('.route-button').filter({ hasText: fallback.title }).click();
+      verify('unillustrated route returns to procedural artwork', !await hero.isVisible() && await hero.getAttribute('src') === null);
+      await routeButton.click();
+    }
     const dossier = page.locator('#dossierEnding');
     const plan = chronicleEncounterPlan(id);
-    if (!plan.queue.length) {
+    const missing = plan.queue.filter(fighterId => !combatSpriteFor(fighterId));
+    if (!plan.queue.length || missing.length) {
+      record.missingCombatSprites = missing;
       record.dossiers = plan.referenceDossiers;
       verify('dossier provides a disclosure', await dossier.isVisible() && !await dossier.evaluate(node => node.open));
       await dossier.locator('summary').click();
@@ -128,15 +140,27 @@ try {
       }
       await capture(dossier, id + '-dossier-ending.jpg');
       verify('reading does not award a win or register an attempt', await page.evaluate(() => !localStorage.getItem('sh-halo-of-flesh-run-v1') && !localStorage.getItem('sh-halo-of-flesh-chronicles-v1')));
-      await page.locator('.route-button').filter({ hasText: fallback.title }).click();
-      verify('other dossier clears disclosure and picture', !await dossier.isVisible() && await dossier.locator('img').getAttribute('src') === null);
+      if (battleRoute) {
+        await page.locator('.route-button').filter({ hasText: battleRoute.title }).click();
+        verify('playable route clears disclosure and picture', !await dossier.isVisible() && await dossier.locator('img').getAttribute('src') === null);
+      }
+      if (missing.length) {
+        await routeButton.click();
+        verify('archive explains pending combat art', (await dossier.locator('summary').textContent()).includes('en attente de sprites'));
+        await page.selectOption('#playerFighter', playerId);
+        await page.click('#launchRoute');
+        const status = page.locator('#spriteLaunchStatus');
+        await page.waitForFunction(() => document.querySelector('#spriteLaunchStatus')?.textContent.includes('Sprites à produire'));
+        verify('preflight preserves the blocked route', (await status.textContent()).includes(getFighter(missing[0]).name));
+        verify('failed launch keeps progression intact', await page.evaluate(() => !localStorage.getItem('sh-halo-of-flesh-run-v1') && !localStorage.getItem('sh-halo-of-flesh-chronicles-v1')));
+      }
       await context.close();
       await browser.close();
       browser = null;
       continue;
     }
     verify('playable ending reserved for final victory', !await dossier.isVisible());
-    await page.selectOption('#playerFighter', players[id]);
+    await page.selectOption('#playerFighter', playerId);
     await page.click('#launchRoute');
     await loaded(page, 0);
     const opening = page.locator('#chronicleOpening'), ending = page.locator('#chronicleEnding');
@@ -158,7 +182,19 @@ try {
       await loaded(page, index);
       record.encounters.push(await page.evaluate(() => window.__HALO_QA__.selection.p2.id));
       verify('ordinary encounter ' + (index + 1), record.encounters.at(-1) === fighterId);
-      if (index) verify('later chapter omits introduction ' + (index + 1), !await opening.isVisible());
+      if (index && art.rival?.fighterId === fighterId) {
+        await opening.locator('img').waitFor({ state: 'visible' });
+        verify('rival appears at the matching encounter', (await opening.locator('img').getAttribute('src')).endsWith(art.rival.path) && await opening.locator('p').textContent() === art.rival.caption);
+        await capture(opening, id + '-rival.jpg');
+        if (id === 'room_21') {
+          verify('rival fight can be retried after a loss', await settle(page, 1));
+          await page.locator('#rematch').click();
+          await loaded(page, index);
+          verify('retry skips the illustrated encounter', !await opening.isVisible());
+        }
+      } else if (index) {
+        verify('chapter omits introduction ' + (index + 1), !await opening.isVisible());
+      }
       if (id === 'murphy_rain' && fighterId === 'downpour_wheelman_116') {
         await page.evaluate(() => {
           const engine = window.__HALO_QA__.engine;
@@ -172,7 +208,12 @@ try {
       await page.locator('#result').waitFor({ state: 'visible' });
       if (index < run.queue.length - 1) {
         verify('intermediate screen with Continue, no ending ' + (index + 1), !await ending.isVisible() && await page.locator('#continueRun').isVisible());
-        await page.click('#continueRun');
+        if (id === 'room_21' && run.queue[index + 1] === art.rival?.fighterId) {
+          await page.goto(base + '/modules/unified-versus.html?qa=1');
+          await page.click('#resumeCheckpoint');
+        } else {
+          await page.click('#continueRun');
+        }
       }
     }
     await ending.locator('img').waitFor({ state: 'visible' });

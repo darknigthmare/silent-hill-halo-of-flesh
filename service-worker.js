@@ -1,5 +1,5 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicle-illustrations-wave9-20261118';
+const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
 // BITMAP_REVISION_BEGIN
 const BITMAP_REVISION = '07424e28e635f74efbbebc73a0837651d1067dd71cbe61fdba6d9cbd7f2af2cb';
 // BITMAP_REVISION_END
@@ -409,6 +409,22 @@ const ESSENTIAL_SHELL = [
   '/src/versus.js',
   '/src/chronicles.js',
   '/src/chronicle-art.js',
+  '/assets/chronicles/room_21.rival.55558b472462.webp',
+  '/assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp',
+  '/assets/chronicles/loop_204863.ending.414d839e6067.webp',
+  '/assets/chronicles/james_sentence.intro.2475b8ca70a5.webp',
+  '/assets/chronicles/james_sentence.ending.b8c9176fa2d2.webp',
+  '/assets/chronicles/hinako_f.intro.d3358693909a.webp',
+  '/assets/chronicles/hinako_f.ending.e7efdcdddbc1.webp',
+  '/assets/chronicles/heather_birth.rival.8cce731a8ae4.webp',
+  '/assets/chronicles/fog_of_alessa.intro.4ff0100b7713.webp',
+  '/assets/chronicles/fog_of_alessa.ending.967dc0f0b2b6.webp',
+  '/assets/chronicles/book_elements.intro.c7cc398f8185.webp',
+  '/assets/chronicles/book_elements.ending.4958baecadb0.webp',
+  '/assets/chronicles/ashes_of_alessa.intro.b00931169b8f.webp',
+  '/assets/chronicles/ashes_of_alessa.ending.dfeb9c9495f9.webp',
+  '/assets/chronicles/alex_home.intro.2183e839d619.webp',
+  '/assets/chronicles/alex_home.ending.142737135fe0.webp',
   '/assets/chronicles/travis_mirrors.intro.a8432e807635.webp',
   '/assets/chronicles/travis_mirrors.ending.e9afa58dc5c1.webp',
   '/assets/chronicles/heather_birth.intro.2ef91708c75e.webp',

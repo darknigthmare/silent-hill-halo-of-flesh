@@ -426,9 +426,10 @@ function activateRun(run) {
 }
 function restoreCheckpoint() {
   if(state.loadingSprites)return false;
-  const resumed=resumeRun(loadRun());
+  const saved=loadRun();
+  const resumed=resumeRun(saved);
   if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return false;}
-  return startFight({preserveRun:true,runCandidate:resumed});
+  return startFight({preserveRun:true,runCandidate:resumed,enteringChapter:saved.status==='won'});
 }
 function canRetryCurrentFight() {
   return !state.loadingSprites&&!(state.run&&['won','complete'].includes(state.run.status));
@@ -439,24 +440,31 @@ function retryCurrentFight() {
   return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
 
-function showChronicleOpening(isNewRun) {
-  const route=isNewRun&&state.run?.mode==='chronicle'&&state.run.index===0?CHRONICLES.find(r=>r.id===state.run.routeId):null;
-  const artwork=chronicleArtwork(route?.id)?.intro;
-  const panel=els.chronicleOpening;
-  panel.hidden=!artwork;
-  setChronicleImage(panel.querySelector('img'),artwork);
-  if(artwork){
-    panel.querySelector('strong').textContent=route.title;
-    panel.querySelector('p').textContent=route.intro;
+function showChronicleOpening(enteringChapter) {
+  const run = state.run;
+  const route = enteringChapter && run?.mode === 'chronicle'
+    ? CHRONICLES.find(entry => entry.id === run.routeId)
+    : null;
+  const scenes = chronicleArtwork(route?.id);
+  const rival = run?.index > 0 && scenes?.rival?.fighterId === run.queue[run.index]
+    ? scenes.rival
+    : null;
+  const artwork = run?.index === 0 ? scenes?.intro : rival;
+  const panel = els.chronicleOpening;
+  panel.hidden = !artwork;
+  setChronicleImage(panel.querySelector('img'), artwork);
+  if (artwork) {
+    panel.querySelector('strong').textContent = rival?.title || route.title;
+    panel.querySelector('p').textContent = rival?.caption || route.intro;
   }
 }
 
-function showFight(isNewRun) {
+function showFight(enteringChapter) {
   els.selectScreen.classList.add('hidden');
   els.fightScreen.classList.remove('hidden');
   els.result.classList.add('hidden');
   els.chronicleEnding.hidden=true;
-  showChronicleOpening(isNewRun);
+  showChronicleOpening(enteringChapter);
   window.scrollTo(0, 0);
 }
 function showSelect() {
@@ -504,7 +512,7 @@ function fightConfig() {
   };
 }
 
-async function startFight({ preserveRun = false, runCandidate = null } = {}) {
+async function startFight({ preserveRun = false, runCandidate = null, enteringChapter = false } = {}) {
   if (state.loadingSprites) return false;
   const previousAnnouncement=flow.announcementId;
   const lease=++state.spriteLease;
@@ -570,7 +578,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   }
   if (state.run?.rituals?.length) els.ritualSelect.value = currentRitualId();
   state.engine?.destroy();
-  showFight(!preserveRun);
+  showFight(!preserveRun || enteringChapter);
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
@@ -703,7 +711,7 @@ function handleMatchEnd(result) {
 }
 function continueRun() {
   if(state.loadingSprites||state.run?.status!=='won')return false;
-  return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
+  return startFight({preserveRun:true,runCandidate:resumeRun(state.run),enteringChapter:true});
 }
 function refreshControlHelp(bindings = state.controls) {
   state.controls=bindings;

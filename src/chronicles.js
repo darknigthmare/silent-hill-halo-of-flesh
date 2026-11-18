@@ -1,4 +1,5 @@
 import { CHRONICLES, ROSTER, SOURCE_META, createCombatProfile, getFighter, getStage } from './data.js';
+import { combatSpriteFor } from './sprite-system.js';
 import { chronicleEncounterPlan } from './run-progress.js';
 import { drawStage, renderPortrait } from './renderers.js';
 import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
@@ -45,7 +46,12 @@ function renderSelected(){
   const art = chronicleArtwork(selected.id);
   setChronicleImage($('#routeIllustration'), art?.intro);
   dossierEnding.open = false;
-  dossierEnding.hidden = !art?.ending || chronicleEncounterPlan(selected.id).queue.length > 0;
+  const encounters = chronicleEncounterPlan(selected.id).queue;
+  const waitingForArt = encounters.some(fighterId => !combatSpriteFor(fighterId));
+  dossierEnding.hidden = !art?.ending || (encounters.length > 0 && !waitingForArt);
+  dossierEnding.querySelector('summary').textContent = waitingForArt
+    ? 'Voir le dénouement illustré · parcours en attente de sprites'
+    : 'Voir le dénouement illustré';
   setChronicleImage(dossierImage, null);
   els.routeSource.textContent=`${SOURCE_META[selected.source].label} · DOSSIER ${String(CHRONICLES.indexOf(selected)+1).padStart(2,'0')}`;
   els.routeTitle.textContent=selected.title;els.routeSubtitle.textContent=selected.subtitle;els.routeIntro.textContent=selected.intro;els.routeOutro.textContent=selected.outro;

@@ -7,6 +7,13 @@ const ARTWORK = {
     "ending": {
       "path": "assets/chronicles/heather_birth.ending.f3d3fe97049d.webp",
       "alt": "Heather, de dos dans la chapelle, regarde les vitraux éclairés au-dessus de l’autel."
+    },
+    "rival": {
+      "fighterId": "sh3_memory_of_alessa_049",
+      "path": "assets/chronicles/heather_birth.rival.8cce731a8ae4.webp",
+      "title": "Le double",
+      "caption": "Dans la chapelle, Heather reconnaît ses propres traits sous la frange noire d’Alessa.",
+      "alt": "Heather se retourne vers son double aux cheveux noirs, entre les rangées de bancs."
     }
   },
   "room_21": {
@@ -17,6 +24,13 @@ const ARTWORK = {
     "ending": {
       "path": "assets/chronicles/room_21.ending.936178291280.webp",
       "alt": "Deux chaînes tendues se croisent sur les panneaux usés de la porte du 302."
+    },
+    "rival": {
+      "fighterId": "sh4_walter_sullivan_072",
+      "path": "assets/chronicles/room_21.rival.55558b472462.webp",
+      "title": "Au bout du couloir",
+      "caption": "La porte entrouverte laisse voir Walter. Il se retourne et attend.",
+      "alt": "Walter Sullivan regarde par-dessus son épaule dans le couloir de South Ashfield Heights."
     }
   },
   "travis_mirrors": {
@@ -77,6 +91,76 @@ const ARTWORK = {
     "ending": {
       "path": "assets/chronicles/trauma_together.ending.5209aa4cc455.webp",
       "alt": "Une porte reste entrouverte devant l’autel, ses deux bougies et le grand symbole circulaire de la Fondation."
+    }
+  },
+  "fog_of_alessa": {
+    "intro": {
+      "path": "assets/chronicles/fog_of_alessa.intro.4ff0100b7713.webp",
+      "alt": "À l’accueil de Midwich, la lampe de poitrine de Harry éclaire les indices de la tour de l’horloge."
+    },
+    "ending": {
+      "path": "assets/chronicles/fog_of_alessa.ending.967dc0f0b2b6.webp",
+      "alt": "Une porte entrouverte donne sur des grilles rouillées de Nowhere, où filtre une dernière lumière."
+    }
+  },
+  "james_sentence": {
+    "intro": {
+      "path": "assets/chronicles/james_sentence.intro.2475b8ca70a5.webp",
+      "alt": "Dans un couloir des appartements Wood Side, James s’immobilise, la lettre de Mary à la main."
+    },
+    "ending": {
+      "path": "assets/chronicles/james_sentence.ending.b8c9176fa2d2.webp",
+      "alt": "Près de Lakeview, la rame d’une barque trouble le reflet des pilotis sur le lac Toluca."
+    }
+  },
+  "alex_home": {
+    "intro": {
+      "path": "assets/chronicles/alex_home.intro.2183e839d619.webp",
+      "alt": "Alex revient devant la maison familiale de Shepherd’s Glen, dans une rue déserte."
+    },
+    "ending": {
+      "path": "assets/chronicles/alex_home.ending.142737135fe0.webp",
+      "alt": "Sous Shepherd’s Glen, une photographie de famille reste au fond d’une bassine, derrière le grillage."
+    }
+  },
+  "book_elements": {
+    "intro": {
+      "path": "assets/chronicles/book_elements.intro.c7cc398f8185.webp",
+      "alt": "Sur un bureau, le livre reçu en cadeau s’ouvre tandis qu’un passage rougeoyant apparaît au-delà des pages."
+    },
+    "ending": {
+      "path": "assets/chronicles/book_elements.ending.4958baecadb0.webp",
+      "alt": "Refermé sur la pierre, le livre garde des marques d’eau, de cendre et de doigts sur la tranche."
+    }
+  },
+  "loop_204863": {
+    "intro": {
+      "path": "assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp",
+      "alt": "La porte s’ouvre sur le couloir en L, éclairé par un globe et la lampe du guéridon."
+    },
+    "ending": {
+      "path": "assets/chronicles/loop_204863.ending.414d839e6067.webp",
+      "alt": "La radio se tait sur le meuble du couloir, entre des photographies et une lampe éteinte."
+    }
+  },
+  "hinako_f": {
+    "intro": {
+      "path": "assets/chronicles/hinako_f.intro.d3358693909a.webp",
+      "alt": "Hinako remonte une ruelle embrumée d’Ebisugaoka, où des fleurs rouges apparaissent entre les pierres."
+    },
+    "ending": {
+      "path": "assets/chronicles/hinako_f.ending.e7efdcdddbc1.webp",
+      "alt": "Au seuil du sanctuaire obscur, un masque de renard repose devant les lumières de la procession."
+    }
+  },
+  "ashes_of_alessa": {
+    "intro": {
+      "path": "assets/chronicles/ashes_of_alessa.intro.b00931169b8f.webp",
+      "alt": "À Midwich, des flocons de cendre traversent le faisceau d’une lampe tandis que le métal gagne le couloir."
+    },
+    "ending": {
+      "path": "assets/chronicles/ashes_of_alessa.ending.dfeb9c9495f9.webp",
+      "alt": "Dans le sanctuaire désert, la lumière des fenêtres révèle les cendres qui retombent sur les bancs."
     }
   }
 };
