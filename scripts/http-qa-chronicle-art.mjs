@@ -21,6 +21,8 @@ const rivalJournal = new URL('../docs/production/wave10-story/rivals.json', impo
 outputs.push(...JSON.parse(await readFile(rivalJournal, 'utf8')).outputs);
 const sightingJournal = new URL('../docs/production/wave13-story/sightings.json', import.meta.url);
 outputs.push(...JSON.parse(await readFile(sightingJournal, 'utf8')).outputs);
+const wave12Journal = new URL('../docs/production/wave12-story/generation.json', import.meta.url);
+outputs.push(...JSON.parse(await readFile(wave12Journal, 'utf8')).outputs);
 const selected = process.env.QA_STORY_ROUTES?.split(',');
 const routes = CHRONICLES.filter(route => chronicleArtwork(route.id) && (!selected || selected.includes(route.id)));
 const fallback = CHRONICLES.find(route => !chronicleArtwork(route.id));
@@ -139,6 +141,18 @@ try {
     const dossier = page.locator('#dossierEnding');
     const plan = chronicleEncounterPlan(id);
     const missing = plan.queue.filter(fighterId => !combatSpriteFor(fighterId));
+    const observation = page.locator('#dossierObservation');
+    const archivedScene = art.observation || (missing.length ? art.rival : null);
+    if (archivedScene) {
+      verify('archive illustrates a chapter subject', route.fighters.includes(archivedScene.fighterId));
+      await observation.locator('summary').click();
+      await observation.locator('img').waitFor({ state: 'visible' });
+      verify('observation matches the dossier', (await observation.locator('img').getAttribute('src')).endsWith(archivedScene.path) && await observation.locator('p').textContent() === archivedScene.caption);
+      await capture(observation, id + '-observation.jpg');
+    } else {
+      verify('chronicle without dossier scene hides disclosure', !await observation.isVisible());
+    }
+
     if (!plan.queue.length || missing.length) {
       record.missingCombatSprites = missing;
       record.dossiers = plan.referenceDossiers;

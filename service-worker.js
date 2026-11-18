@@ -1,5 +1,5 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'wood-round-result-20261118';
+const CACHE_REVISION = 'chronicle-observations-and-rivals-20261118';
 // BITMAP_REVISION_BEGIN
 const BITMAP_REVISION = '2a792e55a9de6ae9eaa150fcb395858d171f7914f2984b1f718dd45915f7c469';
 // BITMAP_REVISION_END
@@ -486,6 +486,19 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/harry_ice.ending.60e707ba2ec2.webp',
   '/assets/chronicles/static_beneath_st_amelia.intro.b2c5e2281739.webp',
   '/assets/chronicles/static_beneath_st_amelia.ending.345fe853f2ea.webp',
+  '/assets/chronicles/fog_of_alessa.rival.01b4d120d813.webp',
+  '/assets/chronicles/james_sentence.rival.891ccb039b52.webp',
+  '/assets/chronicles/travis_mirrors.rival.779163d914f5.webp',
+  '/assets/chronicles/alex_home.rival.3833ff314d37.webp',
+  '/assets/chronicles/murphy_rain.rival.ef82a4c07ea9.webp',
+  '/assets/chronicles/trauma_together.rival.6264d55b2a7e.webp',
+  '/assets/chronicles/static_beneath_st_amelia.rival.2bc85a5cfdd5.webp',
+  '/assets/chronicles/harry_ice.observation.47f032022e32.webp',
+  '/assets/chronicles/maya_villa.observation.5acf09d4e8f2.webp',
+  '/assets/chronicles/book_elements.rival.1063fb0ebc19.webp',
+  '/assets/chronicles/hinako_f.rival.706c6f3b0b0e.webp',
+  '/assets/chronicles/ashes_of_alessa.rival.494a38581318.webp',
+  '/assets/chronicles/loop_204863.observation.7892ac1b6bb1.webp',
   '/src/archive.js',
 ];
 

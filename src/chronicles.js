@@ -36,6 +36,14 @@ function fillPlayerFighters(){
   recommended.forEach(f=>{const option=document.createElement('option');option.value=f.id;option.textContent=`${f.name} · ${SOURCE_META[f.source].short}`;els.playerFighter.append(option);});
   const preferred=previous&&ROSTER.some(f=>f.id===previous)?previous:(sameSource.find(f=>!f.boss)?.id||ROSTER[0].id);els.playerFighter.value=preferred;
 }
+const dossierObservation = $('#dossierObservation');
+const observationImage = dossierObservation.querySelector('img');
+let displayedObservation = null;
+dossierObservation.addEventListener('toggle', () => {
+  if (dossierObservation.open && !dossierObservation.hidden) {
+    setChronicleImage(observationImage, displayedObservation);
+  }
+});
 const dossierEnding = $('#dossierEnding');
 const dossierImage = $('#dossierEndingImage');
 dossierEnding.addEventListener('toggle', () => {
@@ -46,8 +54,15 @@ function renderSelected(){
   const art = chronicleArtwork(selected.id);
   setChronicleImage($('#routeIllustration'), art?.intro);
   dossierEnding.open = false;
-  const encounters = chronicleEncounterPlan(selected.id).queue;
+  const { queue: encounters } = chronicleEncounterPlan(selected.id);
   const waitingForArt = encounters.some(fighterId => !combatSpriteFor(fighterId));
+  const observation = art?.observation || (waitingForArt ? art?.rival : null);
+  displayedObservation = observation && selected.fighters.includes(observation.fighterId) ? observation : null;
+  dossierObservation.open = false;
+  dossierObservation.hidden = !displayedObservation;
+  dossierObservation.querySelector('summary').textContent = observation?.title || '';
+  dossierObservation.querySelector('p').textContent = observation?.caption || '';
+  setChronicleImage(observationImage, null);
   dossierEnding.hidden = !art?.ending || (encounters.length > 0 && !waitingForArt);
   dossierEnding.querySelector('summary').textContent = waitingForArt
     ? 'Voir le dénouement illustré · parcours en attente de sprites'
