@@ -7129,50 +7129,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-99e5fa2d-437a-40ed-afa5-382b89d5d7f4.png",
-    "sourceSHA256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+    "sourceFile": "origins_the_butcher_081-combat.png",
+    "sourceSHA256": "94159a7a4db32c6ee8001a159853d92e6938ddf0b811eae8ddd7be0b30f3e9d6",
     "sourceDimensions": [
-      1254,
-      1254
+      1199,
+      1312
     ],
     "singleSubjectReviewed": true,
-    "notes": "Corps entier candidat Origins PSP : tablier long, protection de tête propre au Butcher, deux bottes, grand couperet entier. Ne remplace pas les Pyramid Head SH2/film. Image fixe et pose2D reconstruites, aspect du côté masqué/texture à comparer ; aucune animation ou fidélité1:1 certifiée.",
+    "notes": "Pose latérale en pied orientée vers la droite de The Butcher. Apparence reprise du portrait de sélection de cette édition.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
-        "bytes": 849326,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "94159a7a4db32c6ee8001a159853d92e6938ddf0b811eae8ddd7be0b30f3e9d6",
+        "bytes": 1370164,
+        "width": 1199,
+        "height": 1312,
         "visibleBounds": [
-          396,
-          116,
-          939,
-          1151
+          106,
+          74,
+          1090,
+          1225
         ],
-        "pixelSHA256": "daa59efc6b127ae5ecf8728d8ebbf587fbb654664aed4751cc9ecdc979e23cf8",
-        "transparentFraction": 0.80339,
-        "path": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+        "pixelSHA256": "63945b3eabcf16d487d06bfe4005498507afe41b4961aed27fc0110d3c738927",
+        "transparentFraction": 0.67985,
+        "path": "assets/sprites/origins_the_butcher_081.94159a7a4db3.png",
         "facing": 1,
         "anchor": [
           0.5,
-          0.9178628389154705
+          1
         ],
-        "bodyHeight": 0.8253588516746412,
-        "sourceFile": "exec-99e5fa2d-437a-40ed-afa5-382b89d5d7f4.png",
-        "sourceSHA256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+        "bodyHeight": 1,
+        "sourceFile": "origins_the_butcher_081-combat.png",
+        "sourceSHA256": "94159a7a4db32c6ee8001a159853d92e6938ddf0b811eae8ddd7be0b30f3e9d6",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          57,
           19,
-          1242,
-          1254
+          40,
+          1185,
+          1312
         ],
         "framingBounds": [
-          394,
-          112,
-          941,
-          1156
+          98,
+          65,
+          1094,
+          1234
         ]
       }
     ],
@@ -7213,7 +7215,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Corps entier candidat Origins PSP : tablier long, protection de tête propre au Butcher, deux bottes, grand couperet entier. Ne remplace pas les Pyramid Head SH2/film. Image fixe et pose2D reconstruites, aspect du côté masqué/texture à comparer ; aucune animation ou fidélité1:1 certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "b2b741cbb31cfba86621f7e91db16d40889324f42556c6ee0b69cf7b9490e1d6",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-99e5fa2d-437a-40ed-afa5-382b89d5d7f4.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Pose latérale en pied orientée vers la droite de The Butcher. Apparence reprise du portrait de sélection de cette édition."
   },
   "origins_caliban_079": {
     "fighterId": "origins_caliban_079",
@@ -20783,5 +20797,569 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Garde latérale propre au Phantom de The Arcade, bras tendu à droite. Reprise de la pose précédente dont la brume touchait le bord haut. Les extrémités des rubans sont reconstituées."
+  },
+  "sh4_jasper_gein_victim_17": {
+    "fighterId": "sh4_jasper_gein_victim_17",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh4_jasper_gein_victim_17-selection.png",
+    "sourceSHA256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
+    "sourceDimensions": [
+      1086,
+      1448
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Vue de sélection en pied de Jasper Gein — Victim 17. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/sh4_jasper_gein_victim_17.efd5b90f7168.png",
+      "sha256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
+      "bytes": 1030954,
+      "width": 1086,
+      "height": 1448,
+      "facing": 1,
+      "visibleBounds": [
+        224,
+        33,
+        847,
+        1376
+      ],
+      "pixelSHA256": "3e8b68d51e2fc926b3514f4b5d3a656e20c52c9ebbf3d16d34ebfed55972c8ef",
+      "sourceFile": "sh4_jasper_gein_victim_17-selection.png",
+      "sourceSHA256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        11,
+        1070,
+        1448
+      ],
+      "framingBounds": [
+        222,
+        31,
+        853,
+        1384
+      ],
+      "transparentFraction": 0.72396
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Vue de sélection en pied de Jasper Gein — Victim 17. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
+      "sourceDimensions": [
+        1086,
+        1448
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh4_jasper_gein_victim_17-selection.png"
+    },
+    "animatedClips": 0
+  },
+  "sh4_toby_archbolt_victim_14": {
+    "fighterId": "sh4_toby_archbolt_victim_14",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh4_toby_archbolt_victim_14-combat.png",
+    "sourceSHA256": "d8007b080d54c6d74f3d9173e0e091b6ff87b8145ac603007c05dc65b517aa50",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Toby Archbolt — Victim 14. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "d8007b080d54c6d74f3d9173e0e091b6ff87b8145ac603007c05dc65b517aa50",
+        "bytes": 1474329,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          139,
+          80,
+          896,
+          1400
+        ],
+        "pixelSHA256": "2b30bb389d2e65c592628fc849c4248566e2450116c2b045e40050f699925e0d",
+        "transparentFraction": 0.73843,
+        "path": "assets/sprites/sh4_toby_archbolt_victim_14.d8007b080d54.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "sh4_toby_archbolt_victim_14-combat.png",
+        "sourceSHA256": "d8007b080d54c6d74f3d9173e0e091b6ff87b8145ac603007c05dc65b517aa50",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          15,
+          1010,
+          1516
+        ],
+        "framingBounds": [
+          135,
+          78,
+          898,
+          1410
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_toby_archbolt_victim_14.9044cf2c87f5.png",
+      "sha256": "9044cf2c87f532055542cd3cc28862e85b71083f7041896e14260e0213784cba",
+      "bytes": 947879,
+      "width": 1052,
+      "height": 1495,
+      "facing": 1,
+      "visibleBounds": [
+        176,
+        67,
+        870,
+        1463
+      ],
+      "pixelSHA256": "eb1a4c89c57b95fc781070c3cfed0510f311dcd0175d12fdd277d8842d209625",
+      "sourceFile": "sh4_toby_archbolt_victim_14-selection.png",
+      "sourceSHA256": "9044cf2c87f532055542cd3cc28862e85b71083f7041896e14260e0213784cba",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        19,
+        1024,
+        1495
+      ],
+      "framingBounds": [
+        172,
+        64,
+        874,
+        1466
+      ],
+      "transparentFraction": 0.69635
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Toby Archbolt — Victim 14. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "9044cf2c87f532055542cd3cc28862e85b71083f7041896e14260e0213784cba",
+      "sourceDimensions": [
+        1052,
+        1495
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh4_toby_archbolt_victim_14-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Toby Archbolt — Victim 14. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
+  },
+  "sh2_flesh_lip_027": {
+    "fighterId": "sh2_flesh_lip_027",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh2_flesh_lip_027-selection.png",
+    "sourceSHA256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
+    "sourceDimensions": [
+      824,
+      1909
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Vue de sélection en pied de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
+      "sha256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
+      "bytes": 1647233,
+      "width": 824,
+      "height": 1909,
+      "facing": 1,
+      "visibleBounds": [
+        47,
+        15,
+        778,
+        1884
+      ],
+      "pixelSHA256": "706dcd001866b7272b89015a40b3b70883485fb55aa4867683d8554c10c03e84",
+      "sourceFile": "sh2_flesh_lip_027-selection.png",
+      "sourceSHA256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        13,
+        810,
+        1909
+      ],
+      "framingBounds": [
+        44,
+        13,
+        781,
+        1892
+      ],
+      "transparentFraction": 0.5192
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Vue de sélection en pied de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
+      "sourceDimensions": [
+        824,
+        1909
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh2_flesh_lip_027-selection.png"
+    },
+    "animatedClips": 0
+  },
+  "sh2_mannequin_022": {
+    "fighterId": "sh2_mannequin_022",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh2_mannequin_022-combat.png",
+    "sourceSHA256": "8d1659f7f4e5cbd0ea4cd9c45c8242af47f1783fa39e214883ebc1e608558ff1",
+    "sourceDimensions": [
+      1243,
+      1265
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Mannequin. Mannequin de Silent Hill 2 (2001), garde basse de profil. Les jambes servant d’appuis sont fléchies et décalées ; les deux autres sont repliées en hauteur autour du bassin.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "8d1659f7f4e5cbd0ea4cd9c45c8242af47f1783fa39e214883ebc1e608558ff1",
+        "bytes": 1123950,
+        "width": 1243,
+        "height": 1265,
+        "visibleBounds": [
+          63,
+          34,
+          1180,
+          1228
+        ],
+        "pixelSHA256": "aa1b93de7626a30afc5e2a5f91eefce7111b4df9f619710646ee9e2fd93236f4",
+        "transparentFraction": 0.72312,
+        "path": "assets/sprites/sh2_mannequin_022.8d1659f7f4e5.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "sh2_mannequin_022-combat.png",
+        "sourceSHA256": "8d1659f7f4e5cbd0ea4cd9c45c8242af47f1783fa39e214883ebc1e608558ff1",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1235,
+          1265
+        ],
+        "framingBounds": [
+          58,
+          23,
+          1183,
+          1235
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh2_mannequin_022.8c4e65209cd8.png",
+      "sha256": "8c4e65209cd8f48b811080d5ad7ac03f9503c1fe3d82de1a5b07ed72e1fe3dec",
+      "bytes": 1825549,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        47,
+        19,
+        973,
+        1516
+      ],
+      "pixelSHA256": "402c065828f87e5201c4d4e0e4e975bfe23b8b76cffce4f7434779115de987d5",
+      "sourceFile": "sh2_mannequin_022-selection.png",
+      "sourceSHA256": "8c4e65209cd8f48b811080d5ad7ac03f9503c1fe3d82de1a5b07ed72e1fe3dec",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        9,
+        1010,
+        1536
+      ],
+      "framingBounds": [
+        44,
+        15,
+        976,
+        1521
+      ],
+      "transparentFraction": 0.72621
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Mannequin. Mannequin de Silent Hill 2 (2001), garde basse de profil. Les jambes servant d’appuis sont fléchies et décalées ; les deux autres sont repliées en hauteur autour du bassin.",
+    "selectionProvenance": {
+      "sourceSHA256": "8c4e65209cd8f48b811080d5ad7ac03f9503c1fe3d82de1a5b07ed72e1fe3dec",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh2_mannequin_022-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Mannequin. Mannequin de Silent Hill 2 (2001), garde basse de profil. Les jambes servant d’appuis sont fléchies et décalées ; les deux autres sont repliées en hauteur autour du bassin."
+  },
+  "pt_lisa_149": {
+    "fighterId": "pt_lisa_149",
+    "source": "pt",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "pt_lisa_149-combat.png",
+    "sourceSHA256": "979a6105fdd2cfb58b80e884de8dd7727540b6697a78ce768cbffcd0b5869d9d",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Lisa. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "979a6105fdd2cfb58b80e884de8dd7727540b6697a78ce768cbffcd0b5869d9d",
+        "bytes": 1773121,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          107,
+          23,
+          892,
+          1525
+        ],
+        "pixelSHA256": "8da48f234014caf9204e3bdaf55f526c92795a991f225d71c29f8e5fb81a8c9d",
+        "transparentFraction": 0.62834,
+        "path": "assets/sprites/pt_lisa_149.979a6105fdd2.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "pt_lisa_149-combat.png",
+        "sourceSHA256": "979a6105fdd2cfb58b80e884de8dd7727540b6697a78ce768cbffcd0b5869d9d",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1010,
+          1536
+        ],
+        "framingBounds": [
+          99,
+          17,
+          894,
+          1536
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/pt_lisa_149.6bbde9f732ca.png",
+      "sha256": "6bbde9f732cae1bee8f191ab0bbfb4bfe46d93d5defb20cb5b427676115b7593",
+      "bytes": 1569180,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        257,
+        22,
+        758,
+        1530
+      ],
+      "pixelSHA256": "eb1a4a16c6cbe3e0c8750276bee78cc83fb2de98bfff0da1840e0423ee39ea7f",
+      "sourceFile": "pt_lisa_149-selection.png",
+      "sourceSHA256": "6bbde9f732cae1bee8f191ab0bbfb4bfe46d93d5defb20cb5b427676115b7593",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        51,
+        15,
+        978,
+        1536
+      ],
+      "framingBounds": [
+        254,
+        15,
+        763,
+        1536
+      ],
+      "transparentFraction": 0.67003
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Lisa. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "6bbde9f732cae1bee8f191ab0bbfb4bfe46d93d5defb20cb5b427676115b7593",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "pt_lisa_149-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Lisa. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
+  },
+  "sh3_nurse_pipe_043": {
+    "fighterId": "sh3_nurse_pipe_043",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh3_nurse_pipe_043-combat.png",
+    "sourceSHA256": "0d75f277d7e2cf7c336b6b28dcbe6fdab6d7349b77a478f2a3141afe4e43b52c",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Nurse — Pipe. Infirmière au tuyau de Silent Hill 3 (2003), garde voûtée de profil vers la droite. Pieds décalés, genoux fléchis et tuyau de fer dégagé devant la silhouette.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "0d75f277d7e2cf7c336b6b28dcbe6fdab6d7349b77a478f2a3141afe4e43b52c",
+        "bytes": 974481,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          89,
+          19,
+          1107,
+          1241
+        ],
+        "pixelSHA256": "37a12c840ffe13f060cab8d10dc3a4dc11ea9157fefbf0a6c8e9b939f24c2748",
+        "transparentFraction": 0.77948,
+        "path": "assets/sprites/sh3_nurse_pipe_043.0d75f277d7e2.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "sh3_nurse_pipe_043-combat.png",
+        "sourceSHA256": "0d75f277d7e2cf7c336b6b28dcbe6fdab6d7349b77a478f2a3141afe4e43b52c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          16,
+          1234,
+          1254
+        ],
+        "framingBounds": [
+          81,
+          16,
+          1111,
+          1246
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
+      "sha256": "41849ba63f73f342b1726b4ae06936ec023f4b5e1524436ef7b00a2d4946e936",
+      "bytes": 2034533,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        144,
+        11,
+        913,
+        1529
+      ],
+      "pixelSHA256": "4b5463f870f8f8d2206cb5a65785afbaeab40fbc1f8cb763a91b96212acc7b10",
+      "sourceFile": "sh3_nurse_pipe_043-selection.png",
+      "sourceSHA256": "41849ba63f73f342b1726b4ae06936ec023f4b5e1524436ef7b00a2d4946e936",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        8,
+        1008,
+        1536
+      ],
+      "framingBounds": [
+        141,
+        8,
+        916,
+        1536
+      ],
+      "transparentFraction": 0.69418
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Nurse — Pipe. Infirmière au tuyau de Silent Hill 3 (2003), sélection entière. Coiffe, chevelure sombre rabattue, uniforme croisé, jupe et chaussures fermées. Le tuyau est tenu bas, au côté.",
+    "selectionProvenance": {
+      "sourceSHA256": "41849ba63f73f342b1726b4ae06936ec023f4b5e1524436ef7b00a2d4946e936",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh3_nurse_pipe_043-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Nurse — Pipe. Infirmière au tuyau de Silent Hill 3 (2003), garde voûtée de profil vers la droite. Pieds décalés, genoux fléchis et tuyau de fer dégagé devant la silhouette."
   }
 };

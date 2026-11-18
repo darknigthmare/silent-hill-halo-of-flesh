@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wood-round-result-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'c074189f47e1d7d86ebccd8eb0c146fdd2cab145188f99d880c03d4f64ad72da';
+const BITMAP_REVISION = 'dfa183ff5c7cb4ab8565cceebc35ec666855887d95c172718eb0367ea4a5860b';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -147,8 +147,11 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_remnant_077.912fa1130daa.png",
   "/assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+  "/assets/sprites/origins_the_butcher_081.94159a7a4db3.png",
   "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
   "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+  "/assets/sprites/pt_lisa_149.6bbde9f732ca.png",
+  "/assets/sprites/pt_lisa_149.979a6105fdd2.png",
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
   "/assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
@@ -203,12 +206,15 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_creeper_025.f562380701ab.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+  "/assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
   "/assets/sprites/sh2_mandarin_026.04d4be93badc.png",
   "/assets/sprites/sh2_mandarin_026.75cacc76973e.png",
+  "/assets/sprites/sh2_mannequin_022.8c4e65209cd8.png",
+  "/assets/sprites/sh2_mannequin_022.8d1659f7f4e5.png",
   "/assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
@@ -249,6 +255,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
   "/assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+  "/assets/sprites/sh3_nurse_pipe_043.0d75f277d7e2.png",
+  "/assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
   "/assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
@@ -278,6 +286,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
   "/assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+  "/assets/sprites/sh4_jasper_gein_victim_17.efd5b90f7168.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
   "/assets/sprites/sh4_joseph_schreiber_victim_15.1f89b111bb00.png",
@@ -303,6 +312,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
   "/assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+  "/assets/sprites/sh4_toby_archbolt_victim_14.9044cf2c87f5.png",
+  "/assets/sprites/sh4_toby_archbolt_victim_14.d8007b080d54.png",
   "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
   "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
