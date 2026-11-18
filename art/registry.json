@@ -7649,51 +7649,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-6581fdfe-c060-4083-9538-7e4806b59c34.png",
-      "sourceSHA256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
+      "sourceFile": "sh2_mandarin_026-combat.png",
+      "sourceSHA256": "75cacc76973e036ea6c0653f20429bd2f4010744d2b6395dbfa244f308ddbc20",
       "sourceDimensions": [
-        1254,
-        1254
+        1199,
+        1312
       ],
       "singleSubjectReviewed": true,
-      "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Mandarin SH2 original 2001 suspendu : deux bras à terminaisons circulaires, corps sans tête et deux extrémités basses intégralement cadrés. Le support est implicite pour le sprite ; pas une forme debout sur le sol. Suspente, taille et orientation latérale exacte non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "notes": "Mandarin suspendu de Silent Hill 2 (2001), de profil vers la droite. Les deux bras se décalent en hauteur et les jambes pendent vers la gauche. Dessin fixe de combat dérivé du portrait de sélection du projet. L’ancrage et la taille suivent la silhouette visible. La position exacte par rapport à la grille du jeu d’origine reste à valider.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
-          "bytes": 454043,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "75cacc76973e036ea6c0653f20429bd2f4010744d2b6395dbfa244f308ddbc20",
+          "bytes": 833064,
+          "width": 1199,
+          "height": 1312,
           "visibleBounds": [
-            361,
-            236,
-            945,
-            1028
+            188,
+            116,
+            1003,
+            1213
           ],
-          "alphaBounds": [
-            49,
-            53,
-            1240,
-            1214
-          ],
-          "framingBounds": [
-            353,
-            231,
-            949,
-            1031
-          ],
-          "pixelSHA256": "9859775d0f4872b9fc048e9302d0a218edbe4994ce599615d30a24b2f658fa3e",
-          "transparentFraction": 0.90106,
-          "path": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+          "pixelSHA256": "6ce5b0a191273ae2ccbb7a10df5dd10b9192ad3cc4e86383c5af991b100c51bd",
+          "transparentFraction": 0.81468,
+          "path": "assets/sprites/sh2_mandarin_026.75cacc76973e.png",
           "facing": 1,
           "anchor": [
-            0.52073,
-            0.81978
+            0.49666,
+            0.92454
           ],
-          "bodyHeight": 0.63158,
-          "sourceFile": "exec-6581fdfe-c060-4083-9538-7e4806b59c34.png",
-          "sourceSHA256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.83613,
+          "sourceFile": "sh2_mandarin_026-combat.png",
+          "sourceSHA256": "75cacc76973e036ea6c0653f20429bd2f4010744d2b6395dbfa244f308ddbc20",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -7713,7 +7703,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Mandarin SH2 original 2001 suspendu : deux bras à terminaisons circulaires, corps sans tête et deux extrémités basses intégralement cadrés. Le support est implicite pour le sprite ; pas une forme debout sur le sol. Suspente, taille et orientation latérale exacte non mesurées. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+      "selectionProvenance": {
+        "sourceSHA256": "04d4be93badcc2ade05e075e8ec82cd938beec73d21b1f5052675fa34b308eb0",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-6581fdfe-c060-4083-9538-7e4806b59c34.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Mandarin suspendu de Silent Hill 2 (2001), de profil vers la droite. Les deux bras se décalent en hauteur et les jambes pendent vers la gauche. Dessin fixe de combat dérivé du portrait de sélection du projet. L’ancrage et la taille suivent la silhouette visible. La position exacte par rapport à la grille du jeu d’origine reste à valider."
     },
     "sh2_abstract_daddy_028": {
       "fighterId": "sh2_abstract_daddy_028",

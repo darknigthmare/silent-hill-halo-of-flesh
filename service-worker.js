@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'd933e44aee403bb8883d832653dce91632db765bdbba60738cbcea1891645814';
+const BITMAP_REVISION = '77a349540f35bc045e71905b4415c6ef42a945bb392ba506563aa1961bb1ff32';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -207,6 +207,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
   "/assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+  "/assets/sprites/sh2_mandarin_026.75cacc76973e.png",
   "/assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
