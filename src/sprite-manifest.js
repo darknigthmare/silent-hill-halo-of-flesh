@@ -653,50 +653,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-5c460c54-daf2-43de-b3ae-b0f79eb35554.png",
-    "sourceSHA256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+    "sourceFile": "exec-7e084907-f7bd-4660-8a32-bd19caee89c9.png",
+    "sourceSHA256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
     "sourceDimensions": [
-      1254,
-      1254
+      2172,
+      724
     ],
     "singleSubjectReviewed": true,
-    "notes": "Pose fixe candidate depuis vue dessus originaleSH2;3pairesdepatteset2antennes, têteorientéedroite, aucuntempssourcemesuré.",
+    "notes": "Creeper de Silent Hill 2 (2001), profil rasant orienté vers la droite. Les antennes et les pattes restent distinctes. L’appui suit les pattes basses. Pose fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
-        "bytes": 633182,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+        "bytes": 1181785,
+        "width": 2172,
+        "height": 724,
         "visibleBounds": [
-          50,
-          317,
-          1222,
-          938
+          127,
+          71,
+          2107,
+          675
         ],
-        "pixelSHA256": "3c4db831881090e2417c283be8ded34f40fe67863267160208bf10f3ab87efc5",
-        "transparentFraction": 0.80692,
-        "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+        "pixelSHA256": "01dd3c155bfa698987788e22b698f0b98d7b75b3507cdca45d70020972cd6bb4",
+        "transparentFraction": 0.72556,
+        "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
         "facing": 1,
         "anchor": [
-          0.51,
-          0.748
+          0.435,
+          0.93232
         ],
-        "bodyHeight": 0.5,
-        "sourceFile": "exec-5c460c54-daf2-43de-b3ae-b0f79eb35554.png",
-        "sourceSHA256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+        "bodyHeight": 0.985,
+        "sourceFile": "exec-7e084907-f7bd-4660-8a32-bd19caee89c9.png",
+        "sourceSHA256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          0,
-          1238,
-          1233
+          9,
+          2166,
+          708
         ],
         "framingBounds": [
-          45,
-          312,
-          1224,
-          941
+          110,
+          64,
+          2111,
+          680
         ]
       }
     ],
@@ -737,7 +739,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Pose fixe candidate depuis vue dessus originaleSH2;3pairesdepatteset2antennes, têteorientéedroite, aucuntempssourcemesuré.",
+    "selectionProvenance": {
+      "sourceSHA256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5c460c54-daf2-43de-b3ae-b0f79eb35554.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Creeper de Silent Hill 2 (2001), profil rasant orienté vers la droite. Les antennes et les pattes restent distinctes. L’appui suit les pattes basses. Pose fixe candidate, fidélité non certifiée."
   },
   "sh1_split_head_014": {
     "fighterId": "sh1_split_head_014",
@@ -3795,50 +3809,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
-    "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+    "sourceFile": "exec-fc80eec9-af5a-47a2-840d-ce555592cc5a.png",
+    "sourceSHA256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775",
     "sourceDimensions": [
-      1102,
-      1428
+      1199,
+      1312
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Corps trapu brun, deux bras à longues griffes et deux jambes ; pied levé du modèle, bords de doigts reconstruits. Angle unique. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Mumbler de Silent Hill (1999), profil gauche, les deux pieds posés à des profondeurs différentes. Le pied le plus bas détermine l’appui ; deux griffes en avant-plan descendent sous cet appui dans la perspective de l’image. Pose fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
-        "bytes": 1089509,
-        "width": 1102,
-        "height": 1428,
+        "sha256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775",
+        "bytes": 1082304,
+        "width": 1199,
+        "height": 1312,
         "visibleBounds": [
-          102,
-          14,
-          1026,
-          1417
+          93,
+          65,
+          1097,
+          1284
         ],
-        "pixelSHA256": "b9b84bfabaaa53906f013865b63fc9c9e0952da20dd36250147c5ae7166b5e62",
-        "transparentFraction": 0.62002,
-        "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
-        "facing": 1,
+        "pixelSHA256": "afa70761ac4600a9c60a73ed2427821364d70211068f40765f0287de58847d37",
+        "transparentFraction": 0.67021,
+        "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+        "facing": -1,
         "anchor": [
-          0.54,
-          0.9916
+          0.607,
+          0.900915
         ],
-        "bodyHeight": 0.97,
-        "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png",
-        "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "bodyHeight": 0.9,
+        "sourceFile": "exec-fc80eec9-af5a-47a2-840d-ce555592cc5a.png",
+        "sourceSHA256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          0,
-          12,
-          1094,
-          1428
+          31,
+          19,
+          1177,
+          1312
         ],
         "framingBounds": [
-          96,
-          12,
-          1032,
-          1428
+          82,
+          63,
+          1100,
+          1288
         ]
       }
     ],
@@ -3879,7 +3895,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Corps trapu brun, deux bras à longues griffes et deux jambes ; pied levé du modèle, bords de doigts reconstruits. Angle unique. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+      "sourceDimensions": [
+        1102,
+        1428
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-28de4bd5-cb0a-4804-a722-50033fec9068.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Mumbler de Silent Hill (1999), profil gauche, les deux pieds posés à des profondeurs différentes. Le pied le plus bas détermine l’appui ; deux griffes en avant-plan descendent sous cet appui dans la perspective de l’image. Pose fixe candidate, fidélité non certifiée."
   },
   "sh1_creeper_009": {
     "fighterId": "sh1_creeper_009",
@@ -4808,50 +4836,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
-    "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+    "sourceFile": "exec-17572fa0-0855-48cf-aab6-81a2def68b63.png",
+    "sourceSHA256": "0a6c15a7fc9a4c9f09aced99db20f28805d578162c146641a5092c8cbda085e7",
     "sourceDimensions": [
-      1298,
-      1212
+      2172,
+      724
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Blue Tremer SH4 bleu-gris, deux lobes séparés par constriction médiane ; pas le Red Tremer continu. Brillance renforcée, pas de traînée ni explosion produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Tremer bleu de Silent Hill 4. Le corps sombre et luisant repose sur sa face ventrale, avec un appendice relevé vers la droite. Vue latérale fixe de dossier dans l’atelier. Son rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
-        "bytes": 1554591,
-        "width": 1298,
-        "height": 1212,
+        "sha256": "0a6c15a7fc9a4c9f09aced99db20f28805d578162c146641a5092c8cbda085e7",
+        "bytes": 1634840,
+        "width": 2172,
+        "height": 724,
         "visibleBounds": [
-          26,
-          15,
-          1271,
-          1180
+          34,
+          91,
+          2129,
+          648
         ],
-        "pixelSHA256": "125fd374a21270c732cd84726f635e4c6e16bbe1f899c54c11f41894b9c6e609",
-        "transparentFraction": 0.58268,
-        "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+        "pixelSHA256": "e39b1478c3781a84ea0bc8127da8c594bb702d88239d4b10cb12ed29b3062e5f",
+        "transparentFraction": 0.50603,
+        "path": "assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
         "facing": 1,
         "anchor": [
-          0.51,
-          0.97277
+          0.46,
+          0.895028
         ],
-        "bodyHeight": 0.96,
-        "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png",
-        "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "bodyHeight": 0.98,
+        "sourceFile": "exec-17572fa0-0855-48cf-aab6-81a2def68b63.png",
+        "sourceSHA256": "0a6c15a7fc9a4c9f09aced99db20f28805d578162c146641a5092c8cbda085e7",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          12,
-          1273,
-          1212
+          28,
+          2138,
+          708
         ],
         "framingBounds": [
-          21,
-          12,
-          1273,
-          1184
+          31,
+          86,
+          2134,
+          661
         ]
       }
     ],
@@ -4892,7 +4922,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Blue Tremer SH4 bleu-gris, deux lobes séparés par constriction médiane ; pas le Red Tremer continu. Brillance renforcée, pas de traînée ni explosion produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+      "sourceDimensions": [
+        1298,
+        1212
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-bf04db05-3914-4a4d-b7af-a900be6a350d.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Tremer bleu de Silent Hill 4. Le corps sombre et luisant repose sur sa face ventrale, avec un appendice relevé vers la droite. Vue latérale fixe de dossier dans l’atelier. Son rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée."
   },
   "sh4_tremer_red_064": {
     "fighterId": "sh4_tremer_red_064",
@@ -5600,50 +5642,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
-    "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+    "sourceFile": "exec-1d873ce2-e370-414f-871a-007d3c87b853.png",
+    "sourceSHA256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7",
     "sourceDimensions": [
-      1161,
-      1355
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Jimmy Stone Victim 1 SH4 en posture flottante penchée, visage incliné, vêtement sombre et pieds nus. Contraste/rouge accentués ; ni fantôme générique ni cycle de lévitation original. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Jimmy Stone, Victim 01 de Silent Hill 4. Le visage chauve, les vêtements sombres et les deux pieds nus sont visibles. La tête et la main avancent vers la droite. La marge sous le pied abaissé conserve la suspension du fantôme. Pose fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
-        "bytes": 1103151,
-        "width": 1161,
-        "height": 1355,
+        "sha256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7",
+        "bytes": 2021696,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          171,
-          72,
-          999,
-          1307
+          65,
+          43,
+          982,
+          1452
         ],
-        "pixelSHA256": "3104f5859eaaa196a04a38e232a575d5b3d5e316bd8e17d093a0880a032985f2",
-        "transparentFraction": 0.72292,
-        "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
-        "facing": -1,
+        "pixelSHA256": "4aca223328bfdab2de85e3bf4a997465873add801546ad09b36a82c0a2aef108",
+        "transparentFraction": 0.68194,
+        "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+        "facing": 1,
         "anchor": [
-          0.52,
+          0.47,
           1
         ],
-        "bodyHeight": 0.92,
-        "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png",
-        "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-1d873ce2-e370-414f-871a-007d3c87b853.png",
+        "sourceSHA256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
           0,
-          1143,
-          1355
+          1015,
+          1536
         ],
         "framingBounds": [
-          165,
-          64,
-          1003,
-          1309
+          63,
+          35,
+          986,
+          1456
         ]
       }
     ],
@@ -5684,7 +5728,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Jimmy Stone Victim 1 SH4 en posture flottante penchée, visage incliné, vêtement sombre et pieds nus. Contraste/rouge accentués ; ni fantôme générique ni cycle de lévitation original. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+      "sourceDimensions": [
+        1161,
+        1355
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5fad0b0e-d207-4d81-be78-95f1bba0a4b3.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Jimmy Stone, Victim 01 de Silent Hill 4. Le visage chauve, les vêtements sombres et les deux pieds nus sont visibles. La tête et la main avancent vers la droite. La marge sous le pied abaissé conserve la suspension du fantôme. Pose fixe candidate, fidélité non certifiée."
   },
   "sh4_cynthia_velasquez_victim_16": {
     "fighterId": "sh4_cynthia_velasquez_victim_16",
@@ -7852,50 +7908,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-0fc63c9c-6bf9-49eb-9363-cd8dcdc17c53.png",
-    "sourceSHA256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+    "sourceFile": "exec-00fb5106-115a-4669-917a-2d5f86de8ed7.png",
+    "sourceSHA256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Ariel Origins PSP entière : marionnette inversée, deux mains d’appui et deux pieds au-dessus, sans corps de boxeur ni faux ancrage au plafond. Forme au sol transposée depuis anatomie et guide sol/plafond ; contacts exacts et matière reconstruits, aucun cycle ni timing original certifié.",
+    "notes": "Ariel de Silent Hill: Origins sur PSP. Le visage suspendu regarde vers la gauche entre les bras, et les deux mains supportent la posture renversée. Pose fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
-        "bytes": 321708,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261",
+        "bytes": 1802669,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          454,
-          237,
-          836,
-          1008
+          153,
+          46,
+          848,
+          1436
         ],
-        "pixelSHA256": "a7ef154220e2fbf90e1bec66706cd4efbc252c740fbd027cc3a617e0fc5a5c11",
-        "transparentFraction": 0.94765,
-        "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
-        "facing": 1,
+        "pixelSHA256": "a9b6d9799e7d101d1406e24651ed574265f7ccbaec5bd58dad35e680e2dac62e",
+        "transparentFraction": 0.80765,
+        "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+        "facing": -1,
         "anchor": [
           0.5,
-          0.8038277511961722
+          0.934896
         ],
-        "bodyHeight": 0.6148325358851675,
-        "sourceFile": "exec-0fc63c9c-6bf9-49eb-9363-cd8dcdc17c53.png",
-        "sourceSHA256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+        "bodyHeight": 0.915,
+        "sourceFile": "exec-00fb5106-115a-4669-917a-2d5f86de8ed7.png",
+        "sourceSHA256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          41,
-          37,
-          1206,
-          1228
+          0,
+          21,
+          1018,
+          1536
         ],
         "framingBounds": [
-          449,
-          232,
-          839,
-          1015
+          150,
+          44,
+          850,
+          1440
         ]
       }
     ],
@@ -7936,7 +7994,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Ariel Origins PSP entière : marionnette inversée, deux mains d’appui et deux pieds au-dessus, sans corps de boxeur ni faux ancrage au plafond. Forme au sol transposée depuis anatomie et guide sol/plafond ; contacts exacts et matière reconstruits, aucun cycle ni timing original certifié.",
+    "selectionProvenance": {
+      "sourceSHA256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0fc63c9c-6bf9-49eb-9363-cd8dcdc17c53.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Ariel de Silent Hill: Origins sur PSP. Le visage suspendu regarde vers la gauche entre les bras, et les deux mains supportent la posture renversée. Pose fixe candidate, fidélité non certifiée."
   },
   "origins_two_back_080": {
     "fighterId": "origins_two_back_080",
@@ -19144,5 +19214,67 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Phase lumineuse de profil gauche. Le halo est décalé derrière la tête, les manches et l’instrument sont relevés ; les sandales restent suspendues. L’épaisseur des rayons est interprétée. Image fixe candidate, fidélité non certifiée."
+  },
+  "arcade_greedy_worm_arcade_119": {
+    "fighterId": "arcade_greedy_worm_arcade_119",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-c80b5031-50d9-4c5b-89aa-40a9c5c0b50b.png",
+    "sourceSHA256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+    "sourceDimensions": [
+      1261,
+      1247
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Greedy Worm de la borne, vue frontale en raccourci à la prison de Toluca. La tête masque l’arrière du corps dans cet angle de jeu. La longueur, les teintes et la dentition restent interprétées. Sélection seule, rencontre scénarisée, fidélité non certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "sha256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+      "bytes": 1306134,
+      "width": 1261,
+      "height": 1247,
+      "facing": 1,
+      "visibleBounds": [
+        167,
+        96,
+        1094,
+        1161
+      ],
+      "pixelSHA256": "f50d9f9cfe083dba480cf7b878b89a547e675ce6cc4bc550365c926cf3b32524",
+      "sourceFile": "exec-c80b5031-50d9-4c5b-89aa-40a9c5c0b50b.png",
+      "sourceSHA256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        2,
+        1241,
+        1247
+      ],
+      "framingBounds": [
+        162,
+        93,
+        1101,
+        1175
+      ],
+      "transparentFraction": 0.52833
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Greedy Worm de la borne, vue frontale en raccourci à la prison de Toluca. La tête masque l’arrière du corps dans cet angle de jeu. La longueur, les teintes et la dentition restent interprétées. Sélection seule, rencontre scénarisée, fidélité non certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+      "sourceDimensions": [
+        1261,
+        1247
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c80b5031-50d9-4c5b-89aa-40a9c5c0b50b.png"
+    },
+    "animatedClips": 0
   }
 };

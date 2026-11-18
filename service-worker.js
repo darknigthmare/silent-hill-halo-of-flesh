@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '7cb92ce83ffe2bd2200cff0ee8f99c232825647da9a6153c67ec5c70f5be83ce';
+const BITMAP_REVISION = '98de059aece94db3076cf7419087ecb57c64cd4ffa29a55a7670008da9d7f1ad';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -14,6 +14,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
   "/assets/sprites/arcade_double_head_arcade.43246b06e708.png",
   "/assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+  "/assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
   "/assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
   "/assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
   "/assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
@@ -118,6 +119,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_smog_087.63ce313a3705.png",
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
+  "/assets/sprites/origins_ariel_078.e3ffa353215f.png",
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
   "/assets/sprites/origins_caliban_079.f7c29928e5e8.png",
   "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
@@ -149,6 +151,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
   "/assets/sprites/sh1_mumbler_006.38861850b609.png",
+  "/assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
   "/assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
@@ -172,6 +175,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
+  "/assets/sprites/sh2_creeper_025.f562380701ab.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
@@ -237,6 +241,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+  "/assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
   "/assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
   "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
@@ -253,6 +258,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+  "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
   "/assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
   "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",

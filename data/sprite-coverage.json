@@ -2,14 +2,14 @@
   "schema": 1,
   "version": "0.9.6",
   "total": 230,
-  "integrated": 184,
-  "missing": 46,
-  "selectionAvailable": 184,
-  "selectionMissing": 46,
-  "combatSideViewCandidates": 59,
-  "combatLegacyUnreviewed": 119,
+  "integrated": 185,
+  "missing": 45,
+  "selectionAvailable": 185,
+  "selectionMissing": 45,
+  "combatSideViewCandidates": 64,
+  "combatLegacyUnreviewed": 114,
   "combatMissing": 52,
-  "separateSelectionAndCombat": 59,
+  "separateSelectionAndCombat": 64,
   "certified": 0,
   "animatedClips": 1,
   "presentationKeys": [
@@ -176,8 +176,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -736,8 +736,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1941,8 +1941,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2053,8 +2053,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2669,8 +2669,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3924,11 +3924,11 @@
       "name": "Greedy Worm — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
-      "selection": false,
+      "fidelity": "unverified",
+      "selection": true,
       "combatView": "missing",
       "separateSelectionAndCombat": false,
       "presentations": {
