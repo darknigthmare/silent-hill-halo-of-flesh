@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "checkpoints": {
+    "core": {
+      "report": "core/report.json",
+      "sha256": "c1a38ddf3b79c6699cb404d456111b647ced39c8c82f7b58f9008e27b0e2f0a8",
+      "checks": 111,
+      "passed": true,
+      "duels": 6,
+      "portraits": 12,
+      "coverage": [
+        181,
+        53
+      ],
+      "registrySHA256": "6e3170a58a04649c7ae38b0e4fdc401c8ec9681c98159b1312c2eb57f981e195",
+      "manifestSHA256": "9e49927a4452e0fbaaf94c28d9ff68123d3deedafe01eaab7194118465219fbb",
+      "pairsInBothSlotOrders": [
+        [
+          "sh1_puppet_doctor_013",
+          "sh2_lying_figure_020"
+        ],
+        [
+          "sh1_creeper_009",
+          "sh3_split_worm_046"
+        ],
+        [
+          "sh4_gum_head_old_type_057",
+          "homecoming_smog_087"
+        ]
+      ],
+      "tick120GapBelowVisibleAlphaPx": {
+        "sh1_puppet_doctor_013": 0.176,
+        "sh2_lying_figure_020": 0.219,
+        "sh1_creeper_009": 0.0,
+        "sh3_split_worm_046": -0.0,
+        "sh4_gum_head_old_type_057": 0.0,
+        "homecoming_smog_087": 0.171
+      }
+    },
+    "additional": {
+      "report": "additional/report.json",
+      "sha256": "21844689ef70a66afbc67e655395ab5c72f6d0866587e0a09a442f3a838ae0d2",
+      "checks": 111,
+      "passed": true,
+      "duels": 6,
+      "portraits": 12,
+      "coverage": [
+        184,
+        59
+      ],
+      "registrySHA256": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+      "manifestSHA256": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a",
+      "pairsInBothSlotOrders": [
+        [
+          "shf_sakuko_like_entity_162",
+          "bom_ghost_125"
+        ],
+        [
+          "sh4_gum_head_new_type_058",
+          "homecoming_lurker_085"
+        ],
+        [
+          "origins_straight_jacket_074",
+          "origins_caliban_079"
+        ]
+      ],
+      "tick120GapBelowVisibleAlphaPx": {
+        "shf_sakuko_like_entity_162": 3.344,
+        "bom_ghost_125": 7.613,
+        "sh4_gum_head_new_type_058": 0.0,
+        "homecoming_lurker_085": 0.252,
+        "origins_straight_jacket_074": -0.0,
+        "origins_caliban_079": -0.0
+      }
+    },
+    "selection": {
+      "report": "selection/report.json",
+      "sha256": "4ca7f4805f9ca5032a9db70ffde9e28cb92cfa0bd61331bf4fc01492c851f5fd",
+      "checks": 11,
+      "passed": true,
+      "duels": 0,
+      "portraits": 2
+    },
+    "roles": {
+      "report": "role-check.json",
+      "sha256": "c30ff84476c38aa503e1c29773dad5d83e9d75eddd9e4585da87c8c8a9a6bda4",
+      "checks": 7,
+      "passed": true,
+      "duels": 0,
+      "portraits": 0
+    }
+  },
+  "counts": {
+    "checksPassed": 240,
+    "checksFailed": 0,
+    "renderAndIdentityChecks": 233,
+    "roleAndPreflightChecks": 7,
+    "uniqueProfilesVisuallyReviewed": 13,
+    "duelsBothSlotOrders": 12,
+    "duelCapturesAt0And120Ticks": 24,
+    "selectionCapturesBothDirections": 26,
+    "savedCapturePNGs": 50
+  },
+  "visualReview": [
+    "All six pairs were inspected in both player slots at entry and after 120 simulation ticks. All 26 selection renders were visually inspected in both orientations.",
+    "Core batch: all outlines remain inside the combat canvas. The low Creeper and elongated Split Worm remain fully visible; the four other creatures show clear support. The greatest bottom-to-ground difference in this batch is 0.22 px.",
+    "Additional batch: Sakuko-like Entity shows the halo rays, cylinder, sleeves and sandals. Ghost shows his cap, lowered arms, trouser legs and both shoes. The cutout bottoms float respectively 3.34 px and 7.61 px above the stage ground at tick 120 in both slots. Lurker’s long claws, Gum Head’s rod, Caliban’s broad shape and the Straight-Jacket’s feet all remain inside the canvas.",
+    "Joseph’s mirrored selections preserve the upside-down head, collar, shoulders and blurred ceiling seam. The nearly black eyes and mouth have low contrast against the catalogue background. His noncombatant role and the ordinary preflight rejection without a combat frame were verified."
+  ],
+  "featuredImage": {
+    "path": "additional/duel-shf_sakuko_like_entity_162--bom_ghost_125-tick120.png",
+    "sha256": "8f023d0dedd6b1de6235fb4a0a09c04a417840b9daace1adc006fd9ca3013470",
+    "reason": "Two first-time selections now visibly face one another in their distinct suspended lateral poses."
+  },
+  "alternateImage": {
+    "path": "core/duel-sh4_gum_head_old_type_057--homecoming_smog_087-tick120.png",
+    "sha256": "d45f3dac06a4540507f9d1c860a7a9839600ced9848961caa2c12d189570a9e6"
+  },
+  "scope": "Native Canvas2D rendering using the actual game engine and portrait painter. Logical ticks exercise static idles. No browser session, attack animation or 1:1 fidelity certification."
+}

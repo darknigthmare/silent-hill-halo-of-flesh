@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
 import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
-import {readArtContinuation,readBrowserCampaignSubjects,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {matchesCampaignCandidate,readArtContinuation,readBrowserCampaignSubjects,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const campaign=process.env.QA_ART_CAMPAIGN||'art144';
@@ -111,12 +111,15 @@ try{
  const browserPixels=new Map();
  for(const row of candidates){
   const {id,fighter,art,policy,owners}=byId.get(row.entityId),frame=art?.frames?.[0];
-  check(id+': own source image is a single unverified static idle',!!fighter&&art?.fighterId===id&&art.source===fighter.source&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===1&&art.animatedClips===0&&Object.keys(art.clips).length===1&&JSON.stringify(art.clips.idle.frames)==='[0]'&&art.clips.idle.loop===false&&art.clips.idle.ticksPerFrame===1&&row.artifacts.includes(frame.path));
+  const original=intake.entries.find(entry=>entry.fighter.id===id);
+  check(id+': historical portrait and current static idle match the exact source and their deliveries',
+   !!fighter&&fighter.source===original.fighter.source&&matchesCampaignCandidate(row,fighter.source,fragmentAssets[id],art,continuation));
   check(id+': no other identity borrows its path or decoded pixels',owners.length===1&&owners[0]===id,owners);
-  const fragment=fragmentAssets[id],original=intake.entries.find(entry=>entry.fighter.id===id);
-  check(id+': served manifest matches its additive fragment and original edition',fragment?.fighterId===id&&fragment.source===original.fighter.source&&art.source===original.fighter.source&&fragment.frames?.length===1&&fragment.frames[0].path===frame.path&&fragment.frames[0].sha256===frame.sha256&&fragment.frames[0].bytes===frame.bytes);
-  const response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());
-  check(id+': exact versioned PNG bytes arrive over HTTP',response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===frame.bytes&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);
+  const rasters=art.portrait.path===frame.path?[frame]:[art.portrait,frame];
+  for(const raster of rasters){
+   const response=await fetch(base+'/'+raster.path),bytes=Buffer.from(await response.arrayBuffer());
+   check(id+': exact versioned PNG bytes arrive over HTTP for '+raster.path,response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===raster.bytes&&createHash('sha256').update(bytes).digest('hex')===raster.sha256);
+  }
   const decoded=await page.evaluate(async frame=>{
    const image=new Image();image.src='/'+frame.path;await image.decode();
    const canvas=document.createElement('canvas');canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;
@@ -144,8 +147,11 @@ try{
   }
   await page.selectOption('[data-inspect=pose]','walk');
   check(id+': absent walk remains an explicit static idle preview',await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')==='walk'&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('[data-inspect=play]').isDisabled()&&/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
-  const duelLinks=await page.locator('#spriteDetail a[href*="unified-versus"]').count(),imageLinks=await page.locator('#spriteDetail a[href*="assets/sprites/"]').count();
-  check(id+': dossier keeps its original combat role',imageLinks===1&&(policy.combatEnabled?duelLinks===1:duelLinks===0&&await page.locator('[data-reference-only]').count()===1),{policy,duelLinks,imageLinks});
+  const duelLinks=await page.locator('#spriteDetail a[href*="unified-versus"]').count();
+  const imageLinks=await page.locator('#spriteDetail a[href*="assets/sprites/"]').evaluateAll(links=>links.map(link=>new URL(link.href).pathname));
+  const selectionPath=await page.locator('#spriteDetail img[data-art-purpose="selection"]').evaluate(img=>new URL(img.src).pathname);
+  check(id+': dossier shows the historical selection and links its exact image files',selectionPath==='/'+art.portrait.path&&imageLinks.length===rasters.length&&rasters.every(raster=>imageLinks.includes('/'+raster.path)),{selectionPath,imageLinks});
+  check(id+': dossier keeps its original combat role',policy.combatEnabled?duelLinks===1:duelLinks===0&&await page.locator('[data-reference-only]').count()===1,{policy,duelLinks});
   if(row.rolePreserved!==undefined)check(id+': ledger role agrees with source policy',row.rolePreserved===policy.role&&row.combatEnabledPreserved===policy.combatEnabled,{row,policy});
   report.roles.push({id,role:policy.role,combatEnabled:policy.combatEnabled});
  }

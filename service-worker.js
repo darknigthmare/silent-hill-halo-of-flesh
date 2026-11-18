@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '4bc70f5b7c82d082944502bfbe5aba8a5da15342ee828ec815a52099c8397131';
+const BITMAP_REVISION = '7cb92ce83ffe2bd2200cff0ee8f99c232825647da9a6153c67ec5c70f5be83ce';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -50,6 +50,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
   "/assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
   "/assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+  "/assets/sprites/bom_ghost_125.6fa510a96dba.png",
+  "/assets/sprites/bom_ghost_125.ed274487b37b.png",
   "/assets/sprites/bom_gray_child_147.947d757ecfea.png",
   "/assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
   "/assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
@@ -101,6 +103,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_feral_086.d944b0e329cf.png",
   "/assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
   "/assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+  "/assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
   "/assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
   "/assets/sprites/homecoming_needler_088.39331afee89d.png",
   "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
@@ -116,6 +119,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+  "/assets/sprites/origins_caliban_079.f7c29928e5e8.png",
   "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
   "/assets/sprites/origins_demon_084.abac0695168a.png",
@@ -123,6 +127,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
   "/assets/sprites/origins_remnant_077.912fa1130daa.png",
+  "/assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
   "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
   "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
@@ -224,6 +229,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
   "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+  "/assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
   "/assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
   "/assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
   "/assets/sprites/sh4_hummer_055.8561079c64dc.png",
@@ -231,6 +237,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+  "/assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
   "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
@@ -270,6 +277,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
   "/assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
   "/assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
+  "/assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+  "/assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
   "/assets/sprites/shf_shichibi_168.332222c595ae.png",
   "/assets/sprites/shf_shiromuku_166.25d31075e81d.png",
   "/assets/sprites/shf_tsukumogami_167.e8130e444254.png",

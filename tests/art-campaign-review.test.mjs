@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
 import {join,dirname} from 'node:path';
 import {tmpdir} from 'node:os';
-import {resolvedHistoricalArtwork,readArtContinuation,readBrowserCampaignSubjects} from '../scripts/art-campaign-review.mjs';
+import {matchesCampaignCandidate,resolvedHistoricalArtwork,readArtContinuation,readBrowserCampaignSubjects} from '../scripts/art-campaign-review.mjs';
 import {ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from '../scripts/art-campaign-tracking.mjs';
 
 function artwork(id='subject',source='sh3'){
@@ -21,6 +21,46 @@ function fixture(){
  return {row,art,continuation:{rows:[item],intake:{campaign:'art92',baseCommit:ART_CONTINUATION_BASE,entries:[entry]},assets:{subject:structuredClone(art)}}};
 }
 const inspect=f=>resolvedHistoricalArtwork(f.row,f.art,f.continuation);
+
+test('campaign review binds a retained portrait to its original fragment and its distinct idle to the combat import',async t=>{
+ const {root,candidate}=await continuationFixture(t);
+ const id=candidate.fighter.id,source=candidate.fighter.source,art=artwork(id,source);
+ const portrait={...art.frames[0]},sha256='c'.repeat(64);
+ const combat={...portrait,path:`assets/sprites/${id}.${sha256.slice(0,12)}.png`,sha256,bytes:512,purpose:'combat',view:'side-view'};
+ art.portrait=portrait;
+ const journal={schema:1,imports:[{fighterId:id,source,kind:'distinct-combat-idle',path:combat.path,sha256,bytes:combat.bytes,existingSelectionReference:portrait}]};
+ await writeFile(join(root,'docs/production/sprite-wave5-imports-2026-11-18.json'),JSON.stringify(journal));
+ const continuation=await readArtContinuation(root),row=continuation.rows.find(row=>row.entityId===id),fragment=continuation.assets[id];
+ const check=f=>matchesCampaignCandidate(f.row,source,f.fragment,f.art,f.continuation);
+ const f={row,fragment,art,continuation};
+ assert.equal(check(f),true); // Originally shared static idle.
+ art.frames=[combat];art.combatView='side-view-candidate';
+ assert.equal(check(f),true);
+ assert.equal(resolvedHistoricalArtwork({...row,status:'blocked'},art,continuation,{purpose:'selection'}),true);
+ assert.deepEqual(row.artifacts,[portrait.path]);
+ for(const [label,mutate] of Object.entries({
+  'missing journal':f=>{f.continuation.purposeDeliveries=[];},
+  'wrong owner':f=>{f.continuation.purposeDeliveries[0].id='other';},
+  'missing edition':f=>{delete f.continuation.purposeDeliveries[0].source;},
+  'incorrect edition':f=>{f.continuation.purposeDeliveries[0].source='other';},
+  'wrong purpose':f=>{f.continuation.purposeDeliveries[0].purpose='selection';},
+  'wrong digest':f=>{f.continuation.purposeDeliveries[0].sha256='d'.repeat(64);},
+  'missing digest':f=>{delete f.continuation.purposeDeliveries[0].sha256;},
+  'wrong byte count':f=>{f.continuation.purposeDeliveries[0].bytes++;},
+  'wrong path':f=>{f.continuation.purposeDeliveries[0].file=portrait.path;},
+  'wrong earlier selection':f=>{f.continuation.purposeDeliveries[0].existingSelectionReference={...portrait,bytes:10};},
+  'unbound portrait':f=>{f.art.portrait={...combat};},
+  'changed portrait digest':f=>{f.art.portrait.sha256='d'.repeat(64);},
+  'altered fragment':f=>{f.fragment.frames[0].bytes++;},
+  'rewritten historical row':f=>{f.row.artifacts=[combat.path];},
+  'unqualified combat frame':f=>{delete f.art.frames[0].view;},
+  'shared frame presented as a revision':f=>{f.art.frames=[{...portrait,purpose:'combat',view:'side-view'}];}
+ })){
+  const changed=structuredClone(f);mutate(changed);assert.equal(check(changed),false,label);
+  assert.equal(resolvedHistoricalArtwork({...row,status:'blocked'},changed.art,changed.continuation,{purpose:'combat'}),false,label);
+ }
+});
+
 test('browser campaign review handles selection-only dossiers and detects shared combat paths and pixels',async()=>{
  const combat=artwork('combat');
  const frame=combat.frames[0];

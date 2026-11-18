@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {resolve,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-constants.mjs';
-import {readPurposeDeliveries,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {matchesCampaignCandidate,readPurposeDeliveries,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
 export {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES};
 
 const repositoryRoot=fileURLToPath(new URL('../',import.meta.url));
@@ -30,6 +30,17 @@ function artifactMatches(root,frame){
     return bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))&&
       frame.bytes===bytes.length&&frame.sha256===createHash('sha256').update(bytes).digest('hex');
   }catch{return false;}
+}
+
+function continuationCandidateFilesMatch(root,item,source,art,review){
+  const idle=art.frames[0];
+  if(!artifactMatches(root,idle))return false;
+  if(art.combatView!=='side-view-candidate'&&(!art.portrait||art.portrait.path===idle.path))return item.artifacts.includes(idle.path);
+  const file=resolve(root,`art/fragments/art92-${item.group}.json`);
+  let fragment;
+  try{fragment=JSON.parse(readFileSync(file,'utf8'));}catch(error){if(error.code==='ENOENT')return false;throw error;}
+  return fragment?.schema===1&&fragment.campaign===ART_CONTINUATION_ID&&fragment.baseCommit===ART_CONTINUATION_BASE&&fragment.group===item.group&&
+    matchesCampaignCandidate(item,source,fragment.assets?.[item.entityId],art,review)&&artifactMatches(root,art.portrait);
 }
 
 function validatedContinuation(plan,deliveries,assets,root){
@@ -63,7 +74,7 @@ function validatedContinuation(plan,deliveries,assets,root){
       if(later)laterCombat.set(item.rowId,art.frames[clip.frames[0]].path);
     }else if(entry.generationExcluded!==false||!art||art.fighterId!==item.entityId||art.source!==row.source||art.fidelity!=='unverified'||
       art.animatedClips!==0||art.frames?.length!==1||!art.frames[0]||JSON.stringify(clip?.frames)!=='[0]'||clip.loop!==false||clip.ticksPerFrame!==1||
-      !item.artifacts.includes(art.frames[0].path)||!artifactMatches(root,art.frames[0])){
+      !continuationCandidateFilesMatch(root,item,row.source,art,review)){
       throw Error('ART92 candidate requires an eligible exact-source imported static idle, evidence and matching artifact file: '+item.rowId);
     }
     result.set(item.rowId,item);

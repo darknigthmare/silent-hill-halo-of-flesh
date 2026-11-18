@@ -1,0 +1,2417 @@
+{
+  "schema": 3,
+  "label": "sprite-wave5-core",
+  "generatedAt": "2026-11-18T09:17:22.759Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4254\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 922407,
+        "sha256": "7ac753d023c51395bec792ee0187f0138d8ab8c3dc3496a7ad49d9156bfa8aa1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1629947,
+        "sha256": "16b6777faa9585ee1b77c92d758aabb977382842df9853e77ab65d132795582d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1468686,
+        "sha256": "af82da95d655904b849a170323269e33bd3336142a49cc182430af84a2f59b32"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1596080,
+        "sha256": "86ac95da85c7b200ae8029addca33d1ab044517269033d679ad87e698421b955"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 938605,
+        "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1359829,
+        "sha256": "0ed910ef61d05cceb835fcf14d43c25677974defb04d80458dd1750c198e65b7"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1770893,
+        "sha256": "5e27e5f4f9bf05e1f9cb29e759b0795a55f2ad98cfd56c59b9fbfd23966f50af"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 825350,
+        "sha256": "5bbdfc4868e0f0d4cf13ca26e1de11a1dc8f535bd1dd5818712ab1da24b31f38"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1520474,
+        "sha256": "e75cbbab2b25a5367f4902a3884c01908b2e2a0809c0cf707a0e7ab6d9cdac06"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1619677,
+        "sha256": "53de39c93d922597cd5ecbe807d9a112bab9b028176e5b9caaa88a42fb5c83f4"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 866520,
+        "sha256": "63ce313a370553e173775366995a46c142be1e39f54edb5a56ffb17c06644ecd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 369366,
+        "sha256": "24134515bb83706d76d21705c8a61f139f77743a4a81afcc949f5a944c3c63f6"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          188,
+          140,
+          938,
+          1258
+        ],
+        "expected": [
+          188,
+          140,
+          938,
+          1258
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          164,
+          17,
+          862,
+          1518
+        ],
+        "expected": [
+          164,
+          17,
+          862,
+          1518
+        ]
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png"
+        ],
+        "portrait": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png"
+        ],
+        "expected": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png"
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png"
+        ],
+        "expected": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          437,
+          19,
+          1110,
+          1001
+        ],
+        "expected": [
+          437,
+          19,
+          1110,
+          1001
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          209,
+          169,
+          976,
+          1372
+        ],
+        "expected": [
+          209,
+          169,
+          976,
+          1372
+        ]
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_lying_figure_020.af82da95d655.png"
+        ],
+        "portrait": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png"
+        ],
+        "expected": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png"
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png"
+        ],
+        "expected": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          66,
+          100,
+          2106,
+          631
+        ],
+        "expected": [
+          66,
+          100,
+          2106,
+          631
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          216,
+          30,
+          804,
+          1519
+        ],
+        "expected": [
+          216,
+          30,
+          804,
+          1519
+        ]
+      }
+    },
+    {
+      "name": "sh1_creeper_009 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_creeper_009.57fcc90186ee.png"
+        ],
+        "portrait": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_creeper_009 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_creeper_009.0ed910ef61d0.png"
+        ],
+        "expected": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png"
+      }
+    },
+    {
+      "name": "sh1_creeper_009 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_creeper_009.0ed910ef61d0.png"
+        ],
+        "expected": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          50,
+          119,
+          2104,
+          627
+        ],
+        "expected": [
+          50,
+          119,
+          2104,
+          627
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          278,
+          346,
+          1032,
+          1022
+        ],
+        "expected": [
+          278,
+          346,
+          1032,
+          1022
+        ]
+      }
+    },
+    {
+      "name": "sh3_split_worm_046 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png"
+        ],
+        "portrait": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_split_worm_046 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png"
+        ],
+        "expected": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png"
+      }
+    },
+    {
+      "name": "sh3_split_worm_046 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png"
+        ],
+        "expected": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          119,
+          31,
+          1303,
+          1049
+        ],
+        "expected": [
+          119,
+          31,
+          1303,
+          1049
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          61,
+          18,
+          824,
+          1732
+        ],
+        "expected": [
+          61,
+          18,
+          824,
+          1732
+        ]
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png"
+        ],
+        "portrait": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png"
+        ],
+        "expected": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png"
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png"
+        ],
+        "expected": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          175,
+          57,
+          945,
+          1244
+        ],
+        "expected": [
+          175,
+          57,
+          945,
+          1244
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          462,
+          282,
+          833,
+          1021
+        ],
+        "expected": [
+          462,
+          282,
+          833,
+          1021
+        ]
+      }
+    },
+    {
+      "name": "homecoming_smog_087 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_smog_087.63ce313a3705.png"
+        ],
+        "portrait": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_smog_087 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_smog_087.24134515bb83.png"
+        ],
+        "expected": "assets/sprites/homecoming_smog_087.24134515bb83.png"
+      }
+    },
+    {
+      "name": "homecoming_smog_087 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_smog_087.24134515bb83.png"
+        ],
+        "expected": "assets/sprites/homecoming_smog_087.24134515bb83.png"
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013/sh2_lying_figure_020 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013/sh2_lying_figure_020 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013/sh2_lying_figure_020 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_puppet_doctor_013",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_lying_figure_020",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_puppet_doctor_013/sh2_lying_figure_020 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+          "assets/sprites/sh2_lying_figure_020.af82da95d655.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+          "assets/sprites/sh2_lying_figure_020.af82da95d655.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 259.1335565402519,
+          "top": 395.19068862628023,
+          "right": 393.0255886786778,
+          "bottom": 594.1764755197512
+        },
+        "visible": {
+          "left": 260.1919915769193,
+          "top": 396.6019353418368,
+          "right": 392.4963711603441,
+          "bottom": 593.823663840862
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 877.1767149022533,
+          "top": 378.53129653700836,
+          "right": 1026.8684029251144,
+          "bottom": 595.529612167229
+        },
+        "visible": {
+          "left": 878.0508269491021,
+          "top": 379.18688057214496,
+          "right": 1025.1201788314168,
+          "bottom": 593.7813880735313
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013/sh2_lying_figure_020 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020/sh1_puppet_doctor_013 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020/sh1_puppet_doctor_013 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020/sh1_puppet_doctor_013 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_lying_figure_020",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_puppet_doctor_013",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_lying_figure_020/sh1_puppet_doctor_013 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+          "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+          "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 253.13162759246373,
+          "top": 378.53129653700836,
+          "right": 402.8233156153249,
+          "bottom": 595.529612167229
+        },
+        "visible": {
+          "left": 254.87985168616137,
+          "top": 379.18688057214496,
+          "right": 401.94920356847604,
+          "bottom": 593.7813880735313
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_puppet_doctor_013 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 886.9744418389004,
+          "top": 395.19068862628023,
+          "right": 1020.8664739773262,
+          "bottom": 594.1764755197512
+        },
+        "visible": {
+          "left": 887.503659357234,
+          "top": 396.6019353418368,
+          "right": 1019.8080389406588,
+          "bottom": 593.823663840862
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020/sh1_puppet_doctor_013 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009/sh3_split_worm_046 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_creeper_009/sh3_split_worm_046 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_creeper_009/sh3_split_worm_046 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_creeper_009",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_split_worm_046",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_creeper_009/sh3_split_worm_046 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_creeper_009 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 237.91853596591295,
+          "top": 554.9761101011355,
+          "right": 386.95192859658584,
+          "bottom": 594.1456094833055
+        },
+        "visible": {
+          "left": 238.13695324871316,
+          "top": 555.3401389058025,
+          "right": 386.6607055528522,
+          "bottom": 593.9999979614387
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_split_worm_046 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 814.318025908681,
+          "top": 513.9681405931814,
+          "right": 1134.290106601165,
+          "bottom": 601.6146940223028
+        },
+        "visible": {
+          "left": 814.7842309801124,
+          "top": 515.0559524265216,
+          "right": 1133.9793032202108,
+          "bottom": 594.0000111889217
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_creeper_009/sh3_split_worm_046 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_split_worm_046/sh1_creeper_009 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_split_worm_046/sh1_creeper_009 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_split_worm_046/sh1_creeper_009 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_split_worm_046",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_creeper_009",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_split_worm_046/sh1_creeper_009 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+          "assets/sprites/sh1_creeper_009.57fcc90186ee.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+          "assets/sprites/sh1_creeper_009.57fcc90186ee.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_split_worm_046 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 145.709923916413,
+          "top": 513.9681405931814,
+          "right": 465.6820046088972,
+          "bottom": 601.6146940223028
+        },
+        "visible": {
+          "left": 146.02072729736736,
+          "top": 515.0559524265216,
+          "right": 465.2157995374657,
+          "bottom": 594.0000111889217
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_creeper_009 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 893.0481019209923,
+          "top": 554.9761101011355,
+          "right": 1042.0814945516652,
+          "bottom": 594.1456094833055
+        },
+        "visible": {
+          "left": 893.3393249647258,
+          "top": 555.3401389058025,
+          "right": 1041.863077268865,
+          "bottom": 593.9999979614387
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_split_worm_046/sh1_creeper_009 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_gum_head_old_type_057/homecoming_smog_087 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057/homecoming_smog_087 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057/homecoming_smog_087 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_gum_head_old_type_057",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_smog_087",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_gum_head_old_type_057/homecoming_smog_087 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+          "assets/sprites/homecoming_smog_087.63ce313a3705.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+          "assets/sprites/homecoming_smog_087.63ce313a3705.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 197.34019560836634,
+          "top": 385.06565523482124,
+          "right": 442.08599019210646,
+          "bottom": 594.6138940757493
+        },
+        "visible": {
+          "left": 198.772654272318,
+          "top": 385.67956609080056,
+          "right": 441.062805432141,
+          "bottom": 593.9999832197699
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_smog_087 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 902.3942078596613,
+          "top": 389.67096272397123,
+          "right": 1036.2825896696763,
+          "bottom": 594.5116589708858
+        },
+        "visible": {
+          "left": 903.9292338931518,
+          "top": 391.3765472056274,
+          "right": 1035.2592389806825,
+          "bottom": 593.8294251782233
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057/homecoming_smog_087 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_smog_087/sh4_gum_head_old_type_057 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_smog_087/sh4_gum_head_old_type_057 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_smog_087/sh4_gum_head_old_type_057 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_smog_087",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_gum_head_old_type_057",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_smog_087/sh4_gum_head_old_type_057 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+          "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+          "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_smog_087 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 243.7174408479019,
+          "top": 389.67096272397123,
+          "right": 377.6058226579169,
+          "bottom": 594.5116589708858
+        },
+        "visible": {
+          "left": 244.74079153689564,
+          "top": 391.3765472056274,
+          "right": 376.0707966244263,
+          "bottom": 593.8294251782233
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_gum_head_old_type_057 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 837.9140403254717,
+          "top": 385.06565523482124,
+          "right": 1082.6598349092117,
+          "bottom": 594.6138940757493
+        },
+        "visible": {
+          "left": 838.9372250854371,
+          "top": 385.67956609080056,
+          "right": 1081.22737624526,
+          "bottom": 593.9999832197699
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_smog_087/sh4_gum_head_old_type_057 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "6e3170a58a04649c7ae38b0e4fdc401c8ec9681c98159b1312c2eb57f981e195",
+        "after": "6e3170a58a04649c7ae38b0e4fdc401c8ec9681c98159b1312c2eb57f981e195"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "9e49927a4452e0fbaaf94c28d9ff68123d3deedafe01eaab7194118465219fbb",
+        "after": "9e49927a4452e0fbaaf94c28d9ff68123d3deedafe01eaab7194118465219fbb"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh1_puppet_doctor_013",
+      "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "width": 1161,
+      "height": 1355,
+      "transparentFraction": 0.7290985312953905,
+      "visibleBounds": [
+        188,
+        140,
+        938,
+        1258
+      ]
+    },
+    {
+      "id": "sh1_puppet_doctor_013",
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7020238240559896,
+      "visibleBounds": [
+        164,
+        17,
+        862,
+        1518
+      ]
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.8089701334635416,
+      "visibleBounds": [
+        437,
+        19,
+        1110,
+        1001
+      ]
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.6947441101074219,
+      "visibleBounds": [
+        209,
+        169,
+        976,
+        1372
+      ]
+    },
+    {
+      "id": "sh1_creeper_009",
+      "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.761947005077175,
+      "visibleBounds": [
+        66,
+        100,
+        2106,
+        631
+      ]
+    },
+    {
+      "id": "sh1_creeper_009",
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7987988789876302,
+      "visibleBounds": [
+        216,
+        30,
+        804,
+        1519
+      ]
+    },
+    {
+      "id": "sh3_split_worm_046",
+      "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.5291505143310644,
+      "visibleBounds": [
+        50,
+        119,
+        2104,
+        627
+      ]
+    },
+    {
+      "id": "sh3_split_worm_046",
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8248036903917035,
+      "visibleBounds": [
+        278,
+        346,
+        1032,
+        1022
+      ]
+    },
+    {
+      "id": "sh4_gum_head_old_type_057",
+      "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "width": 1453,
+      "height": 1082,
+      "transparentFraction": 0.6046302315433808,
+      "visibleBounds": [
+        119,
+        31,
+        1303,
+        1049
+      ]
+    },
+    {
+      "id": "sh4_gum_head_old_type_057",
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "width": 885,
+      "height": 1777,
+      "transparentFraction": 0.5682452174521269,
+      "visibleBounds": [
+        61,
+        18,
+        824,
+        1732
+      ]
+    },
+    {
+      "id": "homecoming_smog_087",
+      "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.7760907209259749,
+      "visibleBounds": [
+        175,
+        57,
+        945,
+        1244
+      ]
+    },
+    {
+      "id": "homecoming_smog_087",
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9247924981367439,
+      "visibleBounds": [
+        462,
+        282,
+        833,
+        1021
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh1_puppet_doctor_013",
+      "facing": 1,
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "file": "portrait-sh1_puppet_doctor_013-right.png"
+    },
+    {
+      "id": "sh1_puppet_doctor_013",
+      "facing": -1,
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "file": "portrait-sh1_puppet_doctor_013-left.png"
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "facing": 1,
+      "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "file": "portrait-sh2_lying_figure_020-right.png"
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "facing": -1,
+      "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "file": "portrait-sh2_lying_figure_020-left.png"
+    },
+    {
+      "id": "sh1_creeper_009",
+      "facing": 1,
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "file": "portrait-sh1_creeper_009-right.png"
+    },
+    {
+      "id": "sh1_creeper_009",
+      "facing": -1,
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "file": "portrait-sh1_creeper_009-left.png"
+    },
+    {
+      "id": "sh3_split_worm_046",
+      "facing": 1,
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "file": "portrait-sh3_split_worm_046-right.png"
+    },
+    {
+      "id": "sh3_split_worm_046",
+      "facing": -1,
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "file": "portrait-sh3_split_worm_046-left.png"
+    },
+    {
+      "id": "sh4_gum_head_old_type_057",
+      "facing": 1,
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "file": "portrait-sh4_gum_head_old_type_057-right.png"
+    },
+    {
+      "id": "sh4_gum_head_old_type_057",
+      "facing": -1,
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "file": "portrait-sh4_gum_head_old_type_057-left.png"
+    },
+    {
+      "id": "homecoming_smog_087",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "file": "portrait-homecoming_smog_087-right.png"
+    },
+    {
+      "id": "homecoming_smog_087",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "file": "portrait-homecoming_smog_087-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh1_puppet_doctor_013",
+        "sh2_lying_figure_020"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.563453125
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_puppet_doctor_013",
+          "slot": 1,
+          "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+          "exterior": {
+            "left": 259.1335565402519,
+            "top": 395.19068862628023,
+            "right": 393.0255886786778,
+            "bottom": 594.1764755197512
+          },
+          "visible": {
+            "left": 260.1919915769193,
+            "top": 396.6019353418368,
+            "right": 392.4963711603441,
+            "bottom": 593.823663840862
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.1763361591380317,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+            "args": [
+              -92.10885608856088,
+              -227.00848295454543,
+              209.33830929218382,
+              244.3181818181818
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1161,
+            "height": 1355
+          }
+        },
+        {
+          "id": "sh2_lying_figure_020",
+          "slot": 2,
+          "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+          "exterior": {
+            "left": 877.1767149022533,
+            "top": 378.53129653700836,
+            "right": 1026.8684029251144,
+            "bottom": 595.529612167229
+          },
+          "visible": {
+            "left": 878.0508269491021,
+            "top": 379.18688057214496,
+            "right": 1025.1201788314168,
+            "bottom": 593.7813880735313
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.21861192646872496,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+            "args": [
+              -161.25000000000003,
+              -223.8095106382979,
+              343.0851063829788,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+        "assets/sprites/sh2_lying_figure_020.af82da95d655.png"
+      ],
+      "snapshots": [
+        "duel-sh1_puppet_doctor_013--sh2_lying_figure_020-tick0.png",
+        "duel-sh1_puppet_doctor_013--sh2_lying_figure_020-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh2_lying_figure_020",
+        "sh1_puppet_doctor_013"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.563453125
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_lying_figure_020",
+          "slot": 1,
+          "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+          "exterior": {
+            "left": 253.13162759246373,
+            "top": 378.53129653700836,
+            "right": 402.8233156153249,
+            "bottom": 595.529612167229
+          },
+          "visible": {
+            "left": 254.87985168616137,
+            "top": 379.18688057214496,
+            "right": 401.94920356847604,
+            "bottom": 593.7813880735313
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.21861192646872496,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+            "args": [
+              -161.25000000000003,
+              -223.8095106382979,
+              343.0851063829788,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh1_puppet_doctor_013",
+          "slot": 2,
+          "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+          "exterior": {
+            "left": 886.9744418389004,
+            "top": 395.19068862628023,
+            "right": 1020.8664739773262,
+            "bottom": 594.1764755197512
+          },
+          "visible": {
+            "left": 887.503659357234,
+            "top": 396.6019353418368,
+            "right": 1019.8080389406588,
+            "bottom": 593.823663840862
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.1763361591380317,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+            "args": [
+              -92.10885608856088,
+              -227.00848295454543,
+              209.33830929218382,
+              244.3181818181818
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1161,
+            "height": 1355
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+        "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png"
+      ],
+      "snapshots": [
+        "duel-sh2_lying_figure_020--sh1_puppet_doctor_013-tick0.png",
+        "duel-sh2_lying_figure_020--sh1_puppet_doctor_013-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_creeper_009",
+        "sh3_split_worm_046"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 619.7831606077348
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_creeper_009",
+          "slot": 1,
+          "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "exterior": {
+            "left": 237.91853596591295,
+            "top": 554.9761101011355,
+            "right": 386.95192859658584,
+            "bottom": 594.1456094833055
+          },
+          "visible": {
+            "left": 238.13695324871316,
+            "top": 555.3401389058025,
+            "right": 386.6607055528522,
+            "bottom": 593.9999979614387
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000020385613197504426,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+            "args": [
+              -85.66530612244898,
+              -46.956817959183674,
+              161.6326530612245,
+              53.87755102040816
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "sh3_split_worm_046",
+          "slot": 2,
+          "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+          "exterior": {
+            "left": 814.318025908681,
+            "top": 513.9681405931814,
+            "right": 1134.290106601165,
+            "bottom": 601.6146940223028
+          },
+          "visible": {
+            "left": 814.7842309801124,
+            "top": 515.0559524265216,
+            "right": 1133.9793032202108,
+            "bottom": 594.0000111889217
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000011188921689608833,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+            "args": [
+              -182.84999999999997,
+              -99.59252999999998,
+              344.99999999999994,
+              114.99999999999999
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+        "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png"
+      ],
+      "snapshots": [
+        "duel-sh1_creeper_009--sh3_split_worm_046-tick0.png",
+        "duel-sh1_creeper_009--sh3_split_worm_046-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_split_worm_046",
+        "sh1_creeper_009"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 619.7831606077348
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_split_worm_046",
+          "slot": 1,
+          "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+          "exterior": {
+            "left": 145.709923916413,
+            "top": 513.9681405931814,
+            "right": 465.6820046088972,
+            "bottom": 601.6146940223028
+          },
+          "visible": {
+            "left": 146.02072729736736,
+            "top": 515.0559524265216,
+            "right": 465.2157995374657,
+            "bottom": 594.0000111889217
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000011188921689608833,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+            "args": [
+              -182.84999999999997,
+              -99.59252999999998,
+              344.99999999999994,
+              114.99999999999999
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "sh1_creeper_009",
+          "slot": 2,
+          "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "exterior": {
+            "left": 893.0481019209923,
+            "top": 554.9761101011355,
+            "right": 1042.0814945516652,
+            "bottom": 594.1456094833055
+          },
+          "visible": {
+            "left": 893.3393249647258,
+            "top": 555.3401389058025,
+            "right": 1041.863077268865,
+            "bottom": 593.9999979614387
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000020385613197504426,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+            "args": [
+              -85.66530612244898,
+              -46.956817959183674,
+              161.6326530612245,
+              53.87755102040816
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+        "assets/sprites/sh1_creeper_009.57fcc90186ee.png"
+      ],
+      "snapshots": [
+        "duel-sh3_split_worm_046--sh1_creeper_009-tick0.png",
+        "duel-sh3_split_worm_046--sh1_creeper_009-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_gum_head_old_type_057",
+        "homecoming_smog_087"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6274757953108
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_gum_head_old_type_057",
+          "slot": 1,
+          "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+          "exterior": {
+            "left": 197.34019560836634,
+            "top": 385.06565523482124,
+            "right": 442.08599019210646,
+            "bottom": 594.6138940757493
+          },
+          "visible": {
+            "left": 198.772654272318,
+            "top": 385.67956609080056,
+            "right": 441.062805432141,
+            "bottom": 593.9999832197699
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000016780230112090067,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+            "args": [
+              -145.8795602685086,
+              -219.41338421052635,
+              303.91575055939296,
+              226.31578947368425
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1453,
+            "height": 1082
+          }
+        },
+        {
+          "id": "homecoming_smog_087",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+          "exterior": {
+            "left": 902.3942078596613,
+            "top": 389.67096272397123,
+            "right": 1036.2825896696763,
+            "bottom": 594.5116589708858
+          },
+          "visible": {
+            "left": 903.9292338931518,
+            "top": 391.3765472056274,
+            "right": 1035.2592389806825,
+            "bottom": 593.8294251782233
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.17057482177665406,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+            "args": [
+              -104.51195186818889,
+              -217.04318617021275,
+              209.02390373637778,
+              228.72340425531914
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+        "assets/sprites/homecoming_smog_087.63ce313a3705.png"
+      ],
+      "snapshots": [
+        "duel-sh4_gum_head_old_type_057--homecoming_smog_087-tick0.png",
+        "duel-sh4_gum_head_old_type_057--homecoming_smog_087-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "homecoming_smog_087",
+        "sh4_gum_head_old_type_057"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6274757953108
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_smog_087",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+          "exterior": {
+            "left": 243.7174408479019,
+            "top": 389.67096272397123,
+            "right": 377.6058226579169,
+            "bottom": 594.5116589708858
+          },
+          "visible": {
+            "left": 244.74079153689564,
+            "top": 391.3765472056274,
+            "right": 376.0707966244263,
+            "bottom": 593.8294251782233
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.17057482177665406,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+            "args": [
+              -104.51195186818889,
+              -217.04318617021275,
+              209.02390373637778,
+              228.72340425531914
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        },
+        {
+          "id": "sh4_gum_head_old_type_057",
+          "slot": 2,
+          "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+          "exterior": {
+            "left": 837.9140403254717,
+            "top": 385.06565523482124,
+            "right": 1082.6598349092117,
+            "bottom": 594.6138940757493
+          },
+          "visible": {
+            "left": 838.9372250854371,
+            "top": 385.67956609080056,
+            "right": 1081.22737624526,
+            "bottom": 593.9999832197699
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000016780230112090067,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+            "args": [
+              -145.8795602685086,
+              -219.41338421052635,
+              303.91575055939296,
+              226.31578947368425
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1453,
+            "height": 1082
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+        "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_smog_087--sh4_gum_head_old_type_057-tick0.png",
+        "duel-homecoming_smog_087--sh4_gum_head_old_type_057-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "6e3170a58a04649c7ae38b0e4fdc401c8ec9681c98159b1312c2eb57f981e195",
+  "src/sprite-manifest.jsSHA256": "9e49927a4452e0fbaaf94c28d9ff68123d3deedafe01eaab7194118465219fbb",
+  "version": "0.9.6",
+  "ids": [
+    "sh1_puppet_doctor_013",
+    "sh2_lying_figure_020",
+    "sh1_creeper_009",
+    "sh3_split_worm_046",
+    "sh4_gum_head_old_type_057",
+    "homecoming_smog_087"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

@@ -3689,50 +3689,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png",
-    "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+    "sourceFile": "exec-4b855be6-9fb6-4c7d-ad0c-cbb05bf7b0a6.png",
+    "sourceSHA256": "a0cf8e0bcf4e1a6cd848204e080857f2860cea3f834db57ca3988cff389f32d1",
     "sourceDimensions": [
-      1161,
-      1355
+      1217,
+      1293
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat Gum Head New Type SH4 : modèle armé pâle à gorge/poitrine orange prononcée, tuyau métallique courbé ; scène rendue distincte de la galerie corrobore la variante, sans attester une capture interactive, Old Type gris en arrière-plan exclu. Une pose de repos, genou levé comme modèle ; ni vol ni attaque originale produits. Contraste/rouge accentués et faibles traces alpha hors silhouette ; aucune certification 1:1.",
+    "notes": "Gum Head New Type armé du tuyau métallique courbé visible sur le modèle. Le terme golf club du prompt est imprécis ; l’image livrée conserve le tuyau creux. Image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
-        "bytes": 1057167,
-        "width": 1161,
-        "height": 1355,
+        "sha256": "a0cf8e0bcf4e1a6cd848204e080857f2860cea3f834db57ca3988cff389f32d1",
+        "bytes": 870258,
+        "width": 1217,
+        "height": 1293,
         "visibleBounds": [
-          33,
-          66,
-          1145,
-          1249
+          100,
+          46,
+          1119,
+          1181
         ],
-        "pixelSHA256": "34e17b868827940876a852f4d26b06137c8b271aa7a911032232a4380ad4a7b9",
-        "transparentFraction": 0.72547,
-        "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+        "pixelSHA256": "c835ea8372c87c23064680f89455847eeae0cfc424351854828a633bdbd873a3",
+        "transparentFraction": 0.8063,
+        "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
         "facing": 1,
         "anchor": [
-          0.62,
-          0.9225
+          0.56,
+          0.91338
         ],
         "bodyHeight": 0.94,
-        "sourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png",
-        "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+        "sourceFile": "exec-4b855be6-9fb6-4c7d-ad0c-cbb05bf7b0a6.png",
+        "sourceSHA256": "a0cf8e0bcf4e1a6cd848204e080857f2860cea3f834db57ca3988cff389f32d1",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          0,
+          17,
           9,
-          1148,
-          1355
+          1207,
+          1293
         ],
         "framingBounds": [
-          30,
-          63,
-          1148,
-          1256
+          95,
+          42,
+          1122,
+          1184
         ]
       }
     ],
@@ -3773,7 +3775,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat Gum Head New Type SH4 : modèle armé pâle à gorge/poitrine orange prononcée, tuyau métallique courbé ; scène rendue distincte de la galerie corrobore la variante, sans attester une capture interactive, Old Type gris en arrière-plan exclu. Une pose de repos, genou levé comme modèle ; ni vol ni attaque originale produits. Contraste/rouge accentués et faibles traces alpha hors silhouette ; aucune certification 1:1.",
+    "selectionProvenance": {
+      "sourceSHA256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329",
+      "sourceDimensions": [
+        1161,
+        1355
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b1efaf53-d78a-4769-8c9f-765ccc2848d7.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Gum Head New Type armé du tuyau métallique courbé visible sur le modèle. Le terme golf club du prompt est imprécis ; l’image livrée conserve le tuyau creux. Image fixe candidate, fidélité non certifiée."
   },
   "sh1_mumbler_006": {
     "fighterId": "sh1_mumbler_006",
@@ -6304,50 +6318,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-c274a4e8-3da7-4935-9548-23fdca8432b9.png",
-    "sourceSHA256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+    "sourceFile": "exec-71a04553-aef1-4964-9ed4-a49aafb5770a.png",
+    "sourceSHA256": "44bc2de11b55f8f77fb8a5085f6e28db57ebe4c4880bb0849de97a32fae29d5d",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Corps entier candidat Origins PSP : bras enfermés dans le torse, deux jambes et appuis visibles. Pose 2D composée depuis les vues de modèle ; texture/volume reconstruits, aucune animation ni mesure originale, fidélité non certifiée.",
+    "notes": "Straight-Jacket du jeu PSP de 2007. Silhouette gainée, corps de profil et jambes en appui décalé. Image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
-        "bytes": 671659,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "44bc2de11b55f8f77fb8a5085f6e28db57ebe4c4880bb0849de97a32fae29d5d",
+        "bytes": 1478769,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          326,
-          108,
-          914,
-          1151
+          145,
+          313,
+          785,
+          1299
         ],
-        "pixelSHA256": "6b2fa82ae5e19aa62cc9abb05155c08cecdba2355a5bbd36856bf6765dec7efc",
-        "transparentFraction": 0.84527,
-        "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
-        "facing": 1,
+        "pixelSHA256": "f61a6d5adfc6ce4ed7c11b5542909fa36768e7a7a31f2eb1c6cdcae88f8d1989",
+        "transparentFraction": 0.83421,
+        "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+        "facing": -1,
         "anchor": [
-          0.5,
-          0.9178628389154705
+          0.49,
+          0.845703
         ],
-        "bodyHeight": 0.8317384370015949,
-        "sourceFile": "exec-c274a4e8-3da7-4935-9548-23fdca8432b9.png",
-        "sourceSHA256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+        "bodyHeight": 0.76,
+        "sourceFile": "exec-71a04553-aef1-4964-9ed4-a49aafb5770a.png",
+        "sourceSHA256": "44bc2de11b55f8f77fb8a5085f6e28db57ebe4c4880bb0849de97a32fae29d5d",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          25,
-          21,
-          1240,
-          1254
+          0,
+          0,
+          1010,
+          1536
         ],
         "framingBounds": [
-          322,
-          98,
-          916,
-          1159
+          142,
+          310,
+          788,
+          1333
         ]
       }
     ],
@@ -6388,7 +6404,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Corps entier candidat Origins PSP : bras enfermés dans le torse, deux jambes et appuis visibles. Pose 2D composée depuis les vues de modèle ; texture/volume reconstruits, aucune animation ni mesure originale, fidélité non certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c274a4e8-3da7-4935-9548-23fdca8432b9.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Straight-Jacket du jeu PSP de 2007. Silhouette gainée, corps de profil et jambes en appui décalé. Image fixe candidate, fidélité non certifiée."
   },
   "origins_carrion_076": {
     "fighterId": "origins_carrion_076",
@@ -6686,50 +6714,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-45cd2a08-88e3-450d-87e6-39ba54594f9b.png",
-    "sourceSHA256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+    "sourceFile": "exec-08912575-f37b-41fa-924d-8faa8d416d1a.png",
+    "sourceSHA256": "f7c29928e5e851421207913f9ac6a1d9a57b8a3a4d9a34eb52eaff809a2042f3",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Corps entier candidat Origins PSP : masse bossue et appuis contorsionnés ; emplacement tête et détails de membres éloignés à comparer au modèle. Deux corrections de cadrage/couleur par outil image, aucun recadrage Python. Pose fixe isolée, zéro animation ou timing original certifié.",
+    "notes": "Caliban en appui latéral, dos bossu et extrémités contorsionnées d’après les deux vues de modèle Origins. Image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
-        "bytes": 478897,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "f7c29928e5e851421207913f9ac6a1d9a57b8a3a4d9a34eb52eaff809a2042f3",
+        "bytes": 1339405,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          368,
-          415,
-          959,
-          846
+          161,
+          71,
+          1630,
+          814
         ],
-        "pixelSHA256": "fd9b94539a1f0051cb4c575c721dca003a89fd3d2eeb4a644566cc4e71e8a4f9",
-        "transparentFraction": 0.9011,
-        "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
-        "facing": 1,
+        "pixelSHA256": "95f782f8518fb435787372ea60880e0a5874f673e7fc2b885c69aa2609e513d0",
+        "transparentFraction": 0.66474,
+        "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+        "facing": -1,
         "anchor": [
-          0.52,
-          0.6746411483253588
+          0.53,
+          0.9177
         ],
-        "bodyHeight": 0.3437001594896332,
-        "sourceFile": "exec-45cd2a08-88e3-450d-87e6-39ba54594f9b.png",
-        "sourceSHA256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-08912575-f37b-41fa-924d-8faa8d416d1a.png",
+        "sourceSHA256": "f7c29928e5e851421207913f9ac6a1d9a57b8a3a4d9a34eb52eaff809a2042f3",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          69,
-          53,
-          1202,
-          1190
+          0,
+          0,
+          1768,
+          887
         ],
         "framingBounds": [
-          364,
-          411,
-          964,
-          852
+          157,
+          50,
+          1635,
+          826
         ]
       }
     ],
@@ -6770,7 +6800,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Corps entier candidat Origins PSP : masse bossue et appuis contorsionnés ; emplacement tête et détails de membres éloignés à comparer au modèle. Deux corrections de cadrage/couleur par outil image, aucun recadrage Python. Pose fixe isolée, zéro animation ou timing original certifié.",
+    "selectionProvenance": {
+      "sourceSHA256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-45cd2a08-88e3-450d-87e6-39ba54594f9b.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Caliban en appui latéral, dos bossu et extrémités contorsionnées d’après les deux vues de modèle Origins. Image fixe candidate, fidélité non certifiée."
   },
   "homecoming_lurker_085": {
     "fighterId": "homecoming_lurker_085",
@@ -6778,50 +6820,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-e424236d-13c1-49a7-a812-958f1083457d.png",
-    "sourceSHA256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+    "sourceFile": "exec-d57f1412-f219-40a1-a8b4-c4271eb6b997.png",
+    "sourceSHA256": "f75a3e452a0b29780717b38d0904881850ec3c460968696fa648b01561724971",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Corps entier candidat Homecoming2008 : torse rampant, partie inférieure réunie et deux bras à doigts crochus. Toutes pointes dans le cadre, pose2D transposée et cadrage élargi par outil image ; aucune jambe debout inventée. Détails de peau et géométrie non certifiés.",
+    "notes": "Lurker de profil, bas du corps réuni, deux bras crochus ; l’appui arrière et les pointes des doigts sont dans le cadre. Image fixe candidate, fidélité non certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
-        "bytes": 305795,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "f75a3e452a0b29780717b38d0904881850ec3c460968696fa648b01561724971",
+        "bytes": 966676,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          342,
-          412,
-          996,
-          885
+          124,
+          134,
+          1718,
+          811
         ],
-        "pixelSHA256": "363ef19a623f1fc147da2d632a5b1e608596e46a87c25f9b6b8dafe3e0520b6b",
-        "transparentFraction": 0.95125,
-        "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+        "pixelSHA256": "152aef6316cc5b3b46fb4e5e36be98d0aa7f5e5b9a7a14f21ebe992086c286dd",
+        "transparentFraction": 0.76953,
+        "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
         "facing": 1,
         "anchor": [
-          0.55,
-          0.7057416267942583
+          0.45,
+          0.915445
         ],
-        "bodyHeight": 0.37719298245614036,
-        "sourceFile": "exec-e424236d-13c1-49a7-a812-958f1083457d.png",
-        "sourceSHA256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+        "bodyHeight": 0.94,
+        "sourceFile": "exec-d57f1412-f219-40a1-a8b4-c4271eb6b997.png",
+        "sourceSHA256": "f75a3e452a0b29780717b38d0904881850ec3c460968696fa648b01561724971",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          93,
-          29,
-          1095,
-          1156
+          35,
+          21,
+          1773,
+          887
         ],
         "framingBounds": [
-          337,
-          409,
-          998,
-          887
+          121,
+          124,
+          1724,
+          815
         ]
       }
     ],
@@ -6862,7 +6906,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Corps entier candidat Homecoming2008 : torse rampant, partie inférieure réunie et deux bras à doigts crochus. Toutes pointes dans le cadre, pose2D transposée et cadrage élargi par outil image ; aucune jambe debout inventée. Détails de peau et géométrie non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-e424236d-13c1-49a7-a812-958f1083457d.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Lurker de profil, bas du corps réuni, deux bras crochus ; l’appui arrière et les pointes des doigts sont dans le cadre. Image fixe candidate, fidélité non certifiée."
   },
   "homecoming_feral_086": {
     "fighterId": "homecoming_feral_086",
@@ -18806,5 +18862,287 @@ export const SPRITES = {
       "sourceFile": "exec-dd1f2416-f353-4380-82e9-d8dbae9b90ae.png"
     },
     "animatedClips": 0
+  },
+  "bom_ghost_125": {
+    "fighterId": "bom_ghost_125",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-bdd66db5-60b1-4521-9a0d-5dd66782bccb.png",
+    "sourceSHA256": "ed274487b37b0f4213b8670429268acb2d84235e510b5c68f1d17b5689b8fc4a",
+    "sourceDimensions": [
+      1024,
+      1536
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Ghost du bestiaire Vita, bras pendants, profil vers la droite et chaussures légèrement suspendues pour le versus. Image fixe candidate, fidélité non certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "ed274487b37b0f4213b8670429268acb2d84235e510b5c68f1d17b5689b8fc4a",
+        "bytes": 1341659,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          282,
+          65,
+          754,
+          1476
+        ],
+        "pixelSHA256": "e73b5ed04a87926222267f2cebd29f4e8c6b84ec3d1308b29d4ab17de974d816",
+        "transparentFraction": 0.7921,
+        "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+        "facing": 1,
+        "anchor": [
+          0.47,
+          0.995
+        ],
+        "bodyHeight": 0.96,
+        "sourceFile": "exec-bdd66db5-60b1-4521-9a0d-5dd66782bccb.png",
+        "sourceSHA256": "ed274487b37b0f4213b8670429268acb2d84235e510b5c68f1d17b5689b8fc4a",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          23,
+          1006,
+          1536
+        ],
+        "framingBounds": [
+          275,
+          61,
+          756,
+          1485
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "sha256": "6fa510a96dba81027953e554bc1d506cf2355b11ca3bff20c430ffc432807f33",
+      "bytes": 1418491,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        214,
+        35,
+        762,
+        1477
+      ],
+      "pixelSHA256": "d52aef341b95cd3cf0fa6e186a0ba308596be1b42e5a2c229bb9355dd1987518",
+      "sourceFile": "exec-1f67d30a-ebb3-4f09-a2c6-519ffcd5fcfc.png",
+      "sourceSHA256": "6fa510a96dba81027953e554bc1d506cf2355b11ca3bff20c430ffc432807f33",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        32,
+        1006,
+        1536
+      ],
+      "framingBounds": [
+        207,
+        32,
+        770,
+        1482
+      ],
+      "transparentFraction": 0.72558
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Forme sombre du Ghost sur PS Vita, tête inclinée et chaussures identifiables pendant la suspension. Image fixe candidate, fidélité non certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "6fa510a96dba81027953e554bc1d506cf2355b11ca3bff20c430ffc432807f33",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-1f67d30a-ebb3-4f09-a2c6-519ffcd5fcfc.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Ghost du bestiaire Vita, bras pendants, profil vers la droite et chaussures légèrement suspendues pour le versus. Image fixe candidate, fidélité non certifiée."
+  },
+  "sh4_joseph_schreiber_victim_15": {
+    "fighterId": "sh4_joseph_schreiber_victim_15",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-536baeac-dc59-4774-b35b-ec582ea0b11a.png",
+    "sourceSHA256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+    "sourceDimensions": [
+      1277,
+      1231
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Manifestation de Joseph dans Apartment World : visage à l’envers et épaules englobées dans le plafond. La jonction sombre reprend la limite visible de l’apparition. Image fixe candidate, fidélité non certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+      "sha256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+      "bytes": 762667,
+      "width": 1277,
+      "height": 1231,
+      "facing": 1,
+      "visibleBounds": [
+        83,
+        183,
+        1195,
+        1077
+      ],
+      "pixelSHA256": "f267023de8d2b05cf31f8f976f967af7f50638d2b726e23de06e27143b5949b7",
+      "sourceFile": "exec-536baeac-dc59-4774-b35b-ec582ea0b11a.png",
+      "sourceSHA256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        19,
+        1241,
+        1174
+      ],
+      "framingBounds": [
+        79,
+        155,
+        1199,
+        1095
+      ],
+      "transparentFraction": 0.66132
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Manifestation de Joseph dans Apartment World : visage à l’envers et épaules englobées dans le plafond. La jonction sombre reprend la limite visible de l’apparition. Image fixe candidate, fidélité non certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+      "sourceDimensions": [
+        1277,
+        1231
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-536baeac-dc59-4774-b35b-ec582ea0b11a.png"
+    },
+    "animatedClips": 0
+  },
+  "shf_sakuko_like_entity_162": {
+    "fighterId": "shf_sakuko_like_entity_162",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-9ffd02d4-59af-4356-8b9e-9b4f70e4baae.png",
+    "sourceSHA256": "f4949f7cbcc6766b8096f017a8dfbbc768afa0650060e54778c6987b34301d51",
+    "sourceDimensions": [
+      992,
+      1586
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Phase lumineuse de profil gauche. Le halo est décalé derrière la tête, les manches et l’instrument sont relevés ; les sandales restent suspendues. L’épaisseur des rayons est interprétée. Image fixe candidate, fidélité non certifiée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "f4949f7cbcc6766b8096f017a8dfbbc768afa0650060e54778c6987b34301d51",
+        "bytes": 1326329,
+        "width": 992,
+        "height": 1586,
+        "visibleBounds": [
+          214,
+          10,
+          818,
+          1559
+        ],
+        "pixelSHA256": "54e854310f95ec6e2a2901df13dfd8ccafeb15aa367c79ab298e7900ca02c903",
+        "transparentFraction": 0.70835,
+        "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+        "facing": -1,
+        "anchor": [
+          0.47,
+          0.998
+        ],
+        "bodyHeight": 0.945,
+        "sourceFile": "exec-9ffd02d4-59af-4356-8b9e-9b4f70e4baae.png",
+        "sourceSHA256": "f4949f7cbcc6766b8096f017a8dfbbc768afa0650060e54778c6987b34301d51",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          978,
+          1586
+        ],
+        "framingBounds": [
+          205,
+          0,
+          839,
+          1563
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "sha256": "f15d4f66c8da8ee6795cd7bf7ce5d7d63a106387a5cab3c7662913cf52052d43",
+      "bytes": 1580010,
+      "width": 1132,
+      "height": 1390,
+      "facing": 1,
+      "visibleBounds": [
+        112,
+        1,
+        1102,
+        1340
+      ],
+      "pixelSHA256": "d0e1f65c67259c4272f9e5eec73f7a042cc549ed4f25a2254d6f311ebb0d512b",
+      "sourceFile": "exec-9b5b4013-f355-4070-a09b-7315e97d62b0.png",
+      "sourceSHA256": "f15d4f66c8da8ee6795cd7bf7ce5d7d63a106387a5cab3c7662913cf52052d43",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        0,
+        1128,
+        1390
+      ],
+      "framingBounds": [
+        106,
+        0,
+        1105,
+        1343
+      ],
+      "transparentFraction": 0.66649
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Forme suspendue ressemblant à Sakuko, halo lumineux, chaîne et sandales documentés lors du combat PS5. L’identité reste indéterminée. Image fixe candidate, fidélité non certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "f15d4f66c8da8ee6795cd7bf7ce5d7d63a106387a5cab3c7662913cf52052d43",
+      "sourceDimensions": [
+        1132,
+        1390
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-9b5b4013-f355-4070-a09b-7315e97d62b0.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Phase lumineuse de profil gauche. Le halo est décalé derrière la tête, les manches et l’instrument sont relevés ; les sandales restent suspendues. L’épaisseur des rayons est interprétée. Image fixe candidate, fidélité non certifiée."
   }
 };

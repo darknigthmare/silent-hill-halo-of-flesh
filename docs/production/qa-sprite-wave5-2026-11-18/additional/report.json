@@ -1,0 +1,2417 @@
+{
+  "schema": 3,
+  "label": "sprite-wave5-additional",
+  "generatedAt": "2026-11-18T09:28:23.141Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4261\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1326329,
+        "sha256": "f4949f7cbcc6766b8096f017a8dfbbc768afa0650060e54778c6987b34301d51"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1580010,
+        "sha256": "f15d4f66c8da8ee6795cd7bf7ce5d7d63a106387a5cab3c7662913cf52052d43"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1341659,
+        "sha256": "ed274487b37b0f4213b8670429268acb2d84235e510b5c68f1d17b5689b8fc4a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1418491,
+        "sha256": "6fa510a96dba81027953e554bc1d506cf2355b11ca3bff20c430ffc432807f33"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 870258,
+        "sha256": "a0cf8e0bcf4e1a6cd848204e080857f2860cea3f834db57ca3988cff389f32d1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1057167,
+        "sha256": "5bd345e719cc363303ceb5a99c78b93e47d8df9a07951604ef3d04df3bb9b329"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 966676,
+        "sha256": "f75a3e452a0b29780717b38d0904881850ec3c460968696fa648b01561724971"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 305795,
+        "sha256": "8cd7fc032a40ab77ce14382ce3eb3723230d1f0426fda920b74ac3189a9d7ac0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1478769,
+        "sha256": "44bc2de11b55f8f77fb8a5085f6e28db57ebe4c4880bb0849de97a32fae29d5d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 671659,
+        "sha256": "5b5eb9aba8ef83c54b9595727959cd72238f3bcdbcfd8d4aa73a298a4cb3ce8d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1339405,
+        "sha256": "f7c29928e5e851421207913f9ac6a1d9a57b8a3a4d9a34eb52eaff809a2042f3"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 478897,
+        "sha256": "1cbb09623aa2604b352a0d04cedd16073dee558bbbfae6cb42d133043d414896"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          214,
+          10,
+          818,
+          1559
+        ],
+        "expected": [
+          214,
+          10,
+          818,
+          1559
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          112,
+          1,
+          1102,
+          1340
+        ],
+        "expected": [
+          112,
+          1,
+          1102,
+          1340
+        ]
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png"
+        ],
+        "portrait": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png"
+        ],
+        "expected": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png"
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png"
+        ],
+        "expected": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          282,
+          65,
+          754,
+          1476
+        ],
+        "expected": [
+          282,
+          65,
+          754,
+          1476
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          214,
+          35,
+          762,
+          1477
+        ],
+        "expected": [
+          214,
+          35,
+          762,
+          1477
+        ]
+      }
+    },
+    {
+      "name": "bom_ghost_125 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/bom_ghost_125.ed274487b37b.png"
+        ],
+        "portrait": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "bom_ghost_125 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_ghost_125.6fa510a96dba.png"
+        ],
+        "expected": "assets/sprites/bom_ghost_125.6fa510a96dba.png"
+      }
+    },
+    {
+      "name": "bom_ghost_125 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_ghost_125.6fa510a96dba.png"
+        ],
+        "expected": "assets/sprites/bom_ghost_125.6fa510a96dba.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          100,
+          46,
+          1119,
+          1181
+        ],
+        "expected": [
+          100,
+          46,
+          1119,
+          1181
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          33,
+          66,
+          1145,
+          1249
+        ],
+        "expected": [
+          33,
+          66,
+          1145,
+          1249
+        ]
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png"
+        ],
+        "portrait": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png"
+        ],
+        "expected": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png"
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png"
+        ],
+        "expected": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          124,
+          134,
+          1718,
+          811
+        ],
+        "expected": [
+          124,
+          134,
+          1718,
+          811
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          342,
+          412,
+          996,
+          885
+        ],
+        "expected": [
+          342,
+          412,
+          996,
+          885
+        ]
+      }
+    },
+    {
+      "name": "homecoming_lurker_085 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png"
+        ],
+        "portrait": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_lurker_085 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png"
+        ],
+        "expected": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png"
+      }
+    },
+    {
+      "name": "homecoming_lurker_085 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png"
+        ],
+        "expected": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          145,
+          313,
+          785,
+          1299
+        ],
+        "expected": [
+          145,
+          313,
+          785,
+          1299
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          326,
+          108,
+          914,
+          1151
+        ],
+        "expected": [
+          326,
+          108,
+          914,
+          1151
+        ]
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png"
+        ],
+        "portrait": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png"
+        ],
+        "expected": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png"
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png"
+        ],
+        "expected": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          161,
+          71,
+          1630,
+          814
+        ],
+        "expected": [
+          161,
+          71,
+          1630,
+          814
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          368,
+          415,
+          959,
+          846
+        ],
+        "expected": [
+          368,
+          415,
+          959,
+          846
+        ]
+      }
+    },
+    {
+      "name": "origins_caliban_079 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_caliban_079.f7c29928e5e8.png"
+        ],
+        "portrait": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_caliban_079 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_caliban_079.1cbb09623aa2.png"
+        ],
+        "expected": "assets/sprites/origins_caliban_079.1cbb09623aa2.png"
+      }
+    },
+    {
+      "name": "origins_caliban_079 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_caliban_079.1cbb09623aa2.png"
+        ],
+        "expected": "assets/sprites/origins_caliban_079.1cbb09623aa2.png"
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162/bom_ghost_125 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162/bom_ghost_125 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162/bom_ghost_125 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "shf_sakuko_like_entity_162",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_ghost_125",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "shf_sakuko_like_entity_162/bom_ghost_125 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+          "assets/sprites/bom_ghost_125.ed274487b37b.png"
+        ],
+        "expected": [
+          "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+          "assets/sprites/bom_ghost_125.ed274487b37b.png"
+        ]
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 264.8274906234177,
+          "top": 371.85647586476864,
+          "right": 353.8068328524765,
+          "bottom": 591.2172201928742
+        },
+        "visible": {
+          "left": 267.7747559022982,
+          "top": 373.25993552137845,
+          "right": 352.5437191615277,
+          "bottom": 590.6558363302303
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_ghost_125 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 922.8845291621382,
+          "top": 380.50019400475185,
+          "right": 992.8715849398243,
+          "bottom": 587.6967998829743
+        },
+        "visible": {
+          "left": 923.1755356310682,
+          "top": 381.08220694261206,
+          "right": 991.853062298569,
+          "bottom": 586.387270772789
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162/bom_ghost_125 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "bom_ghost_125/shf_sakuko_like_entity_162 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_ghost_125/shf_sakuko_like_entity_162 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_ghost_125/shf_sakuko_like_entity_162 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_ghost_125",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "shf_sakuko_like_entity_162",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_ghost_125/shf_sakuko_like_entity_162 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_ghost_125.ed274487b37b.png",
+          "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_ghost_125.ed274487b37b.png",
+          "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_ghost_125 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 287.1284455777539,
+          "top": 380.50019400475185,
+          "right": 357.11550135543996,
+          "bottom": 587.6967998829743
+        },
+        "visible": {
+          "left": 288.1469682190092,
+          "top": 381.08220694261206,
+          "right": 356.8244948865099,
+          "bottom": 586.387270772789
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 926.1931976651016,
+          "top": 371.85647586476864,
+          "right": 1015.1725398941604,
+          "bottom": 591.2172201928742
+        },
+        "visible": {
+          "left": 927.4563113560504,
+          "top": 373.25993552137845,
+          "right": 1012.2252746152799,
+          "bottom": 590.6558363302303
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_ghost_125/shf_sakuko_like_entity_162 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_gum_head_new_type_058/homecoming_lurker_085 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058/homecoming_lurker_085 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058/homecoming_lurker_085 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_gum_head_new_type_058",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_lurker_085",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_gum_head_new_type_058/homecoming_lurker_085 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 215.63693274008654,
+          "top": 396.87922416776485,
+          "right": 393.37440100081204,
+          "bottom": 594.5191353203924
+        },
+        "visible": {
+          "left": 216.5022563440823,
+          "top": 397.57148305096143,
+          "right": 392.8552068384146,
+          "bottom": 593.999941157995
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_lurker_085 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 729.321243605179,
+          "top": 420.43118059506793,
+          "right": 1133.7266691308364,
+          "bottom": 594.7569129957101
+        },
+        "visible": {
+          "left": 730.8349257967909,
+          "top": 422.95398424775453,
+          "right": 1132.9698280350306,
+          "bottom": 593.7477915346354
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058/homecoming_lurker_085 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_lurker_085/sh4_gum_head_new_type_058 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_lurker_085/sh4_gum_head_new_type_058 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_lurker_085/sh4_gum_head_new_type_058 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_lurker_085",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_gum_head_new_type_058",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_lurker_085/sh4_gum_head_new_type_058 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+          "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+          "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_lurker_085 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 146.2733613867416,
+          "top": 420.43118059506793,
+          "right": 550.6787869123991,
+          "bottom": 594.7569129957101
+        },
+        "visible": {
+          "left": 147.03020248254757,
+          "top": 422.95398424775453,
+          "right": 549.1651047207872,
+          "bottom": 593.7477915346354
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_gum_head_new_type_058 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 886.6256295167661,
+          "top": 396.87922416776485,
+          "right": 1064.3630977774915,
+          "bottom": 594.5191353203924
+        },
+        "visible": {
+          "left": 887.1448236791636,
+          "top": 397.57148305096143,
+          "right": 1063.4977741734958,
+          "bottom": 593.999941157995
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_lurker_085/sh4_gum_head_new_type_058 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_straight_jacket_074/origins_caliban_079 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074/origins_caliban_079 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074/origins_caliban_079 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_straight_jacket_074",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_caliban_079",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_straight_jacket_074/origins_caliban_079 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+          "assets/sprites/origins_caliban_079.f7c29928e5e8.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+          "assets/sprites/origins_caliban_079.f7c29928e5e8.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 265.5653347234209,
+          "top": 415.7923579575141,
+          "right": 381.967922295456,
+          "bottom": 600.1264865739103
+        },
+        "visible": {
+          "left": 266.1059040155511,
+          "top": 416.3329272496443,
+          "right": 381.4273530033258,
+          "bottom": 594.0000345964347
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_caliban_079 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 682.2779184206559,
+          "top": 320.306113151151,
+          "right": 1211.753857831903,
+          "bottom": 598.2988932479898
+        },
+        "visible": {
+          "left": 683.7108708953817,
+          "top": 327.8291136434624,
+          "right": 1209.9626672384954,
+          "bottom": 594.0000358238119
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074/origins_caliban_079 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_caliban_079/origins_straight_jacket_074 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_caliban_079/origins_straight_jacket_074 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_caliban_079/origins_straight_jacket_074 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_caliban_079",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_straight_jacket_074",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_caliban_079/origins_straight_jacket_074 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+          "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+          "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_caliban_079 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 68.24617268567525,
+          "top": 320.306113151151,
+          "right": 597.7221120969223,
+          "bottom": 598.2988932479898
+        },
+        "visible": {
+          "left": 70.03736327908271,
+          "top": 327.8291136434624,
+          "right": 596.2891596221964,
+          "bottom": 594.0000358238119
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_straight_jacket_074 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 898.0321082221221,
+          "top": 415.7923579575141,
+          "right": 1014.4346957941573,
+          "bottom": 600.1264865739103
+        },
+        "visible": {
+          "left": 898.5726775142523,
+          "top": 416.3329272496443,
+          "right": 1013.894126502027,
+          "bottom": 594.0000345964347
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_caliban_079/origins_straight_jacket_074 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+        "after": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a",
+        "after": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "width": 992,
+      "height": 1586,
+      "transparentFraction": 0.6617193538217467,
+      "visibleBounds": [
+        214,
+        10,
+        818,
+        1559
+      ]
+    },
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "width": 1132,
+      "height": 1390,
+      "transparentFraction": 0.6179106185016651,
+      "visibleBounds": [
+        112,
+        1,
+        1102,
+        1340
+      ]
+    },
+    {
+      "id": "bom_ghost_125",
+      "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7795861562093099,
+      "visibleBounds": [
+        282,
+        65,
+        754,
+        1476
+      ]
+    },
+    {
+      "id": "bom_ghost_125",
+      "path": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7100989023844401,
+      "visibleBounds": [
+        214,
+        35,
+        762,
+        1477
+      ]
+    },
+    {
+      "id": "sh4_gum_head_new_type_058",
+      "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "width": 1217,
+      "height": 1293,
+      "transparentFraction": 0.7864075633856789,
+      "visibleBounds": [
+        100,
+        46,
+        1119,
+        1181
+      ]
+    },
+    {
+      "id": "sh4_gum_head_new_type_058",
+      "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "width": 1161,
+      "height": 1355,
+      "transparentFraction": 0.7057848718022064,
+      "visibleBounds": [
+        33,
+        66,
+        1145,
+        1249
+      ]
+    },
+    {
+      "id": "homecoming_lurker_085",
+      "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.7452136522918417,
+      "visibleBounds": [
+        124,
+        134,
+        1718,
+        811
+      ]
+    },
+    {
+      "id": "homecoming_lurker_085",
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9440107445647612,
+      "visibleBounds": [
+        342,
+        412,
+        996,
+        885
+      ]
+    },
+    {
+      "id": "origins_straight_jacket_074",
+      "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7876199086507162,
+      "visibleBounds": [
+        145,
+        313,
+        785,
+        1299
+      ]
+    },
+    {
+      "id": "origins_straight_jacket_074",
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.836422650071605,
+      "visibleBounds": [
+        326,
+        108,
+        914,
+        1151
+      ]
+    },
+    {
+      "id": "origins_caliban_079",
+      "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.6352595234433487,
+      "visibleBounds": [
+        161,
+        71,
+        1630,
+        814
+      ]
+    },
+    {
+      "id": "origins_caliban_079",
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8956354021199149,
+      "visibleBounds": [
+        368,
+        415,
+        959,
+        846
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "facing": 1,
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "file": "portrait-shf_sakuko_like_entity_162-right.png"
+    },
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "facing": -1,
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "file": "portrait-shf_sakuko_like_entity_162-left.png"
+    },
+    {
+      "id": "bom_ghost_125",
+      "facing": 1,
+      "path": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "file": "portrait-bom_ghost_125-right.png"
+    },
+    {
+      "id": "bom_ghost_125",
+      "facing": -1,
+      "path": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "file": "portrait-bom_ghost_125-left.png"
+    },
+    {
+      "id": "sh4_gum_head_new_type_058",
+      "facing": 1,
+      "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "file": "portrait-sh4_gum_head_new_type_058-right.png"
+    },
+    {
+      "id": "sh4_gum_head_new_type_058",
+      "facing": -1,
+      "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "file": "portrait-sh4_gum_head_new_type_058-left.png"
+    },
+    {
+      "id": "homecoming_lurker_085",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "file": "portrait-homecoming_lurker_085-right.png"
+    },
+    {
+      "id": "homecoming_lurker_085",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "file": "portrait-homecoming_lurker_085-left.png"
+    },
+    {
+      "id": "origins_straight_jacket_074",
+      "facing": 1,
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "file": "portrait-origins_straight_jacket_074-right.png"
+    },
+    {
+      "id": "origins_straight_jacket_074",
+      "facing": -1,
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "file": "portrait-origins_straight_jacket_074-left.png"
+    },
+    {
+      "id": "origins_caliban_079",
+      "facing": 1,
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "file": "portrait-origins_caliban_079-right.png"
+    },
+    {
+      "id": "origins_caliban_079",
+      "facing": -1,
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "file": "portrait-origins_caliban_079-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "shf_sakuko_like_entity_162",
+        "bom_ghost_125"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 609.1556543031953
+        }
+      },
+      "geometries": [
+        {
+          "id": "shf_sakuko_like_entity_162",
+          "slot": 1,
+          "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+          "exterior": {
+            "left": 264.8274906234177,
+            "top": 371.85647586476864,
+            "right": 353.8068328524765,
+            "bottom": 591.2172201928742
+          },
+          "visible": {
+            "left": 267.7747559022982,
+            "top": 373.25993552137845,
+            "right": 352.5437191615277,
+            "bottom": 590.6558363302303
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -3.3441636697697277,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+            "args": [
+              -66.88257704651146,
+              -227.05820105820106,
+              142.3033554181095,
+              227.51322751322752
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 992,
+            "height": 1586
+          }
+        },
+        {
+          "id": "bom_ghost_125",
+          "slot": 2,
+          "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+          "exterior": {
+            "left": 922.8845291621382,
+            "top": 380.50019400475185,
+            "right": 992.8715849398243,
+            "bottom": 587.6967998829743
+          },
+          "visible": {
+            "left": 923.1755356310682,
+            "top": 381.08220694261206,
+            "right": 991.853062298569,
+            "bottom": 586.387270772789
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -7.612729227211048,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+            "args": [
+              -71.57708333333333,
+              -227.29531250000002,
+              152.29166666666669,
+              228.43750000000003
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+        "assets/sprites/bom_ghost_125.ed274487b37b.png"
+      ],
+      "snapshots": [
+        "duel-shf_sakuko_like_entity_162--bom_ghost_125-tick0.png",
+        "duel-shf_sakuko_like_entity_162--bom_ghost_125-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "bom_ghost_125",
+        "shf_sakuko_like_entity_162"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 609.1556543031953
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_ghost_125",
+          "slot": 1,
+          "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+          "exterior": {
+            "left": 287.1284455777539,
+            "top": 380.50019400475185,
+            "right": 357.11550135543996,
+            "bottom": 587.6967998829743
+          },
+          "visible": {
+            "left": 288.1469682190092,
+            "top": 381.08220694261206,
+            "right": 356.8244948865099,
+            "bottom": 586.387270772789
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -7.612729227211048,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+            "args": [
+              -71.57708333333333,
+              -227.29531250000002,
+              152.29166666666669,
+              228.43750000000003
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "shf_sakuko_like_entity_162",
+          "slot": 2,
+          "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+          "exterior": {
+            "left": 926.1931976651016,
+            "top": 371.85647586476864,
+            "right": 1015.1725398941604,
+            "bottom": 591.2172201928742
+          },
+          "visible": {
+            "left": 927.4563113560504,
+            "top": 373.25993552137845,
+            "right": 1012.2252746152799,
+            "bottom": 590.6558363302303
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -3.3441636697697277,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+            "args": [
+              -66.88257704651146,
+              -227.05820105820106,
+              142.3033554181095,
+              227.51322751322752
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 992,
+            "height": 1586
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_ghost_125.ed274487b37b.png",
+        "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png"
+      ],
+      "snapshots": [
+        "duel-bom_ghost_125--shf_sakuko_like_entity_162-tick0.png",
+        "duel-bom_ghost_125--shf_sakuko_like_entity_162-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_gum_head_new_type_058",
+        "homecoming_lurker_085"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7736588488569
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_gum_head_new_type_058",
+          "slot": 1,
+          "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+          "exterior": {
+            "left": 215.63693274008654,
+            "top": 396.87922416776485,
+            "right": 393.37440100081204,
+            "bottom": 594.5191353203924
+          },
+          "visible": {
+            "left": 216.5022563440823,
+            "top": 397.57148305096143,
+            "right": 392.8552068384146,
+            "bottom": 593.999941157995
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000058842005046244594,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+            "args": [
+              -120.5565154432213,
+              -208.91138297872342,
+              215.27949186289516,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1217,
+            "height": 1293
+          }
+        },
+        {
+          "id": "homecoming_lurker_085",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+          "exterior": {
+            "left": 729.321243605179,
+            "top": 420.43118059506793,
+            "right": 1133.7266691308364,
+            "bottom": 594.7569129957101
+          },
+          "visible": {
+            "left": 730.8349257967909,
+            "top": 422.95398424775453,
+            "right": 1132.9698280350306,
+            "bottom": 593.7477915346354
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.25220846536456065,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+            "args": [
+              -205.85106382978722,
+              -209.38369680851062,
+              457.4468085106383,
+              228.72340425531914
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+        "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png"
+      ],
+      "snapshots": [
+        "duel-sh4_gum_head_new_type_058--homecoming_lurker_085-tick0.png",
+        "duel-sh4_gum_head_new_type_058--homecoming_lurker_085-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "homecoming_lurker_085",
+        "sh4_gum_head_new_type_058"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7736588488569
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_lurker_085",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+          "exterior": {
+            "left": 146.2733613867416,
+            "top": 420.43118059506793,
+            "right": 550.6787869123991,
+            "bottom": 594.7569129957101
+          },
+          "visible": {
+            "left": 147.03020248254757,
+            "top": 422.95398424775453,
+            "right": 549.1651047207872,
+            "bottom": 593.7477915346354
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.25220846536456065,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+            "args": [
+              -205.85106382978722,
+              -209.38369680851062,
+              457.4468085106383,
+              228.72340425531914
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh4_gum_head_new_type_058",
+          "slot": 2,
+          "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+          "exterior": {
+            "left": 886.6256295167661,
+            "top": 396.87922416776485,
+            "right": 1064.3630977774915,
+            "bottom": 594.5191353203924
+          },
+          "visible": {
+            "left": 887.1448236791636,
+            "top": 397.57148305096143,
+            "right": 1063.4977741734958,
+            "bottom": 593.999941157995
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000058842005046244594,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+            "args": [
+              -120.5565154432213,
+              -208.91138297872342,
+              215.27949186289516,
+              228.72340425531917
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1217,
+            "height": 1293
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+        "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_lurker_085--sh4_gum_head_new_type_058-tick0.png",
+        "duel-homecoming_lurker_085--sh4_gum_head_new_type_058-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_straight_jacket_074",
+        "origins_caliban_079"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 618.262028234649
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_straight_jacket_074",
+          "slot": 1,
+          "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+          "exterior": {
+            "left": 265.5653347234209,
+            "top": 415.7923579575141,
+            "right": 381.967922295456,
+            "bottom": 600.1264865739103
+          },
+          "visible": {
+            "left": 266.1059040155511,
+            "top": 416.3329272496443,
+            "right": 381.4273530033258,
+            "bottom": 594.0000345964347
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000034596434716149815,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+            "args": [
+              -92.41228070175438,
+              -239.24492763157895,
+              188.59649122807016,
+              282.89473684210526
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "origins_caliban_079",
+          "slot": 2,
+          "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+          "exterior": {
+            "left": 682.2779184206559,
+            "top": 320.306113151151,
+            "right": 1211.753857831903,
+            "bottom": 598.2988932479898
+          },
+          "visible": {
+            "left": 683.7108708953817,
+            "top": 327.8291136434624,
+            "right": 1209.9626672384954,
+            "bottom": 594.0000358238119
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003582381191336026,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+            "args": [
+              -344.27446808510643,
+              -298.05724468085106,
+              649.5744680851064,
+              324.7872340425532
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+        "assets/sprites/origins_caliban_079.f7c29928e5e8.png"
+      ],
+      "snapshots": [
+        "duel-origins_straight_jacket_074--origins_caliban_079-tick0.png",
+        "duel-origins_straight_jacket_074--origins_caliban_079-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_caliban_079",
+        "origins_straight_jacket_074"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 618.262028234649
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_caliban_079",
+          "slot": 1,
+          "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+          "exterior": {
+            "left": 68.24617268567525,
+            "top": 320.306113151151,
+            "right": 597.7221120969223,
+            "bottom": 598.2988932479898
+          },
+          "visible": {
+            "left": 70.03736327908271,
+            "top": 327.8291136434624,
+            "right": 596.2891596221964,
+            "bottom": 594.0000358238119
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003582381191336026,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+            "args": [
+              -344.27446808510643,
+              -298.05724468085106,
+              649.5744680851064,
+              324.7872340425532
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "origins_straight_jacket_074",
+          "slot": 2,
+          "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+          "exterior": {
+            "left": 898.0321082221221,
+            "top": 415.7923579575141,
+            "right": 1014.4346957941573,
+            "bottom": 600.1264865739103
+          },
+          "visible": {
+            "left": 898.5726775142523,
+            "top": 416.3329272496443,
+            "right": 1013.894126502027,
+            "bottom": 594.0000345964347
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000034596434716149815,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+            "args": [
+              -92.41228070175438,
+              -239.24492763157895,
+              188.59649122807016,
+              282.89473684210526
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+        "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png"
+      ],
+      "snapshots": [
+        "duel-origins_caliban_079--origins_straight_jacket_074-tick0.png",
+        "duel-origins_caliban_079--origins_straight_jacket_074-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+  "src/sprite-manifest.jsSHA256": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a",
+  "version": "0.9.6",
+  "ids": [
+    "shf_sakuko_like_entity_162",
+    "bom_ghost_125",
+    "sh4_gum_head_new_type_058",
+    "homecoming_lurker_085",
+    "origins_straight_jacket_074",
+    "origins_caliban_079"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

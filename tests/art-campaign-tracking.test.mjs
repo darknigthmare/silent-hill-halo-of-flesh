@@ -136,6 +136,31 @@ test('a renewed ART92 blocker keeps both old and new diagnostics without pretend
   assert.throws(()=>applyArtCampaignProgress(fixture().plan,[f.previous,f.next],f.assets,f.options),/ART92 blocked row/);
 });
 
+test('a later combat revision keeps the original ART92 candidate and checks both actual PNG files',context=>{
+  function setup(){
+    const f=laterCombatFixture(context),art=f.assets[f.id],frame=art.frames[0];
+    Object.assign(f.next,{status:'implemented-candidate',artifacts:[art.portrait.path]});delete f.next.reason;
+    const archived={...art,frames:[{...art.portrait}],combatView:'legacy-unreviewed'};
+    const fragment={schema:1,campaign:'art92',baseCommit:ART_CONTINUATION_BASE,group:'a',assets:{[f.id]:archived}};
+    const folder=join(f.root,'art/fragments');mkdirSync(folder,{recursive:true});
+    const fragmentPath=join(folder,'art92-a.json');writeFileSync(fragmentPath,JSON.stringify(fragment));
+    const journalPath=join(f.root,'docs/production/sprite-wave5-imports-2026-11-18.json');
+    writeFileSync(journalPath,JSON.stringify({schema:1,imports:[{fighterId:f.id,source:art.source,kind:'distinct-combat-idle',
+      path:frame.path,sha256:frame.sha256,bytes:frame.bytes,existingSelectionReference:art.portrait}]}));
+    return {...f,art,frame,fragmentPath,journalPath};
+  }
+  const f=setup(),original=structuredClone(f.next);
+  applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options);
+  assert.deepEqual(f.next,original);assert.equal(f.plan.artContinuation.candidates,1);assert.equal(f.plan.artContinuation.blocked,0);
+  assert.equal(f.plan.tasks[0].delivery,'art92-static-candidate-2026-11-02');
+  for(const corrupt of [g=>rmSync(g.fragmentPath),g=>rmSync(g.journalPath),
+    g=>writeFileSync(join(g.root,g.art.portrait.path),'bad old PNG'),g=>writeFileSync(join(g.root,g.frame.path),'bad new PNG'),
+    g=>{g.next.artifacts=[g.frame.path];}]){
+    const changed=setup();corrupt(changed);
+    assert.throws(()=>applyArtCampaignProgress(changed.plan,[changed.previous,changed.next],changed.assets,changed.options),/matching artifact file/);
+  }
+});
+
 test('a later exact combat delivery coexists with both immutable blocked campaigns without approving work',context=>{
   const f=laterCombatFixture(context),before=structuredClone([f.previous,f.next,f.assets,f.plan.tasks[1]]);
   applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options);

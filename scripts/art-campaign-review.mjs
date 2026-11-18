@@ -45,7 +45,27 @@ function staticCandidate(id,source,art){
 }
 
 function matchingFrame(a,b){
- return ['path','sha256','bytes','width','height','facing','bodyHeight'].every(key=>a[key]===b[key])&&JSON.stringify(a.anchor)===JSON.stringify(b.anchor);
+ return sameRaster(a,b)&&a.facing===b.facing&&a.bodyHeight===b.bodyHeight&&JSON.stringify(a.anchor)===JSON.stringify(b.anchor);
+}
+
+function sameRaster(a,b){
+ return record(a)&&record(b)&&['path','sha256','bytes','width','height'].every(key=>a[key]===b[key]);
+}
+
+/** Verify the archived candidate and the current idle independently when their uses have diverged. */
+export function matchesCampaignCandidate(row,source,fragment,art,continuation){
+ const id=row?.entityId;
+ if(!nonempty(id)||!nonempty(source)||!exactRow(row,id)||row.status!=='implemented-candidate'||!artifacts(row.artifacts)||
+  !staticCandidate(id,source,fragment)||!staticCandidate(id,source,art)||!hasCombatSprite(art))return false;
+ const original=fragment.frames[0],idle=art.frames[0];
+ if(!row.artifacts.includes(original.path)||!sameRaster(original,art.portrait)||
+  (fragment.portrait!==undefined&&!sameRaster(original,fragment.portrait)))return false;
+ if(idle.path===original.path)return art.combatView!=='side-view-candidate'&&matchingFrame(idle,original);
+ if(art.combatView!=='side-view-candidate'||idle.purpose!=='combat'||idle.view!=='side-view')return false;
+ return Array.isArray(continuation?.purposeDeliveries)&&continuation.purposeDeliveries.some(delivery=>
+  delivery?.id===id&&delivery.source===source&&delivery.purpose==='combat'&&delivery.file===idle.path&&
+  delivery.sha256===idle.sha256&&delivery.bytes===idle.bytes&&
+  (delivery.existingSelectionReference===undefined||sameRaster(original,delivery.existingSelectionReference)));
 }
 
 function validDeliveredRaster(id,frame){
@@ -88,7 +108,8 @@ export function readPurposeDeliveries(root){
     !nonempty(row.source)||!safeArtifact(row.path)||!row.path.startsWith('assets/sprites/'+row.fighterId+'.')||
     !/^assets\/sprites\/[a-z0-9_.-]+\.png$/.test(row.path)||typeof row.sha256!=='string'||!/^[a-f0-9]{64}$/.test(row.sha256)||
     !row.path.includes('.'+row.sha256.slice(0,12)+'.'))throw Error('Invalid exact artwork delivery '+path+':imports');
-   deliveries.push({id:row.fighterId,source:row.source,file:row.path,sha256:row.sha256,purpose,journal:path});
+   deliveries.push({id:row.fighterId,source:row.source,file:row.path,sha256:row.sha256,bytes:row.bytes,
+    existingSelectionReference:row.existingSelectionReference,purpose,journal:path});
   }
  }
  return deliveries;
@@ -176,14 +197,18 @@ export function resolvedHistoricalArtwork(row,art,continuation,{purpose='any'}={
  if(matches.length!==1||entries.length!==1)return false;
  const item=matches[0],entry=entries[0],fragment=continuation.assets[row.entityId];
  if(record(entry)&&record(entry.fighter)&&nonempty(entry.fighter.source)&&entry.generationExcluded===false&&entry.workbookRowId===row.rowId&&
-  Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)&&exactRow(item,row.entityId)&&item.group===entry.group&&record(art)&&art.fighterId===row.entityId&&art.source===entry.fighter.source&&
+  Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)&&exactRow(item,row.entityId)&&item.status==='blocked'&&item.group===entry.group&&record(art)&&art.fighterId===row.entityId&&art.source===entry.fighter.source&&
   art.singleSubjectReviewed===true&&art.fidelity==='unverified'&&art.status==='integrated-candidate'&&
   ((purpose!=='combat'&&deliveredUse(art,continuation,'selection'))||(purpose!=='selection'&&deliveredUse(art,continuation,'combat'))))return true;
  if(!record(entry)||!record(entry.fighter)||!nonempty(entry.fighter.source)||!Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)||
   !exactRow(item,row.entityId)||item.status!=='implemented-candidate'||item.group!==entry.group||entry.workbookRowId!==row.rowId||
   entry.generationExcluded!==false||!nonempty(item.limits)||!evidence(item.evidence)||!artifacts(item.artifacts)||
   !staticCandidate(row.entityId,entry.fighter.source,art)||!staticCandidate(row.entityId,entry.fighter.source,fragment)||
-  !item.artifacts.includes(art.frames[0].path)||!matchingFrame(art.frames[0],fragment.frames[0]))return false;
+  !item.artifacts.includes(fragment.frames[0].path))return false;
+ if(art.combatView==='side-view-candidate'||art.frames[0].path!==fragment.frames[0].path){
+  return matchesCampaignCandidate(item,entry.fighter.source,fragment,art,continuation);
+ }
+ if(!matchingFrame(art.frames[0],fragment.frames[0]))return false;
  if(purpose==='selection'&&!validDeliveredRaster(row.entityId,art.portrait))return false;
  if(purpose==='combat'&&!hasCombatSprite(art))return false;
  return true;
