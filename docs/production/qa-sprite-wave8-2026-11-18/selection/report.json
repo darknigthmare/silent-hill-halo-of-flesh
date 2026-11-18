@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-18",
+  "surface": "Serveur HTTP du projet, pages de sélection Versus, dossier modal et atelier",
+  "test": "Sélection / dossier / atelier avec le PNG natif, lancement local et diagnostic des rôles non combattants",
+  "checks": [
+    {
+      "fighterId": "downpour_monocle_man_114",
+      "selectionFile": "/assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
+      "verifiedServedSha256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+      "selectionCanvas": {
+        "spriteId": "downpour_monocle_man_114",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "dossierCanvas": {
+        "spriteId": "downpour_monocle_man_114",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "canvasDrawImageConfirmed": [
+        "p1Portrait",
+        "dossierPortrait"
+      ],
+      "workshop": {
+        "path": "/assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
+        "width": 1254,
+        "height": 1254,
+        "alt": "Monocle Man — image de sélection"
+      },
+      "combat": {
+        "artPurpose": "combat",
+        "spriteId": "downpour_monocle_man_114",
+        "artStatus": "missing"
+      },
+      "role": "Image consultable dans cet atelier. Le rôle de ce profil dans son œuvre ne permet pas de duel.",
+      "attempts": [
+        {
+          "annonce": "Monocle Man : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.",
+          "selection": "Monocle Man : rôle non combattant ou identité à confirmer. Consulter le dossier.",
+          "engine": false,
+          "run": false,
+          "diagnostic": false
+        },
+        {
+          "annonce": "Monocle Man : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.",
+          "selection": "Monocle Man : rôle non combattant ou identité à confirmer. Consulter le dossier.",
+          "engine": false,
+          "run": false,
+          "diagnostic": true
+        }
+      ],
+      "captures": [
+        "mono-selection.jpg",
+        "mono-atelier.jpg"
+      ],
+      "pageErrors": []
+    },
+    {
+      "fighterId": "sh3_sewer_creature_052",
+      "selectionFile": "/assets/sprites/sh3_sewer_creature_052.f1e1545f70aa.png",
+      "verifiedServedSha256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+      "selectionCanvas": {
+        "spriteId": "sh3_sewer_creature_052",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "dossierCanvas": {
+        "spriteId": "sh3_sewer_creature_052",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "canvasDrawImageConfirmed": [
+        "p1Portrait",
+        "dossierPortrait"
+      ],
+      "workshop": {
+        "path": "/assets/sprites/sh3_sewer_creature_052.f1e1545f70aa.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Sewer Creature — image de sélection"
+      },
+      "combat": {
+        "artPurpose": "combat",
+        "spriteId": "sh3_sewer_creature_052",
+        "artStatus": "missing"
+      },
+      "role": "Image consultable dans cet atelier. Le rôle de ce profil dans son œuvre ne permet pas de duel.",
+      "attempts": [
+        {
+          "annonce": "Sewer Creature : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.",
+          "selection": "Sewer Creature : rôle non combattant ou identité à confirmer. Consulter le dossier.",
+          "engine": false,
+          "run": false,
+          "diagnostic": false
+        },
+        {
+          "annonce": "Sewer Creature : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible.",
+          "selection": "Sewer Creature : rôle non combattant ou identité à confirmer. Consulter le dossier.",
+          "engine": false,
+          "run": false,
+          "diagnostic": true
+        }
+      ],
+      "captures": [
+        "sewer-selection.jpg",
+        "sewer-atelier.jpg"
+      ],
+      "pageErrors": []
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "passed": true
+}

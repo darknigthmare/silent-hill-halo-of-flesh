@@ -1,0 +1,574 @@
+{
+  "stageBitmaps": {
+    "version": "0.9.6",
+    "build": "dist",
+    "checks": [
+      {
+        "name": "source HTTP server ready",
+        "passed": true
+      },
+      {
+        "name": "FightEngine waits for all pending stage files",
+        "passed": true
+      },
+      {
+        "name": "engine commits only with every current actor and decor frame ready",
+        "passed": true
+      },
+      {
+        "name": "combat canvas paints actual stage cache images",
+        "passed": true
+      },
+      {
+        "name": "failed pause retry preserves old paused engine and decoded pinned decor",
+        "passed": true
+      },
+      {
+        "name": "successful retry replaces engine and closes pause only after readiness",
+        "passed": true
+      },
+      {
+        "name": "the new intro publishes its unpaused button state immediately",
+        "passed": true
+      },
+      {
+        "name": "successful retry clears the obsolete loading error before stable capture",
+        "passed": true
+      },
+      {
+        "name": "HTTP stage failure blocks even explicit actor diagnostic mode",
+        "passed": true
+      },
+      {
+        "name": "failed loading preserves selection and persistent checkpoint",
+        "passed": true
+      },
+      {
+        "name": "retry after the real HTTP failure starts successfully",
+        "passed": true
+      },
+      {
+        "name": "retry issues a new stage request",
+        "passed": true
+      },
+      {
+        "name": "a newer memory warning survives the successful loading commit",
+        "passed": true
+      },
+      {
+        "name": "selection change cancels pending combat without constructing an engine",
+        "passed": true
+      },
+      {
+        "name": "selection cancellation restores the previous empty asset leases",
+        "passed": true
+      },
+      {
+        "name": "menu cancellation invalidates loading and does not resurrect its leases",
+        "passed": true
+      },
+      {
+        "name": "no unhandled browser exceptions",
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "captures": [
+      "ready.png"
+    ],
+    "fixtures": [
+      "Opaque 4×4 test PNGs and a manifest are injected only in Playwright HTTP routes. No production scenery or visual fidelity is claimed.",
+      "A failed pause retry and a newer storage warning are injected to verify recovery without changing production files."
+    ],
+    "output": "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/tests/http-stage-bitmaps",
+    "browser": "153.0.8010.0",
+    "recoveryBeforeFirstFrame": {
+      "frame": 14,
+      "paused": false,
+      "button": "PAUSE",
+      "status": ""
+    },
+    "recoveryAfterFirstFrames": {
+      "frame": 17,
+      "paused": false,
+      "button": "PAUSE",
+      "events": []
+    },
+    "readyCapture": {
+      "phase": "fight",
+      "frame": 162,
+      "paused": false,
+      "button": "PAUSE",
+      "dialogs": 0,
+      "status": ""
+    },
+    "passed": true
+  },
+  "chronicles": {
+    "version": "0.9.6",
+    "base": "http://127.0.0.1:4387",
+    "build": "external HTTP",
+    "checks": [
+      {
+        "name": "static HTTP server ready",
+        "passed": true
+      },
+      {
+        "name": "new chapter selection explicitly lists the sacrificed Walter dossier outside victories",
+        "passed": true,
+        "detail": "1 dossier(s) hors combat dans cette chronique5 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 5 · Sacrificed Walter — Rencontre scénarisée · WATER PRISON — SURVEILLANCE2F CONSULTER LE DOSSIER"
+      },
+      {
+        "name": "the noncombatant chapter remains consultable through its actual reference dossier",
+        "passed": true
+      },
+      {
+        "name": "real launch uses the marked compatible queue and original first chapter arena",
+        "passed": true,
+        "detail": {
+          "format": "reference-encounters-v1",
+          "queue": [
+            "sh4_sniffer_dog_male_053",
+            "sh4_sniffer_dog_female_054",
+            "sh4_man_with_the_coat_067",
+            "sh4_one_truth_070",
+            "sh4_walter_sullivan_072"
+          ],
+          "stages": [
+            "room_302",
+            "water_prison",
+            "apartment_world",
+            "room_302",
+            "apartment_world"
+          ],
+          "chapterIndices": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "dossiers": [
+            {
+              "chapterIndex": 4,
+              "fighterId": "sh4_sacrificed_walter_071",
+              "stageId": "water_prison",
+              "role": "scripted-encounter"
+            }
+          ],
+          "stage": "room_302",
+          "expectedStage": "room_302",
+          "roleBlocked": false
+        }
+      },
+      {
+        "name": "fight view retains the chapter dossier notice without interactive archive controls",
+        "passed": true
+      },
+      {
+        "name": "Alex Home: the scripted Bogeyman remains displayed chapter four with five compatible encounters",
+        "passed": true,
+        "detail": "1 dossier(s) hors combat dans cette chronique5 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 4 · Bogeyman — Rencontre scénarisée · SHEPHERD’S GLEN CONSULTER LE DOSSIER"
+      },
+      {
+        "name": "Alex Home: the cutscene chapter opens its actual Homecoming dossier",
+        "passed": true
+      },
+      {
+        "name": "Alex Home: actual first launch retains all five queue entries with their original chapter arenas",
+        "passed": true,
+        "detail": {
+          "queue": [
+            "homecoming_lurker_085",
+            "homecoming_feral_086",
+            "homecoming_curtis_ackers",
+            "homecoming_sepulcher_093",
+            "homecoming_scarlet_doll_form_094"
+          ],
+          "stages": [
+            "shepherds_glen",
+            "grand_hotel",
+            "underground_hc",
+            "grand_hotel",
+            "underground_hc"
+          ],
+          "chapterIndices": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "dossiers": [
+            {
+              "chapterIndex": 3,
+              "fighterId": "homecoming_bogeyman_092",
+              "stageId": "shepherds_glen",
+              "role": "scripted-encounter"
+            }
+          ],
+          "stage": "shepherds_glen",
+          "wins": 0,
+          "results": [],
+          "status": "ready",
+          "opponent": "homecoming_lurker_085"
+        }
+      },
+      {
+        "name": "Alex Home: the archived cutscene earns no victory and preserves its source chapter arena",
+        "passed": true,
+        "detail": {
+          "queue": [
+            "homecoming_lurker_085",
+            "homecoming_feral_086",
+            "homecoming_curtis_ackers",
+            "homecoming_sepulcher_093",
+            "homecoming_scarlet_doll_form_094"
+          ],
+          "stages": [
+            "shepherds_glen",
+            "grand_hotel",
+            "underground_hc",
+            "grand_hotel",
+            "underground_hc"
+          ],
+          "chapterIndices": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "dossiers": [
+            {
+              "chapterIndex": 3,
+              "fighterId": "homecoming_bogeyman_092",
+              "stageId": "shepherds_glen",
+              "role": "scripted-encounter"
+            }
+          ],
+          "stage": "shepherds_glen",
+          "wins": 0,
+          "results": [],
+          "status": "ready",
+          "opponent": "homecoming_lurker_085"
+        }
+      },
+      {
+        "name": "legacy checkpoint is visible with its earned win and explicit suspended continuation",
+        "passed": true,
+        "detail": "Parcours chronicle : 1/6 victoires. Reprise suspendue : Sacrificed Walter exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée."
+      },
+      {
+        "name": "resuming a blocked legacy chapter explains that it was neither removed nor rewritten",
+        "passed": true,
+        "detail": "Sacrificed Walter : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      },
+      {
+        "name": "refused legacy resume leaves checkpoint backup records and attempts byte-for-byte unchanged",
+        "passed": true
+      },
+      {
+        "name": "harry_ice: the entire pursuit route remains an explicit zero-fight archive with every original dossier",
+        "passed": true,
+        "detail": {
+          "text": "2 dossier(s) hors combat dans cette chronique0 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 1 · Raw Shock — Base — Rencontre scénarisée · MIDWICH GELÉ — COUR PAPARAZZI CONSULTER LE DOSSIERChapitre 2 · Raw Shock — Feminine — Rencontre scénarisée · MIDWICH GELÉ — COUR PAPARAZZI CONSULTER LE DOSSIER",
+          "ids": [
+            "shattered_raw_shock_base_099",
+            "shattered_raw_shock_feminine_100"
+          ]
+        }
+      },
+      {
+        "name": "harry_ice: every pursuit chapter opens its actual reference dossier",
+        "passed": true,
+        "detail": [
+          "shattered_raw_shock_base_099",
+          "shattered_raw_shock_feminine_100"
+        ]
+      },
+      {
+        "name": "harry_ice: real launch refuses a fabricated combat run even with the image diagnostic enabled",
+        "passed": true,
+        "detail": "Cette chronique ne possède pas encore de rencontre combattante compatible ; ses chapitres restent des dossiers consultables."
+      },
+      {
+        "name": "harry_ice: archive launch preserves the existing earned checkpoint backup records and attempts byte-for-byte",
+        "passed": true
+      },
+      {
+        "name": "maya_villa: the entire pursuit route remains an explicit zero-fight archive with every original dossier",
+        "passed": true,
+        "detail": {
+          "text": "1 dossier(s) hors combat dans cette chronique0 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 1 · Sakura Head — Rencontre scénarisée · KETTENSTADT VILLA CONSULTER LE DOSSIER",
+          "ids": [
+            "shortmessage_sakura_head_150"
+          ]
+        }
+      },
+      {
+        "name": "maya_villa: every pursuit chapter opens its actual reference dossier",
+        "passed": true,
+        "detail": [
+          "shortmessage_sakura_head_150"
+        ]
+      },
+      {
+        "name": "maya_villa: real launch refuses a fabricated combat run even with the image diagnostic enabled",
+        "passed": true,
+        "detail": "Cette chronique ne possède pas encore de rencontre combattante compatible ; ses chapitres restent des dossiers consultables."
+      },
+      {
+        "name": "maya_villa: archive launch preserves the existing earned checkpoint backup records and attempts byte-for-byte",
+        "passed": true
+      },
+      {
+        "name": "harry_ice: old zero-win pursuit checkpoint is visible and explicitly suspended",
+        "passed": true,
+        "detail": "Parcours chronicle : 0/2 victoires. Reprise suspendue : Raw Shock — Base · Raw Shock — Feminine exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée."
+      },
+      {
+        "name": "harry_ice: old pursuit resume refuses combat without deleting or rewriting its chapters",
+        "passed": true,
+        "detail": "Raw Shock — Base · Raw Shock — Feminine : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      },
+      {
+        "name": "harry_ice: refused pursuit resume preserves every checkpoint record and attempt byte-for-byte",
+        "passed": true
+      },
+      {
+        "name": "maya_villa: old zero-win pursuit checkpoint is visible and explicitly suspended",
+        "passed": true,
+        "detail": "Parcours chronicle : 0/1 victoires. Reprise suspendue : Sakura Head exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée."
+      },
+      {
+        "name": "maya_villa: old pursuit resume refuses combat without deleting or rewriting its chapters",
+        "passed": true,
+        "detail": "Sakura Head : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      },
+      {
+        "name": "maya_villa: refused pursuit resume preserves every checkpoint record and attempt byte-for-byte",
+        "passed": true
+      },
+      {
+        "name": "no unhandled browser errors",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "errors": [],
+    "captures": [
+      "alex-home-scripted-chapter.png",
+      "harry_ice-archive-refusal.png",
+      "maya_villa-archive-refusal.png",
+      "harry_ice-legacy-refusal.png",
+      "maya_villa-legacy-refusal.png"
+    ],
+    "scenes": {
+      "preview": "1 dossier(s) hors combat dans cette chronique5 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 5 · Sacrificed Walter — Rencontre scénarisée · WATER PRISON — SURVEILLANCE2F CONSULTER LE DOSSIER",
+      "launched": {
+        "format": "reference-encounters-v1",
+        "queue": [
+          "sh4_sniffer_dog_male_053",
+          "sh4_sniffer_dog_female_054",
+          "sh4_man_with_the_coat_067",
+          "sh4_one_truth_070",
+          "sh4_walter_sullivan_072"
+        ],
+        "stages": [
+          "room_302",
+          "water_prison",
+          "apartment_world",
+          "room_302",
+          "apartment_world"
+        ],
+        "chapterIndices": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "dossiers": [
+          {
+            "chapterIndex": 4,
+            "fighterId": "sh4_sacrificed_walter_071",
+            "stageId": "water_prison",
+            "role": "scripted-encounter"
+          }
+        ],
+        "stage": "room_302",
+        "expectedStage": "room_302",
+        "roleBlocked": false
+      },
+      "alexHome": {
+        "queue": [
+          "homecoming_lurker_085",
+          "homecoming_feral_086",
+          "homecoming_curtis_ackers",
+          "homecoming_sepulcher_093",
+          "homecoming_scarlet_doll_form_094"
+        ],
+        "stages": [
+          "shepherds_glen",
+          "grand_hotel",
+          "underground_hc",
+          "grand_hotel",
+          "underground_hc"
+        ],
+        "chapterIndices": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "dossiers": [
+          {
+            "chapterIndex": 3,
+            "fighterId": "homecoming_bogeyman_092",
+            "stageId": "shepherds_glen",
+            "role": "scripted-encounter"
+          }
+        ],
+        "stage": "shepherds_glen",
+        "wins": 0,
+        "results": [],
+        "status": "ready",
+        "opponent": "homecoming_lurker_085"
+      },
+      "legacyNotice": "Parcours chronicle : 1/6 victoires. Reprise suspendue : Sacrificed Walter exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée.",
+      "blocked": {
+        "engine": false,
+        "message": "Sacrificed Walter : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      },
+      "harry_iceArchive": {
+        "text": "2 dossier(s) hors combat dans cette chronique0 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 1 · Raw Shock — Base — Rencontre scénarisée · MIDWICH GELÉ — COUR PAPARAZZI CONSULTER LE DOSSIERChapitre 2 · Raw Shock — Feminine — Rencontre scénarisée · MIDWICH GELÉ — COUR PAPARAZZI CONSULTER LE DOSSIER",
+        "ids": [
+          "shattered_raw_shock_base_099",
+          "shattered_raw_shock_feminine_100"
+        ],
+        "message": "Cette chronique ne possède pas encore de rencontre combattante compatible ; ses chapitres restent des dossiers consultables."
+      },
+      "maya_villaArchive": {
+        "text": "1 dossier(s) hors combat dans cette chronique0 rencontres combattantes sont jouées. Les chapitres ci-dessous restent consultables et ne comptent pas comme des victoires.Chapitre 1 · Sakura Head — Rencontre scénarisée · KETTENSTADT VILLA CONSULTER LE DOSSIER",
+        "ids": [
+          "shortmessage_sakura_head_150"
+        ],
+        "message": "Cette chronique ne possède pas encore de rencontre combattante compatible ; ses chapitres restent des dossiers consultables."
+      },
+      "harry_iceLegacy": {
+        "notice": "Parcours chronicle : 0/2 victoires. Reprise suspendue : Raw Shock — Base · Raw Shock — Feminine exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée.",
+        "message": "Raw Shock — Base · Raw Shock — Feminine : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      },
+      "maya_villaLegacy": {
+        "notice": "Parcours chronicle : 0/1 victoires. Reprise suspendue : Sakura Head exige un rôle de combat encore indisponible. Toute la progression est conservée ; aucune rencontre sauvegardée n’a été remplacée.",
+        "message": "Sakura Head : rôle non combattant ou identité à confirmer. Les fiches restent consultables ; ce contact est indisponible. Ce parcours sauvegardé reste intact, avec toutes ses victoires. Sa suite contient une rencontre désormais incompatible ; aucune étape n’a été supprimée ou réécrite."
+      }
+    },
+    "fixtures": [
+      "Isolated browser storage and synthetic old checkpoints prepared for regression verification. No campaign is claimed as played and no combat result is injected into the engine.",
+      "The ordinary room_21 route really launches through its menu. Two archive-only pursuit routes are inspected through their real dossier buttons, then their launch and legacy-resume refusals must preserve checkpoints, backups, records and attempts byte-for-byte.",
+      "A separate isolated Alex Home context launches its real first encounter and inspects the five-entry queue with original chapter/arena pairing. Homecoming Bogeyman remains the dossier at index 3, displayed chapter 4; the remaining campaign is not played or marked complete.",
+      "The room_21 checkpoint explicitly contains one historical synthetic win to check preservation. Old pursuit-route fixtures contain zero wins and all original chapters; no archive dossier is turned into a victory or removed from a saved route."
+    ],
+    "passed": true
+  },
+  "weaponPhases": {
+    "version": "0.9.6",
+    "build": "dist",
+    "checks": [
+      {
+        "name": "HTTP server ready",
+        "passed": true
+      },
+      {
+        "name": "fixture launches through the normal asset preflight",
+        "passed": true
+      },
+      {
+        "name": "real actor phase renders exact weapon knife",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 1",
+        "passed": true
+      },
+      {
+        "name": "real actor phase renders exact weapon handgun",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 2",
+        "passed": true
+      },
+      {
+        "name": "real actor phase renders exact weapon pipe",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 3",
+        "passed": true
+      },
+      {
+        "name": "real actor phase renders exact weapon smg",
+        "passed": true
+      },
+      {
+        "name": "fixture launches through the normal asset preflight",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 1",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 2",
+        "passed": true
+      },
+      {
+        "name": "documented weapon transition accepted 3",
+        "passed": true
+      },
+      {
+        "name": "missing SMG is a card even when generic knife and SMG pixels are loaded",
+        "passed": true
+      },
+      {
+        "name": "inspector exposes all four exact weapon choices",
+        "passed": true
+      },
+      {
+        "name": "missing inspector weapon clears old pixels and disables calibration/playback",
+        "passed": true
+      },
+      {
+        "name": "inspector keeps the selected weapon when inspecting a missing KO",
+        "passed": true
+      },
+      {
+        "name": "editor refuses to lend handgun image to SMG",
+        "passed": true
+      },
+      {
+        "name": "dedicated SMG draft renders and exports while remaining unpublished",
+        "passed": true
+      },
+      {
+        "name": "no unhandled browser exceptions",
+        "passed": true
+      }
+    ],
+    "errors": [],
+    "captures": [
+      "missing-smg.png",
+      "inspector.png"
+    ],
+    "fixtures": [
+      "Four transparent colored rectangles and an exact SH3 Alessa manifest are intercepted in Playwright only. No production artwork or 1:1 certification is created."
+    ],
+    "browser": "153.0.8010.0",
+    "passed": true
+  },
+  "sprites": "http-sprites/report.json"
+}

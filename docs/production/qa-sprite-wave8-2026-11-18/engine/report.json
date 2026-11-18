@@ -1,0 +1,3442 @@
+{
+  "schema": 3,
+  "label": "wave8",
+  "generatedAt": "2026-11-18T13:45:23.857Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4237\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1453763,
+        "sha256": "1f3b94d9b298e27851d1901eb001ead57c936b56d10852706c4585f595f2151f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 926873,
+        "sha256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 913584,
+        "sha256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 996619,
+        "sha256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 953534,
+        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1578652,
+        "sha256": "56414946ecc4ff509f3b9b543ccda71f5916836e68bea493773ae93918e15c75"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1232423,
+        "sha256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1399372,
+        "sha256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1078028,
+        "sha256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2224873,
+        "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1677916,
+        "sha256": "121bf71aca10b00397859c5b43dd6739e75ccf6f8dddcffc831adb66bf1f2c34"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1704270,
+        "sha256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1678454,
+        "sha256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1675645,
+        "sha256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1746455,
+        "sha256": "47f037d1249a16facbea4d1f6c7d65bb0e9ba4bc6bba057953b48e300f9b467c"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 732687,
+        "sha256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1538469,
+        "sha256": "4b12704519205112037d0270609ca05ebbf0db12b269ea3e204bac27db53e811"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 428059,
+        "sha256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 628569,
+        "sha256": "b2fb16716892f59a6c2a78587adfa040d9aeecaab7c4891aaff03c3c96ca6f8f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 423614,
+        "sha256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1635274,
+        "sha256": "3ee16c0ba3dc1adcfa4c0eeea60c79d359a68bf470b26650ba6cb216749ff686"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1475861,
+        "sha256": "192d46a2e1052def3a369d2cf0f632798f0f622b45c87984e3cbd686cf486b3e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          327,
+          128,
+          1299,
+          922
+        ],
+        "expected": [
+          327,
+          128,
+          1299,
+          922
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          209,
+          219,
+          1058,
+          1184
+        ],
+        "expected": [
+          209,
+          219,
+          1058,
+          1184
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          226,
+          147,
+          1044,
+          1189
+        ],
+        "expected": [
+          226,
+          147,
+          1044,
+          1189
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          84,
+          527,
+          1234,
+          1199
+        ],
+        "expected": [
+          84,
+          527,
+          1234,
+          1199
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          218,
+          55,
+          1086,
+          1138
+        ],
+        "expected": [
+          218,
+          55,
+          1086,
+          1138
+        ]
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+        ],
+        "portrait": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png"
+        ],
+        "expected": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png"
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png"
+        ],
+        "expected": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          97,
+          83,
+          1700,
+          792
+        ],
+        "expected": [
+          97,
+          83,
+          1700,
+          792
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          45,
+          357,
+          1238,
+          1155
+        ],
+        "expected": [
+          45,
+          357,
+          1238,
+          1155
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          49,
+          103,
+          1238,
+          1204
+        ],
+        "expected": [
+          49,
+          103,
+          1238,
+          1204
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          57,
+          547,
+          1230,
+          1130
+        ],
+        "expected": [
+          57,
+          547,
+          1230,
+          1130
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          36,
+          34,
+          1526,
+          992
+        ],
+        "expected": [
+          36,
+          34,
+          1526,
+          992
+        ]
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png"
+        ],
+        "portrait": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png"
+        ],
+        "expected": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png"
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png"
+        ],
+        "expected": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          227,
+          91,
+          814,
+          1492
+        ],
+        "expected": [
+          227,
+          91,
+          814,
+          1492
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          91,
+          57,
+          986,
+          1501
+        ],
+        "expected": [
+          91,
+          57,
+          986,
+          1501
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          90,
+          57,
+          988,
+          1502
+        ],
+        "expected": [
+          90,
+          57,
+          988,
+          1502
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          92,
+          55,
+          981,
+          1500
+        ],
+        "expected": [
+          92,
+          55,
+          981,
+          1500
+        ]
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png"
+        ],
+        "portrait": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png"
+        ],
+        "expected": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png"
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png"
+        ],
+        "expected": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          303,
+          33,
+          1294,
+          922
+        ],
+        "expected": [
+          303,
+          33,
+          1294,
+          922
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          252,
+          227,
+          1117,
+          1042
+        ],
+        "expected": [
+          252,
+          227,
+          1117,
+          1042
+        ]
+      }
+    },
+    {
+      "name": "homecoming_swarm idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_swarm.47f037d1249a.png"
+        ],
+        "portrait": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_swarm portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_swarm.d2dfbea5f058.png"
+        ],
+        "expected": "assets/sprites/homecoming_swarm.d2dfbea5f058.png"
+      }
+    },
+    {
+      "name": "homecoming_swarm portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_swarm.d2dfbea5f058.png"
+        ],
+        "expected": "assets/sprites/homecoming_swarm.d2dfbea5f058.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          198,
+          114,
+          748,
+          1452
+        ],
+        "expected": [
+          198,
+          114,
+          748,
+          1452
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          469,
+          217,
+          862,
+          1067
+        ],
+        "expected": [
+          469,
+          217,
+          862,
+          1067
+        ]
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png"
+        ],
+        "portrait": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png"
+        ],
+        "expected": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png"
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png"
+        ],
+        "expected": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          323,
+          92,
+          858,
+          1182
+        ],
+        "expected": [
+          323,
+          92,
+          858,
+          1182
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          487,
+          238,
+          821,
+          1038
+        ],
+        "expected": [
+          487,
+          238,
+          821,
+          1038
+        ]
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png"
+        ],
+        "portrait": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png"
+        ],
+        "expected": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png"
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png"
+        ],
+        "expected": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          127,
+          23,
+          1234,
+          1119
+        ],
+        "expected": [
+          127,
+          23,
+          1234,
+          1119
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          137,
+          18,
+          1251,
+          1189
+        ],
+        "expected": [
+          137,
+          18,
+          1251,
+          1189
+        ]
+      }
+    },
+    {
+      "name": "downpour_wheelman_116 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png"
+        ],
+        "portrait": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_wheelman_116 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_wheelman_116.192d46a2e105.png"
+        ],
+        "expected": "assets/sprites/downpour_wheelman_116.192d46a2e105.png"
+      }
+    },
+    {
+      "name": "downpour_wheelman_116 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_wheelman_116.192d46a2e105.png"
+        ],
+        "expected": "assets/sprites/downpour_wheelman_116.192d46a2e105.png"
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/sh4_sniffer_dog_female_054 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/sh4_sniffer_dog_female_054 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/sh4_sniffer_dog_female_054 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_numb_body_small_037",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_sniffer_dog_female_054",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_numb_body_small_037/sh4_sniffer_dog_female_054 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 238.16438183668072,
+          "top": 461.0381172641879,
+          "right": 383.2540447552921,
+          "bottom": 579.6537234422983
+        },
+        "visible": {
+          "left": 238.60808111166116,
+          "top": 461.48181653916834,
+          "right": 382.3666462053312,
+          "bottom": 578.9142246506642
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 869.8114267652508,
+          "top": 502.53704430860085,
+          "right": 1052.6242813424972,
+          "bottom": 583.3726602781317
+        },
+        "visible": {
+          "left": 870.9419948207687,
+          "top": 503.10232833635985,
+          "right": 1052.17205412029,
+          "bottom": 583.2596034725798
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/sh4_sniffer_dog_female_054 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054/sh3_numb_body_small_037 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054/sh3_numb_body_small_037 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054/sh3_numb_body_small_037 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_sniffer_dog_female_054",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_numb_body_small_037",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054/sh3_numb_body_small_037 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 227.37574917508084,
+          "top": 502.53704430860085,
+          "right": 410.18860375232737,
+          "bottom": 583.3726602781317
+        },
+        "visible": {
+          "left": 227.827976397288,
+          "top": 503.10232833635985,
+          "right": 409.05803569680944,
+          "bottom": 583.2596034725798
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 896.745985762286,
+          "top": 461.0381172641879,
+          "right": 1041.8356486808975,
+          "bottom": 579.6537234422983
+        },
+        "visible": {
+          "left": 897.6333843122469,
+          "top": 461.48181653916834,
+          "right": 1041.3919494059169,
+          "bottom": 578.9142246506642
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_female_054/sh3_numb_body_small_037 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_memory_of_alessa_049/homecoming_swarm asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049/homecoming_swarm real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049/homecoming_swarm actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_memory_of_alessa_049",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false,
+            "weaponContext": "sh3_memory_of_alessa_049:weapon:knife"
+          }
+        },
+        {
+          "id": "homecoming_swarm",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_memory_of_alessa_049/homecoming_swarm fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+          "assets/sprites/homecoming_swarm.47f037d1249a.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+          "assets/sprites/homecoming_swarm.47f037d1249a.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 275.2379212572705,
+          "top": 395.70476846552145,
+          "right": 356.71973255769507,
+          "bottom": 588.7961196144266
+        },
+        "visible": {
+          "left": 275.78569813996245,
+          "top": 396.1156011275404,
+          "right": 356.1719556750031,
+          "bottom": 587.9744542903887
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_swarm full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 939.1473560119048,
+          "top": 543.8562493784353,
+          "right": 989.4928923502564,
+          "bottom": 589.1571427971124
+        },
+        "visible": {
+          "left": 939.3995881578885,
+          "top": 544.0075886660255,
+          "right": 989.391999491863,
+          "bottom": 588.854464221932
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049/homecoming_swarm pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_swarm/sh3_memory_of_alessa_049 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_swarm/sh3_memory_of_alessa_049 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_swarm/sh3_memory_of_alessa_049 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_swarm",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_memory_of_alessa_049",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false,
+            "weaponContext": "sh3_memory_of_alessa_049:weapon:knife"
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_swarm/sh3_memory_of_alessa_049 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_swarm.47f037d1249a.png",
+          "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_swarm.47f037d1249a.png",
+          "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_swarm full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 290.50713816732167,
+          "top": 543.8562493784353,
+          "right": 340.85267450567335,
+          "bottom": 589.1571427971124
+        },
+        "visible": {
+          "left": 290.60803102571515,
+          "top": 544.0075886660255,
+          "right": 340.6004423596896,
+          "bottom": 588.854464221932
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_memory_of_alessa_049 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 923.2802979598831,
+          "top": 395.70476846552145,
+          "right": 1004.7621092603076,
+          "bottom": 588.7961196144266
+        },
+        "visible": {
+          "left": 923.828074842575,
+          "top": 396.1156011275404,
+          "right": 1004.2143323776157,
+          "bottom": 587.9744542903887
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_swarm/sh3_memory_of_alessa_049 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10/sh4_sharon_blake_victim_13 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10/sh4_sharon_blake_victim_13 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10/sh4_sharon_blake_victim_13 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_eric_walsh_victim_10",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_sharon_blake_victim_13",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10/sh4_sharon_blake_victim_13 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+          "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+          "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 272.5839422606281,
+          "top": 394.95157525182003,
+          "right": 350.5271148988628,
+          "bottom": 582.8253515930846
+        },
+        "visible": {
+          "left": 273.2823577860603,
+          "top": 395.37062456707935,
+          "right": 350.10806558360343,
+          "bottom": 582.2666191727388
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 910.330983500147,
+          "top": 394.3320238718433,
+          "right": 1003.0645251123672,
+          "bottom": 582.7077237151171
+        },
+        "visible": {
+          "left": 910.8442687858235,
+          "top": 395.1874993479708,
+          "right": 1002.3801447314652,
+          "bottom": 581.6811531437642
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10/sh4_sharon_blake_victim_13 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13/sh4_eric_walsh_victim_10 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13/sh4_eric_walsh_victim_10 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13/sh4_eric_walsh_victim_10 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_sharon_blake_victim_13",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_eric_walsh_victim_10",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13/sh4_eric_walsh_victim_10 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 276.935505405211,
+          "top": 394.3320238718433,
+          "right": 369.6690470174311,
+          "bottom": 582.7077237151171
+        },
+        "visible": {
+          "left": 277.61988578611295,
+          "top": 395.1874993479708,
+          "right": 369.15576173175464,
+          "bottom": 581.6811531437642
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_eric_walsh_victim_10 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 929.4729156187153,
+          "top": 394.95157525182003,
+          "right": 1007.41608825695,
+          "bottom": 582.8253515930846
+        },
+        "visible": {
+          "left": 929.8919649339747,
+          "top": 395.37062456707935,
+          "right": 1006.7176727315178,
+          "bottom": 582.2666191727388
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sharon_blake_victim_13/sh4_eric_walsh_victim_10 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_wheelman_116/sh3_numb_body_small_037 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_wheelman_116/sh3_numb_body_small_037 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_wheelman_116/sh3_numb_body_small_037 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_wheelman_116",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_numb_body_small_037",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_wheelman_116/sh3_numb_body_small_037 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_wheelman_116 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 228.89903543494614,
+          "top": 414.624385826634,
+          "right": 408.7559795211208,
+          "bottom": 593.5186700871914
+        },
+        "visible": {
+          "left": 230.66391178191128,
+          "top": 416.06837556506,
+          "right": 408.2746496083122,
+          "bottom": 591.9142370444957
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 896.745985762286,
+          "top": 461.0381172641879,
+          "right": 1041.8356486808975,
+          "bottom": 579.6537234422983
+        },
+        "visible": {
+          "left": 897.6333843122469,
+          "top": 461.48181653916834,
+          "right": 1041.3919494059169,
+          "bottom": 578.9142246506642
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_wheelman_116/sh3_numb_body_small_037 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_numb_body_small_037/downpour_wheelman_116 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/downpour_wheelman_116 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/downpour_wheelman_116 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_numb_body_small_037",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_wheelman_116",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_numb_body_small_037/downpour_wheelman_116 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 238.16438183668072,
+          "top": 461.0381172641879,
+          "right": 383.2540447552921,
+          "bottom": 579.6537234422983
+        },
+        "visible": {
+          "left": 238.60808111166116,
+          "top": 461.48181653916834,
+          "right": 382.3666462053312,
+          "bottom": 578.9142246506642
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_wheelman_116 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 871.2440509964573,
+          "top": 414.624385826634,
+          "right": 1051.100995082632,
+          "bottom": 593.5186700871914
+        },
+        "visible": {
+          "left": 871.7253809092659,
+          "top": 416.06837556506,
+          "right": 1049.3361187356668,
+          "bottom": 591.9142370444957
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_small_037/downpour_wheelman_116 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "92a7b10610c0a5ffe3a0ea4ccd37ef0c5c6d5633e4c957fc6d838ad417665fd9",
+        "after": "92a7b10610c0a5ffe3a0ea4ccd37ef0c5c6d5633e4c957fc6d838ad417665fd9"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "f82a2b482a00a29d7f18e2f355701f213607d1378b2f5eddff93fd28c118361a",
+        "after": "f82a2b482a00a29d7f18e2f355701f213607d1378b2f5eddff93fd28c118361a"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh3_numb_body_small_037",
+      "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.8101634979248047,
+      "visibleBounds": [
+        327,
+        128,
+        1299,
+        922
+      ]
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "path": "assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7751774862704099,
+      "visibleBounds": [
+        209,
+        219,
+        1058,
+        1184
+      ]
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "path": "assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7738013476492449,
+      "visibleBounds": [
+        226,
+        147,
+        1044,
+        1189
+      ]
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "path": "assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.761192254959568,
+      "visibleBounds": [
+        84,
+        527,
+        1234,
+        1199
+      ]
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "width": 1362,
+      "height": 1155,
+      "transparentFraction": 0.7569928358474614,
+      "visibleBounds": [
+        218,
+        55,
+        1086,
+        1138
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.6148297657889419,
+      "visibleBounds": [
+        97,
+        83,
+        1700,
+        792
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7099845089016582,
+      "visibleBounds": [
+        45,
+        357,
+        1238,
+        1155
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6620632158909671,
+      "visibleBounds": [
+        49,
+        103,
+        1238,
+        1204
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7431606419266958,
+      "visibleBounds": [
+        57,
+        547,
+        1230,
+        1130
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.5574207305908203,
+      "visibleBounds": [
+        36,
+        34,
+        1526,
+        992
+      ]
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7470811208089193,
+      "visibleBounds": [
+        227,
+        91,
+        814,
+        1492
+      ]
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "path": "assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7209873199462891,
+      "visibleBounds": [
+        91,
+        57,
+        986,
+        1501
+      ]
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "path": "assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7257544199625651,
+      "visibleBounds": [
+        90,
+        57,
+        988,
+        1502
+      ]
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7217197418212891,
+      "visibleBounds": [
+        92,
+        55,
+        981,
+        1500
+      ]
+    },
+    {
+      "id": "homecoming_swarm",
+      "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7554957071940104,
+      "visibleBounds": [
+        303,
+        33,
+        1294,
+        922
+      ]
+    },
+    {
+      "id": "homecoming_swarm",
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8359240859870424,
+      "visibleBounds": [
+        252,
+        227,
+        1117,
+        1042
+      ]
+    },
+    {
+      "id": "sh4_eric_walsh_victim_10",
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7830842336018881,
+      "visibleBounds": [
+        198,
+        114,
+        748,
+        1452
+      ]
+    },
+    {
+      "id": "sh4_eric_walsh_victim_10",
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.89321698475564,
+      "visibleBounds": [
+        469,
+        217,
+        862,
+        1067
+      ]
+    },
+    {
+      "id": "sh4_sharon_blake_victim_13",
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8486756255580229,
+      "visibleBounds": [
+        323,
+        92,
+        858,
+        1182
+      ]
+    },
+    {
+      "id": "sh4_sharon_blake_victim_13",
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9032849268306332,
+      "visibleBounds": [
+        487,
+        238,
+        821,
+        1038
+      ]
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "width": 1390,
+      "height": 1132,
+      "transparentFraction": 0.5578215166382795,
+      "visibleBounds": [
+        127,
+        23,
+        1234,
+        1119
+      ]
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "path": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "width": 1307,
+      "height": 1203,
+      "transparentFraction": 0.5947684982901075,
+      "visibleBounds": [
+        137,
+        18,
+        1251,
+        1189
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh3_numb_body_small_037",
+      "facing": 1,
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "file": "portrait-sh3_numb_body_small_037-right.png"
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "facing": -1,
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "file": "portrait-sh3_numb_body_small_037-left.png"
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "facing": 1,
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "file": "portrait-sh4_sniffer_dog_female_054-right.png"
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "facing": -1,
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "file": "portrait-sh4_sniffer_dog_female_054-left.png"
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "facing": 1,
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "file": "portrait-sh3_memory_of_alessa_049-right.png"
+    },
+    {
+      "id": "sh3_memory_of_alessa_049",
+      "facing": -1,
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "file": "portrait-sh3_memory_of_alessa_049-left.png"
+    },
+    {
+      "id": "homecoming_swarm",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "file": "portrait-homecoming_swarm-right.png"
+    },
+    {
+      "id": "homecoming_swarm",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "file": "portrait-homecoming_swarm-left.png"
+    },
+    {
+      "id": "sh4_eric_walsh_victim_10",
+      "facing": 1,
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "file": "portrait-sh4_eric_walsh_victim_10-right.png"
+    },
+    {
+      "id": "sh4_eric_walsh_victim_10",
+      "facing": -1,
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "file": "portrait-sh4_eric_walsh_victim_10-left.png"
+    },
+    {
+      "id": "sh4_sharon_blake_victim_13",
+      "facing": 1,
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "file": "portrait-sh4_sharon_blake_victim_13-right.png"
+    },
+    {
+      "id": "sh4_sharon_blake_victim_13",
+      "facing": -1,
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "file": "portrait-sh4_sharon_blake_victim_13-left.png"
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "facing": 1,
+      "path": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "file": "portrait-downpour_wheelman_116-right.png"
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "facing": -1,
+      "path": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "file": "portrait-downpour_wheelman_116-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh3_numb_body_small_037",
+        "sh4_sniffer_dog_female_054"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6196392755304
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_numb_body_small_037",
+          "slot": 1,
+          "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "exterior": {
+            "left": 238.16438183668072,
+            "top": 461.0381172641879,
+            "right": 383.2540447552921,
+            "bottom": 579.6537234422983
+          },
+          "visible": {
+            "left": 238.60808111166116,
+            "top": 461.48181653916834,
+            "right": 382.3666462053312,
+            "bottom": 578.9142246506642
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -15.08577534933579,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+            "args": [
+              -116.1,
+              -154.79999999999998,
+              232.2,
+              154.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh4_sniffer_dog_female_054",
+          "slot": 2,
+          "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+          "exterior": {
+            "left": 869.8114267652508,
+            "top": 502.53704430860085,
+            "right": 1052.6242813424972,
+            "bottom": 583.3726602781317
+          },
+          "visible": {
+            "left": 870.9419948207687,
+            "top": 503.10232833635985,
+            "right": 1052.17205412029,
+            "bottom": 583.2596034725798
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -10.740396527420216,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+        "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png"
+      ],
+      "snapshots": [
+        "duel-sh3_numb_body_small_037--sh4_sniffer_dog_female_054-tick0.png",
+        "duel-sh3_numb_body_small_037--sh4_sniffer_dog_female_054-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_sniffer_dog_female_054",
+        "sh3_numb_body_small_037"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6196392755304
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_sniffer_dog_female_054",
+          "slot": 1,
+          "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+          "exterior": {
+            "left": 227.37574917508084,
+            "top": 502.53704430860085,
+            "right": 410.18860375232737,
+            "bottom": 583.3726602781317
+          },
+          "visible": {
+            "left": 227.827976397288,
+            "top": 503.10232833635985,
+            "right": 409.05803569680944,
+            "bottom": 583.2596034725798
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -10.740396527420216,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh3_numb_body_small_037",
+          "slot": 2,
+          "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "exterior": {
+            "left": 896.745985762286,
+            "top": 461.0381172641879,
+            "right": 1041.8356486808975,
+            "bottom": 579.6537234422983
+          },
+          "visible": {
+            "left": 897.6333843122469,
+            "top": 461.48181653916834,
+            "right": 1041.3919494059169,
+            "bottom": 578.9142246506642
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -15.08577534933579,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+            "args": [
+              -116.1,
+              -154.79999999999998,
+              232.2,
+              154.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+        "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+      ],
+      "snapshots": [
+        "duel-sh4_sniffer_dog_female_054--sh3_numb_body_small_037-tick0.png",
+        "duel-sh4_sniffer_dog_female_054--sh3_numb_body_small_037-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_memory_of_alessa_049",
+        "homecoming_swarm"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.1779780841287
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_memory_of_alessa_049",
+          "slot": 1,
+          "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+          "exterior": {
+            "left": 275.2379212572705,
+            "top": 395.70476846552145,
+            "right": 356.71973255769507,
+            "bottom": 588.7961196144266
+          },
+          "visible": {
+            "left": 275.78569813996245,
+            "top": 396.1156011275404,
+            "right": 356.1719556750031,
+            "bottom": 587.9744542903887
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -6.025545709611265,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+            "args": [
+              -71.66666666666667,
+              -215,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "homecoming_swarm",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+          "exterior": {
+            "left": 939.1473560119048,
+            "top": 543.8562493784353,
+            "right": 989.4928923502564,
+            "bottom": 589.1571427971124
+          },
+          "visible": {
+            "left": 939.3995881578885,
+            "top": 544.0075886660255,
+            "right": 989.391999491863,
+            "bottom": 588.854464221932
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.1455357780680515,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+            "args": [
+              -39.6,
+              -52.800000000000004,
+              79.2,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+        "assets/sprites/homecoming_swarm.47f037d1249a.png"
+      ],
+      "snapshots": [
+        "duel-sh3_memory_of_alessa_049--homecoming_swarm-tick0.png",
+        "duel-sh3_memory_of_alessa_049--homecoming_swarm-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "homecoming_swarm",
+        "sh3_memory_of_alessa_049"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.1779780841287
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_swarm",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+          "exterior": {
+            "left": 290.50713816732167,
+            "top": 543.8562493784353,
+            "right": 340.85267450567335,
+            "bottom": 589.1571427971124
+          },
+          "visible": {
+            "left": 290.60803102571515,
+            "top": 544.0075886660255,
+            "right": 340.6004423596896,
+            "bottom": 588.854464221932
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.1455357780680515,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+            "args": [
+              -39.6,
+              -52.800000000000004,
+              79.2,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh3_memory_of_alessa_049",
+          "slot": 2,
+          "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+          "exterior": {
+            "left": 923.2802979598831,
+            "top": 395.70476846552145,
+            "right": 1004.7621092603076,
+            "bottom": 588.7961196144266
+          },
+          "visible": {
+            "left": 923.828074842575,
+            "top": 396.1156011275404,
+            "right": 1004.2143323776157,
+            "bottom": 587.9744542903887
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -6.025545709611265,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+            "args": [
+              -71.66666666666667,
+              -215,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_swarm.47f037d1249a.png",
+        "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_swarm--sh3_memory_of_alessa_049-tick0.png",
+        "duel-homecoming_swarm--sh3_memory_of_alessa_049-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_eric_walsh_victim_10",
+        "sh4_sharon_blake_victim_13"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 600.578125
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_eric_walsh_victim_10",
+          "slot": 1,
+          "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+          "exterior": {
+            "left": 272.5839422606281,
+            "top": 394.95157525182003,
+            "right": 350.5271148988628,
+            "bottom": 582.8253515930846
+          },
+          "visible": {
+            "left": 273.2823577860603,
+            "top": 395.37062456707935,
+            "right": 350.10806558360343,
+            "bottom": 582.2666191727388
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -11.733380827261158,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+            "args": [
+              -73.10000000000001,
+              -219.3,
+              146.20000000000002,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh4_sharon_blake_victim_13",
+          "slot": 2,
+          "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+          "exterior": {
+            "left": 910.330983500147,
+            "top": 394.3320238718433,
+            "right": 1003.0645251123672,
+            "bottom": 582.7077237151171
+          },
+          "visible": {
+            "left": 910.8442687858235,
+            "top": 395.1874993479708,
+            "right": 1002.3801447314652,
+            "bottom": 581.6811531437642
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -12.318846856235837,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+            "args": [
+              -109.65,
+              -219.3,
+              219.3,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+        "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png"
+      ],
+      "snapshots": [
+        "duel-sh4_eric_walsh_victim_10--sh4_sharon_blake_victim_13-tick0.png",
+        "duel-sh4_eric_walsh_victim_10--sh4_sharon_blake_victim_13-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_sharon_blake_victim_13",
+        "sh4_eric_walsh_victim_10"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 600.578125
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_sharon_blake_victim_13",
+          "slot": 1,
+          "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+          "exterior": {
+            "left": 276.935505405211,
+            "top": 394.3320238718433,
+            "right": 369.6690470174311,
+            "bottom": 582.7077237151171
+          },
+          "visible": {
+            "left": 277.61988578611295,
+            "top": 395.1874993479708,
+            "right": 369.15576173175464,
+            "bottom": 581.6811531437642
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -12.318846856235837,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+            "args": [
+              -109.65,
+              -219.3,
+              219.3,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "id": "sh4_eric_walsh_victim_10",
+          "slot": 2,
+          "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+          "exterior": {
+            "left": 929.4729156187153,
+            "top": 394.95157525182003,
+            "right": 1007.41608825695,
+            "bottom": 582.8253515930846
+          },
+          "visible": {
+            "left": 929.8919649339747,
+            "top": 395.37062456707935,
+            "right": 1006.7176727315178,
+            "bottom": 582.2666191727388
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -11.733380827261158,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+            "args": [
+              -73.10000000000001,
+              -219.3,
+              146.20000000000002,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+        "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png"
+      ],
+      "snapshots": [
+        "duel-sh4_sharon_blake_victim_13--sh4_eric_walsh_victim_10-tick0.png",
+        "duel-sh4_sharon_blake_victim_13--sh4_eric_walsh_victim_10-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_wheelman_116",
+        "sh3_numb_body_small_037"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.5878978810663
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_wheelman_116",
+          "slot": 1,
+          "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+          "exterior": {
+            "left": 228.89903543494614,
+            "top": 414.624385826634,
+            "right": 408.7559795211208,
+            "bottom": 593.5186700871914
+          },
+          "visible": {
+            "left": 230.66391178191128,
+            "top": 416.06837556506,
+            "right": 408.2746496083122,
+            "bottom": 591.9142370444957
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -2.085762955504265,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+            "args": [
+              -113.97508833922262,
+              -185.64000000000001,
+              227.95017667844525,
+              185.64000000000001
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1390,
+            "height": 1132
+          }
+        },
+        {
+          "id": "sh3_numb_body_small_037",
+          "slot": 2,
+          "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "exterior": {
+            "left": 896.745985762286,
+            "top": 461.0381172641879,
+            "right": 1041.8356486808975,
+            "bottom": 579.6537234422983
+          },
+          "visible": {
+            "left": 897.6333843122469,
+            "top": 461.48181653916834,
+            "right": 1041.3919494059169,
+            "bottom": 578.9142246506642
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -15.08577534933579,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+            "args": [
+              -116.1,
+              -154.79999999999998,
+              232.2,
+              154.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+        "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png"
+      ],
+      "snapshots": [
+        "duel-downpour_wheelman_116--sh3_numb_body_small_037-tick0.png",
+        "duel-downpour_wheelman_116--sh3_numb_body_small_037-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_numb_body_small_037",
+        "downpour_wheelman_116"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.5878978810663
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_numb_body_small_037",
+          "slot": 1,
+          "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+          "exterior": {
+            "left": 238.16438183668072,
+            "top": 461.0381172641879,
+            "right": 383.2540447552921,
+            "bottom": 579.6537234422983
+          },
+          "visible": {
+            "left": 238.60808111166116,
+            "top": 461.48181653916834,
+            "right": 382.3666462053312,
+            "bottom": 578.9142246506642
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -15.08577534933579,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+            "args": [
+              -116.1,
+              -154.79999999999998,
+              232.2,
+              154.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "downpour_wheelman_116",
+          "slot": 2,
+          "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+          "exterior": {
+            "left": 871.2440509964573,
+            "top": 414.624385826634,
+            "right": 1051.100995082632,
+            "bottom": 593.5186700871914
+          },
+          "visible": {
+            "left": 871.7253809092659,
+            "top": 416.06837556506,
+            "right": 1049.3361187356668,
+            "bottom": 591.9142370444957
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -2.085762955504265,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+            "args": [
+              -113.97508833922262,
+              -185.64000000000001,
+              227.95017667844525,
+              185.64000000000001
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1390,
+            "height": 1132
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+        "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png"
+      ],
+      "snapshots": [
+        "duel-sh3_numb_body_small_037--downpour_wheelman_116-tick0.png",
+        "duel-sh3_numb_body_small_037--downpour_wheelman_116-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "92a7b10610c0a5ffe3a0ea4ccd37ef0c5c6d5633e4c957fc6d838ad417665fd9",
+  "src/sprite-manifest.jsSHA256": "f82a2b482a00a29d7f18e2f355701f213607d1378b2f5eddff93fd28c118361a",
+  "version": "0.9.6",
+  "ids": [
+    "sh3_numb_body_small_037",
+    "sh4_sniffer_dog_female_054",
+    "sh3_memory_of_alessa_049",
+    "homecoming_swarm",
+    "sh4_eric_walsh_victim_10",
+    "sh4_sharon_blake_victim_13",
+    "downpour_wheelman_116"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}
