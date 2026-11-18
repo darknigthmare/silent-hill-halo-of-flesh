@@ -125,6 +125,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+  "/assets/sprites/homecoming_scarlet_spider_form_095.fadeb11172db.png",
   "/assets/sprites/homecoming_schism_089.40895822f98f.png",
   "/assets/sprites/homecoming_schism_089.b94be9905392.png",
   "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",

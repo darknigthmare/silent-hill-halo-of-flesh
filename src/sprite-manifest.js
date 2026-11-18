@@ -9221,50 +9221,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-a4059c06-9cc0-4e91-aee8-5bcd31f54243.png",
-    "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+    "sourceFile": "homecoming_scarlet_spider_form_095-combat.png",
+    "sourceSHA256": "fadeb11172db009aab024ad3720de17310292a2a030620175c4b5c7889bfb3b5",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Scarlet Homecoming2008 forme2 entière : quatre membres longs, corps interne exposé et porcelaine restante du rendu21. Aucune mécanique Amnion, aucun huitième membre ou câble de Sepulcher. Portrait de la forme1 ne certifie pas son corps entier. Pose2D/fentes de porcelaine et contacts reconstruits, zéro animation originale mesurée.",
+    "notes": "Scarlet en forme arachnide de Homecoming, en appui sur ses quatre membres. Vue latérale orientée vers la droite, recomposée d’après le portrait existant du jeu.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
-        "bytes": 520470,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "fadeb11172db009aab024ad3720de17310292a2a030620175c4b5c7889bfb3b5",
+        "bytes": 759818,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          213,
-          324,
-          1096,
-          932
+          61,
+          111,
+          1719,
+          741
         ],
-        "pixelSHA256": "b919886ca7d4a7836e57a8aefd3cb469a7b4870044ee26c6b8481abb8e250d40",
-        "transparentFraction": 0.90624,
-        "path": "assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+        "pixelSHA256": "406df572e369fdfe4e7e1385a196ba50b2f117e90ce0e71644b6faefb3df3f06",
+        "transparentFraction": 0.85445,
+        "path": "assets/sprites/homecoming_scarlet_spider_form_095.fadeb11172db.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.7432216905901117
+          0.50169,
+          0.8354
         ],
-        "bodyHeight": 0.48484848484848486,
-        "sourceFile": "exec-a4059c06-9cc0-4e91-aee8-5bcd31f54243.png",
-        "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+        "bodyHeight": 0.71026,
+        "sourceFile": "homecoming_scarlet_spider_form_095-combat.png",
+        "sourceSHA256": "fadeb11172db009aab024ad3720de17310292a2a030620175c4b5c7889bfb3b5",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          130,
-          32,
-          1188,
-          1148
+          0,
+          19,
+          1742,
+          887
         ],
         "framingBounds": [
-          208,
-          321,
-          1099,
-          935
+          59,
+          106,
+          1724,
+          744
         ]
       }
     ],
@@ -9305,7 +9307,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Scarlet Homecoming2008 forme2 entière : quatre membres longs, corps interne exposé et porcelaine restante du rendu21. Aucune mécanique Amnion, aucun huitième membre ou câble de Sepulcher. Portrait de la forme1 ne certifie pas son corps entier. Pose2D/fentes de porcelaine et contacts reconstruits, zéro animation originale mesurée.",
+    "selectionProvenance": {
+      "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-a4059c06-9cc0-4e91-aee8-5bcd31f54243.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Scarlet en forme arachnide de Homecoming, en appui sur ses quatre membres. Vue latérale orientée vers la droite, recomposée d’après le portrait existant du jeu."
   },
   "homecoming_asphyxia_096": {
     "fighterId": "homecoming_asphyxia_096",
