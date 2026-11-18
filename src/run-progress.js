@@ -2,11 +2,12 @@ import { ROSTER, STAGES, CHRONICLES, RITUAL_MODIFIERS, VERSION } from './data.js
 import { seededRandom } from './shared.js';
 import { KEYS, plain, readState, writeState, validateEntry } from './save-store.js';
 import { combatReferencePolicy } from './combat-reference-policy.js';
+import { TOURNAMENT_FORMAT, STORY_FORMAT, tournamentPlan, storyPlan } from './tournament.js';
 
 const fighters=new Map(ROSTER.map(f=>[f.id,f]));
 const stages=new Map(STAGES.map(s=>[s.id,s]));
 const routes=new Map(CHRONICLES.map(r=>[r.id,r]));
-export const RUN_MODES=['arcade','boss','ritual','chronicle'];
+export const RUN_MODES=['arcade','boss','ritual','chronicle','tournament','story'];
 export const CHRONICLE_ENCOUNTER_FORMAT='reference-encounters-v1';
 export const RULE_BOOLEANS=['otherworldShift','stageHazards','radioWarning','adaptiveAI','fatalities','stageFatalities','stageAnimations','stageTerrain','stageDirector'];
 export function normalizeRules(input={}) {
@@ -49,7 +50,7 @@ export function createRun({mode,playerId,routeId=null,seed=Date.now(),rules={}})
   if(!combatReferencePolicy(fighters.get(playerId)).combatEnabled)throw new Error('Le rôle de ce sujet ne permet pas un parcours de combat ; sa fiche reste consultable.');
   seed=Number(seed)>>>0;
   const rng=seededRandom(seed), pool=ROSTER.filter(f=>f.id!==playerId&&combatReferencePolicy(f).combatEnabled);
-  let queue=[],stageIds=[],rituals=[],route=null,chronicle=null;
+  let queue=[],stageIds=[],rituals=[],route=null,chronicle=null,tournament=null,story=null;
   if(mode==='chronicle') {
     route=routes.get(routeId);if(!route)throw new Error('Chronique inconnue : choisissez un dossier existant.');
     chronicle=chronicleEncounterPlan(routeId);queue=chronicle.queue;stageIds=chronicle.stages;
@@ -58,6 +59,12 @@ export function createRun({mode,playerId,routeId=null,seed=Date.now(),rules={}})
     rituals=Object.keys(RITUAL_MODIFIERS).filter(k=>k!=='none');
     const normal=shuffled(pool.filter(f=>!f.boss),rng), bosses=shuffled(pool.filter(f=>f.boss),rng);
     queue=rituals.map((_,i)=>(i>=rituals.length-2||i===3?bosses.shift():normal.shift()).id);
+  } else if(mode==='tournament') {
+    tournament=tournamentPlan(playerId,seed);queue=tournament.queue;stageIds=tournament.stages;
+  } else if(mode==='story') {
+    story=storyPlan(playerId);
+    if(!story.combatEnabled||!story.queue.length)throw new Error('Ce récit ne contient pas encore de rencontre combattante ; sa fiche reste consultable.');
+    queue=story.queue;stageIds=story.stages;
   } else if(mode==='arcade') {
     // Reserve the last encounter before drawing the rest of the descent.
     const finalBoss=shuffled(pool.filter(f=>f.boss),rng)[0];
@@ -65,9 +72,11 @@ export function createRun({mode,playerId,routeId=null,seed=Date.now(),rules={}})
   } else queue=shuffled(pool.filter(f=>f.boss),rng).slice(0,6).map(f=>f.id);
   if(!stageIds.length)stageIds=queue.map(stageForFighter);
   const carry=mode==='boss'||mode==='ritual';
-  return {schema:1,version:VERSION,type:{arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[mode],id:`${mode}-${Date.now()}-${seed}`,mode,playerId,routeId:route?.id||null,seed,
+  return {schema:1,version:VERSION,type:{arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE',tournament:'TOURNOI DES HUIT',story:'RÉCIT DE MANIFESTATION'}[mode],id:`${mode}-${Date.now()}-${seed}`,mode,playerId,routeId:route?.id||null,seed,
     queue,stages:stageIds,rituals,index:0,wins:0,status:'ready',carry,carryHealth:1,carryMeter:0,
     ...(chronicle?{chronicleFormat:chronicle.chronicleFormat,chapterIndices:chronicle.chapterIndices,referenceDossiers:chronicle.referenceDossiers}:{}),
+    ...(tournament?{tournamentFormat:tournament.format,tournamentLabel:tournament.label}:{}),
+    ...(story?{storyFormat:story.format,storyFighterId:story.playerId}:{}),
     recovery:mode==='boss'?.18:.12,rules:normalizeRules({...rules,mode:'cpu'}),results:[],updatedAt:Date.now()};
 }
 export function validateRun(value) {
@@ -94,6 +103,16 @@ export function validateRun(value) {
   const hasFormat=Object.hasOwn(value,'chronicleFormat');
   const hasChapters=Object.hasOwn(value,'chapterIndices'),hasDossiers=Object.hasOwn(value,'referenceDossiers');
   if((hasFormat||hasChapters||hasDossiers)&&(value.mode!=='chronicle'||!hasFormat||!hasChapters||!hasDossiers||value.chronicleFormat!==CHRONICLE_ENCOUNTER_FORMAT))return false;
+  if(value.mode==='tournament'){
+    if(value.tournamentFormat!==TOURNAMENT_FORMAT)return false;
+    let plan;try{plan=tournamentPlan(value.playerId,value.seed);}catch{return false;}
+    if(!sameList(value.queue,plan.queue)||!sameList(value.stages,plan.stages))return false;
+  }
+  if(value.mode==='story'){
+    if(value.storyFormat!==STORY_FORMAT||value.storyFighterId!==value.playerId)return false;
+    let plan;try{plan=storyPlan(value.playerId);}catch{return false;}
+    if(!sameList(value.queue,plan.queue)||!sameList(value.stages,plan.stages))return false;
+  }
   if(value.mode==='chronicle') {
     const route=routes.get(value.routeId);
     if(!route)return false;
@@ -165,7 +184,7 @@ export function updateRecords(previous,result,matchId,opponentId,grade,run) {
   out.bossPhases=(old.bossPhases||0)+(stats.bossPhasesTriggered||0)+(opponentStats.bossPhasesTriggered||0);
   const ranks={D:0,C:1,B:2,A:3,S:4};
   out.bestGrade=(ranks[grade]??0)>(ranks[old.bestGrade]??-1)?grade:old.bestGrade||'D';
-  const best={arcade:'arcadeBest',boss:'bossBest',ritual:'ritualBest'}[run?.mode];
+  const best={arcade:'arcadeBest',boss:'bossBest',ritual:'ritualBest',tournament:'tournamentBest',story:'storyBest'}[run?.mode];
   if(best)out[best]=Math.max(old[best]||0,run.wins);
   return out;
 }

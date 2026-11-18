@@ -377,6 +377,7 @@ const ESSENTIAL_SHELL = [
   '/src/shared.js',
   '/src/save-store.js',
   '/src/run-progress.js',
+  '/src/tournament.js',
   '/src/player-input.js',
   '/src/touch-controls.js',
   '/src/playflow-ui.js',

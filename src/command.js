@@ -39,6 +39,20 @@ const modes = {
     choices: [`${CONTENT_STATS.chronicles} ROUTES`,'RANGS S–D','BOSS FINAUX'],
     scene: 'chronicles', frequency: '87.9', code: 'SHHF/15', signal: 'RÉCIT', data: [`${CONTENT_STATS.chronicles} ROUTES`,'RELEVÉ LOCAL']
   },
+  tournament: {
+    kicker: 'RITE DES HUIT',
+    title: 'ENTRE<br><span>DANS LE TOURNOI.</span>',
+    text: 'Huit manifestations, trois manches à élimination directe, un rival documenté qui attend en finale. Chaque adversaire combat sur son propre terrain.',
+    choices: ['8 SUJETS','3 MANCHES','RIVAL EN FINALE'],
+    scene: 'tournament', frequency: '99.9', code: 'SHHF/T8', signal: 'TOURNOI', data: ['BRACKET DE HUIT','RIVAL DOCUMENTÉ']
+  },
+  story: {
+    kicker: 'RÉCITS DE MANIFESTATION',
+    title: 'SUIS<br><span>SON CAUCHEMAR.</span>',
+    text: 'Chaque fiche possède son introduction, ses épreuves dans sa propre œuvre, son rival documenté et sa clôture. Les textes viennent du catalogue, sans transfert entre éditions.',
+    choices: [`${CONTENT_STATS.fighters} RÉCITS`,'ÉPREUVES','RIVAL'],
+    scene: 'story', frequency: '96.4', code: 'SHHF/RC', signal: 'RÉCIT', data: [`${CONTENT_STATS.fighters} DOSSIERS`,'CLÔTURE DE VERSUS']
+  },
   versus: {
     kicker: 'CONTACT DE MANIFESTATION',
     title: 'CHOISIS<br><span>TON CAUCHEMAR.</span>',
@@ -93,6 +107,8 @@ const modes = {
 const moduleUrls = {
   chronicles: 'modules/chronicles.html',
   versus: 'modules/unified-versus.html?mode=versus',
+  tournament: 'modules/unified-versus.html?mode=tournament',
+  story: 'modules/unified-versus.html?mode=story',
   arcade: 'modules/unified-versus.html?mode=arcade',
   ritual: 'modules/unified-versus.html?mode=ritual',
   boss: 'modules/unified-versus.html?mode=boss',
@@ -424,7 +440,7 @@ function drawCommandBackground(time=0) {
 
 function drawHero(scene,time){
   const w=heroCanvas.width,h=heroCanvas.height;ctx.clearRect(0,0,w,h);
-  const palettes={fog:['#263029','#060907'],chronicles:['#34352e','#070907'],duel:['#302c28','#080706'],arcade:['#332427','#080405'],ritual:['#351e22','#070304'],boss:['#3b2022','#080303'],training:['#20332c','#040806'],archive:['#2f3430','#060806'],options:['#29302c','#050705']};
+  const palettes={fog:['#263029','#060907'],chronicles:['#34352e','#070907'],duel:['#302c28','#080706'],arcade:['#332427','#080405'],ritual:['#351e22','#070304'],boss:['#3b2022','#080303'],tournament:['#241f33','#060409'],story:['#2b2330','#070509'],training:['#20332c','#040806'],archive:['#2f3430','#060806'],options:['#29302c','#050705']};
   const p=palettes[scene]||palettes.fog;const g=ctx.createLinearGradient(0,0,w,h);g.addColorStop(0,p[0]);g.addColorStop(1,p[1]);ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
   ctx.strokeStyle='rgba(182,191,182,.055)';for(let x=-h;x<w;x+=52){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+h,h);ctx.stroke();}
   for(let i=0;i<7;i++){ctx.fillStyle=`rgba(210,214,205,${.014+i*.006})`;ctx.beginPath();ctx.moveTo(0,120+i*78);for(let x=0;x<w;x+=60)ctx.lineTo(x,120+i*78+Math.sin(x*.012+i)*26);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.fill();}

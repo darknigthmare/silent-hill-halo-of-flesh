@@ -7,6 +7,7 @@ import {
 } from './data.js';
 import { KEYS, importMemory, MEMORY_SCHEMA, removeState } from './save-store.js';
 import { createRun, loadRun, saveRun, resumeRun, settleRun, playerOutcome, runSummary, updateRecords, RULE_BOOLEANS, validateRun, runEncounterRules, chronicleEncounterPlan, runCombatBlockers, CHRONICLE_ENCOUNTER_FORMAT } from './run-progress.js';
+import { tournamentPlan, storyPlan, TOURNAMENT_ROUNDS } from './tournament.js';
 import {bindTouchButton} from './touch-controls.js';
 import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
@@ -25,6 +26,7 @@ const $$ = (selector) => [...document.querySelectorAll(selector)];
 const params = new URLSearchParams(location.search);
 let preset = params.get('preset') || params.get('mode') || 'versus';
 const PAGE_SIZE = 30;
+const RUN_PRESETS = ['arcade','boss','ritual','chronicle','tournament','story'];
 const FAVORITES_KEY = 'sh-halo-of-flesh-favorites-v1';
 const settings = loadSettings();
 const GRADE_SCORE = Object.freeze({ D: 0, C: 1, B: 2, A: 3, S: 4 });
@@ -37,7 +39,7 @@ const defaults = {
 
 const state = {
   activeSlot: 1, loadingSprites: false, spriteLease: 0,
-  p1: getFighter(params.get('p1') || defaults.p1),
+  p1: getFighter(params.get('fighter') || params.get('p1') || defaults.p1),
   p2: getFighter(params.get('p2') || defaults.p2),
   stage: getStage(params.get('stage') || defaults.stage),
   page: 0,
@@ -95,7 +97,46 @@ function fighterInfo(fighter) {
     <div class="signature">${escapeHTML(fighter.signature)}</div><p class="fighter-role">${escapeHTML(fighterRoleLabel(fighter,profile))}</p>`;
 }
 
+function tournamentSeed() {
+  const raw = Number(params.get('seed'));
+  return Number.isFinite(raw) && raw >= 0 ? raw >>> 0 : 0;
+}
+function currentModePlan() {
+  try {
+    if (preset === 'tournament') return tournamentPlan(state.run?.mode === 'tournament' ? state.run.playerId : state.p1.id, state.run?.mode === 'tournament' ? state.run.seed : tournamentSeed());
+    if (preset === 'story') return storyPlan(state.run?.mode === 'story' ? state.run.playerId : state.p1.id);
+  } catch { return null; }
+  return null;
+}
+function renderModePanel() {
+  const anchor = $('#runCheckpoint');
+  if (!anchor) return;
+  let panel = $('#modePanel');
+  if (!panel) {
+    panel = document.createElement('aside'); panel.id = 'modePanel'; panel.className = 'mode-panel hidden';
+    anchor.insertAdjacentElement('afterend', panel);
+  }
+  if (!['tournament','story'].includes(preset)) { panel.classList.add('hidden'); panel.replaceChildren(); return; }
+  const plan = currentModePlan();
+  panel.classList.remove('hidden');
+  if (!plan) { panel.innerHTML = '<p>Ce mode attend une manifestation compatible.</p>'; return; }
+  if (preset === 'tournament') {
+    const highlighted = new Set([plan.playerId, plan.rivalId]);
+    panel.innerHTML = `<h3>${escapeHTML(plan.label)}</h3><p>Huit sujets, trois manches à élimination directe. Le rival documenté <strong>${escapeHTML(getFighter(plan.rivalId).name)}</strong> attend en finale ; chaque adversaire combat sur son arène associée.</p><div class="mode-bracket">${plan.quarters.map((pair, index) => `<div class="bracket-match"><small>QUART ${index + 1}</small>${pair.map((id) => `<span class="${highlighted.has(id) ? 'highlight' : ''}">${escapeHTML(getFighter(id).name)}</span>`).join('<i>VS</i>')}</div>`).join('')}</div><ol class="mode-path">${plan.opponents.map((opponent) => `<li><strong>${escapeHTML(opponent.round)}</strong> — ${escapeHTML(getFighter(opponent.fighterId).name)} · ${escapeHTML(getStage(opponent.stageId).name)}${opponent.rival ? ' · RIVAL' : ''}</li>`).join('')}</ol>`;
+    return;
+  }
+  const completed = state.run?.mode === 'story' && state.run.status === 'complete';
+  panel.innerHTML = `<h3>${escapeHTML(plan.title)}</h3><p>${escapeHTML(plan.intro)}</p>${plan.combatEnabled ? `<p><strong>${plan.chapterCount} adversaire(s)</strong> à vaincre, dans l’ordre de l’œuvre.</p>` : '<p>Récit consultable : le rôle documenté de ce sujet ne permet pas un parcours de combat.</p>'}<ol class="mode-path">${plan.chapters.map((chapter) => `<li><strong>${escapeHTML(chapter.label)}</strong> — ${escapeHTML(getFighter(chapter.fighterId).name)} · ${escapeHTML(getStage(chapter.stageId).name)}${chapter.rival ? ' · RIVAL' : ''}</li>`).join('') || '<li>Aucune rencontre combattante dans cette œuvre.</li>'}</ol>${completed ? `<div class="mode-ending"><strong>${escapeHTML(plan.ending.title)}</strong><p>${escapeHTML(plan.ending.text)}</p><small>${escapeHTML(plan.ending.note)}</small></div>` : ''}`;
+}
 function renderSelected() {
+  if (['tournament','story'].includes(preset)) {
+    const plan = currentModePlan();
+    if (plan?.queue?.length) {
+      const index = state.run?.mode === preset ? state.run.index : 0;
+      state.p2 = getFighter(plan.queue[index]);
+      state.stage = getStage(plan.stages[index]);
+    }
+  }
   renderPortrait(els.p1Portrait, state.p1, { time: performance.now() });
   renderPortrait(els.p2Portrait, state.p2, { time: performance.now() + 700, facing: -1 });
   els.p1Info.innerHTML = fighterInfo(state.p1);
@@ -108,6 +149,7 @@ function renderSelected() {
   const current=[state.p1,state.p2].filter(f=>!combatSpriteFor(f));
   const blocked=[state.p1,state.p2].filter(f=>createCombatProfile(f).referencePolicy?.combatEnabled===false);
   const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans sprite de combat. Leur image de sélection reste consultable lorsqu’elle est disponible.`:'Sprites de combat disponibles. Les vues historiques, animations et fidélité restent à valider.';
+  renderModePanel();
 }
 
 function renderStageMini() {
@@ -306,7 +348,8 @@ function configurePreset() {
     versus: ['CONFRONTATION', 'OUVRIR LE CONTACT'], arcade: ['DESCENTE', 'COMMENCER LE PARCOURS'],
     ritual: ['RITES DU JUGEMENT', 'OUVRIR LE PREMIER SCEAU'],
     boss: ['GRANDS TOURMENTS', 'AFFRONTER LES BOSS'], training: ['OBSERVATION', 'ENTRER DANS LE LABORATOIRE'],
-    chronicle: ['CHRONIQUE', 'POURSUIVRE'],
+    chronicle: ['CHRONIQUE', 'POURSUIVRE'], tournament: ['TOURNOI DES HUIT', 'OUVRIR LE BRACKET'],
+    story: ['RÉCIT DE MANIFESTATION', 'COMMENCER LE RÉCIT'],
   };
   const [title, action] = labels[preset] || labels.versus;
   els.modeTitle.textContent = title;
@@ -317,13 +360,15 @@ function configurePreset() {
     els.rounds.value = '1';
     els.timer.value = '0';
     els.difficulty.disabled = true;
-  } else if (preset === 'arcade' || preset === 'boss' || preset === 'ritual' || preset === 'chronicle') {
+  } else if (RUN_PRESETS.includes(preset)) {
     els.mode.value = 'cpu';
     els.mode.disabled = true;
     if (preset === 'boss' || preset === 'ritual') els.rounds.value = '1';
+    if (preset === 'tournament' || preset === 'story') els.rounds.value = '2';
     if (preset === 'ritual') els.ritualSelect.disabled = true;
   }
   renderChronicleDossiers();
+  renderModePanel();
 }
 
 function renderChronicleDossiers(run=null) {
@@ -345,10 +390,10 @@ function selectedRules() {
     ...Object.fromEntries(RULE_BOOLEANS.map(k=>[k,els[k].checked]))};
 }
 function buildRun(candidate = null) {
-  if (!['arcade','boss','ritual','chronicle'].includes(preset)) { state.run=null;return true; }
+  if (!RUN_PRESETS.includes(preset)) { state.run=null;return true; }
   const previous=loadRun();
   if(previous&&previous.status!=='complete'&&!confirm('Remplacer le parcours sauvegardé par un nouveau parcours ?'))return false;
-  try { state.run=candidate||createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()}); }
+  try { state.run=candidate||createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:preset==='tournament'?tournamentSeed():Date.now(),rules:selectedRules()}); }
   catch(error){state.run=null;flow.announce(error.message,true);return false;}
   try {
     if(preset==='chronicle'){
@@ -468,7 +513,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   const diagnostic=$('#artDiagnostic')?.checked===true;
   let candidate=preserveRun?(runCandidate||state.run):null;
   try {
-    if(!preserveRun&&['arcade','boss','ritual','chronicle'].includes(preset))candidate=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:Date.now(),rules:selectedRules()});
+    if(!preserveRun&&RUN_PRESETS.includes(preset))candidate=createRun({mode:preset,playerId:state.p1.id,routeId:params.get('route'),seed:preset==='tournament'?tournamentSeed():Date.now(),rules:selectedRules()});
   } catch(error){flow.announce(error.message,true);return false;}
   // Preflight the WHOLE run before overwriting a checkpoint or counting an attempt.
   const ids=candidate?[candidate.playerId,...candidate.queue.slice(candidate.index)]:[state.p1.id,state.p2.id];
@@ -532,7 +577,8 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   els.touchLayer.style.display = state.touchEnabled ? 'block' : 'none';
   const ritual = currentRitual();
   const chapter=state.run?.chronicleFormat===CHRONICLE_ENCOUNTER_FORMAT?` · CHAPITRE ${state.run.chapterIndices[state.run.index]+1}`:'';
-  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length}${chapter} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
+  const round=state.run?.mode==='tournament'?` · ${TOURNAMENT_ROUNDS[state.run.index] || ''}`:state.run?.mode==='story'?` · ${(storyPlan(state.run.playerId).chapters[state.run.index]?.label) || ''}`:'';
+  els.matchLabel.textContent = state.run ? `${state.run.type} ${state.run.index + 1}/${state.run.queue.length}${chapter}${round} · ${ritual.short || ritual.name}` : (training ? `OBSERVATION · ${ritual.short || ritual.name}` : `CONTACT · ${ritual.short || ritual.name}`);
   refreshControlHelp();
   saveLastFront({ mode: preset, p1: state.p1.id, p2: state.p2.id, stage: state.stage.id, ritualId: currentRitualId(), rules: { otherworldShift: els.otherworldShift.checked, stageHazards: els.stageHazards.checked, radioWarning: els.radioWarning.checked, adaptiveAI: els.adaptiveAI.checked, fatalities: els.fatalities.checked, stageFatalities: els.stageFatalities.checked, stageAnimations: els.stageAnimations.checked, stageTerrain: els.stageTerrain.checked, stageDirector: els.stageDirector.checked } });
   const generation=state.generation, config=fightConfig();
@@ -628,11 +674,13 @@ function handleMatchEnd(result) {
       state.resultTimer=setTimeout(revealResult,50);
       return;
     }
-    const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE'}[state.run.mode]):'CONFRONTATION';
+    const title=state.run?({arcade:'DESCENTE',boss:'GRANDS TOURMENTS',ritual:'RITES DU JUGEMENT',chronicle:'CHRONIQUE',tournament:'TOURNOI DES HUIT',story:'RÉCIT DE MANIFESTATION'}[state.run.mode]):'CONFRONTATION';
     els.resultKicker.textContent=`${title} · ${won?'VICTOIRE DU SUJET I':'DÉFAITE DU SUJET I'}`;
     const dossiers=state.run?.referenceDossiers||[];
-    els.resultTitle.textContent=completedRun?(dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
-    els.resultText.textContent=completedRun?(dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
+    const storyRun=state.run?.mode==='story'&&completedRun?storyPlan(state.run.playerId):null;
+    const tournamentRun=state.run?.mode==='tournament'&&completedRun;
+    els.resultTitle.textContent=completedRun?(storyRun?'RÉCIT ACHEVÉ':tournamentRun?'MAÎTRE DU RITE':dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
+    els.resultText.textContent=completedRun?(storyRun?`${storyRun.ending.text} ${storyRun.ending.note}`:tournamentRun?`${state.run.wins}/${state.run.queue.length} manches remportées. Le Rite des Huit est clos ; le rival documenté est tombé en finale.`:dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
       (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
     const artwork=completedRun&&state.run.mode==='chronicle'?chronicleArtwork(route?.id)?.ending:null;
     els.chronicleEnding.hidden=!artwork;

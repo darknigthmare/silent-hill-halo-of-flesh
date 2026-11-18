@@ -20,6 +20,8 @@
     "test:art": "python -m unittest discover -s tests -p 'test_*.py' -v",
     "references:check": "node scripts/build-production-reference.mjs --check",
     "audit:sprites": "node scripts/audit-sprite-backlog.mjs",
+    "brief:assets": "node scripts/build-authoring-brief.mjs",
+    "audit:references": "node scripts/audit-sprite-references.mjs",
     "qa:art92": "node scripts/http-qa-art92.mjs"
   },
   "engines": {
