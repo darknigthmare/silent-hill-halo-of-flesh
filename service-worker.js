@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wood-round-result-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'dfa183ff5c7cb4ab8565cceebc35ec666855887d95c172718eb0367ea4a5860b';
+const BITMAP_REVISION = '2a792e55a9de6ae9eaa150fcb395858d171f7914f2984b1f718dd45915f7c469';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -55,6 +55,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
   "/assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
   "/assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+  "/assets/sprites/bom_flesh_lips_134.050b9881b5ca.png",
+  "/assets/sprites/bom_flesh_lips_134.ff398c8adaeb.png",
   "/assets/sprites/bom_ghost_125.6fa510a96dba.png",
   "/assets/sprites/bom_ghost_125.ed274487b37b.png",
   "/assets/sprites/bom_gray_child_147.947d757ecfea.png",
@@ -149,6 +151,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
   "/assets/sprites/origins_the_butcher_081.94159a7a4db3.png",
   "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+  "/assets/sprites/origins_two_back_080.53a0f2a0fefb.png",
   "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
   "/assets/sprites/pt_lisa_149.6bbde9f732ca.png",
   "/assets/sprites/pt_lisa_149.979a6105fdd2.png",
@@ -200,12 +203,14 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_wormhead_004.60b854394522.png",
   "/assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
   "/assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+  "/assets/sprites/sh2_abstract_daddy_028.30a667af4b6d.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
   "/assets/sprites/sh2_creeper_025.84618d11d580.png",
   "/assets/sprites/sh2_creeper_025.f562380701ab.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+  "/assets/sprites/sh2_flesh_lip_027.0965d0e5994d.png",
   "/assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
@@ -256,6 +261,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
   "/assets/sprites/sh3_nurse_pipe_043.0d75f277d7e2.png",
+  "/assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
+  "/assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
   "/assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
@@ -270,6 +277,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
   "/assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
   "/assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+  "/assets/sprites/sh4_andrew_desalvo_victim_18.34e3a9498467.png",
+  "/assets/sprites/sh4_andrew_desalvo_victim_18.6e5d7107f9f9.png",
   "/assets/sprites/sh4_bottom_065.b0daf4900078.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
@@ -334,6 +343,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
   "/assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
   "/assets/sprites/shf_ara_abare_153.a11358a86425.png",
+  "/assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
   "/assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
   "/assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
   "/assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",

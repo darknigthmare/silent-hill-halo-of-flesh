@@ -8507,50 +8507,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-58b61379-ecc9-43d4-8241-2d8c2f8bf9a7.png",
-    "sourceSHA256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+    "sourceFile": "origins_two_back_080-combat.png",
+    "sourceSHA256": "53a0f2a0fefb3ea540f8c1f77b0c1f23e0748966966cedb3da03e464b473b22d",
     "sourceDimensions": [
       1254,
       1254
     ],
     "singleSubjectReviewed": true,
-    "notes": "Two-Back Origins PSP entier : un seul corps composé contorsionné suivant les vues du modèle, sans deux acteurs séparés ni nouvelle arme. Extrémités visibles comprises dans le cadre ; structures éloignées occultées et surfaces reconstruites à comparer. Pose2D fixe, aucune animation originale certifiée.",
+    "notes": "Pose latérale en pied orientée vers la droite de Two-Back. Apparence reprise du portrait de sélection de cette édition.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
-        "bytes": 467569,
+        "sha256": "53a0f2a0fefb3ea540f8c1f77b0c1f23e0748966966cedb3da03e464b473b22d",
+        "bytes": 1369027,
         "width": 1254,
         "height": 1254,
         "visibleBounds": [
-          377,
-          343,
-          901,
-          970
+          112,
+          15,
+          1097,
+          1222
         ],
-        "pixelSHA256": "919bfe83288d0b6631cb37308e60bb3f0a6fb29c59b1db26ca861f4ad99db42f",
-        "transparentFraction": 0.90302,
-        "path": "assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+        "pixelSHA256": "09eb7a541b2a7971dcb401cd563a8089389c936ecca02a0b553d05d362e5eea6",
+        "transparentFraction": 0.66383,
+        "path": "assets/sprites/origins_two_back_080.53a0f2a0fefb.png",
         "facing": 1,
         "anchor": [
           0.5,
-          0.773524720893142
+          1
         ],
-        "bodyHeight": 0.5,
-        "sourceFile": "exec-58b61379-ecc9-43d4-8241-2d8c2f8bf9a7.png",
-        "sourceSHA256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+        "bodyHeight": 1,
+        "sourceFile": "origins_two_back_080-combat.png",
+        "sourceSHA256": "53a0f2a0fefb3ea540f8c1f77b0c1f23e0748966966cedb3da03e464b473b22d",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          29,
-          1230,
-          1228
+          11,
+          1250,
+          1254
         ],
         "framingBounds": [
-          371,
-          341,
-          904,
-          974
+          110,
+          11,
+          1100,
+          1225
         ]
       }
     ],
@@ -8591,7 +8593,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Two-Back Origins PSP entier : un seul corps composé contorsionné suivant les vues du modèle, sans deux acteurs séparés ni nouvelle arme. Extrémités visibles comprises dans le cadre ; structures éloignées occultées et surfaces reconstruites à comparer. Pose2D fixe, aucune animation originale certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "9e0fbbab1404338db6bb7875f8d1fc8d18ddfbf8686ab3d65e36484adf816782",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-58b61379-ecc9-43d4-8241-2d8c2f8bf9a7.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Two-Back. Apparence reprise du portrait de sélection de cette édition."
   },
   "homecoming_nurse": {
     "fighterId": "homecoming_nurse",
@@ -11053,51 +11067,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png",
-    "sourceSHA256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
+    "sourceFile": "sh2_abstract_daddy_028-combat.png",
+    "sourceSHA256": "30a667af4b6d2500c6bbe439c12715031b8e0508d5d399e129d3d01e3d29e6ed",
     "sourceDimensions": [
-      1254,
-      1254
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Abstract Daddy SH2 original 2001 : silhouette rectangulaire du cadre, surface organique fermée et quatre extrémités inférieures visibles entièrement. Nouvelle pose recomposée depuis les modèles, géométrie exacte et matériaux non certifiés ; aucun autre sujet ou modèle remake. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "notes": "Pose latérale en pied orientée vers la droite de Abstract Daddy. Apparence reprise du portrait de sélection de cette édition.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
-        "bytes": 813733,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "30a667af4b6d2500c6bbe439c12715031b8e0508d5d399e129d3d01e3d29e6ed",
+        "bytes": 1464116,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          114,
-          325,
-          1156,
-          1068
+          125,
+          12,
+          1647,
+          876
         ],
-        "alphaBounds": [
-          0,
-          23,
-          1242,
-          1214
-        ],
-        "framingBounds": [
-          112,
-          321,
-          1158,
-          1077
-        ],
-        "pixelSHA256": "26345aa04bd48b44cecb09f7841391ec30306bc7e62a589abda6d448d5150808",
-        "transparentFraction": 0.74747,
-        "path": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+        "pixelSHA256": "e5a8e920bc9d2271e9032dd380a215778fe73fba8be5eed3aa075f15a3231632",
+        "transparentFraction": 0.5654,
+        "path": "assets/sprites/sh2_abstract_daddy_028.30a667af4b6d.png",
         "facing": 1,
         "anchor": [
-          0.50638,
-          0.85167
+          0.5,
+          1
         ],
-        "bodyHeight": 0.5925,
-        "sourceFile": "exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png",
-        "sourceSHA256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 1,
+        "sourceFile": "sh2_abstract_daddy_028-combat.png",
+        "sourceSHA256": "30a667af4b6d2500c6bbe439c12715031b8e0508d5d399e129d3d01e3d29e6ed",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          8,
+          1760,
+          887
+        ],
+        "framingBounds": [
+          120,
+          9,
+          1649,
+          887
+        ]
       }
     ],
     "portrait": {
@@ -11137,7 +11153,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Abstract Daddy SH2 original 2001 : silhouette rectangulaire du cadre, surface organique fermée et quatre extrémités inférieures visibles entièrement. Nouvelle pose recomposée depuis les modèles, géométrie exacte et matériaux non certifiés ; aucun autre sujet ou modèle remake. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "selectionProvenance": {
+      "sourceSHA256": "21dad4720ede4eb27bf398a03178783193f5edb004d39fccf3581a250b15b87d",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-817ebe61-f4f6-4157-a3ac-d3d66681543d.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Abstract Daddy. Apparence reprise du portrait de sélection de cette édition."
   },
   "sh2_twin_pyramid_heads_031": {
     "fighterId": "sh2_twin_pyramid_heads_031",
@@ -20976,16 +21004,55 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "sh2_flesh_lip_027-selection.png",
-    "sourceSHA256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
+    "sourceFile": "sh2_flesh_lip_027-combat.png",
+    "sourceSHA256": "0965d0e5994dc1c1d9502d5b68127a82b498be39626f430099dabee89fc795e7",
     "sourceDimensions": [
-      824,
-      1909
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Vue de sélection en pied de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "notes": "Pose latérale en pied orientée vers la droite de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
-    "frames": [],
+    "frames": [
+      {
+        "sha256": "0965d0e5994dc1c1d9502d5b68127a82b498be39626f430099dabee89fc795e7",
+        "bytes": 1823620,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          226,
+          71,
+          934,
+          1506
+        ],
+        "pixelSHA256": "8b27e6932bea07529922ace0bd5eaa0c9ad75f937c5b8d0d394351b8c4fc2647",
+        "transparentFraction": 0.71864,
+        "path": "assets/sprites/sh2_flesh_lip_027.0965d0e5994d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "sh2_flesh_lip_027-combat.png",
+        "sourceSHA256": "0965d0e5994dc1c1d9502d5b68127a82b498be39626f430099dabee89fc795e7",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          21,
+          1010,
+          1536
+        ],
+        "framingBounds": [
+          221,
+          68,
+          936,
+          1508
+        ]
+      }
+    ],
     "portrait": {
       "path": "assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
       "sha256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
@@ -21018,8 +21085,16 @@ export const SPRITES = {
       ],
       "transparentFraction": 0.5192
     },
-    "clips": {},
-    "combatView": "selection-only",
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
     "selectionNotes": "Vue de sélection en pied de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
     "selectionProvenance": {
       "sourceSHA256": "15f2f56aa578ced08121e1ef508c3d313f3d40fcd5c4c43cee3c8d326d42cffb",
@@ -21030,7 +21105,8 @@ export const SPRITES = {
       "origin": "conversation-image-generation",
       "sourceFile": "sh2_flesh_lip_027-selection.png"
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Flesh Lip. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
   },
   "sh2_mannequin_022": {
     "fighterId": "sh2_mannequin_022",
@@ -21305,6 +21381,82 @@ export const SPRITES = {
           1111,
           1246
         ]
+      },
+      {
+        "sha256": "1ae39140fef8d95e603262f5126f131efbac7d7529080b71210793d87dd514d1",
+        "bytes": 872881,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          105,
+          25,
+          824,
+          1243
+        ],
+        "pixelSHA256": "67746817aa920ba21d38b517e6bb0e887c1d4b112c13ef89f061ed6538a997fe",
+        "transparentFraction": 0.79872,
+        "path": "assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "nurse-hurt.png",
+        "sourceSHA256": "1ae39140fef8d95e603262f5126f131efbac7d7529080b71210793d87dd514d1",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1224,
+          1254
+        ],
+        "framingBounds": [
+          102,
+          19,
+          827,
+          1254
+        ]
+      },
+      {
+        "sha256": "3f1dfb8fbec6cb2d9e870b89f06c9cc443a366aa96e75e698c0ddd87b47858e3",
+        "bytes": 976974,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          87,
+          20,
+          1112,
+          1241
+        ],
+        "pixelSHA256": "8f5da055d144fe25a9710be13647f902f8e8505645326e1f5a6b6ac9fe2419c2",
+        "transparentFraction": 0.77433,
+        "path": "assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "nurse-guard.png",
+        "sourceSHA256": "3f1dfb8fbec6cb2d9e870b89f06c9cc443a366aa96e75e698c0ddd87b47858e3",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1230,
+          1254
+        ],
+        "framingBounds": [
+          83,
+          17,
+          1115,
+          1246
+        ]
       }
     ],
     "portrait": {
@@ -21346,6 +21498,20 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "hurt": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "guard": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "combatView": "side-view-candidate",
@@ -21361,5 +21527,287 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Pose latérale en pied orientée vers la droite de Nurse — Pipe. Infirmière au tuyau de Silent Hill 3 (2003), garde voûtée de profil vers la droite. Pieds décalés, genoux fléchis et tuyau de fer dégagé devant la silhouette."
+  },
+  "bom_flesh_lips_134": {
+    "fighterId": "bom_flesh_lips_134",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "bom_flesh_lips_134-combat.png",
+    "sourceSHA256": "ff398c8adaebf2a4e5a8948acaf8525885f9cd3613c362aa9aa77e820fcfa89e",
+    "sourceDimensions": [
+      992,
+      1585
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Flesh Lips. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "ff398c8adaebf2a4e5a8948acaf8525885f9cd3613c362aa9aa77e820fcfa89e",
+        "bytes": 861963,
+        "width": 992,
+        "height": 1585,
+        "visibleBounds": [
+          230,
+          135,
+          821,
+          1435
+        ],
+        "pixelSHA256": "b26b8e6807d9404d4bdceadc5b36da5be4c591c767badd1c5c92883d76e647e9",
+        "transparentFraction": 0.73712,
+        "path": "assets/sprites/bom_flesh_lips_134.ff398c8adaeb.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "bom_flesh_lips_134-combat.png",
+        "sourceSHA256": "ff398c8adaebf2a4e5a8948acaf8525885f9cd3613c362aa9aa77e820fcfa89e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          19,
+          978,
+          1585
+        ],
+        "framingBounds": [
+          217,
+          129,
+          827,
+          1441
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/bom_flesh_lips_134.050b9881b5ca.png",
+      "sha256": "050b9881b5cad4b161ca80814a556f0309cc351d6fd8d1a615e29d134578c027",
+      "bytes": 1757270,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        272,
+        136,
+        750,
+        1416
+      ],
+      "pixelSHA256": "06c292bce68613e9b80432cd2871c0d62f663a311f3b029f35327dd9a1fead1b",
+      "sourceFile": "bom_flesh_lips_134-selection.png",
+      "sourceSHA256": "050b9881b5cad4b161ca80814a556f0309cc351d6fd8d1a615e29d134578c027",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        20,
+        1010,
+        1536
+      ],
+      "framingBounds": [
+        267,
+        133,
+        755,
+        1421
+      ],
+      "transparentFraction": 0.70378
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Flesh Lips. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "050b9881b5cad4b161ca80814a556f0309cc351d6fd8d1a615e29d134578c027",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "bom_flesh_lips_134-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Flesh Lips. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
+  },
+  "shf_ayakakashi_152": {
+    "fighterId": "shf_ayakakashi_152",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "shf_ayakakashi_152-selection.png",
+    "sourceSHA256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
+    "sourceDimensions": [
+      1079,
+      1458
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Vue de sélection en pied de Ayakakashi. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
+      "sha256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
+      "bytes": 1040917,
+      "width": 1079,
+      "height": 1458,
+      "facing": 1,
+      "visibleBounds": [
+        123,
+        78,
+        990,
+        1415
+      ],
+      "pixelSHA256": "32e73790ea3a76d715371261b4afaa7d8f48fa6b9fc87a2efaa957bcec727d35",
+      "sourceFile": "shf_ayakakashi_152-selection.png",
+      "sourceSHA256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        23,
+        15,
+        1061,
+        1458
+      ],
+      "framingBounds": [
+        116,
+        75,
+        1001,
+        1420
+      ],
+      "transparentFraction": 0.77625
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Vue de sélection en pied de Ayakakashi. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
+      "sourceDimensions": [
+        1079,
+        1458
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "shf_ayakakashi_152-selection.png"
+    },
+    "animatedClips": 0
+  },
+  "sh4_andrew_desalvo_victim_18": {
+    "fighterId": "sh4_andrew_desalvo_victim_18",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "sh4_andrew_desalvo_victim_18-combat.png",
+    "sourceSHA256": "34e3a949846780e5beeed4a90ed07e6a46d50d56dd7356c3eafd177df1581bf7",
+    "sourceDimensions": [
+      1161,
+      1355
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Pose latérale en pied orientée vers la droite de Andrew DeSalvo — Victim 18. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "34e3a949846780e5beeed4a90ed07e6a46d50d56dd7356c3eafd177df1581bf7",
+        "bytes": 943640,
+        "width": 1161,
+        "height": 1355,
+        "visibleBounds": [
+          114,
+          47,
+          1051,
+          1193
+        ],
+        "pixelSHA256": "54bf0dcf3e583e967ef65ff05deed2af9b35c2f2dcfeedea44987e04eee931f3",
+        "transparentFraction": 0.73824,
+        "path": "assets/sprites/sh4_andrew_desalvo_victim_18.34e3a9498467.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "sh4_andrew_desalvo_victim_18-combat.png",
+        "sourceSHA256": "34e3a949846780e5beeed4a90ed07e6a46d50d56dd7356c3eafd177df1581bf7",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          25,
+          21,
+          1137,
+          1355
+        ],
+        "framingBounds": [
+          112,
+          42,
+          1053,
+          1196
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh4_andrew_desalvo_victim_18.6e5d7107f9f9.png",
+      "sha256": "6e5d7107f9f901490fb24d5265b11e2821002cac7eb977f7a5082a8e800f2561",
+      "bytes": 1920420,
+      "width": 1024,
+      "height": 1536,
+      "facing": 1,
+      "visibleBounds": [
+        38,
+        43,
+        984,
+        1480
+      ],
+      "pixelSHA256": "1878793e72c5cbea9db4807ee91be486d4ec6c79c60afe2a33ee5e64c40922e1",
+      "sourceFile": "sh4_andrew_desalvo_victim_18-selection.png",
+      "sourceSHA256": "6e5d7107f9f901490fb24d5265b11e2821002cac7eb977f7a5082a8e800f2561",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        2,
+        40,
+        1010,
+        1510
+      ],
+      "framingBounds": [
+        33,
+        40,
+        991,
+        1484
+      ],
+      "transparentFraction": 0.66442
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Vue de sélection en pied de Andrew DeSalvo — Victim 18. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "selectionProvenance": {
+      "sourceSHA256": "6e5d7107f9f901490fb24d5265b11e2821002cac7eb977f7a5082a8e800f2561",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh4_andrew_desalvo_victim_18-selection.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Pose latérale en pied orientée vers la droite de Andrew DeSalvo — Victim 18. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
   }
 };
