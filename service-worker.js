@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-illustrations-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'a5371962fde5836fff0a255385332fb91cc170dbaf9bcf22f1864c4ca4ea1781';
+const BITMAP_REVISION = 'f668b3c41b32b6d6f638e20854210b8750662f349942d7ef061009bbbc74a56a';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -76,6 +76,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
   "/assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
   "/assets/sprites/downpour_doll_106.50727eee886c.png",
+  "/assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
   "/assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
@@ -265,10 +266,12 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
   "/assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+  "/assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
   "/assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+  "/assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
@@ -284,6 +287,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",
   "/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
   "/assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+  "/assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
   "/assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
   "/assets/sprites/sh4_whitestool_062.bcbd83497241.png",
   "/assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",

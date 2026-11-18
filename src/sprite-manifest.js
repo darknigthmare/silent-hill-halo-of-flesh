@@ -4549,50 +4549,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
-    "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+    "sourceFile": "exec-10ce3020-fed4-46ec-9fa8-e865f5446534.png",
+    "sourceSHA256": "56414946ecc4ff509f3b9b543ccda71f5916836e68bea493773ae93918e15c75",
     "sourceDimensions": [
-      1536,
-      1024
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Chienne Sniffer Dog de SH4 en appui bas, de profil droit, langue visible.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
-        "bytes": 2224873,
-        "width": 1536,
-        "height": 1024,
+        "sha256": "56414946ecc4ff509f3b9b543ccda71f5916836e68bea493773ae93918e15c75",
+        "bytes": 1578652,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          36,
-          34,
-          1526,
-          992
+          97,
+          83,
+          1700,
+          792
         ],
-        "pixelSHA256": "f01a99f8d3fe49597f74b7e4281f93516ef3fa554fd21df8d500c8cb49af173f",
-        "transparentFraction": 0.58355,
-        "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
-        "facing": -1,
+        "pixelSHA256": "344f56d04baa2fa51cc5caf30e508100b1188feb2e7a6ab0362a026a04df4a6e",
+        "transparentFraction": 0.65354,
+        "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+        "facing": 1,
         "anchor": [
-          0.57,
-          0.96777
+          0.5,
+          1
         ],
-        "bodyHeight": 0.94,
-        "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png",
-        "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+        "bodyHeight": 1,
+        "sourceFile": "exec-10ce3020-fed4-46ec-9fa8-e865f5446534.png",
+        "sourceSHA256": "56414946ecc4ff509f3b9b543ccda71f5916836e68bea493773ae93918e15c75",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
           0,
-          1535,
-          1024
+          1768,
+          887
         ],
         "framingBounds": [
-          31,
-          28,
-          1533,
-          992
+          93,
+          78,
+          1710,
+          793
         ]
       },
       {
@@ -4762,7 +4764,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Sniffer femelle SH4 sans oreilles et langue violette, quatre pattes ; aucune image du mâle à oreilles/langue rouge empruntée. Texture et contraste accentués. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "efa3851269cf7256b6577a88f02e07db93e75077eb8a19969f9b04fbf731fe61",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5c1007dc-a9b8-4df7-acbf-9b828332c089.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "013381fb3f3533f683a0588fb09ef8d1963a7e9e7d5e6bce3a88706565a9b09d"
+      },
+      {
+        "index": 2,
+        "sha256": "3180b9553b30c7d39dd45a4498e9ba7c1cf5ba8a4e3a8b346d9be4d4f08f4db0"
+      },
+      {
+        "index": 3,
+        "sha256": "167e0e26ebd603a9d6c0e629258ab37d912bb1cdbeecb4b15689328c6c5f70f5"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Chienne Sniffer Dog de SH4 en appui bas, de profil droit, langue visible."
   },
   "sh4_gum_head_old_type_057": {
     "fighterId": "sh4_gum_head_old_type_057",
@@ -5272,50 +5300,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
-    "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+    "sourceFile": "exec-643cdb98-ebbe-44eb-8dac-b284f8259392.png",
+    "sourceSHA256": "2976f1648fece59c4a9d412853cf669638397ca5bd06ef20b18c4d35667cfc42",
     "sourceDimensions": [
-      1187,
-      1326
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Fauteuil SH4 vide, deux grandes roues arrière, roulettes avant et repose-pieds ; tissu brun/rouge quadrillé. Perspective des appuis non aplatie ni certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Fauteuil vide de SH4 en profil gauche. Vue du dossier et de l’atelier.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
-        "bytes": 2211751,
-        "width": 1187,
-        "height": 1326,
+        "sha256": "2976f1648fece59c4a9d412853cf669638397ca5bd06ef20b18c4d35667cfc42",
+        "bytes": 2203221,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          16,
-          8,
-          1174,
-          1288
+          142,
+          10,
+          1345,
+          1017
         ],
-        "pixelSHA256": "fd50e79c7256d5ab3d916597c09bbf4e41efd393dfa78ae72e4b8573d35096fe",
-        "transparentFraction": 0.46625,
-        "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+        "pixelSHA256": "017a1ee9eb1efc0fd525c0437beca662de161d103fcc38116e31d13cbc1cae5c",
+        "transparentFraction": 0.6996,
+        "path": "assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
         "facing": -1,
         "anchor": [
-          0.54,
-          0.97134
+          0.5,
+          1
         ],
-        "bodyHeight": 0.96,
-        "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png",
-        "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+        "bodyHeight": 1,
+        "sourceFile": "exec-643cdb98-ebbe-44eb-8dac-b284f8259392.png",
+        "sourceSHA256": "2976f1648fece59c4a9d412853cf669638397ca5bd06ef20b18c4d35667cfc42",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
           0,
-          1186,
-          1326
+          1522,
+          1024
         ],
         "framingBounds": [
-          13,
+          138,
           0,
-          1177,
-          1294
+          1348,
+          1024
         ]
       }
     ],
@@ -5356,7 +5386,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Fauteuil SH4 vide, deux grandes roues arrière, roulettes avant et repose-pieds ; tissu brun/rouge quadrillé. Perspective des appuis non aplatie ni certifiée. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "d81a108b0a69e7b2fc4f550ab87bd0570ec37c4d6d6dd87552d289b2a0c4734e",
+      "sourceDimensions": [
+        1187,
+        1326
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-6d1c8c4f-52c2-4a9c-971d-3cb227681922.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Fauteuil vide de SH4 en profil gauche. Vue du dossier et de l’atelier."
   },
   "sh3_numb_body_large_038": {
     "fighterId": "sh3_numb_body_large_038",
@@ -9348,50 +9390,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-6b70d106-13a4-427d-97d5-893c91837f11.png",
-    "sourceSHA256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa",
+    "sourceFile": "exec-3176fe23-c341-4e79-9f86-5faed137d990.png",
+    "sourceSHA256": "b2fb16716892f59a6c2a78587adfa040d9aeecaab7c4891aaff03c3c96ca6f8f",
     "sourceDimensions": [
       1254,
       1254
     ],
     "singleSubjectReviewed": true,
-    "notes": "Sharon Blake Victim13 SH4 entière, femme adulte avec chapeau, blouse, longue jupe et deux chaussures ; posture flottante naturelle, mains vides. Sens gauche déclaré puis miroir de présentation. Aucun pied planté, arme ou pouvoir ajouté ; un seul idle composé et non certifié.",
+    "notes": "Sharon Blake, victime 13 de SH4, en suspension de profil gauche.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa",
-        "bytes": 423614,
+        "sha256": "b2fb16716892f59a6c2a78587adfa040d9aeecaab7c4891aaff03c3c96ca6f8f",
+        "bytes": 628569,
         "width": 1254,
         "height": 1254,
         "visibleBounds": [
-          487,
-          238,
-          821,
-          1038
+          323,
+          92,
+          858,
+          1182
         ],
-        "pixelSHA256": "d04cabc733cc0a4b24b1b5a67b86f24c486bc21b70ae32eff9dc89fc7a441a37",
-        "transparentFraction": 0.90859,
-        "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+        "pixelSHA256": "9db2c0db3a4272a59f1d7facc412aeb7202428adcbcc06e3f71a43f169b7654a",
+        "transparentFraction": 0.85565,
+        "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
         "facing": -1,
         "anchor": [
-          0.5215311004784688,
-          0.8277511961722488
+          0.5,
+          1
         ],
-        "bodyHeight": 0.6379585326953748,
-        "sourceFile": "exec-6b70d106-13a4-427d-97d5-893c91837f11.png",
-        "sourceSHA256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa",
+        "bodyHeight": 1,
+        "sourceFile": "exec-3176fe23-c341-4e79-9f86-5faed137d990.png",
+        "sourceSHA256": "b2fb16716892f59a6c2a78587adfa040d9aeecaab7c4891aaff03c3c96ca6f8f",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          33,
-          49,
-          1200,
-          1166
+          0,
+          21,
+          1178,
+          1230
         ],
         "framingBounds": [
-          481,
-          235,
-          824,
-          1040
+          320,
+          87,
+          862,
+          1188
         ]
       }
     ],
@@ -9432,7 +9476,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Sharon Blake Victim13 SH4 entière, femme adulte avec chapeau, blouse, longue jupe et deux chaussures ; posture flottante naturelle, mains vides. Sens gauche déclaré puis miroir de présentation. Aucun pied planté, arme ou pouvoir ajouté ; un seul idle composé et non certifié.",
+    "selectionProvenance": {
+      "sourceSHA256": "fdf29cba0b0d54fdaf66f6c09e804993c8acc48867e619cde24250b803407afa",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-6b70d106-13a4-427d-97d5-893c91837f11.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Sharon Blake, victime 13 de SH4, en suspension de profil gauche."
   },
   "sh4_wall_man_056": {
     "fighterId": "sh4_wall_man_056",
@@ -19818,5 +19874,67 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Profil gauche du boss fixe de la chambre 500. Cou en extension horizontale, bouche de profil, plans de suspension superposés. L’illustration de sélection est indépendante. Aucun déplacement, saut ou esquive ajouté."
+  },
+  "downpour_monocle_man_114": {
+    "fighterId": "downpour_monocle_man_114",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-99f51c0c-2127-4285-b5e9-d3504c07f299.png",
+    "sourceSHA256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+    "sourceDimensions": [
+      1254,
+      1254
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Tête montée de Devil’s Pit, délimitée aux attaches visibles dans Downpour. Premier portrait du dossier.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
+      "sha256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+      "bytes": 1623034,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        17,
+        7,
+        1240,
+        1240
+      ],
+      "pixelSHA256": "84af0ba2614d4038784075a70f4eb82428bc2c76d65164090c2e3d7ace5b9bd7",
+      "sourceFile": "exec-99f51c0c-2127-4285-b5e9-d3504c07f299.png",
+      "sourceSHA256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        0,
+        1253,
+        1254
+      ],
+      "framingBounds": [
+        14,
+        0,
+        1243,
+        1242
+      ],
+      "transparentFraction": 0.57354
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Tête montée de Devil’s Pit, délimitée aux attaches visibles dans Downpour. Premier portrait du dossier.",
+    "selectionProvenance": {
+      "sourceSHA256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-99f51c0c-2127-4285-b5e9-d3504c07f299.png"
+    },
+    "animatedClips": 0
   }
 };
