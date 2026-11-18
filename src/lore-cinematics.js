@@ -6,6 +6,7 @@
  */
 import { FIGHTER_REFERENCES, STAGE_REFERENCES } from './production-reference.js';
 import { STAGE_BITMAPS } from './stage-bitmap-manifest.js';
+import { selectStageBitmapRoom } from './stage-bitmaps.js';
 import { bodyProfile } from './combat-geometry.js';
 
 const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n));
@@ -832,7 +833,7 @@ function hasCeiling(stage,set){
   // Match the stage renderer's sub-room selection: an inactive legacy raster
   // supplies neither visible scenery nor ceiling geometry to the new room.
   const selectedScene=stage?.referencePolicy?.sceneId;
-  const bitmap=selectedScene&&candidate?.scene&&selectedScene!==candidate.scene?null:candidate;
+  const bitmap=selectStageBitmapRoom(candidate,selectedScene);
   if(bitmap){
     // A full replacement owns the visible geometry. Neither its scene name nor
     // inherited procedural motifs may invent a support absent from its contract.

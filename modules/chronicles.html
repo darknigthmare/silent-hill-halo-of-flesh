@@ -16,7 +16,12 @@
   <section class="route-stage panel">
     <div class="route-art"><canvas id="routeCanvas" width="1120" height="520"></canvas><img id="routeIllustration" class="route-illustration" alt="" hidden><div class="route-overlay"><span id="routeSource" class="route-source">—</span><h2 id="routeTitle">—</h2><p id="routeSubtitle">—</p></div></div>
     <div class="route-content">
-      <article class="route-copy"><h3>DESCENTE</h3><p id="routeIntro"></p><blockquote id="routeOutro"></blockquote><label class="fighter-select">MANIFESTATION CONTRÔLÉE<select id="playerFighter" class="ui-select"></select></label><div class="route-actions"><button id="launchRoute" class="ui-button primary">COMMENCER LA CHRONIQUE</button><button id="previewRoster" class="ui-button">VOIR LES ADVERSAIRES</button></div></article>
+      <article class="route-copy"><h3>DESCENTE</h3><p id="routeIntro"></p><blockquote id="routeOutro"></blockquote>
+        <details id="dossierEnding" class="dossier-ending" hidden>
+          <summary>Voir le dénouement illustré</summary>
+          <img id="dossierEndingImage" alt="" hidden>
+        </details>
+        <label class="fighter-select">MANIFESTATION CONTRÔLÉE<select id="playerFighter" class="ui-select"></select></label><div class="route-actions"><button id="launchRoute" class="ui-button primary">COMMENCER LA CHRONIQUE</button><button id="previewRoster" class="ui-button">VOIR LES ADVERSAIRES</button></div></article>
       <div class="route-path"><div class="path-head"><b>TRAJET DU CAUCHEMAR</b><span id="routeState">NON PARCOURUE</span></div><div id="encounterPath" class="encounter-path"></div></div>
     </div>
   </section>

@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {ROSTER, STAGES, SOURCE_META, createCombatProfile, STAGE_EVENTS, STAGE_HAZARDS, MOVESET_KEYS} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
-import {validateStageBitmap,stageBitmapFor} from '../src/stage-bitmaps.js';
+import {validateStageBitmap,stageBitmapFor,stageBitmapRooms} from '../src/stage-bitmaps.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 import {nonDamagingStagger} from '../src/combat-reference-policy.js';
 import {cinematicSummary,lorePresentation} from '../src/lore-cinematics.js';
@@ -211,15 +211,12 @@ function roleDecisionNote(decision){
   return `Rôle confirmé le ${decision.reviewedAt} : ${roleDescription(decision)} (${decision.edition}). ${decision.rationale} Preuves : ${rowRefs(decision.evidence)}. Cette décision ne valide ni image, ni animation, ni mouvement offensif.`;
 }
 
-function stageBitmapProgress(stage,{includeInactive=false}={}){
-  // Inventory includes retained older room candidates; selected progress must
-  // follow the same exact-scene resolver as the running renderer.
-  const art=includeInactive?STAGE_BITMAPS[stage.id]:stageBitmapFor(stage);
-  if(!art)return null;
-  validateStageBitmap(stage,art);
-  return {layers:art.layers.length,files:new Set(art.layers.flatMap(layer=>layer.frames.map(frame=>frame.path))).size,
-    layerNames:art.layers.map(layer=>layer.id),mode:art.mode,scene:art.scene||'',
-    static:art.layers.every(layer=>new Set(layer.frames.map(frame=>frame.path)).size===1)};
+function stageBitmapProgress(stage,rooms){
+  if(!rooms.length)return null;
+  const layers=rooms.flatMap(room=>validateStageBitmap(stage,room).layers);
+  return {layers:layers.length,files:new Set(layers.flatMap(layer=>layer.frames.map(frame=>frame.path))).size,
+    layerNames:layers.map(layer=>layer.id),mode:rooms[0].mode,scene:rooms.map(room=>room.scene||'').join(', '),
+    static:layers.every(layer=>new Set(layer.frames.map(frame=>frame.path)).size===1)};
 }
 function plannedPose(fighter, ref, pose) {
   const base=`Conserver les contraintes de la fiche ${fighter.id}.`;
@@ -401,8 +398,9 @@ function applyRuntimeProgress(plan){
   }
   for(const row of plan.stages){
     const s=stages.get(row.id);row.runtimePolicy=s.referencePolicy;row.referenceTracks=s.referenceTracks;
-    row.bitmapProgress=stageBitmapProgress(s);
-    row.archivedBitmapProgress=row.bitmapProgress?null:stageBitmapProgress(s,{includeInactive:true});
+    const selectedRoom=stageBitmapFor(s);
+    row.bitmapProgress=stageBitmapProgress(s,selectedRoom?[selectedRoom]:[]);
+    row.archivedBitmapProgress=stageBitmapProgress(s,stageBitmapRooms(STAGE_BITMAPS[s.id]).filter(room=>room!==selectedRoom));
     row.additionalBindings=plan.stageAnimations.filter(a=>a.stageId===row.id&&!stageAnimationBaseline.some(old=>old.id===a.id));
     row.shift=s.shift.enabled===false?`${s.shift.style} — ${s.shift.startOtherworld?'Otherworld fixe':'bascule désactivée'}`:s.shift.style;
     row.locationNote+=`\nMoteur : ${(s.referenceTracks||[]).length} piste(s) de la fiche, ${s.director.events.length} événement(s), ${s.director.hazardDeck.length} danger(s) autorisé(s).`;
@@ -411,7 +409,7 @@ function applyRuntimeProgress(plan){
       row.locationNote+=`\nDécor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s), mode ${bitmap.mode}${bitmap.scene?' ; vue '+bitmap.scene:''} ; couches ${bitmap.layerNames.join(', ')}. Images de travail non certifiées ; profondeur, animation et comparaison source à vérifier.`;
       if(bitmap.mode==='replace')row.locationNote+=' Les pistes procédurales restent préparées mais sont masquées par cette vue bitmap.';
     }
-    if(row.archivedBitmapProgress){const bitmap=row.archivedBitmapProgress;row.locationNote+=`\nDécor bitmap conservé pour une autre vue : ${bitmap.scene}, ${bitmap.layers} couche(s), ${bitmap.files} PNG. Cette ancienne vue ne correspond pas à la pièce sélectionnée et ne masque pas ses pistes actuelles ; aucun nouveau bitmap de cette pièce n’est produit.`;}
+    if(row.archivedBitmapProgress){const bitmap=row.archivedBitmapProgress;row.locationNote+=`\nDécor bitmap conservé pour une autre vue : ${bitmap.scene}, ${bitmap.layers} couche(s), ${bitmap.files} PNG. Cette ancienne vue ne correspond pas à la pièce sélectionnée et ne masque pas ses pistes actuelles ; le décor actif est suivi séparément.`;}
     if(row.additionalBindings.length)row.locationNote+='\nNouveaux raccords de versus : '+row.additionalBindings.map(a=>`${a.id} — ${a.animationName} (${a.type})`).join(' ; ')+'. Ces règles de jeu ne certifient aucune action de l’œuvre.';
     if(row.productionStatus==='À produire')row.productionStatus='En cours';
   }
@@ -468,7 +466,7 @@ function applyRuntimeProgress(plan){
       task.reason=`Contraintes du lieu appliquées : ${masked?0:tracks} piste(s) de la fiche rendue(s)${masked?`, ${tracks} piste(s) préparée(s) mais masquée(s) par la vue bitmap`:''}. Météo, phase et dangers filtrés ; architecture et captures à vérifier.`;
       if(bitmap)task.reason+=` Décor bitmap candidat : ${bitmap.layers} couche(s), ${bitmap.files} PNG indépendant(s). Montage animé et fidélité à vérifier ; aucune certification.`;
       const archived=plan.stages.find(row=>row.id===task.entityId).archivedBitmapProgress;
-      if(archived)task.reason+=` Ancien bitmap ${archived.scene} conservé (${archived.files} PNG), sans affichage dans la pièce sélectionnée. Nouveau décor bitmap de cette pièce à produire.`;
+      if(archived)task.reason+=` Ancien bitmap ${archived.scene} conservé (${archived.files} PNG), sans affichage dans la pièce sélectionnée.`;
     }
   }
   const hooks=plan.tasks.find(t=>t.id==='global:cinematic-clips');
@@ -491,10 +489,10 @@ function applyRuntimeProgress(plan){
     stageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress||s.archivedBitmapProgress).length,
     activeStageBitmapCandidates:plan.stages.filter(s=>s.bitmapProgress).length,
     inactiveStageBitmapCandidates:plan.stages.filter(s=>s.archivedBitmapProgress).length,
-    stageBitmapLayers:plan.stages.reduce((n,s)=>n+((s.bitmapProgress||s.archivedBitmapProgress)?.layers||0),0),
+    stageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0)+(s.archivedBitmapProgress?.layers||0),0),
     activeStageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.layers||0),0),
     inactiveStageBitmapLayers:plan.stages.reduce((n,s)=>n+(s.archivedBitmapProgress?.layers||0),0),
-    stageBitmapFiles:plan.stages.reduce((n,s)=>n+((s.bitmapProgress||s.archivedBitmapProgress)?.files||0),0),
+    stageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0)+(s.archivedBitmapProgress?.files||0),0),
     activeStageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.bitmapProgress?.files||0),0),
     inactiveStageBitmapFiles:plan.stages.reduce((n,s)=>n+(s.archivedBitmapProgress?.files||0),0),
     sourceTimingSchema:SOURCE_TIMING_SCHEMA,

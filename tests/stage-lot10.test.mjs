@@ -68,7 +68,9 @@ test('renderer keeps gallery motion ambient and masks only matching raster rooms
  for(const id of ['woodside','shopping_mall']){
   const room=stage(id),art=STAGE_BITMAPS[id];
   assert.ok(art?.scene);assert.notEqual(art.scene,room.referencePolicy.sceneId);
-  assert.equal(stageBitmapFor(room),null);
+  const selected=stageBitmapFor(room);assert.equal(selected.scene,room.referencePolicy.sceneId);
+  assert.ok(selected.layers.some(layer=>layer.parallaxX>0));
+  assert.equal(stageBitmapFor({...room,referencePolicy:{sceneId:art.scene}}),art);
  }
  const parallax=['lakeside_amusement','room_302','riverside_motel'].map(stage);
  assert.ok(parallax.every(s=>replaced.includes(s)&&stageBitmapFor(s).layers.some(layer=>layer.parallaxX>0)));

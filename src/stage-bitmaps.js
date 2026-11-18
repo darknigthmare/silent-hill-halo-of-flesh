@@ -3,10 +3,11 @@ import {STAGE_BITMAPS} from './stage-bitmap-manifest.js';
 import {SpriteCache,spriteCache,combatSpriteFor} from './sprite-system.js';
 const own=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
 const uniqueStages=stages=>{
-  const result=new Map();
+  const result=new Map(),sources=new Map();
   for(const stage of stages.filter(Boolean)){
-    if(result.has(stage.id)&&result.get(stage.id).source!==stage.source)throw new Error('Stage bitmap: conflicting stage source');
-    result.set(stage.id,stage);
+    if(sources.has(stage.id)&&sources.get(stage.id)!==stage.source)throw new Error('Stage bitmap: conflicting stage source');
+    sources.set(stage.id,stage.source);
+    result.set(JSON.stringify([stage.id,stage.referencePolicy?.sceneId||null]),stage);
   }
   return [...result.values()];
 };
@@ -35,6 +36,26 @@ export function validateStageBitmap(stage,art){
   }
   return art;
 }
+export function stageBitmapRooms(entry){
+  if(!entry)return [];
+  const variants=entry.variants;
+  if(variants===undefined)return [entry];
+  if(!Array.isArray(variants)||!entry.scene)throw new Error('Stage bitmap: invalid room variants');
+  const seen=new Set([entry.scene]);
+  for(const room of variants){
+    if(!room||typeof room.scene!=='string'||!room.scene||seen.has(room.scene)||room.variants!==undefined||
+       room.stageId!==entry.stageId||room.source!==entry.source)throw new Error('Stage bitmap: invalid/duplicate room variant');
+    seen.add(room.scene);
+  }
+  return [entry,...variants];
+}
+
+export function selectStageBitmapRoom(entry,scene){
+  if(!entry)return null;
+  if(!scene||!entry.scene||entry.scene===scene)return entry;
+  return stageBitmapRooms(entry).find(room=>room.scene===scene)||null;
+}
+
 export function stageBitmapFor(stage,registry=STAGE_BITMAPS){
   if(!stage||!own(registry,stage.id))return null;
   const art=validateStageBitmap(stage,registry[stage.id]);
@@ -42,8 +63,8 @@ export function stageBitmapFor(stage,registry=STAGE_BITMAPS){
   // A roster location can select a newly documented sub-room. An older raster
   // from that location must not hide it or grant the old room's geometry.
   const selectedScene=stage.referencePolicy?.sceneId;
-  if(selectedScene&&art.scene&&selectedScene!==art.scene)return null;
-  return art;
+  const selected=selectStageBitmapRoom(art,selectedScene);
+  return selected&&selected!==art?validateStageBitmap(stage,selected):selected;
 }
 export function stageBitmapFrames(stages,registry=STAGE_BITMAPS){
   const frames=new Map();

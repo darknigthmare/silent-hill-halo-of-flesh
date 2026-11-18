@@ -26,6 +26,19 @@ test('Air Screamer idle uses distinct pixels and repeats at the registered caden
  assert.deepEqual([0,5,6,11,12,17,18,23,24].map(frame=>sampleSpriteClip(a,{frame}).frameIndex),[0,0,1,1,0,0,2,2,0]);
 });
 
+test('horizontal flight holds its dedicated side view and releases back to the existing hover',()=>{
+ const art=SPRITES[id],walking=art.clips.walk;
+ assert.equal(clipSummary(art,walking).distinct,1);
+ assert.equal(clipSummary(art,walking).animated,false);
+ assert.ok(walking.frames.every(index=>!art.clips.idle.frames.includes(index)));
+ for(const frame of [0,6,24,90]){
+   const moving=sampleSpriteClip(art,{moving:true,frame});
+   assert.equal(moving.pose,'walk');assert.equal(moving.fallback,false);
+   assert.equal(moving.frameIndex,walking.frames[0]);
+   assert.equal(sampleSpriteClip(art,{frame}).pose,'idle');
+ }
+});
+
 test('Air Screamer missing attack pose remains an explicit fallback, not a completed attack animation',()=>{
  const a=SPRITES[id],sample=sampleSpriteClip(a,{moveKey:'light',frame:12});
  assert.ok(sample);

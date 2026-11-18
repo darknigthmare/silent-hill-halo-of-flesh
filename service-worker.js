@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicle-illustrations-20261118';
+const CACHE_REVISION = 'chronicle-illustrations-wave8-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'f668b3c41b32b6d6f638e20854210b8750662f349942d7ef061009bbbc74a56a';
+const BITMAP_REVISION = 'e7305495b92e019e392027e3829281ba27baee26e3072ac97b27bc9021e44100';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -92,6 +92,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
   "/assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
   "/assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+  "/assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+  "/assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
   "/assets/sprites/film_armless_man_170.25e542fa86c4.png",
   "/assets/sprites/film_armless_man_170.a103ebba3cce.png",
   "/assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
@@ -122,6 +124,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_siam_090.88b378486212.png",
   "/assets/sprites/homecoming_smog_087.24134515bb83.png",
   "/assets/sprites/homecoming_smog_087.63ce313a3705.png",
+  "/assets/sprites/homecoming_swarm.47f037d1249a.png",
   "/assets/sprites/homecoming_swarm.d2dfbea5f058.png",
   "/assets/sprites/origins_ariel_078.5c894ecbb354.png",
   "/assets/sprites/origins_ariel_078.e3ffa353215f.png",
@@ -141,6 +144,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
   "/assets/sprites/origins_two_back_080.9e0fbbab1404.png",
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+  "/assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
   "/assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
@@ -219,6 +223,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
   "/assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
   "/assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+  "/assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
   "/assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
   "/assets/sprites/sh3_missionary_047.820d3acca65f.png",
@@ -226,6 +231,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
   "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
   "/assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+  "/assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
   "/assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
   "/assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
   "/assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
@@ -235,6 +241,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
   "/assets/sprites/sh3_scraper_045.2bfdc425582b.png",
   "/assets/sprites/sh3_scraper_045.827b9a459105.png",
+  "/assets/sprites/sh3_sewer_creature_052.f1e1545f70aa.png",
   "/assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
   "/assets/sprites/sh3_slurper_042.5cda350161d4.png",
@@ -246,6 +253,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
   "/assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
   "/assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+  "/assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
   "/assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
   "/assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
   "/assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
@@ -319,6 +327,8 @@ const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+  "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+  "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
   "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
@@ -328,8 +338,12 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
   "/assets/stages/room_302.chair.739650b60353.png",
   "/assets/stages/room_302.entrance.6535cc934c6c.png",
+  "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+  "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+  "/assets/stages/woodside.clock-room.da94acd4e920.png",
   "/assets/stages/woodside.corridor.c6ac083599d0.png",
+  "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
   // STAGE_BITMAP_ASSETS_END
   '/',
   '/index.html',
@@ -386,6 +400,14 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/heather_birth.ending.f3d3fe97049d.webp',
   '/assets/chronicles/room_21.intro.9edcdf651684.webp',
   '/assets/chronicles/room_21.ending.936178291280.webp',
+  '/assets/chronicles/maya_villa.intro.2a8d87331e10.webp',
+  '/assets/chronicles/maya_villa.ending.1703f9f04378.webp',
+  '/assets/chronicles/murphy_rain.intro.f5cc6b7b961b.webp',
+  '/assets/chronicles/murphy_rain.ending.9ef51285a649.webp',
+  '/assets/chronicles/harry_ice.intro.f5e2f6506b50.webp',
+  '/assets/chronicles/harry_ice.ending.60e707ba2ec2.webp',
+  '/assets/chronicles/static_beneath_st_amelia.intro.b2c5e2281739.webp',
+  '/assets/chronicles/static_beneath_st_amelia.ending.345fe853f2ea.webp',
   '/src/archive.js',
 ];
 

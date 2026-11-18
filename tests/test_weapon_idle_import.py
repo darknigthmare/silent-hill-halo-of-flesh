@@ -61,6 +61,19 @@ class WeaponIdleImportTests(unittest.TestCase):
                 self.make_image(number)
                 IMPORTER.import_sprite(self.args('--append', '--pose', key))
 
+    def test_replace_shared_knife_idle_preserves_other_weapon_frames_and_clips(self):
+        self.initialize(all_weapons=True)
+        old = self.asset()
+        self.make_image(5)
+        with self.assertRaisesRegex(ValueError, 'shared with another clip'):
+            IMPORTER.import_sprite(self.args('--combat-idle'))
+        IMPORTER.import_sprite(self.args('--combat-idle', '--pose', KEYS[0]))
+        updated = self.asset()
+        self.assertEqual(updated['clips'], old['clips'])
+        self.assertEqual(updated['frames'][1:], old['frames'][1:])
+        self.assertEqual(updated['portrait'], old['portrait'])
+        self.assertNotEqual(updated['frames'][0]['sha256'], old['frames'][0]['sha256'])
+
     def test_exact_four_keys_keep_original_engine_key_contract_and_weapon_order(self):
         self.assertEqual(IMPORTER.WEAPON_IDLE_KEYS, KEYS)
         self.assertEqual(len(set(IMPORTER.POSE_KEYS)), 39)

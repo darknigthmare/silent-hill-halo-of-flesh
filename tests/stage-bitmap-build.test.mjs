@@ -65,6 +65,28 @@ test('stage builder decodes opaque PNG and preserves service-worker content outs
   assert.equal(await readFile(join(f.root,'service-worker.js'),'utf8'),updated,'second build is byte-identical');
 });
 
+test('stage builder precaches and validates both active and historical room artwork',async context=>{
+  const f=await fixture(context),main=f.registry[f.stage.id];
+  main.scene='historical-room';
+  const selected=structuredClone(main);
+  selected.scene='new-room';
+  main.variants=[selected];
+  const alternative=selected.layers[0].frames[0];
+  alternative.path=alternative.path.replace(f.stage.id+'.',f.stage.id+'.new-room.');
+  await writeFile(join(f.root,alternative.path),f.bytes);
+  await f.manifests();
+  const report=await buildStageBitmaps(f),updated=await readFile(join(f.root,'service-worker.js'),'utf8');
+  assert.equal(report.stages,1);
+  assert.deepEqual(new Set(report.paths),new Set(['/'+f.path,'/'+alternative.path]));
+  for(const variant of [main,selected]){
+    const frame=variant.layers[0].frames[0];
+    frame.bytes++;
+    await assert.rejects(buildStageBitmaps(f),/metadata mismatch/);
+    assert.equal(await readFile(join(f.root,'service-worker.js'),'utf8'),updated);
+    frame.bytes--;
+  }
+});
+
 test('stage descriptor changes invalidate caches even when image paths and bytes stay identical',async context=>{
   const f=await fixture(context),paths=(await auditStageBitmaps(f)).paths;
   let previous=(await buildStageBitmaps(f)).revision;

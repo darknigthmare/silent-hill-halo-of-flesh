@@ -28,6 +28,46 @@ const ARTWORK = {
       "path": "assets/chronicles/travis_mirrors.ending.e9afa58dc5c1.webp",
       "alt": "Le Flauros assemblé et la clé du Riverside Motel reposent ensemble dans la pénombre."
     }
+  },
+  "harry_ice": {
+    "intro": {
+      "path": "assets/chronicles/harry_ice.intro.f5e2f6506b50.webp",
+      "alt": "Un questionnaire attend près du fauteuil bleu du cabinet, face à une vitre aux reflets froids."
+    },
+    "ending": {
+      "path": "assets/chronicles/harry_ice.ending.60e707ba2ec2.webp",
+      "alt": "Une fissure traverse le reflet du manteau et du visage de Harry dans une paroi de glace bleue."
+    }
+  },
+  "maya_villa": {
+    "intro": {
+      "path": "assets/chronicles/maya_villa.intro.2a8d87331e10.webp",
+      "alt": "Dans un appartement de la Villa, une lampe éclaire un mur et une fenêtre couverts de papiers."
+    },
+    "ending": {
+      "path": "assets/chronicles/maya_villa.ending.1703f9f04378.webp",
+      "alt": "Dans l’atelier de Maya, quelques pétales s’éloignent de la fresque rose dans la lumière du jour."
+    }
+  },
+  "static_beneath_st_amelia": {
+    "intro": {
+      "path": "assets/chronicles/static_beneath_st_amelia.intro.b2c5e2281739.webp",
+      "alt": "Simon, reconnaissable à son gilet rouge, écoute dans une rue humide de St. Amelia noyée de brouillard."
+    },
+    "ending": {
+      "path": "assets/chronicles/static_beneath_st_amelia.ending.345fe853f2ea.webp",
+      "alt": "Le CRTV de poche s’éteint sur un rebord de fenêtre, devant une rue de St. Amelia perdue dans la brume."
+    }
+  },
+  "murphy_rain": {
+    "intro": {
+      "path": "assets/chronicles/murphy_rain.intro.f5cc6b7b961b.webp",
+      "alt": "Murphy se tient seul sous les fenêtres hautes d’Overlook, où la pluie projette les ombres des barreaux."
+    },
+    "ending": {
+      "path": "assets/chronicles/murphy_rain.ending.9ef51285a649.webp",
+      "alt": "À Overlook, Murphy et Anne se regardent face à face. Une main ouverte entre eux accompagne le choix du pardon."
+    }
   }
 };
 

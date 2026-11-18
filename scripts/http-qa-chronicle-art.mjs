@@ -5,13 +5,20 @@ import { chromium } from 'playwright-core';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { CHRONICLES } from '../src/data.js';
+import { chronicleEncounterPlan } from '../src/run-progress.js';
 import { chronicleArtwork } from '../src/chronicle-art.js';
 
 const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4282';
-const output = resolve(process.env.QA_OUTPUT || 'docs/production/wave7-story/qa');
-const players = { heather_birth: 'sh3_missionary_047', room_21: 'sh4_walter_sullivan_072', travis_mirrors: 'origins_ariel_078' };
-const journal = JSON.parse(await readFile(new URL('../docs/production/wave7-story/generation.json', import.meta.url), 'utf8'));
-const routes = CHRONICLES.filter(route => chronicleArtwork(route.id));
+const output = resolve(process.env.QA_OUTPUT || 'tests/http-chronicle-art');
+const players = { heather_birth: 'sh3_missionary_047', room_21: 'sh4_walter_sullivan_072', travis_mirrors: 'origins_ariel_078', static_beneath_st_amelia: 'townfall_lunger', murphy_rain: 'downpour_anne_cunningham' };
+const outputs = [];
+for (const wave of [7, 8]) {
+  const journal = new URL(`../docs/production/wave${wave}-story/generation.json`, import.meta.url);
+  outputs.push(...JSON.parse(await readFile(journal, 'utf8')).outputs);
+}
+const selected = process.env.QA_STORY_ROUTES?.split(',');
+const routes = CHRONICLES.filter(route => chronicleArtwork(route.id) && (!selected || selected.includes(route.id)));
+const fallback = CHRONICLES.find(route => !chronicleArtwork(route.id));
 const report = { build: 'dist', checks: [], routes: [], captures: [], errors: [], method: 'Real HTTP navigation and combat preflight. Prepared deciding KOs advance the normal engine callbacks and result UI. No saved victory or substituted art.' };
 await mkdir(output, { recursive: true });
 
@@ -46,10 +53,15 @@ async function settle(page, winnerIndex) {
   }, winnerIndex);
 }
 async function loaded(page, index) {
-  await page.waitForFunction(index => {
-    const q = window.__HALO_QA__;
-    return q?.run?.index === index && q.engine && !q.engine.destroyed && q.run.status === 'ready' && q.engine.phase !== 'matchEnd';
-  }, index, { timeout: 40000 });
+  try {
+    await page.waitForFunction(index => {
+      const q = window.__HALO_QA__;
+      return q?.run?.index === index && q.engine && !q.engine.destroyed && q.run.status === 'ready' && q.engine.phase !== 'matchEnd';
+    }, index, { timeout: 60000 });
+  } catch (error) {
+    const status = await page.locator('#spriteLaunchStatus').textContent({ timeout: 1000 }).catch(() => '');
+    throw Error(`Encounter ${index + 1} did not start. ${status || error.message}`);
+  }
   await page.evaluate(() => { window.__HALO_QA__.engine.running = false; });
 }
 
@@ -68,7 +80,7 @@ try {
     }
   }
   const build = await (await fetch(base + '/build-manifest.json')).json();
-  for (const { web } of journal.outputs) {
+  for (const { web } of outputs) {
     const entry = build.files.find(file => file.path === web.path);
     check('dist ships exact bytes / ' + web.path, entry?.sha256 === web.sha256 && entry.bytes === web.bytes);
   }
@@ -96,11 +108,34 @@ try {
     await routeButton.click();
     const hero = page.locator('#routeIllustration');
     await hero.waitFor({ state: 'visible' });
-    verify('archive displays authored opening', (await hero.getAttribute('src')).endsWith(art.intro.path) && await page.locator('#routeIntro').textContent() === route.intro);
+    verify('archive displays authored opening', (await hero.getAttribute('src')).endsWith(art.intro.path) && await hero.getAttribute('alt') === art.intro.alt && await page.locator('#routeIntro').textContent() === route.intro);
     await capture(page.locator('.route-art'), id + '-archive.jpg');
-    await page.locator('.route-button').first().click();
+    await page.locator('.route-button').filter({ hasText: fallback.title }).click();
     verify('unillustrated route returns to procedural artwork', !await hero.isVisible() && await hero.getAttribute('src') === null);
     await routeButton.click();
+    const dossier = page.locator('#dossierEnding');
+    const plan = chronicleEncounterPlan(id);
+    if (!plan.queue.length) {
+      record.dossiers = plan.referenceDossiers;
+      verify('dossier provides a disclosure', await dossier.isVisible() && !await dossier.evaluate(node => node.open));
+      await dossier.locator('summary').click();
+      await dossier.locator('img').waitFor({ state: 'visible' });
+      verify('dossier decodes distinct ending with authored text', (await dossier.locator('img').getAttribute('src')).endsWith(art.ending.path) && await dossier.locator('img').getAttribute('alt') === art.ending.alt && art.ending.path !== art.intro.path && await page.locator('#routeOutro').textContent() === route.outro);
+      if (id === 'maya_villa') {
+        await page.setViewportSize({ width: 390, height: 680 });
+        await dossier.scrollIntoViewIfNeeded();
+        verify('mobile dossier fits the viewport', await dossier.evaluate(node => { const rect = node.getBoundingClientRect(); return rect.width > 0 && rect.left >= 0 && rect.right <= innerWidth + 1; }));
+      }
+      await capture(dossier, id + '-dossier-ending.jpg');
+      verify('reading does not award a win or register an attempt', await page.evaluate(() => !localStorage.getItem('sh-halo-of-flesh-run-v1') && !localStorage.getItem('sh-halo-of-flesh-chronicles-v1')));
+      await page.locator('.route-button').filter({ hasText: fallback.title }).click();
+      verify('other dossier clears disclosure and picture', !await dossier.isVisible() && await dossier.locator('img').getAttribute('src') === null);
+      await context.close();
+      await browser.close();
+      browser = null;
+      continue;
+    }
+    verify('playable ending reserved for final victory', !await dossier.isVisible());
     await page.selectOption('#playerFighter', players[id]);
     await page.click('#launchRoute');
     await loaded(page, 0);
@@ -124,6 +159,15 @@ try {
       record.encounters.push(await page.evaluate(() => window.__HALO_QA__.selection.p2.id));
       verify('ordinary encounter ' + (index + 1), record.encounters.at(-1) === fighterId);
       if (index) verify('later chapter omits introduction ' + (index + 1), !await opening.isVisible());
+      if (id === 'murphy_rain' && fighterId === 'downpour_wheelman_116') {
+        await page.evaluate(() => {
+          const engine = window.__HALO_QA__.engine;
+          const ticks = engine.phase === 'intro' ? engine.phaseTimer : 0;
+          for (let tick = 0; tick < ticks; tick++) engine.update();
+          engine.render(performance.now());
+        });
+        await capture(page.locator('.canvas-wrap'), id + '-wheelman.jpg');
+      }
       verify('engine decides encounter ' + (index + 1), await settle(page, 0));
       await page.locator('#result').waitFor({ state: 'visible' });
       if (index < run.queue.length - 1) {
@@ -138,7 +182,7 @@ try {
     verify('checkpoint, grade and attempt persisted', saved.run.status === 'complete' && saved.run.wins === run.queue.length && saved.progress.completed.includes(id) && !!saved.progress.grades[id] && saved.progress.attempts[id] === 1);
     record.grade = saved.progress.grades[id];
     await capture(page.locator('.result-card'), id + '-ending.jpg');
-    if (id === 'room_21') {
+    if (id === 'room_21' || id === 'static_beneath_st_amelia') {
       await page.setViewportSize({ width: 390, height: 680 });
       await page.locator('#resultSelect').scrollIntoViewIfNeeded();
       verify('mobile result action reachable', await page.locator('#resultSelect').evaluate(button => { const box = button.getBoundingClientRect(); return box.bottom <= innerHeight + 1 && box.left >= 0 && box.right <= innerWidth + 1; }));
@@ -155,7 +199,7 @@ try {
   tab.on('pageerror', error => report.errors.push(String(error)));
   await tab.goto(base);
   await tab.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 120000 });
-  const assets = journal.outputs.map(row => row.web);
+  const assets = outputs.map(row => row.web);
   const cacheName = await tab.evaluate(async paths => {
     for (const name of await caches.keys()) {
       if (!name.includes('-static-')) continue;
@@ -164,7 +208,7 @@ try {
     }
     return null;
   }, assets.map(asset => asset.path));
-  check('installed static cache contains all six illustrations', cacheName);
+  check(`installed static cache contains all ${assets.length} illustrations`, cacheName);
   report.cache = cacheName;
   await offline.setOffline(true);
   const navigation = await tab.goto(base + '/modules/chronicles.html');

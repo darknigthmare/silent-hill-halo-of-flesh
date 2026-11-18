@@ -1,0 +1,156 @@
+{
+  "wave": 8,
+  "baseline": "c28c7a3b282404adbe6dd117a6a792e1c4f9e5cc",
+  "fighterId": "sh1_air_screamer_001",
+  "source": "sh1",
+  "edition": "Silent Hill, PlayStation, 1999",
+  "status": "integrated-candidate",
+  "fidelity": "unverified",
+  "purpose": "Pose fixe de locomotion horizontale en vol, déclenchée par le clip walk.",
+  "authoring": "Un seul PNG inédit, de profil droit. En vol au repos, le cycle à trois images existant reprend.",
+  "gaitTiming": "Le maintien de cette image sert le déplacement latéral du versus. La durée de lecture ne mesure pas un cycle de vol de 1999.",
+  "sourceReferences": [
+    {
+      "id": "sh1_air_screamer_001",
+      "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_03.jpg",
+      "provenance": "art/reference-provenance.json",
+      "sha256": "bb1b200b16abaf050757deb9351a21fb2c8bfc7610c483506afaa654a4400bc4",
+      "size": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "id": "sh1_air_screamer_001",
+      "url": "https://www.silenthillmemories.net/sh1/screens/pics/sh1_screen_10.jpg",
+      "provenance": "art/reference-provenance.json",
+      "sha256": "5022391a2b271231ac20ebfc7c80b1a369aac71327b2c7a31eae3b9268abd7dd",
+      "size": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "continuityReference": {
+    "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+    "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+    "bytes": 627900,
+    "width": 1774,
+    "height": 887,
+    "facing": 1
+  },
+  "nativeFrame": {
+    "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+    "bytes": 932472,
+    "width": 2172,
+    "height": 724,
+    "visibleBounds": [
+      137,
+      20,
+      2068,
+      657
+    ],
+    "pixelSHA256": "e58e8acbf2f8765a5860209f8ac2b1e7ad978a17884ddd53c71e18f716301b2b",
+    "transparentFraction": 0.75044,
+    "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+    "facing": 1,
+    "anchor": [
+      0.51,
+      0.9
+    ],
+    "bodyHeight": 0.8,
+    "sourceFile": "exec-e13fb987-1f9d-4deb-a323-b2b673f0edeb.png",
+    "sourceSHA256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+    "origin": "conversation-image-generation"
+  },
+  "clip": {
+    "frames": [
+      3
+    ],
+    "ticksPerFrame": 6,
+    "loop": true
+  },
+  "originalIdle": {
+    "frames": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "ticksPerFrame": 6,
+    "frameTicks": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "loop": true
+  },
+  "originalFrameDigests": [
+    "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+    "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+    "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780"
+  ],
+  "animatedClips": 1,
+  "scaleBasis": "Le ratio entre largeur visible et hauteur de corps projetée est proche de celui de la première image de repos. Le point d’ancrage se trouve sous le torse pour maintenir la hauteur de vol au changement de pose.",
+  "prompt": "Create one high-resolution true transparent raster sprite for a 2D lateral fighting game, Silent Hill: Halo of Flesh. Original Air Screamer (Silent Hill on PlayStation, 1999): use the correct long pointed beak, narrow head, small dangling hind legs and wide brown membranous wings established in the game artwork. Hovering strict side profile toward RIGHT, near wing raised and angled back, far wing displaced lower, neck leaned forward and hindfeet folded slightly under the body. Separate both wing silhouettes. New side-on flight posture, entire wingspan, beak, tail and feet. The initial references show the original edition, the last is the existing selection image for visual continuity. Repose the subject so the side contour, facing and weight distribution are unmistakably different from the selection. Neutral readable game lighting, full subject within generous alpha padding on all four sides, no floor, no contact shadow, scenery, text, decals, border or second figure. Highest available native resolution.",
+  "browserVerification": {
+    "browser": "153.0.8010.0",
+    "stage": "woodside",
+    "gameCanvas": [
+      1280,
+      720
+    ],
+    "selection": [
+      "sh1_air_screamer_001",
+      "sh2_lying_figure_020"
+    ],
+    "motionKey": "ArrowRight",
+    "steps": 21,
+    "walkPath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+    "from": {
+      "engineTick": 265,
+      "x": 310,
+      "y": 594,
+      "state": "idle",
+      "pose": "idle",
+      "frameIndex": 2,
+      "draws": [
+        "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png"
+      ]
+    },
+    "to": {
+      "engineTick": 286,
+      "x": 441.25,
+      "y": 594,
+      "state": "walk",
+      "pose": "walk",
+      "frameIndex": 3,
+      "draws": [
+        "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png"
+      ]
+    },
+    "released": {
+      "engineTick": 316,
+      "x": 547.7256884088521,
+      "y": 594,
+      "state": "idle",
+      "pose": "idle",
+      "frameIndex": 0,
+      "draws": [
+        "assets/sprites/sh1_air_screamer_001.f208137d6414.png"
+      ]
+    },
+    "idleFramesDrawn": [
+      0,
+      2,
+      1
+    ],
+    "walkingFramesDrawn": [
+      3
+    ],
+    "actualWalkDraws": 21,
+    "pageErrors": [],
+    "capture": "docs/production/wave8-air-screamer/flight.jpg"
+  }
+}

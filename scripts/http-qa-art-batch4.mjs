@@ -230,16 +230,18 @@ try{
   for(const scene of registry.scenes){
     const {id,stage,decor}=scene,{source:exactSource,scene:exactScene,ceiling=true}=sceneContracts[id];
     check(id+': exact source/room is an unverified cover replacement with its declared ceiling geometry',stage?.source===exactSource&&decor?.stageId===id&&decor.source===exactSource&&decor.scene===exactScene&&decor.mode==='replace'&&decor.geometry?.ceiling===ceiling&&decor.status==='integrated-candidate'&&decor.fidelity==='unverified'&&decor.layers.length===1&&decor.layers.every(layer=>layer.fit==='cover'&&layer.frames.length===1&&layer.loop===false),decor);
-    for(const layer of decor.layers)for(const frame of layer.frames)await verifyFile(frame,id+'/'+layer.id);
-    check(id+': selected sub-room either uses its own raster or retains the historical raster without borrowing it', ['woodside','shopping_mall'].includes(id)?scene.activeDecor===null&&stage.referencePolicy.sceneId===({woodside:'woodside-208-clock-room',shopping_mall:'central-square-happy-burger'})[id]:scene.activeDecor?.scene===exactScene,scene);
+    const rooms=scene.activeDecor&&scene.activeDecor.scene!==decor.scene?[decor,scene.activeDecor]:[decor];
+    for(const room of rooms)for(const layer of room.layers)for(const frame of layer.frames)await verifyFile(frame,id+'/'+room.scene+'/'+layer.id);
+    check(id+': selected sub-room either uses its own raster or retains the historical raster without borrowing it', ['woodside','shopping_mall'].includes(id)?scene.activeDecor?.scene===stage.referencePolicy.sceneId&&scene.activeDecor.scene!==decor.scene&&stage.referencePolicy.sceneId===({woodside:'woodside-208-clock-room',shopping_mall:'central-square-happy-burger'})[id]:scene.activeDecor?.scene===exactScene,scene);
     check(id+': scenery rejects another work/variant and never borrows another image owner',await page.evaluate(async id=>{
-      const {STAGES}=await import('/src/data.js'),{STAGE_BITMAPS}=await import('/src/stage-bitmap-manifest.js'),{stageBitmapFor}=await import('/src/stage-bitmaps.js');
-      const stage=STAGES.find(s=>s.id===id),paths=new Set(STAGE_BITMAPS[id].layers.flatMap(layer=>layer.frames.map(frame=>frame.path)));
+      const {STAGES}=await import('/src/data.js'),{STAGE_BITMAPS}=await import('/src/stage-bitmap-manifest.js'),{stageBitmapFor,stageBitmapRooms}=await import('/src/stage-bitmaps.js');
+      const stage=STAGES.find(s=>s.id===id),roomPaths=entry=>stageBitmapRooms(entry).flatMap(room=>room.layers.flatMap(layer=>layer.frames.map(frame=>frame.path)));
+      const paths=new Set(roomPaths(STAGE_BITMAPS[id]));
       let wrongSourceRejected=false;try{stageBitmapFor({...stage,source:stage.source+'-unverified-edition'});}catch{wrongSourceRejected=true;}
-      const owners=Object.entries(STAGE_BITMAPS).filter(([,art])=>art.layers.some(layer=>layer.frames.some(frame=>paths.has(frame.path)))).map(([owner])=>owner);
+      const owners=Object.entries(STAGE_BITMAPS).filter(([,entry])=>roomPaths(entry).some(path=>paths.has(path))).map(([owner])=>owner);
       return wrongSourceRejected&&stageBitmapFor({...stage,id:id+'-unverified-variant'})===null&&owners.length===1&&owners[0]===id;
     },id));
-    report.scenery.push({id,source:decor.source,scene:decor.scene,activeScene:stage.referencePolicy?.sceneId||decor.scene,activeRaster:!!scene.activeDecor,geometry:decor.geometry,frames:decor.layers.flatMap(layer=>layer.frames)});
+    report.scenery.push({id,source:decor.source,scene:decor.scene,activeScene:stage.referencePolicy?.sceneId||decor.scene,activeRaster:!!scene.activeDecor,geometry:decor.geometry,frames:decor.layers.flatMap(layer=>layer.frames),activeFrames:scene.activeDecor?.layers.flatMap(layer=>layer.frames)||[]});
   }
   const matches=[{scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:batch4.slice(0,2)},
     {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['sh1_wormhead_004','sh3_closer_036']},
@@ -283,7 +285,8 @@ try{
     check(stageId+': real menu selects exact PNG profiles and room without diagnostic mode',await page.evaluate(({ids,stageId})=>{const q=__HALO_QA__;return q.selection.p1.id===ids[0]&&q.selection.p2.id===ids[1]&&q.selection.stage.id===stageId&&!document.querySelector('#artDiagnostic').checked;},{ids,stageId}));
     await page.evaluate(()=>{window.__ART_BATCH4_DRAWS__=[];});await page.click('#launch');
     await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight'&&!__HALO_QA__.engine.paused);
-    const expected=[...ids.map(id=>registry.subjects.find(subject=>subject.id===id).art.frames[0].path),...(decor?.layers||[]).flatMap(layer=>layer.frames.map(frame=>frame.path))];
+    const stagePaths=new Set((decor?.layers||[]).flatMap(layer=>layer.frames.map(frame=>frame.path)));
+    const expected=[...ids.map(id=>registry.subjects.find(subject=>subject.id===id).art.frames[0].path),...stagePaths];
     await page.waitForFunction(paths=>paths.every(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+path&&draw.calls>0)),expected);
     await page.waitForFunction(()=>__HALO_QA__.engine.phase==='fight'&&__HALO_QA__.engine.texts.every(text=>!['intro','round','fight'].includes(text.kind)));
     const combat=await page.evaluate(()=>({phase:__HALO_QA__.engine.phase,stage:__HALO_QA__.engine.stage.id,diagnostic:__HALO_QA__.engine.config.artDiagnostic,camera:__HALO_QA__.engine.presentationCamera,
@@ -310,9 +313,16 @@ try{
       check('Brookhaven roof actual HUD does not invent wet concrete, rain or Fog World',combat.hudTexts.every(row=>!row.text.includes('BÉTON TREMPÉ')&&!row.text.includes('PLUIE')&&!row.text.includes('FOG WORLD')),combat.hudTexts);
       check('Brookhaven pre-fall roof keeps fixed phase, no weather, events, hazards or automatic fall',await page.evaluate(()=>{const stage=__HALO_QA__.engine.stage;return stage.weather==='none'&&stage.referencePolicy.worldState==='fixed-normal'&&stage.referencePolicy.automaticFinishers===false&&stage.referencePolicy.allowedEvents.length===0&&stage.referencePolicy.allowedHazards.length===0&&!stage.shift.enabled&&!stage.visibility.fog;}));
     }
-    check(stageId+': actual canvas paints both registered images and full cover scenery',!combat.diagnostic&&combat.stage===stageId&&expected.every(path=>combat.draws.some(draw=>draw.path==='/'+path&&draw.width>0&&draw.height>0))&&combat.draws.filter(draw=>draw.path.includes('/assets/stages/')).every(draw=>draw.args.length===8&&draw.args[6]===1280&&draw.args[7]===720),combat);
+    const stageDraws=combat.draws.filter(draw=>draw.path.includes('/assets/stages/'));
+    const expectedLayers=(decor?.layers||[]).every(layer=>layer.frames.every(frame=>{
+      const draw=stageDraws.find(row=>row.path==='/'+frame.path);
+      if(!draw)return false;
+      if(layer.fit==='cover')return draw.args.length===8&&draw.args[6]===1280&&draw.args[7]===720;
+      return draw.args.length===4&&draw.args[2]>0&&draw.args[3]>0;
+    }));
+    check(stageId+': actual canvas paints both actors and each registered scenery plane with its declared fit',!combat.diagnostic&&combat.stage===stageId&&expected.every(path=>combat.draws.some(draw=>draw.path==='/'+path&&draw.width>0&&draw.height>0))&&stageDraws.every(draw=>stagePaths.has(draw.path.slice(1)))&&expectedLayers,combat);
     const actorPaths=ids.flatMap(id=>registry.subjects.find(subject=>subject.id===id).art.frames.map(frame=>frame.path));
-    check(stageId+': combat leases contain exactly all PNGs of the selected two actors and room',combat.actorPins.length===actorPaths.length&&combat.stagePins.length===(decor?1:0)&&[...actorPaths,...expected].every(path=>[...combat.actorPins,...combat.stagePins].includes(path)),combat);
+    check(stageId+': combat leases contain exactly all PNGs of the selected two actors and room',combat.actorPins.length===actorPaths.length&&combat.stagePins.length===stagePaths.size&&[...actorPaths,...expected].every(path=>[...combat.actorPins,...combat.stagePins].includes(path)),combat);
     if(!decor)check(stageId+': current documented room paints procedurally without leasing or drawing its older different-room bitmap',combat.stagePins.length===0&&!combat.draws.some(draw=>draw.path.includes('/assets/stages/')),combat);
     combat.imagePlacement=ids.map(id=>{
       const frame=registry.subjects.find(subject=>subject.id===id).art.frames[0],alpha=report.assets.find(asset=>asset.id===id).alpha.bounds,draw=combat.draws.find(draw=>draw.path==='/'+frame.path);

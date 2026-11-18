@@ -204,7 +204,8 @@ def import_sprite(args: argparse.Namespace) -> dict:
         raise ValueError('This ID already has art. Use --append, --selection, --selection-only or --combat-idle; --replace resets legacy art explicitly.')
     if args.append and (not current or current.get('combatView') == 'selection-only' or not current.get('frames')):
         raise ValueError('Cannot append to an ID without an idle frame.')
-    if separate_action and args.pose != 'idle':
+    replace_knife_idle = args.combat_idle and args.pose == WEAPON_IDLE_KEYS[0]
+    if separate_action and args.pose != 'idle' and not replace_knife_idle:
         raise ValueError('Selection and combat-idle actions use the idle import slot; append other combat poses separately.')
     if (args.selection or args.selection_only) and args.loop:
         raise ValueError('A selection portrait is not an animation.')
@@ -224,7 +225,12 @@ def import_sprite(args: argparse.Namespace) -> dict:
         clips = current['clips']
         if not current['frames'] or clips.get('idle', {}).get('frames') != [0]:
             raise ValueError('Combat idle replacement requires a single static idle at frame 0.')
-        if any(0 in clip['frames'] for name, clip in clips.items() if name != 'idle'):
+        shared_idle = {'idle'}
+        if replace_knife_idle:
+            if clips.get(args.pose, {}).get('frames') != [0]:
+                raise ValueError('The knife idle must already share exactly the generic idle frame.')
+            shared_idle.add(args.pose)
+        if any(0 in clip['frames'] for name, clip in clips.items() if name not in shared_idle):
             raise ValueError('Combat idle replacement cannot change frame 0 shared with another clip.')
     if not current and args.pose != 'idle' or args.replace and args.pose != 'idle':
         raise ValueError('The first frame of an asset must be idle.')

@@ -24,7 +24,10 @@ function harness(Type=StageBitmapCache,options={}){
 const context=()=>{const calls=[];return {calls,save(){},restore(){},drawImage(...args){calls.push(args);}};};
 test('production stage candidates are exact and unregistered stages retain procedural rendering',async()=>{
   for(const [id,art] of Object.entries(STAGE_BITMAPS)){
-    const subject=STAGES.find(item=>item.id===id);assert.ok(subject);assert.equal(stageBitmapFor(subject),subject.referencePolicy?.sceneId&&subject.referencePolicy.sceneId!==art.scene?null:art);
+    const subject=STAGES.find(item=>item.id===id);assert.ok(subject);
+    const scene=subject.referencePolicy?.sceneId;
+    const expected=scene&&art.scene!==scene?(art.variants||[]).find(room=>room.scene===scene)||null:art;
+    assert.equal(stageBitmapFor(subject),expected);
     assert.equal(art.fidelity,'unverified');
   }
   const procedural=STAGES.find(item=>!Object.hasOwn(STAGE_BITMAPS,item.id));assert.ok(procedural);
@@ -87,7 +90,7 @@ test('diagnostics permits missing actors but never unreadable declared actor fil
   const h=harness(SpriteCache);const missing=getFighter('sh2_red_pyramid_thing_great_knife_029');
   assert.equal((await h.cache.prepare([missing],{diagnostic:true})).ok,true);
   const {spriteFor}=await import('../src/sprite-system.js');for(const frame of spriteFor(air).frames)h.failures.add(frame.path);
-  const result=await h.cache.prepare([air],{diagnostic:true});assert.equal(result.ok,false);assert.equal(result.failed.length,3);
+  const result=await h.cache.prepare([air],{diagnostic:true});assert.equal(result.ok,false);assert.deepEqual(new Set(result.failed),new Set(spriteFor(air).frames.map(frame=>frame.path)));
 });
 test('stages draw no partial layers while any declared image is pending or failed',async()=>{
   const art=artFor(stage,{frames:2}),h=harness(StageBitmapCache,{registry:{[stage.id]:art}}),c=context(),pending=art.layers[0].frames[1];
@@ -162,7 +165,7 @@ test('an active final presentation retains all its future clip frames',()=>{
   const art=structuredClone(combatSpriteFor(air));
   art.clips.outro={frames:[0,1,2],ticksPerFrame:6,loop:false};
   const actor={data:air,presentation:{key:'outro',frame:0,duration:90,complete:false}};
-  assert.deepEqual(retainedCombatFrames({phase:'matchEnd',actors:[actor]},{[air.id]:art}),art.frames);
+  assert.deepEqual(retainedCombatFrames({phase:'matchEnd',actors:[actor]},{[air.id]:art}),art.clips.outro.frames.map(index=>art.frames[index]));
 });
 test('Numb Body to Split Head continuation stays within 64 MiB and preserves the old result on decode failure',async()=>{
   const actors=settledActors(),old=actors.map(actor=>actor.data),next=[air,getFighter('sh1_split_head_014')];
@@ -195,11 +198,24 @@ test('Numb Body to Split Head continuation stays within 64 MiB and preserves the
   assert.ok(!actor.cache.pins.has(retainedFrames[1].path),'the retired opponent is unpinned only after successful replacement');
 });
 
-test('a different documented sub-room cannot render or lease an older raster from the same location',async()=>{
+test('one location leases the selected room and keeps its historical bitmap independently addressable',async()=>{
  for(const id of ['woodside','shopping_mall']){
-  const s=STAGES.find(v=>v.id===id),art=STAGE_BITMAPS[id];assert.ok(s.referencePolicy.sceneId);assert.notEqual(s.referencePolicy.sceneId,art.scene);
-  assert.equal(stageBitmapFor(s),null);assert.deepEqual(stageBitmapFrames([s]),[]);assert.equal(drawStageBitmaps(context(),s,100).kind,'unregistered');
-  const sameRoom={...s,referencePolicy:{...s.referencePolicy,sceneId:art.scene}};assert.equal(stageBitmapFor(sameRoom),art);assert.ok(stageBitmapFrames([sameRoom]).length);
-  const c=harness(StageBitmapCache);assert.equal((await c.cache.prepare([s])).ok,true);assert.equal(c.images.length,0);
+  const s=STAGES.find(v=>v.id===id),historical=STAGE_BITMAPS[id],active=stageBitmapFor(s);
+  assert.equal(active.scene,s.referencePolicy.sceneId);assert.notEqual(active.scene,historical.scene);
+  const oldRoom={...s,referencePolicy:{...s.referencePolicy,sceneId:historical.scene}};
+  assert.equal(stageBitmapFor(oldRoom),historical);
+  const activeFrames=stageBitmapFrames(s),oldFrames=stageBitmapFrames(oldRoom);
+  assert.equal(activeFrames.length,2);assert.equal(oldFrames.length,1);
+  assert.deepEqual(stageBitmapFrames([s,oldRoom,s]),[...activeFrames,...oldFrames]);
+  const missing={...s,referencePolicy:{...s.referencePolicy,sceneId:'unregistered-room'}};
+  assert.equal(stageBitmapFor(missing),null);assert.deepEqual(stageBitmapFrames(missing),[]);
+  const c=harness(StageBitmapCache);
+  assert.equal((await c.cache.prepare([s])).ok,true);
+  assert.equal(c.images.length,2);assert.equal(c.cache.peek(oldFrames[0].path),null);
+  assert.equal(drawStageBitmaps(context(),missing,100,{cache:c.cache}).kind,'unregistered');
+  for(const invalid of [historical,{...active,source:'wrong-edition'},{...active,variants:[]}]){
+   const registry={[id]:{...historical,variants:[active,invalid]}};
+   assert.throws(()=>stageBitmapFor(s,registry),/room variant/);
+  }
  }
 });

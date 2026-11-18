@@ -1,4 +1,5 @@
 import { CHRONICLES, ROSTER, SOURCE_META, createCombatProfile, getFighter, getStage } from './data.js';
+import { chronicleEncounterPlan } from './run-progress.js';
 import { drawStage, renderPortrait } from './renderers.js';
 import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
 import { attachGlobalAudioUnlock, audio, escapeHTML, loadJSON, writeJSON, CHRONICLES_KEY, returnToCommand } from './shared.js';
@@ -34,9 +35,18 @@ function fillPlayerFighters(){
   recommended.forEach(f=>{const option=document.createElement('option');option.value=f.id;option.textContent=`${f.name} · ${SOURCE_META[f.source].short}`;els.playerFighter.append(option);});
   const preferred=previous&&ROSTER.some(f=>f.id===previous)?previous:(sameSource.find(f=>!f.boss)?.id||ROSTER[0].id);els.playerFighter.value=preferred;
 }
+const dossierEnding = $('#dossierEnding');
+const dossierImage = $('#dossierEndingImage');
+dossierEnding.addEventListener('toggle', () => {
+  if (dossierEnding.open && !dossierEnding.hidden) setChronicleImage(dossierImage, chronicleArtwork(selected.id)?.ending);
+});
 function renderSelected(){
   const firstStage=getStage(selected.stages[0]);drawStage(els.routeCanvas.getContext('2d'),firstStage,performance.now(),{width:els.routeCanvas.width,height:els.routeCanvas.height,cinematic:true,otherworld:completed(selected.id)?.72:.18,radio:.2});
-  setChronicleImage($('#routeIllustration'),chronicleArtwork(selected.id)?.intro);
+  const art = chronicleArtwork(selected.id);
+  setChronicleImage($('#routeIllustration'), art?.intro);
+  dossierEnding.open = false;
+  dossierEnding.hidden = !art?.ending || chronicleEncounterPlan(selected.id).queue.length > 0;
+  setChronicleImage(dossierImage, null);
   els.routeSource.textContent=`${SOURCE_META[selected.source].label} · DOSSIER ${String(CHRONICLES.indexOf(selected)+1).padStart(2,'0')}`;
   els.routeTitle.textContent=selected.title;els.routeSubtitle.textContent=selected.subtitle;els.routeIntro.textContent=selected.intro;els.routeOutro.textContent=selected.outro;
   const attempts=progress.attempts?.[selected.id]||0;const best=grade(selected.id);els.routeState.textContent=best?`RANG ${best} · ${attempts} TENTATIVE${attempts>1?'S':''}`:completed(selected.id)?'CHRONIQUE ARCHIVÉE':`${attempts} TENTATIVE${attempts>1?'S':''}`;

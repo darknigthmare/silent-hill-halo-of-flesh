@@ -3,11 +3,13 @@ import assert from 'node:assert/strict';
 import {spawn,execFileSync} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-import {STAGE_BITMAPS} from '../../../src/stage-bitmap-manifest.js';
+import {resolve,sep} from 'node:path';
+import {STAGES} from '../../../src/data.js';
+import {stageBitmapFor} from '../../../src/stage-bitmaps.js';
 
 const {chromium}=await import(process.env.QA_PLAYWRIGHT_MODULE||'playwright-core');
 const root=fileURLToPath(new URL('../../../',import.meta.url));
-const out=fileURLToPath(new URL('./captures/',import.meta.url));
+const out=process.env.QA_STAGE_OUTPUT_DIR?resolve(process.env.QA_STAGE_OUTPUT_DIR)+sep:fileURLToPath(new URL('./captures/',import.meta.url));
 await mkdir(out,{recursive:true});
 const port=Number(process.env.QA_STAGE_PORT||4297),base='http://127.0.0.1:'+port;
 const server=spawn(process.execPath,['scripts/server.mjs',String(port)],{cwd:root,stdio:'ignore'});
@@ -29,7 +31,8 @@ try{
     await page.waitForFunction(()=>window.__HALO_QA__?.selection.stage);
     await page.selectOption('#mode','local');
     assert.equal(await page.evaluate(()=>__HALO_QA__.startFight()),true);
-    const art=STAGE_BITMAPS[id];
+    const art=stageBitmapFor(STAGES.find(stage=>stage.id===id));
+    assert.equal(art?.layers.length,2,'selected room has two parallax planes');
     const data=await page.evaluate(({stageId,layers})=>{
       const {engine:e,stageAssetCache:cache}=__HALO_QA__,ctx=e.ctx;
       if(e.stage.id!==stageId)throw Error('stage substitution');

@@ -40,8 +40,8 @@ test('each runtime bitmap has its actual digest, PNG header and native dimension
 test('mirrored presentation reuses an image but is not counted as generated animation',()=>{
  const single=spriteFor(film);
  assert.match(single.mirrorPolicy,/not independently/);assert.equal(single.animatedClips,0);assert.equal(single.frames.length,1);
- assert.match(art.mirrorPolicy,/not independently/);assert.equal(art.animatedClips,1);assert.equal(art.frames.length,3);
- assert.equal(new Set(art.frames.map(frame=>frame.pixelSHA256)).size,3,'flight uses genuinely different images');
+ assert.match(art.mirrorPolicy,/not independently/);assert.equal(art.animatedClips,1);assert.equal(new Set(art.clips.idle.frames).size,3);
+ assert.equal(new Set(art.clips.idle.frames.map(index=>art.frames[index].pixelSHA256)).size,3,'hovering uses genuinely different images');
 });
 test('pose priority and missing pose fallback are explicit',()=>{
  assert.equal(poseKey({ko:true,hurt:true}), 'ko');assert.equal(poseKey({hurt:true,moveKey:'neutralLight'}),'hurt');assert.equal(poseKey({crouching:true}),'crouch');assert.equal(frameFor(art,{ko:true,frame:900}),f);

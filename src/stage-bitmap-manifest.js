@@ -75,7 +75,72 @@ export const STAGE_BITMAPS = {
         ]
       }
     ],
-    "notes": "Caméra et coupe adaptées au versus : continuité du tapis au premier plan pour les appuis horizontaux. Matériaux du couloir PC original ; géométrie et cadrage non certifiés."
+    "notes": "Caméra et coupe adaptées au versus : continuité du tapis au premier plan pour les appuis horizontaux. Matériaux du couloir PC original ; géométrie et cadrage non certifiés.",
+    "variants": [
+      {
+        "stageId": "woodside",
+        "source": "sh2",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "mode": "replace",
+        "scene": "woodside-208-clock-room",
+        "geometry": {
+          "ceiling": false
+        },
+        "referenceIds": [
+          "CL_SH2_02_WOOD_SIDE_APTS",
+          "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+          "EXT12_REF_WOODSIDE_ROOM_3_20261101"
+        ],
+        "layers": [
+          {
+            "id": "clock-room",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "fit": "cover",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "frames": [
+              {
+                "path": "assets/stages/woodside.clock-room.da94acd4e920.png",
+                "sha256": "da94acd4e92079ab84490684c78ff3b3c7656c172e3bc2aac49be78ce6597e4f",
+                "bytes": 2219586,
+                "width": 1672,
+                "height": 941
+              }
+            ]
+          },
+          {
+            "id": "grandfather-clock",
+            "rect": [
+              0.64,
+              0.12,
+              0.3,
+              0.68
+            ],
+            "fit": "contain",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "frames": [
+              {
+                "path": "assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
+                "sha256": "bc7fec047ff50a86de01f366d1c5fa5719ba3070986e26c011a3c07b9f079896",
+                "bytes": 1640280,
+                "width": 1024,
+                "height": 1536
+              }
+            ],
+            "parallaxX": 0.035
+          }
+        ],
+        "notes": "Appartement 208 avant déplacement de l’horloge. Le meuble fermé forme le plan rapproché. Échelle, éclairage et cadrage latéral adaptés au duel."
+      }
+    ]
   },
   "alchemilla": {
     "stageId": "alchemilla",
@@ -194,6 +259,70 @@ export const STAGE_BITMAPS = {
             "height": 941
           }
         ]
+      }
+    ],
+    "variants": [
+      {
+        "stageId": "shopping_mall",
+        "source": "sh3",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "mode": "replace",
+        "scene": "central-square-happy-burger",
+        "geometry": {
+          "ceiling": false
+        },
+        "referenceIds": [
+          "CL_SH3_02_SHOPPING_CENTER",
+          "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
+        ],
+        "layers": [
+          {
+            "id": "happy-burger",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "fit": "cover",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "frames": [
+              {
+                "path": "assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+                "sha256": "2f61daa0c6a6d925ddb0d6cf7b8e08f6f314879979d628a1f4a3cb82d1d545cb",
+                "bytes": 1872785,
+                "width": 1672,
+                "height": 941
+              }
+            ]
+          },
+          {
+            "id": "happy-burger-table",
+            "rect": [
+              0,
+              0.53,
+              0.31,
+              0.38
+            ],
+            "fit": "contain",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "frames": [
+              {
+                "path": "assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+                "sha256": "459203f86106b40cc83677ddd760f7f965b57122be9a4ea4c50bd0909a8c8c78",
+                "bytes": 887489,
+                "width": 1672,
+                "height": 941
+              }
+            ],
+            "parallaxX": 0.055
+          }
+        ],
+        "notes": "Salle normale de Happy Burger. Une table et ses condiments forment le plan rapproché à gauche. Répartition du mobilier et cadrage adaptés au duel."
       }
     ]
   },
@@ -421,5 +550,68 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Cour des chambres 305–309 dans la brume de la version PSP. Le portillon ouvert est un plan indépendant. Cadrage et course adaptés au versus."
+  },
+  "blue_creek": {
+    "stageId": "blue_creek",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "blue-creek-stairwell-before-drainage",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH2_03_BLUE_CREEK_APTS",
+      "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+      "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
+    ],
+    "layers": [
+      {
+        "id": "flooded-landing",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+            "sha256": "26ee99b298138af4835b555bfb0aa6598e1a28b4fdeba910d65814c27396322f",
+            "bytes": 2717731,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "landing-rail",
+        "rect": [
+          0.008,
+          0.57,
+          0.26,
+          0.35
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+            "sha256": "bae35a70bc4eb4f41c42220196201f1e9fd7e483ffd258ee241c02d4754f6051",
+            "bytes": 1239212,
+            "width": 1536,
+            "height": 1024
+          }
+        ],
+        "parallaxX": 0.045
+      }
+    ],
+    "notes": "Palier de la première rencontre avec Pyramid Head, avant drainage. Le tronçon de rampe bordant les marches forme le plan rapproché. Eau fixe et espace de combat adapté."
   }
 };

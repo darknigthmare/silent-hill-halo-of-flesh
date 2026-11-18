@@ -123,6 +123,42 @@ export const SPRITES = {
           1741,
           760
         ]
+      },
+      {
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "bytes": 932472,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          137,
+          20,
+          2068,
+          657
+        ],
+        "pixelSHA256": "e58e8acbf2f8765a5860209f8ac2b1e7ad978a17884ddd53c71e18f716301b2b",
+        "transparentFraction": 0.75044,
+        "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.9
+        ],
+        "bodyHeight": 0.8,
+        "sourceFile": "exec-e13fb987-1f9d-4deb-a323-b2b673f0edeb.png",
+        "sourceSHA256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "origin": "conversation-image-generation",
+        "alphaBounds": [
+          37,
+          17,
+          2148,
+          724
+        ],
+        "framingBounds": [
+          136,
+          17,
+          2074,
+          660
+        ]
       }
     ],
     "portrait": {
@@ -168,6 +204,13 @@ export const SPRITES = {
           6,
           6
         ],
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 6,
         "loop": true
       }
     },
@@ -267,50 +310,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png",
-    "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+    "sourceFile": "exec-8a02ef4c-9bc6-437c-91d9-9e449fd2bdfe.png",
+    "sourceSHA256": "121bf71aca10b00397859c5b43dd6739e75ccf6f8dddcffc831adb66bf1f2c34",
     "sourceDimensions": [
       1024,
       1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Memory of Alessa SH3 original : trois poses candidates avec armes distinctes, palette et surfaces mates revues d’après render officiel et capture visage. SMG visuel manquant. Prises et pixels restent non certifiés 1:1 ; anciennes candidates conservées dans art/archive.",
+    "notes": "Memory of Alessa du SH3 original en garde de profil gauche avec son couteau. Les deux autres poses restent enregistrées.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
-        "bytes": 1675645,
+        "sha256": "121bf71aca10b00397859c5b43dd6739e75ccf6f8dddcffc831adb66bf1f2c34",
+        "bytes": 1677916,
         "width": 1024,
         "height": 1536,
         "visibleBounds": [
-          92,
-          55,
-          981,
-          1500
+          227,
+          91,
+          814,
+          1492
         ],
-        "pixelSHA256": "287f3a065672fd518e99e6efe7037fd2fb54bcd975e19380f06d33b9759dc2a3",
-        "transparentFraction": 0.73538,
-        "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
-        "facing": 1,
+        "pixelSHA256": "5ff82e6932757f7fabece7256ace248f988d92daa41f6c7744ae215c684a7b5e",
+        "transparentFraction": 0.76189,
+        "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+        "facing": -1,
         "anchor": [
-          0.524,
-          0.974
+          0.5,
+          1
         ],
-        "bodyHeight": 0.943,
-        "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png",
-        "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+        "bodyHeight": 1,
+        "sourceFile": "exec-8a02ef4c-9bc6-437c-91d9-9e449fd2bdfe.png",
+        "sourceSHA256": "121bf71aca10b00397859c5b43dd6739e75ccf6f8dddcffc831adb66bf1f2c34",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          21,
-          1021,
-          1516
+          19,
+          1010,
+          1527
         ],
         "framingBounds": [
-          87,
-          49,
-          984,
-          1503
+          223,
+          88,
+          818,
+          1498
         ]
       },
       {
@@ -447,7 +492,29 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Memory of Alessa SH3 original : trois poses candidates avec armes distinctes, palette et surfaces mates revues d’après render officiel et capture visage. SMG visuel manquant. Prises et pixels restent non certifiés 1:1 ; anciennes candidates conservées dans art/archive.",
+    "selectionProvenance": {
+      "sourceSHA256": "6e965c6ce5f60f033a5daf2c7d1eb230ddef2d3e59bdd1428b35b14dfd6eaf43",
+      "sourceDimensions": [
+        1024,
+        1536
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0c78c781-e6d4-4327-94ef-f28d886656dd.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "e44abe7d8249a78cc5d1df38821e4d6d8ed817d8eb9b28ca72544cad1eef7617"
+      },
+      {
+        "index": 2,
+        "sha256": "06e554d4f1a958c2521937af2c967a5dd33eb43d3244c2c4d225b52426ff1f93"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Memory of Alessa du SH3 original en garde de profil gauche avec son couteau. Les deux autres poses restent enregistrées."
   },
   "sh2_lying_figure_020": {
     "fighterId": "sh2_lying_figure_020",
@@ -1114,50 +1181,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
-    "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+    "sourceFile": "exec-6f1021a9-4b4e-4314-84a5-f346b8d44d21.png",
+    "sourceSHA256": "1f3b94d9b298e27851d1901eb001ead57c936b56d10852706c4585f595f2151f",
     "sourceDimensions": [
-      1362,
-      1155
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Petit Numb Body du SH3 original en profil gauche, sur deux jambes décalées.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
-        "bytes": 953534,
-        "width": 1362,
-        "height": 1155,
+        "sha256": "1f3b94d9b298e27851d1901eb001ead57c936b56d10852706c4585f595f2151f",
+        "bytes": 1453763,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          218,
-          55,
-          1086,
-          1138
+          327,
+          128,
+          1299,
+          922
         ],
-        "pixelSHA256": "a5a9475a23d0bbca8966b12b7af2795a7ed94a94b9f6c23f33791786eb42d906",
-        "transparentFraction": 0.76783,
-        "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
-        "facing": 1,
+        "pixelSHA256": "31c7b4d6afbf817769901ae16a25db3da4806133c37d00807f498600a4167586",
+        "transparentFraction": 0.81738,
+        "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+        "facing": -1,
         "anchor": [
-          0.56,
-          0.98
+          0.5,
+          1
         ],
-        "bodyHeight": 0.93,
-        "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png",
-        "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+        "bodyHeight": 1,
+        "sourceFile": "exec-6f1021a9-4b4e-4314-84a5-f346b8d44d21.png",
+        "sourceSHA256": "1f3b94d9b298e27851d1901eb001ead57c936b56d10852706c4585f595f2151f",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          49,
-          47,
-          1316,
-          1141
+          149,
+          9,
+          1460,
+          970
         ],
         "framingBounds": [
-          215,
-          47,
-          1090,
-          1141
+          321,
+          125,
+          1302,
+          927
         ]
       },
       {
@@ -1327,7 +1396,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH3 original depuis modèle final : deux jambes, aucun bras. Patte éloignée plus abaissée et pieds reconstruits ; taille Small non mesurée par la source, échelle/ancrage versus seulement. Aucune attribution Medium/Large/Arcade, aucune animation ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "a69b62b7c58a0eeddad4cb8a608fa0b9bfef7a06bb42840b81ca1ae0077d0df6",
+      "sourceDimensions": [
+        1362,
+        1155
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-4a5ffc91-62f6-4932-ab53-71ccadaa49e9.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "9ddda808b57c6ca7dd785a93933d03fe579f4097b2fcddae1444e0b7f4f6730a"
+      },
+      {
+        "index": 2,
+        "sha256": "3904c1567965eeaffe83e83aa25668476c3f91a2880f19db76bd633927a0808f"
+      },
+      {
+        "index": 3,
+        "sha256": "974da23966d7d3601d3cefd3adf602c315245a0121b3f676637631db9d293aae"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Petit Numb Body du SH3 original en profil gauche, sur deux jambes décalées."
   },
   "sh1_groaner_003": {
     "fighterId": "sh1_groaner_003",
@@ -8004,50 +8099,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-f0147a93-74f9-45e5-9443-654081827051.png",
-    "sourceSHA256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+    "sourceFile": "exec-6abb16dc-e61a-4059-b22f-60668e70577a.png",
+    "sourceSHA256": "47f037d1249a16facbea4d1f6c7d65bb0e9ba4bc6bba057953b48e300f9b467c",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Un individu complet du Swarm Homecoming2008 : insecte à élytres, ailes et pattes propres au modèle, pas de monstre humanoïde. Vue3/4 : certaines pattes éloignées partiellement occultées par la carapace, ni nombre visible ni angle ne valent certification anatomique1:1. Corps entier dans le cadre ; pose fixe, sans cycle de vol mesuré.",
+    "notes": "Un spécimen du Swarm de Homecoming en profil gauche de vol.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
-        "bytes": 732687,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "47f037d1249a16facbea4d1f6c7d65bb0e9ba4bc6bba057953b48e300f9b467c",
+        "bytes": 1746455,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          252,
-          227,
-          1117,
-          1042
+          303,
+          33,
+          1294,
+          922
         ],
-        "pixelSHA256": "cc599364fa90470c3f431e71d8fbaab2770bedd979c20c5e5fc90090fe924820",
-        "transparentFraction": 0.84805,
-        "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
-        "facing": 1,
+        "pixelSHA256": "0fe729be403382399b90e25ea617ea45190d4c5bf74baf42c3a246d8c017d70c",
+        "transparentFraction": 0.77711,
+        "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+        "facing": -1,
         "anchor": [
           0.5,
-          0.8309409888357256
+          1
         ],
-        "bodyHeight": 0.6499202551834131,
-        "sourceFile": "exec-f0147a93-74f9-45e5-9443-654081827051.png",
-        "sourceSHA256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+        "bodyHeight": 1,
+        "sourceFile": "exec-6abb16dc-e61a-4059-b22f-60668e70577a.png",
+        "sourceSHA256": "47f037d1249a16facbea4d1f6c7d65bb0e9ba4bc6bba057953b48e300f9b467c",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          35,
-          26,
-          1226,
-          1228
+          33,
+          23,
+          1522,
+          1024
         ],
         "framingBounds": [
-          246,
-          224,
-          1121,
-          1045
+          298,
+          30,
+          1296,
+          928
         ]
       }
     ],
@@ -8088,7 +8185,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Un individu complet du Swarm Homecoming2008 : insecte à élytres, ailes et pattes propres au modèle, pas de monstre humanoïde. Vue3/4 : certaines pattes éloignées partiellement occultées par la carapace, ni nombre visible ni angle ne valent certification anatomique1:1. Corps entier dans le cadre ; pose fixe, sans cycle de vol mesuré.",
+    "selectionProvenance": {
+      "sourceSHA256": "d2dfbea5f05806ea76ed7c46807637426251ffd4e3dba22013897f8d468fa266",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-f0147a93-74f9-45e5-9443-654081827051.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Un spécimen du Swarm de Homecoming en profil gauche de vol."
   },
   "downpour_bogeyman_115": {
     "fighterId": "downpour_bogeyman_115",
@@ -9298,50 +9407,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-ac630ad5-dbc0-475f-8249-962c72c48e9f.png",
-    "sourceSHA256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073",
+    "sourceFile": "exec-0d5f5463-aff7-49f4-8f07-93b761f780a5.png",
+    "sourceSHA256": "4b12704519205112037d0270609ca05ebbf0db12b269ea3e204bac27db53e811",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Eric Walsh Victim10 SH4 entier, genoux pliés et deux mains vides. État réveillé après retrait de la Sword of Obedience ; le rendu source est empalé par cette épée amovible, jamais tenue comme arme. Suppression visuelle et raccord du vêtement constituent une reconstruction non vérifiée, aucun plan original de réveil livré.",
+    "notes": "Eric Walsh, victime 10 de SH4, en suspension de profil droit, genoux pliés.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073",
-        "bytes": 428059,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "4b12704519205112037d0270609ca05ebbf0db12b269ea3e204bac27db53e811",
+        "bytes": 1538469,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          469,
-          217,
-          862,
-          1067
+          198,
+          114,
+          748,
+          1452
         ],
-        "pixelSHA256": "8b7916a41c1f3b1a36869f5bd6f27f83868b57d3a15d16ceb149d2167512a904",
-        "transparentFraction": 0.90071,
-        "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+        "pixelSHA256": "0260a1ffed16e902f0c37d59989815db166841c98b91a3440f9242fae70fa0ae",
+        "transparentFraction": 0.79564,
+        "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
         "facing": 1,
         "anchor": [
-          0.5307017543859649,
-          0.8508771929824561
+          0.5,
+          1
         ],
-        "bodyHeight": 0.6778309409888357,
-        "sourceFile": "exec-ac630ad5-dbc0-475f-8249-962c72c48e9f.png",
-        "sourceSHA256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073",
+        "bodyHeight": 1,
+        "sourceFile": "exec-0d5f5463-aff7-49f4-8f07-93b761f780a5.png",
+        "sourceSHA256": "4b12704519205112037d0270609ca05ebbf0db12b269ea3e204bac27db53e811",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          63,
-          31,
-          1232,
-          1182
+          0,
+          23,
+          1006,
+          1520
         ],
         "framingBounds": [
-          464,
-          213,
-          866,
-          1069
+          193,
+          111,
+          751,
+          1456
         ]
       }
     ],
@@ -9382,7 +9493,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Eric Walsh Victim10 SH4 entier, genoux pliés et deux mains vides. État réveillé après retrait de la Sword of Obedience ; le rendu source est empalé par cette épée amovible, jamais tenue comme arme. Suppression visuelle et raccord du vêtement constituent une reconstruction non vérifiée, aucun plan original de réveil livré.",
+    "selectionProvenance": {
+      "sourceSHA256": "b61ddf804db17ee0fe75eebc8757d2b84a52459031a0f61e28348b9017bf5073",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-ac630ad5-dbc0-475f-8249-962c72c48e9f.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Eric Walsh, victime 10 de SH4, en suspension de profil droit, genoux pliés."
   },
   "sh4_sharon_blake_victim_13": {
     "fighterId": "sh4_sharon_blake_victim_13",
@@ -19934,6 +20057,178 @@ export const SPRITES = {
       ],
       "origin": "conversation-image-generation",
       "sourceFile": "exec-99f51c0c-2127-4285-b5e9-d3504c07f299.png"
+    },
+    "animatedClips": 0
+  },
+  "downpour_wheelman_116": {
+    "fighterId": "downpour_wheelman_116",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-550f104b-48af-41ae-a6f4-b88d2df61ba9.png",
+    "sourceSHA256": "3ee16c0ba3dc1adcfa4c0eeea60c79d359a68bf470b26650ba6cb216749ff686",
+    "sourceDimensions": [
+      1390,
+      1132
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Profil gauche du Wheelman géant en suspension dans sa machine, Penitencier d’Overlook. Les raccords délimitent la silhouette visible du boss.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "3ee16c0ba3dc1adcfa4c0eeea60c79d359a68bf470b26650ba6cb216749ff686",
+        "bytes": 1635274,
+        "width": 1390,
+        "height": 1132,
+        "visibleBounds": [
+          127,
+          23,
+          1234,
+          1119
+        ],
+        "pixelSHA256": "48d400ad02c4a8e692572a91d48744035f0d9588c8c6fb75e659697cd96f060d",
+        "transparentFraction": 0.57676,
+        "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+        "facing": -1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-550f104b-48af-41ae-a6f4-b88d2df61ba9.png",
+        "sourceSHA256": "3ee16c0ba3dc1adcfa4c0eeea60c79d359a68bf470b26650ba6cb216749ff686",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          3,
+          1389,
+          1132
+        ],
+        "framingBounds": [
+          124,
+          14,
+          1245,
+          1129
+        ]
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "sha256": "192d46a2e1052def3a369d2cf0f632798f0f622b45c87984e3cbd686cf486b3e",
+      "bytes": 1475861,
+      "width": 1307,
+      "height": 1203,
+      "facing": 1,
+      "visibleBounds": [
+        137,
+        18,
+        1251,
+        1189
+      ],
+      "pixelSHA256": "17a9e6a8d033a5c04055d39a9706fac0e7945f80808e45f25fa135385742383d",
+      "sourceFile": "exec-b2dd1f75-cdf6-47fc-9451-5d6e1ae33fbb.png",
+      "sourceSHA256": "192d46a2e1052def3a369d2cf0f632798f0f622b45c87984e3cbd686cf486b3e",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        17,
+        14,
+        1283,
+        1203
+      ],
+      "framingBounds": [
+        133,
+        14,
+        1259,
+        1195
+      ],
+      "transparentFraction": 0.60871
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
+    "selectionNotes": "Première sélection de la forme géante d’Overlook, buste et raccords de maintien visibles dans le guide Prima p. 163.",
+    "selectionProvenance": {
+      "sourceSHA256": "192d46a2e1052def3a369d2cf0f632798f0f622b45c87984e3cbd686cf486b3e",
+      "sourceDimensions": [
+        1307,
+        1203
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b2dd1f75-cdf6-47fc-9451-5d6e1ae33fbb.png"
+    },
+    "animatedClips": 0,
+    "combatNotes": "Profil gauche du Wheelman géant en suspension dans sa machine, Penitencier d’Overlook. Les raccords délimitent la silhouette visible du boss."
+  },
+  "sh3_sewer_creature_052": {
+    "fighterId": "sh3_sewer_creature_052",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-b387c292-af56-49a9-92b5-b7db7b6772de.png",
+    "sourceSHA256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Tentacule du piège des égouts de SH3, entier du pied à la pointe, d’après le modèle et la scène sous la grille. Premier portrait du dossier.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/sh3_sewer_creature_052.f1e1545f70aa.png",
+      "sha256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+      "bytes": 1281633,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "visibleBounds": [
+        101,
+        12,
+        1364,
+        1011
+      ],
+      "pixelSHA256": "91ffceae33e3eb04fbdbf6f1bc5c55c66642f0f059a16ca9275238df03792c4e",
+      "sourceFile": "exec-b387c292-af56-49a9-92b5-b7db7b6772de.png",
+      "sourceSHA256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        51,
+        10,
+        1520,
+        1024
+      ],
+      "framingBounds": [
+        97,
+        10,
+        1367,
+        1012
+      ],
+      "transparentFraction": 0.85461
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Tentacule du piège des égouts de SH3, entier du pied à la pointe, d’après le modèle et la scène sous la grille. Premier portrait du dossier.",
+    "selectionProvenance": {
+      "sourceSHA256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b387c292-af56-49a9-92b5-b7db7b6772de.png"
     },
     "animatedClips": 0
   }

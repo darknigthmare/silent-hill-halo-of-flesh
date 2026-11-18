@@ -307,22 +307,21 @@ test('replacement bitmap scenery keeps procedural proposals prepared and visibly
  }finally{if(previous)STAGE_BITMAPS[stage.id]=previous;else delete STAGE_BITMAPS[stage.id];}
 });
 
-test('new room selections retain older bitmaps as inventory without hiding the current room tracks',()=>{
+test('new room rasters cover the active tracks while historical rooms remain separately inventoried',()=>{
  const generated=buildProductionPlan(research);
  const expected={woodside:'original-pc-corridor',shopping_mall:'normal-helens-bakery'};
  for(const [id,oldScene] of Object.entries(expected)){
   const row=generated.stages.find(stage=>stage.id===id);
-  assert.equal(row.bitmapProgress,null,id);assert.equal(row.archivedBitmapProgress.scene,oldScene);
+  assert.equal(row.bitmapProgress.scene,row.runtimePolicy.sceneId,id);assert.equal(row.bitmapProgress.files,2);assert.equal(row.archivedBitmapProgress.scene,oldScene);
   assert.equal(row.archivedBitmapProgress.files,1);assert.match(row.locationNote,/ancienne vue ne correspond pas à la pièce sélectionnée/);
   for(const track of generated.stageAnimations.filter(track=>track.stageId===id&&track.runtimeTrack)){
-   assert.equal(track.runtimeTrackVisible,true);assert.match(track.existing,/Prototype Canvas partiel joué/);
-   assert.doesNotMatch(track.existing,/masquée par la vue bitmap/);
+   assert.equal(track.runtimeTrackVisible,false);assert.match(track.existing,/masquée par la vue bitmap/);
   }
   const task=generated.tasks.find(task=>task.id===id+':stage');assert.match(task.reason,/Ancien bitmap.*sans affichage dans la pièce sélectionnée/);
  }
  assert.equal(generated.metrics.stageBitmapCandidates,Object.keys(STAGE_BITMAPS).length);
  assert.equal(generated.metrics.inactiveStageBitmapCandidates,2);
- assert.equal(generated.metrics.activeStageBitmapCandidates,generated.metrics.stageBitmapCandidates-2);
+ assert.equal(generated.metrics.activeStageBitmapCandidates,generated.metrics.stageBitmapCandidates);
  assert.equal(generated.metrics.stageBitmapFiles,generated.metrics.activeStageBitmapFiles+generated.metrics.inactiveStageBitmapFiles);
  assert.equal(generated.metrics.inactiveStageBitmapFiles,2);
 });
