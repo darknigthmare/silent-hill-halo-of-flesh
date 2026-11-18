@@ -3,6 +3,7 @@ import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
+import {checkWave14} from './qa-wave14-browser.mjs';
 import {VERSION} from '../src/data.js';
 const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-v090');
 await mkdir(out,{recursive:true});
@@ -17,6 +18,7 @@ try{
   assert('HTTP server starts',available);
   browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
   report.browser=await browser.version();
+  await checkWave14(browser,base,out,report,assert);
   const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
   page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
   await page.goto(base);await page.waitForSelector('.command-item');
