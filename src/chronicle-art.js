@@ -1,5 +1,11 @@
 const ARTWORK = {
   "heather_birth": {
+    "sighting": {
+      "fighterId": "sh3_closer_036",
+      "path": "assets/chronicles/heather_birth.sighting.d720743e3ddf.jpg",
+      "alt": "Sur la mezzanine du centre commercial, le Closer penche la tête. Ses deux longs bras touchent presque le carrelage.",
+      "caption": "Le néon rose se reflète dans la vitrine. Sous la verrière, le Closer s’est arrêté près de l’escalier mécanique."
+    },
     "intro": {
       "path": "assets/chronicles/heather_birth.intro.2ef91708c75e.webp",
       "alt": "Heather s’arrête entre les banquettes du diner et la galerie marchande déserte."

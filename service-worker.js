@@ -1,5 +1,5 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicle-observations-and-rivals-20261118';
+const CACHE_REVISION = 'chronicle-heather-closer-20261118';
 // BITMAP_REVISION_BEGIN
 const BITMAP_REVISION = 'c7439f5388602978efe2a074dbc66992fa1c27f9e19927ae45fb4dd0baf1da1a';
 // BITMAP_REVISION_END
@@ -495,6 +495,7 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/fog_of_alessa.rival.01b4d120d813.webp',
   '/assets/chronicles/james_sentence.rival.891ccb039b52.webp',
   '/assets/chronicles/james_sentence.sighting.52ea5680fe31.webp',
+  '/assets/chronicles/heather_birth.sighting.d720743e3ddf.jpg',
   '/assets/chronicles/travis_mirrors.rival.779163d914f5.webp',
   '/assets/chronicles/alex_home.rival.3833ff314d37.webp',
   '/assets/chronicles/murphy_rain.rival.ef82a4c07ea9.webp',
