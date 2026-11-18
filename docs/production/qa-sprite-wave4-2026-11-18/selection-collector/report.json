@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T08:45:32.967Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "ascension_the_collector_183",
+      "path": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": [
+        73,
+        17,
+        963,
+        1519
+      ],
+      "role": "noncombatant",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "ascension_the_collector_183",
+      "facing": 1,
+      "path": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "file": "selection-ascension_the_collector_183-right.png"
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "facing": -1,
+      "path": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "file": "selection-ascension_the_collector_183-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "ascension_the_collector_183 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "noncombatant",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+        "sha256": "55a90d583450484044baf7d7b2ccfbc162a5a8a8970dca2248c2614b44ff7911",
+        "bytes": 2348793
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "ascension_the_collector_183 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          73,
+          17,
+          963,
+          1519
+        ],
+        "transparentFraction": 0.4740886688232422
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/ascension_the_collector_183.55a90d583450.png"
+        ],
+        "dataset": {
+          "spriteId": "ascension_the_collector_183",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          73,
+          17,
+          890,
+          1502
+        ],
+        "destination": [
+          -144.58055925432757,
+          -244.00000000000003,
+          289.16111850865514,
+          488.00000000000006
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/ascension_the_collector_183.55a90d583450.png"
+        ],
+        "dataset": {
+          "spriteId": "ascension_the_collector_183",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "ascension_the_collector_183 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          73,
+          17,
+          890,
+          1502
+        ],
+        "destination": [
+          -144.58055925432757,
+          -244.00000000000003,
+          289.16111850865514,
+          488.00000000000006
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "cf52ac5da858740c1af40ec56ec127c391607df253ee68b4c6898b54d0264ca0",
+    "src/sprite-manifest.js": "99c8f22a91f6cd3da2154b67edd9c3eb3493e09cb3f448f859aa01533f296421"
+  },
+  "hashesAfter": {
+    "art/registry.json": "cf52ac5da858740c1af40ec56ec127c391607df253ee68b4c6898b54d0264ca0",
+    "src/sprite-manifest.js": "99c8f22a91f6cd3da2154b67edd9c3eb3493e09cb3f448f859aa01533f296421"
+  },
+  "passed": true
+}

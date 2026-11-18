@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "checks": 39,
+  "failures": 0,
+  "sourceHashes": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "selections": [
+    {
+      "file": "../core/portrait-arcade_creeper_arcade-left.png",
+      "repeatedWith": "final manifest",
+      "bytes": 129630,
+      "sha256": "57b428053f159c85fc63263b6b0cf8833c304d4cbff6df2d30cbf4d7af7929be",
+      "exactMatch": true
+    },
+    {
+      "file": "../core/portrait-arcade_creeper_arcade-right.png",
+      "repeatedWith": "final manifest",
+      "bytes": 128222,
+      "sha256": "1ff671563c95e932ba3a435f6889a1783f059bbc305012857ca1609ed8816a75",
+      "exactMatch": true
+    }
+  ],
+  "observation": "Les deux images de Creeper Arcade obtenues du manifeste final sont identiques octet par octet aux portraits déjà inspectés dans core. La répétition des deux duels avec Carrion et les autres sorties de contrôle sont comptabilisées séparément.",
+  "nativeReport": "native-report.json",
+  "captureStorage": "The two identical Creeper selection captures are retained once under core. Remaining auxiliary captures are scratch validation outputs."
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-18T08:42:36.013505+00:00",
+  "nativeCanvas": true,
+  "browserTest": false,
+  "checks": 11,
+  "failures": 0,
+  "sourceHashes": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "selectionCapturesReviewed": [
+    "selection-arcade_toadstool_arcade-right.png",
+    "selection-arcade_toadstool_arcade-left.png"
+  ],
+  "findings": [
+    {
+      "id": "arcade_toadstool_arcade",
+      "role": "unverified",
+      "visibleBounds": [
+        68,
+        37,
+        1183,
+        1161
+      ],
+      "observation": "Le groupe de tiges et les têtes renflées de Toadstool tiennent dans le champ des deux rendus de 500 × 500. Chaque orientation sélectionne le portrait, et aucune image de combat ne résout pour ce profil."
+    }
+  ],
+  "calibrationAdjustmentSuggested": false
+}

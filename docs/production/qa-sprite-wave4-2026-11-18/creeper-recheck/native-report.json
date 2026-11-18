@@ -1,0 +1,853 @@
+{
+  "schema": 3,
+  "label": "sprite-wave4-creeper-recheck",
+  "generatedAt": "2026-11-18T08:40:21.714Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4252\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1109767,
+        "sha256": "306efcaf78b8833dbe558cc2bc87513e963c17c8270ccb0491b79777515f38e5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1752301,
+        "sha256": "e4c2182692b5e6c2f56ce187fc47cf542f682dfdeea89dae2365125617df3674"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1151214,
+        "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1202192,
+        "sha256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          56,
+          148,
+          2119,
+          640
+        ],
+        "expected": [
+          56,
+          148,
+          2119,
+          640
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          51,
+          133,
+          1480,
+          941
+        ],
+        "expected": [
+          51,
+          133,
+          1480,
+          941
+        ]
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ],
+        "portrait": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+        ],
+        "expected": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+        ],
+        "expected": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          112,
+          241,
+          1129,
+          1088
+        ],
+        "expected": [
+          112,
+          241,
+          1129,
+          1088
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          245,
+          137,
+          1087,
+          1129
+        ],
+        "expected": [
+          245,
+          137,
+          1087,
+          1129
+        ]
+      }
+    },
+    {
+      "name": "origins_carrion_076 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ],
+        "portrait": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_carrion_076 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+        ],
+        "expected": "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+      }
+    },
+    {
+      "name": "origins_carrion_076 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+        ],
+        "expected": "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_creeper_arcade",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_carrion_076",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 246.39539807830198,
+          "top": 558.3965216511735,
+          "right": 394.23186399922974,
+          "bottom": 594.2853934456845
+        },
+        "visible": {
+          "left": 246.75214630687566,
+          "top": 558.8959691711766,
+          "right": 393.94646541637087,
+          "bottom": 593.9999948628255
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_carrion_076 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 916.0911850394054,
+          "top": 509.1326286893777,
+          "right": 1018.351809455774,
+          "bottom": 594.7996424966385
+        },
+        "visible": {
+          "left": 916.3910695684857,
+          "top": 509.3325517087645,
+          "right": 1018.0519249266938,
+          "bottom": 593.9999504190912
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_carrion_076",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_creeper_arcade",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_carrion_076 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 261.6482210618041,
+          "top": 509.1326286893777,
+          "right": 363.9088454781727,
+          "bottom": 594.7996424966385
+        },
+        "visible": {
+          "left": 261.9481055908844,
+          "top": 509.3325517087645,
+          "right": 363.6089609490924,
+          "bottom": 593.9999504190912
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 885.7681665183484,
+          "top": 558.3965216511735,
+          "right": 1033.6046324392762,
+          "bottom": 594.2853934456845
+        },
+        "visible": {
+          "left": 886.0535651012073,
+          "top": 558.8959691711766,
+          "right": 1033.2478842107025,
+          "bottom": 593.9999948628255
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+        "after": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8",
+        "after": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "arcade_creeper_arcade",
+      "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.7235909312902536,
+      "visibleBounds": [
+        56,
+        148,
+        2119,
+        640
+      ]
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7658774058024088,
+      "visibleBounds": [
+        51,
+        133,
+        1480,
+        941
+      ]
+    },
+    {
+      "id": "origins_carrion_076",
+      "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6816515698409428,
+      "visibleBounds": [
+        112,
+        241,
+        1129,
+        1088
+      ]
+    },
+    {
+      "id": "origins_carrion_076",
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6436290632336968,
+      "visibleBounds": [
+        245,
+        137,
+        1087,
+        1129
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "arcade_creeper_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "file": "portrait-arcade_creeper_arcade-right.png"
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "file": "portrait-arcade_creeper_arcade-left.png"
+    },
+    {
+      "id": "origins_carrion_076",
+      "facing": 1,
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "file": "portrait-origins_carrion_076-right.png"
+    },
+    {
+      "id": "origins_carrion_076",
+      "facing": -1,
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "file": "portrait-origins_carrion_076-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "arcade_creeper_arcade",
+        "origins_carrion_076"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.817333692185
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_creeper_arcade",
+          "slot": 1,
+          "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "exterior": {
+            "left": 246.39539807830198,
+            "top": 558.3965216511735,
+            "right": 394.23186399922974,
+            "bottom": 594.2853934456845
+          },
+          "visible": {
+            "left": 246.75214630687566,
+            "top": 558.8959691711766,
+            "right": 393.94646541637087,
+            "bottom": 593.9999948628255
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000051371745257711154,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+            "args": [
+              -76.032,
+              -46.67403840000001,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "origins_carrion_076",
+          "slot": 2,
+          "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "exterior": {
+            "left": 916.0911850394054,
+            "top": 509.1326286893777,
+            "right": 1018.351809455774,
+            "bottom": 594.7996424966385
+          },
+          "visible": {
+            "left": 916.3910695684857,
+            "top": 509.3325517087645,
+            "right": 1018.0519249266938,
+            "bottom": 593.9999504190912
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00004958090880791133,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+        "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+      ],
+      "snapshots": [
+        "duel-arcade_creeper_arcade--origins_carrion_076-tick0.png",
+        "duel-arcade_creeper_arcade--origins_carrion_076-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_carrion_076",
+        "arcade_creeper_arcade"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.817333692185
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_carrion_076",
+          "slot": 1,
+          "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "exterior": {
+            "left": 261.6482210618041,
+            "top": 509.1326286893777,
+            "right": 363.9088454781727,
+            "bottom": 594.7996424966385
+          },
+          "visible": {
+            "left": 261.9481055908844,
+            "top": 509.3325517087645,
+            "right": 363.6089609490924,
+            "bottom": 593.9999504190912
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00004958090880791133,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "id": "arcade_creeper_arcade",
+          "slot": 2,
+          "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "exterior": {
+            "left": 885.7681665183484,
+            "top": 558.3965216511735,
+            "right": 1033.6046324392762,
+            "bottom": 594.2853934456845
+          },
+          "visible": {
+            "left": 886.0535651012073,
+            "top": 558.8959691711766,
+            "right": 1033.2478842107025,
+            "bottom": 593.9999948628255
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000051371745257711154,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+            "args": [
+              -76.032,
+              -46.67403840000001,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+        "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+      ],
+      "snapshots": [
+        "duel-origins_carrion_076--arcade_creeper_arcade-tick0.png",
+        "duel-origins_carrion_076--arcade_creeper_arcade-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+  "src/sprite-manifest.jsSHA256": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8",
+  "version": "0.9.6",
+  "ids": [
+    "arcade_creeper_arcade",
+    "origins_carrion_076"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

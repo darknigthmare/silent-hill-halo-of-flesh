@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '82a08ff9811d83bc3cc0717aad902bc1506b4a27d8d76698be847b612fd98fe8';
+const BITMAP_REVISION = '056c0bcd551b4e79fca00140acd6ed278ef99275608ae75619b49ed3a4f7a6cd';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -28,6 +28,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
   "/assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
   "/assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+  "/assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
   "/assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
   "/assets/sprites/arcade_tremer_arcade.f20804673e14.png",
   "/assets/sprites/arcade_tuberculosis.05377508d32c.png",
@@ -37,6 +38,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/ascension_snarler_180.216c2e6ba960.png",
   "/assets/sprites/ascension_snarler_180.88e712963625.png",
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
+  "/assets/sprites/ascension_the_collector_183.55a90d583450.png",
   "/assets/sprites/ascension_the_immolator_182.627713ebf694.png",
   "/assets/sprites/ascension_wanderer_178.3da19262874e.png",
   "/assets/sprites/ascension_wanderer_178.488439c222a8.png",
@@ -62,6 +64,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_swarm_132.96315f628aaf.png",
   "/assets/sprites/bom_tremer_133.637b09a88365.png",
   "/assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+  "/assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+  "/assets/sprites/bom_wood_guardian_138.dce588da250b.png",
   "/assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
   "/assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
   "/assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
@@ -151,6 +155,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_split_head_014.483ae08e94aa.png",
   "/assets/sprites/sh1_split_head_014.e48107f497d7.png",
   "/assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+  "/assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
   "/assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
   "/assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
   "/assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
@@ -167,6 +172,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
   "/assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+  "/assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
   "/assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
   "/assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
   "/assets/sprites/sh3_closer_036.83102a051acb.png",
@@ -190,6 +196,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
   "/assets/sprites/sh3_missionary_047.820d3acca65f.png",
   "/assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+  "/assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
   "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
   "/assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
   "/assets/sprites/sh3_numb_body_small_037.3904c1567965.png",

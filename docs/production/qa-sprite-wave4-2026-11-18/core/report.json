@@ -1,0 +1,3830 @@
+{
+  "schema": 3,
+  "label": "sprite-wave4-core",
+  "generatedAt": "2026-11-18T08:26:57.366Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4250\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1334302,
+        "sha256": "499200e206d444bd6b5455fa6275db6a872a610bcf274bb8c6bdeff045fa2b04"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1564590,
+        "sha256": "ab639ab99e1cffc97f6835c509c7626bfdacd46fa88cadbbc180b4babc240981"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1237542,
+        "sha256": "40895822f98fb59c5f7677219fecd61da98cd47ac53edfdeecbb1641afa45ecf"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 445424,
+        "sha256": "b94be990539255eca6fb49b6923058a326e3fe12fb1da2a45c7b65a11a6360a1"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1683958,
+        "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1525989,
+        "sha256": "121baef62376b7b9c5c88ae81827163df86cf3726bbf4baf12569fe854861c19"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1296938,
+        "sha256": "216c2e6ba960f700aa228ba2f578f1aadb603524a95c41c414fd242ba8214c74"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_snarler_180.88e712963625.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2034013,
+        "sha256": "88e71296362552a3757cec50d547b9fa23934169df64629dcf0e6dc52d72f1fb"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_snarler_180.88e712963625.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 874989,
+        "sha256": "97153b22d0bc63ac8338e303da0cd8a21cf7618cabca7a66f9e69a01d59f9f20"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 950201,
+        "sha256": "6bfe8afc9ed6a62a142f47e80cc912ad63b1d51f2dc0952ed88f6fa1ea924fb9"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1517500,
+        "sha256": "c977f8bce1918d1f20f1ffd7cf0ed82fdf8dd723d94549828e2e930a3816360b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1763911,
+        "sha256": "00201a3d31acaf4fe51c7c9897f7a7f655f298cd6f0799f1c324e336c63793ef"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1151214,
+        "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1202192,
+        "sha256": "fc6703575ef3043565737f5ecd8c49e680eab5b25ced06941b350ebfcf28210c"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1109767,
+        "sha256": "306efcaf78b8833dbe558cc2bc87513e963c17c8270ccb0491b79777515f38e5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1752301,
+        "sha256": "e4c2182692b5e6c2f56ce187fc47cf542f682dfdeea89dae2365125617df3674"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1306330,
+        "sha256": "3da19262874e7ab08750912a45989a302c57f333d33143f299c29ac0f07f5c86"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1315756,
+        "sha256": "488439c222a8f696bc08ea24c11efa43c40db1ff4662f47ba362a746633c6de4"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          111,
+          18,
+          1604,
+          868
+        ],
+        "expected": [
+          111,
+          18,
+          1604,
+          868
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          121,
+          18,
+          1368,
+          1065
+        ],
+        "expected": [
+          121,
+          18,
+          1368,
+          1065
+        ]
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png"
+        ],
+        "portrait": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png"
+        ],
+        "expected": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png"
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png"
+        ],
+        "expected": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          57,
+          89,
+          1276,
+          1094
+        ],
+        "expected": [
+          57,
+          89,
+          1276,
+          1094
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          339,
+          363,
+          951,
+          925
+        ],
+        "expected": [
+          339,
+          363,
+          951,
+          925
+        ]
+      }
+    },
+    {
+      "name": "homecoming_schism_089 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_schism_089.40895822f98f.png"
+        ],
+        "portrait": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_schism_089 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_schism_089.b94be9905392.png"
+        ],
+        "expected": "assets/sprites/homecoming_schism_089.b94be9905392.png"
+      }
+    },
+    {
+      "name": "homecoming_schism_089 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_schism_089.b94be9905392.png"
+        ],
+        "expected": "assets/sprites/homecoming_schism_089.b94be9905392.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          48,
+          17,
+          1424,
+          1035
+        ],
+        "expected": [
+          48,
+          17,
+          1424,
+          1035
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          164,
+          18,
+          1185,
+          1116
+        ],
+        "expected": [
+          164,
+          18,
+          1185,
+          1116
+        ]
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png"
+        ],
+        "portrait": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png"
+        ],
+        "expected": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png"
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png"
+        ],
+        "expected": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          30,
+          34,
+          1694,
+          850
+        ],
+        "expected": [
+          30,
+          34,
+          1694,
+          850
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_snarler_180.88e712963625.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_snarler_180.88e712963625.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          184,
+          23,
+          1277,
+          1011
+        ],
+        "expected": [
+          184,
+          23,
+          1277,
+          1011
+        ]
+      }
+    },
+    {
+      "name": "ascension_snarler_180 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+        ],
+        "portrait": "assets/sprites/ascension_snarler_180.88e712963625.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "ascension_snarler_180 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_snarler_180.88e712963625.png"
+        ],
+        "expected": "assets/sprites/ascension_snarler_180.88e712963625.png"
+      }
+    },
+    {
+      "name": "ascension_snarler_180 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_snarler_180.88e712963625.png"
+        ],
+        "expected": "assets/sprites/ascension_snarler_180.88e712963625.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          189,
+          40,
+          1177,
+          1285
+        ],
+        "expected": [
+          189,
+          40,
+          1177,
+          1285
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          15,
+          46,
+          1072,
+          1432
+        ],
+        "expected": [
+          15,
+          46,
+          1072,
+          1432
+        ]
+      }
+    },
+    {
+      "name": "sh3_pendulum_039 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_pendulum_039.97153b22d0bc.png"
+        ],
+        "portrait": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_pendulum_039 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png"
+        ],
+        "expected": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png"
+      }
+    },
+    {
+      "name": "sh3_pendulum_039 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png"
+        ],
+        "expected": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          195,
+          32,
+          883,
+          1439
+        ],
+        "expected": [
+          195,
+          32,
+          883,
+          1439
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          97,
+          17,
+          1246,
+          1141
+        ],
+        "expected": [
+          97,
+          17,
+          1246,
+          1141
+        ]
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png"
+        ],
+        "portrait": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png"
+        ],
+        "expected": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png"
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png"
+        ],
+        "expected": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          112,
+          241,
+          1129,
+          1088
+        ],
+        "expected": [
+          112,
+          241,
+          1129,
+          1088
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          245,
+          137,
+          1087,
+          1129
+        ],
+        "expected": [
+          245,
+          137,
+          1087,
+          1129
+        ]
+      }
+    },
+    {
+      "name": "origins_carrion_076 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ],
+        "portrait": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_carrion_076 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+        ],
+        "expected": "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+      }
+    },
+    {
+      "name": "origins_carrion_076 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+        ],
+        "expected": "assets/sprites/origins_carrion_076.fc6703575ef3.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          56,
+          148,
+          2119,
+          640
+        ],
+        "expected": [
+          56,
+          148,
+          2119,
+          640
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          51,
+          133,
+          1480,
+          941
+        ],
+        "expected": [
+          51,
+          133,
+          1480,
+          941
+        ]
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ],
+        "portrait": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+        ],
+        "expected": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+        ],
+        "expected": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          237,
+          111,
+          841,
+          1424
+        ],
+        "expected": [
+          237,
+          111,
+          841,
+          1424
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          293,
+          62,
+          752,
+          1475
+        ],
+        "expected": [
+          293,
+          62,
+          752,
+          1475
+        ]
+      }
+    },
+    {
+      "name": "ascension_wanderer_178 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/ascension_wanderer_178.3da19262874e.png"
+        ],
+        "portrait": "assets/sprites/ascension_wanderer_178.488439c222a8.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "ascension_wanderer_178 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_wanderer_178.488439c222a8.png"
+        ],
+        "expected": "assets/sprites/ascension_wanderer_178.488439c222a8.png"
+      }
+    },
+    {
+      "name": "ascension_wanderer_178 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/ascension_wanderer_178.488439c222a8.png"
+        ],
+        "expected": "assets/sprites/ascension_wanderer_178.488439c222a8.png"
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011/homecoming_schism_089 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011/homecoming_schism_089 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011/homecoming_schism_089 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_hanged_scratcher_011",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_schism_089",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_hanged_scratcher_011/homecoming_schism_089 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+          "assets/sprites/homecoming_schism_089.40895822f98f.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+          "assets/sprites/homecoming_schism_089.40895822f98f.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 212.61238540407697,
+          "top": 461.5807161108215,
+          "right": 445.58962252985026,
+          "bottom": 594.7771752280914
+        },
+        "visible": {
+          "left": 213.07865072187371,
+          "top": 461.8915596560193,
+          "right": 445.1233572120535,
+          "bottom": 594.0000663650969
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_schism_089 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 826.97536802379,
+          "top": 407.8478643058341,
+          "right": 1053.2670617476158,
+          "bottom": 594.5523211292347
+        },
+        "visible": {
+          "left": 827.7118747568211,
+          "top": 408.95262440538085,
+          "right": 1052.162301648069,
+          "bottom": 593.9999410794613
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011/homecoming_schism_089 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_schism_089/sh1_hanged_scratcher_011 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_schism_089/sh1_hanged_scratcher_011 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_schism_089/sh1_hanged_scratcher_011 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_schism_089",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_hanged_scratcher_011",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_schism_089/sh1_hanged_scratcher_011 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_schism_089.40895822f98f.png",
+          "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_schism_089.40895822f98f.png",
+          "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_schism_089 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 226.73296876996233,
+          "top": 407.8478643058341,
+          "right": 453.0246624937881,
+          "bottom": 594.5523211292347
+        },
+        "visible": {
+          "left": 227.83772886950908,
+          "top": 408.95262440538085,
+          "right": 452.288155760757,
+          "bottom": 593.9999410794613
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_hanged_scratcher_011 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 834.4104079877279,
+          "top": 461.5807161108215,
+          "right": 1067.387645113501,
+          "bottom": 594.7771752280914
+        },
+        "visible": {
+          "left": 834.8766733055246,
+          "top": 461.8915596560193,
+          "right": 1066.9213797957045,
+          "bottom": 594.0000663650969
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_schism_089/sh1_hanged_scratcher_011 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053/ascension_snarler_180 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053/ascension_snarler_180 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053/ascension_snarler_180 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "ascension_snarler_180",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053/ascension_snarler_180 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 250.92619824575053,
+          "top": 487.1753780168681,
+          "right": 395.27536938422253,
+          "bottom": 594.3136114831489
+        },
+        "visible": {
+          "left": 251.2397735632128,
+          "top": 487.5934784401511,
+          "right": 395.066319172581,
+          "bottom": 594.0000361656867
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_snarler_180 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 849.6770374856181,
+          "top": 488.52318022050406,
+          "right": 1064.0995471060041,
+          "bottom": 594.8993563533257
+        },
+        "visible": {
+          "left": 850.0624584136356,
+          "top": 489.1655484338665,
+          "right": 1063.8425998206592,
+          "bottom": 594.0000408546184
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053/ascension_snarler_180 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "ascension_snarler_180/sh4_sniffer_dog_male_053 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_snarler_180/sh4_sniffer_dog_male_053 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "ascension_snarler_180/sh4_sniffer_dog_male_053 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "ascension_snarler_180",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "ascension_snarler_180/sh4_sniffer_dog_male_053 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png"
+        ],
+        "expected": [
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png"
+        ]
+      }
+    },
+    {
+      "name": "ascension_snarler_180 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 215.90048341157404,
+          "top": 488.52318022050406,
+          "right": 430.32299303196,
+          "bottom": 594.8993563533257
+        },
+        "visible": {
+          "left": 216.15743069691902,
+          "top": 489.1655484338665,
+          "right": 429.9375721039425,
+          "bottom": 594.0000408546184
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 884.7246611333555,
+          "top": 487.1753780168681,
+          "right": 1029.0738322718275,
+          "bottom": 594.3136114831489
+        },
+        "visible": {
+          "left": 884.9337113449972,
+          "top": 487.5934784401511,
+          "right": 1028.7602569543653,
+          "bottom": 594.0000361656867
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_snarler_180/sh4_sniffer_dog_male_053 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_pendulum_039/sh3_insane_cancer_041 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_pendulum_039/sh3_insane_cancer_041 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_pendulum_039/sh3_insane_cancer_041 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_pendulum_039",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_insane_cancer_041",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_pendulum_039/sh3_insane_cancer_041 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+          "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+          "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_pendulum_039 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 284.3922920868344,
+          "top": 412.180317461233,
+          "right": 404.9286842736027,
+          "bottom": 564.3030533836907
+        },
+        "visible": {
+          "left": 284.8763739831668,
+          "top": 412.7854198316485,
+          "right": 404.44460237727037,
+          "bottom": 563.4559100651089
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 891.8171696603333,
+          "top": 357.3790080481967,
+          "right": 1008.617334121103,
+          "bottom": 595.8460104889349
+        },
+        "visible": {
+          "left": 892.320618645078,
+          "top": 357.8824570329414,
+          "right": 1007.7782524798619,
+          "bottom": 594.0000308782044
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_pendulum_039/sh3_insane_cancer_041 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_insane_cancer_041/sh3_pendulum_039 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041/sh3_pendulum_039 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041/sh3_pendulum_039 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_insane_cancer_041",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_pendulum_039",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_insane_cancer_041/sh3_pendulum_039 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+          "assets/sprites/sh3_pendulum_039.97153b22d0bc.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+          "assets/sprites/sh3_pendulum_039.97153b22d0bc.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 271.3826963964751,
+          "top": 357.3790080481967,
+          "right": 388.18286085724486,
+          "bottom": 595.8460104889349
+        },
+        "visible": {
+          "left": 272.22177803771626,
+          "top": 357.8824570329414,
+          "right": 387.67941187250017,
+          "bottom": 594.0000308782044
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_pendulum_039 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 875.0713462439754,
+          "top": 412.180317461233,
+          "right": 995.6077384307437,
+          "bottom": 564.3030533836907
+        },
+        "visible": {
+          "left": 875.5554281403078,
+          "top": 412.7854198316485,
+          "right": 995.1236565344113,
+          "bottom": 563.4559100651089
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_insane_cancer_041/sh3_pendulum_039 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_carrion_076",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_creeper_arcade",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_carrion_076 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 261.6482210618041,
+          "top": 509.1326286893777,
+          "right": 363.9088454781727,
+          "bottom": 594.7996424966385
+        },
+        "visible": {
+          "left": 261.9481055908844,
+          "top": 509.3325517087645,
+          "right": 363.6089609490924,
+          "bottom": 593.9999504190912
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 885.7681665183484,
+          "top": 558.3965216511735,
+          "right": 1033.6046324392762,
+          "bottom": 594.2853934456845
+        },
+        "visible": {
+          "left": 886.0535651012073,
+          "top": 558.8959691711766,
+          "right": 1033.2478842107025,
+          "bottom": 593.9999948628255
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_carrion_076/arcade_creeper_arcade pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_creeper_arcade",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_carrion_076",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 246.39539807830198,
+          "top": 558.3965216511735,
+          "right": 394.23186399922974,
+          "bottom": 594.2853934456845
+        },
+        "visible": {
+          "left": 246.75214630687566,
+          "top": 558.8959691711766,
+          "right": 393.94646541637087,
+          "bottom": 593.9999948628255
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_carrion_076 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 916.0911850394054,
+          "top": 509.1326286893777,
+          "right": 1018.351809455774,
+          "bottom": 594.7996424966385
+        },
+        "visible": {
+          "left": 916.3910695684857,
+          "top": 509.3325517087645,
+          "right": 1018.0519249266938,
+          "bottom": 593.9999504190912
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_creeper_arcade/origins_carrion_076 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "ascension_wanderer_178/ascension_snarler_180 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_wanderer_178/ascension_snarler_180 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "ascension_wanderer_178/ascension_snarler_180 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "ascension_wanderer_178",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "ascension_snarler_180",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "ascension_wanderer_178/ascension_snarler_180 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+        ],
+        "expected": [
+          "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+        ]
+      }
+    },
+    {
+      "name": "ascension_wanderer_178 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 279.22255632330376,
+          "top": 400.51114424853984,
+          "right": 369.63519233750935,
+          "bottom": 594.5890827936913
+        },
+        "visible": {
+          "left": 279.6643118738617,
+          "top": 400.65839609872586,
+          "right": 368.60442938620736,
+          "bottom": 594.0000753929473
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_snarler_180 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 849.6770374856181,
+          "top": 488.52318022050406,
+          "right": 1064.0995471060041,
+          "bottom": 594.8993563533257
+        },
+        "visible": {
+          "left": 850.0624584136356,
+          "top": 489.1655484338665,
+          "right": 1063.8425998206592,
+          "bottom": 594.0000408546184
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_wanderer_178/ascension_snarler_180 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "ascension_snarler_180/ascension_wanderer_178 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_snarler_180/ascension_wanderer_178 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "ascension_snarler_180/ascension_wanderer_178 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "ascension_snarler_180",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "ascension_wanderer_178",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "ascension_snarler_180/ascension_wanderer_178 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "assets/sprites/ascension_wanderer_178.3da19262874e.png"
+        ],
+        "expected": [
+          "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "assets/sprites/ascension_wanderer_178.3da19262874e.png"
+        ]
+      }
+    },
+    {
+      "name": "ascension_snarler_180 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 215.90048341157404,
+          "top": 488.52318022050406,
+          "right": 430.32299303196,
+          "bottom": 594.8993563533257
+        },
+        "visible": {
+          "left": 216.15743069691902,
+          "top": 489.1655484338665,
+          "right": 429.9375721039425,
+          "bottom": 594.0000408546184
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_wanderer_178 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 910.3648381800688,
+          "top": 400.51114424853984,
+          "right": 1000.7774741942744,
+          "bottom": 594.5890827936913
+        },
+        "visible": {
+          "left": 911.3956011313708,
+          "top": 400.65839609872586,
+          "right": 1000.3357186437164,
+          "bottom": 594.0000753929473
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "ascension_snarler_180/ascension_wanderer_178 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+        "after": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f",
+        "after": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh1_hanged_scratcher_011",
+      "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5876559701767609,
+      "visibleBounds": [
+        111,
+        18,
+        1604,
+        868
+      ]
+    },
+    {
+      "id": "sh1_hanged_scratcher_011",
+      "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.5431960511990883,
+      "visibleBounds": [
+        121,
+        18,
+        1368,
+        1065
+      ]
+    },
+    {
+      "id": "homecoming_schism_089",
+      "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "width": 1322,
+      "height": 1190,
+      "transparentFraction": 0.6521103751636812,
+      "visibleBounds": [
+        57,
+        89,
+        1276,
+        1094
+      ]
+    },
+    {
+      "id": "homecoming_schism_089",
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.899835677347639,
+      "visibleBounds": [
+        339,
+        363,
+        951,
+        925
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "width": 1475,
+      "height": 1066,
+      "transparentFraction": 0.5561338124463383,
+      "visibleBounds": [
+        48,
+        17,
+        1424,
+        1035
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "width": 1391,
+      "height": 1131,
+      "transparentFraction": 0.6134974043697612,
+      "visibleBounds": [
+        164,
+        18,
+        1185,
+        1116
+      ]
+    },
+    {
+      "id": "ascension_snarler_180",
+      "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.6632556697073728,
+      "visibleBounds": [
+        30,
+        34,
+        1694,
+        850
+      ]
+    },
+    {
+      "id": "ascension_snarler_180",
+      "path": "assets/sprites/ascension_snarler_180.88e712963625.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.6820138295491537,
+      "visibleBounds": [
+        184,
+        23,
+        1277,
+        1011
+      ]
+    },
+    {
+      "id": "sh3_pendulum_039",
+      "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.7862236569092129,
+      "visibleBounds": [
+        189,
+        40,
+        1177,
+        1285
+      ]
+    },
+    {
+      "id": "sh3_pendulum_039",
+      "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "width": 1086,
+      "height": 1449,
+      "transparentFraction": 0.7341025181524822,
+      "visibleBounds": [
+        15,
+        46,
+        1072,
+        1432
+      ]
+    },
+    {
+      "id": "sh3_insane_cancer_041",
+      "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "width": 1076,
+      "height": 1462,
+      "transparentFraction": 0.6124865870961508,
+      "visibleBounds": [
+        195,
+        32,
+        883,
+        1439
+      ]
+    },
+    {
+      "id": "sh3_insane_cancer_041",
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "width": 1363,
+      "height": 1154,
+      "transparentFraction": 0.5449055313045568,
+      "visibleBounds": [
+        97,
+        17,
+        1246,
+        1141
+      ]
+    },
+    {
+      "id": "origins_carrion_076",
+      "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6816515698409428,
+      "visibleBounds": [
+        112,
+        241,
+        1129,
+        1088
+      ]
+    },
+    {
+      "id": "origins_carrion_076",
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6436290632336968,
+      "visibleBounds": [
+        245,
+        137,
+        1087,
+        1129
+      ]
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.7235909312902536,
+      "visibleBounds": [
+        56,
+        148,
+        2119,
+        640
+      ]
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7658774058024088,
+      "visibleBounds": [
+        51,
+        133,
+        1480,
+        941
+      ]
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.8161443074544271,
+      "visibleBounds": [
+        237,
+        111,
+        841,
+        1424
+      ]
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "path": "assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.8315525054931641,
+      "visibleBounds": [
+        293,
+        62,
+        752,
+        1475
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh1_hanged_scratcher_011",
+      "facing": 1,
+      "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "file": "portrait-sh1_hanged_scratcher_011-right.png"
+    },
+    {
+      "id": "sh1_hanged_scratcher_011",
+      "facing": -1,
+      "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "file": "portrait-sh1_hanged_scratcher_011-left.png"
+    },
+    {
+      "id": "homecoming_schism_089",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "file": "portrait-homecoming_schism_089-right.png"
+    },
+    {
+      "id": "homecoming_schism_089",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "file": "portrait-homecoming_schism_089-left.png"
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "facing": 1,
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "file": "portrait-sh4_sniffer_dog_male_053-right.png"
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "facing": -1,
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "file": "portrait-sh4_sniffer_dog_male_053-left.png"
+    },
+    {
+      "id": "ascension_snarler_180",
+      "facing": 1,
+      "path": "assets/sprites/ascension_snarler_180.88e712963625.png",
+      "file": "portrait-ascension_snarler_180-right.png"
+    },
+    {
+      "id": "ascension_snarler_180",
+      "facing": -1,
+      "path": "assets/sprites/ascension_snarler_180.88e712963625.png",
+      "file": "portrait-ascension_snarler_180-left.png"
+    },
+    {
+      "id": "sh3_pendulum_039",
+      "facing": 1,
+      "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "file": "portrait-sh3_pendulum_039-right.png"
+    },
+    {
+      "id": "sh3_pendulum_039",
+      "facing": -1,
+      "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "file": "portrait-sh3_pendulum_039-left.png"
+    },
+    {
+      "id": "sh3_insane_cancer_041",
+      "facing": 1,
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "file": "portrait-sh3_insane_cancer_041-right.png"
+    },
+    {
+      "id": "sh3_insane_cancer_041",
+      "facing": -1,
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "file": "portrait-sh3_insane_cancer_041-left.png"
+    },
+    {
+      "id": "origins_carrion_076",
+      "facing": 1,
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "file": "portrait-origins_carrion_076-right.png"
+    },
+    {
+      "id": "origins_carrion_076",
+      "facing": -1,
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "file": "portrait-origins_carrion_076-left.png"
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "file": "portrait-arcade_creeper_arcade-right.png"
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "file": "portrait-arcade_creeper_arcade-left.png"
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "facing": 1,
+      "path": "assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "file": "portrait-ascension_wanderer_178-right.png"
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "facing": -1,
+      "path": "assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "file": "portrait-ascension_wanderer_178-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh1_hanged_scratcher_011",
+        "homecoming_schism_089"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7943693604591
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_hanged_scratcher_011",
+          "slot": 1,
+          "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+          "exterior": {
+            "left": 212.61238540407697,
+            "top": 461.5807161108215,
+            "right": 445.58962252985026,
+            "bottom": 594.7771752280914
+          },
+          "visible": {
+            "left": 213.07865072187371,
+            "top": 461.8915596560193,
+            "right": 445.1233572120535,
+            "bottom": 594.0000663650969
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00006636509692725667,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+            "args": [
+              -124,
+              -137.89067727272726,
+              281.8181818181818,
+              140.9090909090909
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "homecoming_schism_089",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+          "exterior": {
+            "left": 826.97536802379,
+            "top": 407.8478643058341,
+            "right": 1053.2670617476158,
+            "bottom": 594.5523211292347
+          },
+          "visible": {
+            "left": 827.7118747568211,
+            "top": 408.95262440538085,
+            "right": 1052.162301648069,
+            "bottom": 593.9999410794613
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00005892053866318747,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+            "args": [
+              -102.00831582633053,
+              -205.89116666666672,
+              248.80077030812328,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1322,
+            "height": 1190
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+        "assets/sprites/homecoming_schism_089.40895822f98f.png"
+      ],
+      "snapshots": [
+        "duel-sh1_hanged_scratcher_011--homecoming_schism_089-tick0.png",
+        "duel-sh1_hanged_scratcher_011--homecoming_schism_089-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "homecoming_schism_089",
+        "sh1_hanged_scratcher_011"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7943693604591
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_schism_089",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+          "exterior": {
+            "left": 226.73296876996233,
+            "top": 407.8478643058341,
+            "right": 453.0246624937881,
+            "bottom": 594.5523211292347
+          },
+          "visible": {
+            "left": 227.83772886950908,
+            "top": 408.95262440538085,
+            "right": 452.288155760757,
+            "bottom": 593.9999410794613
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00005892053866318747,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+            "args": [
+              -102.00831582633053,
+              -205.89116666666672,
+              248.80077030812328,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1322,
+            "height": 1190
+          }
+        },
+        {
+          "id": "sh1_hanged_scratcher_011",
+          "slot": 2,
+          "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+          "exterior": {
+            "left": 834.4104079877279,
+            "top": 461.5807161108215,
+            "right": 1067.387645113501,
+            "bottom": 594.7771752280914
+          },
+          "visible": {
+            "left": 834.8766733055246,
+            "top": 461.8915596560193,
+            "right": 1066.9213797957045,
+            "bottom": 594.0000663650969
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00006636509692725667,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+            "args": [
+              -124,
+              -137.89067727272726,
+              281.8181818181818,
+              140.9090909090909
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_schism_089.40895822f98f.png",
+        "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_schism_089--sh1_hanged_scratcher_011-tick0.png",
+        "duel-homecoming_schism_089--sh1_hanged_scratcher_011-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_sniffer_dog_male_053",
+        "ascension_snarler_180"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9192536063852
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "slot": 1,
+          "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "exterior": {
+            "left": 250.92619824575053,
+            "top": 487.1753780168681,
+            "right": 395.27536938422253,
+            "bottom": 594.3136114831489
+          },
+          "visible": {
+            "left": 251.2397735632128,
+            "top": 487.5934784401511,
+            "right": 395.066319172581,
+            "bottom": 594.0000361656867
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003616568665165687,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+            "args": [
+              -72.48931623931625,
+              -110.57688611111112,
+              157.5854700854701,
+              113.8888888888889
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1475,
+            "height": 1066
+          }
+        },
+        {
+          "id": "ascension_snarler_180",
+          "slot": 2,
+          "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "exterior": {
+            "left": 849.6770374856181,
+            "top": 488.52318022050406,
+            "right": 1064.0995471060041,
+            "bottom": 594.8993563533257
+          },
+          "visible": {
+            "left": 850.0624584136356,
+            "top": 489.1655484338665,
+            "right": 1063.8425998206592,
+            "bottom": 594.0000408546184
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00004085461841896176,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+            "args": [
+              -107.1590909090909,
+              -111.61853977272726,
+              232.95454545454544,
+              116.47727272727272
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+        "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+      ],
+      "snapshots": [
+        "duel-sh4_sniffer_dog_male_053--ascension_snarler_180-tick0.png",
+        "duel-sh4_sniffer_dog_male_053--ascension_snarler_180-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "ascension_snarler_180",
+        "sh4_sniffer_dog_male_053"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9192536063852
+        }
+      },
+      "geometries": [
+        {
+          "id": "ascension_snarler_180",
+          "slot": 1,
+          "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "exterior": {
+            "left": 215.90048341157404,
+            "top": 488.52318022050406,
+            "right": 430.32299303196,
+            "bottom": 594.8993563533257
+          },
+          "visible": {
+            "left": 216.15743069691902,
+            "top": 489.1655484338665,
+            "right": 429.9375721039425,
+            "bottom": 594.0000408546184
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00004085461841896176,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+            "args": [
+              -107.1590909090909,
+              -111.61853977272726,
+              232.95454545454544,
+              116.47727272727272
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "slot": 2,
+          "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "exterior": {
+            "left": 884.7246611333555,
+            "top": 487.1753780168681,
+            "right": 1029.0738322718275,
+            "bottom": 594.3136114831489
+          },
+          "visible": {
+            "left": 884.9337113449972,
+            "top": 487.5934784401511,
+            "right": 1028.7602569543653,
+            "bottom": 594.0000361656867
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003616568665165687,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+            "args": [
+              -72.48931623931625,
+              -110.57688611111112,
+              157.5854700854701,
+              113.8888888888889
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1475,
+            "height": 1066
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+        "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png"
+      ],
+      "snapshots": [
+        "duel-ascension_snarler_180--sh4_sniffer_dog_male_053-tick0.png",
+        "duel-ascension_snarler_180--sh4_sniffer_dog_male_053-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_pendulum_039",
+        "sh3_insane_cancer_041"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8868514055669
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_pendulum_039",
+          "slot": 1,
+          "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+          "exterior": {
+            "left": 284.3922920868344,
+            "top": 412.180317461233,
+            "right": 404.9286842736027,
+            "bottom": 564.3030533836907
+          },
+          "visible": {
+            "left": 284.8763739831668,
+            "top": 412.7854198316485,
+            "right": 404.44460237727037,
+            "bottom": 563.4559100651089
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -30.544089934891076,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+            "args": [
+              -56.35924479166666,
+              -190.17166666666665,
+              148.31380208333331,
+              162.29166666666666
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        },
+        {
+          "id": "sh3_insane_cancer_041",
+          "slot": 2,
+          "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+          "exterior": {
+            "left": 891.8171696603333,
+            "top": 357.3790080481967,
+            "right": 1008.617334121103,
+            "bottom": 595.8460104889349
+          },
+          "visible": {
+            "left": 892.320618645078,
+            "top": 357.8824570329414,
+            "right": 1007.7782524798619,
+            "bottom": 594.0000308782044
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000030878204370310414,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+            "args": [
+              -79.3630732292917,
+              -246.830309877551,
+              184.56528657974815,
+              250.7755102040816
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1076,
+            "height": 1462
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+        "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png"
+      ],
+      "snapshots": [
+        "duel-sh3_pendulum_039--sh3_insane_cancer_041-tick0.png",
+        "duel-sh3_pendulum_039--sh3_insane_cancer_041-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_insane_cancer_041",
+        "sh3_pendulum_039"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8868514055669
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_insane_cancer_041",
+          "slot": 1,
+          "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+          "exterior": {
+            "left": 271.3826963964751,
+            "top": 357.3790080481967,
+            "right": 388.18286085724486,
+            "bottom": 595.8460104889349
+          },
+          "visible": {
+            "left": 272.22177803771626,
+            "top": 357.8824570329414,
+            "right": 387.67941187250017,
+            "bottom": 594.0000308782044
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000030878204370310414,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+            "args": [
+              -79.3630732292917,
+              -246.830309877551,
+              184.56528657974815,
+              250.7755102040816
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1076,
+            "height": 1462
+          }
+        },
+        {
+          "id": "sh3_pendulum_039",
+          "slot": 2,
+          "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+          "exterior": {
+            "left": 875.0713462439754,
+            "top": 412.180317461233,
+            "right": 995.6077384307437,
+            "bottom": 564.3030533836907
+          },
+          "visible": {
+            "left": 875.5554281403078,
+            "top": 412.7854198316485,
+            "right": 995.1236565344113,
+            "bottom": 563.4559100651089
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -30.544089934891076,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+            "args": [
+              -56.35924479166666,
+              -190.17166666666665,
+              148.31380208333331,
+              162.29166666666666
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+        "assets/sprites/sh3_pendulum_039.97153b22d0bc.png"
+      ],
+      "snapshots": [
+        "duel-sh3_insane_cancer_041--sh3_pendulum_039-tick0.png",
+        "duel-sh3_insane_cancer_041--sh3_pendulum_039-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_carrion_076",
+        "arcade_creeper_arcade"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.817333692185
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_carrion_076",
+          "slot": 1,
+          "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "exterior": {
+            "left": 261.6482210618041,
+            "top": 509.1326286893777,
+            "right": 363.9088454781727,
+            "bottom": 594.7996424966385
+          },
+          "visible": {
+            "left": 261.9481055908844,
+            "top": 509.3325517087645,
+            "right": 363.6089609490924,
+            "bottom": 593.9999504190912
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00004958090880791133,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "id": "arcade_creeper_arcade",
+          "slot": 2,
+          "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "exterior": {
+            "left": 885.7681665183484,
+            "top": 558.3965216511735,
+            "right": 1033.6046324392762,
+            "bottom": 594.2853934456845
+          },
+          "visible": {
+            "left": 886.0535651012073,
+            "top": 558.8959691711766,
+            "right": 1033.2478842107025,
+            "bottom": 593.9999948628255
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000051371745257711154,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+            "args": [
+              -76.032,
+              -46.67403840000001,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+        "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png"
+      ],
+      "snapshots": [
+        "duel-origins_carrion_076--arcade_creeper_arcade-tick0.png",
+        "duel-origins_carrion_076--arcade_creeper_arcade-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "arcade_creeper_arcade",
+        "origins_carrion_076"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.817333692185
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_creeper_arcade",
+          "slot": 1,
+          "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+          "exterior": {
+            "left": 246.39539807830198,
+            "top": 558.3965216511735,
+            "right": 394.23186399922974,
+            "bottom": 594.2853934456845
+          },
+          "visible": {
+            "left": 246.75214630687566,
+            "top": 558.8959691711766,
+            "right": 393.94646541637087,
+            "bottom": 593.9999948628255
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.0000051371745257711154,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+            "args": [
+              -76.032,
+              -46.67403840000001,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "origins_carrion_076",
+          "slot": 2,
+          "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "exterior": {
+            "left": 916.0911850394054,
+            "top": 509.1326286893777,
+            "right": 1018.351809455774,
+            "bottom": 594.7996424966385
+          },
+          "visible": {
+            "left": 916.3910695684857,
+            "top": 509.3325517087645,
+            "right": 1018.0519249266938,
+            "bottom": 593.9999504190912
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00004958090880791133,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+        "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+      ],
+      "snapshots": [
+        "duel-arcade_creeper_arcade--origins_carrion_076-tick0.png",
+        "duel-arcade_creeper_arcade--origins_carrion_076-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "ascension_wanderer_178",
+        "ascension_snarler_180"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9192536063852
+        }
+      },
+      "geometries": [
+        {
+          "id": "ascension_wanderer_178",
+          "slot": 1,
+          "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+          "exterior": {
+            "left": 279.22255632330376,
+            "top": 400.51114424853984,
+            "right": 369.63519233750935,
+            "bottom": 594.5890827936913
+          },
+          "visible": {
+            "left": 279.6643118738617,
+            "top": 400.65839609872586,
+            "right": 368.60442938620736,
+            "bottom": 594.0000753929473
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00007539294733760471,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+            "args": [
+              -73.9784946236559,
+              -214.32563978494625,
+              154.12186379928315,
+              231.18279569892474
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "ascension_snarler_180",
+          "slot": 2,
+          "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "exterior": {
+            "left": 849.6770374856181,
+            "top": 488.52318022050406,
+            "right": 1064.0995471060041,
+            "bottom": 594.8993563533257
+          },
+          "visible": {
+            "left": 850.0624584136356,
+            "top": 489.1655484338665,
+            "right": 1063.8425998206592,
+            "bottom": 594.0000408546184
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00004085461841896176,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+            "args": [
+              -107.1590909090909,
+              -111.61853977272726,
+              232.95454545454544,
+              116.47727272727272
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+        "assets/sprites/ascension_snarler_180.216c2e6ba960.png"
+      ],
+      "snapshots": [
+        "duel-ascension_wanderer_178--ascension_snarler_180-tick0.png",
+        "duel-ascension_wanderer_178--ascension_snarler_180-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "ascension_snarler_180",
+        "ascension_wanderer_178"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9192536063852
+        }
+      },
+      "geometries": [
+        {
+          "id": "ascension_snarler_180",
+          "slot": 1,
+          "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+          "exterior": {
+            "left": 215.90048341157404,
+            "top": 488.52318022050406,
+            "right": 430.32299303196,
+            "bottom": 594.8993563533257
+          },
+          "visible": {
+            "left": 216.15743069691902,
+            "top": 489.1655484338665,
+            "right": 429.9375721039425,
+            "bottom": 594.0000408546184
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00004085461841896176,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+            "args": [
+              -107.1590909090909,
+              -111.61853977272726,
+              232.95454545454544,
+              116.47727272727272
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "ascension_wanderer_178",
+          "slot": 2,
+          "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+          "exterior": {
+            "left": 910.3648381800688,
+            "top": 400.51114424853984,
+            "right": 1000.7774741942744,
+            "bottom": 594.5890827936913
+          },
+          "visible": {
+            "left": 911.3956011313708,
+            "top": 400.65839609872586,
+            "right": 1000.3357186437164,
+            "bottom": 594.0000753929473
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00007539294733760471,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+            "args": [
+              -73.9784946236559,
+              -214.32563978494625,
+              154.12186379928315,
+              231.18279569892474
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+        "assets/sprites/ascension_wanderer_178.3da19262874e.png"
+      ],
+      "snapshots": [
+        "duel-ascension_snarler_180--ascension_wanderer_178-tick0.png",
+        "duel-ascension_snarler_180--ascension_wanderer_178-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+  "src/sprite-manifest.jsSHA256": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f",
+  "version": "0.9.6",
+  "ids": [
+    "sh1_hanged_scratcher_011",
+    "homecoming_schism_089",
+    "sh4_sniffer_dog_male_053",
+    "ascension_snarler_180",
+    "sh3_pendulum_039",
+    "sh3_insane_cancer_041",
+    "origins_carrion_076",
+    "arcade_creeper_arcade",
+    "ascension_wanderer_178"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}
