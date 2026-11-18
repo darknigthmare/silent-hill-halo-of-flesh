@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '07424e28e635f74efbbebc73a0837651d1067dd71cbe61fdba6d9cbd7f2af2cb';
+const BITMAP_REVISION = 'e35f509ae1d641d84d2297d4627d8b7ec454d4131913eff1c091da623645af64';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -22,10 +22,13 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
   "/assets/sprites/arcade_mama_117.10d203f5fa42.png",
   "/assets/sprites/arcade_mama_117.fcc669873d67.png",
+  "/assets/sprites/arcade_phantom_118.0b602ed82175.png",
+  "/assets/sprites/arcade_phantom_118.a63d532d68f2.png",
   "/assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
   "/assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
   "/assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
+  "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.74eb4c08943e.png",
   "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
   "/assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
   "/assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
@@ -280,6 +283,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
   "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
+  "/assets/sprites/sh4_patient_060.2ef3e24bfa30.png",
   "/assets/sprites/sh4_patient_060.735bcaec2736.png",
   "/assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
   "/assets/sprites/sh4_peter_walls_victim_12.977b306a917b.png",
@@ -302,6 +306,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_tremer_red_064.19432685fd21.png",
   "/assets/sprites/sh4_tremer_red_064.50aee55d75d4.png",
   "/assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
+  "/assets/sprites/sh4_twin_victim_059.79dac078f077.png",
   "/assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
   "/assets/sprites/sh4_wall_man_056.397d02f8b567.png",
   "/assets/sprites/sh4_wall_man_056.492d01451dc8.png",
@@ -339,11 +344,15 @@ const ESSENTIAL_SHELL = [
   // SPRITE_ASSETS_END
   // STAGE_BITMAP_ASSETS_BEGIN
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+  "/assets/stages/apartment_world.office.6001d447c296.png",
+  "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
   "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
   "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+  "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+  "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
   "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
   "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
@@ -355,6 +364,10 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
   "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+  "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+  "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+  "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+  "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
   "/assets/stages/woodside.clock-room.da94acd4e920.png",
   "/assets/stages/woodside.corridor.c6ac083599d0.png",
   "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",

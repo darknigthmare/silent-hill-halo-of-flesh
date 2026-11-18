@@ -676,5 +676,255 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Chapelle initiale de Silent Hill 3 (2003), devant l’autel aux trois vitraux. La table au livre ouvert et les cierges forment le plan rapproché. Caméra de profil, espace du duel, supports du mobilier et détail des vitraux reconstruits."
+  },
+  "toluca_prison": {
+    "stageId": "toluca_prison",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "toluca-courtyard-scaffold",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH2_09_TOLUCA_PRISON",
+      "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
+    ],
+    "layers": [
+      {
+        "id": "courtyard",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+            "sha256": "4d0ef11168ae0d2e727fc7bcbcdf91ea27a8f2aacdf6ee703d39d876b21f0fe9",
+            "bytes": 2024725,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "scaffold-panel",
+        "rect": [
+          0.34,
+          0,
+          0.32,
+          0.656
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+            "sha256": "3b120ad61785a179ac66a2020fe227569c048700c9db317a776daf3b8476f258",
+            "bytes": 1710277,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.021
+      }
+    ],
+    "notes": "Cour de Toluca avant placement des trois plaques. Le panneau du gibet et ses deux montants plongent dans l’obscurité. Éclairage et espace de circulation reconstruits pour la vue latérale."
+  },
+  "labyrinth": {
+    "stageId": "labyrinth",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "labyrinth-box-of-faces-control",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH2_10_THE_LABYRINTH",
+      "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+      "EXT12_REF_LABYRINTH_ROOM_3_20261101"
+    ],
+    "layers": [
+      {
+        "id": "control-chamber",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/labyrinth.control-chamber.60453a15467d.png",
+            "sha256": "60453a15467dbe6581cf73c7f45f23616ae4ad19540a1c4bebd7ed8a5bf6da90",
+            "bytes": 2631340,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "box-of-faces",
+        "rect": [
+          0.025,
+          0.385,
+          0.25,
+          0.405
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+            "sha256": "ae7971ba7a0f3e51b4097d454678f8315366eb75d40195ac4e9381060da534d6",
+            "bytes": 2111581,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.036
+      }
+    ],
+    "notes": "Chambre de commande du labyrinthe, cube à visages immobile sur son support orientable. Le relief, les parois et la disposition au sol sont adaptés à la vue latérale du duel."
+  },
+  "water_prison": {
+    "stageId": "water_prison",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "water-prison-2f-surveillance",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH4_04_WATER_PRISON_WORLD",
+      "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
+    ],
+    "layers": [
+      {
+        "id": "surveillance-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+            "sha256": "5f3849f044071b38e31920a2ba156a21727cbbab9930e0ad3f543e0c0ba4e8e3",
+            "bytes": 2740198,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "valve-pedestal",
+        "rect": [
+          0.7,
+          0.405,
+          0.14,
+          0.29
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+            "sha256": "7711109d1342ce450c9571ce7c81a68ff60237c4d53769ea55d9df41aa50de9e",
+            "bytes": 1984081,
+            "width": 1024,
+            "height": 1536
+          }
+        ],
+        "parallaxX": 0.022
+      }
+    ],
+    "notes": "Salle de surveillance du deuxième étage, lors du premier passage. Le volant sur son piédestal reste fixe auprès du puits. Le cadrage latéral, la profondeur de la salle et la position horizontale du piédestal sont adaptés au duel."
+  },
+  "apartment_world": {
+    "stageId": "apartment_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "south-ashfield-room105-desk",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH4_06_APARTMENT_WORLD",
+      "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+      "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
+    ],
+    "layers": [
+      {
+        "id": "office",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/apartment_world.office.6001d447c296.png",
+            "sha256": "6001d447c2965d4f3033093be4218284eb5a606d0ec5a8b341765f126ff07dc3",
+            "bytes": 2625586,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "tubular-chair",
+        "rect": [
+          0.414,
+          0.48,
+          0.15,
+          0.24
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+            "sha256": "0558fe1037f53b13d0dfb4fe56680265b8aeefd2a582482a333d775e7016654c",
+            "bytes": 546824,
+            "width": 1254,
+            "height": 1254
+          }
+        ],
+        "parallaxX": 0.018
+      }
+    ],
+    "notes": "Bureau 105 du concierge au premier passage. La table, le casier et la cloison grillagée se trouvent derrière la chaise vide. Le nouveau cadrage et le déplacement apparent de la chaise suivent la caméra du duel."
   }
 };
