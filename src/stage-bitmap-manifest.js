@@ -1119,5 +1119,67 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Seuil fermé de la première chambre rituelle. Le brasero gauche se déplace en parallaxe et le droit reste près du mur. Les panneaux de bois, le tatami et la porte suivent la référence photographique du parcours Crimson Water. Les flammes sont fixes."
+  },
+  "book_wood": {
+    "stageId": "book_wood",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "wood-guardian-clearing",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21",
+      "EXT9_BOM_WOOD_VIEW_06_20261026"
+    ],
+    "layers": [
+      {
+        "id": "wood-clearing",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/book_wood.wood-clearing.badc47213490.png",
+            "sha256": "badc4721349088d28b698b11eecde3286188b20520301521e93f4375c884cd8f",
+            "bytes": 2586365,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "bare-bough",
+        "rect": [
+          0.035,
+          0.405,
+          0.185,
+          0.327
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+            "sha256": "58fbcd47b40118115db72e81684420aec51625c22b6e440717e8a499865afba9",
+            "bytes": 648447,
+            "width": 1199,
+            "height": 1312
+          }
+        ],
+        "parallaxX": 0.022
+      }
+    ],
+    "notes": "Clairière terreuse de la zone Wood avec une bordure de pierres et d’arbres nus. La souche au bord gauche suit le mouvement de caméra du duel. Cadrage et proportions adaptés au versus."
   }
 };

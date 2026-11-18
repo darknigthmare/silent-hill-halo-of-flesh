@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '77a349540f35bc045e71905b4415c6ef42a945bb392ba506563aa1961bb1ff32';
+const BITMAP_REVISION = 'aeccb37ab98150b61585b7c6641c7c9ad326a8ef4993d6dfe7d7c4376616f289';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -349,6 +349,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
   "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
   "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+  "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+  "/assets/stages/book_wood.wood-clearing.badc47213490.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
