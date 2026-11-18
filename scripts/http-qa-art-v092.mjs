@@ -36,8 +36,15 @@ try{
  await page.selectOption('#spriteFilter','ready');await selectSubject(page,STATIC_SUBJECT,'film');
  await page.setViewportSize({width:430,height:932});check('inspector controls fit mobile width',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'02-mobile-inspector');
  await page.setViewportSize({width:1440,height:1000});await selectSubject(page,ANIMATED_SUBJECT,'sh1');
- const air=await page.evaluate(async()=>{const art=(await import('/src/sprite-manifest.js')).SPRITES.sh1_air_screamer_001;return {frames:art.frames.length,pixels:new Set(art.frames.map(f=>f.pixelSHA256)).size,fidelity:art.fidelity,steps:art.clips.idle.frames,loop:art.clips.idle.loop};});
- check('Air Screamer has three distinct candidate images and a loop without visual certification',air.frames===3&&air.pixels===3&&air.fidelity==='unverified'&&air.loop&&JSON.stringify(air.steps)==='[0,1,0,2]');
+ const air=await page.evaluate(async()=>{
+  const art=(await import('/src/sprite-manifest.js')).SPRITES.sh1_air_screamer_001;
+  const idle=art.clips.idle;
+  return {fidelity:art.fidelity,steps:idle.frames,loop:idle.loop,
+   idlePixels:new Set(idle.frames.map(index=>art.frames[index].pixelSHA256)).size,
+   flightPixels:art.frames[art.clips.walk.frames[0]].pixelSHA256,
+   idlePixelHashes:idle.frames.map(index=>art.frames[index].pixelSHA256)};
+ });
+ check('Air Screamer keeps its three-image idle loop and a separate horizontal flight pose',air.idlePixels===3&&JSON.stringify(air.steps)==='[0,1,0,2]'&&air.loop&&air.fidelity==='unverified'&&!!air.flightPixels&&!air.idlePixelHashes.includes(air.flightPixels));
  const sought=[];for(const tick of [0,6,12,18]){
   await page.locator('[data-inspect=tick]').evaluate((input,tick)=>{input.value=String(tick);input.dispatchEvent(new Event('input',{bubbles:true}));},tick);
   await page.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');

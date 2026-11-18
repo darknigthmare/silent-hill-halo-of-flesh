@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
 import {join,dirname} from 'node:path';
 import {tmpdir} from 'node:os';
+import {fileURLToPath} from 'node:url';
 import {matchesCampaignCandidate,resolvedHistoricalArtwork,readArtContinuation,readBrowserCampaignSubjects} from '../scripts/art-campaign-review.mjs';
 import {ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from '../scripts/art-campaign-tracking.mjs';
 
@@ -241,5 +242,25 @@ test('continuation reader rejects forged groups, source, exclusions, evidence an
   }
  ]){
   const {root}=await continuationFixture(t,mutate);await assert.rejects(readArtContinuation(root));
+ }
+});
+
+test('later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion', async () => {
+ const root = new URL('../', import.meta.url);
+ const review = await readArtContinuation(fileURLToPath(root));
+ const {assets} = JSON.parse(await readFile(new URL('art/registry.json', root)));
+ for (const id of ['sh1_monster_cybil_017', 'homecoming_curtis_ackers']) {
+  const intake = review.intake.entries.find(entry => entry.fighter.id === id);
+  const row = review.rows.find(entry => entry.entityId === id);
+  assert.equal(intake.generationExcluded, true);
+  assert.equal(row.status, 'blocked');
+  for (const purpose of ['selection', 'combat']) {
+   const delivery = review.purposeDeliveries.find(item => item.id === id && item.purpose === purpose);
+   assert.equal(delivery.source, intake.fighter.source);
+   assert.equal(delivery.reviewedWithSource, true);
+   assert.equal(resolvedHistoricalArtwork(row, assets[id], review, {purpose}), true);
+   const unreviewed = {...review, purposeDeliveries: [{...delivery, reviewedWithSource: false}]};
+   assert.equal(resolvedHistoricalArtwork(row, assets[id], unreviewed, {purpose}), false);
+  }
  }
 });

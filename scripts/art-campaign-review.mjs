@@ -108,19 +108,23 @@ export function readPurposeDeliveries(root){
     !nonempty(row.source)||!safeArtifact(row.path)||!row.path.startsWith('assets/sprites/'+row.fighterId+'.')||
     !/^assets\/sprites\/[a-z0-9_.-]+\.png$/.test(row.path)||typeof row.sha256!=='string'||!/^[a-f0-9]{64}$/.test(row.sha256)||
     !row.path.includes('.'+row.sha256.slice(0,12)+'.'))throw Error('Invalid exact artwork delivery '+path+':imports');
-   deliveries.push({id:row.fighterId,source:row.source,file:row.path,sha256:row.sha256,bytes:row.bytes,
+   const reviewedWithSource = row.singleSubjectReviewed === true && Number.isSafeInteger(row.bytes) && row.bytes > 0 &&
+    typeof row.sourceSHA256 === 'string' && /^[a-f0-9]{64}$/.test(row.sourceSHA256) &&
+    Array.isArray(row.references) && row.references.some(ref => evidence([ref?.url]) && /^[a-f0-9]{64}$/.test(ref?.sha256));
+   deliveries.push({id:row.fighterId,source:row.source,file:row.path,sha256:row.sha256,bytes:row.bytes,reviewedWithSource,
     existingSelectionReference:row.existingSelectionReference,purpose,journal:path});
   }
  }
  return deliveries;
 }
 
-function deliveredUse(art,continuation,purpose){
+function deliveredUse(art,continuation,purpose,requireReviewedSource = false){
  if(!Array.isArray(continuation.purposeDeliveries))return false;
  const frames=purpose==='selection'?[art.portrait]:art.combatView==='side-view-candidate'&&hasCombatSprite(art)&&validDeliveredRaster(art.fighterId,art.portrait)?
   art.frames.filter(frame=>frame.purpose==='combat'&&frame.view==='side-view'&&frame.path!==art.portrait.path):[];
  return frames.some(frame=>validDeliveredRaster(art.fighterId,frame)&&continuation.purposeDeliveries.some(delivery=>
   record(delivery)&&delivery.id===art.fighterId&&delivery.purpose===purpose&&delivery.file===frame.path&&
+  (!requireReviewedSource||(delivery.reviewedWithSource===true&&delivery.bytes===frame.bytes&&delivery.source===art.source))&&
   (delivery.source===undefined||delivery.source===art.source)&&
   (delivery.sha256===undefined||delivery.sha256===frame.sha256)));
 }
@@ -196,10 +200,11 @@ export function resolvedHistoricalArtwork(row,art,continuation,{purpose='any'}={
  const matches=continuation.rows.filter(item=>item?.rowId===row.rowId),entries=continuation.intake.entries.filter(entry=>entry?.fighter?.id===row.entityId);
  if(matches.length!==1||entries.length!==1)return false;
  const item=matches[0],entry=entries[0],fragment=continuation.assets[row.entityId];
- if(record(entry)&&record(entry.fighter)&&nonempty(entry.fighter.source)&&entry.generationExcluded===false&&entry.workbookRowId===row.rowId&&
+ // An exclusion belongs to its intake. A reviewed later delivery documents current artwork independently.
+ if(record(entry)&&record(entry.fighter)&&nonempty(entry.fighter.source)&&typeof entry.generationExcluded==='boolean'&&entry.workbookRowId===row.rowId&&
   Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)&&exactRow(item,row.entityId)&&item.status==='blocked'&&item.group===entry.group&&record(art)&&art.fighterId===row.entityId&&art.source===entry.fighter.source&&
   art.singleSubjectReviewed===true&&art.fidelity==='unverified'&&art.status==='integrated-candidate'&&
-  ((purpose!=='combat'&&deliveredUse(art,continuation,'selection'))||(purpose!=='selection'&&deliveredUse(art,continuation,'combat'))))return true;
+  ((purpose!=='combat'&&deliveredUse(art,continuation,'selection',entry.generationExcluded))||(purpose!=='selection'&&deliveredUse(art,continuation,'combat',entry.generationExcluded))))return true;
  if(!record(entry)||!record(entry.fighter)||!nonempty(entry.fighter.source)||!Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)||
   !exactRow(item,row.entityId)||item.status!=='implemented-candidate'||item.group!==entry.group||entry.workbookRowId!==row.rowId||
   entry.generationExcluded!==false||!nonempty(item.limits)||!evidence(item.evidence)||!artifacts(item.artifacts)||
