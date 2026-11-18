@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-observations-and-rivals-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '10a10d092e5f41c51ae34cfa47ec46d81691fd1cb0cc9a3146879981d6919939';
+const BITMAP_REVISION = 'c7439f5388602978efe2a074dbc66992fa1c27f9e19927ae45fb4dd0baf1da1a';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -374,6 +374,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
   "/assets/stages/book_wood.wood-clearing.badc47213490.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+  "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+  "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
   "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
@@ -492,6 +494,7 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/static_beneath_st_amelia.ending.345fe853f2ea.webp',
   '/assets/chronicles/fog_of_alessa.rival.01b4d120d813.webp',
   '/assets/chronicles/james_sentence.rival.891ccb039b52.webp',
+  '/assets/chronicles/james_sentence.sighting.52ea5680fe31.webp',
   '/assets/chronicles/travis_mirrors.rival.779163d914f5.webp',
   '/assets/chronicles/alex_home.rival.3833ff314d37.webp',
   '/assets/chronicles/murphy_rain.rival.ef82a4c07ea9.webp',

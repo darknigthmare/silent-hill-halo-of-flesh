@@ -159,6 +159,12 @@ const ARTWORK = {
     }
   },
   "james_sentence": {
+    "sighting": {
+      "fighterId": "sh2_lying_figure_020",
+      "path": "assets/chronicles/james_sentence.sighting.52ea5680fe31.webp",
+      "alt": "Depuis une porte entrouverte, le faisceau éclaire de profil le torse replié et les jambes d’un Lying Figure.",
+      "caption": "À Wood Side, une semelle racle le carrelage. La silhouette se fige dans la lumière."
+    },
     "intro": {
       "path": "assets/chronicles/james_sentence.intro.2475b8ca70a5.webp",
       "alt": "Dans un couloir des appartements Wood Side, James s’immobilise, la lettre de Mary à la main."

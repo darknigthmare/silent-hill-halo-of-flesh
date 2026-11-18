@@ -1309,5 +1309,66 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "La salle est représentée avant la restitution de la statue. Le meuble aux coffres occupe le bord gauche et laisse le socle éclairé visible au centre."
+  },
+  "brookhaven_sh3": {
+    "stageId": "brookhaven_sh3",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "leonard-basin-below-c4",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_12_NIGHTMARE_HOSPITAL"
+    ],
+    "layers": [
+      {
+        "id": "leonard-basin",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+            "sha256": "1b105f5aef29c411914163578795af1fe50a6d4e790ba27524abd681b693beb4",
+            "bytes": 2275719,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "access-ladder",
+        "rect": [
+          0.016,
+          0,
+          0.205,
+          0.695
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+            "sha256": "43a8e52282cc823a17e37279bb96bf26e157e5d05214f9162fb91c1531ad8003",
+            "bytes": 761708,
+            "width": 887,
+            "height": 1774
+          }
+        ],
+        "parallaxX": 0.025
+      }
+    ],
+    "notes": "Salle inondée sous C4. Les brosses de fond restent décoratives. La position latérale de l’échelle et la lumière sont des choix de composition pour le duel."
   }
 };
