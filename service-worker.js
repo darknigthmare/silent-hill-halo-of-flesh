@@ -1,5 +1,5 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicles-rivals-wave11-20261118';
+const CACHE_REVISION = 'chronicles-villa-sighting-20261118';
 // BITMAP_REVISION_BEGIN
 const BITMAP_REVISION = 'aeccb37ab98150b61585b7c6641c7c9ad326a8ef4993d6dfe7d7c4376616f289';
 // BITMAP_REVISION_END
@@ -455,6 +455,7 @@ const ESSENTIAL_SHELL = [
   '/assets/chronicles/room_21.ending.936178291280.webp',
   '/assets/chronicles/trauma_together.intro.db1929b7a0b4.webp',
   '/assets/chronicles/trauma_together.ending.5209aa4cc455.webp',
+  '/assets/chronicles/maya_villa.sighting.64d66e28683a.jpg',
   '/assets/chronicles/maya_villa.intro.2a8d87331e10.webp',
   '/assets/chronicles/maya_villa.ending.1703f9f04378.webp',
   '/assets/chronicles/murphy_rain.intro.f5cc6b7b961b.webp',

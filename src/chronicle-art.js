@@ -54,6 +54,12 @@ const ARTWORK = {
     }
   },
   "maya_villa": {
+    "sighting": {
+      "fighterId": "shortmessage_sakura_head_150",
+      "path": "assets/chronicles/maya_villa.sighting.64d66e28683a.jpg",
+      "alt": "Au seuil d’un appartement de la Villa, des fleurs roses masquent le visage de Sakura Head. Des pétales jonchent l’escalier.",
+      "caption": "Sakura Head attend sur le palier de la Villa, éclairé par la fenêtre de l’escalier."
+    },
     "intro": {
       "path": "assets/chronicles/maya_villa.intro.2a8d87331e10.webp",
       "alt": "Dans un appartement de la Villa, une lampe éclaire un mur et une fenêtre couverts de papiers."

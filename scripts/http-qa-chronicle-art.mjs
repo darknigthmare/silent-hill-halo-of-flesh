@@ -19,6 +19,8 @@ for (const wave of [7, 8, 9, 10]) {
 }
 const rivalJournal = new URL('../docs/production/wave10-story/rivals.json', import.meta.url);
 outputs.push(...JSON.parse(await readFile(rivalJournal, 'utf8')).outputs);
+const sightingJournal = new URL('../docs/production/wave13-story/sightings.json', import.meta.url);
+outputs.push(...JSON.parse(await readFile(sightingJournal, 'utf8')).outputs);
 const selected = process.env.QA_STORY_ROUTES?.split(',');
 const routes = CHRONICLES.filter(route => chronicleArtwork(route.id) && (!selected || selected.includes(route.id)));
 const fallback = CHRONICLES.find(route => !chronicleArtwork(route.id));
@@ -123,6 +125,17 @@ try {
       verify('unillustrated route returns to procedural artwork', !await hero.isVisible() && await hero.getAttribute('src') === null);
       await routeButton.click();
     }
+    await page.click('#previewRoster');
+    const scene = page.locator('#modalRoster .manifestation-scene');
+    if (art.sighting) {
+      await scene.locator('img').waitFor({ state: 'visible' });
+      verify('roster displays the authored encounter', (await scene.locator('img').getAttribute('src')).endsWith(art.sighting.path)
+        && await scene.locator('img').getAttribute('alt') === art.sighting.alt
+        && await scene.locator('figcaption').textContent() === art.sighting.caption);
+    } else {
+      verify('other rosters omit the encounter illustration', await scene.count() === 0);
+    }
+    await page.click('#closeRoster');
     const dossier = page.locator('#dossierEnding');
     const plan = chronicleEncounterPlan(id);
     const missing = plan.queue.filter(fighterId => !combatSpriteFor(fighterId));
@@ -254,7 +267,7 @@ try {
   await offline.setOffline(true);
   const navigation = await tab.goto(base + '/modules/chronicles.html');
   check('offline archive opens from service worker', navigation.fromServiceWorker() && navigation.status() === 200);
-  for (const { path, sha256, width, height } of assets) {
+  for (const { path, sha256, width, height, mimeType = 'image/webp' } of assets) {
     const actual = await tab.evaluate(async path => {
       const response = await fetch('/' + path);
       const blob = await response.blob();
@@ -264,7 +277,7 @@ try {
       bitmap.close();
       return { offline: !navigator.onLine, status: response.status, type: blob.type, dimensions, sha256: Array.from(new Uint8Array(digest), n => n.toString(16).padStart(2, '0')).join('') };
     }, path);
-    check('offline exact and decodable / ' + path, actual.offline && actual.status === 200 && actual.type === 'image/webp' && actual.sha256 === sha256 && actual.dimensions[0] === width && actual.dimensions[1] === height);
+    check('offline exact and decodable / ' + path, actual.offline && actual.status === 200 && actual.type === mimeType && actual.sha256 === sha256 && actual.dimensions[0] === width && actual.dimensions[1] === height);
   }
   for (const route of CHRONICLES) {
     await tab.locator('.route-button').filter({ hasText: route.title }).click();

@@ -14,3 +14,18 @@ html,body{height:100%;overflow:hidden}.chronicles-body{height:100%;overflow:hidd
 .dossier-ending summary{cursor:pointer;font-size:.9rem;width:fit-content}
 .dossier-ending summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .dossier-ending img{width:100%;height:auto;margin-top:.7rem}
+
+.manifestation-scene {
+  grid-column: 1 / -1;
+  margin: 0;
+  align-self: start;
+}
+.manifestation-scene img {
+  display: block;
+  width: 100%;
+  max-height: 48vh;
+  object-fit: contain;
+  background: #070a08;
+}
+.manifestation-scene img[hidden] { display: none; }
+.manifestation-scene figcaption { margin-top: .5rem; color: #b5bcb4; }

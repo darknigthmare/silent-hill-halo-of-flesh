@@ -69,6 +69,17 @@ function renderEncounterPath(){
 }
 function openRoster(){
   els.modalRouteTitle.textContent=selected.title;els.modalRoster.textContent='';
+  const sighting = chronicleArtwork(selected.id)?.sighting;
+  if (sighting && selected.fighters.includes(sighting.fighterId)) {
+    const figure = document.createElement('figure');
+    figure.className = 'manifestation-scene';
+    const image = document.createElement('img');
+    const caption = document.createElement('figcaption');
+    caption.textContent = sighting.caption;
+    figure.append(image, caption);
+    els.modalRoster.append(figure);
+    setChronicleImage(image, sighting);
+  }
   selected.fighters.forEach(id=>{const f=getFighter(id),card=document.createElement('article');card.className='modal-fighter';const canvas=document.createElement('canvas');canvas.width=300;canvas.height=230;card.append(canvas);const copy=document.createElement('div');copy.innerHTML=`<b>${escapeHTML(f.name)}</b><small>${escapeHTML(f.game)} · ${escapeHTML(f.signature)}</small>`;card.append(copy);els.modalRoster.append(card);renderPortrait(canvas,f,{time:performance.now()});});
   els.rosterModal.classList.remove('hidden');
 }
