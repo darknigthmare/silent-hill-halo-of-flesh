@@ -56,6 +56,32 @@ Les 840 actions ouvertes comprennent toujours 93 P0.
 [Contrôle d’import](batches/art92-summary.json) ·
 [QA ciblée](../INTEGRATION_QA_2026-11-02-art92.json).
 
+## Audit des candidats — 17 novembre 2026
+
+L’[audit des 154 sprites candidats](SPRITE_REFERENCE_AUDIT_2026-11-17.md)
+confronte chaque asset à son profil de roster et à sa référence documentée :
+identité, édition, contrat de poses, calibrage et cohérence du manifeste
+runtime. Il relève 0 anomalie bloquante, mais 4 identités à arbitrer
+(`sh2_lying_figure_crawling_021`, `sh3_numb_body_medium`,
+`film_lying_figure_return_to_silent_hill`, `sh4_greedy_worm_069`), 1 édition
+à préciser (`film_mannequin_monster_176`, Revelation 2012) et 11 rattachements
+de variante non résolvables par ID. Il ne compare aucun pixel à une capture
+source et ne certifie aucune fidélité 1:1.
+
+Regénération : `npm run audit:references`.
+
+## Dossier d’authoring — 17 novembre 2026
+
+Le [dossier d’authoring](AUTHORING_BRIEF_2026-11-17.md) recense les **76 profils
+sans image acceptée** et les **117 arènes sans bitmap**. Pour chaque entrée, il
+reprend la base canonique déjà documentée, les gestes observés, les références,
+les contraintes et le blocage réel à lever (« capture à relever »). Il ne produit
+aucune image et ne certifie aucune fidélité 1:1 : il sert à préparer une
+production conforme au lore du projet.
+
+Regénération : `npm run brief:assets` (données lues dans `data/`,
+`src/production-reference.js` et `src/stage-bitmap-manifest.js`).
+
 ## Campagne ART144 — 1er novembre 2026
 
 Les 144 profils initialement sans PNG ont tous une disposition individualisée :
