@@ -1,3 +1,4 @@
+import {checkRecoveredFighters} from './qa-recovered-fighters.mjs';
 import {resolve} from 'node:path';
 import {CHRONICLES, getFighter, getStage} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
@@ -78,6 +79,41 @@ async function checkSighting(page, module, base, output, report, check, {routeId
   report.captures.push(capture);
 }
 
+
+async function checkColinSelection(page, module, base, output, report, check) {
+  const id = 'film_colin_the_janitor_174';
+  const portrait = SPRITES[id].portrait;
+  check('Colin has the recovered film portrait',
+    portrait.sha256 === 'e51afcfc4fe22e6cc7902f5693bd5302e0f3418b96a6498b4f5f1fe4045ecc52');
+  await page.goto(base);
+  await page.locator('[data-mode="versus"]').first().click();
+  await module.locator('#slotP1').click();
+  await module.locator('#search').fill(getFighter(id).name);
+  const canvas = module.locator('#p1Portrait');
+  await canvas.evaluate((element, path) => {
+    const context = element.getContext('2d');
+    const draw = context.drawImage;
+    context.drawImage = function (image, ...args) {
+      const result = draw.call(this, image, ...args);
+      if (image instanceof HTMLImageElement && image.complete && image.currentSrc && image.naturalWidth > 0
+        && new URL(image.currentSrc).pathname === '/' + path) {
+        element.dataset.recoveredPortrait = JSON.stringify({path, width: image.naturalWidth, height: image.naturalHeight});
+        context.drawImage = draw;
+      }
+      return result;
+    };
+  }, portrait.path);
+  await module.locator('#roster [data-id="' + id + '"]').click();
+  await module.locator('#p1Portrait[data-sprite-id="' + id + '"][data-recovered-portrait][data-art-status="raster"]').waitFor();
+  const decoded = JSON.parse(await canvas.getAttribute('data-recovered-portrait'));
+  check('The player-one selection card painted Colin at its native source dimensions',
+    decoded.path === portrait.path && decoded.width === portrait.width && decoded.height === portrait.height);
+  report.colinSelection = decoded;
+  const capture = '10-colin-selection.png';
+  await module.locator('#p1Card').screenshot({path: resolve(output, capture)});
+  report.captures.push(capture);
+}
+
 export async function checkWave14(browser, base, output, report, check) {
   const context = await browser.newContext({viewport: {width: 1440, height: 1000}, serviceWorkers: 'block'});
   try {
@@ -92,6 +128,14 @@ export async function checkWave14(browser, base, output, report, check) {
       ids: ['sh3_numb_body_small_037', 'sh3_leonard_wolf_048'], stageId: 'brookhaven_sh3', layerIds: ['leonard-basin', 'access-ladder'],
       reportKey: 'brookhavenDraws', capture: '06-leonard-brookhaven.png'
     });
+    check('Scarlet has the new spider-form side view',
+      SPRITES.homecoming_scarlet_spider_form_095.frames[0].sha256 === 'fadeb11172db009aab024ad3720de17310292a2a030620175c4b5c7889bfb3b5');
+    await checkDuel(page, module, base, output, report, check, {
+      ids: ['homecoming_scarlet_spider_form_095', 'homecoming_siam_090'], stageId: 'historical_society', layerIds: ['exhibition-room', 'damaged-display-case'],
+      reportKey: 'scarletHistoricalDraws', capture: '09-scarlet-siam-historical-society.png'
+    });
+    await checkColinSelection(page, module, base, output, report, check);
+    await checkRecoveredFighters(page, module, base, output, report, check, checkDuel);
     for (const fixture of [
       {routeId: 'maya_villa', fighterId: 'shortmessage_sakura_head_150', reportKey: 'mayaSighting', capture: '05-maya-manifestation.png'},
       {routeId: 'james_sentence', fighterId: 'sh2_lying_figure_020', reportKey: 'jamesSighting', capture: '07-james-manifestation.png'},

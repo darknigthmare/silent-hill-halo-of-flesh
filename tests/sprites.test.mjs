@@ -9,17 +9,26 @@ import {spriteFor,spriteCoverage,poseKey,frameFor,rasterPlacement,SpriteCache,dr
 const air=getFighter('sh1_air_screamer_001'),film=getFighter('film_red_pyramid_film_175'),art=spriteFor(air),f=art.frames[0];
 const missing=ROSTER.find(fighter=>!spriteFor(fighter));
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const registeredFrames=Object.values(SPRITES).flatMap(asset=>[asset.portrait,...asset.frames]);
 function harness({fail=false,hang=false,wrong=false,delay=0,...options}={}){
  const images=[];let pending=0,peak=0;
  const cache=new SpriteCache({url:x=>x,timeout:80,...options,createImage:()=>{
   const im={naturalWidth:f.width,naturalHeight:f.height,decode:async()=>{}};
-  Object.defineProperty(im,'src',{set(path){const registered=Object.values(SPRITES).flatMap(asset=>asset.frames).find(frame=>frame.path===path)||f;im.naturalWidth=registered.width;im.naturalHeight=registered.height;images.push(im);pending++;peak=Math.max(peak,pending);if(hang)return;setTimeout(()=>{pending--;if(wrong)im.naturalWidth=4;if(fail)im.onerror?.();else im.onload?.();},delay);}});return im;
+  Object.defineProperty(im,'src',{set(path){const registered=registeredFrames.find(frame=>frame.path===path)||f;im.naturalWidth=registered.width;im.naturalHeight=registered.height;images.push(im);pending++;peak=Math.max(peak,pending);if(hang)return;setTimeout(()=>{pending--;if(wrong)im.naturalWidth=4;if(fail)im.onerror?.();else im.onload?.();},delay);}});return im;
  }});return {cache,images,get peak(){return peak;}};
 }
 function ctx(){const calls=[],gradient={addColorStop(){}};return new Proxy({calls,canvas:{width:720,height:500},createLinearGradient:()=>gradient},{get:(o,k)=>k in o?o[k]:(...a)=>calls.push([k,...a])});}
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('raster coverage counts real exact-ID assets, not roster entries or resized copies',()=>{
- const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,1);
+ const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,2);
+});
+test('Scarlet crawls through three lateral drawings and returns to rest on release',()=>{
+ const scarlet=spriteFor('homecoming_scarlet_spider_form_095');
+ const ticks=[0,7,14,21,28];
+ const frames=ticks.map(frame=>frameFor(scarlet,{moving:true,frame}));
+ assert.deepEqual(frames.map(image=>image.sha256.slice(0,12)),['fadeb11172db','11cdb8a63cd5','3679e9e24bab','11cdb8a63cd5','fadeb11172db']);
+ assert.equal(frameFor(scarlet,{moving:false,frame:14}),scarlet.frames[0]);
+ assert.ok(frames.every(image=>image.bodyHeight===scarlet.frames[0].bodyHeight));
 });
 test('film bitmap is not silently used for the SH2 original or spear',()=>{
  const filmArt=spriteFor(film),knife=spriteFor('sh2_red_pyramid_thing_great_knife_029'),spear=spriteFor('sh2_red_pyramid_thing_spear_030');
@@ -121,19 +130,20 @@ test('every actual sprite path is in the generated offline shell',async()=>{
 test('portrait orientation combines presentation side with a left-facing native frame',async()=>{
  const h=harness();await h.cache.load(f);
  for(const explicit of [false,true])for(const facing of [-1,1]){
-  const portrait={...art.portrait};if(explicit)portrait.facing=-1;else delete portrait.facing;
+  const portrait={...f,purpose:'selection'};if(explicit)portrait.facing=-1;else delete portrait.facing;
   const left={...art,frames:[{...f,facing:-1}],portrait},c=ctx(),canvas={width:720,height:500,dataset:{},getContext:()=>c,setAttribute(){}};
   paintRasterPortrait(canvas,air,{cache:h.cache,facing,registry:{[air.id]:left}});
   assert.ok(c.calls.some(x=>x[0]==='scale'&&x[1]===-facing));
  }
 });
 test('a portrait paints its successful decode even when the next queued image evicts it before the callback',async()=>{
- const cost=f.width*f.height*4,h=harness({maxBytes:cost+1,concurrency:1}),c=ctx();
+ const portrait=art.portrait, cost=Math.max(portrait.width*portrait.height, f.width*f.height)*4;
+ const h=harness({maxBytes:cost+1,concurrency:1}),c=ctx();
  const canvas={width:300,height:200,dataset:{},getContext:()=>c,setAttribute(){}};
  paintRasterPortrait(canvas,air,{cache:h.cache});
- const first=h.cache.load(f),second=h.cache.load({...f,path:'portrait-next-in-queue'});
+ const first=h.cache.load(portrait),second=h.cache.load(f);
  assert.ok((await Promise.all([first,second])).every(Boolean));
- assert.equal(h.cache.status(f.path),'absent','the full-size first frame really was evicted');
+ assert.equal(h.cache.status(portrait.path),'absent','the full-size portrait really was evicted');
  assert.equal(canvas.dataset.artStatus,'raster','painted pixels remain in the card');
  assert.ok(c.calls.some(call=>call[0]==='drawImage'&&call[1]===h.images[0]));
  assert.ok(h.cache.bytes<=h.cache.maxBytes);assert.equal(h.cache.reservedBytes,0);

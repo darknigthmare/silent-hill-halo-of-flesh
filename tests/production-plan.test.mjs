@@ -217,7 +217,7 @@ test('implementation progress maps to real hooks while every unproduced artistic
  }
  for(const row of plan.tasks.filter(row=>row.id.endsWith(':art')))
   assert.equal(row.status,SPRITES[row.entityId]?.frames.length>0?'En cours':'À faire',row.id);
- assert.equal(plan.metrics.animatedClips,1);assert.equal(plan.metrics.certifiedOneToOne,0);
+ assert.equal(plan.metrics.animatedClips,2);assert.equal(plan.metrics.certifiedOneToOne,0);
 });
 
 function roleFixture(){

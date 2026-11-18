@@ -150,11 +150,42 @@ try{
     const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id),isBatch11=batch11.includes(id),isBatch12=batch12.includes(id);
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
     const isTwin=id===twinId;
-    check(id+': exact source owns its static idle and only its declared additional stills',art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===(isBatch10?4:isTwin?2:1)&&Object.keys(art.clips).length===(isBatch10?4:isTwin?2:1)&&art.clips.idle?.frames.length===1&&art.clips.idle.frames[0]===0&&art.animatedClips===0&&(!isTwin||art.clips[twinTaunt]?.frames.length===1&&art.clips[twinTaunt].frames[0]===1&&art.clips[twinTaunt].loop===false&&art.frames[0].path!==art.frames[1].path)&&(!isBatch10||batch10Poses.every((pose,i)=>art.clips[pose]?.frames.length===1&&art.clips[pose].frames[0]===i+1&&art.clips[pose].loop===false)&&new Set(art.frames.map(frame=>frame.pixelSHA256)).size===4),art);
+    const laterClips = {
+      sh3_nurse_revolver_044: {guard: [1]},
+      homecoming_nurse: {hurt: [1]},
+      homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]}
+    }[id] || {};
+    const expectedClips = {idle: [0], ...laterClips};
+    if (isTwin) expectedClips[twinTaunt] = [1];
+    if (isBatch10) batch10Poses.forEach((pose, index) => { expectedClips[pose] = [index + 1]; });
+    const expectedIndices = new Set(Object.values(expectedClips).flat());
+    const animatedCount = Object.values(expectedClips).filter(indices => new Set(indices).size > 1).length;
+    check(id+': exact source owns every declared frame and clip',
+      art.fighterId === id && art.source === exactSource && fighter.source === exactSource && fighter.year === exactYear
+      && art.status === 'integrated-candidate' && art.fidelity === 'unverified'
+      && art.frames.length === expectedIndices.size && new Set(art.frames.map(frame=>frame.pixelSHA256)).size === expectedIndices.size
+      && art.animatedClips === animatedCount && Object.keys(art.clips).length === Object.keys(expectedClips).length
+      && Object.entries(expectedClips).every(([pose, indices]) =>
+        JSON.stringify(art.clips[pose]?.frames) === JSON.stringify(indices)
+        && (pose === 'idle' || art.clips[pose].loop === (new Set(indices).size > 1))), art);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){
     await verifyFile(frame,id+'/image-'+frameIndex);
+    if(frameIndex>0&&Object.keys(laterClips).length){
+      const [pose, indices]=Object.entries(laterClips).find(([, sequence])=>sequence.includes(frameIndex));
+      await page.selectOption('[data-inspect=pose]',pose);
+      const clip=art.clips[pose];
+      const tick=indices.slice(0,indices.indexOf(frameIndex)).reduce((sum,_,i)=>sum+(clip.frameTicks?.[i]??clip.ticksPerFrame),0);
+      await page.locator('[data-inspect=tick]').evaluate((input,tick)=>{
+        input.value=String(tick);input.dispatchEvent(new Event('input',{bubbles:true}));
+      },tick);
+      await page.waitForFunction(({id,pose,index,path})=>{
+        const canvas=document.querySelector('#spriteDetail canvas');
+        return canvas?.dataset.spriteId===id&&canvas.dataset.artStatus==='raster'&&canvas.dataset.pose===pose
+          &&canvas.dataset.frameIndex===String(index)&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path);
+      },{id,pose,index:frameIndex,path:frame.path});
+    }
     if(isTwin&&frameIndex===1){
       await page.selectOption('[data-inspect=pose]',twinTaunt);
       check(id+': exact pointing context uses its distinct static image and no playback animation',await page.locator('#spriteDetail canvas').getAttribute('data-pose')===twinTaunt&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='1'&&await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
@@ -185,7 +216,7 @@ try{
     report.assets.push({id,frameIndex,source:art.source,path:frame.path,sha256:frame.sha256,bytes:frame.bytes,alpha:decoded});
     check(id+': inspector drawImage used that registered image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path&&draw.width>0),frame.path));
     }
-    for(const pose of [...(isBatch10?['guard','dodge']:['walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11||isBatch12)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
+    for(const pose of [...(isBatch10?['guard','dodge']:[laterClips.walk?'jump':'walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11||isBatch12)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
       await page.selectOption('[data-inspect=pose]',pose);
       check(id+': absent '+pose+' stays an explicit static idle preview',/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent())&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')===pose);
     }

@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-heather-closer-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'c7439f5388602978efe2a074dbc66992fa1c27f9e19927ae45fb4dd0baf1da1a';
+const BITMAP_REVISION = '7f7e56cfbc7279c4b7115aec3c320530cc63a6cdf8a29253316ab14e8e785e04';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -102,6 +102,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/film_armless_man_170.25e542fa86c4.png",
   "/assets/sprites/film_armless_man_170.a103ebba3cce.png",
   "/assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+  "/assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png",
   "/assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
@@ -120,10 +121,14 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
   "/assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
   "/assets/sprites/homecoming_needler_088.39331afee89d.png",
+  "/assets/sprites/homecoming_nurse.0f5480b382dc.png",
   "/assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+  "/assets/sprites/homecoming_nurse.d0dc5079a32a.png",
   "/assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+  "/assets/sprites/homecoming_scarlet_spider_form_095.11cdb8a63cd5.png",
+  "/assets/sprites/homecoming_scarlet_spider_form_095.3679e9e24bab.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.fadeb11172db.png",
   "/assets/sprites/homecoming_schism_089.40895822f98f.png",
@@ -157,6 +162,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/pt_lisa_149.6bbde9f732ca.png",
   "/assets/sprites/pt_lisa_149.979a6105fdd2.png",
   "/assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+  "/assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
   "/assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
@@ -265,6 +271,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
   "/assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
   "/assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
+  "/assets/sprites/sh3_nurse_revolver_044.9fcda8fd65b8.png",
+  "/assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
   "/assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
   "/assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
@@ -296,6 +304,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
   "/assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+  "/assets/sprites/sh4_jasper_gein_victim_17.b78662e0dc8c.png",
   "/assets/sprites/sh4_jasper_gein_victim_17.efd5b90f7168.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
@@ -341,9 +350,11 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
   "/assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
   "/assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+  "/assets/sprites/shattered_raw_shock_base_099.e5f649da7bf0.png",
   "/assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
   "/assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
   "/assets/sprites/shf_ara_abare_153.a11358a86425.png",
+  "/assets/sprites/shf_ayakakashi_152.250241616ae2.png",
   "/assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
   "/assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
   "/assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
@@ -387,6 +398,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
   "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
   "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+  "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+  "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
   "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
   "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
   "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",

@@ -162,32 +162,36 @@ export const SPRITES = {
       }
     ],
     "portrait": {
-      "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
-      "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
-      "bytes": 627900,
-      "width": 1774,
-      "height": 887,
+      "path": "assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
+      "sha256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "bytes": 1791506,
+      "width": 1536,
+      "height": 1024,
       "facing": 1,
       "visibleBounds": [
-        40,
-        234,
-        1747,
-        673
+        15,
+        41,
+        1518,
+        924
       ],
+      "pixelSHA256": "7aceae431a625936c274d2dafdc8936cb6d25fd5aaf922bc065f9831ec314452",
+      "sourceFile": "sh1_air_screamer_001-selection.png",
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
       "alphaBounds": [
-        34,
-        39,
-        1750,
-        843
+        0,
+        0,
+        1536,
+        1024
       ],
       "framingBounds": [
-        34,
-        229,
-        1750,
-        676
+        0,
+        0,
+        1536,
+        932
       ],
-      "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
-      "transparentFraction": 0.84725
+      "transparentFraction": 0.80394
     },
     "clips": {
       "idle": {
@@ -214,7 +218,17 @@ export const SPRITES = {
         "loop": true
       }
     },
-    "animatedClips": 1
+    "animatedClips": 1,
+    "selectionNotes": "Illustration de sélection en pied. Air Screamer.",
+    "selectionProvenance": {
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh1_air_screamer_001-selection.png"
+    }
   },
   "film_red_pyramid_film_175": {
     "fighterId": "film_red_pyramid_film_175",
@@ -5669,50 +5683,90 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
-    "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+    "sourceFile": "sh3_nurse_revolver_044-combat.png",
+    "sourceSHA256": "a371cb22efc95049b2f1681a2f2533e7a67ed0625949532831258be8474d7aa4",
     "sourceDimensions": [
-      934,
-      1683
+      1176,
+      1337
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH3 au revolver long abaissé, cheveux sombres et uniforme coiffé ; pas de tuyau ou arme du film. Une pose modèle, aucune cadence ou phase de tir produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "notes": "Attente latérale orientée vers la droite. Nurse — Revolver.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
-        "bytes": 1177577,
-        "width": 934,
-        "height": 1683,
+        "sha256": "a371cb22efc95049b2f1681a2f2533e7a67ed0625949532831258be8474d7aa4",
+        "bytes": 772164,
+        "width": 1176,
+        "height": 1337,
         "visibleBounds": [
-          93,
-          11,
-          886,
-          1666
+          197,
+          51,
+          905,
+          1280
         ],
-        "pixelSHA256": "65722b01be9cfc152046b683a7a0abf1964566a895a083d24aabfb1158beadab",
-        "transparentFraction": 0.67812,
-        "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+        "pixelSHA256": "666a3f744c119d18ddc692b3486fdcfc471073bfc4f6d5fca9f93491311bca30",
+        "transparentFraction": 0.83164,
+        "path": "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
         "facing": 1,
         "anchor": [
-          0.53,
-          0.9893
+          0.43793,
+          0.95737
         ],
-        "bodyHeight": 0.98,
-        "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png",
-        "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+        "bodyHeight": 0.91922,
+        "sourceFile": "sh3_nurse_revolver_044-combat.png",
+        "sourceSHA256": "a371cb22efc95049b2f1681a2f2533e7a67ed0625949532831258be8474d7aa4",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          8,
-          922,
-          1683
+          0,
+          1152,
+          1321
         ],
         "framingBounds": [
-          91,
-          8,
-          889,
-          1669
+          192,
+          4,
+          907,
+          1290
+        ]
+      },
+      {
+        "sha256": "9fcda8fd65b8f880e4a025f7c45bd0f90735d86fa422c93c98ffcf596bea008b",
+        "bytes": 886956,
+        "width": 1176,
+        "height": 1338,
+        "visibleBounds": [
+          222,
+          68,
+          788,
+          1291
+        ],
+        "pixelSHA256": "5c75f379c2df721bb2fa07960b7d832201b4e7cb1c3ca3910b1ebd4254d5db3d",
+        "transparentFraction": 0.79952,
+        "path": "assets/sprites/sh3_nurse_revolver_044.9fcda8fd65b8.png",
+        "facing": 1,
+        "anchor": [
+          0.42942,
+          0.96487
+        ],
+        "bodyHeight": 0.91854,
+        "sourceFile": "sh3_nurse_revolver_044-guard-combat.png",
+        "sourceSHA256": "9fcda8fd65b8f880e4a025f7c45bd0f90735d86fa422c93c98ffcf596bea008b",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          17,
+          1162,
+          1338
+        ],
+        "framingBounds": [
+          219,
+          64,
+          791,
+          1294
         ]
       }
     ],
@@ -5751,9 +5805,28 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "guard": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat lot 9 depuis références originales ; image statique affectée à l’aperçu idle du versus, état de repos original non attesté. Nurse SH3 au revolver long abaissé, cheveux sombres et uniforme coiffé ; pas de tuyau ou arme du film. Une pose modèle, aucune cadence ou phase de tir produite. Faibles résidus alpha marginaux possibles ; fidélité 1:1 et temps source non certifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "f4651e9f2b8eaa217f87399bcffb2f761ffb7ecac948da600fe0505280b8e0e7",
+      "sourceDimensions": [
+        934,
+        1683
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-0ee6e403-4b16-43cd-854d-7b9f967c34a4.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Attente latérale orientée vers la droite. Nurse — Revolver."
   },
   "sh3_scraper_045": {
     "fighterId": "sh3_scraper_045",
@@ -8613,50 +8686,90 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-668a4c79-cc75-41e3-9136-497617e7c1a5.png",
-    "sourceSHA256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+    "sourceFile": "homecoming_nurse-combat.png",
+    "sourceSHA256": "d0dc5079a32ae56d3e28729ae695f5caad7a87fb8b0fb502239ccc2402523378",
     "sourceDimensions": [
-      1254,
-      1254
+      1230,
+      1278
     ],
     "singleSubjectReviewed": true,
-    "notes": "Nurse Homecoming2008 adulte entière : tête et uniforme propres au modèle, couteau/scalpel visible, deux chaussures et appuis en garde. Aucun mélange Nurse Origins à seringue, SH3 ou film. Angle, prise et texture reconstruits ; aucune séquence ou mesure originale certifiée.",
+    "notes": "Attente latérale orientée vers la droite. Nurse.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
-        "bytes": 549518,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "d0dc5079a32ae56d3e28729ae695f5caad7a87fb8b0fb502239ccc2402523378",
+        "bytes": 602869,
+        "width": 1230,
+        "height": 1278,
         "visibleBounds": [
-          408,
-          167,
-          914,
-          1101
+          306,
+          134,
+          1003,
+          1143
         ],
-        "pixelSHA256": "3980f1c9d2d167b4f88bc5470969ada771a69ece171eca20301fd5439473b8ff",
-        "transparentFraction": 0.89868,
-        "path": "assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+        "pixelSHA256": "09ca10b38c1578ff0640e82be138a80c87ab21bd77a90165ba1d096b34913415",
+        "transparentFraction": 0.8778,
+        "path": "assets/sprites/homecoming_nurse.d0dc5079a32a.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.8779904306220095
+          0.45935,
+          0.89437
         ],
-        "bodyHeight": 0.74481658692185,
-        "sourceFile": "exec-668a4c79-cc75-41e3-9136-497617e7c1a5.png",
-        "sourceSHA256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+        "bodyHeight": 0.78951,
+        "sourceFile": "homecoming_nurse-combat.png",
+        "sourceSHA256": "d0dc5079a32ae56d3e28729ae695f5caad7a87fb8b0fb502239ccc2402523378",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          73,
-          37,
-          1176,
-          1254
+          0,
+          18,
+          1216,
+          1278
         ],
         "framingBounds": [
-          401,
-          160,
-          917,
-          1110
+          303,
+          128,
+          1008,
+          1149
+        ]
+      },
+      {
+        "sha256": "0f5480b382dc8ef0da897da666f6f073f43b1664985053bcff40a61c2336e726",
+        "bytes": 673633,
+        "width": 1230,
+        "height": 1278,
+        "visibleBounds": [
+          171,
+          142,
+          881,
+          1161
+        ],
+        "pixelSHA256": "f6578fd835f6299422c9448b0ff9cfec35175e806948506748c422d1af6a494e",
+        "transparentFraction": 0.85304,
+        "path": "assets/sprites/homecoming_nurse.0f5480b382dc.png",
+        "facing": 1,
+        "anchor": [
+          0.49837,
+          0.90845
+        ],
+        "bodyHeight": 0.78951,
+        "sourceFile": "homecoming_nurse-hurt-combat.png",
+        "sourceSHA256": "0f5480b382dc8ef0da897da666f6f073f43b1664985053bcff40a61c2336e726",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1202,
+          1278
+        ],
+        "framingBounds": [
+          168,
+          136,
+          886,
+          1166
         ]
       }
     ],
@@ -8695,9 +8808,28 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "hurt": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Nurse Homecoming2008 adulte entière : tête et uniforme propres au modèle, couteau/scalpel visible, deux chaussures et appuis en garde. Aucun mélange Nurse Origins à seringue, SH3 ou film. Angle, prise et texture reconstruits ; aucune séquence ou mesure originale certifiée.",
+    "selectionProvenance": {
+      "sourceSHA256": "bdc9670f12ab8447d05910c593ae37de01089f3aacd0af46ae9018aa02e6779b",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-668a4c79-cc75-41e3-9136-497617e7c1a5.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Attente latérale orientée vers la droite. Nurse."
   },
   "homecoming_smog_087": {
     "fighterId": "homecoming_smog_087",
@@ -9268,6 +9400,82 @@ export const SPRITES = {
           1724,
           744
         ]
+      },
+      {
+        "sha256": "11cdb8a63cd5ee1d60674a4df3bacb23cd6c5df75a7b6382249657ba94842b9c",
+        "bytes": 923970,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          204,
+          134,
+          1560,
+          750
+        ],
+        "pixelSHA256": "00f72c3d542ae864fbbcb3069e04c4fefaa91bc2b7924059de393a49c8412745",
+        "transparentFraction": 0.8526,
+        "path": "assets/sprites/homecoming_scarlet_spider_form_095.11cdb8a63cd5.png",
+        "facing": 1,
+        "anchor": [
+          0.50169,
+          0.84555
+        ],
+        "bodyHeight": 0.71026,
+        "sourceFile": "scarlet-lift.png",
+        "sourceSHA256": "11cdb8a63cd5ee1d60674a4df3bacb23cd6c5df75a7b6382249657ba94842b9c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "framingBounds": [
+          192,
+          126,
+          1603,
+          768
+        ]
+      },
+      {
+        "sha256": "3679e9e24babc042c5a5c55b37182c66ffc41089d984fffa3c98c10bf22c521e",
+        "bytes": 729206,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          62,
+          184,
+          1734,
+          737
+        ],
+        "pixelSHA256": "074896490f55a39ba984bb16ad00ecae32ad0abf92e0081e19dab264bd983b73",
+        "transparentFraction": 0.85649,
+        "path": "assets/sprites/homecoming_scarlet_spider_form_095.3679e9e24bab.png",
+        "facing": 1,
+        "anchor": [
+          0.50169,
+          0.83089
+        ],
+        "bodyHeight": 0.71026,
+        "sourceFile": "scarlet-plant.png",
+        "sourceSHA256": "3679e9e24babc042c5a5c55b37182c66ffc41089d984fffa3c98c10bf22c521e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "framingBounds": [
+          59,
+          175,
+          1744,
+          743
+        ]
       }
     ],
     "portrait": {
@@ -9305,9 +9513,19 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "ticksPerFrame": 7,
+        "loop": true
       }
     },
-    "animatedClips": 0,
+    "animatedClips": 1,
     "selectionNotes": "Scarlet Homecoming2008 forme2 entière : quatre membres longs, corps interne exposé et porcelaine restante du rendu21. Aucune mécanique Amnion, aucun huitième membre ou câble de Sepulcher. Portrait de la forme1 ne certifie pas son corps entier. Pose2D/fentes de porcelaine et contacts reconstruits, zéro animation originale mesurée.",
     "selectionProvenance": {
       "sourceSHA256": "b79dfe63c212bd72a16a9ef4fa868111ed2cdc6502e4279ca03236483391d707",
@@ -15858,51 +16076,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-8a946815-a0e5-4db5-b826-b05d10de78ff.png",
-    "sourceSHA256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+    "sourceFile": "shattered_raw_shock_base_099-combat.png",
+    "sourceSHA256": "e5f649da7bf0036e06aa5121e0edbbb03da4aa6cc40f899fb951dcd3525b38f8",
     "sourceDimensions": [
-      1254,
-      1254
+      1199,
+      1312
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Deux captures complètent désormais les jambes/pieds manquants du portrait neutre. La capture20090826_08 montre le corps entier au centre, la35 corrobore la famille neutre ; build promotionnel précis non établi. Pose calme et membres recomposés, pas de variante féminine/malade/abstraite/atrophiée transférée. Rôle de poursuite hors duel inchangé. Aucun1:1 certifié. Marges réelles=[0.33333, 0.0622, 0.29346, 0.063] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "notes": "Attente latérale orientée vers la droite. Raw Shock — Base.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
-        "bytes": 736613,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "e5f649da7bf0036e06aa5121e0edbbb03da4aa6cc40f899fb951dcd3525b38f8",
+        "bytes": 738506,
+        "width": 1199,
+        "height": 1312,
         "visibleBounds": [
-          421,
-          81,
-          883,
-          1172
+          211,
+          145,
+          1039,
+          1184
         ],
-        "alphaBounds": [
-          0,
-          31,
-          1240,
-          1235
-        ],
-        "framingBounds": [
-          418,
-          78,
-          886,
-          1175
-        ],
-        "pixelSHA256": "94d5a73dc6a57ff763779d1da4aaa4d75cbab4dfc8413e09136a9d443e7f8317",
-        "transparentFraction": 0.86733,
-        "path": "assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+        "pixelSHA256": "bb004dd790f774fa5cfd5dc1b52dbee45d771a6f0be0770a1eebdc4e4f588048",
+        "transparentFraction": 0.85243,
+        "path": "assets/sprites/shattered_raw_shock_base_099.e5f649da7bf0.png",
         "facing": 1,
         "anchor": [
-          0.519936,
-          0.937002
+          0.52127,
+          0.90244
         ],
-        "bodyHeight": 0.874801,
-        "sourceFile": "exec-8a946815-a0e5-4db5-b826-b05d10de78ff.png",
-        "sourceSHA256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.79192,
+        "sourceFile": "shattered_raw_shock_base_099-combat.png",
+        "sourceSHA256": "e5f649da7bf0036e06aa5121e0edbbb03da4aa6cc40f899fb951dcd3525b38f8",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          25,
+          17,
+          1179,
+          1312
+        ],
+        "framingBounds": [
+          208,
+          142,
+          1041,
+          1188
+        ]
       }
     ],
     "portrait": {
@@ -15942,7 +16162,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Deux captures complètent désormais les jambes/pieds manquants du portrait neutre. La capture20090826_08 montre le corps entier au centre, la35 corrobore la famille neutre ; build promotionnel précis non établi. Pose calme et membres recomposés, pas de variante féminine/malade/abstraite/atrophiée transférée. Rôle de poursuite hors duel inchangé. Aucun1:1 certifié. Marges réelles=[0.33333, 0.0622, 0.29346, 0.063] ; le contour connecté reste interne, sans certification de la cible12%.",
+    "selectionProvenance": {
+      "sourceSHA256": "46fc4116fef9739ac18e86d6ddad7acf49eea17a0487ca12fb439fbff6012716",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-8a946815-a0e5-4db5-b826-b05d10de78ff.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Attente latérale orientée vers la droite. Raw Shock — Base."
   },
   "bom_light_guardian_140": {
     "fighterId": "bom_light_guardian_140",
@@ -20846,16 +21078,55 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "sh4_jasper_gein_victim_17-selection.png",
-    "sourceSHA256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
+    "sourceFile": "sh4_jasper_gein_victim_17-combat.png",
+    "sourceSHA256": "b78662e0dc8c848ef9b73c608a709f4cda17912b7a96f1458f6dfb46a1ddb38e",
     "sourceDimensions": [
-      1086,
-      1448
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Vue de sélection en pied de Jasper Gein — Victim 17. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "notes": "Attente latérale orientée vers la droite. Jasper Gein — Victim 17.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
-    "frames": [],
+    "frames": [
+      {
+        "sha256": "b78662e0dc8c848ef9b73c608a709f4cda17912b7a96f1458f6dfb46a1ddb38e",
+        "bytes": 1313839,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          469,
+          9,
+          1131,
+          998
+        ],
+        "pixelSHA256": "a98ec722edd2d86d94074e64d48535240b4712ce11643d7cfa10e9db7596447e",
+        "transparentFraction": 0.86035,
+        "path": "assets/sprites/sh4_jasper_gein_victim_17.b78662e0dc8c.png",
+        "facing": 1,
+        "anchor": [
+          0.52083,
+          0.97461
+        ],
+        "bodyHeight": 0.96582,
+        "sourceFile": "sh4_jasper_gein_victim_17-combat.png",
+        "sourceSHA256": "b78662e0dc8c848ef9b73c608a709f4cda17912b7a96f1458f6dfb46a1ddb38e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1522,
+          1014
+        ],
+        "framingBounds": [
+          466,
+          5,
+          1137,
+          1000
+        ]
+      }
+    ],
     "portrait": {
       "path": "assets/sprites/sh4_jasper_gein_victim_17.efd5b90f7168.png",
       "sha256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
@@ -20888,8 +21159,16 @@ export const SPRITES = {
       ],
       "transparentFraction": 0.72396
     },
-    "clips": {},
-    "combatView": "selection-only",
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
     "selectionNotes": "Vue de sélection en pied de Jasper Gein — Victim 17. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
     "selectionProvenance": {
       "sourceSHA256": "efd5b90f71689d25da82fa3eb1ebe07e7186a61214504def3179a5e1d4c06fd8",
@@ -20900,7 +21179,8 @@ export const SPRITES = {
       "origin": "conversation-image-generation",
       "sourceFile": "sh4_jasper_gein_victim_17-selection.png"
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "combatNotes": "Attente latérale orientée vers la droite. Jasper Gein — Victim 17."
   },
   "sh4_toby_archbolt_victim_14": {
     "fighterId": "sh4_toby_archbolt_victim_14",
@@ -21658,16 +21938,55 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "shf_ayakakashi_152-selection.png",
-    "sourceSHA256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
+    "sourceFile": "shf_ayakakashi_152-combat.png",
+    "sourceSHA256": "250241616ae2bda2bdaec1721196e502022f15a7167e0099a5064cfb0b814a82",
     "sourceDimensions": [
-      1079,
-      1458
+      1173,
+      1341
     ],
     "singleSubjectReviewed": true,
-    "notes": "Vue de sélection en pied de Ayakakashi. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
+    "notes": "Attente latérale orientée vers la droite. Ayakakashi.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
-    "frames": [],
+    "frames": [
+      {
+        "sha256": "250241616ae2bda2bdaec1721196e502022f15a7167e0099a5064cfb0b814a82",
+        "bytes": 984559,
+        "width": 1173,
+        "height": 1341,
+        "visibleBounds": [
+          107,
+          125,
+          1089,
+          1242
+        ],
+        "pixelSHA256": "93e4f89c89655d22eb23c2d287d93f81a88eda27a46d9b982a25b2f83586d910",
+        "transparentFraction": 0.78991,
+        "path": "assets/sprites/shf_ayakakashi_152.250241616ae2.png",
+        "facing": 1,
+        "anchor": [
+          0.5098,
+          0.92617
+        ],
+        "bodyHeight": 0.83296,
+        "sourceFile": "shf_ayakakashi_152-combat.png",
+        "sourceSHA256": "250241616ae2bda2bdaec1721196e502022f15a7167e0099a5064cfb0b814a82",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          37,
+          1159,
+          1341
+        ],
+        "framingBounds": [
+          101,
+          117,
+          1093,
+          1243
+        ]
+      }
+    ],
     "portrait": {
       "path": "assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
       "sha256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
@@ -21700,8 +22019,16 @@ export const SPRITES = {
       ],
       "transparentFraction": 0.77625
     },
-    "clips": {},
-    "combatView": "selection-only",
+    "clips": {
+      "idle": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      }
+    },
+    "combatView": "side-view-candidate",
     "selectionNotes": "Vue de sélection en pied de Ayakakashi. Reconstitution d’après l’illustration de production ou la capture du jeu référencée.",
     "selectionProvenance": {
       "sourceSHA256": "f63b174d67b2df63c3e1e003d64d684af974ce85e35abacf3f49253197168603",
@@ -21712,7 +22039,8 @@ export const SPRITES = {
       "origin": "conversation-image-generation",
       "sourceFile": "shf_ayakakashi_152-selection.png"
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "combatNotes": "Attente latérale orientée vers la droite. Ayakakashi."
   },
   "sh4_andrew_desalvo_victim_18": {
     "fighterId": "sh4_andrew_desalvo_victim_18",
@@ -21823,5 +22151,67 @@ export const SPRITES = {
     },
     "animatedClips": 0,
     "combatNotes": "Pose latérale en pied orientée vers la droite de Andrew DeSalvo — Victim 18. Reconstitution d’après l’illustration de production ou la capture du jeu référencée."
+  },
+  "film_colin_the_janitor_174": {
+    "fighterId": "film_colin_the_janitor_174",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "colin-selection.png",
+    "sourceSHA256": "e51afcfc4fe22e6cc7902f5693bd5302e0f3418b96a6498b4f5f1fe4045ecc52",
+    "sourceDimensions": [
+      1312,
+      1199
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Silent Hill (2006), forme rampante du concierge. Portrait de sélection frontal, mains en appui et jambes repliées au-dessus du dos. Le dessous du costume, l’arrière et le tracé des liens restent incertains.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png",
+      "sha256": "e51afcfc4fe22e6cc7902f5693bd5302e0f3418b96a6498b4f5f1fe4045ecc52",
+      "bytes": 1503105,
+      "width": 1312,
+      "height": 1199,
+      "facing": 1,
+      "visibleBounds": [
+        108,
+        35,
+        1126,
+        1187
+      ],
+      "pixelSHA256": "6ababd730b90b5329c639a1de5e422755aaf7896075faf29fdf540e1d81e34a0",
+      "sourceFile": "colin-selection.png",
+      "sourceSHA256": "e51afcfc4fe22e6cc7902f5693bd5302e0f3418b96a6498b4f5f1fe4045ecc52",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        7,
+        1298,
+        1199
+      ],
+      "framingBounds": [
+        105,
+        29,
+        1129,
+        1189
+      ],
+      "transparentFraction": 0.5945
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Silent Hill (2006), forme rampante du concierge. Portrait de sélection frontal, mains en appui et jambes repliées au-dessus du dos. Le dessous du costume, l’arrière et le tracé des liens restent incertains.",
+    "selectionProvenance": {
+      "sourceSHA256": "e51afcfc4fe22e6cc7902f5693bd5302e0f3418b96a6498b4f5f1fe4045ecc52",
+      "sourceDimensions": [
+        1312,
+        1199
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "colin-selection.png"
+    },
+    "animatedClips": 0
   }
 };

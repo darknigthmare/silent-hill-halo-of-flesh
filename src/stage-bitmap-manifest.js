@@ -1370,5 +1370,66 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Salle inondée sous C4. Les brosses de fond restent décoratives. La position latérale de l’échelle et la lumière sont des choix de composition pour le duel."
+  },
+  "historical_society": {
+    "stageId": "historical_society",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "second-exhibition-room",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_08_HISTORICAL_SOCIETY"
+    ],
+    "layers": [
+      {
+        "id": "exhibition-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+            "sha256": "d8f2ddc8b88973f25b9f2df3bf44a87e22d03ad5ca5039301fb653f0fe4efc11",
+            "bytes": 2243034,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "damaged-display-case",
+        "rect": [
+          0.04,
+          0.505,
+          0.32,
+          0.27
+        ],
+        "fit": "contain",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+            "sha256": "f5ef90a939da38c60ddd151842786d2729eb3da2ae41b7387d7bb2650b231dac",
+            "bytes": 2415697,
+            "width": 1774,
+            "height": 887
+          }
+        ],
+        "parallaxX": 0.035
+      }
+    ],
+    "notes": "Seconde salle d’exposition du musée de Silent Hill 2 (2001), avant la descente. La vitrine endommagée est vide. Les tableaux, les matériaux, les mesures et le cadrage latéral sont des interprétations pour le versus."
   }
 };

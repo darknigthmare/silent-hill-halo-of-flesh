@@ -13,4 +13,6 @@ Le superviseur des effets visuels explique que le costume utilisait deux jambes 
 
 Les vignettes mesurent 160 × 90, 319 × 180 et 320 × 180 pixels. Elles permettent de reconstruire la pose de sélection frontale observée. La face inférieure, l’arrière et le tracé détaillé des liens restent incertains. Les extraits du documentaire long et de son chapitre autonome proviennent du même tournage. [Sources, dimensions et empreintes SHA-256](source-audit.json)
 
-La première tentative de génération de cette pose a ensuite été refusée. Aucun PNG de sélection n’a été livré pour Colin. [Journal de génération du lot](../../sprite-wave3-generation-2026-11-18.json)
+La première tentative de génération de cette pose a ensuite été refusée. Ce premier lot s’est terminé sans portrait. [Journal de génération du lot](../../sprite-wave3-generation-2026-11-18.json)
+
+Le nouveau portrait frontal montre Colin en appui sur les mains, les pieds repliés près de la tête. Le jeu l’utilise à la sélection. [Fiche du portrait et vérifications](selection.json) · [Voir le PNG](../../../../assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png)
