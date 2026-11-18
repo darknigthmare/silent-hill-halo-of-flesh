@@ -82,7 +82,17 @@ test('actual engine frames pause and render without mutating mechanics, health, 
  for(const id of new Set(candidates.map(i=>i.entityId))){const e=engineFor(stage(id));while(e.phase==='intro')e.update();for(let n=0;n<30;n++)e.update();const before=JSON.stringify({snapshot:e.snapshot(),runtime:e.stageRuntime,world:e.world,terrain:e.currentTerrain(),actors:e.actors.map(a=>[a.health,a.guard,a.meter])});let reads=0;const rng=e.rng;e.rng=()=>{reads++;return rng();};e.render(1);e.render(987654);assert.equal(reads,0,id);assert.equal(JSON.stringify({snapshot:e.snapshot(),runtime:e.stageRuntime,world:e.world,terrain:e.currentTerrain(),actors:e.actors.map(a=>[a.health,a.guard,a.meter])}),before,id);e.togglePause(true);const frame=e.frame,timer=e.phaseTimer,a=draw(e.stage,frame*1000/60).calls;for(let n=0;n<10;n++)e.update();assert.equal(e.frame,frame);assert.equal(e.phaseTimer,timer);assert.deepEqual(draw(e.stage,e.frame*1000/60).calls,a);e.togglePause(false);e.update();assert.ok(e.frame>frame);assert.equal(e.hazards.length,0);}
 });
 
-test('no bitmap or older room is replaced by lot11 and the reviewed global deltas stay explicit',()=>{
- for(const id of ['midwich','woodside','alchemilla','lakeview','shopping_mall','brookhaven_roof'])assert.ok(STAGE_BITMAPS[id],id);assert.ok(!candidates.some(i=>STAGE_BITMAPS[i.entityId]));assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),163);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
+test('lot11 retains its procedural tracks when later artwork is registered for the same room',()=>{
+ for(const id of ['midwich','woodside','alchemilla','lakeview','shopping_mall','brookhaven_roof'])assert.ok(STAGE_BITMAPS[id],id);
+ for(const item of candidates){
+  assert.ok(!item.artifacts.some(path=>path.startsWith('assets/stages/')),item.rowId);
+  const bitmap=STAGE_BITMAPS[item.entityId];
+  if(!bitmap)continue;
+  const room=stage(item.entityId);
+  assert.equal(bitmap.stageId,room.id);
+  assert.equal(bitmap.source,room.source);
+  assert.equal(bitmap.scene,room.referencePolicy.sceneId);
+ }
+ assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),163);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
  const waiting=stage('alchemilla');for(const key of['ward','curtains','monitor','beds'])assert.ok(![...waiting.props,...waiting.layers].includes(key));assert.match(stage('artaud_theater').referencePolicy.normalPhaseLabel,/SCÈNE NORMALE/);assert.equal(stage('hinako_home').referencePolicy.sceneId,undefined);
 });

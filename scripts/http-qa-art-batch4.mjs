@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
-import {readArtContinuation,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {readArtContinuation,resolvedHistoricalArtwork,matchesCampaignCandidate} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-batch4');
 const source=process.env.QA_SOURCE_TREE==='1',base=process.env.QA_BASE_URL||'http://127.0.0.1:4195';
@@ -30,7 +30,13 @@ const batch12=ledger12.items.filter(item=>item.status==='implemented-candidate')
 const blocked12=ledger12.items.filter(item=>item.status==='blocked').map(item=>item.entityId);
 // Old ledgers remain historical evidence. A later exact-ID candidate can resolve
 // an old source/cropping blocker, but cannot silently erase that history.
-const art144Rows=(await Promise.all(['a','b','c','d','e'].map(async group=>JSON.parse(await readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8')).items))).flat();
+const art144Groups=await Promise.all(['a','b','c','d','e'].map(async group=>{
+ const [ledger,fragment]=await Promise.all([
+  readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8'),
+  readFile(resolve(root,`art/fragments/art144-${group}.json`),'utf8')
+ ]);
+ return {rows:JSON.parse(ledger).items,assets:JSON.parse(fragment).assets};
+}));
 const historicalBlocked=[...new Set([...blocked9,...blocked11,...blocked12])];
 const resolvedHistorical=historicalBlocked.filter(id=>SPRITES[id]);
 const currentBlocked=historicalBlocked.filter(id=>!SPRITES[id]);
@@ -38,8 +44,11 @@ const continuation=await readArtContinuation(root);
 const unretriedRefusals=['sh1_incubus_019','sh3_nurse_pipe_043','sh3_valtiel_051','sh4_jasper_gein_victim_17','sh4_andrew_desalvo_victim_18','sh4_toby_archbolt_victim_14','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'];
 if(unretriedRefusals.some(id=>SPRITES[id]))throw Error('A previously tool-refused identity unexpectedly acquired artwork.');
 for(const id of resolvedHistorical){
- const row=art144Rows.find(item=>item.entityId===id),art=SPRITES[id];
- if(row?.status==='implemented-candidate'&&row.evidence?.length&&row.limits?.trim()&&row.artifacts?.includes(art.frames[0].path))continue;
+ const group=art144Groups.find(group=>group.rows.some(item=>item.entityId===id));
+ const row=group?.rows.find(item=>item.entityId===id),art=SPRITES[id];
+ if(row?.status==='implemented-candidate'&&row.evidence?.length&&row.limits?.trim()){
+  if(row.artifacts.includes(art.frames[0].path)||matchesCampaignCandidate(row,art.source,group.assets[id],art,continuation))continue;
+ }
  if(!row||!resolvedHistoricalArtwork(row,art,continuation))throw Error('Historical blocker requires a documented later exact-ID delivery: '+id);
 }
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
