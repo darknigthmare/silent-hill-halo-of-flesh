@@ -759,50 +759,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
-    "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+    "sourceFile": "exec-a3240066-f516-4f33-887c-b97d96a3fd65.png",
+    "sourceSHA256": "13a4fcfcf0d60fca9dbb3eb51efea85a83bc4d9e225cdc257df0500828966ad0",
     "sourceDimensions": [
-      1774,
-      887
+      2172,
+      724
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Profil gauche de Split Head en appui bas, mâchoire marquée, longue queue entière et pattes décalées. Pose statique de duel SH1.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
-        "bytes": 1001511,
-        "width": 1774,
-        "height": 887,
+        "sha256": "13a4fcfcf0d60fca9dbb3eb51efea85a83bc4d9e225cdc257df0500828966ad0",
+        "bytes": 1232129,
+        "width": 2172,
+        "height": 724,
         "visibleBounds": [
-          27,
-          158,
-          1753,
-          861
+          52,
+          113,
+          2143,
+          686
         ],
-        "pixelSHA256": "edf228380b552db7705a281afda74e4e2ef96a8bfb78d62dff251662dc46547c",
-        "transparentFraction": 0.67668,
-        "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
-        "facing": 1,
+        "pixelSHA256": "bbe244fe1285b070fb4cb0d0ca1e8a0a835b7ee00966e39c93cafe597fbf7bfc",
+        "transparentFraction": 0.62762,
+        "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+        "facing": -1,
         "anchor": [
-          0.56,
-          0.97
+          0.5,
+          1
         ],
-        "bodyHeight": 0.79,
-        "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png",
-        "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+        "bodyHeight": 1,
+        "sourceFile": "exec-a3240066-f516-4f33-887c-b97d96a3fd65.png",
+        "sourceSHA256": "13a4fcfcf0d60fca9dbb3eb51efea85a83bc4d9e225cdc257df0500828966ad0",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          16,
-          34,
-          1757,
-          865
+          21,
+          0,
+          2154,
+          724
         ],
         "framingBounds": [
-          16,
-          155,
-          1757,
-          864
+          49,
+          110,
+          2145,
+          694
         ]
       },
       {
@@ -972,7 +974,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe depuis rendu SH1 original ; tête fermée seulement. Extrémités recadrées de la source reconstruites et appendice gauche ambigu ; échelle/ancrage versus, pas de mesure ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3",
+      "sourceDimensions": [
+        1774,
+        887
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-120a5805-bc4a-4d1e-b4e6-1fce93e859a7.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375"
+      },
+      {
+        "index": 2,
+        "sha256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495"
+      },
+      {
+        "index": 3,
+        "sha256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil gauche de Split Head en appui bas, mâchoire marquée, longue queue entière et pattes décalées. Pose statique de duel SH1."
   },
   "sh1_floatstinger_016": {
     "fighterId": "sh1_floatstinger_016",
@@ -1307,50 +1335,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
-    "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+    "sourceFile": "exec-88d1f2b6-1e52-4267-8c4e-8a17ebe389c1.png",
+    "sourceSHA256": "9ab82a90231f6b38f72829652e883aa6c87ac7fec8531072797627c553b5f29a",
     "sourceDimensions": [
-      1448,
-      1086
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Profil droit, museau long abaissé, pattes décalées et queue fine. Pose statique de duel d’après le rendu SH1.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
-        "bytes": 1287938,
-        "width": 1448,
-        "height": 1086,
+        "sha256": "9ab82a90231f6b38f72829652e883aa6c87ac7fec8531072797627c553b5f29a",
+        "bytes": 1544075,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          18,
-          136,
-          1432,
-          1050
+          37,
+          37,
+          1701,
+          836
         ],
-        "pixelSHA256": "8ee16afdf8f63b0fbde6e5b751241efe5bb5f19b4c6822fe07d10f2c24aa4f00",
-        "transparentFraction": 0.6668,
-        "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
-        "facing": -1,
+        "pixelSHA256": "ed69f50771552bed3e4d2fd1e9d7f2ef483e5e3f2c68c8f640584e83d8daca39",
+        "transparentFraction": 0.58495,
+        "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+        "facing": 1,
         "anchor": [
-          0.61,
-          0.97
+          0.5,
+          1
         ],
-        "bodyHeight": 0.85,
-        "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png",
-        "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+        "bodyHeight": 1,
+        "sourceFile": "exec-88d1f2b6-1e52-4267-8c4e-8a17ebe389c1.png",
+        "sourceSHA256": "9ab82a90231f6b38f72829652e883aa6c87ac7fec8531072797627c553b5f29a",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          13,
-          1434,
-          1086
+          4,
+          1750,
+          887
         ],
         "framingBounds": [
-          14,
-          134,
-          1434,
-          1055
+          31,
+          31,
+          1708,
+          842
         ]
       },
       {
@@ -1520,7 +1550,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH1 original depuis modèle, patte avant éloignée repliée. Premiers candidats à halo brun exclus ; détails de texture accentués et extrémités reconstruites. Marge gauche étroite mais museau entier ; ancrage/échelle versus, pas de cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd",
+      "sourceDimensions": [
+        1448,
+        1086
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-489a137a-c5b9-4773-bdd2-a2915e3c5b89.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db"
+      },
+      {
+        "index": 2,
+        "sha256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f"
+      },
+      {
+        "index": 3,
+        "sha256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit, museau long abaissé, pattes décalées et queue fine. Pose statique de duel d’après le rendu SH1."
   },
   "sh1_wormhead_004": {
     "fighterId": "sh1_wormhead_004",
@@ -1528,50 +1584,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
-    "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+    "sourceFile": "exec-f2b51641-6340-43f7-8bb7-4bda060da08c.png",
+    "sourceSHA256": "60b854394522c018dc02ab01104c0c96e9d96769c0586f39ed7cca721f47f664",
     "sourceDimensions": [
-      1448,
-      1086
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH1 original : tête recouverte de replis distincte de Groaner, pose source conservée. Pieds sombres recadrés reconstruits et marges haut/bas étroites ; côté opposé absent. Échelle/ancrage versus non mesurés ; aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Profil droit en appui, tête cylindrique striée et plus massive que le museau du Groaner. Pose statique de duel SH1.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
-        "bytes": 1218735,
-        "width": 1448,
-        "height": 1086,
+        "sha256": "60b854394522c018dc02ab01104c0c96e9d96769c0586f39ed7cca721f47f664",
+        "bytes": 1489126,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          97,
-          13,
-          1361,
-          1068
+          54,
+          14,
+          1697,
+          877
         ],
-        "pixelSHA256": "f525ca031771e4ebad1c5d8c132136be25713b9ecd54f40946a0a66ca179c2a0",
-        "transparentFraction": 0.57779,
-        "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
-        "facing": -1,
+        "pixelSHA256": "9f0327c96f43177ef815af534ee95a36a2aa3b51bb05b40a36fc393f22884976",
+        "transparentFraction": 0.56306,
+        "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+        "facing": 1,
         "anchor": [
-          0.65,
-          0.985
+          0.5,
+          1
         ],
-        "bodyHeight": 0.95,
-        "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png",
-        "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+        "bodyHeight": 1,
+        "sourceFile": "exec-f2b51641-6340-43f7-8bb7-4bda060da08c.png",
+        "sourceSHA256": "60b854394522c018dc02ab01104c0c96e9d96769c0586f39ed7cca721f47f664",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          22,
-          11,
-          1422,
-          1086
+          0,
+          0,
+          1750,
+          887
         ],
         "framingBounds": [
-          94,
-          11,
-          1366,
-          1071
+          45,
+          10,
+          1700,
+          887
         ]
       },
       {
@@ -1741,7 +1799,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH1 original : tête recouverte de replis distincte de Groaner, pose source conservée. Pieds sombres recadrés reconstruits et marges haut/bas étroites ; côté opposé absent. Échelle/ancrage versus non mesurés ; aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e",
+      "sourceDimensions": [
+        1448,
+        1086
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c6dfcae9-6416-4057-935b-ae0f2949d71c.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578"
+      },
+      {
+        "index": 2,
+        "sha256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730"
+      },
+      {
+        "index": 3,
+        "sha256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit en appui, tête cylindrique striée et plus massive que le museau du Groaner. Pose statique de duel SH1."
   },
   "sh1_hanged_scratcher_011": {
     "fighterId": "sh1_hanged_scratcher_011",
@@ -1855,50 +1939,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
-    "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+    "sourceFile": "exec-72362668-05d5-4f92-a024-e5f226e80f8a.png",
+    "sourceSHA256": "fdb0379cf4b5cb9a4c5d6633a6879785207a0f89a27d2ac069177993303f648a",
     "sourceDimensions": [
-      1723,
-      913
+      1610,
+      977
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH4 original : un seul Hummer depuis le grand sujet de la planche à deux créatures. Deux ailes asymétriques et long bec ; membranes/fourrure extrapolées depuis 404×214, aucune vue indépendante nette. Direction/ancrage/échelle versus ; aucune attribution Arcade ni cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Vol en profil droit, ailes décalées et appendice effilé lisible. Pose statique de duel SH4.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
-        "bytes": 893461,
-        "width": 1723,
-        "height": 913,
+        "sha256": "fdb0379cf4b5cb9a4c5d6633a6879785207a0f89a27d2ac069177993303f648a",
+        "bytes": 761798,
+        "width": 1610,
+        "height": 977,
         "visibleBounds": [
-          109,
-          49,
-          1688,
-          881
+          132,
+          11,
+          1441,
+          955
         ],
-        "pixelSHA256": "666d46d2f9a0760f65e51e4ff7ac75643e2eff788cb47a75f62c27809a9a99f2",
-        "transparentFraction": 0.77321,
-        "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+        "pixelSHA256": "ec5a2b0d036d49010270a2505f17591e7a9e4139d90142fbd12c6a953ec418a2",
+        "transparentFraction": 0.83682,
+        "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
         "facing": 1,
         "anchor": [
           0.5,
-          0.95
+          1
         ],
-        "bodyHeight": 0.88,
-        "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png",
-        "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+        "bodyHeight": 1,
+        "sourceFile": "exec-72362668-05d5-4f92-a024-e5f226e80f8a.png",
+        "sourceSHA256": "fdb0379cf4b5cb9a4c5d6633a6879785207a0f89a27d2ac069177993303f648a",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          0,
-          19,
-          1701,
-          913
+          37,
+          9,
+          1582,
+          960
         ],
         "framingBounds": [
-          104,
-          46,
-          1691,
-          883
+          130,
+          9,
+          1442,
+          959
         ]
       },
       {
@@ -2068,7 +2154,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH4 original : un seul Hummer depuis le grand sujet de la planche à deux créatures. Deux ailes asymétriques et long bec ; membranes/fourrure extrapolées depuis 404×214, aucune vue indépendante nette. Direction/ancrage/échelle versus ; aucune attribution Arcade ni cycle ou certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63",
+      "sourceDimensions": [
+        1723,
+        913
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b5143596-933d-4dc5-8ffb-f520769fe543.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54"
+      },
+      {
+        "index": 2,
+        "sha256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58"
+      },
+      {
+        "index": 3,
+        "sha256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Vol en profil droit, ailes décalées et appendice effilé lisible. Pose statique de duel SH4."
   },
   "sh3_closer_036": {
     "fighterId": "sh3_closer_036",
@@ -2672,50 +2784,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
-    "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+    "sourceFile": "exec-a7b8bc0b-f0d6-4b05-8718-075576db4f14.png",
+    "sourceSHA256": "770cd55b09c9a678342e1b0aed3956420b4b749faeaa04e80c24072e15b33382",
     "sourceDimensions": [
-      1324,
-      1188
+      1774,
+      887
     ],
     "singleSubjectReviewed": true,
-    "notes": "Candidat fixe SH3 original : humanoïde rampant, deux bras gantés à droite, deux jambes sombres à gauche/bas et museau triangulaire central distinct. Le second rendu est un doublon écarté ; vues DVD séparées mais filtrées/occluses. Contraste orangé accru, arrière masqué et appuis reconstruits ; enveloppe quadrupède et échelle de versus, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "notes": "Profil gauche rampant, long museau tendu et appuis antérieurs épais. Pose de duel SH3 vue au niveau du sol.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
-        "bytes": 1481436,
-        "width": 1324,
-        "height": 1188,
+        "sha256": "770cd55b09c9a678342e1b0aed3956420b4b749faeaa04e80c24072e15b33382",
+        "bytes": 1399325,
+        "width": 1774,
+        "height": 887,
         "visibleBounds": [
-          33,
-          21,
-          1298,
-          1150
+          43,
+          156,
+          1736,
+          757
         ],
-        "pixelSHA256": "35627559f5f3d9d2b17fd5cab5e8af0f749ec47106963fea4662415f70879f9a",
-        "transparentFraction": 0.62058,
-        "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
-        "facing": 1,
+        "pixelSHA256": "4cc66b37802cf958ed36b3046de6513996a4fa6bab1f19421fb690d5355c7f3c",
+        "transparentFraction": 0.68868,
+        "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+        "facing": -1,
         "anchor": [
           0.5,
-          0.96801
+          1
         ],
-        "bodyHeight": 0.95,
-        "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png",
-        "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+        "bodyHeight": 1,
+        "sourceFile": "exec-a7b8bc0b-f0d6-4b05-8718-075576db4f14.png",
+        "sourceSHA256": "770cd55b09c9a678342e1b0aed3956420b4b749faeaa04e80c24072e15b33382",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          25,
-          15,
-          1302,
-          1160
+          0,
+          0,
+          1774,
+          887
         ],
         "framingBounds": [
-          30,
-          17,
-          1302,
-          1152
+          33,
+          147,
+          1774,
+          804
         ]
       },
       {
@@ -2885,7 +2999,33 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Candidat fixe SH3 original : humanoïde rampant, deux bras gantés à droite, deux jambes sombres à gauche/bas et museau triangulaire central distinct. Le second rendu est un doublon écarté ; vues DVD séparées mais filtrées/occluses. Contraste orangé accru, arrière masqué et appuis reconstruits ; enveloppe quadrupède et échelle de versus, aucun cycle ni certification 1:1. Lot10: trois poses fixes supplémentaires walk/hurt/ko, sans animation ni timing original; calibration debout équivalente et ancre propre.",
+    "selectionProvenance": {
+      "sourceSHA256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de",
+      "sourceDimensions": [
+        1324,
+        1188
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-97cd51a6-a42c-4ef5-b31b-0be84261b709.png"
+    },
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 1,
+        "sha256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88"
+      },
+      {
+        "index": 2,
+        "sha256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae"
+      },
+      {
+        "index": 3,
+        "sha256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de"
+      }
+    ],
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil gauche rampant, long museau tendu et appuis antérieurs épais. Pose de duel SH3 vue au niveau du sol."
   },
   "sh1_romper_010": {
     "fighterId": "sh1_romper_010",
@@ -19510,6 +19650,68 @@ export const SPRITES = {
       ],
       "origin": "conversation-image-generation",
       "sourceFile": "exec-0721bee3-5366-4c99-b3ec-203ff49b7c67.png"
+    },
+    "animatedClips": 0
+  },
+  "origins_memory_of_richard_grady_083": {
+    "fighterId": "origins_memory_of_richard_grady_083",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-af14124f-bf63-4928-a5a0-fec2d585c15e.png",
+    "sourceSHA256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
+    "sourceDimensions": [
+      1444,
+      1089
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Première sélection de Sad Daddy, installation fixe de la chambre 500. Le rendu du modèle Konami à deux angles documente le plan de fixation commun, la cage centrale et les panneaux latéraux. Le duel ne reçoit aucune nouvelle pose.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [],
+    "portrait": {
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "sha256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
+      "bytes": 1897822,
+      "width": 1444,
+      "height": 1089,
+      "facing": 1,
+      "visibleBounds": [
+        209,
+        13,
+        1267,
+        1056
+      ],
+      "pixelSHA256": "857c8855f551a89f0ea43d246fb0d77fd00f8896909aa64c7146fc4586c51b2c",
+      "sourceFile": "exec-af14124f-bf63-4928-a5a0-fec2d585c15e.png",
+      "sourceSHA256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "alphaBounds": [
+        0,
+        0,
+        1434,
+        1089
+      ],
+      "framingBounds": [
+        204,
+        0,
+        1270,
+        1059
+      ],
+      "transparentFraction": 0.53281
+    },
+    "clips": {},
+    "combatView": "selection-only",
+    "selectionNotes": "Première sélection de Sad Daddy, installation fixe de la chambre 500. Le rendu du modèle Konami à deux angles documente le plan de fixation commun, la cage centrale et les panneaux latéraux. Le duel ne reçoit aucune nouvelle pose.",
+    "selectionProvenance": {
+      "sourceSHA256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6",
+      "sourceDimensions": [
+        1444,
+        1089
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-af14124f-bf63-4928-a5a0-fec2d585c15e.png"
     },
     "animatedClips": 0
   }

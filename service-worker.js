@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'parallel-20261101-pass12';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'b39dbbaa43885e93dbea3eefc49b07c1a1c0487896f7bada6c763e989356d55d';
+const BITMAP_REVISION = 'a66bd2a8adb0ad6d470e4b86d2b8813deca2e43159d4e1b1318c79961cce50d4';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -132,6 +132,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_demon_084.c23b0115c82b.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+  "/assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
   "/assets/sprites/origins_remnant_077.912fa1130daa.png",
   "/assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
   "/assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
@@ -147,6 +148,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
   "/assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
   "/assets/sprites/sh1_groaner_003.82984139e47a.png",
+  "/assets/sprites/sh1_groaner_003.9ab82a90231f.png",
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
   "/assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
   "/assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
@@ -166,6 +168,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_romper_010.f5be63471b21.png",
   "/assets/sprites/sh1_romper_010.fa62c070efdd.png",
   "/assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+  "/assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
   "/assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
   "/assets/sprites/sh1_split_head_014.483ae08e94aa.png",
   "/assets/sprites/sh1_split_head_014.e48107f497d7.png",
@@ -175,6 +178,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
   "/assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
   "/assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+  "/assets/sprites/sh1_wormhead_004.60b854394522.png",
   "/assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
   "/assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
   "/assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
@@ -231,6 +235,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
   "/assets/sprites/sh3_slurper_042.3f0598df95a4.png",
   "/assets/sprites/sh3_slurper_042.5cda350161d4.png",
+  "/assets/sprites/sh3_slurper_042.770cd55b09c9.png",
   "/assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
   "/assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
   "/assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
@@ -247,6 +252,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_hummer_055.9d51cedd24be.png",
   "/assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
   "/assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+  "/assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
   "/assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
   "/assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",

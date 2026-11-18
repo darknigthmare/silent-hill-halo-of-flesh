@@ -2,14 +2,14 @@
   "schema": 1,
   "version": "0.9.6",
   "total": 230,
-  "integrated": 187,
-  "missing": 43,
-  "selectionAvailable": 187,
-  "selectionMissing": 43,
-  "combatSideViewCandidates": 70,
-  "combatLegacyUnreviewed": 108,
+  "integrated": 188,
+  "missing": 42,
+  "selectionAvailable": 188,
+  "selectionMissing": 42,
+  "combatSideViewCandidates": 75,
+  "combatLegacyUnreviewed": 103,
   "combatMissing": 52,
-  "separateSelectionAndCombat": 70,
+  "separateSelectionAndCombat": 75,
   "certified": 0,
   "animatedClips": 1,
   "presentationKeys": [
@@ -92,8 +92,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -120,8 +120,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -400,8 +400,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1324,8 +1324,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1716,8 +1716,8 @@
       "animatedClips": 0,
       "fidelity": "unverified",
       "selection": true,
-      "combatView": "legacy-unreviewed",
-      "separateSelectionAndCombat": false,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2804,11 +2804,11 @@
       "name": "Memory of Richard Grady",
       "source": "origins",
       "game": "SILENT HILL: ORIGINS",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
-      "selection": false,
+      "fidelity": "unverified",
+      "selection": true,
       "combatView": "missing",
       "separateSelectionAndCombat": false,
       "presentations": {
