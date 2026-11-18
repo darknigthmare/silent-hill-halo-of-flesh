@@ -1,5 +1,5 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicles-villa-sighting-20261118';
+const CACHE_REVISION = 'wood-round-result-20261118';
 // BITMAP_REVISION_BEGIN
 const BITMAP_REVISION = 'c074189f47e1d7d86ebccd8eb0c146fdd2cab145188f99d880c03d4f64ad72da';
 // BITMAP_REVISION_END

@@ -1,6 +1,6 @@
 import { hashCode, seededRandom, clamp } from './shared.js';
 import { drawStageArchitecture, stageSpace } from './stage-architecture.js';
-import { drawStageCinematics, drawStageReferenceTracks, stageReferencePresentation } from './stage-cinematics.js';
+import { drawStageCinematics, drawStageReferenceTracks, stageReferencePresentation, drawRoundComposition } from './stage-cinematics.js';
 import { stageReferenceEventAllowed, stageAnimationConflictsWithHazard } from './stage-reference-policy.js';
 import {drawStageBitmaps} from './stage-bitmaps.js';
 
@@ -265,7 +265,8 @@ function drawStageAnimations(ctx,w,h,stage,time,otherworld=0,director=null,hazar
 export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=false,otherworld=0,radio=0,animationsEnabled=true,director=null,terrain=null,shift=null,reducedMotion=false,hazards=[],matchState=null,viewPan=0}={}){
   // Read only engine frames: repeated renders, pause and gallery wall clocks
   // cannot advance a result composition or consume gameplay randomness.
-  time = stageReferencePresentation(stage,time,matchState,{reducedMotion,animationsEnabled}).time;
+  const presentation = stageReferencePresentation(stage,time,matchState,{reducedMotion,animationsEnabled});
+  time = presentation.time;
   const policy=stage?.referencePolicy;
   if(policy?.worldState==='fixed-normal'||policy?.worldState==='unresolved')otherworld=0;
   else if(policy?.worldState==='fixed-altered')otherworld=1;
@@ -284,7 +285,14 @@ export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=fals
     ctx.fillStyle='#101613';ctx.fillRect(0,0,w,h);ctx.fillStyle='#c6beb0';ctx.textAlign='center';ctx.font='600 15px system-ui';
     ctx.fillText(bitmap.kind==='error'?'DÉCOR INDISPONIBLE':'CHARGEMENT DU DÉCOR',w*.5,h*.4);ctx.restore();return;
   }
-  if(bitmap.kind==='raster'&&bitmap.mode==='replace'){drawStageBitmaps(ctx,stage,time,bitmapOptions);ctx.restore();return;}
+  if(bitmap.kind==='raster'&&bitmap.mode==='replace'){
+    drawStageBitmaps(ctx,stage,time,bitmapOptions);
+    if(presentation.track && presentation.strength>0){
+      drawRoundComposition(ctx,w,h,presentation.track,presentation.strength);
+    }
+    ctx.restore();
+    return;
+  }
   const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,sky[0]);grad.addColorStop(.52,sky[1]);grad.addColorStop(1,sky[2]);ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
   const halo=ctx.createRadialGradient(w*.72,h*.18,0,w*.72,h*.18,w*.55);halo.addColorStop(0,'rgba(214,213,188,.13)');halo.addColorStop(.32,'rgba(171,172,156,.04)');halo.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=halo;ctx.fillRect(0,0,w,h);
   if (!drawStageArchitecture(ctx,w,h,stage)) drawFarBuildings(ctx,w,h,stage?.family||'street');
