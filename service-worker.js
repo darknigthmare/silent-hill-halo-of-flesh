@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicles-villa-sighting-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'aeccb37ab98150b61585b7c6641c7c9ad326a8ef4993d6dfe7d7c4376616f289';
+const BITMAP_REVISION = 'c074189f47e1d7d86ebccd8eb0c146fdd2cab145188f99d880c03d4f64ad72da';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -127,6 +127,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_schism_089.b94be9905392.png",
   "/assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
   "/assets/sprites/homecoming_siam_090.88b378486212.png",
+  "/assets/sprites/homecoming_siam_090.9a93d5c60f3c.png",
   "/assets/sprites/homecoming_smog_087.24134515bb83.png",
   "/assets/sprites/homecoming_smog_087.63ce313a3705.png",
   "/assets/sprites/homecoming_swarm.47f037d1249a.png",
