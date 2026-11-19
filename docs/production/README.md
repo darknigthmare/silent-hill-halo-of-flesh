@@ -4,7 +4,16 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État des sprites — dernière reprise du 17 novembre 2026
+## État actuel — vague 18 du 19 novembre 2026
+
+**204 portraits, 129 vues latérales candidates, 28 arènes bitmap sur 123 et 6
+clips réellement animés.** La [vague 18](vague18/README.md) récupère 13 PNG actifs
+et 7 variantes, avec trois nouveaux clips et deux décors en plans séparés.
+Les portraits historiques sont conservés. Le suivi courant des absences reste
+dans `data/sprite-coverage.json` : 26 portraits et 37 images de combat absents,
+64 anciennes vues de combat à revoir. Aucun certificat de fidélité 1:1.
+
+## Historique — reprise du 17 novembre 2026
 
 **172 profils illustrés sur 230, 58 encore sans image et 25 vues de combat latérales distinctes.** La dernière suite ajoute Insane Cancer de The Arcade (sélection et combat séparés), Walter Sullivan et le Bogeyman de Downpour (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_FOLLOWING_2026-11-17.md) et le [relevé de reprise exact](sprite-status-following-2026-11-17.json). La [suite précédente](SPRITE_SUITE_2026-11-17.md) conserve Steel Guardian, Anne et Juggernaut ; la [reprise antérieure](SPRITE_NEXT_2026-11-17.md) documente la récupération de 22 originaux. Le [correctif de transition des Rites](BROWSER_QA_RITE_CACHE_2026-11-17.md) accompagne ce lot. Les sections historiques ci-dessous gardent les chiffres de leur date.
 

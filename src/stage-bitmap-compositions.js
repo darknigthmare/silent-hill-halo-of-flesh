@@ -1,5 +1,5 @@
 /**
- * Scoped bitmap composition for the authored film_hospital candidate.
+ * Scoped compositions for exact authored bitmap candidates.
  *
  * The PNG already contains the complete tent. Do not repaint the procedural
  * tent silhouette. This helper only modulates narrow folds inside that fabric.
@@ -80,4 +80,41 @@ export function drawAlessaBitmapComposition(ctx, w, h, stage, art, presentation,
   }
   ctx.restore();
   return {handled: true, roundHandled: !!roundHandled, trackIds};
+}
+
+/** Keep the existing hearth pulse inside the painted SH1 fire, without another cage. */
+export function drawMidwichHearthBitmapComposition(ctx, w, h, stage, art, presentation, trackAllowed) {
+  const layer = art?.layers?.find(item => item.id === 'hearth');
+  const frame = layer?.frames?.[0];
+  if (stage?.id !== 'midwich_nightmare' || stage.source !== 'sh1' ||
+      stage.reference?.blocked || art?.scene !== 'otherworld-boiler-hearth' ||
+      art.mode !== 'replace' || layer?.fit !== 'cover' ||
+      layer.frames.length !== 1 || (layer.parallaxX || 0) !== 0 ||
+      frame?.sha256 !== '862c9df53e36a477d92d8f9881181f303a57e9020cd82b6164a90a553b7b2f71' ||
+      frame.width !== NATIVE_WIDTH || frame.height !== NATIVE_HEIGHT ||
+      ![0, 0, 1, 1].every((value, index) => layer.rect?.[index] === value) ||
+      typeof trackAllowed !== 'function' || !(w > 0 && h > 0)) return EMPTY();
+  const track = (stage.referenceTracks || []).find(item =>
+    item.key === 'boilerHearthGlow' && !item.event &&
+    item.trigger !== 'match-phase' && trackAllowed(stage, item));
+  if (!track) return {handled: true, roundHandled: false, trackIds: []};
+
+  const time = Number.isFinite(presentation?.time) ? Math.max(0, presentation.time) : 0;
+  const pulse = .5 + .5 * Math.sin(time * .0012);
+  const scale = Math.max(w / NATIVE_WIDTH, h / NATIVE_HEIGHT);
+  ctx.save();
+  ctx.translate((w - NATIVE_WIDTH * scale) / 2, (h - NATIVE_HEIGHT * scale) / 2);
+  ctx.scale(scale, scale);
+  // Native coordinates exclude the metal rim, fighting floor and foreground.
+  // Only existing fire cells below the rim receive a low-contrast light change.
+  ctx.beginPath();
+  for (const [x, y, width, height] of [[611, 516, 68, 75], [708, 516, 143, 82], [884, 516, 88, 80], [993, 518, 53, 67]]) {
+    ctx.rect(x, y, width, height);
+  }
+  ctx.clip();
+  ctx.globalCompositeOperation = 'screen';
+  ctx.fillStyle = `rgba(221,99,31,${.018 + pulse * .042})`;
+  ctx.fillRect(600, 510, 455, 90);
+  ctx.restore();
+  return {handled: true, roundHandled: false, trackIds: [track.id]};
 }

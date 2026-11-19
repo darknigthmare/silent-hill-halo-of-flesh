@@ -32,6 +32,17 @@ export function retainedCombatFrames(engine,registry=SPRITES){
   });
   return [...new Map(frames.map(frame=>[frame.path,frame])).values()];
 }
+/** A completed, visible result can keep its canvas pixels instead of its image lease. */
+export function shouldRetireCompletedCombat(engine,nextFrames,{settled=false,resultVisible=false,
+  retainedFrames=retainedCombatFrames(engine),cache=spriteCache}={}){
+  if(!settled||!resultVisible||!engine||engine.destroyed||engine.phase!=='matchEnd'||
+    typeof engine.isPresentingOutro!=='function'||engine.isPresentingOutro())return false;
+  // A cold replacement must fit on its own. Invalid or oversized sets never
+  // justify releasing a result; only the otherwise-valid overlap does.
+  try{cache.validatePins(nextFrames);cache.validatePins(retainedFrames);}catch{return false;}
+  try{cache.validatePins([...nextFrames,...retainedFrames]);return false;}
+  catch(error){return error instanceof RangeError;}
+}
 export function spriteStatus(fighter,registry=SPRITES){
   const art=spriteFor(fighter,registry),usage=spriteUsage(art);
   return art?{kind:usage.combatView==='missing'?'selection-only':'candidate',

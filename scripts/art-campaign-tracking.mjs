@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {resolve,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-constants.mjs';
-import {matchesCampaignCandidate,readPurposeDeliveries,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {matchesCampaignCandidate,readPurposeDeliveries,resolvedHistoricalArtwork,expandedCombatIdle} from './art-campaign-review.mjs';
 export {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES};
 
 const repositoryRoot=fileURLToPath(new URL('../',import.meta.url));
@@ -73,7 +73,8 @@ function validatedContinuation(plan,deliveries,assets,root){
       if(!nonempty(item.reason)||(clip?.frames?.length&&!later))throw Error('ART92 blocked row requires a reason and no imported idle: '+item.rowId);
       if(later)laterCombat.set(item.rowId,art.frames[clip.frames[0]].path);
     }else if(entry.generationExcluded!==false||!art||art.fighterId!==item.entityId||art.source!==row.source||art.fidelity!=='unverified'||
-      art.animatedClips!==0||art.frames?.length!==1||!art.frames[0]||JSON.stringify(clip?.frames)!=='[0]'||clip.loop!==false||clip.ticksPerFrame!==1||
+      ((art.animatedClips!==0||art.frames?.length!==1)&&!expandedCombatIdle(item.entityId,row.source,art))||
+      !art.frames[0]||JSON.stringify(clip?.frames)!=='[0]'||clip.loop!==false||clip.ticksPerFrame!==1||
       !continuationCandidateFilesMatch(root,item,row.source,art,review)){
       throw Error('ART92 candidate requires an eligible exact-source imported static idle, evidence and matching artifact file: '+item.rowId);
     }

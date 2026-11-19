@@ -1,0 +1,398 @@
+{
+  "schema": 1,
+  "wave": 18,
+  "date": "2026-11-19",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "fighterId": "arcade_scraper_arcade",
+  "source": "arcade",
+  "edition": "Silent Hill: The Arcade (2007)",
+  "status": "production-complete-awaiting-root-integration",
+  "origin": "conversation-image-generation",
+  "generatorMode": "built-in image_gen",
+  "role": {
+    "role": "combatant",
+    "combatEnabled": true,
+    "canMove": true,
+    "canJump": true,
+    "canDodge": true,
+    "superEnabled": false,
+    "sourceAnimationMeasured": false,
+    "referenceIds": [
+      "EXT13",
+      "EXT14"
+    ]
+  },
+  "preserved": {
+    "idlePath": "assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+    "idleSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+    "portraitPath": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+    "portraitSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e"
+  },
+  "sourceProvenance": {
+    "artReferenceFile": "art/reference-provenance-batch12.json",
+    "idleReferenceFile": "docs/production/vague16/fighter-generation.json",
+    "sourceUrls": [
+      "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+      "https://www.silenthillmemories.net/sh_arcade/creatures/scraper.jpg",
+      "https://www.silenthillmemories.net/sh_arcade/creatures/scraper_screen01.jpg",
+      "https://www.silenthillmemories.net/sh_arcade/creatures/scraper_screen02.jpg"
+    ],
+    "freshWebReview": "Creature index opened 2026-11-19 and confirmed Scraper heading; direct JPEG was inaccessible to web reader. Identity/wardrobe references inherited from repository source provenance, and both existing generated images were visually inspected. No new original Arcade timing or hidden-side observation is claimed."
+  },
+  "initialAssignment": {
+    "profiles": [
+      "film_dark_nurse_171",
+      "film_grey_child_film_172"
+    ],
+    "newImageCalls": 0,
+    "outcome": "historical output refusals respected; root reassigned to Scraper animation; see scope-and-history.json"
+  },
+  "activeNewPNGCount": 3,
+  "variantPNGCount": 2,
+  "deliveries": [
+    {
+      "file": "walk-passing.png",
+      "framePurpose": "walk-passing",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-ae24ffcd-3b84-4e06-8a63-6342f833ff8a.png",
+      "prompt": "Use case: identity-preserve. Asset type: a single transparent full-body WALK PASSING animation frame for a 2D fighting game. Input image is the appearance and scale reference: Scraper from Silent Hill: The Arcade (2007), NOT Silent Hill 3. Draw the very same character in ONE distinct passing-step pose, facing screen-right from the same side camera. Preserve the exact cloth veil covering all face and head, dark crown band, muted brown folded tunic and layered hem, striped dark trousers, wrapped forearms, studded wrist cuffs, dark closed shoes and two short steel blades held in the two hands. Change ONLY gait and the small associated arm/body movement. The weight-bearing FAR leg is nearly vertical under the pelvis with its full shoe flat on the ground. The NEAR knee lifts moderately forward to the right, bent about 90 degrees, so that its shoe is visibly raised clear of the ground next to the planted leg's shin; both legs must remain distinct. The pelvis is above the planted foot. Torso still leans a little forward, head and right-facing orientation match the reference. Keep both forearms bent and both hand-held blades readable: leading hand at chest height with blade diagonally upward toward screen-right; rear hand slightly behind the hip on screen-left with its blade diagonally downward and backward. Neither weapon is allowed to become a forearm, change shape or disappear. Same gritty detailed illustrated game art, same wardrobe and proportions, no new wounds, no new props. Whole silhouette and both blade tips must fit inside the CENTRAL 72 percent of the canvas, leaving at least 14 percent genuinely transparent empty margin at each edge; use a generous portrait-shaped canvas near the input native pixel count, not a cropped close-up. One subject and one pose only. True transparent alpha, no floor or shadow, no background, no extra limbs or duplicate, no text, no glow, no colored fringe. This is an authored versus walk pose, no source-accurate timing claim.",
+      "active": true,
+      "proposedIndex": 1,
+      "anchor": [
+        0.46710526315789475,
+        0.8839907192575406
+      ],
+      "bodyHeight": 0.7672080433101315,
+      "review": "Pose de passage à genou levé. Deux lames, deux mains et deux chaussures entières; costume et voile cohérents. Le genou est haut : cadence de prototype, pas reproduction d'une démarche mesurée. Marges de cadrage minimales 11,21 %, en dessous de la cible 12–15 % mais silhouette intérieure et sans coupe.",
+      "path": "/workspace/scratch/b86991fb2253/wave18/scraper/walk-passing.png",
+      "referencePath": "/workspace/scratch/b86991fb2253/repo/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "referenceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+      "sourceReferenceKind": "existing-generated-combat-candidate",
+      "sha256": "75bcf0ea854a8673e7e0cf2ac396da50487f4a33d1b9b0aeda877fe453e258e2",
+      "gitBlobSHA": "7ac2ca5e693cba122cfbae9a13e124eef5bf0b42",
+      "bytes": 758197,
+      "decodedBytes": 6289152,
+      "width": 1216,
+      "height": 1293,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        197,
+        151,
+        1021,
+        1143
+      ],
+      "alphaBounds": [
+        49,
+        96,
+        1098,
+        1293
+      ],
+      "framingBounds": [
+        194,
+        146,
+        1024,
+        1148
+      ],
+      "transparentFraction": 0.8403,
+      "pixelSHA256": "287b6576721ef1cde999041d9726b8917e90d51f85b4bd17b24cc29afa25c528",
+      "marginByFramingBounds": [
+        0.15953947368421054,
+        0.11291569992266048,
+        0.15789473684210525,
+        0.11214230471771075
+      ],
+      "facing": 1,
+      "purpose": "combat",
+      "view": "side-view",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "wholeBodyAndTwoBladesReviewed": true,
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "walk-contact-framed.png",
+      "framePurpose": "walk-contact",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-dc519e7f-27b4-41b0-8edf-7bbf2eb60072.png",
+      "prompt": "Use case: precise-object-edit. Editing target: the attached transparent Scraper walk-contact frame. Change ONLY the framing and scale of the existing whole character within the image. Preserve this exact pose, right-facing camera, all anatomy and clothing, head veil, two complete hand-held blades, both fists and shoes, palette, textures and lighting. The character is too close to the right edge. Recompose it substantially SMALLER and centered in a more generous transparent canvas: the COMPLETE silhouette INCLUDING BOTH BLADE TIPS must lie between 18 percent and 82 percent of canvas width, and between 18 percent and 82 percent of canvas height. This means at least 18 percent genuinely transparent empty space above, below, left and right. Do not zoom back into the character, do not crop. Keep a native pixel count similar to the input, do not enlarge image resolution for this edit. Do not add any object, environment, ground, shadow, glow, background color, text or border. Keep actual alpha transparency. One complete Scraper in the same walk-contact pose, only smaller within the generous frame.",
+      "active": true,
+      "proposedIndex": 2,
+      "anchor": [
+        0.4843330349149508,
+        0.7189496096522356
+      ],
+      "bodyHeight": 0.41447835344215755,
+      "referencePath": "/workspace/scratch/b86991fb2253/wave18/scraper/walk-contact.png",
+      "referenceSHA256": "5eb9fd298caa9ac881f81ac75cba53eaabc5ea4a9ad31909e191c4a2ee69f3e6",
+      "review": "Contact au talon avant et pointe arrière, les deux lames dégagées. Reprise du cadrage uniquement par génération d'image; marges significatives minimales 24,62 %. Le sujet occupe moins de pixels que le premier essai; calibration dédiée nécessaire. Aucune image redimensionnée par script.",
+      "path": "/workspace/scratch/b86991fb2253/wave18/scraper/walk-contact-framed.png",
+      "sourceReferenceKind": "existing-generated-combat-candidate",
+      "sha256": "17a9e16b785b13ac26fcfc80139af9a9ef71291c1b6a09f1823f3e99424bbe68",
+      "gitBlobSHA": "422aef17ef36d8cb33c89b5205d03914d0291f0f",
+      "bytes": 393828,
+      "decodedBytes": 6295412,
+      "width": 1117,
+      "height": 1409,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        315,
+        429,
+        839,
+        1013
+      ],
+      "alphaBounds": [
+        114,
+        85,
+        1087,
+        1384
+      ],
+      "framingBounds": [
+        312,
+        426,
+        842,
+        1017
+      ],
+      "transparentFraction": 0.93468,
+      "pixelSHA256": "f8177df15ea15554f6f392641cd0021fda7c5d924811ea8614fe1ac44af8e1a8",
+      "marginByFramingBounds": [
+        0.279319606087735,
+        0.30234208658623135,
+        0.24619516562220234,
+        0.2782114975159688
+      ],
+      "facing": 1,
+      "purpose": "combat",
+      "view": "side-view",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "wholeBodyAndTwoBladesReviewed": true,
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "guard.png",
+      "framePurpose": "guard",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-683c3ccd-1cc2-461b-b53e-4d080477c6da.png",
+      "prompt": "Use case: identity-preserve. Asset type: ONE transparent full-body defensive GUARD pose for a 2D fighting-game sprite. Use the input as the exact appearance reference for Scraper from Silent Hill: The Arcade (2007). Keep its right-facing side camera, identical body proportions, long dirty ivory cloth veil completely hiding head and face, dark securing head band, brown layered folded short tunic, striped charcoal trousers, brown wrapped forearms, dark studded wrist cuffs and the same worn closed dark shoes. Preserve the TWO separate short broad steel hand-held blades: same lengths, width and rough silver material as the reference, not attached in place of forearms. Change only the posture into a clear held guard: feet set apart in a stable side stance, both knees softly bent, torso slightly drawn back away from the opponent at screen-right. Lift BOTH bent forearms in front of the upper torso and veiled head, with both clenched hands distinctly visible. The near hand is in front of the chest and holds its blade diagonally upward-right. The far hand is higher near the forehead and holds its blade diagonally downward-right, forming a separated protective V with the two complete blades. Maintain clear space between the blade silhouettes and make each blade readable from fist to tip; no fused single weapon, no extra blade. Do not make an attack or a jump. The head, both complete shoes, hands and both blade tips are wholly inside the image. Make the entire character smaller within the canvas than in the reference: center its complete silhouette in the central 70 percent of the canvas, leaving at least 15 percent empty transparent margin on all sides. Portrait canvas near the reference native pixel count, roughly 1217x1293. Same gritty detailed illustrated game material and muted palette, no extra blood or new injuries. One subject, one fixed pose. True transparent alpha, no scenery, no floor, no cast or contact shadow, no halo, no text, no frame, no label, no watermark. This is a new versus guard drawing, not a claim about an original measured Arcade technique.",
+      "active": true,
+      "proposedIndex": 3,
+      "anchor": [
+        0.4838709677419355,
+        0.8218594748048261
+      ],
+      "bodyHeight": 0.6061036195883606,
+      "review": "Garde tenue, deux avant-bras relevés, deux poings et deux lames visibles en V sans fusion; pieds et tête entiers. Marges minimales 17,32 %. Le geste est une adaptation versus, pas une technique Arcade certifiée.",
+      "path": "/workspace/scratch/b86991fb2253/wave18/scraper/guard.png",
+      "referencePath": "/workspace/scratch/b86991fb2253/repo/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "referenceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+      "sourceReferenceKind": "existing-generated-combat-candidate",
+      "sha256": "a269b2831292bfdb7b6b5b2d3ea52487deba8a07c46494967c255104b1f46adb",
+      "gitBlobSHA": "296180f6354f52077335e8a8eb03623ae5372e40",
+      "bytes": 607205,
+      "decodedBytes": 6289776,
+      "width": 1116,
+      "height": 1409,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        288,
+        304,
+        834,
+        1158
+      ],
+      "alphaBounds": [
+        136,
+        19,
+        1096,
+        1385
+      ],
+      "framingBounds": [
+        282,
+        301,
+        837,
+        1165
+      ],
+      "transparentFraction": 0.87687,
+      "pixelSHA256": "dc199142c5e4b15e80321da2c79a7d14848a67a0270b8f43d5df8169fa59bc9d",
+      "marginByFramingBounds": [
+        0.25268817204301075,
+        0.21362668559261888,
+        0.25,
+        0.17317246273953157
+      ],
+      "facing": 1,
+      "purpose": "combat",
+      "view": "side-view",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "wholeBodyAndTwoBladesReviewed": true,
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "walk-contact.png",
+      "framePurpose": "walk-contact-first-framing",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-f3e36ff6-5a77-4939-99f5-cbd0c3fd0731.png",
+      "prompt": "Use case: identity-preserve. Asset type: one transparent full-body frame for an authored 2D fighting-game walk cycle. Reference image is the existing integrated candidate of Scraper specifically from Silent Hill: The Arcade (2007). Make a NEW OPPOSITE-CONTACT WALK POSE of exactly the same character, while preserving his appearance, proportions, gritty illustrated 2D render, and right-facing side camera. Keep the pale dirty long cloth veil hiding the entire head and face, dark band around the crown, brown folded short tunic with its curved layered hem, dark vertically striped trousers, brown wrapped forearms, studded dark wrist cuffs, worn dark closed shoes and exactly TWO separate short broad steel blades HELD in the two hands. Preserve the reference blade shape and lengths, not forearm blades. Pose change only: move the nearest leg forward toward screen-right, heel touching the ground and knee softly bent; the far leg trails toward screen-left, toe contacting the ground with its heel raised. The legs must be clearly separate, with a modest stride. Keep torso leaning slightly forward and right, arms bent in the same cautious walk-ready stance: the leading blade points diagonally upward toward screen-right, the rear hand and second blade stay visibly separated on the screen-left side, blade angled down and back. This is an in-place game animation drawing, not a scene or an attack. Keep the head-to-shoe proportions consistent with the reference; no height stretch. Whole body, both shoes, both fists and BOTH blade tips entirely visible. Center the complete figure with about 12 to 15 percent transparent margin on all four sides, roughly the reference portrait-format native canvas around 1217 by 1293 pixels. Maintain the reference's restrained brown, charcoal and dirty ivory palette, no glow and no red/green edge fringe. Actual transparent background and clean continuous alpha. One subject, one pose, no duplicate figure, no frame sheet, no floor, no cast/contact shadow, no scenery, no text, no logo, no watermark, no new anatomy or costume.",
+      "active": false,
+      "reason": "Reprise de cadrage sélectionnée pour dégager davantage la pointe avant; la première version n'a que 6,00 % de marge à droite.",
+      "review": "Silhouette entière et deux lames lisibles; variante remplacée uniquement pour son cadrage trop proche à droite.",
+      "path": "/workspace/scratch/b86991fb2253/wave18/scraper/walk-contact.png",
+      "referencePath": "/workspace/scratch/b86991fb2253/repo/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "referenceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+      "sourceReferenceKind": "existing-generated-combat-candidate",
+      "sha256": "5eb9fd298caa9ac881f81ac75cba53eaabc5ea4a9ad31909e191c4a2ee69f3e6",
+      "gitBlobSHA": "e0aaad2135d7e6a3a8252422fac7ea89df1e037f",
+      "bytes": 957708,
+      "decodedBytes": 6289776,
+      "width": 1116,
+      "height": 1409,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        108,
+        173,
+        1044,
+        1218
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1102,
+        1393
+      ],
+      "framingBounds": [
+        104,
+        169,
+        1049,
+        1225
+      ],
+      "transparentFraction": 0.79466,
+      "pixelSHA256": "a604885a0cc2b548a1193640e68bc8481a724723a5cdaf6ea5aa65b59528d3e3",
+      "marginByFramingBounds": [
+        0.0931899641577061,
+        0.11994322214336409,
+        0.06003584229390681,
+        0.13058907026259758
+      ],
+      "facing": 1,
+      "purpose": "combat",
+      "view": "side-view",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "wholeBodyAndTwoBladesReviewed": true,
+      "originalBytesPreserved": true
+    },
+    {
+      "file": "walk-compression.png",
+      "framePurpose": "walk-compression-reserve",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-86603565-9640-4931-9445-e3a7cce5afb4.png",
+      "prompt": "Use case: identity-preserve. Create ONE transparent full-body animation drawing of the exact reference character: Scraper from Silent Hill: The Arcade (2007). This is the COMPRESSION / WEIGHT-ACCEPTANCE phase of an authored 2D versus walk, facing screen-right. Preserve the same side camera, entire veil and dark head band, identical brown folded tunic with curved layered hem, striped trousers, wrapped arms, dark studded cuffs, two dark closed shoes, and TWO short hand-held broad steel blades. Keep the gritty illustrated game finish and dirty ivory, brown, charcoal palette of the input, with no extra wounds or redesign. Change the pose: bring the feet moderately closer together than the wide reference stance. The forward near shoe is planted flat just to the right of the pelvis; bend that near knee to accept weight. The far leg is behind the pelvis with its heel lifted and the toes touching the ground. Lower the pelvis a little through both bent knees, while the whole character still leans toward screen-right. Both legs and both feet must be clearly readable, not crossed or fused. Keep the leading hand and short blade lifted near chest height and directed diagonally forward-right; the rear hand stays to the left of the hip, holding its second blade downward-backward. Both fists and both distinct weapon tips are completely visible. Preserve actual body/limb proportions: compress through joint angles, do not shorten limbs or enlarge the head. Whole figure centered inside the middle 72 percent of the image, with at least 14 percent empty transparent margin on every edge; native portrait-format around 1217x1293, keep complete blades and shoes inside that central safe area. Exactly one subject and one pose, true transparent background. No scene, no floor, no cast or contact shadow, no duplicate, no sprite sheet, no new equipment, no text, no logo, no glow or colored outline. This is a new prototype walk drawing, not certification of original Arcade animation.",
+      "active": false,
+      "reason": "Conservée hors du manifeste actif afin de limiter Scraper à quatre PNG de combat au total, incluant l'idle existant, et de préserver ses duels avec Origins Nurse sous 64 Mio.",
+      "review": "Appui comprimé distinct; deux lames et deux chaussures entières. Marges minimales 10,22 %. Pose de réserve non comptée comme clip ou frame actif.",
+      "path": "/workspace/scratch/b86991fb2253/wave18/scraper/walk-compression.png",
+      "referencePath": "/workspace/scratch/b86991fb2253/repo/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "referenceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+      "sourceReferenceKind": "existing-generated-combat-candidate",
+      "sha256": "0da5c23b70b08708c432820adc84eee4582d0ee163c46bf5d1a96ad8bbd2e4e2",
+      "gitBlobSHA": "903e83212ad58b650e0f2aa8e01f26c3c4bb04b5",
+      "bytes": 895850,
+      "decodedBytes": 6289776,
+      "width": 1116,
+      "height": 1409,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        179,
+        224,
+        1000,
+        1256
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        1096,
+        1393
+      ],
+      "framingBounds": [
+        177,
+        222,
+        1002,
+        1263
+      ],
+      "transparentFraction": 0.80806,
+      "pixelSHA256": "6331c098d379b9ababe9b2fdd7e22fc022e9807c5a37b1355b6ca24bc0dabb16",
+      "marginByFramingBounds": [
+        0.1586021505376344,
+        0.15755855216465578,
+        0.10215053763440861,
+        0.10361958836053939
+      ],
+      "facing": 1,
+      "purpose": "combat",
+      "view": "side-view",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "wholeBodyAndTwoBladesReviewed": true,
+      "originalBytesPreserved": true
+    }
+  ],
+  "proposedClipsIfImportedInListedActiveOrder": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "ticksPerFrame": 1,
+      "loop": false
+    },
+    "walk": {
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "ticksPerFrame": 7,
+      "frameTicks": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "loop": true
+    },
+    "guard": {
+      "frames": [
+        3
+      ],
+      "ticksPerFrame": 1,
+      "loop": false
+    }
+  },
+  "decodedMemory": {
+    "existingIdleBytes": 6294324,
+    "activeNewBytes": 18874340,
+    "allFourCombatFramesBytes": 25168664,
+    "portraitExcludedFromCombatSet": true,
+    "variantsExcludedFromRuntime": true,
+    "cacheBudgetBytes": 67108864
+  },
+  "verification": {
+    "pngDecoder": "scripts/raster-validation.mjs decodePng (read-only)",
+    "nativeIntegrityChecks": "All five PNGs decoded; RGBA alpha; non-animated; hashes/dimensions/framing measured; native bytes preserved.",
+    "visual": "All five generated originals inspected at full output size. One subject per file, two separate weapons and full shoes. No gameplay test or new clip claim performed by this subagent.",
+    "calibrationStatus": "proposed anchors/bodyHeight only; root must inspect grounded engine renders in both directions"
+  },
+  "limitations": [
+    "No source 1:1, UHD native or original gait/guard timing certification.",
+    "The passing pose has a high knee and will be a short prototype walk cycle, not a complete eight-frame source animation.",
+    "Faint alpha pixels and thin colored fringes remain visible in full-size inspection; no scripted cleanup or pixel editing was performed.",
+    "Passing-frame meaningful top/bottom margins are 11.21–11.29%, slightly below the requested 12–15% target.",
+    "The selected contact edit has lower subject-pixel density due to its larger transparent margins.",
+    "Only three new PNGs are proposed for activation; compression and first contact remain archive variants."
+  ]
+}

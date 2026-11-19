@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'wave17-route-arena-20261119';
+const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '7be362efae5931e5a93285cc70029ab533a9899368df0015affef5ed61255655';
+const BITMAP_REVISION = '1b063c0bc963f0c4d4a8b8fb266e1f5b15a1eed36c139e5ca3bd1ef832f069c0';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -29,7 +29,10 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.74eb4c08943e.png",
+  "/assets/sprites/arcade_scraper_arcade.17a9e16b785b.png",
   "/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+  "/assets/sprites/arcade_scraper_arcade.75bcf0ea854a.png",
+  "/assets/sprites/arcade_scraper_arcade.a269b2831292.png",
   "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
   "/assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
   "/assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
@@ -110,6 +113,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+  "/assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png",
+  "/assets/sprites/film_mannequin_monster_176.d5bc6baa191d.png",
   "/assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
   "/assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
   "/assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
@@ -130,6 +135,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_nurse.d0dc5079a32a.png",
   "/assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+  "/assets/sprites/homecoming_scarlet_doll_form_094.35a3afb32f14.png",
+  "/assets/sprites/homecoming_scarlet_doll_form_094.4885e2373476.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.11cdb8a63cd5.png",
@@ -155,7 +162,9 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_demon_084.c23b0115c82b.png",
   "/assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+  "/assets/sprites/origins_faceless_nurse.761018b17f26.png",
   "/assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+  "/assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
   "/assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
   "/assets/sprites/origins_faceless_nurse.b93c719c3104.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
@@ -401,6 +410,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
   "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
   "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+  "/assets/stages/building_world.fan-stairwell.15995c474e24.png",
+  "/assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",
   "/assets/stages/church.initial-chapel.1b637d5146cd.png",
   "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
@@ -423,6 +434,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
   "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
+  "/assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+  "/assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
   "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
   "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
   "/assets/stages/room_302.chair.739650b60353.png",

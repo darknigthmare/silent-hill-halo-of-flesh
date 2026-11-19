@@ -4,6 +4,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {resolve,isAbsolute} from 'node:path';
 import {ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-constants.mjs';
 import {hasCombatSprite} from '../src/sprite-usage.js';
+import {validateClip,clipSummary} from '../src/sprite-clips.js';
 
 const record=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
 const nonempty=value=>typeof value==='string'&&!!value.trim();
@@ -44,6 +45,28 @@ function staticCandidate(id,source,art){
   [frame.width,frame.height].every(n=>Number.isSafeInteger(n)&&n>0&&n<=4096);
 }
 
+/** Later poses do not rewrite the archived still or turn its idle into an animation.
+ * Only a reviewed lateral set with a valid, fully referenced frame/clip catalogue
+ * may extend that still. The historical fragment remains strictly static.
+ */
+export function expandedCombatIdle(id,source,art){
+ if(!record(art)||art.combatView!=='side-view-candidate'||!Array.isArray(art.frames)||
+  art.frames.length<2||art.frames.length>256||!record(art.clips)||
+  !staticCandidate(id,source,{...art,frames:[art.frames[0]],clips:{idle:art.clips.idle},animatedClips:0})||
+  art.frames.some(frame=>!validDeliveredRaster(id,frame)||frame.purpose!=='combat'||frame.view!=='side-view'))return false;
+ const used=new Set();let animated=0;
+ try{
+  for(const [pose,clip] of Object.entries(art.clips)){
+   validateClip(art,pose,clip);
+   for(const index of clip.frames)used.add(index);
+   if(clipSummary(art,clip).animated)animated++;
+  }
+ }catch{return false;}
+ return used.size===art.frames.length&&art.animatedClips===animated;
+}
+
+const currentCandidate=(id,source,art)=>staticCandidate(id,source,art)||expandedCombatIdle(id,source,art);
+
 function matchingFrame(a,b){
  return sameRaster(a,b)&&a.facing===b.facing&&a.bodyHeight===b.bodyHeight&&JSON.stringify(a.anchor)===JSON.stringify(b.anchor);
 }
@@ -56,7 +79,7 @@ function sameRaster(a,b){
 export function matchesCampaignCandidate(row,source,fragment,art,continuation){
  const id=row?.entityId;
  if(!nonempty(id)||!nonempty(source)||!exactRow(row,id)||row.status!=='implemented-candidate'||!artifacts(row.artifacts)||
-  !staticCandidate(id,source,fragment)||!staticCandidate(id,source,art)||!hasCombatSprite(art))return false;
+  !staticCandidate(id,source,fragment)||!currentCandidate(id,source,art)||!hasCombatSprite(art))return false;
  const original=fragment.frames[0],idle=art.frames[0];
  if(!row.artifacts.includes(original.path)||!sameRaster(original,art.portrait)||
   (fragment.portrait!==undefined&&!sameRaster(original,fragment.portrait)))return false;
@@ -217,7 +240,7 @@ export function resolvedHistoricalArtwork(row,art,continuation,{purpose='any'}={
  if(!record(entry)||!record(entry.fighter)||!nonempty(entry.fighter.source)||!Object.hasOwn(ART_CONTINUATION_GROUP_SIZES,entry.group)||
   !exactRow(item,row.entityId)||item.status!=='implemented-candidate'||item.group!==entry.group||entry.workbookRowId!==row.rowId||
   entry.generationExcluded!==false||!nonempty(item.limits)||!evidence(item.evidence)||!artifacts(item.artifacts)||
-  !staticCandidate(row.entityId,entry.fighter.source,art)||!staticCandidate(row.entityId,entry.fighter.source,fragment)||
+  !currentCandidate(row.entityId,entry.fighter.source,art)||!staticCandidate(row.entityId,entry.fighter.source,fragment)||
   !item.artifacts.includes(fragment.frames[0].path))return false;
  if(art.combatView==='side-view-candidate'||art.frames[0].path!==fragment.frames[0].path){
   return matchesCampaignCandidate(item,entry.fighter.source,fragment,art,continuation);

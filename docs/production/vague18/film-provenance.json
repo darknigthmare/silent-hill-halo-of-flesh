@@ -1,0 +1,331 @@
+{
+  "schema": "wave18-film-idles-receipt-v1",
+  "generatedOn": "2026-11-19",
+  "agent": "/root/wave18_arcade",
+  "repositoryBase": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "scope": "Reassigned from stopped Arcade subjects to three legacy film side-profile idles; final deliverables limited to two after one new Red Pyramid output refusal.",
+  "repositoryMutated": false,
+  "generationTool": "built-in image_gen__imagegen",
+  "pngHandling": "Original imagegen PNG bytes copied with shutil.copy2. No resizing, cleaning, compositing or pixel edits by code.",
+  "detailedAuditFiles": [
+    "image-audit.json",
+    "source-audit.json"
+  ],
+  "deliverables": [
+    {
+      "fighterId": "film_mannequin_monster_176",
+      "source": "film",
+      "edition": "Silent Hill: Revelation (2012)",
+      "path": "/workspace/scratch/b86991fb2253/wave18/arcade/film_mannequin_monster_176_combat_idle.png",
+      "originalImagegenPath": "/workspace/scratch/b86991fb2253/generated_images/exec-9b2949b9-1581-4c90-a594-e25e901cd8af.png",
+      "sha256": "d5bc6baa191d8bab7a0232001b57d936578635f12ad8acf41bdf6d73f9712eef",
+      "pixelSHA256": "b7f7455e988253a0979915e5e49f1518d31386ec86084e8a3852f88866445eb5",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 553460,
+      "decodedBytes": 6290064,
+      "visibleBoundsAlpha32": [
+        228,
+        387,
+        1022,
+        876
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroFraction": 0.8847000602855551,
+      "alpha1to15Fraction": 0.009424387414818037,
+      "visibleMarginsFraction": {
+        "left": 0.181818,
+        "right": 0.185008,
+        "top": 0.308612,
+        "bottom": 0.301435
+      },
+      "proposedImport": {
+        "source": "film",
+        "origin": "conversation-image-generation",
+        "singleSubjectReviewed": true,
+        "mode": "combat-idle",
+        "pose": "idle",
+        "facing": 1,
+        "anchorX": 0.498405,
+        "anchorY": 0.698565,
+        "bodyHeight": 0.389952,
+        "ticks": 1,
+        "loop": false
+      },
+      "currentPolicy": {
+        "role": "scripted-encounter",
+        "adaptationMode": "versus-scripted",
+        "combatEnabled": true,
+        "referenceIds": [
+          "EXT50",
+          "EXT53",
+          "EXT_REVELATION_BASSETT_DC_20261026",
+          "EXT_REVELATION_COMPARISON_20261026",
+          "EXT_REVELATION_BASSETT_BD_20261026"
+        ]
+      },
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+        "sha256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7"
+      },
+      "review": "Complete four-head candidate silhouette, hands and feet visible, broadside shell facing screen right and mouth opening reduced to right edge. Generous visible margins. One static frame only.",
+      "limitations": [
+        "The four-head count and support arrangement preserve the existing project candidate; booklet source does not certify every attachment or exact final film topology.",
+        "The lateral pose is reconstructed; not an extracted native frame, measured model, native animation or 1:1 certification.",
+        "Final image includes very low-alpha RGB fringe/noise; no cleanup performed. Parent must verify real Canvas compositing at gameplay scale.",
+        "Current gameplay capabilities are unchanged."
+      ]
+    },
+    {
+      "fighterId": "film_lying_figure_return_to_silent_hill",
+      "source": "film",
+      "edition": "Return to Silent Hill (2026)",
+      "path": "/workspace/scratch/b86991fb2253/wave18/arcade/film_lying_figure_return_to_silent_hill_combat_idle.png",
+      "originalImagegenPath": "/workspace/scratch/b86991fb2253/generated_images/exec-5caccb6d-6eae-489f-bcd7-741540f998d0.png",
+      "sha256": "5d110b145c90b5a8f6071d37956b411cc278e2becf17a7c423d897a57074b835",
+      "pixelSHA256": "1a73de61d7ec83a626f46611254e2000d4063a351af194fd5c9d04eeef2df616",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 332268,
+      "decodedBytes": 6290064,
+      "visibleBoundsAlpha32": [
+        448,
+        150,
+        779,
+        1108
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaZeroFraction": 0.925033513172521,
+      "alpha1to15Fraction": 0.004815213326923223,
+      "visibleMarginsFraction": {
+        "left": 0.357257,
+        "right": 0.378788,
+        "top": 0.119617,
+        "bottom": 0.116427
+      },
+      "proposedImport": {
+        "source": "film",
+        "origin": "conversation-image-generation",
+        "singleSubjectReviewed": true,
+        "mode": "combat-idle",
+        "pose": "idle",
+        "facing": 1,
+        "anchorX": 0.489234,
+        "anchorY": 0.883573,
+        "bodyHeight": 0.763955,
+        "ticks": 1,
+        "loop": false
+      },
+      "currentPolicy": {
+        "role": "unverified",
+        "adaptationMode": "versus-transposition",
+        "combatEnabled": false,
+        "referenceIds": [
+          "EXT55"
+        ]
+      },
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+        "sha256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014"
+      },
+      "review": "Complete featureless sheathed head, arm-contained narrow torso, two legs and complete feet. Right-facing side profile; body stays within roughly 12 percent top/bottom margin. One static frame only.",
+      "limitations": [
+        "Only a single useful source view was found; the side volume and unseen details are reconstructed.",
+        "The feet are vertically offset slightly in the illustration; lowest sole supplies the proposed anchor. Final grounding should be checked in engine.",
+        "This fighter remains combatEnabled=false and must not be counted as newly playable.",
+        "No source timing, movement animation or 1:1 fidelity is asserted."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "for": "film_mannequin_monster_176",
+      "url": "https://www.silenthillmemories.net/shm2/art_en.htm",
+      "kind": "Fan archive hosting production-booklet scans",
+      "observed": "Collector's Edition Booklet (France), grey CGI creature views and Mr X Rev9/9.1 renders; scans credited to Silent Nerd."
+    },
+    {
+      "for": "film_mannequin_monster_176",
+      "url": "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_02.jpg",
+      "localFile": "references/mannequin-booklet-02.jpg",
+      "sha256": "ca0b8d3d30ddf9e7dab52e98f55e3ba4d284f776ab222a709bb7a92fdde58951",
+      "dimensions": [
+        1753,
+        1275
+      ]
+    },
+    {
+      "for": "film_mannequin_monster_176",
+      "url": "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_03.jpg",
+      "localFile": "references/mannequin-booklet-03.jpg",
+      "sha256": "404e253d29f96299a7ec58fb2c84c7626d4851ff3bf87dbdc4223829e95e14a7",
+      "dimensions": [
+        1753,
+        1275
+      ]
+    },
+    {
+      "for": "film_lying_figure_return_to_silent_hill",
+      "url": "https://www.silenthillmemories.net/return_to_sh/photos_en.htm",
+      "kind": "Film photo gallery in fan archive",
+      "observed": "Gallery describes official movie stills."
+    },
+    {
+      "for": "film_lying_figure_return_to_silent_hill",
+      "url": "https://www.silenthillmemories.net/return_to_sh/photos/pics/return_to_silent_hill_photo_16.webp",
+      "localFile": "references/return-photo-16.webp",
+      "sha256": "c5d07e74f4fc76d039ee2f8a7e3f4b3107f92e5acf3ce010186d94ac2f0aa485",
+      "dimensions": [
+        1600,
+        660
+      ],
+      "observed": "Whole Lying Figure centered in an arched view: head, contained torso, two separate legs and complete feet visible."
+    },
+    {
+      "for": "film_red_pyramid_film_175",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_128.jpg",
+      "localFile": "references/film2006-photo-128.jpg",
+      "sha256": "7def99b10b6a66cae9ff2b90cd97962ac0a97b850429f4a2685177c7444a4088",
+      "dimensions": [
+        400,
+        600
+      ],
+      "observed": "2006 film still with helmet, muscular bare torso, long costume and Great Knife; weapon tip meets left boundary and boots largely concealed."
+    },
+    {
+      "for": "film_red_pyramid_film_175",
+      "url": "https://acsketch.artstation.com/projects/EVdQrA",
+      "kind": "Primary artist portfolio",
+      "observed": "Andy Chung identifies these as Silent Hill movie concepts from 2005; last sheet captioned final."
+    },
+    {
+      "for": "film_red_pyramid_film_175",
+      "url": "https://www.silenthillmemories.net/shm/arts/pics/silent_hill_art_andy_chung_06_pyramid_head.jpg",
+      "localFile": "references/film2006-andy-chung-06-final.jpg",
+      "sha256": "195c987fee56905585f723efe2c84013c1a0a3502e80ae5acd0dec61b42d8549",
+      "dimensions": [
+        1458,
+        1076
+      ],
+      "observed": "Final concept sheet; developmental construction details not assumed final costume."
+    },
+    {
+      "for": "film_red_pyramid_film_175",
+      "url": "https://www.silenthillmemories.net/shm/downloads/silent_hill_production_notes.pdf",
+      "kind": "Primary film production notes hosted in archive",
+      "observed": "Text credits Tatopoulos design, Jones implementation and Partridge skirt/platform boots; does not verify a generated side profile."
+    }
+  ],
+  "correctedHistoricalAttribution": {
+    "affectedRecord": "art/provenance-art144-e.json and current film_lying_figure_return_to_silent_hill registry note",
+    "previouslyCitedURL": "https://www.silenthillmemories.net/return_to_sh/photos/pics/return_to_silent_hill_photo_15.webp",
+    "observedOn": "2026-11-19",
+    "currentPhoto15SHA256": "72ea999317a53c07b68917952aae15799aeafa82d8deb20ddc591d32e60490b2",
+    "finding": "Photo15 currently shows James holding a flashlight, not a whole Lying Figure. Photo16 supplies the actual full creature view. No assertion is made whether the old record was mistaken or the URL content changed.",
+    "repositoryCorrectionAppliedByChild": false
+  },
+  "attempts": [
+    {
+      "id": "mannequin-v1",
+      "status": "superseded",
+      "prompt": "Use case: identity-preserve. Asset type: one transparent 2D combat idle sprite. Create a NEW full-body SIDE-VIEW pose of the Mannequin Monster from Silent Hill: Revelation (2012). Input image 1 is the project's existing candidate creature and fixes its visual identity: one low spiderlike dark central carapace, pale aged shop-mannequin plastic components, joint sockets, four head-bearing branches and its existing articulated supports ending in mannequin hands or feet. Inputs 2 and 3 are original production-booklet reference pages: use only the creature's grey CGI views and Mr X Rev9/9.1 renders as structural/material reference; do not reproduce people, text or layouts. Rotate the WHOLE creature into a strict broadside profile facing screen RIGHT: its central mouth/front points to the right edge, body axis parallel to the image plane, not toward the viewer. Keep all its appendages, heads, hand tips and foot tips complete and inside the image, far-side supports visible with only natural small offsets. Idle stance: low crouch, supports planted, no attack, no moving limbs, same four head branches as the existing candidate. Preserve sculpted artificial plastic surfaces and dark shell, not flesh or injured people. No new limbs, no new heads, no props, no weapons, no human victim. Composition: one subject in one pose on a wide transparent canvas, the full silhouette occupies the central 65% of width and height, with at least 15% empty transparent border around every extremity. Deliberately zoom OUT so that all appendages fit comfortably. Detailed restrained horror-game raster rendering, neutral diffuse lighting, real transparent RGBA including gaps between limbs, crisp clean edges. No shadows, floor, aura, fog, text, watermark, panels or duplicate figures. This is a candidate versus pose adapted from the evidence, not an original film frame or certified model reconstruction.",
+      "references": [
+        "existing portrait",
+        "references/mannequin-booklet-02.jpg",
+        "references/mannequin-booklet-03.jpg"
+      ],
+      "output": "variants/mannequin-v1.png",
+      "reason": "Oblique camera and 7.6 percent horizontal margins. Initial preview raised brown-halo concern; subsequent alpha audit shows off-silhouette low-alpha pixels, so an opaque runtime halo was not established."
+    },
+    {
+      "id": "mannequin-v2",
+      "status": "superseded",
+      "prompt": "Use case: background-extraction. Precise quality correction of this single existing creature sprite. Keep the exact same mannequin monster and all its body parts, four heads, limb attachments, pose, materials and proportions. Remove ALL the brown glow, beige aura, shadow, black/grey background and haze around AND between the body parts. Only the actual hard-surface creature pixels should remain, with clean edges and genuine fully transparent RGBA holes between limbs and head branches. No soft cast shadow anywhere. Also place the whole unchanged complete creature smaller and centered on a transparent wide canvas so there is at least 15 percent of the image width of CLEAR EMPTY TRANSPARENCY before its leftmost foot and after its rightmost fingertip. Do not crop or deform any extremity. No new limbs, no removed limbs, no changed heads, no other alterations, no text. The retained subject must be isolated cleanly with no colored edge glow.",
+      "references": [
+        "variants/mannequin-v1.png"
+      ],
+      "output": "variants/mannequin-v2.png",
+      "reason": "Still oblique; top/bottom margins about 10 percent. Red/yellow fringe pixels measured at alpha<=16, none above16; not interpreted as opaque halo."
+    },
+    {
+      "id": "mannequin-v3",
+      "status": "superseded",
+      "prompt": "Use case: identity-preserve, camera-angle correction. Edit this single transparent Mannequin Monster candidate sprite from Silent Hill: Revelation (2012). Preserve its exact dark central carapace, cracked ivory shop-mannequin plastic construction, four head-bearing branches, all existing articulated support limbs, and every hand and foot. Rotate the whole existing creature around its vertical axis until it is seen from a TRUE 90-DEGREE LATERAL ORTHOGRAPHIC VIEW facing screen RIGHT, like a fighting-game side elevation. Its central mouth points exactly right; the mouth opening is seen edge-on as a narrow vertical sliver at the right end, not as a round frontal opening. We see the complete left flank of the central shell, no broad frontal face of the shell. The front-to-back body axis must lie perfectly horizontal in the image plane. Arrange the near and far supports in a quiet grounded idle with small silhouette offsets, preserving every existing support and the same four mannequin heads without inventing new body parts. This changes camera angle and pose only; retain the existing creature identity and artificial materials. Zoom OUT to fit the entire creature in the central 65 percent of a square transparent canvas: at least 15 percent clear margin above every head, below every fingertip and foot, and beside both ends. One subject, one full-body pose, no parts cropped. Crisp detailed game cutout; neutral diffuse light; real transparent RGBA background including all gaps. No cast shadow, no colored edge glow, no fog, no floor, no captions or panels. This is a candidate side-view adaptation, not a claim of exact source topology.",
+      "references": [
+        "variants/mannequin-v2.png"
+      ],
+      "output": "variants/mannequin-v3.png",
+      "reason": "Lateral angle corrected; horizontal margins only 6.7–7.4 percent, so reframed through imagegen."
+    },
+    {
+      "id": "mannequin-v4",
+      "status": "selected",
+      "prompt": "Use case: reframe only. Preserve this exact 90-degree right-facing side-profile Mannequin Monster sprite, every head, support limb, hand, foot, material, proportion and pose unchanged. Do not rotate it back. Place the complete existing creature SMALLER in a larger square transparent canvas, centered both horizontally and vertically. Its entire width must fit between x=20% and x=80% of the output, leaving a full 20 percent of canvas width of empty transparency before the leftmost foot and after the rightmost fingertips. The top and bottom should have at least 20 percent clear transparency too. This is an explicit zoom-OUT and padding operation: preserve the whole silhouette and its fine detail, do not crop any appendage and do not enlarge it to fill the image. Keep real transparent RGBA background and empty transparent holes between the parts, with no shadow, no glow, no text. One unchanged subject in one unchanged pose.",
+      "references": [
+        "variants/mannequin-v3.png"
+      ],
+      "output": "film_mannequin_monster_176_combat_idle.png"
+    },
+    {
+      "id": "return-idle-v1",
+      "status": "selected",
+      "prompt": "Use case: identity-preserve. Create one full-body right-facing COMBAT IDLE cutout sprite of the Lying Figure from the 2026 film Return to Silent Hill. Reference 1 is the project's existing candidate portrait; preserve this specific slender elongated creature, its dark charcoal grey tight continuous wrinkled sheath, sloping enclosed featureless head, constricted upper torso with arms entirely contained inside the sheath, long thin legs, and two small bare feet. Reference 2 is the actual Return to Silent Hill movie still, photo 16: use only the whole creature in the middle as source-specific silhouette evidence, not the environment. It establishes the featureless tapered hood, very narrow waist, arm-contained torso and two separate slim legs. Produce a DISTINCT new pose viewed in strict TRUE 90-DEGREE LATERAL PROFILE facing SCREEN RIGHT, as in a 2D fighting game: side of torso and head visible, chest points exactly to right edge, not toward camera. Quiet tense idle with slightly bent knees, near foot a little ahead, both complete feet visible on the same implied ground line; head inclined forward and upward only as appropriate for the enclosing sheath. No free arms or hands and no new appendages. No weapons, no straps or added clothing, no human face, no chest opening. Restrained detailed horror-game raster rendering under neutral diffuse light, preserving the existing material palette. Entire head, torso, both legs and every toe inside the frame. Center the full body within the middle 65 percent of a square canvas, at least 15 percent EMPTY TRANSPARENT margin above the head and below both soles and generous space on both sides. Real transparent RGBA background, including gap between legs; no floor, no cast shadow, no colored halo, no fog, no scenery, no panels, no text. One subject and one pose only. The unobserved side volume is an explicit candidate reconstruction, not a certified original model. Do not substitute the 2006 Armless or any SH2 game edition.",
+      "references": [
+        "existing portrait",
+        "references/return-photo-16.webp"
+      ],
+      "output": "film_lying_figure_return_to_silent_hill_combat_idle.png"
+    },
+    {
+      "id": "red-pyramid-idle-v1",
+      "status": "tool-refusal-no-output",
+      "prompt": "Use case: game-asset generation from source-specific reference. Create ONE full-body transparent combat-idle sprite of RED PYRAMID from the original SILENT HILL film directed by Christophe Gans, released in 2006. Reference 1 is an actual 2006 film still of this character, and is the controlling reference for the final filmed costume, silhouette, colors, large triangular helmet and long broad Great Knife. Reference 2 is Andy Chung's 2005 final film concept sheet: consult its helmet side view and long costume proportions, but do not copy the sheet, early mechanical ideas, annotations or red paint splashes. The official production notes describe the tall powerful body, skin-like skirt and platform boots; keep the skirt very long so the platforms are mostly concealed, with both complete boot toes and soles visible. Match the filmed 2006 identity: towering lean-muscular pale grey bare torso and long bare arms, no chest harness or shoulder straps, long weathered ochre-brown hide-like apron/skirt from the waist nearly to the ground, dark worn platform boots, large dark rusted pyramidal helmet with its distinctive forward-descending point and ribbed metal panels. The head and all facial features are completely concealed. Do not substitute the SH2 game design, Homecoming, Arcade, Revelation fire scene or Return to Silent Hill design. CAMERA AND POSE: true 90-degree ORTHOGRAPHIC SIDE PROFILE facing screen RIGHT, entire body and helmet turned sideways, chest direction exactly toward right edge, not three-quarter. Calm heavy grounded idle, knees only slightly flexed, two planted feet with a modest stagger on one ground baseline. The near hand grips the Great Knife's complete handle beside the thigh; the huge long broad blade trails down and back to the LEFT with its tip just above the implied ground, entirely visible. Free hand hangs relaxed with complete fingers visible. Full helmet, body, both arms, all fingers, complete long skirt, both boot ends and entire weapon included. One subject and one pose, no opponent or victim. Neutral diffuse lighting and detailed realistic horror-game raster cutout, subdued aged surfaces, no fresh violence or splatter. COMPOSITION: deliberately zoom OUT on a wide transparent canvas, full character plus entire knife contained within the central 65 percent of the canvas, generous 15–18 percent transparent border on all four sides, especially before the blade tip, above the helmet and below the boots. Real RGBA transparency, including gaps around arms and weapon. No scenery, no floor, no cast shadow, no haze, no brown aura, no colored outline, no lettering, no watermark, no panels. Candidate versus adaptation; exact hidden side details are not certified.",
+      "references": [
+        "references/film2006-photo-128.jpg",
+        "references/film2006-andy-chung-06-final.jpg"
+      ],
+      "error": {
+        "httpStatus": 400,
+        "code": "moderation_blocked",
+        "stage": "output",
+        "categories": [
+          "other"
+        ],
+        "requestId": "f6f4e23f-ddcc-4ce0-b0fb-19a76d112c8c"
+      },
+      "followup": "Stopped immediately; no retry, reformulation or substitute. Parent confirmed definitive stop for this subject."
+    }
+  ],
+  "historicalStops": {
+    "arcade_numb_body_arcade": {
+      "state": "stop-preserved",
+      "historicalEvidence": [
+        "docs/production/sprite-status-resume-2026-11-18.json",
+        "docs/production/sprite-status-wave9-2026-11-18.json"
+      ],
+      "currentTurnEvent": "An initial selection request had begun before the parent warning identified the prior new-generation-refusal. The running functions.exec cell g2:9 was immediately terminated. No image response was received, inspected or used; no subsequent attempt. Exact interrupted prompt was not retained in this handoff; it is not reconstructed here."
+    },
+    "arcade_nurse_arcade": {
+      "state": "stop-preserved",
+      "currentTurnEvent": "No generation call. Parent requested hold due unresolved inherited SH3 stop."
+    }
+  },
+  "validation": {
+    "readOnlyTechnicalAudit": "scripts/import-sprite.py inspect_image imported and invoked directly; all selected files pass native PNG/alpha/dimensions/framing inspection.",
+    "visualInspection": "Sources and every generated output were inspected; orientation and framing corrected through imagegen only.",
+    "roleInspection": "createCombatProfile(getFighter(id)).referencePolicy read directly from src/data.js.",
+    "engineQA": "Pending root-built manifest and separate read-only wave18 native QA.",
+    "animationsAdded": 0,
+    "oneToOneValidated": false
+  }
+}

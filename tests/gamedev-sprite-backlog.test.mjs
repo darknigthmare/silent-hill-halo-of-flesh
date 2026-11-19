@@ -67,10 +67,10 @@ test('real sprite coverage keeps authored animated clips in the validation queue
  assert.equal(result.summary.illustrated,intake.baselineProfiles+candidates.length+newlyResolved);
  assert.equal(result.summary.missing,blocked.length-newlyResolved);
  assert.equal(result.summary.certified,0);
- for(const id of ['sh1_air_screamer_001','origins_faceless_nurse']){
+ for(const [id,animated] of Object.entries({sh1_air_screamer_001:1,origins_faceless_nurse:2,arcade_scraper_arcade:1,homecoming_scarlet_doll_form_094:1})){
   const row=result.rows.find(candidate=>candidate.id===id);
   assert.equal(row.priority,'P0-validate-animation',id);
-  assert.equal(row.animated,1,id);
+  assert.equal(row.animated,animated,id);
   assert.equal(row.fidelity,'unverified',id);
  }
  assert.equal(result.rows[0].priority,'P0-validate-animation');

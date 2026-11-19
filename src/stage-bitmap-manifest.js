@@ -1615,5 +1615,121 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Deux plans statiques candidats de la chambre d’Alessa du film 2006. Matériaux et tente documentés par les photos 46 et 81 ; cadrage versus, volumes et piste de combat reconstruits. Aucun personnage, corps visible, lit occupé ou couloir des Dark Nurses. Le nom Brookhaven n’est pas attesté. Dimensions natives 1672 × 941 ; pas de certification 1:1 ni 4K natif. Préserver les compositions authored existantes gansAlessaTentCloth et alessaRoomRoundRest avec un raccord bitmap ciblé ; les PNG ne constituent pas de nouveaux clips animés."
+  },
+  "midwich_nightmare": {
+    "stageId": "midwich_nightmare",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "otherworld-boiler-hearth",
+    "referenceIds": [
+      "CL_SH1_03_NIGHTMARE_SCHOOL"
+    ],
+    "layers": [
+      {
+        "id": "hearth",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+            "sha256": "862c9df53e36a477d92d8f9881181f303a57e9020cd82b6164a90a553b7b2f71",
+            "bytes": 1955416,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-grid-uprights",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+            "sha256": "9a4ed651714051ca4b4a072f0510ea6edbef0b0a6dd57ffc4b61ce864ef66291",
+            "bytes": 175727,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Chambre du foyer central de Split Head sous la chaufferie Otherworld de Midwich SH1, sans boss ni corps. Caillebotis et foyer documentés ; largeur, cage, perspective, détail des matériaux et deux montants proches reconstruits pour le versus. Passage horizontal dégagé devant le foyer. Deux plans statiques natifs 1672×941 ; parallaxe de caméra authored .012. Aucun plafond déclaré, aucune règle de terrain, aucun danger, aucune cadence source ou fidélité 1:1 revendiquée."
+  },
+  "building_world": {
+    "stageId": "building_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "b12-b15-fan-stairwell-first-visit",
+    "referenceIds": [
+      "CL_SH4_05_BUILDING_WORLD"
+    ],
+    "layers": [
+      {
+        "id": "fan-stairwell",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/building_world.fan-stairwell.15995c474e24.png",
+            "sha256": "15995c474e24d66bed78609dea163344a04f4471260e5065edd2e9ecc834d23b",
+            "bytes": 2465408,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-masonry-returns",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+            "sha256": "9e753eeb66e25617558a302d0ae75d622531b4d31917ca7a2bd63a320a962652",
+            "bytes": 270542,
+            "width": 1671,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Grand escalier B12–B15 sous le ventilateur, premier Building World de SH4. Chambre vide sans fauteuils de la seconde visite. Matières et volée d’escalier informées par une capture de la seconde visite, sans importer ses entités ou événements. Palier horizontal, caméra, proportions, orientation frontale et quatre pales du ventilateur sont des adaptations non certifiées. Fond natif1672×941 et avant-plan natif1671×941, inchangés ; parallaxe de caméra .012. Aucun plafond déclaré, aucune chute, règle matérielle, cadence source ou fidélité 1:1 revendiquée."
   }
 };

@@ -1,6 +1,6 @@
 import {fighterReferenceHTML,stageReferenceHTML,finisherReferenceHTML,moveAvailabilityHTML,fighterRoleLabel,COMBAT_ROLE_LABELS} from './reference-ui.js';
-import { combatSpriteFor, retainedCombatFrames, spriteStatus, spriteCache } from './sprite-system.js';
-import {stageBitmapCache,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
+import { combatSpriteFor, retainedCombatFrames, shouldRetireCompletedCombat, spriteStatus, spriteCache } from './sprite-system.js';
+import {stageBitmapCache,stageBitmapFrames,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
@@ -543,12 +543,12 @@ async function startFight({ preserveRun = false, runCandidate = null, enteringCh
   const stages=stageIds.map(id=>STAGES.find(stage=>stage.id===id));
   if(stages.some(stage=>!stage)){flow.announce('Une arène du parcours est indisponible. La progression reste intacte.',true);return false;}
   const currentStage=candidate?.stages?.length?stages.find(stage=>stage.id===candidate.stages[candidate.index%candidate.stages.length]):state.stage;
-  const retainedFrames=retainedCombatFrames(state.engine);
-  const retainedStage=state.engine&&!state.engine.destroyed?state.engine.stage:null;
-  // A settled result needs only its final presentation clips. Preserve those
-  // images and every stage layer throughout preflight, including on failure.
+  let retainedFrames=retainedCombatFrames(state.engine);
+  let retainedStage=state.engine&&!state.engine.destroyed?state.engine.stage:null;
+  // Preserve the settled result and its stage throughout global preflight.
+  // Replacements that fit keep this lease until commit, including on failure.
   pinCombatAssets([],retainedStage?[retainedStage]:[],{retainedFrames});
-  const restorePins=captureCombatAssetPins();
+  let restorePins=captureCombatAssetPins();
   state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
   $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
   let ready;
@@ -556,6 +556,16 @@ async function startFight({ preserveRun = false, runCandidate = null, enteringCh
     ready=await prepareCombatAssets(fighters,stages,{diagnostic});
     if(ready.ok&&lease===state.spriteLease&&selection()===originalSelection){
       const pair=candidate?[getFighter(candidate.playerId),getFighter(candidate.queue[candidate.index])]:[state.p1,state.p2];
+      const nextFrames=pair.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]);
+      if(shouldRetireCompletedCombat(state.engine,nextFrames,{settled:state.settled,retainedFrames,
+        resultVisible:!els.result.classList.contains('hidden')&&!els.fightScreen.classList.contains('hidden')})){
+        stageBitmapCache.validatePins(stageBitmapFrames([currentStage]));
+        // The revealed result is irreversible. Stopping its renderer preserves
+        // the canvas pixels without a snapshot or a larger decoded-image budget.
+        // If final decoding fails, its panel and won checkpoint remain usable.
+        state.engine.destroy();retainedFrames=[];retainedStage=null;
+        pinCombatAssets([],[]);restorePins=captureCombatAssetPins();
+      }
       // Keep every image the old engine can still render until replacement is
       // decoded. A live previous match still retains its complete combat set.
       pinCombatAssets(pair,[currentStage,retainedStage].filter(Boolean),{retainedFrames});

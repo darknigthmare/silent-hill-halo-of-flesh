@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "wave": 18,
+  "date": "2026-11-19",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "fighterId": "homecoming_scarlet_doll_form_094",
+  "source": "homecoming",
+  "method": "built-in image_gen",
+  "status": "integrated-candidate; native and browser QA pending",
+  "referenceImage": {
+    "path": "assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+    "sha256": "a60a4f6fb41b135c3adbcd47833505b77c3322da152f14a8298861986e96cb69",
+    "role": "existing candidate doll idle; not original-game artwork"
+  },
+  "sourceEvidence": {
+    "referenceIds": [
+      "EXT05",
+      "EXT06"
+    ],
+    "repositoryReference": "src/production-reference.js:homecoming_scarlet_doll_form_094",
+    "scope": "Porcelain standing doll form only; no spider-phase replacement, source walk timing unmeasured"
+  },
+  "calls": [
+    {
+      "output": "passing-v1.png",
+      "selected": false,
+      "prompt": "Use case: identity-preserve.\nAsset type: one separate full-body transparent walking animation frame for Scarlet, porcelain DOLL FORM, Silent Hill Homecoming, matching the provided existing game-project sprite.\nInput image: strict character, material, proportions and side-view reference. Preserve the tall two-legged porcelain doll with the same cracked pale ceramic shell, red seams/patina, long articulated arms, segmented hips/knees/ankles, bald sculpted head and fixed snarling face. This is the intact doll phase, NOT the later exposed/spider phase.\nPrimary request: a clearly different PASSING STEP pose facing RIGHT in an exact side-on fighting-game view. Her weight is on the planted front/rightmost foot. The other foot is lifted a little and passes forward beneath the hip with its knee bent. Keep the two legs distinct, no crossing through each other, same giant proportions. The long arms counter-swing gently, hands open, fingers long and complete; they are not attacking. Upper body leans slightly forward but is still upright.\nComposition: one character, one pose. Scale the entire character down within the canvas so there is at least 12 percent clear transparent padding from the top of the head, bottoms of the soles, and all fingertips to the image edges. Full silhouette from head to toes and fingertips. No tight crop. Center within the middle 76 percent of the canvas.\nRendering: detailed realistic 2D game character render consistent with the reference; ceramic surfaces remain ceramic, no new flesh injuries, no new gore, no clothing or weapon added.\nTransparency: genuine clean alpha; remove the reference's ambient brown haze so only the doll is visible. No background, ground, cast shadow, smoke, vignette, glow, outline or text. No sheet and no second character.",
+      "reason": "Replaced by alpha-edge refinement; most apparent preview haze already had alpha zero."
+    },
+    {
+      "output": "passing.png",
+      "selected": true,
+      "prompt": "Use case: background-extraction.\nEdit target: the supplied image of the single porcelain Scarlet doll in a raised-foot walking pose.\nChange ONLY the background/transparency. The large diffuse brown/cream/red haze surrounding the doll is unwanted background, NOT part of the character. Remove that haze completely. Cut out the complete doll with a close, clean alpha edge, including the empty spaces between fingers, arms, torso and legs. Every area outside the solid doll silhouette must be fully transparent, not dark gray, not blurred or semi-opaque mist.\nKeep the doll itself unchanged: same pose, all body parts, exact head/face, ceramic colors and surface markings, two arms/two legs, all fingers, both whole feet and existing framing. Do not change anatomy, scale, position or camera; no new shadows, glow, floor, backdrop, text, objects or extra character.\nReturn the same single full-body sprite on actual transparent alpha.",
+      "frameIndex": 1,
+      "anchor": [
+        0.515,
+        0.9010416666666666
+      ],
+      "bodyHeight": 0.86
+    },
+    {
+      "output": "contact-v1.png",
+      "selected": false,
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE separate full-body transparent walking frame for Scarlet, intact porcelain DOLL FORM, from Silent Hill Homecoming.\nInput image is the project's new lifted-foot/passing pose. Preserve this exact nonhuman porcelain doll's identity, long articulated limbs, proportions, head/face, pale ceramic shell with red seams and patina, segmented mechanical joints, colors and rendering. No transformation to the exposed/spider phase.\nPrimary request: the next OPPOSITE CONTACT walking step in exact SIDE PROFILE facing RIGHT. The leg which was lifted at the left/rear in the input now reaches FORWARD toward screen-right and has its complete foot newly contacting the ground. The other leg is now behind, extended back toward screen-left with a naturally slightly lifted heel. Clearly reverse the legs' front/back stride positions relative to the original project idle; do not repeat the same stance. The two legs must remain anatomically separate. Both long arms counter-swing modestly, both complete hands visible, not attacking.\nKeep her torso upright with a restrained forward lean. Same giant doll proportions, same head size, no added clothing, weapon or new injuries.\nComposition: one character and one pose, no animation sheet. Entire head, both feet, all fingertips in view. Keep the figure within the central 76 percent of the canvas, with roughly 12 percent transparent safety margin all around. Do not change the camera to three-quarter.\nTransparency: clean actual alpha around the solid doll and inside all gaps. Any brown/red ambient haze in the input is background and must not appear in the output. No floor, cast shadow, smoke, vignette, glow, outlines or text.",
+      "reason": "Leading legs did not alternate clearly from initial idle."
+    },
+    {
+      "output": "contact.png",
+      "selected": true,
+      "prompt": "Use case: precise-object-edit.\nTarget: this Scarlet porcelain doll sprite in a side-facing walking contact pose.\nChange only the gait pose to the OPPOSITE contact. Keep the exact same head, porcelain material, scale, limb lengths, camera facing RIGHT, canvas framing and complete silhouette.\nCritical leg order: the NEAR leg (closest to the viewer, its thigh currently visible across the foreground going toward screen-right) must instead extend BACKWARD toward SCREEN-LEFT with its heel slightly raised. The FAR leg must extend FORWARD toward SCREEN-RIGHT with its foot planted. The far thigh is naturally partly occluded by the near thigh at the hip; do not fuse the legs. This is a true alternating stride, not the same leading leg in a wider stance.\nCounter-swing: the NEAR arm moves a little forward toward screen-right while the far arm drifts back; preserve both complete long hands and all fingers, no attack.\nEverything else stays the same. Entire doll visible with transparent margins; no added background, haze, ground, shadow, glow, outlines, text, weapon or new damage. Actual clean transparent alpha outside the doll, including all gaps.",
+      "frameIndex": 2,
+      "anchor": [
+        0.515,
+        0.86328125
+      ],
+      "bodyHeight": 0.86
+    }
+  ],
+  "clip": {
+    "key": "walk",
+    "frames": [
+      0,
+      1,
+      2,
+      1
+    ],
+    "ticksPerFrame": 8,
+    "frameTicks": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "loop": true,
+    "totalTicks": 32,
+    "distinctImages": 3,
+    "newImages": 2
+  },
+  "calibration": "New heads are about 94% of the original source-pixel size. Shared bodyHeight .86 retains their standing-equivalent stature while allowing the bent/wide stride to lower the body. Vertical anchors follow actual lowest visible sole at alpha>=32; horizontal anchor aligns pelvis relative to old idle.",
+  "limits": [
+    "Short authored versus walk, passage reused on return; no complete source walk cycle certified.",
+    "Existing portrait and idle unchanged; no gameplay movement speed, attacks, collision geometry or role edited.",
+    "No external pixel cleanup, resize or crop. Original PNG bytes copied unchanged.",
+    "Viewer RGB under alpha zero can look like haze; read actual alpha and properly composited game pixels before judging visibility.",
+    "Fine colored fringes and reconstructed proportions remain candidate art; no source 1:1 or UHD certification."
+  ]
+}

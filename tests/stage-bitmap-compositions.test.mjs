@@ -4,7 +4,7 @@ import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
 import {STAGES} from '../src/data.js';
 import {stageReferenceTrackAllowed} from '../src/stage-reference-policy.js';
 import {stageReferencePresentation} from '../src/stage-cinematics.js';
-import {drawAlessaBitmapComposition} from '../src/stage-bitmap-compositions.js';
+import {drawAlessaBitmapComposition,drawMidwichHearthBitmapComposition} from '../src/stage-bitmap-compositions.js';
 
 const stage = STAGES.find(value => value.id === 'film_hospital');
 const art = STAGE_BITMAPS.film_hospital;
@@ -82,4 +82,47 @@ test('round rest uses existing phase clock, returns its id, and does not mutate 
   assert.ok(first.drawn.trackIds.includes(stage.referenceTracks.find(track=>track.key==='alessaRoomRoundRest').id));
   assert.equal(first.calls.filter(call=>call[0]==='stroke').length,3);
   assert.equal(JSON.stringify(stage),before);
+});
+
+const hearthStage=STAGES.find(value=>value.id==='midwich_nightmare');
+const hearthArt=STAGE_BITMAPS.midwich_nightmare;
+function hearthDraw(presentation,selectedArt=hearthArt,selectedStage=hearthStage,allowed=stageReferenceTrackAllowed,size=[1280,720]){
+  const result=trace();
+  result.drawn=drawMidwichHearthBitmapComposition(result.ctx,...size,selectedStage,selectedArt,presentation,allowed);
+  assert.equal(result.stack.length,0);
+  assert.equal(result.ctx.globalAlpha,.4);
+  return result;
+}
+test('SH1 hearth pulse clips to four painted fire cells without replacing its cage or floor',()=>{
+  const before=JSON.stringify(hearthStage),result=hearthDraw(stageReferencePresentation(hearthStage,1200));
+  assert.deepEqual(result.drawn,{handled:true,roundHandled:false,trackIds:[hearthStage.referenceTracks.find(item=>item.key==='boilerHearthGlow').id]});
+  assert.equal(result.calls.filter(call=>call[0]==='clip').length,1);
+  assert.equal(result.calls.filter(call=>call[0]==='rect').length,4);
+  assert.equal(result.calls.filter(call=>call[0]==='fillRect').length,1);
+  assert.equal(result.calls.some(call=>['stroke','drawImage','ellipse','arc'].includes(call[0])),false);
+  assert.equal(JSON.stringify(hearthStage),before);
+  const denied=hearthDraw({time:1200},hearthArt,hearthStage,()=>false);
+  assert.equal(denied.calls.length,0);assert.deepEqual(denied.drawn.trackIds,[]);
+});
+test('SH1 bitmap pulse rejects another scene, frame, fit or blocked reference',()=>{
+  for(const art of [
+    {...hearthArt,scene:'otherworld-corridor'},
+    {...hearthArt,layers:hearthArt.layers.map((layer,index)=>index?layer:{...layer,fit:'stretch'})},
+    {...hearthArt,layers:hearthArt.layers.map((layer,index)=>index?layer:{...layer,frames:[{...layer.frames[0],sha256:'0'.repeat(64)}]})}
+  ]){
+    const result=hearthDraw({time:1200},art);assert.equal(result.drawn.handled,false);assert.equal(result.calls.length,0);
+  }
+  const result=hearthDraw({time:1200},hearthArt,{...hearthStage,reference:{...hearthStage.reference,blocked:true}});
+  assert.equal(result.drawn.handled,false);assert.equal(result.calls.length,0);
+});
+test('SH1 bitmap pulse uses the existing frozen presentation clock and cover projection',()=>{
+  assert.notDeepEqual(hearthDraw(stageReferencePresentation(hearthStage,1200)).calls,hearthDraw(stageReferencePresentation(hearthStage,3600)).calls);
+  for(const options of [{reducedMotion:true},{animationsEnabled:false}])assert.deepEqual(
+    hearthDraw(stageReferencePresentation(hearthStage,1200,null,options)).calls,
+    hearthDraw(stageReferencePresentation(hearthStage,3600,null,options)).calls);
+  for(const size of [[1280,720],[1920,720],[720,1280]]){
+    const result=hearthDraw({time:1200},hearthArt,hearthStage,stageReferenceTrackAllowed,size),scale=Math.max(size[0]/1672,size[1]/941);
+    assert.deepEqual(result.calls.find(call=>call[0]==='translate'),['translate',(size[0]-1672*scale)/2,(size[1]-941*scale)/2]);
+    assert.deepEqual(result.calls.find(call=>call[0]==='scale'),['scale',scale,scale]);
+  }
 });

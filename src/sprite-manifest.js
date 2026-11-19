@@ -7117,7 +7117,7 @@ export const SPRITES = {
       1312
     ],
     "singleSubjectReviewed": true,
-    "notes": "Nurse de Silent Hill Origins : nouvelle attente latérale vers la droite, corps entier, tête sans visage et seringue. Portrait historique conservé. Dessin candidat statique ; fidélité exacte et détails du modèle PSP non certifiés. Garde séparée raccordée au même sujet et à la même échelle.",
+    "notes": "Vague18 : attaque neutralSpecial à seringue avec deux nouvelles poses, [4,5,4,0] et durées15/6/13/13ticks ; dessin d’anticipation réutilisé en récupération puis idle. Startup15/active6/recovery26 et règles existantes inchangés ; timings source non mesurés. Idle, garde, marche de vague17 et portrait conservés. Trois dessins distincts pour l’attaque, pas de moveset complet ni fidélité 1:1 certifiés.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -7271,6 +7271,82 @@ export const SPRITES = {
           924,
           1216
         ]
+      },
+      {
+        "sha256": "761018b17f268fee3696f215952d5be578a3e80c32e2e1fe99c76c9494691571",
+        "bytes": 675872,
+        "width": 1199,
+        "height": 1312,
+        "visibleBounds": [
+          243,
+          113,
+          875,
+          1208
+        ],
+        "pixelSHA256": "3785e579b05e683395c3184b752deca7f08f1ae3159970391795dc2c0bd6ea19",
+        "transparentFraction": 0.84699,
+        "path": "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.9207317073170732
+        ],
+        "bodyHeight": 0.8734756097560976,
+        "sourceFile": "anticipation.png",
+        "sourceSHA256": "761018b17f268fee3696f215952d5be578a3e80c32e2e1fe99c76c9494691571",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          18,
+          1173,
+          1312
+        ],
+        "framingBounds": [
+          240,
+          110,
+          878,
+          1218
+        ]
+      },
+      {
+        "sha256": "79e6ad63330f1554e7bae9e11c612c7f99f377f6e860b3abcdfb44d624610b17",
+        "bytes": 699191,
+        "width": 1199,
+        "height": 1312,
+        "visibleBounds": [
+          197,
+          122,
+          1149,
+          1217
+        ],
+        "pixelSHA256": "59c5d4335bd643dcdc407106a68bfdea07ceb6fca86e7d6529ff877373e2739d",
+        "transparentFraction": 0.85156,
+        "path": "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+        "facing": 1,
+        "anchor": [
+          0.402,
+          0.9275914634146342
+        ],
+        "bodyHeight": 0.8734756097560976,
+        "sourceFile": "active.png",
+        "sourceSHA256": "79e6ad63330f1554e7bae9e11c612c7f99f377f6e860b3abcdfb44d624610b17",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          50,
+          20,
+          1179,
+          1295
+        ],
+        "framingBounds": [
+          192,
+          119,
+          1153,
+          1222
+        ]
       }
     ],
     "portrait": {
@@ -7331,9 +7407,25 @@ export const SPRITES = {
           7
         ],
         "loop": true
+      },
+      "neutralSpecial": {
+        "frames": [
+          4,
+          5,
+          4,
+          0
+        ],
+        "ticksPerFrame": 15,
+        "frameTicks": [
+          15,
+          6,
+          13,
+          13
+        ],
+        "loop": false
       }
     },
-    "animatedClips": 1,
+    "animatedClips": 2,
     "selectionNotes": "Corps entier candidat Origins PSP : adulte en uniforme, tête sans visage, seringue visible et deux chaussures. Seringue propre à Origins ; aucun scalpel, pipe ou arme SH3/film emprunté. Matière/échelle/pose2D composées depuis les rendus, sans animation ni mesure originale certifiée.",
     "selectionProvenance": {
       "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
@@ -7345,7 +7437,7 @@ export const SPRITES = {
       "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Nurse de Silent Hill Origins : nouvelle attente latérale vers la droite, corps entier, tête sans visage et seringue. Portrait historique conservé. Dessin candidat statique ; fidélité exacte et détails du modèle PSP non certifiés. Garde séparée raccordée au même sujet et à la même échelle."
+    "combatNotes": "Vague18 : attaque neutralSpecial à seringue avec deux nouvelles poses, [4,5,4,0] et durées15/6/13/13ticks ; dessin d’anticipation réutilisé en récupération puis idle. Startup15/active6/recovery26 et règles existantes inchangés ; timings source non mesurés. Idle, garde, marche de vague17 et portrait conservés. Trois dessins distincts pour l’attaque, pas de moveset complet ni fidélité 1:1 certifiés."
   },
   "origins_the_butcher_081": {
     "fighterId": "origins_the_butcher_081",
@@ -10707,7 +10799,7 @@ export const SPRITES = {
       1293
     ],
     "singleSubjectReviewed": true,
-    "notes": "Scraper de Silent Hill: The Arcade (2007). Garde vers la droite, voile et bande de tête, tunique brune et pantalon rayé de l'édition Arcade ; deux lames courtes séparées tenues par les mains, deux chaussures entières. Légère torsion du buste pour dégager les deux bras. Aucun transfert du costume SH3 ou de Missionary. Pose fixe candidate ; orientation et détails arrière interprétés. Sélection historique conservée ; aucune animation ajoutée.",
+    "notes": "Vague18 : deux nouvelles poses de marche et une garde statique, identité du Scraper Arcade et deux couteaux conservés. Marche [0,1,2,1] à7ticks, garde[3] ; idle et portrait inchangés. Cycle court versus avec passage réutilisé, super toujours désactivé, timings source non mesurés. Dessins natifs sans redimensionnement ; calibration par image ; aucune fidélité 1:1 certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -10747,6 +10839,120 @@ export const SPRITES = {
           1107,
           1166
         ]
+      },
+      {
+        "sha256": "75bcf0ea854a8673e7e0cf2ac396da50487f4a33d1b9b0aeda877fe453e258e2",
+        "bytes": 758197,
+        "width": 1216,
+        "height": 1293,
+        "visibleBounds": [
+          197,
+          151,
+          1021,
+          1143
+        ],
+        "pixelSHA256": "287b6576721ef1cde999041d9726b8917e90d51f85b4bd17b24cc29afa25c528",
+        "transparentFraction": 0.8403,
+        "path": "assets/sprites/arcade_scraper_arcade.75bcf0ea854a.png",
+        "facing": 1,
+        "anchor": [
+          0.46710526315789475,
+          0.8839907192575406
+        ],
+        "bodyHeight": 0.7672080433101315,
+        "sourceFile": "walk-passing.png",
+        "sourceSHA256": "75bcf0ea854a8673e7e0cf2ac396da50487f4a33d1b9b0aeda877fe453e258e2",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          49,
+          96,
+          1098,
+          1293
+        ],
+        "framingBounds": [
+          194,
+          146,
+          1024,
+          1148
+        ]
+      },
+      {
+        "sha256": "17a9e16b785b13ac26fcfc80139af9a9ef71291c1b6a09f1823f3e99424bbe68",
+        "bytes": 393828,
+        "width": 1117,
+        "height": 1409,
+        "visibleBounds": [
+          315,
+          429,
+          839,
+          1013
+        ],
+        "pixelSHA256": "f8177df15ea15554f6f392641cd0021fda7c5d924811ea8614fe1ac44af8e1a8",
+        "transparentFraction": 0.93468,
+        "path": "assets/sprites/arcade_scraper_arcade.17a9e16b785b.png",
+        "facing": 1,
+        "anchor": [
+          0.4843330349149508,
+          0.7189496096522356
+        ],
+        "bodyHeight": 0.41447835344215755,
+        "sourceFile": "walk-contact-framed.png",
+        "sourceSHA256": "17a9e16b785b13ac26fcfc80139af9a9ef71291c1b6a09f1823f3e99424bbe68",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          114,
+          85,
+          1087,
+          1384
+        ],
+        "framingBounds": [
+          312,
+          426,
+          842,
+          1017
+        ]
+      },
+      {
+        "sha256": "a269b2831292bfdb7b6b5b2d3ea52487deba8a07c46494967c255104b1f46adb",
+        "bytes": 607205,
+        "width": 1116,
+        "height": 1409,
+        "visibleBounds": [
+          288,
+          304,
+          834,
+          1158
+        ],
+        "pixelSHA256": "dc199142c5e4b15e80321da2c79a7d14848a67a0270b8f43d5df8169fa59bc9d",
+        "transparentFraction": 0.87687,
+        "path": "assets/sprites/arcade_scraper_arcade.a269b2831292.png",
+        "facing": 1,
+        "anchor": [
+          0.4838709677419355,
+          0.8218594748048261
+        ],
+        "bodyHeight": 0.6061036195883606,
+        "sourceFile": "guard.png",
+        "sourceSHA256": "a269b2831292bfdb7b6b5b2d3ea52487deba8a07c46494967c255104b1f46adb",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          136,
+          19,
+          1096,
+          1385
+        ],
+        "framingBounds": [
+          282,
+          301,
+          837,
+          1165
+        ]
       }
     ],
     "portrait": {
@@ -10784,9 +10990,32 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "ticksPerFrame": 7,
+        "frameTicks": [
+          7,
+          7,
+          7,
+          7
+        ],
+        "loop": true
+      },
+      "guard": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
-    "animatedClips": 0,
+    "animatedClips": 1,
     "selectionNotes": "Scraper Arcade 2007 entier, visage voilé, tunique et pantalon rayé, deux lames courtes et chaussures visibles. Les lames restent tenues dans les mains du rendu ; pas greffe de bras ou transfert de Missionary SH3. Pose/outil et matière reconstruits, aucune mesure originale.",
     "selectionProvenance": {
       "sourceSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
@@ -10798,7 +11027,7 @@ export const SPRITES = {
       "sourceFile": "exec-1b97aa79-f9b1-4443-8fcf-d908c9c93066.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Scraper de Silent Hill: The Arcade (2007). Garde vers la droite, voile et bande de tête, tunique brune et pantalon rayé de l'édition Arcade ; deux lames courtes séparées tenues par les mains, deux chaussures entières. Légère torsion du buste pour dégager les deux bras. Aucun transfert du costume SH3 ou de Missionary. Pose fixe candidate ; orientation et détails arrière interprétés. Sélection historique conservée ; aucune animation ajoutée."
+    "combatNotes": "Vague18 : deux nouvelles poses de marche et une garde statique, identité du Scraper Arcade et deux couteaux conservés. Marche [0,1,2,1] à7ticks, garde[3] ; idle et portrait inchangés. Cycle court versus avec passage réutilisé, super toujours désactivé, timings source non mesurés. Dessins natifs sans redimensionnement ; calibration par image ; aucune fidélité 1:1 certifiée."
   },
   "arcade_red_pyramid_thing_arcade": {
     "fighterId": "arcade_red_pyramid_thing_arcade",
@@ -15653,50 +15882,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-297da1b8-8f2b-483e-9473-dc4e617570a2.png",
-    "sourceSHA256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014",
+    "sourceFile": "film_lying_figure_return_to_silent_hill_combat_idle.png",
+    "sourceSHA256": "5d110b145c90b5a8f6071d37956b411cc278e2becf17a7c423d897a57074b835",
     "sourceDimensions": [
       1254,
       1254
     ],
     "singleSubjectReviewed": true,
-    "notes": "ART144 E : extérieur entier inspecté, alpha réel et marges transparentes; candidats issus de références de l’édition exacte. Une seule illustration idle statique, non bouclée; aucune animation, chronologie native ni certification1:1. Les rôles et capacités existants restent inchangés. Plan15 du film2026 montre tête, corps contenu sans bras libres et deux pieds entiers. Une seule orientation de cette édition a été trouvée: texture haute résolution, épaisseur et détails hors champ restent reconstruits et non mesurés. Ne valide ni la version2006 ni le modèleSH2.",
+    "notes": "Vague18 : silhouette latérale candidate entière du Lying Figure Return, d’après photo16.webp (photo15 historique montre James et n’est pas la créature). Bras contenus, tête engainée, deux pieds ; détails latéraux reconstruits. Portrait conservé ; rôle toujours non vérifié et combat désactivé, bitmap consultable dans l’atelier seulement. Aucune activation jouable ni fidélité 1:1 certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "9d5e3c653fa9e90c4bc7d63d2ea770758d6e78d5a9718bd882411b65396f07e2",
-        "sha256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014",
-        "bytes": 271449,
+        "sha256": "5d110b145c90b5a8f6071d37956b411cc278e2becf17a7c423d897a57074b835",
+        "bytes": 332268,
         "width": 1254,
         "height": 1254,
         "visibleBounds": [
-          487,
-          282,
-          807,
-          1052
+          448,
+          150,
+          779,
+          1108
         ],
-        "transparentFraction": 0.9486,
-        "path": "assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+        "pixelSHA256": "1a73de61d7ec83a626f46611254e2000d4063a351af194fd5c9d04eeef2df616",
+        "transparentFraction": 0.92985,
+        "path": "assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png",
         "facing": 1,
         "anchor": [
-          0.515949,
-          0.838915
+          0.4892344497607656,
+          0.8835725677830941
         ],
-        "bodyHeight": 0.614035,
-        "sourceFile": "exec-297da1b8-8f2b-483e-9473-dc4e617570a2.png",
-        "sourceSHA256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014",
+        "bodyHeight": 0.7639553429027113,
+        "sourceFile": "film_lying_figure_return_to_silent_hill_combat_idle.png",
+        "sourceSHA256": "5d110b145c90b5a8f6071d37956b411cc278e2becf17a7c423d897a57074b835",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          242,
-          51,
-          1152,
-          1152
+          73,
+          37,
+          1208,
+          1214
         ],
         "framingBounds": [
-          483,
-          278,
-          810,
-          1057
+          445,
+          147,
+          782,
+          1111
         ]
       }
     ],
@@ -15737,7 +15968,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "ART144 E : extérieur entier inspecté, alpha réel et marges transparentes; candidats issus de références de l’édition exacte. Une seule illustration idle statique, non bouclée; aucune animation, chronologie native ni certification1:1. Les rôles et capacités existants restent inchangés. Plan15 du film2026 montre tête, corps contenu sans bras libres et deux pieds entiers. Une seule orientation de cette édition a été trouvée: texture haute résolution, épaisseur et détails hors champ restent reconstruits et non mesurés. Ne valide ni la version2006 ni le modèleSH2.",
+    "selectionProvenance": {
+      "sourceSHA256": "03b36f63842238bd56c10ed99665ea4535a3096fdd39eebc3d6f6ca5c2741014",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-297da1b8-8f2b-483e-9473-dc4e617570a2.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Vague18 : silhouette latérale candidate entière du Lying Figure Return, d’après photo16.webp (photo15 historique montre James et n’est pas la créature). Bras contenus, tête engainée, deux pieds ; détails latéraux reconstruits. Portrait conservé ; rôle toujours non vérifié et combat désactivé, bitmap consultable dans l’atelier seulement. Aucune activation jouable ni fidélité 1:1 certifiée."
   },
   "ascension_stinger_181": {
     "fighterId": "ascension_stinger_181",
@@ -16226,7 +16469,7 @@ export const SPRITES = {
       1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Scarlet, forme de poupée de Silent Hill Homecoming : attente latérale vers la droite, coque de porcelaine, deux bras et deux appuis entiers. Portrait historique conservé ; forme distincte de Scarlet arachnide. Dessin candidat statique, reconstruction de profil depuis la référence du projet ; détails du modèle source non certifiés.",
+    "notes": "Vague18 : deux poses nouvelles pour la forme poupée de Scarlet Homecoming ; marche [0,1,2,1] à8ticks, trois images distinctes dont l’idle existant. Porcelaine et phase poupée conservées, portrait inchangé. Calibration commune .86 des nouveaux dessins, appuis propres ; aucun changement de locomotion ou de règles. Cycle court versus et détails reconstruits, timings source non mesurés ; aucune fidélité 1:1 certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
@@ -16266,6 +16509,82 @@ export const SPRITES = {
           898,
           1472
         ]
+      },
+      {
+        "sha256": "35a3afb32f14d89625c3ff40cf99924ea66fc16602c84d9893884a84bbb33068",
+        "bytes": 1610864,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          164,
+          155,
+          876,
+          1384
+        ],
+        "pixelSHA256": "1cb301ca91300ed6c8699478a2bfc2cdf1b90a9e21f7c0a94cd09c0c62bfcf56",
+        "transparentFraction": 0.85983,
+        "path": "assets/sprites/homecoming_scarlet_doll_form_094.35a3afb32f14.png",
+        "facing": 1,
+        "anchor": [
+          0.515,
+          0.9010416666666666
+        ],
+        "bodyHeight": 0.86,
+        "sourceFile": "passing.png",
+        "sourceSHA256": "35a3afb32f14d89625c3ff40cf99924ea66fc16602c84d9893884a84bbb33068",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          39,
+          29,
+          994,
+          1504
+        ],
+        "framingBounds": [
+          159,
+          149,
+          880,
+          1395
+        ]
+      },
+      {
+        "sha256": "4885e23734763b4f0e59f289754887ce4a3f214e98162d16f25e1b80bd776611",
+        "bytes": 1691241,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          117,
+          154,
+          895,
+          1326
+        ],
+        "pixelSHA256": "b3f5ff9add7113146796260b32f82b6de6059084734ef2f725c843f3cf230995",
+        "transparentFraction": 0.86499,
+        "path": "assets/sprites/homecoming_scarlet_doll_form_094.4885e2373476.png",
+        "facing": 1,
+        "anchor": [
+          0.515,
+          0.86328125
+        ],
+        "bodyHeight": 0.86,
+        "sourceFile": "contact.png",
+        "sourceSHA256": "4885e23734763b4f0e59f289754887ce4a3f214e98162d16f25e1b80bd776611",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          41,
+          1008,
+          1520
+        ],
+        "framingBounds": [
+          109,
+          145,
+          898,
+          1330
+        ]
       }
     ],
     "portrait": {
@@ -16303,9 +16622,25 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "ticksPerFrame": 8,
+        "frameTicks": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "loop": true
       }
     },
-    "animatedClips": 0,
+    "animatedClips": 1,
     "selectionNotes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Nouvelles captures126/127 correctement identifiées Scarlet à coque de porcelaine, distinctes des anciennes133-138 Asphyxia/Sepulcher. La127 atteint le bord inférieur et son pied droit est en partie masqué par le watermark ; la126 coupe les jambes. Les deux terminaisons sombres des pieds/capsules de la sortie sont donc interprétées et non attestées nettement. Silhouette générée entière ; détails des pieds, proportions, motifs et état exact de la coque non certifiés. Aucun1:1 certifié. Marges réelles=[0.19059, 0.02313, 0.10128, 0.02313] ; le contour connecté reste interne, sans certification de la cible12%.",
     "selectionProvenance": {
       "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
@@ -16317,7 +16652,7 @@ export const SPRITES = {
       "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Scarlet, forme de poupée de Silent Hill Homecoming : attente latérale vers la droite, coque de porcelaine, deux bras et deux appuis entiers. Portrait historique conservé ; forme distincte de Scarlet arachnide. Dessin candidat statique, reconstruction de profil depuis la référence du projet ; détails du modèle source non certifiés."
+    "combatNotes": "Vague18 : deux poses nouvelles pour la forme poupée de Scarlet Homecoming ; marche [0,1,2,1] à8ticks, trois images distinctes dont l’idle existant. Porcelaine et phase poupée conservées, portrait inchangé. Calibration commune .86 des nouveaux dessins, appuis propres ; aucun changement de locomotion ou de règles. Cycle court versus et détails reconstruits, timings source non mesurés ; aucune fidélité 1:1 certifiée."
   },
   "shattered_raw_shock_base_099": {
     "fighterId": "shattered_raw_shock_base_099",
@@ -16891,51 +17226,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-166e669a-3a5d-4920-b14f-e9de4eb48b77.png",
-    "sourceSHA256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+    "sourceFile": "film_mannequin_monster_176_combat_idle.png",
+    "sourceSHA256": "d5bc6baa191d8bab7a0232001b57d936578635f12ad8acf41bdf6d73f9712eef",
     "sourceDimensions": [
       1254,
       1254
     ],
     "singleSubjectReviewed": true,
-    "notes": "Mannequin Monster du film Silent Hill: Revelation2012, édition France du booklet de production : vues CG du panneau02 recoupées avec les rendus MrXRev9/9.1 et les plans filmés03. Une araignée de pièces de mannequins de vitrine autour d’une carapace sombre, distincte du MannequinSH2. La première sortie avait un halo brun, supprimé par édition ImageGen ; cette première sortie est exclue. Les vues CG entières02 ne sont pas explicitement légendées finales ; les recouvrements des rendus03 empêchent de certifier le total source des têtes/mains/pieds et leurs raccords cachés. Le candidat conserve4têtes et ses extrémités visibles, sans prétendre certifier cette topologie ni la pose du film. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "Vague18 : silhouette latérale candidate entière du Mannequin Monster de Revelation, quatre têtes. Livret de production CGI02/03 et portrait candidat utilisés ; attaches, angle caché et texture reconstruits. Idle statique séparé du portrait conservé. Rencontre scénarisée avec transposition versus déjà autorisée, sans changement de rôle. Franges colorées fines à réviser ; aucune fidélité 1:1 certifiée.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
-        "bytes": 1443378,
+        "sha256": "d5bc6baa191d8bab7a0232001b57d936578635f12ad8acf41bdf6d73f9712eef",
+        "bytes": 553460,
         "width": 1254,
         "height": 1254,
         "visibleBounds": [
-          28,
-          164,
-          1243,
-          1120
+          228,
+          387,
+          1022,
+          876
         ],
-        "alphaBounds": [
-          0,
-          23,
-          1253,
-          1254
-        ],
-        "framingBounds": [
-          24,
-          160,
-          1253,
-          1123
-        ],
-        "pixelSHA256": "8c19c2a229d88b42ef7f02e087d3178c49d4b205b4ad607c749dc31796d46a28",
-        "transparentFraction": 0.70793,
-        "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+        "pixelSHA256": "b7f7455e988253a0979915e5e49f1518d31386ec86084e8a3852f88866445eb5",
+        "transparentFraction": 0.89412,
+        "path": "assets/sprites/film_mannequin_monster_176.d5bc6baa191d.png",
         "facing": 1,
         "anchor": [
-          0.5067783094098883,
-          0.8931419457735247
+          0.4984051036682616,
+          0.6985645933014354
         ],
-        "bodyHeight": 0.7623604465709729,
-        "sourceFile": "exec-166e669a-3a5d-4920-b14f-e9de4eb48b77.png",
-        "sourceSHA256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.38995215311004783,
+        "sourceFile": "film_mannequin_monster_176_combat_idle.png",
+        "sourceSHA256": "d5bc6baa191d8bab7a0232001b57d936578635f12ad8acf41bdf6d73f9712eef",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          55,
+          55,
+          1227,
+          1228
+        ],
+        "framingBounds": [
+          226,
+          385,
+          1024,
+          882
+        ]
       }
     ],
     "portrait": {
@@ -16975,7 +17312,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Mannequin Monster du film Silent Hill: Revelation2012, édition France du booklet de production : vues CG du panneau02 recoupées avec les rendus MrXRev9/9.1 et les plans filmés03. Une araignée de pièces de mannequins de vitrine autour d’une carapace sombre, distincte du MannequinSH2. La première sortie avait un halo brun, supprimé par édition ImageGen ; cette première sortie est exclue. Les vues CG entières02 ne sont pas explicitement légendées finales ; les recouvrements des rendus03 empêchent de certifier le total source des têtes/mains/pieds et leurs raccords cachés. Le candidat conserve4têtes et ses extrémités visibles, sans prétendre certifier cette topologie ni la pose du film. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "dc9b92150b37cd46b6fa633bfd02b635ff98d71349f0b078f83c96119a9e8eb7",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-166e669a-3a5d-4920-b14f-e9de4eb48b77.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Vague18 : silhouette latérale candidate entière du Mannequin Monster de Revelation, quatre têtes. Livret de production CGI02/03 et portrait candidat utilisés ; attaches, angle caché et texture reconstruits. Idle statique séparé du portrait conservé. Rencontre scénarisée avec transposition versus déjà autorisée, sans changement de rôle. Franges colorées fines à réviser ; aucune fidélité 1:1 certifiée."
   },
   "townfall_lunger": {
     "fighterId": "townfall_lunger",

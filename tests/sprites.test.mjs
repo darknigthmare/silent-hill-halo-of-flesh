@@ -20,7 +20,7 @@ function harness({fail=false,hang=false,wrong=false,delay=0,...options}={}){
 function ctx(){const calls=[],gradient={addColorStop(){}};return new Proxy({calls,canvas:{width:720,height:500},createLinearGradient:()=>gradient},{get:(o,k)=>k in o?o[k]:(...a)=>calls.push([k,...a])});}
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('raster coverage counts real exact-ID assets, not roster entries or resized copies',()=>{
- const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,3);
+ const c=spriteCoverage(ROSTER),registered=Object.keys(SPRITES).length;assert.equal(c.total,230);assert.equal(c.integrated,registered);assert.equal(c.missing.length,230-registered);assert.equal(c.certified,0);assert.equal(c.animatedClips,6);
 });
 test('Scarlet crawls through three lateral drawings and returns to rest on release',()=>{
  const scarlet=spriteFor('homecoming_scarlet_spider_form_095');

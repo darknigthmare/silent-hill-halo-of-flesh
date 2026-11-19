@@ -3,7 +3,7 @@ import { drawStageArchitecture, stageSpace } from './stage-architecture.js';
 import { drawStageCinematics, drawStageReferenceTracks, stageReferencePresentation, drawRoundComposition } from './stage-cinematics.js';
 import { stageReferenceEventAllowed, stageAnimationConflictsWithHazard, stageReferenceTrackAllowed } from './stage-reference-policy.js';
 import {drawStageBitmaps, stageBitmapFor, stageBitmapCache} from './stage-bitmaps.js';
-import {drawAlessaBitmapComposition} from './stage-bitmap-compositions.js';
+import {drawAlessaBitmapComposition,drawMidwichHearthBitmapComposition} from './stage-bitmap-compositions.js';
 
 const TAU=Math.PI*2;
 function rgba(hex,a=1){
@@ -290,7 +290,9 @@ export function drawStage(ctx,stage,time=0,{width=1280,height=720,cinematic=fals
     drawStageBitmaps(ctx,stage,time,bitmapOptions);
     const composition=stage.id==='film_hospital'
       ? drawAlessaBitmapComposition(ctx,w,h,stage,stageBitmapFor(stage,stageBitmapCache.registry),presentation,stageReferenceTrackAllowed)
-      : null;
+      : stage.id==='midwich_nightmare'
+        ? drawMidwichHearthBitmapComposition(ctx,w,h,stage,stageBitmapFor(stage,stageBitmapCache.registry),presentation,stageReferenceTrackAllowed)
+        : null;
     if(!composition?.roundHandled && presentation.track && presentation.strength>0){
       drawRoundComposition(ctx,w,h,presentation.track,presentation.strength);
     }

@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "task": "wave18-two-missing-arenas-production",
+  "recordedAt": "2026-11-19 08:22:53 UTC",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pullRequest": 6,
+  "branch": "art/missing-fullbody-20261117",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "stageId": "midwich_nightmare",
+  "source": "sh1",
+  "sceneId": "otherworld-boiler-hearth",
+  "productionStatus": "two-png-candidates-ready-for-root-integration",
+  "fidelity": "unverified",
+  "generationTool": "image_gen__imagegen",
+  "authoredBy": "/root/wave18_stages",
+  "repositoryMutations": "None. All proposals and assets are in exclusive scratch directory; no shared registry, runtime source, branch, git or remote modified.",
+  "referenceBasis": {
+    "repositoryResearchPath": "docs/production/research/classic.json",
+    "sourceIds": [
+      "CL_SH1_03_NIGHTMARE_SCHOOL"
+    ],
+    "references": [
+      {
+        "id": "CL_SH1_03_NIGHTMARE_SCHOOL",
+        "url": "https://www.silenthillmemories.net/sh1/walkthrough_03_nightmare_school_en.htm",
+        "title": "Silent Hill Memories — Silent Hill 1, Nightmare School walkthrough",
+        "type": "secondary-game-walkthrough",
+        "sha256": "97e6228792a77f30dac8f68b21c942659df6c6bd6325ec0cd8fff026c31d7377",
+        "inspected": "Relevant Boiler Room and Split Head boss chamber sections.",
+        "observation": "The turnstile boiler-room mechanism leads to a lift descending into the boss arena, with a central fire pit. Existing project policy selects this chamber and a duel strip in front of the hearth."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_1_official_strategy_guide_piggyback.pdf",
+        "title": "Silent Hill — Official Strategy Guide, Piggyback",
+        "type": "licensed-official-guide-with-original-game-captures",
+        "sha256": "e3810680ac7f08eb4a05402c986a4c1dff08fb0b3ba6b3021c925fd75748f4e7",
+        "inspectedPages": [
+          80
+        ],
+        "inspected": "Printed and PDF page80; The First Boss / Lizard, small original game captures, viewed as rendered page.",
+        "observation": "Rusted metal grating, very dark chamber and orange fire contained in a central metal cage. The ordinary boiler-room antechamber is shown separately above.",
+        "limits": "Small printed screenshots establish the main scene anchors, not a complete measured floor plan, exact cage construction, ceiling or animation. Guide text/layout/characters were not used in the generated plate."
+      }
+    ],
+    "authoredReconstruction": [
+      "Wide side-view camera and flat versus passage in front of the hearth.",
+      "Cage dimensions and square iron-grid panels, exact metal detail and orange lighting.",
+      "Thin near-camera grid uprights to create a separate camera-parallax plane."
+    ]
+  },
+  "preservedPolicies": {
+    "worldState": "fixed-altered",
+    "weather": "dust",
+    "terrainRules": false,
+    "automaticFinishers": false,
+    "allowedEvents": [],
+    "allowedHazards": [],
+    "geometryCeilingDeclaration": "Omitted: no new ceiling capability or measured ceiling is claimed."
+  },
+  "generations": [
+    {
+      "variant": "background-v1",
+      "role": "opaque-background",
+      "prompt": "Create one original landscape 16:9 bitmap background plate for an existing side-on versus fighting game arena. Native wide output, one single coherent physical room, no panels or collage. The exact scene is Silent Hill 1 (1999), Otherworld Midwich Elementary School, the underground Split Head boss chamber reached by the boiler-room turnstile lift. This is the dark fire-pit boss chamber, NOT the ordinary boiler machinery room, NOT a school corridor or classroom, and NOT a hospital. Reconstruct the source scene without any characters, monster, corpse, blood pile, weapons, lettering, symbols, interface or watermark.\n\nSOURCE OBSERVATIONS TO RESPECT: The licensed Piggyback Silent Hill official guide, printed page 80, shows a dark rusted metal-grid chamber with a bright orange fire in its central metal cage/fire pit, iron grating underfoot and distant metal fencing disappearing into blackness. The existing project reference describes the boiler-room lift descending into the open arena with a fire pit in the middle. The only strongly lit object is the contained hearth. Translate the simple dirty PS1 industrial material language into a detailed, restrained, atmospheric painted game background; do not add fantasy architecture or generic steampunk props.\n\nCAMERA / VERSUS ADAPTATION: Fixed side-view theatrical wide framing, nearly level horizon, slight perspective into the room. A continuous broad horizontal iron-grating floor occupies the bottom 32% of the image; it is unobstructed across the full width and suitable for two full-body fighters. The circular low rusty metal cage around the open hearth sits BEHIND this foreground fighting strip, centered at x=50%, with its orange light centered at y=59%. Keep the cage about 27% of image width, its metal sides from y=51% to y=66%. Small restrained contained orange-yellow fire comes from inside it, never reaches the fighter strip. Fire base and cage must be clear, readable silhouettes. The background corners and distant wire-grid walls sink into deep brown-black shadow. No prominent ceiling plane, no overhead lamps, no boiler tanks, no suspended chains, no doors or secondary rooms, no floor drop in the front strip, no lava or active hazard effects. Keep the top half dark and spacious. Dim copper-orange light grazes the grate locally around the pit; elsewhere muted charcoal and rust brown. Fine aging and corrosion, physically coherent perspective, serious horror atmosphere, readable low-contrast floor. Opaque full-frame background, no transparency. Do not include any separate foreground framing objects; those will be a different PNG.\n",
+      "referencedImagePaths": [],
+      "transparentBackground": false,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-385da2e5-c919-4c4d-99c2-f7f09315b35b.png",
+      "localFile": "midwich_nightmare.hearth.862c9df53e36.png",
+      "selected": true,
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "862c9df53e36a477d92d8f9881181f303a57e9020cd82b6164a90a553b7b2f71",
+        "pixelSHA256": "222369fec9125b255850507948745532dc2f88b16eb220d7c353cb3369742843",
+        "path": "/workspace/scratch/b86991fb2253/wave18/stages/midwich_nightmare.hearth.862c9df53e36.png",
+        "originalLocalFile": "midwich_nightmare.hearth.png",
+        "bytes": 1955416,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentPixels": 0,
+        "transparentFraction": 0.0,
+        "central90PercentAlphaExtrema": [
+          255,
+          255
+        ],
+        "central90PercentAlphaOnePixels": 0,
+        "central90PercentPixelsOverAlphaOne": 1416205,
+        "readableAlphaThreshold": 16,
+        "readableXSpanInclusive": [
+          [
+            0,
+            835
+          ],
+          [
+            836,
+            1671
+          ]
+        ],
+        "aspectRatio": 1.7768331562167907,
+        "nativeOutputPreserved": true,
+        "postProcessing": "None. Original tool PNG bytes copied without resize, crop, recolor or alpha modification."
+      }
+    },
+    {
+      "variant": "foreground-v1",
+      "role": "transparent-near-architecture",
+      "prompt": "Derive a separate transparent FOREGROUND PARALLAX PLATE matching the attached background, at exactly the same landscape 16:9 canvas and perspective. The final image must be an RGBA PNG with genuine alpha transparency everywhere except two very thin partial rusty metal fence uprights at the extreme left and right edge. This is a separate layer, NOT a second background.\n\nKeep only the visual language and lighting of the supplied Silent Hill 1 Otherworld Midwich hearth chamber. Remove the entire supplied room, all floor, the hearth, all walls, fire, smoke and darkness to true transparency. On the outermost left 0–3% of the canvas and outermost right 97–100%, show two cropped near-camera rusty vertical square iron fence uprights with, at most, tiny cropped metal-grid fragments extending a further 1% inward. The uprights continue offscreen above and below, thin and unobtrusive. Their inner-facing edges receive a subtle dark orange reflected glint from the central hearth. They must remain thin edge details in accurate scale, not huge pillars, pillars in the center, thick bars, door leaves, chains, or a decorative picture frame. No horizontal connecting bar, no floor shadow, no ground strip, no bottom or top border, no haze, vignette, smoke, fire, lighting wash or opaque black backdrop. Absolutely every pixel in the central 90% of image width must have alpha zero, including the bottom. Do not draw characters, corpses, text, symbols or logos. Canvas must match the source background dimensions and wide aspect, with all the empty transparent space preserved. A small camera parallax displacement of 1.2% of width is the only future movement; these edge pieces must not occlude combat.\n",
+      "referencedImagePaths": [
+        "/workspace/scratch/b86991fb2253/wave18/stages/midwich_nightmare.hearth.png"
+      ],
+      "transparentBackground": true,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-1318c01b-05ac-428d-a132-50e9c37509d9.png",
+      "localFile": "midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "selected": true,
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "9a4ed651714051ca4b4a072f0510ea6edbef0b0a6dd57ffc4b61ce864ef66291",
+        "pixelSHA256": "cea3e47a6b3d702e70cf04e9025a1cdaafb6928fdf2db54d5fbf6685503f8fc6",
+        "path": "/workspace/scratch/b86991fb2253/wave18/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+        "originalLocalFile": "midwich_nightmare.near-grid-uprights.png",
+        "bytes": 175727,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 1508619,
+        "transparentFraction": 0.9588566322094484,
+        "central90PercentAlphaExtrema": [
+          0,
+          1
+        ],
+        "central90PercentAlphaOnePixels": 65,
+        "central90PercentPixelsOverAlphaOne": 0,
+        "readableAlphaThreshold": 16,
+        "readableXSpanInclusive": [
+          [
+            0,
+            32
+          ],
+          [
+            1639,
+            1671
+          ]
+        ],
+        "aspectRatio": 1.7768331562167907,
+        "nativeOutputPreserved": true,
+        "postProcessing": "None. Original tool PNG bytes copied without resize, crop, recolor or alpha modification."
+      }
+    }
+  ],
+  "variantsPolicy": "First background and foreground generations retained unchanged; no output discarded, no image editing outside built-in generation.",
+  "qualityAudit": {
+    "pngDecode": "Passed existing scripts/validate-stage-png.py audit_png, including PNG structure, CRC, one static frame, native dimensions, full decode and pixel hash.",
+    "originalVisualInspection": "Both generated PNGs visually inspected. Background is one coherent physical chamber; foreground contains only thin matching edge objects, no readable central object or lower floor strip.",
+    "dimensionsNote": "Both native1672×941.",
+    "centralAlphaNote": "Central90% alpha range0..1; 65 pixels have residual alpha1/255, none above1. The center is effectively clear but not mathematically zero at every pixel.",
+    "parallaxAudit": {
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit": "cover",
+      "parallaxX": 0.012,
+      "maxScreenShiftAt1280": 15.36,
+      "readableAlphaThreshold": 16,
+      "foregroundReadableXSpans": [
+        [
+          0,
+          32
+        ],
+        [
+          1639,
+          1671
+        ]
+      ],
+      "centralSafeIntervalNormalizedForAllPan": [
+        0.031737,
+        0.968263
+      ],
+      "centralClearWidthFractionForAllPan": 0.936526,
+      "conceptualCompositing": "Identical full-frame alignment and matching source material scale; thin edges only. Neither plane reaches the player area through the bounded pan. This is coordinate/alpha analysis, not a screenshot or live-fight certification."
+    },
+    "runtimeQA": "Pending parent integration and actual fight screenshot/side-switch check.",
+    "sourceFidelity": "Unverified reconstruction; source text and small original captures establish scene anchors only.",
+    "nativeResolution": "Approximately16:9 native PNG, not UHD.",
+    "descriptorValidation": {
+      "stageId": "midwich_nightmare",
+      "source": "sh1",
+      "descriptor": "passed",
+      "frameCount": 2,
+      "sceneMismatchReturnsNull": true,
+      "fullFrameDraws": [
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          15.36,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          -15.36,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "ceilingDeclared": false,
+      "actualImageCompositing": "Not performed here. Coordinate calls and decoded alpha audited separately; live fight QA belongs to root."
+    }
+  },
+  "rendererRaccord": {
+    "existingTrack": "boilerHearthGlow",
+    "existingAnchor": [
+      0.5,
+      0.61
+    ],
+    "imageAnchor": [
+      0.5,
+      0.6
+    ],
+    "visibleRegionNormalized": [
+      0.35,
+      0.5,
+      0.3,
+      0.21
+    ],
+    "implementationAdvice": "Raster replace suppresses the existing background vector track. A root-owned raccord may add only a subtle contained orange luminance variation in the hearth, hash/scene bounded. Do not draw a second cage, new flames across fighters, particles, damage, or a new event. The image itself is static.",
+    "authoredAdaptations": [
+      "Wide side-view camera and flat versus passage in front of the hearth.",
+      "Cage dimensions and square iron-grid panels, exact metal detail and orange lighting.",
+      "Thin near-camera grid uprights to create a separate camera-parallax plane."
+    ]
+  },
+  "proposedManifestEntry": {
+    "stageId": "midwich_nightmare",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "otherworld-boiler-hearth",
+    "referenceIds": [
+      "CL_SH1_03_NIGHTMARE_SCHOOL"
+    ],
+    "layers": [
+      {
+        "id": "hearth",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+            "sha256": "862c9df53e36a477d92d8f9881181f303a57e9020cd82b6164a90a553b7b2f71",
+            "bytes": 1955416,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-grid-uprights",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+            "sha256": "9a4ed651714051ca4b4a072f0510ea6edbef0b0a6dd57ffc4b61ce864ef66291",
+            "bytes": 175727,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Chambre du foyer central de Split Head sous la chaufferie Otherworld de Midwich SH1, sans boss ni corps. Caillebotis et foyer documentés ; largeur, cage, perspective, détail des matériaux et deux montants proches reconstruits pour le versus. Passage horizontal dégagé devant le foyer. Deux plans statiques natifs 1672×941 ; parallaxe de caméra authored .012. Aucun plafond déclaré, aucune règle de terrain, aucun danger, aucune cadence source ou fidélité 1:1 revendiquée."
+  }
+}

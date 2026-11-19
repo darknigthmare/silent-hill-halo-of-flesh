@@ -151,7 +151,9 @@ try{
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
     const isTwin=id===twinId;
     const laterClips = {
-      origins_faceless_nurse: {guard: [1], walk: [0,2,3,2]},
+      origins_faceless_nurse: {guard: [1], walk: [0,2,3,2], neutralSpecial: [4,5,4,0]},
+      arcade_scraper_arcade: {walk: [0,1,2,1], guard: [3]},
+      homecoming_scarlet_doll_form_094: {walk: [0,1,2,1]},
       sh3_nurse_revolver_044: {guard: [1]},
       homecoming_nurse: {hurt: [1]},
       homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]}
@@ -168,7 +170,7 @@ try{
       && art.animatedClips === animatedCount && Object.keys(art.clips).length === Object.keys(expectedClips).length
       && Object.entries(expectedClips).every(([pose, indices]) =>
         JSON.stringify(art.clips[pose]?.frames) === JSON.stringify(indices)
-        && (pose === 'idle' || art.clips[pose].loop === (new Set(indices).size > 1))), art);
+        && (pose === 'idle' || art.clips[pose].loop === (pose === 'walk' && new Set(indices).size > 1))), art);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){

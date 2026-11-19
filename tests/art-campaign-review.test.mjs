@@ -60,6 +60,25 @@ test('campaign review binds a retained portrait to its original fragment and its
   const changed=structuredClone(f);mutate(changed);assert.equal(check(changed),false,label);
   assert.equal(resolvedHistoricalArtwork({...row,status:'blocked'},changed.art,changed.continuation,{purpose:'combat'}),false,label);
  }
+ const expanded=structuredClone(f),history=JSON.stringify([expanded.row,expanded.fragment]);
+ const stepSHA='d'.repeat(64);
+ expanded.art.frames.push({...combat,path:`assets/sprites/${id}.${stepSHA.slice(0,12)}.png`,sha256:stepSHA,pixelSHA256:'e'.repeat(64)});
+ expanded.art.clips.walk={frames:[0,1,0],ticksPerFrame:7,loop:true};
+ expanded.art.animatedClips=1;
+ assert.equal(check(expanded),true,'later walking frames keep the delivered idle and original portrait bound');
+ assert.equal(resolvedHistoricalArtwork({...row,status:'blocked'},expanded.art,expanded.continuation,{purpose:'combat'}),true);
+ assert.equal(JSON.stringify([expanded.row,expanded.fragment]),history,'the static campaign history stays unchanged');
+ for(const [label,mutate] of Object.entries({
+  'invented animation count':f=>{f.art.animatedClips=2;},
+  'orphan added frame':f=>{f.art.frames.push({...f.art.frames[1]});},
+  'foreign added frame':f=>{f.art.frames[1].path=f.art.frames[1].path.replace(id,'other');},
+  'missing combat purpose':f=>{delete f.art.frames[1].purpose;},
+  'invalid timing':f=>{f.art.clips.walk.ticksPerFrame=0;},
+  'animated historical fragment':f=>{f.fragment.animatedClips=1;},
+  'animated idle':f=>{f.art.clips.idle.frames=[0,1];}
+ })){
+  const changed=structuredClone(expanded);mutate(changed);assert.equal(check(changed),false,label);
+ }
 });
 
 test('browser campaign review handles selection-only dossiers and detects shared combat paths and pixels',async()=>{

@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "wave": 18,
+  "date": "2026-11-19",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "fighterId": "origins_faceless_nurse",
+  "source": "origins",
+  "method": "built-in image_gen",
+  "status": "integrated-candidate; native and browser QA pending",
+  "referenceImage": {
+    "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+    "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+    "role": "Existing candidate idle; strict visual identity reference, not original PSP artwork"
+  },
+  "sourceEvidence": {
+    "referenceIds": [
+      "EXT01",
+      "EXT9_REF_ORIGINS_NURSE_20261026"
+    ],
+    "repositoryReference": "src/production-reference.js:origins_faceless_nurse",
+    "observed": "Syringe attack documented; no original frame timing or geometry certified"
+  },
+  "existingMove": {
+    "key": "neutralSpecial",
+    "startup": 15,
+    "active": 6,
+    "recovery": 26,
+    "totalTicks": 47,
+    "damage": 112,
+    "reach": 95,
+    "travel": 0,
+    "sourceTimingMeasured": false
+  },
+  "frames": [
+    {
+      "name": "anticipation",
+      "file": "/workspace/scratch/b86991fb2253/wave18/nurse/anticipation.png",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-be693907-87ff-4ad5-9df9-e43efa868e12.png",
+      "sha256": "761018b17f268fee3696f215952d5be578a3e80c32e2e1fe99c76c9494691571",
+      "width": 1199,
+      "height": 1312,
+      "bytes": 675872,
+      "visibleBounds": [
+        243,
+        113,
+        875,
+        1208
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent full-body frame for the existing 2D fighting-game character Faceless Nurse from Silent Hill Origins (PSP). The input image is the existing project's idle sprite and is the edit target / strict identity, clothing, anatomy, color and rendering reference.\nPrimary request: produce ONE new anticipation / wind-up pose for her existing close syringe attack, in a clean exact side view facing RIGHT. Keep the same adult faceless head, small nurse cap, worn pale short-sleeved uniform with pleated skirt, same shoes, same slender proportions and the SAME intact metal medical syringe in her right hand.\nPose: keep both shoes planted in a stable staggered stance. Bend the knees a little, turn neither the face nor chest toward the viewer. Draw the syringe-holding right elbow backward beside the waist so the hand and entire syringe are closer to the hip than in the input, with the long needle pointed horizontally to the RIGHT. The empty left hand remains forward for balance. This is anticipation BEFORE a short thrust, no contact and no victim.\nComposition: whole single subject from cap to soles and the entire syringe/needle; preserve orthographic side-on fighting camera; generous transparent safety margins on all sides (about 12 percent). Match the original's realistic detailed game-art rendering and muted aged fabric materials without adding wounds or extra gore.\nConstraints: one pose, one subject, no sheet, no alternate views, no extra arms/fingers or second syringe, no background, no floor, no cast shadow, no outline/glow, no text. Actual transparent alpha around the entire figure. The output is a new sibling animation frame, not a replacement portrait or idle."
+    },
+    {
+      "name": "active",
+      "file": "/workspace/scratch/b86991fb2253/wave18/nurse/active.png",
+      "generatedFile": "/workspace/scratch/b86991fb2253/generated_images/exec-7bf49cab-fd13-4ace-862d-a811837298b5.png",
+      "sha256": "79e6ad63330f1554e7bae9e11c612c7f99f377f6e860b3abcdfb44d624610b17",
+      "width": 1199,
+      "height": 1312,
+      "bytes": 699191,
+      "visibleBounds": [
+        197,
+        122,
+        1149,
+        1217
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE transparent full-body animation frame for the existing 2D fighter Faceless Nurse from Silent Hill Origins.\nInput image 1: the project idle sprite, strict identity / wardrobe / syringe reference.\nInput image 2: the just-created anticipation frame, strict same-character and fixed planted-foot placement reference.\nPrimary request: draw the NEXT active extension pose of the SAME close syringe thrust. Exact side profile facing RIGHT, one adult faceless nurse only. Keep her recognizable cap, covered faceless head, short-sleeved worn uniform and pleated skirt, strapped low-heel shoes, body proportions, palette, metal syringe and realistic rendering.\nPose change only: from image 2, extend the syringe-holding right arm FORWARD toward the right at approximately lower-chest / waist height, elbow almost straight, long needle pointing horizontally right. The syringe is still firmly held, never thrown. Keep the left hand bent nearer the chest. Both feet remain planted in the SAME staggered stance, same support line and heel positions; a slight forward upper-body lean, no running step, no leap, no new weapon. The needle points into EMPTY SPACE; no target, victim, contact, splash or effect.\nFraming: whole body including cap, both complete shoes, every finger, full syringe and needle. Allow generous empty transparent safety margins around the complete extended silhouette, about 12 percent. Keep side-on fighting-game orthographic view and the same visual scale/proportions as references.\nConstraints: one independent PNG pose, no sheet, no mirror duplicate, no text, no floor or cast shadow, no background, no added wounds, no colored glow/edge. Actual transparent alpha."
+    }
+  ],
+  "proposedClip": {
+    "frames": [
+      4,
+      5,
+      4,
+      0
+    ],
+    "ticksPerFrame": 15,
+    "frameTicks": [
+      15,
+      6,
+      13,
+      13
+    ],
+    "loop": false
+  },
+  "limits": [
+    "Two new poses plus reused idle: three distinct images, four time segments; not a complete fluid source animation.",
+    "Recovery reuses the anticipation drawing before returning to the existing idle.",
+    "Candidate art, no certified source anatomy/texture, no native-UHD claim.",
+    "The extended needle is complete but its right margin is about 4.2%, below the requested 12%; colored edge fringes remain visible at full size.",
+    "Original PNG bytes preserved; no external resizing or pixel cleanup."
+  ]
+}
