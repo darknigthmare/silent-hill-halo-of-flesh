@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "date": "2026-11-19T05:36:34.333Z",
+  "command": "QA_SOURCE_TREE=1 QA_BROWSER_EXECUTABLE=/usr/bin/chromium node scripts/http-qa-wave17.mjs",
+  "pageCreated": false,
+  "browserTestCompleted": false,
+  "result": "environment-blocked",
+  "error": "Chromium aborted before page creation: process_singleton_posix.cc socket() failed: Operation not permitted",
+  "attempts": 1,
+  "alteredLaunchFlags": false,
+  "preBrowserChecksPassed": 65,
+  "captures": 0,
+  "nextValidation": "Existing GitHub Actions HTTP browser QA workflow, including qa:wave17."
+}

@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "task": "wave17-underground-hc-stage-production",
+  "recordedAt": "2026-11-19 05:24:10 UTC",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pullRequest": 6,
+  "branch": "art/missing-fullbody-20261117",
+  "baseCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+  "stageId": "underground_hc",
+  "source": "homecoming",
+  "sceneId": "founding-families-antechamber",
+  "moment": "Après Curtis, avant Amnion ; avant résolution de l’énigme, tablettes couvertes et porte fermée.",
+  "productionStatus": "two-png-candidates-ready-for-root-integration",
+  "fidelity": "unverified",
+  "generationTool": "image_gen__imagegen",
+  "authoredBy": "/root/wave17_underground",
+  "repositoryMutations": "No shared registry, runtime source, branch or commit modified. Only independent GitHub blobs created for the two PNGs.",
+  "referenceBasis": {
+    "repositoryResearchPath": "docs/production/research/extended.json",
+    "repositoryResearchBlob": "08fe59d59ff0b8446480a6cc0c7f217deb33cbd4",
+    "sourceIds": [
+      "EXT06",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+    ],
+    "references": [
+      {
+        "id": "EXT06",
+        "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "title": "Silent Hill Memories — Homecoming, Walkthrough",
+        "type": "secondary-game-walkthrough",
+        "inspected": "Web guide, relevant Underground / Founding Families section",
+        "observation": "Le guide situe une grande pièce circulaire avant la salle d’Amnion : quatre tablettes couvertes de rouge, chacune avec une colonne de déverrouillage à sa droite. L’énigme comporte des anneaux au sol puis un mécanisme sur la porte."
+      },
+      {
+        "id": "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+        "url": "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13c.jpg",
+        "localPath": "references/shh_walkthrough_13c.jpg",
+        "type": "republished-game-capture",
+        "width": 200,
+        "height": 125,
+        "bytes": 7114,
+        "sha256": "0e0ad742054fb7fdcd54166de6803a72722e42aa85cb5e1f0624d7eb4a89686b",
+        "inspected": true,
+        "observation": "Gros plan d’anneaux concentriques brun bronze au sol, avec médaillons circulaires.",
+        "limits": "Cette petite capture ne documente pas les dimensions de la salle, son cadrage complet ou une animation."
+      },
+      {
+        "id": "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028",
+        "url": "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13d.jpg",
+        "localPath": "references/shh_walkthrough_13d.jpg",
+        "type": "republished-game-capture",
+        "width": 200,
+        "height": 125,
+        "bytes": 7222,
+        "sha256": "66703b4552d5e8a9ba09cfbc7835f7e2afbae82297ab33b90864b9c05c199e21",
+        "inspected": true,
+        "observation": "Gros plan d’un verrou circulaire laiton/bronze dans une monture octogonale rivetée sur une porte métallique brune.",
+        "limits": "Cette petite capture ne documente pas la vue d’ensemble, les proportions complètes ou une animation."
+      }
+    ],
+    "reconstruction": [
+      "Vue de face élargie pour un duel horizontal, perspective et dimensions de la pièce.",
+      "Disposition symétrique de deux tablettes de chaque côté de la porte et espacement entre éléments.",
+      "Apparence des couvertures intactes, lumière chaude indirecte et détail des surfaces.",
+      "Sol praticable dégagé sur le bas du cadre ; mécanisme circulaire reculé hors de la ligne de duel.",
+      "Deux montants architecturaux proches étroits, limités aux bords, et parallaxe de caméra proposée."
+    ],
+    "prohibitionsRespected": [
+      "Aucun combattant, monstre, corps, interface ou texte.",
+      "Aucune salle de torture, aucun hôpital du rêve, aucune salle de boss ou membre d’Amnion.",
+      "Aucune lampe chirurgicale, tuyauterie, vapeur, toile organique, racine ou cocon.",
+      "Aucune ouverture de porte, rotation animée des anneaux ou levée des couvertures.",
+      "Aucune inscription familiale reproduite ni solution de l’énigme revendiquée."
+    ]
+  },
+  "generations": [
+    {
+      "variant": "background-v1",
+      "role": "opaque-background",
+      "prompt": "Use case: compositing. Asset type: one opaque landscape 16:9 background plate for a 2D fighting game, Silent Hill: Halo of Flesh. Input images: Image 1 is a small original-game reference for the weathered concentric metal FLOOR rings; Image 2 is a small original-game reference for the recessed circular/brass locking mechanism on a heavy riveted door. Reconstruct the Founding Families puzzle ANTECHAMBER in Silent Hill: Homecoming (2008), BEFORE the puzzle is solved and BEFORE entering Amnion's chamber. Wide nearly frontal side-on view across an empty circular underground room. A closed heavy riveted metal door stands in the center back wall, with an unlit circular lock like reference 2. Four tall memorial tablets are placed along the curved back wall, two to either side of the door; each tablet is fully hidden by a simple faded dark red cover and has a narrow lock column immediately on its right. Keep all covers intact and all locks closed. Recess the muted concentric floor rings from reference 1 into the rear half of the floor, unobtrusive and unsolved, with no clearly readable glyphs. Materials: worn gray-brown concrete, dull aged bronze, riveted brown steel, red fabric, layered grime. Restrained warm reflected light, dim dark ceiling, no fog or glare. Extend a level empty horizontal floor across the whole lower third for two standing fighters; camera remains level, no fisheye, no steep perspective or steps in the fighting lane. Detailed grounded gritty 2D painted game background with readable midtones, no characters, no bodies, no monsters, no UI or text, no surgical lamps, no pipes or steam, no organic webs, no active ritual, no Amnion limbs. This is a reconstructed versus composition, not an exact source screenshot. One continuous complete scene, no collage or panels.",
+      "referencedImagePaths": [
+        "/workspace/scratch/b86991fb2253/wave17/underground/references/shh_walkthrough_13c.jpg",
+        "/workspace/scratch/b86991fb2253/wave17/underground/references/shh_walkthrough_13d.jpg"
+      ],
+      "transparentBackground": false,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-1cf274cc-c77c-4912-a3c3-5f8c85f95c18.png",
+      "localFile": "underground-hc-founding-families-background-v1.png",
+      "selected": true,
+      "nativeOutputPreserved": true,
+      "postProcessing": "None; copied original PNG bytes without resize, crop, recolor or alpha edit.",
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "aefad84f59ee1a74aa05d96abc0c529e097ed335d2a0b4028a9e1711ceb9b013",
+        "pixelSHA256": "187c48a015835c971e06ea2742c560d16eddc5fbd4c0dcfb4ad2a6b5247e7406",
+        "path": "/workspace/scratch/b86991fb2253/wave17/underground/underground-hc-founding-families-background-v1.png",
+        "bytes": 2399961,
+        "mode": "RGB",
+        "gitBlobSHA": "d226977ae8626882a8ba9618e2c02a97828b1c0b",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "alphaNonzeroBounds": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "transparentPixels": 0,
+        "transparentFraction": 0,
+        "opaqueFraction": 1,
+        "partialAlphaFraction": 0,
+        "center80PercentAlphaExtrema": [
+          255,
+          255
+        ],
+        "fightLaneAlphaExtrema": [
+          255,
+          255
+        ],
+        "aspectRatio": 1.7768331562167907,
+        "aspectRatioErrorVs16_9": -0.0009446215609869579
+      },
+      "githubBlobSHA": "d226977ae8626882a8ba9618e2c02a97828b1c0b"
+    },
+    {
+      "variant": "foreground-v1",
+      "role": "transparent-near-architecture",
+      "prompt": "Use case: compositing. Produce ONLY a transparent foreground PNG layer that matches the provided background plate exactly in perspective, light, materials, 16:9 canvas composition and 1672 by 941 pixel framing. This is the near architectural frame for the Founding Families puzzle antechamber from Silent Hill: Homecoming, before its closed central door opens. Keep the entire middle 84 percent of the image fully transparent. Add only two extremely narrow near-camera vertical architectural jamb fragments: a weathered concrete-and-dull-bronze column cropped flush along the extreme left edge within the leftmost 7 percent, and a slightly thinner riveted concrete/steel jamb cropped along the extreme right edge within the rightmost 6 percent. Match the charcoal brown and dim warm reflections of the reference. Both fragments extend vertically to the canvas edges but should not have large bases jutting into the horizontal fighting lane. No top lintel spanning the image, no bottom floor strip, no broad wall panels, no new door, no center object, no people or characters, no text, no lamps, no pipes, no fog, no shadows floating in the clear area. The background room, covered tablets, door and floor must all be removed from this output and replaced with true alpha transparency. The only opaque pixels belong to the two thin edge fragments. Preserve crisp material detail with subtle antialiased silhouette boundaries, no white/black halo, no checkerboard baked in. One separate game foreground layer, not a combined scene.",
+      "referencedImagePaths": [
+        "/workspace/scratch/b86991fb2253/wave17/underground/underground-hc-founding-families-background-v1.png"
+      ],
+      "transparentBackground": true,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-f89ff39e-59e6-41c5-a592-5ca1be93f052.png",
+      "localFile": "underground-hc-founding-families-foreground-v1.png",
+      "selected": true,
+      "nativeOutputPreserved": true,
+      "postProcessing": "None; copied original PNG bytes without resize, crop, recolor or alpha edit.",
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "a49721844afa73828caaaad75387ef2daa4dac08329ed195227c48c62bc76cbd",
+        "pixelSHA256": "f6c6b1dcfac859dbd9c0b787718cdd00d2db53edac860577a8703dbc572c8f00",
+        "path": "/workspace/scratch/b86991fb2253/wave17/underground/underground-hc-founding-families-foreground-v1.png",
+        "bytes": 437771,
+        "mode": "RGBA",
+        "gitBlobSHA": "bfb4ab36fe43e60eea93e3f459a755fbac0d2885",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaNonzeroBounds": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "transparentPixels": 1385434,
+        "transparentFraction": 0.8805620102812339,
+        "opaqueFraction": 0.0004741469169009859,
+        "partialAlphaFraction": 0.11896384280186506,
+        "center80PercentAlphaExtrema": [
+          0,
+          1
+        ],
+        "fightLaneAlphaExtrema": [
+          0,
+          1
+        ],
+        "aspectRatio": 1.7768331562167907,
+        "aspectRatioErrorVs16_9": -0.0009446215609869579
+      },
+      "githubBlobSHA": "bfb4ab36fe43e60eea93e3f459a755fbac0d2885"
+    }
+  ],
+  "variantsPolicy": "Both first-generation candidates retained unchanged. No generated variant discarded.",
+  "qualityAudit": {
+    "pngDecode": "Passed existing scripts/validate-stage-png.py audit_png: structure, CRC, bounded static PNG decode, dimensions and pixel SHA.",
+    "originalVisualInspection": "Both PNGs viewed at native composition. Background shows four red-covered tablets, four right-side columns, a closed door, circular floor mechanism and an empty level fighting lane. Foreground has only narrow edge architecture.",
+    "backgroundMode": "RGB opaque",
+    "foregroundMode": "RGBA with native alpha",
+    "matchingDimensions": true,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "aspect": "Native output 1672×941, approximately 16:9 (ratio 1.776833). No resizing performed; not UHD.",
+    "transparency": "88.056201% strictly zero alpha. Entire central 80% and central lower fighting-lane sample have alpha range 0..1; any residual alpha=1 is effectively invisible, not strictly empty.",
+    "centralOcclusion": "No readable foreground pixels within central 80%; a final in-engine side-switch check is owned by the integrating parent.",
+    "sourceFidelity": "Unverified. Tiny mechanism captures plus guide text support scene anchors only, not this reconstructed room geometry or pixel-accurate reproduction.",
+    "animation": "Two static PNG layers. No source timing or animation clip claimed. Optional small camera parallax is an original presentation choice.",
+    "integratedRuntimeQA": "Pending parent integration. No claim of browser or gameplay validation is made here.",
+    "foregroundReadableAlphaAudit": {
+      "readableAlphaThreshold": 16,
+      "readableXSpanInclusive": [
+        [
+          0,
+          120
+        ],
+        [
+          1595,
+          1671
+        ]
+      ],
+      "central80PercentPixels": 1259058,
+      "central80PercentAlphaOnePixels": 230,
+      "central80PercentPixelsOverAlphaOne": 0,
+      "edgeObjectsIntentionallyTouchCanvas": true
+    },
+    "descriptorAndSceneValidation": "Passed existing validateStageBitmap, stageBitmapFor, stageBitmapFrames and scene mismatch rejection against the actual getStage('underground_hc') object, using an isolated in-memory registry."
+  },
+  "proposedManifestEntry": {
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "founding-families-antechamber",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "founding-families-closed-door",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+            "sha256": "aefad84f59ee1a74aa05d96abc0c529e097ed335d2a0b4028a9e1711ceb9b013",
+            "bytes": 2399961,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/underground_hc.near-jambs.a49721844afa.png",
+            "sha256": "a49721844afa73828caaaad75387ef2daa4dac08329ed195227c48c62bc76cbd",
+            "bytes": 437771,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Antichambre des familles fondatrices de Silent Hill: Homecoming, après Curtis et avant la salle d’Amnion, avant résolution de l’énigme. Quatre tablettes couvertes et porte fermée ; les anneaux de sol restent dans le plan arrière. Caméra latérale, largeur, espacement, éclairage, matières fines et montants proches reconstruits pour le versus. Les captures sources 200×125 documentent surtout les mécanismes, pas cette vue d’ensemble. Deux plans statiques en 1672×941 natifs, sans animation source, sans certification 1:1 ni UHD native."
+  },
+  "integrationAudit": {
+    "descriptorValidation": "passed",
+    "registryIsolation": true,
+    "sharedRegistryModified": false,
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "sceneId": "founding-families-antechamber",
+    "referenceBlocked": false,
+    "worldState": "fixed-normal",
+    "weather": "none",
+    "fog": 0,
+    "interior": true,
+    "terrainRules": false,
+    "automaticFinishers": false,
+    "allowedEvents": [],
+    "allowedHazards": [],
+    "frameCount": 2,
+    "frames": [
+      {
+        "path": "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+        "sha256": "aefad84f59ee1a74aa05d96abc0c529e097ed335d2a0b4028a9e1711ceb9b013",
+        "bytes": 2399961,
+        "width": 1672,
+        "height": 941
+      },
+      {
+        "path": "assets/stages/underground_hc.near-jambs.a49721844afa.png",
+        "sha256": "a49721844afa73828caaaad75387ef2daa4dac08329ed195227c48c62bc76cbd",
+        "bytes": 437771,
+        "width": 1672,
+        "height": 941
+      }
+    ],
+    "fit": "cover",
+    "nativeDimensions": [
+      1672,
+      941
+    ],
+    "maxVerticalCropAt1280x720": 0.25,
+    "finalBrowserCheck": "pending integration"
+  },
+  "workflowInstructionsRead": [
+    "AGENTS.md",
+    "docs/GAMEDEV_GUIDANCE.md",
+    "e0/imagegen"
+  ]
+}

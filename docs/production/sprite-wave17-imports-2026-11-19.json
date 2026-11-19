@@ -1,0 +1,695 @@
+{
+  "schema": 1,
+  "baselineCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+  "wave": 17,
+  "date": "2026-11-19",
+  "scope": "Quatre nouveaux idles de combat distincts, portraits historiques conservés. Deux poses de marche Origins, deux décors à deux plans et trois variantes Needler sont documentés séparément et ne sont pas des imports idle.",
+  "imports": [
+    {
+      "sha256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+      "bytes": 566712,
+      "width": 1254,
+      "height": 1254,
+      "visibleBounds": [
+        329,
+        90,
+        916,
+        1178
+      ],
+      "pixelSHA256": "5e01ee58b48d51137bfd3d172145d0e2a5d912f92e515500069ba38b9e7104c2",
+      "transparentFraction": 0.88244,
+      "path": "assets/sprites/downpour_doll_106.5a84e5d8f278.png",
+      "facing": 1,
+      "anchor": [
+        0.448963,
+        0.939394
+      ],
+      "bodyHeight": 0.867624,
+      "sourceFile": "downpour_doll_106.side-right.v1.png",
+      "sourceSHA256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "downpour_doll_106",
+      "source": "downpour",
+      "kind": "distinct-combat-idle",
+      "existingSelectionReference": {
+        "path": "assets/sprites/downpour_doll_106.50727eee886c.png",
+        "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+        "bytes": 745018,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "references": [
+        {
+          "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/blob/96cbd9c49233230e8ddaed08f6f6063734aef96e/assets/sprites/downpour_doll_106.50727eee886c.png",
+          "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+          "description": "Portrait candidat existant du projet, conservé en sélection et inspecté avant génération ; ce lien ne transforme pas la référence générée en pixels du modèle commercial."
+        }
+      ],
+      "notes": "Profil droit entier ; une seule Doll adulte synthétique, cheveux, deux mains et deux pieds conservés. La Doll reste un mannequin immobile dans un rôle environmental-obstacle, sans locomotion ni attaque directe ajoutée. Pose reconstruite depuis le portrait candidat, pas depuis une rotation mesurée du modèle commercial. Deux pieds proches et partiellement superposés, extrémités présentes. Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+      "provenance": "docs/production/vague17/fighters-generation.json",
+      "rasterAudit": "docs/production/vague17/fighters-raster-audit.json",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "nativeTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "preservedCombatRole": "environmental-obstacle",
+      "minimumConnectedMarginFraction": 0.05422647527910686,
+      "framingBounds": [
+        324,
+        83,
+        919,
+        1186
+      ],
+      "alphaBounds": [
+        23,
+        21,
+        1210,
+        1254
+      ]
+    },
+    {
+      "sha256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+      "bytes": 1168120,
+      "width": 1254,
+      "height": 1254,
+      "visibleBounds": [
+        131,
+        135,
+        1128,
+        1132
+      ],
+      "pixelSHA256": "a1525d70789e4509aa37ff6c3a1c478aa175d6c046ee19c7d73b6b827b795d14",
+      "transparentFraction": 0.73407,
+      "path": "assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png",
+      "facing": 1,
+      "anchor": [
+        0.34689,
+        0.902711
+      ],
+      "bodyHeight": 0.795056,
+      "sourceFile": "shattered_raw_shock_diseased_101.side-right.v1.png",
+      "sourceSHA256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "shattered_raw_shock_diseased_101",
+      "source": "shattered",
+      "kind": "distinct-combat-idle",
+      "existingSelectionReference": {
+        "path": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+        "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+        "bytes": 1065628,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "references": [
+        {
+          "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/blob/96cbd9c49233230e8ddaed08f6f6063734aef96e/assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+          "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+          "description": "Portrait candidat existant du projet, conservé en sélection et inspecté avant génération ; ce lien ne transforme pas la référence générée en pixels du modèle commercial."
+        }
+      ],
+      "notes": "Lecture latérale vers la droite, corps entier en posture voûtée, deux bras et deux jambes avec extrémités lisibles. Rencontre de poursuite scripted-encounter maintenue ; aucune aura ni capacité ajoutée. Pose voûtée debout reconstruite depuis un portrait plus accroupi ; ce geste ne constitue pas une animation canonique mesurée. Morphologie et raccords cachés reconstruits ; profil exact du crâne non certifié. Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+      "provenance": "docs/production/vague17/fighters-generation.json",
+      "rasterAudit": "docs/production/vague17/fighters-raster-audit.json",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "nativeTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "preservedCombatRole": "scripted-encounter",
+      "minimumConnectedMarginFraction": 0.09090909090909091,
+      "framingBounds": [
+        128,
+        130,
+        1132,
+        1140
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        1236,
+        1254
+      ]
+    },
+    {
+      "sha256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+      "bytes": 599254,
+      "width": 1774,
+      "height": 887,
+      "visibleBounds": [
+        67,
+        208,
+        1705,
+        721
+      ],
+      "pixelSHA256": "833f3fbd3f2c5ba4e47494b1db81a4579f7cd2690f0beff7ebcebac25c7f1120",
+      "transparentFraction": 0.89786,
+      "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "facing": 1,
+      "anchor": [
+        0.48478,
+        0.812852
+      ],
+      "bodyHeight": 0.578354,
+      "sourceFile": "bom_needler_127.side-right.v4.png",
+      "sourceSHA256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+        "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+        "bytes": 386427,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "references": [
+        {
+          "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/blob/96cbd9c49233230e8ddaed08f6f6063734aef96e/assets/sprites/bom_needler_127.9f41a2f38998.png",
+          "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+          "description": "Portrait candidat existant du projet, conservé en sélection et inspecté avant génération ; ce lien ne transforme pas la référence générée en pixels du modèle commercial."
+        }
+      ],
+      "notes": "Profil droit à axe du torse horizontal, quatre chaînes de membres distinctes et quatre lames entières, tête pendante et configuration inversée. Lecture latérale meilleure que v1–v3. Le torse apparaît plus étiré dans cette reconstruction latérale ; proportion et raccords nécessitent la revue finale du responsable de l’intégration. Silhouette BoM à quatre membres conservée ; aucun transfert de modèle ou animation Homecoming revendiqué. Grande largeur de silhouette : l’ancre et la hauteur proposées doivent être vérifiées avec la mise à l’échelle du moteur. Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+      "provenance": "docs/production/vague17/fighters-generation.json",
+      "rasterAudit": "docs/production/vague17/fighters-raster-audit.json",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "nativeTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "preservedCombatRole": "combatant",
+      "minimumConnectedMarginFraction": 0.036076662908680945,
+      "framingBounds": [
+        64,
+        206,
+        1708,
+        726
+      ],
+      "alphaBounds": [
+        55,
+        0,
+        1760,
+        871
+      ]
+    },
+    {
+      "sha256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+      "bytes": 463056,
+      "width": 1254,
+      "height": 1254,
+      "visibleBounds": [
+        439,
+        85,
+        841,
+        1168
+      ],
+      "pixelSHA256": "24a781e90703a5c441057a543e60a8ee2400b51572e6fbbd04989e249c0637e9",
+      "transparentFraction": 0.90091,
+      "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "facing": 1,
+      "anchor": [
+        0.467305,
+        0.931419
+      ],
+      "bodyHeight": 0.863636,
+      "sourceFile": "bom_nurse_128.side-right.v1.png",
+      "sourceSHA256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "bom_nurse_128",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+        "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+        "bytes": 509415,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "references": [
+        {
+          "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/blob/96cbd9c49233230e8ddaed08f6f6063734aef96e/assets/sprites/bom_nurse_128.af4b765e1618.png",
+          "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+          "description": "Portrait candidat existant du projet, conservé en sélection et inspecté avant génération ; ce lien ne transforme pas la référence générée en pixels du modèle commercial."
+        }
+      ],
+      "notes": "Vue latérale droite entière ; coiffe, deux mains, deux chaussures et Steel Pipe complet avec son coude présents. Candidat de la variante artiste Hershberg à tête chair lisse. Correspondance à chaque modèle retail BoM non certifiée ; ne remplace pas la variante à tête sombre du rendu couleur 2013. Prise du tuyau et pose nouvelle reconstruites ; aucune animation SH3, Origins ou Homecoming transférée. Appuis décalés en hauteur dans la pose ; ancrage proposé sur la chaussure la plus basse, à contrôler dans le moteur. Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+      "provenance": "docs/production/vague17/fighters-generation.json",
+      "rasterAudit": "docs/production/vague17/fighters-raster-audit.json",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "nativeTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "preservedCombatRole": "combatant",
+      "minimumConnectedMarginFraction": 0.06140350877192982,
+      "framingBounds": [
+        435,
+        77,
+        845,
+        1176
+      ],
+      "alphaBounds": [
+        25,
+        19,
+        1232,
+        1228
+      ]
+    }
+  ],
+  "extraClips": [
+    {
+      "fighterId": "origins_faceless_nurse",
+      "source": "origins",
+      "pose": "walk",
+      "kind": "additional-motion-poses",
+      "countAsDistinctCombatIdle": false,
+      "newImageCount": 2,
+      "existingSelectionReference": {
+        "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+        "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+        "bytes": 574669,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "preservedClips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "guard": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "newFrames": [
+        {
+          "index": 2,
+          "phase": "passing",
+          "frame": {
+            "sha256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3",
+            "bytes": 651021,
+            "width": 1108,
+            "height": 1420,
+            "visibleBounds": [
+              211,
+              90,
+              861,
+              1305
+            ],
+            "pixelSHA256": "05b5a9497a568ce8552f9b370273137e37ca7805c62c485977a489d5472c9adc",
+            "transparentFraction": 0.85529,
+            "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+            "facing": 1,
+            "anchor": [
+              0.425,
+              0.9190140845070423
+            ],
+            "bodyHeight": 0.8734756097560976,
+            "sourceFile": "passing.png",
+            "sourceSHA256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3",
+            "origin": "conversation-image-generation",
+            "purpose": "combat",
+            "view": "side-view"
+          }
+        },
+        {
+          "index": 3,
+          "phase": "opposite-contact",
+          "frame": {
+            "sha256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7",
+            "bytes": 649938,
+            "width": 1199,
+            "height": 1312,
+            "visibleBounds": [
+              207,
+              80,
+              919,
+              1210
+            ],
+            "pixelSHA256": "ad221556194231294f013621ea43adf355cffbffefa5da6778239866fde9e37d",
+            "transparentFraction": 0.86231,
+            "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+            "facing": 1,
+            "anchor": [
+              0.436,
+              0.9222560975609756
+            ],
+            "bodyHeight": 0.8734756097560976,
+            "sourceFile": "opposite-contact.png",
+            "sourceSHA256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7",
+            "origin": "conversation-image-generation",
+            "purpose": "combat",
+            "view": "side-view"
+          }
+        }
+      ],
+      "reusedFrames": [
+        {
+          "index": 0,
+          "role": "initial-contact-reused-idle",
+          "frame": {
+            "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+            "bytes": 656138,
+            "width": 1199,
+            "height": 1312,
+            "visibleBounds": [
+              245,
+              84,
+              915,
+              1230
+            ],
+            "pixelSHA256": "31217d513facb7a8d9cd94dd50f255ed5aca3e310e49b79dcc4aa1bc7e5ca5b1",
+            "transparentFraction": 0.86259,
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "facing": 1,
+            "anchor": [
+              0.444,
+              0.9375
+            ],
+            "bodyHeight": 0.8734756097560976,
+            "sourceFile": "origins_faceless_nurse.7875b7b8cc53.png",
+            "sourceSHA256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+            "origin": "conversation-image-generation",
+            "purpose": "combat",
+            "view": "side-view"
+          },
+          "previousReceipt": "docs/production/sprite-wave16-imports-2026-11-19.json"
+        }
+      ],
+      "preservedOtherFrames": [
+        {
+          "index": 1,
+          "role": "guard",
+          "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+          "sha256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e"
+        }
+      ],
+      "clip": {
+        "frames": [
+          0,
+          2,
+          3,
+          2
+        ],
+        "ticksPerFrame": 7,
+        "frameTicks": [
+          7,
+          7,
+          7,
+          7
+        ],
+        "loop": true
+      },
+      "distinctPixelFrames": 3,
+      "timelineSteps": 4,
+      "totalAuthoredTicks": 28,
+      "animatedClipsBefore": 0,
+      "animatedClipsAfter": 1,
+      "references": [
+        {
+          "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/blob/96cbd9c49233230e8ddaed08f6f6063734aef96e/assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+          "description": "Idle latéral existant fourni comme référence aux deux poses de marche."
+        }
+      ],
+      "provenance": "docs/production/vague17/nurse-walk-provenance.json",
+      "clipReceipt": "docs/production/vague17/nurse-walk-clip.json",
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "nativeUHD": false,
+      "limits": [
+        "Deux images nouvelles et une image idle réutilisée, pas un cycle de six ou huit dessins.",
+        "Pose de passage réutilisée au retour ; alternance des jambes simplifiée.",
+        "Les poses sont reconstruites depuis le candidat existant, sans animation source mesurée ni certification 1:1.",
+        "La mise en jeu utilise les ancrages de métadonnées ; aucun pixel n’est redimensionné ou retouché dans le dépôt."
+      ]
+    }
+  ],
+  "stageDeliveries": [
+    {
+      "stageId": "film_hospital",
+      "source": "film",
+      "kind": "stage-bitmap-layers",
+      "countAsDistinctCombatIdle": false,
+      "scene": "alessa-isolation-room-2006",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "mode": "replace",
+      "referenceIds": [
+        "EXT49",
+        "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+        "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
+      ],
+      "layers": [
+        {
+          "id": "alessa-isolation-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+              "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb",
+              "bytes": 2829692,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-privacy-curtain",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+              "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d",
+              "bytes": 228118,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "imageCount": 2,
+      "animatedClipsAdded": 0,
+      "nativeUHD": false,
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false,
+      "provenance": "docs/production/vague17/alessa-room-provenance.json",
+      "notes": "Deux plans statiques candidats de la chambre d’Alessa du film 2006. Matériaux et tente documentés par les photos 46 et 81 ; cadrage versus, volumes et piste de combat reconstruits. Aucun personnage, corps visible, lit occupé ou couloir des Dark Nurses. Le nom Brookhaven n’est pas attesté. Dimensions natives 1672 × 941 ; pas de certification 1:1 ni 4K natif. Préserver les compositions authored existantes gansAlessaTentCloth et alessaRoomRoundRest avec un raccord bitmap ciblé ; les PNG ne constituent pas de nouveaux clips animés."
+    },
+    {
+      "stageId": "underground_hc",
+      "source": "homecoming",
+      "kind": "stage-bitmap-layers",
+      "countAsDistinctCombatIdle": false,
+      "scene": "founding-families-antechamber",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "mode": "replace",
+      "referenceIds": [
+        "EXT06",
+        "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+        "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+      ],
+      "layers": [
+        {
+          "id": "founding-families-closed-door",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+              "sha256": "aefad84f59ee1a74aa05d96abc0c529e097ed335d2a0b4028a9e1711ceb9b013",
+              "bytes": 2399961,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-jambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/underground_hc.near-jambs.a49721844afa.png",
+              "sha256": "a49721844afa73828caaaad75387ef2daa4dac08329ed195227c48c62bc76cbd",
+              "bytes": 437771,
+              "width": 1672,
+              "height": 941
+            }
+          ],
+          "parallaxX": 0.012
+        }
+      ],
+      "imageCount": 2,
+      "animatedClipsAdded": 0,
+      "nativeUHD": false,
+      "certifiedOneToOne": false,
+      "sourceTimingMeasured": false,
+      "provenance": "docs/production/vague17/underground-provenance.json",
+      "notes": "Antichambre des familles fondatrices de Silent Hill: Homecoming, après Curtis et avant la salle d’Amnion, avant résolution de l’énigme. Quatre tablettes couvertes et porte fermée ; les anneaux de sol restent dans le plan arrière. Caméra latérale, largeur, espacement, éclairage, matières fines et montants proches reconstruits pour le versus. Les captures sources 200×125 documentent surtout les mécanismes, pas cette vue d’ensemble. Deux plans statiques en 1672×941 natifs, sans animation source, sans certification 1:1 ni UHD native."
+    }
+  ],
+  "archivedVariants": [
+    {
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "path": "docs/production/vague17/variants/bom_needler_127.side-right.v1.rejected.png",
+      "sha256": "bdd1f8edca2b0a9ae607f5ec059c862975e862c356aa1d20727485bc6d3eebad",
+      "bytes": 517311,
+      "width": 1254,
+      "height": 1254,
+      "pixelSHA256": "9e4d97f38a0852c3622b218c09842125ff4d20e46223bc12726a50634ff51bcf",
+      "reason": "Five blade-ended limb chains: rejected anatomy.",
+      "status": "archived-not-integrated",
+      "countAsDistinctCombatIdle": false,
+      "usedInRegistry": false,
+      "usedInClip": false,
+      "provenance": "docs/production/vague17/fighters-generation.json"
+    },
+    {
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "path": "docs/production/vague17/variants/bom_needler_127.side-right.v2.png",
+      "sha256": "1bc2e5c558e517244954b80d894237b9771290f02e556db52a72f37f0feb254f",
+      "bytes": 499139,
+      "width": 1254,
+      "height": 1254,
+      "pixelSHA256": "ecf3e9d8421d2394ce9e7c220f873e68260969d869382a08b04cdf60d9483590",
+      "reason": "Four limbs restored, but torso remains oblique; not selected as strict lateral.",
+      "status": "archived-not-integrated",
+      "countAsDistinctCombatIdle": false,
+      "usedInRegistry": false,
+      "usedInClip": false,
+      "provenance": "docs/production/vague17/fighters-generation.json"
+    },
+    {
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "path": "docs/production/vague17/variants/bom_needler_127.side-right.v3.png",
+      "sha256": "ef4ae8b76cbadbe38f2ad5be488d734d3df6f2613fcedd76177bccfb17f2de8e",
+      "bytes": 551487,
+      "width": 1254,
+      "height": 1254,
+      "pixelSHA256": "bf7edb3bd2c662b410fd96ef331b23078e91c14fd96ee9385a7eddf8e7fe7843",
+      "reason": "Four limbs retained, camera still reads oblique and edge fringe stronger; not selected.",
+      "status": "archived-not-integrated",
+      "countAsDistinctCombatIdle": false,
+      "usedInRegistry": false,
+      "usedInClip": false,
+      "provenance": "docs/production/vague17/fighters-generation.json"
+    }
+  ],
+  "counts": {
+    "distinctCombatIdleImports": 4,
+    "newSelectionPortraitImports": 0,
+    "preservedSelectionPortraits": 5,
+    "additionalMotionPngs": 2,
+    "newAnimatedFighterClips": 1,
+    "reusedMotionPngs": 1,
+    "stageScenes": 2,
+    "stagePngs": 4,
+    "archivedVariantPngs": 3,
+    "totalNewNativePngFiles": 13,
+    "selectedNewPngFiles": 10,
+    "certifiedOneToOneAdded": 0,
+    "nativeUHDFilesAdded": 0
+  },
+  "provenanceDocuments": [
+    "docs/production/vague17/fighters-generation.json",
+    "docs/production/vague17/fighters-raster-audit.json",
+    "docs/production/vague17/nurse-walk-provenance.json",
+    "docs/production/vague17/nurse-walk-clip.json",
+    "docs/production/vague17/alessa-room-provenance.json",
+    "docs/production/vague17/underground-provenance.json",
+    "docs/production/vague17/qa-native/report.json"
+  ],
+  "accountingRules": [
+    "Seules les quatre lignes imports sont lues comme livraisons de combat par scripts/art-campaign-review.mjs.",
+    "Les portraits historiques sont des références préservées, sans nouvel import selection-base.",
+    "Les deux images Nurse aux indices 2 et 3 appartiennent à walk ; l’image 0 réutilisée et la garde 1 ne sont pas de nouvelles images.",
+    "Le cycle walk [0,2,3,2] contient trois dessins distincts et quatre étapes de sept ticks ; il ajoute un clip animé authored, sans mesure du jeu source.",
+    "Les quatre PNG de décor et trois variantes archivées ne participent pas au nombre de profils latéraux.",
+    "Les lignes et fragments historiques ART144/ART92 restent inchangés."
+  ],
+  "integrationReview": {
+    "status": "imported-candidates-native-engine-reviewed",
+    "report": "docs/production/vague17/qa-native/report.json",
+    "mode": "native FightEngine visual QA",
+    "reviewedFighterIds": [
+      "bom_needler_127",
+      "bom_nurse_128",
+      "origins_faceless_nurse"
+    ],
+    "checksPassed": 80,
+    "checksFailed": 0,
+    "browserTest": false,
+    "boundaryFringes": "Franges colorées et claires constatées en plein format. Selon la revue visuelle du responsable de l’intégration, celles de Nurse BoM et Needler restent discrètes à l’échelle de combat ; les PNG sont conservés sans nouvelle retouche et la réserve reste ouverte.",
+    "needlerProportions": "Torse étiré reconstruit et grande largeur conservés comme limites du candidat.",
+    "fidelity": "unverified",
+    "sourceAnimationsClaimed": false,
+    "limits": [
+      "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+      "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+      "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+      "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+      "This script writes only reports and captures. Final captures must be visually inspected separately."
+    ]
+  }
+}

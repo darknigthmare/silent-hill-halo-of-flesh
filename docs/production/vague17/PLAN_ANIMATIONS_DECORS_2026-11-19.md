@@ -18,7 +18,7 @@ Chaque pose est un PNG transparent indépendant, personnage entier de profil fac
 | Faceless Nurse (Origins) | idle, garde, marche, attaque seringue, hit, KO, victoire | 6, 3, 8, 7, 4, 7, 6 | Garde déjà statique ; conserver la seringue entière |
 | Scarlet forme poupée (Homecoming) | idle, marche, garde, coup, hit, transformation | 6, 8, 4, 7, 4, 10 | Ne pas confondre avec Scarlet arachnide |
 | Scraper (The Arcade) | idle, marche, garde, double-lame, hit, KO | 6, 8, 4, 8, 4, 7 | Deux lames lisibles à toutes les frames |
-| Incubator (SH1) | présentation et manifestations de boss compatibles avec son rôle | à définir | Ne pas transformer une entité non jouable en combattant standard |
+| Incubator (SH1) | présentation et manifestations de boss compatibles avec son rôle | à définir | Respecter son rôle de boss stationnaire |
 
 ### Critères de validation
 1. Un seul sujet et une seule pose par image ; alpha réel et silhouette complète.

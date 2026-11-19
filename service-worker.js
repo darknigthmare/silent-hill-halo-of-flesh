@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
-const CACHE_REVISION = 'chronicle-heather-closer-20261118';
+const CACHE_REVISION = 'wave17-walk-and-stages-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '3a6c71afc59d374446f735aa3aec06b95ce18b55a02e39880649d4b8128a5696';
+const BITMAP_REVISION = '7be362efae5931e5a93285cc70029ab533a9899368df0015affef5ed61255655';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -63,7 +63,9 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_gray_child_147.947d757ecfea.png",
   "/assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
   "/assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+  "/assets/sprites/bom_needler_127.579a17e5bccf.png",
   "/assets/sprites/bom_needler_127.9f41a2f38998.png",
+  "/assets/sprites/bom_nurse_128.902db2be4c5b.png",
   "/assets/sprites/bom_nurse_128.af4b765e1618.png",
   "/assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
   "/assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
@@ -82,6 +84,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
   "/assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
   "/assets/sprites/downpour_doll_106.50727eee886c.png",
+  "/assets/sprites/downpour_doll_106.5a84e5d8f278.png",
   "/assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
   "/assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
@@ -153,6 +156,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
   "/assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+  "/assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+  "/assets/sprites/origins_faceless_nurse.b93c719c3104.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
   "/assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
   "/assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
@@ -357,6 +362,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
   "/assets/sprites/shattered_raw_shock_base_099.e5f649da7bf0.png",
   "/assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+  "/assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png",
   "/assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
   "/assets/sprites/shf_ara_abare_153.a11358a86425.png",
   "/assets/sprites/shf_ayakakashi_152.250241616ae2.png",
@@ -405,6 +411,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
   "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
   "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+  "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+  "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
   "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
   "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
   "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
@@ -424,6 +432,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
   "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
   "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+  "/assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+  "/assets/stages/underground_hc.near-jambs.a49721844afa.png",
   "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
   "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
   "/assets/stages/woodside.clock-room.da94acd4e920.png",
@@ -466,6 +476,7 @@ const ESSENTIAL_SHELL = [
   '/src/sprite-usage.js',
   '/src/stage-bitmaps.js',
   '/src/stage-bitmap-manifest.js',
+  '/src/stage-bitmap-compositions.js',
   '/src/sprite-animation.js',
   '/src/sprite-poses.js',
   '/src/presentation-sequences.js',

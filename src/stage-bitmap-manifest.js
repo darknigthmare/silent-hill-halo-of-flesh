@@ -1492,5 +1492,128 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Extrémité du couloir Otherworld B1 de Brookhaven dans Silent Hill 2 original (2001), devant l’ascenseur de la poursuite. Élargissement du sol, cadrage latéral, matériaux fins, éclairage, huisserie proche et portes entrouvertes sont des interprétations pour le versus. Aucun personnage, décès de Maria, poursuite ni cycle source reproduit."
+  },
+  "underground_hc": {
+    "stageId": "underground_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "founding-families-antechamber",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+      "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+    ],
+    "layers": [
+      {
+        "id": "founding-families-closed-door",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+            "sha256": "aefad84f59ee1a74aa05d96abc0c529e097ed335d2a0b4028a9e1711ceb9b013",
+            "bytes": 2399961,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/underground_hc.near-jambs.a49721844afa.png",
+            "sha256": "a49721844afa73828caaaad75387ef2daa4dac08329ed195227c48c62bc76cbd",
+            "bytes": 437771,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Antichambre des familles fondatrices de Silent Hill: Homecoming, après Curtis et avant la salle d’Amnion, avant résolution de l’énigme. Quatre tablettes couvertes et porte fermée ; les anneaux de sol restent dans le plan arrière. Caméra latérale, largeur, espacement, éclairage, matières fines et montants proches reconstruits pour le versus. Les captures sources 200×125 documentent surtout les mécanismes, pas cette vue d’ensemble. Deux plans statiques en 1672×941 natifs, sans animation source, sans certification 1:1 ni UHD native."
+  },
+  "film_hospital": {
+    "stageId": "film_hospital",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "alessa-isolation-room-2006",
+    "referenceIds": [
+      "EXT49",
+      "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+      "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
+    ],
+    "layers": [
+      {
+        "id": "alessa-isolation-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+            "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb",
+            "bytes": 2829692,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-privacy-curtain",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+            "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d",
+            "bytes": 228118,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Deux plans statiques candidats de la chambre d’Alessa du film 2006. Matériaux et tente documentés par les photos 46 et 81 ; cadrage versus, volumes et piste de combat reconstruits. Aucun personnage, corps visible, lit occupé ou couloir des Dark Nurses. Le nom Brookhaven n’est pas attesté. Dimensions natives 1672 × 941 ; pas de certification 1:1 ni 4K natif. Préserver les compositions authored existantes gansAlessaTentCloth et alessaRoomRoundRest avec un raccord bitmap ciblé ; les PNG ne constituent pas de nouveaux clips animés."
   }
 };

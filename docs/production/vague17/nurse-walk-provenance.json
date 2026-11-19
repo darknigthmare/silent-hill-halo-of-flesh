@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "wave": 17,
+  "date": "2026-11-19",
+  "fighterId": "origins_faceless_nurse",
+  "source": "origins",
+  "kind": "additional-walk-poses",
+  "origin": "conversation-image-generation",
+  "fidelity": "unverified",
+  "originalIdle": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+  "preservedPortrait": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+  "purpose": "Premier cycle de marche limité à trois dessins distincts : l’appui initial existant et deux poses nouvelles. La séquence ne certifie ni les timings source ni un moveset complet.",
+  "generated": [
+    {
+      "name": "passing",
+      "prompt": "Use case: identity-preserve. Asset: ONE full-body RGBA animation frame for the Faceless Nurse from Silent Hill Origins, using the attached existing right-facing combat sprite as the exact identity and scale reference. Create the PASSING phase of her slow rightward walk. Preserve the featureless adult head, nurse cap, uniform cut and pleated skirt, all texture/colors, closed strap shoes, single metal syringe in the same hand, hunched torso and strict right-facing side profile. Change the LEGS to one clear walking phase: the forward/support foot is planted under the hip, knee lightly flexed; the rear leg bends at the knee and its foot lifts behind the support ankle as it starts passing forward. Exactly two legs and two complete shoes. Keep torso, head and weapon hand at nearly the same position and scale as the reference; cap around y=84 and the lowest planted shoe at y=1230 on the same 1199 by 1312 transparent canvas. Keep the full syringe and needle in frame. The free hand remains forward in its tense clawlike posture, subtly lowered for balance. Entire adult figure, both hands and feet, no cut parts, no extra limbs. Clean transparent background, no ground, no shadow, no haze, no captions. No new wounds, no detached body parts, no additional props or figures. One image = one pose. This frame should match adjacent game animation drawings, not redesign the character.",
+      "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "receipt": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/nurse-walk/passing.png",
+        "bytes": 651021,
+        "sha256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3",
+        "width": 1108,
+        "height": 1420,
+        "format": "PNG",
+        "mode": "RGBA"
+      },
+      "anchor": [
+        0.425,
+        0.9190140845070423
+      ],
+      "bodyHeight": 0.8734756097560976
+    },
+    {
+      "name": "opposite-contact",
+      "prompt": "Use case: identity-preserve. Create ONE RGBA full-body walk-cycle frame of the adult Faceless Nurse from Silent Hill Origins. The attached image is the exact reference for her identity, textured clothing, featureless head, nurse cap, strapped closed shoes, proportions and syringe. Preserve all those features and keep her facing RIGHT in strict side profile, hunched in the same way. This is the OPPOSITE CONTACT / HEEL-STRIKE phase of her slow walk, distinct from the reference's fighting idle: the leg NEAREST the camera now swings forward toward the RIGHT and extends from the hip, the forward foot lands heel first with its toe slightly lifted; the farther leg trails to the LEFT, rear knee flexed and rear heel lifted while its toe finishes pushing off. Exactly two legs, two whole shoes, naturally connected at the hips. Keep both feet separated so the gait is readable, no impossible bending. Keep the torso, head and arms almost steady; syringe held at waist height pointing right, free hand forward at chest level. Same adult character, same palette, same stitched and stained uniform, no redesign and no new damage. Entire cap, hands, syringe needle and both shoes visible with clear transparent margin. Same subject scale and approximate ground baseline as the reference, isolated on real transparent alpha. No background, floor, shadow, fog, panels, labels or other character. One PNG is one pose.",
+      "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "receipt": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/nurse-walk/opposite-contact.png",
+        "bytes": 649938,
+        "sha256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7",
+        "width": 1199,
+        "height": 1312,
+        "format": "PNG",
+        "mode": "RGBA"
+      },
+      "anchor": [
+        0.436,
+        0.9222560975609756
+      ],
+      "bodyHeight": 0.8734756097560976
+    }
+  ],
+  "clip": {
+    "pose": "walk",
+    "frames": [
+      0,
+      2,
+      3,
+      2
+    ],
+    "ticksPerFrame": 7,
+    "loop": true
+  },
+  "visualReview": "Chaque sortie a été inspectée entière : une infirmière adulte, deux membres inférieurs lisibles, seringue et coiffe entières, fond transparent. La pose de passage a été rendue en 1108×1420 au lieu des 1199×1312 demandés ; les dimensions natives sont conservées.",
+  "limitations": [
+    "Deux images nouvelles et une image idle réutilisée, pas un cycle de six ou huit dessins.",
+    "Pose de passage réutilisée au retour ; alternance des jambes simplifiée.",
+    "Les poses sont reconstruites depuis le candidat existant, sans animation source mesurée ni certification 1:1.",
+    "La mise en jeu utilise les ancrages de métadonnées ; aucun pixel n’est redimensionné ou retouché dans le dépôt."
+  ],
+  "integrationReview": {
+    "report": "docs/production/vague17/qa-native-walk/report.json",
+    "checksPassed": 118,
+    "browserTest": false,
+    "inspected": [
+      "walk-right-step0-frame0.png",
+      "walk-right-step1-frame2.png",
+      "walk-right-step2-frame3.png",
+      "walk-left-step2-frame3.png"
+    ],
+    "conclusion": "Appuis au sol, seringue entière et orientation cohérente dans les captures du vrai moteur. Les trois images restent dans le cadre ; l’échelle et les ancrages initiaux sont conservés."
+  }
+}

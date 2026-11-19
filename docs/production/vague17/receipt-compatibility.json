@@ -1,0 +1,89 @@
+{
+  "receipt": "sprite-wave17-imports-2026-11-19.json",
+  "checkedAt": "2026-11-19T05:35:11.961Z",
+  "sharedFilesModified": false,
+  "reader": "scripts/art-campaign-review.mjs",
+  "readerOutputCount": 4,
+  "allDeliveriesCombat": true,
+  "allDeliveriesReviewedWithSource": true,
+  "nurseMotionCountedAsIdle": false,
+  "stageCountedAsIdle": false,
+  "archiveCountedAsIdle": false,
+  "campaignMatches": [
+    {
+      "id": "downpour_doll_106",
+      "group": "b",
+      "matched": true,
+      "oldPortrait": "assets/sprites/downpour_doll_106.50727eee886c.png",
+      "newCombat": "assets/sprites/downpour_doll_106.5a84e5d8f278.png"
+    },
+    {
+      "id": "shattered_raw_shock_diseased_101",
+      "group": "b",
+      "matched": true,
+      "oldPortrait": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+      "newCombat": "assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png"
+    },
+    {
+      "id": "bom_needler_127",
+      "group": "c",
+      "matched": true,
+      "oldPortrait": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "newCombat": "assets/sprites/bom_needler_127.579a17e5bccf.png"
+    },
+    {
+      "id": "bom_nurse_128",
+      "group": "c",
+      "matched": true,
+      "oldPortrait": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "newCombat": "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+    }
+  ],
+  "repositoryFileBytesVerified": 13,
+  "extraClipFrames": [
+    {
+      "index": 2,
+      "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png"
+    },
+    {
+      "index": 3,
+      "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png"
+    }
+  ],
+  "walk": {
+    "frames": [
+      0,
+      2,
+      3,
+      2
+    ],
+    "ticksPerFrame": 7,
+    "frameTicks": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": true
+  },
+  "counts": {
+    "distinctCombatIdleImports": 4,
+    "newSelectionPortraitImports": 0,
+    "preservedSelectionPortraits": 5,
+    "additionalMotionPngs": 2,
+    "newAnimatedFighterClips": 1,
+    "reusedMotionPngs": 1,
+    "stageScenes": 2,
+    "stagePngs": 4,
+    "archivedVariantPngs": 3,
+    "totalNewNativePngFiles": 13,
+    "selectedNewPngFiles": 10,
+    "certifiedOneToOneAdded": 0,
+    "nativeUHDFilesAdded": 0
+  },
+  "integrationReviewAddedFromReport": {
+    "path": "docs/production/vague17/qa-native/report.json",
+    "checksPassed": 80,
+    "browserTest": false
+  }
+}

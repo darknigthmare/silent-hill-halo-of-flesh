@@ -5096,6 +5096,58 @@
           "origin": "conversation-image-generation",
           "purpose": "combat",
           "view": "side-view"
+        },
+        {
+          "sha256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3",
+          "bytes": 651021,
+          "width": 1108,
+          "height": 1420,
+          "visibleBounds": [
+            211,
+            90,
+            861,
+            1305
+          ],
+          "pixelSHA256": "05b5a9497a568ce8552f9b370273137e37ca7805c62c485977a489d5472c9adc",
+          "transparentFraction": 0.85529,
+          "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+          "facing": 1,
+          "anchor": [
+            0.425,
+            0.9190140845070423
+          ],
+          "bodyHeight": 0.8734756097560976,
+          "sourceFile": "passing.png",
+          "sourceSHA256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7",
+          "bytes": 649938,
+          "width": 1199,
+          "height": 1312,
+          "visibleBounds": [
+            207,
+            80,
+            919,
+            1210
+          ],
+          "pixelSHA256": "ad221556194231294f013621ea43adf355cffbffefa5da6778239866fde9e37d",
+          "transparentFraction": 0.86231,
+          "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+          "facing": 1,
+          "anchor": [
+            0.436,
+            0.9222560975609756
+          ],
+          "bodyHeight": 0.8734756097560976,
+          "sourceFile": "opposite-contact.png",
+          "sourceSHA256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -5120,9 +5172,25 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "walk": {
+          "frames": [
+            0,
+            2,
+            3,
+            2
+          ],
+          "ticksPerFrame": 7,
+          "frameTicks": [
+            7,
+            7,
+            7,
+            7
+          ],
+          "loop": true
         }
       },
-      "animatedClips": 0,
+      "animatedClips": 1,
       "selectionNotes": "Corps entier candidat Origins PSP : adulte en uniforme, tête sans visage, seringue visible et deux chaussures. Seringue propre à Origins ; aucun scalpel, pipe ou arme SH3/film emprunté. Matière/échelle/pose2D composées depuis les rendus, sans animation ni mesure originale certifiée.",
       "selectionProvenance": {
         "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
@@ -8738,39 +8806,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-f4632371-503d-4c5f-b04d-eb730f743840.png",
-      "sourceSHA256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+      "sourceFile": "shattered_raw_shock_diseased_101.side-right.v1.png",
+      "sourceSHA256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
       "sourceDimensions": [
         1254,
         1254
       ],
       "singleSubjectReviewed": true,
-      "notes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "notes": "Lecture latérale vers la droite, corps entier en posture voûtée, deux bras et deux jambes avec extrémités lisibles. Rencontre de poursuite scripted-encounter maintenue ; aucune aura ni capacité ajoutée. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
-          "bytes": 1065628,
+          "sha256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+          "bytes": 1168120,
           "width": 1254,
           "height": 1254,
           "visibleBounds": [
-            157,
-            317,
-            1103,
-            1038
+            131,
+            135,
+            1128,
+            1132
           ],
-          "pixelSHA256": "4fc09898f41f8692c64dde5b8f995832eec1ffa9159b9d7909453c24520bb950",
-          "transparentFraction": 0.74606,
-          "path": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+          "pixelSHA256": "a1525d70789e4509aa37ff6c3a1c478aa175d6c046ee19c7d73b6b827b795d14",
+          "transparentFraction": 0.73407,
+          "path": "assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png",
           "facing": 1,
           "anchor": [
-            0.502392,
-            0.827751
+            0.34689,
+            0.902711
           ],
-          "bodyHeight": 0.57496,
-          "sourceFile": "exec-f4632371-503d-4c5f-b04d-eb730f743840.png",
-          "sourceSHA256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.795056,
+          "sourceFile": "shattered_raw_shock_diseased_101.side-right.v1.png",
+          "sourceSHA256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -8790,7 +8860,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "selectionProvenance": {
+        "sourceSHA256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-f4632371-503d-4c5f-b04d-eb730f743840.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Lecture latérale vers la droite, corps entier en posture voûtée, deux bras et deux jambes avec extrémités lisibles. Rencontre de poursuite scripted-encounter maintenue ; aucune aura ni capacité ajoutée. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json."
     },
     "shattered_raw_shock_abstract_102": {
       "fighterId": "shattered_raw_shock_abstract_102",
@@ -8918,39 +9000,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-b62acf56-59e8-4495-aa24-38dd529f8928.png",
-      "sourceSHA256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+      "sourceFile": "downpour_doll_106.side-right.v1.png",
+      "sourceSHA256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
       "sourceDimensions": [
         1254,
         1254
       ],
       "singleSubjectReviewed": true,
-      "notes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "notes": "Profil droit entier ; une seule Doll adulte synthétique, cheveux, deux mains et deux pieds conservés. La Doll reste un mannequin immobile dans un rôle environmental-obstacle, sans locomotion ni attaque directe ajoutée. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
-          "bytes": 745018,
+          "sha256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+          "bytes": 566712,
           "width": 1254,
           "height": 1254,
           "visibleBounds": [
-            242,
-            95,
-            1128,
-            1186
+            329,
+            90,
+            916,
+            1178
           ],
-          "pixelSHA256": "67108827ec5401d8eee5f36966e5648e5ac79fe2f679bf2507a5c0545711d56d",
-          "transparentFraction": 0.83416,
-          "path": "assets/sprites/downpour_doll_106.50727eee886c.png",
+          "pixelSHA256": "5e01ee58b48d51137bfd3d172145d0e2a5d912f92e515500069ba38b9e7104c2",
+          "transparentFraction": 0.88244,
+          "path": "assets/sprites/downpour_doll_106.5a84e5d8f278.png",
           "facing": 1,
           "anchor": [
-            0.546252,
-            0.945774
+            0.448963,
+            0.939394
           ],
-          "bodyHeight": 0.870016,
-          "sourceFile": "exec-b62acf56-59e8-4495-aa24-38dd529f8928.png",
-          "sourceSHA256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.867624,
+          "sourceFile": "downpour_doll_106.side-right.v1.png",
+          "sourceSHA256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -8970,7 +9054,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+      "selectionProvenance": {
+        "sourceSHA256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-b62acf56-59e8-4495-aa24-38dd529f8928.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Profil droit entier ; une seule Doll adulte synthétique, cheveux, deux mains et deux pieds conservés. La Doll reste un mannequin immobile dans un rôle environmental-obstacle, sans locomotion ni attaque directe ajoutée. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json."
     },
     "downpour_tormented_soul_111": {
       "fighterId": "downpour_tormented_soul_111",
@@ -9398,39 +9494,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png",
-      "sourceSHA256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+      "sourceFile": "bom_needler_127.side-right.v4.png",
+      "sourceSHA256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
       "sourceDimensions": [
-        1254,
-        1254
+        1774,
+        887
       ],
       "singleSubjectReviewed": true,
-      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Needler BoM entier depuis capture native20120713_01 complétant le bestiaire recadré : quatre membres à lames, configuration inversée. Silhouette source retenue ; perspective, occultations et détails des raccords restent reconstruits, sans modèle Homecoming substitué. Marge lisible connectée minimale réelle :4.70% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "notes": "Profil droit à axe du torse horizontal, quatre chaînes de membres distinctes et quatre lames entières, tête pendante et configuration inversée. Lecture latérale meilleure que v1–v3. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "pixelSHA256": "f96191d586481bb1d9b2bcded0b982f7db1a1404f32a34d24e6be9f33634bbf0",
-          "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
-          "bytes": 386427,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+          "bytes": 599254,
+          "width": 1774,
+          "height": 887,
           "visibleBounds": [
-            251,
-            305,
-            1193,
-            976
+            67,
+            208,
+            1705,
+            721
           ],
-          "transparentFraction": 0.9464,
-          "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+          "pixelSHA256": "833f3fbd3f2c5ba4e47494b1db81a4579f7cd2690f0beff7ebcebac25c7f1120",
+          "transparentFraction": 0.89786,
+          "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
           "facing": 1,
           "anchor": [
-            0.55,
-            0.783892
+            0.48478,
+            0.812852
           ],
-          "bodyHeight": 0.543062,
-          "sourceFile": "exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png",
-          "sourceSHA256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.578354,
+          "sourceFile": "bom_needler_127.side-right.v4.png",
+          "sourceSHA256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -9450,7 +9548,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Needler BoM entier depuis capture native20120713_01 complétant le bestiaire recadré : quatre membres à lames, configuration inversée. Silhouette source retenue ; perspective, occultations et détails des raccords restent reconstruits, sans modèle Homecoming substitué. Marge lisible connectée minimale réelle :4.70% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "selectionProvenance": {
+        "sourceSHA256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Profil droit à axe du torse horizontal, quatre chaînes de membres distinctes et quatre lames entières, tête pendante et configuration inversée. Lecture latérale meilleure que v1–v3. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json."
     },
     "bom_nurse_128": {
       "fighterId": "bom_nurse_128",
@@ -9458,39 +9568,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-604e0ddf-6084-4513-9818-98b4932bacf9.png",
-      "sourceSHA256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+      "sourceFile": "bom_nurse_128.side-right.v1.png",
+      "sourceSHA256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
       "sourceDimensions": [
         1254,
         1254
       ],
       "singleSubjectReviewed": true,
-      "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Nurse BoM entière depuis le modèle Hershberg à tête chair lisse, avec Steel Pipe natif entier explicitement associé aux nurses sur la page armes. Ce modèle d’artiste diffère du rendu couleur2013 à tête sombre ; correspondance exacte à chaque modèle retail et prise non certifiées. Aucun modèle SH3 Pipe réétiqueté. Marge lisible connectée minimale réelle :7.34% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "notes": "Vue latérale droite entière ; coiffe, deux mains, deux chaussures et Steel Pipe complet avec son coude présents. Candidat de la variante artiste Hershberg à tête chair lisse. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "pixelSHA256": "dd0dbd9ebc5090803a8b62663912a1c7fdf3707bdc30579980d8f850ff4524e8",
-          "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
-          "bytes": 509415,
+          "sha256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+          "bytes": 463056,
           "width": 1254,
           "height": 1254,
           "visibleBounds": [
-            336,
-            97,
-            931,
-            1159
+            439,
+            85,
+            841,
+            1168
           ],
-          "transparentFraction": 0.89212,
-          "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+          "pixelSHA256": "24a781e90703a5c441057a543e60a8ee2400b51572e6fbbd04989e249c0637e9",
+          "transparentFraction": 0.90091,
+          "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
           "facing": 1,
           "anchor": [
-            0.52,
-            0.926635
+            0.467305,
+            0.931419
           ],
-          "bodyHeight": 0.851675,
-          "sourceFile": "exec-604e0ddf-6084-4513-9818-98b4932bacf9.png",
-          "sourceSHA256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.863636,
+          "sourceFile": "bom_nurse_128.side-right.v1.png",
+          "sourceSHA256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -9510,7 +9622,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Nurse BoM entière depuis le modèle Hershberg à tête chair lisse, avec Steel Pipe natif entier explicitement associé aux nurses sur la page armes. Ce modèle d’artiste diffère du rendu couleur2013 à tête sombre ; correspondance exacte à chaque modèle retail et prise non certifiées. Aucun modèle SH3 Pipe réétiqueté. Marge lisible connectée minimale réelle :7.34% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+      "selectionProvenance": {
+        "sourceSHA256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-604e0ddf-6084-4513-9818-98b4932bacf9.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Vue latérale droite entière ; coiffe, deux mains, deux chaussures et Steel Pipe complet avec son coude présents. Candidat de la variante artiste Hershberg à tête chair lisse. Candidat non certifié ; voir docs/production/vague17/fighters-generation.json."
     },
     "bom_pyramid_head_129": {
       "fighterId": "bom_pyramid_head_129",

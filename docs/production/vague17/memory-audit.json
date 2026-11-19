@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T05:45:59.120Z",
+  "baseCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+  "inputDigests": {
+    "baseRegistry": "d0196d6f6b984fc8672c3fdcb1f5478e566b3830f1d2572b7a00503df5d29a7e",
+    "currentRegistry": "f10b8b9305fb992a0eefb6dde1194436fde918ae2b7d608a25092da7fbfc61eb",
+    "baseStageManifest": "35c311c93f7d7f61ade7008c43ece2c7b44ee86e09576a8d0118895587de6043",
+    "currentStageManifest": "6beb836098c4df8f1c7872900096aa29d3690f2cde5a1d4b8e5ad8cc13138471",
+    "currentVersus": "0ce3752f16242d7833939705e154e3228cdddc28b69bd88681d0ef86a583249e"
+  },
+  "selectionFlowCorrection": {
+    "randomizeReturnsToSelection": true,
+    "newStageReturnsToSelection": true,
+    "writtenByAuditor": false,
+    "browserVerificationPerformedByAuditor": false,
+    "extraRecoveryTransactionRecommended": false
+  },
+  "method": "Read-only comparison of the committed base and the actual integrated art/registry.json and src/stage-bitmap-manifest.js. No external proposals or scratch files are read. Decoded bytes = unique path width × height × 4. Real SpriteCache.validatePins and stageBitmapFrames used. No registry or budget edited.",
+  "budgets": {
+    "fighterBytes": 67108864,
+    "stageBytes": 67108864,
+    "separateCaches": true,
+    "compressedPngBytesUsed": false
+  },
+  "nurse": {
+    "id": "origins_faceless_nurse",
+    "before": {
+      "frames": 2,
+      "bytes": 12584704
+    },
+    "after": {
+      "frames": 4,
+      "bytes": 25170496
+    }
+  },
+  "fighterProfiles": [
+    {
+      "id": "downpour_doll_106",
+      "beforeBytes": 6290064,
+      "afterBytes": 6290064,
+      "frameCount": 1,
+      "combatEnabled": false
+    },
+    {
+      "id": "shattered_raw_shock_diseased_101",
+      "beforeBytes": 6290064,
+      "afterBytes": 6290064,
+      "frameCount": 1,
+      "combatEnabled": false
+    },
+    {
+      "id": "bom_nurse_128",
+      "beforeBytes": 6290064,
+      "afterBytes": 6290064,
+      "frameCount": 1,
+      "combatEnabled": true
+    },
+    {
+      "id": "bom_needler_127",
+      "beforeBytes": 6290064,
+      "afterBytes": 6294152,
+      "frameCount": 1,
+      "combatEnabled": true
+    }
+  ],
+  "coldDuels": {
+    "base": {
+      "enabledFighters": 187,
+      "totalPairsIncludingMirrors": 17578,
+      "admitted": 14365,
+      "missingCombatArt": 3213,
+      "rejectedForBudget": 0,
+      "max": {
+        "bytes": 50336912,
+        "ids": [
+          "sh1_air_screamer_001",
+          "sh1_groaner_003"
+        ]
+      }
+    },
+    "integrated": {
+      "enabledFighters": 187,
+      "totalPairsIncludingMirrors": 17578,
+      "admitted": 14365,
+      "missingCombatArt": 3213,
+      "rejectedForBudget": 0,
+      "max": {
+        "bytes": 50343064,
+        "ids": [
+          "sh1_air_screamer_001",
+          "origins_faceless_nurse"
+        ]
+      }
+    },
+    "regressions": []
+  },
+  "stages": {
+    "base": {
+      "registeredStages": 24,
+      "selectedStages": 24,
+      "declaredRooms": 26,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3",
+          "historical_society"
+        ]
+      },
+      "rejectedSingles": 0,
+      "rejectedPairs": 0,
+      "largestRoom": {
+        "id": "brookhaven_sh3",
+        "scene": "leonard-basin-below-c4",
+        "bytes": 12587560
+      },
+      "allDeclaredRoomPairMaxBytes": 25175120,
+      "newStages": [
+        {
+          "id": "underground_hc",
+          "bytes": 0,
+          "frameCount": 0
+        },
+        {
+          "id": "film_hospital",
+          "bytes": 0,
+          "frameCount": 0
+        }
+      ]
+    },
+    "integrated": {
+      "registeredStages": 26,
+      "selectedStages": 26,
+      "declaredRooms": 28,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3",
+          "historical_society"
+        ]
+      },
+      "rejectedSingles": 0,
+      "rejectedPairs": 0,
+      "largestRoom": {
+        "id": "brookhaven_sh3",
+        "scene": "leonard-basin-below-c4",
+        "bytes": 12587560
+      },
+      "allDeclaredRoomPairMaxBytes": 25175120,
+      "newStages": [
+        {
+          "id": "underground_hc",
+          "bytes": 12586816,
+          "frameCount": 2
+        },
+        {
+          "id": "film_hospital",
+          "bytes": 12586816,
+          "frameCount": 2
+        }
+      ]
+    }
+  },
+  "settledResult": {
+    "finalResultPresentationClips": [],
+    "largestFrame": {
+      "id": "downpour_screamer_104",
+      "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "bytes": 6296220
+    },
+    "conservativeNewPairPlusTwoRetainedFramesBytes": 62935504,
+    "budgetBytes": 67108864,
+    "passes": true,
+    "scope": "Bound valid for current registry with no final-result presentation clips; final result retains at most one fallback/core-KO frame per actor. An existing taunt does not run during matchEnd."
+  },
+  "livePreviousMatch": {
+    "oldIds": [
+      "sh1_air_screamer_001",
+      "sh1_groaner_003"
+    ],
+    "nextIds": [
+      "origins_faceless_nurse",
+      "sh1_air_screamer_001"
+    ],
+    "before": {
+      "retainedBytes": 50336912,
+      "nextPairBytes": 37757272,
+      "combinedBytes": 62921616,
+      "combinedFrames": 10,
+      "admitted": true
+    },
+    "after": {
+      "retainedBytes": 50336912,
+      "nextPairBytes": 50343064,
+      "combinedBytes": 75507408,
+      "combinedFrames": 12,
+      "admitted": false
+    },
+    "simulatedBefore": {
+      "oldLoaded": true,
+      "releasedOldLeaseBeforeNext": false,
+      "prepared": true,
+      "failed": [],
+      "finalPinAccepted": true,
+      "finalPinError": null,
+      "finalPrepared": true,
+      "newPairFullyReady": true,
+      "peakBytes": 62921616,
+      "maxBytes": 67108864,
+      "retainedStillReady": true
+    },
+    "simulatedAfter": {
+      "oldLoaded": true,
+      "releasedOldLeaseBeforeNext": false,
+      "prepared": true,
+      "failed": [],
+      "finalPinAccepted": false,
+      "finalPinError": "Combat sprite set exceeds the decoded-memory budget.",
+      "finalPrepared": null,
+      "newPairFullyReady": false,
+      "peakBytes": 62922704,
+      "maxBytes": 67108864,
+      "retainedStillReady": true
+    },
+    "simulatedAfterSelectionReset": {
+      "oldLoaded": true,
+      "releasedOldLeaseBeforeNext": true,
+      "prepared": true,
+      "failed": [],
+      "finalPinAccepted": true,
+      "finalPinError": null,
+      "finalPrepared": true,
+      "newPairFullyReady": true,
+      "peakBytes": 62923192,
+      "maxBytes": 67108864,
+      "retainedStillReady": false
+    },
+    "conclusion": "The retained-live simulation isolates the oversized union found before the flow correction. The selectionFlowCorrection fields report whether the integrated guards return through showSelect before an effective new selection. The reset simulation checks the resulting cache behavior, without replacing browser verification or changing recovery."
+  }
+}

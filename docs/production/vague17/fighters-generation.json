@@ -1,0 +1,1167 @@
+{
+  "schema": "wave17-fighter-generation-journal-v1",
+  "createdAt": "2026-11-19T05:31:14.627Z",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pullRequest": 6,
+  "branch": "art/missing-fullbody-20261117",
+  "baseCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+  "owner": "wave17_fighters",
+  "scope": "Native PNG production and candidate audit only; no shared registry, engine rules, git commit or ref modified by this agent.",
+  "instructionsRead": [
+    "AGENTS.md",
+    "docs/GAMEDEV_GUIDANCE.md",
+    "e0/imagegen",
+    "art/registry.json",
+    "src/production-reference.js",
+    "src/combat-reference-policy.js",
+    "art/provenance-art144-b.json",
+    "art/provenance-art144-c.json"
+  ],
+  "generator": "image_gen.imagegen builtin",
+  "generationCalls": 7,
+  "successfulPngArtifacts": 7,
+  "selectedCandidateImages": 4,
+  "archivedUnselectedImages": 3,
+  "refusalsThisWave": 0,
+  "externalPixelEditing": false,
+  "originalSelectionPortraitsPreserved": true,
+  "engineRolesOrAbilitiesChanged": false,
+  "animatedClipsAdded": 0,
+  "certifiedOneToOneAdded": 0,
+  "nativeUHDCandidatesAdded": 0,
+  "toolAudit": {
+    "auditor": "scripts/raster-validation.mjs",
+    "auditorBaseCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+    "tests": "PNG signature/CRC/decode, real alpha, dimension limits, connected silhouette framing, normalized RGBA hash; byte SHA-256 and computed Git blob SHA.",
+    "allRasterAuditsPassed": true,
+    "integratedGameplayVerificationPerformedByThisAgent": false
+  },
+  "items": [
+    {
+      "fighterId": "downpour_doll_106",
+      "source": "downpour",
+      "sourceRegistryAt": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+      "previousStatus": "integrated-candidate",
+      "previousCombatView": "legacy-unreviewed",
+      "edition": "Silent Hill: Downpour (2012, version commerciale)",
+      "combatRolePreserved": "environmental-obstacle",
+      "combatCapabilitiesModified": false,
+      "sourceReferenceIds": [
+        "EXT10"
+      ],
+      "sourceConstraints": [
+        "Déplacements offensifs directs du mannequin non canoniques.",
+        "Détruire la Doll dissipe ses Shadows.",
+        "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+      ],
+      "inputReference": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/downpour_doll_106.png",
+        "repositoryPath": "assets/sprites/downpour_doll_106.50727eee886c.png",
+        "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+        "bytes": 745018,
+        "width": 1254,
+        "height": 1254,
+        "pixelSHA256": "67108827ec5401d8eee5f36966e5648e5ac79fe2f679bf2507a5c0545711d56d",
+        "visuallyInspected": true,
+        "kind": "existing-generated-selection-portrait-candidate",
+        "originalSelectionFileUnmodified": true
+      },
+      "priorSourceProvenance": {
+        "fighterId": "downpour_doll_106",
+        "source": "downpour",
+        "edition": "Silent Hill: Downpour (2012, version commerciale)",
+        "status": "implemented-candidate",
+        "fidelity": "unverified",
+        "generationAttempted": true,
+        "tool": "image_gen.imagegen",
+        "prompt": "Create the exact Doll creature from Silent Hill Downpour (2012), using these two native full-body render references exclusively. It is the pale worn human-shaped doll with short straight silver bob hair, dark eye cavities, dark open mouth, faded red circular cheek paint; the dark one-piece camisole with reddish pink neckline and thin straps, covered torso and wrapped/patterned bare-looking doll legs from the references. Preserve all clothing, seams, markings and exact proportions. Whole body including both hands and feet. Natural slightly bent knees and forward reaching stalking ready posture from the second reference, facing right in side three-quarter view for 2D gameplay. Match the specific Downpour doll model and original wardrobe; do not add weapons, doll strings, extra limbs, detached parts, violence, or an action victim. One isolated complete single-subject static sprite candidate on TRUE transparent RGBA square canvas. Subject centered in middle60percent BOTH dimensions, at least20percent empty margin every edge, all hair and finger and toe tips fully inside canvas. Readable softly lit detailed 2012 game-inspired material. No environment, floor, shadow, captions, UI, sheet or duplicate. Source-constrained authored still; no claimed source animation or certified 1:1.",
+        "references": [
+          {
+            "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/sh_downpour_art_120422_08_doll.png",
+            "sha256": "e1099f4be5ca07568609df5a35fd2a757dee746649b4d5b83332a99a0f837ea7",
+            "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_08_doll.png",
+            "viewedAtNativeResolution": true
+          },
+          {
+            "path": "/workspace/shared/halo-of-flesh/references/batch11-art-2026-10-28/sh_downpour_art_120422_09_doll.png",
+            "sha256": "10e5d7205ae59e935a9e0354dee28c7c6c6f3af1a365589378e5f830a636f26a",
+            "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_09_doll.png",
+            "viewedAtNativeResolution": true
+          }
+        ],
+        "selectedOutput": "/workspace/generated_images/exec-b62acf56-59e8-4495-aa24-38dd529f8928.png",
+        "publishedPath": "assets/sprites/downpour_doll_106.50727eee886c.png",
+        "technical": {
+          "pixelSHA256": "67108827ec5401d8eee5f36966e5648e5ac79fe2f679bf2507a5c0545711d56d",
+          "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+          "bytes": 745018,
+          "width": 1254,
+          "height": 1254,
+          "extension": "png",
+          "visibleBounds": [
+            242,
+            95,
+            1128,
+            1186
+          ],
+          "transparentFraction": 0.83416
+        },
+        "singleSubjectReviewed": true,
+        "fullExteriorReviewed": true,
+        "loop": false,
+        "uniqueFrames": 1,
+        "nativeTimingMeasured": false,
+        "oneToOneValidated": false,
+        "sourceLimit": "Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+        "rolePreserved": "environmental-obstacle",
+        "combatEnabledPreserved": false
+      },
+      "externalOriginalsReDownloadedThisWave": false,
+      "selectedFile": "/workspace/scratch/b86991fb2253/wave17/fighters/downpour_doll_106.side-right.v1.png",
+      "technical": {
+        "name": "downpour_doll_106.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/downpour_doll_106.side-right.v1.png",
+        "bytes": 566712,
+        "sha256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+        "gitBlobSHAComputedOnly": "1b64981b39f8f573ee1cf34d538dbf5d2abbc3c4",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          329,
+          90,
+          916,
+          1178
+        ],
+        "alphaBounds": [
+          23,
+          21,
+          1210,
+          1254
+        ],
+        "framingBounds": [
+          324,
+          83,
+          919,
+          1186
+        ],
+        "transparentFraction": 0.88244,
+        "pixelSHA256": "5e01ee58b48d51137bfd3d172145d0e2a5d912f92e515500069ba38b9e7104c2",
+        "minConnectedMarginFraction": 0.05422647527910686,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "proposedRepositoryPath": "assets/sprites/downpour_doll_106.side-right-wave17.5a84e5d8f278.png",
+      "proposal": {
+        "status": "candidate-pending-root-integration-review",
+        "combatView": "side-view-candidate",
+        "purpose": "combat",
+        "view": "side-view",
+        "facing": 1,
+        "anchor": [
+          0.448963,
+          0.939394
+        ],
+        "anchorPixel": [
+          563,
+          1178
+        ],
+        "bodyHeight": 0.867624,
+        "basis": "Visible full silhouette height; manually proposed support-center anchor, not source-game scale or measured native timing.",
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "animatedClips": 0,
+        "mirrorPolicy": "presentation-only; opposite side not independently generated"
+      },
+      "visualReview": {
+        "reviewed": true,
+        "oneSubject": true,
+        "fullExteriorReviewed": true,
+        "wholeWeaponOrAppendices": true,
+        "facingRightCandidate": true,
+        "strictSourceOneToOneValidated": false,
+        "summary": "Profil droit entier ; une seule Doll adulte synthétique, cheveux, deux mains et deux pieds conservés. La Doll reste un mannequin immobile dans un rôle environmental-obstacle, sans locomotion ni attaque directe ajoutée.",
+        "alphaBoundaryLimitation": "Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+        "marginRequestedFraction": 0.12,
+        "marginActuallyMet": false,
+        "minConnectedMarginFraction": 0.05422647527910686,
+        "limitations": [
+          "Pose reconstruite depuis le portrait candidat, pas depuis une rotation mesurée du modèle commercial.",
+          "Deux pieds proches et partiellement superposés, extrémités présentes."
+        ]
+      },
+      "animationClaims": {
+        "staticPoseOnly": true,
+        "uniqueFramesSelected": 1,
+        "loop": false,
+        "nativeTimingMeasured": false,
+        "certifiedOneToOne": false,
+        "nativeUHD": false,
+        "sourceGamePixelsDelivered": false
+      },
+      "publishedRepositoryPath": "assets/sprites/downpour_doll_106.5a84e5d8f278.png"
+    },
+    {
+      "fighterId": "shattered_raw_shock_diseased_101",
+      "source": "shattered",
+      "sourceRegistryAt": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+      "previousStatus": "integrated-candidate",
+      "previousCombatView": "legacy-unreviewed",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "combatRolePreserved": "scripted-encounter",
+      "combatCapabilitiesModified": false,
+      "sourceReferenceIds": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "sourceConstraints": [
+        "Aucune aura toxique/affaiblissante prouvée.",
+        "Hérite des seuls gestes documentés du Raw Shock de Shattered Memories.",
+        "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Rencontre de poursuite invulnérable : fuite et fusées temporaires dans l’original ; aucune mort de Raw Shock ni commande de duel autonome validée. Le blocage du prototype ne représente pas une immobilité canonique."
+      ],
+      "inputReference": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/shattered_raw_shock_diseased_101.png",
+        "repositoryPath": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+        "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+        "bytes": 1065628,
+        "width": 1254,
+        "height": 1254,
+        "pixelSHA256": "4fc09898f41f8692c64dde5b8f995832eec1ffa9159b9d7909453c24520bb950",
+        "visuallyInspected": true,
+        "kind": "existing-generated-selection-portrait-candidate",
+        "originalSelectionFileUnmodified": true
+      },
+      "priorSourceProvenance": {
+        "fighterId": "shattered_raw_shock_diseased_101",
+        "source": "shattered",
+        "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+        "status": "implemented-candidate",
+        "fidelity": "unverified",
+        "generationAttempted": true,
+        "tool": "image_gen.imagegen",
+        "prompt": "Diseased Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match ONLY this exact full-body and portrait variant: enlarged lumpy sealed head with dark central seam and swollen facial folds, pale thick pitted body and localized lumpy surface texture. Two arms and two bent legs in its original low four-limb ready crawling posture, entire head and all hand and foot tips visible, facing RIGHT in a slight side view. No human boxing guard, no weapons, no extra organs or graphic wounds, no victim.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+        "references": [
+          {
+            "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_diseased_art_04.jpg",
+            "sha256": "6ec5b275bc7b100ea51ecac52169336c776d1c58f4cfe0cce37107b6c7e11818",
+            "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_diseased_art_04.jpg",
+            "viewedAtNativeResolution": true
+          },
+          {
+            "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_diseased.jpg",
+            "sha256": "4aa8db000ea5d8d0e7e5828b1729a69aca4f20bd3ccbac9b2a15ed869164eaf9",
+            "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_diseased.jpg",
+            "viewedAtNativeResolution": true
+          }
+        ],
+        "selectedOutput": "/workspace/generated_images/exec-f4632371-503d-4c5f-b04d-eb730f743840.png",
+        "publishedPath": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+        "technical": {
+          "pixelSHA256": "4fc09898f41f8692c64dde5b8f995832eec1ffa9159b9d7909453c24520bb950",
+          "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+          "bytes": 1065628,
+          "width": 1254,
+          "height": 1254,
+          "extension": "png",
+          "visibleBounds": [
+            157,
+            317,
+            1103,
+            1038
+          ],
+          "transparentFraction": 0.74606
+        },
+        "singleSubjectReviewed": true,
+        "fullExteriorReviewed": true,
+        "loop": false,
+        "uniqueFrames": 1,
+        "nativeTimingMeasured": false,
+        "oneToOneValidated": false,
+        "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+        "rolePreserved": "scripted-encounter",
+        "combatEnabledPreserved": false
+      },
+      "externalOriginalsReDownloadedThisWave": false,
+      "selectedFile": "/workspace/scratch/b86991fb2253/wave17/fighters/shattered_raw_shock_diseased_101.side-right.v1.png",
+      "technical": {
+        "name": "shattered_raw_shock_diseased_101.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/shattered_raw_shock_diseased_101.side-right.v1.png",
+        "bytes": 1168120,
+        "sha256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+        "gitBlobSHAComputedOnly": "f6da98fed7735c560dbf67c0dd1a80e542ad746a",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          131,
+          135,
+          1128,
+          1132
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1236,
+          1254
+        ],
+        "framingBounds": [
+          128,
+          130,
+          1132,
+          1140
+        ],
+        "transparentFraction": 0.73407,
+        "pixelSHA256": "a1525d70789e4509aa37ff6c3a1c478aa175d6c046ee19c7d73b6b827b795d14",
+        "minConnectedMarginFraction": 0.09090909090909091,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "proposedRepositoryPath": "assets/sprites/shattered_raw_shock_diseased_101.side-right-wave17.c33f48ae8d27.png",
+      "proposal": {
+        "status": "candidate-pending-root-integration-review",
+        "combatView": "side-view-candidate",
+        "purpose": "combat",
+        "view": "side-view",
+        "facing": 1,
+        "anchor": [
+          0.34689,
+          0.902711
+        ],
+        "anchorPixel": [
+          435,
+          1132
+        ],
+        "bodyHeight": 0.795056,
+        "basis": "Visible full silhouette height; manually proposed support-center anchor, not source-game scale or measured native timing.",
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "animatedClips": 0,
+        "mirrorPolicy": "presentation-only; opposite side not independently generated"
+      },
+      "visualReview": {
+        "reviewed": true,
+        "oneSubject": true,
+        "fullExteriorReviewed": true,
+        "wholeWeaponOrAppendices": true,
+        "facingRightCandidate": true,
+        "strictSourceOneToOneValidated": false,
+        "summary": "Lecture latérale vers la droite, corps entier en posture voûtée, deux bras et deux jambes avec extrémités lisibles. Rencontre de poursuite scripted-encounter maintenue ; aucune aura ni capacité ajoutée.",
+        "alphaBoundaryLimitation": "Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+        "marginRequestedFraction": 0.12,
+        "marginActuallyMet": false,
+        "minConnectedMarginFraction": 0.09090909090909091,
+        "limitations": [
+          "Pose voûtée debout reconstruite depuis un portrait plus accroupi ; ce geste ne constitue pas une animation canonique mesurée.",
+          "Morphologie et raccords cachés reconstruits ; profil exact du crâne non certifié."
+        ]
+      },
+      "animationClaims": {
+        "staticPoseOnly": true,
+        "uniqueFramesSelected": 1,
+        "loop": false,
+        "nativeTimingMeasured": false,
+        "certifiedOneToOne": false,
+        "nativeUHD": false,
+        "sourceGamePixelsDelivered": false
+      },
+      "publishedRepositoryPath": "assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png"
+    },
+    {
+      "fighterId": "bom_nurse_128",
+      "source": "bom",
+      "sourceRegistryAt": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+      "previousStatus": "integrated-candidate",
+      "previousCombatView": "legacy-unreviewed",
+      "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "combatRolePreserved": "combatant",
+      "combatCapabilitiesModified": false,
+      "sourceReferenceIds": [
+        "EXT20",
+        "EXT9_REF_BOM_NURSE_20261026"
+      ],
+      "sourceConstraints": [
+        "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+        "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté."
+      ],
+      "inputReference": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/bom_nurse_128.png",
+        "repositoryPath": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+        "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+        "bytes": 509415,
+        "width": 1254,
+        "height": 1254,
+        "pixelSHA256": "dd0dbd9ebc5090803a8b62663912a1c7fdf3707bdc30579980d8f850ff4524e8",
+        "visuallyInspected": true,
+        "kind": "existing-generated-selection-portrait-candidate",
+        "originalSelectionFileUnmodified": true
+      },
+      "priorSourceProvenance": {
+        "fighterId": "bom_nurse_128",
+        "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+        "sourceGeneratedPath": "/workspace/generated_images/exec-604e0ddf-6084-4513-9818-98b4932bacf9.png",
+        "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+        "pixelSHA256": "dd0dbd9ebc5090803a8b62663912a1c7fdf3707bdc30579980d8f850ff4524e8",
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_10_nurse.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_11_nurse.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/weapons/sh_bom_steel_pipe.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+        ],
+        "referenceFiles": [
+          "/workspace/shared/halo-of-flesh/references/art144-c-2026-11-01/bom-sh_bom_art_20160221_hershberg_10_nurse.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-c-2026-11-01/bom-sh_bom_art_20160221_hershberg_11_nurse.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-c-2026-11-01/bom-weapon-steel_pipe.jpg"
+        ],
+        "visibleBounds": [
+          336,
+          97,
+          931,
+          1159
+        ],
+        "framingBounds": [
+          332,
+          94,
+          935,
+          1162
+        ],
+        "minimumPaddingFraction": 0.073365,
+        "wholeSubjectReviewed": true,
+        "limits": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Nurse BoM entière depuis le modèle Hershberg à tête chair lisse, avec Steel Pipe natif entier explicitement associé aux nurses sur la page armes. Ce modèle d’artiste diffère du rendu couleur2013 à tête sombre ; correspondance exacte à chaque modèle retail et prise non certifiées. Aucun modèle SH3 Pipe réétiqueté. Marge lisible connectée minimale réelle :7.34% ; la marge20% demandée au générateur n’est pas déclarée acquise."
+      },
+      "externalOriginalsReDownloadedThisWave": false,
+      "selectedFile": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_nurse_128.side-right.v1.png",
+      "technical": {
+        "name": "bom_nurse_128.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_nurse_128.side-right.v1.png",
+        "bytes": 463056,
+        "sha256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+        "gitBlobSHAComputedOnly": "608226e89e4fd2f7e60cdcfd499c0513c29a7cdd",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          439,
+          85,
+          841,
+          1168
+        ],
+        "alphaBounds": [
+          25,
+          19,
+          1232,
+          1228
+        ],
+        "framingBounds": [
+          435,
+          77,
+          845,
+          1176
+        ],
+        "transparentFraction": 0.90091,
+        "pixelSHA256": "24a781e90703a5c441057a543e60a8ee2400b51572e6fbbd04989e249c0637e9",
+        "minConnectedMarginFraction": 0.06140350877192982,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "proposedRepositoryPath": "assets/sprites/bom_nurse_128.side-right-wave17.902db2be4c5b.png",
+      "proposal": {
+        "status": "candidate-pending-root-integration-review",
+        "combatView": "side-view-candidate",
+        "purpose": "combat",
+        "view": "side-view",
+        "facing": 1,
+        "anchor": [
+          0.467305,
+          0.931419
+        ],
+        "anchorPixel": [
+          586,
+          1168
+        ],
+        "bodyHeight": 0.863636,
+        "basis": "Visible full silhouette height; manually proposed support-center anchor, not source-game scale or measured native timing.",
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "animatedClips": 0,
+        "mirrorPolicy": "presentation-only; opposite side not independently generated"
+      },
+      "visualReview": {
+        "reviewed": true,
+        "oneSubject": true,
+        "fullExteriorReviewed": true,
+        "wholeWeaponOrAppendices": true,
+        "facingRightCandidate": true,
+        "strictSourceOneToOneValidated": false,
+        "summary": "Vue latérale droite entière ; coiffe, deux mains, deux chaussures et Steel Pipe complet avec son coude présents. Candidat de la variante artiste Hershberg à tête chair lisse.",
+        "alphaBoundaryLimitation": "Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+        "marginRequestedFraction": 0.12,
+        "marginActuallyMet": false,
+        "minConnectedMarginFraction": 0.06140350877192982,
+        "limitations": [
+          "Correspondance à chaque modèle retail BoM non certifiée ; ne remplace pas la variante à tête sombre du rendu couleur 2013.",
+          "Prise du tuyau et pose nouvelle reconstruites ; aucune animation SH3, Origins ou Homecoming transférée.",
+          "Appuis décalés en hauteur dans la pose ; ancrage proposé sur la chaussure la plus basse, à contrôler dans le moteur."
+        ]
+      },
+      "animationClaims": {
+        "staticPoseOnly": true,
+        "uniqueFramesSelected": 1,
+        "loop": false,
+        "nativeTimingMeasured": false,
+        "certifiedOneToOne": false,
+        "nativeUHD": false,
+        "sourceGamePixelsDelivered": false
+      },
+      "publishedRepositoryPath": "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+    },
+    {
+      "fighterId": "bom_needler_127",
+      "source": "bom",
+      "sourceRegistryAt": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+      "previousStatus": "integrated-candidate",
+      "previousCombatView": "legacy-unreviewed",
+      "edition": "Silent Hill: Book of Memories (2012, PS Vita)",
+      "combatRolePreserved": "combatant",
+      "combatCapabilitiesModified": false,
+      "sourceReferenceIds": [
+        "EXT20"
+      ],
+      "sourceConstraints": [
+        "Version Book of Memories uniquement; ne pas transférer automatiquement les animations du titre parent.",
+        "Fidélité 1:1 non validée sans clip de référence de cette œuvre, poses et mesures.",
+        "Dégâts, inputs, super, finisher et événements de manche sont des adaptations de versus, même si le geste de base est attesté.",
+        "Quatre membres-lames selon le bestiaire Book of Memories ; aucune anatomie à six membres ni animation de la version Homecoming importée."
+      ],
+      "inputReference": {
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/bom_needler_127.png",
+        "repositoryPath": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+        "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+        "bytes": 386427,
+        "width": 1254,
+        "height": 1254,
+        "pixelSHA256": "f96191d586481bb1d9b2bcded0b982f7db1a1404f32a34d24e6be9f33634bbf0",
+        "visuallyInspected": true,
+        "kind": "existing-generated-selection-portrait-candidate",
+        "originalSelectionFileUnmodified": true
+      },
+      "priorSourceProvenance": {
+        "fighterId": "bom_needler_127",
+        "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+        "sourceGeneratedPath": "/workspace/generated_images/exec-bbc87ecd-d9ff-41ba-95ed-a2f2c0a34019.png",
+        "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+        "pixelSHA256": "f96191d586481bb1d9b2bcded0b982f7db1a1404f32a34d24e6be9f33634bbf0",
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120713_01.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/needler.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+        ],
+        "referenceFiles": [
+          "/workspace/shared/halo-of-flesh/references/art144-c-2026-11-01/sh_book_of_memories_screen_20120713_01.jpg",
+          "/workspace/shared/halo-of-flesh/references/art144-c-2026-11-01/bom-needler.jpg"
+        ],
+        "visibleBounds": [
+          251,
+          305,
+          1193,
+          976
+        ],
+        "framingBounds": [
+          242,
+          302,
+          1195,
+          983
+        ],
+        "minimumPaddingFraction": 0.047049,
+        "wholeSubjectReviewed": true,
+        "limits": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Needler BoM entier depuis capture native20120713_01 complétant le bestiaire recadré : quatre membres à lames, configuration inversée. Silhouette source retenue ; perspective, occultations et détails des raccords restent reconstruits, sans modèle Homecoming substitué. Marge lisible connectée minimale réelle :4.70% ; la marge20% demandée au générateur n’est pas déclarée acquise."
+      },
+      "externalOriginalsReDownloadedThisWave": false,
+      "selectedFile": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v4.png",
+      "technical": {
+        "name": "bom_needler_127.side-right.v4.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v4.png",
+        "bytes": 599254,
+        "sha256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+        "gitBlobSHAComputedOnly": "64f9b42d92fa5a32b5e12d872880d5a9d23ed53a",
+        "width": 1774,
+        "height": 887,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          67,
+          208,
+          1705,
+          721
+        ],
+        "alphaBounds": [
+          55,
+          0,
+          1760,
+          871
+        ],
+        "framingBounds": [
+          64,
+          206,
+          1708,
+          726
+        ],
+        "transparentFraction": 0.89786,
+        "pixelSHA256": "833f3fbd3f2c5ba4e47494b1db81a4579f7cd2690f0beff7ebcebac25c7f1120",
+        "minConnectedMarginFraction": 0.036076662908680945,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "proposedRepositoryPath": "assets/sprites/bom_needler_127.side-right-wave17.579a17e5bccf.png",
+      "proposal": {
+        "status": "candidate-pending-root-integration-review",
+        "combatView": "side-view-candidate",
+        "purpose": "combat",
+        "view": "side-view",
+        "facing": 1,
+        "anchor": [
+          0.48478,
+          0.812852
+        ],
+        "anchorPixel": [
+          860,
+          721
+        ],
+        "bodyHeight": 0.578354,
+        "basis": "Visible full silhouette height; manually proposed support-center anchor, not source-game scale or measured native timing.",
+        "clips": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "ticksPerFrame": 1,
+            "loop": false
+          }
+        },
+        "animatedClips": 0,
+        "mirrorPolicy": "presentation-only; opposite side not independently generated"
+      },
+      "visualReview": {
+        "reviewed": true,
+        "oneSubject": true,
+        "fullExteriorReviewed": true,
+        "wholeWeaponOrAppendices": true,
+        "facingRightCandidate": true,
+        "strictSourceOneToOneValidated": false,
+        "summary": "Profil droit à axe du torse horizontal, quatre chaînes de membres distinctes et quatre lames entières, tête pendante et configuration inversée. Lecture latérale meilleure que v1–v3.",
+        "alphaBoundaryLimitation": "Des franges colorées ou claires sont encore visibles à certains contours en plein format. Le PNG natif est conservé sans nettoyage externe ; la validation alpha/framing ne certifie pas la qualité de ces contours.",
+        "marginRequestedFraction": 0.12,
+        "marginActuallyMet": false,
+        "minConnectedMarginFraction": 0.036076662908680945,
+        "limitations": [
+          "Le torse apparaît plus étiré dans cette reconstruction latérale ; proportion et raccords nécessitent la revue finale du responsable de l’intégration.",
+          "Silhouette BoM à quatre membres conservée ; aucun transfert de modèle ou animation Homecoming revendiqué.",
+          "Grande largeur de silhouette : l’ancre et la hauteur proposées doivent être vérifiées avec la mise à l’échelle du moteur."
+        ]
+      },
+      "animationClaims": {
+        "staticPoseOnly": true,
+        "uniqueFramesSelected": 1,
+        "loop": false,
+        "nativeTimingMeasured": false,
+        "certifiedOneToOne": false,
+        "nativeUHD": false,
+        "sourceGamePixelsDelivered": false
+      },
+      "publishedRepositoryPath": "assets/sprites/bom_needler_127.579a17e5bccf.png"
+    }
+  ],
+  "calls": [
+    {
+      "key": "downpour_doll_106",
+      "fighterId": "downpour_doll_106",
+      "variant": "v1",
+      "generatedFile": "exec-07bf7f2a-0742-4400-b492-7a53066a35bb.png",
+      "file": "downpour_doll_106.side-right.v1.png",
+      "inputPaths": [
+        "references/downpour_doll_106.png"
+      ],
+      "status": "selected-candidate",
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent full-body lateral sprite candidate for a 2D horror fighting-game presentation.\nInput image 1: the project's existing generated portrait candidate for Downpour Doll. Preserve this specific character's materials, adult mannequin proportions, chin-length rough grey hair, pale cracked porcelain mask with hollow dark eyes and mouth and faded red cheek paint, dark worn one-piece outfit with thin faded red straps, pale scratched artificial limbs and reddish painted wear on forearms and legs.\nPrimary request: create ONE new full-length side-view stance of this same character, facing and looking exactly screen RIGHT. Turn the entire head, shoulders, pelvis and feet into a true 90-degree lateral profile; the original front-three-quarter composition is not the target. Pose: slightly hunched, knees softly bent, weight on both complete feet, arms separated in silhouette, nearer hand held forward at lower chest level and farther hand lower beside the hip. No new weapon or accessory. Keep the entire body from all hair tips to every fingertip and both soles.\nStyle/medium: detailed realistic game-creature render, consistent worn surface treatment, subdued neutral directional studio light.\nScene/backdrop: genuine transparent alpha only. No floor, cast shadow, smoke or scenery.\nComposition/framing: a single isolated subject centered on a square canvas; fit every extremity inside the canvas with at least 12 percent clear transparent margin on every side. Full body and both feet visible, readable silhouette, no cropped fingers or hair. Highest available native detail.\nConstraints: preserve the reference identity and outfit; this is a new static presentation pose, not a sheet or an animation. One subject only, adult synthetic mannequin; no explicit injury or exposed anatomy; no added gore. No text, logo, frame, labels, border, watermark or checkerboard pixels.",
+      "startedAt": "2026-11-19T05:19:28.576Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-07bf7f2a-0742-4400-b492-7a53066a35bb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/downpour_doll_106.side-right.v1.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-07bf7f2a-0742-4400-b492-7a53066a35bb.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/downpour_doll_106.png",
+          "sha256": "50727eee886ce76cbea2ab49064fb52ca2909c298bbac698d29456d2544ae514",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "downpour_doll_106.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/downpour_doll_106.side-right.v1.png",
+        "bytes": 566712,
+        "sha256": "5a84e5d8f278592eb135224494c779b2cf939d5f3bfa1540345d7dce2bbbefdb",
+        "gitBlobSHAComputedOnly": "1b64981b39f8f573ee1cf34d538dbf5d2abbc3c4",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          329,
+          90,
+          916,
+          1178
+        ],
+        "alphaBounds": [
+          23,
+          21,
+          1210,
+          1254
+        ],
+        "framingBounds": [
+          324,
+          83,
+          919,
+          1186
+        ],
+        "transparentFraction": 0.88244,
+        "pixelSHA256": "5e01ee58b48d51137bfd3d172145d0e2a5d912f92e515500069ba38b9e7104c2",
+        "minConnectedMarginFraction": 0.05422647527910686,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "bom_needler_127",
+      "fighterId": "bom_needler_127",
+      "variant": "v1",
+      "generatedFile": "exec-b6614694-e650-40d4-86cd-e2f8c835f52d.png",
+      "file": "bom_needler_127.side-right.v1.rejected.png",
+      "inputPaths": [
+        "references/bom_needler_127.png"
+      ],
+      "status": "rejected-extra-limb",
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent full-body lateral combat sprite candidate.\nInput image 1: the project's existing generated Book of Memories Needler portrait candidate. Preserve specifically THIS design: a small inverted torso and low hanging head, exactly FOUR long jointed flesh-colored limbs each ending in a single long rusty curved blade, mottled pale beige material and dark worn metal. This is the Book of Memories variant, not a substitute Homecoming design.\nPrimary request: create ONE new full-length strict SIDE PROFILE stance facing screen RIGHT, viewed at body height, not from above and not three-quarter. The long body axis runs left to right. Preserve the inverted body configuration with the head hanging low on the RIGHT/front side of the torso and looking right. Exactly four limb chains total: two on the near side and two on the far side; stagger the far pair slightly so all four can be counted and all four complete blade tips are visible. Keep a stable low lateral stance with its blade limbs bracing underneath or beside the compact torso, not an airborne attack.\nStyle/medium: realistic detailed horror game creature render consistent with the reference materials; neutral diffuse studio light with readable contour.\nScene/backdrop: genuine transparent alpha. No floor, shadow, smoke, effects or environment.\nComposition/framing: one isolated entire creature centered in a square canvas with at least 12 percent transparent clearance from all four canvas edges. Include the entire head, torso, every joint and all four complete blade tips. High native detail and a clean readable silhouette.\nConstraints: retain exactly the reference four-member inverted anatomy, no additional limbs, hands, feet, tail, weapons or duplicated head. A static pose, one subject, one image, no sheet, no variants. No open wounds or added gore. No text, label, watermark, border, drawn checkerboard or frame.",
+      "startedAt": "2026-11-19T05:21:03.899Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-b6614694-e650-40d4-86cd-e2f8c835f52d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v1.rejected.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-b6614694-e650-40d4-86cd-e2f8c835f52d.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/bom_needler_127.png",
+          "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "bom_needler_127.side-right.v1.rejected.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v1.rejected.png",
+        "bytes": 517311,
+        "sha256": "bdd1f8edca2b0a9ae607f5ec059c862975e862c356aa1d20727485bc6d3eebad",
+        "gitBlobSHAComputedOnly": "9f25b61d12cbe49d2e720b42787ad3a05abc899e",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          56,
+          334,
+          1199,
+          904
+        ],
+        "alphaBounds": [
+          49,
+          23,
+          1202,
+          1226
+        ],
+        "framingBounds": [
+          49,
+          329,
+          1200,
+          907
+        ],
+        "transparentFraction": 0.91498,
+        "pixelSHA256": "9e4d97f38a0852c3622b218c09842125ff4d20e46223bc12726a50634ff51bcf",
+        "minConnectedMarginFraction": 0.03907496012759171,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "bom_nurse_128",
+      "fighterId": "bom_nurse_128",
+      "variant": "v1",
+      "generatedFile": "exec-4b8cf913-1623-4b54-bf0a-3d5183733650.png",
+      "file": "bom_nurse_128.side-right.v1.png",
+      "inputPaths": [
+        "references/bom_nurse_128.png"
+      ],
+      "status": "selected-candidate",
+      "prompt": "Use case: identity-preserve.\nAsset type: ONE transparent full-body lateral combat sprite candidate.\nInput image 1: preserve the project's existing Book of Memories Nurse candidate derived from the Hershberg artist-model reference: adult woman-proportioned creature with smooth flesh-colored featureless face, white folded nurse cap with a worn faded red mark, worn cream short-sleeved uniform dress with collar and waist band, off-white gloves, pale closed low-heeled shoes, and exactly the same long dark steel pipe with its visible elbow bend and open end. Preserve this specific edition candidate; do not substitute a black-headed retail variant, SH3, Homecoming or Origins nurse.\nPrimary request: create one new neutral ready pose in exact 90-degree lateral side profile, facing screen RIGHT. Head, shoulders, hips and both feet all oriented right, camera level with the torso, no front-three-quarter view. Right hand holds the complete pipe lowered forward diagonally, its elbow and far tip fully visible and separate from legs. Other hand is empty and relaxed slightly forward. Both feet firmly present with a small stagger so both complete shoes are visible. Adult normal proportions, knees slightly bent, restrained static stance without striking.\nStyle/medium: realistic detailed game-character render; worn cream cloth, aged dark steel, subdued flesh material, neutral diffuse lighting. Preserve the reference surface design with no additional wounds or splashes.\nScene/backdrop: true transparent alpha only; no floor, cast shadow, smoke, particles or scenery. Clean natural alpha boundary without colored fringe.\nComposition/framing: whole figure from cap top to soles, all fingers and ENTIRE steel pipe inside a square canvas, centered with at least 12 percent transparent margin on all sides. High native detail. One subject, one pose.\nConstraints: existing costume and identity retained; nothing cropped. Non-sexual clinical horror presentation. No added weapons or accessories. No sheet, duplicate views, typography, watermark, border, labels or checkerboard pixels.",
+      "startedAt": "2026-11-19T05:22:26.140Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-4b8cf913-1623-4b54-bf0a-3d5183733650.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_nurse_128.side-right.v1.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-4b8cf913-1623-4b54-bf0a-3d5183733650.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/bom_nurse_128.png",
+          "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "bom_nurse_128.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_nurse_128.side-right.v1.png",
+        "bytes": 463056,
+        "sha256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc",
+        "gitBlobSHAComputedOnly": "608226e89e4fd2f7e60cdcfd499c0513c29a7cdd",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          439,
+          85,
+          841,
+          1168
+        ],
+        "alphaBounds": [
+          25,
+          19,
+          1232,
+          1228
+        ],
+        "framingBounds": [
+          435,
+          77,
+          845,
+          1176
+        ],
+        "transparentFraction": 0.90091,
+        "pixelSHA256": "24a781e90703a5c441057a543e60a8ee2400b51572e6fbbd04989e249c0637e9",
+        "minConnectedMarginFraction": 0.06140350877192982,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "bom_needler_127_v2",
+      "fighterId": "bom_needler_127",
+      "variant": "v2",
+      "generatedFile": "exec-6be66d3f-5a3f-4ba9-a22f-df17c0b93e24.png",
+      "file": "bom_needler_127.side-right.v2.png",
+      "inputPaths": [
+        "bom_needler_127.side-right.v1.rejected.png"
+      ],
+      "status": "archived-four-limbs-oblique",
+      "prompt": "Use case: precise-object-edit.\nInput image: an isolated Needler Book of Memories candidate with an incorrect fifth limb.\nPrimary request: correct ONLY the limb count to exactly FOUR blade-ended limb chains. Remove the EXTRA thin far-side rear leg located in the lower-left interior: the small slender limb that descends from under the left half of the torso, has a joint at approximately x=0.23,y=0.50 and ends in a thin blade around x=0.27,y=0.68. Fill its former pixels with genuine transparency.\nKeep these FOUR remaining complete limbs: 1 the large arched limb at the far left; 2 the thicker lower-left limb that ends around x=0.40,y=0.72; 3 the upper-right long limb with a blade extending to the right; 4 the lower-right curved limb and blade. Each remaining limb connects to the compact inverted torso; no extra appendages. Retain the low hanging single head pointing RIGHT. Preserve the existing material, texture, body and remaining limb shapes, horizontal side presentation, entire framing and lighting. All four tips inside the canvas, no crop.\nTransparent background must remain true alpha; no shadow, checkerboard, scenery, text or watermark. One creature only, a single static pose. This is a four-limbed Book of Memories creature, not a six-limbed Homecoming substitution.",
+      "startedAt": "2026-11-19T05:23:37.486Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-6be66d3f-5a3f-4ba9-a22f-df17c0b93e24.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v2.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-6be66d3f-5a3f-4ba9-a22f-df17c0b93e24.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v1.rejected.png",
+          "sha256": "bdd1f8edca2b0a9ae607f5ec059c862975e862c356aa1d20727485bc6d3eebad",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "bom_needler_127.side-right.v2.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v2.png",
+        "bytes": 499139,
+        "sha256": "1bc2e5c558e517244954b80d894237b9771290f02e556db52a72f37f0feb254f",
+        "gitBlobSHAComputedOnly": "330f14822cbe81165e7162168500231e5d54c0c5",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          54,
+          331,
+          1199,
+          906
+        ],
+        "alphaBounds": [
+          49,
+          53,
+          1200,
+          1214
+        ],
+        "framingBounds": [
+          49,
+          327,
+          1200,
+          909
+        ],
+        "transparentFraction": 0.91793,
+        "pixelSHA256": "ecf3e9d8421d2394ce9e7c220f873e68260969d869382a08b04cdf60d9483590",
+        "minConnectedMarginFraction": 0.03907496012759171,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "shattered_raw_shock_diseased_101",
+      "fighterId": "shattered_raw_shock_diseased_101",
+      "variant": "v1",
+      "generatedFile": "exec-cfac6f9e-3c50-4545-a582-8417096cc15c.png",
+      "file": "shattered_raw_shock_diseased_101.side-right.v1.png",
+      "inputPaths": [
+        "references/shattered_raw_shock_diseased_101.png"
+      ],
+      "status": "selected-candidate",
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent full-body lateral static creature presentation candidate for the existing scripted-encounter entry.\nInput image 1: the project's existing generated Raw Shock — Diseased portrait candidate for Silent Hill: Shattered Memories (Wii). Preserve this exact monster identity: full-sized adult humanoid proportions, pale grey-pink waxy mottled material, closed rounded featureless head with its irregular dark seams, swollen bumpy and folded torso/limbs, long plain hands, broad feet, no hair or costume or weapon.\nPrimary request: create ONE new entire static side-view pose facing exactly screen RIGHT. Show the head, shoulders, pelvis and feet in true 90-degree lateral profile, camera at torso height, no front-three-quarter perspective. A low hunched paused pursuit stance: bent knees, bent back, head pushed forward and looking right; both feet planted with a stagger, two arms loosely reaching ahead at different heights so all hands and fingers read separately. Entire anatomy, both feet, all fingers and head intact within frame. No grabbing another person, no attack impact.\nStyle/medium: realistic detailed horror-game creature render consistent with the supplied source candidate; neutral diffuse light showing surface relief. Maintain the mottled closed creature surface; do not add open wounds, blood, exposed organs or explicit anatomy.\nScene/backdrop: genuine transparent alpha only. No ground, cast shadow, fog, aura, toxic cloud, particles, scenery or effects.\nComposition/framing: single isolated whole subject, centered in a square canvas, at least 12 percent clear transparent space between every outer extremity and every edge; highest available native detail. Clean alpha boundary.\nConstraints: a static presentation image only; this scripted chase creature gains no duel abilities, toxin or weakness effect. One adult monster, one pose, no additional characters, weapons, accessories or limbs. No text, logo, labels, border, watermark or painted checkerboard.",
+      "startedAt": "2026-11-19T05:24:47.511Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-cfac6f9e-3c50-4545-a582-8417096cc15c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/shattered_raw_shock_diseased_101.side-right.v1.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-cfac6f9e-3c50-4545-a582-8417096cc15c.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/shattered_raw_shock_diseased_101.png",
+          "sha256": "59f6c89e93d639e6eb887ec691374d298a3a53c59e26c5747ffa1fcbc7912644",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "shattered_raw_shock_diseased_101.side-right.v1.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/shattered_raw_shock_diseased_101.side-right.v1.png",
+        "bytes": 1168120,
+        "sha256": "c33f48ae8d27db39df7f2342ebcfb00cdffbf673ff06d6d815ef10d783fd958d",
+        "gitBlobSHAComputedOnly": "f6da98fed7735c560dbf67c0dd1a80e542ad746a",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          131,
+          135,
+          1128,
+          1132
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1236,
+          1254
+        ],
+        "framingBounds": [
+          128,
+          130,
+          1132,
+          1140
+        ],
+        "transparentFraction": 0.73407,
+        "pixelSHA256": "a1525d70789e4509aa37ff6c3a1c478aa175d6c046ee19c7d73b6b827b795d14",
+        "minConnectedMarginFraction": 0.09090909090909091,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "bom_needler_127_v3",
+      "fighterId": "bom_needler_127",
+      "variant": "v3",
+      "generatedFile": "exec-fdcd2536-9437-4df0-a3c7-f52ac04b37a4.png",
+      "file": "bom_needler_127.side-right.v3.png",
+      "inputPaths": [
+        "bom_needler_127.side-right.v2.png"
+      ],
+      "status": "archived-four-limbs-oblique",
+      "prompt": "Use case: identity-preserve.\nInput image: the FOUR-limbed Book of Memories Needler candidate.\nPrimary request: change ONLY the presentation camera and consequent occlusion to a strict orthographic SIDE PROFILE facing screen RIGHT. Lower the camera to the height of the small inverted torso, exactly perpendicular to its left-to-right axis. We should see the SIDE of the compact torso and of the low hanging head, not their front or top. Keep the head at the right/front end, pointing right and down as in the reference. Keep the inverted back and exactly FOUR long jointed limbs, each ending in exactly one curved rusty blade; do not add a fifth limb. Keep all four limbs identifiable through a small stagger of the far pair, and keep every whole blade tip visible. Retain the beige mottled flesh and rusty blade design.\nComposition: one entire creature and all four blades centered on a square transparent canvas, with generous blank alpha margins on all sides. No cropping.\nLighting: neutral diffuse studio illumination and clean natural edge colors.\nConstraints: same identity and four-member inverted anatomy, no redesign, no Homecoming replacement, no extra head, limb or tail. A new static lateral presentation image only. Genuine transparent alpha; no floor, shadows, scene, particles, text, border or checkerboard.",
+      "startedAt": "2026-11-19T05:26:24.349Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-fdcd2536-9437-4df0-a3c7-f52ac04b37a4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v3.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-fdcd2536-9437-4df0-a3c7-f52ac04b37a4.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v2.png",
+          "sha256": "1bc2e5c558e517244954b80d894237b9771290f02e556db52a72f37f0feb254f",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "bom_needler_127.side-right.v3.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v3.png",
+        "bytes": 551487,
+        "sha256": "ef4ae8b76cbadbe38f2ad5be488d734d3df6f2613fcedd76177bccfb17f2de8e",
+        "gitBlobSHAComputedOnly": "d276fbe7460d7909d05b8577ce2d1a1cce6d857b",
+        "width": 1254,
+        "height": 1254,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          57,
+          364,
+          1204,
+          915
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1240,
+          1254
+        ],
+        "framingBounds": [
+          46,
+          355,
+          1209,
+          918
+        ],
+        "transparentFraction": 0.90887,
+        "pixelSHA256": "bf7edb3bd2c662b410fd96ef331b23078e91c14fd96ee9385a7eddf8e7fe7843",
+        "minConnectedMarginFraction": 0.03588516746411483,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    },
+    {
+      "key": "bom_needler_127_v4",
+      "fighterId": "bom_needler_127",
+      "variant": "v4",
+      "generatedFile": "exec-94534ae7-7d85-4d56-8914-5d50d8dfd84b.png",
+      "file": "bom_needler_127.side-right.v4.png",
+      "inputPaths": [
+        "references/bom_needler_127.png"
+      ],
+      "status": "selected-candidate-needs-proportion-review",
+      "prompt": "Use case: identity-preserve.\nAsset type: a single transparent full-body profile sprite.\nReference image: the existing four-limbed Book of Memories Needler. Keep this creature's exact four-member inverted anatomy, small flesh-colored torso, low-hanging head and curved rusty blade endings.\nPrimary request: rotate and repose this same creature into a TRUE FLAT SIDE ELEVATION for a side-scrolling game, facing RIGHT. Camera exactly perpendicular to the long torso, level with the body, like an orthographic side model sheet but with only ONE complete subject. The horizontal inverted torso must be seen edge-on with its rear at left and neck/head at right; head hangs beneath the front end and points right. Do not show a top-down view of the back or a frontal spread of its limbs.\nPose the exactly FOUR existing blade limbs into two staggered lateral pairs with a low stable stance: the two rear limbs originate together at the left/rear of the torso and bend down toward the left-side support area; the two front limbs originate together at the right/front of the torso and bend down toward the right-side support area. Near-side and far-side limbs have small longitudinal offsets so that ALL FOUR whole blades and limb chains can be counted; do not fan the limbs toward or away from the camera. Four limbs total, one body, one hanging head. No hands, feet, extra fifth limb or tail. Keep the torso inverted, not upright or doglike. Full length of all four blades visible.\nMaterials: realistic detailed pale beige mottled creature surface and aged curved metal blades, consistent with the reference. Neutral diffuse lighting, no dramatic perspective. Do not add open wounds or blood.\nBackdrop: genuine transparent alpha, no floor, shadow, particles or scenery.\nFraming: whole subject centered, generous transparent padding on every side, all tips comfortably inside canvas. No text, labels, logo, borders, checkerboard, sheet or multiple views.",
+      "startedAt": "2026-11-19T05:28:28.292Z",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/b86991fb2253/generated_images as /workspace/scratch/b86991fb2253/generated_images/exec-94534ae7-7d85-4d56-8914-5d50d8dfd84b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v4.png",
+      "generatedSourcePath": "/workspace/scratch/b86991fb2253/generated_images/exec-94534ae7-7d85-4d56-8914-5d50d8dfd84b.png",
+      "inputReferences": [
+        {
+          "path": "/workspace/scratch/b86991fb2253/wave17/fighters/references/bom_needler_127.png",
+          "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f",
+          "visuallyInspectedBeforeCall": true
+        }
+      ],
+      "technical": {
+        "name": "bom_needler_127.side-right.v4.png",
+        "path": "/workspace/scratch/b86991fb2253/wave17/fighters/bom_needler_127.side-right.v4.png",
+        "bytes": 599254,
+        "sha256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d",
+        "gitBlobSHAComputedOnly": "64f9b42d92fa5a32b5e12d872880d5a9d23ed53a",
+        "width": 1774,
+        "height": 887,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          67,
+          208,
+          1705,
+          721
+        ],
+        "alphaBounds": [
+          55,
+          0,
+          1760,
+          871
+        ],
+        "framingBounds": [
+          64,
+          206,
+          1708,
+          726
+        ],
+        "transparentFraction": 0.89786,
+        "pixelSHA256": "833f3fbd3f2c5ba4e47494b1db81a4579f7cd2690f0beff7ebcebac25c7f1120",
+        "minConnectedMarginFraction": 0.036076662908680945,
+        "twelvePercentMarginMet": false,
+        "sourcePixelBytesUnmodified": true,
+        "externalPixelEditing": false
+      },
+      "preserved": true
+    }
+  ],
+  "archiveDecisions": [
+    {
+      "file": "bom_needler_127.side-right.v1.rejected.png",
+      "reason": "Five blade-ended limb chains: rejected anatomy."
+    },
+    {
+      "file": "bom_needler_127.side-right.v2.png",
+      "reason": "Four limbs restored, but torso remains oblique; not selected as strict lateral."
+    },
+    {
+      "file": "bom_needler_127.side-right.v3.png",
+      "reason": "Four limbs retained, camera still reads oblique and edge fringe stronger; not selected."
+    }
+  ],
+  "globalLimits": [
+    "Every selected image is an authored static candidate based on an existing generated portrait; not source-extracted pixels.",
+    "No source animation, native timing, source-game movement, autonomous duel role, UHD native resolution or 1:1 certification is implied.",
+    "Requested transparent margins were not achieved on every side; actual connected margins are recorded per PNG.",
+    "Native alpha contains faint isolated speckles; framing uses the repository connected-readable-alpha definition.",
+    "Colored or pale edge fringe remains visible in full-size previews and is recorded for final integration review.",
+    "No GitHub blob upload, commit or branch movement was performed by this agent."
+  ]
+}
