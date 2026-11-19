@@ -179,6 +179,13 @@
     "memory": {
       "passed": true,
       "report": "memory-audit.json"
+    },
+    "browserHarnessUpdate": {
+      "path": "scripts/http-qa-art144.mjs",
+      "sha256": "32e633b85f4924907667feaf57e7a8cc9afadb24e50d395acfe7aca5a0334421",
+      "targetedTestsPassed": 108,
+      "report": "browser-check-update.md",
+      "localChromiumExecuted": false
     }
   },
   "combinedWaves18And19": {
@@ -202,5 +209,24 @@
     "No native UHD or original 1:1 artistic fidelity certification.",
     "Native Canvas QA covers idle, movement and return to idle; no new attack/contact/guard/finisher matrix.",
     "GitHub browser and CI results are recorded separately after publication."
-  ]
+  ],
+  "workbook": {
+    "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+    "report": "docs/production/workbook-verification.json",
+    "reportSha256": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+    "changedCells": 330,
+    "adjustedRowHeights": 151,
+    "preservedFormulas": 80,
+    "preservedSheets": 11,
+    "preservedTables": 10,
+    "contractTestsPassed": 10,
+    "historyBlocksPreserved": 177,
+    "integrationReceipt": "workbook/integration-receipt.json"
+  },
+  "assetPublication": {
+    "commit": "319c865b70ad3d684a5ddfbcaf8628369a058bc6",
+    "tree": "794a700879f84259a776901186183c6b9e7f1aca",
+    "receipt": "publication.json"
+  }
 }

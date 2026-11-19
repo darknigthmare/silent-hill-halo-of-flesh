@@ -1,0 +1,207 @@
+{
+  "status": "validated",
+  "xlsxSha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+  "sourceWorkbookSha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+  "canonicalReport": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-verification.json",
+  "metrics": {
+    "portraits": 204,
+    "sideViews": 135,
+    "animatedClips": 6,
+    "activeStages": 32,
+    "roster": 230,
+    "stages": 123,
+    "portraitMissing": 26,
+    "combatMissing": 37,
+    "combatLegacy": 58
+  },
+  "changes": {
+    "cells": 330,
+    "rowHeights": 151,
+    "bySheet": {
+      "Combattants": 54,
+      "Clips": 241,
+      "Mouvements": 1,
+      "Arènes": 32,
+      "Synthèse": 2
+    }
+  },
+  "formulaCount": 80,
+  "tests": {
+    "status": "passed",
+    "suite": "tests/test_production_workbook_update.py",
+    "tests": 10,
+    "seconds": 165.553,
+    "execution": "Exact repository test/updater/verifier sources in an isolated fixture tree, using the candidate XLSX and proposed canonical report. Source repository was not modified.",
+    "log": "workbook-contract-tests.log",
+    "logSha256": "98d911fffee4070d55f35d58045bdd7d13b35b8c539b330231d364ac2659a432"
+  },
+  "coreFiles": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "bytes": 1776905,
+      "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "suggestedRepositoryDestination": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-verification.json",
+      "bytes": 26403,
+      "sha256": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+      "suggestedRepositoryDestination": "docs/production/workbook-verification.json"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-export-verification.json",
+      "bytes": 3224,
+      "sha256": "7e6a5e0d97b7e265fb7f7379d61b2f896460db66b0b539b2bcfde3668881270a",
+      "suggestedRepositoryDestination": "docs/production/workbook-export-verification.json"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-change-log.json.gz",
+      "bytes": 37422,
+      "sha256": "d6b78f1188b9e5c2e8571ce5d898fcd002cbc6e2ce684cb0b27f5c0150dd5fea",
+      "suggestedRepositoryDestination": "docs/production/workbook-change-log.json.gz"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-layout-changes.json.gz",
+      "bytes": 919,
+      "sha256": "588fd918a96bf5f92d198a27ab675b1ceb49b354e2dfc58d76438841cd77a518",
+      "suggestedRepositoryDestination": "docs/production/workbook-layout-changes.json.gz"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-structure-changes.json.gz",
+      "bytes": 23,
+      "sha256": "2ca4529576310b626c1bd48352d283b521d029d54f195d8416536872d826e4c6",
+      "suggestedRepositoryDestination": "docs/production/workbook-structure-changes.json.gz"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/wave19-current-coverage.json.gz",
+      "bytes": 113048,
+      "sha256": "f7b6c9b96214e060d468ec644e957f23a1ce659c7ad07e78124b9373e2e2453b",
+      "suggestedRepositoryDestination": "docs/production/wave19-current-coverage.json.gz"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-verification-before-wave19.json",
+      "bytes": 20015,
+      "sha256": "b7d38cf5a859e20476c4dc77bea418de216d3b6154847b42cfdff247729483b6",
+      "suggestedRepositoryDestination": "docs/production/workbook-verification-before-wave19.json"
+    }
+  ],
+  "auditFiles": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-change-log.json",
+      "bytes": 536854,
+      "sha256": "33ed558b497292a5a1dd9cfe52db0aaed4ba9c78cc1b140ade82d1e66a38cb4c"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-layout-changes.json",
+      "bytes": 25939,
+      "sha256": "829798a6829d29dc9a88fb5d3c2128f3fbe8231effce2ef09c6c66596640d084"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-history-retention.json",
+      "bytes": 224761,
+      "sha256": "a971c042cfab21d0ad7df00ec8ba0b331df7db6cdf3e50dcb5bf4a465478a4a0"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-semantic-preservation.json",
+      "bytes": 530555,
+      "sha256": "c2077269a1bd533dd881ba123ea6a824cd45ed8c78036f7dc34a06f9fe63a2ce"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/roundtrip-preservation.json",
+      "bytes": 4740,
+      "sha256": "69fc0dbcff31cb78fc507dd3bc7d755e9361d319e382d2a8350a7e194c569311"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-contract-tests.log",
+      "bytes": 2137,
+      "sha256": "98d911fffee4070d55f35d58045bdd7d13b35b8c539b330231d364ac2659a432"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-summary-inspection.ndjson",
+      "bytes": 1125,
+      "sha256": "62a1e0ef688f49954ec2240aa629b2405541776f7b8d6c73cbcbc828046dd029"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/workbook-formula-scan.ndjson",
+      "bytes": 60,
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/audit-final.py",
+      "bytes": 10058,
+      "sha256": "c6359e0326b6fea91dda068521cb87d410759a95f576fd710cd34b65a0d26bd6"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/verify-preservation.py",
+      "bytes": 7628,
+      "sha256": "7f773ecc09c57aee522d9a28a06f8905a41be73e555a8234d079e098d751aad5"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/update-wave19-workbook.mjs",
+      "bytes": 16749,
+      "sha256": "8812dd2de30aa6be622614281399f9d0dd7c0764c76ca29973b16af57a1f2f7f"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/capture-wave19-facts.mjs",
+      "bytes": 3232,
+      "sha256": "b343352fe3f26c77dcb6c3d4417428bdc735826f79193c38246481b62390f5ba"
+    }
+  ],
+  "previews": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/01-synthese.png",
+      "bytes": 247096,
+      "sha256": "08106105c8c1978005805a75c40fd72bf424103992c28416f5b60f03a118fdb6",
+      "sheet": "Synthèse",
+      "range": "A1:H36"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/02-bom-facts.png",
+      "bytes": 27144,
+      "sha256": "c06a74c11ad70c7690387d58536161ae20e5a8752f196dfddedc4bbd7c80f9a6",
+      "sheet": "Combattants",
+      "range": "P163:V164"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/03-nurse-walk.png",
+      "bytes": 23418,
+      "sha256": "6c360da4244b13b573f88e5350b2bf9b5ff5aee68913b40105487d779080173b",
+      "sheet": "Clips",
+      "range": "H917:L917"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/04-nurse-attack.png",
+      "bytes": 15328,
+      "sha256": "787484891775a90c28e48375a5b3178084f054d00b704162fb7daf131c5a39d9",
+      "sheet": "Mouvements",
+      "range": "W1839:AE1839"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/05-stage-facts.png",
+      "bytes": 53368,
+      "sha256": "bb82300bee8dbddde69eec35a90935317d3cab1e8af915b1def9f87cc7084892",
+      "sheet": "Arènes",
+      "range": "E6:K6"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/06-longest-history.png",
+      "bytes": 214172,
+      "sha256": "4fb060255f3230e936bca7a1fd209ae36cfc6a7e88c313c511172971e0376a82",
+      "sheet": "Clips",
+      "range": "H1876:M1876"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/outputs/wave19-workbook/previews/07-bom-idle.png",
+      "bytes": 106588,
+      "sha256": "2b6b5f649e4e70e7668b00056641f43477a9a09ff2601944e02db190e072b961",
+      "sheet": "Clips",
+      "range": "H1576:M1576"
+    }
+  ],
+  "planBaseline": "planSha256=null; historicalPlanSha256 retains the previous full-plan hash. This factual update does not assert a new full production plan baseline.",
+  "limits": [
+    "The longest pre-existing history cell (Clips I1876) remains at the original 390-point row-height cap; its full 3,453-character value is preserved, while the lower historical text requires opening the cell/formula bar. Current availability remains visible at the start. No global column/font change or removal of annotations was introduced.",
+    "No native Excel session or artwork/source-timing certification."
+  ],
+  "sourceRepositoryEdited": false
+}

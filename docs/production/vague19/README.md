@@ -65,7 +65,8 @@ libres. Les règles de rôle, de terrain et de dégâts conservent leur état.
 - Importeur officiel du dépôt : identité et édition exactes, hash et pixels,
   alpha, cadrage, absence de clone et conservation des portraits.
 - [Registres et plans de scène](sprite-and-stage-build.txt) : 135 vues latérales,
-  32 arènes enregistrées et 62 PNG de décor actifs, anciens lieux inclus.
+  32 arènes enregistrées et 62 PNG de décor référencés, dont 60 dans les
+  compositions actives et deux conservés hors composition active.
 - [Suite Node complète](node-tests.txt) : **1 290 tests réussis** sur les fichiers
   intégrés de cette vague.
 - [Build](build-verification.txt) : **584 fichiers vérifiés**, 230 profils et
@@ -90,6 +91,40 @@ déclarée.
 Cette QA native ne remplace pas les contrôles Chromium de DOM, HTTP et service
 worker. Aucune attaque ni animation nouvelle n'est exercée ou revendiquée dans
 la vague 19. Les animations de la vague 18 ont leur propre rapport.
+
+## Classeur actualisé
+
+Le [classeur de production](../SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx)
+et son [rapport canonique](../workbook-verification.json) ont été intégrés
+ensemble. La mise à jour porte sur **330 cellules factuelles**, avec 151
+hauteurs de lignes adaptées pour les annotations. Les **11 onglets, 10 tableaux,
+80 formules et 177 blocs d'historique** sont préservés. La Synthèse reprend les
+204 portraits, 135 vues latérales, six clips et 32 arènes bitmap.
+
+La suite dédiée au classeur passe **10 tests** sur cette paire exacte
+([log](../workbook-contract-tests.log)). L'[audit de conservation](workbook/workbook-semantic-preservation.json)
+compare 250 550 cellules et les 38 parties natives du XLSX ; le
+[reçu d'intégration](workbook/integration-receipt.json) vérifie les fichiers
+copiés, les empreintes des journaux, le ZIP, les formules et les totaux en cache.
+Les [aperçus](../previews/01-synthese.png) rendent la mise à jour consultable.
+
+Cette édition actualise les disponibilités et les compteurs ; les rôles,
+responsables, décisions de production et mesures source conservent leur état.
+Les changements d'identifiants internes de relations dus à l'export sont
+documentés et leurs cibles vérifiées. L'ancien plan complet garde son empreinte
+historique ; aucun nouveau plan complet n'est prétendu appliqué. La fin de la
+plus longue note préexistante reste consultable en ouvrant sa cellule.
+
+## Contrôle navigateur des livraisons historiques
+
+La campagne ART92 contient désormais une marche livrée pour Scarlet doll.
+Le [correctif du harness](browser-check-update.md) conserve le test strict
+d'absence pour les 67 autres candidats historiques des campagnes ART144/ART92,
+et vérifie la timeline, les PNG servis et la lecture réelle du clip lorsqu'il
+existe. Les fragments, décisions et compteurs des campagnes d'origine restent
+inchangés. Le succès de ces nouvelles assertions sous Chromium doit être lu
+dans les checks GitHub du commit publié ; aucune exécution Chromium locale
+n'est revendiquée.
 
 ## Restants documentés
 
@@ -120,3 +155,19 @@ la référence Subway documente le vestibule de commande, pas l'intégralité du
 quai. Les montants proches de Baldwin sont semi-opaques (alpha maximal 208).
 Ces limites restent enregistrées ; ni UHD native ni fidélité 1:1 ne sont
 certifiées par les contrôles techniques.
+
+## Publication des images et preuves
+
+Le commit distant
+[`319c865`](https://github.com/darknigthmare/silent-hill-halo-of-flesh/commit/319c865b70ad3d684a5ddfbcaf8628369a058bc6)
+contient les 14 PNG actifs, les deux variantes, les huit captures sélectionnées,
+les manifestes et les rapports de cette vague. Son arbre Git est exactement
+`794a700879f84259a776901186183c6b9e7f1aca`, identique au commit local vérifié.
+Le [reçu de publication](publication.json) conserve le parent, les contrôles
+d'intégrité et la mise à jour sans force de la branche de la PR #6.
+
+La vague 18 a été publiée au préalable dans
+[`23a8fee`](https://github.com/darknigthmare/silent-hill-halo-of-flesh/commit/23a8feeace8aca385c64237ed177c21242e2de55),
+avec la même vérification d'égalité intégrale des arbres
+([reçu](wave18-publication.json)). Les [chiffres consolidés](delivery.json)
+distinguent les actifs des variantes et des captures QA.

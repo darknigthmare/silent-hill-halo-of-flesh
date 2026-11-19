@@ -17,6 +17,11 @@ dans `data/sprite-coverage.json` : 26 portraits et 37 images de combat absents,
 distingue les références manquantes, les refus historiques et les usages hors
 combat. Aucun certificat de fidélité 1:1.
 
+Le classeur a été actualisé sur cette couverture : 330 cellules factuelles,
+80 formules conservées et recalculées, 177 blocs d'historique préservés. Le
+[rapport de mise à jour](vague19/README.md#classeur-actualisé) et les journaux
+distinguent cette actualisation des décisions de production existantes.
+
 ## Historique — reprise du 17 novembre 2026
 
 **172 profils illustrés sur 230, 58 encore sans image et 25 vues de combat latérales distinctes.** La dernière suite ajoute Insane Cancer de The Arcade (sélection et combat séparés), Walter Sullivan et le Bogeyman de Downpour (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_FOLLOWING_2026-11-17.md) et le [relevé de reprise exact](sprite-status-following-2026-11-17.json). La [suite précédente](SPRITE_SUITE_2026-11-17.md) conserve Steel Guardian, Anne et Juggernaut ; la [reprise antérieure](SPRITE_NEXT_2026-11-17.md) documente la récupération de 22 originaux. Le [correctif de transition des Rites](BROWSER_QA_RITE_CACHE_2026-11-17.md) accompagne ce lot. Les sections historiques ci-dessous gardent les chiffres de leur date.

@@ -1,8 +1,16 @@
 {
   "schema": 1,
-  "input": "production-plan.json",
-  "planSha256": "45b092009538a4586933571ac633f094b8de3f9bb7fdbad4cb8795ef5873bede",
+  "input": "wave19-current-coverage.json.gz",
+  "planSha256": null,
+  "planSha256Status": "No new complete production-plan baseline was applied. The historical plan hash is preserved below; full-plan updates require reconciliation against this narrow factual update.",
+  "historicalPlanSha256": "45b092009538a4586933571ac633f094b8de3f9bb7fdbad4cb8795ef5873bede",
+  "historicalWorkbookSha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+  "historicalVerificationSha256": "b7d38cf5a859e20476c4dc77bea418de216d3b6154847b42cfdff247729483b6",
+  "historicalReport": "workbook-verification-before-wave19.json",
+  "coverageSnapshotSha256": "785c24f9a3d7497157d81c1492d97a36d459a9959bea8005c0e8123b825c76dd",
   "file": "SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+  "xlsxSha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+  "bytes": 1776905,
   "sheets": {
     "Combattants": {
       "rows": 230,
@@ -243,8 +251,8 @@
     "observations": 435,
     "sources": 277,
     "tasks": 875,
-    "pngCandidates": 154,
-    "animatedClips": 1,
+    "pngCandidates": 204,
+    "animatedClips": 6,
     "certifiedOneToOne": 0,
     "newGameplaySequences": 205,
     "presentationHooks": 9,
@@ -258,14 +266,14 @@
     "authoredStageFinishers": 7,
     "authoredPresentations": 806,
     "resolvedRoleDecisions": 33,
-    "stageBitmapCandidates": 6,
-    "activeStageBitmapCandidates": 4,
+    "stageBitmapCandidates": 32,
+    "activeStageBitmapCandidates": 32,
     "inactiveStageBitmapCandidates": 2,
-    "stageBitmapLayers": 6,
-    "activeStageBitmapLayers": 4,
+    "stageBitmapLayers": 62,
+    "activeStageBitmapLayers": 60,
     "inactiveStageBitmapLayers": 2,
-    "stageBitmapFiles": 6,
-    "activeStageBitmapFiles": 4,
+    "stageBitmapFiles": 62,
+    "activeStageBitmapFiles": 60,
     "inactiveStageBitmapFiles": 2,
     "sourceTimingSchema": 1,
     "sourceTimingBatchSchema": 1,
@@ -273,8 +281,8 @@
     "measuredSourceMoves": 0,
     "referenceStageTracks": 163,
     "retiredStageItems": 1213,
-    "visibleReferenceStageTracks": 158,
-    "maskedReferenceStageTracks": 5,
+    "visibleReferenceStageTracks": 97,
+    "maskedReferenceStageTracks": 66,
     "additionalStageBindings": 25
   },
   "calculated": [
@@ -289,532 +297,679 @@
     1799,
     435,
     277,
-    154,
-    1,
+    204,
+    6,
     0,
     840,
     93
   ],
-  "engine": "Python stdlib OOXML narrow update; native Excel desktop not executed",
-  "operation": "Narrow update of existing workbook",
-  "sourceSha256": "f86c5d271966f015c131f8eeaadaa2661af636c8efb850ba992d7a6302273ffe",
-  "changedCells": 247,
+  "engine": "Artifact Tool through the primary bundled Node runtime; read-only native XML verification; native Excel desktop not executed",
+  "operation": "Narrow factual coverage update after wave19; no full production-plan rewrite",
+  "updatedAt": "2026-11-19T10:16:22.107Z",
+  "sourceSha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+  "changedCells": 330,
   "changesBySheet": {
-    "Combattants": 16,
-    "Clips": 105,
-    "Actions": 124,
+    "Combattants": 54,
+    "Clips": 241,
+    "Mouvements": 1,
+    "Arènes": 32,
     "Synthèse": 2
   },
-  "enlargedRows": 162,
+  "enlargedRows": 151,
   "recalculatedFormulas": [
     {
       "sheet": "Synthèse",
       "address": "B6",
       "formula": "COUNTA('Combattants'!$A$6:$A$235)",
-      "value": 230
+      "value": 230.0
     },
     {
       "sheet": "Synthèse",
       "address": "E6",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D6)",
-      "value": 20
+      "value": 20.0
     },
     {
       "sheet": "Synthèse",
       "address": "F6",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D6)",
-      "value": 9
+      "value": 9.0
     },
     {
       "sheet": "Synthèse",
       "address": "G6",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D6)",
-      "value": 400
+      "value": 400.0
     },
     {
       "sheet": "Synthèse",
       "address": "H6",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D6)",
-      "value": 41
+      "value": 41.0
     },
     {
       "sheet": "Synthèse",
       "address": "B7",
       "formula": "COUNTA('Arènes'!$A$6:$A$128)",
-      "value": 123
+      "value": 123.0
     },
     {
       "sheet": "Synthèse",
       "address": "E7",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D7)",
-      "value": 18
+      "value": 18.0
     },
     {
       "sheet": "Synthèse",
       "address": "F7",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D7)",
-      "value": 12
+      "value": 12.0
     },
     {
       "sheet": "Synthèse",
       "address": "G7",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D7)",
-      "value": 360
+      "value": 360.0
     },
     {
       "sheet": "Synthèse",
       "address": "H7",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D7)",
-      "value": 39
+      "value": 39.0
     },
     {
       "sheet": "Synthèse",
       "address": "B8",
       "formula": "COUNTA('Mouvements'!$A$6:$A$4605)",
-      "value": 4600
+      "value": 4600.0
     },
     {
       "sheet": "Synthèse",
       "address": "E8",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D8)",
-      "value": 20
+      "value": 20.0
     },
     {
       "sheet": "Synthèse",
       "address": "F8",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D8)",
-      "value": 12
+      "value": 12.0
     },
     {
       "sheet": "Synthèse",
       "address": "G8",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D8)",
-      "value": 400
+      "value": 400.0
     },
     {
       "sheet": "Synthèse",
       "address": "H8",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D8)",
-      "value": 50
+      "value": 50.0
     },
     {
       "sheet": "Synthèse",
       "address": "B9",
       "formula": "COUNTIFS('Mouvements'!$E$6:$E$4605,\"super\")+COUNTIFS('Mouvements'!$E$6:$E$4605,\"desperation\")",
-      "value": 460
+      "value": 460.0
     },
     {
       "sheet": "Synthèse",
       "address": "E9",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D9)",
-      "value": 32
+      "value": 32.0
     },
     {
       "sheet": "Synthèse",
       "address": "F9",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D9)",
-      "value": 10
+      "value": 10.0
     },
     {
       "sheet": "Synthèse",
       "address": "G9",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D9)",
-      "value": 640
+      "value": 640.0
     },
     {
       "sheet": "Synthèse",
       "address": "H9",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D9)",
-      "value": 53
+      "value": 53.0
     },
     {
       "sheet": "Synthèse",
       "address": "B10",
       "formula": "COUNTIFS('Finishers'!$D$6:$D$588,\"Combattant\")",
-      "value": 460
+      "value": 460.0
     },
     {
       "sheet": "Synthèse",
       "address": "E10",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D10)",
-      "value": 11
+      "value": 11.0
     },
     {
       "sheet": "Synthèse",
       "address": "F10",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D10)",
-      "value": 6
+      "value": 6.0
     },
     {
       "sheet": "Synthèse",
       "address": "G10",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D10)",
-      "value": 220
+      "value": 220.0
     },
     {
       "sheet": "Synthèse",
       "address": "H10",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D10)",
-      "value": 22
+      "value": 22.0
     },
     {
       "sheet": "Synthèse",
       "address": "B11",
       "formula": "COUNTIFS('Finishers'!$D$6:$D$588,\"Arène\")",
-      "value": 123
+      "value": 123.0
     },
     {
       "sheet": "Synthèse",
       "address": "E11",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D11)",
-      "value": 17
+      "value": 17.0
     },
     {
       "sheet": "Synthèse",
       "address": "F11",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D11)",
-      "value": 11
+      "value": 11.0
     },
     {
       "sheet": "Synthèse",
       "address": "G11",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D11)",
-      "value": 340
+      "value": 340.0
     },
     {
       "sheet": "Synthèse",
       "address": "H11",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D11)",
-      "value": 37
+      "value": 37.0
     },
     {
       "sheet": "Synthèse",
       "address": "B12",
       "formula": "COUNTA('Présentations'!$A$6:$A$1615)",
-      "value": 1610
+      "value": 1610.0
     },
     {
       "sheet": "Synthèse",
       "address": "E12",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D12)",
-      "value": 5
+      "value": 5.0
     },
     {
       "sheet": "Synthèse",
       "address": "F12",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D12)",
-      "value": 5
+      "value": 5.0
     },
     {
       "sheet": "Synthèse",
       "address": "G12",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D12)",
-      "value": 100
+      "value": 100.0
     },
     {
       "sheet": "Synthèse",
       "address": "H12",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D12)",
-      "value": 3
+      "value": 3.0
     },
     {
       "sheet": "Synthèse",
       "address": "B13",
       "formula": "COUNTA('Clips'!$A$6:$A$2305)",
-      "value": 2300
+      "value": 2300.0
     },
     {
       "sheet": "Synthèse",
       "address": "E13",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D13)",
-      "value": 14
+      "value": 14.0
     },
     {
       "sheet": "Synthèse",
       "address": "F13",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D13)",
-      "value": 7
+      "value": 7.0
     },
     {
       "sheet": "Synthèse",
       "address": "G13",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D13)",
-      "value": 280
+      "value": 280.0
     },
     {
       "sheet": "Synthèse",
       "address": "H13",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D13)",
-      "value": 21
+      "value": 21.0
     },
     {
       "sheet": "Synthèse",
       "address": "B14",
       "formula": "COUNTA('Animations arènes'!$A$6:$A$1804)",
-      "value": 1799
+      "value": 1799.0
     },
     {
       "sheet": "Synthèse",
       "address": "E14",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D14)",
-      "value": 19
+      "value": 19.0
     },
     {
       "sheet": "Synthèse",
       "address": "F14",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D14)",
-      "value": 12
+      "value": 12.0
     },
     {
       "sheet": "Synthèse",
       "address": "G14",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D14)",
-      "value": 380
+      "value": 380.0
     },
     {
       "sheet": "Synthèse",
       "address": "H14",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D14)",
-      "value": 20
+      "value": 20.0
     },
     {
       "sheet": "Synthèse",
       "address": "B15",
       "formula": "COUNTA('Gestes référencés'!$A$6:$A$440)",
-      "value": 435
+      "value": 435.0
     },
     {
       "sheet": "Synthèse",
       "address": "E15",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D15)",
-      "value": 28
+      "value": 28.0
     },
     {
       "sheet": "Synthèse",
       "address": "F15",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D15)",
-      "value": 8
+      "value": 8.0
     },
     {
       "sheet": "Synthèse",
       "address": "G15",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D15)",
-      "value": 560
+      "value": 560.0
     },
     {
       "sheet": "Synthèse",
       "address": "H15",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D15)",
-      "value": 31
+      "value": 31.0
     },
     {
       "sheet": "Synthèse",
       "address": "B16",
       "formula": "COUNTA('Sources'!$A$6:$A$282)",
-      "value": 277
+      "value": 277.0
     },
     {
       "sheet": "Synthèse",
       "address": "E16",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D16)",
-      "value": 1
+      "value": 1.0
     },
     {
       "sheet": "Synthèse",
       "address": "F16",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D16)",
-      "value": 1
+      "value": 1.0
     },
     {
       "sheet": "Synthèse",
       "address": "G16",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D16)",
-      "value": 20
+      "value": 20.0
     },
     {
       "sheet": "Synthèse",
       "address": "H16",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D16)",
-      "value": 3
+      "value": 3.0
     },
     {
       "sheet": "Synthèse",
       "address": "B17",
       "formula": "COUNTIFS('Combattants'!$R$6:$R$235,\"PNG candidat, fidélité à valider\")",
-      "value": 154
+      "value": 204.0
     },
     {
       "sheet": "Synthèse",
       "address": "E17",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D17)",
-      "value": 1
+      "value": 1.0
     },
     {
       "sheet": "Synthèse",
       "address": "F17",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D17)",
-      "value": 3
+      "value": 3.0
     },
     {
       "sheet": "Synthèse",
       "address": "G17",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D17)",
-      "value": 20
+      "value": 20.0
     },
     {
       "sheet": "Synthèse",
       "address": "H17",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D17)",
-      "value": 1
+      "value": 1.0
     },
     {
       "sheet": "Synthèse",
       "address": "B18",
       "formula": "SUM('Combattants'!$S$6:$S$235)",
-      "value": 1
+      "value": 6.0
     },
     {
       "sheet": "Synthèse",
       "address": "E18",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D18)",
-      "value": 19
+      "value": 19.0
     },
     {
       "sheet": "Synthèse",
       "address": "F18",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D18)",
-      "value": 9
+      "value": 9.0
     },
     {
       "sheet": "Synthèse",
       "address": "G18",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D18)",
-      "value": 380
+      "value": 380.0
     },
     {
       "sheet": "Synthèse",
       "address": "H18",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D18)",
-      "value": 78
+      "value": 78.0
     },
     {
       "sheet": "Synthèse",
       "address": "B19",
       "formula": "COUNTIFS('Combattants'!$T$6:$T$235,\"Oui\")",
-      "value": 0
+      "value": 0.0
     },
     {
       "sheet": "Synthèse",
       "address": "E19",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D19)",
-      "value": 13
+      "value": 13.0
     },
     {
       "sheet": "Synthèse",
       "address": "F19",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D19)",
-      "value": 8
+      "value": 8.0
     },
     {
       "sheet": "Synthèse",
       "address": "G19",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D19)",
-      "value": 260
+      "value": 260.0
     },
     {
       "sheet": "Synthèse",
       "address": "H19",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D19)",
-      "value": 17
+      "value": 17.0
     },
     {
       "sheet": "Synthèse",
       "address": "B20",
       "formula": "COUNTA('Actions'!$A$6:$A$880)-COUNTIFS('Actions'!$H$6:$H$880,\"Validé\")",
-      "value": 840
+      "value": 840.0
     },
     {
       "sheet": "Synthèse",
       "address": "E20",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D20)",
-      "value": 7
+      "value": 7.0
     },
     {
       "sheet": "Synthèse",
       "address": "F20",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D20)",
-      "value": 3
+      "value": 3.0
     },
     {
       "sheet": "Synthèse",
       "address": "G20",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D20)",
-      "value": 140
+      "value": 140.0
     },
     {
       "sheet": "Synthèse",
       "address": "H20",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D20)",
-      "value": 8
+      "value": 8.0
     },
     {
       "sheet": "Synthèse",
       "address": "B21",
       "formula": "COUNTIFS('Actions'!$D$6:$D$880,\"P0\",'Actions'!$H$6:$H$880,\"<>Validé\")",
-      "value": 93
+      "value": 93.0
     },
     {
       "sheet": "Synthèse",
       "address": "E21",
       "formula": "COUNTIFS('Combattants'!$C$6:$C$235,$D21)",
-      "value": 5
+      "value": 5.0
     },
     {
       "sheet": "Synthèse",
       "address": "F21",
       "formula": "COUNTIFS('Arènes'!$C$6:$C$128,$D21)",
-      "value": 7
+      "value": 7.0
     },
     {
       "sheet": "Synthèse",
       "address": "G21",
       "formula": "COUNTIFS('Mouvements'!$C$6:$C$4605,$D21)",
-      "value": 100
+      "value": 100.0
     },
     {
       "sheet": "Synthèse",
       "address": "H21",
       "formula": "COUNTIFS('Gestes référencés'!$D$6:$D$440,$D21)",
-      "value": 11
+      "value": 11.0
     }
   ],
-  "changeLogSha256": "e7f1a5c752cec46fc0f17980d2b9d25e308c40dd6b6005da23e891f287dc2029",
+  "editableStatusRecalculation": {
+    "sheet": "Actions",
+    "address": "H6",
+    "before": 840,
+    "after": 839,
+    "restored": 840,
+    "inputRestored": true
+  },
+  "changeLogSha256": "33ed558b497292a5a1dd9cfe52db0aaed4ba9c78cc1b140ade82d1e66a38cb4c",
   "changeLog": "workbook-change-log.json.gz",
   "layoutChangeLog": "workbook-layout-changes.json.gz",
   "structureChangeLog": "workbook-structure-changes.json.gz",
-  "structureChangeLogSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
   "appendedSources": 0,
   "verification": {
     "passed": true,
     "preservation": {
       "passed": true,
+      "method": "Every native ZIP part compared after resolving relationship IDs to their type/target and masking only journaled values, exact journaled row heights, and recalculated formula caches.",
       "comparedCells": 250550,
-      "authoredChanges": 247,
-      "enlargedRows": 162,
+      "authoredChanges": 330,
+      "enlargedRows": 151,
       "appendedSourceRows": 0,
       "appendedSourceCells": 0,
       "auditedFormulaExpansions": 0,
+      "nativeParts": 38,
+      "serializerChangedParts": [
+        "xl/workbook.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/worksheets/sheet2.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml",
+        "xl/worksheets/sheet5.xml",
+        "xl/worksheets/sheet6.xml",
+        "xl/worksheets/sheet7.xml",
+        "xl/worksheets/sheet8.xml",
+        "xl/worksheets/sheet9.xml",
+        "xl/worksheets/sheet10.xml",
+        "xl/worksheets/sheet11.xml",
+        "_rels/.rels",
+        "xl/_rels/workbook.xml.rels",
+        "xl/worksheets/_rels/sheet10.xml.rels",
+        "xl/worksheets/_rels/sheet11.xml.rels",
+        "xl/worksheets/_rels/sheet2.xml.rels",
+        "xl/worksheets/_rels/sheet3.xml.rels",
+        "xl/worksheets/_rels/sheet4.xml.rels",
+        "xl/worksheets/_rels/sheet5.xml.rels",
+        "xl/worksheets/_rels/sheet6.xml.rels",
+        "xl/worksheets/_rels/sheet7.xml.rels",
+        "xl/worksheets/_rels/sheet8.xml.rels",
+        "xl/worksheets/_rels/sheet9.xml.rels"
+      ],
+      "strictByteIdentityComparator": {
+        "passed": false,
+        "reason": "Unrelated ZIP member changed: xl/workbook.xml",
+        "interpretation": "The Artifact Tool serializer reassigns relationship IDs. The complete XML graph is checked below after resolving each relationship ID to its same target."
+      },
       "unchanged": [
         "worksheet order",
-        "unrelated values",
-        "all formulas",
-        "effective cell formatting",
+        "all unrelated values",
+        "all 80 formulas",
+        "all effective cell styles",
         "column widths",
         "unrelated row heights",
-        "native tables and validation features",
-        "unrelated ZIP members"
+        "native tables and filters",
+        "validation lists",
+        "all relationship targets",
+        "all other native XML metadata and binary parts"
       ]
+    },
+    "zipCrc": true,
+    "all80FormulaCachesNumeric": true,
+    "formulaErrors": [],
+    "historyRetainedEntries": 177,
+    "protectedAnnotationCellsUnchanged": 55229,
+    "currentTotals": [
+      230,
+      123,
+      4600,
+      460,
+      460,
+      123,
+      1610,
+      2300,
+      1799,
+      435,
+      277,
+      204,
+      6,
+      0,
+      840,
+      93
+    ],
+    "coverage": {
+      "pngCandidates": 204,
+      "animatedClips": 6,
+      "activeStageBitmapCandidates": 32
+    },
+    "planBaseline": "No complete-plan baseline invented. Historical plan hash retained separately; canonical planSha256 is null.",
+    "limits": "Read-only native workbook audit and Artifact Tool rendering. No native Excel application or artwork certification.",
+    "contractTests": {
+      "status": "passed",
+      "suite": "tests/test_production_workbook_update.py",
+      "tests": 10,
+      "seconds": 165.553,
+      "execution": "Exact repository test/updater/verifier sources in an isolated fixture tree, using the candidate XLSX and proposed canonical report. Source repository was not modified.",
+      "log": "workbook-contract-tests.log",
+      "logSha256": "98d911fffee4070d55f35d58045bdd7d13b35b8c539b330231d364ac2659a432"
     }
   },
-  "limits": "No visual preview, native Excel session, source timing measurement or art certification performed."
+  "visualPreviews": [
+    {
+      "sheet": "Synthèse",
+      "range": "A1:H36",
+      "file": "previews/01-synthese.png"
+    },
+    {
+      "sheet": "Combattants",
+      "range": "P163:V164",
+      "file": "previews/02-bom-facts.png"
+    },
+    {
+      "sheet": "Clips",
+      "range": "H917:L917",
+      "file": "previews/03-nurse-walk.png"
+    },
+    {
+      "sheet": "Mouvements",
+      "range": "W1839:AE1839",
+      "file": "previews/04-nurse-attack.png"
+    },
+    {
+      "sheet": "Arènes",
+      "range": "E6:K6",
+      "file": "previews/05-stage-facts.png"
+    },
+    {
+      "sheet": "Clips",
+      "range": "H1876:M1876",
+      "file": "previews/06-longest-history.png"
+    },
+    {
+      "sheet": "Clips",
+      "range": "H1576:M1576",
+      "file": "previews/07-bom-idle.png"
+    }
+  ],
+  "limits": "Only current factual PNG/clip/stage coverage and the summary were updated. IDs, roles, annotation suffixes, owners, status decisions, source timings and historical proposals remain as in the original workbook. No art or timing certification.",
+  "contractTests": {
+    "status": "passed",
+    "suite": "tests/test_production_workbook_update.py",
+    "tests": 10,
+    "seconds": 165.553,
+    "execution": "Exact repository test/updater/verifier sources in an isolated fixture tree, using the candidate XLSX and proposed canonical report. Source repository was not modified.",
+    "log": "workbook-contract-tests.log",
+    "logSha256": "98d911fffee4070d55f35d58045bdd7d13b35b8c539b330231d364ac2659a432"
+  },
+  "coverageSnapshotCompression": "gzip; coverageSnapshotSha256 hashes the decompressed UTF-8 JSON",
+  "compressedCoverageSnapshotSha256": "f7b6c9b96214e060d468ec644e957f23a1ce659c7ad07e78124b9373e2e2453b",
+  "visualAudit": {
+    "reviewed": true,
+    "summaryAndSampledUpdatedFactsReadable": true,
+    "views": [
+      "Synthèse current totals and detailed coverage",
+      "BoM fighter facts",
+      "Origins nurse walk and neutralSpecial availability",
+      "Active stage bitmap facts",
+      "BoM idle and preserved delivery history",
+      "Longest historical note"
+    ],
+    "displayLimitations": [
+      "The longest pre-existing history cell (Clips I1876) remains at the original 390-point row-height cap; its full 3,453-character value is preserved, while the lower historical text requires opening the cell/formula bar. Current availability remains visible at the start. No global column/font change or removal of annotations was introduced."
+    ],
+    "nativeExcelDesktopExecuted": false
+  }
 }
