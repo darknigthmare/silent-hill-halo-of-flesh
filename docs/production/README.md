@@ -4,14 +4,18 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État actuel — vague 18 du 19 novembre 2026
+## État actuel — vague 19 du 19 novembre 2026
 
-**204 portraits, 129 vues latérales candidates, 28 arènes bitmap sur 123 et 6
-clips réellement animés.** La [vague 18](vague18/README.md) récupère 13 PNG actifs
-et 7 variantes, avec trois nouveaux clips et deux décors en plans séparés.
+**204 portraits, 135 vues latérales candidates, 32 arènes bitmap sur 123 et 6
+clips réellement animés.** La [vague 19](vague19/README.md) ajoute six idles BoM
+et quatre décors en deux plans, soit 14 PNG actifs et deux variantes conservées.
+La [vague 18](vague18/README.md) récupère 13 PNG actifs et sept variantes, avec
+trois nouveaux clips et deux décors en plans séparés.
 Les portraits historiques sont conservés. Le suivi courant des absences reste
 dans `data/sprite-coverage.json` : 26 portraits et 37 images de combat absents,
-64 anciennes vues de combat à revoir. Aucun certificat de fidélité 1:1.
+58 anciennes vues de combat à revoir. Le [triage actuel](vague19/missing-triage.json)
+distingue les références manquantes, les refus historiques et les usages hors
+combat. Aucun certificat de fidélité 1:1.
 
 ## Historique — reprise du 17 novembre 2026
 

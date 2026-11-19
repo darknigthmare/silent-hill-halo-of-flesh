@@ -1,0 +1,26 @@
+[
+  {
+    "stage": "forest_world",
+    "layer": "near-bark-and-grass",
+    "reference": "/workspace/scratch/8edddaaaab76/generated_images/exec-67d68dd2-c39b-436b-bcd9-f6d828bb0cbf.png",
+    "prompt": "Use case: compositing. Asset type: SEPARATE transparent foreground parallax layer for the exact attached Forest World fighting background. Produce only a thin partial dark-brown tree trunk cropped along the extreme LEFT edge (occupy x 0–6% only) and a thin cluster of dark dry grass/leaves at the extreme bottom-right corner (y 92–100%, x 87–100% only). Match the attached background's warm grey-brown lighting and realistic painted texture. The trunk is foreground but has natural bark and no fingers or human shapes. Keep the entire central 85% of canvas fully transparent from top to bottom; keep the footing band y 72–92% fully transparent outside the leftmost 6%. Do not include any forest background, fog field, ground plane, boulder, fence, candles, shelf, people, text or new major objects. Preserve 16:9 full canvas framing, same 1672×941 aspect as reference, alpha transparency with clean edges. This is one overlay layer with two small edge fragments, no opaque background, no checkerboard painted into the pixels, no border. It will be composited at exactly the same screen size over the attached background."
+  },
+  {
+    "stage": "subway_world",
+    "layer": "near-platform-uprights",
+    "reference": "/workspace/scratch/8edddaaaab76/generated_images/exec-45fee565-1c14-44a7-9575-a32dd05957f5.png",
+    "prompt": "Use case: compositing. Asset type: SEPARATE transparent foreground parallax layer for the exact attached SH4 Subway World Lynch Street fighting background. Create only two thin partial dark grimy riveted steel support uprights at extreme image edges, left x 0–4% and right x 96–100%, cropped off by the frame. Match rusty-grey materials and dim overhead lighting in the reference station. Each upright reaches from top edge to the near platform footing at the very bottom. All other pixels, especially the entire central 90% of width and all the visible train doors and fighting strip, must be fully TRANSPARENT. No floor, no train, no station background, fog, beams stretching across the picture, signage, character, red button duplication, labels, frame, watermark or text. Same wide 16:9 canvas 1672×941 aspect as reference. Two edge slivers on true alpha, no checkerboard texture painted in. It is an overlay placed at same dimensions on the reference, so architecture in the original is not repeated."
+  },
+  {
+    "stage": "hilltop_center",
+    "layer": "near-cabinet-edges",
+    "reference": "/workspace/scratch/8edddaaaab76/generated_images/exec-04d377e6-cec0-4fc7-94ef-6fc05c5c6155.png",
+    "prompt": "Use case: compositing. Asset type: separate transparent foreground parallax layer aligned over this exact attached Monica's Dance Studio reception game backdrop. Generate ONLY two thin cropped dark worn grey metal cabinet side edges at extreme left x 0–3% and extreme right x 97–100%, slightly nearer and darker than backdrop cupboard. They are simple upright outer cabinet side surfaces with a few small scratches; no drawers or handles extending inward. Same muted cream/olive lighting, same 16:9 landscape canvas 1672×941 aspect. Leave the entire central 94% transparent, and preserve full transparency over the closed green blinds, door-wall region, desk, chairs and all clear floor. No additional office scene, no background wall, floor, ground shadow, ceiling, desk, papers, objects, characters, text, symbols, logo or border. Actual alpha background, no checkerboard drawn. Foreground fragment image only, same framing, no crop around individual fragments."
+  },
+  {
+    "stage": "baldwin_mansion",
+    "layer": "near-timber-jambs",
+    "reference": "/workspace/scratch/8edddaaaab76/generated_images/exec-863ac9c2-4e3b-498a-8b54-88b1bf9a8094.png",
+    "prompt": "Use case: compositing. Asset type: separate transparent foreground parallax overlay for the attached Baldwin Mansion closed Lounge landing backplate. Produce ONLY two very narrow near dark timber wall-return/jamb fragments clipped along extreme frame left x 0–3% and right x 97–100%, from top to bottom, simple aged vertically grained dark-brown wood matching the attached paneled doorway. Foreground fragments are gently shadowed and do not form a top or bottom frame. Leave the entire central 94% of this 16:9 canvas fully transparent, including the closed Lounge door and uninterrupted playable floor. No door duplication, wall, wallpaper field, floor, banister, candles, lamps, faces, people, text, label, portal, fog, decoration, border or checkerboard pattern. Real alpha background only. Keep 1672×941 aspect and alignment to the attached landscape so the fragments can shift sideways slightly independently when composited."
+  }
+]

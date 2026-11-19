@@ -1731,5 +1731,237 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Grand escalier B12–B15 sous le ventilateur, premier Building World de SH4. Chambre vide sans fauteuils de la seconde visite. Matières et volée d’escalier informées par une capture de la seconde visite, sans importer ses entités ou événements. Palier horizontal, caméra, proportions, orientation frontale et quatre pales du ventilateur sont des adaptations non certifiées. Fond natif1672×941 et avant-plan natif1671×941, inchangés ; parallaxe de caméra .012. Aucun plafond déclaré, aucune chute, règle matérielle, cadence source ou fidélité 1:1 revendiquée."
+  },
+  "subway_world": {
+    "stageId": "subway_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "lynch-street-platform-first-visit",
+    "referenceIds": [
+      "CL_SH4_02_SUBWAY_WORLD"
+    ],
+    "layers": [
+      {
+        "id": "lynch-platform",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+            "sha256": "db4c6baf4c38de7ef7bd37644f76bc2d791d231327a37f5578fc669c852ec732",
+            "bytes": 2392453,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-platform-uprights",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
+            "sha256": "6fac368c5db562632321936d4355883dcc44a79c8332d7d95e4230819ee5553a",
+            "bytes": 272237,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Premier passage de Subway World SH4, quai Lynch Street et voiture arrêtée, portes fermées et bouton rouge. Capture source limitée au vestibule de commande : quai latéral, largeur et façade de voiture reconstruits pour versus. Aucun escalator/Wallman, train en mouvement ou scène Hazel Street SH3. Deux PNG statiques natifs 1672×941 : fond opaque et plan proche alpha séparé. Parallaxe proposée .012 ; aucune nouvelle règle de combat/terrain, cadence source ou fidélité 1:1."
+  },
+  "forest_world": {
+    "stageId": "forest_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "first-visit-rocky-clearing",
+    "referenceIds": [
+      "CL_SH4_03_FOREST_WORLD"
+    ],
+    "layers": [
+      {
+        "id": "first-visit-clearing",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+            "sha256": "76588be774dee33c230e26852319d7365d765f0112e7e2ba12ef394ff20690a2",
+            "bytes": 2529787,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-bark-and-grass",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+            "sha256": "5df8c21ae5bc20359b76a76c49a7f2db2ee22521ea8d74a0ee985adbd3b2423a",
+            "bytes": 183407,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Clairière rocheuse du premier passage Forest World SH4. Capture de la rencontre Jasper utilisée sans les deux personnages ; rocher, clôture et étagère à cierges conservés au fond. Chemin horizontal élargi ; sans Wish House ni scène de retour/incendie. Deux PNG statiques natifs 1672×941 : fond opaque et plan proche alpha séparé. Parallaxe proposée .012 ; aucune nouvelle règle de combat/terrain, cadence source ou fidélité 1:1."
+  },
+  "hilltop_center": {
+    "stageId": "hilltop_center",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "monica-reception-normal",
+    "referenceIds": [
+      "CL_SH3_07_HILLTOP_CENTER"
+    ],
+    "layers": [
+      {
+        "id": "monica-reception",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+            "sha256": "8153762e19e65a235921ab42c5dc2567d6ccad86336bcea22f01da5e7404c3a4",
+            "bytes": 2459042,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-cabinet-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
+            "sha256": "e64c163eeca248bb5a7f02e959a2b47bf0e4becc5028c939d7a29a06f9ffa8a8",
+            "bytes": 254156,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Bureau/réception normal de Monica’s Dance Studio SH3, fenêtre au store fermé, armoires, fauteuils, table de verre et bureau. Plan horizontal et meubles reculés pour versus ; pas de salle de répétition, atelier, baignoire ou Otherworld. Symbole mural représenté mais tracé non certifié. Deux PNG statiques natifs 1672×941 : fond opaque et plan proche alpha séparé. Parallaxe proposée .012 ; aucune nouvelle règle de combat/terrain, cadence source ou fidélité 1:1."
+  },
+  "baldwin_mansion": {
+    "stageId": "baldwin_mansion",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "closed-lounge-landing",
+    "referenceIds": [
+      "CL_SH2_BFAW02_BALDWIN_MANSION"
+    ],
+    "layers": [
+      {
+        "id": "closed-lounge-landing",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+            "sha256": "5fa7f85bcd252c37e664299ada13e0c4f64896167c7191b688f6328b2cacac9a",
+            "bytes": 2160077,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-timber-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
+            "sha256": "de3ae2125a5ee7723d7b90edf085207cb9df7d8a40f13eaad2be2e7156ce0c28",
+            "bytes": 182898,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Palier devant la porte du Lounge d’Ernest, Born from a Wish SH2 original. Porte fermée et matériaux repris de la capture ; vue large et retours latéraux reconstruits pour versus. Aucune bougie du grenier, aucun corps d’Ernest. Montants de bois proches semi-opaques alpha max208/255. Deux PNG statiques natifs 1672×941 : fond opaque et plan proche alpha séparé. Parallaxe proposée .012 ; aucune nouvelle règle de combat/terrain, cadence source ou fidélité 1:1."
   }
 };

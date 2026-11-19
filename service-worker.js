@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '1b063c0bc963f0c4d4a8b8fb266e1f5b15a1eed36c139e5ca3bd1ef832f069c0';
+const BITMAP_REVISION = '0a2e26354b546c14d0002cdc814db888ac5095a691f078be87a16035305ff0f9';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -54,7 +54,10 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
   "/assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
   "/assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
+  "/assets/sprites/bom_bogeyman_122.47ff81e2ecb8.png",
+  "/assets/sprites/bom_butcher_123.67cd2f023ce2.png",
   "/assets/sprites/bom_butcher_123.95b439f69ed7.png",
+  "/assets/sprites/bom_double_head_124.536da40f7758.png",
   "/assets/sprites/bom_double_head_124.7b4030beb9da.png",
   "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
   "/assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
@@ -70,11 +73,14 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_needler_127.9f41a2f38998.png",
   "/assets/sprites/bom_nurse_128.902db2be4c5b.png",
   "/assets/sprites/bom_nurse_128.af4b765e1618.png",
+  "/assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
   "/assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
   "/assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
   "/assets/sprites/bom_schism_130.89c7127c0006.png",
+  "/assets/sprites/bom_schism_130.e9fce1fd7658.png",
   "/assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
   "/assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+  "/assets/sprites/bom_straight_jacket_131.9d8fdb7602b9.png",
   "/assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
   "/assets/sprites/bom_swarm_132.96315f628aaf.png",
   "/assets/sprites/bom_tremer_133.637b09a88365.png",
@@ -401,6 +407,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
   "/assets/stages/apartment_world.office.6001d447c296.png",
   "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+  "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+  "/assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
   "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
   "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
   "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
@@ -424,6 +432,10 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
   "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
   "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+  "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+  "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+  "/assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+  "/assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
   "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
   "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
   "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
@@ -443,6 +455,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
   "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+  "/assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+  "/assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
   "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
   "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
   "/assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",

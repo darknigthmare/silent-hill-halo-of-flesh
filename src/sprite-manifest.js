@@ -13370,50 +13370,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-dcec60b6-05d3-42a6-b5aa-c4107411bea4.png",
-    "sourceSHA256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+    "sourceFile": "bom_bogeyman_122.side-right.v1.png",
+    "sourceSHA256": "47ff81e2ecb8999672f9c44412720c6679b9334874f69fff87110adcc5496a5c",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Bogeyman BoM entier avec manteau, masque à gaz et marteau complet établis par son rendu natif. Sens gauche déclaré d’après la sortie réelle ; pas de substitution du modèle Downpour. Prise et posture statiques recomposées. Marge lisible connectée minimale réelle :3.75% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit entier, pieds distincts, marteau carré complet tenu à deux mains. Torse légèrement tourné pour rendre les mains lisibles ; détails du masque et revers reconstruits. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "61fb717590e7757d48b610b94dcaa3598513f38be197f0244bcceaf4b5c4b051",
-        "sha256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
-        "bytes": 859661,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "47ff81e2ecb8999672f9c44412720c6679b9334874f69fff87110adcc5496a5c",
+        "bytes": 1904154,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          339,
-          67,
-          925,
-          1199
+          99,
+          101,
+          910,
+          1461
         ],
-        "transparentFraction": 0.76866,
-        "path": "assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
-        "facing": -1,
+        "pixelSHA256": "ddcfdbdc20c2e55cbdc04231cd070a7060c2b7213dc522ad21f536e07ebe5d0c",
+        "transparentFraction": 0.66116,
+        "path": "assets/sprites/bom_bogeyman_122.47ff81e2ecb8.png",
+        "facing": 1,
         "anchor": [
-          0.545,
-          0.96252
+          0.43,
+          0.951171875
         ],
-        "bodyHeight": 0.912281,
-        "sourceFile": "exec-dcec60b6-05d3-42a6-b5aa-c4107411bea4.png",
-        "sourceSHA256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+        "bodyHeight": 0.884766,
+        "sourceFile": "bom_bogeyman_122.side-right.v1.png",
+        "sourceSHA256": "47ff81e2ecb8999672f9c44412720c6679b9334874f69fff87110adcc5496a5c",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          0,
-          9,
-          1218,
-          1214
+          31,
+          8,
+          1010,
+          1536
         ],
         "framingBounds": [
-          336,
-          63,
-          931,
-          1207
+          96,
+          95,
+          913,
+          1474
         ]
       }
     ],
@@ -13454,7 +13456,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Bogeyman BoM entier avec manteau, masque à gaz et marteau complet établis par son rendu natif. Sens gauche déclaré d’après la sortie réelle ; pas de substitution du modèle Downpour. Prise et posture statiques recomposées. Marge lisible connectée minimale réelle :3.75% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "1d2a5e309e092816487a17af89a99bd7f759eda1f92fdffabdaa2d89cad5850d",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-dcec60b6-05d3-42a6-b5aa-c4107411bea4.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier, pieds distincts, marteau carré complet tenu à deux mains. Torse légèrement tourné pour rendre les mains lisibles ; détails du masque et revers reconstruits. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported."
   },
   "bom_butcher_123": {
     "fighterId": "bom_butcher_123",
@@ -13462,50 +13476,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-5f5846ba-104a-415d-8f55-70f19505059a.png",
-    "sourceSHA256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+    "sourceFile": "bom_butcher_123.side-right.v1.png",
+    "sourceSHA256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Butcher BoM entier depuis modèles couleur/sculpt Hershberg, avec Great Cleaver natif entier. La page armes associe explicitement cet objet au Butcher. Prise et posture composées, détails de lame depuis vignette127px ; aucun transfert du modèle Origins. Marge lisible connectée minimale réelle :8.77% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit entier, masque asymétrique et bottes complets. Great Cleaver conforme au vocabulaire visible du visuel BoM : lame rectangulaire rouillée, trou au coin extérieur, manche sombre ; taille relative à la main et épaisseur reconstruites depuis vignette 127×127, non mesurées dans le jeu. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "376f62999fd506235f05590c14051f75caf170d26482ae4ae824abc5e57e128f",
-        "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
-        "bytes": 665309,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+        "bytes": 1697023,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          376,
-          142,
-          919,
-          1140
+          161,
+          129,
+          784,
+          1467
         ],
-        "transparentFraction": 0.84225,
-        "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+        "pixelSHA256": "69ebd9b570e31d925c66797b4825f90a65698295fa6c0b35112e6e53c9272c83",
+        "transparentFraction": 0.74651,
+        "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
         "facing": 1,
         "anchor": [
-          0.51,
-          0.912281
+          0.435,
+          0.955078125
         ],
-        "bodyHeight": 0.802233,
-        "sourceFile": "exec-5f5846ba-104a-415d-8f55-70f19505059a.png",
-        "sourceSHA256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+        "bodyHeight": 0.870443,
+        "sourceFile": "bom_butcher_123.side-right.v1.png",
+        "sourceSHA256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          0,
-          1240,
-          1240
+          20,
+          994,
+          1536
         ],
         "framingBounds": [
-          372,
-          138,
-          922,
-          1144
+          159,
+          125,
+          787,
+          1473
         ]
       }
     ],
@@ -13546,7 +13562,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Butcher BoM entier depuis modèles couleur/sculpt Hershberg, avec Great Cleaver natif entier. La page armes associe explicitement cet objet au Butcher. Prise et posture composées, détails de lame depuis vignette127px ; aucun transfert du modèle Origins. Marge lisible connectée minimale réelle :8.77% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5f5846ba-104a-415d-8f55-70f19505059a.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier, masque asymétrique et bottes complets. Great Cleaver conforme au vocabulaire visible du visuel BoM : lame rectangulaire rouillée, trou au coin extérieur, manche sombre ; taille relative à la main et épaisseur reconstruites depuis vignette 127×127, non mesurées dans le jeu. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported."
   },
   "bom_double_head_124": {
     "fighterId": "bom_double_head_124",
@@ -13554,50 +13582,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-d0a35b6e-092b-48ad-88aa-5f0f52a75470.png",
-    "sourceSHA256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+    "sourceFile": "bom_double_head_124.side-right.v1.png",
+    "sourceSHA256": "536da40f7758ebb93f0a85bb2703733758ec79ebdea00c04ec2b4b3381f393c8",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Double Head BoM entier depuis ses modèles couleur/sculpt Hershberg : quatre pattes, bandages, tête fendue et queue courte ; pas de texture SH3 substituée. L’appui et le volume sont recomposés, les surfaces cachées ne sont pas mesurées. Marge lisible connectée minimale réelle :10.61% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit quadrupède complet, quatre pattes/pieds séparés, queue courte et silhouette caractéristique de tête. Détails de peau, bandages et surfaces cachées reconstruits. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "e067f5ca6f94282823486239c08bedfdecc01e31763ce501ee7743e929ccd634",
-        "sha256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
-        "bytes": 596995,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "536da40f7758ebb93f0a85bb2703733758ec79ebdea00c04ec2b4b3381f393c8",
+        "bytes": 1817880,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          244,
-          362,
-          1118,
-          999
+          109,
+          171,
+          1466,
+          885
         ],
-        "transparentFraction": 0.85629,
-        "path": "assets/sprites/bom_double_head_124.7b4030beb9da.png",
+        "pixelSHA256": "f4afbae2d1fdafc65e80f5eacb3be4054528ad7bbe3aa35d3a839014c96776b8",
+        "transparentFraction": 0.72343,
+        "path": "assets/sprites/bom_double_head_124.536da40f7758.png",
         "facing": 1,
         "anchor": [
-          0.53,
-          0.798246
+          0.39,
+          0.8642578125
         ],
-        "bodyHeight": 0.515152,
-        "sourceFile": "exec-d0a35b6e-092b-48ad-88aa-5f0f52a75470.png",
-        "sourceSHA256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+        "bodyHeight": 0.696289,
+        "sourceFile": "bom_double_head_124.side-right.v1.png",
+        "sourceSHA256": "536da40f7758ebb93f0a85bb2703733758ec79ebdea00c04ec2b4b3381f393c8",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          21,
-          1170,
-          1222
+          17,
+          1506,
+          1024
         ],
         "framingBounds": [
-          239,
-          355,
-          1121,
-          1001
+          104,
+          164,
+          1469,
+          892
         ]
       }
     ],
@@ -13638,7 +13668,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Double Head BoM entier depuis ses modèles couleur/sculpt Hershberg : quatre pattes, bandages, tête fendue et queue courte ; pas de texture SH3 substituée. L’appui et le volume sont recomposés, les surfaces cachées ne sont pas mesurées. Marge lisible connectée minimale réelle :10.61% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "7b4030beb9dafc33af8fd295bfe7a9e2dc53353dc350cc4de467d247c97dd9d4",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-d0a35b6e-092b-48ad-88aa-5f0f52a75470.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit quadrupède complet, quatre pattes/pieds séparés, queue courte et silhouette caractéristique de tête. Détails de peau, bandages et surfaces cachées reconstruits. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported."
   },
   "bom_insane_cancer_126": {
     "fighterId": "bom_insane_cancer_126",
@@ -13950,50 +13992,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-53d11e7b-04ca-4760-a965-cc3c6f9bc4c5.png",
-    "sourceSHA256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+    "sourceFile": "bom_pyramid_head_129.side-right.v2.png",
+    "sourceSHA256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Pyramid Head BoM entier et Great Knife complet depuis rendu natif2012, complété pour les matériaux par le rendu2013 de la même galerie. Deux bottes et pointe du casque visibles ; sens gauche déclaré selon la sortie. Aucun costume SH2/film ou lance substitués. Marge lisible connectée minimale réelle :5.10% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit entier, casque BoM à apex vertical et panneaux triangulaires, Great Knife complet, deux bottes distinctes. Correction unique de cadrage sélectionnée : apex et appuis éloignés des bords. Détails et proportions depuis rendus BoM 2012/2013, aucun modèle SH2 substitué. One static drawing, no source timing or 1:1 fidelity certified. Native PNG pixels unchanged after imagegen; no raster editing performed. Tiny alpha noise below 8 extends beyond readable silhouette bounds. RGB colors under alpha 0 are invisible under standard alpha composition.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "4a1dc2d014d850879e3bd66bbc915917bfa8a06e04695a204a02b44bf4380a44",
-        "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
-        "bytes": 775204,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+        "bytes": 1182614,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          105,
-          87,
-          1110,
-          1187
+          418,
+          110,
+          1169,
+          898
         ],
-        "transparentFraction": 0.83751,
-        "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
-        "facing": -1,
+        "pixelSHA256": "2b699cc1617c7b6110588a3aac4b97d75d13c304370770765566021ff472e003",
+        "transparentFraction": 0.91419,
+        "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+        "facing": 1,
         "anchor": [
-          0.735,
-          0.948963
+          0.36,
+          0.876953125
         ],
-        "bodyHeight": 0.881978,
-        "sourceFile": "exec-53d11e7b-04ca-4760-a965-cc3c6f9bc4c5.png",
-        "sourceSHA256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+        "bodyHeight": 0.768555,
+        "sourceFile": "bom_pyramid_head_129.side-right.v2.png",
+        "sourceSHA256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
           0,
-          1238,
-          1254
+          1536,
+          1024
         ],
         "framingBounds": [
-          99,
-          84,
-          1113,
-          1190
+          414,
+          107,
+          1172,
+          904
         ]
       }
     ],
@@ -14034,7 +14078,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Pyramid Head BoM entier et Great Knife complet depuis rendu natif2012, complété pour les matériaux par le rendu2013 de la même galerie. Deux bottes et pointe du casque visibles ; sens gauche déclaré selon la sortie. Aucun costume SH2/film ou lance substitués. Marge lisible connectée minimale réelle :5.10% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-53d11e7b-04ca-4760-a965-cc3c6f9bc4c5.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier, casque BoM à apex vertical et panneaux triangulaires, Great Knife complet, deux bottes distinctes. Correction unique de cadrage sélectionnée : apex et appuis éloignés des bords. Détails et proportions depuis rendus BoM 2012/2013, aucun modèle SH2 substitué. One static drawing, no source timing or 1:1 fidelity certified. Native PNG pixels unchanged after imagegen; no raster editing performed. Tiny alpha noise below 8 extends beyond readable silhouette bounds. RGB colors under alpha 0 are invisible under standard alpha composition."
   },
   "bom_schism_130": {
     "fighterId": "bom_schism_130",
@@ -14042,50 +14098,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-65ddeb39-3945-4b2a-aaa7-6906476ae819.png",
-    "sourceSHA256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+    "sourceFile": "bom_schism_130.side-right.v2.png",
+    "sourceSHA256": "e9fce1fd7658596c73e537320e396bbbad950ba19aeb5b2b66c2551cf4d0fc35",
     "sourceDimensions": [
-      1254,
-      1254
+      1536,
+      1024
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Schism BoM entier depuis son portrait bestiaire complet, tête-lame et deux bras/jambes visibles. Référence127px : détail des doigts, surface et proportions fines restent reconstruits et non certifiés ; aucun modèle Homecoming repris. Marge lisible connectée minimale réelle :11.16% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit entier, deux bras et deux jambes, extension courbe de tête et crête hautes non coupées. Correction unique de cadrage sélectionnée. Référence bestiaire 127×127 ; surface, proportions fines et tête reconstruits, non certifiés. One static drawing, no source timing or 1:1 fidelity certified. Native PNG pixels unchanged after imagegen; no raster editing performed. Tiny alpha noise below 8 extends beyond readable silhouette bounds. RGB colors under alpha 0 are invisible under standard alpha composition.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "1c34f711029ab985994ead613cd52166b8572c54db18d3193244f06be79b9765",
-        "sha256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
-        "bytes": 663117,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "e9fce1fd7658596c73e537320e396bbbad950ba19aeb5b2b66c2551cf4d0fc35",
+        "bytes": 1286511,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          190,
-          147,
-          1035,
-          1112
+          473,
+          148,
+          1144,
+          866
         ],
-        "transparentFraction": 0.87835,
-        "path": "assets/sprites/bom_schism_130.89c7127c0006.png",
-        "facing": -1,
+        "pixelSHA256": "af8152552a52bc6fbbbc4d321a69eeea889730c615dee072838cd6d417bddf21",
+        "transparentFraction": 0.92622,
+        "path": "assets/sprites/bom_schism_130.e9fce1fd7658.png",
+        "facing": 1,
         "anchor": [
-          0.56,
-          0.888357
+          0.42,
+          0.845703125
         ],
-        "bodyHeight": 0.77512,
-        "sourceFile": "exec-65ddeb39-3945-4b2a-aaa7-6906476ae819.png",
-        "sourceSHA256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+        "bodyHeight": 0.700195,
+        "sourceFile": "bom_schism_130.side-right.v2.png",
+        "sourceSHA256": "e9fce1fd7658596c73e537320e396bbbad950ba19aeb5b2b66c2551cf4d0fc35",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
-          35,
-          1240,
-          1254
+          27,
+          1522,
+          1015
         ],
         "framingBounds": [
-          186,
-          142,
-          1045,
-          1114
+          469,
+          146,
+          1150,
+          869
         ]
       }
     ],
@@ -14126,7 +14184,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Schism BoM entier depuis son portrait bestiaire complet, tête-lame et deux bras/jambes visibles. Référence127px : détail des doigts, surface et proportions fines restent reconstruits et non certifiés ; aucun modèle Homecoming repris. Marge lisible connectée minimale réelle :11.16% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "89c7127c0006136eabda15698851b701f82f5f16591ff6724585024cc08ba408",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-65ddeb39-3945-4b2a-aaa7-6906476ae819.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier, deux bras et deux jambes, extension courbe de tête et crête hautes non coupées. Correction unique de cadrage sélectionnée. Référence bestiaire 127×127 ; surface, proportions fines et tête reconstruits, non certifiés. One static drawing, no source timing or 1:1 fidelity certified. Native PNG pixels unchanged after imagegen; no raster editing performed. Tiny alpha noise below 8 extends beyond readable silhouette bounds. RGB colors under alpha 0 are invisible under standard alpha composition."
   },
   "bom_straight_jacket_131": {
     "fighterId": "bom_straight_jacket_131",
@@ -14134,50 +14204,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-225602ac-cb71-4a0f-ba57-04fb7611efc4.png",
-    "sourceSHA256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+    "sourceFile": "bom_straight_jacket_131.side-right.v1.png",
+    "sourceSHA256": "9d8fdb7602b99d9ce58598300194c91e11c0bb03699336847d59f63112be8eb3",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Straight Jacket BoM entier, bras contenus dans la gaine, deux jambes/pieds visibles. Appuis recomposés depuis le rendu de cette édition ; aucun bras extérieur ajouté et aucune animation de vomissement livrée. Marge lisible connectée minimale réelle :6.30% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "notes": "Profil droit complet, gaine sans bras extérieurs, pieds nus distincts, tête et torse enveloppés. Posture latérale recomposée, non issue d'une frame originale. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "pixelSHA256": "910b777dbaadaa09ac276bce99b4533e2f0b51e34d26888f13766c6d0bc58734",
-        "sha256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
-        "bytes": 638823,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "9d8fdb7602b99d9ce58598300194c91e11c0bb03699336847d59f63112be8eb3",
+        "bytes": 1711467,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          349,
-          88,
-          938,
-          1164
+          92,
+          101,
+          904,
+          1407
         ],
-        "transparentFraction": 0.82723,
-        "path": "assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
+        "pixelSHA256": "56eef08dcd67baa8b3138c9d9f9b12a54f5b0c1160a820204091152ec7141840",
+        "transparentFraction": 0.74827,
+        "path": "assets/sprites/bom_straight_jacket_131.9d8fdb7602b9.png",
         "facing": 1,
         "anchor": [
-          0.5,
-          0.934609
+          0.46,
+          0.916015625
         ],
-        "bodyHeight": 0.871611,
-        "sourceFile": "exec-225602ac-cb71-4a0f-ba57-04fb7611efc4.png",
-        "sourceSHA256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+        "bodyHeight": 0.85026,
+        "sourceFile": "bom_straight_jacket_131.side-right.v1.png",
+        "sourceSHA256": "9d8fdb7602b99d9ce58598300194c91e11c0bb03699336847d59f63112be8eb3",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          25,
+          0,
           9,
-          1184,
-          1211
+          1006,
+          1502
         ],
         "framingBounds": [
-          343,
-          79,
-          947,
-          1172
+          87,
+          95,
+          912,
+          1412
         ]
       }
     ],
@@ -14218,7 +14290,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe entière, idle non bouclé ; aucune animation ou durée originale mesurée, aucun pixel original livré et aucune fidélité1:1 certifiée. Ancrage et hauteur calibrent la présentation versus, pas une échelle native mesurée. Straight Jacket BoM entier, bras contenus dans la gaine, deux jambes/pieds visibles. Appuis recomposés depuis le rendu de cette édition ; aucun bras extérieur ajouté et aucune animation de vomissement livrée. Marge lisible connectée minimale réelle :6.30% ; la marge20% demandée au générateur n’est pas déclarée acquise.",
+    "selectionProvenance": {
+      "sourceSHA256": "ac32c6f8e574f9fb2c7ef4c1048b040ca0b1de08301dd0ca1a21e9140bc951e0",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-225602ac-cb71-4a0f-ba57-04fb7611efc4.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit complet, gaine sans bras extérieurs, pieds nus distincts, tête et torse enveloppés. Posture latérale recomposée, non issue d'une frame originale. One static drawing, no source timing or 1:1 fidelity certified. Native pixels preserved without processing. Very low alpha noise (mostly below 8) may extend beyond readable bounds; RGB colors under alpha 0 are invisible under standard alpha composition. Requested 8-10% margin not fully achieved; measured padding is reported."
   },
   "bom_swarm_132": {
     "fighterId": "bom_swarm_132",

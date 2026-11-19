@@ -1,0 +1,685 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T10:04:53.497245+00:00",
+  "scope": "Read-only triage of all 37 combatMissing profiles and their 26 selectionMissing subset, from repository evidence through wave18. No new web research or generation.",
+  "root": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+  "coverageSHA256": "a894c1757ec15e003052832b0760cb1e59fc671dcaf7cc47fa6451052df647a1",
+  "generationCalls": 0,
+  "sourceFilesModified": false,
+  "counts": {
+    "combatMissing": 37,
+    "selectionMissing": 26,
+    "combatEnabled": 18,
+    "combatDisabled": 19,
+    "categories": {
+      "historical-refusal": 20,
+      "other": 9,
+      "insufficient-visual-source": 8
+    },
+    "selectionMissingCategories": {
+      "historical-refusal": 19,
+      "other": 4,
+      "insufficient-visual-source": 3
+    },
+    "refusalKinds": {
+      "direct": 13,
+      "related-variant": 7
+    },
+    "readyAbsentPortraits": 0,
+    "readyAbsentCombatViews": 0
+  },
+  "conclusion": "Aucun des 26 portraits absents n’est prêt sans blocage. Parmi les 37 slots combat absents, 19 sont des rôles actuellement hors duel ; les remplir ne créerait pas 19 combattants. Quatre profils autorisés au combat n’ont pas de refus historique identifié, mais nécessitent toujours une référence complète ou une résolution d’identité.",
+  "nonRefusedCombatPriorities": [
+    {
+      "id": "film_missionary_revelation_177",
+      "needed": "Vue finale native des chaussures et appuis du même costume Revelation ; ne pas choisir arbitrairement un concept."
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "needed": "Vue latérale native montrant la longueur et la terminaison réelle du tronc Arcade."
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "needed": "Résoudre Rifle versus Shotgun sur la variante précise, puis référence complète de son arme."
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "needed": "Décision de catalogue : catégorie collective versus individu, sans dupliquer une victime existante."
+    }
+  ],
+  "optionalNoncombatantArt": [
+    {
+      "id": "sh3_sewer_creature_052",
+      "existingEvidence": "docs/production/wave8-references/sewer/model-views.png",
+      "possibleScope": "Pose environnementale du seul appendice connu ; ne pas ajouter de corps ni activer un duel.",
+      "whyNotReadyAbsentCombat": "Le portrait du même appendice est déjà livré ; manque de combat technique ne vaut pas demande de combattant."
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "existingEvidence": "docs/production/wave4-references/collector/collector-sources.json",
+      "possibleScope": "Vue neutre additionnelle de dossier/cinématique, avec perspective reconstituée explicitement déclarée.",
+      "whyNotReadyAbsentCombat": "Portrait déjà livré et rôle non combattant. Les trois photogrammes inspectés ne montrent pas une vue latérale entière."
+    }
+  ],
+  "evidenceIndex": {
+    "coverage": "data/sprite-coverage.json",
+    "roles": "src/data.js:createCombatProfile -> src/combat-reference-policy.js",
+    "old": "docs/production/combat-remaining-2026-11-17.json",
+    "art92": "docs/production/ART92_PROFILE_STATUS.md",
+    "art144a": "art/provenance-art144-a.json",
+    "art144d": "art/provenance-art144-d.json",
+    "art92d": "art/provenance-art92-d.json",
+    "lot12": "art/reference-provenance-batch12.json",
+    "wave3": "docs/production/sprite-wave3-generation-2026-11-18.json",
+    "wave4": "docs/production/sprite-wave4-generation-2026-11-18.json",
+    "wave6": "docs/production/sprite-wave6-generation-2026-11-18.json",
+    "wave8": "docs/production/sprite-wave8-generation-2026-11-18.json",
+    "ghost": "docs/production/wave6-references/sh4-ghost/source-audit.json",
+    "walter": "docs/production/wave8-references/unresolved-manifestations.json",
+    "eileen": "docs/production/wave4-references/manifestations/research.json",
+    "monocle": "docs/production/wave6-references/downpour/monocle-source-audit.json",
+    "toadstool": "docs/production/wave4-references/arcade/toadstool-sources.json",
+    "collector": "docs/production/wave4-references/collector/collector-sources.json",
+    "creeper": "docs/production/wave3-research-2026-11-18/research.json",
+    "nurse": "docs/production/wave3-research-2026-11-18/nurse/references.json",
+    "mattress": "docs/production/wave5-references/film-mattress/sources.json",
+    "registry": "art/registry.json",
+    "scope18": "docs/production/vague18/scope-and-history.json"
+  },
+  "entries": [
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "stationary-boss",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus antérieur explicite Incubus, maintenu dans ART144/ART92.",
+      "evidence": [
+        "old",
+        "art144a"
+      ]
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Variante du Mannequin SH2 déjà refusé ; arrêt historique propre à cette ligne.",
+      "evidence": [
+        "old",
+        "art144a"
+      ]
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel Mary Final Manifestation à la sortie, catégorie violence.",
+      "evidence": [
+        "old",
+        "art144a"
+      ],
+      "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30"
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "immaterial-form",
+      "reason": "Présence invisible dans SH2 original ; aucun corps visible à reproduire. Une image corporelle créerait une apparence non documentée.",
+      "evidence": [
+        "old"
+      ]
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Variante Spider de la famille Mannequin SH2 refusée ; aucun essai prévu.",
+      "evidence": [
+        "old",
+        "art144a"
+      ]
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "identity-or-variant-unresolved",
+      "reason": "Le Mandarin source est suspendu sous le sol ; aucun modèle propre à une forme marchant au-dessus du sol n’est attesté.",
+      "evidence": [
+        "old"
+      ]
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus antérieur explicite Valtiel SH3, maintenu dans ART144/ART92.",
+      "evidence": [
+        "old",
+        "art144a"
+      ]
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "scripted-encounter",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "selection-only-environmental-subject",
+      "reason": "Trois vues du tentacule entier ont permis le portrait vague8. C’est un appendice du piège scripté, pas un corps autonome combattant ; aucun animal central n’est montré.",
+      "evidence": [
+        "wave8",
+        "registry"
+      ]
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "collective-category-without-distinct-body",
+      "reason": "La fiche représente les anciens Ghosts collectivement. La carte Old Type correspond à Jimmy Stone déjà illustré ; les six victimes ont leurs propres IDs. Pas de septième corps collectif canonique.",
+      "evidence": [
+        "ghost",
+        "lot12"
+      ]
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "scripted-encounter",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "Les vues Conjurer face/dos montrent bras, membrane et attaches proches ; plusieurs tubes sortent du cadre et la terminaison inférieure se confond avec la fosse.",
+      "evidence": [
+        "walter"
+      ]
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "Le visage frontal et son raccord visible ont permis le portrait ; couronne dans l’ombre, arrière libre du crâne et contour latéral autonome non attestés.",
+      "evidence": [
+        "eileen",
+        "registry"
+      ]
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel sur la première forme et son rig entier, catégories sexual/violence.",
+      "evidence": [
+        "lot12"
+      ],
+      "requestId": "618d08f4-0487-4b32-839f-f69a2983f6e2"
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Même Amnion refusé ; corps exposé de phase 2 aussi incomplet dans les références.",
+      "evidence": [
+        "lot12",
+        "old"
+      ],
+      "requestId": "618d08f4-0487-4b32-839f-f69a2983f6e2"
+    },
+    {
+      "id": "downpour_void_113",
+      "name": "Void",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "immaterial-form",
+      "reason": "Lumière/distorsion du décor à étendue variable ; portrait du phénomène livré. Ni corps fini ni limite autonome de sprite combattant.",
+      "evidence": [
+        "registry",
+        "old"
+      ]
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "La tête et le monocle sont établis ; rails, chaînes et membrane sortent du cadre. Le mesh de boss coupé comprend des éléments inutilisés, exclus du corps final.",
+      "evidence": [
+        "monocle",
+        "registry"
+      ]
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "Le longplay résout la silhouette projetée frontale, mais la tête cache la longueur du tronc et sa terminaison. Une vue latérale entière imposerait encore un arrière inventé.",
+      "evidence": [
+        "wave6",
+        "registry"
+      ]
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Référence entière 113/114 retrouvée, puis génération de sélection refusée à la sortie (sexual).",
+      "evidence": [
+        "old"
+      ],
+      "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0"
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Modèle associé au design SH3 Nurse Pipe déjà refusé ; arrêt explicite de la variante Arcade.",
+      "evidence": [
+        "old",
+        "lot12"
+      ]
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "selection-only-environmental-subject",
+      "reason": "Forme brune enracinée documentée dans la prison Arcade, portrait livré ; racines cachées, autres états et rôle de combat restent hors preuve.",
+      "evidence": [
+        "toadstool",
+        "registry"
+      ]
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "identity-or-variant-unresolved",
+      "reason": "Modèle retrouvé nommé Robbie_Rifle.obj, mais fiche Shotgun ; la capture d’arme longue ne tranche pas sa configuration. Ne pas affecter un rifle à ce profil sans correction sourcée.",
+      "evidence": [
+        "old",
+        "lot12"
+      ]
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel Mother BoM, catégories sexual/violence.",
+      "evidence": [
+        "old",
+        "art92"
+      ],
+      "requestId": "a78228ad-d44c-40b7-8a8e-214bf0b7508e"
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Même sujet Valtiel déjà refusé ; changement d’édition ne résout pas le refus.",
+      "evidence": [
+        "old",
+        "art92"
+      ]
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "multi-body",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "État incluant Blood Mama refusée ; arrêt explicite de cette variante, pas un refus direct propre au Guardian.",
+      "evidence": [
+        "old",
+        "art92d"
+      ],
+      "requestId": "b6688211-2810-4d1e-ae1c-963cc64a7ea9"
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "multi-body",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel, catégories violence/sexual, enregistré dans ART92-D.",
+      "evidence": [
+        "art92d"
+      ],
+      "requestId": "b6688211-2810-4d1e-ae1c-963cc64a7ea9"
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel à la sortie, catégorie violence.",
+      "evidence": [
+        "art144d"
+      ],
+      "requestId": "dbf7e92d-aba3-4115-b752-0234e8660483"
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel à la sortie, catégories sexual/violence.",
+      "evidence": [
+        "art144d"
+      ],
+      "requestId": "5cb09bcb-9e8b-40be-b3c2-391e62900d5e"
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "related-variant",
+      "reason": "Variante sombre du Hatcher refusé, arrêt explicite conservé.",
+      "evidence": [
+        "art144d"
+      ],
+      "requestId": "5cb09bcb-9e8b-40be-b3c2-391e62900d5e"
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "combatant",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus individuel à la sortie, catégorie violence.",
+      "evidence": [
+        "art144d"
+      ],
+      "requestId": "13cb56a1-c05c-45b6-a193-987153da6fca"
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus après inspection du costume 2006 entier ; confirmé encore dans le cadrage vague18.",
+      "evidence": [
+        "old",
+        "scope18"
+      ],
+      "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d"
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus de sélection vague4, catégorie violence ; plus récent que le motif ancien de référence incomplète.",
+      "evidence": [
+        "wave4",
+        "scope18"
+      ],
+      "requestId": "d4141265-76a7-41a8-acd9-6b146046b5f7"
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "historical-refusal",
+      "refusalKind": "direct",
+      "reason": "Refus de sélection vague3, catégorie violence, malgré un portrait déjà présent. Ne pas le reclasser simplement comme référence incomplète.",
+      "evidence": [
+        "wave3",
+        "registry"
+      ],
+      "requestId": "85305550-1db8-474b-a58d-f66f849d4e01"
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "Masque et costume final documentés ; pieds masqués dans les photogrammes. Plusieurs chaussures concurrentes dans les concepts, aucune version finale établie.",
+      "evidence": [
+        "walter"
+      ]
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "La figure entière du film est maintenant documentée pour la sélection (crop 320×441), mais profil exact, main arrière et forme précise de l’instrument ne sont pas établis ; rôle reste non vérifié.",
+      "evidence": [
+        "nurse",
+        "wave3",
+        "registry"
+      ]
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "Le trailer officiel documente un individu dorsal complet de 59×79 px ; dessous, jonctions et silhouette latérale non couverts par une vue entière attribuée.",
+      "evidence": [
+        "creeper",
+        "registry"
+      ]
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "combatMissing": true,
+      "selectionMissing": true,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "insufficient-visual-source",
+      "reason": "La présence d’Abstract Daddy dans le film est confirmée par Gans ; aucune silhouette finale entière identifiée pour cette fiche de fusion matelas, et libellé éditorial encore à rapprocher.",
+      "evidence": [
+        "mattress",
+        "old"
+      ]
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "name": "The Collector",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "selection-only-noncombatant",
+      "reason": "Trois photogrammes finaux du chapitre21 couvrent couronne, torse, cape et pieds. Portrait livré ; rôle non combattant et absence de posture latérale entière sourcée. Une vue neutre de dossier serait une adaptation, pas un duel.",
+      "evidence": [
+        "collector",
+        "registry"
+      ]
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "combatMissing": true,
+      "selectionMissing": false,
+      "role": "unverified",
+      "combatEnabled": false,
+      "readyForGeneration": false,
+      "category": "other",
+      "subtype": "identity-or-variant-unresolved",
+      "reason": "La rencontre de Stilledalen utilise le Stinger standard. Portrait ailes fermées livré ; aucune anatomie régionale indépendante n’est attestée, et le rôle de cette fiche reste non vérifié.",
+      "evidence": [
+        "wave6",
+        "registry"
+      ]
+    }
+  ],
+  "notes": [
+    "Refus de génération et refus d’accès HTTP sont distingués : un HTTP 402/403 ne classe pas un personnage en historical-refusal.",
+    "Aucune tentative de génération refusée n’a été relancée. Aucun statut du registre, rôle ou ID n’a été modifié.",
+    "Les motifs ART92 antérieurs à novembre18 ne suffisent plus seuls : Collector, Creeper Return, Nurse Return, Sewer Creature, Toadstool et plusieurs autres ont maintenant des portraits documentés.",
+    "Les 26 absences de portrait sont un sous-ensemble des 37 absences combat, pas 63 profils distincts."
+  ]
+}
