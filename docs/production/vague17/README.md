@@ -32,7 +32,7 @@ Les imports passent par `import-sprite.py` et `apply-sprite-clip.py`. Registre, 
 
 Les trois premiers essais Needler sont conservés sous [variants/](variants/) avec leurs motifs : cinq membres sur v1 ; torse encore oblique sur v2 et v3. Ils ne sont ni actifs, ni comptés comme nouvelles vues latérales.
 
-Le changement de sélection a aussi été corrigé : « Signal aléatoire » ou le choix d’une autre arène revient à la sélection avant de remplacer un combat vivant. Cela libère ses images avant le prochain préchargement et évite une union inutile de deux combats. La simple consultation de la galerie et le choix de l’arène courante conservent le combat. Le parcours sauvegardé et la récupération après un échec d’image restent conservés.
+Le changement de sélection a aussi été corrigé : « Signal aléatoire » ou le choix d’une autre arène revient à la sélection avant de remplacer un combat vivant. Cela libère ses images avant le prochain préchargement et évite une union inutile de deux combats. La simple consultation de la galerie et le choix de l’arène courante conservent le combat. En Récit et Tournoi, l’arène imposée par le parcours reste inchangée et la galerie ne termine pas la rencontre. Le parcours sauvegardé et la récupération après un échec d’image restent conservés.
 
 ## Évolution mesurée
 

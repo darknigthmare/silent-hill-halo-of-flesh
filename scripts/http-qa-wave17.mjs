@@ -491,6 +491,33 @@ try{
   check('Randomizing a new contact returns to setup before changing the live pair',
     randomized.destroyed&&!randomized.engineCreated&&randomized.actorPins===0&&randomized.stagePins===0&&randomized.setupVisible,randomized);
   report.selectionTransitions={changedArena,randomized};
+  report.fixedRouteArenas=[];
+  for(const mode of ['story','tournament']){
+    await page.goto(base+'/modules/unified-versus.html?qa=1&preset='+mode+'&p1='+nurse+'&seed=0');
+    await page.waitForFunction(()=>!!window.__HALO_QA__);
+    await page.uncheck('#artDiagnostic');
+    await page.click('#launch');
+    await page.waitForFunction(()=>!!__HALO_QA__.engine,null,{timeout:20000});
+    const before=await page.evaluate(async()=>{
+      const {KEYS}=await import('/src/save-store.js');
+      window.__W17.retiringEngine=__HALO_QA__.engine;
+      const keys=[KEYS.run,KEYS.run+':backup',KEYS.records,KEYS.chronicles];
+      return {stage:__HALO_QA__.engine.stage.id,keys,storage:keys.map(key=>localStorage.getItem(key))};
+    });
+    check(mode+': the real route selects a different arena from the gallery target',before.stage!=='film_hospital');
+    await page.click('#openGallery');
+    await page.locator('#stageList .stage-entry').filter({has:page.locator('b',{hasText:getStage('film_hospital').name})}).click();
+    await page.waitForFunction(()=>document.querySelector('#stageGallery').classList.contains('hidden'));
+    const after=await page.evaluate(keys=>({
+      sameEngine:__HALO_QA__.engine===__W17.retiringEngine&&!__W17.retiringEngine.destroyed,
+      selectedStage:__HALO_QA__.selection.stage.id,engineStage:__HALO_QA__.engine?.stage.id,
+      fightVisible:!document.querySelector('#fightScreen').classList.contains('hidden'),
+      storage:keys.map(key=>localStorage.getItem(key))
+    }),before.keys);
+    check(mode+': inspecting another arena preserves the active route and exact checkpoint bytes',
+      after.sameEngine&&after.fightVisible&&after.selectedStage===before.stage&&after.engineStage===before.stage&&JSON.stringify(after.storage)===JSON.stringify(before.storage),after);
+    report.fixedRouteArenas.push({mode,before,after});
+  }
   check('No browser, HTTP asset or network errors',report.errors.length===0,report.errors);
 }catch(error){
   report.failure=String(error);

@@ -38,7 +38,7 @@ Avant correction, les boutons d’en-tête ouvraient ce chemin : `randomize()` m
 
 `showSelect()` libère les pins, invalide le chargement en cours, arrête le timer de résultat et détruit l’ancien moteur. Il ne remplace pas `state.run` et n’écrit ni sauvegarde, ni victoire, ni tentative. Le parcours en cours reste reprenable au début de la rencontre, selon la sémantique déjà annoncée par l’interface.
 
-Une simple ouverture/fermeture de galerie, ou le choix de l’arène déjà sélectionnée, ne déclenche pas ce retour. Le retry sans nouvelle sélection reste inchangé. La continuation après résultat conserve sa récupération actuelle : aucune transaction de suspension/rechargement supplémentaire n’est nécessaire.
+Une simple ouverture/fermeture de galerie, ou le choix de l’arène déjà sélectionnée, ne déclenche pas ce retour. En Récit et Tournoi, les arènes sont imposées par currentModePlan() : la galerie reste consultative et conserve le moteur et le checkpoint même si une autre vignette est cliquée. Le retry sans nouvelle sélection reste inchangé. La continuation après résultat conserve sa récupération actuelle : aucune transaction de suspension/rechargement supplémentaire n’est nécessaire.
 
 Simulation du même contre-exemple après libération normale de la sélection : nouvel épinglage accepté, paire entière décodée, pic **62 923 192 octets**, inférieur au plafond. L’ancien combat est volontairement quitté au moment du choix d’un nouveau contact ; il n’est pas détruit tardivement sur une erreur de préchargement.
 

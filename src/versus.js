@@ -279,8 +279,12 @@ function renderStageGallery() {
     const label = document.createElement('b'); label.textContent = stage.name; button.append(label);
     const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.director?.hazardDeck?.[0]]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}${!stage.director?.hazardDeck?.length ? ' · AMBIANCE SANS DÉGÂTS' : ''}<br>${stage.animationTracks?.length || stage.animations?.length || 0} ANIMATIONS · ${stage.director?.events?.length || 0} ÉVÉNEMENTS<br>${escapeHTML(stage.terrain?.name || 'TERRAIN NEUTRE')} · ${escapeHTML(stage.shift?.name || 'BASCULE STANDARD')}`; button.append(meta);
     button.addEventListener('click', () => {
-      if(stage.id!==state.stage.id&&(state.engine||state.loadingSprites))showSelect();
-      state.stage = stage; audio.confirm(); renderSelected(); renderStageGallery();
+      // Récit and tournament own their arena; browsing must keep the encounter.
+      if(!currentModePlan()?.queue?.length){
+        if(stage.id!==state.stage.id&&(state.engine||state.loadingSprites))showSelect();
+        state.stage=stage;
+      }
+      audio.confirm(); renderSelected(); renderStageGallery();
       setTimeout(closeStageGallery, 110);
     });
     els.stageList.append(button);
