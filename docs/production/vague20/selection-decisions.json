@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "date": "2026-11-19",
+  "scope": "Stages without active bitmap compositions only. No fighter, portrait, moveset, stage rule or workbook edits.",
+  "plannedCount": 12,
+  "targetStageIds": [
+    "apartment_roof",
+    "sewers",
+    "lakeside_sh3",
+    "nightmare_hospital_sh3",
+    "dark_shrine",
+    "school_shf",
+    "hinako_home",
+    "corrupted_ebisugaoka",
+    "hospital_world",
+    "artaud_theater",
+    "devils_pit",
+    "overlook"
+  ],
+  "replacements": [
+    {
+      "plannedStage": "shimizu_residence",
+      "replacementStage": "corrupted_ebisugaoka",
+      "reason": "The local contract calls the Yellowed Calendar dining room Residence I; the freshly inspected guide explicitly places this item and scene in Residence II. The local stage policy is preserved and no contradictory bitmap is delivered.",
+      "source": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+      "sourceSection": "Shimizu Residence II",
+      "image": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg"
+    },
+    {
+      "plannedStage": "nightmare_mall",
+      "replacementStage": "apartment_roof",
+      "reason": "Inspected native views did not sufficiently document the six-tunnel arena. No invented full room is delivered from the worm close-up; the missing Daisy Villa rooftop stage is sourced instead.",
+      "evidence": "group-a delivery and reference report"
+    }
+  ],
+  "basePublication": {
+    "commit": "2db0c78284f681d641d439c62e1bd4487838677e",
+    "generalQA": "success",
+    "httpBrowserQA": "success",
+    "generalRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44507254604",
+    "browserRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44507254574"
+  },
+  "deliveredCount": 11,
+  "deliveredStageIds": [
+    "sewers",
+    "lakeside_sh3",
+    "nightmare_hospital_sh3",
+    "dark_shrine",
+    "school_shf",
+    "hinako_home",
+    "corrupted_ebisugaoka",
+    "hospital_world",
+    "artaud_theater",
+    "devils_pit",
+    "overlook"
+  ],
+  "deferredAfterSourceReview": [
+    {
+      "stageId": "apartment_roof",
+      "reason": "Guide/storyboard sources showed the Missionary in isolation and no sufficiently documented full rooftop. No asset generated or substituted."
+    }
+  ]
+}

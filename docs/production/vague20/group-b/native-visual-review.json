@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "batch": "stage-pass20-b",
+  "createdAt": "2026-11-19T12:24:59.890274+00:00",
+  "reviewer": "/root/wave19_fighters",
+  "method": "Inspection visuelle effective des quatre PNG via view_image, après intégration et rendu par le moteur ; les observations ne sont pas déduites des seules dimensions ou mesures d’alpha.",
+  "imageSource": "Captures du canvas natif 1280×720 produites par le harness du dépôt scripts/qa-stage-pass20-native.mjs, fournies par le parent. Ce sont des captures du jeu du projet, pas des captures originales de Silent Hill f.",
+  "result": "accepted-for-stage-image-integration",
+  "blockingDefects": [],
+  "nonBlockingAssetDefects": [],
+  "newGenerationNecessary": false,
+  "images": [
+    {
+      "stageId": "dark_shrine",
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/dark_shrine.png",
+      "sha256": "edd8d99657c4f8c9e7509fc1a82cc8b1df142626cea163fce848d4ee24f6a90e",
+      "bytes": 1296354,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "visuallyInspected": true,
+      "result": "pass",
+      "observations": {
+        "combatReadability": "Les deux silhouettes et leurs armes se détachent du fond. Le centre entre les combattants reste libre ; les portes, marches, lanternes et le Hokora sont lisibles derrière eux.",
+        "groundSupport": "Les semelles reposent sur le parvis horizontal devant les marches. Les pierres et herbes du premier plan restent en bas de l’écran et ne masquent pas les pieds.",
+        "foregroundTransparency": "Aucun rectangle opaque, damier, halo noir ou rupture visible autour des touffes et pierres dans le composite réel.",
+        "hud": "Noms, barres, compteur et intitulé de scène restent lisibles et non recouverts."
+      }
+    },
+    {
+      "stageId": "school_shf",
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/school_shf.png",
+      "sha256": "976e10e21cbf07ed970fc1bb997558426dc06f0d0fa8d0bb4bc4a6fc777026e4",
+      "bytes": 1212537,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "visuallyInspected": true,
+      "result": "pass",
+      "observations": {
+        "combatReadability": "La bibliothèque à gauche, le coffret et le planning identifient le bureau. Les combattants restent distincts des boiseries ; le centre du duel n’est encombré par aucun meuble.",
+        "groundSupport": "Les pieds sont visibles sur le plancher, devant la jonction avec le mur. La bande au sol reste continue sous les deux acteurs.",
+        "foregroundTransparency": "Le montant proche reste au bord gauche et la végétation au coin droit. Leurs raccords avec le fond ne révèlent ni carte opaque ni frange colorée visible.",
+        "hud": "Les barres et le titre du bureau sont lisibles. La mention de terrain neutre est expliquée par la configuration du harness ci-dessous."
+      }
+    },
+    {
+      "stageId": "hinako_home",
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/hinako_home.png",
+      "sha256": "b813f1a2edc3aecfc40054d8b2d497dba2ebbd94aa1dfcc68bd9961468d57660",
+      "bytes": 1159000,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "visuallyInspected": true,
+      "result": "pass",
+      "observations": {
+        "combatReadability": "La porte quadrillée, le calendrier et le mur restent identifiables. La lumière sur le bois sépare bien le combattant gauche ; le combattant droit reste lisible sur les boiseries.",
+        "groundSupport": "Les quatre appuis visibles reposent sur le plancher éclairé, sans impression de flottement ni objet devant les semelles.",
+        "foregroundTransparency": "Les deux jambages sont confinés aux bords, sans traverse devant les acteurs. Les traces colorées vues dans la prévisualisation alpha isolée n’apparaissent pas dans ce composite.",
+        "hud": "Noms, barres et libellé Residence I sont lisibles et sans débordement."
+      }
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/corrupted_ebisugaoka.png",
+      "sha256": "a9c4785c655336bce4a94da5d39c94f945c173154596c7192dbe2f4c92565be0",
+      "bytes": 1372996,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "visuallyInspected": true,
+      "result": "pass",
+      "observations": {
+        "combatReadability": "La façade, les marches et les pots restent visibles derrière le duel. La flore rouge se tient aux marges ; le centre laisse lire les silhouettes et les armes.",
+        "groundSupport": "Les pieds reposent sur le parvis continu devant les marches. Les fleurs proches ne passent pas devant les appuis.",
+        "foregroundTransparency": "Aucune plaque de fond, damier ou halo de détourage visible autour du vélo ou des plantes.",
+        "bicycleJoin": "Le vélo rejoint naturellement le bord gauche et son pneu avant se lit au contact du sol proche. La partie arrière coupée est cohérente avec la capture source. La roue reste à gauche du combattant dans cette vue et ne coupe pas sa silhouette.",
+        "hud": "Les barres, le nom du parvis et le compteur restent visibles ; aucun élément proche ne recouvre le HUD."
+      }
+    }
+  ],
+  "hudContext": {
+    "visibleText": "BÉTON SEC",
+    "classification": "Expected harness configuration, not an image defect",
+    "explanation": "Le harness force stageTerrain:false ; FightEngine.currentTerrain() renvoie alors le profil neutre concrete. Cela explique la mention sur les scènes à plancher bois sans remettre en cause la matière des PNG.",
+    "codeEvidence": [
+      {
+        "path": "scripts/qa-stage-pass20-native.mjs",
+        "line": 84,
+        "setting": "stageTerrain:false"
+      },
+      {
+        "path": "src/fight.js",
+        "line": 1994,
+        "behavior": "currentTerrain() returns the concrete profile when stageTerrain is false"
+      },
+      {
+        "path": "src/stage-director.js",
+        "line": 87,
+        "definition": "concrete name is BÉTON SEC"
+      }
+    ]
+  },
+  "limits": [
+    "Cette revue porte sur les quatre vues statiques fournies ; elle ne certifie pas à elle seule toutes les positions de caméra ou toutes les poses.",
+    "Fidélité 1:1, géométrie source exacte et UHD non certifiées.",
+    "Aucune édition du dépôt, nouvelle génération ou modification de pixels effectuée pendant cette revue."
+  ]
+}

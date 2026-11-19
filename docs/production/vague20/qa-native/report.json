@@ -1,0 +1,5837 @@
+{
+  "schema": 1,
+  "label": "stage-pass20-native",
+  "generatedAt": "2026-11-19T12:23:22.800Z",
+  "root": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "sewers",
+    "lakeside_sh3",
+    "nightmare_hospital_sh3",
+    "dark_shrine",
+    "school_shf",
+    "hinako_home",
+    "corrupted_ebisugaoka",
+    "hospital_world",
+    "artaud_theater",
+    "devils_pit",
+    "overlook"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/dark_shrine.background.2664d35ea297.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/dark_shrine.background.2664d35ea297.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/school_shf.background.360ffba8283b.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/school_shf.background.360ffba8283b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/school_shf.foreground.a50d69a51274.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/school_shf.foreground.a50d69a51274.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/hinako_home.background.90570edd1d72.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/hinako_home.background.90570edd1d72.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "passed": true
+    },
+    {
+      "name": "sewers: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "sewers: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "sewers: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sewers: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "sewers: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "sewers: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "sewers: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "sewers: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "sewers: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "sewers: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "sewers: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "sewers: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "sewers: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "sewers: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "sewers: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "sewers: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "sewers: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "sewers: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "sewers: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "sewers: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "sewers: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "sewers: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "sewers: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "sewers: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "sewers: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "lakeside_sh3: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "lakeside_sh3: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "lakeside_sh3: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "lakeside_sh3: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "lakeside_sh3: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "lakeside_sh3: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "lakeside_sh3: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "nightmare_hospital_sh3: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "nightmare_hospital_sh3: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "dark_shrine: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "dark_shrine: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "dark_shrine: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "dark_shrine: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "dark_shrine: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "dark_shrine: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "dark_shrine: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "school_shf: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "school_shf: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "school_shf: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "school_shf: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "school_shf: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "school_shf: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "school_shf: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "school_shf: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "school_shf: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "school_shf: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "school_shf: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "school_shf: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "school_shf: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "school_shf: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "school_shf: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "school_shf: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "school_shf: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "school_shf: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "school_shf: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "school_shf: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "school_shf: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "school_shf: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "school_shf: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "school_shf: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "school_shf: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "hinako_home: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "hinako_home: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "hinako_home: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "hinako_home: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "hinako_home: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "hinako_home: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "hinako_home: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "corrupted_ebisugaoka: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "corrupted_ebisugaoka: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "hospital_world: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "hospital_world: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "hospital_world: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "hospital_world: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "hospital_world: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "hospital_world: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "hospital_world: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "artaud_theater: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "artaud_theater: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "artaud_theater: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "artaud_theater: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "artaud_theater: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "artaud_theater: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "artaud_theater: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "devils_pit: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "devils_pit: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "devils_pit: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "devils_pit: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "devils_pit: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "devils_pit: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "devils_pit: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "overlook: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "overlook: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "overlook: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "overlook: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "overlook: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "overlook: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "overlook: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "overlook: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "overlook: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "overlook: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "overlook: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "overlook: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "overlook: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "overlook: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.7668000000000018
+        ],
+        "expected": [
+          0,
+          -0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "overlook: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "overlook: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "overlook: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "overlook: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "overlook: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "overlook: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "overlook: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.7667999999999984
+        ],
+        "expected": [
+          0,
+          0.7668000000000011
+        ]
+      }
+    },
+    {
+      "name": "overlook: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "overlook: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "overlook: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "overlook: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/dark_shrine.background.2664d35ea297.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/school_shf.background.360ffba8283b.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/school_shf.foreground.a50d69a51274.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/hinako_home.background.90570edd1d72.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "sha256": "9572d9592225a1014a0d9cf914a5834ddad5e2795887ac35b058eaad4999db10",
+      "bytes": 2499871,
+      "width": 1671,
+      "height": 941,
+      "rgbaSha256": "b753d364ed06fc1e125116ad3d93971deb3c2dabd7ab7ee8b593e1eaef1b935d"
+    },
+    {
+      "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "sha256": "5698b0266f8c9ea3bbfe2097e6feec0f10cbcc5aaefc998c1b548f08a01bab32",
+      "bytes": 316219,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "f4c52aabf8a09dffc0b08376efc7e01cff1d4a8fa7e089760f9099fdab63f5dc"
+    },
+    {
+      "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "sha256": "bdd844f50ec7c6d96d60502aa5e23afdb0f8c0aa9ac33529e0154c7763ac2949",
+      "bytes": 2284992,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "ff6c90dcaf4b64529e974bb6415c1adbaac5972e4bda0330053c2746b06afeca"
+    },
+    {
+      "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "sha256": "4249d9b871856257e242050e0da77d741e61e0e16f8a501992c6e8f98f151ce2",
+      "bytes": 214606,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "f1519af7da09a5a9b73f0d0110cfe299eb99ee0e6335fac6117ef6c1ab2c38cb"
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "sha256": "a60fa6d89fbf8f0d0854453a45597724a1a44e783e2cdf5dd4deeb91f460d51a",
+      "bytes": 2501782,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "2a16c2982f9f1da52c0d60eb7c792e891a69ba8980df562b8106b9b4171b49b9"
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "sha256": "1d8e55fb19ab4cfba5b3a830489b87aa561e3077bc984d8a1efd8750139c1fe0",
+      "bytes": 391266,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "24a911a2fa9bdb44a20c6713dd05adcdbc8f4948aeb83524ab62625b9e9f9040"
+    },
+    {
+      "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+      "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+      "bytes": 2294268,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "f00894779beb0937f8a9422fd583ae7ebd2733bf5b3dff8a9144270053a96aa3"
+    },
+    {
+      "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "sha256": "2abdd42961b578991e4b0f5670ffcab08a2678af7bf0a5930976b1af1d64dcff",
+      "bytes": 132551,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "94ad2d05044dc2d25f4fd5f39f07a5d3158f1e65d8739dcb4584a82c595bb39f"
+    },
+    {
+      "path": "assets/stages/school_shf.background.360ffba8283b.png",
+      "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+      "bytes": 2265328,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "4b59329056e34c550429ca693c26d18801753495b3a6fcc3399c382cd1d77f31"
+    },
+    {
+      "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+      "sha256": "a50d69a51274e519af937eea250adced9eaa18c554b0245c2a8eccddbe74d9ce",
+      "bytes": 185180,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "ba88e086fb6b8e9f684420ea415667808cb7cac234ddffba944ec0acaeccd919"
+    },
+    {
+      "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+      "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+      "bytes": 2117156,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "fe55d8032c3633872a20d0a0625703749cebab01a0d56182de1eb995846bd474"
+    },
+    {
+      "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "sha256": "e1ab86dcc94ac3a1bc1adcc212f75df96062367d02b5d5be9b9ff06ad9d3813b",
+      "bytes": 204582,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "bbd5baf3147443cd58947db9d51ea8e72b2cc322cf7ff2fd4157367945131f13"
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+      "bytes": 2452216,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "27aa34abac744444564e0c8ae4e1882ed4225778695eff93a8cd871465ae3f69"
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "sha256": "097c19a0598acde9f37df4fdde9533f2c4ae0f9cd05c4b271ea0b3e0197db4bc",
+      "bytes": 299193,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "764afdfddf51b530c7ee4a531c7ca94ca50627ad00002df28869acc758b8735c"
+    },
+    {
+      "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "sha256": "0bb80f0606449b629f834810497a61d800e7dc1d3d885568b0071ae91e250910",
+      "bytes": 2109114,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "140ff2ad527429e3a6a49d2ec14a5d1fb1043b6aff3d5cdbf368fb6676d8808a"
+    },
+    {
+      "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "sha256": "d94873aa3fe8d3321442db077fd37fc25f35bab8c9ba333f6b688af57c4d15bd",
+      "bytes": 288757,
+      "width": 1671,
+      "height": 941,
+      "rgbaSha256": "b1bb8a9187e89e44172251003b1025fb5edacadd94faab8b56aec7f7d7fe5bab"
+    },
+    {
+      "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "sha256": "73ab43a7563e0aaa24a9c8b0fa8942b4201bb8e08f1c6c1b2bbf3bc6693f4b21",
+      "bytes": 2274126,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "ca5467794e384f2aad01e76230b95694789107f240be0f92f61306cf1761c059"
+    },
+    {
+      "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "sha256": "133f10a3b7775e1642def9f424fee9c9393544976943038a28f37373d24d545a",
+      "bytes": 377476,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "2bfea9dcee922512c2c308aeaff378dc64bdaf067776870708d7874d44d187ee"
+    },
+    {
+      "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "sha256": "406d6f6df55f370912c5ff5b2df6bb30f1846d5b65b59a192657c947081d0381",
+      "bytes": 2964994,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "d87192803691142339356f0d92e073af9ef0b5bdf43588da2cc28d3ea41f0ceb"
+    },
+    {
+      "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "sha256": "1858e96a1fd21deb630f02dd6a24f0947d968f041ec168380c8ca73fd304b57b",
+      "bytes": 235056,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "325f8822f081f0b642149758d06f006cc491a6cfe639f74f9ed624b7d9bc8697"
+    },
+    {
+      "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "sha256": "da91aaa922c03b973ee7ffb7ade47a91cd2aef81244be1f813fce4526d98bdc5",
+      "bytes": 2595719,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "6ee7f72b89c8a08fff416528edaf3a05a0c493a0eebb2b4ccf0be32488efc615"
+    },
+    {
+      "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "sha256": "29b757fe46c2e25ab7da25f70081adedcd66f951af5c5ddb081458f867433b84",
+      "bytes": 418385,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "cfab86bfbecfe15d3219c619fb64674bacb0980d168a9631f1d9edff09b84880"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "sewers",
+      "source": "sh3",
+      "scene": "underpass-bridge-after-hair-dryer",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "lakeside_sh3",
+      "source": "sh3",
+      "scene": "happy-carousel-before-transition",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "source": "sh3",
+      "scene": "brookhaven-3f-storeroom-mirror",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "dark_shrine",
+      "source": "shf",
+      "scene": "shrine-vault-forecourt-closed",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "school_shf",
+      "source": "shf",
+      "scene": "staff-room-key-cabinet",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/school_shf.background.360ffba8283b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/school_shf.background.360ffba8283b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/school_shf.background.360ffba8283b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/school_shf.background.360ffba8283b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "hinako_home",
+      "source": "shf",
+      "scene": "residence-i-entry-corridor",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "source": "shf",
+      "scene": "shimizu-forecourt-part5",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "hospital_world",
+      "source": "sh4",
+      "scene": "hospital-second-floor-corridor",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+              "args": [
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+              "args": [
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+              "args": [
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "artaud_theater",
+      "source": "origins",
+      "scene": "normal-theater-forest-set-lit",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+              "args": [
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+              "args": [
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+              "args": [
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "devils_pit",
+      "source": "downpour",
+      "scene": "water-wheels-cavern-dry-catwalk",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+              "args": [
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+              "args": [
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+              "args": [
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "overlook",
+      "source": "downpour",
+      "scene": "block-a-a2-before-flooded-vision",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.7668000000000018
+          ],
+          "expected": [
+            0,
+            -0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+              "args": [
+                -0.7668000000000018,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.7667999999999984
+          ],
+          "expected": [
+            0,
+            0.7668000000000011
+          ],
+          "before": [
+            {
+              "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+              "args": [
+                -0.8233372054929737,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+              "args": [
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+              "args": [
+                -0.05653720549297532,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "sewers.png",
+      "stageId": "sewers",
+      "sha256": "c1ff3b3a5c8c76de698e509bc22cd635ddb6c8d984541c21f15372d73b68cba6",
+      "bytes": 1417752,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "lakeside_sh3.png",
+      "stageId": "lakeside_sh3",
+      "sha256": "42de0d887ccc5d6ac71a99d44967181cdaca51272b79d851df681bd537298297",
+      "bytes": 1344486,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "nightmare_hospital_sh3.png",
+      "stageId": "nightmare_hospital_sh3",
+      "sha256": "cb75bf5868686eb204ebd95cd290e253a15acdb484165ce018eae5643ae9c0dc",
+      "bytes": 1431019,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "dark_shrine.png",
+      "stageId": "dark_shrine",
+      "sha256": "edd8d99657c4f8c9e7509fc1a82cc8b1df142626cea163fce848d4ee24f6a90e",
+      "bytes": 1296354,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "school_shf.png",
+      "stageId": "school_shf",
+      "sha256": "976e10e21cbf07ed970fc1bb997558426dc06f0d0fa8d0bb4bc4a6fc777026e4",
+      "bytes": 1212537,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "hinako_home.png",
+      "stageId": "hinako_home",
+      "sha256": "b813f1a2edc3aecfc40054d8b2d497dba2ebbd94aa1dfcc68bd9961468d57660",
+      "bytes": 1159000,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "corrupted_ebisugaoka.png",
+      "stageId": "corrupted_ebisugaoka",
+      "sha256": "a9c4785c655336bce4a94da5d39c94f945c173154596c7192dbe2f4c92565be0",
+      "bytes": 1372996,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "hospital_world.png",
+      "stageId": "hospital_world",
+      "sha256": "dc40a6b04bc7864337cf4eede50bd775d69e8820e1118f9836b24cd8c12b22ef",
+      "bytes": 1131105,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "artaud_theater.png",
+      "stageId": "artaud_theater",
+      "sha256": "87a328af49ae16352d399797264a6b33451debc82482667c18b88566f8040ff8",
+      "bytes": 1274197,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "devils_pit.png",
+      "stageId": "devils_pit",
+      "sha256": "f41b4690c699b648ba3414c7b3ef0b415e12a14b058235abac1c5779ca275c98",
+      "bytes": 1567656,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "overlook.png",
+      "stageId": "overlook",
+      "sha256": "0c7765ec7c70c525f24561f0e1a6c925c917a6aa73a2cdba03c26f7bcc80de09",
+      "bytes": 1456388,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "0a831fb6bd3a240985162e096d7c2c330d1281f5439482153b0f5fa0dfa7f8ab",
+      "after": "0a831fb6bd3a240985162e096d7c2c330d1281f5439482153b0f5fa0dfa7f8ab"
+    },
+    "src/sprite-manifest.js": {
+      "before": "44547abeb82677bfeb0ea869be563a7fcc259cb8115f486007f9f5dfd8d1651c",
+      "after": "44547abeb82677bfeb0ea869be563a7fcc259cb8115f486007f9f5dfd8d1651c"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "53bb9214cf150b6a3ce567dcec3759daf3603a71565737dc72222afcb2e993f0",
+      "after": "53bb9214cf150b6a3ce567dcec3759daf3603a71565737dc72222afcb2e993f0"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "3451b1b5635471f23a17c3d6f30e9030694d5359cf1f42c126b99e21e5b80119",
+  "version": "0.9.6",
+  "passed": true,
+  "completedAt": "2026-11-19T12:23:31.505Z"
+}

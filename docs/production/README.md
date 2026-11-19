@@ -4,7 +4,20 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État actuel — vague 19 du 19 novembre 2026
+## État actuel — vague 20 du 19 novembre 2026
+
+**43 arènes bitmap sur 123 ; 80 restent sans bitmap.** La [vague 20](vague20/README.md)
+ajoute uniquement des décors manquants : onze lieux, chacun avec un fond et un
+premier plan transparent indépendant, soit 22 nouveaux PNG. Les trois lieux
+reportés et les 80 absences restantes sont documentés dans le relevé de cette
+passe. Les 32 compositions actives antérieures et leurs variantes sont préservées.
+
+Les combattants restent à **204 portraits, 135 vues latérales candidates et six
+clips animés**. Aucun moveset, règle de stage, sprite ou contenu de classeur n'est
+modifié dans cette passe. Le suivi courant des décors se trouve dans
+[l'audit de la vague 20](vague20/final-audit.json).
+
+## État précédent — vague 19 du 19 novembre 2026
 
 **204 portraits, 135 vues latérales candidates, 32 arènes bitmap sur 123 et 6
 clips réellement animés.** La [vague 19](vague19/README.md) ajoute six idles BoM
@@ -17,7 +30,7 @@ dans `data/sprite-coverage.json` : 26 portraits et 37 images de combat absents,
 distingue les références manquantes, les refus historiques et les usages hors
 combat. Aucun certificat de fidélité 1:1.
 
-Le classeur a été actualisé sur cette couverture : 330 cellules factuelles,
+Le classeur a été actualisé sur la couverture de la vague 19 : 330 cellules factuelles,
 80 formules conservées et recalculées, 177 blocs d'historique préservés. Le
 [rapport de mise à jour](vague19/README.md#classeur-actualisé) et les journaux
 distinguent cette actualisation des décisions de production existantes.

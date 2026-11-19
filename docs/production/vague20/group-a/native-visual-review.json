@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-19",
+  "reviewer": "wave19_stages / stage-pass20-a",
+  "scope": "Final three supplied native screenshots only; source files and descriptors read-only",
+  "result": "no concrete visual blocker in the three inspected stills",
+  "captures": [
+    {
+      "stageId": "sewers",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/sewers.png",
+      "sha256": "c1ff3b3a5c8c76de698e509bc22cd635ddb6c8d984541c21f15372d73b68cba6",
+      "bytes": 1417752,
+      "width": 1280,
+      "height": 720,
+      "method": "view_image inspection of the final supplied native capture",
+      "observations": {
+        "footing": "Les deux combattants reposent sur la surface du treillis ; aucun pied dans l’eau. Le correctif de hauteur de passerelle est effectif dans le rendu moteur.",
+        "readability": "Silhouettes et armes lisibles sur le mur olive ; la grande lame reste entière et la lampe n’obscurcit pas les acteurs.",
+        "alphaAndPlanes": "Les bordures en béton et leurs attaches se composent aux extrémités ; aucune plaque opaque, damier ou voile visible au centre. Le pont et l’eau sont séparés visuellement.",
+        "hud": "Noms, jauges et libellé APRÈS LE SÈCHE-CHEVEUX lisibles ; aucune bordure de décor devant le HUD.",
+        "scene": "Passerelle et eau sous le plateau, sans créature ajoutée ni courant électrique visible."
+      },
+      "blockingIssues": [],
+      "result": "visual-pass-for-inspected-still"
+    },
+    {
+      "stageId": "lakeside_sh3",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/lakeside_sh3.png",
+      "sha256": "42de0d887ccc5d6ac71a99d44967181cdaca51272b79d851df681bd537298297",
+      "bytes": 1344486,
+      "width": 1280,
+      "height": 720,
+      "method": "view_image inspection of the final supplied native capture",
+      "observations": {
+        "footing": "Les pieds sont posés sur les plaques continues du plateau du manège. Aucune sculpture ou barrière ne traverse la zone de duel.",
+        "readability": "Acteurs et armes restent détachés des chevaux et du hub. Les détails du fond sont plus hauts que les appuis ; aucun corps ou arme coupé.",
+        "alphaAndPlanes": "Deux pôles de premier plan restent sur les bords. Le centre est libre sans matte visible, cohérent avec les mesures alpha des fichiers.",
+        "hud": "Noms, jauges et libellé AVANT LA TRANSITION DU CARROUSEL lisibles. La canopy reste derrière le HUD.",
+        "scene": "Trois sculptures de chevaux sur mâts fixes, hub et canopy présents ; aucun gaz, Alessa, Cybil ou autre personne ajoutée au décor."
+      },
+      "blockingIssues": [],
+      "result": "visual-pass-for-inspected-still"
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/nightmare_hospital_sh3.png",
+      "sha256": "cb75bf5868686eb204ebd95cd290e253a15acdb484165ce018eae5643ae9c0dc",
+      "bytes": 1431019,
+      "width": 1280,
+      "height": 720,
+      "method": "view_image inspection of the final supplied native capture",
+      "observations": {
+        "footing": "Les deux combattants reposent sur le sol carrelé devant le cadre du miroir. Aucun meuble ne se trouve sous leurs appuis.",
+        "readability": "Armes et corps complets lisibles sur le carrelage et le fond brun. La grande lame ne rencontre aucun obstacle de premier plan.",
+        "alphaAndPlanes": "Les jambages rouillés restent latéraux et le centre reste transparent. Aucun halo évident ou rectangle opaque ajouté au centre. Le bassin et son reflet demeurent à l’arrière.",
+        "hud": "Noms et jauges lisibles ; libellé OTHERWORLD visible. Les jambages ne recouvrent pas les informations utiles.",
+        "scene": "Grand miroir et bassin utilitaire avec contamination sombre fixe ; absence de reflet humain ajoutée au bitmap. Aucun reflet dynamique des combattants n’est revendiqué."
+      },
+      "blockingIssues": [],
+      "result": "visual-pass-for-inspected-still"
+    }
+  ],
+  "runtimeEvidence": {
+    "reportedBy": "parent /root",
+    "checksPassed": 356,
+    "rerunByReviewer": false
+  },
+  "limits": [
+    "A still verifies composition, footing, legibility and absence of visible matte; it does not independently demonstrate parallax movement over time.",
+    "Separate layers and parallax descriptors were previously validated; dynamic motion is covered by the parent harness, not inferred from these stills.",
+    "No new duel session, attack, animation, browser campaign, fidelity certification or UHD claim made.",
+    "Only the shown orientation and positions are visually reviewed here; no unseen frame or opposite-side result is invented."
+  ],
+  "sourceClosure": {
+    "deliveredStages": [
+      "sewers",
+      "lakeside_sh3",
+      "nightmare_hospital_sh3"
+    ],
+    "deferred": [
+      "nightmare_mall",
+      "apartment_roof"
+    ],
+    "manifest": "/workspace/scratch/8edddaaaab76/stage-pass20-a/delivery.json",
+    "guideSources": "/workspace/scratch/8edddaaaab76/stage-pass20-a/guide-sources.json",
+    "summary": "/workspace/scratch/8edddaaaab76/stage-pass20-a/qa-summary.md"
+  },
+  "changes": "Only this review JSON and a closure note in the isolated report; no repository, asset or descriptor edited."
+}

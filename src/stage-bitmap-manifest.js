@@ -1963,5 +1963,706 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Palier devant la porte du Lounge d’Ernest, Born from a Wish SH2 original. Porte fermée et matériaux repris de la capture ; vue large et retours latéraux reconstruits pour versus. Aucune bougie du grenier, aucun corps d’Ernest. Montants de bois proches semi-opaques alpha max208/255. Deux PNG statiques natifs 1672×941 : fond opaque et plan proche alpha séparé. Parallaxe proposée .012 ; aucune nouvelle règle de combat/terrain, cadence source ou fidélité 1:1."
+  },
+  "dark_shrine": {
+    "stageId": "dark_shrine",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shrine-vault-forecourt-closed",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT33",
+      "EXT34",
+      "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+      "EXT10_SHF_SHRINE_HOKORA_20261026"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+            "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+            "bytes": 2294268,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+            "sha256": "2abdd42961b578991e4b0f5670ffcab08a2678af7bf0a5930976b1af1d64dcff",
+            "bytes": 132551,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Parvis extérieur devant les portes fermées de Shrine Vault, Hokora à gauche, lanternes et marches derrière une bande de sol libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+  },
+  "school_shf": {
+    "stageId": "school_shf",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "staff-room-key-cabinet",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT32",
+      "EXT10_SHF_SCHOOL_GUIDE_20261026",
+      "EXT10_SHF_STAFF_ROOM_20261026"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/school_shf.background.360ffba8283b.png",
+            "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+            "bytes": 2265328,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+            "sha256": "a50d69a51274e519af937eea250adced9eaa18c554b0245c2a8eccddbe74d9ce",
+            "bytes": 185180,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Bureau du personnel identifiable : bibliothèque vitrée/globe à gauche, coffret mural et planning à droite, plancher libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+  },
+  "hinako_home": {
+    "stageId": "hinako_home",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "residence-i-entry-corridor",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT34",
+      "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+      "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+            "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+            "bytes": 2117156,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+            "sha256": "e1ab86dcc94ac3a1bc1adcc212f75df96062367d02b5d5be9b9ff06ad9d3813b",
+            "bytes": 204582,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Corridor à plancher bois avec porte quadrillée fermée, enduit et poutres, petit calendrier ; aucun tatami, acteur ou HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+  },
+  "corrupted_ebisugaoka": {
+    "stageId": "corrupted_ebisugaoka",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shimizu-forecourt-part5",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT32",
+      "EXT_SHF_EBISUGAOKA5_20261025",
+      "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+            "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+            "bytes": 2452216,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+            "sha256": "097c19a0598acde9f37df4fdde9533f2c4ae0f9cd05c4b271ea0b3e0197db4bc",
+            "bytes": 299193,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Façade et parvis documentés de Shimizu Part 5 ; pots à droite, linge à gauche, végétation rouge aux marges, espace central libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+  },
+  "hospital_world": {
+    "stageId": "hospital_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "hospital-second-floor-corridor",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH4_07_HOSPITAL_WORLD"
+    ],
+    "layers": [
+      {
+        "id": "second-floor-hall",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+            "sha256": "0bb80f0606449b629f834810497a61d800e7dc1d3d885568b0071ae91e250910",
+            "bytes": 2109114,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jamb",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+            "sha256": "d94873aa3fe8d3321442db077fd37fc25f35bab8c9ba333f6b688af57c4d15bd",
+            "bytes": 288757,
+            "width": 1671,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "SH4 2004 Hospital World, couloir des chambres 2F. Portes closes et luminaires bas conservés ; aucun fauteuil ennemi, patient ou tête géante. Vue latérale et espacement reconstruits depuis une capture axiale imprimée ; textures, nombre de portes et largeur ne sont pas mesurés. Premier plan natif 1671×941 associé au fond 1672×941, fit stretch conservant toute la silhouette. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+  },
+  "artaud_theater": {
+    "stageId": "artaud_theater",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-theater-forest-set-lit",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT03",
+      "EXT_ORIGINS_THEATER_GUIDE_20261026"
+    ],
+    "layers": [
+      {
+        "id": "normal-forest-stage",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+            "sha256": "73ab43a7563e0aaa24a9c8b0fa8942b4201bb8e08f1c6c1b2bbf3bc6693f4b21",
+            "bytes": 2274126,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-open-curtains",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+            "sha256": "133f10a3b7775e1642def9f424fee9c9393544976943038a28f37373d24d545a",
+            "bytes": 377476,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Origins 2007 Artaud : scène normale éclairée après lever du rideau, réglage de décor forestier visible dans le guide officiel. Panneaux peints, ouverture centrale et petit arbre accessoire ; aucun passage au monde forestier Otherworld. État resserré par rapport au triage initial : décor forestier installé dans le théâtre normal. Cadrage élargi, proportions et espace de duel adaptés ; aucune fusion bibliothèque/grotte/Otherworld. Matière des rideaux interprétée depuis les bords de scène. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+  },
+  "devils_pit": {
+    "stageId": "devils_pit",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "water-wheels-cavern-dry-catwalk",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT11"
+    ],
+    "layers": [
+      {
+        "id": "upper-cavern-wheels",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+            "sha256": "406d6f6df55f370912c5ff5b2df6bb30f1846d5b65b59a192657c947081d0381",
+            "bytes": 2964994,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-timber-brace",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+            "sha256": "1858e96a1fd21deb630f02dd6a24f0947d968f041ec168380c8ca73fd304b57b",
+            "bytes": 235056,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Downpour 2012 Devil’s Pit, Upper Caverns : chambre des roues hydrauliques/lift depuis la coursive sèche, avant départ vers Deep Mines. Déploiement latéral et espacement adaptés des captures Prima 02d-017/018. Roues, lift et conduites restent statiques ; pas de puzzle rejoué, pas d’eau sur le plateau, ni fusion avec la cave inondée, le train ou l’attraction extérieure. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+  },
+  "overlook": {
+    "stageId": "overlook",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "block-a-a2-before-flooded-vision",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT11"
+    ],
+    "layers": [
+      {
+        "id": "block-a-a2-gallery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+            "sha256": "da91aaa922c03b973ee7ffb7ade47a91cd2aef81244be1f813fce4526d98bdc5",
+            "bytes": 2595719,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-rusted-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "stretch",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+            "sha256": "29b757fe46c2e25ab7da25f70081adedcd66f951af5c5ddb081458f867433b84",
+            "bytes": 418385,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Downpour 2012 Overlook Penitentiary, coursive Cells A2 du Block A après escalier, avant barrière de fil barbelé et vision du couloir inondé. Caméra réorientée transversalement vers la galerie opposée ; répétition des cellules, largeur et lumière adaptées, non relevées architecturalement. Aucun plan Homecoming, émeute, corps, fil électrique, pluie ou inondation. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+  },
+  "lakeside_sh3": {
+    "stageId": "lakeside_sh3",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "happy-carousel-before-transition",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+    ],
+    "layers": [
+      {
+        "id": "happy-carousel-before-transition",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+            "sha256": "bdd844f50ec7c6d96d60502aa5e23afdb0f8c0aa9ac33529e0154c7763ac2949",
+            "bytes": 2284992,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-canopy-poles",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+            "sha256": "4249d9b871856257e242050e0da77d741e61e0e16f8a501992c6e8f98f151ce2",
+            "bytes": 214606,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Happy Carousel SH3 avant transition et Memory of Alessa ; trois sculptures sur mâts fixes, sans gaz ni personne.",
+      "Cadrage latéral reconstruit ; les trois chevaux représentent une partie des douze. Plateau couvert rouille, sans sol extérieur mouillé.",
+      "Deux plans statiques distincts ; aucune rotation ou animation de chevaux produite."
+    ]
+  },
+  "nightmare_hospital_sh3": {
+    "stageId": "nightmare_hospital_sh3",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "brookhaven-3f-storeroom-mirror",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_12_NIGHTMARE_HOSPITAL"
+    ],
+    "layers": [
+      {
+        "id": "mirror-storeroom",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+            "sha256": "a60fa6d89fbf8f0d0854453a45597724a1a44e783e2cdf5dd4deeb91f460d51a",
+            "bytes": 2501782,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-doorjambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+            "sha256": "1d8e55fb19ab4cfba5b3a830489b87aa561e3077bc984d8a1efd8750139c1fe0",
+            "bytes": 391266,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Réserve 3F de Brookhaven Otherworld : grand miroir, bassin utilitaire et traces sombres fixes, sans reflet humain.",
+      "Reconstruction latérale du lieu ; capture native republiée par Den of Geek, plateforme exacte de cette capture non vérifiée indépendamment.",
+      "Aucune contamination animée ni reflet dynamique produit ; aucune salle téléphonique ou bassin Leonard substitué."
+    ]
+  },
+  "sewers": {
+    "stageId": "sewers",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "underpass-bridge-after-hair-dryer",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_05_UNDERPASS"
+    ],
+    "layers": [
+      {
+        "id": "channel-after-dryer",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+            "sha256": "9572d9592225a1014a0d9cf914a5834ddad5e2795887ac35b058eaad4999db10",
+            "bytes": 2499871,
+            "width": 1671,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-basin-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+            "sha256": "5698b0266f8c9ea3bbfe2097e6feec0f10cbcc5aaefc998c1b548f08a01bab32",
+            "bytes": 316219,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Passerelle du canal après usage du sèche-cheveux ; câble posé au bord, eau sous le plateau, aucun ennemi vivant ni courant actif.",
+      "L’architecture est guidée par la capture du pont lors de la rencontre ; la phase après sèche-cheveux est une reconstruction fondée sur la fiche et le guide.",
+      "Une correction imagegen ciblée a élargi la passerelle afin que y=82,5% tombe sur le treillis. Aucun pixel modifié par script.",
+      "Le fond livré mesure 1671×941 et le premier plan 1672×941. fit=cover conserve les proportions ; différence de largeur de 1 pixel source, sans recadrage matériel."
+    ]
   }
 };
