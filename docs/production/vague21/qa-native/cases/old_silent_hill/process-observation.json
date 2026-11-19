@@ -1,0 +1,27 @@
+{
+  "stageId": "old_silent_hill",
+  "startedAt": "2026-11-19T13:35:42.432Z",
+  "completedAt": "2026-11-19T13:35:44.470Z",
+  "durationMs": 2037,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=128",
+    "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+    "--stages=old_silent_hill",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/old_silent_hill"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "passed": true,
+  "report": "cases/old_silent_hill/report.json",
+  "stdout": "cases/old_silent_hill/process.stdout.log",
+  "stderr": "cases/old_silent_hill/process.stderr.log",
+  "reportSHA256": "6e69aa4c6148811a872d207ab332554ea8ff5ba75bc732f79f4cf9238c38e3d4",
+  "checks": 46,
+  "nodeExecArgv": [
+    "--max-old-space-size=128"
+  ],
+  "harnessSHA256": "1d589b3dc17f2a7b0d7555e95fd4b85fd2d7bbeba25276a55332001a450c195c",
+  "execInitialYieldTimeMs": 30000,
+  "observationSource": "Actual child-process close event in sequential orchestrator; successful reports and capture hashes checked before recording."
+}

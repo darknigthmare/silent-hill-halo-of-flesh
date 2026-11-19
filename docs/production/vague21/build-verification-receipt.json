@@ -1,0 +1,268 @@
+{
+  "schema": 1,
+  "startedAt": "2026-11-19T14:01:03.217466+00:00",
+  "completedAt": "2026-11-19T14:01:07.214761+00:00",
+  "durationSeconds": 3.997,
+  "command": [
+    "node",
+    "scripts/build.mjs",
+    "--verify-only"
+  ],
+  "exitCode": 0,
+  "passed": true,
+  "scriptSha256": "58ca58987e045a494dfb6bf73baee670ac658795eed68b3d22d9559f23081c1e",
+  "method": "Existing build --verify-only; its canonical JSON sync is recorded by SHA-256 before and after. No full dist build, test suite or native QA was rerun.",
+  "generatedJSONCount": 10,
+  "generatedJSONBeforeAfter": [
+    {
+      "path": "data/roster.json",
+      "before": {
+        "bytes": 1771325,
+        "sha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3"
+      },
+      "after": {
+        "bytes": 1771325,
+        "sha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/stages.json",
+      "before": {
+        "bytes": 1351594,
+        "sha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055"
+      },
+      "after": {
+        "bytes": 1351594,
+        "sha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/chronicles.json",
+      "before": {
+        "bytes": 8246,
+        "sha256": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d"
+      },
+      "after": {
+        "bytes": 8246,
+        "sha256": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/sources.json",
+      "before": {
+        "bytes": 1952,
+        "sha256": "a783771effa7918f62f64e99183ddf2e1768c8e804849860ebc60a7e79dc0f6f"
+      },
+      "after": {
+        "bytes": 1952,
+        "sha256": "a783771effa7918f62f64e99183ddf2e1768c8e804849860ebc60a7e79dc0f6f"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/content-stats.json",
+      "before": {
+        "bytes": 469,
+        "sha256": "eb077befd6b1b5f34033026a90bbc0729760f0e184744eac46f43baee52e9855"
+      },
+      "after": {
+        "bytes": 469,
+        "sha256": "eb077befd6b1b5f34033026a90bbc0729760f0e184744eac46f43baee52e9855"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/coverage-audit.json",
+      "before": {
+        "bytes": 3365,
+        "sha256": "a53eb073509cb51e15a28ba23237a4dd957ffbf1a006212795f040736a5118c8"
+      },
+      "after": {
+        "bytes": 3365,
+        "sha256": "a53eb073509cb51e15a28ba23237a4dd957ffbf1a006212795f040736a5118c8"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/stage-director.json",
+      "before": {
+        "bytes": 1280332,
+        "sha256": "b0a597ba83097720dc29364147713782b647e4c1bea7744ef7411bf1645965b7"
+      },
+      "after": {
+        "bytes": 1280332,
+        "sha256": "b0a597ba83097720dc29364147713782b647e4c1bea7744ef7411bf1645965b7"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/fatalities.json",
+      "before": {
+        "bytes": 356636,
+        "sha256": "cc34aa7607f7b9713678ea366c8e65ac8db01ee5fda117702bad5541505d724a"
+      },
+      "after": {
+        "bytes": 356636,
+        "sha256": "cc34aa7607f7b9713678ea366c8e65ac8db01ee5fda117702bad5541505d724a"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/movesets.json",
+      "before": {
+        "bytes": 10896605,
+        "sha256": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec"
+      },
+      "after": {
+        "bytes": 10896605,
+        "sha256": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec"
+      },
+      "unchanged": true
+    },
+    {
+      "path": "data/combat-rules.json",
+      "before": {
+        "bytes": 37894,
+        "sha256": "052288439869ea420162ddd1efd14018b80b6b0866d7cef95e78cb99dbcdfa9a"
+      },
+      "after": {
+        "bytes": 37894,
+        "sha256": "052288439869ea420162ddd1efd14018b80b6b0866d7cef95e78cb99dbcdfa9a"
+      },
+      "unchanged": true
+    }
+  ],
+  "protectedFileCount": 15,
+  "protectedFiles": [
+    {
+      "path": "art/registry.json",
+      "expectedSha256": "0a831fb6bd3a240985162e096d7c2c330d1281f5439482153b0f5fa0dfa7f8ab",
+      "actualSha256": "0a831fb6bd3a240985162e096d7c2c330d1281f5439482153b0f5fa0dfa7f8ab",
+      "expectedBytes": 708432,
+      "actualBytes": 708432,
+      "unchanged": true
+    },
+    {
+      "path": "data/sprite-coverage.json",
+      "expectedSha256": "9ef5620ebede9eef21f2f87750c112d8bea10f6c0002d839f65746bc50a73f2d",
+      "actualSha256": "9ef5620ebede9eef21f2f87750c112d8bea10f6c0002d839f65746bc50a73f2d",
+      "expectedBytes": 154684,
+      "actualBytes": 154684,
+      "unchanged": true
+    },
+    {
+      "path": "src/sprite-manifest.js",
+      "expectedSha256": "44547abeb82677bfeb0ea869be563a7fcc259cb8115f486007f9f5dfd8d1651c",
+      "actualSha256": "44547abeb82677bfeb0ea869be563a7fcc259cb8115f486007f9f5dfd8d1651c",
+      "expectedBytes": 786564,
+      "actualBytes": 786564,
+      "unchanged": true
+    },
+    {
+      "path": "data/roster.json",
+      "expectedSha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+      "actualSha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+      "expectedBytes": 1771325,
+      "actualBytes": 1771325,
+      "unchanged": true
+    },
+    {
+      "path": "data/movesets.json",
+      "expectedSha256": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
+      "actualSha256": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
+      "expectedBytes": 10896605,
+      "actualBytes": 10896605,
+      "unchanged": true
+    },
+    {
+      "path": "src/fight.js",
+      "expectedSha256": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "actualSha256": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "expectedBytes": 165508,
+      "actualBytes": 165508,
+      "unchanged": true
+    },
+    {
+      "path": "src/sprite-system.js",
+      "expectedSha256": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "actualSha256": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "expectedBytes": 14292,
+      "actualBytes": 14292,
+      "unchanged": true
+    },
+    {
+      "path": "src/sprite-animation.js",
+      "expectedSha256": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "actualSha256": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "expectedBytes": 5835,
+      "actualBytes": 5835,
+      "unchanged": true
+    },
+    {
+      "path": "src/versus.js",
+      "expectedSha256": "79081299a045d7423fbbb2731e7bf0d7723c7221c060250a69524c745eebb440",
+      "actualSha256": "79081299a045d7423fbbb2731e7bf0d7723c7221c060250a69524c745eebb440",
+      "expectedBytes": 54105,
+      "actualBytes": 54105,
+      "unchanged": true
+    },
+    {
+      "path": "data/stages.json",
+      "expectedSha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+      "actualSha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+      "expectedBytes": 1351594,
+      "actualBytes": 1351594,
+      "unchanged": true
+    },
+    {
+      "path": "src/renderers.js",
+      "expectedSha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "actualSha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "expectedBytes": 35565,
+      "actualBytes": 35565,
+      "unchanged": true
+    },
+    {
+      "path": "src/stage-bitmaps.js",
+      "expectedSha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "actualSha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "expectedBytes": 9122,
+      "actualBytes": 9122,
+      "unchanged": true
+    },
+    {
+      "path": "src/stage-bitmap-compositions.js",
+      "expectedSha256": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "actualSha256": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "expectedBytes": 5697,
+      "actualBytes": 5697,
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "expectedSha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "actualSha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "expectedBytes": 1776905,
+      "actualBytes": 1776905,
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/workbook-verification.json",
+      "expectedSha256": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+      "actualSha256": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+      "expectedBytes": 26403,
+      "actualBytes": 26403,
+      "unchanged": true
+    }
+  ],
+  "changedObservedFiles": [],
+  "distExistedBefore": false,
+  "distExistsAfter": false,
+  "diskFreeBytesBefore": 100917248,
+  "diskFreeBytesAfter": 100913152,
+  "log": "docs/production/vague21/build-verification.log",
+  "logSha256": "8f5c919ad8cc24c8fcf38d4b24677f76a49cc719e0fd029b511233efd4607e60"
+}

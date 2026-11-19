@@ -1,0 +1,26 @@
+/** Reopen the exported workbook and render one sheet per fresh process. */
+import fs from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+import {createHash} from 'node:crypto';
+import {SpreadsheetFile,FileBlob} from '@oai/artifact-tool';
+const arg=name=>process.argv.find(x=>x.startsWith(`--${name}=`))?.slice(name.length+3);
+if(!arg('output')||!['Corpus','Stages'].includes(arg('sheet')))throw Error('Use --output and --sheet=Corpus|Stages.');
+const out=resolve(arg('output')),sheetName=arg('sheet'),path=join(out,'SILENT_HILL_CORPUS_BIBLE.xlsx');
+const range=arg('range')||'A1:H15',region=arg('region')||'opening';
+if(!/^[a-z0-9-]+$/.test(region))throw Error('Invalid preview region name.');
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const reportPath=join(out,'workbook-verification.json'),report=JSON.parse(await fs.readFile(reportPath,'utf8'));
+if(hash(await fs.readFile(path))!==report.xlsx.sha256)throw Error('Export SHA mismatch.');
+const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path));wb.recalculate();
+const c=wb.worksheets.getItem('Corpus'),s=wb.worksheets.getItem('Stages'),v=(sheet,cell)=>sheet.getRange(cell).values[0][0];
+const actual={corpus:v(c,'B4'),originalOmissions:v(c,'E4'),stages:v(s,'B5'),active:v(s,'B4'),missingUnblocked:v(s,'E4'),blocked:v(s,'H4')};
+if(actual.corpus!==report.corpusRecords||actual.originalOmissions!==41||actual.stages!==report.stages.total||actual.active!==report.stages.bitmapActive||actual.missingUnblocked!==report.stages.missingUnblocked||actual.blocked!==report.stages.referenceBlocked)throw Error('Exported formula readback differs: '+JSON.stringify(actual));
+if(c.tables.items.length!==1||s.tables.items.length!==1)throw Error('Native tables were not preserved.');
+global.gc?.();
+const png=await wb.render({sheetName,range,scale:1,format:'png'}),bytes=new Uint8Array(await png.arrayBuffer());
+const file=sheetName.toLowerCase()+(region==='opening'?'':'-'+region)+'-preview.png';await fs.writeFile(join(out,file),bytes);
+if(hash(await fs.readFile(path))!==report.xlsx.sha256)throw Error('Readback modified exported workbook.');
+report.exportReadback='passed';report.readbackSummary=actual;
+report.renderedSheets=(report.renderedSheets||[]).filter(r=>r.sheet!==sheetName||(r.region||'opening')!==region).concat({sheet:sheetName,region,range,file,sha256:hash(bytes),bytes:bytes.length});
+await fs.writeFile(reportPath,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({sheet:sheetName,region,range,readback:actual,rendered:file,sha256:hash(bytes),memoryMiB:Math.round(process.memoryUsage().rss/1024/1024)}));

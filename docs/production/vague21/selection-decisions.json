@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "date": "2026-11-19",
+  "scope": "New art only for missing stage bitmaps; documentary bible extension and a companion workbook. No fighter, moveset, runtime stage rule or historical workbook changes.",
+  "plannedCount": 12,
+  "targetStageIds": [
+    "old_silent_hill",
+    "hospital_nightmare",
+    "sewer_resort",
+    "south_vale",
+    "hotel_otherworld",
+    "prison_meat_locker",
+    "grand_hotel",
+    "town_hall_hc",
+    "shepherd_house_hc",
+    "centennial_building",
+    "st_marias",
+    "shepherds_glen"
+  ],
+  "replacements": [
+    {
+      "plannedStage": "police_station_hc",
+      "replacementStage": "shepherds_glen",
+      "reason": "Inspected police-station views were predominantly dialogue closeups or a map. A native wide view of the Elle meeting noticeboard documents the existing Shepherds Glen stage policy. No generic police cell is generated."
+    }
+  ],
+  "basePublication": {
+    "commit": "2c16796e6b99bb71f79fdfcf45b9cd2a84838581",
+    "generalQA": "success",
+    "httpBrowserQA": "success",
+    "generalRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44525987478",
+    "browserRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44525987451",
+    "previousHttpBrowserObservation": "in_progress-at-last-observation",
+    "verifiedBy": "Root GitHub connector read after environment recovery on 2026-11-19; both base-commit workflow runs completed successfully.",
+    "appliesOnlyToBaseCommit": true
+  },
+  "deliveredCount": 12,
+  "deliveredStageIds": [
+    "old_silent_hill",
+    "hospital_nightmare",
+    "sewer_resort",
+    "south_vale",
+    "hotel_otherworld",
+    "prison_meat_locker",
+    "grand_hotel",
+    "town_hall_hc",
+    "shepherd_house_hc",
+    "centennial_building",
+    "st_marias",
+    "shepherds_glen"
+  ],
+  "deferredAfterSourceReview": [
+    {
+      "stageId": "police_station_hc",
+      "reason": "No sufficiently wide, verified cell architecture reference at this pass."
+    }
+  ],
+  "status": "integrated-and-verified",
+  "verificationCompletedAt": "2026-11-19T14:09:39.720930+00:00",
+  "verificationEvidence": [
+    "final-audit.json",
+    "qa-native/report.json",
+    "stage-tests.txt",
+    "build-verification-receipt.json",
+    "workbook/workbook-verification.json",
+    "corpus-audit/integration-review.json"
+  ]
+}

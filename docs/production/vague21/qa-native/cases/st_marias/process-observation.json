@@ -1,0 +1,27 @@
+{
+  "stageId": "st_marias",
+  "startedAt": "2026-11-19T13:36:02.209Z",
+  "completedAt": "2026-11-19T13:36:03.874Z",
+  "durationMs": 1665,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=128",
+    "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+    "--stages=st_marias",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/st_marias"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "passed": true,
+  "report": "cases/st_marias/report.json",
+  "stdout": "cases/st_marias/process.stdout.log",
+  "stderr": "cases/st_marias/process.stderr.log",
+  "reportSHA256": "c715a735bbeefbe1635b9258d60cbb5f2ba7c007f6c04cf22c7fc48117dc5703",
+  "checks": 46,
+  "nodeExecArgv": [
+    "--max-old-space-size=128"
+  ],
+  "harnessSHA256": "1d589b3dc17f2a7b0d7555e95fd4b85fd2d7bbeba25276a55332001a450c195c",
+  "execInitialYieldTimeMs": 30000,
+  "observationSource": "Actual child-process close event in sequential orchestrator; successful reports and capture hashes checked before recording."
+}

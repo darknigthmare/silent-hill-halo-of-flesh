@@ -1,0 +1,711 @@
+{
+  "observedAt": "2026-11-19T13:18:59.486Z",
+  "stages": [
+    {
+      "id": "old_silent_hill",
+      "source": "sh1",
+      "reference": {
+        "id": "old_silent_hill",
+        "source": "sh1",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "OLD SILENT HILL",
+        "correctedName": null,
+        "locationNote": "Rues du premier quartier de SH1 ; brouillard et neige distincts de la cendre du film.",
+        "referenceIds": [
+          "CL_SH1_01_OLD_SILENT_HILL"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Neige, visibilité réduite et rues coupées.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH1_01_OLD_SILENT_HILL"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Deux nappes de brouillard glissent à des vitesses différentes ; silhouettes lointaines seulement.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_01_OLD_SILENT_HILL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Un choc près de la devanture fait tinter l’enseigne du café, sans chute sur les combattants.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_01_OLD_SILENT_HILL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Une rafale de neige occulte brièvement le fond puis révèle la même rue intacte.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_01_OLD_SILENT_HILL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "snow",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "roadCollapse",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "fogDrift",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "weather",
+            "id": "fog",
+            "reason": "Ambiance remplacée par snow pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "old_silent_hill:reference:2",
+          "old_silent_hill:reference:1"
+        ],
+        "pendingProposalIds": [
+          "old_silent_hill:reference:3",
+          "old_silent_hill:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    },
+    {
+      "id": "hospital_nightmare",
+      "source": "sh1",
+      "reference": {
+        "id": "hospital_nightmare",
+        "source": "sh1",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "ALCHEMILLA — NIGHTMARE WARD",
+        "correctedName": null,
+        "locationNote": "Alchemilla Otherworld de SH1, avec le Bloodsucker de la chambre 204.",
+        "referenceIds": [
+          "CL_SH1_07_NIGHTMARE_HOSPITAL"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le paquet de sang détourne les tentacules.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH1_07_NIGHTMARE_HOSPITAL"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Une poche suspendue oscille au-dessus d’un récipient sans variation de collision.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_07_NIGHTMARE_HOSPITAL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Derrière une vitre, les tentacules se rapprochent d’une poche déplacée lors d’un impact de décor.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_07_NIGHTMARE_HOSPITAL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "La lumière du couloir baisse et expose les reliefs rouillés pendant l’annonce de manche.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_07_NIGHTMARE_HOSPITAL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [
+          "sirenCall"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "flicker",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "gurneyRush",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "gurneyRush",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "hospitalMonitor",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "hospital_nightmare:reference:1",
+          "hospital_nightmare:reference:2",
+          "hospital_nightmare:reference:3",
+          "hospital_nightmare:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    },
+    {
+      "id": "sewer_resort",
+      "source": "sh1",
+      "reference": {
+        "id": "sewer_resort",
+        "source": "sh1",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "SEWERS TO THE RESORT",
+        "correctedName": null,
+        "locationNote": "Égouts qui conduisent à la zone touristique dans SH1.",
+        "referenceIds": [
+          "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Hanged Scratchers occupent le plafond.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Gouttes individualisées dans le canal et reflet intermittent de la lampe.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Le fond de la grille résonne après un choc, suivi d’une silhouette retirant une patte au plafond.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Une poussée d’eau charrie de petits débris derrière la barrière pendant la pause de manche.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "water",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "steamRelease",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "waterSurge",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "steamVent",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "bloodTide",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "waterRipple",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "sewer_resort:reference:2"
+        ],
+        "pendingProposalIds": [
+          "sewer_resort:reference:1",
+          "sewer_resort:reference:3",
+          "sewer_resort:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    },
+    {
+      "id": "south_vale",
+      "source": "sh2",
+      "reference": {
+        "id": "south_vale",
+        "source": "sh2",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "SOUTH VALE STREETS",
+        "correctedName": null,
+        "locationNote": "South Vale Est de SH2 original ; préciser rue exacte et limites de parcours.",
+        "referenceIds": [
+          "CL_SH2_01_EAST_SOUTH_SIDE"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Des traces conduisent au premier Lying Figure.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH2_01_EAST_SOUTH_SIDE"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Brouillard rasant qui découvre une bordure de trottoir puis la recouvre.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_01_EAST_SOUTH_SIDE"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Une voiture garée craque après choc voisin, puis cesse ; aucune alarme constante.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_01_EAST_SOUTH_SIDE"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Lointains pas hors champ pendant la pause, puis leur disparition sous le son de reprise.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_01_EAST_SOUTH_SIDE"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "fog",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "stormSurge",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "roadCollapse",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "fogDrift",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "south_vale:reference:2"
+        ],
+        "pendingProposalIds": [
+          "south_vale:reference:1",
+          "south_vale:reference:3",
+          "south_vale:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    },
+    {
+      "id": "hotel_otherworld",
+      "source": "sh2",
+      "reference": {
+        "id": "hotel_otherworld",
+        "source": "sh2",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "LAKEVIEW HOTEL — OTHERWORLD",
+        "correctedName": null,
+        "locationNote": "État ruiné du Lakeview après la cassette, SH2 original.",
+        "referenceIds": [
+          "CL_SH2_13_NIGHTMARE_HOTEL"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le hall accueille les deux Pyramid Heads à lance.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH2_13_NIGHTMARE_HOTEL"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Eau fine sur le carrelage et gouttes issues du plafond brûlé ; reflets à faible contraste.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_13_NIGHTMARE_HOTEL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Une secousse détache seulement de la poussière du haut du mur, sans incendie inventé.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_13_NIGHTMARE_HOTEL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "La caméra recule sur les traces des deux lances pendant le score ; les deux boss restent une rencontre dédiée.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_13_NIGHTMARE_HOTEL"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [
+          "referenceDustRelease"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "water",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "ashFall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "mirrorTurn",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "mirrorFracture",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par water pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "hotel_otherworld:reference:2",
+          "hotel_otherworld:reference:3"
+        ],
+        "pendingProposalIds": [
+          "hotel_otherworld:reference:1",
+          "hotel_otherworld:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    },
+    {
+      "id": "prison_meat_locker",
+      "source": "sh2",
+      "reference": {
+        "id": "prison_meat_locker",
+        "source": "sh2",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "libelle-geographique-a-corriger",
+        "catalogueName": "TOLUCA PRISON — MEAT LOCKER",
+        "correctedName": "LABYRINTH — MEAT LOCKER",
+        "locationNote": "Libellé à corriger : la chambre froide du combat Eddie termine le Labyrinthe ; ne pas affirmer une salle ordinaire de Toluca Prison.",
+        "referenceIds": [
+          "CL_SH2_10_THE_LABYRINTH"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Les carcasses suspendues servent d’obstacles face à Eddie.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH2_10_THE_LABYRINTH"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Une seule carcasse oscille très lentement dans le fond pour éviter un écran visuel permanent.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_10_THE_LABYRINTH"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Une frappe proche transmet une secousse à un crochet et une courte volute de froid.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_10_THE_LABYRINTH"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Le compresseur s’arrête pendant le résultat, laissant le grincement des crochets audible.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH2_10_THE_LABYRINTH"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "referenceHookReply"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "normalPhaseLabel": "CHAMBRE FROIDE · SECONDE SALLE",
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SOL DE LA CHAMBRE FROIDE",
+          "description": "Seconde salle du combat Eddie de SH2 original ; carcasses et rails de fond distincts du plateau versus. Matériau, humidité et physique non mesurés ; cadrage non certifié 1:1."
+        },
+        "weather": "none",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "chainSway",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "coldBreath",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "cellShadow",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "cold",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "prison_meat_locker:reference:2",
+          "prison_meat_locker:reference:3"
+        ],
+        "pendingProposalIds": [
+          "prison_meat_locker:reference:1",
+          "prison_meat_locker:reference:4"
+        ]
+      },
+      "absenceObserved": {
+        "registryAbsent": true,
+        "stageBitmapForNull": true
+      },
+      "sceneId": null
+    }
+  ]
+}

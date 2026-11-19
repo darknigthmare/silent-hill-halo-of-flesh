@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "batch": "stage-pass21-b",
+  "createdAt": "2026-11-19T13:39:46.332Z",
+  "reviewer": "/root/wave19_fighters",
+  "method": "Inspection visuelle effective des six captures via view_image après intégration ; observations fondées sur les images complètes avec acteurs et HUD, pas seulement sur les tailles ou l’alpha. Aucun rendu ni test relancé par le réviseur.",
+  "imageSource": "Captures 1280×720 du moteur du projet FightEngine avec Canvas natif, produites par scripts/qa-stage-pass21-native.mjs et l’orchestrateur séquentiel. Il ne s’agit pas de captures originales de Homecoming/Downpour ni de captures Chromium.",
+  "result": "accepted-for-stage-image-integration",
+  "reviewScope": {
+    "requestedStages": 6,
+    "reviewedStages": 6,
+    "acceptedReviewedStages": 6,
+    "pendingStages": []
+  },
+  "blockingDefects": [],
+  "nonBlockingAssetDefects": [],
+  "newGenerationNecessaryForReviewedImages": false,
+  "images": [
+    {
+      "stageId": "grand_hotel",
+      "path": "docs/production/vague21/qa-native/grand_hotel.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/grand_hotel.png",
+      "sha256": "5828f11d949d143b44b4f7696385c0c6c341e64965a108b85a0b469a046d8d1a",
+      "bytes": 1089944,
+      "scene": "otherworld-atrium-without-sepulcher",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/grand_hotel/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false
+      },
+      "observations": {
+        "sceneConformity": "Atrium sombre à nervures et supports/rayonnages sculptés sur les côtés, sol circulaire brun ; aucun Sepulcher, sac organique, arbre vivant, lustre ou nouvelle transformation.",
+        "combatReadability": "Les deux silhouettes, le casque et les armes restent distincts sur le fond sombre. La zone entre les acteurs est entièrement lisible.",
+        "groundSupport": "Les semelles reposent sur le sol continu à l’intérieur de la bordure circulaire. La bordure et les débris proches sont plus bas que les appuis et ne les masquent pas.",
+        "foregroundTransparency": "Les fragments sont confinés aux deux coins bas. Aucun rectangle, damier, halo noir ou frange colorée visible dans cette composition réelle.",
+        "hud": "Noms, barres et compteur sont lisibles ; le libellé ATRIUM SANS SEPULCHER correspond au périmètre retenu."
+      }
+    },
+    {
+      "stageId": "town_hall_hc",
+      "path": "docs/production/vague21/qa-native/town_hall_hc.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/town_hall_hc.png",
+      "sha256": "5ac3de300ae93c5a3eeff5684b41499f179c0c22f86515e49e59b94c8f61ac46",
+      "bytes": 1235746,
+      "scene": "public-hall-first-visit",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/town_hall_hc/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false
+      },
+      "observations": {
+        "sceneConformity": "Salle publique normale identifiable : podium à gauche, deux pots, porte centrale sur estrade, tableaux et chaises à droite. Aucun sous-sol ou décor de cérémonie.",
+        "combatReadability": "Les silhouettes et leurs armes se lisent devant la salle. Ni le podium ni les chaises ne coupent la zone centrale du duel.",
+        "groundSupport": "Les pieds reposent sur le sol devant l’estrade, sans flottement visible. Les marches arrière restent derrière les combattants.",
+        "foregroundTransparency": "Les montants proches restent aux marges extrêmes. Le centre, le tapis et les pieds sont visibles sans aplats opaques ni liserés colorés.",
+        "hud": "Les noms, les jauges et l’intitulé SHEPHERD'S GLEN TOWN HALL sont lisibles et non recouverts."
+      }
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "path": "docs/production/vague21/qa-native/shepherd_house_hc.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/shepherd_house_hc.png",
+      "sha256": "5e43ba12e677a2a2ef42dbf3e67a98c7a8a712b96ae20ed8a31df2ffabd3fd44",
+      "bytes": 1224687,
+      "scene": "normal-attic-before-transformation",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/shepherd_house_hc/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false
+      },
+      "observations": {
+        "sceneConformity": "Grenier normal : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque et caisses sous une toile. Aucun masque, horloge ou élément Otherworld.",
+        "combatReadability": "La lumière des fenêtres et les valeurs du bois permettent de distinguer les deux acteurs. Le drap reste derrière le combattant droit, dont la silhouette reste lisible.",
+        "groundSupport": "Les quatre appuis sont visibles sur le plancher continu ; le faisceau de lumière ne crée pas de rupture de niveau.",
+        "foregroundTransparency": "Le montant gauche et les planches du coin droit ne masquent aucun pied. Les alpha1 résiduels mesurés sur le PNG isolé n’apparaissent pas comme un voile ou une frange dans la capture.",
+        "hud": "Noms, barres, compteur et titre SHEPHERD HOUSE — ATTIC sont lisibles ; la charpente ne coupe pas le texte."
+      }
+    },
+    {
+      "stageId": "centennial_building",
+      "path": "docs/production/vague21/qa-native/centennial_building.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/centennial_building.png",
+      "sha256": "d8dc3e5a82fc141f48e9cc24e8dea82195b1afc4624ffcf5550cad798e756015",
+      "bytes": 1386420,
+      "scene": "library-normal-main-reading-room",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/centennial_building/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false
+      },
+      "observations": {
+        "sceneConformity": "Bibliothèque normale reconnue par ses rayonnages, galerie, pilastres, fenêtres et bureau arrière ; aucun mélange avec les archives vidéo, les bureaux administratifs ou un faisceau UV.",
+        "combatReadability": "Les acteurs se détachent devant le tapis et les boiseries. Les rayonnages détaillés n’empêchent pas de lire les armes ou l’espace entre les combattants.",
+        "groundSupport": "Les pieds reposent sur le tapis plat, loin des caisses et du bureau arrière. Le plancher autour du tapis reste continu.",
+        "foregroundTransparency": "Le montant gauche et les papiers du coin droit sont propres en composition. La différence native de dimensions entre fond et premier plan, traitée par fit cover, ne produit ni bande vide ni raccord visible dans cette capture.",
+        "hud": "Noms, jauges, compteur et titre CENTENNIAL BUILDING sont visibles et contrastés."
+      }
+    },
+    {
+      "stageId": "st_marias",
+      "path": "docs/production/vague21/qa-native/st_marias.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/st_marias.png",
+      "sha256": "a0f5293abfd512f05f1b1093f7933123f8f39e6bcd8b29324f1487163cadea7e",
+      "bytes": 1533861,
+      "scene": "normal-chapel-closed-altar-gate",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/st_marias/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false
+      },
+      "observations": {
+        "sceneConformity": "Chapelle normale devant la grille fermée : colonnes et enduit usés, barres rectilignes, autel et rideau rouge derrière. Aucun lustre descendu, ouverture de grille ou événement de puzzle.",
+        "combatReadability": "La grille reste derrière les silhouettes ; elle ne les masque pas. Le centre du duel et les armes sont lisibles malgré les lignes verticales du fond.",
+        "groundSupport": "Les appuis reposent sur les dalles continues devant la grille. Les marches de l’autel restent à l’arrière.",
+        "foregroundTransparency": "Les petits éclats de pierre et la planche sont limités aux coins inférieurs. Aucune frange rouge/jaune, plaque opaque ou contamination du sol central visible.",
+        "hud": "Les deux noms, les barres et le titre ST. MARIA'S MONASTERY sont lisibles ; les détails de l’autel ne recouvrent pas le HUD."
+      }
+    },
+    {
+      "stageId": "shepherds_glen",
+      "path": "docs/production/vague21/qa-native/shepherds_glen.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/shepherds_glen.png",
+      "sha256": "aa9a5707383a969805925fb5090f4af792f7c49278d90193dba8f14e3c694b28",
+      "bytes": 1105273,
+      "scene": "elles-missing-persons-board-sidewalk",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "frame": 229,
+      "shaMatchesHarnessReport": true,
+      "visuallyInspected": true,
+      "result": "pass",
+      "unitHarness": {
+        "path": "docs/production/vague21/qa-native/cases/shepherds_glen/report.json",
+        "passed": true,
+        "checks": 46,
+        "browserTest": false,
+        "actorStateInjected": false,
+        "executionVariant": "Isolated process with 64 MiB old-space limit and explicit garbage collection, as recorded by the capture-producing agent; no change to game-engine logic."
+      },
+      "observations": {
+        "sceneConformity": "Panneau de disparus, petite lampe qui lui est propre, chaise vide, clôture et trottoir de la rencontre Elle sont bien identifiables. Le lampadaire proche est séparé du panneau ; aucun décor de Town Hall, cimetière ou rue générique n’est substitué.",
+        "combatReadability": "Les silhouettes et les armes se détachent du panneau et de la brume. La chaise et les pieds du panneau restent derrière les acteurs et ne ferment pas le centre du duel.",
+        "groundSupport": "Les semelles reposent sur les dalles du trottoir. La bordure est située plus bas dans l’image et ne traverse pas les appuis ; la base du lampadaire occupe le bord proche inférieur.",
+        "foregroundTransparency": "Le lampadaire reste à l’extrême gauche et les papiers au coin inférieur droit. Aucune plaque, frange rouge/jaune ou halo de détourage visible dans le composite. La faible lumière du globe est contenue près de celui-ci.",
+        "hud": "Noms, barres, compteur et libellé PANNEAU DE LA RENCONTRE ELLE restent lisibles. Le globe du lampadaire passe derrière le bandeau du HUD, sans le recouvrir."
+      }
+    }
+  ],
+  "unreviewed": [],
+  "hudContext": {
+    "visibleText": "BÉTON SEC",
+    "classification": "configuration du harness, pas un défaut des images",
+    "explanation": "Le harness utilise stageTerrain:false ; FightEngine.currentTerrain() renvoie alors le profil neutre concrete, y compris pour les scènes à plancher bois.",
+    "codeEvidence": [
+      {
+        "path": "scripts/qa-stage-pass21-native.mjs",
+        "setting": "stageTerrain:false"
+      },
+      {
+        "path": "src/fight.js",
+        "method": "currentTerrain",
+        "behavior": "returns concrete profile when stageTerrain is false"
+      },
+      {
+        "path": "src/stage-director.js",
+        "definition": "concrete.name = BÉTON SEC"
+      }
+    ]
+  },
+  "limits": [
+    "Les six vues contrôlées sont des captures statiques à la frame229, avec les deux combattants existants en idle ; elles ne couvrent pas toutes les positions de caméra ou toutes les poses.",
+    "Le contrôle natif ne remplace pas une vérification Chromium/DOM/CSS/HTTP ou des entrées clavier délivrées par un navigateur.",
+    "Aucune fidélité 1:1, géométrie source mesurée, UHD ou animation canonique nouvelle n’est certifiée.",
+    "Aucune image, source du moteur, donnée de jeu ou test n’a été modifié par cette revue. Seul ce rapport est écrit."
+  ],
+  "completedAt": "2026-11-19T13:44:16.192Z",
+  "priorExecutionContext": {
+    "source": "docs/production/vague21/qa-native/report.json",
+    "snapshotSha256": "729a281d90132cd75addc0a59420de39e005d754c394c425f0aed2f72604e9ef",
+    "historicalStatus": "failed before successful final isolated recovery",
+    "historicalSuccessfulCases": 11,
+    "historicalCheckExecutions": 506,
+    "historicalFailedProcess": "shepherds_glen",
+    "explanation": "Le premier agrégat de 11 cas réussis était en échec à cause du SIGKILL du dernier processus. Cette tentative n’a pas été convertie en succès : une capture finale distincte et son rapport unitaire réussi ont ensuite été inspectés. Les anciennes tentatives sont conservées par l’agent producteur."
+  },
+  "nativeUnitEvidence": {
+    "reviewedStageCases": 6,
+    "passedUnitReports": 6,
+    "checksPerCase": 46,
+    "totalChecksInReviewedUnitReports": 276,
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false,
+    "globalAggregate": "Consolidation des 12 cas gérée séparément par l’agent producteur ; cette revue repose sur les six captures et rapports unitaires effectivement inspectés."
+  }
+}

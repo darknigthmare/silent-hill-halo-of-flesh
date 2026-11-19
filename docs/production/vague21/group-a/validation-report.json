@@ -1,0 +1,251 @@
+{
+  "observedAt": "2026-11-19T13:21:34.584Z",
+  "status": "pass",
+  "scope": "metadata, native byte preservation, alpha audit and descriptor selection only; no engine render, browser or attack tests",
+  "scriptSha256": "bedcc18663006d85e7f578fb504c50101c09643bdabb48b9b59c5bdb9c863a46",
+  "deliverySha256": "ae28632d33ca86859183e22d2991b74638c5cfb2b1e381fbc8751b63dc0c25c2",
+  "stageCount": 6,
+  "assetCount": 12,
+  "stages": [
+    {
+      "stageId": "old_silent_hill",
+      "source": "sh1",
+      "scene": "levin-street-house",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+          "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+          "bytes": 1624541,
+          "width": 1672,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+          "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+          "bytes": 160823,
+          "width": 1672,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    },
+    {
+      "stageId": "hospital_nightmare",
+      "source": "sh1",
+      "scene": "room204",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+          "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+          "bytes": 1919049,
+          "width": 1672,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+          "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+          "bytes": 296524,
+          "width": 1672,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    },
+    {
+      "stageId": "sewer_resort",
+      "source": "sh1",
+      "scene": "south-tunnel-pipe-bay",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+          "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+          "bytes": 2118832,
+          "width": 1672,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+          "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+          "bytes": 278076,
+          "width": 1672,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    },
+    {
+      "stageId": "south_vale",
+      "source": "sh2",
+      "scene": "neely-sanders-frontage",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+          "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+          "bytes": 2217344,
+          "width": 1672,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+          "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+          "bytes": 210049,
+          "width": 1672,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "source": "sh2",
+      "scene": "last-hall-after-egg-doors",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+          "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+          "bytes": 1938212,
+          "width": 1672,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+          "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+          "bytes": 285111,
+          "width": 1672,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    },
+    {
+      "stageId": "prison_meat_locker",
+      "source": "sh2",
+      "scene": "second-freezer",
+      "runtimeSceneId": null,
+      "missingBeforeIntegration": true,
+      "referenceBlocked": false,
+      "validateStageBitmap": true,
+      "stageBitmapForSelectsCandidate": true,
+      "uniqueFrames": 2,
+      "layers": 2,
+      "parallaxX": [
+        0,
+        0.012
+      ],
+      "assets": [
+        {
+          "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+          "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+          "bytes": 1710056,
+          "width": 1671,
+          "height": 941,
+          "role": "opaque-background",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        },
+        {
+          "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+          "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+          "bytes": 279546,
+          "width": 1670,
+          "height": 941,
+          "role": "transparent-foreground",
+          "hashVerified": true,
+          "nativeHardlinkVerified": true,
+          "pngHeaderDimensionsVerified": true
+        }
+      ]
+    }
+  ]
+}

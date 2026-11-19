@@ -1,0 +1,916 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T14:01:13.250Z",
+  "baseCommitUsed": "ca25d04196b73d6229cdef4dd572eb76846ca7ad",
+  "basePublishedCommit": "2c16796e6b99bb71f79fdfcf45b9cd2a84838581",
+  "method": "Exact source hashes and immutable base registry comparison. Stage-cache admission uses the real validatePins and unique width×height×4 accounting. No image decoding, browser, animation or combat-behaviour claim is inferred.",
+  "checks": [
+    {
+      "name": "Protected source unchanged: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/sprite-coverage.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/roster.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/movesets.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/versus.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/stages.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/production/workbook-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Every existing composition and historical variant is unchanged",
+      "passed": true
+    },
+    {
+      "name": "Only the delivered missing stages were added",
+      "passed": true
+    },
+    {
+      "name": "Every new stage was previously missing and is now active",
+      "passed": true
+    },
+    {
+      "name": "Service worker changes are confined to its generated bitmap blocks",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/grand_hotel.background.8250537eb741.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/st_marias.background.e8b396a71baf.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "passed": true
+    },
+    {
+      "name": "Integrated PNG bytes unchanged: assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "passed": true
+    },
+    {
+      "name": "Existing stage cache budget is preserved",
+      "passed": true
+    },
+    {
+      "name": "All active stages and all stored-room pairs fit without budget increase",
+      "passed": true
+    }
+  ],
+  "protectedFiles": [
+    {
+      "path": "art/registry.json",
+      "sha256": "0a831fb6bd3a240985162e096d7c2c330d1281f5439482153b0f5fa0dfa7f8ab",
+      "bytes": 708432
+    },
+    {
+      "path": "data/sprite-coverage.json",
+      "sha256": "9ef5620ebede9eef21f2f87750c112d8bea10f6c0002d839f65746bc50a73f2d",
+      "bytes": 154684
+    },
+    {
+      "path": "src/sprite-manifest.js",
+      "sha256": "44547abeb82677bfeb0ea869be563a7fcc259cb8115f486007f9f5dfd8d1651c",
+      "bytes": 786564
+    },
+    {
+      "path": "data/roster.json",
+      "sha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+      "bytes": 1771325
+    },
+    {
+      "path": "data/movesets.json",
+      "sha256": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
+      "bytes": 10896605
+    },
+    {
+      "path": "src/fight.js",
+      "sha256": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "bytes": 165508
+    },
+    {
+      "path": "src/sprite-system.js",
+      "sha256": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "bytes": 14292
+    },
+    {
+      "path": "src/sprite-animation.js",
+      "sha256": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "bytes": 5835
+    },
+    {
+      "path": "src/versus.js",
+      "sha256": "79081299a045d7423fbbb2731e7bf0d7723c7221c060250a69524c745eebb440",
+      "bytes": 54105
+    },
+    {
+      "path": "data/stages.json",
+      "sha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+      "bytes": 1351594
+    },
+    {
+      "path": "src/renderers.js",
+      "sha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "bytes": 35565
+    },
+    {
+      "path": "src/stage-bitmaps.js",
+      "sha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "bytes": 9122
+    },
+    {
+      "path": "src/stage-bitmap-compositions.js",
+      "sha256": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "bytes": 5697
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "bytes": 1776905
+    },
+    {
+      "path": "docs/production/workbook-verification.json",
+      "sha256": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+      "bytes": 26403
+    }
+  ],
+  "coverage": {
+    "totalStages": 123,
+    "beforeActive": 43,
+    "afterActive": 55,
+    "beforeMissing": 80,
+    "afterMissing": 68,
+    "remainingUnblocked": 53,
+    "remainingBlocked": 15,
+    "storedRoomCompositions": 57,
+    "referencedPNGCount": 108,
+    "activePNGCount": 106,
+    "historicalInactivePNGCount": 2,
+    "addedStageIds": [
+      "old_silent_hill",
+      "hospital_nightmare",
+      "sewer_resort",
+      "south_vale",
+      "hotel_otherworld",
+      "prison_meat_locker",
+      "grand_hotel",
+      "town_hall_hc",
+      "shepherd_house_hc",
+      "centennial_building",
+      "st_marias",
+      "shepherds_glen"
+    ],
+    "addedPNGCount": 24
+  },
+  "memory": {
+    "budgetBytes": 67108864,
+    "active": {
+      "setCount": 55,
+      "singleCount": 55,
+      "pairCountIncludingSelf": 1540,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3",
+          "historical_society"
+        ]
+      },
+      "rejections": 0
+    },
+    "allStoredRooms": {
+      "setCount": 57,
+      "singleCount": 57,
+      "pairCountIncludingSelf": 1653,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3:leonard-basin-below-c4"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3:leonard-basin-below-c4",
+          "historical_society:second-exhibition-room"
+        ]
+      },
+      "rejections": 0
+    }
+  },
+  "passed": true,
+  "assets": [
+    {
+      "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+      "bytes": 1624541,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+      "bytes": 160823,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+      "bytes": 1919049,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+      "bytes": 296524,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+      "bytes": 2118832,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+      "bytes": 278076,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+      "bytes": 2217344,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+      "bytes": 210049,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+      "bytes": 1938212,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+      "bytes": 285111,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+      "bytes": 1710056,
+      "width": 1671,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+      "bytes": 279546,
+      "width": 1670,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+      "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+      "bytes": 2018968,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "sha256": "bc6963bb530b8d1ee4080393d5c18bc066054d61ac26e33180b8382c15f69af9",
+      "bytes": 97721,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+      "bytes": 2299765,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "sha256": "a42274c88402daafa7ca162708731b14a37891e948966ea00ce008a72c24baac",
+      "bytes": 249564,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+      "bytes": 2142985,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "sha256": "a7cc1f1e9d27108af9ad916c9ac19cfca1d702c0512d1d323554d7ec03dd713b",
+      "bytes": 244289,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+      "bytes": 2546849,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "sha256": "9ddcc6285a36798db5c6baa4947962bb2ca621b4b05603af2e05d7a9fde6530f",
+      "bytes": 205294,
+      "width": 1673,
+      "height": 940
+    },
+    {
+      "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+      "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+      "bytes": 2889977,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "sha256": "5ea59966acd38172eff9a5386b99efebba02bd66d2ba10d1be66a25422145a9f",
+      "bytes": 93452,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+      "bytes": 1966431,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "sha256": "c83fab7b1fd227e642b5a31eb0fddf47bb8f2488ffaea165d1f6d123c044cd62",
+      "bytes": 208307,
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "missingStages": [
+    {
+      "id": "nowhere",
+      "name": "NOWHERE",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "apartment_roof",
+      "name": "DAISY VILLA ROOFTOP",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "cedar_grove",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_school",
+      "name": "MIDWICH GELÉ — COUR PAPARAZZI",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "arcade_ship",
+      "name": "LITTLE BARONESS",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "book_zone",
+      "name": "BOOK OF MEMORIES — NEXUS",
+      "source": "bom",
+      "blocked": true
+    },
+    {
+      "id": "villa",
+      "name": "KETTENSTADT VILLA",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "ebisugaoka",
+      "name": "EBISUGAOKA — MAIN STREET",
+      "source": "shf",
+      "blocked": false
+    },
+    {
+      "id": "festival_square",
+      "name": "FESTIVAL SQUARE",
+      "source": "shf",
+      "blocked": true
+    },
+    {
+      "id": "book_fire",
+      "name": "FIRE ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_light",
+      "name": "LIGHT ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_water",
+      "name": "WATER ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_earth",
+      "name": "EARTH ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_blood",
+      "name": "BLOOD ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_steel",
+      "name": "STEEL ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "antique_shop",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "film_midwich",
+      "name": "MIDWICH — FILM OTHERWORLD",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_church",
+      "name": "CHURCH OF THE ORDER",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_sanctuary",
+      "name": "SANCTUARY — REVELATION",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "hope_junction",
+      "name": "HOPE’S JUNCTION",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "stilledalen",
+      "name": "STILLEDALEN WOODS",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "ascension_otherworld",
+      "name": "ASCENSION — OPEN GATE",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "central_nightmare",
+      "name": "CENTRAL SILENT HILL — OTHERWORLD",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall",
+      "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "hazel_subway",
+      "name": "HAZEL STREET SUBWAY",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "underpass_sh3",
+      "name": "UNDERPASS",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hilltop",
+      "name": "HILLTOP CENTER — OTHERWORLD",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "outside_room_302",
+      "name": "OUTSIDE ROOM 302",
+      "source": "sh4",
+      "blocked": false
+    },
+    {
+      "id": "wish_house",
+      "name": "WISH HOUSE",
+      "source": "sh4",
+      "blocked": true
+    },
+    {
+      "id": "final_sacrament",
+      "name": "21 SACRAMENTS — FINAL CHAMBER",
+      "source": "sh4",
+      "blocked": false
+    },
+    {
+      "id": "alchemilla_origins",
+      "name": "ALCHEMILLA HOSPITAL — ORIGINS",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_theater",
+      "name": "ARTAUD THEATER — NIGHTMARE",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_hc",
+      "name": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "prison_hc",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "scarlet_chamber",
+      "name": "SCARLET’S CHAMBER",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "frozen_streets",
+      "name": "SILENT HILL — FROZEN STREETS",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_sm",
+      "name": "ALCHEMILLA GELÉ — CHAMBRE ER",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "name": "TOLUCA MALL GELÉ — HALL GUMBALL",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "lighthouse_sm",
+      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "source": "shattered",
+      "blocked": true
+    },
+    {
+      "id": "downpour_streets",
+      "name": "SILENT HILL — DOWNPOUR STREETS",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "otherworld_void",
+      "name": "DOWNPOUR — VOID CHASE",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "anne_fight",
+      "name": "FULL CIRCLE — ANNE’S CONFRONTATION",
+      "source": "downpour",
+      "blocked": true
+    },
+    {
+      "id": "arcade_city",
+      "name": "THE ARCADE — CITY / JACK’S INN",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital",
+      "name": "THE ARCADE — BROOKHAVEN HOSPITAL",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital_roof",
+      "name": "THE ARCADE — HOSPITAL ROOF",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_historical",
+      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_prison",
+      "name": "THE ARCADE — TOLUCA PRISON",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_graveyard",
+      "name": "THE ARCADE — UNDERGROUND GRAVEYARD",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "name": "THE ARCADE — TOLUCA LAKE",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1918",
+      "name": "THE ARCADE — 1918",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1993",
+      "name": "THE ARCADE — 1993 PHANTOM FRONT",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_mall",
+      "name": "THE ARCADE — SHOPPING MALL",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_amusement",
+      "name": "THE ARCADE — AMUSEMENT PARK",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "villa_rooftop",
+      "name": "KETTENSTADT VILLA — ROOFTOP",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "villa_stairwell",
+      "name": "KETTENSTADT VILLA — STAIRWELL",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "shimizu_residence",
+      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "source": "shf",
+      "blocked": false
+    },
+    {
+      "id": "return_streets",
+      "name": "RETURN TO SILENT HILL — STREETS",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_brookhaven",
+      "name": "RETURN TO SILENT HILL — BROOKHAVEN",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_lakeview",
+      "name": "RETURN TO SILENT HILL — BURNING LAKEVIEW",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "return_portrait_room",
+      "name": "RETURN TO SILENT HILL — PORTRAIT ROOM",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_marina",
+      "name": "ST. AMELIA MARINA",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_residential",
+      "name": "ST. AMELIA — RESIDENTIAL DISTRICT",
+      "source": "townfall",
+      "blocked": false
+    },
+    {
+      "id": "townfall_medical",
+      "name": "ST. AMELIA MEDICAL CENTRE",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "ceg_tower",
+      "name": "CEG TOWER",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods",
+      "name": "CLARA WOODS",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods_different",
+      "name": "CLARA WOODS — DIFFERENT",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "alternate_facility",
+      "name": "ST. AMELIA — ALTERNATE FACILITY",
+      "source": "townfall",
+      "blocked": false
+    }
+  ]
+}

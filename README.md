@@ -1,5 +1,20 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Bible et stages manquants — 19 novembre 2026, vague 21
+
+**66 entrées de franchise documentées et 55 arènes bitmap sur 123.** La
+[bible du corpus](docs/BIBLE_CORPUS_SILENT_HILL.md) ajoute les branches oubliées
+et précise les éditions, films, récits, collaborations et programmes officiels,
+dont **Silent Hill Transmission**. Les seize groupes de sources du moteur
+conservent leurs identifiants.
+
+La [vague 21](docs/production/vague21/README.md) ajoute **12 stages et 24 PNG**.
+Les **68 stages sans bitmap**, dont 15 références bloquées, sont suivis dans
+[l'inventaire courant](docs/production/vague21/final-audit.json) et le
+[classeur Corpus / Stages](docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx).
+Les images sont des reconstructions candidates ; les 204 portraits, 135 vues
+latérales de combattants et six clips animés existants restent inchangés.
+
 ## Reprise des 92 profils — 2 novembre 2026
 
 **16 nouveaux rendus entiers candidats** sont intégrés : Split Worm, Greedy Worm,

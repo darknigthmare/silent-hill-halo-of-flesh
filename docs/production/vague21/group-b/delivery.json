@@ -1,0 +1,3056 @@
+{
+  "schemaVersion": 1,
+  "batch": "stage-pass21-b",
+  "createdAt": "2026-11-19T13:21:11.499777+00:00",
+  "scope": "Missing stages only. Six isolated Homecoming/Downpour room-state candidates; no repository writes, characters, movesets or workbook changes.",
+  "counts": {
+    "stages": 6,
+    "pngs": 12,
+    "opaqueBackgrounds": 6,
+    "transparentForegrounds": 6,
+    "newAnimatedClips": 0,
+    "deferredOriginalTargets": 1
+  },
+  "stages": [
+    {
+      "stageId": "grand_hotel",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "otherworld-atrium-without-sepulcher",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT06",
+        "EXT05"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+              "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+              "bytes": 2018968,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+              "sha256": "bc6963bb530b8d1ee4080393d5c18bc066054d61ac26e33180b8382c15f69af9",
+              "bytes": 97721,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Atrium Otherworld du Grand Hotel sans Sepulcher : enveloppe sombre nervurée, rayonnages/supports latéraux sculptés, sol brun circulaire continu et petits débris aux coins. Aucun boss, sac organique, arbre vivant, lustre ou événement. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    },
+    {
+      "stageId": "town_hall_hc",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "public-hall-first-visit",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+              "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+              "bytes": 2299765,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+              "sha256": "a42274c88402daafa7ca162708731b14a37891e948966ea00ce008a72c24baac",
+              "bytes": 249564,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Salle publique du premier passage normal : boiseries, porte arrière sur estrade, deux pots, podium à gauche et chaises à droite. Tapis et sol centraux libres ; montants proches limités aux marges. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "normal-attic-before-transformation",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+              "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+              "bytes": 2142985,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+              "sha256": "a7cc1f1e9d27108af9ad916c9ac19cfca1d702c0512d1d323554d7ec03dd713b",
+              "bytes": 244289,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Grenier normal avant transformation : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque fermée et caisses couvertes. Plancher central dégagé ; montant et chutes de bois seulement aux coins. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    },
+    {
+      "stageId": "centennial_building",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "library-normal-main-reading-room",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+              "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+              "bytes": 2546849,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+              "sha256": "9ddcc6285a36798db5c6baa4947962bb2ca621b4b05603af2e05d7a9fde6530f",
+              "bytes": 205294,
+              "width": 1673,
+              "height": 940
+            }
+          ]
+        }
+      ],
+      "notes": "Bibliothèque normale : rayonnages, pilastres de bois, galerie, bureau arrière, fenêtres hautes et tapis. Le faisceau UV portable des captures est exclu ; papiers du premier plan au coin droit. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    },
+    {
+      "stageId": "st_marias",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "normal-chapel-closed-altar-gate",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+              "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+              "bytes": 2889977,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+              "sha256": "5ea59966acd38172eff9a5386b99efebba02bd66d2ba10d1be66a25422145a9f",
+              "bytes": 93452,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Chapelle normale devant sa grille d’autel fermée : enduit écaillé, poteaux massifs, fer à motifs rectilignes, autel au rideau rouge derrière. Sol central continu ; éclats et planche proches aux coins. Lustre hors cadre. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    },
+    {
+      "stageId": "shepherds_glen",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "elles-missing-persons-board-sidewalk",
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+              "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+              "bytes": 1966431,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+              "sha256": "c83fab7b1fd227e642b5a31eb0fddf47bb8f2488ffaea165d1f6d123c044cd62",
+              "bytes": 208307,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "grand_hotel",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/grand_hotel.background.v1.png",
+      "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+      "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+      "bytes": 2018968,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving a readable ceiling and room height. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Homecoming, GRAND HOTEL, the exact OTHERWORLD ATRIUM used for the Sepulcher encounter, shown empty WITHOUT SEPULCHER. This is the empty architectural stage, not a boss scene. Use the three references only for the room, floor and shelving. Preserve the very tall dark ash-gray greenhouse-like enclosure, long narrow vertical structural ribs, shadowy curved glazed/metal roof structure near the upper edge, and the dull oxidized reddish-brown floor with its broad circular band pattern. Keep the squat heavily weathered pale brown-gray carved wooden bookcase/support units to the outer rear sides; each has a scroll-carved ornamental top, thick sides, a few dark open shelf compartments, and worn recessed panels. Their scale and sculpted edges should follow the close reference. The two side groups remain behind the duel lane. The central region originally occluded by the boss is reconstructed as flat continuous worn floor and dark distant wall, not a pit. Low cool gray overhead ambient light reveals rust and grimy wood without making a bright generic lobby. NO boss, hanging organic sacks, living tree, roots, human bodies, flesh, moving chains, chandeliers, new altar or supernatural spectacle. Do not depict the normal hotel lobby, rooms, boiler room, Lakeview Hotel, reception desk or an unrelated library. Architectural supports may be visible only as quiet fixed structural lines; do not show a triggered event or transformation. No invented light fixture. This image is a static camera adaptation of the source architecture.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0138.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0138-medium.webp",
+          "bytes": 17134,
+          "sha256": "0ee038c625fba9fd1d8906644d6c11033326f10fc110630eb02483e635d9784c",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0139.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0139-medium.webp",
+          "bytes": 24344,
+          "sha256": "25590af6819fffe9597cc267e964f8c8b570ed2e0577c9b6a5091b2f1adc78f9",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0140.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0140-medium.webp",
+          "bytes": 18256,
+          "sha256": "ff3a825632be66d497a66755773791650dd94a7d337ec6ace463bd3543322810",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-4275444e-d9d0-4777-b53b-ea671ce08eea.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Atrium Otherworld du Grand Hotel sans Sepulcher : enveloppe sombre nervurée, rayonnages/supports latéraux sculptés, sol brun circulaire continu et petits débris aux coins. Aucun boss, sac organique, arbre vivant, lustre ou événement.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "grand_hotel",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/grand_hotel.foreground.v1.png",
+      "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "sha256": "bc6963bb530b8d1ee4080393d5c18bc066054d61ac26e33180b8382c15f69af9",
+      "bytes": 97721,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9863050353639872,
+        "fullyOpaqueFraction": 1.2711713589838765e-05,
+        "boundsAlpha32Exclusive": [
+          0,
+          884,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 2.8283942499207626e-06
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 1.9844990777340143e-06
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 16
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Homecoming, Grand Hotel Otherworld atrium without Sepulcher. Draw only two small, low clusters of chipped dull black-brown metal edging and dark broken floor-material fragments in the nearest lower corners, left x=0–13 percent and right x=87–100 percent, both confined to y=93–100 percent. Match the source atrium's very dark corroded floor perimeter material and reddish-brown low ambient highlights; these are inert shallow fragments without shafts or spikes. The center and the circular floor band remain fully transparent in this overlay. No new structural device, bookshelf, body, boss, hanging organic sacks, flesh, living roots, tree, chain, chandelier, pit, moving debris or light effect. Do not repeat any large background surface.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0138.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0138-medium.webp",
+          "bytes": 17134,
+          "sha256": "0ee038c625fba9fd1d8906644d6c11033326f10fc110630eb02483e635d9784c",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0139.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0139-medium.webp",
+          "bytes": 24344,
+          "sha256": "25590af6819fffe9597cc267e964f8c8b570ed2e0577c9b6a5091b2f1adc78f9",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0140.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0140-medium.webp",
+          "bytes": 18256,
+          "sha256": "ff3a825632be66d497a66755773791650dd94a7d337ec6ace463bd3543322810",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/grand_hotel.background.v1.png",
+          "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-ff6f7f82-5382-4eef-93d9-fc3143d20e1d.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Atrium Otherworld du Grand Hotel sans Sepulcher : enveloppe sombre nervurée, rayonnages/supports latéraux sculptés, sol brun circulaire continu et petits débris aux coins. Aucun boss, sac organique, arbre vivant, lustre ou événement.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "town_hall_hc",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/town_hall_hc.background.v1.png",
+      "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+      "bytes": 2299765,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving a readable ceiling and room height. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Homecoming, Shepherd's Glen Town Hall, FIRST NORMAL VISIT, the public central room with the podium. Use the reference room's muted charcoal-brown timber paneling, broad coffered/beamed dark ceiling, green-gray aged plaster panels separated by squared wooden pilasters, small dim cream-shade wall lamps, framed paintings, and the broad dark double doorway in the far wall. The two large worn pale ceramic plant pots with withered leaves flank that doorway; the low shallow platform and its two steps stay in the BACKGROUND, not in the fighting lane. Two simple dark waiting chairs rest along the right wall, behind the lane. Retain the dark wooden podium/lectern toward the rear-left side, its little reading surface turned slightly inward; no glowing collectible or interact icon. Use the source's desaturated green-gray and brown ambiance, readable diffuse dim lighting, and a wide dull worn floor with a dark flat rectangular rug. Framed artwork stays dark and indistinct, with no new recognizable human figure. Do not depict Judge Holloway's office, basement, Founders ceremony, church, return chapter, rust transformation or red cult symbol. Do not turn this modest public hall into a grand courthouse.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/town_hall_hc.native-0031.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0031-medium.webp",
+          "bytes": 21274,
+          "sha256": "26d9b1451d45046456c7ce22d850e67d428ef306eda8ed5a52422d922b4f2b91",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-a37e4bb7-726a-4a17-a4e6-706ddcf11db5.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Salle publique du premier passage normal : boiseries, porte arrière sur estrade, deux pots, podium à gauche et chaises à droite. Tapis et sol centraux libres ; montants proches limités aux marges.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "town_hall_hc",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/town_hall_hc.foreground.v1.png",
+      "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "sha256": "a42274c88402daafa7ca162708731b14a37891e948966ea00ce008a72c24baac",
+      "bytes": 249564,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9369270195099381,
+        "fullyOpaqueFraction": 0.0003552923948359935,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 3.111233674857328e-05
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 2.877523662669912e-05
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 212,
+          "2": 2
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Homecoming, Town Hall first-visit public room. Draw only two extremely narrow close fragments of the same dark, aged, squared wooden doorway/pilaster trim seen in the native room: a taller left-edge jamb confined to x=0–5 percent and a shorter dark right-edge wood molding fragment confined to x=96–100 percent. Their relief and chipped dull brown patina match the background's modest timber paneling, not decorative gold or elaborate gothic carving. These are cropped near-camera architectural surfaces, not a complete new doorway. They must not cover the podium, central doors, pots, floor rug or waiting chairs, and do not reproduce any of those background objects. No new furniture or lamp. Keep the middle and lower central 80 percent completely empty transparent.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/town_hall_hc.native-0031.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0031-medium.webp",
+          "bytes": 21274,
+          "sha256": "26d9b1451d45046456c7ce22d850e67d428ef306eda8ed5a52422d922b4f2b91",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/town_hall_hc.background.v1.png",
+          "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-a510d340-e0e3-4d4e-a08e-d198198fff5b.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Salle publique du premier passage normal : boiseries, porte arrière sur estrade, deux pots, podium à gauche et chaises à droite. Tapis et sol centraux libres ; montants proches limités aux marges.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherd_house_hc.background.v1.png",
+      "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+      "bytes": 2142985,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving a readable ceiling and room height. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Homecoming, Shepherd family house, the NORMAL ATTIC before the downstairs conversation with Lillian and before any transformation. Main architectural reference is the attic window-and-covered-boxes view; the second reference only establishes the same attic's plain tall movable wooden bookcase. Keep the two modest frosted rectangular sash windows, dirty milky glass, raw weathered gray-brown horizontal timber wall boards, exposed upright studs and dark roof rafters. Cool weak window light and deep dusty brown shadows. A low cluster of stored cardboard/wooden boxes covered by one sagging gray-taupe dust sheet stays at the far right against the back wall. The tall plain brown bookcase stays closed against the far-left side wall, behind the fighting lane; do not reveal a secret study. A few stored boards can rest far at the side. Preserve the modest domestic scale, bare worn wood plank floor, dim ceiling eaves, no luxurious decoration. No other rooms, nursery, Lillian, bloody bed, masks, coat-of-arms puzzle, medals, clocks, chains, industrial grating, fleshy growth, Otherworld or hole in the center. The entire central floor must be exposed level wood.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0368.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0368-medium.webp",
+          "bytes": 14996,
+          "sha256": "13dd4a61f8c72ec5f0d1a9fa5f6ff673bf1c52f9c85d42be5858c07e940b1c23",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0369.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0369-medium.webp",
+          "bytes": 23546,
+          "sha256": "20c5ec7ba475291961fb1e728f36863bc9b47838e082b0bb0810b0a6fa3c6f0e",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-2557194e-263e-457d-97e3-bfdab53941dc.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Grenier normal avant transformation : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque fermée et caisses couvertes. Plancher central dégagé ; montant et chutes de bois seulement aux coins.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherd_house_hc.foreground.v1.png",
+      "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "sha256": "a7cc1f1e9d27108af9ad916c9ac19cfca1d702c0512d1d323554d7ec03dd713b",
+      "bytes": 244289,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9509760053694278,
+        "fullyOpaqueFraction": 0.0003108013972715578,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 3.498277098523683e-05
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 1.2727774124421387e-05
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 2.182948985474109e-05
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 71
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Homecoming, normal Shepherd House attic before transformation. Draw a very narrow close weathered raw-timber upright/rafter fragment along the far-left edge, confined to x=0–5 percent, and a few short dusty splintered board ends in the extreme lower-right corner, confined to x=91–100 percent and y=91–100 percent. Match the raw gray-brown horizontal board and stud material and cool window light of the supplied attic. The right scraps sit in the closest corner, below the fighting sole line, never reaching the center. Do not repeat the windows, bookcase or sheet-covered storage cluster; these remain entirely in the background. No hanging object, clock, masks, medals, cloth silhouette, chains or altered-house material.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0368.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0368-medium.webp",
+          "bytes": 14996,
+          "sha256": "13dd4a61f8c72ec5f0d1a9fa5f6ff673bf1c52f9c85d42be5858c07e940b1c23",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0369.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0369-medium.webp",
+          "bytes": 23546,
+          "sha256": "20c5ec7ba475291961fb1e728f36863bc9b47838e082b0bb0810b0a6fa3c6f0e",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherd_house_hc.background.v1.png",
+          "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-e9b5c5bf-be7e-4023-915d-56520467fbb3.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Grenier normal avant transformation : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque fermée et caisses couvertes. Plancher central dégagé ; montant et chutes de bois seulement aux coins.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "centennial_building",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/centennial_building.background.v1.png",
+      "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+      "bytes": 2546849,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving a readable ceiling and room height. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Downpour, Centennial Building, the NORMAL LIBRARY main reading-room area, not the office floors or video archives. Use the exact library architecture visible in the two references: tall aged medium-brown wooden bookcase walls with many muted books, massive paneled square timber pilasters, dark molded wainscoting, upper wood galleries/railings, modest cream-shade sconces and tall narrow dirty windows admitting gray daylight at the distant end. Include one low dark reading desk under the rear bookcase and a few closed wooden storage crates along the distant sides only; none in the support lane. A worn faded burgundy rectangular carpet lies flush on the scratched parquet floor, with a few flat scattered papers near rear-side edges. Reframe to a wide nearly frontal view across this ONE library room, with the main fixed bookcase wall as a readable backdrop and a modest window bay beyond; keep the grand height restrained to that shown in the source. Use ambient neutral gray daylight and warm-brown timber. The purple color in the screenshots comes from Murphy's portable forensic UV flashlight: REMOVE that purple beam, glowing footprints and clue highlight, and do not treat them as permanent lighting. No Murphy, no axes, no supernatural ink, no monster, no police office, elevator, archive-cart invention, projector screen, mayor's office, Otherworld void, giant clock or red theatrical glow.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-021.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-021.jpg",
+          "bytes": 77703,
+          "sha256": "3c6b90a21972b6cfa527cf7e40b26dc01e779659ce27ac650109013febac5745",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-022.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-022.jpg",
+          "bytes": 63190,
+          "sha256": "99eac8e29dc07e88e7538a5f9643fb7aacfac7c46e6210830b3fea5212c4e550",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-c842a635-0739-40b6-b435-bc41d67b51b6.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Bibliothèque normale : rayonnages, pilastres de bois, galerie, bureau arrière, fenêtres hautes et tapis. Le faisceau UV portable des captures est exclu ; papiers du premier plan au coin droit.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "centennial_building",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/centennial_building.foreground.v1.png",
+      "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "sha256": "9ddcc6285a36798db5c6baa4947962bb2ca621b4b05603af2e05d7a9fde6530f",
+      "bytes": 205294,
+      "width": 1673,
+      "height": 940,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9577463087077616,
+        "fullyOpaqueFraction": 0.00019330798285663414,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1673,
+          940
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1338,
+            808
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1338,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 1.1302308496552449e-05
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            301,
+            0,
+            1371,
+            940
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 1.1930801352200149e-05
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 855,
+          "2": 5
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Downpour, normal Centennial Building library. Draw only a close narrow worn medium-brown timber panel edge at far left x=0–4 percent and a modest handful of flat, torn aged cream paper sheets in the extreme lower-right corner x=89–100 percent, y=93–100 percent. The timber's bevel and grain match the library's paneled pillars; the paper material matches the loose sheets in the native library. All sheets are grounded and still, not airborne, with no readable printed text. Do not draw a whole bookcase, desk, new crate, chair, bookshelf wall, carpet or floor. No portable UV beam, purple glow, footprints, book-clue glint or floating particle. The background architecture and large empty fighting lane must show through untouched.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-021.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-021.jpg",
+          "bytes": 77703,
+          "sha256": "3c6b90a21972b6cfa527cf7e40b26dc01e779659ce27ac650109013febac5745",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-022.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-022.jpg",
+          "bytes": 63190,
+          "sha256": "99eac8e29dc07e88e7538a5f9643fb7aacfac7c46e6210830b3fea5212c4e550",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/centennial_building.background.v1.png",
+          "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-089fb782-ea32-40ef-8fde-0057d08a36ce.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Bibliothèque normale : rayonnages, pilastres de bois, galerie, bureau arrière, fenêtres hautes et tapis. Le faisceau UV portable des captures est exclu ; papiers du premier plan au coin droit.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "st_marias",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/st_marias.background.v1.png",
+      "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+      "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+      "bytes": 2889977,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving a readable ceiling and room height. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Downpour, ST. MARIA'S MONASTERY, the NORMAL CHAPEL SANCTUARY facing its still-CLOSED ALTAR GATE before the gate-opening puzzle. Keep this single chapel only. Use references 017/018 for the exact old pale beige-gray peeling plaster, thick square columns with exposed rough masonry, worn gray rectangular floor tiles and the tall black iron gate. The gate has narrow straight vertical bars and distinctive stepped rectangular bar patterns, not decorative gothic scrollwork. Use reference 019 ONLY for the altar's permanent appearance beyond that gate: a low cloth-covered light cream altar on a modest dark carved wooden dais, two slender old candleholders, narrow carved timber side trim and a muted deep red curtain behind. Do not carry the open-gate state of that close altar shot into this scene: the gate stays closed and the altar remains well behind it. The low dais and any shallow steps are in the distance, never in the fighting lane. Let damaged masonry and a few fallen old boards stay at the far rear-right margin; reconstruct the central support lane as continuous worn stone tile. Crop the high hanging chandelier out of the top of the image: no lowered chandelier, swinging object, rope burning or event in progress. Remove the portable purple forensic flashlight beam shown on the screenshots: use soft gray ambient daylight and subdued warm altar light, without ultraviolet footprints. No Murphy, little girl, Doll, axe, pickups, book puzzle prompt, orphanage classroom, theater, hospice, flooding, Otherworld, cells or new religious symbols. Keep the scale intimate and damaged as in the reference, not an ornate cathedral.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-017.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-017.jpg",
+          "bytes": 76734,
+          "sha256": "1735fb3d864d8ad90533ef390ae08a1f93bc5eac564e8b444aa08a9bba3dca01",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-018.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-018.jpg",
+          "bytes": 111581,
+          "sha256": "164b2b96dc6d8fe4f367d2326856ad723d242678f811cbdfeaa0cdd522c864e4",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-019.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-019.jpg",
+          "bytes": 90019,
+          "sha256": "50c891f8890051d1eeae807f161828a35d131e7d0c9cee1f0e81bf69aa06596d",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-44d0ba22-77f6-40ff-809d-ad442ced79a5.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Chapelle normale devant sa grille d’autel fermée : enduit écaillé, poteaux massifs, fer à motifs rectilignes, autel au rideau rouge derrière. Sol central continu ; éclats et planche proches aux coins. Lustre hors cadre.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "st_marias",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/st_marias.foreground.v1.png",
+      "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "sha256": "5ea59966acd38172eff9a5386b99efebba02bd66d2ba10d1be66a25422145a9f",
+      "bytes": 93452,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9909670563230606,
+        "fullyOpaqueFraction": 3.4957212372056604e-05,
+        "boundsAlpha32Exclusive": [
+          0,
+          870,
+          1655,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 4.242591374770122e-06
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 6.945746771958028e-06
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 181,
+          "2": 4
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Downpour, St Maria's normal chapel sanctuary, closed altar gate. Draw only a few small broken pale plaster/stone chips and one short flat weathered brown board at the extreme bottom-left corner x=0–12 percent and bottom-right corner x=89–100 percent, all within y=93–100 percent. Match the reference's peeling beige-gray chapel masonry, worn gray floor debris and aged boards. Make both clusters irregular and restrained, low enough to stay below the feet line. No whole pillar, wall, gate, altar, chandelier, candle, rug, pew, floor, rubble heap, hole, falling object or rope. The broad central combat area stays completely transparent. No purple UV glow or shadows from unseen characters.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-017.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-017.jpg",
+          "bytes": 76734,
+          "sha256": "1735fb3d864d8ad90533ef390ae08a1f93bc5eac564e8b444aa08a9bba3dca01",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-018.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-018.jpg",
+          "bytes": 111581,
+          "sha256": "164b2b96dc6d8fe4f367d2326856ad723d242678f811cbdfeaa0cdd522c864e4",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-019.jpg",
+          "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-019.jpg",
+          "bytes": 90019,
+          "sha256": "50c891f8890051d1eeae807f161828a35d131e7d0c9cee1f0e81bf69aa06596d",
+          "contentType": "image/jpeg",
+          "width": 1047,
+          "height": 587,
+          "mode": "RGB",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/st_marias.background.v1.png",
+          "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-053b1be8-5c1d-40a0-8d6d-88cc46b9246f.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Chapelle normale devant sa grille d’autel fermée : enduit écaillé, poteaux massifs, fer à motifs rectilignes, autel au rideau rouge derrière. Sol central continu ; éclats et planche proches aux coins. Lustre hors cadre.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "shepherds_glen",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherds_glen.background.v1.png",
+      "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+      "bytes": 1966431,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: an opaque BACKGROUND bitmap for a 2D lateral fighting-game arena. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied native gameplay screenshots document this exact game, room, materials and state; they are architectural references, not characters or UI to reproduce. Reconstruct that one room with grounded aged-material game-environment realism and source-specific details. Reframe conservatively to a nearly frontal lateral fighting-game camera, mild perspective only, preserving the source's outdoor street scale. Keep a continuous level floor lane across the entire lower 30 percent of the frame: fighter soles will stand at y=82.5 percent. No object, pit, step, furniture leg or raised threshold may interrupt the central x=20–80 percent support lane. Large fixed furnishings stay behind that lane. Keep the middle 65 percent clear enough for two complete fighters. No people, monsters, creatures, body parts, actor shadows, actor reflections, weapons, pickups, dialogue, HUD, subtitles, captions, logo, watermark, border, grid, storyboard, montage or multiple views. No new scene, no generic horror substitutions, no cinematic event, no visible magical effects, no fidelity certification. Scene: Silent Hill: Homecoming, SHEPHERD'S GLEN, the exact foggy SIDEWALK AT ELLE'S MISSING-PERSONS NOTICEBOARD. Use this specific outdoor meeting spot from the reference, not a generic town street. Retain the large freestanding pale gray-blue rectangular bulletin panel on simple narrow metal legs with triangular foot braces. The board is covered unevenly with small faded missing-person notices, curled corners and faded blocks of ink; no readable names or detailed faces. Its OWN small lamp is mounted on a short horizontal arm just above the panel and casts a subdued cool white pool down onto it. Keep that lamp distinct from the street lamp. Place the board slightly behind the fight lane toward the rear-left/center, leaving its full main silhouette visible. Behind it runs a low narrow black iron fence with spear-like uprights, disappearing into dense blue-gray fog with only vague building masses, no invented storefront. The sidewalk is broad worn gray rectangular concrete paving, with a curb edge confined to the extreme bottom/right margin, below the fighter soles. A small empty folding chair may remain immediately under the board, deep behind the support lane. Keep the closer black street-lamp post OUT of this background; it will be delivered separately as a foreground cutout. No Elle, Alex, stapling action, other people, parked monster, cemetery, Town Hall facade, rainstorm, neon, traffic, poster portraits coming alive, or generic foggy road vanishing down the center. Broad continuous flat sidewalk from x=0 to1 across y=70–100 percent, with only a few flat scraps of paper near the back edge.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherds_glen.reserve-native-0062.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0062-medium.webp",
+          "bytes": 18482,
+          "sha256": "329de78e4bde9704a7e171c83db98da2f2b330620cc3daf0e6f85056d8745f3e",
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "candidateRole": "reserve-location-inspection-only",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-1a3b1d0d-d519-4031-9235-a224f07f1054.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    },
+    {
+      "stageId": "shepherds_glen",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherds_glen.foreground.v1.png",
+      "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "sha256": "c83fab7b1fd227e642b5a31eb0fddf47bb8f2488ffaea165d1f6d123c044cd62",
+      "bytes": 208307,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9528338223105828,
+        "fullyOpaqueFraction": 0.0005370698991706878,
+        "boundsAlpha32Exclusive": [
+          39,
+          17,
+          1651,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0001574224694338433
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 6.0810476372297195e-05
+        },
+        "fullCentralStrip": {
+          "normalizedBounds": [
+            0.18,
+            0,
+            0.82,
+            1
+          ],
+          "pixelBoundsExclusive": [
+            300,
+            0,
+            1371,
+            941
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 9.426370619092239e-05
+        },
+        "saturatedRedYellowEdgePixelsByAlpha": {
+          "1": 2681,
+          "2": 4
+        },
+        "saturatedRedYellowEdgePixelsAlpha32OrMore": 0
+      },
+      "prompt": "Use case: stylized-concept. Asset type: a separate FOREGROUND OVERLAY PNG for a lateral 2D fighting-game arena, true transparent background, wide 16:9 landscape, ideally 1672 by 941 pixels. Create ONE sparse layer with isolated close edge objects only. The native gameplay image(s) document the materials and exact location; the final supplied image is an accepted generated BACKGROUND used only to align the camera, scale and lighting, and must NOT be redrawn in this overlay. Output actual RGBA transparency everywhere except the requested solid edge objects. No full background, room, sky, floor plane, haze sheet, vignette, matte, checkerboard pixels, colored backdrop, drop-shadow rectangle, border or frame connecting the two sides. The ENTIRE vertical strip x=18–82 percent must have alpha zero from top to bottom; all body space and soles at y=82.5 percent stay fully clear. Object silhouettes may touch or be cropped by the extreme canvas edges. Make restrained realistically weathered game-environment details, with crisp natural alpha edges and only very local antialiasing. No people, creatures, body parts, actor shadows, reflections, weapons, pickups, UI, words, captions, logos, watermarks, montage or multiple views. Do not add an event or transformation. Location: Silent Hill: Homecoming, the sidewalk of Elle's missing-persons board. Draw the ONE nearer black cast-iron STREET LAMP from the native reference as a thin foreground cutout at the far left, distinct from the board's own little lamp already in the background. Its vertical post is centered about x=5.5 percent and stays inside x=1–10 percent, its faceted pale yellow-white luminous glass globe near the upper-left, and its base extends to/crops at the bottom canvas edge. Match the native post's simple old black shaft and widened foot. A faint tight halo around the globe may stay inside x=0–14 percent only; absolutely no fog layer or glow extending into the center. At the extreme bottom-right x=92–100 percent, y=94–100 percent, add just one or two small worn flat paper scraps matching the street notices, with no readable words or faces. Do not reproduce the noticeboard, chair, fence, sidewalk, curb, sky, buildings or board-mounted light. No rain, traffic, actor or supernatural effect.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherds_glen.reserve-native-0062.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0062-medium.webp",
+          "bytes": 18482,
+          "sha256": "329de78e4bde9704a7e171c83db98da2f2b330620cc3daf0e6f85056d8745f3e",
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB",
+          "candidateRole": "reserve-location-inspection-only",
+          "role": "native-game-capture",
+          "usage": "Exact-location architectural reference inspected visually before generation; actor/UI excluded."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherds_glen.background.v1.png",
+          "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+          "role": "accepted-generated-background",
+          "usage": "Camera, scale and lighting alignment only; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-2690f6f7-0473-4276-af4c-7f1827ce7c5f.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent native integration harness pending; no browser or live-engine success asserted by isolated delivery."
+      }
+    }
+  ],
+  "stageEvidence": [
+    {
+      "stageId": "grand_hotel",
+      "name": "GRAND HOTEL",
+      "source": "homecoming",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "referenceSupportReply"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SOL DE L’ATRIUM",
+          "description": "Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "ATRIUM SANS SEPULCHER",
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "ashFall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "grand_hotel:reference:2",
+          "grand_hotel:reference:3",
+          "grand_hotel:reference:4"
+        ],
+        "pendingProposalIds": [
+          "grand_hotel:reference:1"
+        ]
+      },
+      "referenceIds": [
+        "EXT06",
+        "EXT05"
+      ],
+      "locationNote": "Grand Hotel et rencontre Sepulcher; ne pas reproduire Lakeview.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.guide.html",
+          "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+          "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+          "bytes": 111444,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.portforward-hotel.html",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-3-Hotel.htm",
+          "bytes": 81154,
+          "sha256": "2212ae37f893c31791e1455b44d4845111c9e7c065af7ec750dd64bfb146a577",
+          "contentType": "text/html"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.portforward-boss.html",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Boss-Sepulcher.htm",
+          "bytes": 40539,
+          "sha256": "2113c0f8d2fc253bc7169c68fa3834b9b5a03de2c6091fdd47526154a2598945",
+          "contentType": "text/html"
+        }
+      ],
+      "descriptorScene": "otherworld-atrium-without-sepulcher",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Atrium Otherworld du Grand Hotel sans Sepulcher : enveloppe sombre nervurée, rayonnages/supports latéraux sculptés, sol brun circulaire continu et petits débris aux coins. Aucun boss, sac organique, arbre vivant, lustre ou événement.",
+      "limits": [
+        "Le contrat détaillé atriumSupportReply vise explicitement l’atrium Otherworld. Le flag moteur fixed-normal et normalPhaseLabel ATRIUM SANS SEPULCHER sont conservés ; aucune politique ni transition modifiée.",
+        "Les captures de combat 0138–0140 attestent matériaux, supports sculptés et sol, mais les acteurs occultent une partie de la salle. Le centre libéré et la projection frontale sont reconstruits ; la topologie, le nombre complet de supports et la courbure du toit ne sont pas mesurés.",
+        "La fiche de recherche historique évoque un lustre proposé ; le contrat runtime détaillé l’exclut. Le rendu suit cette exclusion, sans lustre, sac destructible, arbre vivant, boss ni événement.",
+        "Les fragments proches sont une reconstruction des matériaux de bordure visibles. Aucun morceau ne représente un danger ajouté."
+      ]
+    },
+    {
+      "stageId": "town_hall_hc",
+      "name": "SHEPHERD’S GLEN TOWN HALL",
+      "source": "homecoming",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "flagSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "doorPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "town_hall_hc:reference:2"
+        ],
+        "pendingProposalIds": [
+          "town_hall_hc:reference:1",
+          "town_hall_hc:reference:3",
+          "town_hall_hc:reference:4"
+        ]
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.guide.html",
+          "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+          "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+          "bytes": 111444,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.portforward-chapter2.html",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-2-Missing-Persons.htm",
+          "bytes": 67238,
+          "sha256": "705423ef3b87cca6db9d7fde2f5ca2eba6852910817121fc224d2e80cf9c6e26",
+          "contentType": "text/html"
+        }
+      ],
+      "descriptorScene": "public-hall-first-visit",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Salle publique du premier passage normal : boiseries, porte arrière sur estrade, deux pots, podium à gauche et chaises à droite. Tapis et sol centraux libres ; montants proches limités aux marges.",
+      "limits": [
+        "Capture 0031 du premier passage public, sans importer le sous-sol ou le retour cérémoniel. Cadrage latéral, position du podium et largeur d’appui adaptés.",
+        "Les petites peintures restent indistinctes. Une petite lampe de lecture apparaît sur le podium généré ; son modèle précis n’est pas certifié par la capture.",
+        "Les montants proches sont une extrapolation de la menuiserie observée et non une mesure de la porte de la salle."
+      ]
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "name": "SHEPHERD HOUSE — ATTIC",
+      "source": "homecoming",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "portraitWatch",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "mirrorTurn",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "roomBreath",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "mirrorFracture",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "mirrorGlitch",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "shepherd_house_hc:reference:2"
+        ],
+        "pendingProposalIds": [
+          "shepherd_house_hc:reference:1",
+          "shepherd_house_hc:reference:3",
+          "shepherd_house_hc:reference:4"
+        ]
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.guide.html",
+          "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+          "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+          "bytes": 111444,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.portforward-chapter7.html",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-7-Town-Hall.htm",
+          "bytes": 68830,
+          "sha256": "8c10e64bea79de68983c56b5c7b6d364ba222f860e1f75f326153aa54bbcfa96",
+          "contentType": "text/html"
+        }
+      ],
+      "descriptorScene": "normal-attic-before-transformation",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Grenier normal avant transformation : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque fermée et caisses couvertes. Plancher central dégagé ; montant et chutes de bois seulement aux coins.",
+      "limits": [
+        "Captures 0368 et 0369 du grenier normal avant la discussion avec Lillian. La vue fermée de la bibliothèque ne révèle pas l’étude secrète et n’importe pas le chapitre Otherworld.",
+        "La caméra réunit les repères de deux angles de la même pièce ; écartements, travées et détails de charpente sont reconstruits.",
+        "Quelques pixels alpha1 subsistent dans la zone centrale du premier plan natif. Ils sont mesurés et conservés ; aucun pixel alpha32 ou supérieur ne masque la bande d’appui."
+      ]
+    },
+    {
+      "stageId": "centennial_building",
+      "name": "CENTENNIAL BUILDING",
+      "source": "downpour",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "elevatorCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "elevatorDrop",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "windowShadow",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "centennial_building:reference:2",
+          "centennial_building:reference:1"
+        ],
+        "pendingProposalIds": [
+          "centennial_building:reference:3",
+          "centennial_building:reference:4"
+        ]
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "locationNote": "Centennial Building; séparer archives et salles administratives.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.guide.html",
+          "url": "https://www.silenthillmemories.net/sh8/walkthrough_06_centennial_building_en.htm",
+          "sha256": "48791314112250b29688c1abb8fac72d7ffbed0d8fde23a200967184e5bf8dfe",
+          "bytes": 23889,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.prima-guide.html",
+          "url": "https://primagames.com/eguides/silent-hill-downpour-eguide/walkthrough/campaign/centennial-building",
+          "bytes": 81437,
+          "sha256": "cebbdeff4682e5f6ad0fb37db8266d7401fd526dcc26d6da3fea9a0d8c82e9c8",
+          "contentType": "text/html; charset=utf-8"
+        }
+      ],
+      "descriptorScene": "library-normal-main-reading-room",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Bibliothèque normale : rayonnages, pilastres de bois, galerie, bureau arrière, fenêtres hautes et tapis. Le faisceau UV portable des captures est exclu ; papiers du premier plan au coin droit.",
+      "limits": [
+        "Sous-salle retenue : bibliothèque normale, documentée dans la section Library du guide. Les bureaux administratifs et les archives vidéo ne sont pas mélangés.",
+        "La projection latérale, le plafond, la galerie et les zones masquées sont reconstruits à partir des vues 02g-021 et 02g-022. Aucun plan métrique ni fidélité 1:1 établi.",
+        "Le violet est le faisceau UV porté par Murphy dans les captures ; il est absent du décor permanent.",
+        "Dimensions natives du premier plan : 1673×940, contre 1672×941 pour le fond. Le descripteur fit cover emploie ces mesures exactes ; aucun redimensionnement de fichier effectué."
+      ]
+    },
+    {
+      "stageId": "st_marias",
+      "name": "ST. MARIA’S MONASTERY",
+      "source": "downpour",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "bellToll",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "ritualSeal",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightning",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "ritualGlyph",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "st_marias:reference:1"
+        ],
+        "pendingProposalIds": [
+          "st_marias:reference:2",
+          "st_marias:reference:3",
+          "st_marias:reference:4"
+        ]
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "locationNote": "St Maria’s Monastery; cadrage de chapelle, théâtre ou orphelinat à fixer.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.guide.html",
+          "url": "https://www.silenthillmemories.net/sh8/walkthrough_08_st_marias_monastery_en.htm",
+          "sha256": "f23f7362fd08a82836f931e698f891267e679a4b2865637c0ce28f0307ed5db8",
+          "bytes": 28379,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.prima-guide.html",
+          "url": "https://primagames.com/eguides/silent-hill-downpour-eguide/walkthrough/campaign/st-marias-monastery",
+          "bytes": 88124,
+          "sha256": "8cab8d29bf374bba14b14b401d73970c48db9f5d4332db7487b3b8fc14cda294",
+          "contentType": "text/html; charset=utf-8"
+        }
+      ],
+      "descriptorScene": "normal-chapel-closed-altar-gate",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Chapelle normale devant sa grille d’autel fermée : enduit écaillé, poteaux massifs, fer à motifs rectilignes, autel au rideau rouge derrière. Sol central continu ; éclats et planche proches aux coins. Lustre hors cadre.",
+      "limits": [
+        "Sous-salle retenue : sanctuaire de la chapelle normale, grille fermée avant son ouverture. La capture 02i-018 documente la grille et le matériau, mais son lustre descendu est volontairement hors cadre ; aucun mouvement de puzzle ajouté.",
+        "02i-019 est une vue proche de l’autel après accès ; elle sert uniquement à son mobilier permanent, son rideau et ses matériaux, pas à importer l’état ouvert de la grille.",
+        "La caméra frontale, les régions occultées et la bande d’appui sont adaptées. Les effondrements périphériques visibles dans la source ne sont pas transformés en trou central.",
+        "Les chandeliers d’autel et le livre restent fixes ; aucune interaction, flamme animée ou nouveau clip n’est créé."
+      ]
+    },
+    {
+      "stageId": "shepherds_glen",
+      "name": "SHEPHERD’S GLEN",
+      "source": "homecoming",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "TROTTOIR DU PANNEAU",
+          "description": "Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "PANNEAU DE LA RENCONTRE ELLE",
+        "weather": "fog",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "stormSurge",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "roadCollapse",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "fogDrift",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "streetLightFlicker",
+            "reason": "Remplacé par une piste précise du classeur."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "shepherds_glen:reference:1",
+          "shepherds_glen:reference:2",
+          "shepherds_glen:reference:3"
+        ],
+        "pendingProposalIds": [
+          "shepherds_glen:reference:4"
+        ]
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "locationNote": "Ville de Shepherd’s Glen; cadrage de rue à définir.",
+      "guides": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.guide.html",
+          "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+          "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+          "bytes": 111444,
+          "contentType": "text/html; charset=UTF-8"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.portforward-chapter2.html",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-2-Missing-Persons.htm",
+          "bytes": 67238,
+          "sha256": "705423ef3b87cca6db9d7fde2f5ca2eba6852910817121fc224d2e80cf9c6e26",
+          "contentType": "text/html"
+        }
+      ],
+      "descriptorScene": "elles-missing-persons-board-sidewalk",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for this documented location; existing policy had no sceneId and was not modified.",
+      "visualAcceptance": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne.",
+      "limits": [
+        "Remplacement autorisé de police_station_hc après inspection de la capture large 0062. Le périmètre est le trottoir du panneau de la rencontre Elle, pas une rue générique, le Town Hall ou un cimetière.",
+        "Le panneau, sa lampe propre, ses jambes, la chaise, la clôture, le trottoir et le lampadaire proche sont visibles dans la source. La caméra et les distances sont adaptées au duel ; l’implantation de la maçonnerie de clôture n’est pas mesurée.",
+        "Le lampadaire proche est isolé dans le premier plan ; le fond ne le double pas. Sa petite lueur est statique. La brume reste figée dans le fond.",
+        "Les avis affichés sont des textures reconstruites avec petites silhouettes imprimées indistinctes ; aucun nom ou visage réel n’est certifié. Des alpha1–2 résiduels aux bords sont conservés sans retouche."
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "stageId": "police_station_hc",
+      "status": "deferred-insufficient-native-room-view",
+      "replacementStageId": "shepherds_glen",
+      "authorization": "Parent /root approved replacement if wide native noticeboard view and exact policy confirmed; both confirmed from Portforward 0062 and repository policy.",
+      "reason": "Initial-cell captures inspected are close dialogue shots or tiny thumbnails; the Gamepressure overview image is a station map, not cell architecture. No generic cell invented.",
+      "inspectedSources": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0145.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0145-medium.webp",
+          "bytes": 7580,
+          "sha256": "176ad67ef4e1c22c4d9e78411550b97a313caf3cbcdcacc01378149f8611dc9b",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0146.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0146-medium.webp",
+          "bytes": 16334,
+          "sha256": "26f973559f10f11f7afc7afcbeea73cde4789c478d38fb876cbf991f14b0fa95",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0147.webp",
+          "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0147-medium.webp",
+          "bytes": 21296,
+          "sha256": "cf7b49c81ca0b69b864c155c3b91f5380e6c9d32eec48f7b35244fb8621d9f6b",
+          "contentType": null,
+          "width": 1024,
+          "height": 575,
+          "mode": "RGB"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-cell-guide.jpg",
+          "url": "https://www.gamepressure.com/silenthillhomecoming/gfx/word/675031359.jpg",
+          "bytes": 24019,
+          "sha256": "12ca34b142dd754868291f13dbace87d9ba80f9c3d0a4bb39737aa5cfd559a48",
+          "contentType": "image/jpeg",
+          "width": 580,
+          "height": 499,
+          "mode": "RGB"
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-script-5.1.jpg",
+          "url": "https://www.silenthillmemories.net/sh5/script/shh_script_5.1.jpg",
+          "bytes": 5478,
+          "sha256": "3abf72fff1c5c3b87fe27b81dc4d96933b04de2995be08a2e33b0a7c2907ca1b",
+          "contentType": "image/jpeg",
+          "width": 200,
+          "height": 113,
+          "mode": "RGB"
+        }
+      ],
+      "scopePreserved": "Initial locked cell before Wheeler releases Alex. No substitution by the chief office, garage or Overlook Penitentiary; no image produced for this stage and no policy modified."
+    }
+  ],
+  "sources": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.guide.html",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+      "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+      "bytes": 111444,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-sepulcher.jpg",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_03d.jpg",
+      "sha256": "1d9c6ed4aab6b24b80e7543e7920b8cad6294fd08a8471a7051addcb477a677b",
+      "bytes": 5656,
+      "contentType": "image/jpeg",
+      "width": 200,
+      "height": 125,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-first-cell.jpg",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_04a.jpg",
+      "sha256": "ff16bfca74a2d7eafd3bc995199df1b3cb6b941a5f3a99aff103210f43f8f73f",
+      "bytes": 5892,
+      "contentType": "image/jpeg",
+      "width": 200,
+      "height": 125,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.guide.html",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_06_centennial_building_en.htm",
+      "sha256": "48791314112250b29688c1abb8fac72d7ffbed0d8fde23a200967184e5bf8dfe",
+      "bytes": 23889,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.guide.html",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_08_st_marias_monastery_en.htm",
+      "sha256": "f23f7362fd08a82836f931e698f891267e679a4b2865637c0ce28f0307ed5db8",
+      "bytes": 28379,
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.gamepressure-reference.jpg",
+      "url": "https://www.gamepressure.com/silenthillhomecoming/gfx/word/675266890.jpg",
+      "bytes": 20547,
+      "sha256": "53f6082b6b9c885b55219129bebc607e84ad26e74cd2febe5d17f22dff234299",
+      "contentType": "image/jpeg",
+      "width": 250,
+      "height": 188,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.gamepressure-guide.html",
+      "url": "https://www.gamepressure.com/silenthillhomecoming/shepherd-house-again/ze1a48",
+      "bytes": 221585,
+      "sha256": "3c80aa6aa405af17e4ac3b8ac4593acbca6442b70793adc28ebcde8571ab0ce6",
+      "contentType": "text/html; Charset=utf-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/town_hall_hc.gamepressure-guide.html",
+      "url": "https://www.gamepressure.com/silenthillhomecoming/town-hall/zc1a46",
+      "bytes": 219979,
+      "sha256": "f1b2ab5c38eca5946177c602325e9013c0f928402ddd7de7405306983a0b965c",
+      "contentType": "text/html; Charset=utf-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.gamepressure-guide.html",
+      "url": "https://www.gamepressure.com/silenthillhomecoming/jail-walkthrough/ze1a57",
+      "bytes": 221430,
+      "sha256": "6f3275cb6d0ca1e9042902c4123ed941179605cd24f9fbac32cc0aa973c1e343",
+      "contentType": "text/html; Charset=utf-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.portforward-chapter2.html",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-2-Missing-Persons.htm",
+      "bytes": 67238,
+      "sha256": "705423ef3b87cca6db9d7fde2f5ca2eba6852910817121fc224d2e80cf9c6e26",
+      "contentType": "text/html"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/homecoming.portforward-chapter7.html",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-7-Town-Hall.htm",
+      "bytes": 68830,
+      "sha256": "8c10e64bea79de68983c56b5c7b6d364ba222f860e1f75f326153aa54bbcfa96",
+      "contentType": "text/html"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.portforward-boss.html",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Boss-Sepulcher.htm",
+      "bytes": 40539,
+      "sha256": "2113c0f8d2fc253bc7169c68fa3834b9b5a03de2c6091fdd47526154a2598945",
+      "contentType": "text/html"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.portforward-guide.html",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-4-Sheriffs-Station.htm",
+      "bytes": 52886,
+      "sha256": "59b2ed7ca2aef57e61cec01b87931c6ed916cac1d6dda760787ed787d5eeb403",
+      "contentType": "text/html"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.prima-guide.html",
+      "url": "https://primagames.com/eguides/silent-hill-downpour-eguide/walkthrough/campaign/centennial-building",
+      "bytes": 81437,
+      "sha256": "cebbdeff4682e5f6ad0fb37db8266d7401fd526dcc26d6da3fea9a0d8c82e9c8",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.prima-guide.html",
+      "url": "https://primagames.com/eguides/silent-hill-downpour-eguide/walkthrough/campaign/st-marias-monastery",
+      "bytes": 88124,
+      "sha256": "8cab8d29bf374bba14b14b401d73970c48db9f5d4332db7487b3b8fc14cda294",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/town_hall_hc.native-0031.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0031-medium.webp",
+      "bytes": 21274,
+      "sha256": "26d9b1451d45046456c7ce22d850e67d428ef306eda8ed5a52422d922b4f2b91",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0368.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0368-medium.webp",
+      "bytes": 14996,
+      "sha256": "13dd4a61f8c72ec5f0d1a9fa5f6ff673bf1c52f9c85d42be5858c07e940b1c23",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherd_house_hc.native-0369.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0369-medium.webp",
+      "bytes": 23546,
+      "sha256": "20c5ec7ba475291961fb1e728f36863bc9b47838e082b0bb0810b0a6fa3c6f0e",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0145.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0145-medium.webp",
+      "bytes": 7580,
+      "sha256": "176ad67ef4e1c22c4d9e78411550b97a313caf3cbcdcacc01378149f8611dc9b",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0146.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0146-medium.webp",
+      "bytes": 16334,
+      "sha256": "26f973559f10f11f7afc7afcbeea73cde4789c478d38fb876cbf991f14b0fa95",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0139.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0139-medium.webp",
+      "bytes": 24344,
+      "sha256": "25590af6819fffe9597cc267e964f8c8b570ed2e0577c9b6a5091b2f1adc78f9",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0140.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0140-medium.webp",
+      "bytes": 18256,
+      "sha256": "ff3a825632be66d497a66755773791650dd94a7d337ec6ace463bd3543322810",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.portforward-hotel.html",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Chapter-3-Hotel.htm",
+      "bytes": 81154,
+      "sha256": "2212ae37f893c31791e1455b44d4845111c9e7c065af7ec750dd64bfb146a577",
+      "contentType": "text/html"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-021.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-021.jpg",
+      "bytes": 77703,
+      "sha256": "3c6b90a21972b6cfa527cf7e40b26dc01e779659ce27ac650109013febac5745",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-022.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-022.jpg",
+      "bytes": 63190,
+      "sha256": "99eac8e29dc07e88e7538a5f9643fb7aacfac7c46e6210830b3fea5212c4e550",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/centennial_building.native-02g-023.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02g-023.jpg",
+      "bytes": 86262,
+      "sha256": "dd5a8a89e1a005208764a1a9fd648eb6387e189414f620cfab607c1177ab6c3b",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-015.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-015.jpg",
+      "bytes": 52251,
+      "sha256": "9c3882bfa37920770f233d1db018a6955a3e8b270b55671ff63564598c62a3b9",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-017.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-017.jpg",
+      "bytes": 76734,
+      "sha256": "1735fb3d864d8ad90533ef390ae08a1f93bc5eac564e8b444aa08a9bba3dca01",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-018.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-018.jpg",
+      "bytes": 111581,
+      "sha256": "164b2b96dc6d8fe4f367d2326856ad723d242678f811cbdfeaa0cdd522c864e4",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0137.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0137-medium.webp",
+      "bytes": 14366,
+      "sha256": "e435bf9e885689cc95c171071daae0292bb8f4c28b01ca1af1394bd32a69d55c",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/grand_hotel.native-0138.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0138-medium.webp",
+      "bytes": 17134,
+      "sha256": "0ee038c625fba9fd1d8906644d6c11033326f10fc110630eb02483e635d9784c",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-0147.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0147-medium.webp",
+      "bytes": 21296,
+      "sha256": "cf7b49c81ca0b69b864c155c3b91f5380e6c9d32eec48f7b35244fb8621d9f6b",
+      "contentType": null,
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-cell-guide.jpg",
+      "url": "https://www.gamepressure.com/silenthillhomecoming/gfx/word/675031359.jpg",
+      "bytes": 24019,
+      "sha256": "12ca34b142dd754868291f13dbace87d9ba80f9c3d0a4bb39737aa5cfd559a48",
+      "contentType": "image/jpeg",
+      "width": 580,
+      "height": 499,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/police_station_hc.native-script-5.1.jpg",
+      "url": "https://www.silenthillmemories.net/sh5/script/shh_script_5.1.jpg",
+      "bytes": 5478,
+      "sha256": "3abf72fff1c5c3b87fe27b81dc4d96933b04de2995be08a2e33b0a7c2907ca1b",
+      "contentType": "image/jpeg",
+      "width": 200,
+      "height": 113,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/st_marias.native-02i-019.jpg",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02i-019.jpg",
+      "bytes": 90019,
+      "sha256": "50c891f8890051d1eeae807f161828a35d131e7d0c9cee1f0e81bf69aa06596d",
+      "contentType": "image/jpeg",
+      "width": 1047,
+      "height": 587,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherds_glen.reserve-native-0063.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0063-medium.webp",
+      "bytes": 25148,
+      "sha256": "052766765f43e2ece2c972942424f17eede1d4ff12ebae2642d0e51327d0fd9f",
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB",
+      "candidateRole": "reserve-location-inspection-only"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass21-b/references/shepherds_glen.reserve-native-0062.webp",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/silent-hill-homecoming-0062-medium.webp",
+      "bytes": 18482,
+      "sha256": "329de78e4bde9704a7e171c83db98da2f2b330620cc3daf0e6f85056d8745f3e",
+      "width": 1024,
+      "height": 575,
+      "mode": "RGB",
+      "candidateRole": "reserve-location-inspection-only"
+    }
+  ],
+  "inputHashesAtResearch": {
+    "data/stages.json": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+    "docs/production/research/extended.json": "3fb766eed4d6405cf7be4c1d6c9dae0420a2fb7030ebb4b5b7f82e6ec1fa1696",
+    "src/stage-bitmap-manifest.js": "53bb9214cf150b6a3ce567dcec3759daf3603a71565737dc72222afcb2e993f0",
+    "src/stage-reference-policy.js": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6"
+  },
+  "generationPolicy": {
+    "builtinImagegenOnly": true,
+    "nativeCaptureInspectedBeforeGeneration": true,
+    "noPixelRetouch": true,
+    "nativeOutputPreserved": true,
+    "notCertifiedOneToOne": true,
+    "notCertifiedUhd": true,
+    "repositoryFilesModifiedByThisAgent": false
+  },
+  "qa": {
+    "allPngsInspectedVisually": true,
+    "allOriginalOutputShaMatch": true,
+    "allReferencesShaMatch": true,
+    "nativeDimensionsObserved": [
+      [
+        1672,
+        941
+      ],
+      [
+        1673,
+        940
+      ]
+    ],
+    "alpha32Threshold": 32,
+    "supportBandNormalized": [
+      0.2,
+      0.8,
+      0.8,
+      0.86
+    ],
+    "supportBandAllForegroundsVisibleFractionAlpha32Zero": true,
+    "centralBodyAllForegroundsVisibleFractionAlpha32Zero": true,
+    "supportFloorNormalized": 0.825,
+    "descriptorValidationFile": "descriptor-validation.json",
+    "liveEngineCompositeStatus": "Pending parent harness after integration. No browser claim.",
+    "notes": [
+      "11 native PNGs are 1672×941; Centennial foreground alone is 1673×940 and remains untouched.",
+      "All six foregrounds have actual RGBA transparency. Tiny alpha1–2 remnants and saturated RGB in near-transparent edge pixels are measured, not painted out.",
+      "No saturated red/yellow edge pixel reaches alpha32. Real compositing review remains separate.",
+      "Each layer is a single static frame; these twelve PNGs do not increment animation-clip coverage.",
+      "Background parallax is0; foreground parallax is0.006. Neither filename nor source metadata invents a runtime sceneId requirement."
+    ]
+  }
+}

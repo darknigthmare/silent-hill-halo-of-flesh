@@ -1,0 +1,2925 @@
+{
+  "stageIds": [
+    "grand_hotel",
+    "police_station_hc",
+    "town_hall_hc",
+    "shepherd_house_hc",
+    "centennial_building",
+    "st_marias"
+  ],
+  "stages": [
+    {
+      "id": "grand_hotel",
+      "name": "GRAND HOTEL",
+      "source": "homecoming",
+      "family": "hotel",
+      "sky": [
+        "#3e302c",
+        "#150d0a",
+        "#030202"
+      ],
+      "weather": "dust",
+      "props": [],
+      "hazard": "emberFall",
+      "animations": [
+        "lampFlicker"
+      ],
+      "fatality": {
+        "id": "grand_hotel_fatality",
+        "name": "CHAMBRE DU SOUVENIR",
+        "effect": "fire",
+        "sequence": [
+          "portrait",
+          "fire",
+          "ash"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de GRAND HOTEL."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Grand Hotel et rencontre Sepulcher; ne pas reproduire Lakeview.",
+        "canonicalBasis": "EXT06 ; EXT05",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "carpet",
+        "name": "SOL DE L’ATRIUM",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 263,
+        "intensity": 1.13,
+        "arenaInset": 104,
+        "hazardDeck": [],
+        "events": [
+          "referenceSupportReply"
+        ],
+        "motifPolicy": {
+          "events": [
+            "referenceSupportReply"
+          ],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "portraitWatch",
+            "mirrorTurn"
+          ],
+          "excludedHazards": [
+            "portraitGaze",
+            "mirrorFracture"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "ashFall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "emberFall",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "weather",
+              "id": "embers",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "grand_hotel:rust:carpet:fixed-normal::referenceSupportReply"
+      },
+      "gameplay": {
+        "arenaInset": 104,
+        "terrainRules": false,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "lobby"
+      ],
+      "animationTracks": [
+        {
+          "id": "lampFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "grand_hotel_referenceSupportReply_1",
+          "event": "referenceSupportReply",
+          "name": "Support suspendu de l’atrium Sepulcher",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Support du boss vibrant après impact",
+          "referenceIds": [
+            "EXT06",
+            "EXT05"
+          ],
+          "proposalId": "grand_hotel:reference:3",
+          "zone": {
+            "x": 0.73,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "reference": {
+        "id": "grand_hotel",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "GRAND HOTEL",
+        "correctedName": null,
+        "locationNote": "Grand Hotel et rencontre Sepulcher; ne pas reproduire Lakeview.",
+        "referenceIds": [
+          "EXT06",
+          "EXT05"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "grand_hotel_ambient_01",
+            "description": "Suspension du lustre",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06",
+              "EXT05"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "grand_hotel_ambient_02",
+            "description": "Poussière près des passerelles endommagées",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06",
+              "EXT05"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "grand_hotel_ambient_03",
+            "description": "Support du boss vibrant après impact",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06",
+              "EXT05"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "grand_hotel_round_transition",
+            "description": "Transition proposée pour GRAND HOTEL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06",
+              "EXT05"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "grand_hotel:reference:2",
+          "key": "dustDrift",
+          "name": "Poussière dans un faisceau de fond",
+          "description": "Poussière près des passerelles endommagées",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.69,
+            "y": 0.45
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière dans un faisceau de fond",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "grand_hotel:reference:3",
+          "key": "atriumSupportReply",
+          "name": "Support suspendu de l’atrium Sepulcher",
+          "description": "Support du boss vibrant après impact",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.73,
+            "y": 0.28
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referenceSupportReply",
+          "eventEnabled": true,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Support suspendu de l’atrium Sepulcher",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide décrit les quatre sacs suspendus. Seul leur support abstrait réagit dans le versus ; aucun sac destructible, arbre vivant, Sepulcher, vibration canonique ou lustre inventé."
+        },
+        {
+          "id": "grand_hotel:reference:4",
+          "key": "atriumRoundRest",
+          "name": "La poussière cesse de tomber et le support d’atrium garde un faible éclat",
+          "description": "Transition proposée pour GRAND HOTEL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "proposalIndex": 3,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.69,
+            "y": 0.45
+          },
+          "trigger": "match-phase",
+          "event": null,
+          "matchRecipe": {
+            "targets": [
+              "dustDrift"
+            ],
+            "settleFrames": 31,
+            "kind": "atriumRoundRest"
+          },
+          "requiresExplicitMatchPhase": true,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "La poussière cesse de tomber et le support d’atrium garde un faible éclat",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Atrium Otherworld du Grand Hotel Homecoming, sans boss ajouté",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. La poussière cesse de tomber et le support d’atrium garde un faible éclat. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "referenceSupportReply"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SOL DE L’ATRIUM",
+          "description": "Atrium de la rencontre Sepulcher adapté au versus ; supports et rayonnages distincts des chambres et du boiler. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "ATRIUM SANS SEPULCHER",
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "ashFall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "grand_hotel:reference:2",
+          "grand_hotel:reference:3",
+          "grand_hotel:reference:4"
+        ],
+        "pendingProposalIds": [
+          "grand_hotel:reference:1"
+        ]
+      }
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "family": "office",
+      "sky": [
+        "#353833",
+        "#121410",
+        "#030403"
+      ],
+      "weather": "dust",
+      "props": [
+        "bars",
+        "lights"
+      ],
+      "animations": [
+        "lightFlicker"
+      ],
+      "hazard": "fallingDebris",
+      "fatality": {
+        "id": "police_station_hc_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN POLICE STATION."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Commissariat de Shepherd’s Glen.",
+        "canonicalBasis": "EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "carpet",
+        "name": "SOL DE LA CELLULE",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Cellule de la première rencontre Wheeler ; pas le bureau du chef, le garage ou la prison Overlook. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 281,
+        "intensity": 1.13,
+        "arenaInset": 96,
+        "hazardDeck": [],
+        "events": [
+          "powerFailure",
+          "referencePoliceBarsReply"
+        ],
+        "motifPolicy": {
+          "events": [
+            "powerFailure",
+            "referencePoliceBarsReply"
+          ],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "elevatorCall"
+          ],
+          "excludedHazards": [
+            "elevatorDrop",
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "rainSheets",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "radioPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "rain",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "police_station_hc:rust:carpet:fixed-normal::powerFailure+referencePoliceBarsReply"
+      },
+      "gameplay": {
+        "arenaInset": 96,
+        "terrainRules": false,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "bars",
+        "lights"
+      ],
+      "animationTracks": [
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "police_station_hc_powerFailure_1",
+          "event": "powerFailure",
+          "name": "PANNE GÉNÉRALE",
+          "trigger": "time-or-first-heavy-impact",
+          "triggerLabel": "IMPACT LOURD / PREMIER TEMPS",
+          "triggerDescription": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu.",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+          "canonicalBasis": "Commissariat de Shepherd’s Glen.",
+          "referenceIds": [
+            "EXT06"
+          ],
+          "proposalId": null
+        },
+        {
+          "id": "police_station_hc_referencePoliceBarsReply_2",
+          "event": "referencePoliceBarsReply",
+          "name": "Barreaux fermés de la cellule du commissariat",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Réaction des grilles à un impact voisin",
+          "referenceIds": [
+            "EXT06"
+          ],
+          "proposalId": "police_station_hc:reference:3",
+          "zone": {
+            "x": 0.35,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "reference": {
+        "id": "police_station_hc",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "SHEPHERD’S GLEN POLICE STATION",
+        "correctedName": null,
+        "locationNote": "Commissariat de Shepherd’s Glen.",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "police_station_hc_ambient_01",
+            "description": "Lumière de secours sur les cellules",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "police_station_hc_ambient_02",
+            "description": "Fumée poussiéreuse dans le faisceau",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "police_station_hc_ambient_03",
+            "description": "Réaction des grilles à un impact voisin",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "police_station_hc_round_transition",
+            "description": "Transition proposée pour SHEPHERD’S GLEN POLICE STATION : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "police_station_hc:reference:1",
+          "key": "lampReply",
+          "name": "Voyant après impact",
+          "description": "Lumière de secours sur les cellules",
+          "proposalIndex": 0,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.53,
+            "y": 0.3
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Voyant après impact",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "police_station_hc:reference:2",
+          "key": "policeCellLightDust",
+          "name": "Poussière dans la lumière de la cellule",
+          "description": "Fumée poussiéreuse dans le faisceau",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.35,
+            "y": 0.35
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière dans la lumière de la cellule",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Cellule du réveil d’Alex, commissariat Homecoming, avant libération par Wheeler",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux et cellule attestés ; faisceau et poussière sont proposés pour le versus, sans Wheeler, phare mobile attribué à son arme, fumée d’incendie ou effet sur la précision."
+        },
+        {
+          "id": "police_station_hc:reference:3",
+          "key": "policeCellBarsReply",
+          "name": "Barreaux fermés de la cellule du commissariat",
+          "description": "Réaction des grilles à un impact voisin",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.35,
+            "y": 0.57
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referencePoliceBarsReply",
+          "eventEnabled": true,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Barreaux fermés de la cellule du commissariat",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Cellule du premier réveil, distincte de la prison Homecoming",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Une résonance visuelle proposée après impact local ; serrure intacte, aucun passage ouvert, Schism, Wheeler ou empreinte de main."
+        },
+        {
+          "id": "police_station_hc:reference:4",
+          "key": "policeCellRoundRest",
+          "name": "Le faisceau se resserre sur la cellule sans ouvrir ses barreaux",
+          "description": "Transition proposée pour SHEPHERD’S GLEN POLICE STATION : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "proposalIndex": 3,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.35,
+            "y": 0.57
+          },
+          "trigger": "match-phase",
+          "event": null,
+          "matchRecipe": {
+            "targets": [
+              "lampReply",
+              "policeCellLightDust"
+            ],
+            "settleFrames": 21,
+            "kind": "policeCellRoundRest"
+          },
+          "requiresExplicitMatchPhase": true,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Le faisceau se resserre sur la cellule sans ouvrir ses barreaux",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Cellule du premier réveil, distincte de la prison Homecoming",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le faisceau se resserre sur la cellule sans ouvrir ses barreaux. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "powerFailure",
+          "referencePoliceBarsReply"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "SOL DE LA CELLULE",
+          "description": "Cellule de la première rencontre Wheeler ; pas le bureau du chef, le garage ou la prison Overlook. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "CELLULE AVANT LIBÉRATION",
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "radioPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "police_station_hc:reference:1",
+          "police_station_hc:reference:2",
+          "police_station_hc:reference:3",
+          "police_station_hc:reference:4"
+        ],
+        "pendingProposalIds": []
+      }
+    },
+    {
+      "id": "town_hall_hc",
+      "name": "SHEPHERD’S GLEN TOWN HALL",
+      "source": "homecoming",
+      "family": "hall",
+      "sky": [
+        "#37342d",
+        "#13110d",
+        "#030302"
+      ],
+      "weather": "dust",
+      "props": [
+        "portraits"
+      ],
+      "animations": [
+        "lightFlicker"
+      ],
+      "hazard": "fallingDebris",
+      "fatality": {
+        "id": "town_hall_hc_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN TOWN HALL."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
+        "canonicalBasis": "EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "narrow",
+        "name": "COULOIR ÉTROIT",
+        "moveScale": 0.95,
+        "jumpScale": 0.88,
+        "dodgeScale": 0.84,
+        "friction": 0.84,
+        "knockbackScale": 0.82,
+        "guardRegenScale": 1.02,
+        "description": "Les murs réduisent l’espace de recul et rendent les saisies plus dangereuses."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 265,
+        "initialDelay": 266,
+        "intensity": 1.13,
+        "arenaInset": 148,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "mirrorTurn"
+          ],
+          "excludedHazards": [
+            "mirrorFracture",
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "doorSlam",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "portraitBlink",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "flagSway",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "shadowPass",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "doorPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 86,
+        "signature": "town_hall_hc:rust:narrow:fixed-normal::"
+      },
+      "gameplay": {
+        "arenaInset": 148,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": true
+      },
+      "layers": [
+        "corridor",
+        "doors",
+        "ceiling-lights",
+        "portraits"
+      ],
+      "animationTracks": [
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "town_hall_hc",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "SHEPHERD’S GLEN TOWN HALL",
+        "correctedName": null,
+        "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "town_hall_hc_ambient_01",
+            "description": "Drapeau légèrement agité",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "town_hall_hc_ambient_02",
+            "description": "Lueur changeante sur pupitre",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "town_hall_hc_ambient_03",
+            "description": "Poussière du plafond entre les manches",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "town_hall_hc_round_transition",
+            "description": "Transition proposée pour SHEPHERD’S GLEN TOWN HALL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "town_hall_hc:reference:2",
+          "key": "lecternGlint",
+          "name": "Lueur sur le pupitre de la salle publique",
+          "description": "Lueur changeante sur pupitre",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lueur sur le pupitre de la salle publique",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Premier passage normal, salle centrale du Town Hall",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Podium attesté par le guide ; reflet proposé pour le versus, sans texte ajouté, cérémonie de retour, clé ou ouverture du sous-sol."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "flagSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "doorPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "town_hall_hc:reference:2"
+        ],
+        "pendingProposalIds": [
+          "town_hall_hc:reference:1",
+          "town_hall_hc:reference:3",
+          "town_hall_hc:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "shepherd_house_hc",
+      "name": "SHEPHERD HOUSE — ATTIC",
+      "source": "homecoming",
+      "family": "house",
+      "sky": [
+        "#332f29",
+        "#110f0c",
+        "#030302"
+      ],
+      "weather": "dust",
+      "props": [],
+      "animations": [
+        "floorCreak"
+      ],
+      "hazard": "fallingDebris",
+      "fatality": {
+        "id": "shepherd_house_hc_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SHEPHERD HOUSE — ATTIC."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
+        "canonicalBasis": "EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "wood",
+        "name": "PLANCHER ANCIEN",
+        "moveScale": 0.97,
+        "jumpScale": 1,
+        "dodgeScale": 0.96,
+        "friction": 0.85,
+        "knockbackScale": 1,
+        "guardRegenScale": 0.98,
+        "creak": true,
+        "description": "Le plancher trahit les déplacements par des craquements."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 281,
+        "intensity": 1.13,
+        "arenaInset": 118,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [],
+          "excludedHazards": [
+            "portraitGaze"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "portraitWatch",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "mirrorTurn",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "roomBreath",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "doorSlam",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "mirrorFracture",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "portraitBlink",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "mirrorGlitch",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "shepherd_house_hc:rust:wood:fixed-normal::"
+      },
+      "gameplay": {
+        "arenaInset": 118,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "rooms"
+      ],
+      "animationTracks": [
+        {
+          "id": "floorCreak",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "shepherd_house_hc",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "SHEPHERD HOUSE — ATTIC",
+        "correctedName": null,
+        "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "shepherd_house_hc_ambient_01",
+            "description": "Oscillation d’objet suspendu",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherd_house_hc_ambient_02",
+            "description": "Poussière sous la charpente",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherd_house_hc_ambient_03",
+            "description": "Horloge brièvement dérèglée entre les manches",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherd_house_hc_round_transition",
+            "description": "Transition proposée pour SHEPHERD HOUSE — ATTIC : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "shepherd_house_hc:reference:2",
+          "key": "atticDustFall",
+          "name": "Poussière sous les chevrons du grenier normal",
+          "description": "Poussière sous la charpente",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.17
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière sous les chevrons du grenier normal",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Grenier Shepherd House normal avant la transformation",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Charpente et poussière interprétées depuis la proposition versus ; aucun plan mesuré ni masque, médaille, horloge ou objet de l’état Otherworld importé."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "portraitWatch",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "mirrorTurn",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "roomBreath",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "mirrorFracture",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "mirrorGlitch",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "shepherd_house_hc:reference:2"
+        ],
+        "pendingProposalIds": [
+          "shepherd_house_hc:reference:1",
+          "shepherd_house_hc:reference:3",
+          "shepherd_house_hc:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "centennial_building",
+      "name": "CENTENNIAL BUILDING",
+      "source": "downpour",
+      "family": "office",
+      "sky": [
+        "#373a37",
+        "#121513",
+        "#030404"
+      ],
+      "weather": "dust",
+      "props": [
+        "desks",
+        "elevator",
+        "windows"
+      ],
+      "animations": [
+        "elevatorBlink",
+        "lightFlicker"
+      ],
+      "hazard": "fallingDebris",
+      "fatality": {
+        "id": "centennial_building_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de CENTENNIAL BUILDING."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Centennial Building; séparer archives et salles administratives.",
+        "canonicalBasis": "EXT11",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "carpet",
+        "name": "MOQUETTE HUMIDE",
+        "moveScale": 0.92,
+        "jumpScale": 0.96,
+        "dodgeScale": 0.9,
+        "friction": 0.76,
+        "knockbackScale": 0.88,
+        "guardRegenScale": 1.04,
+        "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.38,
+        "radioScale": 1.1340000000000001,
+        "silhouetteRange": 484,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "storm",
+        "name": "ORAGE ET DÉLUGE",
+        "cue": "TONNERRE",
+        "duration": 145,
+        "threshold": 0.57,
+        "timerRatio": 0.58,
+        "radioScale": 1.08,
+        "overlay": "storm",
+        "description": "La pluie, les éclairs et l’eau envahissent progressivement l’espace.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 319,
+        "initialDelay": 287,
+        "intensity": 1.065,
+        "arenaInset": 96,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "stormSurge"
+          ],
+          "excludedHazards": [
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "elevatorCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "waterRise",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "elevatorDrop",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "rainSheets",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "windowShadow",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "rain",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "centennial_building:storm:carpet:fixed-normal::"
+      },
+      "gameplay": {
+        "arenaInset": 96,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "desks",
+        "windows",
+        "elevator"
+      ],
+      "animationTracks": [
+        {
+          "id": "elevatorBlink",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        },
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "centennial_building",
+        "source": "downpour",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "CENTENNIAL BUILDING",
+        "correctedName": null,
+        "locationNote": "Centennial Building; séparer archives et salles administratives.",
+        "referenceIds": [
+          "EXT11"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "centennial_building_ambient_01",
+            "description": "Pages soulevées sur table",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "centennial_building_ambient_02",
+            "description": "Poussière dans le puits de lumière",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "centennial_building_ambient_03",
+            "description": "Roue de chariot d’archives qui tremble",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "centennial_building_round_transition",
+            "description": "Transition proposée pour CENTENNIAL BUILDING : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "centennial_building:reference:2",
+          "key": "dustDrift",
+          "name": "Poussière dans un faisceau de fond",
+          "description": "Poussière dans le puits de lumière",
+          "proposalIndex": 1,
+          "source": "downpour",
+          "evidence": [
+            "EXT11"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.52,
+            "y": 0.39
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Poussière dans un faisceau de fond",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "centennial_building:reference:1",
+          "key": "paperFlutter",
+          "name": "Papier retenu au décor",
+          "description": "Pages soulevées sur table",
+          "proposalIndex": 0,
+          "source": "downpour",
+          "evidence": [
+            "EXT11"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.3,
+            "y": 0.6
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Papier retenu au décor",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "elevatorCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "elevatorDrop",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "windowShadow",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "centennial_building:reference:2",
+          "centennial_building:reference:1"
+        ],
+        "pendingProposalIds": [
+          "centennial_building:reference:3",
+          "centennial_building:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "st_marias",
+      "name": "ST. MARIA’S MONASTERY",
+      "source": "downpour",
+      "family": "church",
+      "sky": [
+        "#343630",
+        "#11130f",
+        "#030403"
+      ],
+      "weather": "dust",
+      "props": [
+        "altar",
+        "bells",
+        "windows"
+      ],
+      "animations": [
+        "bellSwing"
+      ],
+      "hazard": "fallingDebris",
+      "fatality": {
+        "id": "st_marias_fatality",
+        "name": "AUTEL DU SACRIFICE",
+        "effect": "ritual",
+        "sequence": [
+          "mark",
+          "altar",
+          "siren"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de ST. MARIA’S MONASTERY."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "St Maria’s Monastery; cadrage de chapelle, théâtre ou orphelinat à fixer.",
+        "canonicalBasis": "EXT11",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "ritualStone",
+        "name": "PIERRE RITUELLE",
+        "moveScale": 0.97,
+        "jumpScale": 0.94,
+        "dodgeScale": 0.94,
+        "friction": 0.83,
+        "knockbackScale": 1.02,
+        "guardRegenScale": 0.88,
+        "description": "Les marques rituelles amplifient la jauge et les phases de boss."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.38,
+        "radioScale": 1.1340000000000001,
+        "silhouetteRange": 484,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "storm",
+        "name": "ORAGE ET DÉLUGE",
+        "cue": "TONNERRE",
+        "duration": 145,
+        "threshold": 0.57,
+        "timerRatio": 0.58,
+        "radioScale": 1.08,
+        "overlay": "storm",
+        "description": "La pluie, les éclairs et l’eau envahissent progressivement l’espace.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 319,
+        "initialDelay": 257,
+        "intensity": 1.065,
+        "arenaInset": 98,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "stormSurge"
+          ],
+          "excludedHazards": [
+            "bellToll",
+            "emberFall"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "bellToll",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "ritualWake",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "waterRise",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "ritualSeal",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "chainSweep",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "rainSheets",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "lightning",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "ritualGlyph",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "rain",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "st_marias:storm:ritualStone:fixed-normal::"
+      },
+      "gameplay": {
+        "arenaInset": 98,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "altar",
+        "nave",
+        "symbols",
+        "bells",
+        "windows"
+      ],
+      "animationTracks": [
+        {
+          "id": "bellSwing",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "st_marias",
+        "source": "downpour",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "ST. MARIA’S MONASTERY",
+        "correctedName": null,
+        "locationNote": "St Maria’s Monastery; cadrage de chapelle, théâtre ou orphelinat à fixer.",
+        "referenceIds": [
+          "EXT11"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "st_marias_ambient_01",
+            "description": "Tentures agitées près des fenêtres",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "st_marias_ambient_02",
+            "description": "Bougies du sanctuaire vacillantes",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "st_marias_ambient_03",
+            "description": "Ombre d’orgue glissant sur le mur",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "st_marias_round_transition",
+            "description": "Transition proposée pour ST. MARIA’S MONASTERY : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT11"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "st_marias:reference:1",
+          "key": "curtainBreathe",
+          "name": "Bord de rideau dans un courant faible",
+          "description": "Tentures agitées près des fenêtres",
+          "proposalIndex": 0,
+          "source": "downpour",
+          "evidence": [
+            "EXT11"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.28,
+            "y": 0.36
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Bord de rideau dans un courant faible",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "bellToll",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "ritualSeal",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "rainSheets",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightning",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "ritualGlyph",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "rain",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "st_marias:reference:1"
+        ],
+        "pendingProposalIds": [
+          "st_marias:reference:2",
+          "st_marias:reference:3",
+          "st_marias:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "shepherds_glen",
+      "name": "SHEPHERD’S GLEN",
+      "source": "homecoming",
+      "family": "street",
+      "sky": [
+        "#3d423e",
+        "#161a17",
+        "#040504"
+      ],
+      "weather": "fog",
+      "props": [
+        "road"
+      ],
+      "hazard": "staticBurst",
+      "animations": [],
+      "fatality": {
+        "id": "shepherds_glen_fatality",
+        "name": "CHUTE DANS LA BRUME",
+        "effect": "chasm",
+        "sequence": [
+          "siren",
+          "road-split",
+          "fog-close"
+        ],
+        "triggerZone": "edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Ville de Shepherd’s Glen; cadrage de rue à définir.",
+        "canonicalBasis": "EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "wetConcrete",
+        "name": "TROTTOIR DU PANNEAU",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "visibility": {
+        "fog": 0.62,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 272,
+        "intensity": 1.13,
+        "arenaInset": 74,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [],
+          "excludedHazards": [
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "corridorCollapse",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "stormSurge",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "roadCollapse",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "fogDrift",
+              "reason": "Remplacé par une piste précise du classeur."
+            },
+            {
+              "kind": "animation",
+              "id": "streetLightFlicker",
+              "reason": "Remplacé par une piste précise du classeur."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "shepherds_glen:rust:wetConcrete:fixed-normal::"
+      },
+      "gameplay": {
+        "arenaInset": 74,
+        "terrainRules": false,
+        "environmentalDirector": true,
+        "edgePressure": true,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "facades",
+        "road",
+        "fog-bank"
+      ],
+      "animationTracks": [],
+      "interactions": [],
+      "reference": {
+        "id": "shepherds_glen",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "SHEPHERD’S GLEN",
+        "correctedName": null,
+        "locationNote": "Ville de Shepherd’s Glen; cadrage de rue à définir.",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "shepherds_glen_ambient_01",
+            "description": "Brume qui traverse la chaussée",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherds_glen_ambient_02",
+            "description": "Affiches de disparus agitées sur panneau",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherds_glen_ambient_03",
+            "description": "Faisceau de lampadaire affaibli par le brouillard",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "shepherds_glen_round_transition",
+            "description": "Transition proposée pour SHEPHERD’S GLEN : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "shepherds_glen:reference:1",
+          "key": "fogLayers",
+          "name": "Nappes de brume à deux vitesses",
+          "description": "Brume qui traverse la chaussée",
+          "proposalIndex": 0,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.55
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Nappes de brume à deux vitesses",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "shepherds_glen:reference:2",
+          "key": "shepherdMissingNotices",
+          "name": "Affiches sur le panneau de disparus",
+          "description": "Affiches de disparus agitées sur panneau",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Affiches sur le panneau de disparus",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Panneau extérieur de la première rencontre Elle, Homecoming",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Panneau et papiers de la capture ; frémissement authored de quelques coins. Aucun visage, nom de disparu lisible, Elle ou plan de Town Hall importé."
+        },
+        {
+          "id": "shepherds_glen:reference:3",
+          "key": "shepherdNoticeLampFog",
+          "name": "Lampe au-dessus du panneau de disparus",
+          "description": "Faisceau de lampadaire affaibli par le brouillard",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.5,
+            "y": 0.25
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Lampe au-dessus du panneau de disparus",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Même panneau extérieur Shepherd’s Glen sous la brume",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Lampe réelle du panneau ; atténuation de faisceau par la brume proposée. Sans extinction narrative, choc électrique, éclair ou lampadaire déplacé depuis un autre quartier."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "TROTTOIR DU PANNEAU",
+          "description": "Panneau de disparus et sa propre lampe dans Shepherd’s Glen ; pas Town Hall ou cimetière. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "PANNEAU DE LA RENCONTRE ELLE",
+        "weather": "fog",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "stormSurge",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "roadCollapse",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "fogDrift",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "streetLightFlicker",
+            "reason": "Remplacé par une piste précise du classeur."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "shepherds_glen:reference:1",
+          "shepherds_glen:reference:2",
+          "shepherds_glen:reference:3"
+        ],
+        "pendingProposalIds": [
+          "shepherds_glen:reference:4"
+        ]
+      }
+    }
+  ],
+  "researchStages": [
+    {
+      "id": "grand_hotel",
+      "name": "GRAND HOTEL",
+      "source": "homecoming",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Grand Hotel et rencontre Sepulcher; ne pas reproduire Lakeview.",
+      "referenceIds": [
+        "EXT06",
+        "EXT05"
+      ],
+      "animations": [
+        {
+          "name": "grand_hotel_ambient_01",
+          "description": "Suspension du lustre",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "grand_hotel_ambient_02",
+          "description": "Poussière près des passerelles endommagées",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "grand_hotel_ambient_03",
+          "description": "Support du boss vibrant après impact",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "grand_hotel_round_transition",
+          "description": "Transition proposée pour GRAND HOTEL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06",
+            "EXT05"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Commissariat de Shepherd’s Glen.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "animations": [
+        {
+          "name": "police_station_hc_ambient_01",
+          "description": "Lumière de secours sur les cellules",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "police_station_hc_ambient_02",
+          "description": "Fumée poussiéreuse dans le faisceau",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "police_station_hc_ambient_03",
+          "description": "Réaction des grilles à un impact voisin",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "police_station_hc_round_transition",
+          "description": "Transition proposée pour SHEPHERD’S GLEN POLICE STATION : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "town_hall_hc",
+      "name": "SHEPHERD’S GLEN TOWN HALL",
+      "source": "homecoming",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "animations": [
+        {
+          "name": "town_hall_hc_ambient_01",
+          "description": "Drapeau légèrement agité",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "town_hall_hc_ambient_02",
+          "description": "Lueur changeante sur pupitre",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "town_hall_hc_ambient_03",
+          "description": "Poussière du plafond entre les manches",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "town_hall_hc_round_transition",
+          "description": "Transition proposée pour SHEPHERD’S GLEN TOWN HALL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "shepherd_house_hc",
+      "name": "SHEPHERD HOUSE — ATTIC",
+      "source": "homecoming",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "animations": [
+        {
+          "name": "shepherd_house_hc_ambient_01",
+          "description": "Oscillation d’objet suspendu",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherd_house_hc_ambient_02",
+          "description": "Poussière sous la charpente",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherd_house_hc_ambient_03",
+          "description": "Horloge brièvement dérèglée entre les manches",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherd_house_hc_round_transition",
+          "description": "Transition proposée pour SHEPHERD HOUSE — ATTIC : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "centennial_building",
+      "name": "CENTENNIAL BUILDING",
+      "source": "downpour",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Centennial Building; séparer archives et salles administratives.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "animations": [
+        {
+          "name": "centennial_building_ambient_01",
+          "description": "Pages soulevées sur table",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "centennial_building_ambient_02",
+          "description": "Poussière dans le puits de lumière",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "centennial_building_ambient_03",
+          "description": "Roue de chariot d’archives qui tremble",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "centennial_building_round_transition",
+          "description": "Transition proposée pour CENTENNIAL BUILDING : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "st_marias",
+      "name": "ST. MARIA’S MONASTERY",
+      "source": "downpour",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "St Maria’s Monastery; cadrage de chapelle, théâtre ou orphelinat à fixer.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "animations": [
+        {
+          "name": "st_marias_ambient_01",
+          "description": "Tentures agitées près des fenêtres",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "st_marias_ambient_02",
+          "description": "Bougies du sanctuaire vacillantes",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "st_marias_ambient_03",
+          "description": "Ombre d’orgue glissant sur le mur",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "st_marias_round_transition",
+          "description": "Transition proposée pour ST. MARIA’S MONASTERY : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT11"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    },
+    {
+      "id": "shepherds_glen",
+      "name": "SHEPHERD’S GLEN",
+      "source": "homecoming",
+      "baseId": null,
+      "locationStatus": "lieu-documente-secondaire",
+      "locationNote": "Ville de Shepherd’s Glen; cadrage de rue à définir.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "animations": [
+        {
+          "name": "shepherds_glen_ambient_01",
+          "description": "Brume qui traverse la chaussée",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherds_glen_ambient_02",
+          "description": "Affiches de disparus agitées sur panneau",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherds_glen_ambient_03",
+          "description": "Faisceau de lampadaire affaibli par le brouillard",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "shepherds_glen_round_transition",
+          "description": "Transition proposée pour SHEPHERD’S GLEN : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT06"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "EXT05",
+      "url": "https://silenthillheaven.com/shh/shh_bosses/",
+      "title": "Silent Hill Heaven — Homecoming, Bosses",
+      "type": "secondaire-guide",
+      "scope": "Boss; Bogeyman non affrontable",
+      "consultedAt": "2026-10-17",
+      "webRef": "turn15view4",
+      "accessStatus": "page-consultee",
+      "caveat": "Synthèse documentaire; mouvements non encore mesurés image par image.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT06",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+      "title": "Silent Hill Memories — Homecoming, Walkthrough",
+      "type": "secondaire-guide",
+      "scope": "Lieux et séquences; Curtis; Bogeyman",
+      "consultedAt": "2026-10-17",
+      "webRef": "turn28view0",
+      "accessStatus": "page-consultee",
+      "caveat": "Synthèse documentaire; mouvements non encore mesurés image par image.",
+      "wordLimit": 200
+    },
+    {
+      "id": "EXT11",
+      "url": "https://www.silenthillmemories.net/sh8/walkthrough_en.htm",
+      "title": "Silent Hill Memories — Downpour, Walkthrough",
+      "type": "secondaire-guide",
+      "scope": "Sections du parcours et lieux",
+      "consultedAt": "2026-10-17",
+      "webRef": "turn28view1",
+      "accessStatus": "page-consultee",
+      "caveat": "Synthèse documentaire; mouvements non encore mesurés image par image.",
+      "wordLimit": 200
+    }
+  ],
+  "inputHashes": {
+    "data/stages.json": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+    "docs/production/research/extended.json": "3fb766eed4d6405cf7be4c1d6c9dae0420a2fb7030ebb4b5b7f82e6ec1fa1696",
+    "src/stage-bitmap-manifest.js": "53bb9214cf150b6a3ce567dcec3759daf3603a71565737dc72222afcb2e993f0",
+    "src/stage-reference-policy.js": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6"
+  },
+  "productionStageIds": [
+    "grand_hotel",
+    "town_hall_hc",
+    "shepherd_house_hc",
+    "centennial_building",
+    "st_marias",
+    "shepherds_glen"
+  ],
+  "replacement": {
+    "original": "police_station_hc",
+    "replacement": "shepherds_glen",
+    "authorization": "Parent /root approved replacement if wide native noticeboard view and exact policy confirmed; both confirmed from Portforward 0062 and repository policy.",
+    "reason": "Initial-cell captures inspected are close dialogue shots or tiny thumbnails; the Gamepressure overview image is a station map, not cell architecture. No generic cell invented."
+  }
+}

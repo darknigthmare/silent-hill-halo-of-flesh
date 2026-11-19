@@ -2664,5 +2664,787 @@ export const STAGE_BITMAPS = {
       "Une correction imagegen ciblée a élargi la passerelle afin que y=82,5% tombe sur le treillis. Aucun pixel modifié par script.",
       "Le fond livré mesure 1671×941 et le premier plan 1672×941. fit=cover conserve les proportions ; différence de largeur de 1 pixel source, sans recadrage matériel."
     ]
+  },
+  "old_silent_hill": {
+    "stageId": "old_silent_hill",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "levin-street-house",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH1_01_OLD_SILENT_HILL"
+    ],
+    "layers": [
+      {
+        "id": "levin-street-house",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+            "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+            "bytes": 1624541,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-frontage-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+            "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+            "bytes": 160823,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Neige blanche et brouillard de SH1 ; aucune cendre de film, personne ou silhouette lointaine.",
+      "Vue de maison utilisée pour les volumes ; seconde capture utilisée seulement pour la chaussée, la brume et la neige, sans fusion de géométries de rues.",
+      "Façade réorientée latéralement, trottoir et chaussée étendus pour le versus. Position, échelle et distance des objets non mesurées.",
+      "Le gros plan périphérique de bardage et boîte aux lettres est une adaptation de cadrage à partir de matériaux visibles, pas une seconde adresse attestée.",
+      "Deux plans statiques ; aucune chute de neige animée ou transition de rue produite."
+    ]
+  },
+  "hospital_nightmare": {
+    "stageId": "hospital_nightmare",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "room204",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH1_07_NIGHTMARE_HOSPITAL"
+    ],
+    "layers": [
+      {
+        "id": "room204",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+            "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+            "bytes": 1919049,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-doorjambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+            "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+            "bytes": 296524,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Deux lits anciens, chariot à étagères, fenêtre barrée et plaque turquoise sans inscription lisible repris de la chambre 204.",
+      "Harry, Bloodsucker, tentacules et flaque sanglante retirés pour cette demande de décor sans acteur ni monstre.",
+      "Mobilier reculé et réparti sur la paroi arrière pour un plateau de duel libre ; caméra, nombre exact de divisions murales et matériau du sol non certifiés.",
+      "Motif de sol carré rouillé guidé par la capture 204 ; le preset de matériau du moteur ne constitue pas une mesure du matériau original.",
+      "Deux plans statiques ; aucune animation du Bloodsucker, poche suspendue ou variation de lumière produite."
+    ]
+  },
+  "sewer_resort": {
+    "stageId": "sewer_resort",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "south-tunnel-pipe-bay",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+    ],
+    "layers": [
+      {
+        "id": "south-tunnel-pipe-bay",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+            "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+            "bytes": 2118832,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-service-struts",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+            "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+            "bytes": 278076,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Baie documentée de sorties de conduites vert sombre devant structures grillagées rouillées ; aucun emprunt au canal de SH3 ni au passage ultérieur vers le parc.",
+      "Harry, créature et tache de sang retirés. Eau derrière et sous la passerelle, pas de flaque sanglante ni de danger ajouté.",
+      "Caillebotis élargi en plateau latéral ; nombre, proportions et écartement précis des tuyaux et supports reconstruits, non mesurés.",
+      "Avant-plan indépendant de deux fragments de supports rouillés ; aucune grille ou conduite devant les appuis centraux.",
+      "Deux plans statiques ; aucune montée des eaux, vapeur ou animation de créature produite."
+    ]
+  },
+  "south_vale": {
+    "stageId": "south_vale",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "neely-sanders-frontage",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH2_01_EAST_SOUTH_SIDE"
+    ],
+    "layers": [
+      {
+        "id": "neely-sanders-frontage",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+            "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+            "bytes": 2217344,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-street-poles",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+            "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+            "bytes": 210049,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Brique brune, porte en bois, fenêtres couvertes de journaux, bande/auvent bleu-vert et magasin sombre attenant repris de la capture native.",
+      "James et textes lisibles retirés. Les textures de journaux restent des motifs illisibles ; aucune enseigne inventée.",
+      "Aucun sang transféré de la capture de Lindsey/Sanders, aucun secteur West South Vale ni élément du remake 2024.",
+      "Façade mise à plat et chaussée étendue pour le duel ; les fragments de poteaux proches sont une interprétation de premier plan, pas un relevé de leur nombre ou position.",
+      "Deux plans statiques ; brouillard peint, sans nouvelle animation météorologique ou interaction de véhicule."
+    ]
+  },
+  "hotel_otherworld": {
+    "stageId": "hotel_otherworld",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "last-hall-after-egg-doors",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_13_NIGHTMARE_HOTEL"
+    ],
+    "layers": [
+      {
+        "id": "last-hall-after-egg-doors",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+            "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+            "bytes": 1938212,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-panel-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+            "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+            "bytes": 285111,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Sous-lieu retenu explicitement : couloir post-œufs documenté par la capture native, et non le hall du duo, le sous-sol inondé ou l’escalier en flammes d’Angela.",
+      "Plâtre gris usé, soubassement de bois sombre, appliques triangulaires et plafond bas à traverses réinterprétés en vue latérale ; James retiré.",
+      "Le cadrage, l’espacement des panneaux et des appliques sont reconstruits pour le versus. Ni plan coté ni matériau/physique de sol vérifiés.",
+      "Aucune inondation, incendie ou ruine spectaculaire ajoutée depuis une autre salle. La politique runtime water ne sert pas de preuve visuelle pour ce couloir précis.",
+      "Deux plans statiques ; aucune animation de fuite, poussière ou séquence des boss produite."
+    ]
+  },
+  "prison_meat_locker": {
+    "stageId": "prison_meat_locker",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "second-freezer",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_10_THE_LABYRINTH"
+    ],
+    "layers": [
+      {
+        "id": "second-freezer",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+            "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+            "bytes": 1710056,
+            "width": 1671,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-freezer-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+            "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+            "bytes": 279546,
+            "width": 1670,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Salle industrielle verdâtre, fluorescents, rails fixes et quartiers de viande animale suspendus ; Eddie, James et corps humains absents.",
+      "Quatre pièces de viande réparties au fond pour dégager le duel ; décompte et placement sont une reconstruction, pas une topologie certifiée de la salle.",
+      "Une correction ciblée a relié les quatre pièces aux crochets du rail. Le premier essai avait des suspensions interrompues et est exclu des assets livrables.",
+      "Aucun déplacement des rails, jet de vapeur ou mécanisme du remake. Sol et humidité non mesurés ; plateau versus distinct des obstacles du combat original.",
+      "Tailles natives conservées : fond 1671×941, premier plan 1670×941. Écart de largeur de 1 pixel normalisé par fit=cover ; aucune mise à l’échelle enregistrée dans les PNG.",
+      "Deux plans statiques ; aucune oscillation de viande, vapeur ou nouvelle animation produite."
+    ]
+  },
+  "grand_hotel": {
+    "stageId": "grand_hotel",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "otherworld-atrium-without-sepulcher",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06",
+      "EXT05"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+            "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+            "bytes": 2018968,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+            "sha256": "bc6963bb530b8d1ee4080393d5c18bc066054d61ac26e33180b8382c15f69af9",
+            "bytes": 97721,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Atrium Otherworld du Grand Hotel sans Sepulcher : enveloppe sombre nervurée, rayonnages/supports latéraux sculptés, sol brun circulaire continu et petits débris aux coins. Aucun boss, sac organique, arbre vivant, lustre ou événement. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "town_hall_hc": {
+    "stageId": "town_hall_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "public-hall-first-visit",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+            "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+            "bytes": 2299765,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+            "sha256": "a42274c88402daafa7ca162708731b14a37891e948966ea00ce008a72c24baac",
+            "bytes": 249564,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Salle publique du premier passage normal : boiseries, porte arrière sur estrade, deux pots, podium à gauche et chaises à droite. Tapis et sol centraux libres ; montants proches limités aux marges. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "shepherd_house_hc": {
+    "stageId": "shepherd_house_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-attic-before-transformation",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+            "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+            "bytes": 2142985,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+            "sha256": "a7cc1f1e9d27108af9ad916c9ac19cfca1d702c0512d1d323554d7ec03dd713b",
+            "bytes": 244289,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Grenier normal avant transformation : deux fenêtres laiteuses, planches brutes, charpente, bibliothèque fermée et caisses couvertes. Plancher central dégagé ; montant et chutes de bois seulement aux coins. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "centennial_building": {
+    "stageId": "centennial_building",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "library-normal-main-reading-room",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT11"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+            "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+            "bytes": 2546849,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+            "sha256": "9ddcc6285a36798db5c6baa4947962bb2ca621b4b05603af2e05d7a9fde6530f",
+            "bytes": 205294,
+            "width": 1673,
+            "height": 940
+          }
+        ]
+      }
+    ],
+    "notes": "Bibliothèque normale : rayonnages, pilastres de bois, galerie, bureau arrière, fenêtres hautes et tapis. Le faisceau UV portable des captures est exclu ; papiers du premier plan au coin droit. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "st_marias": {
+    "stageId": "st_marias",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-chapel-closed-altar-gate",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT11"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+            "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+            "bytes": 2889977,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+            "sha256": "5ea59966acd38172eff9a5386b99efebba02bd66d2ba10d1be66a25422145a9f",
+            "bytes": 93452,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Chapelle normale devant sa grille d’autel fermée : enduit écaillé, poteaux massifs, fer à motifs rectilignes, autel au rideau rouge derrière. Sol central continu ; éclats et planche proches aux coins. Lustre hors cadre. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "shepherds_glen": {
+    "stageId": "shepherds_glen",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "elles-missing-persons-board-sidewalk",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "background",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+            "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+            "bytes": 1966431,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "foreground",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+            "sha256": "c83fab7b1fd227e642b5a31eb0fddf47bb8f2488ffaea165d1f6d123c044cd62",
+            "bytes": 208307,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
   }
 };

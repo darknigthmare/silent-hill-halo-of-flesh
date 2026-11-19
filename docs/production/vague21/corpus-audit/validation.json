@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "revision": "2026-11-19-final-66",
+  "recordCount": 66,
+  "sourceCatalogueEntries": 71,
+  "coverageBeforeAddition": {
+    "covered": 15,
+    "covered-within-aggregate": 3,
+    "partially-covered": 4,
+    "absent": 40,
+    "mentioned-only": 1,
+    "edition-not-indexed": 2,
+    "absent-as-programme": 1
+  },
+  "historicalWorkbook": {
+    "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "bytes": 1776905,
+    "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+    "matchesExpected": true
+  },
+  "checks": [
+    "66 unique stable IDs",
+    "source arrays nonempty and aligned",
+    "runtime links use existing source IDs",
+    "related corpus IDs exist",
+    "release dates match publication years",
+    "unreleased entries have no release date",
+    "machines retain announcement/target fields",
+    "all rows mark pre-pass coverage",
+    "next actions no longer request duplicate bible entries",
+    "all 66 records occur once in annex tables",
+    "research revision matches",
+    "historical workbook SHA256 unchanged"
+  ],
+  "problems": [],
+  "files": [
+    {
+      "path": "/workspace/scratch/8edddaaaab76/wave21-corpus/corpus.json",
+      "bytes": 84055,
+      "sha256": "2ca417959e1b32e246aee53bf0e817e2df444a634ce409ba1960a682d5f1a7d5"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/wave21-corpus/research.json",
+      "bytes": 39937,
+      "sha256": "a9e0992bc26d98b8b7c7b6b6e6f960a7b3d4914dac6c4281b6f8e5e1e49650f4"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/wave21-corpus/ANNEXE_CORPUS_SILENT_HILL.md",
+      "bytes": 29145,
+      "sha256": "d81af6334c8d20e01554e24c37a0b5d2183262dcf9d726395d7bb8169cdf0015"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/wave21-corpus/workbook-readonly-audit.json",
+      "bytes": 18912,
+      "sha256": "314b9769122917c3ffdd5b747f5498e115d55eef39f10874b8cbd68d9b946620"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/wave21-corpus/local-documentary-audit.json",
+      "bytes": 10794,
+      "sha256": "896fdca8562fad35c36b61fec6b133cf01e1aefc3423e4d9d6c02b2168afa251"
+    }
+  ],
+  "runtimeSourceRegistryShape": "object-keyed-by-source-id",
+  "runtimeSourceCount": 16
+}

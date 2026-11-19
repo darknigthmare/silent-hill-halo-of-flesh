@@ -4,7 +4,27 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État actuel — vague 20 du 19 novembre 2026
+## État actuel — vague 21 du 19 novembre 2026
+
+**55 arènes bitmap sur 123 ; 68 restent sans bitmap**, dont 53 fiches non
+bloquées et 15 références bloquées. La [vague 21](vague21/README.md) ajoute
+douze lieux avec un fond et un premier plan transparent indépendant, soit
+24 PNG natifs. Les 43 arènes précédentes et leurs variantes sont préservées.
+
+La [bible du corpus](../BIBLE_CORPUS_SILENT_HILL.md) indexe désormais **66 œuvres,
+éditions, récits, programmes et supports**, dont 41 étaient absents du périmètre
+documentaire inspecté. Elle distingue notamment Transmission, Play Novel,
+Mobile DX, Orphan / Mobile 1–3, The Escape, les trois films et les récits dérivés.
+Le [registre JSON](franchise-corpus.json) conserve les alias, sources, statuts
+antérieurs et prochaines études.
+
+Le nouveau [classeur Corpus / Stages](SILENT_HILL_CORPUS_BIBLE.xlsx) fournit deux
+tables filtrables : les 66 notices et les 123 stages avec leur couverture
+courante. Le classeur historique des movesets et animations reste identique à
+la vague 19 et conserve ses annotations. Les combattants restent à **204 portraits,
+135 vues latérales candidates et six clips animés**.
+
+## État précédent — vague 20 du 19 novembre 2026
 
 **43 arènes bitmap sur 123 ; 80 restent sans bitmap.** La [vague 20](vague20/README.md)
 ajoute uniquement des décors manquants : onze lieux, chacun avec un fond et un

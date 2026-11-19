@@ -1,0 +1,27 @@
+{
+  "stageId": "hospital_nightmare",
+  "startedAt": "2026-11-19T13:35:44.474Z",
+  "completedAt": "2026-11-19T13:35:46.176Z",
+  "durationMs": 1702,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=128",
+    "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+    "--stages=hospital_nightmare",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/hospital_nightmare"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "passed": true,
+  "report": "cases/hospital_nightmare/report.json",
+  "stdout": "cases/hospital_nightmare/process.stdout.log",
+  "stderr": "cases/hospital_nightmare/process.stderr.log",
+  "reportSHA256": "15db433bc720824cefea9cd199c1b400db481a20388e4c0704655d0c18e1a571",
+  "checks": 46,
+  "nodeExecArgv": [
+    "--max-old-space-size=128"
+  ],
+  "harnessSHA256": "1d589b3dc17f2a7b0d7555e95fd4b85fd2d7bbeba25276a55332001a450c195c",
+  "execInitialYieldTimeMs": 30000,
+  "observationSource": "Actual child-process close event in sequential orchestrator; successful reports and capture hashes checked before recording."
+}

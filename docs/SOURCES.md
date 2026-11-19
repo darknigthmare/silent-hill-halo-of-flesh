@@ -2,11 +2,37 @@
 
 ## Principe
 
-Le projet construit un registre de fan-game à partir de manifestations et lieux publiquement documentés. Les descriptions sont reformulées, les comportements sont transposés et les visuels sont produits par code. Aucun fichier média officiel n’est embarqué.
+Le projet construit un registre de fan-game à partir de manifestations et lieux publiquement documentés. Les descriptions sont reformulées, les comportements sont transposés et les visuels sont des créations originales : rendus procéduraux et images générées, avec provenance et limites documentées. Aucun fichier média officiel n’est embarqué dans le jeu.
 
 ## Périmètre
 
 Silent Hill ; Silent Hill 2 et ses formes distinctes ; Silent Hill 3 ; Silent Hill 4: The Room ; Origins ; Homecoming ; Shattered Memories ; Downpour ; The Arcade ; Book of Memories ; P.T. ; The Short Message ; Silent Hill f ; adaptations cinématographiques dont Return to Silent Hill ; Ascension ; Townfall.
+
+Ce périmètre décrit les seize groupes actuels du moteur. Le [corpus documentaire
+complété le 19 novembre 2026](BIBLE_CORPUS_SILENT_HILL.md) ajoute les œuvres et
+éditions oubliées : notamment Play Novel, Mobile DX, Orphan / Mobile 1–3, The
+Escape, The Experience, les éditions et remakes distincts, les récits imprimés,
+les collaborations, les machines dédiées et les programmes officiels.
+Les références, alias, statuts et prochaines actions sont conservés dans
+[franchise-corpus.json](production/franchise-corpus.json). Une ligne de corpus
+ne représente pas une nouvelle fiche jouable.
+
+### Transmission et actualité officielle
+
+Silent Hill Transmission est un programme de présentations de Konami. Les
+[annonces du 20 octobre 2022](https://www.konami.com/games/eu/fr/topics/16705/)
+et le [communiqué du 13 février 2026](https://www.konami.com/games/eu/en/topics/18990/)
+le documentent comme tel. Ses épisodes servent à dater les informations sur les
+jeux et films annoncés. Les statuts de sortie sont réévalués à partir d'une
+source plus récente lorsqu'elle existe : par exemple, le
+[communiqué de lancement de Townfall](https://www.konami.com/games/us/en/topics/3483/)
+du 24 septembre 2026 remplace l'ancien statut « TBA » de son annonce.
+
+Les dates historiques, les titres commerciaux et les noms régionaux ne doivent
+pas être fusionnés par ressemblance. Mobile DX et Orphan sont deux dossiers ;
+The Escape et Silent Hill Escape désignent des produits de catégories
+différentes. Une publication sous licence ne vaut pas déclaration de continuité
+canonique avec tous les jeux.
 
 ## Hiérarchie de vérification
 
