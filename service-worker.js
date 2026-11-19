@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'chronicle-heather-closer-20261118';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '7f7e56cfbc7279c4b7115aec3c320530cc63a6cdf8a29253316ab14e8e785e04';
+const BITMAP_REVISION = '3a6c71afc59d374446f735aa3aec06b95ce18b55a02e39880649d4b8128a5696';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -29,6 +29,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
   "/assets/sprites/arcade_robbie_the_rabbit_chainsaw.74eb4c08943e.png",
+  "/assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
   "/assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
   "/assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
   "/assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
@@ -127,6 +128,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
   "/assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
   "/assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+  "/assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.11cdb8a63cd5.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.3679e9e24bab.png",
   "/assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
@@ -148,7 +150,9 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
   "/assets/sprites/origins_demon_084.abac0695168a.png",
   "/assets/sprites/origins_demon_084.c23b0115c82b.png",
+  "/assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
   "/assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+  "/assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
   "/assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
   "/assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
   "/assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
@@ -179,6 +183,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
   "/assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+  "/assets/sprites/sh1_incubator_018.45c7c84b1960.png",
   "/assets/sprites/sh1_incubator_018.82460c82402f.png",
   "/assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
   "/assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png",
@@ -386,6 +391,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
   "/assets/stages/book_wood.wood-clearing.badc47213490.png",
   "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+  "/assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+  "/assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
   "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
   "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
   "/assets/stages/church.candle-stand.53fb59eeefa2.png",

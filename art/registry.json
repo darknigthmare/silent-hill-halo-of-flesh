@@ -5035,39 +5035,67 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png",
-      "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+      "sourceFile": "origins_faceless_nurse.7875b7b8cc53.png",
+      "sourceSHA256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
       "sourceDimensions": [
-        1254,
-        1254
+        1199,
+        1312
       ],
       "singleSubjectReviewed": true,
-      "notes": "Corps entier candidat Origins PSP : adulte en uniforme, tête sans visage, seringue visible et deux chaussures. Seringue propre à Origins ; aucun scalpel, pipe ou arme SH3/film emprunté. Matière/échelle/pose2D composées depuis les rendus, sans animation ni mesure originale certifiée.",
+      "notes": "Nurse de Silent Hill Origins : nouvelle attente latérale vers la droite, corps entier, tête sans visage et seringue. Portrait historique conservé. Dessin candidat statique ; fidélité exacte et détails du modèle PSP non certifiés. Garde séparée raccordée au même sujet et à la même échelle.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
-          "bytes": 574669,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+          "bytes": 656138,
+          "width": 1199,
+          "height": 1312,
           "visibleBounds": [
-            413,
-            94,
-            908,
-            1164
+            245,
+            84,
+            915,
+            1230
           ],
-          "pixelSHA256": "472b269dd5afbd440786ec7e7b42fd912cdfc7ff2fd6a456418d8a7dc27318bd",
-          "transparentFraction": 0.88166,
-          "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+          "pixelSHA256": "31217d513facb7a8d9cd94dd50f255ed5aca3e310e49b79dcc4aa1bc7e5ca5b1",
+          "transparentFraction": 0.86259,
+          "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
           "facing": 1,
           "anchor": [
-            0.5,
-            0.9282296650717703
+            0.444,
+            0.9375
           ],
-          "bodyHeight": 0.8532695374800638,
-          "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png",
-          "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.8734756097560976,
+          "sourceFile": "origins_faceless_nurse.7875b7b8cc53.png",
+          "sourceSHA256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e",
+          "bytes": 705868,
+          "width": 1199,
+          "height": 1312,
+          "visibleBounds": [
+            327,
+            115,
+            823,
+            1218
+          ],
+          "pixelSHA256": "1d6e1ef389501c16e4234f5f712264aa790f2bd9692b4fa47a554ca33d708ab3",
+          "transparentFraction": 0.85014,
+          "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+          "facing": 1,
+          "anchor": [
+            0.482,
+            0.9283536585365854
+          ],
+          "bodyHeight": 0.8734756097560976,
+          "sourceFile": "origins_faceless_nurse.4f0ad91d37c5.png",
+          "sourceSHA256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -5085,9 +5113,28 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "guard": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Corps entier candidat Origins PSP : adulte en uniforme, tête sans visage, seringue visible et deux chaussures. Seringue propre à Origins ; aucun scalpel, pipe ou arme SH3/film emprunté. Matière/échelle/pose2D composées depuis les rendus, sans animation ni mesure originale certifiée.",
+      "selectionProvenance": {
+        "sourceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-46796552-08af-4abc-b8b6-e106d952a742.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Nurse de Silent Hill Origins : nouvelle attente latérale vers la droite, corps entier, tête sans visage et seringue. Portrait historique conservé. Dessin candidat statique ; fidélité exacte et détails du modèle PSP non certifiés. Garde séparée raccordée au même sujet et à la même échelle."
     },
     "origins_the_butcher_081": {
       "fighterId": "origins_the_butcher_081",
@@ -6312,39 +6359,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-f7e9cd23-163b-488e-92c3-6c089ca1567a.png",
-      "sourceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+      "sourceFile": "sh1_incubator_018.45c7c84b1960.png",
+      "sourceSHA256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
       "sourceDimensions": [
-        1254,
-        1254
+        1086,
+        1448
       ],
       "singleSubjectReviewed": true,
-      "notes": "Incubator SH1original1999 entier : figure féminine blonde, robe blanche opaque à manches évasées, deux mains et deux pieds. Source native complète très surexposée ; visage, matière et petits contours lumineux restent peu déterminés. Distincte d’Incubus : aucune aile, corne ou arme. Pose fixe reconstruite, zéro fidélité1:1 certifiée.",
+      "notes": "Incubator de Silent Hill (1999) : vue latérale vers la droite en robe blanche, deux pieds dans le cadre. Pose statique de présentation reconstruite depuis le portrait existant ; ne pas confondre avec Incubus. Les restrictions de rôle et de commandes du projet restent applicables. Fidélité source et détails du visage non certifiés.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
-          "bytes": 196032,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
+          "bytes": 518856,
+          "width": 1086,
+          "height": 1448,
           "visibleBounds": [
-            459,
-            354,
-            802,
-            997
+            340,
+            54,
+            754,
+            1396
           ],
-          "pixelSHA256": "2043908a67becc570d10f8f21185411b3ef52c0b5b4c658abc1bc5c8d8f716c2",
-          "transparentFraction": 0.93983,
-          "path": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+          "pixelSHA256": "4d2b2ea6b145c1e37f5af16e6ae3868c07dee099d418fc86327ab3a9df59e1fa",
+          "transparentFraction": 0.81921,
+          "path": "assets/sprites/sh1_incubator_018.45c7c84b1960.png",
           "facing": 1,
           "anchor": [
-            0.5,
-            0.7950558213716108
+            0.488,
+            0.9640883977900553
           ],
-          "bodyHeight": 0.5127591706539075,
-          "sourceFile": "exec-f7e9cd23-163b-488e-92c3-6c089ca1567a.png",
-          "sourceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.9267955801104972,
+          "sourceFile": "sh1_incubator_018.45c7c84b1960.png",
+          "sourceSHA256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -6364,7 +6413,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Incubator SH1original1999 entier : figure féminine blonde, robe blanche opaque à manches évasées, deux mains et deux pieds. Source native complète très surexposée ; visage, matière et petits contours lumineux restent peu déterminés. Distincte d’Incubus : aucune aile, corne ou arme. Pose fixe reconstruite, zéro fidélité1:1 certifiée.",
+      "selectionProvenance": {
+        "sourceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-f7e9cd23-163b-488e-92c3-6c089ca1567a.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Incubator de Silent Hill (1999) : vue latérale vers la droite en robe blanche, deux pieds dans le cadre. Pose statique de présentation reconstruite depuis le portrait existant ; ne pas confondre avec Incubus. Les restrictions de rôle et de commandes du projet restent applicables. Fidélité source et détails du visage non certifiés."
     },
     "homecoming_order_soldier_091": {
       "fighterId": "homecoming_order_soldier_091",
@@ -7400,39 +7461,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-1b97aa79-f9b1-4443-8fcf-d908c9c93066.png",
-      "sourceSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
+      "sourceFile": "arcade_scraper_arcade.6d399af81f98.png",
+      "sourceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
       "sourceDimensions": [
-        1254,
-        1254
+        1217,
+        1293
       ],
       "singleSubjectReviewed": true,
-      "notes": "Scraper Arcade 2007 entier, visage voilé, tunique et pantalon rayé, deux lames courtes et chaussures visibles. Les lames restent tenues dans les mains du rendu ; pas greffe de bras ou transfert de Missionary SH3. Pose/outil et matière reconstruits, aucune mesure originale.",
+      "notes": "Scraper de Silent Hill: The Arcade (2007). Garde vers la droite, voile et bande de tête, tunique brune et pantalon rayé de l'édition Arcade ; deux lames courtes séparées tenues par les mains, deux chaussures entières. Légère torsion du buste pour dégager les deux bras. Aucun transfert du costume SH3 ou de Missionary. Pose fixe candidate ; orientation et détails arrière interprétés. Sélection historique conservée ; aucune animation ajoutée.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
-          "bytes": 618343,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+          "bytes": 910542,
+          "width": 1217,
+          "height": 1293,
           "visibleBounds": [
-            389,
-            235,
-            945,
-            1091
+            168,
+            164,
+            1104,
+            1161
           ],
-          "pixelSHA256": "3b892fcf31cc9b1f932ba34b47f4a4e8dc3555df9d1a1a578ae6d86936a7a14f",
-          "transparentFraction": 0.86545,
-          "path": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+          "pixelSHA256": "a4b26ec01d2ea9811ad71d8b12d20cb913fd82e7188fa101bc3d804adc3347e1",
+          "transparentFraction": 0.8058,
+          "path": "assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
           "facing": 1,
           "anchor": [
-            0.5318979266347688,
-            0.8700159489633174
+            0.469,
+            0.8979118329466357
           ],
-          "bodyHeight": 0.682615629984051,
-          "sourceFile": "exec-1b97aa79-f9b1-4443-8fcf-d908c9c93066.png",
-          "sourceSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.7710750193348801,
+          "sourceFile": "arcade_scraper_arcade.6d399af81f98.png",
+          "sourceSHA256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -7452,7 +7515,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Scraper Arcade 2007 entier, visage voilé, tunique et pantalon rayé, deux lames courtes et chaussures visibles. Les lames restent tenues dans les mains du rendu ; pas greffe de bras ou transfert de Missionary SH3. Pose/outil et matière reconstruits, aucune mesure originale.",
+      "selectionProvenance": {
+        "sourceSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-1b97aa79-f9b1-4443-8fcf-d908c9c93066.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Scraper de Silent Hill: The Arcade (2007). Garde vers la droite, voile et bande de tête, tunique brune et pantalon rayé de l'édition Arcade ; deux lames courtes séparées tenues par les mains, deux chaussures entières. Légère torsion du buste pour dégager les deux bras. Aucun transfert du costume SH3 ou de Missionary. Pose fixe candidate ; orientation et détails arrière interprétés. Sélection historique conservée ; aucune animation ajoutée."
     },
     "arcade_red_pyramid_thing_arcade": {
       "fighterId": "arcade_red_pyramid_thing_arcade",
@@ -11281,51 +11356,41 @@
       "status": "integrated-candidate",
       "fidelity": "unverified",
       "origin": "conversation-image-generation",
-      "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png",
-      "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+      "sourceFile": "homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+      "sourceSHA256": "a60a4f6fb41b135c3adbcd47833505b77c3322da152f14a8298861986e96cb69",
       "sourceDimensions": [
-        1254,
-        1254
+        1024,
+        1536
       ],
       "singleSubjectReviewed": true,
-      "notes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Nouvelles captures126/127 correctement identifiées Scarlet à coque de porcelaine, distinctes des anciennes133-138 Asphyxia/Sepulcher. La127 atteint le bord inférieur et son pied droit est en partie masqué par le watermark ; la126 coupe les jambes. Les deux terminaisons sombres des pieds/capsules de la sortie sont donc interprétées et non attestées nettement. Silhouette générée entière ; détails des pieds, proportions, motifs et état exact de la coque non certifiés. Aucun1:1 certifié. Marges réelles=[0.19059, 0.02313, 0.10128, 0.02313] ; le contour connecté reste interne, sans certification de la cible12%.",
+      "notes": "Scarlet, forme de poupée de Silent Hill Homecoming : attente latérale vers la droite, coque de porcelaine, deux bras et deux appuis entiers. Portrait historique conservé ; forme distincte de Scarlet arachnide. Dessin candidat statique, reconstruction de profil depuis la référence du projet ; détails du modèle source non certifiés.",
       "mirrorPolicy": "presentation-only; opposite side not independently generated",
       "frames": [
         {
-          "sha256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
-          "bytes": 768803,
-          "width": 1254,
-          "height": 1254,
+          "sha256": "a60a4f6fb41b135c3adbcd47833505b77c3322da152f14a8298861986e96cb69",
+          "bytes": 1786424,
+          "width": 1024,
+          "height": 1536,
           "visibleBounds": [
-            245,
-            32,
-            1123,
-            1222
+            131,
+            67,
+            895,
+            1468
           ],
-          "alphaBounds": [
-            17,
-            18,
-            1218,
-            1230
-          ],
-          "framingBounds": [
-            239,
-            29,
-            1127,
-            1225
-          ],
-          "pixelSHA256": "12c1a354ecf3100a4b827240cc958106f721cc72b73f02372861da8c9729a5a2",
-          "transparentFraction": 0.86377,
-          "path": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+          "pixelSHA256": "6dd46198d86f1a0741f50095f6ef7317f7d81a4cf6dc39456b1a5fb49bc6ee31",
+          "transparentFraction": 0.81707,
+          "path": "assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
           "facing": 1,
           "anchor": [
-            0.544657,
-            0.976874
+            0.4395,
+            0.9557291666666666
           ],
-          "bodyHeight": 0.953748,
-          "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png",
-          "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
-          "origin": "conversation-image-generation"
+          "bodyHeight": 0.912109375,
+          "sourceFile": "homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+          "sourceSHA256": "a60a4f6fb41b135c3adbcd47833505b77c3322da152f14a8298861986e96cb69",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -11345,7 +11410,19 @@
           "loop": false
         }
       },
-      "animatedClips": 0
+      "animatedClips": 0,
+      "selectionNotes": "Une image statique idle non bouclée, aucun clip animé ni timing natif. Nouvelles captures126/127 correctement identifiées Scarlet à coque de porcelaine, distinctes des anciennes133-138 Asphyxia/Sepulcher. La127 atteint le bord inférieur et son pied droit est en partie masqué par le watermark ; la126 coupe les jambes. Les deux terminaisons sombres des pieds/capsules de la sortie sont donc interprétées et non attestées nettement. Silhouette générée entière ; détails des pieds, proportions, motifs et état exact de la coque non certifiés. Aucun1:1 certifié. Marges réelles=[0.19059, 0.02313, 0.10128, 0.02313] ; le contour connecté reste interne, sans certification de la cible12%.",
+      "selectionProvenance": {
+        "sourceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "origin": "conversation-image-generation",
+        "sourceFile": "exec-af36ac76-2609-4d0a-94d7-38917e8d90fa.png"
+      },
+      "combatView": "side-view-candidate",
+      "combatNotes": "Scarlet, forme de poupée de Silent Hill Homecoming : attente latérale vers la droite, coque de porcelaine, deux bras et deux appuis entiers. Portrait historique conservé ; forme distincte de Scarlet arachnide. Dessin candidat statique, reconstruction de profil depuis la référence du projet ; détails du modèle source non certifiés."
     },
     "shattered_raw_shock_base_099": {
       "fighterId": "shattered_raw_shock_base_099",

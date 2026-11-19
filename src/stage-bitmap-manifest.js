@@ -1431,5 +1431,66 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Seconde salle d’exposition du musée de Silent Hill 2 (2001), avant la descente. La vitrine endommagée est vide. Les tableaux, les matériaux, les mesures et le cadrage latéral sont des interprétations pour le versus."
+  },
+  "brookhaven_sh2": {
+    "stageId": "brookhaven_sh2",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "otherworld-b1-elevator-terminus",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_06_NIGHTMARE_HOSPITAL"
+    ],
+    "layers": [
+      {
+        "id": "elevator-terminus",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+            "sha256": "5ae0d389b5c51d2c567e6cb9b8c8291541ce05b71da925d4a27c990b353271f6",
+            "bytes": 2613099,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jamb",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+            "sha256": "2f663e35be1ca7edba101cb790bc78fcb09485e57e627ffa7420e3cd784a098a",
+            "bytes": 461573,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Extrémité du couloir Otherworld B1 de Brookhaven dans Silent Hill 2 original (2001), devant l’ascenseur de la poursuite. Élargissement du sol, cadrage latéral, matériaux fins, éclairage, huisserie proche et portes entrouvertes sont des interprétations pour le versus. Aucun personnage, décès de Maria, poursuite ni cycle source reproduit."
   }
 };

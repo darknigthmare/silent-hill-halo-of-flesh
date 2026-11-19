@@ -1,0 +1,467 @@
+{
+  "schema": 1,
+  "date": "2026-11-19",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "baseCommit": "67d8df2cff2132387ee39b590420145204729a44",
+  "method": "built-in image_gen; one transparent PNG per character and pose; direct GitHub blob transfer",
+  "status": "generated-and-reviewed-static-candidates; parent owns registry integration and publication",
+  "fidelity": "unverified",
+  "newAnimatedClips": 0,
+  "portraitsPreserved": true,
+  "runtimeTests": "No local runtime, browser or build tests executed by this agent because the workspace was unavailable. PNG decode, CRC, alpha, dimensions and SHA256 measured using the repository's decodePng validator plus verified JS compatibility helpers.",
+  "notProduced": [
+    {
+      "id": "sh4_bottom_065",
+      "reason": "Existing selection exceeds GitHub contents endpoint 1MiB limit, so its pixels could not be inspected in the unavailable local runtime. No image generated, no asset changed."
+    }
+  ],
+  "assets": [
+    {
+      "id": "origins_faceless_nurse",
+      "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+      "bytes": 656138,
+      "width": 1199,
+      "height": 1312,
+      "bitDepth": 8,
+      "colorType": 6,
+      "prompt": "Use case: identity-preserve. Asset type: one individual full-body 2D fighting-game combat sprite for Silent Hill: Halo of Flesh. The immediately preceding image is the existing selection portrait of the Faceless Nurse from Silent Hill: Origins (PSP 2007), and is the identity/costume reference. Create ONE distinct combat idle stance in a strict right-facing side profile, camera at mid-torso height, full character visible from nurse cap to both shoes, all syringe including its needle visible, generous transparent margin on every side. Preserve the same faceless head, short dirty nurse cap, short-sleeved buttoned fitted nurse uniform with pleated lower skirt, stained ivory-brown fabric, battered flesh, simple dark strap shoes, and single metal syringe in the original hand. Change the camera angle and pose: side-on combat view facing right, knees bent slightly, front foot toward opponent, back foot clearly separated behind, upper body subtly hunched, syringe held low ahead of hip with needle toward the right, other arm raised in a tense bent guard. The character is an adult. Keep realistic gritty textured illustrated 2D UHD sprite rendering and readable silhouette consistent with the reference. No frontal or three-quarter view; no environment, no ground plane, no cast shadow, no text, no label, no grid, no duplicated character, no extra weapons or limbs. One image equals one pose. Genuinely transparent background, not a checkerboard. This is a new presentation pose reconstructed from the provided selection portrait; retain its exact visible design rather than borrowing any nurse design from SH2, SH3, Homecoming or the movies.",
+      "referencePath": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "referenceSHA256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2",
+      "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "gitBlobSHA": "c560d81d3e5d0b4aae42e30cb92db36ca9f08609",
+      "referenceGitBlobSHA": "2f13c4a0aa0fa04ce7e791003d2620e8fb31722d",
+      "sourceFile": "origins_faceless_nurse.7875b7b8cc53.png",
+      "sourceReferenceKind": "existing-generated-selection-candidate",
+      "facing": 1,
+      "framePurpose": "idle",
+      "combatView": "side-view-candidate",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "proposedAnchor": [
+        0.444,
+        0.9375
+      ],
+      "proposedBodyHeight": 0.8734756097560976,
+      "audit": {
+        "width": 1199,
+        "height": 1312,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          245,
+          84,
+          915,
+          1230
+        ],
+        "alphaBounds": [
+          25,
+          19,
+          1175,
+          1292
+        ],
+        "framingBounds": [
+          242,
+          81,
+          917,
+          1233
+        ],
+        "transparentFraction": 0.86259,
+        "pixelSHA256": "31217d513facb7a8d9cd94dd50f255ed5aca3e310e49b79dcc4aa1bc7e5ca5b1"
+      },
+      "reviewNotes": "Faceless Nurse de Silent Hill: Origins (PSP, 2007). Garde latérale droite, tête sans visage, uniforme plissé et seringue conservés depuis le portrait de cette édition. Les deux chaussures et l'aiguille sont entières. Pose statique de présentation ; angle de flanc, détails fins et échelle non mesurés sur le modèle source.",
+      "integratedAnchor": [
+        0.444,
+        0.9375
+      ],
+      "integratedBodyHeight": 0.8734756097560976
+    },
+    {
+      "id": "homecoming_scarlet_doll_form_094",
+      "sha256": "a60a4f6fb41b135c3adbcd47833505b77c3322da152f14a8298861986e96cb69",
+      "bytes": 1786424,
+      "width": 1024,
+      "height": 1536,
+      "bitDepth": 8,
+      "colorType": 6,
+      "prompt": "Use case: identity-preserve. Asset: ONE individual full-body transparent side-view combat sprite for a 2D fighting game. The immediately preceding reference is the project's selection portrait of Scarlet in her UPRIGHT PORCELAIN DOLL form from Silent Hill: Homecoming (2008). Keep this exact form and its visible design: bald rounded cracked porcelain head, small amber eyes, open jagged mouth, pale cracked and weathered shell with the existing dark-red streaks, ball-jointed long thin legs, elongated forearms and hands, gray-black rounded foot tips. Retain the reference's thin giant doll proportions, two arms and two legs. Repose the same figure into a true side profile facing RIGHT, standing upright with a slight forward hunch, front knee a little bent, feet separated front/back along the fighting line, front long arm reaching slightly down and toward the opponent, rear long arm hanging behind. The head also faces right in profile. Render all of the head, both hands and fingers, both feet and the entire limbs inside the image with at least 7 percent empty margin around the outermost silhouette. The camera is perpendicular to the side of the figure with minimal perspective; gritty realistic painted 2D UHD game-sprite texture, readable silhouette. No spider posture, no four-foot crawling, no missing porcelain shell, no duplicate views or panel grid, no extra limbs, no background, no floor or shadow, no captions or watermark. Preserve transparent alpha; the empty area must be actual transparency. This is a static presentation pose derived from the existing portrait; do not borrow Asphyxia or Sepulcher anatomy.",
+      "correction": "Edit the immediately preceding generated Scarlet porcelain doll side-profile image. Fix two problems only, preserving the head, porcelain costume/anatomy, both legs, both feet, right-facing direction, proportions, colors and lighting on the character. 1) Remove absolutely all of the brown/red soft glow, smoke, haze and background between and outside the limbs: the empty space must be completely transparent, crisp clean cutout edges, no vignette or shadow, no semi-transparent atmospheric pixels. 2) The figure must have EXACTLY TWO ARMS, each with one upper arm, one forearm and one hand. Keep the single front arm reaching down toward the RIGHT with its hand fully visible. Keep one rear arm trailing down toward the LEFT with its hand fully visible. Remove the extra narrow dangling limb/strip next to the rear arm; create a clear open transparent gap between rear arm and torso. Preserve the pose as an upright porcelain doll, not spider form. Whole figure fits within canvas with empty margins, no crops of fingers or feet. One isolated sprite, one pose, absolutely no text.",
+      "referencePath": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+      "referenceSHA256": "4dff90f33b7ac8dde2c4135464d2cec3b81bd63105ede05c67c2438fa1750382",
+      "extraction": "Background extraction only. Take the single porcelain-doll monster from the immediately preceding image. Make an exact clean cutout: preserve the monster's pixels and silhouette, including two arms, hands, both legs and shoes, head and porcelain cracks. Delete the entire colored haze and vignette around it and between all limbs. Replace EVERY background pixel with alpha 0. There must be no visible glow, no smoke, no translucent mist, no ground shadow. The monster is opaque; its anti-aliased outline alone can have partial alpha. All empty spaces, especially the large open area between the legs and the gap between rear arm and torso, must be fully transparent. Do not add anything, do not change the pose, do not crop, do not redesign the monster. Return the isolated full-body sprite on a truly transparent PNG.",
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+      "gitBlobSHA": "345674ef032a6594d2b0b4612ac9f98afa9c3302",
+      "referenceGitBlobSHA": "df9cb6d9ab1bad2d12379fb0ccb064c22c0fca83",
+      "sourceFile": "homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+      "sourceReferenceKind": "existing-generated-selection-candidate",
+      "facing": 1,
+      "framePurpose": "idle",
+      "combatView": "side-view-candidate",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "proposedAnchor": [
+        0.4395,
+        0.9557291666666666
+      ],
+      "proposedBodyHeight": 0.912109375,
+      "audit": {
+        "width": 1024,
+        "height": 1536,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          131,
+          67,
+          895,
+          1468
+        ],
+        "alphaBounds": [
+          39,
+          49,
+          1021,
+          1536
+        ],
+        "framingBounds": [
+          127,
+          63,
+          898,
+          1472
+        ],
+        "transparentFraction": 0.81707,
+        "pixelSHA256": "6dd46198d86f1a0741f50095f6ef7317f7d81a4cf6dc39456b1a5fb49bc6ee31"
+      },
+      "reviewNotes": "Scarlet dans sa forme verticale à coque de porcelaine de Silent Hill: Homecoming (2008). Profil droit, exactement deux bras et deux jambes après correction de l'essai, deux mains et deux pieds dans le cadre. Forme arachnide exclue. Proportions, pieds et motifs arrière restent reconstruits à partir du portrait candidat, sans certification 1:1. Les zones brunes visibles dans certaines prévisualisations sont des valeurs RGB cachées sous alpha=0, contrôlées par lecture RGBA.",
+      "alphaSamples": [
+        {
+          "x": 40,
+          "y": 200,
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 500,
+          "y": 1000,
+          "rgba": [
+            88,
+            52,
+            42,
+            0
+          ]
+        },
+        {
+          "x": 700,
+          "y": 400,
+          "rgba": [
+            9,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "x": 700,
+          "y": 1200,
+          "rgba": [
+            75,
+            32,
+            26,
+            0
+          ]
+        },
+        {
+          "x": 500,
+          "y": 1510,
+          "rgba": [
+            7,
+            5,
+            4,
+            0
+          ]
+        },
+        {
+          "x": 20,
+          "y": 1510,
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 800,
+          "y": 1000,
+          "rgba": [
+            32,
+            15,
+            12,
+            0
+          ]
+        },
+        {
+          "x": 700,
+          "y": 600,
+          "rgba": [
+            84,
+            56,
+            48,
+            0
+          ]
+        }
+      ],
+      "integratedAnchor": [
+        0.4395,
+        0.9557291666666666
+      ],
+      "integratedBodyHeight": 0.912109375
+    },
+    {
+      "id": "sh1_incubator_018",
+      "sha256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
+      "bytes": 518856,
+      "width": 1086,
+      "height": 1448,
+      "bitDepth": 8,
+      "colorType": 6,
+      "prompt": "Use case: identity-preserve. Asset type: ONE standalone full-body transparent 2D combat sprite of the INCUBATOR from the original Silent Hill (PlayStation, 1999), based on the immediately preceding selection portrait. Change only the camera angle and the neutral presentation pose. Show the same adult woman in a true right-facing side profile, head also facing right, fully visible from the top of the short light blond-brown hair to BOTH bare feet. Preserve her pure white opaque ankle-length dress with high closed neckline and long flared bell sleeves, simple straight silhouette, bare hands, short hair and softly overexposed pale appearance. No wings, no horns, no halo disc, no crown, no weapon: this is Incubator, not Incubus. Neutral suspended stance, torso upright, the two relaxed hands slightly separated in profile with one just ahead and one just behind, sleeves draping naturally, both feet appearing separately below the dress. No martial arts pose and no invented powers or projectiles. Mid-height orthographic-style side camera, entire figure takes approximately 80 percent of canvas height, with transparent margin all around. Render as a detailed clean 2D game sprite faithful to the reference's pale materials and understated white light, without adding smoke or atmospheric glow beyond the silhouette. Genuinely transparent background; no floor, no cast shadow, no text, no label, no grid, no extra figure. One image, one static pose.",
+      "referencePath": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+      "referenceSHA256": "82460c82402fc5a61ec164133aeed7c21e2fe5b5c18ffb563ff3d96603e18731",
+      "path": "assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "gitBlobSHA": "45d8e78899cd89658f0cec554d49ce4ea231ee98",
+      "referenceGitBlobSHA": "1ffcb9f5515347ecab1adddc8084ac1ac155939f",
+      "sourceFile": "sh1_incubator_018.45c7c84b1960.png",
+      "sourceReferenceKind": "existing-generated-selection-candidate",
+      "facing": 1,
+      "framePurpose": "idle",
+      "combatView": "side-view-candidate",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "proposedAnchor": [
+        0.488,
+        0.9640883977900553
+      ],
+      "proposedBodyHeight": 0.9267955801104972,
+      "audit": {
+        "width": 1086,
+        "height": 1448,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          340,
+          54,
+          754,
+          1396
+        ],
+        "alphaBounds": [
+          0,
+          19,
+          1056,
+          1430
+        ],
+        "framingBounds": [
+          330,
+          49,
+          761,
+          1404
+        ],
+        "transparentFraction": 0.81921,
+        "pixelSHA256": "4d2b2ea6b145c1e37f5af16e6ae3868c07dee099d418fc86327ab3a9df59e1fa"
+      },
+      "reviewNotes": "Incubator du Silent Hill original (1999), figure adulte en robe blanche opaque à manches évasées, vue de profil droit, deux mains et deux pieds nus. Aucune aile, corne ou arme d'Incubus. Pose neutre statique de présentation ; visage, coiffure, matière et contours lumineux restent reconstruits d'après la sélection surexposée.",
+      "integratedAnchor": [
+        0.488,
+        0.9640883977900553
+      ],
+      "integratedBodyHeight": 0.9267955801104972
+    },
+    {
+      "id": "arcade_scraper_arcade",
+      "sha256": "6d399af81f985aaf2de842133d3f6da6c53eaa6a23cd403e8665e6245f936810",
+      "bytes": 910542,
+      "width": 1217,
+      "height": 1293,
+      "bitDepth": 8,
+      "colorType": 6,
+      "prompt": "Use case: identity-preserve. Create ONE full-body transparent 2D fighting-game sprite of Scraper specifically from Silent Hill: The Arcade (2007), using the immediately preceding image as the exact appearance reference. Convert the existing selection portrait into a strict right-facing side-profile battle idle. Keep the same long dirty pale cloth veil completely covering the head/face with its dark securing band, brown ribbed and folded short tunic, dark vertically striped trousers, wrapped brown forearms, dark studded wrist guards, dark worn shoes, and the TWO separate short steel blades held in the two hands. Blades are handheld tools, never substituted for forearms. Do not borrow Missionary's or SH3 Scraper's costume. Whole body and both blade tips must be inside the canvas. Pose: side camera perpendicular to the right-facing torso, knees bent, front foot to the right and rear foot to the left; lead arm bent forward with its blade angled diagonally up toward the opponent, rear arm held slightly behind the hip with the second blade pointing low and backward. Clearly separate the two arms, legs, and blades in silhouette. Keep realistic gritty illustrated 2D UHD game sprite rendering, muted brown gray ivory textures and body proportions of the source. No face visible, no extra weapons, no extra limbs, no character duplicates, no contact shadow, no floor, no background, no atmospheric haze, no text or labels. Actual transparent alpha with generous margin, one sprite per image, one static pose.",
+      "referencePath": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+      "referenceSHA256": "cf2e735654ec87003ed956ea6a4e179b3c6992360a4251c19d24538cebd2b48e",
+      "path": "assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "gitBlobSHA": "dee600526efcc6074034e1b6c848613d60060400",
+      "referenceGitBlobSHA": "7f439472833b8144da0e288e7bd2ddb731a1f144",
+      "sourceFile": "arcade_scraper_arcade.6d399af81f98.png",
+      "sourceReferenceKind": "existing-generated-selection-candidate",
+      "facing": 1,
+      "framePurpose": "idle",
+      "combatView": "side-view-candidate",
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "clips": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "proposedAnchor": [
+        0.469,
+        0.8979118329466357
+      ],
+      "proposedBodyHeight": 0.7710750193348801,
+      "audit": {
+        "width": 1217,
+        "height": 1293,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          168,
+          164,
+          1104,
+          1161
+        ],
+        "alphaBounds": [
+          0,
+          0,
+          1203,
+          1293
+        ],
+        "framingBounds": [
+          163,
+          158,
+          1107,
+          1166
+        ],
+        "transparentFraction": 0.8058,
+        "pixelSHA256": "a4b26ec01d2ea9811ad71d8b12d20cb913fd82e7188fa101bc3d804adc3347e1"
+      },
+      "reviewNotes": "Scraper de Silent Hill: The Arcade (2007). Garde vers la droite, voile et bande de tête, tunique brune et pantalon rayé de l'édition Arcade ; deux lames courtes séparées tenues par les mains, deux chaussures entières. Légère torsion du buste pour dégager les deux bras. Aucun transfert du costume SH3 ou de Missionary. Pose fixe candidate ; orientation et détails arrière interprétés.",
+      "integratedAnchor": [
+        0.469,
+        0.8979118329466357
+      ],
+      "integratedBodyHeight": 0.7710750193348801
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "framePurpose": "guard",
+      "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "gitBlobSHA": "d3186f381c0da7d378bb0e1e14001de279ea5f51",
+      "sha256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e",
+      "bytes": 705868,
+      "width": 1199,
+      "height": 1312,
+      "referencePath": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "referenceSHA256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd",
+      "sourceReferenceKind": "new-generated-side-view-candidate",
+      "prompt": "Use case: identity-preserve. Asset type: ONE individual transparent 2D fighting-game sprite for Silent Hill: Halo of Flesh. Edit the one reference image of the Faceless Nurse from Silent Hill Origins. Preserve her exact design, the sealed featureless fleshy head, nurse cap, old stained uniform, strapped shoes, proportions, color and surface texture, and the same short metal hypodermic syringe held in her right hand. Change ONLY her pose to a clear guarded defensive stance facing RIGHT in side profile: bend both knees slightly, lean upper body back a little, raise the free left forearm diagonally in front of the head and chest, and hold the syringe right hand close to her waist with needle pointing right, not intersecting the left arm. Exactly two arms, two legs, two complete shoes. FULL BODY including cap, all fingers, syringe needle tip and both feet with generous transparent margin all around. Keep approximately the same standing scale and foot-level baseline as reference. The sprite is intended as one static guard frame distinct from idle, not a sprite sheet and not an animation. Real RGBA transparent background, clean edge, no floor, no backdrop, no halo, no cast shadow outside character, no camera perspective, no text, no UI, no extra subject. Faithfully preserve reference identity without adding details or changing the weapon.",
+      "facing": 1,
+      "sourceFile": "origins_faceless_nurse.4f0ad91d37c5.png",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "audit": {
+        "width": 1199,
+        "height": 1312,
+        "alpha": true,
+        "animated": false,
+        "format": "PNG",
+        "visibleBounds": [
+          327,
+          115,
+          823,
+          1218
+        ],
+        "alphaBounds": [
+          0,
+          21,
+          1169,
+          1290
+        ],
+        "framingBounds": [
+          324,
+          112,
+          826,
+          1223
+        ],
+        "transparentFraction": 0.85014,
+        "pixelSHA256": "1d6e1ef389501c16e4234f5f712264aa790f2bd9692b4fa47a554ca33d708ab3",
+        "sha256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e",
+        "bytes": 705868,
+        "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png"
+      },
+      "integratedAnchor": [
+        0.482,
+        0.9283536585365854
+      ],
+      "integratedBodyHeight": 0.8734756097560976,
+      "clip": {
+        "guard": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "animatedClips": 0,
+      "reviewNotes": "Une image statique dédiée à la garde. Échelle de référence conservée depuis idle, baseline ajustée aux appuis de garde, avant-bras libre relevé et seringue conservée."
+    }
+  ],
+  "archivedVariants": [
+    {
+      "path": "art/sources/sprites/vague16/homecoming_scarlet_doll_form_094.extra-arm.ed9a1d7afe50.png",
+      "gitBlobSHA": "31d1312469958ca0de1dd48f794a2a219cb935bb",
+      "sha256": "ed9a1d7afe505ece00b1f6554a1a80414ab22ee59adbe7e51c40fc8f4dd5df83",
+      "bytes": 1810208,
+      "width": 1024,
+      "height": 1536,
+      "reason": "Essai écarté : appendice/bras arrière doublé. Aucune utilisation en jeu."
+    }
+  ],
+  "unavailableIntermediate": {
+    "sha256": "58e4abc67f970fdd5d8e1f8839de0475006591ed708686fef92e2279078e834f",
+    "bytes": 1824320,
+    "width": 1024,
+    "height": 1536,
+    "reason": "Étape intermédiaire de correction remplacée par le rendu final. Données non retenues dans la mémoire de travail de l'agent; poste distant indisponible. Aucun chemin Git ni livraison des octets revendiqués.",
+    "status": "not-recovered"
+  }
+}
